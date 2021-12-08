@@ -19,7 +19,10 @@ const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 	await getFileCached(url, null, docFPath, true, Infinity)
 
 	const buildInfo = await extractBuildsFromODS(docFPath)
+
 	console.log(buildInfo)
+
+	console.log('')
 	for (const [elem, info] of Object.entries(buildInfo.elementMap)) {
 		console.log(elem)
 		for (const char of info)
@@ -28,6 +31,12 @@ const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 					(char.name + ': ').padEnd(12) +
 					char.roles.map(x => x.name + (x.isBest ? '+' : '')).join(', '),
 			)
+	}
+
+	console.log('')
+	console.log('changes')
+	for (const row of buildInfo.changelogsTable.rows.slice(0, 3)) {
+		console.log('  ' + row.date + '   applied by ' + row.appliedBy)
 	}
 
 	// setTimeout(() => {}, 1000000)
