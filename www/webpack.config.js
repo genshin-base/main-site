@@ -5,6 +5,8 @@ import { dirname } from 'path/posix'
 import { default as ESLintPlugin } from 'eslint-webpack-plugin'
 import { default as MiniCssExtractPlugin } from 'mini-css-extract-plugin'
 import { default as HtmlWebpackPlugin } from 'html-webpack-plugin'
+import { default as PurgeCSSPlugin } from 'purgecss-webpack-plugin'
+import { default as glob } from 'glob'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -96,6 +98,10 @@ export default async function (env, argv) {
 			!isProd && new CaseSensitivePathsPlugin({}),
 			new MiniCssExtractPlugin({ filename: '[name].[contenthash:8].css' }),
 			new HtmlWebpackPlugin({ template: SRC + '/index.html' }),
+			new PurgeCSSPlugin({
+				paths: glob.sync(`${SRC}/**/*`, { nodir: true }),
+				variables: true,
+			}),
 		].filter(Boolean),
 	}
 }
