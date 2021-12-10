@@ -15,10 +15,14 @@ const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 	await fs.mkdir(CACHE_DIR, { recursive: true })
 
 	const docFPath = `${CACHE_DIR}/spreadsheet.odt`
-	const url = `https://docs.google.com/spreadsheets/export?id=${DOC_ID}&exportFormat=ods`
-	await getFileCached(url, null, docFPath, true, Infinity)
+	const docUrl = `https://docs.google.com/spreadsheets/export?id=${DOC_ID}&exportFormat=ods`
+	await getFileCached(docUrl, null, docFPath, true, Infinity)
 
-	const buildInfo = await extractBuildsFromODS(docFPath)
+	const zipFPath = `${CACHE_DIR}/spreadsheet.zip`
+	const zipUrl = `https://docs.google.com/spreadsheets/export?id=${DOC_ID}&exportFormat=zip`
+	await getFileCached(zipUrl, null, zipFPath, true, Infinity)
+
+	const buildInfo = await extractBuildsFromODS(docFPath, zipFPath)
 
 	console.log(buildInfo)
 
