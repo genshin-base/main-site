@@ -1,4 +1,5 @@
 /node_modules/
 /cache/
+/builds_data/
 /www/dist/
 /google.private_key.json
