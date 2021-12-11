@@ -1,9 +1,5 @@
 @import "./bootstrap.scss";
 
-body {
-	color: red;
-}
-
-.not-used {
-	color: blue;
+html, body, .app-container{
+	min-height: 100vh
 }

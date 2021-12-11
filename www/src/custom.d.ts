@@ -11,3 +11,8 @@ declare namespace JSX {
 	type Nodes = Node | Node[] | Element[] | null
 }
 declare type Key = number | string
+
+declare module '*.jpg'
+declare module '*.png'
+declare module '*.jpeg'
+declare module '*.gif'

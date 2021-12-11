@@ -96,7 +96,7 @@ export default async function (env, argv) {
 			}),
 			// заставляет писать пути к модулям в правильном регистре (даже в ОСях, где это не обязательно)
 			!isProd && new CaseSensitivePathsPlugin({}),
-			new MiniCssExtractPlugin({ filename: '[name].[contenthash:8].css' }),
+			new MiniCssExtractPlugin({ filename: isProd ? '[name].[contenthash:8].css' : '[name].css' }),
 			new HtmlWebpackPlugin({ template: SRC + '/index.html' }),
 			new PurgeCSSPlugin({
 				paths: glob.sync(`${SRC}/**/*`, { nodir: true }),
