@@ -1,0 +1,9 @@
+.character-avatar{
+	width: var(--thumb-height);
+	height: var(--thumb-height);
+	cursor: pointer;
+	&.small{
+		width: var(--thumb-height-sm);
+		height: var(--thumb-height-sm);
+	}
+}

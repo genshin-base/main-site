@@ -1,13 +1,15 @@
 import { useState } from 'preact/hooks'
-export function Nav() {
+type Props = { isNavExpanded: boolean }
+
+export function Nav({ isNavExpanded }: Props): JSX.Element {
 	const [isExpanded, setIsExpanded] = useState(false)
 	// TODO клик мимо компонента
 	return (
-		<div className="collapse navbar-collapse">
-			<ul className="navbar-nav me-auto mb-2 mb-lg-0">
+		<div className={`collapse navbar-collapse ${isNavExpanded ? 'show' : ''}`}>
+			<ul className="navbar-nav me-auto mb-2 mb-md-0">
 				<li className="nav-item">
 					<a className="nav-link active" href="#">
-						Build
+						Builds
 					</a>
 				</li>
 				<li className="nav-item">
@@ -16,7 +18,7 @@ export function Nav() {
 					</a>
 				</li>
 			</ul>
-			<ul className="navbar-nav mb-2 mb-lg-0 float-end">
+			<ul className="navbar-nav mb-2 mb-md-0 float-md-end">
 				<li className="nav-item dropdown">
 					<a
 						className={`nav-link dropdown-toggle ${isExpanded ? 'show' : ''}`}
@@ -26,7 +28,8 @@ export function Nav() {
 					>
 						English
 					</a>
-					<ul className={`dropdown-menu ${isExpanded ? 'show' : ''}`}>
+					{/* todo почему-то не добавляется класс dropdown-menu-end */}
+					<ul className={`dropdown-menu ${isExpanded ? 'show' : ''}`} style={'right: 0'}>
 						<li>
 							<a className="dropdown-item" href="#">
 								English

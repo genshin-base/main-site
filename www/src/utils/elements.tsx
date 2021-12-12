@@ -6,12 +6,14 @@ import element_Electro from '../media/Element_Electro.png'
 import element_Cryo from '../media/Element_Cryo.png'
 import element_Geo from '../media/Element_Geo.png'
 
-export const elements = [
-	{ code: 'pyro', imgSrc: element_Pyro },
-	{ code: 'hydro', imgSrc: element_Hydro },
-	{ code: 'anemo', imgSrc: element_Anemo },
-	{ code: 'electro', imgSrc: element_Electro },
-	// { code: 'dendro', imgSrc: element_Dendro },
-	{ code: 'cryo', imgSrc: element_Cryo },
-	{ code: 'geo', imgSrc: element_Geo },
+export type GI_ElementCode = 'pyro' | 'electro' | 'hydro' | 'cryo' | 'anemo' | 'geo'
+export type GI_Element = { readonly code: GI_ElementCode; imgSrc: string }
+export const elements: GI_Element[] = [
+	{ code: 'pyro' as const, imgSrc: element_Pyro },
+	{ code: 'hydro' as const, imgSrc: element_Hydro },
+	{ code: 'anemo' as const, imgSrc: element_Anemo },
+	{ code: 'electro' as const, imgSrc: element_Electro },
+	// { code: 'dendro' as const , imgSrc: element_Dendro },
+	{ code: 'cryo' as const, imgSrc: element_Cryo },
+	{ code: 'geo' as const, imgSrc: element_Geo },
 ]
