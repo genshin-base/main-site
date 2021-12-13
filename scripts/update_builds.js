@@ -6,6 +6,7 @@ import { extractBuildsFromODS } from '../lib/builds/index.js'
 import { getFileCached } from '../lib/requests.js'
 import yaml from 'yaml'
 import { loadSpreadsheetCached } from '../lib/google.js'
+import { checkFixesUsage, clearFixesUsage } from '../lib/builds/utils.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const baseDir = dirname(__filename) + '/..'
@@ -16,6 +17,18 @@ const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
 /** @type {import('../lib/builds/utils.js').BuildsExtractionFixes} */
 const fixes = {
+	weapons: [
+		{
+			col: 'name',
+			replace: /Favonious Codex/i,
+			with: 'favonius codex',
+		},
+		{
+			col: 'name',
+			replace: /Wavebreaker/i,
+			with: "Wavebreaker's Fin",
+		},
+	],
 	charactersArtifactsMatch: [
 		{
 			characterCodes: ['rosaria'],
@@ -26,6 +39,33 @@ const fixes = {
 			characterCodes: ['diona', 'qiqi', 'sayu'],
 			replace: /Maiden's Beloved/i,
 			with: 'maiden beloved',
+		},
+	],
+	charactersWeaponsMatch: [
+		{
+			characterCodes: ['traveler'],
+			replace: /^Aquilla Favonia$/i,
+			with: 'aquila favonia',
+		},
+		{
+			characterCodes: ['xiangling'],
+			replace: /^Wavebreaker$/i,
+			with: "Wavebreaker's Fin",
+		},
+		{
+			characterCodes: ['xinyan'],
+			replace: /^Skyrider's Greatsword$/i,
+			with: 'Skyrider Greatsword',
+		},
+		{
+			characterCodes: ['kaeya'],
+			replace: /^Anemona Kageuchi$/i,
+			with: 'Amenoma Kageuchi',
+		},
+		{
+			characterCodes: ['amber', 'fischl', 'kujou-sara', 'childe', 'ganyu'],
+			replace: /^Viridescent Hunt$/i,
+			with: 'The Viridescent Hunt',
 		},
 	],
 }
@@ -50,15 +90,9 @@ const fixes = {
 		],
 	)
 
-	fixes.charactersArtifactsMatch.forEach(x => (x._used = false))
-
+	clearFixesUsage(fixes)
 	const buildInfo = await extractBuildsFromODS(docFPath, jsonFPath, fixes)
-
-	fixes.charactersArtifactsMatch
-		.filter(x => !x._used)
-		.forEach((x, i) =>
-			console.warn(`WARN: fixes.charactersArtifactsMatch[${i}] (${x.replace}) was not used`),
-		)
+	checkFixesUsage(fixes)
 
 	// console.log(buildInfo)
 
