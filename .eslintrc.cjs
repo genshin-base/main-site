@@ -17,5 +17,6 @@ module.exports = {
 		'no-constant-condition': ['error', { checkLoops: false }],
 		eqeqeq: ['warn', 'always'],
 		'@typescript-eslint/no-unused-vars': ['warn', { vars: 'all', args: 'none' }],
+		'@typescript-eslint/no-extra-semi': 'off', //conflicts with prettier
 	},
 }
