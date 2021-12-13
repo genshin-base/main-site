@@ -7,16 +7,16 @@ export function CharacterAvatar({
 	onClick,
 }: {
 	src: string
-	rarity: '5-star' | '4-star'
+	rarity: 5 | 4
 	classes?: string
 	onClick: () => void
 }): JSX.Element {
 	let rarityClass = ''
 	switch (rarity) {
-		case '4-star':
+		case 4:
 			rarityClass = 'bg-primary'
 			break
-		case '5-star':
+		case 5:
 			rarityClass = 'bg-warning'
 			break
 	}
@@ -27,4 +27,8 @@ export function CharacterAvatar({
 			src={src}
 		/>
 	)
+}
+
+export function CharacterPortrait({ src, classes = '' }: { src: string; classes?: string }): JSX.Element {
+	return <img className={`character-portrait ${classes}`} src={src} />
 }

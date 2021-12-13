@@ -6,8 +6,9 @@ export function LastUsedCharacters({ onCharacterSelect }: { onCharacterSelect: (
 	const charactersElems = characters.map(ch => (
 		<CharacterAvatar
 			src={character_Amber_Thumb}
-			rarity={ch === 4 ? `4-star` : '5-star'}
+			rarity={ch === 4 ? 4 : 5}
 			classes="mb-1 me-1 mb-xxl-2 me-xxl-2 small"
+			key={ch} //todo
 			onClick={() => {
 				onCharacterSelect(ch)
 			}}

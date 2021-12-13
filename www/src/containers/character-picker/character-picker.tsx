@@ -1,9 +1,4 @@
 import './character-picker.scss'
-import icon_Sword from '../../media/Icon_Sword.png'
-import icon_Bow from '../../media/Icon_Bow.png'
-import icon_Catalyst from '../../media/Icon_Catalyst.png'
-import icon_Claymore from '../../media/Icon_Claymore.png'
-import icon_Polearm from '../../media/Icon_Polearm.png'
 
 import { elements } from '../../utils/elements'
 import { useFetchTODO } from 'src/api/hooks'
@@ -24,7 +19,7 @@ const ThreeAmbers = () => (
 		{[1, 2, 3].map(() => (
 			<CharacterAvatar
 				src={character_Amber_Thumb}
-				rarity={'4-star'}
+				rarity={5}
 				onClick={doNothing}
 				classes="mb-1 me-1 mb-xxl-2 me-xxl-2"
 			/>
@@ -36,7 +31,7 @@ const FiveAmbers = () => (
 		{[1, 2, 3, 4, 5].map(() => (
 			<CharacterAvatar
 				src={character_Amber_Thumb}
-				rarity={'4-star'}
+				rarity={4}
 				onClick={doNothing}
 				classes="mb-1 me-1 mb-xxl-2 me-xxl-2"
 			/>
@@ -48,7 +43,7 @@ const FiveAmbers = () => (
 const desctopRows = elements.map((el, i, arr) => {
 	const isLastRowClass = i + 1 === arr.length ? 'rounded-bottom' : ''
 	return (
-		<div className="row">
+		<div className="row" key={el.code}>
 			<div className="col col-2 pt-3 pb-2 opacity-50 rounded-start">
 				<img className="rounded-circle d-block mx-auto" src={el.imgSrc} />
 			</div>
@@ -82,7 +77,7 @@ export function CharacterPicker() {
 				<div className="row">
 					<div className="col col-2 pb-3 pt-2"></div>
 					{weaponTypes.map((wt, i) => (
-						<div className="col col-2 pb-3 pt-2 rounded-top ">
+						<div className="col col-2 pb-3 pt-2 rounded-top " key={wt.code}>
 							<img className="rounded-circle d-block mx-auto" src={wt.imgSrc} />
 						</div>
 					))}
@@ -94,19 +89,4 @@ export function CharacterPicker() {
 			</div>
 		</div>
 	)
-}
-
-{
-	/* <div className="col">огонь</div>
-<div className="col">вода</div>
-<div className="col">воздух</div>
-<div className="col">электро</div>
-<div className="col">дендро ТУДУ</div>
-<div className="col">крио</div>
-<div className="col">гео</div> */
-	/* <div className="col">меч</div>
-<div className="col">клеймор</div>
-<div className="col">копье</div>
-<div className="col">каталист</div>
-<div className="col">лук</div> */
 }

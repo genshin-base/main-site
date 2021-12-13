@@ -10,12 +10,7 @@ const doNothing = () => {
 const FiveAmbers = () => (
 	<>
 		{[1, 2, 3, 4, 5].map(() => (
-			<CharacterAvatar
-				src={character_Amber_Thumb}
-				rarity={'4-star'}
-				onClick={doNothing}
-				classes="m-1"
-			/>
+			<CharacterAvatar src={character_Amber_Thumb} rarity={4} onClick={doNothing} classes="m-1" />
 		))}
 	</>
 )
@@ -31,7 +26,7 @@ export function CharacterPickerMobile({ onCharacterSelect }: { onCharacterSelect
 		selectedElementCode ? el.code === selectedElementCode : true,
 	)
 	const rows = filteredElements.map(el => (
-		<div className="row">
+		<div className="row" key={el.code}>
 			<div className="col-2 py-1 opacity-50">
 				<img className="rounded-circle d-block mx-auto" src={el.imgSrc} />
 			</div>
@@ -51,6 +46,7 @@ export function CharacterPickerMobile({ onCharacterSelect }: { onCharacterSelect
 								className={`character-avatar small rounded-circle bg-secondary p-1 m-1 ${
 									selectedElementCode && selectedElementCode !== el.code ? 'opacity-25' : ''
 								}`}
+								key={el.code}
 								src={el.imgSrc}
 								onClick={() => selectElement(el)} //todo почему без стрелки тайпскрипт не пускает?
 							/>
@@ -58,15 +54,16 @@ export function CharacterPickerMobile({ onCharacterSelect }: { onCharacterSelect
 					</div>
 					<br />
 					<div className="d-inline">
-						{weaponTypes.map(el => (
+						{weaponTypes.map(wt => (
 							<img
 								className={`character-avatar small rounded-circle bg-secondary p-1 m-1 ${
-									selectedWeaponTypeCode && selectedWeaponTypeCode !== el.code
+									selectedWeaponTypeCode && selectedWeaponTypeCode !== wt.code
 										? 'opacity-25'
 										: ''
 								}`}
-								src={el.imgSrc}
-								onClick={() => selectWeaponType(el)} //todo почему без стрелки тайпскрипт не пускает?
+								key={wt.code}
+								src={wt.imgSrc}
+								onClick={() => selectWeaponType(wt)} //todo почему без стрелки тайпскрипт не пускает?
 							/>
 						))}
 					</div>
