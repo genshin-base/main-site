@@ -1,12 +1,13 @@
-import element_Pyro from '../media/Element_Pyro.png'
-import element_Hydro from '../media/Element_Hydro.png'
-import element_Anemo from '../media/Element_Anemo.png'
-import element_Electro from '../media/Element_Electro.png'
-// import element_Dendro from '../media/Element_Dendro.png'
-import element_Cryo from '../media/Element_Cryo.png'
-import element_Geo from '../media/Element_Geo.png'
+import element_Anemo from 'src/media/Element_Anemo.png'
+// import element_Dendro from 'src/media/Element_Dendro.png'
+import element_Cryo from 'src/media/Element_Cryo.png'
+import element_Electro from 'src/media/Element_Electro.png'
+import element_Geo from 'src/media/Element_Geo.png'
+import element_Hydro from 'src/media/Element_Hydro.png'
+import element_Pyro from 'src/media/Element_Pyro.png'
 
-export type GI_ElementCode = 'pyro' | 'electro' | 'hydro' | 'cryo' | 'anemo' | 'geo'
+import type { GI_ElementCode } from 'lib/genshin'
+
 export type GI_Element = { readonly code: GI_ElementCode; imgSrc: string }
 export const elements: GI_Element[] = [
 	{ code: 'pyro' as const, imgSrc: element_Pyro },

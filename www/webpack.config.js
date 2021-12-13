@@ -11,6 +11,7 @@ import { default as glob } from 'glob'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const SRC = __dirname + '/src'
+const LIB = __dirname + '/../lib'
 const DIST = __dirname + '/dist'
 const PUBLIC = __dirname + '/public'
 
@@ -43,7 +44,7 @@ export default async function (env, argv) {
 		},
 		resolve: {
 			extensions: ['.js', '.tsx', '.ts'],
-			alias: { src: SRC },
+			alias: { src: SRC, lib: LIB },
 		},
 		optimization: {
 			minimize: isProd,
