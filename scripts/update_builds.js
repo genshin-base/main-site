@@ -117,6 +117,9 @@ const fixes = {
 	// console.log(yaml.stringify(buildInfo.elementMap['pyro']))
 	// console.log(JSON.stringify(buildInfo.elementMap))
 
+	// buildInfo.changelogsTable.rows.length = 0
+	// console.log(JSON.stringify(buildInfo).length)
+
 	await fs.mkdir(DATA_DIR, { recursive: true })
 	await fs.writeFile(`${DATA_DIR}/generated.yaml`, yaml.stringify(buildInfo))
 
