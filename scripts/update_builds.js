@@ -2,11 +2,11 @@
 import { promises as fs } from 'fs'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { extractBuildsFromODS } from '../lib/builds/index.js'
+import { extractBuildsFromODS } from '../lib/parsing/index.js'
 import { getFileCached } from '../lib/requests.js'
 import yaml from 'yaml'
 import { loadSpreadsheetCached } from '../lib/google.js'
-import { checkFixesUsage, clearFixesUsage } from '../lib/builds/utils.js'
+import { checkFixesUsage, clearFixesUsage } from '../lib/parsing/fixes.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const baseDir = dirname(__filename) + '/..'
@@ -15,7 +15,7 @@ const DATA_DIR = `${baseDir}/builds_data`
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
-/** @type {import('../lib/builds/utils.js').BuildsExtractionFixes} */
+/** @type {import('../lib/parsing/fixes.js').BuildsExtractionFixes} */
 const fixes = {
 	weapons: [
 		{
