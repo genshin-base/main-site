@@ -2,8 +2,7 @@
 import { promises as fs } from 'fs'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { extractBuildsFromODS } from '../lib/parsing/index.js'
-import { getFileCached } from '../lib/requests.js'
+import { extractBuilds } from '../lib/parsing/index.js'
 import yaml from 'yaml'
 import { loadSpreadsheetCached } from '../lib/google.js'
 import { checkFixesUsage, clearFixesUsage } from '../lib/parsing/fixes.js'
@@ -94,9 +93,9 @@ const fixes = {
 ;(async () => {
 	await fs.mkdir(CACHE_DIR, { recursive: true })
 
-	const docFPath = `${CACHE_DIR}/spreadsheet.odt`
-	const docUrl = `https://docs.google.com/spreadsheets/export?id=${DOC_ID}&exportFormat=ods`
-	await getFileCached(docUrl, null, docFPath, true, Infinity)
+	// const docFPath = `${CACHE_DIR}/spreadsheet.odt`
+	// const docUrl = `https://docs.google.com/spreadsheets/export?id=${DOC_ID}&exportFormat=ods`
+	// await getFileCached(docUrl, null, docFPath, true, Infinity)
 
 	const jsonFPath = `${CACHE_DIR}/spreadsheets.json`
 	await loadSpreadsheetCached(
@@ -113,7 +112,7 @@ const fixes = {
 	)
 
 	clearFixesUsage(fixes)
-	const buildInfo = await extractBuildsFromODS(docFPath, jsonFPath, fixes)
+	const buildInfo = await extractBuilds(jsonFPath, fixes)
 	checkFixesUsage(fixes)
 
 	// console.log(buildInfo)
