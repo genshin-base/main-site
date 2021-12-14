@@ -7,6 +7,7 @@ import { getFileCached } from '../lib/requests.js'
 import yaml from 'yaml'
 import { loadSpreadsheetCached } from '../lib/google.js'
 import { checkFixesUsage, clearFixesUsage } from '../lib/parsing/fixes.js'
+import { json_getText } from '../lib/parsing/json.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const baseDir = dirname(__filename) + '/..'
@@ -68,6 +69,26 @@ const fixes = {
 			with: 'The Viridescent Hunt',
 		},
 	],
+	sheets: [
+		{
+			// у Барбары у столбца роли нет заголовка
+			title: /^hydro/i,
+			fixFunc(sheet) {
+				for (const { values: cells = [] } of sheet.data[0].rowData) {
+					for (let i = 0; i < cells.length; i++) {
+						const cell = cells[i]
+						if (json_getText(cell).trim().toLocaleLowerCase() === 'barbara') {
+							if (cells.length > i + 1 && json_getText(cells[i + 1]).trim() === '') {
+								cells[i + 1].userEnteredValue = { stringValue: 'role' }
+								return true
+							}
+						}
+					}
+				}
+				return false
+			},
+		},
+	],
 }
 
 ;(async () => {
@@ -86,6 +107,7 @@ const fixes = {
 		[
 			'sheets.properties',
 			'sheets.data.rowData.values.userEnteredValue',
+			'sheets.data.rowData.values.userEnteredFormat.textFormat',
 			'sheets.data.rowData.values.textFormatRuns',
 		],
 	)
