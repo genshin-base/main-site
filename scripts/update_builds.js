@@ -86,7 +86,7 @@ const fixes = {
 		[
 			'sheets.properties',
 			'sheets.data.rowData.values.userEnteredValue',
-			'sheets.data.rowData.values.userEnteredFormat.textFormat',
+			'sheets.data.rowData.values.textFormatRuns',
 		],
 	)
 
