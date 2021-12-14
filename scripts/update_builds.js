@@ -93,10 +93,6 @@ const fixes = {
 ;(async () => {
 	await fs.mkdir(CACHE_DIR, { recursive: true })
 
-	// const docFPath = `${CACHE_DIR}/spreadsheet.odt`
-	// const docUrl = `https://docs.google.com/spreadsheets/export?id=${DOC_ID}&exportFormat=ods`
-	// await getFileCached(docUrl, null, docFPath, true, Infinity)
-
 	const jsonFPath = `${CACHE_DIR}/spreadsheets.json`
 	await loadSpreadsheetCached(
 		`${baseDir}/google.private_key.json`,
