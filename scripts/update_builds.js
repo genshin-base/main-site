@@ -93,11 +93,10 @@ const fixes = {
 ;(async () => {
 	await fs.mkdir(CACHE_DIR, { recursive: true })
 
-	const jsonFPath = `${CACHE_DIR}/spreadsheets.json`
-	await loadSpreadsheetCached(
+	const spreadsheet = await loadSpreadsheetCached(
 		`${baseDir}/google.private_key.json`,
 		`${CACHE_DIR}/google.access_token.json`,
-		jsonFPath,
+		`${CACHE_DIR}/spreadsheet.json`,
 		DOC_ID,
 		[
 			'sheets.properties',
@@ -108,7 +107,7 @@ const fixes = {
 	)
 
 	clearFixesUsage(fixes)
-	const buildInfo = await extractBuilds(jsonFPath, fixes)
+	const buildInfo = await extractBuilds(spreadsheet, fixes)
 	checkFixesUsage(fixes)
 
 	// console.log(buildInfo)
