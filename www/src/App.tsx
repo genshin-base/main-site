@@ -1,8 +1,9 @@
-import './App.scss'
 import { PageWrap } from './components/page-wrap'
 import { Footer } from './containers/footer'
 import { Header } from './containers/header'
 import { FrontPage } from './pages/front-page'
+
+import './App.scss'
 
 export function App() {
 	return (
