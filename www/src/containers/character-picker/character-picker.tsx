@@ -6,9 +6,9 @@ import { isLoaded } from 'src/api/hooks'
 import Spinner from 'src/components/spinners'
 
 import character_Amber_Thumb from '../../media/Character_Amber_Thumb.png' // todo remove
-import { CharacterAvatar } from 'src/components/characters'
 import { CharacterPickerMobile } from './mobile-character-picker'
 import { weaponTypes } from 'src/utils/weaponTypes'
+import { ItemAvatar } from '../item-cards'
 
 // todo remove
 const doNothing = () => {
@@ -17,7 +17,7 @@ const doNothing = () => {
 const ThreeAmbers = () => (
 	<>
 		{[1, 2, 3].map(() => (
-			<CharacterAvatar
+			<ItemAvatar
 				src={character_Amber_Thumb}
 				rarity={5}
 				onClick={doNothing}
@@ -29,7 +29,7 @@ const ThreeAmbers = () => (
 const FiveAmbers = () => (
 	<>
 		{[1, 2, 3, 4, 5].map(() => (
-			<CharacterAvatar
+			<ItemAvatar
 				src={character_Amber_Thumb}
 				rarity={4}
 				onClick={doNothing}

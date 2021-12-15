@@ -1,15 +1,17 @@
+import { GI_RarityCode } from 'src/../../lib/genshin'
+
 import './item-cards.scss'
 
-export function LabeledItemAvatar({
-	imgSrc,
+export function ItemAvatar({
+	src,
 	rarity,
 	classes = '',
-	title,
+	onClick,
 }: {
-	imgSrc: string
-	rarity: 5 | 4 | 3
-	title: string
+	src: string
+	rarity: GI_RarityCode
 	classes?: string
+	onClick?: () => void
 }): JSX.Element {
 	let rarityClass = ''
 	switch (rarity) {
@@ -24,8 +26,28 @@ export function LabeledItemAvatar({
 			break
 	}
 	return (
+		<img
+			onClick={onClick}
+			className={`item-avatar rounded-circle ${onClick ? 'clickable' : ''} ${rarityClass} ${classes}`}
+			src={src}
+		/>
+	)
+}
+
+export function LabeledItemAvatar({
+	imgSrc,
+	rarity,
+	classes = '',
+	title,
+}: {
+	imgSrc: string
+	rarity: GI_RarityCode
+	title: string
+	classes?: string
+}): JSX.Element {
+	return (
 		<div className={`text-nowrap classes`}>
-			<img className={`item-avatar rounded-circle ${rarityClass} ${classes}`} src={imgSrc} />
+			<ItemAvatar rarity={rarity} classes={classes} src={imgSrc} />
 			<label className="text-wrap align-middle lh-1">{title}</label>
 		</div>
 	)

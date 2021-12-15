@@ -1,12 +1,12 @@
 import { useState } from 'preact/hooks'
 
-import { CharacterAvatar } from 'src/components/characters'
 import character_Amber_Thumb from 'src/media/Character_Amber_Thumb.png' // todo remove
 import { elements } from 'src/utils/elements'
 import { weaponTypes } from 'src/utils/weaponTypes'
 
 import type { GI_ElementCode } from 'lib/genshin'
 import type { GI_WeaponTypeCode } from 'lib/genshin'
+import { ItemAvatar } from '../item-cards'
 
 // todo remove
 const doNothing = () => {
@@ -15,7 +15,7 @@ const doNothing = () => {
 const FiveAmbers = () => (
 	<>
 		{[1, 2, 3, 4, 5].map(() => (
-			<CharacterAvatar src={character_Amber_Thumb} rarity={4} onClick={doNothing} classes="m-1" />
+			<ItemAvatar src={character_Amber_Thumb} rarity={4} onClick={doNothing} classes="m-1" />
 		))}
 	</>
 )

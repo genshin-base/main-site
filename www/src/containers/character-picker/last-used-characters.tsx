@@ -1,10 +1,10 @@
-import { CharacterAvatar } from 'src/components/characters'
 import character_Amber_Thumb from '../../media/Character_Amber_Thumb.png'
+import { ItemAvatar } from '../item-cards'
 
 export function LastUsedCharacters({ onCharacterSelect }: { onCharacterSelect: (any) => void }) {
 	const characters = [4, 5, 5, 4]
 	const charactersElems = characters.map(ch => (
-		<CharacterAvatar
+		<ItemAvatar
 			src={character_Amber_Thumb}
 			rarity={ch === 4 ? 4 : 5}
 			classes="mb-1 me-1 mb-xxl-2 me-xxl-2 small"
