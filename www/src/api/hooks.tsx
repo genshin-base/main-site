@@ -10,22 +10,28 @@ export function isLoaded<T>(value: LoadingState<T>): value is T {
 	return value !== PENDING && !(value instanceof Error)
 }
 
-type DummyPayload = { some: 'data' }
-export function useFetchTODO(loadFunc: () => Promise<unknown>, args: unknown[]): LoadingState<DummyPayload> {
-	const timoutRef = useRef<number | null>(null)
-	const [data, setData] = useState<LoadingState<DummyPayload>>(PENDING)
+export function useFetch<T>(
+	loadFunc: (abortSignal: AbortSignal) => Promise<T>,
+	args: unknown[],
+): LoadingState<T> {
+	const controller = useRef<AbortController | null>(null)
+	const [data, setData] = useState<LoadingState<T>>(PENDING)
 
 	useEffect(() => {
 		setData(PENDING)
+		if (controller.current !== null) controller.current.abort()
 
-		timoutRef.current = window.setTimeout(
-			() => setData(location.hash === '#error' ? new Error('some error') : { some: 'data' }),
-			1000,
-		)
+		let ac: AbortController | null = new AbortController()
+		controller.current = ac
+
+		loadFunc(ac.signal)
+			.then(setData)
+			.finally(() => (ac = null))
 
 		return () => {
-			if (timoutRef.current !== null) clearTimeout(timoutRef.current)
+			if (ac !== null) ac.abort()
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, args)
 
 	return data

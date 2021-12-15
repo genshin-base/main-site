@@ -17,6 +17,8 @@ const __filename = fileURLToPath(import.meta.url)
 const baseDir = dirname(__filename) + '/..'
 const CACHE_DIR = `${baseDir}/cache`
 const DATA_DIR = `${baseDir}/builds_data`
+const WWW_STATIC_DIR = `${baseDir}/www/src/generated`
+const WWW_DYNAMIC_DIR = `${baseDir}/www/public/generated`
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -125,19 +127,39 @@ const fixes = {
 	await fs.mkdir(DATA_DIR, { recursive: true })
 	await fs.writeFile(`${DATA_DIR}/generated.yaml`, yaml.stringify(build))
 
-	await fs.writeFile(`${DATA_DIR}/characters.json`, JSON.stringify(makeCharacterShortList(build)))
+	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
+		await fs.rm(dir, { recursive: true, force: true })
+		await fs.mkdir(dir, { recursive: true })
+	}
 
-	await fs.rm(`${DATA_DIR}/characters`, { recursive: true, force: true })
-	await fs.mkdir(`${DATA_DIR}/characters`, { recursive: true })
+	await fs.writeFile(
+		`${WWW_STATIC_DIR}/index.ts`,
+		`
+import { apiGetJSONFile } from 'src/api'
+
+import type { CharacterShortInfo } from 'lib/parsing'
+export const charactersShortList: CharacterShortInfo[] = ${JSON.stringify(makeCharacterShortList(build))}
+
+import type { CharacterFullInfo } from 'lib/parsing'
+export { CharacterFullInfo }
+export function apiGetCharacterFullInfo(code:string, signal:AbortSignal): Promise<CharacterFullInfo> {
+	return apiGetJSONFile(\`/generated/characters/\${code}.json\`, signal)
+}`,
+	)
+
+	await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 	for (const character of build.characters)
 		await fs.writeFile(
-			`${DATA_DIR}/characters/${character.code}.json`,
+			`${WWW_DYNAMIC_DIR}/characters/${character.code}.json`,
 			JSON.stringify(makeCharacterBuildInfo(build, character)),
 		)
 
-	await fs.writeFile(`${DATA_DIR}/changelogs.json`, JSON.stringify(build.changelogsTable))
+	await fs.writeFile(`${WWW_DYNAMIC_DIR}/weapons.json`, JSON.stringify(build.weapons))
+	await fs.writeFile(`${WWW_DYNAMIC_DIR}/artifacts.json`, JSON.stringify(build.artifacts))
+
+	await fs.writeFile(`${WWW_DYNAMIC_DIR}/changelogs.json`, JSON.stringify(build.changelogsTable))
 	await fs.writeFile(
-		`${DATA_DIR}/changelogs_recent.json`,
+		`${WWW_DYNAMIC_DIR}/changelogs_recent.json`,
 		JSON.stringify(makeRecentChangelogsTable(build.changelogsTable)),
 	)
 
