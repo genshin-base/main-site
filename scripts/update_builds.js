@@ -2,7 +2,12 @@
 import { promises as fs } from 'fs'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { extractBuilds } from '../lib/parsing/index.js'
+import {
+	extractBuilds,
+	makeCharacterBuildInfo,
+	makeCharacterShortList,
+	makeRecentChangelogsTable,
+} from '../lib/parsing/index.js'
 import yaml from 'yaml'
 import { loadSpreadsheetCached } from '../lib/google.js'
 import { checkFixesUsage, clearFixesUsage } from '../lib/parsing/fixes.js'
@@ -107,37 +112,34 @@ const fixes = {
 	)
 
 	clearFixesUsage(fixes)
-	const buildInfo = await extractBuilds(spreadsheet, fixes)
+	const build = await extractBuilds(spreadsheet, fixes)
 	checkFixesUsage(fixes)
 
-	// console.log(buildInfo)
-
-	// console.log('')
-	// for (const [elem, info] of Object.entries(buildInfo.elementMap)) {
-	// 	console.log(elem)
-	// 	for (const char of info)
-	// 		console.log(
-	// 			'  ' +
-	// 				(char.name + ': ').padEnd(12) +
-	// 				char.roles.map(x => x.name + (x.isBest ? '+' : '')).join(', '),
-	// 		)
-	// }
-
-	// console.log('')
-	// console.log('changes')
-	// for (const row of buildInfo.changelogsTable.rows.slice(0, 3)) {
-	// 	console.log('  ' + row.date + '   applied by ' + row.appliedBy)
-	// }
-
 	console.log('')
-	// console.log(yaml.stringify(buildInfo.elementMap['pyro']))
-	// console.log(JSON.stringify(buildInfo.elementMap))
+	// console.log(yaml.stringify(build.elementMap['pyro']))
+	// console.log(JSON.stringify(build.elementMap))
 
-	// buildInfo.changelogsTable.rows.length = 0
-	// console.log(JSON.stringify(buildInfo).length)
+	// build.changelogsTable.rows.length = 0
+	// console.log(JSON.stringify(build).length)
 
 	await fs.mkdir(DATA_DIR, { recursive: true })
-	await fs.writeFile(`${DATA_DIR}/generated.yaml`, yaml.stringify(buildInfo))
+	await fs.writeFile(`${DATA_DIR}/generated.yaml`, yaml.stringify(build))
+
+	await fs.writeFile(`${DATA_DIR}/characters.json`, JSON.stringify(makeCharacterShortList(build)))
+
+	await fs.rm(`${DATA_DIR}/characters`, { recursive: true, force: true })
+	await fs.mkdir(`${DATA_DIR}/characters`, { recursive: true })
+	for (const character of build.characters)
+		await fs.writeFile(
+			`${DATA_DIR}/characters/${character.code}.json`,
+			JSON.stringify(makeCharacterBuildInfo(build, character)),
+		)
+
+	await fs.writeFile(`${DATA_DIR}/changelogs.json`, JSON.stringify(build.changelogsTable))
+	await fs.writeFile(
+		`${DATA_DIR}/changelogs_recent.json`,
+		JSON.stringify(makeRecentChangelogsTable(build.changelogsTable)),
+	)
 
 	// setTimeout(() => {}, 1000000)
 })().catch(console.error)
