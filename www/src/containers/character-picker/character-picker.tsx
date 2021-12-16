@@ -1,14 +1,12 @@
-import './character-picker.scss'
-
-import { elements } from '../../utils/elements'
-import { useFetchTODO } from 'src/api/hooks'
-import { isLoaded } from 'src/api/hooks'
-import Spinner from 'src/components/spinners'
-
-import character_Amber_Thumb from '../../media/Character_Amber_Thumb.png' // todo remove
-import { CharacterPickerMobile } from './mobile-character-picker'
+import { isLoaded, useFetch } from 'src/api/hooks'
+import { apiGetCharacterFullInfo, charactersShortList } from 'src/generated'
 import { weaponTypes } from 'src/utils/weaponTypes'
+import character_Amber_Thumb from '../../media/Character_Amber_Thumb.png' // todo remove
+import { elements } from '../../utils/elements'
 import { ItemAvatar } from '../item-cards'
+import { CharacterPickerMobile } from './mobile-character-picker'
+
+import './character-picker.scss'
 
 // todo remove
 const doNothing = () => {
@@ -65,12 +63,16 @@ const desctopRows = elements.map((el, i, arr) => {
 		</div>
 	)
 })
-const fetchTODO = () => new Promise(res => setTimeout(res, 1000))
 
 export function CharacterPicker() {
-	const characters = useFetchTODO(fetchTODO, [])
-	if (!isLoaded(characters)) return <Spinner />
-	const dc = []
+	const amber = useFetch(sig => apiGetCharacterFullInfo('amber', sig), [])
+	if (isLoaded(amber)) console.log(amber.character.code, amber)
+
+	console.log(
+		'characters list',
+		charactersShortList.map(x => x.code + ':' + x.elementCode),
+	)
+
 	return (
 		<div className="character-picker">
 			<div class="d-none d-xl-block container overflow-hidden big-table">

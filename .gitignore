@@ -2,4 +2,6 @@
 /cache/
 /builds_data/
 /www/dist/
+/www/src/generated/
+/www/public/generated/
 /google.private_key.json
