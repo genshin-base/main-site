@@ -47,7 +47,9 @@ export function BtnTabGroup({
 			{tabs.map(t => (
 				<button
 					type="button"
-					className={`btn ${t.code === selectedTab.code ? 'btn-primary' : 'btn-outline-primary'} `}
+					className={`btn btn-sm ${
+						t.code === selectedTab.code ? 'btn-primary' : 'btn-outline-primary'
+					} `}
 					key={t.code}
 					onClick={e => {
 						onTabSelect(t)

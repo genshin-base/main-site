@@ -46,9 +46,9 @@ export function LabeledItemAvatar({
 	classes?: string
 }): JSX.Element {
 	return (
-		<div className={`text-nowrap classes`}>
-			<ItemAvatar rarity={rarity} classes={classes} src={imgSrc} />
-			<label className="text-wrap align-middle lh-1">{title}</label>
+		<div className={`text-nowrap ${classes}`}>
+			<ItemAvatar rarity={rarity} classes="small" src={imgSrc} />
+			<label className="text-wrap align-middle lh-1 ps-1 w-75">{title}</label>
 		</div>
 	)
 }

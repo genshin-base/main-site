@@ -33,7 +33,7 @@ const weapons: { rarity: 3 | 4 | 5; code: string; imgScr: string }[] = [
 	{ code: 'лещ, но плохой', rarity: 3, imgScr: weaponIcon },
 ]
 const weaponList = weapons.map(w => (
-	<li key={w.code}>
+	<li key={w.code} className="m-2 ms-0">
 		<LabeledItemAvatar imgSrc={w.imgScr} title={w.code} rarity={w.rarity} classes={'small'} />
 	</li>
 ))
@@ -89,7 +89,7 @@ export function CharacterBuildDetailed({
 	handleGoBack: () => void
 }) {
 	const CharacterDetailDesktop = (
-		<div class="d-none d-xl-block">
+		<div className="d-none d-xl-block">
 			<div className="container float-end">
 				<div className="row">
 					<div className="col col-3"></div>
@@ -109,16 +109,16 @@ export function CharacterBuildDetailed({
 					</div>
 					<div className="col col-9">
 						<div className="d-flex">
-							<div className="flex-fill w-33">
+							<div className="flex-fill w-33 p-3">
 								<h6 className="text-uppercase opacity-75">Weapon</h6>
 								<ol>{weaponList}</ol>
 							</div>
-							<div className="flex-fill w-33">
+							<div className="flex-fill w-33 p-3">
 								<h6 className="text-uppercase opacity-75">Artifacts</h6>
 								<ol>{weaponList}</ol>
 								<div></div>
 							</div>
-							<div className="flex-fill w-33">
+							<div className="flex-fill w-33 p-3">
 								<h6 className="text-uppercase opacity-75">Talent Priority</h6>
 								<ol>{talentPriority}</ol>
 								<div className="opacity-75">{talentTips}</div>
@@ -129,7 +129,7 @@ export function CharacterBuildDetailed({
 				<div className="row">
 					<div className="col col-3"></div>
 					<div className="col col-9">
-						<div>
+						<div className="p-3">
 							<h6 className="text-uppercase opacity-75">Notes</h6>
 							<div className="opacity-75">{notes}</div>
 						</div>
@@ -150,20 +150,20 @@ export function CharacterBuildDetailed({
 				onTabSelect={t => {
 					t
 				}}
-				classes="w-100"
+				classes="w-100 my-3"
 			/>
 			<div className="">
-				<div className="">
+				<div className="my-3">
 					<h6 className="text-uppercase opacity-75">Artifacts</h6>
 					<ol>{weaponList}</ol>
 					<div></div>
 				</div>
-				<div className="">
+				<div className="my-3">
 					<h6 className="text-uppercase opacity-75">Talent Priority</h6>
 					<ol>{talentPriority}</ol>
 					<div className="opacity-75">{talentTips}</div>
 				</div>
-				<div className="">
+				<div className="my-3">
 					<h6 className="text-uppercase opacity-75">Weapon</h6>
 					<ol>{weaponList}</ol>
 				</div>
