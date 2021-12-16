@@ -3,10 +3,10 @@ import { useState } from 'preact/hooks'
 import character_Amber_Thumb from 'src/media/Character_Amber_Thumb.png' // todo remove
 import { elements } from 'src/utils/elements'
 import { weaponTypes } from 'src/utils/weaponTypes'
-
-import type { GI_ElementCode } from 'lib/genshin'
-import type { GI_WeaponTypeCode } from 'lib/genshin'
 import { ItemAvatar } from '../item-cards'
+
+import type { GI_ElementCode } from '#lib/genshin'
+import type { GI_WeaponTypeCode } from '#lib/genshin'
 
 // todo remove
 const doNothing = () => {

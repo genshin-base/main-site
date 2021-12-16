@@ -1,4 +1,4 @@
-import { GI_RarityCode } from 'src/../../lib/genshin'
+import { GI_RarityCode } from '#lib/genshin'
 
 import './item-cards.scss'
 

@@ -10,7 +10,10 @@
 		"allowSyntheticDefaultImports": true,
 		"target": "esnext",
 		"module": "esnext",
-		"moduleResolution": "node"
+		"moduleResolution": "node",
+		"paths": {
+			"#lib/*": ["./lib/*"]
+		}
 	},
 	"exclude": ["node_modules"]
 }

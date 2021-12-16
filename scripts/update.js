@@ -2,27 +2,27 @@
 import { promises as fs } from 'fs'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
+import yaml from 'yaml'
 import {
 	extractBuilds,
 	makeCharacterBuildInfo,
 	makeCharacterShortList,
 	makeRecentChangelogsTable,
-} from '../lib/parsing/index.js'
-import yaml from 'yaml'
-import { loadSpreadsheetCached } from '../lib/google.js'
-import { checkFixesUsage, clearFixesUsage } from '../lib/parsing/fixes.js'
-import { json_getText } from '../lib/parsing/json.js'
-
-const __filename = fileURLToPath(import.meta.url)
-const baseDir = dirname(__filename) + '/..'
-const CACHE_DIR = `${baseDir}/cache`
-const DATA_DIR = `${baseDir}/builds_data`
-const WWW_STATIC_DIR = `${baseDir}/www/src/generated`
-const WWW_DYNAMIC_DIR = `${baseDir}/www/public/generated`
+} from '#lib/parsing/helperteam/index.js'
+import { loadSpreadsheetCached } from '#lib/google.js'
+import { checkFixesUsage, clearFixesUsage } from '#lib/parsing/helperteam/fixes.js'
+import { json_getText } from '#lib/parsing/helperteam/json.js'
+import {
+	extractArtifactsLangNames,
+	extractCharactersLangNames,
+	extractWeaponsLangNames,
+} from '#lib/parsing/honeyhunter/index.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
-/** @type {import('../lib/parsing/fixes.js').BuildsExtractionFixes} */
+const LANGS = ['en', 'ru']
+
+/** @type {import('#lib/parsing/helperteam/fixes.js').BuildsExtractionFixes} */
 const fixes = {
 	weapons: [
 		{
@@ -97,7 +97,28 @@ const fixes = {
 	],
 }
 
+const __filename = fileURLToPath(import.meta.url)
+const baseDir = dirname(__filename) + '/..'
+const CACHE_DIR = `${baseDir}/cache`
+const DATA_DIR = `${baseDir}/builds_data`
+const WWW_STATIC_DIR = `${baseDir}/www/src/generated`
+const WWW_DYNAMIC_DIR = `${baseDir}/www/public/generated`
+
 ;(async () => {
+	console.log('processing builds...')
+	await extractAndSaveBuildsInfo()
+
+	console.log('processing langs...')
+	await extractAndSaveLangNames()
+
+	console.log('saving www data...')
+	await saveWwwData()
+
+	console.log('done.')
+	// setTimeout(() => {}, 1000000)
+})().catch(console.error)
+
+async function extractAndSaveBuildsInfo() {
 	await fs.mkdir(CACHE_DIR, { recursive: true })
 
 	const spreadsheet = await loadSpreadsheetCached(
@@ -117,25 +138,40 @@ const fixes = {
 	const build = await extractBuilds(spreadsheet, fixes)
 	checkFixesUsage(fixes)
 
-	// console.log(yaml.stringify(build.elementMap['pyro']))
-	// console.log(JSON.stringify(build.elementMap))
+	await fs.mkdir(DATA_DIR, { recursive: true })
+	await fs.writeFile(`${DATA_DIR}/builds.yaml`, yaml.stringify(build))
+}
 
-	// build.changelogsTable.rows.length = 0
-	// console.log(JSON.stringify(build).length)
+async function extractAndSaveLangNames() {
+	await fs.mkdir(DATA_DIR, { recursive: true })
+	await fs.writeFile(
+		`${DATA_DIR}/weapon_names.yaml`,
+		yaml.stringify(await extractWeaponsLangNames(CACHE_DIR, LANGS)),
+	)
+	await fs.writeFile(
+		`${DATA_DIR}/artifact_names.yaml`,
+		yaml.stringify(await extractArtifactsLangNames(CACHE_DIR, LANGS)),
+	)
+	await fs.writeFile(
+		`${DATA_DIR}/character_names.yaml`,
+		yaml.stringify(await extractCharactersLangNames(CACHE_DIR, LANGS)),
+	)
+}
 
-	/** @type {import('./update_langs').ItemsLangNames} */
+async function saveWwwData() {
+	/** @type {import('#lib/parsing/helperteam').BuildInfo} */
+	const builds = yaml.parse(await fs.readFile(`${DATA_DIR}/builds.yaml`, 'utf-8'))
+
+	/** @type {import('#lib/parsing').ItemsLangNames} */
 	const characterNames = yaml.parse(await fs.readFile(`${DATA_DIR}/character_names.yaml`, 'utf-8'))
 
-	/** @type {import('./update_langs').ItemsLangNames} */
+	/** @type {import('#lib/parsing').ItemsLangNames} */
 	const weaponNames = yaml.parse(await fs.readFile(`${DATA_DIR}/weapon_names.yaml`, 'utf-8'))
 
-	/** @type {import('./update_langs').ItemsLangNames} */
+	/** @type {import('#lib/parsing').ItemsLangNames} */
 	const artifactNames = yaml.parse(await fs.readFile(`${DATA_DIR}/artifact_names.yaml`, 'utf-8'))
 
 	const lang = 'en'
-
-	await fs.mkdir(DATA_DIR, { recursive: true })
-	await fs.writeFile(`${DATA_DIR}/builds.yaml`, yaml.stringify(build))
 
 	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
 		await fs.rm(dir, { recursive: true, force: true })
@@ -147,10 +183,10 @@ const fixes = {
 		`
 import { apiGetJSONFile } from 'src/api'
 
-import type { CharacterShortInfo } from 'lib/parsing'
-export const charactersShortList: CharacterShortInfo[] = ${JSON.stringify(makeCharacterShortList(build))}
+import type { CharacterShortInfo } from '#lib/parsing/helperteam'
+export const charactersShortList: CharacterShortInfo[] = ${JSON.stringify(makeCharacterShortList(builds))}
 
-import type { CharacterFullInfo } from 'lib/parsing'
+import type { CharacterFullInfo } from '#lib/parsing/helperteam'
 export { CharacterFullInfo }
 export function apiGetCharacterFullInfo(code:string, signal:AbortSignal): Promise<CharacterFullInfo> {
 	return apiGetJSONFile(\`/generated/characters/\${code}.json\`, signal)
@@ -158,20 +194,18 @@ export function apiGetCharacterFullInfo(code:string, signal:AbortSignal): Promis
 	)
 
 	await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
-	for (const character of build.characters)
+	for (const character of builds.characters)
 		await fs.writeFile(
 			`${WWW_DYNAMIC_DIR}/characters/${character.code}.json`,
-			JSON.stringify(makeCharacterBuildInfo(build, character, characterNames, lang)),
+			JSON.stringify(makeCharacterBuildInfo(builds, character, characterNames, lang)),
 		)
 
-	await fs.writeFile(`${WWW_DYNAMIC_DIR}/weapons.json`, JSON.stringify(build.weapons))
-	await fs.writeFile(`${WWW_DYNAMIC_DIR}/artifacts.json`, JSON.stringify(build.artifacts))
+	await fs.writeFile(`${WWW_DYNAMIC_DIR}/weapons.json`, JSON.stringify(builds.weapons))
+	await fs.writeFile(`${WWW_DYNAMIC_DIR}/artifacts.json`, JSON.stringify(builds.artifacts))
 
-	await fs.writeFile(`${WWW_DYNAMIC_DIR}/changelogs.json`, JSON.stringify(build.changelogsTable))
+	await fs.writeFile(`${WWW_DYNAMIC_DIR}/changelogs.json`, JSON.stringify(builds.changelogsTable))
 	await fs.writeFile(
 		`${WWW_DYNAMIC_DIR}/changelogs_recent.json`,
-		JSON.stringify(makeRecentChangelogsTable(build.changelogsTable)),
+		JSON.stringify(makeRecentChangelogsTable(builds.changelogsTable)),
 	)
-
-	// setTimeout(() => {}, 1000000)
-})().catch(console.error)
+}

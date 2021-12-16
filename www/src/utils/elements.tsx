@@ -6,7 +6,7 @@ import element_Geo from 'src/media/Element_Geo.png'
 import element_Hydro from 'src/media/Element_Hydro.png'
 import element_Pyro from 'src/media/Element_Pyro.png'
 
-import type { GI_ElementCode } from 'lib/genshin'
+import type { GI_ElementCode } from '#lib/genshin'
 
 export type GI_Element = { readonly code: GI_ElementCode; imgSrc: string }
 export const elements: GI_Element[] = [
