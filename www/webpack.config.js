@@ -51,7 +51,7 @@ export default async function (env, argv) {
 		},
 		module: {
 			// роняет билд при попытке импортировать из модуля то, что он не экспортирует
-			strictExportPresence: true,
+			strictExportPresence: false,
 			rules: [
 				{
 					test: /\.tsx?$/,

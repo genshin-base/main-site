@@ -70,7 +70,7 @@ const fixes = {
 			with: 'Amenoma Kageuchi',
 		},
 		{
-			characterCodes: ['amber', 'fischl', 'kujou-sara', 'childe', 'ganyu'],
+			characterCodes: ['amber', 'fischl', 'kujou-sara', 'tartaglia', 'ganyu'],
 			replace: /^Viridescent Hunt$/i,
 			with: 'The Viridescent Hunt',
 		},
@@ -117,15 +117,25 @@ const fixes = {
 	const build = await extractBuilds(spreadsheet, fixes)
 	checkFixesUsage(fixes)
 
-	console.log('')
 	// console.log(yaml.stringify(build.elementMap['pyro']))
 	// console.log(JSON.stringify(build.elementMap))
 
 	// build.changelogsTable.rows.length = 0
 	// console.log(JSON.stringify(build).length)
 
+	/** @type {import('./update_langs').ItemsLangNames} */
+	const characterNames = yaml.parse(await fs.readFile(`${DATA_DIR}/character_names.yaml`, 'utf-8'))
+
+	/** @type {import('./update_langs').ItemsLangNames} */
+	const weaponNames = yaml.parse(await fs.readFile(`${DATA_DIR}/weapon_names.yaml`, 'utf-8'))
+
+	/** @type {import('./update_langs').ItemsLangNames} */
+	const artifactNames = yaml.parse(await fs.readFile(`${DATA_DIR}/artifact_names.yaml`, 'utf-8'))
+
+	const lang = 'en'
+
 	await fs.mkdir(DATA_DIR, { recursive: true })
-	await fs.writeFile(`${DATA_DIR}/generated.yaml`, yaml.stringify(build))
+	await fs.writeFile(`${DATA_DIR}/builds.yaml`, yaml.stringify(build))
 
 	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
 		await fs.rm(dir, { recursive: true, force: true })
@@ -151,7 +161,7 @@ export function apiGetCharacterFullInfo(code:string, signal:AbortSignal): Promis
 	for (const character of build.characters)
 		await fs.writeFile(
 			`${WWW_DYNAMIC_DIR}/characters/${character.code}.json`,
-			JSON.stringify(makeCharacterBuildInfo(build, character)),
+			JSON.stringify(makeCharacterBuildInfo(build, character, characterNames, lang)),
 		)
 
 	await fs.writeFile(`${WWW_DYNAMIC_DIR}/weapons.json`, JSON.stringify(build.weapons))

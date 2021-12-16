@@ -12,6 +12,8 @@ import { getCharacterCodeFromName } from '../lib/parsing/characters.js'
 
 const LANGS = ['en', 'ru']
 
+/** @typedef {Record<string,Record<string,string>>} ItemsLangNames */
+
 const __filename = fileURLToPath(import.meta.url)
 const baseDir = dirname(__filename) + '/..'
 const DATA_DIR = `${baseDir}/builds_data`
@@ -75,9 +77,10 @@ function addNames(names, map, lang) {
 /**
  * @param {Map<string,Record<string,string>>} id2names
  * @param {(name:string) => string} codeFunc
+ * @returns {ItemsLangNames}
  */
 function idMap2codeRecord(id2names, codeFunc) {
-	const res = {}
+	const res = /**@type {ItemsLangNames}*/ ({})
 	for (const names of id2names.values()) res[codeFunc(names.en)] = names
 	return res
 }
