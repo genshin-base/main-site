@@ -16,6 +16,7 @@ import { makeCharacterFullInfo, makeCharacterShortList } from '#lib/parsing/help
 import { makeArtifactFullInfo } from '#lib/parsing/helperteam/artifacts.js'
 import { makeWeaponFullInfo } from '#lib/parsing/helperteam/weapons.js'
 import { makeRecentChangelogsTable } from '#lib/parsing/helperteam/changelogs.js'
+import { trigramSearcherFromStrings } from '#lib/trigrams.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -23,57 +24,6 @@ const LANGS = ['en', 'ru']
 
 /** @type {import('#lib/parsing/helperteam/fixes.js').BuildsExtractionFixes} */
 const fixes = {
-	weapons: [
-		{
-			col: 'name',
-			replace: /Favonious Codex/i,
-			with: 'favonius codex',
-		},
-		{
-			col: 'name',
-			replace: /Wavebreaker/i,
-			with: "Wavebreaker's Fin",
-		},
-	],
-	charactersArtifactsMatch: [
-		{
-			characterCodes: ['rosaria'],
-			replace: /Lavawalkers Epiphany/i,
-			with: 'lavawalker',
-		},
-		{
-			characterCodes: ['diona', 'qiqi', 'sayu'],
-			replace: /Maiden's Beloved/i,
-			with: 'maiden beloved',
-		},
-	],
-	charactersWeaponsMatch: [
-		{
-			characterCodes: ['traveler'],
-			replace: /^Aquilla Favonia$/i,
-			with: 'aquila favonia',
-		},
-		{
-			characterCodes: ['xiangling'],
-			replace: /^Wavebreaker$/i,
-			with: "Wavebreaker's Fin",
-		},
-		{
-			characterCodes: ['xinyan'],
-			replace: /^Skyrider's Greatsword$/i,
-			with: 'Skyrider Greatsword',
-		},
-		{
-			characterCodes: ['kaeya'],
-			replace: /^Anemona Kageuchi$/i,
-			with: 'Amenoma Kageuchi',
-		},
-		{
-			characterCodes: ['amber', 'fischl', 'kujou-sara', 'tartaglia', 'ganyu'],
-			replace: /^Viridescent Hunt$/i,
-			with: 'The Viridescent Hunt',
-		},
-	],
 	sheets: [
 		{
 			// у Барбары у столбца роли нет заголовка
@@ -104,14 +54,21 @@ const WWW_STATIC_DIR = `${baseDir}/www/src/generated`
 const WWW_DYNAMIC_DIR = `${baseDir}/www/public/generated`
 
 ;(async () => {
-	await extractAndSaveBuildsInfo()
 	await extractAndSaveLangNames()
+	await extractAndSaveBuildsInfo()
 	await saveWwwData()
 	console.log('done.')
 	// setTimeout(() => {}, 1000000)
 })().catch(console.error)
 
 async function extractAndSaveBuildsInfo() {
+	const artifactCodes = Object.entries(await loadArtifactNames()).map(([code]) => code)
+	const weaponCodes = Object.entries(await loadWeaponNames()).map(([code]) => code)
+	const knownCodes = {
+		artifacts: trigramSearcherFromStrings(artifactCodes),
+		weapons: trigramSearcherFromStrings(weaponCodes),
+	}
+
 	await fs.mkdir(CACHE_DIR, { recursive: true })
 
 	const spreadsheet = await loadSpreadsheetCached(
@@ -128,41 +85,25 @@ async function extractAndSaveBuildsInfo() {
 	)
 
 	clearFixesUsage(fixes)
-	const build = await extractBuilds(spreadsheet, fixes)
+	const build = await extractBuilds(spreadsheet, knownCodes, fixes)
 	checkFixesUsage(fixes)
 
 	await fs.mkdir(DATA_DIR, { recursive: true })
-	await fs.writeFile(`${DATA_DIR}/builds.yaml`, yaml.stringify(build))
+	await saveBuilds(build)
 }
 
 async function extractAndSaveLangNames() {
 	await fs.mkdir(DATA_DIR, { recursive: true })
-	await fs.writeFile(
-		`${DATA_DIR}/weapon_names.yaml`,
-		yaml.stringify(await extractWeaponsLangNames(CACHE_DIR, LANGS)),
-	)
-	await fs.writeFile(
-		`${DATA_DIR}/artifact_names.yaml`,
-		yaml.stringify(await extractArtifactsLangNames(CACHE_DIR, LANGS)),
-	)
-	await fs.writeFile(
-		`${DATA_DIR}/character_names.yaml`,
-		yaml.stringify(await extractCharactersLangNames(CACHE_DIR, LANGS)),
-	)
+	await saveWeaponsNames(await extractWeaponsLangNames(CACHE_DIR, LANGS))
+	await saveArtifactsNames(await extractArtifactsLangNames(CACHE_DIR, LANGS))
+	await saveCharactersNames(await extractCharactersLangNames(CACHE_DIR, LANGS))
 }
 
 async function saveWwwData() {
-	/** @type {import('#lib/parsing/helperteam').BuildInfo} */
-	const builds = yaml.parse(await fs.readFile(`${DATA_DIR}/builds.yaml`, 'utf-8'))
-
-	/** @type {import('#lib/parsing').ItemsLangNames} */
-	const characterNames = yaml.parse(await fs.readFile(`${DATA_DIR}/character_names.yaml`, 'utf-8'))
-
-	/** @type {import('#lib/parsing').ItemsLangNames} */
-	const weaponNames = yaml.parse(await fs.readFile(`${DATA_DIR}/weapon_names.yaml`, 'utf-8'))
-
-	/** @type {import('#lib/parsing').ItemsLangNames} */
-	const artifactNames = yaml.parse(await fs.readFile(`${DATA_DIR}/artifact_names.yaml`, 'utf-8'))
+	const builds = await loadBuilds()
+	const characterNames = await loadCharacterNames()
+	const artifactNames = await loadArtifactNames()
+	const weaponNames = await loadWeaponNames()
 
 	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
 		await fs.rm(dir, { recursive: true, force: true })
@@ -225,3 +166,36 @@ export function apiGetChangelogs(onlyRecent:boolean, signal:AbortSignal): Promis
 		JSON.stringify(makeRecentChangelogsTable(builds.changelogsTable)),
 	)
 }
+
+/**
+ * @param {string} prefix
+ * @param {import('#lib/parsing').ItemsLangNames} names
+ */
+async function saveNames(prefix, names) {
+	await fs.writeFile(`${DATA_DIR}/${prefix}_names.yaml`, yaml.stringify(names))
+}
+/**
+ * @param {string} prefix
+ * @returns {Promise<import('#lib/parsing').ItemsLangNames>}
+ */
+async function loadNames(prefix) {
+	return yaml.parse(await fs.readFile(`${DATA_DIR}/${prefix}_names.yaml`, 'utf-8'))
+}
+
+/** @param {import('#lib/parsing/helperteam').BuildInfo} builds */
+async function saveBuilds(builds) {
+	await fs.writeFile(`${DATA_DIR}/builds.yaml`, yaml.stringify(builds))
+}
+/** @returns {Promise<import('#lib/parsing/helperteam').BuildInfo>} */
+async function loadBuilds() {
+	return yaml.parse(await fs.readFile(`${DATA_DIR}/builds.yaml`, 'utf-8'))
+}
+
+const saveCharactersNames = saveNames.bind(null, 'character')
+const loadCharacterNames = loadNames.bind(null, 'character')
+
+const saveArtifactsNames = saveNames.bind(null, 'artifact')
+const loadArtifactNames = loadNames.bind(null, 'artifact')
+
+const saveWeaponsNames = saveNames.bind(null, 'weapon')
+const loadWeaponNames = loadNames.bind(null, 'weapon')
