@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'preact/hooks'
+import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
 
 type Pending = { _type: 'pending' }
 
@@ -35,4 +35,25 @@ export function useFetch<T>(
 	}, args)
 
 	return data
+}
+export const useToggle = (initial: boolean): [boolean, () => void] => {
+	const [flagState, setFlagState] = useState(initial)
+	return [flagState, useCallback(() => setFlagState(status => !status), [])]
+}
+export const useClickAway = (ref: preact.RefObject<HTMLElement>, callback?: () => void): void => {
+	const handleClick = (e: MouseEvent | TouchEvent) => {
+		if (ref.current && e.target instanceof HTMLElement && !ref.current.contains(e.target)) {
+			callback && callback()
+		}
+	}
+	useEffect(() => {
+		document.addEventListener('mousedown', handleClick)
+		document.addEventListener('touchstart', handleClick)
+		// document.addEventListener('click', handleClick)
+		return () => {
+			document.removeEventListener('mousedown', handleClick)
+			document.removeEventListener('touchstart', handleClick)
+			// document.removeEventListener('click', handleClick)
+		}
+	})
 }

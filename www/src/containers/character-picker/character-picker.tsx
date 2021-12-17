@@ -1,9 +1,9 @@
 import { isLoaded, useFetch } from 'src/api/hooks'
 import { apiGetCharacterFullInfo, charactersShortList } from 'src/generated'
-import { weaponTypes } from 'src/utils/weaponTypes'
+import { weaponTypes } from 'src/utils/weapon-types'
 import character_Amber_Thumb from '../../media/Character_Amber_Thumb.png' // todo remove
 import { elements } from '../../utils/elements'
-import { ItemAvatar } from '../item-cards'
+import { ItemAvatar } from '../item-cards/item-cards'
 import { CharacterPickerMobile } from './mobile-character-picker'
 
 import './character-picker.scss'

@@ -3,7 +3,7 @@ import character_Sangonomiya_Kokomi_Portrait from 'src/media/Character_Sangonomi
 import weaponIcon from 'src/media/Weapon_Song_of_Broken_Pines.png'
 import { CharacterPortrait } from 'src/components/characters'
 import { Tabs, BtnTabGroup } from 'src/components/tabs'
-import { LabeledItemAvatar } from 'src/containers/item-cards'
+import { LabeledItemAvatar } from 'src/containers/item-cards/item-cards'
 
 // todo remove
 const roles = [
@@ -150,7 +150,7 @@ export function CharacterBuildDetailed({
 				onTabSelect={t => {
 					t
 				}}
-				classes="w-100 my-3"
+				classes="w-100 mt-3 mb-0"
 			/>
 			<div className="">
 				<div className="my-3">

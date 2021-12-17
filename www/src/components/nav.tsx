@@ -1,8 +1,13 @@
-import { useState } from 'preact/hooks'
+import { useCallback, useRef, useState } from 'preact/hooks'
+import { useClickAway } from 'src/api/hooks'
 type Props = { isNavExpanded: boolean }
 
 export function Nav({ isNavExpanded }: Props): JSX.Element {
 	const [isExpanded, setIsExpanded] = useState(false)
+	const ddRef = useRef(null)
+	const closeDd = useCallback(() => isExpanded && setIsExpanded(false), [setIsExpanded, isExpanded])
+	const openDd = useCallback(() => !isExpanded && setIsExpanded(true), [setIsExpanded, isExpanded])
+	useClickAway(ddRef, closeDd)
 	// TODO клик мимо компонента
 	return (
 		<div className={`collapse navbar-collapse ${isNavExpanded ? 'show' : ''}`}>
@@ -24,12 +29,16 @@ export function Nav({ isNavExpanded }: Props): JSX.Element {
 						className={`nav-link dropdown-toggle ${isExpanded ? 'show' : ''}`}
 						id="navbarDropdown"
 						role="button"
-						onClick={() => setIsExpanded(!isExpanded)}
+						onClick={openDd}
 					>
 						English
 					</a>
 					{/* todo почему-то не добавляется класс dropdown-menu-end */}
-					<ul className={`dropdown-menu ${isExpanded ? 'show' : ''}`} style={'right: 0'}>
+					<ul
+						className={`dropdown-menu ${isExpanded ? 'show' : ''}`}
+						style={'right: 0'}
+						ref={ddRef}
+					>
 						<li>
 							<a className="dropdown-item" href="#">
 								English

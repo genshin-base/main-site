@@ -1,5 +1,5 @@
 import character_Amber_Thumb from '../../media/Character_Amber_Thumb.png'
-import { ItemAvatar } from '../item-cards'
+import { ItemAvatar } from '../item-cards/item-cards'
 
 export function LastUsedCharacters({ onCharacterSelect }: { onCharacterSelect: (any) => void }) {
 	const characters = [4, 5, 5, 4]

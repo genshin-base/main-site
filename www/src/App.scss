@@ -12,3 +12,20 @@ html, body, .app-container{
 .w-33{
 	width: 33.33%
 }
+.mw-75{
+	max-width: 75%
+}
+
+.mvh-50{
+	max-height: 50vh
+}
+.c-pointer{
+	cursor: pointer;
+}
+
+
+@media (min-width: 1200px) {//xl
+	.mw-xl-75{
+		max-width: 75%!important
+	}
+}
