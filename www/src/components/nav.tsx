@@ -1,5 +1,7 @@
 import { useCallback, useRef, useState } from 'preact/hooks'
-import { useClickAway } from 'src/api/hooks'
+
+import { useClickAway } from '#src/api/hooks'
+
 type Props = { isNavExpanded: boolean }
 
 export function Nav({ isNavExpanded }: Props): JSX.Element {

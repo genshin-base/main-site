@@ -1,10 +1,9 @@
 import { useState } from 'preact/hooks'
 
-import character_Amber_Thumb from 'src/media/Character_Amber_Thumb.png' // todo remove
-import { elements } from 'src/utils/elements'
-
-import { weaponTypes } from 'src/utils/weapon-types'
-import { ItemAvatar } from '../item-cards/item-cards'
+import { ItemAvatar } from '#src/containers/item-cards/item-cards'
+import character_Amber_Thumb from '#src/media/Character_Amber_Thumb.png' // todo remove
+import { elements } from '#src/utils/elements'
+import { weaponTypes } from '#src/utils/weapon-types'
 
 import type { GI_ElementCode } from '#lib/genshin'
 import type { GI_WeaponTypeCode } from '#lib/genshin'

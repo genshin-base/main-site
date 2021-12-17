@@ -1,8 +1,8 @@
-import icon_Bow from 'src/media/Icon_Bow.png'
-import icon_Catalyst from 'src/media/Icon_Catalyst.png'
-import icon_Claymore from 'src/media/Icon_Claymore.png'
-import icon_Polearm from 'src/media/Icon_Polearm.png'
-import icon_Sword from 'src/media/Icon_Sword.png'
+import icon_Bow from '#src/media/Icon_Bow.png'
+import icon_Catalyst from '#src/media/Icon_Catalyst.png'
+import icon_Claymore from '#src/media/Icon_Claymore.png'
+import icon_Polearm from '#src/media/Icon_Polearm.png'
+import icon_Sword from '#src/media/Icon_Sword.png'
 
 import type { GI_WeaponTypeCode } from '#lib/genshin'
 

@@ -44,7 +44,7 @@ export default async function (env, argv) {
 		},
 		resolve: {
 			extensions: ['.js', '.tsx', '.ts'],
-			alias: { src: SRC, lib: LIB },
+			alias: { '#lib': LIB, '#src': SRC },
 		},
 		optimization: {
 			minimize: isProd,

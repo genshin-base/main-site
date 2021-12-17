@@ -1,6 +1,7 @@
-import { GI_RarityCode } from '#lib/genshin'
 import { useCallback, useRef, useState } from 'preact/hooks'
-import { ItemDetailDdWrap } from 'src/components/item-detail-dd-wrap'
+
+import { GI_RarityCode } from '#lib/genshin'
+import { ItemDetailDdWrap } from '#src/components/item-detail-dd-wrap'
 import { ArtifactCard } from './dd-cards'
 
 import './item-cards.scss'

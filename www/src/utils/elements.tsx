@@ -1,10 +1,10 @@
-import element_Anemo from 'src/media/Element_Anemo.png'
-// import element_Dendro from 'src/media/Element_Dendro.png'
-import element_Cryo from 'src/media/Element_Cryo.png'
-import element_Electro from 'src/media/Element_Electro.png'
-import element_Geo from 'src/media/Element_Geo.png'
-import element_Hydro from 'src/media/Element_Hydro.png'
-import element_Pyro from 'src/media/Element_Pyro.png'
+import element_Anemo from '#src/media/Element_Anemo.png'
+// import element_Dendro from '#src/media/Element_Dendro.png'
+import element_Cryo from '#src/media/Element_Cryo.png'
+import element_Electro from '#src/media/Element_Electro.png'
+import element_Geo from '#src/media/Element_Geo.png'
+import element_Hydro from '#src/media/Element_Hydro.png'
+import element_Pyro from '#src/media/Element_Pyro.png'
 
 import type { GI_ElementCode } from '#lib/genshin'
 

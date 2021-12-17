@@ -1,7 +1,8 @@
 import { useLayoutEffect, useRef, useState } from 'preact/hooks'
-import { useClickAway } from 'src/api/hooks'
-import { calcPosForDd } from 'src/utils/calc-pos-for-dd'
-import { createPortal } from 'src/utils/preact-compat'
+
+import { useClickAway } from '#src/api/hooks'
+import { calcPosForDd } from '#src/utils/calc-pos-for-dd'
+import { createPortal } from '#src/utils/preact-compat'
 
 let modalsEl: Element | null = null
 

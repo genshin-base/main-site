@@ -172,7 +172,7 @@ async function saveWwwData() {
 	await fs.writeFile(
 		`${WWW_STATIC_DIR}/index.ts`,
 		`
-import { apiGetJSONFile } from 'src/api'
+import { apiGetJSONFile } from '#src/api'
 
 const LANG = 'en'
 

@@ -1,6 +1,7 @@
 import { useState } from 'preact/hooks'
-import { CharacterPicker } from 'src/containers/character-picker/character-picker'
-import { LastUsedCharacters } from 'src/containers/character-picker/last-used-characters'
+
+import { CharacterPicker } from '#src/containers/character-picker/character-picker'
+import { LastUsedCharacters } from '#src/containers/character-picker/last-used-characters'
 import { CharacterBuildDetailed } from './character-build-detailed'
 
 export function Builds() {

@@ -46,7 +46,7 @@
 			"disableSort": true
 		},
 		{
-			"regex": "^(\\.\\.?|src)/",
+			"regex": "^(\\.\\.?|#\\w+)/",
 			"orderLevel": 30
 		}
 	]

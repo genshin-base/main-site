@@ -1,9 +1,10 @@
+import { CharacterPortrait } from '#src/components/characters'
+import { BtnTabGroup, Tabs } from '#src/components/tabs'
+import { LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
+import character_Sangonomiya_Kokomi_Portrait from '#src/media/Character_Sangonomiya_Kokomi_Portrait.png'
+import weaponIcon from '#src/media/Weapon_Song_of_Broken_Pines.png'
+
 import './character-build-detailed.scss'
-import character_Sangonomiya_Kokomi_Portrait from 'src/media/Character_Sangonomiya_Kokomi_Portrait.png'
-import weaponIcon from 'src/media/Weapon_Song_of_Broken_Pines.png'
-import { CharacterPortrait } from 'src/components/characters'
-import { Tabs, BtnTabGroup } from 'src/components/tabs'
-import { LabeledItemAvatar } from 'src/containers/item-cards/item-cards'
 
 // todo remove
 const roles = [

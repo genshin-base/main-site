@@ -12,7 +12,8 @@
 	"author": "",
 	"license": "ISC",
 	"imports": {
-		"#lib/*": "./lib/*"
+		"#lib/*": "./lib/*",
+		"#src/*": "./src/*"
 	},
 	"devDependencies": {
 		"@types/chai": "^4.3.0",
