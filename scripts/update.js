@@ -1,14 +1,9 @@
-#!/bin/node
+#!/usr/bin/env node
 import { promises as fs } from 'fs'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
 import yaml from 'yaml'
-import {
-	extractBuilds,
-	makeCharacterBuildInfo,
-	makeCharacterShortList,
-	makeRecentChangelogsTable,
-} from '#lib/parsing/helperteam/index.js'
+import { extractBuilds } from '#lib/parsing/helperteam/index.js'
 import { loadSpreadsheetCached } from '#lib/google.js'
 import { checkFixesUsage, clearFixesUsage } from '#lib/parsing/helperteam/fixes.js'
 import { json_getText } from '#lib/parsing/helperteam/json.js'
@@ -17,6 +12,10 @@ import {
 	extractCharactersLangNames,
 	extractWeaponsLangNames,
 } from '#lib/parsing/honeyhunter/index.js'
+import { makeCharacterFullInfo, makeCharacterShortList } from '#lib/parsing/helperteam/characters.js'
+import { makeArtifactFullInfo } from '#lib/parsing/helperteam/artifacts.js'
+import { makeWeaponFullInfo } from '#lib/parsing/helperteam/weapons.js'
+import { makeRecentChangelogsTable } from '#lib/parsing/helperteam/changelogs.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -105,15 +104,9 @@ const WWW_STATIC_DIR = `${baseDir}/www/src/generated`
 const WWW_DYNAMIC_DIR = `${baseDir}/www/public/generated`
 
 ;(async () => {
-	console.log('processing builds...')
 	await extractAndSaveBuildsInfo()
-
-	console.log('processing langs...')
 	await extractAndSaveLangNames()
-
-	console.log('saving www data...')
 	await saveWwwData()
-
 	console.log('done.')
 	// setTimeout(() => {}, 1000000)
 })().catch(console.error)
@@ -171,8 +164,6 @@ async function saveWwwData() {
 	/** @type {import('#lib/parsing').ItemsLangNames} */
 	const artifactNames = yaml.parse(await fs.readFile(`${DATA_DIR}/artifact_names.yaml`, 'utf-8'))
 
-	const lang = 'en'
-
 	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
 		await fs.rm(dir, { recursive: true, force: true })
 		await fs.mkdir(dir, { recursive: true })
@@ -183,29 +174,54 @@ async function saveWwwData() {
 		`
 import { apiGetJSONFile } from 'src/api'
 
-import type { CharacterShortInfo } from '#lib/parsing/helperteam'
-export const charactersShortList: CharacterShortInfo[] = ${JSON.stringify(makeCharacterShortList(builds))}
+const LANG = 'en'
 
-import type { CharacterFullInfo } from '#lib/parsing/helperteam'
+import type { CharacterShortInfo } from '#lib/parsing/helperteam/characters'
+export const charactersShortList: CharacterShortInfo[] =
+	${JSON.stringify(makeCharacterShortList(builds.characters))}
+
+import type { CharacterFullInfo } from '#lib/parsing/helperteam/characters'
 export { CharacterFullInfo }
 export function apiGetCharacterFullInfo(code:string, signal:AbortSignal): Promise<CharacterFullInfo> {
-	return apiGetJSONFile(\`/generated/characters/\${code}.json\`, signal)
+	return apiGetJSONFile(\`/generated/characters/\${code}-\${LANG}.json\`, signal)
+}
+
+import type { ArtifactFullInfo } from '#lib/parsing/helperteam/artifacts'
+export { ArtifactFullInfo }
+export function apiGetArtifacts(code:string, signal:AbortSignal): Promise<ArtifactFullInfo[]> {
+	return apiGetJSONFile(\`/generated/artifacts-\${LANG}.json\`, signal)
+}
+
+import type { WeaponFullInfo } from '#lib/parsing/helperteam/weapons'
+export { WeaponFullInfo }
+export function apiGetWeapons(code:string, signal:AbortSignal): Promise<WeaponFullInfo[]> {
+	return apiGetJSONFile(\`/generated/weapons-\${LANG}.json\`, signal)
+}
+
+import type { ChangelogsTable } from '#lib/parsing/helperteam/changelogs'
+export { ChangelogsTable }
+export function apiGetChangelogs(onlyRecent:boolean, signal:AbortSignal): Promise<ChangelogsTable> {
+	return apiGetJSONFile(\`/generated/changelogs\${onlyRecent ? '-recent' : ''}.json\`, signal)
 }`,
 	)
 
-	await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
-	for (const character of builds.characters)
-		await fs.writeFile(
-			`${WWW_DYNAMIC_DIR}/characters/${character.code}.json`,
-			JSON.stringify(makeCharacterBuildInfo(builds, character, characterNames, lang)),
-		)
+	for (const lang of LANGS) {
+		const artifacts = builds.artifacts.map(x => makeArtifactFullInfo(x, artifactNames, lang))
+		const weapons = builds.weapons.map(x => makeWeaponFullInfo(x, weaponNames, lang))
 
-	await fs.writeFile(`${WWW_DYNAMIC_DIR}/weapons.json`, JSON.stringify(builds.weapons))
-	await fs.writeFile(`${WWW_DYNAMIC_DIR}/artifacts.json`, JSON.stringify(builds.artifacts))
+		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
+		for (const character of builds.characters)
+			await fs.writeFile(
+				`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`,
+				JSON.stringify(makeCharacterFullInfo(character, characterNames, artifacts, weapons, lang)),
+			)
 
+		await fs.writeFile(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, JSON.stringify(artifacts))
+		await fs.writeFile(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, JSON.stringify(weapons))
+	}
 	await fs.writeFile(`${WWW_DYNAMIC_DIR}/changelogs.json`, JSON.stringify(builds.changelogsTable))
 	await fs.writeFile(
-		`${WWW_DYNAMIC_DIR}/changelogs_recent.json`,
+		`${WWW_DYNAMIC_DIR}/changelogs-recent.json`,
 		JSON.stringify(makeRecentChangelogsTable(builds.changelogsTable)),
 	)
 }
