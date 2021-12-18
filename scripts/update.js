@@ -147,7 +147,9 @@ export function apiGetChangelogs(onlyRecent:boolean, signal:AbortSignal): Promis
 	)
 
 	for (const lang of LANGS) {
-		const artifacts = builds.artifacts.map(x => makeArtifactFullInfo(x, artifactNames, lang))
+		const artifacts = builds.artifacts.map(x =>
+			makeArtifactFullInfo(x, artifactNames, builds.characters, lang),
+		)
 		const weapons = builds.weapons.map(x => makeWeaponFullInfo(x, weaponNames, lang))
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
