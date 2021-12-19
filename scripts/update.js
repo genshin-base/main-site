@@ -8,16 +8,22 @@ import { loadSpreadsheetCached } from '#lib/google.js'
 import { checkFixesUsage, clearFixesUsage } from '#lib/parsing/helperteam/fixes.js'
 import { json_getText } from '#lib/parsing/helperteam/json.js'
 import {
-	extractArtifactsLangNames,
+	extractArtifactsData,
 	extractCharactersLangNames,
 	extractWeaponsLangNames,
+	getAndProcessItemImages,
 } from '#lib/parsing/honeyhunter/index.js'
-import { makeCharacterFullInfo, makeCharacterShortList } from '#lib/parsing/helperteam/characters.js'
+import {
+	getCharacterArtifactCodes,
+	makeCharacterFullInfo,
+	makeCharacterShortList,
+} from '#lib/parsing/helperteam/characters.js'
 import { makeArtifactFullInfo } from '#lib/parsing/helperteam/artifacts.js'
 import { makeWeaponFullInfo } from '#lib/parsing/helperteam/weapons.js'
 import { makeRecentChangelogsTable } from '#lib/parsing/helperteam/changelogs.js'
 import { trigramSearcherFromStrings } from '#lib/trigrams.js'
 import { createHash } from 'crypto'
+import { exists, info, relativeToCwd } from '#lib/utils.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -47,22 +53,61 @@ const fixes = {
 	],
 }
 
+const args = process.argv
+	.slice(2)
+	.flatMap(x => x.split(/(?<=^--[\w-]+)=/))
+	.reduce(
+		({ args, key }, cur) =>
+			cur.startsWith('--')
+				? ((args[cur] = 'true'), { args, key: cur })
+				: ((args[key] = cur), { args, key: '' }),
+		{ args: /**@type {Record<string, string>}*/ ({ '': '' }), key: '' },
+	).args
+
+function printUsage() {
+	console.log(`Usage:
+  node ${relativeToCwd(process.argv[1])} [-h|--help] [--data] [--imgs] [--all] [--force]`)
+}
+
+if (args['--help'] || args[''] === '-h') {
+	printUsage()
+	process.exit(2)
+}
+
 const __filename = fileURLToPath(import.meta.url)
 const baseDir = dirname(__filename) + '/..'
 const CACHE_DIR = `${baseDir}/cache`
 const DATA_DIR = `${baseDir}/builds_data`
 const WWW_STATIC_DIR = `${baseDir}/www/src/generated`
 const WWW_DYNAMIC_DIR = `${baseDir}/www/public/generated`
+const WWW_MEDIA_DIR = `${baseDir}/www/public/media`
 
 ;(async () => {
-	await extractAndSaveLangNames()
-	await extractAndSaveBuildsInfo()
-	await saveWwwData()
-	console.log('done.')
+	if (args['--force']) {
+		info('force update, clearing cache')
+		await fs.rm(CACHE_DIR, { recursive: true, force: true })
+	}
+
+	let updData = args['--data'] ?? args['--all'] ?? 'true'
+	let updImgs = args['--imgs'] ?? args['--all'] ?? args['--force']
+	if (updImgs === undefined) {
+		if (await exists(WWW_MEDIA_DIR))
+			info(`${relativeToCwd(WWW_MEDIA_DIR)} already exists, not updating images`)
+		else updImgs = 'true'
+	}
+
+	if (updData) await extractAndSaveLangNames()
+	if (updData) await extractAndSaveBuildsInfo()
+	if (updImgs) await extractAndSaveItemImages()
+	if (updData) await saveWwwData()
+
+	info('done.')
 	// setTimeout(() => {}, 1000000)
 })().catch(console.error)
 
 async function extractAndSaveBuildsInfo() {
+	info('updating builds')
+
 	const artifactCodes = Object.entries(await loadArtifactNames()).map(([code]) => code)
 	const weaponCodes = Object.entries(await loadWeaponNames()).map(([code]) => code)
 	const knownCodes = {
@@ -94,13 +139,30 @@ async function extractAndSaveBuildsInfo() {
 }
 
 async function extractAndSaveLangNames() {
+	info('updating languages')
 	await fs.mkdir(DATA_DIR, { recursive: true })
 	await saveWeaponsNames(await extractWeaponsLangNames(CACHE_DIR, LANGS))
-	await saveArtifactsNames(await extractArtifactsLangNames(CACHE_DIR, LANGS))
+	await saveArtifactsNames((await extractArtifactsData(CACHE_DIR, LANGS)).langNames)
 	await saveCharactersNames(await extractCharactersLangNames(CACHE_DIR, LANGS))
 }
 
+async function extractAndSaveItemImages() {
+	const builds = await loadBuilds()
+	const usedArtCodes = new Set(builds.characters.map(x => Array.from(getCharacterArtifactCodes(x))).flat())
+
+	const { imgs } = await extractArtifactsData(CACHE_DIR, LANGS)
+	for (const code of imgs.keys()) if (!usedArtCodes.has(code)) imgs.delete(code)
+	await fs.mkdir(`${WWW_MEDIA_DIR}/artifacts`, { recursive: true })
+
+	info('updating artifacts images')
+	await getAndProcessItemImages(imgs, CACHE_DIR, 'artifacts', code => {
+		return `${WWW_MEDIA_DIR}/artifacts/${code}.png`
+	})
+}
+
 async function saveWwwData() {
+	info('updating www JSONs')
+
 	const builds = await loadBuilds()
 	const characterNames = await loadCharacterNames()
 	const artifactNames = await loadArtifactNames()
