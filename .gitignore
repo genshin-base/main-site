@@ -4,4 +4,5 @@
 /www/dist/
 /www/src/generated/
 /www/public/generated/
+/www/public/media/
 /google.private_key.json
