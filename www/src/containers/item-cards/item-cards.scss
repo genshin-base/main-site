@@ -5,7 +5,14 @@
 		width: var(--thumb-height-sm);
 		height: var(--thumb-height-sm);
 	}
+	&.large{
+		width: var(--thumb-height-l);
+		height: var(--thumb-height-l);
+	}
 }
 img.dungeon-location{
 	min-height: 200px;
+}
+.item-detail-popover{
+	max-width: 576px!important;
 }

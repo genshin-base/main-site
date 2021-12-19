@@ -1,3 +1,4 @@
+import { BS_BreakpointCode, BS_getCurrBreakpoint } from '#src/utils/bootstrap'
 import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
 
 type Pending = { _type: 'pending' }
@@ -56,4 +57,30 @@ export const useClickAway = (ref: preact.RefObject<HTMLElement>, callback?: () =
 			// document.removeEventListener('click', handleClick)
 		}
 	})
+}
+
+interface WindowSize {
+	width: number | undefined
+	height: number | undefined
+	breakpoint: BS_BreakpointCode
+}
+export function useWindowSize(): WindowSize {
+	const [windowSize, setWindowSize] = useState<WindowSize>({
+		width: window?.innerWidth,
+		height: window?.innerHeight,
+		breakpoint: BS_getCurrBreakpoint(window?.innerWidth || 0),
+	})
+	useEffect(() => {
+		function handleResize() {
+			setWindowSize({
+				width: window.innerWidth,
+				height: window.innerHeight,
+				breakpoint: BS_getCurrBreakpoint(window.innerWidth),
+			})
+		}
+		window.addEventListener('resize', handleResize)
+		handleResize()
+		return () => window.removeEventListener('resize', handleResize)
+	}, [])
+	return windowSize
 }

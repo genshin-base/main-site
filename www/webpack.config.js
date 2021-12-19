@@ -43,7 +43,6 @@ export default async function (env, argv) {
 			// пока не нужно, см. file-loader
 			// assetModuleFilename: '[name].[hash:8][ext]',
 			publicPath: '/',
-			chunkFormat: 'module',
 		},
 		experiments: {
 			outputModule: true,
@@ -116,7 +115,7 @@ export default async function (env, argv) {
 			// заставляет писать пути к модулям в правильном регистре (даже в ОСях, где это не обязательно)
 			!isProd && new CaseSensitivePathsPlugin({}),
 			new MiniCssExtractPlugin({ filename: isProd ? '[name].[contenthash:8].css' : '[name].css' }),
-			new HtmlWebpackPlugin({ template: SRC + '/index.html', minify: false, scriptLoading: 'module' }),
+			new HtmlWebpackPlugin({ template: SRC + '/index.html', minify: false }),
 			new PurgeCSSPlugin({
 				paths: glob.sync(`${SRC}/**/*`, { nodir: true }),
 				variables: true,

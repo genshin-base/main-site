@@ -6,7 +6,8 @@ html, body, .app-container{
 
 :root {
 	--thumb-height: 3rem;
-	--thumb-height-sm: 2rem
+	--thumb-height-sm: 2rem;
+	--thumb-height-l: 5rem
 }
 
 .w-33{
@@ -15,9 +16,8 @@ html, body, .app-container{
 .mw-75{
 	max-width: 75%
 }
-
-.mvh-50{
-	max-height: 50vh
+.max-height-75vh{
+	max-height: 75vh
 }
 .c-pointer{
 	cursor: pointer;
@@ -25,7 +25,7 @@ html, body, .app-container{
 
 
 @media (min-width: 1200px) {//xl
-	.mw-xl-75{
-		max-width: 75%!important
+	.max-height-xl-50vh{
+		max-height: 50vh!important
 	}
 }

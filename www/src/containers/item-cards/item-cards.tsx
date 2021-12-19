@@ -1,8 +1,7 @@
 import { useCallback, useRef, useState } from 'preact/hooks'
 
 import { GI_RarityCode } from '#lib/genshin'
-import { ItemDetailDdWrap } from '#src/components/item-detail-dd-wrap'
-import { ArtifactCard } from './dd-cards'
+import { ArtifactDetailDd } from './dd-cards'
 
 import './item-cards.scss'
 
@@ -58,11 +57,7 @@ export function LabeledItemAvatar({
 		<div className={`text-nowrap d-inline ${classes}`} ref={elRef} onClick={openDd}>
 			<ItemAvatar rarity={rarity} classes="small" src={imgSrc} />
 			<label className="text-wrap align-middle lh-1 ps-1 mw-75 text-decoration-dashed">{title}</label>
-			{isExpanded ? (
-				<ItemDetailDdWrap onClickAway={closeDd} targetEl={elRef.current}>
-					<ArtifactCard />
-				</ItemDetailDdWrap>
-			) : null}
+			{isExpanded ? <ArtifactDetailDd onClickAway={closeDd} targetEl={elRef.current} /> : null}
 		</div>
 	)
 }
