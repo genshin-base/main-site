@@ -17,6 +17,7 @@ import { makeArtifactFullInfo } from '#lib/parsing/helperteam/artifacts.js'
 import { makeWeaponFullInfo } from '#lib/parsing/helperteam/weapons.js'
 import { makeRecentChangelogsTable } from '#lib/parsing/helperteam/changelogs.js'
 import { trigramSearcherFromStrings } from '#lib/trigrams.js'
+import { createHash } from 'crypto'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -110,41 +111,12 @@ async function saveWwwData() {
 		await fs.mkdir(dir, { recursive: true })
 	}
 
-	await fs.writeFile(
-		`${WWW_STATIC_DIR}/index.ts`,
-		`
-import { apiGetJSONFile } from '#src/api'
-
-const LANG = 'en'
-
-import type { CharacterShortInfo } from '#lib/parsing/helperteam/characters'
-export const charactersShortList: CharacterShortInfo[] =
-	${JSON.stringify(makeCharacterShortList(builds.characters))}
-
-import type { CharacterFullInfo } from '#lib/parsing/helperteam/characters'
-export { CharacterFullInfo }
-export function apiGetCharacterFullInfo(code:string, signal:AbortSignal): Promise<CharacterFullInfo> {
-	return apiGetJSONFile(\`/generated/characters/\${code}-\${LANG}.json\`, signal)
-}
-
-import type { ArtifactFullInfo } from '#lib/parsing/helperteam/artifacts'
-export { ArtifactFullInfo }
-export function apiGetArtifacts(code:string, signal:AbortSignal): Promise<ArtifactFullInfo[]> {
-	return apiGetJSONFile(\`/generated/artifacts-\${LANG}.json\`, signal)
-}
-
-import type { WeaponFullInfo } from '#lib/parsing/helperteam/weapons'
-export { WeaponFullInfo }
-export function apiGetWeapons(code:string, signal:AbortSignal): Promise<WeaponFullInfo[]> {
-	return apiGetJSONFile(\`/generated/weapons-\${LANG}.json\`, signal)
-}
-
-import type { ChangelogsTable } from '#lib/parsing/helperteam/changelogs'
-export { ChangelogsTable }
-export function apiGetChangelogs(onlyRecent:boolean, signal:AbortSignal): Promise<ChangelogsTable> {
-	return apiGetJSONFile(\`/generated/changelogs\${onlyRecent ? '-recent' : ''}.json\`, signal)
-}`,
-	)
+	const md5sum = createHash('md5')
+	async function whiteJsonAndHash(path, data) {
+		const content = JSON.stringify(data)
+		await fs.writeFile(path, content)
+		md5sum.update(content)
+	}
 
 	for (const lang of LANGS) {
 		const artifacts = builds.artifacts.map(x =>
@@ -154,18 +126,58 @@ export function apiGetChangelogs(onlyRecent:boolean, signal:AbortSignal): Promis
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 		for (const character of builds.characters)
-			await fs.writeFile(
+			await whiteJsonAndHash(
 				`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`,
-				JSON.stringify(makeCharacterFullInfo(character, characterNames, artifacts, weapons, lang)),
+				makeCharacterFullInfo(character, characterNames, artifacts, weapons, lang),
 			)
 
-		await fs.writeFile(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, JSON.stringify(artifacts))
-		await fs.writeFile(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, JSON.stringify(weapons))
+		await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, artifacts)
+		await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, weapons)
 	}
-	await fs.writeFile(`${WWW_DYNAMIC_DIR}/changelogs.json`, JSON.stringify(builds.changelogsTable))
-	await fs.writeFile(
+	await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/changelogs.json`, builds.changelogsTable)
+	await whiteJsonAndHash(
 		`${WWW_DYNAMIC_DIR}/changelogs-recent.json`,
-		JSON.stringify(makeRecentChangelogsTable(builds.changelogsTable)),
+		makeRecentChangelogsTable(builds.changelogsTable),
+	)
+
+	const hash = md5sum.digest('hex').slice(0, 8)
+	await fs.writeFile(
+		`${WWW_STATIC_DIR}/index.ts`,
+		`
+import { apiGetJSONFile } from '#src/api'
+
+const LANG = 'en'
+
+const get = <T>(prefix:string, signal:AbortSignal) =>
+	apiGetJSONFile(\`/generated/\${prefix}-\${LANG}.json?v=${hash}\`, signal) as Promise<T>
+
+import type { CharacterShortInfo } from '#lib/parsing/helperteam/characters'
+export const charactersShortList: CharacterShortInfo[] =
+	${JSON.stringify(makeCharacterShortList(builds.characters))}
+
+import type { CharacterFullInfo } from '#lib/parsing/helperteam/characters'
+export { CharacterFullInfo }
+export function apiGetCharacterFullInfo(code:string, signal:AbortSignal): Promise<CharacterFullInfo> {
+	return get(\`characters/\${code}\`, signal)
+}
+
+import type { ArtifactFullInfo } from '#lib/parsing/helperteam/artifacts'
+export { ArtifactFullInfo }
+export function apiGetArtifacts(code:string, signal:AbortSignal): Promise<ArtifactFullInfo[]> {
+	return get(\`artifacts\`, signal)
+}
+
+import type { WeaponFullInfo } from '#lib/parsing/helperteam/weapons'
+export { WeaponFullInfo }
+export function apiGetWeapons(code:string, signal:AbortSignal): Promise<WeaponFullInfo[]> {
+	return get(\`weapons\`, signal)
+}
+
+import type { ChangelogsTable } from '#lib/parsing/helperteam/changelogs'
+export { ChangelogsTable }
+export function apiGetChangelogs(onlyRecent:boolean, signal:AbortSignal): Promise<ChangelogsTable> {
+	return get(\`changelogs\${onlyRecent ? '-recent' : ''}\`, signal)
+}`,
 	)
 }
 

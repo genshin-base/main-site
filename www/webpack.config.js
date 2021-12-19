@@ -40,7 +40,13 @@ export default async function (env, argv) {
 		output: {
 			path: DIST,
 			filename: isProd ? '[name].[contenthash:8].js' : '[name].js',
+			// пока не нужно, см. file-loader
+			// assetModuleFilename: '[name].[hash:8][ext]',
 			publicPath: '/',
+			chunkFormat: 'module',
+		},
+		experiments: {
+			outputModule: true,
 		},
 		resolve: {
 			extensions: ['.js', '.tsx', '.ts'],
@@ -79,8 +85,20 @@ export default async function (env, argv) {
 					test: /\.s[ac]ss$/i,
 					use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
 				},
+				// Новые-модные вебпаковые ассеты (https://webpack.js.org/guides/asset-modules/)
+				// экспортируют CommonJS, ради подключения которого вебпак добавляет в бандл
+				// пол килобайта всякого мусора.
+				// Это некритично, но, раз уж я два часа разбирался в этой фигне, пусть тут
+				// пока полежит фикс: отключение фичи ассетов (javascript/auto) и использование
+				// устаревшего file-loader'а.
+				// Ждём, когда тут появится возможность экспортировать ES-модули
+				// https://github.com/webpack/webpack/blob/main/lib/asset/AssetGenerator.js#L272
 				{
-					test: /\.(png|svg)$/,
+					test: /\.(png|svg|json)$/,
+					type: 'javascript/auto',
+				},
+				{
+					test: /\.(png|svg|json)$/,
 					loader: 'file-loader',
 					options: { name: '[name].[hash:8].[ext]' },
 				},
@@ -98,7 +116,7 @@ export default async function (env, argv) {
 			// заставляет писать пути к модулям в правильном регистре (даже в ОСях, где это не обязательно)
 			!isProd && new CaseSensitivePathsPlugin({}),
 			new MiniCssExtractPlugin({ filename: isProd ? '[name].[contenthash:8].css' : '[name].css' }),
-			new HtmlWebpackPlugin({ template: SRC + '/index.html' }),
+			new HtmlWebpackPlugin({ template: SRC + '/index.html', minify: false, scriptLoading: 'module' }),
 			new PurgeCSSPlugin({
 				paths: glob.sync(`${SRC}/**/*`, { nodir: true }),
 				variables: true,
