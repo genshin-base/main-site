@@ -9,6 +9,7 @@ import { json_getText } from '#lib/parsing/helperteam/json.js'
 import {
 	extractArtifactsData,
 	extractCharactersLangNames,
+	extractDomainsData,
 	extractWeaponsData,
 	getAndProcessItemImages,
 } from '#lib/parsing/honeyhunter/index.js'
@@ -148,12 +149,13 @@ async function extractAndSaveBuildsInfo() {
 }
 
 async function extractAndSaveLangNames() {
-	info('updating languages')
+	info('updating items')
 	await fs.mkdir(DATA_DIR, { recursive: true })
 	clearHoneyhunterFixesUsage(fixes.honeyhunter)
 	await saveWeaponsNames((await extractWeaponsData(CACHE_DIR, LANGS, fixes.honeyhunter)).langNames)
 	await saveArtifactsNames((await extractArtifactsData(CACHE_DIR, LANGS, fixes.honeyhunter)).langNames)
 	await saveCharactersNames(await extractCharactersLangNames(CACHE_DIR, LANGS))
+	await saveDomains(await extractDomainsData(CACHE_DIR, LANGS, fixes.honeyhunter))
 	checkHoneyhunterFixesUsage(fixes.honeyhunter)
 }
 
@@ -301,3 +303,12 @@ const loadArtifactNames = loadNames.bind(null, 'artifact')
 
 const saveWeaponsNames = saveNames.bind(null, 'weapon')
 const loadWeaponNames = loadNames.bind(null, 'weapon')
+
+/** @param {import('#lib/parsing/honeyhunter').DomainsInfo} domains */
+async function saveDomains(domains) {
+	await fs.writeFile(`${DATA_DIR}/domains.yaml`, yaml.stringify(domains))
+}
+/** @returns {Promise<import('#lib/parsing/honeyhunter').DomainsInfo>} */
+async function loadDomains() {
+	return yaml.parse(await fs.readFile(`${DATA_DIR}/domains.yaml`, 'utf-8'))
+}
