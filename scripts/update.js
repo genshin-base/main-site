@@ -5,16 +5,16 @@ import { fileURLToPath } from 'url'
 import yaml from 'yaml'
 import { extractBuilds } from '#lib/parsing/helperteam/index.js'
 import { loadSpreadsheetCached } from '#lib/google.js'
-import { checkFixesUsage, clearFixesUsage } from '#lib/parsing/helperteam/fixes.js'
 import { json_getText } from '#lib/parsing/helperteam/json.js'
 import {
 	extractArtifactsData,
 	extractCharactersLangNames,
-	extractWeaponsLangNames,
+	extractWeaponsData,
 	getAndProcessItemImages,
 } from '#lib/parsing/honeyhunter/index.js'
 import {
 	getCharacterArtifactCodes,
+	getCharacterWeaponCodes,
 	makeCharacterFullInfo,
 	makeCharacterShortList,
 } from '#lib/parsing/helperteam/characters.js'
@@ -23,34 +23,48 @@ import { makeWeaponFullInfo } from '#lib/parsing/helperteam/weapons.js'
 import { makeRecentChangelogsTable } from '#lib/parsing/helperteam/changelogs.js'
 import { trigramSearcherFromStrings } from '#lib/trigrams.js'
 import { createHash } from 'crypto'
-import { exists, info, relativeToCwd } from '#lib/utils.js'
+import { info, relativeToCwd } from '#lib/utils.js'
+import { checkHelperteamFixesUsage, clearHelperteamFixesUsage } from '#lib/parsing/helperteam/fixes.js'
+import { checkHoneyhunterFixesUsage, clearHoneyhunterFixesUsage } from '#lib/parsing/honeyhunter/fixes.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
 const LANGS = ['en', 'ru']
 
-/** @type {import('#lib/parsing/helperteam/fixes.js').BuildsExtractionFixes} */
 const fixes = {
-	sheets: [
-		{
-			// у Барбары у столбца роли нет заголовка
-			title: /^hydro/i,
-			fixFunc(sheet) {
-				for (const { values: cells = [] } of sheet.data[0].rowData) {
-					for (let i = 0; i < cells.length; i++) {
-						const cell = cells[i]
-						if (json_getText(cell).trim().toLocaleLowerCase() === 'barbara') {
-							if (cells.length > i + 1 && json_getText(cells[i + 1]).trim() === '') {
-								cells[i + 1].userEnteredValue = { stringValue: 'role' }
-								return true
+	/** @type {import('#lib/parsing/helperteam/fixes').HelperteamFixes} */
+	helperteam: {
+		sheets: [
+			{
+				// у Барбары у столбца роли нет заголовка
+				title: /^hydro/i,
+				fixFunc(sheet) {
+					for (const { values: cells = [] } of sheet.data[0].rowData) {
+						for (let i = 0; i < cells.length; i++) {
+							const cell = cells[i]
+							if (json_getText(cell).trim().toLocaleLowerCase() === 'barbara') {
+								if (cells.length > i + 1 && json_getText(cells[i + 1]).trim() === '') {
+									cells[i + 1].userEnteredValue = { stringValue: 'role' }
+									return true
+								}
 							}
 						}
 					}
-				}
-				return false
+					return false
+				},
 			},
+		],
+	},
+	/** @type {import('#lib/parsing/honeyhunter/fixes').HoneyhunterFixes} */
+	honeyhunter: {
+		statuses: {
+			// некоторые предметы почему-то находятся в таблице нерелизнутого
+			weapons: [
+				{ actually: 'released', name: 'Predator' },
+				{ actually: 'released', name: "Mouun's Moon" },
+			],
 		},
-	],
+	},
 }
 
 const args = process.argv
@@ -88,13 +102,8 @@ const WWW_MEDIA_DIR = `${baseDir}/www/public/media`
 		await fs.rm(CACHE_DIR, { recursive: true, force: true })
 	}
 
-	let updData = args['--data'] ?? args['--all'] ?? 'true'
+	let updData = args['--data'] ?? args['--all'] ?? !args['--imgs']
 	let updImgs = args['--imgs'] ?? args['--all'] ?? args['--force']
-	if (updImgs === undefined) {
-		if (await exists(WWW_MEDIA_DIR))
-			info(`${relativeToCwd(WWW_MEDIA_DIR)} already exists, not updating images`)
-		else updImgs = 'true'
-	}
 
 	if (updData) await extractAndSaveLangNames()
 	if (updData) await extractAndSaveBuildsInfo()
@@ -130,9 +139,9 @@ async function extractAndSaveBuildsInfo() {
 		],
 	)
 
-	clearFixesUsage(fixes)
-	const build = await extractBuilds(spreadsheet, knownCodes, fixes)
-	checkFixesUsage(fixes)
+	clearHelperteamFixesUsage(fixes.helperteam)
+	const build = await extractBuilds(spreadsheet, knownCodes, fixes.helperteam)
+	checkHelperteamFixesUsage(fixes.helperteam)
 
 	await fs.mkdir(DATA_DIR, { recursive: true })
 	await saveBuilds(build)
@@ -141,23 +150,40 @@ async function extractAndSaveBuildsInfo() {
 async function extractAndSaveLangNames() {
 	info('updating languages')
 	await fs.mkdir(DATA_DIR, { recursive: true })
-	await saveWeaponsNames(await extractWeaponsLangNames(CACHE_DIR, LANGS))
-	await saveArtifactsNames((await extractArtifactsData(CACHE_DIR, LANGS)).langNames)
+	clearHoneyhunterFixesUsage(fixes.honeyhunter)
+	await saveWeaponsNames((await extractWeaponsData(CACHE_DIR, LANGS, fixes.honeyhunter)).langNames)
+	await saveArtifactsNames((await extractArtifactsData(CACHE_DIR, LANGS, fixes.honeyhunter)).langNames)
 	await saveCharactersNames(await extractCharactersLangNames(CACHE_DIR, LANGS))
+	checkHoneyhunterFixesUsage(fixes.honeyhunter)
 }
 
 async function extractAndSaveItemImages() {
 	const builds = await loadBuilds()
 	const usedArtCodes = new Set(builds.characters.map(x => Array.from(getCharacterArtifactCodes(x))).flat())
+	const usedWeaponCodes = new Set(builds.characters.map(x => Array.from(getCharacterWeaponCodes(x))).flat())
 
-	const { imgs } = await extractArtifactsData(CACHE_DIR, LANGS)
-	for (const code of imgs.keys()) if (!usedArtCodes.has(code)) imgs.delete(code)
-	await fs.mkdir(`${WWW_MEDIA_DIR}/artifacts`, { recursive: true })
+	{
+		info('updating artifacts images')
 
-	info('updating artifacts images')
-	await getAndProcessItemImages(imgs, CACHE_DIR, 'artifacts', code => {
-		return `${WWW_MEDIA_DIR}/artifacts/${code}.png`
-	})
+		const { imgs } = await extractArtifactsData(CACHE_DIR, LANGS, fixes.honeyhunter)
+		for (const code of imgs.keys()) if (!usedArtCodes.has(code)) imgs.delete(code)
+
+		await fs.mkdir(`${WWW_MEDIA_DIR}/artifacts`, { recursive: true })
+		await getAndProcessItemImages(imgs, CACHE_DIR, 'artifacts', code => {
+			return `${WWW_MEDIA_DIR}/artifacts/${code}.png`
+		})
+	}
+	{
+		info('updating weapons images')
+
+		const { imgs } = await extractWeaponsData(CACHE_DIR, LANGS, fixes.honeyhunter)
+		for (const code of imgs.keys()) if (!usedWeaponCodes.has(code)) imgs.delete(code)
+
+		await fs.mkdir(`${WWW_MEDIA_DIR}/weapons`, { recursive: true })
+		await getAndProcessItemImages(imgs, CACHE_DIR, 'weapons', code => {
+			return `${WWW_MEDIA_DIR}/weapons/${code}.png`
+		})
+	}
 }
 
 async function saveWwwData() {
