@@ -1,7 +1,7 @@
 import { ItemAvatar } from '#src/containers/item-cards/item-cards'
 import { charactersShortList } from '#src/generated'
 import { makeCharacterBuildHash } from '#src/hashstore'
-import character_Amber_Thumb from '#src/media/Character_Amber_Thumb.png' // todo remove
+import { getCharacterFaceIconSrc } from '#src/utils/characters'
 import { elements } from '#src/utils/elements'
 import { GI_WeaponType, weaponTypes } from '#src/utils/weapons'
 import { CharacterPickerMobile } from './mobile-character-picker'
@@ -25,7 +25,7 @@ function CharacterPickerDesktop({ weaponTypes }: { weaponTypes: GI_WeaponType[] 
 									.map(x => (
 										<ItemAvatar
 											key={x.code}
-											src={character_Amber_Thumb} //TODO
+											src={getCharacterFaceIconSrc(x.code)}
 											rarity={4}
 											hash={makeCharacterBuildHash(x.code)}
 											classes="mb-1 me-1 mb-xxl-2 me-xxl-2"

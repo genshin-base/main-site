@@ -8,7 +8,7 @@ import { loadSpreadsheetCached } from '#lib/google.js'
 import { json_getText } from '#lib/parsing/helperteam/json.js'
 import {
 	extractArtifactsData,
-	extractCharactersLangNames,
+	extractCharactersData,
 	extractDomainsData,
 	extractWeaponsData,
 	getAndProcessItemImages,
@@ -154,7 +154,7 @@ async function extractAndSaveLangNames() {
 	clearHoneyhunterFixesUsage(fixes.honeyhunter)
 	await saveWeaponsNames((await extractWeaponsData(CACHE_DIR, LANGS, fixes.honeyhunter)).langNames)
 	await saveArtifactsNames((await extractArtifactsData(CACHE_DIR, LANGS, fixes.honeyhunter)).langNames)
-	await saveCharactersNames(await extractCharactersLangNames(CACHE_DIR, LANGS))
+	await saveCharactersNames((await extractCharactersData(CACHE_DIR, LANGS)).langNames)
 	await saveDomains(await extractDomainsData(CACHE_DIR, LANGS, fixes.honeyhunter))
 	checkHoneyhunterFixesUsage(fixes.honeyhunter)
 }
@@ -164,6 +164,15 @@ async function extractAndSaveItemImages() {
 	const usedArtCodes = new Set(builds.characters.map(x => Array.from(getCharacterArtifactCodes(x))).flat())
 	const usedWeaponCodes = new Set(builds.characters.map(x => Array.from(getCharacterWeaponCodes(x))).flat())
 
+	{
+		info('updating character face images')
+
+		const { faceImgs } = await extractCharactersData(CACHE_DIR, LANGS)
+		await fs.mkdir(`${WWW_MEDIA_DIR}/characters`, { recursive: true })
+		await getAndProcessItemImages(faceImgs, CACHE_DIR, 'characters_face', code => {
+			return `${WWW_MEDIA_DIR}/characters/${code}_face.png`
+		})
+	}
 	{
 		info('updating artifacts images')
 

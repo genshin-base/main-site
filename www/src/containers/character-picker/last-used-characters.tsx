@@ -1,17 +1,16 @@
-import character_Amber_Thumb from '../../media/Character_Amber_Thumb.png'
+import { makeCharacterBuildHash } from '#src/hashstore'
+import { getCharacterFaceIconSrc } from '#src/utils/characters'
 import { ItemAvatar } from '../item-cards/item-cards'
 
 export function LastUsedCharacters() {
-	const characters = [4, 5, 5, 4]
-	const charactersElems = characters.map(ch => (
+	const characterCodes = ['amber', 'bennett', 'kokomi']
+	const charactersElems = characterCodes.map(code => (
 		<ItemAvatar
-			src={character_Amber_Thumb}
-			rarity={ch === 4 ? 4 : 5}
+			src={getCharacterFaceIconSrc(code)}
+			rarity={code === 'kokomi' ? 5 : 4} //TODO
 			classes="mb-1 me-1 mb-xxl-2 me-xxl-2 small"
-			key={ch} //todo
-			// onClick={() => { TODO
-			// 	onCharacterSelect(ch)
-			// }}
+			key={code}
+			hash={makeCharacterBuildHash(code)}
 		/>
 	))
 	return (

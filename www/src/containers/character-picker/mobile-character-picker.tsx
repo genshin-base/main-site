@@ -3,13 +3,12 @@ import { useMemo, useState } from 'preact/hooks'
 import { ItemAvatar } from '#src/containers/item-cards/item-cards'
 import { charactersShortList } from '#src/generated'
 import { makeCharacterBuildHash } from '#src/hashstore'
-import character_Amber_Thumb from '#src/media/Character_Amber_Thumb.png' // todo remove
+import { getCharacterFaceIconSrc } from '#src/utils/characters'
 import { elements } from '#src/utils/elements'
 import { weaponTypes } from '#src/utils/weapons'
 
 import type { GI_ElementCode } from '#lib/genshin'
 import type { GI_WeaponTypeCode } from '#lib/genshin'
-
 export function CharacterPickerMobile() {
 	const [selectedElementCode, setSelectedElementCode] = useState<null | GI_ElementCode>(null)
 	const selectElement = el => setSelectedElementCode(selectedElementCode === el.code ? null : el.code)
@@ -42,7 +41,7 @@ export function CharacterPickerMobile() {
 			<div className="col py-31">
 				{characters.map(x => (
 					<ItemAvatar
-						src={character_Amber_Thumb}
+						src={getCharacterFaceIconSrc(x.code)}
 						rarity={4}
 						hash={makeCharacterBuildHash(x.code)}
 						classes="m-1"
