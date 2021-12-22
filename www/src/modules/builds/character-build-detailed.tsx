@@ -1,43 +1,20 @@
+import { useMemo, useState } from 'preact/hooks'
+
+import { CharacterBuildInfoRole } from '#src/../../lib/parsing/helperteam/characters'
+import { isLoaded, useFetch } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
-import { BtnTabGroup, Tabs } from '#src/components/tabs'
+import { BtnTabGroup, Tab, Tabs } from '#src/components/tabs'
 import { LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
+import { apiGetCharacterFullInfo } from '#src/generated'
+import { makeCharacterBuildDeselectHash } from '#src/hashstore'
 import character_Sangonomiya_Kokomi_Portrait from '#src/media/Character_Sangonomiya_Kokomi_Portrait.png'
-import weaponIcon from '#src/media/Weapon_Song_of_Broken_Pines.png'
+import { pluralizeEN } from '#src/utils/strings'
+import { getWeaponIconSrc } from '#src/utils/weapons'
 
 import './character-build-detailed.scss'
 
 // todo remove
-const roles = [
-	{ code: 'dps', isRecomended: true },
-	{ code: 'support', isRecomended: false },
-	{ code: 'burst-dps', isRecomended: false },
-]
-const tabs = roles.map(r => {
-	return {
-		code: r.code,
-		title: (
-			<span key={r.code}>
-				{r.isRecomended ? (
-					<span className="fs-4 lh-1 opacity-75 text-warning align-bottom">🟊</span>
-				) : null}
-				{r.code}
-			</span>
-		),
-	}
-})
-const selectedTab = tabs[0]
 
-const weapons: { rarity: 3 | 4 | 5; code: string; imgScr: string }[] = [
-	{ code: 'лещ', rarity: 5, imgScr: weaponIcon },
-	{ code: 'меч неч', rarity: 4, imgScr: weaponIcon },
-	{ code: 'меч с длинным инадзумским названием', rarity: 4, imgScr: weaponIcon },
-	{ code: 'лещ, но плохой', rarity: 3, imgScr: weaponIcon },
-]
-const weaponList = weapons.map(w => (
-	<li key={w.code} className="m-2 ms-0">
-		<LabeledItemAvatar imgSrc={w.imgScr} title={w.code} rarity={w.rarity} classes={'small'} />
-	</li>
-))
 const talentPriority = (
 	<>
 		<li>Normal Attack</li> <li>Skill</li> <li>Burst</li>
@@ -82,13 +59,74 @@ const notes = (
 )
 // end todo remove
 
-export function CharacterBuildDetailed({
-	selectedCharacter,
-	handleGoBack,
-}: {
-	selectedCharacter: unknown
-	handleGoBack: () => void
-}) {
+const DUMMY_TAB: Tab = {
+	title: '…',
+	code: '',
+}
+
+function makeRoleTab(r: CharacterBuildInfoRole): Tab {
+	return {
+		code: r.code,
+		title: (
+			<span key={r.code}>
+				{r.isRecommended ? (
+					<span className="fs-4 lh-1 opacity-75 text-warning align-bottom">🟊</span>
+				) : null}
+				{r.code}
+			</span>
+		),
+	}
+}
+
+export function CharacterBuildDetailed({ selectedCharacterCode }: { selectedCharacterCode: string }) {
+	const build = useFetch(
+		sig => apiGetCharacterFullInfo(selectedCharacterCode, sig),
+		[selectedCharacterCode],
+	)
+
+	// на случай серверного рендера: билд тут будет загружен сразу
+	const roleTabs = useMemo(
+		() => (isLoaded(build) ? build.character.roles.map(makeRoleTab) : [DUMMY_TAB]),
+		[build],
+	)
+	const [selectedRoleTabRaw, setSelectedRoleTab] = useState(DUMMY_TAB)
+	// на случай, если массив вкладок уже реактивно изменился, а выбранная вкладка ещё старая
+	const selectedRoleTab = roleTabs.includes(selectedRoleTabRaw)
+		? selectedRoleTabRaw
+		: roleTabs[0] ?? DUMMY_TAB
+
+	const weaponList = useMemo(() => {
+		if (!isLoaded(build)) return []
+		const role = build.character.roles.find(x => x.code === selectedRoleTab.code)
+		if (!role) return []
+		// TODO: role.weapons.notes, role.weapons.seeCharNotes
+		// TODO: rarity
+		return role.weapons.advices.map((advice, i) => (
+			<li key={i} className="m-2 ms-0">
+				{advice.similar.map(item => {
+					const weapon = build.weapons.find(x => x.code === item.code)
+					if (!weapon) return null
+					return (
+						<LabeledItemAvatar
+							imgSrc={getWeaponIconSrc(weapon.code)}
+							title={
+								weapon.name +
+								(item.refine === null ? '' : ` [${item.refine}]`) +
+								(item.stacks === null
+									? ''
+									: ` (${item.stacks} ${pluralizeEN(item.stacks, 'stack', 'stacks')})`) +
+								(item.notes === null ? '' : JSON.stringify(item.notes)) +
+								(item.seeCharNotes ? ' (see notes)' : '')
+							}
+							rarity={4}
+							classes={'small'}
+						/>
+					)
+				})}
+			</li>
+		))
+	}, [build, selectedRoleTab])
+
 	const CharacterDetailDesktop = (
 		<div className="d-none d-xl-block">
 			<div className="container float-end">
@@ -96,11 +134,9 @@ export function CharacterBuildDetailed({
 					<div className="col col-3"></div>
 					<div className="col col-9">
 						<Tabs
-							tabs={tabs}
-							selectedTab={selectedTab}
-							onTabSelect={t => {
-								t
-							}}
+							tabs={roleTabs}
+							selectedTab={selectedRoleTab}
+							onTabSelect={setSelectedRoleTab}
 						/>
 					</div>
 				</div>
@@ -146,11 +182,9 @@ export function CharacterBuildDetailed({
 				classes="w-75 character-portrait-mobile"
 			/>
 			<BtnTabGroup
-				tabs={tabs}
-				selectedTab={selectedTab}
-				onTabSelect={t => {
-					t
-				}}
+				tabs={roleTabs}
+				selectedTab={selectedRoleTab}
+				onTabSelect={setSelectedRoleTab}
 				classes="w-100 mt-3 mb-0"
 			/>
 			<div className="">
@@ -178,10 +212,16 @@ export function CharacterBuildDetailed({
 	return (
 		<div className="character-build-detailed mt-2 mb-3">
 			<div>
-				<button className="btn btn-secondary align-baseline" type="submit" onClick={handleGoBack}>
+				<a
+					className="btn btn-secondary align-baseline"
+					type="submit"
+					href={makeCharacterBuildDeselectHash()}
+				>
 					<span className="fs-4 lh-1 opacity-75">‹ </span> Back
-				</button>
-				<h5 className="px-3 d-inline align-baseline">Sangonomiya Kokomi </h5>
+				</a>
+				<h5 className="px-3 d-inline align-baseline">
+					{isLoaded(build) ? build.character.name : ''}
+				</h5>
 			</div>
 			{CharacterDetailDesktop}
 			{CharacterDetailMobile}

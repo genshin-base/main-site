@@ -1,78 +1,46 @@
-import { isLoaded, useFetch } from '#src/api/hooks'
 import { ItemAvatar } from '#src/containers/item-cards/item-cards'
-import { apiGetCharacterFullInfo, charactersShortList } from '#src/generated'
+import { charactersShortList } from '#src/generated'
+import { makeCharacterBuildHash } from '#src/hashstore'
 import character_Amber_Thumb from '#src/media/Character_Amber_Thumb.png' // todo remove
 import { elements } from '#src/utils/elements'
-import { weaponTypes } from '#src/utils/weapon-types'
+import { GI_WeaponType, weaponTypes } from '#src/utils/weapons'
 import { CharacterPickerMobile } from './mobile-character-picker'
 
 import './character-picker.scss'
 
-// todo remove
-const doNothing = () => {
-	0 === 0
-}
-const ThreeAmbers = () => (
-	<>
-		{[1, 2, 3].map(() => (
-			<ItemAvatar
-				src={character_Amber_Thumb}
-				rarity={5}
-				onClick={doNothing}
-				classes="mb-1 me-1 mb-xxl-2 me-xxl-2"
-			/>
-		))}
-	</>
-)
-const FiveAmbers = () => (
-	<>
-		{[1, 2, 3, 4, 5].map(() => (
-			<ItemAvatar
-				src={character_Amber_Thumb}
-				rarity={4}
-				onClick={doNothing}
-				classes="mb-1 me-1 mb-xxl-2 me-xxl-2"
-			/>
-		))}
-	</>
-)
-// end todo remove
-
-const desctopRows = elements.map((el, i, arr) => {
-	const isLastRowClass = i + 1 === arr.length ? 'rounded-bottom' : ''
+function CharacterPickerDesktop({ weaponTypes }: { weaponTypes: GI_WeaponType[] }) {
 	return (
-		<div className="row" key={el.code}>
-			<div className="col col-2 pt-3 pb-2 opacity-50 rounded-start">
-				<img className="rounded-circle d-block mx-auto" src={el.imgSrc} />
-			</div>
-			<div className={`col col-2 pt-3 pb-2 ${isLastRowClass}`}>
-				<ThreeAmbers />
-			</div>
-			<div className="col col-2 pt-3 pb-2">
-				<FiveAmbers />
-			</div>
-			<div className={`col col-2 pt-3 pb-2 ${isLastRowClass}`}>
-				<ThreeAmbers />
-			</div>
-			<div className="col col-2 pt-3 pb-2">
-				<ThreeAmbers />
-			</div>
-			<div className={`col col-2 pt-3 pb-2 ${isLastRowClass}`}>
-				<ThreeAmbers />
-			</div>
-		</div>
+		<>
+			{elements.map((el, i, arr) => {
+				const isLastRowClass = i + 1 === arr.length ? 'rounded-bottom' : ''
+				return (
+					<div className="row" key={el.code}>
+						<div className="col col-2 pt-3 pb-2 opacity-50 rounded-start">
+							<img className="rounded-circle d-block mx-auto" src={el.imgSrc} />
+						</div>
+						{weaponTypes.map(wType => (
+							<div className={`col col-2 pt-3 pb-2 ${isLastRowClass}`} key={wType.code}>
+								{charactersShortList
+									.filter(x => x.elementCode === el.code && x.weaponTypeCode === wType.code)
+									.map(x => (
+										<ItemAvatar
+											key={x.code}
+											src={character_Amber_Thumb} //TODO
+											rarity={4}
+											hash={makeCharacterBuildHash(x.code)}
+											classes="mb-1 me-1 mb-xxl-2 me-xxl-2"
+										/>
+									))}
+							</div>
+						))}
+					</div>
+				)
+			})}
+		</>
 	)
-})
+}
 
 export function CharacterPicker() {
-	const amber = useFetch(sig => apiGetCharacterFullInfo('amber', sig), [])
-	if (isLoaded(amber)) console.log(amber.character.code, amber)
-
-	console.log(
-		'characters list',
-		charactersShortList.map(x => x.code + ':' + x.elementCode),
-	)
-
 	return (
 		<div className="character-picker">
 			<div class="d-none d-xl-block container overflow-hidden big-table">
@@ -84,10 +52,10 @@ export function CharacterPicker() {
 						</div>
 					))}
 				</div>
-				{desctopRows}
+				<CharacterPickerDesktop weaponTypes={weaponTypes} />
 			</div>
 			<div class="d-xl-none">
-				<CharacterPickerMobile onCharacterSelect={doNothing} />
+				<CharacterPickerMobile />
 			</div>
 		</div>
 	)

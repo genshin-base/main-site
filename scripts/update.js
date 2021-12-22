@@ -239,7 +239,7 @@ import { apiGetJSONFile } from '#src/api'
 const LANG = 'en'
 
 const get = <T>(prefix:string, signal:AbortSignal) =>
-	apiGetJSONFile(\`/generated/\${prefix}-\${LANG}.json?v=${hash}\`, signal) as Promise<T>
+	apiGetJSONFile(\`generated/\${prefix}-\${LANG}.json?v=${hash}\`, signal) as Promise<T>
 
 import type { CharacterShortInfo } from '#lib/parsing/helperteam/characters'
 export const charactersShortList: CharacterShortInfo[] =

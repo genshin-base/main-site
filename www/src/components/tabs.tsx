@@ -1,4 +1,4 @@
-type Tab = { title: string | JSX.Element; code: string }
+export type Tab = { title: string | JSX.Element; code: string }
 
 export function Tabs({
 	tabs,
@@ -8,7 +8,7 @@ export function Tabs({
 }: {
 	tabs: Tab[]
 	selectedTab: Tab
-	onTabSelect: (Tab) => void
+	onTabSelect: (tab: Tab) => unknown
 	classes?: string
 }): JSX.Element {
 	return (

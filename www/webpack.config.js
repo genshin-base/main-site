@@ -19,6 +19,7 @@ export default async function (env, argv) {
 	if (argv.mode !== 'production' && argv.mode !== 'development') throw new Error('wrong mode: ' + argv.mode)
 
 	const isProd = argv.mode === 'production'
+	const assetPath = '/'
 
 	return {
 		mode: argv.mode,
@@ -42,7 +43,7 @@ export default async function (env, argv) {
 			filename: isProd ? '[name].[contenthash:8].js' : '[name].js',
 			// пока не нужно, см. file-loader
 			// assetModuleFilename: '[name].[hash:8][ext]',
-			publicPath: '/',
+			publicPath: assetPath,
 		},
 		experiments: {
 			outputModule: true,
@@ -106,6 +107,7 @@ export default async function (env, argv) {
 		plugins: [
 			new webpack.DefinePlugin({
 				'process.env.NODE_ENV': JSON.stringify(argv.mode),
+				'process.env.ASSET_PATH': JSON.stringify(assetPath),
 			}),
 			new ESLintPlugin({
 				context: SRC,

@@ -9,12 +9,12 @@ export function ItemAvatar({
 	src,
 	rarity,
 	classes = '',
-	onClick,
+	hash = '',
 }: {
 	src: string
 	rarity: GI_RarityCode
 	classes?: string
-	onClick?: () => void
+	hash?: string
 }): JSX.Element {
 	let rarityClass = ''
 	switch (rarity) {
@@ -29,11 +29,9 @@ export function ItemAvatar({
 			break
 	}
 	return (
-		<img
-			onClick={onClick}
-			className={`item-avatar rounded-circle ${onClick ? 'c-pointer' : ''} ${rarityClass} ${classes}`}
-			src={src}
-		/>
+		<a href={hash}>
+			<img className={`item-avatar rounded-circle ${rarityClass} ${classes}`} src={src} />
+		</a>
 	)
 }
 

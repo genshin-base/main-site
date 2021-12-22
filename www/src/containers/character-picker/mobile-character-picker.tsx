@@ -1,45 +1,57 @@
-import { useState } from 'preact/hooks'
+import { useMemo, useState } from 'preact/hooks'
 
 import { ItemAvatar } from '#src/containers/item-cards/item-cards'
+import { charactersShortList } from '#src/generated'
+import { makeCharacterBuildHash } from '#src/hashstore'
 import character_Amber_Thumb from '#src/media/Character_Amber_Thumb.png' // todo remove
 import { elements } from '#src/utils/elements'
-import { weaponTypes } from '#src/utils/weapon-types'
+import { weaponTypes } from '#src/utils/weapons'
 
 import type { GI_ElementCode } from '#lib/genshin'
 import type { GI_WeaponTypeCode } from '#lib/genshin'
 
-// todo remove
-const doNothing = () => {
-	0 === 0
-}
-const FiveAmbers = () => (
-	<>
-		{[1, 2, 3, 4, 5].map(() => (
-			<ItemAvatar src={character_Amber_Thumb} rarity={4} onClick={doNothing} classes="m-1" />
-		))}
-	</>
-)
-// end todo remove
-export function CharacterPickerMobile({ onCharacterSelect }: { onCharacterSelect: (any) => void }) {
+export function CharacterPickerMobile() {
 	const [selectedElementCode, setSelectedElementCode] = useState<null | GI_ElementCode>(null)
 	const selectElement = el => setSelectedElementCode(selectedElementCode === el.code ? null : el.code)
 	const [selectedWeaponTypeCode, setSelectedWeaponTypeCode] = useState<null | GI_WeaponTypeCode>(null)
 
 	const selectWeaponType = wp =>
 		setSelectedWeaponTypeCode(selectedWeaponTypeCode === wp.code ? null : wp.code)
-	const filteredElements = elements.filter(el =>
-		selectedElementCode ? el.code === selectedElementCode : true,
-	)
-	const rows = filteredElements.map(el => (
-		<div className="row" key={el.code}>
+
+	const elementGroups = useMemo(() => {
+		const filteredElements = selectedElementCode
+			? elements.filter(x => x.code === selectedElementCode)
+			: elements
+		return filteredElements
+			.map(element => ({
+				element,
+				characters: charactersShortList.filter(
+					x =>
+						x.elementCode === element.code &&
+						(selectedWeaponTypeCode === null || x.weaponTypeCode === selectedWeaponTypeCode),
+				),
+			}))
+			.filter(x => x.characters.length > 0)
+	}, [selectedElementCode, selectedWeaponTypeCode])
+
+	const rows = elementGroups.map(({ element, characters }) => (
+		<div className="row" key={element.code}>
 			<div className="col-2 py-1 opacity-50">
-				<img className="rounded-circle d-block mx-auto" src={el.imgSrc} />
+				<img className="rounded-circle d-block mx-auto" src={element.imgSrc} />
 			</div>
 			<div className="col py-31">
-				<FiveAmbers />
+				{characters.map(x => (
+					<ItemAvatar
+						src={character_Amber_Thumb}
+						rarity={4}
+						hash={makeCharacterBuildHash(x.code)}
+						classes="m-1"
+					/>
+				))}
 			</div>
 		</div>
 	))
+
 	return (
 		<div className="character-picker-mobile">
 			<div className="m-auto text-center my-3">
@@ -74,7 +86,7 @@ export function CharacterPickerMobile({ onCharacterSelect }: { onCharacterSelect
 					</div>
 				</div>
 			</div>
-			{rows}
+			{rows.length === 0 ? 'not yet' : rows}
 		</div>
 	)
 }

@@ -1,7 +1,7 @@
 import character_Amber_Thumb from '../../media/Character_Amber_Thumb.png'
 import { ItemAvatar } from '../item-cards/item-cards'
 
-export function LastUsedCharacters({ onCharacterSelect }: { onCharacterSelect: (any) => void }) {
+export function LastUsedCharacters() {
 	const characters = [4, 5, 5, 4]
 	const charactersElems = characters.map(ch => (
 		<ItemAvatar
@@ -9,9 +9,9 @@ export function LastUsedCharacters({ onCharacterSelect }: { onCharacterSelect: (
 			rarity={ch === 4 ? 4 : 5}
 			classes="mb-1 me-1 mb-xxl-2 me-xxl-2 small"
 			key={ch} //todo
-			onClick={() => {
-				onCharacterSelect(ch)
-			}}
+			// onClick={() => { TODO
+			// 	onCharacterSelect(ch)
+			// }}
 		/>
 	))
 	return (

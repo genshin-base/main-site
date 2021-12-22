@@ -14,3 +14,7 @@ export const weaponTypes: GI_WeaponType[] = [
 	{ code: 'claymore' as const, imgSrc: icon_Claymore },
 	{ code: 'polearm' as const, imgSrc: icon_Polearm },
 ]
+
+export function getWeaponIconSrc(weaponCode: string): string {
+	return process.env.ASSET_PATH + `media/weapons/${weaponCode}.png`
+}

@@ -5,4 +5,7 @@ module.exports = {
 		browser: true,
 	},
 	extends: ['../../.eslintrc.cjs', 'plugin:react-hooks/recommended'],
+	rules: {
+		'react-hooks/exhaustive-deps': ['warn', { additionalHooks: '(useFetch)' }],
+	},
 }
