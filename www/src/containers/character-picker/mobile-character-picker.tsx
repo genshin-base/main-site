@@ -3,7 +3,7 @@ import { useMemo, useState } from 'preact/hooks'
 import { ItemAvatar } from '#src/containers/item-cards/item-cards'
 import { charactersShortList } from '#src/generated'
 import { makeCharacterBuildHash } from '#src/hashstore'
-import { getCharacterFaceIconSrc } from '#src/utils/characters'
+import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { elements } from '#src/utils/elements'
 import { weaponTypes } from '#src/utils/weapons'
 
@@ -41,7 +41,7 @@ export function CharacterPickerMobile() {
 			<div className="col py-31">
 				{characters.map(x => (
 					<ItemAvatar
-						src={getCharacterFaceIconSrc(x.code)}
+						src={getCharacterAvatarSrc(x.code)}
 						rarity={4}
 						hash={makeCharacterBuildHash(x.code)}
 						classes="m-1"

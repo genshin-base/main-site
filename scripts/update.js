@@ -1,8 +1,5 @@
 #!/usr/bin/env node
 import { promises as fs } from 'fs'
-import { dirname } from 'path'
-import { fileURLToPath } from 'url'
-import yaml from 'yaml'
 import { extractBuilds } from '#lib/parsing/helperteam/index.js'
 import { loadSpreadsheetCached } from '#lib/google.js'
 import { json_getText } from '#lib/parsing/helperteam/json.js'
@@ -24,9 +21,27 @@ import { makeWeaponFullInfo } from '#lib/parsing/helperteam/weapons.js'
 import { makeRecentChangelogsTable } from '#lib/parsing/helperteam/changelogs.js'
 import { trigramSearcherFromStrings } from '#lib/trigrams.js'
 import { createHash } from 'crypto'
-import { info, relativeToCwd } from '#lib/utils.js'
+import { info, parseArgs, relativeToCwd } from '#lib/utils.js'
 import { checkHelperteamFixesUsage, clearHelperteamFixesUsage } from '#lib/parsing/helperteam/fixes.js'
 import { checkHoneyhunterFixesUsage, clearHoneyhunterFixesUsage } from '#lib/parsing/honeyhunter/fixes.js'
+import {
+	BASE_DIR,
+	CACHE_DIR,
+	DATA_DIR,
+	loadArtifactNames,
+	loadBuilds,
+	loadCharacterNames,
+	loadWeaponNames,
+	saveArtifactsNames,
+	saveBuilds,
+	saveCharactersNames,
+	saveDomains,
+	saveWeaponsNames,
+	WWW_DYNAMIC_DIR,
+	WWW_MEDIA_DIR,
+	WWW_STATIC_DIR,
+} from './_common.js'
+import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -68,34 +83,17 @@ const fixes = {
 	},
 }
 
-const args = process.argv
-	.slice(2)
-	.flatMap(x => x.split(/(?<=^--[\w-]+)=/))
-	.reduce(
-		({ args, key }, cur) =>
-			cur.startsWith('--')
-				? ((args[cur] = 'true'), { args, key: cur })
-				: ((args[key] = cur), { args, key: '' }),
-		{ args: /**@type {Record<string, string>}*/ ({ '': '' }), key: '' },
-	).args
+const args = parseArgs()
 
 function printUsage() {
 	console.log(`Usage:
   node ${relativeToCwd(process.argv[1])} [-h|--help] [--data] [--imgs] [--all] [--force]`)
 }
 
-if (args['--help'] || args[''] === '-h') {
+if (args['--help'] || args['-h']) {
 	printUsage()
 	process.exit(2)
 }
-
-const __filename = fileURLToPath(import.meta.url)
-const baseDir = dirname(__filename) + '/..'
-const CACHE_DIR = `${baseDir}/cache`
-const DATA_DIR = `${baseDir}/builds_data`
-const WWW_STATIC_DIR = `${baseDir}/www/src/generated`
-const WWW_DYNAMIC_DIR = `${baseDir}/www/public/generated`
-const WWW_MEDIA_DIR = `${baseDir}/www/public/media`
 
 ;(async () => {
 	if (args['--force']) {
@@ -128,7 +126,7 @@ async function extractAndSaveBuildsInfo() {
 	await fs.mkdir(CACHE_DIR, { recursive: true })
 
 	const spreadsheet = await loadSpreadsheetCached(
-		`${baseDir}/google.private_key.json`,
+		`${BASE_DIR}/google.private_key.json`,
 		`${CACHE_DIR}/google.access_token.json`,
 		`${CACHE_DIR}/spreadsheet.json`,
 		DOC_ID,
@@ -165,23 +163,15 @@ async function extractAndSaveItemImages() {
 	const usedWeaponCodes = new Set(builds.characters.map(x => Array.from(getCharacterWeaponCodes(x))).flat())
 
 	{
-		info('updating character face images')
-
-		const { faceImgs } = await extractCharactersData(CACHE_DIR, LANGS)
-		await fs.mkdir(`${WWW_MEDIA_DIR}/characters`, { recursive: true })
-		await getAndProcessItemImages(faceImgs, CACHE_DIR, 'characters_face', code => {
-			return `${WWW_MEDIA_DIR}/characters/${code}_face.png`
-		})
-	}
-	{
 		info('updating artifacts images')
 
 		const { imgs } = await extractArtifactsData(CACHE_DIR, LANGS, fixes.honeyhunter)
 		for (const code of imgs.keys()) if (!usedArtCodes.has(code)) imgs.delete(code)
 
 		await fs.mkdir(`${WWW_MEDIA_DIR}/artifacts`, { recursive: true })
-		await getAndProcessItemImages(imgs, CACHE_DIR, 'artifacts', code => {
-			return `${WWW_MEDIA_DIR}/artifacts/${code}.png`
+		await getAndProcessItemImages(imgs, CACHE_DIR, 'artifacts', async (srcFPath, code) => {
+			const dest = `${WWW_MEDIA_DIR}/artifacts/${code}.png`
+			await mediaChain(srcFPath, dest, (i, o) => resize(i, o, '64x64'), pngquant, optipng)
 		})
 	}
 	{
@@ -191,8 +181,9 @@ async function extractAndSaveItemImages() {
 		for (const code of imgs.keys()) if (!usedWeaponCodes.has(code)) imgs.delete(code)
 
 		await fs.mkdir(`${WWW_MEDIA_DIR}/weapons`, { recursive: true })
-		await getAndProcessItemImages(imgs, CACHE_DIR, 'weapons', code => {
-			return `${WWW_MEDIA_DIR}/weapons/${code}.png`
+		await getAndProcessItemImages(imgs, CACHE_DIR, 'weapons', async (srcFPath, code) => {
+			const dest = `${WWW_MEDIA_DIR}/weapons/${code}.png`
+			await mediaChain(srcFPath, dest, (i, o) => resize(i, o, '64x64'), pngquant, optipng)
 		})
 	}
 }
@@ -278,46 +269,4 @@ export function apiGetChangelogs(onlyRecent:boolean, signal:AbortSignal): Promis
 	return get(\`changelogs\${onlyRecent ? '-recent' : ''}\`, signal)
 }`,
 	)
-}
-
-/**
- * @param {string} prefix
- * @param {import('#lib/parsing').ItemsLangNames} names
- */
-async function saveNames(prefix, names) {
-	await fs.writeFile(`${DATA_DIR}/${prefix}_names.yaml`, yaml.stringify(names))
-}
-/**
- * @param {string} prefix
- * @returns {Promise<import('#lib/parsing').ItemsLangNames>}
- */
-async function loadNames(prefix) {
-	return yaml.parse(await fs.readFile(`${DATA_DIR}/${prefix}_names.yaml`, 'utf-8'))
-}
-
-/** @param {import('#lib/parsing/helperteam').BuildInfo} builds */
-async function saveBuilds(builds) {
-	await fs.writeFile(`${DATA_DIR}/builds.yaml`, yaml.stringify(builds))
-}
-/** @returns {Promise<import('#lib/parsing/helperteam').BuildInfo>} */
-async function loadBuilds() {
-	return yaml.parse(await fs.readFile(`${DATA_DIR}/builds.yaml`, 'utf-8'))
-}
-
-const saveCharactersNames = saveNames.bind(null, 'character')
-const loadCharacterNames = loadNames.bind(null, 'character')
-
-const saveArtifactsNames = saveNames.bind(null, 'artifact')
-const loadArtifactNames = loadNames.bind(null, 'artifact')
-
-const saveWeaponsNames = saveNames.bind(null, 'weapon')
-const loadWeaponNames = loadNames.bind(null, 'weapon')
-
-/** @param {import('#lib/parsing/honeyhunter').DomainsInfo} domains */
-async function saveDomains(domains) {
-	await fs.writeFile(`${DATA_DIR}/domains.yaml`, yaml.stringify(domains))
-}
-/** @returns {Promise<import('#lib/parsing/honeyhunter').DomainsInfo>} */
-async function loadDomains() {
-	return yaml.parse(await fs.readFile(`${DATA_DIR}/domains.yaml`, 'utf-8'))
 }

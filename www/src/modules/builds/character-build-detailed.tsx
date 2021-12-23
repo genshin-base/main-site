@@ -7,7 +7,7 @@ import { BtnTabGroup, Tab, Tabs } from '#src/components/tabs'
 import { LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
 import { apiGetCharacterFullInfo } from '#src/generated'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
-import character_Sangonomiya_Kokomi_Portrait from '#src/media/Character_Sangonomiya_Kokomi_Portrait.png'
+import { getCharacterPortraitSrc, getCharacterSilhouetteSrc } from '#src/utils/characters'
 import { pluralizeEN } from '#src/utils/strings'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 
@@ -78,11 +78,8 @@ function makeRoleTab(r: CharacterBuildInfoRole): Tab {
 	}
 }
 
-export function CharacterBuildDetailed({ selectedCharacterCode }: { selectedCharacterCode: string }) {
-	const build = useFetch(
-		sig => apiGetCharacterFullInfo(selectedCharacterCode, sig),
-		[selectedCharacterCode],
-	)
+export function CharacterBuildDetailed({ characterCode }: { characterCode: string }) {
+	const build = useFetch(sig => apiGetCharacterFullInfo(characterCode, sig), [characterCode])
 
 	// на случай серверного рендера: билд тут будет загружен сразу
 	const roleTabs = useMemo(
@@ -142,7 +139,7 @@ export function CharacterBuildDetailed({ selectedCharacterCode }: { selectedChar
 				</div>
 				<div className="row">
 					<div className="col col-3">
-						<CharacterPortrait src={character_Sangonomiya_Kokomi_Portrait} classes="w-100" />
+						<CharacterPortrait src={getCharacterPortraitSrc(characterCode)} classes="w-100" />
 					</div>
 					<div className="col col-9">
 						<div className="d-flex">
@@ -178,7 +175,7 @@ export function CharacterBuildDetailed({ selectedCharacterCode }: { selectedChar
 	const CharacterDetailMobile = (
 		<div class="d-xl-none">
 			<CharacterPortrait
-				src={character_Sangonomiya_Kokomi_Portrait}
+				src={getCharacterSilhouetteSrc(characterCode)}
 				classes="w-75 character-portrait-mobile"
 			/>
 			<BtnTabGroup

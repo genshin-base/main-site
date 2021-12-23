@@ -1,12 +1,12 @@
 import { makeCharacterBuildHash } from '#src/hashstore'
-import { getCharacterFaceIconSrc } from '#src/utils/characters'
+import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { ItemAvatar } from '../item-cards/item-cards'
 
 export function LastUsedCharacters() {
 	const characterCodes = ['amber', 'bennett', 'kokomi']
 	const charactersElems = characterCodes.map(code => (
 		<ItemAvatar
-			src={getCharacterFaceIconSrc(code)}
+			src={getCharacterAvatarSrc(code)}
 			rarity={code === 'kokomi' ? 5 : 4} //TODO
 			classes="mb-1 me-1 mb-xxl-2 me-xxl-2 small"
 			key={code}
