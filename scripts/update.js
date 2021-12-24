@@ -30,13 +30,13 @@ import {
 	DATA_DIR,
 	loadArtifactNames,
 	loadBuilds,
-	loadCharacterNames,
-	loadWeaponNames,
+	loadCharacters,
+	loadWeapons,
 	saveArtifactsNames,
 	saveBuilds,
-	saveCharactersNames,
+	saveCharacters,
 	saveDomains,
-	saveWeaponsNames,
+	saveWeapons,
 	WWW_DYNAMIC_DIR,
 	WWW_MEDIA_DIR,
 	WWW_STATIC_DIR,
@@ -104,7 +104,7 @@ if (args['--help'] || args['-h']) {
 	let updData = args['--data'] ?? args['--all'] ?? !args['--imgs']
 	let updImgs = args['--imgs'] ?? args['--all'] ?? args['--force']
 
-	if (updData) await extractAndSaveLangNames()
+	if (updData) await extractAndSaveItemsInfo()
 	if (updData) await extractAndSaveBuildsInfo()
 	if (updImgs) await extractAndSaveItemImages()
 	if (updData) await saveWwwData()
@@ -117,7 +117,7 @@ async function extractAndSaveBuildsInfo() {
 	info('updating builds')
 
 	const artifactCodes = Object.entries(await loadArtifactNames()).map(([code]) => code)
-	const weaponCodes = Object.entries(await loadWeaponNames()).map(([code]) => code)
+	const weaponCodes = Object.entries(await loadWeapons()).map(([code]) => code)
 	const knownCodes = {
 		artifacts: trigramSearcherFromStrings(artifactCodes),
 		weapons: trigramSearcherFromStrings(weaponCodes),
@@ -146,13 +146,13 @@ async function extractAndSaveBuildsInfo() {
 	await saveBuilds(build)
 }
 
-async function extractAndSaveLangNames() {
+async function extractAndSaveItemsInfo() {
 	info('updating items')
 	await fs.mkdir(DATA_DIR, { recursive: true })
 	clearHoneyhunterFixesUsage(fixes.honeyhunter)
-	await saveWeaponsNames((await extractWeaponsData(CACHE_DIR, LANGS, fixes.honeyhunter)).items)
+	await saveWeapons((await extractWeaponsData(CACHE_DIR, LANGS, fixes.honeyhunter)).items)
 	await saveArtifactsNames((await extractArtifactsData(CACHE_DIR, LANGS, fixes.honeyhunter)).langNames)
-	await saveCharactersNames((await extractCharactersData(CACHE_DIR, LANGS)).langNames)
+	await saveCharacters((await extractCharactersData(CACHE_DIR, LANGS)).items)
 	await saveDomains((await extractDomainsData(CACHE_DIR, LANGS, fixes.honeyhunter)).items)
 	checkHoneyhunterFixesUsage(fixes.honeyhunter)
 }
@@ -192,9 +192,9 @@ async function saveWwwData() {
 	info('updating www JSONs')
 
 	const builds = await loadBuilds()
-	const characterNames = await loadCharacterNames()
+	const characters = await loadCharacters()
 	const artifactNames = await loadArtifactNames()
-	const weapons = await loadWeaponNames()
+	const weapons = await loadWeapons()
 
 	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
 		await fs.rm(dir, { recursive: true, force: true })
@@ -218,7 +218,7 @@ async function saveWwwData() {
 		for (const character of builds.characters)
 			await whiteJsonAndHash(
 				`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`,
-				makeCharacterFullInfo(character, characterNames, artifacts, buildWeapons, lang),
+				makeCharacterFullInfo(character, characters, artifacts, buildWeapons, lang),
 			)
 
 		await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, artifacts)
@@ -243,7 +243,7 @@ const get = <T>(prefix:string, signal:AbortSignal) =>
 
 import type { CharacterShortInfo } from '#lib/parsing/helperteam/characters'
 export const charactersShortList: CharacterShortInfo[] =
-	${JSON.stringify(makeCharacterShortList(builds.characters))}
+	${JSON.stringify(makeCharacterShortList(builds.characters, characters))}
 
 import type { CharacterFullInfo } from '#lib/parsing/helperteam/characters'
 export { CharacterFullInfo }

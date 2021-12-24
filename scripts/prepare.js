@@ -2,7 +2,7 @@
 import { promises as fs } from 'fs'
 import { magick, mediaChain, optipng, pngquant, resize, runCmd } from '#lib/media.js'
 import { info, parseArgs, relativeToCwd, warn } from '#lib/utils.js'
-import { BASE_DIR, loadCharacterNames, WWW_MEDIA_DIR } from './_common.js'
+import { BASE_DIR, loadCharacters, WWW_MEDIA_DIR } from './_common.js'
 
 const args = parseArgs()
 const needHelp = args['--help'] || args['-h']
@@ -72,7 +72,7 @@ function needItemImageArgs(itemType) {
 
 /** @param {string} code */
 async function checkCharacterCode(code) {
-	const names = await loadCharacterNames()
+	const names = await loadCharacters()
 	if (!(code in names)) warn(`character '${code}' is unknown`)
 }
 

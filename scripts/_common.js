@@ -12,49 +12,43 @@ export const WWW_DYNAMIC_DIR = `${BASE_DIR}/www/public/generated`
 export const WWW_MEDIA_DIR = `${BASE_DIR}/www/public/media`
 
 /**
- * @param {string} prefix
- * @param {import('#lib/parsing').ItemsLangNames} names
+ * @template T
+ * @param {string} fname
+ * @param {T} data
  */
-export async function saveNames(prefix, names) {
-	await fs.writeFile(`${DATA_DIR}/${prefix}_names.yaml`, yaml.stringify(names))
+async function saveYaml(fname, data) {
+	await fs.writeFile(`${DATA_DIR}/${fname}.yaml`, yaml.stringify(data))
 }
 /**
- * @param {string} prefix
- * @returns {Promise<import('#lib/parsing').ItemsLangNames>}
+ * @template T
+ * @param {string} fname
+ * @returns {Promise<T>}
  */
-export async function loadNames(prefix) {
-	return yaml.parse(await fs.readFile(`${DATA_DIR}/${prefix}_names.yaml`, 'utf-8'))
+async function loadYaml(fname) {
+	return yaml.parse(await fs.readFile(`${DATA_DIR}/${fname}.yaml`, 'utf-8'))
 }
 
 /** @param {import('#lib/parsing/helperteam').BuildInfo} builds */
-export async function saveBuilds(builds) {
-	await fs.writeFile(`${DATA_DIR}/builds.yaml`, yaml.stringify(builds))
-}
+export const saveBuilds = builds => saveYaml('builds', builds)
 /** @returns {Promise<import('#lib/parsing/helperteam').BuildInfo>} */
-export async function loadBuilds() {
-	return yaml.parse(await fs.readFile(`${DATA_DIR}/builds.yaml`, 'utf-8'))
-}
+export const loadBuilds = () => loadYaml('builds')
 
-export const saveCharactersNames = saveNames.bind(null, 'character')
-export const loadCharacterNames = loadNames.bind(null, 'character')
+/** @param {import('#lib/parsing').CharactersInfo} characters */
+export const saveCharacters = characters => saveYaml('characters', characters)
+/** @returns {Promise<import('#lib/parsing').CharactersInfo>} */
+export const loadCharacters = () => loadYaml('characters')
 
-export const saveArtifactsNames = saveNames.bind(null, 'artifact')
-export const loadArtifactNames = loadNames.bind(null, 'artifact')
+/** @param {import('#lib/parsing').ItemsLangNames} artifacts */
+export const saveArtifactsNames = artifacts => saveYaml('artifacts', artifacts)
+/** @returns {Promise<import('#lib/parsing').ItemsLangNames>} */
+export const loadArtifactNames = () => loadYaml('artifacts')
 
-/** @param {import('#lib/parsing').WeaponsInfo} domains */
-export async function saveWeaponsNames(domains) {
-	await fs.writeFile(`${DATA_DIR}/weapons.yaml`, yaml.stringify(domains))
-}
+/** @param {import('#lib/parsing').WeaponsInfo} weapons */
+export const saveWeapons = weapons => saveYaml('weapons', weapons)
 /** @returns {Promise<import('#lib/parsing').WeaponsInfo>} */
-export async function loadWeaponNames() {
-	return yaml.parse(await fs.readFile(`${DATA_DIR}/weapons.yaml`, 'utf-8'))
-}
+export const loadWeapons = () => loadYaml('weapons')
 
 /** @param {import('#lib/parsing').DomainsInfo} domains */
-export async function saveDomains(domains) {
-	await fs.writeFile(`${DATA_DIR}/domains.yaml`, yaml.stringify(domains))
-}
+export const saveDomains = domains => saveYaml('domains', domains)
 /** @returns {Promise<import('#lib/parsing').DomainsInfo>} */
-export async function loadDomains() {
-	return yaml.parse(await fs.readFile(`${DATA_DIR}/domains.yaml`, 'utf-8'))
-}
+export const loadDomains = () => loadYaml('domains')

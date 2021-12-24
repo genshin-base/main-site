@@ -26,7 +26,7 @@ function CharacterPickerDesktop({ weaponTypes }: { weaponTypes: GI_WeaponType[] 
 										<ItemAvatar
 											key={x.code}
 											src={getCharacterAvatarSrc(x.code)}
-											rarity={4}
+											rarity={x.rarity}
 											hash={makeCharacterBuildHash(x.code)}
 											classes="mb-1 me-1 mb-xxl-2 me-xxl-2"
 										/>

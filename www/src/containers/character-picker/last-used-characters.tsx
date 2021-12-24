@@ -1,3 +1,4 @@
+import { charactersShortList } from '#src/generated'
 import { makeCharacterBuildHash } from '#src/hashstore'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { ItemAvatar } from '../item-cards/item-cards'
@@ -7,7 +8,7 @@ export function LastUsedCharacters() {
 	const charactersElems = characterCodes.map(code => (
 		<ItemAvatar
 			src={getCharacterAvatarSrc(code)}
-			rarity={code === 'kokomi' ? 5 : 4} //TODO
+			rarity={charactersShortList.find(x => x.code === code)?.rarity ?? 5}
 			classes="mb-1 me-1 mb-xxl-2 me-xxl-2 small"
 			key={code}
 			hash={makeCharacterBuildHash(code)}
