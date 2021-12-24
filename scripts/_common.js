@@ -41,14 +41,20 @@ export const loadCharacterNames = loadNames.bind(null, 'character')
 export const saveArtifactsNames = saveNames.bind(null, 'artifact')
 export const loadArtifactNames = loadNames.bind(null, 'artifact')
 
-export const saveWeaponsNames = saveNames.bind(null, 'weapon')
-export const loadWeaponNames = loadNames.bind(null, 'weapon')
+/** @param {import('#lib/parsing').WeaponsInfo} domains */
+export async function saveWeaponsNames(domains) {
+	await fs.writeFile(`${DATA_DIR}/weapons.yaml`, yaml.stringify(domains))
+}
+/** @returns {Promise<import('#lib/parsing').WeaponsInfo>} */
+export async function loadWeaponNames() {
+	return yaml.parse(await fs.readFile(`${DATA_DIR}/weapons.yaml`, 'utf-8'))
+}
 
-/** @param {import('#lib/parsing/honeyhunter').DomainsInfo} domains */
+/** @param {import('#lib/parsing').DomainsInfo} domains */
 export async function saveDomains(domains) {
 	await fs.writeFile(`${DATA_DIR}/domains.yaml`, yaml.stringify(domains))
 }
-/** @returns {Promise<import('#lib/parsing/honeyhunter').DomainsInfo>} */
+/** @returns {Promise<import('#lib/parsing').DomainsInfo>} */
 export async function loadDomains() {
 	return yaml.parse(await fs.readFile(`${DATA_DIR}/domains.yaml`, 'utf-8'))
 }

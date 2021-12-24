@@ -97,7 +97,6 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		const role = build.character.roles.find(x => x.code === selectedRoleTab.code)
 		if (!role) return []
 		// TODO: role.weapons.notes, role.weapons.seeCharNotes
-		// TODO: rarity
 		return role.weapons.advices.map((advice, i) => (
 			<li key={i} className="m-2 ms-0">
 				{advice.similar.map(item => {
@@ -115,7 +114,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 								(item.notes === null ? '' : JSON.stringify(item.notes)) +
 								(item.seeCharNotes ? ' (see notes)' : '')
 							}
-							rarity={4}
+							rarity={weapon.rarity}
 							classes={'small'}
 						/>
 					)

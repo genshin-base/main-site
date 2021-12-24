@@ -150,10 +150,10 @@ async function extractAndSaveLangNames() {
 	info('updating items')
 	await fs.mkdir(DATA_DIR, { recursive: true })
 	clearHoneyhunterFixesUsage(fixes.honeyhunter)
-	await saveWeaponsNames((await extractWeaponsData(CACHE_DIR, LANGS, fixes.honeyhunter)).langNames)
+	await saveWeaponsNames((await extractWeaponsData(CACHE_DIR, LANGS, fixes.honeyhunter)).items)
 	await saveArtifactsNames((await extractArtifactsData(CACHE_DIR, LANGS, fixes.honeyhunter)).langNames)
 	await saveCharactersNames((await extractCharactersData(CACHE_DIR, LANGS)).langNames)
-	await saveDomains(await extractDomainsData(CACHE_DIR, LANGS, fixes.honeyhunter))
+	await saveDomains((await extractDomainsData(CACHE_DIR, LANGS, fixes.honeyhunter)).items)
 	checkHoneyhunterFixesUsage(fixes.honeyhunter)
 }
 
@@ -194,7 +194,7 @@ async function saveWwwData() {
 	const builds = await loadBuilds()
 	const characterNames = await loadCharacterNames()
 	const artifactNames = await loadArtifactNames()
-	const weaponNames = await loadWeaponNames()
+	const weapons = await loadWeaponNames()
 
 	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
 		await fs.rm(dir, { recursive: true, force: true })
@@ -212,17 +212,17 @@ async function saveWwwData() {
 		const artifacts = builds.artifacts.map(x =>
 			makeArtifactFullInfo(x, artifactNames, builds.characters, lang),
 		)
-		const weapons = builds.weapons.map(x => makeWeaponFullInfo(x, weaponNames, lang))
+		const buildWeapons = builds.weapons.map(x => makeWeaponFullInfo(x, weapons, lang))
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 		for (const character of builds.characters)
 			await whiteJsonAndHash(
 				`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`,
-				makeCharacterFullInfo(character, characterNames, artifacts, weapons, lang),
+				makeCharacterFullInfo(character, characterNames, artifacts, buildWeapons, lang),
 			)
 
 		await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, artifacts)
-		await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, weapons)
+		await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, buildWeapons)
 	}
 	await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/changelogs.json`, builds.changelogsTable)
 	await whiteJsonAndHash(
