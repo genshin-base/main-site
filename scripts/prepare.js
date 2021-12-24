@@ -19,8 +19,13 @@ const commands = {
 		checkCharacterCode(code)
 		await fs.mkdir(`${WWW_MEDIA_DIR}/characters/avatars`, { recursive: true })
 		const dest = `${WWW_MEDIA_DIR}/characters/avatars/${code}.png`
-		// const cropResize = (i, o) => magick(i, o, ['-gravity', 'North', '-crop', '75%', '-resize', '72x72'])
-		await mediaChain(src, dest, (i, o) => resize(i, o, '72x72'), pngquant, optipng)
+		// prettier-ignore
+		const circleResize = (i, o) => magick(i, o, [
+			'\(', '+clone', '-alpha', 'transparent', '-fill', 'white', '-draw', 'circle %[fx:w/2],%[fx:h/2] %[fx:w],%[fx:h/2]', '\)',
+			'-define', 'compose:sync=false', '-compose', 'multiply', '-composite',
+			'-resize', '72x72'
+		])
+		await mediaChain(src, dest, circleResize, pngquant, optipng)
 		info(`saved to ${relativeToCwd(dest)}`)
 	},
 	async portrait() {
