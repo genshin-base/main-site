@@ -83,6 +83,25 @@ function ArtifactCard({ onCloseClick }: { onCloseClick: () => void }): JSX.Eleme
 		></Card>
 	)
 }
+export function CardDescMobileWrap({
+	children,
+	targetEl,
+	onClickAway,
+}: {
+	onClickAway: () => void
+	targetEl: HTMLElement | null | undefined
+	children: JSX.Element
+}): JSX.Element {
+	const windowSize = useWindowSize()
+	return BS_isBreakpointLessThen(windowSize.breakpoint, 'xl') ? (
+		<ItemDetailDdMobilePortal onClickAway={onClickAway}>{children}</ItemDetailDdMobilePortal>
+	) : (
+		<ItemDetailDdPortal onClickAway={onClickAway} targetEl={targetEl}>
+			{children}
+		</ItemDetailDdPortal>
+	)
+}
+
 export function ArtifactDetailDd({
 	onClickAway,
 	targetEl,
@@ -90,14 +109,54 @@ export function ArtifactDetailDd({
 	onClickAway: () => void
 	targetEl: HTMLElement | null | undefined
 }): JSX.Element {
-	const windowSize = useWindowSize()
-	return BS_isBreakpointLessThen(windowSize.breakpoint, 'xl') ? (
-		<ItemDetailDdMobilePortal onClickAway={onClickAway}>
+	return (
+		<CardDescMobileWrap onClickAway={onClickAway} targetEl={targetEl}>
 			<ArtifactCard onCloseClick={onClickAway} />
-		</ItemDetailDdMobilePortal>
-	) : (
-		<ItemDetailDdPortal onClickAway={onClickAway} targetEl={targetEl}>
-			<ArtifactCard onCloseClick={onClickAway} />
-		</ItemDetailDdPortal>
+		</CardDescMobileWrap>
+	)
+}
+
+function WeaponCard({ onCloseClick }: { onCloseClick: () => void }): JSX.Element {
+	return (
+		<Card
+			titleEl={'Неприлично длинное название оружия'}
+			bodyEl={
+				<div className="mb-3">
+					<div className="clearfix">
+						<ItemAvatar rarity={5} classes="float-start me-2 mb-2 large" src={''} />
+						<h6 className="text-uppercase opacity-75">Двуручный неч</h6>
+						<div className="mb-2 text-muted">Оружейный баннер</div>
+					</div>
+
+					<div className="opacity-75">Бонус физ. урона</div>
+					<div className="mb-2">10% / 90%</div>
+					<div className="opacity-75">Базовая атака</div>
+					<div className="mb-2">100 / 900</div>
+					<div className="opacity-75">пассивная способность</div>
+					<div className="mb-2">100 / 900</div>
+					<div className="mb-2 opacity-75">{bonus4}</div>
+				</div>
+			}
+			mapEl={
+				<img
+					className="my-3 dungeon-location"
+					src="https://cs10.pikabu.ru/post_img/2019/11/30/12/15751468251132348.jpg"
+				></img>
+			}
+			onCloseClick={onCloseClick}
+		></Card>
+	)
+}
+export function WeaponDetailDd({
+	onClickAway,
+	targetEl,
+}: {
+	onClickAway: () => void
+	targetEl: HTMLElement | null | undefined
+}): JSX.Element {
+	return (
+		<CardDescMobileWrap onClickAway={onClickAway} targetEl={targetEl}>
+			<WeaponCard onCloseClick={onClickAway} />
+		</CardDescMobileWrap>
 	)
 }

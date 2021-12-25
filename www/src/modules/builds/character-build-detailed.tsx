@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'preact/hooks'
+import { useEffect, useMemo, useState } from 'preact/hooks'
 
 import { CharacterBuildInfoRole } from '#src/../../lib/parsing/helperteam/characters'
 import { isLoaded, useFetch } from '#src/api/hooks'
@@ -91,14 +91,16 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 	const selectedRoleTab = roleTabs.includes(selectedRoleTabRaw)
 		? selectedRoleTabRaw
 		: roleTabs[0] ?? DUMMY_TAB
-
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [])
 	const weaponList = useMemo(() => {
 		if (!isLoaded(build)) return []
 		const role = build.character.roles.find(x => x.code === selectedRoleTab.code)
 		if (!role) return []
 		// TODO: role.weapons.notes, role.weapons.seeCharNotes
 		return role.weapons.advices.map((advice, i) => (
-			<li key={i} className="m-2 ms-0">
+			<li key={i} className="p-0 p-xl-1 pt-1 pt-xl-2">
 				{advice.similar.map(item => {
 					const weapon = build.weapons.find(x => x.code === item.code)
 					if (!weapon) return null
@@ -115,7 +117,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 								(item.seeCharNotes ? ' (see notes)' : '')
 							}
 							rarity={weapon.rarity}
-							classes={'small'}
+							classes={'small mb-1'}
 						/>
 					)
 				})}
@@ -144,11 +146,11 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 						<div className="d-flex">
 							<div className="flex-fill w-33 p-3">
 								<h6 className="text-uppercase opacity-75">Weapon</h6>
-								<ol>{weaponList}</ol>
+								<ol className="items-list">{weaponList}</ol>
 							</div>
 							<div className="flex-fill w-33 p-3">
 								<h6 className="text-uppercase opacity-75">Artifacts</h6>
-								<ol>{weaponList}</ol>
+								<ol className="items-list">{weaponList}</ol>
 								<div></div>
 							</div>
 							<div className="flex-fill w-33 p-3">
@@ -186,7 +188,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 			<div className="">
 				<div className="my-3">
 					<h6 className="text-uppercase opacity-75">Artifacts</h6>
-					<ol>{weaponList}</ol>
+					<ol className="items-list">{weaponList}</ol>
 					<div></div>
 				</div>
 				<div className="my-3">
@@ -196,7 +198,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 				</div>
 				<div className="my-3">
 					<h6 className="text-uppercase opacity-75">Weapon</h6>
-					<ol>{weaponList}</ol>
+					<ol className="items-list">{weaponList}</ol>
 				</div>
 			</div>
 			<div>

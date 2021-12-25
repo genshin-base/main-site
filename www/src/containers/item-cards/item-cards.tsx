@@ -1,7 +1,7 @@
 import { useCallback, useRef, useState } from 'preact/hooks'
 
 import { GI_RarityCode } from '#lib/genshin'
-import { ArtifactDetailDd } from './dd-cards'
+import { ArtifactDetailDd, WeaponDetailDd } from './dd-cards'
 
 import './item-cards.scss'
 
@@ -9,7 +9,7 @@ export function ItemAvatar({
 	src,
 	rarity,
 	classes = '',
-	hash = '',
+	hash,
 }: {
 	src: string
 	rarity: GI_RarityCode
@@ -34,7 +34,30 @@ export function ItemAvatar({
 		</a>
 	)
 }
-
+export function ItemLabelText({
+	rarity,
+	classes = '',
+	title,
+}: {
+	rarity: GI_RarityCode
+	title: string
+	classes?: string
+}): JSX.Element {
+	let rarityClass = ''
+	switch (rarity) {
+		case 5:
+			rarityClass = 'text-warning'
+			break
+		case 4:
+			rarityClass = 'text-primary'
+			break
+		case 3:
+			rarityClass = ''
+			break
+	}
+	//todo c-pointer для интерактивных
+	return <label className={`${classes} ${rarityClass}`}>{title}</label>
+}
 export function LabeledItemAvatar({
 	imgSrc,
 	rarity,
@@ -52,10 +75,14 @@ export function LabeledItemAvatar({
 	const openDd = useCallback(() => !isExpanded && setIsExpanded(true), [setIsExpanded, isExpanded])
 	//todo c-pointer для интерактивных
 	return (
-		<div className={`text-nowrap d-inline ${classes}`} ref={elRef} onClick={openDd}>
+		<div className={`text-nowrap ${classes}`} ref={elRef} onClick={openDd}>
 			<ItemAvatar rarity={rarity} classes="small" src={imgSrc} />
-			<label className="text-wrap align-middle lh-1 ps-1 mw-75 text-decoration-dashed">{title}</label>
-			{isExpanded ? <ArtifactDetailDd onClickAway={closeDd} targetEl={elRef.current} /> : null}
+			<ItemLabelText
+				rarity={rarity}
+				classes={'text-wrap align-middle lh-1 ps-1 mw-75 text-decoration-dashed'}
+				title={title}
+			></ItemLabelText>
+			{isExpanded ? <WeaponDetailDd onClickAway={closeDd} targetEl={elRef.current} /> : null}
 		</div>
 	)
 }
