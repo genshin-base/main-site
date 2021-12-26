@@ -148,7 +148,7 @@ async function extractAndSaveItemsInfo() {
 	await fs.mkdir(DATA_DIR, { recursive: true })
 	clearHoneyhunterFixesUsage(fixes.honeyhunter)
 	await saveWeapons((await extractWeaponsData(CACHE_DIR, LANGS, fixes.honeyhunter)).items)
-	await saveArtifactsNames((await extractArtifactsData(CACHE_DIR, LANGS, fixes.honeyhunter)).langNames)
+	await saveArtifactsNames((await extractArtifactsData(CACHE_DIR, LANGS, fixes.honeyhunter)).items)
 	await saveCharacters((await extractCharactersData(CACHE_DIR, LANGS)).items)
 	await saveDomains((await extractDomainsData(CACHE_DIR, LANGS, fixes.honeyhunter)).items)
 	checkHoneyhunterFixesUsage(fixes.honeyhunter)

@@ -38,9 +38,9 @@ export const saveCharacters = characters => saveYaml('characters', characters)
 /** @returns {Promise<import('#lib/parsing').Code2CharacterData>} */
 export const loadCharacters = () => loadYaml('characters')
 
-/** @param {import('#lib/parsing').ItemsLangNames} artifacts */
+/** @param {import('#lib/parsing').Code2ArtifactData} artifacts */
 export const saveArtifactsNames = artifacts => saveYaml('artifacts', artifacts)
-/** @returns {Promise<import('#lib/parsing').ItemsLangNames>} */
+/** @returns {Promise<import('#lib/parsing').Code2ArtifactData>} */
 export const loadArtifactNames = () => loadYaml('artifacts')
 
 /** @param {import('#lib/parsing').Code2WeaponData} weapons */
