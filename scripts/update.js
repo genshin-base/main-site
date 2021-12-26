@@ -21,7 +21,7 @@ import { makeWeaponFullInfo } from '#lib/parsing/helperteam/weapons.js'
 import { makeRecentChangelogsTable } from '#lib/parsing/helperteam/changelogs.js'
 import { trigramSearcherFromStrings } from '#lib/trigrams.js'
 import { createHash } from 'crypto'
-import { info, parseArgs, relativeToCwd } from '#lib/utils.js'
+import { exists, info, parseArgs, relativeToCwd } from '#lib/utils.js'
 import { checkHelperteamFixesUsage, clearHelperteamFixesUsage } from '#lib/parsing/helperteam/fixes.js'
 import { checkHoneyhunterFixesUsage, clearHoneyhunterFixesUsage } from '#lib/parsing/honeyhunter/fixes.js'
 import {
@@ -87,7 +87,7 @@ const args = parseArgs()
 
 function printUsage() {
 	console.log(`Usage:
-  node ${relativeToCwd(process.argv[1])} [-h|--help] [--data] [--imgs] [--all] [--force]`)
+  node ${relativeToCwd(process.argv[1])} [-h|--help] [--force] [--ignore-cache]`)
 }
 
 if (args['--help'] || args['-h']) {
@@ -96,18 +96,15 @@ if (args['--help'] || args['-h']) {
 }
 
 ;(async () => {
-	if (args['--force']) {
-		info('force update, clearing cache')
+	if (args['--ignore-cache']) {
+		info('clearing cache')
 		await fs.rm(CACHE_DIR, { recursive: true, force: true })
 	}
 
-	let updData = args['--data'] ?? args['--all'] ?? !args['--imgs']
-	let updImgs = args['--imgs'] ?? args['--all'] ?? args['--force']
-
-	if (updData) await extractAndSaveItemsInfo()
-	if (updData) await extractAndSaveBuildsInfo()
-	if (updImgs) await extractAndSaveItemImages()
-	if (updData) await saveWwwData()
+	await extractAndSaveItemsInfo()
+	await extractAndSaveBuildsInfo()
+	await extractAndSaveItemImages(!!args['--force'])
+	await saveWwwData()
 
 	info('done.')
 	// setTimeout(() => {}, 1000000)
@@ -157,7 +154,8 @@ async function extractAndSaveItemsInfo() {
 	checkHoneyhunterFixesUsage(fixes.honeyhunter)
 }
 
-async function extractAndSaveItemImages() {
+/** @param {boolean} overwriteExisting */
+async function extractAndSaveItemImages(overwriteExisting) {
 	const builds = await loadBuilds()
 	const usedArtCodes = new Set(builds.characters.map(x => Array.from(getCharacterArtifactCodes(x))).flat())
 	const usedWeaponCodes = new Set(builds.characters.map(x => Array.from(getCharacterWeaponCodes(x))).flat())
@@ -169,10 +167,13 @@ async function extractAndSaveItemImages() {
 		for (const code of imgs.keys()) if (!usedArtCodes.has(code)) imgs.delete(code)
 
 		await fs.mkdir(`${WWW_MEDIA_DIR}/artifacts`, { recursive: true })
-		await getAndProcessItemImages(imgs, CACHE_DIR, 'artifacts', async (srcFPath, code) => {
+		const stats = await getAndProcessItemImages(imgs, CACHE_DIR, 'artifacts', async code => {
 			const dest = `${WWW_MEDIA_DIR}/artifacts/${code}.png`
-			await mediaChain(srcFPath, dest, (i, o) => resize(i, o, '64x64'), pngquant, optipng)
+			if (overwriteExisting || !(await exists(dest)))
+				return src => mediaChain(src, dest, (i, o) => resize(i, o, '64x64'), pngquant, optipng)
 		})
+
+		info(`  saved ${stats.loaded} of total ${stats.total}`)
 	}
 	{
 		info('updating weapons images')
@@ -181,10 +182,13 @@ async function extractAndSaveItemImages() {
 		for (const code of imgs.keys()) if (!usedWeaponCodes.has(code)) imgs.delete(code)
 
 		await fs.mkdir(`${WWW_MEDIA_DIR}/weapons`, { recursive: true })
-		await getAndProcessItemImages(imgs, CACHE_DIR, 'weapons', async (srcFPath, code) => {
+		const stats = await getAndProcessItemImages(imgs, CACHE_DIR, 'weapons', async code => {
 			const dest = `${WWW_MEDIA_DIR}/weapons/${code}.png`
-			await mediaChain(srcFPath, dest, (i, o) => resize(i, o, '64x64'), pngquant, optipng)
+			if (overwriteExisting || !(await exists(dest)))
+				return src => mediaChain(src, dest, (i, o) => resize(i, o, '64x64'), pngquant, optipng)
 		})
+
+		info(`  saved ${stats.loaded} new of total ${stats.total}`)
 	}
 }
 
