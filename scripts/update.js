@@ -31,6 +31,7 @@ import {
 	loadArtifactNames,
 	loadBuilds,
 	loadCharacters,
+	loadDomains,
 	loadWeapons,
 	saveArtifactsNames,
 	saveBuilds,
@@ -41,7 +42,8 @@ import {
 	WWW_MEDIA_DIR,
 	WWW_STATIC_DIR,
 } from './_common.js'
-import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
+import { magick, mediaChain, optipng, pngquant, resize, runCmd } from '#lib/media.js'
+import { getFileCached } from '#lib/requests.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -104,6 +106,7 @@ if (args['--help'] || args['-h']) {
 	await extractAndSaveItemsInfo()
 	await extractAndSaveBuildsInfo()
 	await extractAndSaveItemImages(!!args['--force'])
+	await extractAndSaveDomainLocationImages(!!args['--force'])
 	await saveWwwData()
 
 	info('done.')
@@ -190,6 +193,55 @@ async function extractAndSaveItemImages(overwriteExisting) {
 
 		info(`  saved ${stats.loaded} new of total ${stats.total}`)
 	}
+}
+
+async function extractAndSaveDomainLocationImages(overwriteExisting) {
+	info('updating domain location images')
+
+	const SIZE = 1024
+	const SCALED_SIZE = 512
+
+	const tileUrlFunc = (x, y) => `https://gim.appsample.net/teyvat/v22/10/tile-${x}_${y}.jpg`
+	const tileSize = 256
+	const x2tile = x => (x + 169) / tileSize + 1
+	const y2tile = y => (y + 19) / tileSize + 5
+	const tileFract = n => Math.floor((((n % 1) + 1) % 1) * tileSize)
+
+	await fs.mkdir(`${CACHE_DIR}/gim/tiles`, { recursive: true })
+	await fs.mkdir(`${WWW_MEDIA_DIR}/domains`, { recursive: true })
+
+	const domains = await loadDomains()
+	let count = 0
+	for (const domain of Object.values(domains)) {
+		const [x, y] = domain.location
+
+		const outFPath = `${WWW_MEDIA_DIR}/domains/${domain.code}.png`
+		if (!overwriteExisting && (await exists(outFPath))) continue
+
+		const xOffset = tileFract(x2tile(x + SIZE / 2))
+		const yOffset = 255 - tileFract(y2tile(y + SIZE / 2))
+		const iFrom = Math.floor(x2tile(x - SIZE / 2))
+		const iTo = Math.floor(x2tile(x + SIZE / 2))
+		const jFrom = Math.floor(y2tile(y - SIZE / 2))
+		const jTo = Math.floor(y2tile(y + SIZE / 2))
+
+		const tiles = []
+		for (let j = jTo; j >= jFrom; j--) {
+			for (let i = iFrom; i <= iTo; i++) {
+				const fpath = `${CACHE_DIR}/gim/tiles/${i}_${j}.jpg`
+				await getFileCached(tileUrlFunc(i, j), null, fpath, false, Infinity)
+				tiles.push(fpath)
+			}
+		}
+
+		const concatTiles = (_, out) =>
+			runCmd('montage', [...tiles, '-mode', 'Concatenate', '-tile', `${iTo - iFrom + 1}`, 'png:' + out])
+		const cropAndScale = (i, o) =>
+			magick(i, o, ['-crop', `${SIZE}x${SIZE}+${xOffset}+${yOffset}`, '-scale', `${SCALED_SIZE}`])
+		await mediaChain('', outFPath, concatTiles, cropAndScale, pngquant, optipng)
+		count++
+	}
+	info(`  saved ${count} of total ${Object.keys(domains).length}`)
 }
 
 async function saveWwwData() {
