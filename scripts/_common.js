@@ -6,19 +6,30 @@ import { dirname } from 'path/posix'
 const __filename = fileURLToPath(import.meta.url)
 export const BASE_DIR = dirname(__filename) + '/..'
 export const CACHE_DIR = `${BASE_DIR}/cache`
-export const DATA_DIR = `${BASE_DIR}/builds_data`
+export const DATA_CACHE_DIR = `${CACHE_DIR}/data`
+export const IMGS_CACHE_DIR = `${CACHE_DIR}/imgs`
+export const DATA_DIR = `${BASE_DIR}/data`
 export const WWW_STATIC_DIR = `${BASE_DIR}/www/src/generated`
 export const WWW_DYNAMIC_DIR = `${BASE_DIR}/www/public/generated`
 export const WWW_MEDIA_DIR = `${BASE_DIR}/www/public/media`
 
-const cache = new Map()
+/**
+ * @param {string} dirpath
+ * @param {boolean} clear
+ */
+export async function prepareCacheDir(dirpath, clear) {
+	if (clear) await fs.rm(dirpath, { recursive: true, force: true })
+	await fs.mkdir(dirpath, { recursive: true })
+}
+
+const yamlCache = new Map()
 /**
  * @template T
  * @param {string} fname
  * @param {T} data
  */
 async function saveYaml(fname, data) {
-	cache.set(fname, data)
+	yamlCache.set(fname, data)
 	await fs.writeFile(`${DATA_DIR}/${fname}.yaml`, yaml.stringify(data))
 }
 /**
@@ -27,7 +38,7 @@ async function saveYaml(fname, data) {
  * @returns {Promise<T>}
  */
 async function loadYaml(fname) {
-	if (cache.has(fname)) return cache.get(fname)
+	if (yamlCache.has(fname)) return yamlCache.get(fname)
 	return yaml.parse(await fs.readFile(`${DATA_DIR}/${fname}.yaml`, 'utf-8'))
 }
 

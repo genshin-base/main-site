@@ -1,6 +1,6 @@
 /node_modules/
 /cache/
-/builds_data/
+/data/
 /www/dist/
 /www/src/generated/
 /www/public/generated/

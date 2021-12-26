@@ -21,18 +21,21 @@ import { makeWeaponFullInfo } from '#lib/parsing/helperteam/weapons.js'
 import { makeRecentChangelogsTable } from '#lib/parsing/helperteam/changelogs.js'
 import { trigramSearcherFromStrings } from '#lib/trigrams.js'
 import { createHash } from 'crypto'
-import { exists, info, parseArgs, relativeToCwd } from '#lib/utils.js'
+import { exists, info, parseArgs, progress, relativeToCwd } from '#lib/utils.js'
 import { checkHelperteamFixesUsage, clearHelperteamFixesUsage } from '#lib/parsing/helperteam/fixes.js'
 import { checkHoneyhunterFixesUsage, clearHoneyhunterFixesUsage } from '#lib/parsing/honeyhunter/fixes.js'
 import {
 	BASE_DIR,
 	CACHE_DIR,
+	DATA_CACHE_DIR,
 	DATA_DIR,
+	IMGS_CACHE_DIR,
 	loadArtifactNames,
 	loadBuilds,
 	loadCharacters,
 	loadDomains,
 	loadWeapons,
+	prepareCacheDir,
 	saveArtifactsNames,
 	saveBuilds,
 	saveCharacters,
@@ -89,7 +92,7 @@ const args = parseArgs()
 
 function printUsage() {
 	console.log(`Usage:
-  node ${relativeToCwd(process.argv[1])} [-h|--help] [--force] [--ignore-cache]`)
+  node ${relativeToCwd(process.argv[1])} [data|www|images] [-h|--help] [--force] [--ignore-cache]`)
 }
 
 if (args['--help'] || args['-h']) {
@@ -98,23 +101,28 @@ if (args['--help'] || args['-h']) {
 }
 
 ;(async () => {
-	if (args['--ignore-cache']) {
-		info('clearing cache')
-		await fs.rm(CACHE_DIR, { recursive: true, force: true })
-	}
+	const updData = [undefined, 'data'].includes(args['cmd'])
+	const updImgs = [undefined, 'images'].includes(args['cmd'])
+	const updWww = [undefined, 'www'].includes(args['cmd'])
 
-	await extractAndSaveItemsInfo()
-	await extractAndSaveBuildsInfo()
-	await extractAndSaveItemImages(!!args['--force'])
-	await extractAndSaveDomainLocationImages(!!args['--force'])
-	await saveWwwData()
+	if (updData) {
+		await prepareCacheDir(DATA_CACHE_DIR, !!args['--ignore-cache'])
+		await extractAndSaveItemsData()
+		await extractAndSaveBuildsData()
+	}
+	if (updImgs) {
+		await prepareCacheDir(IMGS_CACHE_DIR, !!args['--ignore-cache'])
+		await extractAndSaveItemImages(!!args['--force'])
+		await extractAndSaveDomainLocationImages(!!args['--force'])
+	}
+	if (updWww) await saveWwwData()
 
 	info('done.')
 	// setTimeout(() => {}, 1000000)
 })().catch(console.error)
 
-async function extractAndSaveBuildsInfo() {
-	info('updating builds')
+async function extractAndSaveBuildsData() {
+	info('updating builds', { newline: false })
 
 	const artifactCodes = Object.entries(await loadArtifactNames()).map(([code]) => code)
 	const weaponCodes = Object.entries(await loadWeapons()).map(([code]) => code)
@@ -123,12 +131,10 @@ async function extractAndSaveBuildsInfo() {
 		weapons: trigramSearcherFromStrings(weaponCodes),
 	}
 
-	await fs.mkdir(CACHE_DIR, { recursive: true })
-
 	const spreadsheet = await loadSpreadsheetCached(
 		`${BASE_DIR}/google.private_key.json`,
 		`${CACHE_DIR}/google.access_token.json`,
-		`${CACHE_DIR}/spreadsheet.json`,
+		`${DATA_CACHE_DIR}/spreadsheet.json`,
 		DOC_ID,
 		[
 			'sheets.properties',
@@ -137,6 +143,7 @@ async function extractAndSaveBuildsInfo() {
 			'sheets.data.rowData.values.textFormatRuns',
 		],
 	)
+	progress()
 
 	clearHelperteamFixesUsage(fixes.helperteam)
 	const build = await extractBuilds(spreadsheet, knownCodes, fixes.helperteam)
@@ -144,17 +151,19 @@ async function extractAndSaveBuildsInfo() {
 
 	await fs.mkdir(DATA_DIR, { recursive: true })
 	await saveBuilds(build)
+	progress()
 }
 
-async function extractAndSaveItemsInfo() {
-	info('updating items')
+async function extractAndSaveItemsData() {
+	info('updating items', { newline: false })
 	await fs.mkdir(DATA_DIR, { recursive: true })
 	clearHoneyhunterFixesUsage(fixes.honeyhunter)
-	await saveWeapons((await extractWeaponsData(CACHE_DIR, LANGS, fixes.honeyhunter)).items)
-	await saveArtifactsNames((await extractArtifactsData(CACHE_DIR, LANGS, fixes.honeyhunter)).items)
-	await saveCharacters((await extractCharactersData(CACHE_DIR, LANGS)).items)
-	await saveDomains((await extractDomainsData(CACHE_DIR, LANGS, fixes.honeyhunter)).items)
+	await saveWeapons((await extractWeaponsData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)).items)
+	await saveArtifactsNames((await extractArtifactsData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)).items)
+	await saveCharacters((await extractCharactersData(DATA_CACHE_DIR, LANGS)).items)
+	await saveDomains((await extractDomainsData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)).items)
 	checkHoneyhunterFixesUsage(fixes.honeyhunter)
+	progress()
 }
 
 /** @param {boolean} overwriteExisting */
@@ -164,13 +173,13 @@ async function extractAndSaveItemImages(overwriteExisting) {
 	const usedWeaponCodes = new Set(builds.characters.map(x => Array.from(getCharacterWeaponCodes(x))).flat())
 
 	{
-		info('updating artifacts images')
+		info('updating artifacts images', { newline: false })
 
-		const { imgs } = await extractArtifactsData(CACHE_DIR, LANGS, fixes.honeyhunter)
+		const { imgs } = await extractArtifactsData(IMGS_CACHE_DIR, LANGS, fixes.honeyhunter)
 		for (const code of imgs.keys()) if (!usedArtCodes.has(code)) imgs.delete(code)
 
 		await fs.mkdir(`${WWW_MEDIA_DIR}/artifacts`, { recursive: true })
-		const stats = await getAndProcessItemImages(imgs, CACHE_DIR, 'artifacts', async code => {
+		const stats = await getAndProcessItemImages(imgs, IMGS_CACHE_DIR, 'artifacts', async code => {
 			const dest = `${WWW_MEDIA_DIR}/artifacts/${code}.png`
 			if (overwriteExisting || !(await exists(dest)))
 				return src => mediaChain(src, dest, (i, o) => resize(i, o, '64x64'), pngquant, optipng)
@@ -179,13 +188,13 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		info(`  saved ${stats.loaded} of total ${stats.total}`)
 	}
 	{
-		info('updating weapons images')
+		info('updating weapons images', { newline: false })
 
-		const { imgs } = await extractWeaponsData(CACHE_DIR, LANGS, fixes.honeyhunter)
+		const { imgs } = await extractWeaponsData(IMGS_CACHE_DIR, LANGS, fixes.honeyhunter)
 		for (const code of imgs.keys()) if (!usedWeaponCodes.has(code)) imgs.delete(code)
 
 		await fs.mkdir(`${WWW_MEDIA_DIR}/weapons`, { recursive: true })
-		const stats = await getAndProcessItemImages(imgs, CACHE_DIR, 'weapons', async code => {
+		const stats = await getAndProcessItemImages(imgs, IMGS_CACHE_DIR, 'weapons', async code => {
 			const dest = `${WWW_MEDIA_DIR}/weapons/${code}.png`
 			if (overwriteExisting || !(await exists(dest)))
 				return src => mediaChain(src, dest, (i, o) => resize(i, o, '64x64'), pngquant, optipng)
@@ -196,7 +205,7 @@ async function extractAndSaveItemImages(overwriteExisting) {
 }
 
 async function extractAndSaveDomainLocationImages(overwriteExisting) {
-	info('updating domain location images')
+	info('updating domain location images', { newline: false })
 
 	const SIZE = 1024
 	const SCALED_SIZE = 512
@@ -207,7 +216,7 @@ async function extractAndSaveDomainLocationImages(overwriteExisting) {
 	const y2tile = y => (y + 19) / tileSize + 5
 	const tileFract = n => Math.floor((((n % 1) + 1) % 1) * tileSize)
 
-	await fs.mkdir(`${CACHE_DIR}/gim/tiles`, { recursive: true })
+	await fs.mkdir(`${IMGS_CACHE_DIR}/gim/tiles`, { recursive: true })
 	await fs.mkdir(`${WWW_MEDIA_DIR}/domains`, { recursive: true })
 
 	const domains = await loadDomains()
@@ -228,7 +237,7 @@ async function extractAndSaveDomainLocationImages(overwriteExisting) {
 		const tiles = []
 		for (let j = jTo; j >= jFrom; j--) {
 			for (let i = iFrom; i <= iTo; i++) {
-				const fpath = `${CACHE_DIR}/gim/tiles/${i}_${j}.jpg`
+				const fpath = `${IMGS_CACHE_DIR}/gim/tiles/${i}_${j}.jpg`
 				await getFileCached(tileUrlFunc(i, j), null, fpath, false, Infinity)
 				tiles.push(fpath)
 			}
@@ -240,12 +249,13 @@ async function extractAndSaveDomainLocationImages(overwriteExisting) {
 			magick(i, o, ['-crop', `${SIZE}x${SIZE}+${xOffset}+${yOffset}`, '-scale', `${SCALED_SIZE}`])
 		await mediaChain('', outFPath, concatTiles, cropAndScale, pngquant, optipng)
 		count++
+		progress()
 	}
 	info(`  saved ${count} of total ${Object.keys(domains).length}`)
 }
 
 async function saveWwwData() {
-	info('updating www JSONs')
+	info('updating www JSONs', { newline: false })
 
 	const builds = await loadBuilds()
 	const characters = await loadCharacters()
@@ -279,6 +289,7 @@ async function saveWwwData() {
 
 		await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, artifacts)
 		await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, buildWeapons)
+		progress()
 	}
 	await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/changelogs.json`, builds.changelogsTable)
 	await whiteJsonAndHash(
@@ -325,4 +336,5 @@ export function apiGetChangelogs(onlyRecent:boolean, signal:AbortSignal): Promis
 	return get(\`changelogs\${onlyRecent ? '-recent' : ''}\`, signal)
 }`,
 	)
+	progress()
 }
