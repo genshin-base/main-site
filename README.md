@@ -2,15 +2,31 @@
 
 `npm install`
 
+`./scripts/update.js www`
+
 `npm run dev`
+
 
 ## Скрипты
 
 ### update.js
 
-`./scripts/update.js --all --force`
+`./scripts/update.js --ignore-cache`
 
-Качает и генерит бОльшую часть данных. Всё скачанное кешируется, `--force` заставляет игнорировать этот кеш.
+Качает и генерит бОльшую часть данных. Всё скачанное кешируется, `--ignore-cache` заставляет игнорировать этот кеш.
+
+`./scripts/update.js data`
+
+Качает и парсит данные.
+
+`./scripts/update.js www`
+
+Генерит клиентские JSON'ы и скрипты из скачанных ранее данных.
+
+`./scripts/update.js images`
+
+Качает и обрабатывает картинки (какие может, для остальных есть `prepare.js`).
+
 
 ## prepare.js
 
@@ -25,6 +41,7 @@
 Сжимает, оптимизурует и сохраняет в `public/media` портрет персонажа (вроде [такого](https://genshin-impact.fandom.com/wiki/Amber?file=Character+Amber+Portrait.png)) и его силуэт в svg.
 
 В системе должны быть установлены `imagemagick`, `pngquant`, `optipng` и `potrace`.
+
 
 ## Очепятки
 
