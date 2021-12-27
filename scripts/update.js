@@ -55,6 +55,10 @@ const LANGS = ['en', 'ru']
 const fixes = {
 	/** @type {import('#lib/parsing/helperteam/fixes').HelperteamFixes} */
 	helperteam: {
+		roleNotes: [
+			{ character: 'kaeya', role: 'cryo dps', searchAs: 'dps' },
+			{ character: 'kaeya', role: 'physical dps', searchAs: 'dps' },
+		],
 		sheets: [
 			{
 				// у Барбары у столбца роли нет заголовка
