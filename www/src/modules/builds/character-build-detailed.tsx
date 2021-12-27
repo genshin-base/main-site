@@ -58,6 +58,21 @@ const notes = (
 	</>
 )
 // end todo remove
+function ArtifactStatsAndSkills() {
+	return (
+		<>
+			<h6 className="text-uppercase opacity-75">Main artifact stats</h6>
+			<ol className="mb-1">{talentPriority}</ol>
+			<div className="opacity-75">artifact tips</div>
+			<h6 className="text-uppercase opacity-75 mt-3">Sub artifact stats</h6>
+			<ol className="mb-1">{talentPriority}</ol>
+			<div className="opacity-75">artifact tips</div>
+			<h6 className="text-uppercase opacity-75 mt-3">Talent Priority</h6>
+			<ol>{talentPriority}</ol>
+			<div className="opacity-75">{talentTips}</div>
+		</>
+	)
+}
 
 const DUMMY_TAB: Tab = {
 	title: '…',
@@ -154,9 +169,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 								<div></div>
 							</div>
 							<div className="flex-fill w-33 p-3">
-								<h6 className="text-uppercase opacity-75">Talent Priority</h6>
-								<ol>{talentPriority}</ol>
-								<div className="opacity-75">{talentTips}</div>
+								<ArtifactStatsAndSkills />
 							</div>
 						</div>
 					</div>
@@ -192,9 +205,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 					<div></div>
 				</div>
 				<div className="my-3">
-					<h6 className="text-uppercase opacity-75">Talent Priority</h6>
-					<ol>{talentPriority}</ol>
-					<div className="opacity-75">{talentTips}</div>
+					<ArtifactStatsAndSkills />
 				</div>
 				<div className="my-3">
 					<h6 className="text-uppercase opacity-75">Weapon</h6>

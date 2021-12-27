@@ -76,7 +76,7 @@ export function LabeledItemAvatar({
 	//todo c-pointer для интерактивных
 	return (
 		<div className={`text-nowrap ${classes}`} ref={elRef} onClick={openDd}>
-			<ItemAvatar rarity={rarity} classes="small" src={imgSrc} />
+			<ItemAvatar rarity={3} classes="small" src={imgSrc} />
 			<ItemLabelText
 				rarity={rarity}
 				classes={'text-wrap align-middle lh-1 ps-1 mw-75 text-decoration-dashed'}
