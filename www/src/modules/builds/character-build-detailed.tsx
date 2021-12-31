@@ -12,6 +12,7 @@ import { pluralizeEN } from '#src/utils/strings'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 
 import './character-build-detailed.scss'
+import Spinner from '#src/components/spinners'
 
 // todo remove
 
@@ -58,21 +59,6 @@ const notes = (
 	</>
 )
 // end todo remove
-function ArtifactStatsAndSkills() {
-	return (
-		<>
-			<h6 className="text-uppercase opacity-75">Main artifact stats</h6>
-			<ol className="mb-1">{talentPriority}</ol>
-			<div className="opacity-75">artifact tips</div>
-			<h6 className="text-uppercase opacity-75 mt-3">Sub artifact stats</h6>
-			<ol className="mb-1">{talentPriority}</ol>
-			<div className="opacity-75">artifact tips</div>
-			<h6 className="text-uppercase opacity-75 mt-3">Talent Priority</h6>
-			<ol>{talentPriority}</ol>
-			<div className="opacity-75">{talentTips}</div>
-		</>
-	)
-}
 
 const DUMMY_TAB: Tab = {
 	title: '…',
@@ -92,7 +78,50 @@ function makeRoleTab(r: CharacterBuildInfoRole): Tab {
 		),
 	}
 }
-
+function getRoleData(build, selectedRoleTab) {
+	return build.character.roles.find(x => x.code === selectedRoleTab.code)
+}
+function genSimpleList(arr) {
+	return arr.join(', ')
+}
+function genNotes(item) {
+	return item.notes === null ? '' : JSON.stringify(item.notes)
+}
+function genSeeCharNotes(item) {
+	return item.seeCharNotes ? ' (see notes)' : ''
+}
+function genArtMainStatDetail(role, itemCode) {
+	return (
+		<span className="">
+			{genSimpleList(role.mainStats[itemCode].codes) +
+				' ' +
+				genNotes(role.mainStats[itemCode]) +
+				genSeeCharNotes(role.mainStats[itemCode])}
+		</span>
+	)
+}
+function notesToJSX(tips) {
+	function processString(str) {
+		return str
+			.split('\n')
+			.map((sub, i, arr) => [sub, i < arr.length - 1 ? <br /> : ''])
+			.flat()
+			.filter(a => a)
+	}
+	function processObj(tip) {
+		if ('p' in tip) return <p>{notesToJSX(tip.p)}</p>
+		if ('b' in tip) return <span className="text-primary">{notesToJSX(tip.b)}</span>
+		if ('i' in tip) return <i>{notesToJSX(tip.i)}</i>
+		if ('a' in tip) return <a href={tip.href}>{notesToJSX(tip.a)}</a>
+		console.warn('unknown element type in notes')
+		return <span>{notesToJSX(tip.a)}</span>
+	}
+	if (!tips) return null
+	if (typeof tips === 'string') return processString(tips)
+	return tips.map(tip => {
+		return typeof tip === 'string' ? processString(tip) : processObj(tip)
+	})
+}
 export function CharacterBuildDetailed({ characterCode }: { characterCode: string }) {
 	const build = useFetch(sig => apiGetCharacterFullInfo(characterCode, sig), [characterCode])
 
@@ -111,7 +140,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 	}, [])
 	const weaponList = useMemo(() => {
 		if (!isLoaded(build)) return []
-		const role = build.character.roles.find(x => x.code === selectedRoleTab.code)
+		const role = getRoleData(build, selectedRoleTab)
 		if (!role) return []
 		// TODO: role.weapons.notes, role.weapons.seeCharNotes
 		return role.weapons.advices.map((advice, i) => (
@@ -128,8 +157,8 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 								(item.stacks === null
 									? ''
 									: ` (${item.stacks} ${pluralizeEN(item.stacks, 'stack', 'stacks')})`) +
-								(item.notes === null ? '' : JSON.stringify(item.notes)) +
-								(item.seeCharNotes ? ' (see notes)' : '')
+								genNotes(item) +
+								genSeeCharNotes(item)
 							}
 							rarity={weapon.rarity}
 							classes={'small mb-1'}
@@ -139,7 +168,60 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 			</li>
 		))
 	}, [build, selectedRoleTab])
-
+	const artifactStatsAndSkills = useMemo(() => {
+		if (!isLoaded(build)) return null
+		const role = getRoleData(build, selectedRoleTab)
+		return (
+			<>
+				<h6 className="text-uppercase opacity-75">Main artifact stats</h6>
+				<ul className="mb-1">
+					<li>
+						<b className="text-muted">circlet — </b>
+						{genArtMainStatDetail(role, 'circlet')}
+					</li>
+					<li>
+						<b className="text-muted">goblet — </b>
+						{genArtMainStatDetail(role, 'goblet')}
+					</li>
+					<li>
+						<b className="text-muted">sands — </b>
+						{genArtMainStatDetail(role, 'sands')}
+					</li>
+				</ul>
+				<div className="opacity-75">
+					{notesToJSX(role.mainStats.notes)} {genSeeCharNotes(role.mainStats)}
+				</div>
+				<h6 className="text-uppercase opacity-75 mt-3">Sub artifact stats</h6>
+				<ol className="mb-1">
+					{role.subStats.advices.map(advice => {
+						return (
+							<li>
+								{genSimpleList(advice.codes)}
+								{' ' + genNotes(advice) + genSeeCharNotes(advice)}
+							</li>
+						)
+					})}
+				</ol>
+				<div className="opacity-75">
+					{role.subStats.notes} {genSeeCharNotes(role.subStats)}
+				</div>
+				<h6 className="text-uppercase opacity-75 mt-3">Talent Priority</h6>
+				<ol>
+					{role.talents.advices.map(advice => {
+						return <li>{advice}</li>
+					})}
+				</ol>
+				<div className="opacity-75">
+					{notesToJSX(role.talents.notes)} {genSeeCharNotes(role.subStats)}
+				</div>
+			</>
+		)
+	}, [build, selectedRoleTab])
+	if (!isLoaded(build)) return <Spinner />
+	console.log(build.character)
+	console.log(build.character.credits)
+	console.log(notesToJSX(build.character.credits))
+	const role = getRoleData(build, selectedRoleTab)
 	const CharacterDetailDesktop = (
 		<div className="d-none d-xl-block">
 			<div className="container float-end">
@@ -168,9 +250,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 								<ol className="items-list">{weaponList}</ol>
 								<div></div>
 							</div>
-							<div className="flex-fill w-33 p-3">
-								<ArtifactStatsAndSkills />
-							</div>
+							<div className="flex-fill w-33 p-3">{artifactStatsAndSkills}</div>
 						</div>
 					</div>
 				</div>
@@ -179,7 +259,11 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 					<div className="col col-9">
 						<div className="p-3">
 							<h6 className="text-uppercase opacity-75">Notes</h6>
-							<div className="opacity-75">{notes}</div>
+							<div className="opacity-75">
+								<div>{notesToJSX(role.tips)}</div>
+								<div>{notesToJSX(role.notes)}</div>
+								<div>{notesToJSX(build.character.credits)}</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -204,9 +288,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 					<ol className="items-list">{weaponList}</ol>
 					<div></div>
 				</div>
-				<div className="my-3">
-					<ArtifactStatsAndSkills />
-				</div>
+				<div className="my-3">{artifactStatsAndSkills}</div>
 				<div className="my-3">
 					<h6 className="text-uppercase opacity-75">Weapon</h6>
 					<ol className="items-list">{weaponList}</ol>
