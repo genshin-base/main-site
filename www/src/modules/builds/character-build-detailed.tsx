@@ -138,7 +138,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 	useEffect(() => {
 		window.scrollTo(0, 0)
 	}, [])
-	const weaponList = useMemo(() => {
+	const weaponListBlock = useMemo(() => {
 		if (!isLoaded(build)) return []
 		const role = getRoleData(build, selectedRoleTab)
 		if (!role) return []
@@ -168,7 +168,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 			</li>
 		))
 	}, [build, selectedRoleTab])
-	const artifactStatsAndSkills = useMemo(() => {
+	const artifactStatsAndSkillsBlock = useMemo(() => {
 		if (!isLoaded(build)) return null
 		const role = getRoleData(build, selectedRoleTab)
 		return (
@@ -217,11 +217,18 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 			</>
 		)
 	}, [build, selectedRoleTab])
+	const notesBlock = useMemo(() => {
+		if (!isLoaded(build)) return null
+		const role = getRoleData(build, selectedRoleTab)
+		return (
+			<>
+				<div>{notesToJSX(role.tips)}</div>
+				<div>{notesToJSX(role.notes)}</div>
+				<div>{notesToJSX(build.character.credits)}</div>
+			</>
+		)
+	}, [build, selectedRoleTab])
 	if (!isLoaded(build)) return <Spinner />
-	console.log(build.character)
-	console.log(build.character.credits)
-	console.log(notesToJSX(build.character.credits))
-	const role = getRoleData(build, selectedRoleTab)
 	const CharacterDetailDesktop = (
 		<div className="d-none d-xl-block">
 			<div className="container float-end">
@@ -243,14 +250,14 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 						<div className="d-flex">
 							<div className="flex-fill w-33 p-3">
 								<h6 className="text-uppercase opacity-75">Weapon</h6>
-								<ol className="items-list">{weaponList}</ol>
+								<ol className="items-list">{weaponListBlock}</ol>
 							</div>
 							<div className="flex-fill w-33 p-3">
 								<h6 className="text-uppercase opacity-75">Artifacts</h6>
-								<ol className="items-list">{weaponList}</ol>
+								<ol className="items-list">{weaponListBlock}</ol>
 								<div></div>
 							</div>
-							<div className="flex-fill w-33 p-3">{artifactStatsAndSkills}</div>
+							<div className="flex-fill w-33 p-3">{artifactStatsAndSkillsBlock}</div>
 						</div>
 					</div>
 				</div>
@@ -259,11 +266,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 					<div className="col col-9">
 						<div className="p-3">
 							<h6 className="text-uppercase opacity-75">Notes</h6>
-							<div className="opacity-75">
-								<div>{notesToJSX(role.tips)}</div>
-								<div>{notesToJSX(role.notes)}</div>
-								<div>{notesToJSX(build.character.credits)}</div>
-							</div>
+							<div className="opacity-75">{notesBlock}</div>
 						</div>
 					</div>
 				</div>
@@ -285,18 +288,18 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 			<div className="">
 				<div className="my-3">
 					<h6 className="text-uppercase opacity-75">Artifacts</h6>
-					<ol className="items-list">{weaponList}</ol>
+					<ol className="items-list">{weaponListBlock}</ol>
 					<div></div>
 				</div>
-				<div className="my-3">{artifactStatsAndSkills}</div>
+				<div className="my-3">{artifactStatsAndSkillsBlock}</div>
 				<div className="my-3">
 					<h6 className="text-uppercase opacity-75">Weapon</h6>
-					<ol className="items-list">{weaponList}</ol>
+					<ol className="items-list">{weaponListBlock}</ol>
 				</div>
 			</div>
 			<div>
 				<h6 className="text-uppercase opacity-75">Notes</h6>
-				<div className="opacity-75">{notes}</div>
+				<div className="opacity-75">{notesBlock}</div>
 			</div>
 		</div>
 	)
