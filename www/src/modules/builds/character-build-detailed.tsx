@@ -14,52 +14,6 @@ import { getWeaponIconSrc } from '#src/utils/weapons'
 import './character-build-detailed.scss'
 import Spinner from '#src/components/spinners'
 
-// todo remove
-
-const talentPriority = (
-	<>
-		<li>Normal Attack</li> <li>Skill</li> <li>Burst</li>
-	</>
-)
-const talentTips = (
-	<>
-		<p>See here for more specifics regarding the weapon rankings.</p>
-		<p>Courtesy of paraszcazk#0148</p>
-		<p>Due to how Polar Star works, your optimal rotation would be different from other weapons:</p>
-		<p>Skill (Burst) &gt; NA &gt; CA &gt; Resummon Oz (To snapshot Polar Star stacks)</p>
-	</>
-)
-const notes = (
-	<>
-		<p>
-			Elemental Burst and Skill both summon Oz, so make sure you're only using one at a time. Start with
-			your Skill, use Burst for second Oz rotation and alternate. Hopefully, by the time your
-			second/third round of Oz summoning is over, you'll have gained enough energy to repeat the loop.
-		</p>
-		<p>
-			Regarding Weapon Choices: The Stringless and Alley Hunter: At [R5], both these weapons are roughly
-			equivalent to Thundering Pulse and Skyward Harp. Prototype Crescent: Ranking assumes hitting
-			enemy's weak spot with Charged Shot everytime before summoning Oz, if you use this weapon without
-			shooting enemy's weak spots for the buff, it will have the same ranking as Rust. Windblume Ode:
-			Ode only performs this well if Fischl ends up being the trigger for some reactions. If Fischl is
-			used in a team comp where by there are NO ELEMENTAL REACTIONS, this weapon will be ranked below
-			Mitternachts Waltz. Mitternachts Waltz: This weapon will be ranked above Windblume Ode at [R5].
-		</p>
-		<p>
-			Regarding Artifact Sets: Thundersoothers (4): This artifact set will outperform Gladiator's
-			Finale(2) Thundering Fury(2) if used in a team comp where an electro aura is always present (e.g.
-			Electro/Electro-charged comps) therefore it is highly recommended within this niche. Gambler (2)
-			Thundering Fury (2): Similar to Albedo and Defender's Will, since Gambler artifact set only goes
-			up to 4 star quality, you should only use them in the Feather and Flower slot such that you do not
-			lose out as much on offensive mainstats. Tenacity of the Millelith (4): Works as a low/no
-			investment Fischl build. This set trades off Fischl's damage in return for a party wide 20 ATK%
-			buff. Not recommended to specifically farm this set for Fischl. Only use this set if you have
-			pieces while farming for the Pale Flame set for your Physical DPSes.
-		</p>
-	</>
-)
-// end todo remove
-
 const DUMMY_TAB: Tab = {
 	title: '…',
 	code: '',
@@ -110,21 +64,23 @@ function notesToJSX(tips) {
 	}
 	function processObj(tip) {
 		if ('p' in tip) return <p>{notesToJSX(tip.p)}</p>
-		if ('b' in tip) return <span className="text-primary">{notesToJSX(tip.b)}</span>
+		if ('b' in tip) return <b className="opacity-75 text-normal">{notesToJSX(tip.b)}</b>
 		if ('i' in tip) return <i>{notesToJSX(tip.i)}</i>
+		if ('u' in tip) return <u>{notesToJSX(tip.u)}</u>
 		if ('a' in tip) return <a href={tip.href}>{notesToJSX(tip.a)}</a>
-		console.warn('unknown element type in notes')
+		console.warn('unknown element type in notes: ', tip)
 		return <span>{notesToJSX(tip.a)}</span>
 	}
 	if (!tips) return null
 	if (typeof tips === 'string') return processString(tips)
-	return tips.map(tip => {
-		return typeof tip === 'string' ? processString(tip) : processObj(tip)
-	})
+	if (Array.isArray(tips))
+		return tips.map(tip => {
+			return typeof tip === 'string' ? processString(tip) : processObj(tip)
+		})
+	return processObj(tips)
 }
 export function CharacterBuildDetailed({ characterCode }: { characterCode: string }) {
 	const build = useFetch(sig => apiGetCharacterFullInfo(characterCode, sig), [characterCode])
-
 	// на случай серверного рендера: билд тут будет загружен сразу
 	const roleTabs = useMemo(
 		() => (isLoaded(build) ? build.character.roles.map(makeRoleTab) : [DUMMY_TAB]),
@@ -266,7 +222,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 					<div className="col col-9">
 						<div className="p-3">
 							<h6 className="text-uppercase opacity-75">Notes</h6>
-							<div className="opacity-75">{notesBlock}</div>
+							<div className="text-muted">{notesBlock}</div>
 						</div>
 					</div>
 				</div>

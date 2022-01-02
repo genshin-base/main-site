@@ -22,7 +22,9 @@ html, body, .app-container{
 .c-pointer{
 	cursor: pointer;
 }
-
+.text-normal {
+	color: var(--bs-body-color)!important;
+}
 
 @media (min-width: 1200px) {//xl
 	.max-height-xl-50vh{
