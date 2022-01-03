@@ -4,7 +4,7 @@ import { CharacterBuildInfoRole } from '#src/../../lib/parsing/helperteam/charac
 import { isLoaded, useFetch } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
 import { BtnTabGroup, Tab, Tabs } from '#src/components/tabs'
-import { LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
+import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
 import { apiGetCharacterFullInfo } from '#src/generated'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
 import { getCharacterPortraitSrc, getCharacterSilhouetteSrc } from '#src/utils/characters'
@@ -13,6 +13,7 @@ import { getWeaponIconSrc } from '#src/utils/weapons'
 
 import './character-build-detailed.scss'
 import Spinner from '#src/components/spinners'
+import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
 
 const DUMMY_TAB: Tab = {
 	title: '…',
@@ -79,6 +80,7 @@ function notesToJSX(tips) {
 		})
 	return processObj(tips)
 }
+const ARTIFACT_CODES = ['circlet', 'goblet', 'sands']
 export function CharacterBuildDetailed({ characterCode }: { characterCode: string }) {
 	const build = useFetch(sig => apiGetCharacterFullInfo(characterCode, sig), [characterCode])
 	// на случай серверного рендера: билд тут будет загружен сразу
@@ -101,24 +103,35 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		// TODO: role.weapons.notes, role.weapons.seeCharNotes
 		return role.weapons.advices.map((advice, i) => (
 			<li key={i} className="p-0 p-xl-1 pt-1 pt-xl-2">
-				{advice.similar.map(item => {
+				{advice.similar.map((item, i) => {
 					const weapon = build.weapons.find(x => x.code === item.code)
 					if (!weapon) return null
+					const isInList = advice.similar.length > 1
+					const isLastInList = i >= advice.similar.length - 1
 					return (
-						<LabeledItemAvatar
-							imgSrc={getWeaponIconSrc(weapon.code)}
-							title={
-								weapon.name +
-								(item.refine === null ? '' : ` [${item.refine}]`) +
-								(item.stacks === null
-									? ''
-									: ` (${item.stacks} ${pluralizeEN(item.stacks, 'stack', 'stacks')})`) +
-								genNotes(item) +
-								genSeeCharNotes(item)
-							}
-							rarity={weapon.rarity}
-							classes={'small mb-1'}
-						/>
+						<>
+							<LabeledItemAvatar
+								imgSrc={getWeaponIconSrc(weapon.code)}
+								title={
+									weapon.name +
+									(item.refine === null ? '' : ` [${item.refine}]`) +
+									(item.stacks === null
+										? ''
+										: ` (${item.stacks} ${pluralizeEN(
+												item.stacks,
+												'stack',
+												'stacks',
+										  )})`) +
+									genNotes(item) +
+									genSeeCharNotes(item)
+								}
+								rarity={weapon.rarity}
+								classes={`small-avatar small ${!isInList || isLastInList ? 'mb-1' : ''}`}
+							/>
+							{isInList && !isLastInList && (
+								<div className="text-center text-muted small ">or</div>
+							)}
+						</>
 					)
 				})}
 			</li>
@@ -130,21 +143,20 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		return (
 			<>
 				<h6 className="text-uppercase opacity-75">Main artifact stats</h6>
-				<ul className="mb-1">
-					<li>
-						<b className="text-muted">circlet — </b>
-						{genArtMainStatDetail(role, 'circlet')}
-					</li>
-					<li>
-						<b className="text-muted">goblet — </b>
-						{genArtMainStatDetail(role, 'goblet')}
-					</li>
-					<li>
-						<b className="text-muted">sands — </b>
-						{genArtMainStatDetail(role, 'sands')}
-					</li>
+				<ul className="mb-1 list-unstyled ms-1">
+					{ARTIFACT_CODES.map(ac => (
+						<li>
+							<ItemAvatar
+								src={getArtifactTypeIconSrc(ac)}
+								rarity={3}
+								classes="small-avatar small mb-1 me-1 mb-xxl-2 me-xxl-2 p-1"
+							/>
+							<b className="text-muted">{ac} — </b>
+							{genArtMainStatDetail(role, ac)}
+						</li>
+					))}
 				</ul>
-				<div className="opacity-75">
+				<div className="opacity-75 small">
 					{notesToJSX(role.mainStats.notes)} {genSeeCharNotes(role.mainStats)}
 				</div>
 				<h6 className="text-uppercase opacity-75 mt-3">Sub artifact stats</h6>
@@ -158,7 +170,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 						)
 					})}
 				</ol>
-				<div className="opacity-75">
+				<div className="opacity-75 small">
 					{role.subStats.notes} {genSeeCharNotes(role.subStats)}
 				</div>
 				<h6 className="text-uppercase opacity-75 mt-3">Talent Priority</h6>
@@ -167,7 +179,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 						return <li>{advice}</li>
 					})}
 				</ol>
-				<div className="opacity-75">
+				<div className="opacity-75 small">
 					{notesToJSX(role.talents.notes)} {genSeeCharNotes(role.subStats)}
 				</div>
 			</>

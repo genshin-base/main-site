@@ -66,7 +66,7 @@ function ArtifactCard({ onCloseClick }: { onCloseClick: () => void }): JSX.Eleme
 			}
 			bodyEl={
 				<div className="mb-3">
-					<ItemAvatar rarity={5} classes="float-start me-2 mb-2 large" src={''} />
+					<ItemAvatar rarity={5} classes="float-end me-2 mb-2 large" src={''} />
 					<h6 className="text-uppercase opacity-75">2 pieces bonus</h6>
 					<div className="mb-3">{bonus2}</div>
 					<h6 className="text-uppercase opacity-75">4 pieces bonus</h6>
@@ -122,12 +122,9 @@ function WeaponCard({ onCloseClick }: { onCloseClick: () => void }): JSX.Element
 			titleEl={'Неприлично длинное название оружия'}
 			bodyEl={
 				<div className="mb-3">
-					<div className="clearfix">
-						<ItemAvatar rarity={5} classes="float-start me-2 mb-2 large" src={''} />
-						<h6 className="text-uppercase opacity-75">Двуручный неч</h6>
-						<div className="mb-2 text-muted">Оружейный баннер</div>
-					</div>
-
+					<ItemAvatar rarity={5} classes="float-end me-2 mb-2 large" src={''} />
+					<h6 className="text-uppercase opacity-75">Двуручный неч</h6>
+					<div className="mb-2 text-muted">Оружейный баннер</div>
 					<div className="opacity-75">Бонус физ. урона</div>
 					<div className="mb-2">10% / 90%</div>
 					<div className="opacity-75">Базовая атака</div>

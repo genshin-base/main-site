@@ -1,33 +1,50 @@
-@import "./bootstrap.scss";
+@import './bootstrap.scss';
 
-html, body, .app-container{
-	min-height: 100vh
+html,
+body,
+.app-container {
+	min-height: 100vh;
 }
 
 :root {
 	--thumb-height: 3rem;
 	--thumb-height-sm: 2rem;
-	--thumb-height-l: 5rem
+	--thumb-height-l: 5rem;
 }
 
-.w-33{
-	width: 33.33%
+.w-33 {
+	width: 33.33%;
 }
-.mw-75{
-	max-width: 75%
+.mw-75 {
+	max-width: 75%;
 }
-.max-height-75vh{
-	max-height: 75vh
+.max-height-75vh {
+	max-height: 75vh;
 }
-.c-pointer{
+.c-pointer {
 	cursor: pointer;
 }
 .text-normal {
-	color: var(--bs-body-color)!important;
+	color: var(--bs-body-color) !important;
+}
+.text-decoration-underline-dotted {
+	text-decoration: dotted;
+	text-decoration-line: underline;
+	text-decoration-color: rgba(var(--bs-body-color), 0.75);
 }
 
-@media (min-width: 1200px) {//xl
-	.max-height-xl-50vh{
-		max-height: 50vh!important
+$colors: primary, secondary, warning, dark;
+
+@each $color in $colors {
+	.text-#{$color}.text-decoration-underline-dotted,
+	.text-#{$color} .text-decoration-underline-dotted {
+		text-decoration-color: rgba(var(--bs-#{$color}-rgb), 0.75)!important;
+	}
+}
+
+@media (min-width: 1200px) {
+	//xl
+	.max-height-xl-50vh {
+		max-height: 50vh !important;
 	}
 }

@@ -9,7 +9,7 @@ export function LastUsedCharacters() {
 		<ItemAvatar
 			src={getCharacterAvatarSrc(code)}
 			rarity={charactersShortList.find(x => x.code === code)?.rarity ?? 5}
-			classes="mb-1 me-1 mb-xxl-2 me-xxl-2 small"
+			classes="mb-1 me-1 mb-xxl-2 me-xxl-2 small-avatar"
 			key={code}
 			hash={makeCharacterBuildHash(code)}
 		/>

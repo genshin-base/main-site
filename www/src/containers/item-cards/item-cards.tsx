@@ -55,8 +55,8 @@ export function ItemLabelText({
 			rarityClass = ''
 			break
 	}
-	//todo c-pointer для интерактивных
-	return <label className={`${classes} ${rarityClass}`}>{title}</label>
+	//todo c-pointer text-decoration-underline-dotted для интерактивных
+	return <label className={`text-decoration-underline-dotted ${classes} ${rarityClass}`}>{title}</label>
 }
 export function LabeledItemAvatar({
 	imgSrc,
@@ -76,7 +76,7 @@ export function LabeledItemAvatar({
 	//todo c-pointer для интерактивных
 	return (
 		<div className={`text-nowrap ${classes}`} ref={elRef} onClick={openDd}>
-			<ItemAvatar rarity={3} classes="small" src={imgSrc} />
+			<ItemAvatar rarity={3} classes="small-avatar" src={imgSrc} />
 			<ItemLabelText
 				rarity={rarity}
 				classes={'text-wrap align-middle lh-1 ps-1 mw-75 text-decoration-dashed'}

@@ -59,7 +59,7 @@ export function CharacterPickerMobile() {
 					<div className="d-inline">
 						{elements.map(el => (
 							<img
-								className={`character-avatar small rounded-circle bg-secondary p-1 m-1 ${
+								className={`character-avatar small-avatar rounded-circle bg-secondary p-1 m-1 ${
 									selectedElementCode && selectedElementCode !== el.code ? 'opacity-25' : ''
 								}`}
 								key={el.code}
@@ -72,7 +72,7 @@ export function CharacterPickerMobile() {
 					<div className="d-inline">
 						{weaponTypes.map(wt => (
 							<img
-								className={`character-avatar small rounded-circle bg-secondary p-1 m-1 ${
+								className={`character-avatar small-avatar rounded-circle bg-secondary p-1 m-1 ${
 									selectedWeaponTypeCode && selectedWeaponTypeCode !== wt.code
 										? 'opacity-25'
 										: ''
