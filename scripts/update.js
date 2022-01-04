@@ -89,6 +89,20 @@ const fixes = {
 				{ actually: 'released', name: "Mouun's Moon" },
 			],
 		},
+		travelerLangNames: {
+			anemo: {
+				en: 'Anemo Traveler',
+				ru: 'Анемо Путешественник',
+			},
+			geo: {
+				en: 'Geo Traveler',
+				ru: 'Гео Путешественник',
+			},
+			electro: {
+				en: 'Electro Traveler',
+				ru: 'Электро Путешественник',
+			},
+		},
 	},
 }
 
@@ -164,7 +178,7 @@ async function extractAndSaveItemsData() {
 	clearHoneyhunterFixesUsage(fixes.honeyhunter)
 	await saveWeapons((await extractWeaponsData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)).items)
 	await saveArtifactsNames((await extractArtifactsData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)).items)
-	await saveCharacters((await extractCharactersData(DATA_CACHE_DIR, LANGS)).items)
+	await saveCharacters((await extractCharactersData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)).items)
 	await saveDomains((await extractDomainsData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)).items)
 	checkHoneyhunterFixesUsage(fixes.honeyhunter)
 	progress()
@@ -324,13 +338,13 @@ export function apiGetCharacterFullInfo(code:string, signal:AbortSignal): Promis
 
 import type { ArtifactFullInfo } from '#lib/parsing/helperteam/artifacts'
 export { ArtifactFullInfo }
-export function apiGetArtifacts(code:string, signal:AbortSignal): Promise<ArtifactFullInfo[]> {
+export function apiGetArtifacts(signal:AbortSignal): Promise<ArtifactFullInfo[]> {
 	return get(\`artifacts\`, signal)
 }
 
 import type { WeaponFullInfo } from '#lib/parsing/helperteam/weapons'
 export { WeaponFullInfo }
-export function apiGetWeapons(code:string, signal:AbortSignal): Promise<WeaponFullInfo[]> {
+export function apiGetWeapons(signal:AbortSignal): Promise<WeaponFullInfo[]> {
 	return get(\`weapons\`, signal)
 }
 
