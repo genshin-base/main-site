@@ -45,4 +45,6 @@
 
 ## Очепятки
 
-Посмотреть лог автоисправлений: `NODE_DEBUG=typo ./scripts/update.js`
+Посмотреть лог автоисправлений опечаток: `env NODE_DEBUG=typo ./scripts/update.js`
+
+Посмотреть лог автоисправлений стилей: `env NODE_DEBUG=style ./scripts/update.js` (выравнивание ссылок по словам и т.д.)
