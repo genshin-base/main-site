@@ -171,7 +171,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 					})}
 				</ol>
 				<div className="opacity-75 small">
-					{role.subStats.notes} {genSeeCharNotes(role.subStats)}
+					{notesToJSX(role.subStats.notes)} {genSeeCharNotes(role.subStats)}
 				</div>
 				<h6 className="text-uppercase opacity-75 mt-3">Talent Priority</h6>
 				<ol>
