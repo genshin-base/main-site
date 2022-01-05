@@ -1,19 +1,21 @@
 import { useEffect, useMemo, useState } from 'preact/hooks'
 
-import { CharacterBuildInfoRole } from '#src/../../lib/parsing/helperteam/characters'
+import { CharacterBuildInfoRole, CharacterFullInfo } from '#lib/parsing/helperteam/characters'
+import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
+import { mustBeDefined } from '#lib/utils'
 import { isLoaded, useFetch } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
+import Spinner from '#src/components/spinners'
 import { BtnTabGroup, Tab, Tabs } from '#src/components/tabs'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
 import { apiGetCharacterFullInfo } from '#src/generated'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
+import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import { getCharacterPortraitSrc, getCharacterSilhouetteSrc } from '#src/utils/characters'
 import { pluralizeEN } from '#src/utils/strings'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 
 import './character-build-detailed.scss'
-import Spinner from '#src/components/spinners'
-import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
 
 const DUMMY_TAB: Tab = {
 	title: '…',
@@ -33,19 +35,19 @@ function makeRoleTab(r: CharacterBuildInfoRole): Tab {
 		),
 	}
 }
-function getRoleData(build, selectedRoleTab) {
-	return build.character.roles.find(x => x.code === selectedRoleTab.code)
+function getRoleData(build: CharacterFullInfo, selectedRoleTab: Tab) {
+	return mustBeDefined(build.character.roles.find(x => x.code === selectedRoleTab.code))
 }
-function genSimpleList(arr) {
+function genSimpleList(arr: string[]) {
 	return arr.join(', ')
 }
-function genNotes(item) {
+function genNotes(item: { notes: CompactTextParagraphs | null }) {
 	return item.notes === null ? '' : JSON.stringify(item.notes)
 }
-function genSeeCharNotes(item) {
+function genSeeCharNotes(item: { seeCharNotes: boolean }) {
 	return item.seeCharNotes ? ' (see notes)' : ''
 }
-function genArtMainStatDetail(role, itemCode) {
+function genArtMainStatDetail(role: CharacterBuildInfoRole, itemCode: 'circlet' | 'goblet' | 'sands') {
 	return (
 		<span className="">
 			{genSimpleList(role.mainStats[itemCode].codes) +
@@ -55,32 +57,32 @@ function genArtMainStatDetail(role, itemCode) {
 		</span>
 	)
 }
-function notesToJSX(tips) {
-	function processString(str) {
+function notesToJSX(tips: CompactTextParagraphs | null) {
+	function processString(str: string) {
 		return str
 			.split('\n')
 			.map((sub, i, arr) => [sub, i < arr.length - 1 ? <br /> : ''])
 			.flat()
 			.filter(a => a)
 	}
-	function processObj(tip) {
+	function processObj(tip: TextNode) {
+		if (typeof tip === 'string') return processString(tip)
 		if ('p' in tip) return <p>{notesToJSX(tip.p)}</p>
 		if ('b' in tip) return <b className="opacity-75 text-normal">{notesToJSX(tip.b)}</b>
 		if ('i' in tip) return <i>{notesToJSX(tip.i)}</i>
 		if ('u' in tip) return <u>{notesToJSX(tip.u)}</u>
+		if ('s' in tip) return <s>{notesToJSX(tip.s)}</s>
 		if ('a' in tip) return <a href={tip.href}>{notesToJSX(tip.a)}</a>
 		console.warn('unknown element type in notes: ', tip)
-		return <span>{notesToJSX(tip.a)}</span>
+		return <span>{JSON.stringify(tip)}</span>
 	}
 	if (!tips) return null
-	if (typeof tips === 'string') return processString(tips)
-	if (Array.isArray(tips))
-		return tips.map(tip => {
-			return typeof tip === 'string' ? processString(tip) : processObj(tip)
-		})
+	if (Array.isArray(tips)) return tips.map(processObj)
 	return processObj(tips)
 }
-const ARTIFACT_CODES = ['circlet', 'goblet', 'sands']
+
+const CIRCLET_GOBLET_SANDS = ['circlet', 'goblet', 'sands'] as const
+
 export function CharacterBuildDetailed({ characterCode }: { characterCode: string }) {
 	const build = useFetch(sig => apiGetCharacterFullInfo(characterCode, sig), [characterCode])
 	// на случай серверного рендера: билд тут будет загружен сразу
@@ -93,9 +95,11 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 	const selectedRoleTab = roleTabs.includes(selectedRoleTabRaw)
 		? selectedRoleTabRaw
 		: roleTabs[0] ?? DUMMY_TAB
+
 	useEffect(() => {
 		window.scrollTo(0, 0)
 	}, [])
+
 	const weaponListBlock = useMemo(() => {
 		if (!isLoaded(build)) return []
 		const role = getRoleData(build, selectedRoleTab)
@@ -144,7 +148,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 			<>
 				<h6 className="text-uppercase opacity-75">Main artifact stats</h6>
 				<ul className="mb-1 list-unstyled ms-1">
-					{ARTIFACT_CODES.map(ac => (
+					{CIRCLET_GOBLET_SANDS.map(ac => (
 						<li>
 							<ItemAvatar
 								src={getArtifactTypeIconSrc(ac)}
