@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'preact/hooks'
 
 import { CharacterBuildInfoRole, CharacterFullInfo } from '#lib/parsing/helperteam/characters'
 import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
-import { mustBeDefined } from '#lib/utils'
+import { mustBeDefined } from '#lib/utils/values'
 import { isLoaded, useFetch } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
