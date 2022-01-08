@@ -31,16 +31,17 @@ import {
 	DATA_CACHE_DIR,
 	DATA_DIR,
 	IMGS_CACHE_DIR,
-	loadArtifactNames,
+	loadArtifacts,
 	loadBuilds,
 	loadCharacters,
 	loadDomains,
 	loadWeapons,
 	prepareCacheDir,
-	saveArtifactsNames,
+	saveArtifacts,
 	saveBuilds,
 	saveCharacters,
 	saveDomains,
+	saveWeaponMaterials,
 	saveWeapons,
 	WWW_DYNAMIC_DIR,
 	WWW_MEDIA_DIR,
@@ -48,6 +49,7 @@ import {
 } from './_common.js'
 import { magick, mediaChain, optipng, pngquant, resize, runCmd } from '#lib/media.js'
 import { getFileCached } from '#lib/requests.js'
+import { extractWeaponMaterialsData } from '#lib/parsing/honeyhunter/weapon_materials.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -143,7 +145,7 @@ if (args['--help'] || args['-h']) {
 async function extractAndSaveBuildsData() {
 	info('updating builds', { newline: false })
 
-	const artifactCodes = Object.entries(await loadArtifactNames()).map(([code]) => code)
+	const artifactCodes = Object.entries(await loadArtifacts()).map(([code]) => code)
 	const weaponCodes = Object.entries(await loadWeapons()).map(([code]) => code)
 	const knownCodes = {
 		artifacts: trigramSearcherFromStrings(artifactCodes),
@@ -176,12 +178,16 @@ async function extractAndSaveBuildsData() {
 async function extractAndSaveItemsData() {
 	info('updating items', { newline: false })
 	await fs.mkdir(DATA_DIR, { recursive: true })
-	clearHoneyhunterFixesUsage(fixes.honeyhunter)
-	await saveWeapons((await extractWeaponsData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)).items)
-	await saveArtifactsNames((await extractArtifactsData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)).items)
-	await saveCharacters((await extractCharactersData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)).items)
-	await saveDomains((await extractDomainsData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)).items)
-	checkHoneyhunterFixesUsage(fixes.honeyhunter)
+	const cd = DATA_CACHE_DIR
+	const fx = fixes.honeyhunter
+	clearHoneyhunterFixesUsage(fx)
+	const weaponMaterials = await extractWeaponMaterialsData(cd, LANGS, fx)
+	await saveWeaponMaterials(weaponMaterials.items)
+	await saveWeapons((await extractWeaponsData(cd, LANGS, weaponMaterials.id2item, fx)).items)
+	await saveArtifacts((await extractArtifactsData(cd, LANGS, fx)).items)
+	await saveCharacters((await extractCharactersData(cd, LANGS, fx)).items)
+	await saveDomains((await extractDomainsData(cd, LANGS, weaponMaterials.items, fx)).items)
+	checkHoneyhunterFixesUsage(fx)
 	progress()
 }
 
@@ -209,7 +215,7 @@ async function extractAndSaveItemImages(overwriteExisting) {
 	{
 		info('updating weapons images', { newline: false })
 
-		const { imgs } = await extractWeaponsData(IMGS_CACHE_DIR, LANGS, fixes.honeyhunter)
+		const { imgs } = await extractWeaponsData(IMGS_CACHE_DIR, LANGS, null, fixes.honeyhunter)
 		for (const code of imgs.keys()) if (!usedWeaponCodes.has(code)) imgs.delete(code)
 
 		await fs.mkdir(`${WWW_MEDIA_DIR}/weapons`, { recursive: true })
@@ -278,8 +284,9 @@ async function saveWwwData() {
 
 	const builds = await loadBuilds()
 	const characters = await loadCharacters()
-	const artifactNames = await loadArtifactNames()
+	const artifacts = await loadArtifacts()
 	const weapons = await loadWeapons()
+	const domains = await loadDomains()
 
 	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
 		await fs.rm(dir, { recursive: true, force: true })
@@ -294,19 +301,19 @@ async function saveWwwData() {
 	}
 
 	for (const lang of LANGS) {
-		const artifacts = builds.artifacts.map(x =>
-			makeArtifactFullInfo(x, artifactNames, builds.characters, lang),
+		const buildArtifacts = builds.artifacts.map(x =>
+			makeArtifactFullInfo(x, artifacts, builds.characters, lang),
 		)
-		const buildWeapons = builds.weapons.map(x => makeWeaponFullInfo(x, weapons, lang))
+		const buildWeapons = builds.weapons.map(x => makeWeaponFullInfo(x, weapons, domains, lang))
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 		for (const character of builds.characters)
 			await whiteJsonAndHash(
 				`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`,
-				makeCharacterFullInfo(character, characters, artifacts, buildWeapons, lang),
+				makeCharacterFullInfo(character, characters, buildArtifacts, buildWeapons, lang),
 			)
 
-		await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, artifacts)
+		await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, buildArtifacts)
 		await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, buildWeapons)
 		progress()
 	}
