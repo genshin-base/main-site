@@ -17,3 +17,8 @@ export const artifactTypes: GI_ArtifactType[] = [
 export function getArtifactTypeIconSrc(artifactTypeCode: string): string {
 	return (artifactTypes.find(at => at.code === artifactTypeCode) || artifactTypes[0]).imgSrc
 }
+export function getArtifactIconSrc(artifactCode: string): string {
+	return artifactCode === '18%-atk'
+		? getArtifactTypeIconSrc('plume')
+		: process.env.ASSET_PATH + `media/artifacts/${artifactCode}.png`
+}

@@ -10,12 +10,13 @@ import { BtnTabGroup, Tab, Tabs } from '#src/components/tabs'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
 import { apiGetCharacterFullInfo } from '#src/generated'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
-import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
+import { getArtifactIconSrc, getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import { getCharacterPortraitSrc, getCharacterSilhouetteSrc } from '#src/utils/characters'
 import { pluralizeEN } from '#src/utils/strings'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 
 import './character-build-detailed.scss'
+import { ArtifactRef, ArtifactRefNode } from '#src/../../lib/parsing/helperteam/artifacts'
 
 const DUMMY_TAB: Tab = {
 	title: '…',
@@ -41,11 +42,15 @@ function getRoleData(build: CharacterFullInfo, selectedRoleTab: Tab) {
 function genSimpleList(arr: string[]) {
 	return arr.join(', ')
 }
+function notesWrap(str) {
+	return <div className="text-muted small">{str}</div>
+}
 function genNotes(item: { notes: CompactTextParagraphs | null }) {
-	return item.notes === null ? '' : JSON.stringify(item.notes)
+	return item.notes === null ? '' : notesWrap(JSON.stringify(item.notes))
 }
 function genSeeCharNotes(item: { seeCharNotes: boolean }) {
-	return item.seeCharNotes ? ' (see notes)' : ''
+	return null
+	return item.seeCharNotes ? notesWrap(' (see notes)') : ''
 }
 function genArtMainStatDetail(role: CharacterBuildInfoRole, itemCode: 'circlet' | 'goblet' | 'sands') {
 	return (
@@ -82,7 +87,35 @@ function notesToJSX(tips: CompactTextParagraphs | null) {
 }
 
 const CIRCLET_GOBLET_SANDS = ['circlet', 'goblet', 'sands'] as const
-
+function genArtofactAdvice(set: ArtifactRef | ArtifactRefNode, isLast = true) {
+	// todo notes
+	if ('code' in set) {
+		//ArtifactRef
+		// todo count
+		return (
+			<LabeledItemAvatar
+				imgSrc={getArtifactIconSrc(set.code)}
+				rarity={3}
+				title={set.code}
+				key={set.code}
+				avatarBadge={'x' + set.count}
+				classes={`small ${isLast ? 'mb-1' : ''}`}
+			/>
+		)
+	}
+	{
+		//ArtifactRefNode
+		return set.arts.map((art, i) => {
+			const isLastInList = i >= set.arts.length - 1
+			return (
+				<>
+					{genArtofactAdvice(art, isLastInList)}
+					{!isLastInList && <div className="text-center text-muted small ">{set.op}</div>}
+				</>
+			)
+		})
+	}
+}
 export function CharacterBuildDetailed({ characterCode }: { characterCode: string }) {
 	const build = useFetch(sig => apiGetCharacterFullInfo(characterCode, sig), [characterCode])
 	// на случай серверного рендера: билд тут будет загружен сразу
@@ -104,7 +137,6 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		if (!isLoaded(build)) return []
 		const role = getRoleData(build, selectedRoleTab)
 		if (!role) return []
-		// TODO: role.weapons.notes, role.weapons.seeCharNotes
 		return role.weapons.advices.map((advice, i) => (
 			<li key={i} className="p-0 p-xl-1 pt-1 pt-xl-2">
 				{advice.similar.map((item, i) => {
@@ -121,17 +153,13 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 									(item.refine === null ? '' : ` [${item.refine}]`) +
 									(item.stacks === null
 										? ''
-										: ` (${item.stacks} ${pluralizeEN(
-												item.stacks,
-												'stack',
-												'stacks',
-										  )})`) +
-									genNotes(item) +
-									genSeeCharNotes(item)
+										: ` (${item.stacks} ${pluralizeEN(item.stacks, 'stack', 'stacks')})`)
 								}
 								rarity={weapon.rarity}
-								classes={`small-avatar small ${!isInList || isLastInList ? 'mb-1' : ''}`}
+								classes={`small ${!isInList || isLastInList ? 'mb-1' : ''}`}
 							/>
+							{genNotes(item)}
+							{genSeeCharNotes(item)}
 							{isInList && !isLastInList && (
 								<div className="text-center text-muted small ">or</div>
 							)}
@@ -140,6 +168,22 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 				})}
 			</li>
 		))
+	}, [build, selectedRoleTab])
+
+	const artifactsListBlock = useMemo(() => {
+		if (!isLoaded(build)) return []
+		const role = getRoleData(build, selectedRoleTab)
+		if (!role) return []
+
+		return role.artifacts.sets.map((set, i) => {
+			return (
+				<li key={i} className="p-0 p-xl-1 pt-1 pt-xl-2">
+					{genArtofactAdvice(set.arts)}
+					{genNotes(set)}
+					{genSeeCharNotes(set)}
+				</li>
+			)
+		})
 	}, [build, selectedRoleTab])
 	const artifactStatsAndSkillsBlock = useMemo(() => {
 		if (!isLoaded(build)) return null
@@ -152,8 +196,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 						<li>
 							<ItemAvatar
 								src={getArtifactTypeIconSrc(ac)}
-								rarity={3}
-								classes="small-avatar small mb-1 me-1 mb-xxl-2 me-xxl-2 p-1"
+								classes="small-avatar small mb-1 me-1 mb-xxl-2 me-xxl-2 p-1 bg-dark"
 							/>
 							<b className="text-muted">{ac} — </b>
 							{genArtMainStatDetail(role, ac)}
@@ -226,7 +269,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 							</div>
 							<div className="flex-fill w-33 p-3">
 								<h6 className="text-uppercase opacity-75">Artifacts</h6>
-								<ol className="items-list">{weaponListBlock}</ol>
+								<ol className="items-list">{artifactsListBlock}</ol>
 								<div></div>
 							</div>
 							<div className="flex-fill w-33 p-3">{artifactStatsAndSkillsBlock}</div>
@@ -260,7 +303,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 			<div className="">
 				<div className="my-3">
 					<h6 className="text-uppercase opacity-75">Artifacts</h6>
-					<ol className="items-list">{weaponListBlock}</ol>
+					<ol className="items-list">{artifactsListBlock}</ol>
 					<div></div>
 				</div>
 				<div className="my-3">{artifactStatsAndSkillsBlock}</div>

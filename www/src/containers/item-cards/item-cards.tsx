@@ -10,27 +10,27 @@ export function ItemAvatar({
 	rarity,
 	classes = '',
 	hash,
+	badge,
 }: {
 	src: string
-	rarity: GI_RarityCode
+	rarity?: GI_RarityCode
 	classes?: string
 	hash?: string
+	badge?: string
 }): JSX.Element {
-	let rarityClass = ''
-	switch (rarity) {
-		case 5:
-			rarityClass = 'bg-warning'
-			break
-		case 4:
-			rarityClass = 'bg-primary'
-			break
-		case 3:
-			rarityClass = 'bg-dark'
-			break
-	}
+	;['bg-2', 'bg-3', 'bg-4', 'bg-5']
+	const rarityClass = rarity ? 'bg-' + rarity : 'bg-dark'
 	return (
-		<a href={hash}>
+		<a href={hash} className="position-relative small">
 			<img className={`item-avatar rounded-circle ${rarityClass} ${classes}`} src={src} />
+			{badge && (
+				<span className="position-absolute top-0 start-0 translate-middle badge rounded-pill opacity-75">
+					{badge}
+				</span>
+			)}
+			{/* <span className="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-primary border border-light">
+				4
+			</span> */}
 		</a>
 	)
 }
@@ -39,7 +39,7 @@ export function ItemLabelText({
 	classes = '',
 	title,
 }: {
-	rarity: GI_RarityCode
+	rarity?: GI_RarityCode
 	title: string
 	classes?: string
 }): JSX.Element {
@@ -51,23 +51,25 @@ export function ItemLabelText({
 		case 4:
 			rarityClass = 'text-primary'
 			break
-		case 3:
+		default:
 			rarityClass = ''
 			break
 	}
 	//todo c-pointer text-decoration-underline-dotted для интерактивных
-	return <label className={`text-decoration-underline-dotted ${classes} ${rarityClass}`}>{title}</label>
+	return <label className={`${classes} ${rarityClass}`}>{title}</label>
 }
 export function LabeledItemAvatar({
 	imgSrc,
 	rarity,
 	classes = '',
 	title,
+	avatarBadge,
 }: {
 	imgSrc: string
-	rarity: GI_RarityCode
+	rarity?: GI_RarityCode
 	title: string
 	classes?: string
+	avatarBadge?: string
 }): JSX.Element {
 	const elRef = useRef(null)
 	const [isExpanded, setIsExpanded] = useState(false)
@@ -76,10 +78,10 @@ export function LabeledItemAvatar({
 	//todo c-pointer для интерактивных
 	return (
 		<div className={`text-nowrap ${classes}`} ref={elRef} onClick={openDd}>
-			<ItemAvatar rarity={3} classes="small-avatar" src={imgSrc} />
+			<ItemAvatar classes="small-avatar" src={imgSrc} badge={avatarBadge} />
 			<ItemLabelText
 				rarity={rarity}
-				classes={'text-wrap align-middle lh-1 ps-1 mw-75 text-decoration-dashed'}
+				classes={'text-wrap align-middle lh-1 ps-1 mw-75'}
 				title={title}
 			></ItemLabelText>
 			{isExpanded ? <WeaponDetailDd onClickAway={closeDd} targetEl={elRef.current} /> : null}

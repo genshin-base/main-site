@@ -11,7 +11,22 @@ body,
 	--thumb-height-sm: 2rem;
 	--thumb-height-l: 5rem;
 }
-
+.bg-5{
+	background-color: rgb(149,107,69);
+	background-color: linear-gradient(180deg, rgba(149,107,69,1) 0%, rgba(218,147,84,1) 100%);
+}
+.bg-4{
+	background-color: rgb(108,101,142);
+	background-color: linear-gradient(180deg, rgba(108,101,142,1) 0%, rgba(152,119,195,1) 100%);
+}
+.bg-3{
+	background-color: rgb(106,119,151);
+	background-color: linear-gradient(180deg, rgba(106,119,151,1) 0%, rgba(111,169,205,1) 100%);
+}
+.bg-2{
+	background-color: rgb(114,115,119);
+	background-color: linear-gradient(180deg, rgba(114,115,119,1) 0%, rgba(162,161,159,1) 100%);
+}
 .w-33 {
 	width: 33.33%;
 }
@@ -30,7 +45,7 @@ body,
 .text-decoration-underline-dotted {
 	text-decoration: dotted;
 	text-decoration-line: underline;
-	text-decoration-color: rgba(var(--bs-body-color), 0.75);
+	text-decoration-color: $light;
 }
 
 $colors: primary, secondary, warning, dark;
