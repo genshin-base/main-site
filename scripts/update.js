@@ -10,14 +10,7 @@ import {
 	extractWeaponsData,
 	getAndProcessItemImages,
 } from '#lib/parsing/honeyhunter/index.js'
-import {
-	getCharacterArtifactCodes,
-	getCharacterWeaponCodes,
-	makeCharacterFullInfo,
-	makeCharacterShortList,
-} from '#lib/parsing/helperteam/characters.js'
-import { makeArtifactFullInfo } from '#lib/parsing/helperteam/artifacts.js'
-import { makeWeaponFullInfo } from '#lib/parsing/helperteam/weapons.js'
+import { getCharacterArtifactCodes, getCharacterWeaponCodes } from '#lib/parsing/helperteam/characters.js'
 import { makeRecentChangelogsTable } from '#lib/parsing/helperteam/changelogs.js'
 import { trigramSearcherFromStrings } from '#lib/trigrams.js'
 import { createHash } from 'crypto'
@@ -49,6 +42,12 @@ import {
 } from './_common.js'
 import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
 import { extractWeaponMaterialsData } from '#lib/parsing/honeyhunter/weapon_materials.js'
+import {
+	makeArtifactFullInfo,
+	makeCharacterFullInfo,
+	makeCharacterShortList,
+	makeWeaponFullInfo,
+} from '#lib/parsing/combine.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -250,7 +249,7 @@ async function saveWwwData() {
 
 	for (const lang of LANGS) {
 		const buildArtifacts = builds.artifacts.map(x =>
-			makeArtifactFullInfo(x, artifacts, builds.characters, lang),
+			makeArtifactFullInfo(x, artifacts, domains, builds.characters, lang),
 		)
 		const buildWeapons = builds.weapons.map(x => makeWeaponFullInfo(x, weapons, domains, lang))
 
@@ -282,23 +281,23 @@ const LANG = 'en'
 const get = <T>(prefix:string, signal:AbortSignal) =>
 	apiGetJSONFile(\`generated/\${prefix}-\${LANG}.json?v=${hash}\`, signal) as Promise<T>
 
-import type { CharacterShortInfo } from '#lib/parsing/helperteam/characters'
+import type { CharacterShortInfo } from '#lib/parsing/combine'
 export const charactersShortList: CharacterShortInfo[] =
 	${JSON.stringify(makeCharacterShortList(builds.characters, characters))}
 
-import type { CharacterFullInfo } from '#lib/parsing/helperteam/characters'
+import type { CharacterFullInfo } from '#lib/parsing/combine'
 export { CharacterFullInfo }
 export function apiGetCharacterFullInfo(code:string, signal:AbortSignal): Promise<CharacterFullInfo> {
 	return get(\`characters/\${code}\`, signal)
 }
 
-import type { ArtifactFullInfo } from '#lib/parsing/helperteam/artifacts'
+import type { ArtifactFullInfo } from '#lib/parsing/combine'
 export { ArtifactFullInfo }
 export function apiGetArtifacts(signal:AbortSignal): Promise<ArtifactFullInfo[]> {
 	return get(\`artifacts\`, signal)
 }
 
-import type { WeaponFullInfo } from '#lib/parsing/helperteam/weapons'
+import type { WeaponFullInfo } from '#lib/parsing/combine'
 export { WeaponFullInfo }
 export function apiGetWeapons(signal:AbortSignal): Promise<WeaponFullInfo[]> {
 	return get(\`weapons\`, signal)
