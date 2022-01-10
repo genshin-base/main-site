@@ -37,6 +37,7 @@
 		"eslint-webpack-plugin": "^3.1.1",
 		"html-webpack-plugin": "^5.5.0",
 		"htmlparser2": "^7.2.0",
+		"locmap": "github:3bl3gamer/locmap#v1.7.0",
 		"mini-css-extract-plugin": "^2.4.5",
 		"node-stream-zip": "^1.15.0",
 		"preact": "^10.6.4",

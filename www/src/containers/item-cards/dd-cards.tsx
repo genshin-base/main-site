@@ -1,6 +1,7 @@
 import { useWindowSize } from '#src/api/hooks'
 import { ItemDetailDdMobilePortal, ItemDetailDdPortal } from '#src/components/item-detail-dd-portal'
 import { BtnTabGroup } from '#src/components/tabs'
+import { TeyvatMap } from '#src/components/teyvat-map'
 import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
 import { ItemAvatar } from './item-cards'
 
@@ -134,12 +135,7 @@ function WeaponCard({ onCloseClick }: { onCloseClick: () => void }): JSX.Element
 					<div className="mb-2 opacity-75">{bonus4}</div>
 				</div>
 			}
-			mapEl={
-				<img
-					className="my-3 dungeon-location"
-					src="https://cs10.pikabu.ru/post_img/2019/11/30/12/15751468251132348.jpg"
-				></img>
-			}
+			mapEl={<TeyvatMap classes="my-3 dungeon-location" x={100} y={100} level={-1.2} />}
 			onCloseClick={onCloseClick}
 		></Card>
 	)
