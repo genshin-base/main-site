@@ -1,14 +1,15 @@
 import { useEffect, useMemo, useState } from 'preact/hooks'
 
-import { CharacterBuildInfoRole, CharacterFullInfo } from '#lib/parsing/helperteam/characters'
+import { CharacterBuildInfoRole } from '#lib/parsing/helperteam/characters'
 import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
 import { mustBeDefined } from '#lib/utils/values'
+import { ArtifactRef, ArtifactRefNode } from '#src/../../lib/parsing/helperteam/artifacts'
 import { isLoaded, useFetch } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
 import { BtnTabGroup, Tab, Tabs } from '#src/components/tabs'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
-import { apiGetCharacterFullInfo } from '#src/generated'
+import { apiGetCharacterFullInfo, CharacterFullInfo } from '#src/generated'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
 import { getArtifactIconSrc, getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import { getCharacterPortraitSrc, getCharacterSilhouetteSrc } from '#src/utils/characters'
@@ -16,7 +17,6 @@ import { pluralizeEN } from '#src/utils/strings'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 
 import './character-build-detailed.scss'
-import { ArtifactRef, ArtifactRefNode } from '#src/../../lib/parsing/helperteam/artifacts'
 
 const DUMMY_TAB: Tab = {
 	title: '…',
