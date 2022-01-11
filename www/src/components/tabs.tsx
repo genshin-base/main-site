@@ -47,7 +47,7 @@ export function BtnTabGroup({
 			{tabs.map(t => (
 				<button
 					type="button"
-					className={`btn btn-sm ${
+					className={`btn btn-sm lh-sm ${
 						t.code === selectedTab.code ? 'btn-primary' : 'btn-outline-primary'
 					} `}
 					key={t.code}

@@ -49,7 +49,7 @@ function genNotes(item: { notes: CompactTextParagraphs | null }) {
 	return item.notes === null ? '' : notesWrap(JSON.stringify(item.notes))
 }
 function genSeeCharNotes(item: { seeCharNotes: boolean }) {
-	return null
+	return ''
 	return item.seeCharNotes ? notesWrap(' (see notes)') : ''
 }
 function genArtMainStatDetail(role: CharacterBuildInfoRole, itemCode: 'circlet' | 'goblet' | 'sands') {
@@ -86,30 +86,36 @@ function notesToJSX(tips: CompactTextParagraphs | null) {
 	return processObj(tips)
 }
 
-const CIRCLET_GOBLET_SANDS = ['circlet', 'goblet', 'sands'] as const
-function genArtofactAdvice(set: ArtifactRef | ArtifactRefNode, isLast = true) {
+const CIRCLET_GOBLET_SANDS = ['sands', 'goblet', 'circlet'] as const
+const ATK_ART_SET = {
+	//todo
+	name: '18% atk',
+	rarity: 2,
+} as const
+function genArtofactAdvice(set: ArtifactRef | ArtifactRefNode, build: CharacterFullInfo, isLast = true) {
 	// todo notes
 	if ('code' in set) {
 		//ArtifactRef
-		// todo count
+		console.log(build)
+		const artifact = set.code === '18%-atk' ? ATK_ART_SET : build.artifacts.find(x => x.code === set.code)
+		if (!artifact) return null
 		return (
 			<LabeledItemAvatar
 				imgSrc={getArtifactIconSrc(set.code)}
-				rarity={3}
-				title={set.code}
+				rarity={artifact.rarity}
+				title={artifact.name}
 				key={set.code}
 				avatarBadge={'x' + set.count}
 				classes={`small ${isLast ? 'mb-1' : ''}`}
 			/>
 		)
-	}
-	{
+	} else {
 		//ArtifactRefNode
 		return set.arts.map((art, i) => {
 			const isLastInList = i >= set.arts.length - 1
 			return (
 				<>
-					{genArtofactAdvice(art, isLastInList)}
+					{genArtofactAdvice(art, build, isLastInList)}
 					{!isLastInList && <div className="text-center text-muted small ">{set.op}</div>}
 				</>
 			)
@@ -178,7 +184,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		return role.artifacts.sets.map((set, i) => {
 			return (
 				<li key={i} className="p-0 p-xl-1 pt-1 pt-xl-2">
-					{genArtofactAdvice(set.arts)}
+					{genArtofactAdvice(set.arts, build)}
 					{genNotes(set)}
 					{genSeeCharNotes(set)}
 				</li>

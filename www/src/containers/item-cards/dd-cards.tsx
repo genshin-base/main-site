@@ -3,7 +3,7 @@ import { ItemDetailDdMobilePortal, ItemDetailDdPortal } from '#src/components/it
 import { BtnTabGroup } from '#src/components/tabs'
 import { TeyvatMap } from '#src/components/teyvat-map'
 import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
-import { ItemAvatar } from './item-cards'
+import { ItemAvatar, LabeledItemAvatar } from './item-cards'
 
 function Card({
 	classes = '',
@@ -21,7 +21,7 @@ function Card({
 	onCloseClick: () => void
 }): JSX.Element {
 	return (
-		<div className={`card max-height-75vh max-height-xl-50vh ${classes}`}>
+		<div className={`item-detail-popover-card card max-height-75vh max-height-xl-50vh ${classes}`}>
 			<h3 className="card-header fs-4 d-flex">
 				<span className="flex-fill">{titleEl}</span>{' '}
 				<span
@@ -40,6 +40,38 @@ function Card({
 		</div>
 	)
 }
+function MapWrap({ children }: { children: JSX.Nodes }): JSX.Element {
+	const tabs = [
+		{ title: 'какой-то данж', code: '1' },
+		{ title: 'Еще какой-то данж', code: '2' },
+		{ title: 'Большой сочный пирог', code: '3' },
+	]
+	const selectedTab = tabs[0]
+	return (
+		<div className={`map-wrap position-relative my-3 `}>
+			<div class="map-header position-absolute d-flex flex-row px-2 py-1">
+				<div className="map-header-bg position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+				<LabeledItemAvatar
+					classes="me-2 mb-2 small-avatar pt-1"
+					imgSrc={''}
+					title="фиговина для прокачки"
+				/>
+				<div className="flex-fill">
+					<BtnTabGroup
+						tabs={tabs}
+						selectedTab={selectedTab}
+						onTabSelect={t => {
+							t
+						}}
+						classes="w-100"
+					/>
+				</div>
+			</div>
+			{children}
+		</div>
+	)
+}
+
 const bonus2 = 'Повышает бонус лечения на 15%.'
 const bonus4 =
 	'Экипированный этим набором артефактов персонаж при лечении соратников создаёт на 3 сек. Пузырь морских красок. Пузырь регистрирует восстановленное при лечении HP (в том числе избыточные, когда лечение превышает максимум здоровья). После окончания действия Пузырь взрывается и наносит окружающим врагам урон в размере 90% учтённого объёма лечения (урон рассчитывается так же, как для эффектов Заряжен и Сверхпроводник, но на него не действуют бонусы мастерства стихий, уровня и реакций). Пузырь морских красок можно создавать не чаще, чем раз в 3,5 сек. Пузырь может записать до 30 000 восстановленных HP, в том числе HP избыточного лечения. Для отряда не может существовать больше одного Пузыря морских красок одновременно. Этот эффект действует, даже если персонаж, экипированный набором артефактов, не находится на поле боя.'
@@ -67,7 +99,7 @@ function ArtifactCard({ onCloseClick }: { onCloseClick: () => void }): JSX.Eleme
 			}
 			bodyEl={
 				<div className="mb-3">
-					<ItemAvatar rarity={5} classes="float-end me-2 mb-2 large" src={''} />
+					<ItemAvatar rarity={5} classes="float-end me-2 mb-2 large-avatar" src={''} />
 					<h6 className="text-uppercase opacity-75">2 pieces bonus</h6>
 					<div className="mb-3">{bonus2}</div>
 					<h6 className="text-uppercase opacity-75">4 pieces bonus</h6>
@@ -76,7 +108,7 @@ function ArtifactCard({ onCloseClick }: { onCloseClick: () => void }): JSX.Eleme
 			}
 			mapEl={
 				<img
-					className="my-3 dungeon-location"
+					className="my-3 dungeon-location "
 					src="https://cs10.pikabu.ru/post_img/2019/11/30/12/15751468251132348.jpg"
 				></img>
 			}
@@ -123,7 +155,7 @@ function WeaponCard({ onCloseClick }: { onCloseClick: () => void }): JSX.Element
 			titleEl={'Неприлично длинное название оружия'}
 			bodyEl={
 				<div className="mb-3">
-					<ItemAvatar rarity={5} classes="float-end me-2 mb-2 large" src={''} />
+					<ItemAvatar rarity={5} classes="float-end me-2 mb-2 large-avatar" src={''} />
 					<h6 className="text-uppercase opacity-75">Двуручный неч</h6>
 					<div className="mb-2 text-muted">Оружейный баннер</div>
 					<div className="opacity-75">Бонус физ. урона</div>
@@ -135,7 +167,11 @@ function WeaponCard({ onCloseClick }: { onCloseClick: () => void }): JSX.Element
 					<div className="mb-2 opacity-75">{bonus4}</div>
 				</div>
 			}
-			mapEl={<TeyvatMap classes="my-3 dungeon-location" x={100} y={100} level={-1.2} />}
+			mapEl={
+				<MapWrap>
+					<TeyvatMap classes="dungeon-location position-relative" x={100} y={100} level={-1.2} />
+				</MapWrap>
+			}
 			onCloseClick={onCloseClick}
 		></Card>
 	)

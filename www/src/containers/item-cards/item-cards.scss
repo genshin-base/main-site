@@ -5,14 +5,23 @@
 		width: var(--thumb-height-sm);
 		height: var(--thumb-height-sm);
 	}
-	&.large{
+	&.large-avatar{
 		width: var(--thumb-height-l);
 		height: var(--thumb-height-l);
 	}
 }
-img.dungeon-location{
-	min-height: 200px;
-}
-.item-detail-popover{
+
+.item-detail-popover { //desktop wrap of a card
 	max-width: 576px!important;
+}
+.item-detail-popover-card {
+	.map-header{
+		z-index: 1;
+	}
+	.map-header-bg{
+		z-index: -1;
+	}
+	.dungeon-location{
+		height: 300px;
+	}
 }

@@ -75,11 +75,5 @@ export function TeyvatMap({
 		if (map) map.updateLocation(x, y, TILE_WIDTH * 2 ** level)
 	}, [x, y, level])
 
-	return (
-		<div
-			ref={wrapRef}
-			class={'teyvat-map ' + classes}
-			style={{ position: 'relative', height: '16000px' }}
-		></div>
-	)
+	return <div ref={wrapRef} class={'teyvat-map ' + classes}></div>
 }
