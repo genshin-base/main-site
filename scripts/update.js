@@ -112,6 +112,22 @@ const fixes = {
 				{ actually: 'released', name: 'Calamity Queller' },
 			],
 		},
+		items: (() => {
+			function addType(type) {
+				return (/**@type {import('#lib/parsing').ItemData}*/ item) => {
+					if (item.types.includes(type)) return false
+					item.types.push(type)
+					return true
+				}
+			}
+			return [
+				// некоторые предметы используются для прокачки, но почему-то отсутствуют на
+				// https://genshin.honeyhunterworld.com/db/item/character-ascension-material-local-material/
+				{ code: 'spectral-nucleus', fixFunc: addType('character-material-local') },
+				{ code: 'dendrobium', fixFunc: addType('character-material-local') },
+				{ code: 'onikabuto', fixFunc: addType('character-material-local') },
+			]
+		})(),
 		travelerLangNames: {
 			anemo: {
 				en: 'Anemo Traveler',
@@ -206,7 +222,7 @@ async function extractAndSaveItemsData() {
 	await saveItems(items.code2item)
 	await saveArtifacts(artifacts.code2item)
 	await saveWeapons((await extractWeaponsData(cd, LANGS, items.id2item, fx)).items)
-	await saveCharacters((await extractCharactersData(cd, LANGS, fx)).items)
+	await saveCharacters((await extractCharactersData(cd, LANGS, items.id2item, fx)).items)
 	await saveDomains((await extractDomainsData(cd, LANGS, items.id2item, artifacts.id2item, fx)).items)
 
 	checkHoneyhunterFixesUsage(fx)
@@ -266,7 +282,7 @@ async function saveWwwData() {
 	}
 
 	const md5sum = createHash('md5')
-	async function whiteJsonAndHash(path, data) {
+	async function writeJsonAndHash(path, data) {
 		const content = JSON.stringify(data)
 		await fs.writeFile(path, content)
 		md5sum.update(content)
@@ -280,17 +296,17 @@ async function saveWwwData() {
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 		for (const character of builds.characters)
-			await whiteJsonAndHash(
+			await writeJsonAndHash(
 				`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`,
-				makeCharacterFullInfo(character, characters, buildArtifacts, buildWeapons, lang),
+				makeCharacterFullInfo(character, characters, buildArtifacts, buildWeapons, domains, lang),
 			)
 
-		await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, buildArtifacts)
-		await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, buildWeapons)
+		await writeJsonAndHash(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, buildArtifacts)
+		await writeJsonAndHash(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, buildWeapons)
 		progress()
 	}
-	await whiteJsonAndHash(`${WWW_DYNAMIC_DIR}/changelogs.json`, builds.changelogsTable)
-	await whiteJsonAndHash(
+	await writeJsonAndHash(`${WWW_DYNAMIC_DIR}/changelogs.json`, builds.changelogsTable)
+	await writeJsonAndHash(
 		`${WWW_DYNAMIC_DIR}/changelogs-recent.json`,
 		makeRecentChangelogsTable(builds.changelogsTable),
 	)
