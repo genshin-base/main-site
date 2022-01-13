@@ -34,20 +34,20 @@ import {
 	saveBuilds,
 	saveCharacters,
 	saveDomains,
-	saveWeaponMaterials,
+	saveItems,
 	saveWeapons,
 	WWW_DYNAMIC_DIR,
 	WWW_MEDIA_DIR,
 	WWW_STATIC_DIR,
 } from './_common.js'
 import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
-import { extractWeaponMaterialsData } from '#lib/parsing/honeyhunter/weapon_materials.js'
 import {
 	makeArtifactFullInfo,
 	makeCharacterFullInfo,
 	makeCharacterShortList,
 	makeWeaponFullInfo,
 } from '#lib/parsing/combine.js'
+import { extractItemsData } from '#lib/parsing/honeyhunter/items.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -63,7 +63,7 @@ const fixes = {
 		sheets: [
 			{
 				// у Барбары у столбца роли нет заголовка
-				title: /^hydro/i,
+				title: /^hydro$/i,
 				fixFunc(sheet) {
 					for (const { values: cells = [] } of sheet.data[0].rowData) {
 						for (let i = 0; i < cells.length; i++) {
@@ -79,6 +79,27 @@ const fixes = {
 					return false
 				},
 			},
+			{
+				// у Эмбер один набор артефактов прописан в странном формате
+				title: /^pyro$/i,
+				fixFunc(sheet) {
+					const substr = '2x +20% Energy Recharge%'
+					const replaceWith = '20% ER set (2) 20% ER set (2)'
+					for (const { values: cells = [] } of sheet.data[0].rowData) {
+						for (const cell of cells) {
+							const text = json_getText(cell)
+							if (text.includes(substr)) {
+								delete cell.textFormatRuns
+								cell.userEnteredValue = {
+									stringValue: text.replace(substr, replaceWith),
+								}
+								return true
+							}
+						}
+					}
+					return false
+				},
+			},
 		],
 	},
 	/** @type {import('#lib/parsing/honeyhunter/fixes').HoneyhunterFixes} */
@@ -88,6 +109,7 @@ const fixes = {
 			weapons: [
 				{ actually: 'released', name: 'Predator' },
 				{ actually: 'released', name: "Mouun's Moon" },
+				{ actually: 'released', name: 'Calamity Queller' },
 			],
 		},
 		travelerLangNames: {
@@ -178,12 +200,15 @@ async function extractAndSaveItemsData() {
 	const cd = DATA_CACHE_DIR
 	const fx = fixes.honeyhunter
 	clearHoneyhunterFixesUsage(fx)
-	const weaponMaterials = await extractWeaponMaterialsData(cd, LANGS, fx)
-	await saveWeaponMaterials(weaponMaterials.items)
-	await saveWeapons((await extractWeaponsData(cd, LANGS, weaponMaterials.id2item, fx)).items)
-	await saveArtifacts((await extractArtifactsData(cd, LANGS, fx)).items)
+
+	const items = await extractItemsData(cd, LANGS, fx)
+	const artifacts = await extractArtifactsData(cd, LANGS, fx)
+	await saveItems(items.code2item)
+	await saveArtifacts(artifacts.code2item)
+	await saveWeapons((await extractWeaponsData(cd, LANGS, items.id2item, fx)).items)
 	await saveCharacters((await extractCharactersData(cd, LANGS, fx)).items)
-	await saveDomains((await extractDomainsData(cd, LANGS, weaponMaterials.items, fx)).items)
+	await saveDomains((await extractDomainsData(cd, LANGS, items.id2item, artifacts.id2item, fx)).items)
+
 	checkHoneyhunterFixesUsage(fx)
 	progress()
 }
@@ -197,11 +222,11 @@ async function extractAndSaveItemImages(overwriteExisting) {
 	{
 		info('updating artifacts images', { newline: false })
 
-		const { imgs } = await extractArtifactsData(IMGS_CACHE_DIR, LANGS, fixes.honeyhunter)
-		for (const code of imgs.keys()) if (!usedArtCodes.has(code)) imgs.delete(code)
+		const { code2img } = await extractArtifactsData(IMGS_CACHE_DIR, LANGS, fixes.honeyhunter)
+		for (const code of code2img.keys()) if (!usedArtCodes.has(code)) code2img.delete(code)
 
 		await fs.mkdir(`${WWW_MEDIA_DIR}/artifacts`, { recursive: true })
-		const stats = await getAndProcessItemImages(imgs, IMGS_CACHE_DIR, 'artifacts', async code => {
+		const stats = await getAndProcessItemImages(code2img, IMGS_CACHE_DIR, 'artifacts', async code => {
 			const dest = `${WWW_MEDIA_DIR}/artifacts/${code}.png`
 			if (overwriteExisting || !(await exists(dest)))
 				return src => mediaChain(src, dest, (i, o) => resize(i, o, '64x64'), pngquant, optipng)

@@ -52,9 +52,9 @@ export const saveCharacters = characters => saveYaml('characters', characters)
 /** @returns {Promise<import('#lib/parsing').Code2CharacterData>} */
 export const loadCharacters = () => loadYaml('characters')
 
-/** @param {import('#lib/parsing').Code2ArtifactData} artifacts */
+/** @param {import('#lib/parsing').Code2ArtifactSetData} artifacts */
 export const saveArtifacts = artifacts => saveYaml('artifacts', artifacts)
-/** @returns {Promise<import('#lib/parsing').Code2ArtifactData>} */
+/** @returns {Promise<import('#lib/parsing').Code2ArtifactSetData>} */
 export const loadArtifacts = () => loadYaml('artifacts')
 
 /** @param {import('#lib/parsing').Code2WeaponData} weapons */
@@ -67,7 +67,7 @@ export const saveDomains = domains => saveYaml('domains', domains)
 /** @returns {Promise<import('#lib/parsing').Code2DomainData>} */
 export const loadDomains = () => loadYaml('domains')
 
-/** @param {import('#lib/parsing').Code2WeaponMaterialData} domains */
-export const saveWeaponMaterials = domains => saveYaml('weapon_materials', domains)
-/** @returns {Promise<import('#lib/parsing').Code2WeaponMaterialData>} */
-export const loadWeaponMaterials = () => loadYaml('weapon_materials')
+/** @param {import('#lib/parsing').Code2ItemData} items */
+export const saveItems = items => saveYaml('items', items)
+/** @returns {Promise<import('#lib/parsing').Code2ItemData>} */
+export const loadItems = () => loadYaml('items')
