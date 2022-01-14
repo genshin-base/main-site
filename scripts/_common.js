@@ -71,3 +71,8 @@ export const loadDomains = () => loadYaml('domains')
 export const saveItems = items => saveYaml('items', items)
 /** @returns {Promise<import('#lib/parsing').Code2ItemData>} */
 export const loadItems = () => loadYaml('items')
+
+/** @param {import('#lib/parsing').Code2EnemyData} enemies */
+export const saveEnemies = enemies => saveYaml('enemies', enemies)
+/** @returns {Promise<import('#lib/parsing').Code2EnemyData>} */
+export const loadEnemies = () => loadYaml('enemies')

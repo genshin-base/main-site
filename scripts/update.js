@@ -34,6 +34,7 @@ import {
 	saveBuilds,
 	saveCharacters,
 	saveDomains,
+	saveEnemies,
 	saveItems,
 	saveWeapons,
 	WWW_DYNAMIC_DIR,
@@ -48,6 +49,7 @@ import {
 	makeWeaponFullInfo,
 } from '#lib/parsing/combine.js'
 import { extractItemsData } from '#lib/parsing/honeyhunter/items.js'
+import { extractEnemiesData } from '#lib/parsing/honeyhunter/enemies.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -224,6 +226,7 @@ async function extractAndSaveItemsData() {
 	await saveWeapons((await extractWeaponsData(cd, LANGS, items.id2item, fx)).items)
 	await saveCharacters((await extractCharactersData(cd, LANGS, items.id2item, fx)).items)
 	await saveDomains((await extractDomainsData(cd, LANGS, items.id2item, artifacts.id2item, fx)).items)
+	await saveEnemies((await extractEnemiesData(cd, LANGS, items.id2item, artifacts.id2item, fx)).code2item)
 
 	checkHoneyhunterFixesUsage(fx)
 	progress()
