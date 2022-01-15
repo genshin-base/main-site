@@ -28,6 +28,7 @@ import {
 	loadBuilds,
 	loadCharacters,
 	loadDomains,
+	loadItems,
 	loadWeapons,
 	prepareCacheDir,
 	saveArtifacts,
@@ -278,6 +279,7 @@ async function saveWwwData() {
 	const artifacts = await loadArtifacts()
 	const weapons = await loadWeapons()
 	const domains = await loadDomains()
+	const items = await loadItems()
 
 	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
 		await fs.rm(dir, { recursive: true, force: true })
@@ -295,7 +297,7 @@ async function saveWwwData() {
 		const buildArtifacts = builds.artifacts.map(x =>
 			makeArtifactFullInfo(x, artifacts, domains, builds.characters, lang),
 		)
-		const buildWeapons = builds.weapons.map(x => makeWeaponFullInfo(x, weapons, domains, lang))
+		const buildWeapons = builds.weapons.map(x => makeWeaponFullInfo(x, weapons, domains, items, lang))
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 		for (const character of builds.characters)
