@@ -260,6 +260,18 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		info(`  saved ${stats.loaded} of total ${stats.total}`)
 	}
 
+	const items = await extractItemsData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)
+	await processGroup('items', async () => {
+		const { code2img } = items
+		for (const code of code2img.keys()) if (!usedItemCodes.has(code)) code2img.delete(code)
+
+		await fs.mkdir(`${WWW_MEDIA_DIR}/items`, { recursive: true })
+		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'items', async code => {
+			const dest = `${WWW_MEDIA_DIR}/items/${code}.png`
+			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
+		})
+	})
+
 	await processGroup('artifacts', async () => {
 		const { code2img } = await extractArtifactsData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)
 		for (const code of code2img.keys()) if (!usedArtCodes.has(code)) code2img.delete(code)
@@ -271,23 +283,12 @@ async function extractAndSaveItemImages(overwriteExisting) {
 	})
 
 	await processGroup('weapons', async () => {
-		const { code2img } = await extractWeaponsData(DATA_CACHE_DIR, LANGS, null, fixes.honeyhunter)
+		const { code2img } = await extractWeaponsData(DATA_CACHE_DIR, LANGS, items.id2item, fixes.honeyhunter)
 		for (const code of code2img.keys()) if (!usedWeaponCodes.has(code)) code2img.delete(code)
 
 		await fs.mkdir(`${WWW_MEDIA_DIR}/weapons`, { recursive: true })
 		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'weapons', async code => {
 			const dest = `${WWW_MEDIA_DIR}/weapons/${code}.png`
-			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
-		})
-	})
-
-	await processGroup('items', async () => {
-		const { code2img } = await extractItemsData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)
-		for (const code of code2img.keys()) if (!usedItemCodes.has(code)) code2img.delete(code)
-
-		await fs.mkdir(`${WWW_MEDIA_DIR}/items`, { recursive: true })
-		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'items', async code => {
-			const dest = `${WWW_MEDIA_DIR}/items/${code}.png`
 			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
 		})
 	})
