@@ -51,6 +51,7 @@ import {
 } from '#lib/parsing/combine.js'
 import { extractItemsData } from '#lib/parsing/honeyhunter/items.js'
 import { extractEnemiesData } from '#lib/parsing/honeyhunter/enemies.js'
+import { applyWeaponsObtainData } from '#lib/parsing/wiki/weapons.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -222,9 +223,11 @@ async function extractAndSaveItemsData() {
 
 	const items = await extractItemsData(cd, LANGS, fx)
 	const artifacts = await extractArtifactsData(cd, LANGS, fx)
+	const weapons = await extractWeaponsData(cd, LANGS, items.id2item, fx)
+	await applyWeaponsObtainData(cd, weapons.items)
 	await saveItems(items.code2item)
 	await saveArtifacts(artifacts.code2item)
-	await saveWeapons((await extractWeaponsData(cd, LANGS, items.id2item, fx)).items)
+	await saveWeapons(weapons.items)
 	await saveCharacters((await extractCharactersData(cd, LANGS, items.id2item, fx)).items)
 	await saveDomains((await extractDomainsData(cd, LANGS, items.id2item, artifacts.id2item, fx)).items)
 	await saveEnemies((await extractEnemiesData(cd, LANGS, items.id2item, artifacts.id2item, fx)).code2item)
