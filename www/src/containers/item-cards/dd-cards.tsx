@@ -1,9 +1,11 @@
-import { DropSourceShortInfo } from '#src/../../lib/parsing/combine'
+import { useMemo } from 'preact/hooks'
+
+import { DomainShortInfo, EnemyShortInfo, ItemObtainInfo, WeaponFullInfo } from '#lib/parsing/combine'
+import { isDefined } from '#lib/utils/values'
 import { useWindowSize } from '#src/api/hooks'
 import { ItemDetailDdMobilePortal, ItemDetailDdPortal } from '#src/components/item-detail-dd-portal'
-import { BtnTabGroup } from '#src/components/tabs'
+import { BtnTabGroup, Tab } from '#src/components/tabs'
 import { TeyvatMap } from '#src/components/teyvat-map'
-import { WeaponFullInfo } from '#src/generated'
 import { notesToJSX } from '#src/modules/builds/character-build-detailed'
 import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
 import { getMaterialIconSrc } from '#src/utils/materials'
@@ -50,18 +52,25 @@ function Card({
 }
 function MapWrap({
 	item,
+	related,
 }: {
-	item: {
-		code: string
-		name: string
-		sources: DropSourceShortInfo[]
-	}
+	item: ItemObtainInfo
+	related: { domains: Map<string, DomainShortInfo>; enemies: Map<string, EnemyShortInfo> }
 }): JSX.Element {
-	const sources = item.sources.map(m => {
-		return { ...m, title: m.name, code: m.name }
-	})
+	const sourceTabs = useMemo(() => {
+		const tabs: (Tab & { location: [number, number] })[] = []
+		for (const code of item.obtainSources.domainCodes) {
+			const src = related.domains.get(code)
+			if (src) tabs.push({ code, title: code, location: src.location })
+		}
+		for (const code of item.obtainSources.enemyCodes) {
+			const src = related.enemies.get(code)
+			if (src) tabs.push({ code, title: code, location: src.locations[0] }) //TODO: all locations
+		}
+		return tabs
+	}, [item, related])
+	const selectedSourceTab = sourceTabs[0]
 
-	const selectedSource = sources[0]
 	return (
 		<div className={`map-wrap position-relative my-3 `}>
 			<div className="map-header position-absolute d-flex flex-row px-2 py-1 w-100">
@@ -71,13 +80,13 @@ function MapWrap({
 					imgSrc={getMaterialIconSrc(item.code)}
 					title={item.name}
 				/>
-				{sources.length > 1 && (
+				{sourceTabs.length > 1 && (
 					<div className="flex-fill">
 						<BtnTabGroup
-							tabs={sources}
-							selectedTab={selectedSource}
+							tabs={sourceTabs}
+							selectedTab={selectedSourceTab}
 							onTabSelect={t => {
-								t
+								t //TODO
 							}}
 							classes="w-100"
 						/>
@@ -86,8 +95,8 @@ function MapWrap({
 			</div>
 			<TeyvatMap
 				classes="dungeon-location position-relative"
-				x={selectedSource.location[0]}
-				y={selectedSource.location[1]}
+				x={selectedSourceTab.location[0]}
+				y={selectedSourceTab.location[1]}
 				level={-1.2}
 			/>
 		</div>
@@ -174,31 +183,38 @@ export function ArtifactDetailDd({
 export function WeaponCard({
 	onCloseClick,
 	classes,
-	item,
+	weapon,
+	related,
 }: {
 	onCloseClick?: () => void
 	classes?: string
-	item: WeaponFullInfo
+	weapon: WeaponFullInfo
+	related: {
+		items: Map<string, ItemObtainInfo>
+		domains: Map<string, DomainShortInfo>
+		enemies: Map<string, EnemyShortInfo>
+	}
 }): JSX.Element {
-	console.log(item)
-	const materialOnMap = item.materials.filter(m => m.sources)[0] //todo
+	console.log(weapon)
+	const materials = weapon.materialCodes.map(x => related.items.get(x)).filter(isDefined)
+	const materialOnMap = weapon.materialCodes.map(x => related.items.get(x)).find(x => !!x) //todo
 	return (
 		<Card
-			titleEl={item.name}
+			titleEl={weapon.name}
 			classes={classes}
 			bodyEl={
 				<div className="">
 					<div className="float-end">
 						<div className="d-flex w-100 justify-content-around">
 							<ItemAvatar
-								rarity={item.rarity}
+								rarity={weapon.rarity}
 								classes="mb-2 large-avatar"
-								src={getWeaponIconSrc(item.code)}
+								src={getWeaponIconSrc(weapon.code)}
 							/>
 						</div>
 
 						<div className="d-flex justify-content-between w-100">
-							{item.materials.map(m => (
+							{materials.map(m => (
 								<ItemAvatar
 									rarity={2}
 									classes="mb-2 mx-1 small-avatar"
@@ -208,33 +224,33 @@ export function WeaponCard({
 						</div>
 					</div>
 					<div className="overflow-hidden">
-						<h6 className="text-uppercase opacity-75 d-inline-block me-1">{item.typeCode}</h6>
+						<h6 className="text-uppercase opacity-75 d-inline-block me-1">{weapon.typeCode}</h6>
 
 						<span className="mb-2 text-muted">
-							{BULLET} {item.obtainSources.join(', ')}
+							{BULLET} {weapon.obtainSources.join(', ')}
 						</span>
 					</div>
 					<div className="d-flex">
 						<div className="me-2">
 							<div className="opacity-75">Базовая атака</div>
 							<div className="mb-2">
-								{item.mainStat.value1} / {item.mainStat.value90}
+								{weapon.mainStat.value1} / {weapon.mainStat.value90}
 							</div>
 						</div>
 						<div>
-							<div className="opacity-75">{item.subStat.code} </div>
+							<div className="opacity-75">{weapon.subStat.code} </div>
 							<div className="mb-2">
-								{item.subStat.value1} / {item.subStat.value90}
+								{weapon.subStat.value1} / {weapon.subStat.value90}
 							</div>
 						</div>
 					</div>
 					<div>
 						<div className="opacity-75">Пассивная способность</div>
-						<div className="">{notesToJSX(item.passiveStat)}</div>
+						<div className="">{notesToJSX(weapon.passiveStat)}</div>
 					</div>
 				</div>
 			}
-			mapEl={<MapWrap item={materialOnMap} />}
+			mapEl={materialOnMap && <MapWrap item={materialOnMap} related={related} />}
 			onCloseClick={onCloseClick}
 		></Card>
 	)
@@ -242,15 +258,21 @@ export function WeaponCard({
 export function WeaponDetailDd({
 	onClickAway,
 	targetEl,
-	item,
+	weapon,
+	related,
 }: {
 	onClickAway: () => void
 	targetEl: HTMLElement | null | undefined
-	item?: any //todo
+	weapon: WeaponFullInfo
+	related: {
+		items: Map<string, ItemObtainInfo>
+		domains: Map<string, DomainShortInfo>
+		enemies: Map<string, EnemyShortInfo>
+	}
 }): JSX.Element {
 	return (
 		<CardDescMobileWrap onClickAway={onClickAway} targetEl={targetEl}>
-			<WeaponCard onCloseClick={onClickAway} item={item} />
+			<WeaponCard onCloseClick={onClickAway} weapon={weapon} related={related} />
 		</CardDescMobileWrap>
 	)
 }

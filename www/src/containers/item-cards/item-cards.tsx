@@ -64,23 +64,21 @@ export function LabeledItemAvatar({
 	classes = '',
 	title,
 	avatarBadge,
-	DdComponent,
-	item,
+	ddComponentFunc,
 }: {
 	imgSrc: string
 	rarity?: GI_RarityCode
 	title: string
 	classes?: string
 	avatarBadge?: string
-	DdComponent?: any //todo
-	item?: any //todo
+	ddComponentFunc?: (closeDd: () => unknown, targetEl: HTMLDivElement) => JSX.Element
 }): JSX.Element {
-	const elRef = useRef(null)
+	const elRef = useRef<HTMLDivElement>(null)
 	const [isExpanded, setIsExpanded] = useState(false)
 	const closeDd = useCallback(() => isExpanded && setIsExpanded(false), [setIsExpanded, isExpanded])
 	const openDd = useCallback(() => !isExpanded && setIsExpanded(true), [setIsExpanded, isExpanded])
 	//todo c-pointer для интерактивных
-	const pointerClass = DdComponent ? 'c-pointer' : ''
+	const pointerClass = ddComponentFunc ? 'c-pointer' : ''
 	return (
 		<div className={`text-nowrap ${pointerClass} ${classes}`} ref={elRef} onClick={openDd}>
 			<ItemAvatar classes="small-avatar" src={imgSrc} badge={avatarBadge} />
@@ -89,9 +87,7 @@ export function LabeledItemAvatar({
 				classes={`text-wrap align-middle lh-1 ps-1 mw-75 ${pointerClass}`}
 				title={title}
 			></ItemLabelText>
-			{isExpanded && DdComponent ? (
-				<DdComponent onClickAway={closeDd} targetEl={elRef.current} item={item} />
-			) : null}
+			{isExpanded && elRef.current && ddComponentFunc && ddComponentFunc(closeDd, elRef.current)}
 		</div>
 	)
 }

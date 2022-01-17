@@ -18,5 +18,6 @@ module.exports = {
 		eqeqeq: ['warn', 'always'],
 		'@typescript-eslint/no-unused-vars': ['warn', { vars: 'all', args: 'none' }],
 		'@typescript-eslint/no-extra-semi': 'off', //conflicts with prettier
+		'@typescript-eslint/ban-ts-comment': 'off',
 	},
 }

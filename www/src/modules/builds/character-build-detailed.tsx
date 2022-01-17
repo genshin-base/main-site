@@ -1,13 +1,14 @@
 import { useEffect, useMemo, useState } from 'preact/hooks'
 
+import { ArtifactRef, ArtifactRefNode } from '#lib/parsing/helperteam/artifacts'
 import { CharacterBuildInfoRole } from '#lib/parsing/helperteam/characters'
 import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
 import { mustBeDefined } from '#lib/utils/values'
-import { ArtifactRef, ArtifactRefNode } from '#src/../../lib/parsing/helperteam/artifacts'
 import { isLoaded, useFetch } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
 import { BtnTabGroup, Tab, Tabs } from '#src/components/tabs'
+import { WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
 import { apiGetCharacter, CharacterFullInfoWithRelated } from '#src/generated'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
@@ -17,7 +18,6 @@ import { pluralizeEN } from '#src/utils/strings'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 
 import './character-build-detailed.scss'
-import { WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
 
 const DUMMY_TAB: Tab = {
 	title: '…',
@@ -169,8 +169,17 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 								}
 								rarity={weapon.rarity}
 								classes={`small ${!isInList || isLastInList ? 'mb-1' : ''}`}
-								item={weapon}
-								DdComponent={WeaponDetailDd}
+								ddComponentFunc={
+									//TODO: useCallback или подобное для кеширования
+									(close, target) => (
+										<WeaponDetailDd
+											onClickAway={close}
+											targetEl={target}
+											weapon={weapon}
+											related={build.maps}
+										/>
+									)
+								}
 							/>
 							{genNotes(item)}
 							{genSeeCharNotes(item)}

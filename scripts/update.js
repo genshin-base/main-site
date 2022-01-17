@@ -370,7 +370,7 @@ async function saveWwwData() {
 	await fs.writeFile(
 		`${WWW_STATIC_DIR}/index.ts`,
 		`
-import { apiGetJSONFile } from '#src/api'
+import { apiGetJSONFile, mapAllByCode, MapAllByCode } from '#src/api'
 
 const LANG = 'en'
 
@@ -383,20 +383,20 @@ export const charactersShortList: CharacterShortInfo[] =
 
 import type { CharacterFullInfoWithRelated } from '#lib/parsing/combine'
 export { CharacterFullInfoWithRelated }
-export function apiGetCharacter(code:string, signal:AbortSignal): Promise<CharacterFullInfoWithRelated> {
-	return get(\`characters/\${code}\`, signal)
+export function apiGetCharacter(code:string, signal:AbortSignal): Promise<MapAllByCode<CharacterFullInfoWithRelated>> {
+	return (get(\`characters/\${code}\`, signal) as Promise<CharacterFullInfoWithRelated>).then(mapAllByCode)
 }
 
 import type { ArtifactsFullInfoWithRelated } from '#lib/parsing/combine'
 export { ArtifactsFullInfoWithRelated }
-export function apiGetArtifacts(signal:AbortSignal): Promise<ArtifactsFullInfoWithRelated> {
-	return get(\`artifacts\`, signal)
+export function apiGetArtifacts(signal:AbortSignal): Promise<MapAllByCode<ArtifactsFullInfoWithRelated>> {
+	return (get(\`artifacts\`, signal) as Promise<ArtifactsFullInfoWithRelated>).then(mapAllByCode)
 }
 
 import type { WeaponsFullInfoWithRelated } from '#lib/parsing/combine'
 export { WeaponsFullInfoWithRelated }
-export function apiGetWeapons(signal:AbortSignal): Promise<WeaponsFullInfoWithRelated> {
-	return get(\`weapons\`, signal)
+export function apiGetWeapons(signal:AbortSignal): Promise<MapAllByCode<WeaponsFullInfoWithRelated>> {
+	return (get(\`weapons\`, signal) as Promise<WeaponsFullInfoWithRelated>).then(mapAllByCode)
 }
 
 import type { ChangelogsTable } from '#lib/parsing/helperteam/changelogs'
