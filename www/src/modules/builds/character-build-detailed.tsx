@@ -146,7 +146,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		const role = getRoleData(build, selectedRoleTab)
 		if (!role) return []
 		return role.weapons.advices.map((advice, i) => (
-			<li key={i} className="p-0 p-xl-1 pt-1 pt-xl-2">
+			<li key={i} className="pt-1">
 				{advice.similar.map((item, i) => {
 					const weapon = build.weapons.find(x => x.code === item.code)
 					if (!weapon) return null
@@ -187,7 +187,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 
 		return role.artifacts.sets.map((set, i) => {
 			return (
-				<li key={i} className="p-0 p-xl-1 pt-1 pt-xl-2">
+				<li key={i} className="pt-1">
 					{genArtofactAdvice(set.arts, build)}
 					{genNotes(set)}
 					{genSeeCharNotes(set)}
@@ -203,7 +203,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 				<h6 className="text-uppercase opacity-75">Main artifact stats</h6>
 				<ul className="mb-1 list-unstyled ms-1">
 					{CIRCLET_GOBLET_SANDS.map(ac => (
-						<li>
+						<li className="mb-1">
 							<ItemAvatar
 								src={getArtifactTypeIconSrc(ac)}
 								classes="small-avatar small mb-1 me-1 mb-xxl-2 me-xxl-2 p-1 bg-dark"
