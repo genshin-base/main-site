@@ -9,7 +9,7 @@ import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
 import { BtnTabGroup, Tab, Tabs } from '#src/components/tabs'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
-import { apiGetCharacterFullInfo, CharacterFullInfo } from '#src/generated'
+import { apiGetCharacter, CharacterFullInfoWithRelated } from '#src/generated'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
 import { getArtifactIconSrc, getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import { getCharacterPortraitSrc, getCharacterSilhouetteSrc } from '#src/utils/characters'
@@ -37,7 +37,7 @@ function makeRoleTab(r: CharacterBuildInfoRole): Tab {
 		),
 	}
 }
-function getRoleData(build: CharacterFullInfo, selectedRoleTab: Tab) {
+function getRoleData(build: CharacterFullInfoWithRelated, selectedRoleTab: Tab) {
 	return mustBeDefined(build.character.roles.find(x => x.code === selectedRoleTab.code))
 }
 function genSimpleList(arr: string[]) {
@@ -95,7 +95,11 @@ const ATK_ART_SET = {
 	name: '18% atk',
 	rarity: 2,
 } as const
-function genArtofactAdvice(set: ArtifactRef | ArtifactRefNode, build: CharacterFullInfo, isLast = true) {
+function genArtofactAdvice(
+	set: ArtifactRef | ArtifactRefNode,
+	build: CharacterFullInfoWithRelated,
+	isLast = true,
+) {
 	// todo notes
 	if ('code' in set) {
 		//ArtifactRef
@@ -125,7 +129,7 @@ function genArtofactAdvice(set: ArtifactRef | ArtifactRefNode, build: CharacterF
 	}
 }
 export function CharacterBuildDetailed({ characterCode }: { characterCode: string }) {
-	const build = useFetch(sig => apiGetCharacterFullInfo(characterCode, sig), [characterCode])
+	const build = useFetch(sig => apiGetCharacter(characterCode, sig), [characterCode])
 	// на случай серверного рендера: билд тут будет загружен сразу
 	const roleTabs = useMemo(
 		() => (isLoaded(build) ? build.character.roles.map(makeRoleTab) : [DUMMY_TAB]),

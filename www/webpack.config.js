@@ -114,7 +114,7 @@ export default async function (env, argv) {
 				extensions: ['.js', '.ts', '.tsx'],
 				lintDirtyModulesOnly: !isProd,
 			}),
-			// заставляет писать пути к модулям в правильном регистре (даже в ОСях, где это не обязательно)
+			// заставляет писать пути к модулям в правильном регистре (даже в ОСях, где это необязательно)
 			!isProd && new CaseSensitivePathsPlugin({}),
 			new MiniCssExtractPlugin({ filename: isProd ? '[name].[contenthash:8].css' : '[name].css' }),
 			new HtmlWebpackPlugin({ template: SRC + '/index.html', minify: false }),
