@@ -4,6 +4,7 @@ import { Header } from './containers/header'
 import { FrontPage } from './pages/front-page'
 
 import './App.scss'
+import { EquipmentPage } from './pages/equipnent'
 
 export function App() {
 	return (
@@ -12,6 +13,7 @@ export function App() {
 			<main>
 				<PageWrap>
 					<FrontPage />
+					{/* <EquipmentPage /> */}
 				</PageWrap>
 			</main>
 			<Footer />

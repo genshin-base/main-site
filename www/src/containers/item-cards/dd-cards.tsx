@@ -1,8 +1,14 @@
+import { DropSourceShortInfo } from '#src/../../lib/parsing/combine'
 import { useWindowSize } from '#src/api/hooks'
 import { ItemDetailDdMobilePortal, ItemDetailDdPortal } from '#src/components/item-detail-dd-portal'
 import { BtnTabGroup } from '#src/components/tabs'
 import { TeyvatMap } from '#src/components/teyvat-map'
+import { WeaponFullInfo } from '#src/generated'
+import { notesToJSX } from '#src/modules/builds/character-build-detailed'
 import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
+import { getMaterialIconSrc } from '#src/utils/materials'
+import { BULLET, TIMES } from '#src/utils/typography'
+import { getWeaponIconSrc } from '#src/utils/weapons'
 import { ItemAvatar, LabeledItemAvatar } from './item-cards'
 
 function Card({
@@ -18,19 +24,21 @@ function Card({
 	selectorEl?: JSX.Nodes
 	bodyEl?: JSX.Nodes
 	mapEl?: JSX.Nodes
-	onCloseClick: () => void
+	onCloseClick?: () => void
 }): JSX.Element {
 	return (
 		<div className={`item-detail-popover-card card max-height-75vh max-height-xl-50vh ${classes}`}>
 			<h3 className="card-header fs-4 d-flex">
 				<span className="flex-fill">{titleEl}</span>{' '}
-				<span
-					class="fs-4 lh-1 opacity-75 float-end ps-2 mt-1 c-pointer"
-					type="button"
-					onClick={onCloseClick}
-				>
-					&times;
-				</span>
+				{onCloseClick && (
+					<span
+						class="fs-4 lh-1 opacity-75 float-end ps-2 mt-1 c-pointer"
+						type="button"
+						onClick={onCloseClick}
+					>
+						{TIMES}
+					</span>
+				)}
 			</h3>
 			{selectorEl && <div class="p-3">{selectorEl}</div>}
 			<div className={`card-body overflow-auto flex-shrink-1 ${selectorEl ? 'pt-0' : ''}`}>
@@ -40,34 +48,48 @@ function Card({
 		</div>
 	)
 }
-function MapWrap({ children }: { children: JSX.Nodes }): JSX.Element {
-	const tabs = [
-		{ title: 'какой-то данж', code: '1' },
-		{ title: 'Еще какой-то данж', code: '2' },
-		{ title: 'Большой сочный пирог', code: '3' },
-	]
-	const selectedTab = tabs[0]
+function MapWrap({
+	item,
+}: {
+	item: {
+		code: string
+		name: string
+		sources: DropSourceShortInfo[]
+	}
+}): JSX.Element {
+	const sources = item.sources.map(m => {
+		return { ...m, title: m.name, code: m.name }
+	})
+
+	const selectedSource = sources[0]
 	return (
 		<div className={`map-wrap position-relative my-3 `}>
-			<div class="map-header position-absolute d-flex flex-row px-2 py-1">
+			<div className="map-header position-absolute d-flex flex-row px-2 py-1 w-100">
 				<div className="map-header-bg position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
 				<LabeledItemAvatar
 					classes="me-2 mb-2 small-avatar pt-1"
-					imgSrc={''}
-					title="фиговина для прокачки"
+					imgSrc={getMaterialIconSrc(item.code)}
+					title={item.name}
 				/>
-				<div className="flex-fill">
-					<BtnTabGroup
-						tabs={tabs}
-						selectedTab={selectedTab}
-						onTabSelect={t => {
-							t
-						}}
-						classes="w-100"
-					/>
-				</div>
+				{sources.length > 1 && (
+					<div className="flex-fill">
+						<BtnTabGroup
+							tabs={sources}
+							selectedTab={selectedSource}
+							onTabSelect={t => {
+								t
+							}}
+							classes="w-100"
+						/>
+					</div>
+				)}
 			</div>
-			{children}
+			<TeyvatMap
+				classes="dungeon-location position-relative"
+				x={selectedSource.location[0]}
+				y={selectedSource.location[1]}
+				level={-1.2}
+			/>
 		</div>
 	)
 }
@@ -149,29 +171,70 @@ export function ArtifactDetailDd({
 	)
 }
 
-function WeaponCard({ onCloseClick }: { onCloseClick: () => void }): JSX.Element {
+export function WeaponCard({
+	onCloseClick,
+	classes,
+	item,
+}: {
+	onCloseClick?: () => void
+	classes?: string
+	item: WeaponFullInfo
+}): JSX.Element {
+	console.log(item)
+	const materialOnMap = item.materials.filter(m => m.sources)[0] //todo
 	return (
 		<Card
-			titleEl={'Неприлично длинное название оружия'}
+			titleEl={item.name}
+			classes={classes}
 			bodyEl={
-				<div className="mb-3">
-					<ItemAvatar rarity={5} classes="float-end me-2 mb-2 large-avatar" src={''} />
-					<h6 className="text-uppercase opacity-75">Двуручный неч</h6>
-					<div className="mb-2 text-muted">Оружейный баннер</div>
-					<div className="opacity-75">Бонус физ. урона</div>
-					<div className="mb-2">10% / 90%</div>
-					<div className="opacity-75">Базовая атака</div>
-					<div className="mb-2">100 / 900</div>
-					<div className="opacity-75">пассивная способность</div>
-					<div className="mb-2">100 / 900</div>
-					<div className="mb-2 opacity-75">{bonus4}</div>
+				<div className="">
+					<div className="float-end">
+						<div className="d-flex w-100 justify-content-around">
+							<ItemAvatar
+								rarity={item.rarity}
+								classes="mb-2 large-avatar"
+								src={getWeaponIconSrc(item.code)}
+							/>
+						</div>
+
+						<div className="d-flex justify-content-between w-100">
+							{item.materials.map(m => (
+								<ItemAvatar
+									rarity={2}
+									classes="mb-2 mx-1 small-avatar"
+									src={getMaterialIconSrc(m.code)}
+								/>
+							))}
+						</div>
+					</div>
+					<div className="overflow-hidden">
+						<h6 className="text-uppercase opacity-75 d-inline-block me-1">{item.typeCode}</h6>
+
+						<span className="mb-2 text-muted">
+							{BULLET} {item.obtainSources.join(', ')}
+						</span>
+					</div>
+					<div className="d-flex">
+						<div className="me-2">
+							<div className="opacity-75">Базовая атака</div>
+							<div className="mb-2">
+								{item.mainStat.value1} / {item.mainStat.value90}
+							</div>
+						</div>
+						<div>
+							<div className="opacity-75">{item.subStat.code} </div>
+							<div className="mb-2">
+								{item.subStat.value1} / {item.subStat.value90}
+							</div>
+						</div>
+					</div>
+					<div>
+						<div className="opacity-75">Пассивная способность</div>
+						<div className="">{notesToJSX(item.passiveStat)}</div>
+					</div>
 				</div>
 			}
-			mapEl={
-				<MapWrap>
-					<TeyvatMap classes="dungeon-location position-relative" x={100} y={100} level={-1.2} />
-				</MapWrap>
-			}
+			mapEl={<MapWrap item={materialOnMap} />}
 			onCloseClick={onCloseClick}
 		></Card>
 	)
@@ -179,13 +242,15 @@ function WeaponCard({ onCloseClick }: { onCloseClick: () => void }): JSX.Element
 export function WeaponDetailDd({
 	onClickAway,
 	targetEl,
+	item,
 }: {
 	onClickAway: () => void
 	targetEl: HTMLElement | null | undefined
+	item?: any //todo
 }): JSX.Element {
 	return (
 		<CardDescMobileWrap onClickAway={onClickAway} targetEl={targetEl}>
-			<WeaponCard onCloseClick={onClickAway} />
+			<WeaponCard onCloseClick={onClickAway} item={item} />
 		</CardDescMobileWrap>
 	)
 }

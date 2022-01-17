@@ -17,6 +17,7 @@ import { pluralizeEN } from '#src/utils/strings'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 
 import './character-build-detailed.scss'
+import { WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
 
 const DUMMY_TAB: Tab = {
 	title: '…',
@@ -62,7 +63,9 @@ function genArtMainStatDetail(role: CharacterBuildInfoRole, itemCode: 'circlet' 
 		</span>
 	)
 }
-function notesToJSX(tips: CompactTextParagraphs | null) {
+
+//todo более адекватное место
+export function notesToJSX(tips: CompactTextParagraphs | null) {
 	function processString(str: string) {
 		return str
 			.split('\n')
@@ -96,7 +99,6 @@ function genArtofactAdvice(set: ArtifactRef | ArtifactRefNode, build: CharacterF
 	// todo notes
 	if ('code' in set) {
 		//ArtifactRef
-		console.log(build)
 		const artifact = set.code === '18%-atk' ? ATK_ART_SET : build.artifacts.find(x => x.code === set.code)
 		if (!artifact) return null
 		return (
@@ -163,6 +165,8 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 								}
 								rarity={weapon.rarity}
 								classes={`small ${!isInList || isLastInList ? 'mb-1' : ''}`}
+								item={weapon}
+								DdComponent={WeaponDetailDd}
 							/>
 							{genNotes(item)}
 							{genSeeCharNotes(item)}
