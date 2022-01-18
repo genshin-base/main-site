@@ -1,4 +1,4 @@
-import { DomainShortInfo, EnemyShortInfo, ItemObtainInfo } from '#lib/parsing/combine'
+import { DomainShortInfo, EnemyShortInfo, ItemShortInfo } from '#lib/parsing/combine'
 
 export function apiGetJSONFile<T>(path: string, signal?: AbortSignal | null): Promise<T> {
 	return fetch(process.env.ASSET_PATH + path, { method: 'GET', signal }).then(x => x.json())
@@ -29,7 +29,7 @@ export function mapAllByCode<T>(obj: T): MapAllByCode<T> {
 	return Object.assign({}, obj, { maps })
 }
 
-export type RelItemsShort = { items: Map<string, ItemObtainInfo> }
+export type RelItemsShort = { items: Map<string, ItemShortInfo> }
 export type RelDomainsShort = { domains: Map<string, DomainShortInfo> }
 export type RelEnemiesShort = { enemies: Map<string, EnemyShortInfo> }
 

@@ -1,6 +1,6 @@
 import { useMemo } from 'preact/hooks'
 
-import { ItemObtainInfo, WeaponFullInfo } from '#lib/parsing/combine'
+import { ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api'
 import { useWindowSize } from '#src/api/hooks'
 import { ItemDetailDdMobilePortal, ItemDetailDdPortal } from '#src/components/item-detail-dd-portal'
@@ -55,7 +55,7 @@ function MapWrap({
 	item,
 	related,
 }: {
-	item: ItemObtainInfo
+	item: ItemShortInfo
 	related: RelDomainsShort & RelEnemiesShort
 }): JSX.Element {
 	const sourceTabs = useMemo(() => {

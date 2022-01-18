@@ -4,6 +4,7 @@ import { ArtifactRef, ArtifactRefNode } from '#lib/parsing/helperteam/artifacts'
 import { CharacterBuildInfoRole } from '#lib/parsing/helperteam/characters'
 import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
 import { mustBeDefined } from '#lib/utils/values'
+import { MapAllByCode } from '#src/api'
 import { isLoaded, useFetch } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
@@ -97,13 +98,13 @@ const ATK_ART_SET = {
 } as const
 function genArtofactAdvice(
 	set: ArtifactRef | ArtifactRefNode,
-	build: CharacterFullInfoWithRelated,
+	build: MapAllByCode<CharacterFullInfoWithRelated>,
 	isLast = true,
 ) {
 	// todo notes
 	if ('code' in set) {
 		//ArtifactRef
-		const artifact = set.code === '18%-atk' ? ATK_ART_SET : build.artifacts.find(x => x.code === set.code)
+		const artifact = set.code === '18%-atk' ? ATK_ART_SET : build.maps.artifacts.get(set.code)
 		if (!artifact) return null
 		return (
 			<LabeledItemAvatar
