@@ -4,7 +4,7 @@ import { ArtifactRef, ArtifactRefNode } from '#lib/parsing/helperteam/artifacts'
 import { CharacterBuildInfoRole } from '#lib/parsing/helperteam/characters'
 import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
 import { mustBeDefined } from '#lib/utils/values'
-import { MapAllByCode } from '#src/api'
+import { getAllRelated, MapAllByCode } from '#src/api'
 import { isLoaded, useFetch } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
@@ -19,6 +19,7 @@ import { pluralizeEN } from '#src/utils/strings'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 
 import './character-build-detailed.scss'
+import { getItemIconSrc } from '#src/utils/items'
 
 const DUMMY_TAB: Tab = {
 	title: '…',
@@ -261,9 +262,10 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 	}, [build, selectedRoleTab])
 	const materialsBlock = useMemo(() => {
 		if (!isLoaded(build)) return null
+		const materials = getAllRelated(build.maps.items, build.character.materialCodes)
 		return (
 			<div className="w-100 d-flex justify-content-between">
-				{build.character.materials.map(m => (
+				{materials.map(m => (
 					<ItemAvatar classes="mb-2 mx-1 small-avatar" src={getItemIconSrc(m.code)} />
 				))}
 			</div>
