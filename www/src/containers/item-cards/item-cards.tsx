@@ -1,7 +1,6 @@
 import { useCallback, useRef, useState } from 'preact/hooks'
 
 import { GI_RarityCode } from '#lib/genshin'
-import { ArtifactDetailDd, WeaponDetailDd } from './dd-cards'
 
 import './item-cards.scss'
 
@@ -58,27 +57,36 @@ export function ItemLabelText({
 	//todo c-pointer text-decoration-underline-dotted для интерактивных
 	return <label className={`${classes} ${rarityClass}`}>{title}</label>
 }
-export function LabeledItemAvatar({
+export function LabeledItemAvatar<TItem, TRelated>({
 	imgSrc,
 	rarity,
 	classes = '',
 	title,
 	avatarBadge,
-	ddComponentFunc,
+	item,
+	related,
+	DdComponent,
 }: {
 	imgSrc: string
 	rarity?: GI_RarityCode
 	title: string
 	classes?: string
 	avatarBadge?: string
-	ddComponentFunc?: (closeDd: () => unknown, targetEl: HTMLDivElement) => JSX.Element
+	item?: TItem
+	related?: TRelated
+	DdComponent?: preact.ComponentType<{
+		onClickAway(): unknown
+		targetEl: HTMLElement
+		item: TItem
+		related: TRelated
+	}>
 }): JSX.Element {
 	const elRef = useRef<HTMLDivElement>(null)
 	const [isExpanded, setIsExpanded] = useState(false)
 	const closeDd = useCallback(() => isExpanded && setIsExpanded(false), [setIsExpanded, isExpanded])
 	const openDd = useCallback(() => !isExpanded && setIsExpanded(true), [setIsExpanded, isExpanded])
 	//todo c-pointer для интерактивных
-	const pointerClass = ddComponentFunc ? 'c-pointer' : ''
+	const pointerClass = DdComponent ? 'c-pointer' : ''
 	return (
 		<div className={`text-nowrap ${pointerClass} ${classes}`} ref={elRef} onClick={openDd}>
 			<ItemAvatar classes="small-avatar" src={imgSrc} badge={avatarBadge} />
@@ -87,7 +95,9 @@ export function LabeledItemAvatar({
 				classes={`text-wrap align-middle lh-1 ps-1 mw-75 ${pointerClass}`}
 				title={title}
 			></ItemLabelText>
-			{isExpanded && elRef.current && ddComponentFunc && ddComponentFunc(closeDd, elRef.current)}
+			{isExpanded && elRef.current && DdComponent && item && related && (
+				<DdComponent onClickAway={closeDd} targetEl={elRef.current} item={item} related={related} />
+			)}
 		</div>
 	)
 }

@@ -1,10 +1,10 @@
 import { useMemo } from 'preact/hooks'
 
-import { DomainShortInfo, EnemyShortInfo, ItemObtainInfo, WeaponFullInfo } from '#lib/parsing/combine'
-import { isDefined } from '#lib/utils/values'
+import { ItemObtainInfo, WeaponFullInfo } from '#lib/parsing/combine'
+import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api'
 import { useWindowSize } from '#src/api/hooks'
 import { ItemDetailDdMobilePortal, ItemDetailDdPortal } from '#src/components/item-detail-dd-portal'
-import { BtnTabGroup, Tab } from '#src/components/tabs'
+import { BtnTabGroup } from '#src/components/tabs'
 import { TeyvatMap } from '#src/components/teyvat-map'
 import { notesToJSX } from '#src/modules/builds/character-build-detailed'
 import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
@@ -50,24 +50,23 @@ function Card({
 		</div>
 	)
 }
+
 function MapWrap({
 	item,
 	related,
 }: {
 	item: ItemObtainInfo
-	related: { domains: Map<string, DomainShortInfo>; enemies: Map<string, EnemyShortInfo> }
+	related: RelDomainsShort & RelEnemiesShort
 }): JSX.Element {
 	const sourceTabs = useMemo(() => {
-		const tabs: (Tab & { location: [number, number] })[] = []
-		for (const code of item.obtainSources.domainCodes) {
-			const src = related.domains.get(code)
-			if (src) tabs.push({ code, title: code, location: src.location })
-		}
-		for (const code of item.obtainSources.enemyCodes) {
-			const src = related.enemies.get(code)
-			if (src) tabs.push({ code, title: code, location: src.locations[0] }) //TODO: all locations
-		}
-		return tabs
+		const srcs = item.obtainSources
+		const domains = getAllRelated(related.domains, srcs.domainCodes).map(domain => {
+			return { code: domain.code, title: domain.name, location: domain.location }
+		})
+		const enemies = getAllRelated(related.enemies, srcs.enemyCodes).map(enemy => {
+			return { code: enemy.code, title: enemy.name, location: enemy.locations[0] } //TODO: use all locations
+		})
+		return domains.concat(enemies)
 	}, [item, related])
 	const selectedSourceTab = sourceTabs[0]
 
@@ -189,15 +188,11 @@ export function WeaponCard({
 	onCloseClick?: () => void
 	classes?: string
 	weapon: WeaponFullInfo
-	related: {
-		items: Map<string, ItemObtainInfo>
-		domains: Map<string, DomainShortInfo>
-		enemies: Map<string, EnemyShortInfo>
-	}
+	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
 }): JSX.Element {
 	console.log(weapon)
-	const materials = weapon.materialCodes.map(x => related.items.get(x)).filter(isDefined)
-	const materialOnMap = weapon.materialCodes.map(x => related.items.get(x)).find(x => !!x) //todo
+	const materials = getAllRelated(related.items, weapon.materialCodes)
+	const materialOnMap = materials[0] //todo
 	return (
 		<Card
 			titleEl={weapon.name}
@@ -258,21 +253,17 @@ export function WeaponCard({
 export function WeaponDetailDd({
 	onClickAway,
 	targetEl,
-	weapon,
+	item,
 	related,
 }: {
 	onClickAway: () => void
 	targetEl: HTMLElement | null | undefined
-	weapon: WeaponFullInfo
-	related: {
-		items: Map<string, ItemObtainInfo>
-		domains: Map<string, DomainShortInfo>
-		enemies: Map<string, EnemyShortInfo>
-	}
+	item: WeaponFullInfo
+	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
 }): JSX.Element {
 	return (
 		<CardDescMobileWrap onClickAway={onClickAway} targetEl={targetEl}>
-			<WeaponCard onCloseClick={onClickAway} weapon={weapon} related={related} />
+			<WeaponCard onCloseClick={onClickAway} weapon={item} related={related} />
 		</CardDescMobileWrap>
 	)
 }

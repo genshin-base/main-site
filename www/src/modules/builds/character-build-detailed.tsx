@@ -50,7 +50,7 @@ function genNotes(item: { notes: CompactTextParagraphs | null }) {
 	return item.notes === null ? '' : notesWrap(JSON.stringify(item.notes))
 }
 function genSeeCharNotes(item: { seeCharNotes: boolean }) {
-	return ''
+	return '' //TODO
 	return item.seeCharNotes ? notesWrap(' (see notes)') : ''
 }
 function genArtMainStatDetail(role: CharacterBuildInfoRole, itemCode: 'circlet' | 'goblet' | 'sands') {
@@ -169,17 +169,9 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 								}
 								rarity={weapon.rarity}
 								classes={`small ${!isInList || isLastInList ? 'mb-1' : ''}`}
-								ddComponentFunc={
-									//TODO: useCallback или подобное для кеширования
-									(close, target) => (
-										<WeaponDetailDd
-											onClickAway={close}
-											targetEl={target}
-											weapon={weapon}
-											related={build.maps}
-										/>
-									)
-								}
+								DdComponent={WeaponDetailDd}
+								item={weapon}
+								related={build.maps}
 							/>
 							{genNotes(item)}
 							{genSeeCharNotes(item)}
