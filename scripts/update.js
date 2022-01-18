@@ -228,14 +228,14 @@ async function extractAndSaveItemsData() {
 	const weapons = await extractWeaponsData(cd, LANGS, items.id2item, fx)
 	const enemies = await extractEnemiesData(cd, LANGS, items.id2item, artifacts.id2item, fx)
 
-	await applyWeaponsObtainData(cd, weapons.items)
+	await applyWeaponsObtainData(cd, weapons.code2item)
 	await applyEnemiesLocations(cd, enemies.code2item)
 
 	await saveItems(items.code2item)
 	await saveArtifacts(artifacts.code2item)
-	await saveWeapons(weapons.items)
-	await saveCharacters((await extractCharactersData(cd, LANGS, items.id2item, fx)).items)
-	await saveDomains((await extractDomainsData(cd, LANGS, items.id2item, artifacts.id2item, fx)).items)
+	await saveWeapons(weapons.code2item)
+	await saveCharacters((await extractCharactersData(cd, LANGS, items.id2item, fx)).code2item)
+	await saveDomains((await extractDomainsData(cd, LANGS, items.id2item, artifacts.id2item, fx)).code2item)
 	await saveEnemies(enemies.code2item)
 
 	checkHoneyhunterFixesUsage(fx)

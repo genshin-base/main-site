@@ -4,6 +4,7 @@ import { ArtifactRef, ArtifactRefNode } from '#lib/parsing/helperteam/artifacts'
 import { CharacterBuildInfoRole } from '#lib/parsing/helperteam/characters'
 import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
 import { mustBeDefined } from '#lib/utils/values'
+import { MapAllByCode } from '#src/api'
 import { isLoaded, useFetch } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
@@ -50,7 +51,7 @@ function genNotes(item: { notes: CompactTextParagraphs | null }) {
 	return item.notes === null ? '' : notesWrap(JSON.stringify(item.notes))
 }
 function genSeeCharNotes(item: { seeCharNotes: boolean }) {
-	return ''
+	return '' //TODO
 	return item.seeCharNotes ? notesWrap(' (see notes)') : ''
 }
 function genArtMainStatDetail(role: CharacterBuildInfoRole, itemCode: 'circlet' | 'goblet' | 'sands') {
@@ -97,13 +98,13 @@ const ATK_ART_SET = {
 } as const
 function genArtofactAdvice(
 	set: ArtifactRef | ArtifactRefNode,
-	build: CharacterFullInfoWithRelated,
+	build: MapAllByCode<CharacterFullInfoWithRelated>,
 	isLast = true,
 ) {
 	// todo notes
 	if ('code' in set) {
 		//ArtifactRef
-		const artifact = set.code === '18%-atk' ? ATK_ART_SET : build.artifacts.find(x => x.code === set.code)
+		const artifact = set.code === '18%-atk' ? ATK_ART_SET : build.maps.artifacts.get(set.code)
 		if (!artifact) return null
 		return (
 			<LabeledItemAvatar
@@ -169,17 +170,9 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 								}
 								rarity={weapon.rarity}
 								classes={`small ${!isInList || isLastInList ? 'mb-1' : ''}`}
-								ddComponentFunc={
-									//TODO: useCallback или подобное для кеширования
-									(close, target) => (
-										<WeaponDetailDd
-											onClickAway={close}
-											targetEl={target}
-											weapon={weapon}
-											related={build.maps}
-										/>
-									)
-								}
+								DdComponent={WeaponDetailDd}
+								item={weapon}
+								related={build.maps}
 							/>
 							{genNotes(item)}
 							{genSeeCharNotes(item)}
