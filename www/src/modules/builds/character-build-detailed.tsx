@@ -18,6 +18,7 @@ import { getWeaponIconSrc } from '#src/utils/weapons'
 
 import './character-build-detailed.scss'
 import { WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
+import { getItemIconSrc } from '#src/utils/items'
 
 const DUMMY_TAB: Tab = {
 	title: '…',
@@ -253,6 +254,16 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 			</>
 		)
 	}, [build, selectedRoleTab])
+	const materialsBlock = useMemo(() => {
+		if (!isLoaded(build)) return null
+		return (
+			<div className="w-100 d-flex justify-content-between">
+				{build.character.materials.map(m => (
+					<ItemAvatar classes="mb-2 mx-1 small-avatar" src={getItemIconSrc(m.code)} />
+				))}
+			</div>
+		)
+	}, [build])
 	if (!isLoaded(build)) return <Spinner />
 	const CharacterDetailDesktop = (
 		<div className="d-none d-xl-block">
@@ -270,6 +281,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 				<div className="row">
 					<div className="col col-3">
 						<CharacterPortrait src={getCharacterPortraitSrc(characterCode)} classes="w-100" />
+						<div className="mt-3">{materialsBlock}</div>
 					</div>
 					<div className="col col-9">
 						<div className="d-flex">
@@ -312,9 +324,12 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 			/>
 			<div className="">
 				<div className="my-3">
+					<h6 className="text-uppercase opacity-75">Ascension materials</h6>
+					{materialsBlock}
+				</div>
+				<div className="my-3">
 					<h6 className="text-uppercase opacity-75">Artifacts</h6>
 					<ol className="items-list">{artifactsListBlock}</ol>
-					<div></div>
 				</div>
 				<div className="my-3">{artifactStatsAndSkillsBlock}</div>
 				<div className="my-3">

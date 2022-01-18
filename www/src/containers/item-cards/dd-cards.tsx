@@ -6,7 +6,7 @@ import { TeyvatMap } from '#src/components/teyvat-map'
 import { WeaponFullInfo } from '#src/generated'
 import { notesToJSX } from '#src/modules/builds/character-build-detailed'
 import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
-import { getMaterialIconSrc } from '#src/utils/materials'
+import { getItemIconSrc } from '#src/utils/items'
 import { BULLET, TIMES } from '#src/utils/typography'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 import { ItemAvatar, LabeledItemAvatar } from './item-cards'
@@ -68,7 +68,7 @@ function MapWrap({
 				<div className="map-header-bg position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
 				<LabeledItemAvatar
 					classes="me-2 mb-2 small-avatar pt-1"
-					imgSrc={getMaterialIconSrc(item.code)}
+					imgSrc={getItemIconSrc(item.code)}
 					title={item.name}
 				/>
 				{sources.length > 1 && (
@@ -180,7 +180,6 @@ export function WeaponCard({
 	classes?: string
 	item: WeaponFullInfo
 }): JSX.Element {
-	console.log(item)
 	const materialOnMap = item.materials.filter(m => m.sources)[0] //todo
 	return (
 		<Card
@@ -202,7 +201,7 @@ export function WeaponCard({
 								<ItemAvatar
 									rarity={2}
 									classes="mb-2 mx-1 small-avatar"
-									src={getMaterialIconSrc(m.code)}
+									src={getItemIconSrc(m.code)}
 								/>
 							))}
 						</div>
