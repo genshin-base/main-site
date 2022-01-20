@@ -9,7 +9,7 @@ import { isLoaded, useFetch } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
 import { BtnTabGroup, Tab, Tabs } from '#src/components/tabs'
-import { WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
+import { ArtifactDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
 import { apiGetCharacter, CharacterFullInfoWithRelated } from '#src/generated'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
@@ -20,6 +20,14 @@ import { getWeaponIconSrc } from '#src/utils/weapons'
 
 import './character-build-detailed.scss'
 import { getItemIconSrc } from '#src/utils/items'
+import {
+	ART_GROUP_18_ATK_CODE,
+	ART_GROUP_18_ATK_DETAIL,
+	ART_GROUP_18_ATK_INSIDE_CODES,
+	ART_GROUP_20_ER_CODE,
+	ART_GROUP_20_ER_DETAIL,
+	ART_GROUP_20_ER_INSIDE_CODES,
+} from '#src/../../lib/genshin'
 
 const DUMMY_TAB: Tab = {
 	title: '…',
@@ -92,11 +100,6 @@ export function notesToJSX(tips: CompactTextParagraphs | null) {
 }
 
 const CIRCLET_GOBLET_SANDS = ['sands', 'goblet', 'circlet'] as const
-const ATK_ART_SET = {
-	//todo
-	name: '18% atk',
-	rarity: 2,
-} as const
 function genArtofactAdvice(
 	set: ArtifactRef | ArtifactRefNode,
 	build: MapAllByCode<CharacterFullInfoWithRelated>,
@@ -105,16 +108,32 @@ function genArtofactAdvice(
 	// todo notes
 	if ('code' in set) {
 		//ArtifactRef
-		const artifact = set.code === '18%-atk' ? ATK_ART_SET : build.maps.artifacts.get(set.code)
-		if (!artifact) return null
+		let artifactsForDd, artifactForList
+		switch (set.code) {
+			case ART_GROUP_18_ATK_CODE:
+				artifactsForDd = ART_GROUP_18_ATK_INSIDE_CODES.map(code => build.maps.artifacts.get(code))
+				artifactForList = ART_GROUP_18_ATK_DETAIL
+				break
+			case ART_GROUP_20_ER_CODE:
+				artifactsForDd = ART_GROUP_20_ER_INSIDE_CODES.map(code => build.maps.artifacts.get(code))
+				artifactForList = ART_GROUP_20_ER_DETAIL
+				break
+			default:
+				artifactForList = build.maps.artifacts.get(set.code)
+				artifactsForDd = [artifactForList]
+		}
+		if (!artifactsForDd.length) return null
 		return (
 			<LabeledItemAvatar
 				imgSrc={getArtifactIconSrc(set.code)}
-				rarity={artifact.rarity}
-				title={artifact.name}
+				rarity={artifactForList.rarity}
+				title={artifactForList.name}
 				key={set.code}
 				avatarBadge={'x' + set.count}
 				classes={`small ${isLast ? 'mb-1' : ''}`}
+				DdComponent={ArtifactDetailDd}
+				ddItems={artifactsForDd}
+				related={build.maps}
 			/>
 		)
 	} else {
@@ -172,7 +191,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 								rarity={weapon.rarity}
 								classes={`small ${!isInList || isLastInList ? 'mb-1' : ''}`}
 								DdComponent={WeaponDetailDd}
-								item={weapon}
+								ddItems={[weapon]}
 								related={build.maps}
 							/>
 							{genNotes(item)}

@@ -11,21 +11,21 @@ body,
 	--thumb-height-sm: 2rem;
 	--thumb-height-l: 5rem;
 }
-.bg-5{
-	background-color: rgb(149,107,69);
-	background-color: linear-gradient(180deg, rgba(149,107,69,1) 0%, rgba(218,147,84,1) 100%);
+.bg-5 {
+	background-color: rgb(149, 107, 69);
+	background-color: linear-gradient(180deg, rgba(149, 107, 69, 1) 0%, rgba(218, 147, 84, 1) 100%);
 }
-.bg-4{
-	background-color: rgb(108,101,142);
-	background-color: linear-gradient(180deg, rgba(108,101,142,1) 0%, rgba(152,119,195,1) 100%);
+.bg-4 {
+	background-color: rgb(108, 101, 142);
+	background-color: linear-gradient(180deg, rgba(108, 101, 142, 1) 0%, rgba(152, 119, 195, 1) 100%);
 }
-.bg-3{
-	background-color: rgb(106,119,151);
-	background-color: linear-gradient(180deg, rgba(106,119,151,1) 0%, rgba(111,169,205,1) 100%);
+.bg-3 {
+	background-color: rgb(106, 119, 151);
+	background-color: linear-gradient(180deg, rgba(106, 119, 151, 1) 0%, rgba(111, 169, 205, 1) 100%);
 }
-.bg-2{
-	background-color: rgb(114,115,119);
-	background-color: linear-gradient(180deg, rgba(114,115,119,1) 0%, rgba(162,161,159,1) 100%);
+.bg-2 {
+	background-color: rgb(114, 115, 119);
+	background-color: linear-gradient(180deg, rgba(114, 115, 119, 1) 0%, rgba(162, 161, 159, 1) 100%);
 }
 .w-33 {
 	width: 33.33%;
@@ -53,8 +53,12 @@ $colors: primary, secondary, warning, dark;
 @each $color in $colors {
 	.text-#{$color}.text-decoration-underline-dotted,
 	.text-#{$color} .text-decoration-underline-dotted {
-		text-decoration-color: rgba(var(--bs-#{$color}-rgb), 0.75)!important;
+		text-decoration-color: rgba(var(--bs-#{$color}-rgb), 0.75) !important;
 	}
+}
+
+.form-select.bg-dark {
+	background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23adb5bd%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27M2 5l6 6 6-6%27/%3e%3c/svg%3e');
 }
 
 @media (min-width: 1200px) {

@@ -57,13 +57,20 @@ export function ItemLabelText({
 	//todo c-pointer text-decoration-underline-dotted для интерактивных
 	return <label className={`${classes} ${rarityClass}`}>{title}</label>
 }
+interface DdComponentProps<TItem, TRelated> {
+	onClickAway(): unknown
+	targetEl: HTMLElement
+	items: TItem[]
+	related: TRelated
+	title: string
+}
 export function LabeledItemAvatar<TItem, TRelated>({
 	imgSrc,
 	rarity,
 	classes = '',
 	title,
 	avatarBadge,
-	item,
+	ddItems,
 	related,
 	DdComponent,
 }: {
@@ -72,14 +79,9 @@ export function LabeledItemAvatar<TItem, TRelated>({
 	title: string
 	classes?: string
 	avatarBadge?: string
-	item?: TItem
+	ddItems?: TItem[]
 	related?: TRelated
-	DdComponent?: preact.ComponentType<{
-		onClickAway(): unknown
-		targetEl: HTMLElement
-		item: TItem
-		related: TRelated
-	}>
+	DdComponent?: preact.ComponentType<DdComponentProps<TItem, TRelated>>
 }): JSX.Element {
 	const elRef = useRef<HTMLDivElement>(null)
 	const [isExpanded, setIsExpanded] = useState(false)
@@ -95,8 +97,14 @@ export function LabeledItemAvatar<TItem, TRelated>({
 				classes={`text-wrap align-middle lh-1 ps-1 mw-75 ${pointerClass}`}
 				title={title}
 			></ItemLabelText>
-			{isExpanded && elRef.current && DdComponent && item && related && (
-				<DdComponent onClickAway={closeDd} targetEl={elRef.current} item={item} related={related} />
+			{isExpanded && elRef.current && DdComponent && ddItems?.length && related && (
+				<DdComponent
+					onClickAway={closeDd}
+					targetEl={elRef.current}
+					items={ddItems}
+					related={related}
+					title={title}
+				/>
 			)}
 		</div>
 	)
