@@ -1,20 +1,21 @@
 import { useMemo, useState } from 'preact/hooks'
 
 import { ArtifactFullInfo, WeaponFullInfo } from '#lib/parsing/combine'
+import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api'
 import { useWindowSize } from '#src/api/hooks'
 import { ItemDetailDdMobilePortal, ItemDetailDdPortal } from '#src/components/item-detail-dd-portal'
+import { SimpleSelect } from '#src/components/select'
 import { BtnTabGroup } from '#src/components/tabs'
-import { TeyvatMap } from '#src/components/teyvat-map'
+import { MapMarkerRaw, TeyvatMap } from '#src/components/teyvat-map'
+import domainIconSrc from '#src/media/domain.png'
 import { notesToJSX } from '#src/modules/builds/character-build-detailed'
+import { getArtifactIconSrc } from '#src/utils/artifacts'
 import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
 import { getItemIconSrc } from '#src/utils/items'
 import { BULLET, LEFT_POINTING, RIGHT_POINTING, TIMES } from '#src/utils/typography'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 import { ItemAvatar, LabeledItemAvatar } from './item-cards'
-import { getArtifactIconSrc } from '#src/utils/artifacts'
-import { SimpleSelect } from '#src/components/select'
-import { arrGetAfter } from '#src/../../lib/utils/collections'
 
 //переключалка для мобильного и десктопного вида
 export function CardDescMobileWrap({
@@ -85,7 +86,7 @@ function MapWrap({
 	sources: {
 		code: string
 		title: string
-		location: [number, number]
+		markers: MapMarkerRaw[]
 	}[]
 }): JSX.Element {
 	const [selectedSourceTab, setSelectedSourceTab] = useState(sources[0])
@@ -95,6 +96,23 @@ function MapWrap({
 	const goToNextSource = () => {
 		setSelectedSourceTab(arrGetAfter(sources, selectedSourceTab))
 	}
+
+	// const sourceTabs = useMemo(() => {
+	// 	const srcs = item.obtainSources
+	// 	const domains = getAllRelated(related.domains, srcs.domainCodes).map(domain => {
+	// 		return { code: domain.code, title: domain.name, location: domain.location }
+	// 	})
+	// 	const enemies = getAllRelated(related.enemies, srcs.enemyCodes).map(enemy => {
+	// 		return { code: enemy.code, title: enemy.name, location: enemy.locations[0] } //TODO: use all locations
+	// 	})
+	// 	return domains.concat(enemies)
+	// }, [item, related])
+	// const selectedSourceTab = sourceTabs[0]
+
+	// const mapMarkers = useMemo(() => {
+	// 	return sourceTabs.map(x => ({ x: x.location[0], y: x.location[1], icon: domainIconSrc }))
+	// }, [sourceTabs])
+
 	let sourceSelectEl
 	if (!sources.length) {
 		sourceSelectEl = null
@@ -133,6 +151,7 @@ function MapWrap({
 			</div>
 		)
 	}
+
 	return (
 		<div className={`map-wrap position-relative my-3 `}>
 			<div className="map-header position-absolute d-flex flex-row px-2 py-1 w-100">
@@ -153,9 +172,8 @@ function MapWrap({
 			</div>
 			<TeyvatMap
 				classes="dungeon-location position-relative"
-				x={selectedSourceTab.location[0]}
-				y={selectedSourceTab.location[1]}
-				level={-1.2}
+				pos="auto"
+				markers={selectedSourceTab.markers}
 			/>
 		</div>
 	)
@@ -186,10 +204,12 @@ function ArtifactCard({
 	const dataForMap = useMemo(() => {
 		const srcs = selectedArt.obtainSources
 		const domains = getAllRelated(related.domains, srcs.domainCodes).map(domain => {
-			return { code: domain.code, title: domain.name, location: domain.location }
+			const [x, y] = domain.location
+			return { code: domain.code, title: domain.name, markers: [{ x, y, icon: domainIconSrc }] }
 		})
 		const enemies = getAllRelated(related.enemies, srcs.enemyCodes).map(enemy => {
-			return { code: enemy.code, title: enemy.name, location: enemy.locations[0] } //TODO: use all locations
+			const markers = enemy.locations.map(([x, y]) => ({ x, y, icon: domainIconSrc })) //TODO: correct icon
+			return { code: enemy.code, title: enemy.name, markers }
 		})
 
 		return {
@@ -200,6 +220,7 @@ function ArtifactCard({
 			sources: domains.concat(enemies),
 		}
 	}, [selectedArt, related])
+
 	return (
 		<Card
 			titleEl={title}
@@ -285,11 +306,14 @@ export function WeaponCard({
 	const dataForMap = useMemo(() => {
 		const srcs = materialOnMap.obtainSources
 		const domains = getAllRelated(related.domains, srcs.domainCodes).map(domain => {
-			return { code: domain.code, title: domain.name, location: domain.location }
+			const [x, y] = domain.location
+			return { code: domain.code, title: domain.name, markers: [{ x, y, icon: domainIconSrc }] }
 		})
 		const enemies = getAllRelated(related.enemies, srcs.enemyCodes).map(enemy => {
-			return { code: enemy.code, title: enemy.name, location: enemy.locations[0] } //TODO: use all locations
+			const markers = enemy.locations.map(([x, y]) => ({ x, y, icon: domainIconSrc })) //TODO: correct icon
+			return { code: enemy.code, title: enemy.name, markers }
 		})
+
 		return {
 			itemData: {
 				name: materialOnMap.name,

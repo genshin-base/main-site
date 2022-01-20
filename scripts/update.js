@@ -366,6 +366,17 @@ async function saveWwwData() {
 		makeRecentChangelogsTable(builds.changelogsTable),
 	)
 
+	/*
+	await writeJsonAndHash(
+		`${WWW_DYNAMIC_DIR}/locations.json`,
+		Object.values(domains)
+			.map(x => ({ type: 'domain', code: x.code, locations: [x.location] }))
+			.concat(
+				Object.values(enemies).map(x => ({ type: 'enemy', code: x.code, locations: x.locations })),
+			),
+	)
+	*/
+
 	const hash = md5sum.digest('hex').slice(0, 8)
 	await fs.writeFile(
 		`${WWW_STATIC_DIR}/index.ts`,
