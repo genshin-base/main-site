@@ -1,10 +1,10 @@
-export type TabOpt = { code: string; title?: string | JSX.Element }
+export type Tab = { code: string; title?: string | JSX.Element }
 
 export function tabTitleFromName(obj: { name: string }): string {
 	return obj.name
 }
 
-export function Tabs<T extends TabOpt>({
+export function Tabs<T extends Tab>({
 	tabs,
 	titleFunc,
 	selectedTab,
@@ -37,7 +37,7 @@ export function Tabs<T extends TabOpt>({
 	)
 }
 
-export function BtnTabGroup<T extends TabOpt>({
+export function BtnTabGroup<T extends Tab>({
 	tabs,
 	titleFunc,
 	selectedTab,
