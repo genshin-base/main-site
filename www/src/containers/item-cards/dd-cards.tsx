@@ -7,7 +7,7 @@ import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '
 import { useWindowSize } from '#src/api/hooks'
 import { ItemDetailDdMobilePortal, ItemDetailDdPortal } from '#src/components/item-detail-dd-portal'
 import { SimpleSelect } from '#src/components/select'
-import { BtnTabGroup } from '#src/components/tabs'
+import { BtnTabGroup, tabTitleFromName } from '#src/components/tabs'
 import { MapMarkerRaw, TeyvatMap } from '#src/components/teyvat-map'
 import { notesToJSX } from '#src/modules/builds/character-build-detailed'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
@@ -200,14 +200,7 @@ function ArtifactCard({
 	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
 	title: string
 }): JSX.Element {
-	const artTabs = useMemo(
-		() =>
-			artifacts.map(a => {
-				return { ...a, title: a.name }
-			}),
-		[artifacts],
-	)
-	const [selectedArt, setSelectedArt] = useState(artTabs[0])
+	const [selectedArt, setSelectedArt] = useState(artifacts[0])
 
 	const dataForMap = useMemo(() => {
 		const srcs = selectedArt.obtainSources
@@ -229,9 +222,10 @@ function ArtifactCard({
 			titleEl={title}
 			classes={classes}
 			selectorEl={
-				artTabs.length > 1 ? (
+				artifacts.length > 1 ? (
 					<BtnTabGroup
-						tabs={artTabs}
+						tabs={artifacts}
+						titleFunc={tabTitleFromName}
 						selectedTab={selectedArt}
 						onTabSelect={setSelectedArt}
 						classes="w-100"

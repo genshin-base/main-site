@@ -16,7 +16,7 @@ import { getAllRelated, MapAllByCode } from '#src/api'
 import { isLoaded, useFetch } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
-import { BtnTabGroup, Tab, Tabs } from '#src/components/tabs'
+import { BtnTabGroup, Tabs } from '#src/components/tabs'
 import { ArtifactDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
 import { apiGetCharacter, CharacterFullInfoWithRelated } from '#src/generated'
@@ -29,26 +29,26 @@ import { getWeaponIconSrc } from '#src/utils/weapons'
 
 import './character-build-detailed.scss'
 
-const DUMMY_TAB: Tab = {
+const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole> = {
 	title: '…',
 	code: '',
 }
+const DUMMY_ROLES = [DUMMY_ROLE]
 
-function makeRoleTab(r: CharacterBuildInfoRole): Tab {
-	return {
-		code: r.code,
-		title: (
-			<span key={r.code}>
-				{r.isRecommended ? (
-					<span className="fs-4 lh-1 opacity-75 text-warning align-bottom">🟊</span>
-				) : null}
-				{r.code}
-			</span>
-		),
-	}
+type BuildRoleOrDummy = CharacterBuildInfoRole | typeof DUMMY_ROLE
+
+function makeRoleTitle(r: BuildRoleOrDummy) {
+	return (
+		<span key={r.code}>
+			{r.isRecommended ? (
+				<span className="fs-4 lh-1 opacity-75 text-warning align-bottom">🟊</span>
+			) : null}
+			{r.code}
+		</span>
+	)
 }
-function getRoleData(build: CharacterFullInfoWithRelated, selectedRoleTab: Tab) {
-	return mustBeDefined(build.character.roles.find(x => x.code === selectedRoleTab.code))
+function getRoleData(build: CharacterFullInfoWithRelated, selectedCode: string) {
+	return mustBeDefined(build.character.roles.find(x => x.code === selectedCode))
 }
 function genSimpleList(arr: string[]) {
 	return arr.join(', ')
@@ -152,15 +152,13 @@ function genArtofactAdvice(
 export function CharacterBuildDetailed({ characterCode }: { characterCode: string }) {
 	const build = useFetch(sig => apiGetCharacter(characterCode, sig), [characterCode])
 	// на случай серверного рендера: билд тут будет загружен сразу
-	const roleTabs = useMemo(
-		() => (isLoaded(build) ? build.character.roles.map(makeRoleTab) : [DUMMY_TAB]),
-		[build],
-	)
-	const [selectedRoleTabRaw, setSelectedRoleTab] = useState(DUMMY_TAB)
+	const roleTabs: BuildRoleOrDummy[] = isLoaded(build) ? build.character.roles : DUMMY_ROLES
+
+	const [selectedRoleTabRaw, setSelectedRoleTab] = useState<BuildRoleOrDummy>(DUMMY_ROLE)
 	// на случай, если массив вкладок уже реактивно изменился, а выбранная вкладка ещё старая
 	const selectedRoleTab = roleTabs.includes(selectedRoleTabRaw)
 		? selectedRoleTabRaw
-		: roleTabs[0] ?? DUMMY_TAB
+		: roleTabs[0] ?? DUMMY_ROLE
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
@@ -168,7 +166,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 
 	const weaponListBlock = useMemo(() => {
 		if (!isLoaded(build)) return []
-		const role = getRoleData(build, selectedRoleTab)
+		const role = getRoleData(build, selectedRoleTab.code)
 		if (!role) return []
 		return role.weapons.advices.map((advice, i) => (
 			<li key={i} className="pt-1">
@@ -208,7 +206,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 
 	const artifactsListBlock = useMemo(() => {
 		if (!isLoaded(build)) return []
-		const role = getRoleData(build, selectedRoleTab)
+		const role = getRoleData(build, selectedRoleTab.code)
 		if (!role) return []
 
 		return role.artifacts.sets.map((set, i) => {
@@ -223,7 +221,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 	}, [build, selectedRoleTab])
 	const artifactStatsAndSkillsBlock = useMemo(() => {
 		if (!isLoaded(build)) return null
-		const role = getRoleData(build, selectedRoleTab)
+		const role = getRoleData(build, selectedRoleTab.code)
 		return (
 			<>
 				<h6 className="text-uppercase opacity-75">Main artifact stats</h6>
@@ -270,7 +268,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 	}, [build, selectedRoleTab])
 	const notesBlock = useMemo(() => {
 		if (!isLoaded(build)) return null
-		const role = getRoleData(build, selectedRoleTab)
+		const role = getRoleData(build, selectedRoleTab.code)
 		return (
 			<>
 				<div>{notesToJSX(role.tips)}</div>
@@ -299,6 +297,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 					<div className="col col-9">
 						<Tabs
 							tabs={roleTabs}
+							titleFunc={makeRoleTitle}
 							selectedTab={selectedRoleTab}
 							onTabSelect={setSelectedRoleTab}
 						/>
