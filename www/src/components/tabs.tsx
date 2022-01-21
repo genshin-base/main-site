@@ -1,14 +1,20 @@
-export type Tab = { title: string | JSX.Element; code: string }
+export type TabOpt = { code: string; title?: string | JSX.Element }
 
-export function Tabs({
+export function tabTitleFromName(obj: { name: string }): string {
+	return obj.name
+}
+
+export function Tabs<T extends TabOpt>({
 	tabs,
+	titleFunc,
 	selectedTab,
 	onTabSelect,
 	classes = '',
 }: {
-	tabs: Tab[]
-	selectedTab: Tab
-	onTabSelect: (tab: Tab) => unknown
+	tabs: T[]
+	titleFunc?: (tab: T) => string | JSX.Element
+	selectedTab: T
+	onTabSelect: (tab: T) => unknown
 	classes?: string
 }): JSX.Element {
 	return (
@@ -23,7 +29,7 @@ export function Tabs({
 							onTabSelect(t)
 						}}
 					>
-						{t.title}
+						{titleFunc ? titleFunc(t) : 'title' in t ? t.title : t}
 					</a>
 				</li>
 			))}
@@ -31,15 +37,17 @@ export function Tabs({
 	)
 }
 
-export function BtnTabGroup({
+export function BtnTabGroup<T extends TabOpt>({
 	tabs,
+	titleFunc,
 	selectedTab,
 	onTabSelect,
 	classes = '',
 }: {
-	tabs: Tab[]
-	selectedTab: Tab
-	onTabSelect: (Tab) => void
+	tabs: T[]
+	titleFunc?: (tab: T) => string | JSX.Element
+	selectedTab: T
+	onTabSelect: (tab: T) => void
 	classes?: string
 }): JSX.Element {
 	return (
@@ -55,7 +63,7 @@ export function BtnTabGroup({
 						onTabSelect(t)
 					}}
 				>
-					{t.title}
+					{titleFunc ? titleFunc(t) : 'title' in t ? t.title : t}
 				</button>
 			))}
 		</div>
