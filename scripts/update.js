@@ -45,6 +45,7 @@ import {
 } from './_common.js'
 import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
 import {
+	excludeDomainBosses,
 	makeArtifactsFullInfo,
 	makeCharacterFullInfo,
 	makeCharacterShortList,
@@ -227,6 +228,7 @@ async function extractAndSaveItemsData() {
 	const artifacts = await extractArtifactsData(cd, LANGS, fx)
 	const weapons = await extractWeaponsData(cd, LANGS, items.id2item, fx)
 	const enemies = await extractEnemiesData(cd, LANGS, items.id2item, artifacts.id2item, fx)
+	const domains = await extractDomainsData(cd, LANGS, items.id2item, artifacts.id2item, enemies.id2item, fx)
 
 	await applyWeaponsObtainData(cd, weapons.code2item)
 	await applyEnemiesLocations(cd, enemies.code2item)
@@ -235,7 +237,7 @@ async function extractAndSaveItemsData() {
 	await saveArtifacts(artifacts.code2item)
 	await saveWeapons(weapons.code2item)
 	await saveCharacters((await extractCharactersData(cd, LANGS, items.id2item, fx)).code2item)
-	await saveDomains((await extractDomainsData(cd, LANGS, items.id2item, artifacts.id2item, fx)).code2item)
+	await saveDomains(domains.code2item)
 	await saveEnemies(enemies.code2item)
 
 	checkHoneyhunterFixesUsage(fx)
@@ -313,6 +315,8 @@ async function saveWwwData() {
 	const weapons = await loadWeapons()
 	const domains = await loadDomains()
 	const items = await loadItems()
+
+	excludeDomainBosses(enemies, domains)
 
 	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
 		await fs.rm(dir, { recursive: true, force: true })
