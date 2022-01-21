@@ -16,7 +16,7 @@ const TILE_DRAW_WIDTH = 192
 const TILE_CONTENT_WIDTH = 256 //tile width in game pixels on layer 0
 const MIN_LEVEL = -4
 const MAX_LEVEL = 1
-const DEFAULT_LEVEL = -1
+const DEFAULT_LEVEL = -1.2
 const MARKERS_AUTO_REGION_DOWNSCALE = 1.1
 const MARKER_ICON_SIZE_PX = 40
 

@@ -4,6 +4,14 @@ import { ArtifactRef, ArtifactRefNode } from '#lib/parsing/helperteam/artifacts'
 import { CharacterBuildInfoRole } from '#lib/parsing/helperteam/characters'
 import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
 import { mustBeDefined } from '#lib/utils/values'
+import {
+	ART_GROUP_18_ATK_CODE,
+	ART_GROUP_18_ATK_DETAIL,
+	ART_GROUP_18_ATK_INSIDE_CODES,
+	ART_GROUP_20_ER_CODE,
+	ART_GROUP_20_ER_DETAIL,
+	ART_GROUP_20_ER_INSIDE_CODES,
+} from '#src/../../lib/genshin'
 import { getAllRelated, MapAllByCode } from '#src/api'
 import { isLoaded, useFetch } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
@@ -15,19 +23,11 @@ import { apiGetCharacter, CharacterFullInfoWithRelated } from '#src/generated'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
 import { getArtifactIconSrc, getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import { getCharacterPortraitSrc, getCharacterSilhouetteSrc } from '#src/utils/characters'
+import { getItemIconSrc } from '#src/utils/items'
 import { pluralizeEN } from '#src/utils/strings'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 
 import './character-build-detailed.scss'
-import { getItemIconSrc } from '#src/utils/items'
-import {
-	ART_GROUP_18_ATK_CODE,
-	ART_GROUP_18_ATK_DETAIL,
-	ART_GROUP_18_ATK_INSIDE_CODES,
-	ART_GROUP_20_ER_CODE,
-	ART_GROUP_20_ER_DETAIL,
-	ART_GROUP_20_ER_INSIDE_CODES,
-} from '#src/../../lib/genshin'
 
 const DUMMY_TAB: Tab = {
 	title: '…',
