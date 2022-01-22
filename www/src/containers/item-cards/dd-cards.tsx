@@ -168,6 +168,7 @@ function MapWrap({
 				{itemData && (
 					<LabeledItemAvatar
 						classes="me-2 my-1 small-avatar"
+						avatarClasses="with-padding"
 						imgSrc={itemData.imgSrc}
 						title={itemData.name}
 					/>
@@ -340,7 +341,7 @@ export function WeaponCard({
 								<ItemAvatar
 									key={m.code}
 									rarity={2}
-									classes="mb-2 mx-1 small-avatar"
+									classes="mb-2 mx-1 small-avatar with-padding"
 									src={getItemIconSrc(m.code)}
 									onClick={() => setMaterialOnMap(m)}
 								/>

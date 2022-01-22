@@ -49,13 +49,16 @@ export function ItemAvatar<TItem, TRelated>({
 		onClick && onClick()
 	}, [openDd, onClick])
 	return (
-		<a href={hash} className="position-relative small" ref={elRef} onClick={onClickLocal}>
-			<img
-				className={`item-avatar rounded-circle ${pointerClass} ${rarityClass} ${classes}`}
-				src={src}
-			/>
+		<a
+			href={hash}
+			className={`item-avatar position-relative small rounded-circle d-inline-block overflow-hidden ${pointerClass} ${rarityClass} ${classes}`}
+			ref={elRef}
+			onClick={onClickLocal}
+		>
+			<img className="image" src={src} />
+
 			{badge && (
-				<span className="position-absolute top-0 start-0 translate-middle badge rounded-pill opacity-75">
+				<span className="position-absolute top-0 start-0 translate-middle badge rounded-pill opacity-75 small">
 					{badge}
 				</span>
 			)}
@@ -103,6 +106,7 @@ export function LabeledItemAvatar<TItem, TRelated>({
 	imgSrc,
 	rarity,
 	classes = '',
+	avatarClasses = '',
 	title,
 	avatarBadge,
 	ddProps,
@@ -111,6 +115,7 @@ export function LabeledItemAvatar<TItem, TRelated>({
 	rarity?: GI_RarityCode
 	title: string
 	classes?: string
+	avatarClasses?: string
 	avatarBadge?: string
 	ddProps?: DDProps<TItem, TRelated>
 }): JSX.Element {
@@ -125,7 +130,11 @@ export function LabeledItemAvatar<TItem, TRelated>({
 	const pointerClass = DdComponent ? 'c-pointer' : ''
 	return (
 		<div className={`text-nowrap ${pointerClass} ${classes}`} ref={elRef} onClick={openDd}>
-			<ItemAvatar classes="small-avatar" src={imgSrc} badge={avatarBadge} />
+			<ItemAvatar
+				classes={`small-avatar align-middle ${avatarClasses}`}
+				src={imgSrc}
+				badge={avatarBadge}
+			/>
 			<ItemLabelText
 				rarity={rarity}
 				classes={`text-wrap align-middle lh-1 ps-1 mw-75 ${pointerClass}`}

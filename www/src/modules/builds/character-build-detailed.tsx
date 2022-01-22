@@ -130,6 +130,7 @@ function genArtofactAdvice(
 				title={artifactForList.name}
 				key={set.code}
 				avatarBadge={'x' + set.count}
+				avatarClasses="with-padding"
 				classes={`small ${isLast ? 'mb-1' : ''}`}
 				ddProps={{
 					DdComponent: ArtifactDetailDd,
@@ -189,6 +190,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 										: ` (${item.stacks} ${pluralizeEN(item.stacks, 'stack', 'stacks')})`)
 								}
 								rarity={weapon.rarity}
+								avatarClasses="with-padding"
 								classes={`small ${!isInList || isLastInList ? 'mb-1' : ''}`}
 								ddProps={{
 									DdComponent: WeaponDetailDd,
@@ -234,7 +236,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 						<li className="mb-1">
 							<ItemAvatar
 								src={getArtifactTypeIconSrc(ac)}
-								classes="small-avatar small mb-1 me-1 mb-xxl-2 me-xxl-2 p-1 bg-dark"
+								classes="small-avatar small mb-1 me-1 mb-xxl-2 me-xxl-2 p-1 bg-dark with-padding align-middle"
 							/>
 							<b className="text-muted">{ac} — </b>
 							{genArtMainStatDetail(role, ac)}
@@ -288,7 +290,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 			<div className="w-100 d-flex justify-content-between">
 				{materials.map(m => (
 					<ItemAvatar
-						classes="mb-2 mx-1 small-avatar"
+						classes="mb-2 mx-1 small-avatar with-padding"
 						src={getItemIconSrc(m.code)}
 						ddProps={{
 							DdComponent: OtherItemCardDetailDd,
