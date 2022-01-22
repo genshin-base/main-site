@@ -50,6 +50,7 @@ import {
 	makeCharacterFullInfo,
 	makeCharacterShortList,
 	makeWeaponsFullInfo,
+	mergeSimilarEnemies,
 } from '#lib/parsing/combine.js'
 import { extractItemsData } from '#lib/parsing/honeyhunter/items.js'
 import { extractEnemiesData } from '#lib/parsing/honeyhunter/enemies.js'
@@ -149,6 +150,25 @@ const fixes = {
 				ru: 'Электро Путешественник',
 			},
 		},
+	},
+	/** @type {import('#lib/parsing/combine').CombineFixes} */
+	combine: {
+		manualEnemyGroups: [
+			{ origNames: /^Ruin Guard$/ },
+			{ origNames: /^Ruin Hunter$/ },
+			{ origNames: /^Ruin Grader$/ },
+			{ origNames: /Bathysmal Vishap$/ },
+			{ origNames: /^Geovishap Hatchling$/ },
+			{ origNames: /^Geovishap$/ },
+			{
+				origNames: /^Ruin (Cruiser|Destroyer|Defender|Scout)$/,
+				name: { en: 'Ruin Sentinel', ru: 'Часовой руин' },
+			},
+			{
+				origNames: /^(Rockfond|Thundercraven) Rifthound( Whelp)?$/,
+				name: { en: 'Wolves of the Rift', ru: 'Волк Разрыва' },
+			},
+		],
 	},
 }
 
@@ -257,6 +277,7 @@ async function extractAndSaveAllItemsData() {
 async function extractAndSaveItemImages(overwriteExisting) {
 	const builds = await loadBuilds()
 	const { items, artifacts, weapons, enemies, characters } = await extractAllItemsData()
+	const enemyImgCode2groupCode = mergeSimilarEnemies(enemies.code2item, fixes.combine)
 
 	const usedArtCodes = new Set(builds.characters.map(x => Array.from(getCharacterArtifactCodes(x))).flat())
 	const usedWeaponCodes = new Set(builds.characters.map(x => Array.from(getCharacterWeaponCodes(x))).flat())
@@ -275,7 +296,7 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		) {
 			usedEmenyCodes.add(enemy.code)
 		}
-	console.log(usedEmenyCodes.size, usedEmenyCodes)
+	for (const code of enemyImgCode2groupCode.keys()) usedEmenyCodes.add(code)
 
 	/**
 	 * @param {string} title
@@ -325,6 +346,7 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		for (const code of code2img.keys()) if (!usedEmenyCodes.has(code)) code2img.delete(code)
 
 		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'weapons', async code => {
+			code = enemyImgCode2groupCode.get(code) ?? code
 			const dest = `${WWW_MEDIA_DIR}/enemies/${code}.png`
 			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
 		})
@@ -343,6 +365,7 @@ async function saveWwwData() {
 	const items = await loadItems()
 
 	excludeDomainBosses(enemies, domains)
+	mergeSimilarEnemies(enemies, fixes.combine)
 
 	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
 		await fs.rm(dir, { recursive: true, force: true })
