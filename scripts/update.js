@@ -50,6 +50,7 @@ import {
 	makeCharacterFullInfo,
 	makeCharacterShortList,
 	makeWeaponsFullInfo,
+	mergeSimilarEnemies,
 } from '#lib/parsing/combine.js'
 import { extractItemsData } from '#lib/parsing/honeyhunter/items.js'
 import { extractEnemiesData } from '#lib/parsing/honeyhunter/enemies.js'
@@ -150,6 +151,25 @@ const fixes = {
 			},
 		},
 	},
+	/** @type {import('#lib/parsing/combine').CombineFixes} */
+	combine: {
+		manualEnemyGroups: [
+			{ origNames: /^Ruin Guard$/ },
+			{ origNames: /^Ruin Hunter$/ },
+			{ origNames: /^Ruin Grader$/ },
+			{ origNames: /Bathysmal Vishap$/ },
+			{ origNames: /^Geovishap Hatchling$/ },
+			{ origNames: /^Geovishap$/ },
+			{
+				origNames: /^Ruin (Cruiser|Destroyer|Defender|Scout)$/,
+				name: { en: 'Ruin Sentinel', ru: 'Часовой руин' },
+			},
+			{
+				origNames: /^(Rockfond|Thundercraven) Rifthound( Whelp)?$/,
+				name: { en: 'Wolves of the Rift', ru: 'Волк Разрыва' },
+			},
+		],
+	},
 }
 
 const args = parseArgs()
@@ -171,7 +191,7 @@ if (args['--help'] || args['-h']) {
 
 	if (updData) {
 		await prepareCacheDir(DATA_CACHE_DIR, !!args['--ignore-cache'])
-		await extractAndSaveItemsData()
+		await extractAndSaveAllItemsData()
 		await extractAndSaveBuildsData()
 	}
 	if (updImgs) {
@@ -217,9 +237,7 @@ async function extractAndSaveBuildsData() {
 	progress()
 }
 
-async function extractAndSaveItemsData() {
-	info('updating items', { newline: false })
-	await fs.mkdir(DATA_DIR, { recursive: true })
+async function extractAllItemsData() {
 	const cd = DATA_CACHE_DIR
 	const fx = fixes.honeyhunter
 	clearHoneyhunterFixesUsage(fx)
@@ -229,39 +247,58 @@ async function extractAndSaveItemsData() {
 	const weapons = await extractWeaponsData(cd, LANGS, items.id2item, fx)
 	const enemies = await extractEnemiesData(cd, LANGS, items.id2item, artifacts.id2item, fx)
 	const domains = await extractDomainsData(cd, LANGS, items.id2item, artifacts.id2item, enemies.id2item, fx)
+	const characters = await extractCharactersData(cd, LANGS, items.id2item, fx)
 
 	await applyWeaponsObtainData(cd, weapons.code2item)
 	await applyEnemiesLocations(cd, enemies.code2item)
 
+	checkHoneyhunterFixesUsage(fx)
+	progress()
+
+	return { items, artifacts, weapons, enemies, domains, characters }
+}
+async function extractAndSaveAllItemsData() {
+	info('updating items', { newline: false })
+	await fs.mkdir(DATA_DIR, { recursive: true })
+
+	const { items, artifacts, weapons, enemies, domains, characters } = await extractAllItemsData()
+
 	await saveItems(items.code2item)
 	await saveArtifacts(artifacts.code2item)
 	await saveWeapons(weapons.code2item)
-	await saveCharacters((await extractCharactersData(cd, LANGS, items.id2item, fx)).code2item)
+	await saveCharacters(characters.code2item)
 	await saveDomains(domains.code2item)
 	await saveEnemies(enemies.code2item)
 
-	checkHoneyhunterFixesUsage(fx)
 	progress()
 }
 
 /** @param {boolean} overwriteExisting */
 async function extractAndSaveItemImages(overwriteExisting) {
 	const builds = await loadBuilds()
+	const { items, artifacts, weapons, enemies, characters } = await extractAllItemsData()
+	const enemyImgCode2groupCode = mergeSimilarEnemies(enemies.code2item, fixes.combine)
 
 	const usedArtCodes = new Set(builds.characters.map(x => Array.from(getCharacterArtifactCodes(x))).flat())
 	const usedWeaponCodes = new Set(builds.characters.map(x => Array.from(getCharacterWeaponCodes(x))).flat())
 
 	const usedItemCodes = new Set()
-	for (const weapon of Object.values(await loadWeapons()))
+	for (const weapon of Object.values(weapons.code2item))
 		if (usedWeaponCodes.has(weapon.code)) for (const code of weapon.materialCodes) usedItemCodes.add(code)
-	for (const character of Object.values(await loadCharacters()))
+	for (const character of Object.values(characters.code2item))
 		for (const code of character.materialCodes) usedItemCodes.add(code)
 
-	const shouldProcess = async dest => overwriteExisting || !(await exists(dest))
-	const resize64 = (i, o) => resize(i, o, '64x64')
+	const usedEmenyCodes = new Set()
+	for (const enemy of Object.values(enemies.code2item))
+		if (
+			enemy.drop.artifactSetCodes.some(x => usedArtCodes.has(x)) ||
+			enemy.drop.itemCodes.some(x => usedItemCodes.has(x))
+		) {
+			usedEmenyCodes.add(enemy.code)
+		}
+	for (const code of enemyImgCode2groupCode.keys()) usedEmenyCodes.add(code)
 
 	/**
-	 *
 	 * @param {string} title
 	 * @param {() => Promise<{loaded:number, total:number}>} func
 	 */
@@ -271,12 +308,13 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		info(`  saved ${stats.loaded} of total ${stats.total}`)
 	}
 
-	const items = await extractItemsData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)
+	const shouldProcess = async dest => overwriteExisting || !(await exists(dest))
+	const resize64 = (i, o) => resize(i, o, '64x64')
+
 	await processGroup('items', async () => {
 		const { code2img } = items
 		for (const code of code2img.keys()) if (!usedItemCodes.has(code)) code2img.delete(code)
 
-		await fs.mkdir(`${WWW_MEDIA_DIR}/items`, { recursive: true })
 		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'items', async code => {
 			const dest = `${WWW_MEDIA_DIR}/items/${code}.png`
 			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
@@ -284,7 +322,7 @@ async function extractAndSaveItemImages(overwriteExisting) {
 	})
 
 	await processGroup('artifacts', async () => {
-		const { code2img } = await extractArtifactsData(DATA_CACHE_DIR, LANGS, fixes.honeyhunter)
+		const { code2img } = artifacts
 		for (const code of code2img.keys()) if (!usedArtCodes.has(code)) code2img.delete(code)
 
 		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'artifacts', async code => {
@@ -294,12 +332,22 @@ async function extractAndSaveItemImages(overwriteExisting) {
 	})
 
 	await processGroup('weapons', async () => {
-		const { code2img } = await extractWeaponsData(DATA_CACHE_DIR, LANGS, items.id2item, fixes.honeyhunter)
+		const { code2img } = weapons
 		for (const code of code2img.keys()) if (!usedWeaponCodes.has(code)) code2img.delete(code)
 
-		await fs.mkdir(`${WWW_MEDIA_DIR}/weapons`, { recursive: true })
 		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'weapons', async code => {
 			const dest = `${WWW_MEDIA_DIR}/weapons/${code}.png`
+			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
+		})
+	})
+
+	await processGroup('enemies', async () => {
+		const { code2img } = enemies
+		for (const code of code2img.keys()) if (!usedEmenyCodes.has(code)) code2img.delete(code)
+
+		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'weapons', async code => {
+			code = enemyImgCode2groupCode.get(code) ?? code
+			const dest = `${WWW_MEDIA_DIR}/enemies/${code}.png`
 			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
 		})
 	})
@@ -317,6 +365,7 @@ async function saveWwwData() {
 	const items = await loadItems()
 
 	excludeDomainBosses(enemies, domains)
+	mergeSimilarEnemies(enemies, fixes.combine)
 
 	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
 		await fs.rm(dir, { recursive: true, force: true })

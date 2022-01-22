@@ -1,17 +1,19 @@
 import { useMemo, useState } from 'preact/hooks'
 
-import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
+import { GI_DomainTypeCode } from '#lib/genshin'
+import { ArtifactFullInfo, WeaponFullInfo, ItemShortInfo } from '#lib/parsing/combine'
 import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api'
 import { useWindowSize } from '#src/api/hooks'
 import { ItemDetailDdMobilePortal, ItemDetailDdPortal } from '#src/components/item-detail-dd-portal'
 import { SimpleSelect } from '#src/components/select'
-import { BtnTabGroup } from '#src/components/tabs'
+import { BtnTabGroup, tabTitleFromName } from '#src/components/tabs'
 import { MapMarkerRaw, TeyvatMap } from '#src/components/teyvat-map'
-import domainIconSrc from '#src/media/domain.png'
 import { notesToJSX } from '#src/modules/builds/character-build-detailed'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
 import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
+import { getDomainIconSrc } from '#src/utils/domains'
+import { getEnemyIconSrc } from '#src/utils/enemies'
 import { getItemIconSrc } from '#src/utils/items'
 import { BULLET, LEFT_POINTING, RIGHT_POINTING, TIMES } from '#src/utils/typography'
 import { getWeaponIconSrc } from '#src/utils/weapons'
@@ -75,36 +77,59 @@ function Card({
 	)
 }
 
+type MapWrapMarkerGroup = {
+	code: string
+	title: string
+	markers: MapMarkerRaw[]
+}
+
+function addMarkerGroupsByDomains(
+	markerGroups: MapWrapMarkerGroup[],
+	domains: { code: string; name: string; type: GI_DomainTypeCode; location: [number, number] }[],
+) {
+	for (const domain of domains) {
+		const [x, y] = domain.location
+		const icon = getDomainIconSrc(domain.type)
+		markerGroups.push({ code: domain.code, title: domain.name, markers: [{ x, y, icon }] })
+	}
+}
+function addMarkerGroupsByEnemies(
+	markerGroups: MapWrapMarkerGroup[],
+	enemies: { code: string; name: string; locations: [number, number][] }[],
+) {
+	for (const enemy of enemies) {
+		const markers = enemy.locations.map(([x, y]) => ({ x, y, icon: getEnemyIconSrc(enemy.code) }))
+		markerGroups.push({ code: enemy.code, title: enemy.name, markers })
+	}
+}
+
 function MapWrap({
 	itemData,
-	sources,
+	markerGroups,
 }: {
 	itemData?: {
 		imgSrc: string
 		name: string
 	}
-	sources: {
-		code: string
-		title: string
-		markers: MapMarkerRaw[]
-	}[]
+	markerGroups: MapWrapMarkerGroup[]
 }): JSX.Element {
-	const [selectedSourceTab, setSelectedSourceTab] = useState(sources[0])
-	const goToPrevSource = () => {
-		setSelectedSourceTab(arrGetAfter(sources, selectedSourceTab, -1))
+	const [selectedSourceTab, setSelectedSourceTab] = useState(markerGroups[0])
+	const goToPrevGroup = () => {
+		setSelectedSourceTab(arrGetAfter(markerGroups, selectedSourceTab, -1))
 	}
-	const goToNextSource = () => {
-		setSelectedSourceTab(arrGetAfter(sources, selectedSourceTab))
+	const goToNextGroup = () => {
+		setSelectedSourceTab(arrGetAfter(markerGroups, selectedSourceTab))
 	}
+
 	let sourceSelectEl
-	if (!sources.length) {
+	if (!markerGroups.length) {
 		sourceSelectEl = null
-	} else if (sources.length === 1) {
-		sourceSelectEl = <span className="align-self-center">{sources[0].title}</span>
-	} else if (sources.length < 4) {
+	} else if (markerGroups.length === 1) {
+		sourceSelectEl = <span className="align-self-center">{markerGroups[0].title}</span>
+	} else if (markerGroups.length < 4) {
 		sourceSelectEl = (
 			<BtnTabGroup
-				tabs={sources}
+				tabs={markerGroups}
 				selectedTab={selectedSourceTab}
 				onTabSelect={setSelectedSourceTab}
 				classes="w-100"
@@ -116,12 +141,12 @@ function MapWrap({
 				<button
 					type="button"
 					class="btn btn-secondary border-dark border-end-0 text-muted fs-4 lh-1"
-					onClick={goToPrevSource}
+					onClick={goToPrevGroup}
 				>
 					{LEFT_POINTING}
 				</button>
 				<SimpleSelect
-					options={sources}
+					options={markerGroups}
 					selectedOption={selectedSourceTab}
 					onOptionSelect={setSelectedSourceTab}
 					classes="w-100 rounded-0"
@@ -129,7 +154,7 @@ function MapWrap({
 				<button
 					type="button"
 					class="btn btn-secondary border-dark border-start-0 text-muted fs-4 lh-1"
-					onClick={goToNextSource}
+					onClick={goToNextGroup}
 				>
 					{RIGHT_POINTING}
 				</button>
@@ -147,7 +172,7 @@ function MapWrap({
 						title={itemData.name}
 					/>
 				)}
-				{sources.length ? (
+				{markerGroups.length ? (
 					<div className={`d-flex flex-fill justify-content-end`}>
 						<label className="me-1 text-muted align-self-center">Source:</label>
 						{sourceSelectEl}
@@ -181,32 +206,20 @@ function ArtifactCard({
 	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
 	title: string
 }): JSX.Element {
-	const artTabs = useMemo(
-		() =>
-			artifacts.map(a => {
-				return { ...a, title: a.name }
-			}),
-		[artifacts],
-	)
-	const [selectedArt, setSelectedArt] = useState(artTabs[0])
+	const [selectedArt, setSelectedArt] = useState(artifacts[0])
 
 	const dataForMap = useMemo(() => {
 		const srcs = selectedArt.obtainSources
-		const domains = getAllRelated(related.domains, srcs.domainCodes).map(domain => {
-			const [x, y] = domain.location
-			return { code: domain.code, title: domain.name, markers: [{ x, y, icon: domainIconSrc }] }
-		})
-		const enemies = getAllRelated(related.enemies, srcs.enemyCodes).map(enemy => {
-			const markers = enemy.locations.map(([x, y]) => ({ x, y, icon: domainIconSrc })) //TODO: correct icon
-			return { code: enemy.code, title: enemy.name, markers }
-		})
+		const markerGroups = []
+		addMarkerGroupsByDomains(markerGroups, getAllRelated(related.domains, srcs.domainCodes))
+		addMarkerGroupsByEnemies(markerGroups, getAllRelated(related.enemies, srcs.enemyCodes))
 
 		return {
 			itemData: {
 				name: selectedArt.name,
 				imgSrc: getArtifactIconSrc(selectedArt.code),
 			},
-			sources: domains.concat(enemies),
+			markerGroups,
 		}
 	}, [selectedArt, related])
 
@@ -215,9 +228,10 @@ function ArtifactCard({
 			titleEl={title}
 			classes={classes}
 			selectorEl={
-				artTabs.length > 1 ? (
+				artifacts.length > 1 ? (
 					<BtnTabGroup
-						tabs={artTabs}
+						tabs={artifacts}
+						titleFunc={tabTitleFromName}
 						selectedTab={selectedArt}
 						onTabSelect={setSelectedArt}
 						classes="w-100"
@@ -251,7 +265,7 @@ function ArtifactCard({
 					)}
 				</div>
 			}
-			mapEl={dataForMap.sources.length ? <MapWrap {...dataForMap} /> : null}
+			mapEl={dataForMap.markerGroups.length ? <MapWrap {...dataForMap} /> : null}
 			onCloseClick={onCloseClick}
 		></Card>
 	)
@@ -293,21 +307,16 @@ export function WeaponCard({
 	const [materialOnMap, setMaterialOnMap] = useState(materials[0])
 	const dataForMap = useMemo(() => {
 		const srcs = materialOnMap.obtainSources
-		const domains = getAllRelated(related.domains, srcs.domainCodes).map(domain => {
-			const [x, y] = domain.location
-			return { code: domain.code, title: domain.name, markers: [{ x, y, icon: domainIconSrc }] }
-		})
-		const enemies = getAllRelated(related.enemies, srcs.enemyCodes).map(enemy => {
-			const markers = enemy.locations.map(([x, y]) => ({ x, y, icon: domainIconSrc })) //TODO: correct icon
-			return { code: enemy.code, title: enemy.name, markers }
-		})
+		const markerGroups = []
+		addMarkerGroupsByDomains(markerGroups, getAllRelated(related.domains, srcs.domainCodes))
+		addMarkerGroupsByEnemies(markerGroups, getAllRelated(related.enemies, srcs.enemyCodes))
 
 		return {
 			itemData: {
 				name: materialOnMap.name,
 				imgSrc: getItemIconSrc(materialOnMap.code),
 			},
-			sources: domains.concat(enemies),
+			markerGroups,
 		}
 	}, [materialOnMap, related])
 
@@ -365,7 +374,7 @@ export function WeaponCard({
 					</div>
 				</div>
 			}
-			mapEl={dataForMap.sources.length ? <MapWrap {...dataForMap} /> : null}
+			mapEl={dataForMap.markerGroups.length ? <MapWrap {...dataForMap} /> : null}
 			onCloseClick={onCloseClick}
 		></Card>
 	)
@@ -401,25 +410,19 @@ export function OtherItemCard({
 }): JSX.Element {
 	const item = items[0] //пока предмет приходит только одно, а артефактов может придти несколько
 	const materials = getAllRelated(related.items, [item.code])
-	const materialOnMap = materials[0] //todo
-
+	const materialOnMap = materials[0]
 	const dataForMap = useMemo(() => {
+		const markerGroups = []
 		const srcs = materialOnMap.obtainSources
-		const domains = getAllRelated(related.domains, srcs.domainCodes).map(domain => {
-			const [x, y] = domain.location
-			return { code: domain.code, title: domain.name, markers: [{ x, y, icon: domainIconSrc }] }
-		})
-		const enemies = getAllRelated(related.enemies, srcs.enemyCodes).map(enemy => {
-			const markers = enemy.locations.map(([x, y]) => ({ x, y, icon: domainIconSrc })) //TODO: correct icon
-			return { code: enemy.code, title: enemy.name, markers }
-		})
+		addMarkerGroupsByDomains(markerGroups, getAllRelated(related.domains, srcs.domainCodes))
+		addMarkerGroupsByEnemies(markerGroups, getAllRelated(related.enemies, srcs.enemyCodes))
 
 		return {
 			itemData: {
 				name: materialOnMap.name,
 				imgSrc: getItemIconSrc(materialOnMap.code),
 			},
-			sources: domains.concat(enemies),
+			markerGroups,
 		}
 	}, [materialOnMap, related])
 
@@ -434,7 +437,7 @@ export function OtherItemCard({
 					<div className="mb-3">{notesToJSX()}</div> */}
 				</div>
 			}
-			mapEl={dataForMap.sources.length ? <MapWrap {...dataForMap} /> : null}
+			mapEl={dataForMap.markerGroups.length ? <MapWrap {...dataForMap} /> : null}
 			onCloseClick={onCloseClick}
 		></Card>
 	)
