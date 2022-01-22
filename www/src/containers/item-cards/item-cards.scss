@@ -1,27 +1,34 @@
-.item-avatar{
+.item-avatar {
 	width: var(--thumb-height);
 	height: var(--thumb-height);
-	&.small-avatar{
+	&.small-avatar {
 		width: var(--thumb-height-sm);
 		height: var(--thumb-height-sm);
 	}
-	&.large-avatar{
+	&.large-avatar {
 		width: var(--thumb-height-l);
 		height: var(--thumb-height-l);
 	}
 }
 
-.item-detail-popover { //desktop wrap of a card
-	max-width: 576px!important;
+.item-detail-popover {
+	//desktop wrap of a card
+	max-width: 576px !important;
+	min-width: 450px !important;
+	max-height: 600px;
 }
 .item-detail-popover-card {
-	.map-header{
+	.card-body{
+		max-height: 180px;
+	}
+	.map-header,
+	.map-tip {
 		z-index: 1;
 	}
-	.map-header-bg{
+	.map-header-bg {
 		z-index: -1;
 	}
-	.dungeon-location{
-		height: 265px;
+	.dungeon-location {
+		height: 230px;
 	}
 }

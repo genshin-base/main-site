@@ -4,24 +4,56 @@ import { GI_RarityCode } from '#lib/genshin'
 
 import './item-cards.scss'
 
-export function ItemAvatar({
+interface DdComponentProps<TItem, TRelated> {
+	onClickAway(): unknown
+	targetEl: HTMLElement
+	items: TItem[]
+	related: TRelated
+	title: string
+}
+interface DDProps<TItem, TRelated> {
+	ddItems?: TItem[]
+	related?: TRelated
+	DdComponent?: preact.ComponentType<DdComponentProps<TItem, TRelated>>
+}
+export function ItemAvatar<TItem, TRelated>({
 	src,
 	rarity,
 	classes = '',
 	hash,
+	onClick,
 	badge,
+	ddProps,
 }: {
 	src: string
 	rarity?: GI_RarityCode
 	classes?: string
 	hash?: string
+	onClick?(): unknown
 	badge?: string
+	ddProps?: DDProps<TItem, TRelated>
 }): JSX.Element {
 	;['bg-2', 'bg-3', 'bg-4', 'bg-5']
 	const rarityClass = rarity ? 'bg-' + rarity : 'bg-dark'
+
+	const elRef = useRef<HTMLAnchorElement>(null)
+	const [isExpanded, setIsExpanded] = useState(false)
+	const closeDd = useCallback(() => isExpanded && setIsExpanded(false), [setIsExpanded, isExpanded])
+	const openDd = useCallback(() => !isExpanded && setIsExpanded(true), [setIsExpanded, isExpanded])
+	const DdComponent = ddProps?.DdComponent,
+		ddItems = ddProps?.ddItems,
+		related = ddProps?.related
+	const pointerClass = DdComponent || onClick ? 'c-pointer' : ''
+	const onClickLocal = useCallback(() => {
+		openDd && openDd()
+		onClick && onClick()
+	}, [openDd, onClick])
 	return (
-		<a href={hash} className="position-relative small">
-			<img className={`item-avatar rounded-circle ${rarityClass} ${classes}`} src={src} />
+		<a href={hash} className="position-relative small" ref={elRef} onClick={onClickLocal}>
+			<img
+				className={`item-avatar rounded-circle ${pointerClass} ${rarityClass} ${classes}`}
+				src={src}
+			/>
 			{badge && (
 				<span className="position-absolute top-0 start-0 translate-middle badge rounded-pill opacity-75">
 					{badge}
@@ -30,6 +62,15 @@ export function ItemAvatar({
 			{/* <span className="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-primary border border-light">
 				4
 			</span> */}
+			{isExpanded && elRef.current && DdComponent && ddItems?.length && related && (
+				<DdComponent
+					onClickAway={closeDd}
+					targetEl={elRef.current}
+					items={ddItems}
+					related={related}
+					title={''}
+				/>
+			)}
 		</a>
 	)
 }
@@ -57,37 +98,30 @@ export function ItemLabelText({
 	//todo c-pointer text-decoration-underline-dotted для интерактивных
 	return <label className={`${classes} ${rarityClass}`}>{title}</label>
 }
-interface DdComponentProps<TItem, TRelated> {
-	onClickAway(): unknown
-	targetEl: HTMLElement
-	items: TItem[]
-	related: TRelated
-	title: string
-}
+
 export function LabeledItemAvatar<TItem, TRelated>({
 	imgSrc,
 	rarity,
 	classes = '',
 	title,
 	avatarBadge,
-	ddItems,
-	related,
-	DdComponent,
+	ddProps,
 }: {
 	imgSrc: string
 	rarity?: GI_RarityCode
 	title: string
 	classes?: string
 	avatarBadge?: string
-	ddItems?: TItem[]
-	related?: TRelated
-	DdComponent?: preact.ComponentType<DdComponentProps<TItem, TRelated>>
+	ddProps?: DDProps<TItem, TRelated>
 }): JSX.Element {
 	const elRef = useRef<HTMLDivElement>(null)
 	const [isExpanded, setIsExpanded] = useState(false)
 	const closeDd = useCallback(() => isExpanded && setIsExpanded(false), [setIsExpanded, isExpanded])
 	const openDd = useCallback(() => !isExpanded && setIsExpanded(true), [setIsExpanded, isExpanded])
 	//todo c-pointer для интерактивных
+	const DdComponent = ddProps?.DdComponent,
+		ddItems = ddProps?.ddItems,
+		related = ddProps?.related
 	const pointerClass = DdComponent ? 'c-pointer' : ''
 	return (
 		<div className={`text-nowrap ${pointerClass} ${classes}`} ref={elRef} onClick={openDd}>

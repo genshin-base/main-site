@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'preact/hooks'
 
-import { ArtifactFullInfo, WeaponFullInfo } from '#lib/parsing/combine'
+import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
 import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api'
 import { useWindowSize } from '#src/api/hooks'
@@ -53,7 +53,7 @@ function Card({
 	onCloseClick?: () => void
 }): JSX.Element {
 	return (
-		<div className={`item-detail-popover-card card max-height-75vh max-height-xl-50vh ${classes}`}>
+		<div className={`item-detail-popover-card card ${classes}`}>
 			<h3 className="card-header fs-4 d-flex">
 				<span className="flex-fill">{titleEl}</span>{' '}
 				{onCloseClick && (
@@ -96,26 +96,11 @@ function MapWrap({
 	const goToNextSource = () => {
 		setSelectedSourceTab(arrGetAfter(sources, selectedSourceTab))
 	}
-
-	// const sourceTabs = useMemo(() => {
-	// 	const srcs = item.obtainSources
-	// 	const domains = getAllRelated(related.domains, srcs.domainCodes).map(domain => {
-	// 		return { code: domain.code, title: domain.name, location: domain.location }
-	// 	})
-	// 	const enemies = getAllRelated(related.enemies, srcs.enemyCodes).map(enemy => {
-	// 		return { code: enemy.code, title: enemy.name, location: enemy.locations[0] } //TODO: use all locations
-	// 	})
-	// 	return domains.concat(enemies)
-	// }, [item, related])
-	// const selectedSourceTab = sourceTabs[0]
-
-	// const mapMarkers = useMemo(() => {
-	// 	return sourceTabs.map(x => ({ x: x.location[0], y: x.location[1], icon: domainIconSrc }))
-	// }, [sourceTabs])
-
 	let sourceSelectEl
 	if (!sources.length) {
 		sourceSelectEl = null
+	} else if (sources.length === 1) {
+		sourceSelectEl = <span className="align-self-center">{sources[0].title}</span>
 	} else if (sources.length < 4) {
 		sourceSelectEl = (
 			<BtnTabGroup
@@ -127,7 +112,7 @@ function MapWrap({
 		)
 	} else {
 		sourceSelectEl = (
-			<div className="btn-group">
+			<div className="btn-group w-100">
 				<button
 					type="button"
 					class="btn btn-secondary border-dark border-end-0 text-muted fs-4 lh-1"
@@ -151,24 +136,28 @@ function MapWrap({
 			</div>
 		)
 	}
-
 	return (
-		<div className={`map-wrap position-relative my-3 `}>
-			<div className="map-header position-absolute d-flex flex-row px-2 py-1 w-100">
+		<div className={`map-wrap position-relative my-3`}>
+			<div className="map-header position-absolute d-flex flex-row justify-content-between px-2 py-1 w-100">
 				<div className="map-header-bg position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
 				{itemData && (
 					<LabeledItemAvatar
-						classes="me-2 mb-1 small-avatar pt-1"
+						classes="me-2 my-1 small-avatar"
 						imgSrc={itemData.imgSrc}
 						title={itemData.name}
 					/>
 				)}
-				{sources.length > 1 && (
-					<div className="flex-fill d-flex">
+				{sources.length ? (
+					<div className={`d-flex flex-fill justify-content-end`}>
 						<label className="me-1 text-muted align-self-center">Source:</label>
 						{sourceSelectEl}
 					</div>
-				)}
+				) : null}
+			</div>
+			<div className="map-tip position-absolute px-2 bottom-0 end-0 small text-muted pe-none opacity-75">
+				<div className="map-header-bg position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75 rounded-0 rounded-top not-rounded-top-end"></div>
+				<div class="d-none d-xl-block">Scroll to zoom</div>
+				<div class="d-xl-none">Pinch to zoom</div>
 			</div>
 			<TeyvatMap
 				classes="dungeon-location position-relative"
@@ -239,7 +228,7 @@ function ArtifactCard({
 				<div className="mb-3">
 					<ItemAvatar
 						rarity={selectedArt.rarity}
-						classes="float-end me-2 mb-2 large-avatar"
+						classes="float-end me-2 large-avatar"
 						src={getArtifactIconSrc(selectedArt.code)}
 					/>
 					{selectedArt.sets[1] && (
@@ -301,8 +290,7 @@ export function WeaponCard({
 }): JSX.Element {
 	const weapon = weapons[0] //пока оружие приходит только одно, а артефактов может придти несколько
 	const materials = getAllRelated(related.items, weapon.materialCodes)
-	const materialOnMap = materials[0] //todo
-
+	const [materialOnMap, setMaterialOnMap] = useState(materials[0])
 	const dataForMap = useMemo(() => {
 		const srcs = materialOnMap.obtainSources
 		const domains = getAllRelated(related.domains, srcs.domainCodes).map(domain => {
@@ -341,9 +329,11 @@ export function WeaponCard({
 						<div className="d-flex justify-content-between w-100">
 							{materials.map(m => (
 								<ItemAvatar
+									key={m.code}
 									rarity={2}
 									classes="mb-2 mx-1 small-avatar"
 									src={getItemIconSrc(m.code)}
+									onClick={() => setMaterialOnMap(m)}
 								/>
 							))}
 						</div>
@@ -370,7 +360,7 @@ export function WeaponCard({
 						</div>
 					</div>
 					<div>
-						<div className="opacity-75">Пассивная способность</div>
+						<span className="opacity-75">Пассивная способность</span>
 						<div className="">{notesToJSX(weapon.passiveStat)}</div>
 					</div>
 				</div>
@@ -394,6 +384,75 @@ export function WeaponDetailDd({
 	return (
 		<CardDescMobileWrap onClickAway={onClickAway} targetEl={targetEl}>
 			<WeaponCard onCloseClick={onClickAway} weapons={items} related={related} />
+		</CardDescMobileWrap>
+	)
+}
+
+export function OtherItemCard({
+	onCloseClick,
+	classes,
+	items,
+	related,
+}: {
+	onCloseClick?: () => void
+	classes?: string
+	items: ItemShortInfo[]
+	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
+}): JSX.Element {
+	const item = items[0] //пока предмет приходит только одно, а артефактов может придти несколько
+	const materials = getAllRelated(related.items, [item.code])
+	const materialOnMap = materials[0] //todo
+
+	const dataForMap = useMemo(() => {
+		const srcs = materialOnMap.obtainSources
+		const domains = getAllRelated(related.domains, srcs.domainCodes).map(domain => {
+			const [x, y] = domain.location
+			return { code: domain.code, title: domain.name, markers: [{ x, y, icon: domainIconSrc }] }
+		})
+		const enemies = getAllRelated(related.enemies, srcs.enemyCodes).map(enemy => {
+			const markers = enemy.locations.map(([x, y]) => ({ x, y, icon: domainIconSrc })) //TODO: correct icon
+			return { code: enemy.code, title: enemy.name, markers }
+		})
+
+		return {
+			itemData: {
+				name: materialOnMap.name,
+				imgSrc: getItemIconSrc(materialOnMap.code),
+			},
+			sources: domains.concat(enemies),
+		}
+	}, [materialOnMap, related])
+
+	return (
+		<Card
+			titleEl={item.name}
+			classes={classes}
+			bodyEl={
+				<div className="">
+					<ItemAvatar rarity={3} classes="large-avatar float-end" src={getItemIconSrc(item.code)} />
+					{/* <h6 className="text-uppercase opacity-75">Описание</h6>
+					<div className="mb-3">{notesToJSX()}</div> */}
+				</div>
+			}
+			mapEl={dataForMap.sources.length ? <MapWrap {...dataForMap} /> : null}
+			onCloseClick={onCloseClick}
+		></Card>
+	)
+}
+export function OtherItemCardDetailDd({
+	onClickAway,
+	targetEl,
+	items,
+	related,
+}: {
+	onClickAway: () => void
+	targetEl: HTMLElement | null | undefined
+	items: ItemShortInfo[]
+	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
+}): JSX.Element {
+	return (
+		<CardDescMobileWrap onClickAway={onClickAway} targetEl={targetEl}>
+			<OtherItemCard onCloseClick={onClickAway} items={items} related={related} />
 		</CardDescMobileWrap>
 	)
 }

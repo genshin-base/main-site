@@ -9,7 +9,7 @@ import { isLoaded, useFetch } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
 import { BtnTabGroup, Tab, Tabs } from '#src/components/tabs'
-import { ArtifactDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
+import { ArtifactDetailDd, OtherItemCardDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
 import { apiGetCharacter, CharacterFullInfoWithRelated } from '#src/generated'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
@@ -28,6 +28,7 @@ import {
 	ART_GROUP_20_ER_DETAIL,
 	ART_GROUP_20_ER_INSIDE_CODES,
 } from '#src/../../lib/genshin'
+import { STAR } from '#src/utils/typography'
 
 const DUMMY_TAB: Tab = {
 	title: '…',
@@ -40,7 +41,7 @@ function makeRoleTab(r: CharacterBuildInfoRole): Tab {
 		title: (
 			<span key={r.code}>
 				{r.isRecommended ? (
-					<span className="fs-4 lh-1 opacity-75 text-warning align-bottom">🟊</span>
+					<span className="fs-4 lh-1 opacity-75 text-warning align-bottom">{STAR}</span>
 				) : null}
 				{r.code}
 			</span>
@@ -131,9 +132,11 @@ function genArtofactAdvice(
 				key={set.code}
 				avatarBadge={'x' + set.count}
 				classes={`small ${isLast ? 'mb-1' : ''}`}
-				DdComponent={ArtifactDetailDd}
-				ddItems={artifactsForDd}
-				related={build.maps}
+				ddProps={{
+					DdComponent: ArtifactDetailDd,
+					ddItems: artifactsForDd,
+					related: build.maps,
+				}}
 			/>
 		)
 	} else {
@@ -190,9 +193,11 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 								}
 								rarity={weapon.rarity}
 								classes={`small ${!isInList || isLastInList ? 'mb-1' : ''}`}
-								DdComponent={WeaponDetailDd}
-								ddItems={[weapon]}
-								related={build.maps}
+								ddProps={{
+									DdComponent: WeaponDetailDd,
+									ddItems: [weapon],
+									related: build.maps,
+								}}
 							/>
 							{genNotes(item)}
 							{genSeeCharNotes(item)}
@@ -285,7 +290,15 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		return (
 			<div className="w-100 d-flex justify-content-between">
 				{materials.map(m => (
-					<ItemAvatar classes="mb-2 mx-1 small-avatar" src={getItemIconSrc(m.code)} />
+					<ItemAvatar
+						classes="mb-2 mx-1 small-avatar"
+						src={getItemIconSrc(m.code)}
+						ddProps={{
+							DdComponent: OtherItemCardDetailDd,
+							ddItems: [m],
+							related: build.maps,
+						}}
+					/>
 				))}
 			</div>
 		)
