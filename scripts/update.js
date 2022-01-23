@@ -15,7 +15,7 @@ import { makeRecentChangelogsTable } from '#lib/parsing/helperteam/changelogs.js
 import { trigramSearcherFromStrings } from '#lib/trigrams.js'
 import { createHash } from 'crypto'
 import { exists, parseArgs, relativeToCwd } from '#lib/utils/os.js'
-import { error, info, progress } from '#lib/utils/logs.js'
+import { error, info, progress, warn } from '#lib/utils/logs.js'
 import { checkHelperteamFixesUsage, clearHelperteamFixesUsage } from '#lib/parsing/helperteam/fixes.js'
 import { checkHoneyhunterFixesUsage, clearHoneyhunterFixesUsage } from '#lib/parsing/honeyhunter/fixes.js'
 import {
@@ -29,6 +29,7 @@ import {
 	loadCharacters,
 	loadDomains,
 	loadEnemies,
+	loadEnemyGroups,
 	loadItems,
 	loadWeapons,
 	prepareCacheDir,
@@ -37,6 +38,7 @@ import {
 	saveCharacters,
 	saveDomains,
 	saveEnemies,
+	saveEnemyGroups,
 	saveItems,
 	saveWeapons,
 	WWW_DYNAMIC_DIR,
@@ -50,10 +52,13 @@ import {
 	makeCharacterFullInfo,
 	makeCharacterShortList,
 	makeWeaponsFullInfo,
-	mergeSimilarEnemies,
 } from '#lib/parsing/combine.js'
 import { extractItemsData } from '#lib/parsing/honeyhunter/items.js'
-import { extractEnemiesData } from '#lib/parsing/honeyhunter/enemies.js'
+import {
+	extractEnemiesData,
+	makeEnemyGroups,
+	replaceEnemiesByGroups,
+} from '#lib/parsing/honeyhunter/enemies.js'
 import { applyWeaponsObtainData } from '#lib/parsing/wiki/weapons.js'
 import { applyEnemiesLocations } from '#lib/parsing/mihoyo/map.js'
 
@@ -150,9 +155,6 @@ const fixes = {
 				ru: 'Электро Путешественник',
 			},
 		},
-	},
-	/** @type {import('#lib/parsing/combine').CombineFixes} */
-	combine: {
 		manualEnemyGroups: [
 			{ origNames: /^Ruin Guard$/ },
 			{ origNames: /^Ruin Hunter$/ },
@@ -248,20 +250,22 @@ async function extractAllItemsData() {
 	const enemies = await extractEnemiesData(cd, LANGS, items.id2item, artifacts.id2item, fx)
 	const domains = await extractDomainsData(cd, LANGS, items.id2item, artifacts.id2item, enemies.id2item, fx)
 	const characters = await extractCharactersData(cd, LANGS, items.id2item, fx)
+	const enemyGroups = makeEnemyGroups(enemies.code2item, fixes.honeyhunter)
 
 	await applyWeaponsObtainData(cd, weapons.code2item)
-	await applyEnemiesLocations(cd, enemies.code2item)
+	await applyEnemiesLocations(cd, enemies.code2item, enemyGroups.code2item)
 
 	checkHoneyhunterFixesUsage(fx)
 	progress()
 
-	return { items, artifacts, weapons, enemies, domains, characters }
+	return { items, artifacts, weapons, enemies, domains, characters, enemyGroups }
 }
 async function extractAndSaveAllItemsData() {
 	info('updating items', { newline: false })
 	await fs.mkdir(DATA_DIR, { recursive: true })
 
-	const { items, artifacts, weapons, enemies, domains, characters } = await extractAllItemsData()
+	const { items, artifacts, weapons, enemies, domains, characters, enemyGroups } =
+		await extractAllItemsData()
 
 	await saveItems(items.code2item)
 	await saveArtifacts(artifacts.code2item)
@@ -269,6 +273,7 @@ async function extractAndSaveAllItemsData() {
 	await saveCharacters(characters.code2item)
 	await saveDomains(domains.code2item)
 	await saveEnemies(enemies.code2item)
+	await saveEnemyGroups(enemyGroups.code2item)
 
 	progress()
 }
@@ -276,8 +281,15 @@ async function extractAndSaveAllItemsData() {
 /** @param {boolean} overwriteExisting */
 async function extractAndSaveItemImages(overwriteExisting) {
 	const builds = await loadBuilds()
-	const { items, artifacts, weapons, enemies, characters } = await extractAllItemsData()
-	const enemyImgCode2groupCode = mergeSimilarEnemies(enemies.code2item, fixes.combine)
+
+	const { items, artifacts, weapons, enemies, characters, enemyGroups } = await extractAllItemsData()
+
+	replaceEnemiesByGroups(enemies.code2item, enemyGroups.code2item)
+	for (const group of Object.values(enemyGroups.code2item)) {
+		const url = enemies.code2img.get(group.iconEnemyCode)
+		if (url) enemies.code2img.set(group.code, url)
+		else warn(`group '${group.code}': no icon image '${group.iconEnemyCode}'`)
+	}
 
 	const usedArtCodes = new Set(builds.characters.map(x => Array.from(getCharacterArtifactCodes(x))).flat())
 	const usedWeaponCodes = new Set(builds.characters.map(x => Array.from(getCharacterWeaponCodes(x))).flat())
@@ -296,7 +308,6 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		) {
 			usedEmenyCodes.add(enemy.code)
 		}
-	for (const code of enemyImgCode2groupCode.keys()) usedEmenyCodes.add(code)
 
 	/**
 	 * @param {string} title
@@ -346,7 +357,6 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		for (const code of code2img.keys()) if (!usedEmenyCodes.has(code)) code2img.delete(code)
 
 		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'weapons', async code => {
-			code = enemyImgCode2groupCode.get(code) ?? code
 			const dest = `${WWW_MEDIA_DIR}/enemies/${code}.png`
 			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
 		})
@@ -363,9 +373,11 @@ async function saveWwwData() {
 	const weapons = await loadWeapons()
 	const domains = await loadDomains()
 	const items = await loadItems()
+	const enemyGroups = await loadEnemyGroups()
 
 	excludeDomainBosses(enemies, domains)
-	mergeSimilarEnemies(enemies, fixes.combine)
+
+	replaceEnemiesByGroups(enemies, enemyGroups)
 
 	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
 		await fs.rm(dir, { recursive: true, force: true })

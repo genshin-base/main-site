@@ -76,3 +76,8 @@ export const loadItems = () => loadYaml('items')
 export const saveEnemies = enemies => saveYaml('enemies', enemies)
 /** @returns {Promise<import('#lib/parsing').Code2EnemyData>} */
 export const loadEnemies = () => loadYaml('enemies')
+
+/** @param {import('#lib/parsing').Code2EnemyGroupData} groups */
+export const saveEnemyGroups = groups => saveYaml('enemy_groups', groups)
+/** @returns {Promise<import('#lib/parsing').Code2EnemyGroupData>} */
+export const loadEnemyGroups = () => loadYaml('enemy_groups')
