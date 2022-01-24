@@ -12,13 +12,12 @@ import {
 	ART_GROUP_20_ER_DETAIL,
 	ART_GROUP_20_ER_INSIDE_CODES,
 } from '#src/../../lib/genshin'
-import { STAR } from '#src/utils/typography'
 import { getAllRelated, MapAllByCode } from '#src/api'
 import { isLoaded, useFetch } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
+import { BtnTabGroup, Tabs } from '#src/components/tabs'
 import { ArtifactDetailDd, OtherItemCardDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
-import { BtnTabGroup, Tab, Tabs } from '#src/components/tabs'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
 import { apiGetCharacter, CharacterFullInfoWithRelated } from '#src/generated'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
@@ -26,7 +25,9 @@ import { getArtifactIconSrc, getArtifactTypeIconSrc } from '#src/utils/artifacts
 import { getCharacterPortraitSrc, getCharacterSilhouetteSrc } from '#src/utils/characters'
 import { getItemIconSrc } from '#src/utils/items'
 import { pluralizeEN } from '#src/utils/strings'
+import { STAR } from '#src/utils/typography'
 import { getWeaponIconSrc } from '#src/utils/weapons'
+
 import './character-build-detailed.scss'
 
 const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole> = {
@@ -40,9 +41,9 @@ type BuildRoleOrDummy = CharacterBuildInfoRole | typeof DUMMY_ROLE
 function makeRoleTitle(r: BuildRoleOrDummy) {
 	return (
 		<span key={r.code}>
-			{r.isRecommended ? (
+			{r.isRecommended && (
 				<span className="fs-4 lh-1 opacity-75 text-warning align-bottom">{STAR}</span>
-			) : null}
+			)}
 			{r.code}
 		</span>
 	)
