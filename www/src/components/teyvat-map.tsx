@@ -14,7 +14,7 @@ import { memo } from '#src/utils/preact-compat'
 
 const TILE_DRAW_WIDTH = 192
 const TILE_CONTENT_WIDTH = 256 //tile width in game pixels on layer 0
-const MIN_LEVEL = -4
+const MIN_LEVEL = -5.5
 const MAX_LEVEL = 1
 const DEFAULT_LEVEL = -1.2
 const MARKERS_AUTO_REGION_DOWNSCALE = 1.1
@@ -48,8 +48,8 @@ const MapProjection = {
 	},
 }
 
-export type MapMarkerRaw = { x: number; y: number; icon: string }
-type MapMarker = { x: number; y: number; icon: HTMLImageElement }
+export type MapMarkerRaw = { x: number; y: number; icon: string; style?: null | 'circle' }
+type MapMarker = { x: number; y: number; icon: HTMLImageElement; style: null | 'circle' }
 
 export const TeyvatMap = memo(function TeyvatMap({
 	classes,
@@ -81,7 +81,7 @@ export const TeyvatMap = memo(function TeyvatMap({
 
 		const map = new LocMap(wrapRef.current, MapProjection)
 		const markersLayer = new MarkersLayer()
-		map.setZoomRange(2 ** MIN_LEVEL * TILE_DRAW_WIDTH, 2 ** MAX_LEVEL * TILE_DRAW_WIDTH)
+		map.setZoomRange(2 ** MIN_LEVEL * TILE_CONTENT_WIDTH, 2 ** MAX_LEVEL * TILE_CONTENT_WIDTH)
 		map.register(
 			new TileLayer(new SmoothTileContainer(TILE_DRAW_WIDTH, loadTile, drawRectTilePlaceholder)),
 		)
@@ -144,31 +144,62 @@ class MarkersLayer {
 
 	setMarkers(rawMarkers: MapMarkerRaw[]) {
 		this.markers.length = 0
-		for (const { x, y, icon: src } of rawMarkers) {
+		for (const { x, y, icon: src, style = null } of rawMarkers) {
 			const icon = new Image()
 			icon.src = src
 			icon.onload = this.onIconLoad
-			this.markers.push({ x, y, icon })
+			this.markers.push({ x, y, icon, style })
 		}
 	}
 
 	redraw(map: LocMap) {
 		const rc = map.get2dContext()
 		if (!rc) return
-		rc.fillStyle = 'white'
+
 		const [viewX, viewY] = map.getViewBoxShift()
+
 		for (let i = 0, markers = this.markers; i < markers.length; i++) {
 			const marker = markers[i]
+
 			const x = map.lon2x(marker.x) - viewX
 			const y = map.lat2y(marker.y) - viewY
+			const downscale = Math.min(1, (map.getZoom() / TILE_DRAW_WIDTH - 1) / 2 + 1)
+			const size = MARKER_ICON_SIZE_PX * downscale
+			const lineW = 1.5 * downscale
+			const isCircled = marker.style === 'circle'
+
+			if (isCircled) {
+				rc.beginPath()
+				rc.arc(x, y, size / 2 + lineW / 2 + 0.75, 0, Math.PI * 2, false)
+				rc.fillStyle = '#333'
+				rc.fill()
+			}
+
 			const img = marker.icon
 			if (imgIsReady(img)) {
 				const nw = img.naturalWidth
 				const nh = img.naturalHeight
-				const scale = Math.min(MARKER_ICON_SIZE_PX / nw, MARKER_ICON_SIZE_PX / nh)
+				const scale = Math.min(size / nw, size / nh)
 				const w = nw * scale
 				const h = nh * scale
+				if (isCircled) {
+					rc.save()
+					rc.beginPath()
+					rc.arc(x, y, size / 2 - lineW / 2 - 0.75, 0, Math.PI * 2, false)
+					rc.clip()
+				}
 				rc.drawImage(img, x - w / 2, y - h / 2, w, h)
+				if (isCircled) {
+					rc.restore()
+				}
+			}
+
+			if (isCircled) {
+				rc.beginPath()
+				rc.arc(x, y, size / 2, 0, Math.PI * 2, false)
+				rc.strokeStyle = 'white'
+				rc.lineWidth = lineW
+				rc.stroke()
 			}
 		}
 	}
