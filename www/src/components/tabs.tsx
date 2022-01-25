@@ -1,3 +1,5 @@
+import { useCallback, useMemo, useState } from 'preact/hooks'
+
 export type Tab = { code: string; title?: string | JSX.Element }
 
 export function tabTitleFromName(obj: { name: string }): string {
@@ -69,4 +71,11 @@ export function BtnTabGroup<T extends Tab>({
 			))}
 		</div>
 	)
+}
+
+export function useSelectedable<T extends Tab>(tabs: T[]): [T, (tab: T) => unknown] {
+	const [tabCode, setTabCode] = useState(tabs[0].code)
+	const setTab = useCallback((tab: T) => setTabCode(tab.code), [])
+	const tab = useMemo(() => tabs.find(x => x.code === tabCode) ?? tabs[0], [tabs, tabCode])
+	return [tab, setTab]
 }

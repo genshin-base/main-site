@@ -1,9 +1,5 @@
-import { useEffect, useMemo, useState } from 'preact/hooks'
+import { useEffect, useMemo } from 'preact/hooks'
 
-import { ArtifactRef, ArtifactRefNode } from '#lib/parsing/helperteam/artifacts'
-import { CharacterBuildInfoRole } from '#lib/parsing/helperteam/characters'
-import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
-import { mustBeDefined } from '#lib/utils/values'
 import {
 	ART_GROUP_18_ATK_CODE,
 	ART_GROUP_18_ATK_DETAIL,
@@ -11,15 +7,19 @@ import {
 	ART_GROUP_20_ER_CODE,
 	ART_GROUP_20_ER_DETAIL,
 	ART_GROUP_20_ER_INSIDE_CODES,
-} from '#src/../../lib/genshin'
+} from '#lib/genshin'
+import { CharacterFullInfoWithRelated } from '#lib/parsing/combine'
+import { ArtifactRef, ArtifactRefNode } from '#lib/parsing/helperteam/artifacts'
+import { CharacterBuildInfoRole } from '#lib/parsing/helperteam/characters'
+import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
+import { mustBeDefined } from '#lib/utils/values'
 import { getAllRelated, MapAllByCode } from '#src/api'
-import { isLoaded, useFetch } from '#src/api/hooks'
+import { isLoaded, useBuildWithDelayedLocs } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
-import { BtnTabGroup, Tabs } from '#src/components/tabs'
+import { BtnTabGroup, Tabs, useSelectedable } from '#src/components/tabs'
 import { ArtifactDetailDd, OtherItemCardDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
-import { apiGetCharacter, CharacterFullInfoWithRelated } from '#src/generated'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
 import { getArtifactIconSrc, getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import { getCharacterPortraitSrc, getCharacterSilhouetteSrc } from '#src/utils/characters'
@@ -154,15 +154,13 @@ function genArtofactAdvice(
 	}
 }
 export function CharacterBuildDetailed({ characterCode }: { characterCode: string }) {
-	const build = useFetch(sig => apiGetCharacter(characterCode, sig), [characterCode])
+	const build = useBuildWithDelayedLocs(characterCode)
+	isLoaded(build) && console.log(build.maps.enemies.get('treasure-hoarders'))
+
 	// на случай серверного рендера: билд тут будет загружен сразу
 	const roleTabs: BuildRoleOrDummy[] = isLoaded(build) ? build.character.roles : DUMMY_ROLES
 
-	const [selectedRoleTabRaw, setSelectedRoleTab] = useState<BuildRoleOrDummy>(DUMMY_ROLE)
-	// на случай, если массив вкладок уже реактивно изменился, а выбранная вкладка ещё старая
-	const selectedRoleTab = roleTabs.includes(selectedRoleTabRaw)
-		? selectedRoleTabRaw
-		: roleTabs[0] ?? DUMMY_ROLE
+	const [selectedRoleTab, setSelectedRoleTab] = useSelectedable(roleTabs)
 
 	useEffect(() => {
 		window.scrollTo(0, 0)

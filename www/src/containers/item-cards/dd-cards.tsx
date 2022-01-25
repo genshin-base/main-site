@@ -7,7 +7,7 @@ import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '
 import { useWindowSize } from '#src/api/hooks'
 import { ItemDetailDdMobilePortal, ItemDetailDdPortal } from '#src/components/item-detail-dd-portal'
 import { SimpleSelect } from '#src/components/select'
-import { BtnTabGroup, tabTitleFromName } from '#src/components/tabs'
+import { BtnTabGroup, tabTitleFromName, useSelectedable } from '#src/components/tabs'
 import { MapMarkerRaw, TeyvatMap } from '#src/components/teyvat-map'
 import { notesToJSX } from '#src/modules/builds/character-build-detailed'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
@@ -85,7 +85,7 @@ function Card({
 type MapWrapMarkerGroup = {
 	code: string
 	title: string
-	markers: MapMarkerRaw[]
+	markers: 'external' | MapMarkerRaw[]
 }
 
 function addMarkerGroupsByDomains(
@@ -100,13 +100,16 @@ function addMarkerGroupsByDomains(
 }
 function addMarkerGroupsByEnemies(
 	markerGroups: MapWrapMarkerGroup[],
-	enemies: { code: string; name: string; locations: [number, number][] }[],
+	enemies: { code: string; name: string; locations: 'external' | [number, number][] }[],
 ) {
 	for (const enemy of enemies) {
-		const markers: MapMarkerRaw[] = enemy.locations.map(([x, y]) => {
-			const icon = getEnemyIconSrc(enemy.code)
-			return { x, y, icon, style: 'circle' }
-		})
+		const markers =
+			enemy.locations === 'external'
+				? 'external'
+				: enemy.locations.map(([x, y]): MapMarkerRaw => {
+						const icon = getEnemyIconSrc(enemy.code)
+						return { x, y, icon, style: 'circle' }
+				  })
 		markerGroups.push({ code: enemy.code, title: enemy.name, markers })
 	}
 }
@@ -121,7 +124,7 @@ function MapWrap({
 	}
 	markerGroups: MapWrapMarkerGroup[]
 }): JSX.Element {
-	const [selectedSourceTab, setSelectedSourceTab] = useState(markerGroups[0])
+	const [selectedSourceTab, setSelectedSourceTab] = useSelectedable(markerGroups)
 	const goToPrevGroup = () => {
 		setSelectedSourceTab(arrGetAfter(markerGroups, selectedSourceTab, -1))
 	}
@@ -192,11 +195,15 @@ function MapWrap({
 				<div class="d-none d-xl-block">Scroll to zoom</div>
 				<div class="d-xl-none">Pinch to zoom</div>
 			</div>
-			<TeyvatMap
-				classes="dungeon-location position-relative"
-				pos="auto"
-				markers={selectedSourceTab.markers}
-			/>
+			{selectedSourceTab.markers === 'external' ? (
+				<div>Loading...</div>
+			) : (
+				<TeyvatMap
+					classes="dungeon-location position-relative"
+					pos="auto"
+					markers={selectedSourceTab.markers}
+				/>
+			)}
 		</div>
 	)
 }
@@ -214,7 +221,7 @@ function ArtifactCard({
 	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
 	title: string
 }): JSX.Element {
-	const [selectedArt, setSelectedArt] = useState(artifacts[0])
+	const [selectedArt, setSelectedArt] = useSelectedable(artifacts)
 
 	const dataForMap = useMemo(() => {
 		const srcs = selectedArt.obtainSources

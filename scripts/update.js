@@ -48,6 +48,7 @@ import {
 import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
 import {
 	excludeDomainBosses,
+	extractFullInfoLocations,
 	makeArtifactsFullInfo,
 	makeCharacterFullInfo,
 	makeCharacterShortList,
@@ -60,7 +61,7 @@ import {
 	replaceEnemiesByGroups,
 } from '#lib/parsing/honeyhunter/enemies.js'
 import { applyWeaponsObtainData } from '#lib/parsing/wiki/weapons.js'
-import { applyEnemiesLocations } from '#lib/parsing/mihoyo/map.js'
+import { applyItemsLocations } from '#lib/parsing/mihoyo/map.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -155,7 +156,11 @@ const fixes = {
 				ru: 'Электро Путешественник',
 			},
 		},
-		skipEnemies: [/^Millelith/i, /^Treasure Hoarders - Boss$/],
+		skipEnemies: [
+			/^Millelith/i, //
+			/^Treasure Hoarders - Boss$/,
+			/Bathysmal Vishap$/i,
+		],
 		manualEnemyGroups: [
 			{ origNames: /^Ruin Guard$/ },
 			{ origNames: /^Ruin Hunter$/ },
@@ -254,7 +259,7 @@ async function extractAllItemsData() {
 	const enemyGroups = makeEnemyGroups(enemies.code2item, fixes.honeyhunter)
 
 	await applyWeaponsObtainData(cd, weapons.code2item)
-	await applyEnemiesLocations(cd, enemies.code2item, enemyGroups.code2item)
+	await applyItemsLocations(cd, enemies.code2item, enemyGroups.code2item, items.code2item)
 
 	checkHoneyhunterFixesUsage(fx)
 	progress()
@@ -386,11 +391,15 @@ async function saveWwwData() {
 	}
 
 	const md5sum = createHash('md5')
-	async function writeJsonAndHash(path, data) {
+	async function writeJson(path, data) {
 		const content = JSON.stringify(data)
 		await fs.writeFile(path, content)
 		md5sum.update(content)
 	}
+	// async function writeBuffer(path, /**@type {Buffer}*/ content) {
+	// 	await fs.writeFile(path, content)
+	// 	md5sum.update(content)
+	// }
 
 	for (const lang of LANGS) {
 		const buildArtifacts = makeArtifactsFullInfo(
@@ -405,43 +414,32 @@ async function saveWwwData() {
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 		for (const character of builds.characters) {
-			await writeJsonAndHash(
-				`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`,
-				makeCharacterFullInfo(
-					character,
-					characters,
-					buildArtifacts.artifacts,
-					buildWeapons.weapons,
-					domains,
-					enemies,
-					items,
-					lang,
-				),
+			const fullInfo = makeCharacterFullInfo(
+				character,
+				characters,
+				buildArtifacts.artifacts,
+				buildWeapons.weapons,
+				domains,
+				enemies,
+				items,
+				lang,
 			)
+			const locsInfo = extractFullInfoLocations(fullInfo)
+			await writeJson(`${WWW_DYNAMIC_DIR}/characters/${character.code}-locs-${lang}.json`, locsInfo)
+			await writeJson(`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`, fullInfo)
 		}
 
-		await writeJsonAndHash(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, buildArtifacts)
-		await writeJsonAndHash(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, buildWeapons)
+		await writeJson(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, buildArtifacts)
+		await writeJson(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, buildWeapons)
 
 		progress()
 	}
 
-	await writeJsonAndHash(`${WWW_DYNAMIC_DIR}/changelogs.json`, builds.changelogsTable)
-	await writeJsonAndHash(
+	await writeJson(`${WWW_DYNAMIC_DIR}/changelogs.json`, builds.changelogsTable)
+	await writeJson(
 		`${WWW_DYNAMIC_DIR}/changelogs-recent.json`,
 		makeRecentChangelogsTable(builds.changelogsTable),
 	)
-
-	/*
-	await writeJsonAndHash(
-		`${WWW_DYNAMIC_DIR}/locations.json`,
-		Object.values(domains)
-			.map(x => ({ type: 'domain', code: x.code, locations: [x.location] }))
-			.concat(
-				Object.values(enemies).map(x => ({ type: 'enemy', code: x.code, locations: x.locations })),
-			),
-	)
-	*/
 
 	const hash = md5sum.digest('hex').slice(0, 8)
 	await fs.writeFile(
@@ -459,25 +457,26 @@ export const charactersShortList: CharacterShortInfo[] =
 	${JSON.stringify(makeCharacterShortList(builds.characters, characters))}
 
 import type { CharacterFullInfoWithRelated } from '#lib/parsing/combine'
-export { CharacterFullInfoWithRelated }
 export function apiGetCharacter(code:string, signal:AbortSignal): Promise<MapAllByCode<CharacterFullInfoWithRelated>> {
 	return (get(\`characters/\${code}\`, signal) as Promise<CharacterFullInfoWithRelated>).then(mapAllByCode)
 }
 
+import type { ExtractedLocationsInfo } from '#lib/parsing/combine'
+export function apiGetCharacterRelatedLocs(code:string, signal:AbortSignal): Promise<ExtractedLocationsInfo> {
+	return get(\`characters/\${code}-locs\`, signal) as Promise<ExtractedLocationsInfo>
+}
+
 import type { ArtifactsFullInfoWithRelated } from '#lib/parsing/combine'
-export { ArtifactsFullInfoWithRelated }
 export function apiGetArtifacts(signal:AbortSignal): Promise<MapAllByCode<ArtifactsFullInfoWithRelated>> {
 	return (get(\`artifacts\`, signal) as Promise<ArtifactsFullInfoWithRelated>).then(mapAllByCode)
 }
 
 import type { WeaponsFullInfoWithRelated } from '#lib/parsing/combine'
-export { WeaponsFullInfoWithRelated }
 export function apiGetWeapons(signal:AbortSignal): Promise<MapAllByCode<WeaponsFullInfoWithRelated>> {
 	return (get(\`weapons\`, signal) as Promise<WeaponsFullInfoWithRelated>).then(mapAllByCode)
 }
 
 import type { ChangelogsTable } from '#lib/parsing/helperteam/changelogs'
-export { ChangelogsTable }
 export function apiGetChangelogs(onlyRecent:boolean, signal:AbortSignal): Promise<ChangelogsTable> {
 	return get(\`changelogs\${onlyRecent ? '-recent' : ''}\`, signal)
 }`,
