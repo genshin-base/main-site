@@ -64,3 +64,14 @@ $colors: primary, secondary, warning, dark;
 .not-rounded-top-end{
 	border-top-right-radius: 0!important;
 }
+.not-rounded-end{
+	border-top-right-radius: 0!important;
+	border-bottom-right-radius: 0!important;
+}
+.not-rounded-start{
+	border-top-left-radius: 0!important;
+	border-bottom-left-radius: 0!important;
+}
+.hide-if-empty:empty{
+	display: none;
+}

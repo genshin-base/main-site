@@ -18,6 +18,7 @@ import { getItemIconSrc } from '#src/utils/items'
 import { BULLET, LEFT_POINTING, RIGHT_POINTING, TIMES } from '#src/utils/typography'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 import { ItemAvatar, LabeledItemAvatar } from './item-cards'
+import { AlchemyCalculator } from '../alchemy-calculator'
 
 //переключалка для мобильного и десктопного вида
 export function CardDescMobileWrap({
@@ -69,7 +70,11 @@ function Card({
 				)}
 			</h3>
 			{selectorEl && <div class="p-3">{selectorEl}</div>}
-			<div className={`card-body overflow-auto flex-shrink-1 ${selectorEl ? 'pt-0' : ''}`}>
+			<div
+				className={`card-body overflow-auto flex-shrink-1 hide-if-empty mb-3 pb-0 ${
+					selectorEl ? 'pt-0' : ''
+				}`}
+			>
 				{bodyEl}
 			</div>
 			{mapEl}
@@ -162,8 +167,8 @@ function MapWrap({
 		)
 	}
 	return (
-		<div className={`map-wrap position-relative my-3`}>
-			<div className="map-header position-absolute d-flex flex-row justify-content-between px-2 py-1 w-100">
+		<div className={`map-wrap position-relative mb-3`}>
+			<div className="map-header position-absolute d-flex flex-row justify-content-between px-3 py-1 w-100">
 				<div className="map-header-bg position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
 				{itemData && (
 					<LabeledItemAvatar
@@ -180,8 +185,7 @@ function MapWrap({
 					</div>
 				) : null}
 			</div>
-			<div className="map-tip position-absolute px-2 bottom-0 end-0 small text-muted pe-none opacity-75">
-				<div className="map-header-bg position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75 rounded-0 rounded-top not-rounded-top-end"></div>
+			<div className="map-tip position-absolute px-3 pt-1 lh-1 top-100 end-0 small text-muted opacity-75 pe-none">
 				<div class="d-none d-xl-block">Scroll to zoom</div>
 				<div class="d-xl-none">Pinch to zoom</div>
 			</div>
@@ -432,11 +436,14 @@ export function OtherItemCard({
 			titleEl={item.name}
 			classes={classes}
 			bodyEl={
-				<div className="">
-					<ItemAvatar rarity={3} classes="large-avatar float-end" src={getItemIconSrc(item.code)} />
-					{/* <h6 className="text-uppercase opacity-75">Описание</h6>
-					<div className="mb-3">{notesToJSX()}</div> */}
-				</div>
+				item.craftedFrom3Code ? (
+					<div className="">
+						{/* <ItemAvatar rarity={3} classes="large-avatar float-end" src={getItemIconSrc(item.code)} /> */}
+						{/* <h6 className="text-uppercase opacity-75">Описание</h6>
+				<div className="mb-3">{notesToJSX()}</div> */}
+						<AlchemyCalculator iconSrc={getItemIconSrc(item.code)} />
+					</div>
+				) : null
 			}
 			mapEl={dataForMap.markerGroups.length ? <MapWrap {...dataForMap} /> : null}
 			onCloseClick={onCloseClick}

@@ -12,6 +12,9 @@
 		width: var(--thumb-height-l);
 		height: var(--thumb-height-l);
 	}
+	&.input-group-avatar{
+		height: auto;
+	}
 	.image{
 		// object-fit: cover;
 		object-fit: scale-down;
