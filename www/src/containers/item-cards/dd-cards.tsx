@@ -434,10 +434,16 @@ export function OtherItemCard({
 	const materials = getAllRelated(related.items, [item.code])
 	const materialOnMap = materials[0]
 	const dataForMap = useMemo(() => {
-		const markerGroups = []
+		const markerGroups: MapWrapMarkerGroup[] = []
 		const srcs = materialOnMap.obtainSources
 		addMarkerGroupsByDomains(markerGroups, getAllRelated(related.domains, srcs.domainCodes))
 		addMarkerGroupsByEnemies(markerGroups, getAllRelated(related.enemies, srcs.enemyCodes))
+		const icon = getItemIconSrc(materialOnMap.code)
+		const markers =
+			materialOnMap.locations === 'external'
+				? 'external'
+				: materialOnMap.locations.map(([x, y]): MapMarkerRaw => ({ x, y, icon, style: 'circle' }))
+		markerGroups.push({ code: materialOnMap.code, title: materialOnMap.name, markers })
 
 		return {
 			itemData: {
