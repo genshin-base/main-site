@@ -27,17 +27,19 @@ export function useFetch<T>(
 	args: unknown[],
 ): LoadingState<T> {
 	const controller = useRef<AbortController | null>(null)
-	const [data, setData] = useState<LoadingState<T>>(PENDING)
+	// data обёрнута в массив на случай, если loadFunc
+	// вернёт другую функцию: без обёртки её (возвращённую) вызовет setData
+	const [data, setData] = useState<[LoadingState<T>]>([PENDING])
 
 	useEffect(() => {
-		setData(PENDING)
+		setData([PENDING])
 		if (controller.current !== null) controller.current.abort()
 
 		let ac: AbortController | null = new AbortController()
 		controller.current = ac
 
 		loadFunc(ac.signal)
-			.then(setData)
+			.then(res => setData([res]))
 			.finally(() => (ac = null))
 
 		return () => {
@@ -46,7 +48,7 @@ export function useFetch<T>(
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, args)
 
-	return data
+	return data[0]
 }
 
 export function useBuildWithDelayedLocs(
