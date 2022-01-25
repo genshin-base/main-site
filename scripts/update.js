@@ -155,6 +155,7 @@ const fixes = {
 				ru: 'Электро Путешественник',
 			},
 		},
+		skipEnemies: [/^Millelith/i, /^Treasure Hoarders - Boss$/],
 		manualEnemyGroups: [
 			{ origNames: /^Ruin Guard$/ },
 			{ origNames: /^Ruin Hunter$/ },
@@ -356,7 +357,7 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		const { code2img } = enemies
 		for (const code of code2img.keys()) if (!usedEmenyCodes.has(code)) code2img.delete(code)
 
-		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'weapons', async code => {
+		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'enemies', async code => {
 			const dest = `${WWW_MEDIA_DIR}/enemies/${code}.png`
 			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
 		})

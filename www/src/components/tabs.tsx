@@ -29,7 +29,7 @@ export function Tabs<T extends Tab>({
 							onTabSelect(t)
 						}}
 					>
-						{titleFunc ? titleFunc(t) : 'title' in t ? t.title : t}
+						{titleFunc ? titleFunc(t) : 'title' in t ? t.title : t.code}
 					</a>
 				</li>
 			))}
@@ -64,7 +64,7 @@ export function BtnTabGroup<T extends Tab>({
 						onTabSelect(t)
 					}}
 				>
-					{titleFunc ? titleFunc(t) : 'title' in t ? t.title : t}
+					{titleFunc ? titleFunc(t) : 'title' in t ? t.title : t.code}
 				</button>
 			))}
 		</div>

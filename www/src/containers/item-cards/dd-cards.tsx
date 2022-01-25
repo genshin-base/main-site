@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'preact/hooks'
 
 import { GI_DomainTypeCode } from '#lib/genshin'
-import { ArtifactFullInfo, WeaponFullInfo, ItemShortInfo } from '#lib/parsing/combine'
+import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
 import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api'
 import { useWindowSize } from '#src/api/hooks'
@@ -103,7 +103,10 @@ function addMarkerGroupsByEnemies(
 	enemies: { code: string; name: string; locations: [number, number][] }[],
 ) {
 	for (const enemy of enemies) {
-		const markers = enemy.locations.map(([x, y]) => ({ x, y, icon: getEnemyIconSrc(enemy.code) }))
+		const markers: MapMarkerRaw[] = enemy.locations.map(([x, y]) => {
+			const icon = getEnemyIconSrc(enemy.code)
+			return { x, y, icon, style: 'circle' }
+		})
 		markerGroups.push({ code: enemy.code, title: enemy.name, markers })
 	}
 }
