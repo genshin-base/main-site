@@ -4,7 +4,7 @@ import { GI_DomainTypeCode } from '#lib/genshin'
 import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
 import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api'
-import { useWindowSize } from '#src/api/hooks'
+import { isLoaded, useFetch, useWindowSize } from '#src/api/hooks'
 import { ItemDetailDdMobilePortal, ItemDetailDdPortal } from '#src/components/item-detail-dd-portal'
 import { SimpleSelect } from '#src/components/select'
 import { BtnTabGroup, tabTitleFromName, useSelectedable } from '#src/components/tabs'
@@ -16,9 +16,11 @@ import { getEnemyIconSrc } from '#src/utils/enemies'
 import { getItemIconSrc } from '#src/utils/items'
 import { BULLET, LEFT_POINTING, RIGHT_POINTING, TIMES } from '#src/utils/typography'
 import { getWeaponIconSrc } from '#src/utils/weapons'
-import { ItemAvatar, LabeledItemAvatar } from './item-cards'
 import { AlchemyCalculator } from '../alchemy-calculator'
+import { ItemAvatar, LabeledItemAvatar } from './item-cards'
 import { notesToJSX } from '#src/modules/builds/common'
+
+const LazyTeyvatMap = import('#src/components/teyvat-map')
 
 //переключалка для мобильного и десктопного вида
 export function CardDescMobileWrap({
@@ -132,6 +134,8 @@ function MapWrap({
 		setSelectedSourceTab(arrGetAfter(markerGroups, selectedSourceTab))
 	}
 
+	const TeyvatMap = useFetch(() => LazyTeyvatMap.then(x => x.TeyvatMap), [])
+
 	let sourceSelectEl
 	if (!markerGroups.length) {
 		sourceSelectEl = null
@@ -195,14 +199,16 @@ function MapWrap({
 				<div class="d-none d-xl-block">Scroll to zoom</div>
 				<div class="d-xl-none">Pinch to zoom</div>
 			</div>
-			{selectedSourceTab.markers === 'external' ? (
-				<div>Loading...</div>
-			) : (
+			{selectedSourceTab.markers !== 'external' && isLoaded(TeyvatMap) ? (
 				<TeyvatMap
 					classes="dungeon-location position-relative"
 					pos="auto"
 					markers={selectedSourceTab.markers}
 				/>
+			) : TeyvatMap instanceof Error ? (
+				<div>Error.</div>
+			) : (
+				<div>Loading...</div>
 			)}
 		</div>
 	)
@@ -427,10 +433,16 @@ export function OtherItemCard({
 	const materials = getAllRelated(related.items, [item.code])
 	const materialOnMap = materials[0]
 	const dataForMap = useMemo(() => {
-		const markerGroups = []
+		const markerGroups: MapWrapMarkerGroup[] = []
 		const srcs = materialOnMap.obtainSources
 		addMarkerGroupsByDomains(markerGroups, getAllRelated(related.domains, srcs.domainCodes))
 		addMarkerGroupsByEnemies(markerGroups, getAllRelated(related.enemies, srcs.enemyCodes))
+		const icon = getItemIconSrc(materialOnMap.code)
+		const markers =
+			materialOnMap.locations === 'external'
+				? 'external'
+				: materialOnMap.locations.map(([x, y]): MapMarkerRaw => ({ x, y, icon, style: 'circle' }))
+		markerGroups.push({ code: materialOnMap.code, title: materialOnMap.name, markers })
 
 		return {
 			itemData: {

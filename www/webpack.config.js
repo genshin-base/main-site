@@ -54,6 +54,13 @@ export default async function (env, argv) {
 		},
 		optimization: {
 			minimize: isProd,
+			splitChunks: {
+				chunks: 'async',
+				cacheGroups: {
+					// отключает дефолтную группу, которая делает для вендоров отдельный чанк
+					default: {},
+				},
+			},
 		},
 		module: {
 			// роняет билд при попытке импортировать из модуля то, что он не экспортирует
