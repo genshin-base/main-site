@@ -20,14 +20,15 @@
 		object-fit: scale-down;
 		height: 100%;
 		width: 100%;
+		border-radius: inherit;
 	}
 }
 
 .item-detail-popover {
 	//desktop wrap of a card
-	max-width: 576px !important;
-	min-width: 450px !important;
-	max-height: 600px;
+	max-width: 500px;
+	min-width: 500px;
+	max-height: 500px;
 }
 .item-detail-popover-card {
 	.card-body{

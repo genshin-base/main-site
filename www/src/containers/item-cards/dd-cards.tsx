@@ -9,7 +9,6 @@ import { ItemDetailDdMobilePortal, ItemDetailDdPortal } from '#src/components/it
 import { SimpleSelect } from '#src/components/select'
 import { BtnTabGroup, tabTitleFromName, useSelectedable } from '#src/components/tabs'
 import { MapMarkerRaw, TeyvatMap } from '#src/components/teyvat-map'
-import { notesToJSX } from '#src/modules/builds/character-build-detailed'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
 import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
 import { getDomainIconSrc } from '#src/utils/domains'
@@ -19,6 +18,7 @@ import { BULLET, LEFT_POINTING, RIGHT_POINTING, TIMES } from '#src/utils/typogra
 import { getWeaponIconSrc } from '#src/utils/weapons'
 import { ItemAvatar, LabeledItemAvatar } from './item-cards'
 import { AlchemyCalculator } from '../alchemy-calculator'
+import { notesToJSX } from '#src/modules/builds/common'
 
 //переключалка для мобильного и десктопного вида
 export function CardDescMobileWrap({
@@ -451,7 +451,7 @@ export function OtherItemCard({
 						{/* <ItemAvatar rarity={3} classes="large-avatar float-end" src={getItemIconSrc(item.code)} /> */}
 						{/* <h6 className="text-uppercase opacity-75">Описание</h6>
 				<div className="mb-3">{notesToJSX()}</div> */}
-						<AlchemyCalculator iconSrc={getItemIconSrc(item.code)} />
+						<AlchemyCalculator classes={'w-75'} iconSrc={getItemIconSrc(item.code)} />
 					</div>
 				) : null
 			}

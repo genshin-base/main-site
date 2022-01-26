@@ -4,7 +4,7 @@ import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { ItemAvatar } from '../item-cards/item-cards'
 
 export function LastUsedCharacters() {
-	const characterCodes = ['amber', 'bennett', 'kokomi']
+	const characterCodes = ['amber', 'bennett', 'kokomi'] //todo
 	const charactersElems = characterCodes.map(code => (
 		<ItemAvatar
 			src={getCharacterAvatarSrc(code)}

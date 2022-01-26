@@ -1,158 +1,34 @@
 import { useEffect, useMemo } from 'preact/hooks'
 
-import {
-	ART_GROUP_18_ATK_CODE,
-	ART_GROUP_18_ATK_DETAIL,
-	ART_GROUP_18_ATK_INSIDE_CODES,
-	ART_GROUP_20_ER_CODE,
-	ART_GROUP_20_ER_DETAIL,
-	ART_GROUP_20_ER_INSIDE_CODES,
-} from '#lib/genshin'
-import { CharacterFullInfoWithRelated } from '#lib/parsing/combine'
-import { ArtifactRef, ArtifactRefNode } from '#lib/parsing/helperteam/artifacts'
-import { CharacterBuildInfoRole } from '#lib/parsing/helperteam/characters'
-import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
-import { mustBeDefined } from '#lib/utils/values'
-import { getAllRelated, MapAllByCode } from '#src/api'
+import { getAllRelated } from '#src/api'
 import { isLoaded, useBuildWithDelayedLocs } from '#src/api/hooks'
 import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectedable } from '#src/components/tabs'
-import { ArtifactDetailDd, OtherItemCardDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
+import { OtherItemCardDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
-import { getArtifactIconSrc, getArtifactTypeIconSrc } from '#src/utils/artifacts'
+import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import { getCharacterPortraitSrc, getCharacterSilhouetteSrc } from '#src/utils/characters'
 import { getItemIconSrc } from '#src/utils/items'
 import { pluralizeEN } from '#src/utils/strings'
-import { STAR } from '#src/utils/typography'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 
 import './character-build-detailed.scss'
+import {
+	BuildRoleOrDummy,
+	CIRCLET_GOBLET_SANDS,
+	DUMMY_ROLES,
+	genArtMainStatDetail,
+	genArtofactAdvice,
+	genNotes,
+	genSeeCharNotes,
+	genSimpleList,
+	getRoleData,
+	makeRoleTitle,
+	notesToJSX,
+} from './common'
 
-const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole> = {
-	title: '…',
-	code: '',
-}
-const DUMMY_ROLES = [DUMMY_ROLE]
-
-type BuildRoleOrDummy = CharacterBuildInfoRole | typeof DUMMY_ROLE
-
-function makeRoleTitle(r: BuildRoleOrDummy) {
-	return (
-		<span key={r.code}>
-			{r.isRecommended && (
-				<span className="fs-4 lh-1 opacity-75 text-warning align-bottom">{STAR}</span>
-			)}
-			{r.code}
-		</span>
-	)
-}
-function getRoleData(build: CharacterFullInfoWithRelated, selectedCode: string) {
-	return mustBeDefined(build.character.roles.find(x => x.code === selectedCode))
-}
-function genSimpleList(arr: string[]) {
-	return arr.join(', ')
-}
-function notesWrap(str) {
-	return <div className="text-muted small">{str}</div>
-}
-function genNotes(item: { notes: CompactTextParagraphs | null }) {
-	return item.notes === null ? '' : notesWrap(JSON.stringify(item.notes))
-}
-function genSeeCharNotes(item: { seeCharNotes: boolean }) {
-	return '' //TODO
-	return item.seeCharNotes ? notesWrap(' (see notes)') : ''
-}
-function genArtMainStatDetail(role: CharacterBuildInfoRole, itemCode: 'circlet' | 'goblet' | 'sands') {
-	return (
-		<span className="">
-			{genSimpleList(role.mainStats[itemCode].codes) +
-				' ' +
-				genNotes(role.mainStats[itemCode]) +
-				genSeeCharNotes(role.mainStats[itemCode])}
-		</span>
-	)
-}
-
-//todo более адекватное место
-export function notesToJSX(tips: CompactTextParagraphs | null) {
-	function processString(str: string) {
-		return str
-			.split('\n')
-			.map((sub, i, arr) => [sub, i < arr.length - 1 ? <br /> : ''])
-			.flat()
-			.filter(a => a)
-	}
-	function processObj(tip: TextNode) {
-		if (typeof tip === 'string') return processString(tip)
-		if ('p' in tip) return <p>{notesToJSX(tip.p)}</p>
-		if ('b' in tip) return <b className="opacity-75 text-normal">{notesToJSX(tip.b)}</b>
-		if ('i' in tip) return <i>{notesToJSX(tip.i)}</i>
-		if ('u' in tip) return <u>{notesToJSX(tip.u)}</u>
-		if ('s' in tip) return <s>{notesToJSX(tip.s)}</s>
-		if ('a' in tip) return <a href={tip.href}>{notesToJSX(tip.a)}</a>
-		console.warn('unknown element type in notes: ', tip)
-		return <span>{JSON.stringify(tip)}</span>
-	}
-	if (!tips) return null
-	if (Array.isArray(tips)) return tips.map(processObj)
-	return processObj(tips)
-}
-
-const CIRCLET_GOBLET_SANDS = ['sands', 'goblet', 'circlet'] as const
-function genArtofactAdvice(
-	set: ArtifactRef | ArtifactRefNode,
-	build: MapAllByCode<CharacterFullInfoWithRelated>,
-	isLast = true,
-) {
-	// todo notes
-	if ('code' in set) {
-		//ArtifactRef
-		let artifactsForDd, artifactForList
-		switch (set.code) {
-			case ART_GROUP_18_ATK_CODE:
-				artifactsForDd = ART_GROUP_18_ATK_INSIDE_CODES.map(code => build.maps.artifacts.get(code))
-				artifactForList = ART_GROUP_18_ATK_DETAIL
-				break
-			case ART_GROUP_20_ER_CODE:
-				artifactsForDd = ART_GROUP_20_ER_INSIDE_CODES.map(code => build.maps.artifacts.get(code))
-				artifactForList = ART_GROUP_20_ER_DETAIL
-				break
-			default:
-				artifactForList = build.maps.artifacts.get(set.code)
-				artifactsForDd = [artifactForList]
-		}
-		if (!artifactsForDd.length) return null
-		return (
-			<LabeledItemAvatar
-				imgSrc={getArtifactIconSrc(set.code)}
-				rarity={artifactForList.rarity}
-				title={artifactForList.name}
-				key={set.code}
-				avatarBadge={'x' + set.count}
-				avatarClasses="with-padding"
-				classes={`small ${isLast ? 'mb-1' : ''}`}
-				ddProps={{
-					DdComponent: ArtifactDetailDd,
-					ddItems: artifactsForDd,
-					related: build.maps,
-				}}
-			/>
-		)
-	} else {
-		//ArtifactRefNode
-		return set.arts.map((art, i) => {
-			const isLastInList = i >= set.arts.length - 1
-			return (
-				<>
-					{genArtofactAdvice(art, build, isLastInList)}
-					{!isLastInList && <div className="text-center text-muted small ">{set.op}</div>}
-				</>
-			)
-		})
-	}
-}
 export function CharacterBuildDetailed({ characterCode }: { characterCode: string }) {
 	const build = useBuildWithDelayedLocs(characterCode)
 	isLoaded(build) && console.log(build.maps.enemies.get('treasure-hoarders'))
@@ -349,7 +225,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		</div>
 	)
 	const CharacterDetailMobile = (
-		<div class="d-xl-none">
+		<div className="d-xl-none">
 			<CharacterPortrait
 				src={getCharacterSilhouetteSrc(characterCode)}
 				classes="w-75 character-portrait-mobile"

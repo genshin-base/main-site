@@ -1,8 +1,7 @@
 import { useCallback, useState } from 'preact/hooks'
 import { ItemAvatar } from './item-cards/item-cards'
-import { GI_RarityCode } from '#lib/genshin'
 import { getItemIconSrc } from '#src/utils/items'
-const RARITIES: GI_RarityCode[] = [3, 4, 5]
+
 const DEF_ICON = getItemIconSrc('philosophies-of-resistance')
 export function AlchemyCalculator({
 	classes = '',
@@ -34,7 +33,7 @@ export function AlchemyCalculator({
 	return (
 		<div className={`alchemy-calculator overflow-hidden ${classes}`}>
 			<h6 class="text-uppercase opacity-75">alchemy calculator</h6>
-			<div className="input-group w-75">
+			<div className="input-group">
 				<input
 					type="number"
 					min="0"
@@ -77,11 +76,6 @@ export function AlchemyCalculator({
 					classes="small-avatar with-padding input-group-avatar not-rounded-start rounded-end border-top border-bottom border-dark"
 				/>
 			</div>
-			{/* <div class="d-flex w-100 justify-content-around mt-2">
-				{RARITIES.map(r => (
-					<ItemAvatar src={iconSrc} rarity={r} classes="small-avatar with-padding" />
-				))}
-			</div> */}
 		</div>
 	)
 }

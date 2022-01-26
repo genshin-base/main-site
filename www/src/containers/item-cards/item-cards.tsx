@@ -51,12 +51,11 @@ export function ItemAvatar<TItem, TRelated>({
 	return (
 		<a
 			href={hash}
-			className={`item-avatar position-relative small rounded-circle d-inline-block overflow-hidden ${pointerClass} ${rarityClass} ${classes}`}
+			className={`item-avatar position-relative small rounded-circle d-inline-block ${pointerClass} ${rarityClass} ${classes}`}
 			ref={elRef}
 			onClick={onClickLocal}
 		>
 			<img className="image" src={src} />
-
 			{badge && (
 				<span className="position-absolute top-0 start-0 translate-middle badge rounded-pill opacity-75 small">
 					{badge}
