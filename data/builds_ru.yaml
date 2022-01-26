@@ -520,7 +520,7 @@
                    Беннетом, и со вторым баффером (то есть
                   Кадзухой/Сахарозой)
 
-                  Wavebreaker's Fin: [R5] Режущий волны плавник равен или превосходит "
+                  Режущий волны плавник: [R5] Режущий волны плавник равен или превосходит "
               - b: |-
                   Посох Хомы, в зависимости от общей стоимости Взрыва стихий вашей команды.
                   Гроза драконов: [R5] Гроза драконов
@@ -535,10 +535,10 @@
               - " и "
               - b: ~110 Восст. энергии% at [R5].
               - " Это позволяет вам распределить куски с Восст. энергии на другие атакующие
-                 допстаты и из-за этого "
+                 допстаты и благодаря этому "
               - b: "[R5] Крест-копьё Китаин"
               - " может превзойти "
-              - b: Нефритовый коршун.
+              - b: Нефритового коршуна.
               - " Из-за значительного снижения порога Восст. энергии комплект артефактов"
               - b: Горящая алая ведьма (4)
               - "  превзойдет "
@@ -572,7 +572,7 @@
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Crimson Witch (4):
+                  Горящая алая ведьма (4):
               - " Этот комплект pulls ahead over "
               - b: Эмблема рассечённой судьбы (4)
               - >2
@@ -721,23 +721,22 @@
         tips: []
         notes:
           - p:
-              b: It is not recommended to run Physical ДПС Сян Лин since Сян Лин excels
-                more as an Off-field Пиро ДПС. Physical Сян Лин is only good
-                for early game.
+              b: Не рекомендовано использовать Сян Лин как физ. ДД, поскольку Сян Лин восхитительна
+                как Off-field Пиро ДПС. Физ. Сян Лин хороша только для ранней игры.
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Crescent Pike:"
-              - " Crescent Pike is extremely strong on Сян Лин due to the
-                nature of её attack combo, Crescent Pike continues to surpass
-                Primordial Jade Winged-Spear in terms of Normal/Charge Attack
+              - b: "Пика полумесяца:"
+              - " Пика полумесяца is extremely strong on Сян Лин due to the
+                nature of её attack combo, Пика полумесяца continues to surpass
+                Нефритовый коршун in terms of Обычная/Заряженная атака
                 Damage."
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
-              - b: "Pale Flame (4): "
+              - b: "Бледный огонь (4): "
               - The passive from this комплект can have 100% uptime through using
-                Guoba off время отката.
+                Гоба off время отката.
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/xiangling/
@@ -877,7 +876,7 @@
               - atk%
             notes: null
             seeCharNotes: true
-          notes: Мастерство стихий sands is generally > Сила атаки%, но допстат quality и оружие выбор can
+          notes: Мастерство стихий sands is generally > Сила атаки%, но качество допстат и оружие выбор can
             potentially favour Сила атаки% sands.
           seeCharNotes: false
         subStats:
@@ -899,17 +898,17 @@
                 - er
               notes: null
               seeCharNotes: false
-          notes: Мастерство стихий has lower priority than Сила атаки% когда using Iron Sting
+          notes: Мастерство стихий имеет более низкий приоритет, чем Сила атаки% когда используется Стальное жало
           seeCharNotes: false
         talents:
           advices:
             - skill
             - burst
             - attack
-          notes: обычная атака is only a priority if you have C6 Беннет
+          notes: обычная атака становится в приоритете только когда у вас есть C6 Беннет
           seeCharNotes: false
         tips:
-          - p: Беннет's EB grants you a pyro status as long as your персонажи are within
+          - p: Беннет's EB grants you a пиро статус as long as your персонажи are within
               his burst AoE (Крио in specific, since Пиро > Крио).
           - p: For that, cast EB с Беннет, switch to the персонаж imbued с Крио и
               walk on Беннет's Взрыв стихии field
@@ -929,7 +928,7 @@
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Crimson Witch of Flames (4):
+                  Горящая алая ведьма (4):
               - >-2
                  Этот комплект works лучший с Чун Юнь on the same отряд for consistent Таяние.
                 Assuming a 
@@ -965,7 +964,7 @@
               - " "
               - b: Instead of Сила атаки/Мастерство стихий, Пиро, и Crit, you'd instead want to go for Мастерство стихий/Пиро/Мастерство стихий on
                   a 4-TF Беннет.
-              - " As such, this also means weapons that have Мастерство стихий substats such as
+              - " As such, this also means weapons that have Мастерство стихий допстаты such as
                 Iron sting take priority over other мечи."
           - p:
               - >-
@@ -973,8 +972,8 @@
                 is able to overtake MIstsplitter Reforged due to its massive
                 Шанс крит. попадания% допстат, which allows you to vape consistently
                 despite the lack of Крит. урон/Шанс крит. попадания subs in your artifacts.
-                Этот assumes that your Мастерство стихий главстат pieces (sands, goblet, и
-                circlet) lack Шанс крит. попадания substats. However, in the rare occasion
+                Этот assumes that your Мастерство стихий главстат pieces (sands, кубок, и
+                корона) lack Шанс крит. попадания допстаты. However, in the rare occasion
                 that your Мастерство стихий pieces manage to roll plenty of Crit subs,
                 Mistsplitter easily overtakes Jade Cutter.
 
@@ -1112,7 +1111,7 @@
         tips: "Recommended amount of Восст. энергии%: 180-200"
         notes:
           - "A Взрыв стихии Support Беннет "
-          - b: "completely ignores the need for healing "
+          - b: "полностью игнорирует необходимость лечения "
           - "и is aimed for people who don't need that much healing from him
             и prefer to "
           - b: squeeze out more damage
@@ -1265,7 +1264,7 @@
               - b: damage бафф from Взрыв стихии only scales с your Базовая атака (персонаж Базовая атака
                   stat и Оружие Базовая атака stat)
               - "\n"
-              - b: DO NOT увеличивать Беннет's constellation from 5 to 6 unless he is in a Пиро
+              - b: НЕ увеличивать созвездие Беннета с 5 на 6 unless he is in a Пиро
                   отряд и you know what you're doing. Этот is because Беннет
                   turns all of your melee on-field персонаж's Auto Attacks into
                   Пиро, which means that Беннет will lose a lot of his отряд
@@ -1286,7 +1285,7 @@
                  In comps где Беннет can reliably trigger reactions (и thus trigger this sword's passive), the buffs provided by this оружие will be stronger than Aquila Favonia.
               - b: "The Alley Flash: "
               - >
-                Этот оружие currently has the highest Базовая атака for a 4 star
+                Этот оружие на данный момент has the highest Базовая атака for a 4 star
                 оружие (even more Базовая атака than some 5 stars like Skyward
                 Blade).
               - b: "Prototype Rancour: "
@@ -1467,9 +1466,9 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Serpent Spine: "
+              - b: "Меч драконьей кости: "
               - "It is worth noting that an "
-              - b: "[R5] Serpent Spine"
+              - b: "[R5] Меч драконьей кости"
               - " can outperform all 5 star weapons at "
               - b: "[R1]"
               - " с proper stack management"
@@ -1621,17 +1620,17 @@
               - Этот комплект can be used on Синь Янь if nobody else on the отряд is
                 using this комплект for the partywide Сила атаки бафф.
           - p:
-              - b: "Regarding Tenacity of the Millelith (4) и Sacrificial Greatsword: "
+              - b: "Regarding Стойкость Миллелита (4) и Sacrificial Greatsword: "
               - >-
                 
                 Синь Янь support is mostly used for её щит и/или Взрыв стихии damage. If you want to use её as a Physical Support, она needs both её Ascension 4 Talent и 
               - b: "[C4]"
               - " to maximize её support capabilities, making её a somewhat
                 expensive выбор to be considered for Physical Support role.
-                However, the Tenacity of the Millelith комплект gives её a new role
+                However, the Стойкость Миллелита комплект gives её a new role
                 с a lower Constellation level prerequisite."
           - p:
-              - b: "Tenacity of the Millelith: "
+              - b: "Стойкость Миллелита: "
               - "Этот комплект gives Синь Янь a unique role among the shielders.
                 Currently, Синь Янь is one of the few shielders in the game who
                 can make full use of the Tenacity комплект's effects. If you can
@@ -1801,17 +1800,17 @@
               - Этот комплект can be used on Синь Янь if nobody else on the отряд is
                 using this комплект for the partywide Сила атаки бафф.
           - p:
-              - b: "Regarding Tenacity of the Millelith (4) и Sacrificial Greatsword: "
+              - b: "Regarding Стойкость Миллелита (4) и Sacrificial Greatsword: "
               - >-
                 
                 Синь Янь support is mostly used for её щит и/или Взрыв стихии damage. If you want to use её as a Physical Support, она needs both её Ascension 4 Talent и 
               - b: "[C4]"
               - " to maximize её support capabilities, making её a somewhat
                 expensive выбор to be considered for Physical Support role.
-                However, the Tenacity of the Millelith комплект gives её a new role
+                However, the Стойкость Миллелита комплект gives её a new role
                 с a lower Constellation level prerequisite."
           - p:
-              - b: "Tenacity of the Millelith: "
+              - b: "Стойкость Миллелита: "
               - "Этот комплект gives Синь Янь a unique role among the shielders.
                 Currently, Синь Янь is one of the few shielders in the game who
                 can make full use of the Tenacity комплект's effects. If you can
@@ -2045,9 +2044,9 @@
               - b: "[C6]"
               - |2
                  effects without casting Взрыв стихии.
-              - b: "Retracing Bolide (4): "
+              - b: "Встречная комета (4): "
               - Running Янь Фэй с a shield персонаж also allows you to make
-                use of a full Retracing Bolide 4-комплект as a placeholder until
+                use of a full Встречная комета 4-комплект as a placeholder until
                 you're able to find a good Crimson Witch 4-комплект.
           - p:
               - b: |
@@ -2464,15 +2463,15 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Redhorn Stonethresher: 
+                  Краснорогий камнеруб: 
               - >
                 Depending on the amount of Сила атаки% buffs you're getting, this
-                оружие can overtake Wolf's Gravestone in personal damage.
-              - b: "Serpent Spine: "
+                оружие can overtake Волчья погибель in personal damage.
+              - b: "Меч драконьей кости: "
               - "Because Дилюк's "
               - b: "[C2] "
               - "requires you to get hit to gain the Сила атаки бафф, it can
-                potentially lead to a damage loss due to losing Serpent Spine
+                potentially lead to a damage loss due to losing Меч драконьей кости
                 stacks. However, когда paired с "
               - b: "Чжун Ли, "
               - "the shield allows you to gain the "
@@ -2495,7 +2494,7 @@
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Crimson Witch of Flames (4): 
+                  Горящая алая ведьма (4): 
               - >
                 Generally the лучший go to комплект for Дилюк due to how easily Дилюк
                 can stack the Пиро Damage effect, while his burst imbues his
@@ -2703,7 +2702,7 @@
               - a: breakdown here
                 href: https://docs.google.com/spreadsheets/d/1JJZPMoNOqXhX8Ez1cl63fNXESJZXx7kQaJEeQ-WLOEY/edit#gid=186983353
               - "\n"
-              - b: "Crimson Witch of Flames (4): "
+              - b: "Горящая алая ведьма (4): "
               - >
                 Этот комплект is лучший used on a Пар Кли, но do note that due
                 to Кли's fast Пиро наложение from all of её kits, она may
@@ -2887,7 +2886,7 @@
               b: "*N = обычная атака, C = Заряженная атака, J = Jump, D = Dash"
         notes:
           - p: Ху Тао is most effective когда used с Син Цю to proc Пар/Заморозка Таяние
-              reactions which utilizes её BiS Set, Crimson Witch of Flames (4).
+              reactions which utilizes её BiS Set, Горящая алая ведьма (4).
               Заморозка Таяние refers to freezing враги for Таяние комплект up, since
               unlike Дилюк или Кли, Ху Тао doesn't shatter замороженные враги.
           - p:
@@ -2900,16 +2899,16 @@
                 is a very strong оружие когда fully stacked, maintaining the
                 stacks on Ху Тао isn't ideal in realistic situations making the
                 оружие less consistent than other options.
-              - b: "Deathmatch: "
+              - b: "Смертельный бой: "
               - >
-                Deathmatch is better than Гроза драконов когда you're not doing
+                Смертельный бой is better than Гроза драконов когда you're not doing
                 Пар.
               - b: "Blackcliff Pole:"
               - " Despite seeming quite good due to the Крит. урон допстат,
                 Blackcliff performs only slightly better than an "
               - b: "[R5]"
               - >2
-                 White Tassel in practice as it is difficult to maintain stacks consistently. It is not recommended to buy this оружие specifically for Ху Тао и should only be used if you already have one.
+                 Белая кисть in practice as it is difficult to maintain stacks consistently. It is not recommended to buy this оружие specifically for Ху Тао и should only be used if you already have one.
               - b: "Vortex Vanquisher и Skyward Spine: "
               - "Provides little to nothing to Ху Тао since она scales better
                 с ХП% than Сила атаки% с every spear in the game. "
@@ -2917,21 +2916,21 @@
                   Base attack makes little difference on Ху Тао because она has
                   a very high ХП to Сила атаки conversion cap.
 
-                  White Tassel: 
-              - White Tassel requires your combos to be more focused on Normal
+                  Белая кисть: 
+              - Белая кисть requires your combos to be more focused on Normal
                 Attacks (N2C over N1C) to make use of it's passive.
           - p:
               - b: |-
                   О комплектах артефактов: 
                   Воспоминания Симэнавы (4): 
               - >
-                Provides higher AA damage than 4CW но lowers your Elemental
+                Provides higher AA damage than 4CW но lowers your
                 Взрыв стихии damage which hurts your AoE damage, also if you're unable
                 to burst, it might cause survivability issues if you're not
                 running a целитель.
-              - b: Retracing Bolide (4)
+              - b: Встречная комета (4)
               - " и "
-              - b: "Странствующий ансамбль / Tenacity of the Millelith (2) + Crimson's Witch of Flame
+              - b: "Странствующий ансамбль / Стойкость Миллелита (2) + Crimson's Witch of Flame
                   (2):"
               - " All these options are almost on equal footing because both of
                 the sets have an equal overall damage output assuming you have
@@ -3128,7 +3127,7 @@
           - p:
               - b: |-
                   Regarding Артефакты:  
-                  Crimson Witch of Flames (2) +18% Сила атаки комплект (2): 
+                  Горящая алая ведьма (2) +18% Сила атаки комплект (2): 
               - "The лучший "
               - b: generalist комплект
               - " on Ёимия. Этот комплект is considered better than Shimenawa's
@@ -3142,7 +3141,7 @@
                   lower overall отряд ДПС
               - >2
                  due to not being able to fully benefit from её Ascension 4 passive.
-              - b: "Crimson Witch of Flames (4): "
+              - b: "Горящая алая ведьма (4): "
               - The go-to artifact комплект for Пар focused Пиро carries,
               - b: " excels over the other options especially on a reaction focused отряд comp."
               - "\n"
@@ -3153,7 +3152,7 @@
                 passive."
           - p:
               - b: |
-                  Regarding Talent Priorities: 
+                  О приоритетных талантах: 
               - Элементальный навык scales very poorly which is why it is the least
                 priority. If you do not care about её Взрыв стихии damage
                 output, you can prioritize Элементальный навык over Взрыв стихии,
@@ -3381,7 +3380,7 @@
                 invest on "
               - b: Конец гладиатора (2) Thundering Fury (2)
               - " until you can obtain "
-              - b: Pale Flame (4)
+              - b: Бледный огонь (4)
               - " с an Электро Кубок."
           - p:
               - b: |-
@@ -3585,7 +3584,7 @@
           - p:
               - b: |-
                   О выборе оружия: 
-                  The Stringless и Alley Hunter:
+                  The Бесструнный и Alley Hunter:
               - " At "
               - b: "[R5],"
               - " both these weapons are roughly equivalent to "
@@ -3620,12 +3619,12 @@
                 (e.g. Электро/Электро-charged comps) therefore it is "
               - b: highly recommended within this niche.
               - "\n"
-              - b: "Tenacity of the Millelith (4): "
+              - b: "Стойкость Миллелита (4): "
               - "Works as a low/no investment Фишль build. Этот комплект trades off
                 Фишль's damage in return for a отряд wide 20 Сила атаки% бафф. "
               - b: Not recommended to specifically farm this комплект for Фишль.
               - " Only use this комплект if you have pieces while farming for the
-                Pale Flame комплект for your Physical DPSes."
+                Бледный огонь комплект for your Physical DPSes."
     credits: null
   - code: beidou
     elementCode: electro
@@ -3799,9 +3798,9 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Serpent Spine: "
-              - Этот оружие can be considered over Wolf's Gravestone for a Sub
-                ДПС Бэй Доу, while Wolf's Gravestone is equipped onto another
+              - b: "Меч драконьей кости: "
+              - Этот оружие can be considered over Волчья погибель for a Sub
+                ДПС Бэй Доу, while Волчья погибель is equipped onto another
                 Claymore ДПС персонаж с higher field time. Бэй Доу can
                 effectively make use of the full stacks, as long as you have её
                 stacks up before swapped
@@ -3809,12 +3808,12 @@
               - "away, the stacks will be maintained even while off-field since
                 её Взрыв стихии snapshots её статы. "
               - b: >-
-                  Serpent Spine outperforms Wolf's Gravestone by a significant
+                  Меч драконьей кости outperforms Волчья погибель by a significant
                   margin когда Беннет/Сара Сила атаки buffs are applied.
 
-                  Redhorn Stonethresher: 
+                  Краснорогий камнеруб: 
               - Depending on the amount of Сила атаки% buffs you're getting, this
-                оружие can overtake Wolf's Gravestone in personal damage.
+                оружие can overtake Волчья погибель in personal damage.
               - b: |-
                   
                   Akuoumaru (260 отряд энергия assumed): 
@@ -3826,9 +3825,9 @@
                 её энергия needs). At "
               - b: "[R3+],"
               - " it becomes exponentially better и comes very close to "
-              - b: Serpent Spine
+              - b: Меч драконьей кости
               - " и "
-              - b: Wolf's Gravestone.
+              - b: Волчья погибель.
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
@@ -3848,7 +3847,7 @@
               - " will outperform"
               - b: " Эмблема рассечённой судьбы (4)."
               - "\n"
-              - b: "Thundersoother (4):"
+              - b: "Усмиряющий гром (4):"
               - >2
                  Этот комплект seeks to maximise your Взрыв стихии damage in an Заряжен или mono Электро comps, take note that the комплект could be rendered useless когда против враги с non-Электро элементы imbued.
               - b: "Церемония древней знати (4): "
@@ -4038,15 +4037,15 @@
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Thundersoother (4):
-              - " For отряды that focus on Электро-Charge reactions, "
-              - b: Thundersoother (4)
+                  Усмиряющий гром (4):
+              - " For отряды that focus on Заряжен reactions, "
+              - b: Усмиряющий гром (4)
               - " can out dps "
               - b: Thundering Fury (2) +18% Сила атаки комплект (2),
               - " said комплект is only recommended below "
               - b: Thundering Fury (2) +18% Сила атаки комплект (2)
               - " due to the potential inconsistency."
-          - p: Электро ДПС Лиза plays around Электро-Charge reaction отряды ideally, for
+          - p: Электро ДПС Лиза plays around Заряжен reaction отряды ideally, for
               Перегрузка Лиза отряды, you would be building for Мастерство стихий ДПС since you
               can be the consistent trigger с supports that apply constant
               Пиро off-field. You can still have an Перегрузка отряд с an
@@ -4171,7 +4170,7 @@
               generally the лучший reaction for this комплект up. Avoid having a second
               Электро in the отряд for this build since this could mess up the
               Пиро aura Лиза wants for this playstyle.
-          - p: Электро-Charge отряды will have a hard time trying to utilize Мастерство стихий ДПС Лиза, in
+          - p: Заряжен отряды will have a hard time trying to utilize Мастерство стихий ДПС Лиза, in
               these situations, build Электро ДПС или Off-Field ДПС Лиза instead.
           - p:
               - b: "О приоритете характеристик:"
@@ -4321,7 +4320,7 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Thrilling Tales Of Dragon Slayers:
+                  Эпос о драконоборцах:
               - " Этот option is "
               - b: "only recommended on a low investment Лиза "
               - whereby она is focused around buffing её teammates и
@@ -4486,26 +4485,26 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: Wolf's Gravestone
+              - b: Волчья погибель
               - >
-                : Wolf's Gravestone (inactive) outperforms Skyward Pride in
+                : Волчья погибель (inactive) outperforms Skyward Pride in
                 every scenario except crowd battles.
-              - b: "Redhorn Stonethresher: "
+              - b: "Краснорогий камнеруб: "
               - >
                 Depending on the amount of Сила атаки% buffs you're getting, this
-                оружие can overtake Wolf's Gravestone in personal damage.
+                оружие can overtake Волчья погибель in personal damage.
               - b: The Unforged
               - >
                 : The playstyle с this оружие becomes a lot more comfortable
-                without having to worry about snapshotting Wolf's Gravestone /
+                without having to worry about snapshotting Волчья погибель /
                 Song of Broken Pines buffs for Sub DPSes, while also granting
                 more щит бонус for better щит uptime. A shielder is
                 required for this, с Чжун Ли being the most ideal option.
-              - b: Serpent Spine
+              - b: Меч драконьей кости
               - ": At "
               - b: "[C6] "
-              - "и high refinement Serpent Spine, it is better to run an Сила атаки%
-                Кубок over Physical Damage% с Serpent Spine. Этот is due to
+              - "и high refinement Меч драконьей кости, it is better to run an Сила атаки%
+                Кубок over Physical Damage% с Меч драконьей кости. Этот is due to
                 the oversaturation of damage bonuses (ascension stat + Serpent
                 Spine) in addition to the fact that Электро accounts for a
                 significant portion of Рэйзор's damage. An in-depth explanation
@@ -4513,7 +4512,7 @@
               - a: found here
                 href: https://tinyurl.com/razoratk
               - ". "
-              - b: It is also worth noting that an [R5] Serpent Spine с max stacks can
+              - b: It is also worth noting that an [R5] Меч драконьей кости с max stacks can
                   outperform all 5✩ weapons at [R1].
               - "\n"
               - b: Skyward Pride
@@ -4522,13 +4521,13 @@
           - p:
               - b: |-
                   О комплектах артефактов: 
-                  Pale Flame (2) Bloodstained Chivalry (2): 
-              - Этот комплект is better if your Сила атаки% is covered by your substats,
+                  Бледный огонь (2) Bloodstained Chivalry (2): 
+              - Этот комплект is better if your Сила атаки% is covered by your допстаты,
                 otherwise you would be better off running Конец гладиатора
                 (4).
               - b: " Этот is only recommended to those who have no immediate access to a decent
-                  Pale Flame (4) комплект, otherwise you would be better off
-                  investing on Pale Flame pieces, regardless of оружие выбор."
+                  Бледный огонь (4) комплект, otherwise you would be better off
+                  investing on Бледный огонь pieces, regardless of оружие выбор."
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/razor/
@@ -5047,17 +5046,17 @@
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
-              - b: "Pale Flame (4): "
+              - b: "Бледный огонь (4): "
               - >
                 Этот комплект is the лучший by far as Кэ Цин can proc its 4 piece комплект
                 bonus instantly by charge attacking after casting E.
-              - b: "Pale Flame (2) Bloodstained Chivalry (2): "
+              - b: "Бледный огонь (2) Bloodstained Chivalry (2): "
               - |2
                  Этот комплект should only be used until getting 4PF.
               - b: "Bloodstained Chivalry (2) +18% Сила атаки комплект (2): "
               - |
                 The generalist Physical ДПС комплект.
-              - b: "Retracing Bolide (4): "
+              - b: "Встречная комета (4): "
               - >
                 Этот комплект should only be used с a consistent shielder (то есть
                 Чжун Ли/Диона) for obvious reasons.
@@ -5260,7 +5259,7 @@
                 generally anywhere, whether it be Co-op или Abyss, или other
                 singleplayer content. Этот has a lot of consistency due to its
                 independence from electro aura, и it is more viable in abyss.
-              - b: "Thundersoother (4): "
+              - b: "Усмиряющий гром (4): "
               - >
                 Этот комплект should be used с Электро-charged отряд compositions
                 (Кэ Цин + Син Цю) или mono-electro отряд comp (Not Suggested).
@@ -5482,7 +5481,7 @@
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Tenacity of the Millelith (4): 
+                  Стойкость Миллелита (4): 
               - Этот комплект acts as a low investment support oriented комплект.
               - b: " "
               - Райдэн is an excellent ToTM holder since её Элементальный навык has
@@ -5491,7 +5490,7 @@
                 damage.
           - p:
               - b: "Об основных характеристиках: Райдэн's главстат priority for Sands и Кубок
-                  entirely depends on the substats, whether она has external
+                  entirely depends on the допстаты, whether она has external
                   buffs, и which оружие она is running. "
               - "You can find a more detailed list of suggestions "
               - a: from ZΛNTO#4984's mastersheet here
@@ -5696,7 +5695,7 @@
                 ).
               - b: "Sacrifical Sword:"
               - >2
-                 Этот is Син Цю's лучший in slot оружие if he doesnt have much Восст. энергии from substats, otherwise it is his second лучший in slot оружие.
+                 Этот is Син Цю's лучший in slot оружие if he doesnt have much Восст. энергии from допстаты, otherwise it is his second лучший in slot оружие.
               - b: "Harbinger of Dawn:"
               - " Этот is a great оружие for Син Цю, assuming he's either "
               - b: "[C6]"
@@ -5734,7 +5733,7 @@
                 though; the враг needs to be под эффектом Электро aura. "
               - b: Not recommended to specifically farm for this комплект.
               - "\n"
-              - b: "Blizzard Strayer (4): "
+              - b: "Заблудший в метели (4): "
               - Этот комплект is only recommended on a freeze отряд to optimize
                 Син Цю's статы since he can just disregard Шанс крит. попадания и build
                 Crit Damage instead for more damage output. Despite it
@@ -5915,7 +5914,7 @@
           - p:
               - >-
                 Use Заряженные атаки if you're going to be doing Пар ДПС,
-                Normal Attacks are for Электро-Charge ДПС.
+                Normal Attacks are for Заряжен ДПС.
 
                 Always activate your skill first, as it reduces stamina consumption и if you have 
               - b: "[C2],"
@@ -6042,7 +6041,7 @@
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
-              - b: "Maiden Beloved (2) Tenacity of the Millelith (2):"
+              - b: "Maiden Beloved (2) Стойкость Миллелита (2):"
               - >2
                  Acts as a place holder комплект for Maiden Beloved if you want pure healing и have not been able to gather Maiden Beloved (4) yet.
               - b: "Церемония древней знати (4): "
@@ -6289,12 +6288,12 @@
                 weak points, "
               - b: falls off if compared с other options without the passive triggered.
               - "\n"
-              - b: "The Stringless: глав. ДПС Тарталья should only use this оружие in"
+              - b: "The Бесструнный: глав. ДПС Тарталья should only use this оружие in"
               - " "
               - b: отряды где you are Vaporising your Взрыв стихии,
               - " as the Мастерство стихий допстат loses alot of value in other
                 отряды. If Тарталья is being used as a "
-              - b: "Nuke Support only for his Vaporised Взрыв стихии damage, R5 Stringless will rank
+              - b: "Nuke Support only for his Vaporised Взрыв стихии damage, R5 Бесструнный will rank
                   just below Thundering Pulse. "
               - Note that the stringless elemental skill passive does not affect
                 Тарталья's melee stance auto attacks.
@@ -6303,7 +6302,7 @@
                   О комплектах артефактов:
                   Heart of Depth (2) +18% Сила атаки комплект (2): 
               - "Этот комплект is "
-              - b: only about 1-2 substats behind Heart of Depth (4),
+              - b: only about 1-2 допстаты behind Heart of Depth (4),
               - >2
                  you can opt out for this комплект instead if you already have decent pieces.
               - b: "Воспоминания Симэнавы (4):"
@@ -6882,7 +6881,7 @@
           - p:
               - b: |-
                   Regarding Артефакт Choices:
-                  Tenacity of the Millelith (4): 
+                  Стойкость Миллелита (4): 
               - "With proper extension of Кокоми's Элементальный навык, она can
                 maintain near "
               - b: 100% uptime on this artifact комплект's 4 piece effect.
@@ -6892,7 +6891,7 @@
               - b: only for её Элементальный навык.
               - " If она is being used to attack onfield during Взрыв стихии,
                 this комплект may "
-              - b: overtake Tenacity of the Millelith (4).
+              - b: overtake Стойкость Миллелита (4).
           - p:
               - b: |-
                   Об основных характеристиках и Sub Stats: 
@@ -7057,7 +7056,7 @@
           - p:
               - b: |-
                   Regarding Артефакт Choices:
-                  Tenacity of the Millelith (4): 
+                  Стойкость Миллелита (4): 
               - Although this комплект offers the lowest personal dmg for Кокоми, the
                 20% Сила атаки отряд бафф can sometimes be better for overall отряд ДПС.
     credits:
@@ -7204,12 +7203,12 @@
               и Крио particle generation. Pairing Диона с Крио carries such
               as Гань Юй и Эола allows you to funnel энергия into your ДПС
               персонажи while providing them с quick shields for stagger
-              resistance. Weapons such as Sacrificial Bow и Favonius Warbow
+              resistance. Weapons such as Церемониальный лук и Favonius Warbow
               greatly увеличивать её potential as a battery.
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Sacrificial Bow: "
+              - b: "Церемониальный лук: "
               - >
                 Prefered over Favonious especially at higher refinements due to
                 having better щит uptime.
@@ -7457,18 +7456,18 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Serpent Spine:
+                  Меч драконьей кости:
               - " Этот оружие outperforms "
-              - b: Wolf's Gravestone
+              - b: Волчья погибель
               - " if we only look at Чун Юнь's damage contribution "
               - b: "[5 Stack Assumed]."
               - " "
-              - b: Wolf's Gravestone
+              - b: Волчья погибель
               - >2
                  is ranked higher as it provides more teamwide ДПС и does not come с the need to acquire stacks before engaging in combat.
               - b: "Redstone Thresher: "
               - Depending on the amount of Сила атаки% buffs you're getting, this
-                оружие can overtake Wolf's Gravestone in personal damage.
+                оружие can overtake Волчья погибель in personal damage.
               - b: |-
                   
                   Akuoumaru:
@@ -7645,7 +7644,7 @@
           notes:
             - b: "crit-rate: "
             - Generally has less value than the other offensive статы since you
-              already have 60-75% Шанс крит. попадания с Blizzard Strayer и Крио
+              already have 60-75% Шанс крит. попадания с Заблудший в метели и Крио
               Resonance alone
           seeCharNotes: false
         talents:
@@ -7663,14 +7662,14 @@
               b: Крио ДПС Кэйа is recommended over Physical ДПС Кэйа since most of his kit
                 scales с Крио.
           - p: Кэйа Крио ДПС is mostly used in a отряд с Чун Юнь и Син Цю/Барбара
-              while having Blizzard Strayer (4) equipped. In this отряд, Кэйа
+              while having Заблудший в метели (4) equipped. In this отряд, Кэйа
               has 55% crit rate против Заморозка враги without any additional
-              Crit статы, which means Шанс крит. попадания substats are generally
+              Crit статы, which means Шанс крит. попадания допстаты are generally
               prioritized less than Сила атаки% или Крит. урон.
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Pale Flame (4):
+                  Бледный огонь (4):
               - " Этот комплект is difficult to fully utilise due to Кэйа's skill
                 время отката being 6 сек.. The full комплект effect requires 2 stacks
                 to be active at any given time, so maintaining stacks can be
@@ -7810,14 +7809,14 @@
               b: Крио ДПС Кэйа is recommended over Physical ДПС Кэйа since most of his kit
                 scales с Крио.
           - p: Кэйа Крио ДПС is mostly used in a отряд с Чун Юнь и Син Цю/Барбара
-              while having Blizzard Strayer (4) equipped. In this отряд, Кэйа
+              while having Заблудший в метели (4) equipped. In this отряд, Кэйа
               has 55% crit rate против Заморозка враги without any additional
-              Crit статы, which means Шанс крит. попадания substats are generally
+              Crit статы, which means Шанс крит. попадания допстаты are generally
               prioritized less than Сила атаки% или Крит. урон.
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Pale Flame (4):
+                  Бледный огонь (4):
               - " Этот комплект is difficult to fully utilise due to Кэйа's skill
                 время отката being 6 сек.. The full комплект effect requires 2 stacks
                 to be active at any given time, so maintaining stacks can be
@@ -8182,7 +8181,7 @@
           - p: If played in a permafreeze setup, Розария has the same отряд comp as Заморозка
               Кэйа. Check Кэйа's ability tips section for teamcomp setup.
           - p:
-              - b: "Regarding Substats: "
+              - b: "О допстатах: "
               - >-
                 
                 Розария does not need much Восст. энергии if paired с Кэйа. If paired с another Крио unit such as Чун Юнь или Аяка, она will need ~130-150% Восст. энергии
@@ -8197,13 +8196,13 @@
               - " this оружие can perform similar to "
               - b: |-
                   Staff of Homa.
-                  Deathmatch: 
+                  Смертельный бой: 
               - "Розария gets alot of Шанс крит. попадания from "
-              - b: Blizzard Strayer (4) и Крио Resonance.
+              - b: Заблудший в метели (4) и Крио Resonance.
               - " As a result, this оружие falls off in value as you will tend
                 to"
               - b: " overcap above 100% Шанс крит. попадания."
-              - " If Розария is being used without the Blizzard Strayer (4) комплект,
+              - " If Розария is being used without the Заблудший в метели (4) комплект,
                 then this оружие can perform better compared to other options."
           - p:
               - b: |-
@@ -8368,15 +8367,15 @@
         notes:
           - b: "О комплектах артефактов:"
           - "\n"
-          - b: "Pale Flame (4):"
+          - b: "Бледный огонь (4):"
           - >2
              Этот комплект is difficult to fully utilise due to Розария's skill время отката being 6 сек.. The full комплект effect requires 2 stacks to be active at any given time, so maintaining stacks can be difficult когда considering rotations between персонажи.
           - b: "Конец гладиатора (4): "
           - |
             The 4 piece комплект passive doesn't work с Crescent Pike.
-          - b: "Blizzard Strayer (4): "
+          - b: "Заблудший в метели (4): "
           - "Розария's Взрыв стихии is required to maintain uptime for
-            Blizzard Strayer (4) (due to Фишль/Бэй Доу stealing Крио procs for
+            Заблудший в метели (4) (due to Фишль/Бэй Доу stealing Крио procs for
             Сверхпроводник). Due to the low uptime of Розария's Взрыв стихии at
             "
           - b: "[C0], "
@@ -8576,10 +8575,10 @@
               - " Этот section was calculated с "
               - b: 160% Восст. энергии requirement,
               - " which is why "
-              - b: Восст. энергии substats weapons are valued highly here,
+              - b: Восст. энергии допстаты weapons are valued highly here,
               - " с lower Восст. энергии reqs,"
               - b: " those weapons may fall off if compared с weapons с more offensive
-                  substats."
+                  допстаты."
               - " Розария's "
               - b: "[C4]"
               - |2
@@ -8595,7 +8594,7 @@
               - b: constantly triggers Реверсивное Таяние.
               - " "
               - b: "[R5] Гроза драконов can outperform The Catch, и [R5] Kitain's Cross Spear
-                  is on par с Deathmatch."
+                  is on par с Смертельный бой."
               - "\n"
               - b: "Wavebreaker's Fin: "
               - At
@@ -8613,12 +8612,12 @@
                   О комплектах артефактов:
                   Lavawalker's Epiphany (4):
               - >2
-                 Only viable on Розария if она's triggering Реверсивное Таяние, pulls ahead of Церемония древней знати (2) Blizzard Strayer (2) assuming you can trigger Реверсивное Таяние on all of её kits.
+                 Only viable on Розария if она's triggering Реверсивное Таяние, pulls ahead of Церемония древней знати (2) Заблудший в метели (2) assuming you can trigger Реверсивное Таяние on all of её kits.
               - b: "Церемония древней знати (4): "
               - " Offers отряд-wide Сила атаки boost, you can equip this комплект on Розария
                 if nobody else on the отряд is equipping it."
           - p:
-              - b: "Regarding Substats Priority:"
+              - b: "О допстатах Priority:"
               - >-
                 
                 Мастерство стихий is only recommended if Розария is to be utilized as a Реверсивное Таяние trigger, as shown in the Ability Tips section.
@@ -8792,8 +8791,8 @@
           - p:
               - b: "Regarding Оружие и Артефакт Choices:"
               - "\n"
-              - b: "Sacrificial Sword и Tenacity of the Millelith (4): "
-              - "Tenacity of the Millelith allows Ци Ци to give the отряд a "
+              - b: "Sacrificial Sword и Стойкость Миллелита (4): "
+              - "Стойкость Миллелита allows Ци Ци to give the отряд a "
               - b: decent Сила атаки boost
               - " while staying in враг melee reach с Элементальный навык active.
                 Sacrificial Sword увеличивает the uptime of её Элементальный навык, which in
@@ -8813,7 +8812,7 @@
               - " или if она acts as the "
               - b: on-field ДПС,
               - " this комплект can "
-              - b: overtake Tenacity of the Millelith (4).
+              - b: overtake Стойкость Миллелита (4).
     credits: null
   - code: ganyu
     elementCode: cryo
@@ -9116,14 +9115,14 @@
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Blizzard Strayer (4): 
+                  Заблудший в метели (4): 
               - Этот комплект is the go to комплект for a Заморозка отряд comp, whereas you
                 focus all your статы on Крит. урон while prioritizing Сила атаки% over
                 Шанс крит. попадания%. Этот has high damage и энергия sustainability while
                 also be used outside of Заморозка comps for a flat 20% Шанс крит. попадания
                 против враги с a Крио status.
               - b: " "
-              - "A Гидро Support would be appreciated с Blizzard Strayer (4)
+              - "A Гидро Support would be appreciated с Заблудший в метели (4)
                 Гань Юй. "
               - b: Highly Recommended, especially for players who have Гань Юй at [C4].
       - code: off-field dps
@@ -9303,7 +9302,7 @@
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Церемония древней знати (2) Blizzard Strayer (2): 
+                  Церемония древней знати (2) Заблудший в метели (2): 
               - >
                 Этот комплект is the generalist комплект, it focuses on dealing damage
                 с её Взрыв стихии и constantly affecting враги с
@@ -9317,7 +9316,7 @@
                   your глав. ДПС.
               - "It is also worth noting that on a Заморозка comp, a доп. ДПС Гань Юй
                 can also equip "
-              - b: Blizzard Strayer (4)
+              - b: Заблудший в метели (4)
               - " as it offers high stat values. "
               - b: Этот комплект pulls ahead of the other options on a Заморозка comp.
     credits:
@@ -9521,7 +9520,7 @@
         notes:
           - p: Эола's оружие rankings assume that you're running её с a Крио battery
               (то есть Диона) instead of Беннет. Она would usually need 30%-60%+
-              Восст. энергии from substats depending on what отряд и Крио
+              Восст. энергии from допстаты depending on what отряд и Крио
               batteries you use.
           - p: Эола's Взрыв стихии does not snapshot. Этот means that any buffs Эола has
               upon casting Взрыв стихии will not be taken into effect if the бафф
@@ -9529,17 +9528,17 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Redhorn Stonethresher: 
+                  Краснорогий камнеруб: 
               - Depending on the amount of Сила атаки% buffs you're getting this оружие
-                can overtake Wolf's Gravestone in personal
+                can overtake Волчья погибель in personal
               - b: " "
               - damage.
               - b: |-
                   
                   Skyward Pride: 
               - >
-                Этот оружие is more forgiving towards Восст. энергии substats. If there is a
-                Крио battery unit in your отряд (Диона с Sacrificial Bow или
+                Этот оружие is more forgiving towards Восст. энергии допстаты. If there is a
+                Крио battery unit in your отряд (Диона с Церемониальный лук или
                 Кэйа с Favonius Sword) или if your отряд generates достаточно
                 particles on their own, Skyward Pride loses effectiveness
                 compared to the above options. 
@@ -9549,13 +9548,13 @@
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
-              - b: "Pale Flame (4): "
+              - b: "Бледный огонь (4): "
               - "Этот is Эола's optimal artifact комплект и it relies on having a
-                condition fulfilled in order to outperform Pale Flame (2)
+                condition fulfilled in order to outperform Бледный огонь (2)
                 Bloodstained Chivalry (2). If you are able to sustain the
                 conditional бафф, you will be able to achieve a 50% Physical урон
                 бонус + 18% Сила атаки. Without using your Взрыв стихии, you can
-                sustain the Pale Flame's 4 piece комплект bonus because each stack
+                sustain the Бледный огонь's 4 piece комплект bonus because each stack
                 lasts 7s и it refreshes per stack, и Эола's Элементальный навык
                 время отката is only 4 сек. когда doing 1-taps, therefore you can
                 keep the condition up. When using this комплект, it is recommended to
@@ -9565,10 +9564,10 @@
               - b: "[C2+]."
               - |2
                  Please visit the Ability Tips for её combo.
-              - b: "Pale Flame (2) Bloodstained Chivalry (2): "
+              - b: "Бледный огонь (2) Bloodstained Chivalry (2): "
               - Этот is a non-conditional, consistent artifact комплект that provides
                 you a constant 50% Physical урон bonus. While that by itself is
-                amazing, Pale Flame (4) can outperform this комплект because it also
+                amazing, Бледный огонь (4) can outperform this комплект because it also
                 has another 18% Сила атаки бафф и is easily maintained through её
                 low быстрое нажатие skill время отката.
     credits: null
@@ -9716,7 +9715,7 @@
                 - atk
               notes: null
               seeCharNotes: false
-          notes: Шанс крит. попадания loses value here assuming you're running Blizzard Strayer (4),
+          notes: Шанс крит. попадания loses value here assuming you're running Заблудший в метели (4),
             if you're not using that artifact комплект, then it has the same priority
             as Крит. урон
           seeCharNotes: false
@@ -9750,8 +9749,8 @@
               - b: permafreeze отряд
               - " (paired с a Гидро enabler such as Мона, Син Цю, или even
                 Барбара) где она could gain huge benefits from the "
-              - b: Blizzard Strayer (4) artifact комплект.
-              - " Blizzard Strayer (4) piece gives a huge amount of статы on a
+              - b: Заблудший в метели (4) artifact комплект.
+              - " Заблудший в метели (4) piece gives a huge amount of статы on a
                 Заморозка отряд, so try to get this artifact комплект as fast as you can.
                 Её Взрыв стихии also sticks on замороженные враги, но it also
                 has a small hitbox so you need to position it well so that it
@@ -9764,7 +9763,7 @@
                  While Aquila has Physical Damage% as a главстат, which is basically useless on Аяка, it is still a good statstick as it has a high Базовая атака и Сила атаки% бафф from the passive.
               - b: "Primordial Jade Cutter:"
               - >2
-                 With Blizzard Strayer (4) и Крио Resonance, this оружие overcrits, so avoid getting Шанс крит. попадания substats.
+                 With Заблудший в метели (4) и Крио Resonance, this оружие overcrits, so avoid getting Шанс крит. попадания допстаты.
               - b: "Skyward Blade, Blackcliff Longsword, The Black Sword, Amenoma Kageuchi:"
               - " These 4 weapons will give a similar output, so it's not worth
                 getting или building another когда you already have one. Depends
@@ -9776,8 +9775,8 @@
               - b: Skyward Blade
               - " или "
               - b: Amenoma Kageuchi
-              - " (especially с higher refines), avoid getting Energy
-                Recharge substats as their статы / passives assist in elemental
+              - " (especially с higher refines), avoid getting Восст.
+                энергии допстаты as their статы / passives assist in elemental
                 burst generation significantly."
               - b: |-
                   
@@ -9981,23 +9980,23 @@
               - >
                 Forcing to get Polar stacks isn't worth due to consuming extra
                 time to get those stacks.
-              - b: "The Stringless: "
+              - b: "The Бесструнный: "
               - >
                 Placement was considering Элой is used on a Реверсивное Таяние отряд.
-                On Реверсивное Таяние Элой, Stringless especially at higher refinement
+                On Реверсивное Таяние Элой, Бесструнный especially at higher refinement
                 levels can pull ahead of Thundering Pulse.
               - b: "Prototype Crescent: "
               - >
                 Assumes the passive is active by proccing a weak point shot.
                 Этот оружие especially at higher refinement levels can be as
                 good as a Skyward Harp.
-              - b: "Sacrificial Bow: "
+              - b: "Церемониальный лук: "
               - A pretty decent option to make Элой a Крио battery as её
                 Элементальный навык provides 5 Крио particles.
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
-              - b: "Blizzard Strayer (4): "
+              - b: "Заблудший в метели (4): "
               - >
                 Этот artifact комплект is лучший used on a Заморозка-focused Элой as it
                 provides a ton of Crit Value.
@@ -10175,7 +10174,7 @@
                   О выборе оружия:
                   Calamity Queller:
               - >2
-                 The passive of this оружие works perfectly с Шэнь Хэ's Элементальный навык because it's dynamic. Этот оружие also has high Базовая атака which makes Сила атаки% substats really effective.
+                 The passive of this оружие works perfectly с Шэнь Хэ's Элементальный навык because it's dynamic. Этот оружие also has high Базовая атака which makes Сила атаки% допстаты really effective.
               - b: "Engulfing Lightning:"
               - >2
                  Этот оружие provides Восст. энергии и converts Восст. энергии to Сила атаки, which benefits Шэнь Хэ a lot.
@@ -10329,7 +10328,7 @@
               - Этот оружие does not provide any Мастерство стихий, however it overtakes the
                 other weapons on the list когда it comes to enabling your отряд.
               - b: >-2
-                   It offers 48% Сила атаки boost to the персонаж you swap to which is equivalent to 1 главстат. Этот enables your ДПС more if compared to Sacrificial Fragments which only gives ~44EM, equivalent to only 2 substats.
+                   It offers 48% Сила атаки boost to the персонаж you swap to which is equivalent to 1 главстат. Этот enables your ДПС more if compared to Sacrificial Fragments which only gives ~44EM, equivalent to only 2 допстаты.
                   Widsith:
               - " Этот оружие is only useful if you get the Мастерство стихий passive from it.
                 As such, it is "
@@ -10340,7 +10339,7 @@
               - " Этот оружие can be useful if you"
               - b: " need Сахароза's Взрыв стихии up as often as possible for grouping."
               - >-2
-                 You may need to get a few crit rate substats to trigger the passive reliably.
+                 You may need to get a few crit rate допстаты to trigger the passive reliably.
                 There are some отряд compositions in which Сахароза's Мастерство стихий is not a priority, such as Заморозка отряды или an Анемо battery for Сяо. In such situations it's better for Сахароза to use to Thrilling Tales of the Dragon Slayers.
           - p:
               - b: "Regarding Восст. энергии Priority:"
@@ -10469,8 +10468,8 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Wolf's Gravestone:"
-              - " Wolf's Gravestone is a universal claymore that is capable of
+              - b: "Волчья погибель:"
+              - " Волчья погибель is a universal claymore that is capable of
                 buffing your teammates along с providing more healing in
                 Саю's case. It is лучший used once you achieve your Восст. энергии
                 threshold."
@@ -10842,7 +10841,7 @@
           - p:
               - b: |-
                   О комплектах артефактов: 
-                  Pale Flame (4): 
+                  Бледный огонь (4): 
               - When running this комплект, make sure you do Press Cast и not Hold
                 Cast, as the Hold Cast Элементальный навык время отката would be too long for you
                 to refresh your stacks.
@@ -11251,7 +11250,7 @@
                 recommended to prioritize utility options such as Noblesse
                 Oblige или Viridescent Venerer over this комплект."
           - p:
-              - b: "Regarding Talent Priorities:"
+              - b: "О приоритетных талантах:"
               - >-2
                  
                 If you prefer more damage than healing, prioritize Элементальный навык over Взрыв стихии since it scales better.
@@ -11424,7 +11423,7 @@
               - " Elegy of the End yields slightly lower Венти damage compared
                 to an "
               - b: "[R5]"
-              - " Stringless (~7% assuming 50% Elegy бафф uptime), it provides a
+              - " Бесструнный (~7% assuming 50% Elegy бафф uptime), it provides a
                 отряд-wide Сила атаки и Мастерство стихий бафф which can be better in terms of total
                 отряд damage и comfortable Восст. энергии."
     credits:
@@ -11528,7 +11527,7 @@
           notes: It is worth noting that комплект bonuses do not увеличивать Сяо's damage by
             much, due to an oversaturation on урон% bonuses и Сила атаки% from various
             sources. For this reason, it is better to opt out for artifact
-            pieces which have higher quality substats instead of trying to
+            pieces which have higher quality допстаты instead of trying to
             maintain a комплект bonus.
           seeCharNotes: false
         mainStats:
@@ -11623,7 +11622,7 @@
           - p:
               - b: "О выборе оружия:"
               - >2
-                 With a proper anemo battery (e.g. Сахароза), Сяо needs as little as 120-130% Восст. энергии to maintain a high burst uptime. In these scenarios, unless there are no Восст. энергии from substats, you should всегда go for a non-Восст. энергии оружие as it will result in more damage.
+                 With a proper anemo battery (e.g. Сахароза), Сяо needs as little as 120-130% Восст. энергии to maintain a high burst uptime. In these scenarios, unless there are no Восст. энергии from допстаты, you should всегда go for a non-Восст. энергии оружие as it will result in more damage.
               - b: "Calamity Queller: "
               - Этот оружие has a really high Базовая атака, which means you benefit
                 more from Сила атаки% buffs (e.g. Thrilling Tales of the Dragon
@@ -11977,7 +11976,7 @@
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
-              - b: "Retracing Bolide (4):"
+              - b: "Встречная комета (4):"
               - " Bolide grants you an additional 40% Normal и Заряженная атака
                 урон когда shielded. Кристаллизация can be unreliable so a consistent
                 shielder is preferred, such as Чжун Ли."
@@ -12262,17 +12261,17 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Serpent Spine: 
+                  Меч драконьей кости: 
               - >
-                When using Husk of Opulent Dreams, Serpent Spine stacks are
+                When using Кокон сладких грёз, Меч драконьей кости stacks are
                 prioritized over Husk of the Opulent Dreams stacks, due to their
                 conflicting nature in gaining stacks (Off-field и on-field)
               - b: "Skyward Pride: "
               - >
-                Useful if you are unable to get Восст. энергии from your substats. Does
+                Useful if you are unable to get Восст. энергии from your допстаты. Does
                 really well while its passive is active, но falls off in
                 sustained fights. Comfort option that has quite a big power gap
-                if compared с Serpent Spine или Whiteblind.
+                if compared с Меч драконьей кости или Whiteblind.
               - b: "Favonius Greatsword: "
               - Only recommended с high refines, as its usefulness scales
                 с its particle generation capabilities. R5 allows её to
@@ -12281,14 +12280,14 @@
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Husk of Opulent Dreams (4): 
+                  Кокон сладких грёз (4): 
               - Ноэлль snapshots её Защита on burst cast. To get the full 4
                 stacks' Защита% boost during your first burst, you need to wait 12
                 сек. off field before swapping in. In abyss, time spent
                 before the chamber starts still generates stacks.
               - b: |-
                   
-                  Retracing Bolide (4): 
+                  Встречная комета (4): 
               - Optimally offers slightly less damage than Gladiator's, но is
                 much easier to farm per resin и can have 100% uptime с
                 crystallise shields. Consider Конец гладиатора if you don't
@@ -12382,7 +12381,7 @@
         tips: Use её заряженные атаки for healing as they are much faster than normal
           attacks.
         notes:
-          - p: Support Ноэлль is not currently recommended in any content due to её
+          - p: Support Ноэлль is not на данный момент recommended in any content due to её
               extremely lackluster healing и poor shield uptime.
           - p:
               - b: |-
@@ -12400,7 +12399,7 @@
                 время отката at "
               - b: "[R1]"
               - " matches с её shield время отката. Generally not recommended
-                unless you have an abundance of crit substats или wish to build
+                unless you have an abundance of crit допстаты или wish to build
                 её pseudo-ДПС."
     credits: null
   - code: gorou
@@ -12550,17 +12549,17 @@
           - p:
               - b: "Regarding Артефакт главстаты и допстаты Priority:"
               - "\n"
-              - b: Защита% mainstats и substats
+              - b: Защита% mainstats и допстаты
               - " (и potentially a "
               - b: Healing бонус
               - " главстат on Корона) can be considered at"
               - b: " [C4]"
               - >2
                  due to being able to лечить the active персонаж based on his Защита during burst. Этот is useful if you plan to use him as a solo целитель.
-              - b: Шанс крит. попадания circlet и substats
+              - b: Шанс крит. попадания circlet и допстаты
               - >2
                  can be considered когда Горо is using Favonius Warbow to trigger the passive comfortably.
-              - b: Восст. энергии% substats can usually be more важно than getting the right главстат,
+              - b: Восст. энергии% допстаты can usually be more важно than getting the right главстат,
               - " as Горо's damage contribution to a отряд is negligible, while
                 being able to get Energy for his Взрыв стихии is a lot more важно."
     credits: null
@@ -12996,7 +12995,7 @@
                     count: 2
               notes: null
               seeCharNotes: false
-          notes: Check заметки for Pale Flame (4)
+          notes: Check заметки for Бледный огонь (4)
           seeCharNotes: false
         mainStats:
           circlet:
@@ -13052,14 +13051,14 @@
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
-              - b: "Конец гладиатора (2) Pale Flame (2):"
-              - " Этот комплект is ranked higher than Pale Flame (2) Bloodstained
+              - b: "Конец гладиатора (2) Бледный огонь (2):"
+              - " Этот комплект is ranked higher than Бледный огонь (2) Bloodstained
                 Chivalry (2) due to how much Гео Damage is in the Путешественница's
                 kit. If you truly prefer to have the highest physical damage
                 output, use Set 2 instead."
               - b: |-
                   
-                  Pale Flame (4): Этот комплект is not recommended 
+                  Бледный огонь (4): Этот комплект is not recommended 
               - due to the Путешественница's Элементальный навык время отката being 6 сек.,
                 which means the 4 piece комплект effect only kicks in 6 сек. into
                 every rotation, и also gives the player a very little time
@@ -13295,7 +13294,7 @@
           - p:
               - b: "Этот kind of playstyle is very straightforward; stack as much ХП as
                   possible. Prioritize ХП scaling polearms such as Black Tassel
-                  и artifact sets such as Tenacity of the Millelith (4) to
+                  и artifact sets such as Стойкость Миллелита (4) to
                   capitalize on Чжун Ли's щит. "
               - Most of the time, especially on a ХП-focused Чжун Ли, casting
                 Взрыв стихии is a ДПС loss due to the cast time, which is why
@@ -13494,8 +13493,8 @@
                 отряды without a reliable source of Гео энергия. With sufficient
                 энергия/Гео particles (то есть in a dual Гео отряд) Lithic Spear и
                 above will outperform Favonius Lance.
-              - b: "Deathmatch: "
-              - In отряды с a reliable source of Гео энергия, Deathmatch will
+              - b: "Смертельный бой: "
+              - In отряды с a reliable source of Гео энергия, Смертельный бой will
                 outperform The Catch.
           - p:
               - b: "Об основных характеристиках:"
@@ -13666,7 +13665,7 @@
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
-              - b: "Husk of Opulent Dreams (4):"
+              - b: "Кокон сладких грёз (4):"
               - >2
                  Due to Альбедо's skill snapshotting upon cast, you need to either wait ~12 сек. before starting a domain/fight to reach max stacks или recast his skill to benefit from the Защита и Гео урон bonus provided by the 4 piece комплект effect.
               - b: "Tenacity of the Milelith (4):"
@@ -13675,7 +13674,7 @@
               - b: "Церемония древней знати (4):"
               - " If you don't have another персонаж in your отряд that has
                 this комплект, you can use this комплект on Альбедо. You might want to get
-                some Восст. энергии substats to maintain your Взрыв стихии
+                some Восст. энергии допстаты to maintain your Взрыв стихии
                 uptime for this. It is also worth noting that this комплект decreases
                 your Элементальный навык damage by a lot if compared to the other
                 offensive sets."
@@ -13683,7 +13682,7 @@
               - b: "Regarding Артефакт Substats Priority:"
               - >-
                 
-                Сила атаки и Восст. энергии substats are only valuable on a Hybrid Альбедо that casts his Взрыв стихии.
+                Сила атаки и Восст. энергии допстаты are only valuable on a Hybrid Альбедо that casts his Взрыв стихии.
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/albedo/
@@ -13825,9 +13824,9 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Serpent Spine:"
+              - b: "Меч драконьей кости:"
               - >2
-                 When using Husk of Opulent Dreams, Serpent Spine stacks are prioritized over Husk of the Opulent Dreams stacks due to their conflicting nature in gaining stacks (Off-field и on-field).
+                 When using Кокон сладких грёз, Меч драконьей кости stacks are prioritized over Husk of the Opulent Dreams stacks due to their conflicting nature in gaining stacks (Off-field и on-field).
               - b: "Skyward Pride: "
               - >
                 Can be a great или bad оружие for Итто depending on your Восст. энергии
@@ -13981,7 +13980,7 @@ artifacts:
       "2":
         - p: Increases щит Strength by 35%
         - p: "Note: щит Strength is a stat, thus only works for the персонаж equipped
-            с Retracing Bolide artifacts."
+            с Встречная комета artifacts."
       "4": Gain an additional 40% Normal и Заряженная атака урон while under the
         protection of a shield.
   - code: heart-of-depth
