@@ -1,5 +1,5 @@
+import { charactersShortList } from '#src/api/generated'
 import { ItemAvatar } from '#src/containers/item-cards/item-cards'
-import { charactersShortList } from '#src/generated'
 import { makeCharacterBuildHash } from '#src/hashstore'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { elements } from '#src/utils/elements'

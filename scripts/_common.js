@@ -9,7 +9,7 @@ export const CACHE_DIR = `${BASE_DIR}/cache`
 export const DATA_CACHE_DIR = `${CACHE_DIR}/data`
 export const IMGS_CACHE_DIR = `${CACHE_DIR}/imgs`
 export const DATA_DIR = `${BASE_DIR}/data`
-export const WWW_STATIC_DIR = `${BASE_DIR}/www/src/generated`
+export const WWW_API_FILE = `${BASE_DIR}/www/src/api/generated.ts`
 export const WWW_DYNAMIC_DIR = `${BASE_DIR}/www/public/generated`
 export const WWW_MEDIA_DIR = `${BASE_DIR}/www/public/media`
 

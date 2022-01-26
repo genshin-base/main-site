@@ -5,13 +5,13 @@ import {
 	ART_GROUP_20_ER_CODE,
 	ART_GROUP_20_ER_DETAIL,
 	ART_GROUP_20_ER_INSIDE_CODES,
-} from '#src/../../lib/genshin'
-import { CharacterFullInfoWithRelated } from '#src/../../lib/parsing/combine'
-import { ArtifactRef, ArtifactRefNode } from '#src/../../lib/parsing/helperteam/artifacts'
-import { CharacterBuildInfoRole } from '#src/../../lib/parsing/helperteam/characters'
-import { CompactTextParagraphs, TextNode } from '#src/../../lib/parsing/helperteam/text'
-import { mustBeDefined } from '#src/../../lib/utils/values'
-import { MapAllByCode } from '#src/api'
+} from '#lib/genshin'
+import { CharacterFullInfoWithRelated } from '#lib/parsing/combine'
+import { ArtifactRef, ArtifactRefNode } from '#lib/parsing/helperteam/artifacts'
+import { CharacterBuildInfoRole } from '#lib/parsing/helperteam/characters'
+import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
+import { mustBeDefined } from '#lib/utils/values'
+import { MapAllByCode } from '#src/api/utils'
 import { ArtifactDetailDd } from '#src/containers/item-cards/dd-cards'
 import { LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
 import { getArtifactIconSrc } from '#src/utils/artifacts'

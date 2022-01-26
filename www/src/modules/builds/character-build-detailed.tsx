@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'preact/hooks'
 
-import { getAllRelated } from '#src/api'
-import { isLoaded, useBuildWithDelayedLocs } from '#src/api/hooks'
+import { useBuildWithDelayedLocs } from '#src/api'
+import { getAllRelated } from '#src/api/utils'
 import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectedable } from '#src/components/tabs'
@@ -10,11 +10,10 @@ import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-c
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
 import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import { getCharacterPortraitSrc, getCharacterSilhouetteSrc } from '#src/utils/characters'
+import { isLoaded } from '#src/utils/hooks'
 import { getItemIconSrc } from '#src/utils/items'
 import { pluralizeEN } from '#src/utils/strings'
 import { getWeaponIconSrc } from '#src/utils/weapons'
-
-import './character-build-detailed.scss'
 import {
 	BuildRoleOrDummy,
 	CIRCLET_GOBLET_SANDS,
@@ -29,13 +28,12 @@ import {
 	notesToJSX,
 } from './common'
 
+import './character-build-detailed.scss'
+
 export function CharacterBuildDetailed({ characterCode }: { characterCode: string }) {
 	const build = useBuildWithDelayedLocs(characterCode)
-	isLoaded(build) && console.log(build.maps.enemies.get('treasure-hoarders'))
 
-	// на случай серверного рендера: билд тут будет загружен сразу
 	const roleTabs: BuildRoleOrDummy[] = isLoaded(build) ? build.character.roles : DUMMY_ROLES
-
 	const [selectedRoleTab, setSelectedRoleTab] = useSelectedable(roleTabs)
 
 	useEffect(() => {

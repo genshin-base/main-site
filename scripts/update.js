@@ -43,7 +43,7 @@ import {
 	saveWeapons,
 	WWW_DYNAMIC_DIR,
 	WWW_MEDIA_DIR,
-	WWW_STATIC_DIR,
+	WWW_API_FILE,
 } from './_common.js'
 import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
 import {
@@ -385,10 +385,9 @@ async function saveWwwData() {
 
 	replaceEnemiesByGroups(enemies, enemyGroups)
 
-	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
-		await fs.rm(dir, { recursive: true, force: true })
-		await fs.mkdir(dir, { recursive: true })
-	}
+	await fs.rm(WWW_API_FILE, { force: true })
+	await fs.rm(WWW_DYNAMIC_DIR, { recursive: true, force: true })
+	await fs.mkdir(WWW_DYNAMIC_DIR, { recursive: true })
 
 	const md5sum = createHash('md5')
 	async function writeJson(path, data) {
@@ -443,9 +442,9 @@ async function saveWwwData() {
 
 	const hash = md5sum.digest('hex').slice(0, 8)
 	await fs.writeFile(
-		`${WWW_STATIC_DIR}/index.ts`,
+		WWW_API_FILE,
 		`
-import { apiGetJSONFile, mapAllByCode, MapAllByCode } from '#src/api'
+import { apiGetJSONFile, mapAllByCode, MapAllByCode } from '#src/api/utils'
 
 const LANG = 'en'
 

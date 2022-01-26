@@ -1,10 +1,11 @@
-import './App.scss'
 import { PageWrap } from './components/page-wrap'
 import { Footer } from './containers/footer'
 import { Header } from './containers/header'
-import { EquipmentPage } from './pages/equipment'
 import { BuildsPage } from './pages/builds'
+import { EquipmentPage } from './pages/equipment'
 import { FrontPage } from './pages/front-page'
+
+import './App.scss'
 
 export function App() {
 	let page = <FrontPage />
