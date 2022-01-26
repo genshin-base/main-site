@@ -9,7 +9,7 @@ import {
 import { useEffect, useRef } from 'preact/hooks'
 
 import { clamp } from '#lib/utils/values'
-import { checkAvifSupport, imgIsReady } from '#lib/utils/web_media'
+import { checkAvifSupport } from '#lib/utils/web_media'
 import { memo } from '#src/utils/preact-compat'
 
 const TILE_DRAW_WIDTH = 192
@@ -48,8 +48,14 @@ const MapProjection = {
 	},
 }
 
-export type MapMarkerRaw = { x: number; y: number; icon: string; style?: null | 'circle' }
-type MapMarker = { x: number; y: number; icon: HTMLImageElement; style: null | 'circle' }
+export type MapMarkerStyle = null | 'circle' | 'outline'
+export type MapMarkerRaw = { x: number; y: number; icon: string; style?: MapMarkerStyle }
+type MapMarker = {
+	x: number
+	y: number
+	icon: null | HTMLImageElement | HTMLCanvasElement
+	style: MapMarkerStyle
+}
 
 export const TeyvatMap = memo(function TeyvatMap({
 	classes,
@@ -136,19 +142,33 @@ function calcAutoPosition(map: LocMap, markers: MapMarkerRaw[]) {
 class MarkersLayer {
 	private map: LocMap | null = null
 	private markers: MapMarker[] = []
-	private onIconLoad: () => unknown
+	private iconCache: Map<string, HTMLImageElement | HTMLCanvasElement> = new Map()
 
-	constructor() {
-		this.onIconLoad = () => this.map?.requestRedraw()
+	private loadMarkerImg(marker: MapMarker, src: string) {
+		const cachedImg = this.iconCache.get(src + '|' + marker.style)
+		if (cachedImg) {
+			marker.icon = cachedImg
+			this.map?.requestRedraw()
+		} else {
+			const img = new Image()
+			img.src = src
+			img.onload = () => {
+				marker.icon =
+					marker.style === 'outline'
+						? makeCanvasWithShadow(img, 1, 'black') //
+						: img
+				this.map?.requestRedraw()
+			}
+		}
 	}
 
 	setMarkers(rawMarkers: MapMarkerRaw[]) {
 		this.markers.length = 0
+		this.iconCache.clear()
 		for (const { x, y, icon: src, style = null } of rawMarkers) {
-			const icon = new Image()
-			icon.src = src
-			icon.onload = this.onIconLoad
-			this.markers.push({ x, y, icon, style })
+			const marker = { x, y, icon: null, style }
+			this.loadMarkerImg(marker, src)
+			this.markers.push(marker)
 		}
 	}
 
@@ -176,9 +196,10 @@ class MarkersLayer {
 			}
 
 			const img = marker.icon
-			if (imgIsReady(img)) {
-				const nw = img.naturalWidth
-				const nh = img.naturalHeight
+			if (img !== null) {
+				const isImg = 'naturalWidth' in img
+				const nw = isImg ? img.naturalWidth : img.width
+				const nh = isImg ? img.naturalHeight : img.height
 				const scale = Math.min(size / nw, size / nh)
 				const w = nw * scale
 				const h = nh * scale
@@ -212,4 +233,17 @@ class MarkersLayer {
 		this.map = null
 		this.markers.length = 0
 	}
+}
+
+function makeCanvasWithShadow(img: HTMLImageElement, blur: number, color: string) {
+	const canvas = document.createElement('canvas')
+	canvas.width = img.naturalWidth
+	canvas.height = img.naturalHeight
+	const rc = canvas.getContext('2d')
+	if (rc) {
+		rc.shadowBlur = blur
+		rc.shadowColor = color
+		for (let i = 0; i < 3; i++) rc.drawImage(img, 0, 0)
+	}
+	return canvas
 }

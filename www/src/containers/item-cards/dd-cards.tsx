@@ -437,12 +437,16 @@ export function OtherItemCard({
 		const srcs = materialOnMap.obtainSources
 		addMarkerGroupsByDomains(markerGroups, getAllRelated(related.domains, srcs.domainCodes))
 		addMarkerGroupsByEnemies(markerGroups, getAllRelated(related.enemies, srcs.enemyCodes))
-		const icon = getItemIconSrc(materialOnMap.code)
-		const markers =
-			materialOnMap.locations === 'external'
-				? 'external'
-				: materialOnMap.locations.map(([x, y]): MapMarkerRaw => ({ x, y, icon, style: 'circle' }))
-		markerGroups.push({ code: materialOnMap.code, title: materialOnMap.name, markers })
+		if (materialOnMap.locations.length > 0) {
+			const icon = getItemIconSrc(materialOnMap.code)
+			const markers =
+				materialOnMap.locations === 'external'
+					? 'external'
+					: materialOnMap.locations.map(
+							([x, y]): MapMarkerRaw => ({ x, y, icon, style: 'outline' }),
+					  )
+			markerGroups.push({ code: materialOnMap.code, title: materialOnMap.name, markers })
+		}
 
 		return {
 			itemData: {
