@@ -577,7 +577,7 @@
               - b: Эмблема рассечённой судьбы (4)
               - >2
                  on отряд comps где Сян Лин имеет более низкую потребность Восст. энергии (то есть Националка Райдэн).
-              - b: "The Exile (2) Scholar (2): "
+              - b: "Изгнанник (2) Учёный (2): "
               - "Этот комплект can be used as a "
               - b: very low investment support build to enable Реверсивное Таяние отряд comps
               - " где Сян Лин is not triggering the reaction и is instead
@@ -919,8 +919,8 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  The Alley Flash: 
-              - "The Alley Flash has the potential to beat Iron Sting "
+                  Вспышка во тьме: 
+              - "Вспышка во тьме has the potential to beat Стальное жало "
               - b: "[R5],"
               - " но this requires the passive to be up, whenever damaged, your
                 passive is disabled for 5 сек. и you could be losing out a
@@ -937,23 +937,23 @@
               - b: Crimson Witch (4) is your лучший комплект for damage.
               - >-
                 
-                Пиро Damage бонус will всегда be the лучший for cup. The combo for the highest Таяние/Пар damage is The Black Sword и Мастерство стихий sand. 
+                Пиро Damage бонус will всегда be the лучший for cup. The combo for the highest Таяние/Пар damage is Чёрный меч и Мастерство стихий sand. 
               - b: "[R1]"
-              - " Iron Sting и Мастерство стихий sand turns out to have diminishing returns
+              - " Стальное жало и Мастерство стихий sand turns out to have diminishing returns
                 и isn't as good, но "
               - b: "[R2+]"
-              - " Iron Sting is a different question because better buffs.
+              - " Стальное жало is a different question because better buffs.
                 (Assuming you don't have a whale build's CR/CD статы, in which
                 case Aquila с Мастерство стихий sands is just flat out better.)"
           - p:
-              - b: "Thundering Fury (4):"
+              - b: "Громогласный рёв ярости (4):"
               - " Этот комплект "
               - b: works лучший if paired с Электро supports such as Бэй Доу и Фишль/Лиза,
               - |2
                  as it allows Беннет to accomplish 2 things: 
                 1) Rapidly spam E for raw pyro damage + overload
                 2) Generate tons of энергия for the entire отряд. 
-              - b: "Thundering Fury (4) also allows Беннет to quickly break the shields of the
+              - b: "Громогласный рёв ярости (4) also allows Беннет to quickly break the shields of the
                   Abyss Lectors "
               - >
                 in the Spiral Abyss. Этот comp is generally only recommended for
@@ -968,7 +968,7 @@
                 Iron sting take priority over other мечи."
           - p:
               - >-
-                It is also worth noting that с 4 TF, Primordial Jade Cutter
+                It is also worth noting that с 4 TF, Драгоценный омут
                 is able to overtake MIstsplitter Reforged due to its massive
                 Шанс крит. попадания% допстат, which allows you to vape consistently
                 despite the lack of Крит. урон/Шанс крит. попадания subs in your artifacts.
@@ -978,7 +978,7 @@
                 Mistsplitter easily overtakes Jade Cutter.
 
                 Recommended amount of Восст. энергии%: 130-150%. Worth noting that 
-              - b: с Thundering Fury (4), you have a lot more leeway когда it comes to Восст. энергии.
+              - b: с Громогласный рёв ярости (4), you have a lot more leeway когда it comes to Восст. энергии.
       - code: burst support
         isRecommended: true
         weapons:
@@ -1277,18 +1277,18 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Mistsplitter Reforged, Aquila Favonia:
+                  Рассекающий туман, Меч Сокола:
               - >2
                  These weapons have the highest Базовая атака in the game which is why it is ranked quite high. It is assuming you have достаточно Восст. энергии so you still can burst off время отката for the maximum Сила атаки бафф.
-              - b: "Freedom-Sworn:"
+              - b: "Клятва свободы:"
               - >2
-                 In comps где Беннет can reliably trigger reactions (и thus trigger this sword's passive), the buffs provided by this оружие will be stronger than Aquila Favonia.
-              - b: "The Alley Flash: "
+                 In comps где Беннет can reliably trigger reactions (и thus trigger this sword's passive), the buffs provided by this оружие will be stronger than Меч Сокола.
+              - b: "Вспышка во тьме: "
               - >
                 Этот оружие на данный момент has the highest Базовая атака for a 4 star
                 оружие (even more Базовая атака than some 5 stars like Skyward
                 Blade).
-              - b: "Prototype Rancour: "
+              - b: "Прототип: Злоба: "
               - Этот оружие has one of the highest Базовая атака for a 4 Star оружие
                 (и this is also a оружие you could craft from the Blacksmith)
     credits:
@@ -1475,9 +1475,9 @@
           - p:
               - b: |-
                   О комплектах артефактов: 
-                  Bloodstained Chivalry (4): 
+                  Рыцарь крови (4): 
               - Despite how dependant Синь Янь's playstyle can get с Charged
-                Attacks, Bloodstained Chivalry Full Set is still not recommended
+                Attacks, Рыцарь крови Full Set is still not recommended
                 due to it only coming in effect after a kill.
       - code: shield support
         isRecommended: false
@@ -2694,7 +2694,7 @@
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
-              - b: "Lavawalker (4): "
+              - b: "Ступающий по лаве (4): "
               - "Кли's kit makes it harder to utilize Пар и Таяние the
                 same way another pyro carry would, но её constant pyro
                 наложение makes Lavawalkers a viable комплект. See KleefulFrame's
@@ -2945,7 +2945,7 @@
               - Since Ху Тао is able to trigger Пар on most of её damage
                 output, Мастерство стихий is quite valuable on её. If you have
                 less than 100EM total (including from Сахароза Мастерство стихий share, 4pc
-                Instructor, и т.д) Мастерство стихий допстат take priority over Шанс крит. попадания / урон.
+                Инструктор, и т.д) Мастерство стихий допстат take priority over Шанс крит. попадания / урон.
     credits: null
   - code: yoimiya
     elementCode: pyro
@@ -3145,7 +3145,7 @@
               - The go-to artifact комплект for Пар focused Пиро carries,
               - b: " excels over the other options especially on a reaction focused отряд comp."
               - "\n"
-              - b: "Lavawalker (4): "
+              - b: "Ступающий по лаве (4): "
               - "Viable option on a "
               - b: mono Пиро отряд
               - " comp где Ёимия can have 100% uptime on the artifact
@@ -3378,7 +3378,7 @@
               - b: "[C6],"
               - " Oz will be dealing about 60% of the ДПС и it'd be better to
                 invest on "
-              - b: Конец гладиатора (2) Thundering Fury (2)
+              - b: Конец гладиатора (2) Громогласный рёв ярости (2)
               - " until you can obtain "
               - b: Бледный огонь (4)
               - " с an Электро Кубок."
@@ -3614,7 +3614,7 @@
               - "\n"
               - b: "Thundersoothers (4):"
               - " Этот artifact комплект will outperform "
-              - b: Конец гладиатора(2) Thundering Fury(2)
+              - b: Конец гладиатора(2) Громогласный рёв ярости(2)
               - " if used in a отряд comp где an electro aura is всегда present
                 (e.g. Электро/Электро-charged comps) therefore it is "
               - b: highly recommended within this niche.
@@ -3843,7 +3843,7 @@
               - " In отряд comps где Бэй Доу has "
               - b: low Восст. энергии requirements
               - " (то есть когда paired с electro batteries), a "
-              - b: Церемония древней знати (2) / Thundering Fury (2) / +18% Сила атаки комплект (2) [Choose Two]
+              - b: Церемония древней знати (2) / Громогласный рёв ярости (2) / +18% Сила атаки комплект (2) [Choose Two]
               - " will outperform"
               - b: " Эмблема рассечённой судьбы (4)."
               - "\n"
@@ -3858,7 +3858,7 @@
                 doesn't benefit from the Сила атаки бафф from the 4 piece комплект if она's
                 the комплект holder, so Бэй Доу as a Церемония древней знати (4) holder isn't
                 really recommended.
-              - b: "Scholar (2) The Exile (2): "
+              - b: "Учёный (2) Изгнанник (2): "
               - Этот комплект acts as a cheap beginner's option to provide Бэй Доу
                 с 40% Восст. энергии to help maintain её Взрыв стихии
                 uptime.
@@ -4041,9 +4041,9 @@
               - " For отряды that focus on Заряжен reactions, "
               - b: Усмиряющий гром (4)
               - " can out dps "
-              - b: Thundering Fury (2) +18% Сила атаки комплект (2),
+              - b: Громогласный рёв ярости (2) +18% Сила атаки комплект (2),
               - " said комплект is only recommended below "
-              - b: Thundering Fury (2) +18% Сила атаки комплект (2)
+              - b: Громогласный рёв ярости (2) +18% Сила атаки комплект (2)
               - " due to the potential inconsistency."
           - p: Электро ДПС Лиза plays around Заряжен reaction отряды ideally, for
               Перегрузка Лиза отряды, you would be building for Мастерство стихий ДПС since you
@@ -4521,7 +4521,7 @@
           - p:
               - b: |-
                   О комплектах артефактов: 
-                  Бледный огонь (2) Bloodstained Chivalry (2): 
+                  Бледный огонь (2) Рыцарь крови (2): 
               - Этот комплект is better if your Сила атаки% is covered by your допстаты,
                 otherwise you would be better off running Конец гладиатора
                 (4).
@@ -5050,17 +5050,17 @@
               - >
                 Этот комплект is the лучший by far as Кэ Цин can proc its 4 piece комплект
                 bonus instantly by charge attacking after casting E.
-              - b: "Бледный огонь (2) Bloodstained Chivalry (2): "
+              - b: "Бледный огонь (2) Рыцарь крови (2): "
               - |2
                  Этот комплект should only be used until getting 4PF.
-              - b: "Bloodstained Chivalry (2) +18% Сила атаки комплект (2): "
+              - b: "Рыцарь крови (2) +18% Сила атаки комплект (2): "
               - |
                 The generalist Physical ДПС комплект.
               - b: "Встречная комета (4): "
               - >
                 Этот комплект should only be used с a consistent shielder (то есть
                 Чжун Ли/Диона) for obvious reasons.
-              - b: "Bloodstained Chivalry (4): "
+              - b: "Рыцарь крови (4): "
               - Этот комплект is for general solo и Abyss content где there are
                 multiple mobs that can be killed с заряженные атаки within 10
                 сек., this is for dealing с a crowd, in other words, AoE.
@@ -5169,7 +5169,7 @@
               notes: null
               seeCharNotes: false
           notes:
-            - p: 4-pcs. Thundering Fury is Not Recommended for Электро ДПС Кэ Цин.
+            - p: 4-pcs. Громогласный рёв ярости is Not Recommended for Электро ДПС Кэ Цин.
             - p: "Note: Артефакт recommendations are not ranked in order of recommendation,
                 read the notes for more info."
           seeCharNotes: false
@@ -5235,25 +5235,25 @@
               - b: "Regarding Roles:"
               - >-
                 
-                Both physical и electro keqing are good и viable. You'd usually want to decide which build to go for depending on your оружие gacha luck. For example, Lion's Roar = Электро, Flute will be equally good on Электро/физ., и т.д.
+                Both physical и electro keqing are good и viable. You'd usually want to decide which build to go for depending on your оружие gacha luck. For example, Драконий рык = Электро, Flute will be equally good on Электро/физ., и т.д.
         notes:
           - p:
               - b: |-
                   О выборе оружия: 
-                  Summit Shaper: 
+                  Кромсатель пиков: 
               - "Этот оружие can only beat Jade Cutter "
               - b: "[R1] "
               - "когда it's shielded at "
               - b: "[R2]."
               - "\n"
-              - b: "The Black Sword:"
+              - b: "Чёрный меч:"
               - " On a quickswap Кэ Цин, this оружие will be shifted below
-                Harbinger of Dawn "
+                Предвестник зари "
               - b: "[R5]."
           - p:
               - b: |-
                   О комплектах артефактов: 
-                  Thundering Fury (2) +18% Сила атаки комплект (2): 
+                  Громогласный рёв ярости (2) +18% Сила атаки комплект (2): 
               - >
                 Этот комплект is a generalist комплект, which means it can be used
                 generally anywhere, whether it be Co-op или Abyss, или other
@@ -5266,7 +5266,7 @@
                 Этот комплект has a 35% Dmg modifier which увеличивает all damage from
                 all sources, although that modifier is a bit unstable due to its
                 dependency to the sustainability of Электро aura on враги.
-              - b: "Thundering Fury (2) Церемония древней знати (2): "
+              - b: "Громогласный рёв ярости (2) Церемония древней знати (2): "
               - Этот комплект is used for Взрыв стихии/Quickswap AoE Кэ Цин. With this комплект,
                 you'd want to be using Starward Sword (Q) all the time, which is
                 your main source of ДПС с this комплект.
@@ -5685,7 +5685,7 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Primordial Jade Cutter: "
+              - b: "Драгоценный омут: "
               - "Этот is Син Цю's лучший in slot оружие if ran с sufficient Восст. энергии
                 (240% Восст. энергии before "
               - b: "[C6]"
@@ -5696,7 +5696,7 @@
               - b: "Sacrifical Sword:"
               - >2
                  Этот is Син Цю's лучший in slot оружие if he doesnt have much Восст. энергии from допстаты, otherwise it is his second лучший in slot оружие.
-              - b: "Harbinger of Dawn:"
+              - b: "Предвестник зари:"
               - " Этот is a great оружие for Син Цю, assuming he's either "
               - b: "[C6]"
               - " или teamed с another Гидро персонаж for энергия generation."
@@ -5705,7 +5705,7 @@
               - " When Син Цю is "
               - b: "[C6],"
               - " Mistsplitter и Jade Cutter has the лучший damage potential
-                given достаточно Восст. энергии (170-190%), Skyward Blade has the second лучший
+                given достаточно Восст. энергии (170-190%), Небесный меч has the second лучший
                 damage potential (same Восст. энергии requirement as Jade), и Sacrificial
                 Sword has the third лучший damage potential."
           - p:
@@ -5720,7 +5720,7 @@
               - " If you already have an invested "
               - b: "[C6]"
               - >2
-                 Син Цю build с Церемония древней знати (2) Heart of Depth (2) и Sacrificial Sword, you don't need to farm for this комплект. 
+                 Син Цю build с Церемония древней знати (2) Сердце глубин (2) и Церемониальный меч, you don't need to farm for this комплект. 
               - b: "Церемония древней знати (4): "
               - >
                 Offers отряд-wide Сила атаки boost, you can use this комплект on Син Цю if
@@ -5728,7 +5728,7 @@
               - b: "Thundersoothers (4): "
               - "Этот комплект is only recommended if you're running an
                 electrocharged отряд. It's essentially the same as Noblesse
-                Oblige (2) Heart of Depth (2) in terms of damage boost, но it
+                Oblige (2) Сердце глубин (2) in terms of damage boost, но it
                 also увеличивает Элементальный навык damage, it comes с a condition
                 though; the враг needs to be под эффектом Электро aura. "
               - b: Not recommended to specifically farm for this комплект.
@@ -5742,7 +5742,7 @@
               - " within this niche, "
               - b: it is generally not recommended to specifically farm for this комплект.
               - "\n"
-              - b: "The Exile (2) Scholar (2): "
+              - b: "Изгнанник (2) Учёный (2): "
               - "Этот комплект is a cheap beginner option to maintain burst uptime
                 well since it gives 40% Восст. энергии. Note that it is "
               - b: not recommended to stay on this комплект as Син Цю contributes alot of damage in
@@ -5751,7 +5751,7 @@
               - b: "О приоритете основных характеристик:"
               - >-
                 
-                Ideally you would be running Сила атаки% Sands когда your Восст. энергии needs are fulfilled. (200% if Sacrificial Sword, 230%+ for others).
+                Ideally you would be running Сила атаки% Sands когда your Восст. энергии needs are fulfilled. (200% if Церемониальный меч, 230%+ for others).
     credits:
       - a: In-depth Guide
         href: https://docs.google.com/document/d/1RQI5IjLZKqsVhQzRDr7FTYgQX66jKB28PnwoZVlQ4_k/edit
@@ -6041,9 +6041,9 @@
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
-              - b: "Maiden Beloved (2) Стойкость Миллелита (2):"
+              - b: "Возлюбленная юная дева (2) Стойкость Миллелита (2):"
               - >2
-                 Acts as a place holder комплект for Maiden Beloved if you want pure healing и have not been able to gather Maiden Beloved (4) yet.
+                 Acts as a place holder комплект for Возлюбленная юная дева if you want pure healing и have not been able to gather Возлюбленная юная дева (4) yet.
               - b: "Церемония древней знати (4): "
               - Usable option if you want Барбара to have more utility, но do
                 note that Барбара might have bad uptime on this комплект.
@@ -6300,16 +6300,16 @@
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Heart of Depth (2) +18% Сила атаки комплект (2): 
+                  Сердце глубин (2) +18% Сила атаки комплект (2): 
               - "Этот комплект is "
-              - b: only about 1-2 допстаты behind Heart of Depth (4),
+              - b: only about 1-2 допстаты behind Сердце глубин (4),
               - >2
                  you can opt out for this комплект instead if you already have decent pieces.
               - b: "Воспоминания Симэнавы (4):"
               - " Due to this комплект requiring Тарталья to have around 140% Energy
                 Recharge to reliably burst every rotation, it falls behind the
                 other options. However, it outperforms "
-              - b: "Heart of Depth (4) "
+              - b: "Сердце глубин (4) "
               - "if used in a single rotation setting "
               - b: (ignoring Восст. энергии).
     credits:
@@ -8006,25 +8006,25 @@
               - b: Реверсивное Таяние отряды
               - |2
                  где the Мастерство стихий stat would be useful.
-              - b: "Skyward Blade:"
+              - b: "Небесный меч:"
               - " In отряды с a "
               - b: 2nd Крио unit generating энергия,
               - >2
                  this оружие would have a lower priority as the Восст. энергии stat would mostly be wasted.
-              - b: "Lion's Roar / The Alley Flash / Iron Sting:"
+              - b: "Драконий рык / Вспышка во тьме / Стальное жало:"
               - " These weapons' rankings are assumed с "
               - b: Реверсивное Таяние отряды
               - " где the passive и Мастерство стихий stat would be useful. At"
               - b: " [R5],"
               - " these weapons would "
-              - b: outperform Summit Shaper.
+              - b: outperform Кромсатель пиков.
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Instructor (4): 
-              - "Due to his ability to easily trigger Instructor's passive,
+                  Инструктор (4): 
+              - "Due to his ability to easily trigger Инструктор's passive,
                 Кэйа is a good holder of "
-              - b: Instructor (4)
+              - b: Инструктор (4)
               - >2
                  for Реверсивное Таяние отряды. Aside from Восст. энергии%, most of his other main статы don't matter as much, making this one of his budget support builds. 
               - b: "Церемония древней знати (4): "
@@ -8610,7 +8610,7 @@
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Lavawalker's Epiphany (4):
+                  Ступающий по лаве's Epiphany (4):
               - >2
                  Only viable on Розария if она's triggering Реверсивное Таяние, pulls ahead of Церемония древней знати (2) Заблудший в метели (2) assuming you can trigger Реверсивное Таяние on all of её kits.
               - b: "Церемония древней знати (4): "
@@ -8627,7 +8627,7 @@
                   комплект.
               - >-
                 
-                If you don't wish to hyperinvest onto Розария, она could still be used as a Шанс крит. попадания provider, you can build up to 88% Шанс крит. попадания и use skill to cap out 100% Шанс крит. попадания, then cast Взрыв стихии for the Шанс крит. попадания бафф. Этот can be easily achievable if you have an existing Шанс крит. попадания допстат polearm, otherwise just put on whatever Шанс крит. попадания Корона, Substats и Berserker artifacts you may have to stack Шанс крит. попадания.
+                If you don't wish to hyperinvest onto Розария, она could still be used as a Шанс крит. попадания provider, you can build up to 88% Шанс крит. попадания и use skill to cap out 100% Шанс крит. попадания, then cast Взрыв стихии for the Шанс крит. попадания бафф. Этот can be easily achievable if you have an existing Шанс крит. попадания допстат polearm, otherwise just put on whatever Шанс крит. попадания Корона, Substats и Берсерк artifacts you may have to stack Шанс крит. попадания.
     credits: null
   - code: qiqi
     elementCode: cryo
@@ -8791,16 +8791,16 @@
           - p:
               - b: "Regarding Оружие и Артефакт Choices:"
               - "\n"
-              - b: "Sacrificial Sword и Стойкость Миллелита (4): "
+              - b: "Церемониальный меч и Стойкость Миллелита (4): "
               - "Стойкость Миллелита allows Ци Ци to give the отряд a "
               - b: decent Сила атаки boost
               - " while staying in враг melee reach с Элементальный навык active.
-                Sacrificial Sword увеличивает the uptime of её Элементальный навык, which in
+                Церемониальный меч увеличивает the uptime of её Элементальный навык, which in
                 turn увеличивает the uptime of the отряд's Сила атаки boost. If you find
                 that your Ци Ци's heals are often more than достаточно, you may
                 consider switching её to this artifact комплект. "
               - b: >-
-                  Do note that other персонажи might utilize Sacrificial Sword
+                  Do note that other персонажи might utilize Церемониальный меч
                   more than Ци Ци, such as Син Цю, Кадзуха, и т.д.
 
                   Ocean Hued Clam (4):
@@ -9539,7 +9539,7 @@
               - >
                 Этот оружие is more forgiving towards Восст. энергии допстаты. If there is a
                 Крио battery unit in your отряд (Диона с Церемониальный лук или
-                Кэйа с Favonius Sword) или if your отряд generates достаточно
+                Кэйа с Меч Фавония) или if your отряд generates достаточно
                 particles on their own, Skyward Pride loses effectiveness
                 compared to the above options. 
               - b: "Akuoumaru:"
@@ -9551,7 +9551,7 @@
               - b: "Бледный огонь (4): "
               - "Этот is Эола's optimal artifact комплект и it relies on having a
                 condition fulfilled in order to outperform Бледный огонь (2)
-                Bloodstained Chivalry (2). If you are able to sustain the
+                Рыцарь крови (2). If you are able to sustain the
                 conditional бафф, you will be able to achieve a 50% Physical урон
                 бонус + 18% Сила атаки. Without using your Взрыв стихии, you can
                 sustain the Бледный огонь's 4 piece комплект bonus because each stack
@@ -9564,7 +9564,7 @@
               - b: "[C2+]."
               - |2
                  Please visit the Ability Tips for её combo.
-              - b: "Бледный огонь (2) Bloodstained Chivalry (2): "
+              - b: "Бледный огонь (2) Рыцарь крови (2): "
               - Этот is a non-conditional, consistent artifact комплект that provides
                 you a constant 50% Physical урон bonus. While that by itself is
                 amazing, Бледный огонь (4) can outperform this комплект because it also
@@ -9758,13 +9758,13 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Aquila Favonia:"
+              - b: "Меч Сокола:"
               - >2
                  While Aquila has Physical Damage% as a главстат, which is basically useless on Аяка, it is still a good statstick as it has a high Базовая атака и Сила атаки% бафф from the passive.
-              - b: "Primordial Jade Cutter:"
+              - b: "Драгоценный омут:"
               - >2
                  With Заблудший в метели (4) и Крио Resonance, this оружие overcrits, so avoid getting Шанс крит. попадания допстаты.
-              - b: "Skyward Blade, Blackcliff Longsword, The Black Sword, Amenoma Kageuchi:"
+              - b: "Небесный меч, Черногорский длинный меч, Чёрный меч, Амэнома Кагэути:"
               - " These 4 weapons will give a similar output, so it's not worth
                 getting или building another когда you already have one. Depends
                 on how much Восст. энергии you're running, how much stacks your
@@ -9772,17 +9772,17 @@
                 Attacks, и how much you value the passive on Amenoma since it
                 gives you leeway in building Восст. энергии, one can be better
                 than the other. If you're running "
-              - b: Skyward Blade
+              - b: Небесный меч
               - " или "
-              - b: Amenoma Kageuchi
+              - b: Амэнома Кагэути
               - " (especially с higher refines), avoid getting Восст.
                 энергии допстаты as their статы / passives assist in elemental
                 burst generation significantly."
               - b: |-
                   
-                  The Flute:
+                  Меч-флейта:
               - " Offers slightly more damage potential than"
-              - b: " Amenoma Kageuchi"
+              - b: " Амэнома Кагэути"
               - ", с the tradeoff being losing Kageuchi's энергия generation.
                 Decide for yourself which is better for your отряд и
                 rotations."
@@ -10301,7 +10301,7 @@
           notes: Сахароза's Talent Levels are not a necessity.
           seeCharNotes: false
         tips:
-          - "When utilized as a Viridescent Venerer (4) artifact комплект holder, "
+          - "When utilized as a Изумрудная тень (4) artifact комплект holder, "
           - b: make sure you don't immediately swap away after casting Элементальный навык/Взрыв стихии,
           - " you need to be on-field когда the swirl reaction happens for you to
             trigger the 4-комплект effect."
@@ -10476,7 +10476,7 @@
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Viridescent Venerer:
+                  Изумрудная тень:
               - " The bread и butter artifact комплект for Анемо units, this комплект
                 provides the ability to shred the враг's elemental resistance
                 while also buffing Саю's swirl damage output."
@@ -10661,21 +10661,21 @@
               - b: full Сила атаки/Crit
               - >2
                  build without much difference in damage. The оружие rankings listed here will not change much between the two builds.
-              - b: "Sacrificial Sword:"
+              - b: "Церемониальный меч:"
               - " Этот оружие's ranking assumes you make use of the passive
                 Элементальный навык reset, however doing so will require you to "
               - b: stay onfield for a much longer period of time which may not be ideal
                   sometimes.
               - "\n"
-              - b: "Amenoma Kageuchi:"
+              - b: "Амэнома Кагэути:"
               - " Этот оружие "
               - b: reduces your Восст. энергии% requirements to ~135% at [R1] и ~110% at [R5].
               - " At ["
               - b: R5],
               - " this оружие will be "
-              - b: better than Sacrificial Sword.
+              - b: better than Церемониальный меч.
               - "\n"
-              - b: "Favonius Sword:"
+              - b: "Меч Фавония:"
               - " Although this оружие does not provide much damage, "
               - b: the Energy generated by the passive can sometimes be more beneficial to your
                   отряд.
@@ -11003,11 +11003,11 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Mistsplitter Reforged:
+                  Рассекающий туман:
               - " If Джинн is used с a way to infuse её attacks с an
                 element (Чун Юнь / "
               - b: "[C6]"
-              - " Беннет), Mistsplitter Reforged will outperform Primordial
+              - " Беннет), Рассекающий туман will outperform Primordial
                 Jade Cutter as you get full value out of the passive."
       - code: burst support
         isRecommended: true
@@ -11202,7 +11202,7 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Amenoma Kageuchi: 
+                  Амэнома Кагэути: 
               - "Этот оружие can lower your Восст. энергии% requirements from anywhere
                 between "
               - b: ~150% to no additional Восст. энергии% needed,
@@ -11211,26 +11211,26 @@
               - "As such, at "
               - b: higher refines / more stacks on the passive,
               - " this оружие can perform"
-              - b: " better than Skyward Blade,"
+              - b: " better than Небесный меч,"
               - " while at "
               - b: lower refines / less stacks, it can perform worse.
               - "\n"
-              - b: "Freedom-Sworn: "
+              - b: "Клятва свободы: "
               - "The ranking here only "
               - b: assumes Джинн's personal damage и not the utility it gives.
               - b: " "
               - "If you want to furthermore бафф your глав. ДПС, you can give
                 this sword to Джинн as она "
-              - b: can trigger Freedom-Sworn's skill relatively easily since Анемо is всегда
+              - b: can trigger Клятва свободы's skill relatively easily since Анемо is всегда
                   trigger.
               - "\ \n"
-              - b: "Lion's Roar:"
+              - b: "Драконий рык:"
               - " Depending on passive uptime, it can be ranked over Favonius
                 (at 50% uptime) и even Aquila (at 100% uptime)."
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
-              - b: "Viridescent Venerer (4) "
+              - b: "Изумрудная тень (4) "
               - "is the bread и butter for Анемо персонажи in general, as it
                 is "
               - b: commonly used for the 40% elemental resistance shred.
@@ -11243,12 +11243,12 @@
               - b: "20% partywide Сила атаки boost "
               - |
                 after Джинн casts её Взрыв стихии.
-              - b: Ocean-Hued Clam (4)
+              - b: Моллюск морских красок (4)
               - " is the лучший комплект for Джинн's personal damage, as the damage it
                 deals scales с Джинн's burst healing. However, because Джинн's
                 total damage output is on the low end, it is generally
                 recommended to prioritize utility options such as Noblesse
-                Oblige или Viridescent Venerer over this комплект."
+                Oblige или Изумрудная тень over this комплект."
           - p:
               - b: "О приоритетных талантах:"
               - >-2
@@ -11629,7 +11629,7 @@
                 Slayers) if compared с other weapons.
           - p:
               - b: "О комплектах артефактов: "
-              - Prioritize Viridescent Venerer over the other 2 +18% Сила атаки sets if
+              - Prioritize Изумрудная тень over the other 2 +18% Сила атаки sets if
                 there are external Сила атаки% бафф sources on your отряд.
     credits:
       - a: In-depth Guide
@@ -11774,11 +11774,11 @@
               - b: " stack as much Мастерство стихий while getting достаточно Восст. энергии (160-180%) for a consistent Взрыв стихии
                   uptime"
               - >
-                . Having Sacrificial Sword или a second Анемо персонаж in the
+                . Having Церемониальный меч или a second Анемо персонаж in the
                 отряд will also help reduce the needs for Восст. энергии и prioritize Мастерство стихий
                 допстат more.
-              - b: "Iron Sting: "
-              - Iron Sting will yield the highest upfront Мастерство стихий и teamwide бафф
+              - b: "Стальное жало: "
+              - Стальное жало will yield the highest upfront Мастерство стихий и teamwide бафф
                 if compared to the other 4 star options,
               - b: " if you manage to meet his энергия needs или simply don't need more than one
                   rotation, this would be the better option if compared to the
@@ -11786,7 +11786,7 @@
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Thundering Fury (4): 
+                  Громогласный рёв ярости (4): 
               - "Этот is a niche build that excels "
               - b: only in AOE situations и с specific отряды.
               - " Этот отряды includes an "
@@ -12291,7 +12291,7 @@
               - Optimally offers slightly less damage than Gladiator's, но is
                 much easier to farm per resin и can have 100% uptime с
                 crystallise shields. Consider Конец гладиатора if you don't
-                want to farm for Archaic Petra as Артефакт Strongbox is much
+                want to farm for Архаичный камень as Артефакт Strongbox is much
                 more effective than elite bosses in terms of artifacts per
                 resin.
       - code: support
@@ -12532,7 +12532,7 @@
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
-              - b: "The Exile (4): "
+              - b: "Изгнанник (4): "
               - >
                 Casting Взрыв стихии regenerates a total of 6 Energy for each
                 of your отряд участник. Этот комплект reduces your Energy Requirements
@@ -12876,7 +12876,7 @@
           - p:
               - b: "О выборе оружия:"
               - "\ \n"
-              - b: Festering Desire, Skyward Blade, Amenoma Kageuchi
+              - b: Осквернённое желание, Небесный меч, Амэнома Кагэути
               - ": These weapons help in bursting off время отката, но if you're
                 not having issues с энергия, then these weapons falls behind
                 in terms of damage."
@@ -13480,7 +13480,7 @@
               - b: |-
                   О комплектах артефактов:
                   Эмблема рассечённой судьбы (4): 
-              - On higher Восст. энергии requirements, this комплект pulls ahead of Archaic Petra
+              - On higher Восст. энергии requirements, this комплект pulls ahead of Архаичный камень
                 (2) Церемония древней знати (2), however it's not recommended to stack
                 Восст. энергии to fully benefit from the 4 piece комплект effect since by
                 stacking Восст. энергии, you sacrifice other offensive статы.
@@ -13648,18 +13648,18 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Primordial Jade Cutter:"
+              - b: "Драгоценный омут:"
               - >2
-                 On a Hybrid build где Альбедо casts his Взрыв стихии, this оружие can be a better option than Cinnabar Spindle on certain situations, such as AoE где Альбедо's Взрыв стихии hits multiple враги или когда there are external Сила атаки buffs like Беннет's Взрыв стихии. On a pure Элементальный навык focused Альбедо или Single Target situations for Hybrid Альбедо, Cinnabar Spindle is the better option, so choose wisely.
-              - b: "Harbinger of Dawn:"
+                 On a Hybrid build где Альбедо casts his Взрыв стихии, this оружие can be a better option than Киноварное веретено on certain situations, such as AoE где Альбедо's Взрыв стихии hits multiple враги или когда there are external Сила атаки buffs like Беннет's Взрыв стихии. On a pure Элементальный навык focused Альбедо или Single Target situations for Hybrid Альбедо, Киноварное веретено is the better option, so choose wisely.
+              - b: "Предвестник зари:"
               - >2
-                 Альбедо's Элементальный навык scales с Defense, which is why the Базовая атака from the оружие doesn't matter that much. Harbinger of Dawn offers a lot of Crit статы which is why it is one of the strongest weapons for him despite being a 3 star оружие. The downside of this оружие is that you'd need to keep Альбедо's ХП at 90% или higher to benefit from the passive, so it might be annoying to use против certain враги which has a ХП lowering debuff, even когда off-field, such as Corrosion.
-              - b: "Mistsplitter Reforged:"
+                 Альбедо's Элементальный навык scales с Defense, which is why the Базовая атака from the оружие doesn't matter that much. Предвестник зари offers a lot of Crit статы which is why it is one of the strongest weapons for him despite being a 3 star оружие. The downside of this оружие is that you'd need to keep Альбедо's ХП at 90% или higher to benefit from the passive, so it might be annoying to use против certain враги which has a ХП lowering debuff, even когда off-field, such as Corrosion.
+              - b: "Рассекающий туман:"
               - >2
-                 Realistically you are only able to get 2 stacks of this оружие's passive и this requires setup. Generally just use Harbinger of Dawn instead и give your Mistsplitter Reforged to another sword ДПС персонаж.
-              - b: "Freedom-Sworn:"
+                 Realistically you are only able to get 2 stacks of this оружие's passive и this requires setup. Generally just use Предвестник зари instead и give your Рассекающий туман to another sword ДПС персонаж.
+              - b: "Клятва свободы:"
               - " Equipping this оружие will decrease Альбедо's own damage
-                significantly но he is one of the better Freedom-Sworn holders
+                significantly но he is one of the better Клятва свободы holders
                 since he can trigger the passive quite easily to бафф your other
                 отряд members."
           - p:
@@ -14738,7 +14738,7 @@ weapons:
     passiveStat:
       - "Hitting враги с Normal или Заряженные атаки grants a 50% chance to
         deal 200% Сила атаки as урон  in a small AoE. Этот effect can only occur once
-        every 10s. Additionally, if the Путешественница equips the Sword of Descension,
+        every 10s. Additionally, if the Путешественница equips the Меч нисхождения,
         their atk is increased by 66.  "
       - b: Этот is a preregistration reward PS4 Путешественница only exclusive оружие.
   - code: amenoma-kageuchi
