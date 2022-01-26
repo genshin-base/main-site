@@ -304,7 +304,7 @@
               генерация энергии очень низкая, прокачка её Восст. энергии
               приоритетна.
           - p:
-              - b: "Regarding 4p Instructors: "
+              - b: "О 4 частях Инструктора: "
               - Этот набор предпочтительнее 4 частей Церемонии древней знати, если Эмбер используется в качестве поддержки в команде испарения с Ху Тао.
     credits: null
   - code: xiangling
@@ -934,7 +934,7 @@
                 Assuming a 
               - b: Таяние/Пар
               - " отряд, "
-              - b: Crimson Witch (4) is your лучший комплект for damage.
+              - b: Горящая алая ведьма (4) is your лучший комплект for damage.
               - >-
                 
                 Пиро Damage бонус will всегда be the лучший for cup. The combo for the highest Таяние/Пар damage is Чёрный меч и Мастерство стихий sand. 
@@ -944,7 +944,7 @@
               - b: "[R2+]"
               - " Стальное жало is a different question because better buffs.
                 (Assuming you don't have a whale build's CR/CD статы, in which
-                case Aquila с Мастерство стихий sands is just flat out better.)"
+                case Меч Сокола с Мастерство стихий sands is just flat out better.)"
           - p:
               - b: "Громогласный рёв ярости (4):"
               - " Этот комплект "
@@ -1620,7 +1620,7 @@
               - Этот комплект can be used on Синь Янь if nobody else on the отряд is
                 using this комплект for the partywide Сила атаки бафф.
           - p:
-              - b: "Regarding Стойкость Миллелита (4) и 	Церемониальный двуручный меч: "
+              - b: "О Стойкости Миллелита (4) и Церемониальном двуручном мече: "
               - >-
                 
                 Синь Янь support is mostly used for её щит и/или Взрыв стихии damage. If you want to use её as a Physical Support, она needs both её Ascension 4 Talent и 
@@ -1800,7 +1800,7 @@
               - Этот комплект can be used on Синь Янь if nobody else on the отряд is
                 using this комплект for the partywide Сила атаки бафф.
           - p:
-              - b: "Regarding Стойкость Миллелита (4) и 	Церемониальный двуручный меч: "
+              - b: "О Стойкости Миллелита (4) и Церемониальном двуручном мече: "
               - >-
                 
                 Синь Янь support is mostly used for её щит и/или Взрыв стихии damage. If you want to use её as a Physical Support, она needs both её Ascension 4 Talent и 
@@ -2031,7 +2031,7 @@
                   Tales, even at low refinements.
           - p:
               - b: |-
-                  Regarding Артефакт Set:
+                  О наборе Артефактов:
                   Воспоминания Симэнавы (4): 
               - "Янь Фэй will rarely have её burst up due to the 15 энергия cost
                 on the 4-piece effect, however она can instead "
@@ -2047,10 +2047,10 @@
               - b: "Встречная комета (4): "
               - Running Янь Фэй с a shield персонаж also allows you to make
                 use of a full Встречная комета 4-комплект as a placeholder until
-                you're able to find a good Crimson Witch 4-комплект.
+                you're able to find a good Горящая алая ведьма 4-комплект.
           - p:
               - b: |
-                  Regarding Артефакт Substats Priority: 
+                  О приоритетных допстатах в артефактах: 
               - Восст. энергии is prioritized over Мастерство стихий here since
                 она has an 80 энергия burst cost while её skill is also not very
                 efficient at generating particles for getting it back. A major
@@ -2500,7 +2500,7 @@
                 can stack the Пиро Damage effect, while his burst imbues his
                 Normal/Заряженные атаки с Пиро.
               - b: "Конец гладиатора (4): "
-              - " For those who are still reluctant on farming for Crimson Witch
+              - " For those who are still reluctant on farming for Горящая алая ведьма
                 of Flames (Pre-AR 45), this will still provide it a fairly
                 decent увеличивать in ДПС as he still relies on his Normal Attacks
                 mostly."
@@ -2941,7 +2941,7 @@
                 cannot keep your shield permanently."
           - p:
               - b: |
-                  Regarding Артефакт Substats Priority: 
+                  О приоритетных допстатах в артефактах: 
               - Since Ху Тао is able to trigger Пар on most of её damage
                 output, Мастерство стихий is quite valuable on её. If you have
                 less than 100EM total (including from Сахароза Мастерство стихий share, 4pc
@@ -3126,7 +3126,7 @@
                 range for Рогатка's passive и you have good Сила атаки бафф uptime.
           - p:
               - b: |-
-                  Regarding Артефакты:  
+                  Об Артефактах:  
                   Горящая алая ведьма (2) +18% Сила атаки комплект (2): 
               - "The лучший "
               - b: generalist комплект
@@ -3373,7 +3373,7 @@
               animation cancelling когда you're out of stamina since it can be
               pretty hard to replicate consistently.
           - p:
-              - b: "Regarding [C6] Фишль Build:"
+              - b: "О [C6] Фишль билде:"
               - " At "
               - b: "[C6],"
               - " Oz will be dealing about 60% of the ДПС и it'd be better to
@@ -5232,7 +5232,7 @@
               - ES (Place stiletto, don't reactivate yet) -> EB -> ES
                 (Reactivation) -> Spam AA -> Repeat
           - p:
-              - b: "Regarding Roles:"
+              - b: "О ролях:"
               - >-
                 
                 Both physical и electro keqing are good и viable. You'd usually want to decide which build to go for depending on your оружие gacha luck. For example, Драконий рык = Электро, Flute will be equally good on Электро/физ., и т.д.
@@ -5701,7 +5701,7 @@
               - b: "[C6]"
               - " или teamed с another Гидро персонаж for энергия generation."
           - p:
-              - b: "Regarding Оружие Order on [C6]:"
+              - b: "О приоритете оружия на [C6]:"
               - " When Син Цю is "
               - b: "[C6],"
               - " Mistsplitter и Jade Cutter has the лучший damage potential
@@ -5714,7 +5714,7 @@
                 href: https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit#gid=0
               - i: .
           - p:
-              - b: "Regarding Артефакт Set:"
+              - b: "О наборе Артефактов:"
               - "\n"
               - b: "Эмблема рассечённой судьбы (4):"
               - " If you already have an invested "
@@ -6880,7 +6880,7 @@
                 for её Элементальный навык due to not casting Взрыв стихии in time."
           - p:
               - b: |-
-                  Regarding Артефакт Choices:
+                  О выборе Артефактов:
                   Стойкость Миллелита (4): 
               - "With proper extension of Кокоми's Элементальный навык, она can
                 maintain near "
@@ -7055,7 +7055,7 @@
                 those situations."
           - p:
               - b: |-
-                  Regarding Артефакт Choices:
+                  О выборе Артефактов:
                   Стойкость Миллелита (4): 
               - Although this комплект offers the lowest personal dmg for Кокоми, the
                 20% Сила атаки отряд бафф can sometimes be better for overall отряд ДПС.
@@ -7231,12 +7231,12 @@
               - Provides both Восст. энергии и ХП which are both valuable for a support
                 diona, increasing ult uptime и healing strength respectively.
           - p:
-              - b: "Regarding Main Stat Choices:"
+              - b: "О выборе главстатов:"
               - >-2
                  
                 Full Stack ХП% is recommended if you want stronger shields но a weaker лечить. You can use Healing бонус Корона if you want a nice balance between the two.
           - p:
-              - b: "Regarding Talent Priority:"
+              - b: "О приоритетах талантов:"
               - >-2
                  
                 Prioritise whichever your Диона is geared for (shielder или целитель), if built for a balance between the two, level both equally.
@@ -7498,7 +7498,7 @@
                 энергия requirements for his Взрыв стихии."
           - p:
               - b: |
-                  Regarding Talent Priority: 
+                  О приоритетах талантов: 
               - >-
                 Prioritize Взрыв стихии on a Таяние отряд as it scales better
                 than his Элементальный навык.
@@ -8206,7 +8206,7 @@
                 then this оружие can perform better compared to other options."
           - p:
               - b: |-
-                  Regarding Talent Priority:
+                  О приоритетах талантов:
                   обычная атака:
               - " If Розария is being used с "
               - b: Чун Юнь to infuse её обычные атаки с Крио,
@@ -8789,7 +8789,7 @@
                  Восст. энергии will greatly benefit Ци Ци, while её Взрыв стихии should be kept as a last resort.
                 Ци Ци's Взрыв стихии allows other персонажи to maximize ДПС field time while offering healing from being off-field. At Ascension 4, её обычная атака applies the healing talisman onto an враг с a время отката of 30 сек..
           - p:
-              - b: "Regarding Оружие и Артефакт Choices:"
+              - b: "О выборе оружия и артефактов:"
               - "\n"
               - b: "Церемониальный меч и Стойкость Миллелита (4): "
               - "Стойкость Миллелита allows Ци Ци to give the отряд a "
@@ -9760,7 +9760,7 @@
               - "\n"
               - b: "Меч Сокола:"
               - >2
-                 While Aquila has Physical Damage% as a главстат, which is basically useless on Аяка, it is still a good statstick as it has a high Базовая атака и Сила атаки% бафф from the passive.
+                 While Меч Сокола has Physical Damage% as a главстат, which is basically useless on Аяка, it is still a good statstick as it has a high Базовая атака и Сила атаки% бафф from the passive.
               - b: "Драгоценный омут:"
               - >2
                  With Заблудший в метели (4) и Крио Resonance, this оружие overcrits, so avoid getting Шанс крит. попадания допстаты.
@@ -10008,7 +10008,7 @@
               - Элой is one of the лучший Noblesse holders since она has low
                 энергия requirements и время отката for её Взрыв стихии.
           - p:
-              - b: "Regarding Артефакт Main Stat и Substats Priority: "
+              - b: "О приоритетах в главстатах и допстатах при выборе артефактов: "
               - "\n"
               - b: "Мастерство стихий "
               - "is only an option if your Элой is played on a "
@@ -10342,7 +10342,7 @@
                  You may need to get a few crit rate допстаты to trigger the passive reliably.
                 There are some отряд compositions in which Сахароза's Мастерство стихий is not a priority, such as Заморозка отряды или an Анемо battery for Сяо. In such situations it's better for Сахароза to use to Thrilling Tales of the Dragon Slayers.
           - p:
-              - b: "Regarding Восст. энергии Priority:"
+              - b: "О приоритете Восст. энергии:"
               - >-2
                  
                 Ranking is based on the assumption that Сахароза has Церемониальные мемуары и is not valued for её Взрыв стихии in отряды that may not want Сахароза's Взрыв стихии interfering с elemental auras. Восст. энергии could be prioritized higher когда Сахароза is utilized in отряды that don't really mind which element is being applied first и last (e.g. Электро-charged).
@@ -11007,8 +11007,8 @@
               - " If Джинн is used с a way to infuse её attacks с an
                 element (Чун Юнь / "
               - b: "[C6]"
-              - " Беннет), Рассекающий туман will outperform Primordial
-                Jade Cutter as you get full value out of the passive."
+              - " Беннет), Рассекающий туман will outperform Драгоценный омут
+                 as you get full value out of the passive."
       - code: burst support
         isRecommended: true
         weapons:
@@ -11226,7 +11226,7 @@
               - "\ \n"
               - b: "Драконий рык:"
               - " Depending on passive uptime, it can be ranked over Favonius
-                (at 50% uptime) и even Aquila (at 100% uptime)."
+                (at 50% uptime) и even Меч Сокола (at 100% uptime)."
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
@@ -11584,11 +11584,11 @@
         tips:
           - p:
               - b: |
-                  Regarding Сяо's Optimal Элементальный навык Rotation:
+                  О Сяо's Optimal Элементальный навык Rotation:
               - Элементальный навык -> Элементальный навык -> Взрыв стихии -> Plunge Combo
           - p:
               - b: |-
-                  Regarding Сяо's Plunge Combo:
+                  О комбо атаки в падении Сяо:
                   Best combo for Сяо когда fighting a single target:
               - |-
                 
@@ -12547,7 +12547,7 @@
                 need to run the recommended Восст. энергии% sets, which means you can opt
                 for this instead.
           - p:
-              - b: "Regarding Артефакт главстаты и допстаты Priority:"
+              - b: "О приоритетных главстатах и допстатах в артефактах:"
               - "\n"
               - b: Защита% mainstats и допстаты
               - " (и potentially a "
@@ -12697,7 +12697,7 @@
                 left at level 1 while still getting full effect from the
                 passive.
           - p:
-              - b: "Regarding Артефакт Main Stats и Substats Priority:"
+              - b: "О приоритетах в главстатах и допстатах при выборе артефактов:"
               - >-
                 
                 Шанс крит. попадания should only be considered когда Юнь Цзинь is equpping Копьё Фавония to reliably proc the passive.
@@ -13679,7 +13679,7 @@
                 your Элементальный навык damage by a lot if compared to the other
                 offensive sets."
           - p:
-              - b: "Regarding Артефакт Substats Priority:"
+              - b: "О приоритетных допстатах в артефактах:"
               - >-
                 
                 Сила атаки и Восст. энергии допстаты are only valuable on a Hybrid Альбедо that casts his Взрыв стихии.
