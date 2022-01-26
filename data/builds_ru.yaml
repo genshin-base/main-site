@@ -178,11 +178,11 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Prototype Crescent: "
+              - b: "Прототип: Полумесяц: "
               - "Этот лук победит Небесное крыло, если он "
               - b: "[R2+]."
               - "\n"
-              - b: "Hamayumi:"
+              - b: "Хамаюми:"
               - " Этот лук превзойдет Клятву стрелка "
               - b: "[R5]"
               - " если он "
@@ -1620,7 +1620,7 @@
               - Этот комплект can be used on Синь Янь if nobody else on the отряд is
                 using this комплект for the partywide Сила атаки бафф.
           - p:
-              - b: "Regarding Стойкость Миллелита (4) и Sacrificial Greatsword: "
+              - b: "Regarding Стойкость Миллелита (4) и 	Церемониальный двуручный меч: "
               - >-
                 
                 Синь Янь support is mostly used for её щит и/или Взрыв стихии damage. If you want to use её as a Physical Support, она needs both её Ascension 4 Talent и 
@@ -1637,14 +1637,14 @@
                 maximize the uptime of Синь Янь's Level 3 shield, она can provide
                 a constant 30% щит Strength и 20% Atk boost to the отряд (as
                 long as the pulses hit an враг). Этот means that "
-              - b: Sacrificial Greatsword
+              - b: 	Церемониальный двуручный меч
               - " и Синь Янь's "
               - b: "[C2]"
               - " are crucial to making this комплект shine on её. Этот комплект isn't as
                 recommended for её if you have neither of the two."
           - p:
               - "щит uptime is also crucial to maximizing её Physical/щит
-                Support capabilities. If you have neither Sacrificial Greatsword
+                Support capabilities. If you have neither 	Церемониальный двуручный меч
                 nor at least "
               - b: "[C2] "
               - "(но ideally "
@@ -1800,7 +1800,7 @@
               - Этот комплект can be used on Синь Янь if nobody else on the отряд is
                 using this комплект for the partywide Сила атаки бафф.
           - p:
-              - b: "Regarding Стойкость Миллелита (4) и Sacrificial Greatsword: "
+              - b: "Regarding Стойкость Миллелита (4) и 	Церемониальный двуручный меч: "
               - >-
                 
                 Синь Янь support is mostly used for её щит и/или Взрыв стихии damage. If you want to use её as a Physical Support, она needs both её Ascension 4 Talent и 
@@ -1817,14 +1817,14 @@
                 maximize the uptime of Синь Янь's Level 3 shield, она can provide
                 a constant 30% щит Strength и 20% Atk boost to the отряд (as
                 long as the pulses hit an враг). Этот means that "
-              - b: Sacrificial Greatsword
+              - b: 	Церемониальный двуручный меч
               - " и Синь Янь's "
               - b: "[C2]"
               - " are crucial to making this комплект shine on её. Этот комплект isn't as
                 recommended for её if you have neither of the two."
           - p:
               - "щит uptime is also crucial to maximizing её Physical/щит
-                Support capabilities. If you have neither Sacrificial Greatsword
+                Support capabilities. If you have neither 	Церемониальный двуручный меч
                 nor at least "
               - b: "[C2] "
               - "(но ideally "
@@ -2009,25 +2009,25 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Lost Prayer to the Sacred Winds: 
+                  Молитва святым ветрам: 
               - Беннет бафф/ Thrilling Tales of Dragon Slayer's бафф + Noblesse
-                Oblige (4) will push Lost Prayer ahead of Skyward Atlas и
-                Memory of Dust
+                Oblige (4) will push Lost Prayer ahead of Небесный атлас и
+                Память о пыли
               - b: |-
                   
-                  Dodoco Tales: 
-              - "On equal refinements, Widsith is better than Dodoco Tales, но
+                  Истории Додоко: 
+              - "On equal refinements, Widsith is better than Истории Додоко, но
                 assuming it's "
               - b: "[R5]"
-              - " Dodoco Tales vs "
+              - " Истории Додоко vs "
               - b: "[R1]"
               - "-"
               - b: "[R3]"
               - " Widsith, "
               - b: "[R5]"
-              - " Dodoco Tales is better. "
+              - " Истории Додоко is better. "
               - b: Note that Беннет бафф / Thrilling Tales of Dragon Slayer's бафф + Noblesse
-                  Oblige (4) бафф may push Widsith и Solar Pearl above Dodoco
+                  Oblige (4) бафф may push Widsith и Солнечная жемчужина above Dodoco
                   Tales, even at low refinements.
           - p:
               - b: |-
@@ -2150,10 +2150,10 @@
           - " 210 Восст. энергии"
           - u:
               b: "\n"
-          - b: "Prototype Эмбер [R1] /Favonius Codex:"
+          - b: "Prototype Эмбер [R1] /Кодекс Фавония:"
           - |2
              240 Восст. энергии
-          - b: "Thrilling Tales of Dragon Slayers:"
+          - b: "Эпос о драконоборцах:"
           - " 250+ Восст. энергии"
         notes:
           - "Этот section is dedicated to a playstyle где Янь Фэй is utilised
@@ -2276,7 +2276,7 @@
                 - hp
               notes: null
               seeCharNotes: false
-          notes: Шанс крит. попадания is an option когда using Favonius Lance.
+          notes: Шанс крит. попадания is an option когда using Копьё Фавония.
           seeCharNotes: false
         talents:
           advices:
@@ -2292,12 +2292,12 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Black Tassel: 
+                  Чёрная кисть: 
               - At
               - b: " [C4]"
               - ", Тома gains 15 энергия когда he fires his Взрыв стихии. Этот
                 effectively reduces his энергия cost to 65 и makes it possible
-                to use Black Tassel с Восст. энергии sands instead of Восст. энергии оружие с Восст. энергии
+                to use Чёрная кисть с Восст. энергии sands instead of Восст. энергии оружие с Восст. энергии
                 sands to furthermore strengthen his shield."
     credits: null
   - code: diluc
@@ -2481,16 +2481,16 @@
               - "Дилюк is "
               - b: highly recommended.
               - "\n"
-              - b: "Blackcliff Slasher: T"
+              - b: "Черногорская бритва: T"
               - >
                 his оружие has excellent ДПС potential когда facing против
                 crowds, но at the same time it's potential will not be utilized
                 at single target situations.
-              - b: "Rainslasher: F"
+              - b: "Дождерез: F"
               - "или obvious reasons, this оружие is only recommended когда Дилюк
                 is in a отряд comp где he can consistently proc vaporize (то есть
                 когда paired с Син Цю). "
-              - b: Rainslasher will also outperform Skyward Pride at [R3+].
+              - b: Дождерез will also outperform Небесное величие at [R3+].
           - p:
               - b: |-
                   О комплектах артефактов:
@@ -2673,23 +2673,23 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Lost Prayer to the Sacred Winds: 
+                  Молитва святым ветрам: 
               - Беннет бафф/ Thrilling Tales of Dragon Slayer's бафф + Noblesse
-                Oblige (4) will push Lost Prayer ahead of Skyward Atlas и
-                Memory of Dust
+                Oblige (4) will push Lost Prayer ahead of Небесный атлас и
+                Память о пыли
               - b: |-
                   
-                  Dodoco Tales:
-              - " On equal refinements, Widsith и Solar Pearl are better than
-                Dodoco Tales, но когда assuming "
+                  Истории Додоко:
+              - " On equal refinements, Widsith и Солнечная жемчужина are better than
+                Истории Додоко, но когда assuming "
               - b: "[R5]"
-              - " Dodoco Tales vs "
+              - " Истории Додоко vs "
               - b: "[R1]"
               - "-"
               - b: "[R3]"
-              - " Widsith/Pearl, Dodoco Tales is better. "
+              - " Widsith/Pearl, Истории Додоко is better. "
               - b: Note that Беннет бафф / Thrilling Tales of Dragon Slayer's бафф + Noblesse
-                  Oblige (4) бафф may push Widsith и Solar Pearl above Dodoco
+                  Oblige (4) бафф may push Widsith и Солнечная жемчужина above Dodoco
                   Tales, even at low refinements.
           - p:
               - b: "О комплектах артефактов:"
@@ -2892,7 +2892,7 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Primordial Jade Winged-Spear: 
+                  Нефритовый коршун: 
               - While this
               - b: " "
               - >
@@ -2903,13 +2903,13 @@
               - >
                 Смертельный бой is better than Гроза драконов когда you're not doing
                 Пар.
-              - b: "Blackcliff Pole:"
+              - b: "Черногорская пика:"
               - " Despite seeming quite good due to the Крит. урон допстат,
                 Blackcliff performs only slightly better than an "
               - b: "[R5]"
               - >2
                  Белая кисть in practice as it is difficult to maintain stacks consistently. It is not recommended to buy this оружие specifically for Ху Тао и should only be used if you already have one.
-              - b: "Vortex Vanquisher и Skyward Spine: "
+              - b: "Покоритель вихря и Небесная ось: "
               - "Provides little to nothing to Ху Тао since она scales better
                 с ХП% than Сила атаки% с every spear in the game. "
               - b: >-
@@ -3101,29 +3101,29 @@
           - p:
               - b: |-
                   О выборе оружия: 
-                  Rust: 
+                  Ржавый лук: 
               - At higher refinements
               - b: ", "
               - this оружие can outperform a low refined
               - b: " "
               - |
-                Amos' Bow и Skyward Harp. 
-              - b: "Hamayumi: "
+                Лук Амоса и Небесное крыло. 
+              - b: "Хамаюми: "
               - >
                 If you're using Воспоминания Симэнавы (4), this оружие
                 doesn't synergize well с that artifact комплект due to its
                 passive. 
-              - b: "Prototype Crescent: "
+              - b: "Прототип: Полумесяц: "
               - >
-                At higher refinements, this оружие can beat out Hamayumi, The
-                Viridescent Hunt, и Blackcliff Warbow. Do note that you want
+                At higher refinements, this оружие can beat out Хамаюми, The
+                Viridescent Hunt, и Черногорский боевой лук. Do note that you want
                 to proc the оружие passive by shooting on враг's weakspot for
                 this оружие to be good.
-              - b: "Slingshot: "
+              - b: "Рогатка: "
               - With external Сила атаки buffs (like from Беннет's Взрыв стихии,
                 Пиро Resonance, Церемония древней знати effect, и т.д), this оружие is
-                competitive to a low refined Rust, assuming you are still in
-                range for Slingshot's passive и you have good Сила атаки бафф uptime.
+                competitive to a low refined Ржавый лук, assuming you are still in
+                range for Рогатка's passive и you have good Сила атаки бафф uptime.
           - p:
               - b: |-
                   Regarding Артефакты:  
@@ -3358,10 +3358,10 @@
           - p:
               - "Courtesy of "
               - i: paraszcazk#0148
-          - p: "Due to how Polar Star works, your optimal rotation would be different from
+          - p: "Due to how Полярная звезда works, your optimal rotation would be different from
               other weapons:"
           - p:
-              b: Элементальный навык (Взрыв стихии) > NA > CA > Resummon Oz (To snapshot Polar Star stacks)
+              b: Элементальный навык (Взрыв стихии) > NA > CA > Resummon Oz (To snapshot Полярная звезда stacks)
         notes:
           - p:
               - b: "[C1] "
@@ -3385,14 +3385,14 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Skyward Harp и Polar Star: 
+                  Небесное крыло и Полярная звезда: 
               - "Due to the aforementioned Электро/физ. split at "
               - b: "[C6],"
               - " "
-              - b: Polar Star
+              - b: Полярная звезда
               - " will surpass "
               - b: |-
-                  Skyward Harp.
+                  Небесное крыло.
                   Viridescent Hunt: 
               - Viridescent Hunt is a really good investment that even surpasses
                 Amos in a situation где there are crowds of враги, although
@@ -3401,12 +3401,12 @@
                 to Фишль's single target attacks.
               - b: |-
                   
-                  Mitternachts Waltz:
+                  Вальс Нирваны Ночи:
               - >2
-                 Mitternachts Waltz would be prioritized over Amos if you manage to get refinement 5 for pure Physical build Фишль.
-              - b: "Prototype Crescent:"
+                 Вальс Нирваны Ночи would be prioritized over Amos if you manage to get refinement 5 for pure Physical build Фишль.
+              - b: "Прототип: Полумесяц:"
               - " If you manage to weave in a заряженный выстрел on враг weak spots
-                once every 9-10 сек., Prototype Crescent could potentially
+                once every 9-10 сек., Прототип: Полумесяц could potentially
                 offer more ДПС, this оружие can be an option for those
                 interested in a more challenging playstyle."
       - code: off-field dps
@@ -3584,29 +3584,29 @@
           - p:
               - b: |-
                   О выборе оружия: 
-                  The Бесструнный и Alley Hunter:
+                  The Бесструнный и Охотник во тьме:
               - " At "
               - b: "[R5],"
               - " both these weapons are roughly equivalent to "
-              - b: Thundering Pulse
+              - b: Громовой пульс
               - " и "
-              - b: Skyward Harp.
+              - b: Небесное крыло.
               - "\n"
-              - b: "Prototype Crescent: "
+              - b: "Прототип: Полумесяц: "
               - >
                 Ranking assumes hitting враг's weak spot с заряженный выстрел
                 everytime before summoning Oz.
-              - b: "Windblume Ode: "
+              - b: "Ода анемонии: "
               - "Ode only performs this well if Фишль ends up being the trigger
                 for some reactions. If Фишль is used in a отряд comp где by
                 there are "
               - b: NO ELEMENTAL REACTIONS,
               - " this оружие will be ranked below "
-              - b: Mitternachts Waltz.
+              - b: Вальс Нирваны Ночи.
               - "\n"
-              - b: "Mitternachts Waltz:"
+              - b: "Вальс Нирваны Ночи:"
               - " Этот оружие will be ranked above "
-              - b: Windblume Ode
+              - b: Ода анемонии
               - " at "
               - b: "[R5]."
           - p:
@@ -3816,9 +3816,9 @@
                 оружие can overtake Волчья погибель in personal damage.
               - b: |-
                   
-                  Akuoumaru (260 отряд энергия assumed): 
-              - "Akuoumaru outperforms "
-              - b: Skyward Pride
+                  Акуомару (260 отряд энергия assumed): 
+              - "Акуомару outperforms "
+              - b: Небесное величие
               - " on a "
               - b: low Восст. энергии requirement Бэй Доу
               - " (где она is paired с other Электро персонажи to battery
@@ -4487,17 +4487,17 @@
               - "\n"
               - b: Волчья погибель
               - >
-                : Волчья погибель (inactive) outperforms Skyward Pride in
+                : Волчья погибель (inactive) outperforms Небесное величие in
                 every scenario except crowd battles.
               - b: "Краснорогий камнеруб: "
               - >
                 Depending on the amount of Сила атаки% buffs you're getting, this
                 оружие can overtake Волчья погибель in personal damage.
-              - b: The Unforged
+              - b: Некованый
               - >
                 : The playstyle с this оружие becomes a lot more comfortable
                 without having to worry about snapshotting Волчья погибель /
-                Song of Broken Pines buffs for Sub DPSes, while also granting
+                Песнь разбитых сосен buffs for Sub DPSes, while also granting
                 more щит бонус for better щит uptime. A shielder is
                 required for this, с Чжун Ли being the most ideal option.
               - b: Меч драконьей кости
@@ -4515,8 +4515,8 @@
               - b: It is also worth noting that an [R5] Меч драконьей кости с max stacks can
                   outperform all 5✩ weapons at [R1].
               - "\n"
-              - b: Skyward Pride
-              - ": Skyward Pride is viable с a Physical урон goblet, as the
+              - b: Небесное величие
+              - ": Небесное величие is viable с a Physical урон goblet, as the
                 damage dealt through its passive scales с Physical%."
           - p:
               - b: |-
@@ -4736,11 +4736,11 @@
               - b: ranked based on their Базовая атака
               - |2
                  to maximize Сара's Сила атаки бафф.
-              - b: "Elegy for the End: "
+              - b: "Элегия погибели: "
               - The время отката on this оружие's passive aligns perfectly с
                 Сара's Взрыв стихии время отката. Этот оружие has lower Базовая атака
-                if compared с Skyward Harp, но this оружие can be considered
-                over Skyward Harp since Сара is able to trigger the оружие
+                if compared с Небесное крыло, но this оружие can be considered
+                over Небесное крыло since Сара is able to trigger the оружие
                 passive quite easily с её Взрыв стихии to provide your
                 отряд members с another 100 Мастерство стихий и 20% Сила атаки бафф for 12
                 сек., it also has Восст. энергии допстат which is very
@@ -5473,10 +5473,10 @@
               - b: "О выборе оружия: Этот list assumes that Райдэн is not ran с an
                   external баффер."
               - "\n"
-              - b: "Wavebreaker's Fin:"
+              - b: "Режущий волны плавник:"
               - " "
               - b: "[R5]"
-              - " Wavebreaker's Fin is relatively equal Staff of Homa, depending
+              - " Режущий волны плавник is relatively equal Посох Хомы, depending
                 on your total отряд burst cost."
           - p:
               - b: |-
@@ -5922,10 +5922,10 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Memory of Dust: "
+              - b: "Память о пыли: "
               - Этот оружие requires stacks to be utilized, и in Пар ДПС
                 comps, you usually don't want to give up the first few Пар
-                hits to stack up Memory of Dust's perk.
+                hits to stack up Память о пыли's perk.
       - code: support
         isRecommended: true
         weapons:
@@ -6234,7 +6234,7 @@
 
                 - 3 NA + 1 CA (Recommended)
 
-                - 5 NA + 1 CA (Recommended combo if using Rust или Thundering Pulse)
+                - 5 NA + 1 CA (Recommended combo if using Ржавый лук или Громовой пульс)
           - p:
               b: "*NA = обычная атака, CA = Заряженная атака"
           - p:
@@ -6249,17 +6249,17 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Polar Star:"
+              - b: "Полярная звезда:"
               - " Has varied performance depending on "
               - b: how many passive stacks you get.
               - " Getting"
               - b: " 2-3 stacks at the start of your rotation can perform better than Thundering
                   Pulse"
               - " while getting "
-              - b: no stacks can perform worse than Skyward Harp.
+              - b: no stacks can perform worse than Небесное крыло.
               - "  Этот only applies if you are Vaporising Тарталья Взрыв стихии together
                 с Беннет."
-              - b: " In отряды without Беннет, Polar Star will всегда perform better than the
+              - b: " In отряды without Беннет, Полярная звезда will всегда perform better than the
                   other options. "
               - "3 stacks can be achieved by doing "
               - b: Элементальный навык + 1 Normal + 1 Заряженная атака
@@ -6271,19 +6271,19 @@
               - >
                 gives 2 stacks (which can be followed by Элементальный навык for the 3rd
                 stack).
-              - b: "Thundering Pulse:"
+              - b: "Громовой пульс:"
               - >2
-                 Slightly better than Skyward Harp depending on rotations - the more time you spend doing Normal Attacks, the more it pulls ahead over Skyward Harp, но it's not recommended to extend your Тарталья's melee rotation for this.
+                 Slightly better than Небесное крыло depending on rotations - the more time you spend doing Normal Attacks, the more it pulls ahead over Небесное крыло, но it's not recommended to extend your Тарталья's melee rotation for this.
               - b: "Viridescent Hunt:"
               - " Offers a valuable passive that helps a lot in "
               - b: grouping враги,
               - |2
                  which can offer a ton of damage from Riptide.
-              - b: "Blackcliff Warbow:"
+              - b: "Черногорский боевой лук:"
               - " Due to inconsistency of gaining stacks,"
               - b: " falls off compared to other weapons at higher refinements."
               - "\n"
-              - b: "Prototype Crescent:"
+              - b: "Прототип: Полумесяц:"
               - " Requires you to trigger its passive by hitting the враг's
                 weak points, "
               - b: falls off if compared с other options without the passive triggered.
@@ -6294,7 +6294,7 @@
               - " as the Мастерство стихий допстат loses alot of value in other
                 отряды. If Тарталья is being used as a "
               - b: "Nuke Support only for his Vaporised Взрыв стихии damage, R5 Бесструнный will rank
-                  just below Thundering Pulse. "
+                  just below Громовой пульс. "
               - Note that the stringless elemental skill passive does not affect
                 Тарталья's melee stance auto attacks.
           - p:
@@ -6730,7 +6730,7 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Thrilling Tales of Dragon Slayers:
+                  Эпос о драконоборцах:
               - " Generally the лучший option on Заморозка Support Мона"
               - b: " because она can furthermore бафф the Сила атаки of your глав. ДПС."
               - " "
@@ -6867,12 +6867,12 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Hakushin Ring: 
+                  Кольцо Хакусин: 
               - "Этот оружие can provide Elemental урон% for the отряд in "
               - b: Электро-charged отряды
               - >2
                  и will outperform Prototype Эмбер if you value damage more than healing.
-              - b: "Sacrificial Fragments: "
+              - b: "Церемониальные мемуары: "
               - "Can be useful as Кокоми won't need to use её Взрыв стихии
                 to reset её skill длительность. Этот "
               - b: allows for smoother rotations
@@ -7042,14 +7042,14 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Thrilling Tales of Dragon Slayers: 
+                  Эпос о драконоборцах: 
               - "Although this оружие doesn't provide as much personal damage
                 for Кокоми, the 48% Сила атаки бафф is usually more worth in most
                 cases. "
               - b: Этот can be её лучший оружие in for overall отряд ДПС if you don't already have
                   another TTDS user in your отряд.
               - "\n"
-              - b: "Hakushin Ring:"
+              - b: "Кольцо Хакусин:"
               - " Этот оружие can provide Elemental урон% for the отряд in
                 Электро-charged отряды, и will usually be the лучший выбор in
                 those situations."
@@ -7203,7 +7203,7 @@
               и Крио particle generation. Pairing Диона с Крио carries such
               as Гань Юй и Эола allows you to funnel энергия into your ДПС
               персонажи while providing them с quick shields for stagger
-              resistance. Weapons such as Церемониальный лук и Favonius Warbow
+              resistance. Weapons such as Церемониальный лук и Боевой лук Фавония
               greatly увеличивать её potential as a battery.
           - p:
               - b: "О выборе оружия:"
@@ -7212,10 +7212,10 @@
               - >
                 Prefered over Favonious especially at higher refinements due to
                 having better щит uptime.
-              - b: "Favonius Warbow:"
+              - b: "Боевой лук Фавония:"
               - >2
                  You will look to build some Шанс крит. попадания coverage to have a higher chance of triggering bow passive for энергия.
-              - b: "Recurve Bow: "
+              - b: "Изогнутый лук: "
               - Этот bow will be your лучший выбор for stronger shields, но it
                 reduces Диона's burst uptime significantly due to no Energy
                 Recharge on её оружие.
@@ -7470,24 +7470,24 @@
                 оружие can overtake Волчья погибель in personal damage.
               - b: |-
                   
-                  Akuoumaru:
+                  Акуомару:
               - " At "
               - b: "[R1],"
               - " "
-              - b: Akuoumaru
+              - b: Акуомару
               - " beats "
-              - b: Luxurious Sea-Lord
+              - b: Благодатный владыка вод
               - " if Чун Юнь is used in a отряд с "
               - b: 260 или greater
               - " total отряд энергия. "
-              - b: Akuoumaru
+              - b: Акуомару
               - " only beats "
-              - b: Luxurious Sea-Lord
+              - b: Благодатный владыка вод
               - " if "
               - b: "[R2]"
               - |2
                  и above otherwise.
-              - b: "Sacrificial Greatsword: "
+              - b: "	Церемониальный двуручный меч: "
               - Этот оружие is your лучший выбор if faced in a situation где
                 you heavily rely on Чун Юнь's Крио infusion uptime.
           - p:
@@ -8190,12 +8190,12 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Wavebreaker's Fin:
+                  Режущий волны плавник:
               - " At "
               - b: "[R5],"
               - " this оружие can perform similar to "
               - b: |-
-                  Staff of Homa.
+                  Посох Хомы.
                   Смертельный бой: 
               - "Розария gets alot of Шанс крит. попадания from "
               - b: Заблудший в метели (4) и Крио Resonance.
@@ -8372,7 +8372,7 @@
              Этот комплект is difficult to fully utilise due to Розария's skill время отката being 6 сек.. The full комплект effect requires 2 stacks to be active at any given time, so maintaining stacks can be difficult когда considering rotations between персонажи.
           - b: "Конец гладиатора (4): "
           - |
-            The 4 piece комплект passive doesn't work с Crescent Pike.
+            The 4 piece комплект passive doesn't work с Пика полумесяца.
           - b: "Заблудший в метели (4): "
           - "Розария's Взрыв стихии is required to maintain uptime for
             Заблудший в метели (4) (due to Фишль/Бэй Доу stealing Крио procs for
@@ -8583,30 +8583,30 @@
               - b: "[C4]"
               - |2
                  can reduce this Восст. энергии requirement down to 140% или lower.
-              - b: "Vortex Vanquisher:"
+              - b: "Покоритель вихря:"
               - " Этот ranking is assumed without a shield. "
               - b: With a large amount of attack buffs such as Беннет, this оружие can fall off
                   compared to the other options due to overstacking Сила атаки%.
               - "\n"
-              - b: "Гроза драконов / Kitain Cross Spear:"
+              - b: "Гроза драконов / Крест-копьё Китаин:"
               - " These weapons are only used if Розария is played in a отряд
                 comp in which она "
               - b: constantly triggers Реверсивное Таяние.
               - " "
-              - b: "[R5] Гроза драконов can outperform The Catch, и [R5] Kitain's Cross Spear
+              - b: "[R5] Гроза драконов can outperform «Улов», и [R5] Kitain's Cross Spear
                   is on par с Смертельный бой."
               - "\n"
-              - b: "Wavebreaker's Fin: "
+              - b: "Режущий волны плавник: "
               - At
               - b: " [R5],"
               - " this оружие can perform"
-              - b: " similar to Staff of Homa."
+              - b: " similar to Посох Хомы."
               - "\n"
-              - b: "Lithic Spear: "
+              - b: "Каменное копьё: "
               - At
               - b: " [R5],"
               - " this оружие can perform "
-              - b: similar to Vortex Vanquisher.
+              - b: similar to Покоритель вихря.
           - p:
               - b: |-
                   О комплектах артефактов:
@@ -8956,20 +8956,20 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Amos' Bow: 
+                  Лук Амоса: 
               - >
                 Amos is an excellent оружие for Гань Юй since её Level 2 Charge
                 Shot Bloom extends arrow flight длительность и you can get 3
                 stacks of Amos' passive even on point blank range.
-              - b: "Hamayumi: "
+              - b: "Хамаюми: "
               - >
                 Этот оружие doesn't synergize well с Воспоминания Симэнавы
                 (4) due to its passive.
-              - b: "Prototype Crescent: "
+              - b: "Прототип: Полумесяц: "
               - "At "
               - b: "[R5]"
               - " с good uptime on its passive, it can potentially beat
-                Skyward Harp. However, do bear in mind that not all враги have
+                Небесное крыло. However, do bear in mind that not all враги have
                 weak spots that you can headshot, which does affect its
                 performance significantly."
       - code: freeze dps
@@ -9096,7 +9096,7 @@
           - p:
               - b: |-
                   О выборе оружия: 
-                  Polar Star: 
+                  Полярная звезда: 
               - "Этот оружие is much harder to optimize с, due to having a
                 very high Шанс крит. попадания stat resulting in your Шанс крит. попадания going well
                 above 100%. However, if optimised properly "
@@ -9104,10 +9104,10 @@
               - " it pulls ahead of the other two options."
               - b: |-
                   
-                  Thundering Pulse и Skyward Harp:
+                  Громовой пульс и Небесное крыло:
               - >2
-                 In quickswap heavy rotations (Гань Юй Мона Венти Диона) где you usually don't do a lot of Charged Shots, these two weapons could pull ahead of Amos' Bow.
-              - b: "Prototype Crescent: "
+                 In quickswap heavy rotations (Гань Юй Мона Венти Диона) где you usually don't do a lot of Charged Shots, these two weapons could pull ahead of Лук Амоса.
+              - b: "Прототип: Полумесяц: "
               - Similar to the Таяние Build, Crescent can pull ahead of Skyward
                 Harp at high refines и с good uptime on its passive.
                 However, its performance is под эффектом враги having/not
@@ -9287,16 +9287,16 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Prototype Crescent: 
+                  Прототип: Полумесяц: 
               - >
                 Этот оружие might pull ahead of some of the other options if you
                 activate the бафф before casting Взрыв стихии.
-              - b: "Blackcliff Warbow: "
+              - b: "Черногорский боевой лук: "
               - Might be dificult to activate the passive и gain stacks since
                 Гань Юй is most of the time off field.
               - b: |-
                   
-                  Elegy for the End: 
+                  Элегия погибели: 
               - Offers отряд-wide Мастерство стихий и Сила атаки бафф which is quite
                 nice on reaction heavy отряд comps.
           - p:
@@ -9535,14 +9535,14 @@
               - damage.
               - b: |-
                   
-                  Skyward Pride: 
+                  Небесное величие: 
               - >
                 Этот оружие is more forgiving towards Восст. энергии допстаты. If there is a
                 Крио battery unit in your отряд (Диона с Церемониальный лук или
                 Кэйа с Меч Фавония) или if your отряд generates достаточно
-                particles on their own, Skyward Pride loses effectiveness
+                particles on their own, Небесное величие loses effectiveness
                 compared to the above options. 
-              - b: "Akuoumaru:"
+              - b: "Акуомару:"
               - " Этот оружие will outperform Luxurious Sea Lord at higher
                 refinements."
           - p:
@@ -9976,7 +9976,7 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Polar Star: "
+              - b: "Полярная звезда: "
               - >
                 Forcing to get Polar stacks isn't worth due to consuming extra
                 time to get those stacks.
@@ -9984,12 +9984,12 @@
               - >
                 Placement was considering Элой is used on a Реверсивное Таяние отряд.
                 On Реверсивное Таяние Элой, Бесструнный especially at higher refinement
-                levels can pull ahead of Thundering Pulse.
-              - b: "Prototype Crescent: "
+                levels can pull ahead of Громовой пульс.
+              - b: "Прототип: Полумесяц: "
               - >
                 Assumes the passive is active by proccing a weak point shot.
                 Этот оружие especially at higher refinement levels can be as
-                good as a Skyward Harp.
+                good as a Небесное крыло.
               - b: "Церемониальный лук: "
               - A pretty decent option to make Элой a Крио battery as её
                 Элементальный навык provides 5 Крио particles.
@@ -10172,16 +10172,16 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Calamity Queller:
+                  Усмиритель бед:
               - >2
                  The passive of this оружие works perfectly с Шэнь Хэ's Элементальный навык because it's dynamic. Этот оружие also has high Базовая атака which makes Сила атаки% допстаты really effective.
-              - b: "Engulfing Lightning:"
+              - b: "Сияющая жатва:"
               - >2
                  Этот оружие provides Восст. энергии и converts Восст. энергии to Сила атаки, which benefits Шэнь Хэ a lot.
-              - b: "Vortex Vanquisher:"
+              - b: "Покоритель вихря:"
               - >2
                  Этот оружие's passive can't be stacked off-field, но it's still an Сила атаки stat stick which provides Шэнь Хэ с a lot of Сила атаки.
-              - b: "Favonius Lance: "
+              - b: "Копьё Фавония: "
               - With this оружие, it is better to have some Шанс крит. попадания on Шэнь Хэ
                 for the оружие passive to proc. (Do note that Крио Resonance
                 provides 15% Шанс крит. попадания on Крио-imbued враги, so the need for
@@ -10324,18 +10324,18 @@
                 It's важно to note that these weapons were ranked based on
                 how much Мастерство стихий they offered you. However, this doesn't take into
                 account how much each catalyst benefits your entire отряд's ДПС.
-              - b: "Thrilling Tales of Dragon Slayers: "
+              - b: "Эпос о драконоборцах: "
               - Этот оружие does not provide any Мастерство стихий, however it overtakes the
                 other weapons on the list когда it comes to enabling your отряд.
               - b: >-2
-                   It offers 48% Сила атаки boost to the персонаж you swap to which is equivalent to 1 главстат. Этот enables your ДПС more if compared to Sacrificial Fragments which only gives ~44EM, equivalent to only 2 допстаты.
+                   It offers 48% Сила атаки boost to the персонаж you swap to which is equivalent to 1 главстат. Этот enables your ДПС more if compared to Церемониальные мемуары which only gives ~44EM, equivalent to only 2 допстаты.
                   Widsith:
               - " Этот оружие is only useful if you get the Мастерство стихий passive from it.
                 As such, it is "
               - b: not recommended for general gameplay
               - |2
                  но only if you want the highest possible Мастерство стихий бафф.
-              - b: "Favonius Codex:"
+              - b: "Кодекс Фавония:"
               - " Этот оружие can be useful if you"
               - b: " need Сахароза's Взрыв стихии up as often as possible for grouping."
               - >-2
@@ -10345,7 +10345,7 @@
               - b: "Regarding Восст. энергии Priority:"
               - >-2
                  
-                Ranking is based on the assumption that Сахароза has Sacrificial Fragments и is not valued for её Взрыв стихии in отряды that may not want Сахароза's Взрыв стихии interfering с elemental auras. Восст. энергии could be prioritized higher когда Сахароза is utilized in отряды that don't really mind which element is being applied first и last (e.g. Электро-charged).
+                Ranking is based on the assumption that Сахароза has Церемониальные мемуары и is not valued for её Взрыв стихии in отряды that may not want Сахароза's Взрыв стихии interfering с elemental auras. Восст. энергии could be prioritized higher когда Сахароза is utilized in отряды that don't really mind which element is being applied first и last (e.g. Электро-charged).
     credits: null
   - code: sayu
     elementCode: anemo
@@ -11410,11 +11410,11 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Skyward Harp:"
+              - b: "Небесное крыло:"
               - >2
                  Due to Мастерство стихий build assumptions, the статы offered aren't very valuable. Consider reading the In-depth Guide from KQM if you're interested in a Crit-focused build.
-              - b: "Elegy for the End:"
-              - " Elegy for the End's Сила атаки бафф DOES NOT бафф Венти's burst if
+              - b: "Элегия погибели:"
+              - " Элегия погибели's Сила атаки бафф DOES NOT бафф Венти's burst if
                 Венти is the one equipping the bow, но the Мастерство стихий бафф affects
                 Венти's Рассеивание reaction. Этот is due to Венти's burst
                 snapshotting his статы (excluding Мастерство стихий toward transformative
@@ -11623,7 +11623,7 @@
               - b: "О выборе оружия:"
               - >2
                  With a proper anemo battery (e.g. Сахароза), Сяо needs as little as 120-130% Восст. энергии to maintain a high burst uptime. In these scenarios, unless there are no Восст. энергии from допстаты, you should всегда go for a non-Восст. энергии оружие as it will result in more damage.
-              - b: "Calamity Queller: "
+              - b: "Усмиритель бед: "
               - Этот оружие has a really high Базовая атака, which means you benefit
                 more from Сила атаки% buffs (e.g. Thrilling Tales of the Dragon
                 Slayers) if compared с other weapons.
@@ -11959,18 +11959,18 @@
                 A really good оружие с external Сила атаки buffs considered due to
                 having Шанс крит. попадания главстат. Even с 1 stack of passive, this
                 оружие is highly competitive с the other top choices.
-              - b: "Memory of Dust: "
+              - b: "Память о пыли: "
               - >
                 A really good Сила атаки stat stick which performs better than the
                 other 5 star options if you don't consider external Сила атаки buffers
                 like Беннет, Пиро resonance, и т.д, но falls off с it
                 considered.
-              - b: "The Widsith:"
+              - b: "Песнь странника:"
               - >2
                  A bursty оружие which has a really great passive, however Нин Гуан can only benefit from 2 out of the 3 passives that this оружие provides; Мастерство стихий bonus on Нин Гуан is basically useless.
-              - b: "Dodoco Tales:"
+              - b: "Истории Додоко:"
               - " Being an Сила атаки оружие, it falls off if compared to the other 4
-                star options such as Solar Pearl и The Widsith с external
+                star options such as Солнечная жемчужина и Песнь странника с external
                 Сила атаки buffs considered, но can perform better without it
                 considered."
           - p:
@@ -12116,14 +12116,14 @@
               - "\n"
               - b: "Lost Prayers to the Sacred Winds:"
               - >2
-                 Falls off a bit if compared to Skyward Atlas due to not being able to stack the passive reliably, но it's still a Crit оружие which makes stat building much easier.
-              - b: "Memory of Dust: "
+                 Falls off a bit if compared to Небесный атлас due to not being able to stack the passive reliably, но it's still a Crit оружие which makes stat building much easier.
+              - b: "Память о пыли: "
               - >
                 A really good Сила атаки statstick which can perform better than the
                 other options if you don't consider external Сила атаки buffers like
                 Беннет, Пиро resonance, и т.д, но falls off с it considered.
-              - b: "Solar Pearl:"
-              - " Due to Solar Pearl's passive being able to бафф quite a huge
+              - b: "Солнечная жемчужина:"
+              - " Due to Солнечная жемчужина's passive being able to бафф quite a huge
                 percentage of a quickswap Нин Гуан's damage (Взрыв стихии
                 Damage), с external Сила атаки buffs it performs similarly to Memory
                 of Dust."
@@ -12266,13 +12266,13 @@
                 When using Кокон сладких грёз, Меч драконьей кости stacks are
                 prioritized over Husk of the Opulent Dreams stacks, due to their
                 conflicting nature in gaining stacks (Off-field и on-field)
-              - b: "Skyward Pride: "
+              - b: "Небесное величие: "
               - >
                 Useful if you are unable to get Восст. энергии from your допстаты. Does
                 really well while its passive is active, но falls off in
                 sustained fights. Comfort option that has quite a big power gap
-                if compared с Меч драконьей кости или Whiteblind.
-              - b: "Favonius Greatsword: "
+                if compared с Меч драконьей кости или Белая тень.
+              - b: "Двуручный меч Фавония: "
               - Only recommended с high refines, as its usefulness scales
                 с its particle generation capabilities. R5 allows её to
                 self-battery assuming some additional particles from враги,
@@ -12386,7 +12386,7 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Sacrificial Greatsword: 
+                  	Церемониальный двуручный меч: 
               - "Does not proc on Ноэлль's "
               - b: "[C4]"
               - " if она's off field, so a high refine is needed for the initial
@@ -12394,7 +12394,7 @@
               - b: "[R5],"
               - >2
                  the время отката is 16 сек. while Ноэлль's shield длительность is 12, so forced downtime is an issue.
-              - b: "Favonius Greatsword: "
+              - b: "Двуручный меч Фавония: "
               - "Relies on hitting crits to generate энергия. The 12 second
                 время отката at "
               - b: "[R1]"
@@ -12523,7 +12523,7 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Elegy for the End:"
+              - b: "Элегия погибели:"
               - " Elegy offers a helpful Восст. энергии допстат alongside an Мастерство стихий и Сила атаки%
                 бафф for your teammates. While not directly useful in отряды
                 centered around Ноэлль или Итто, this could possibly be a good
@@ -12558,7 +12558,7 @@
                  due to being able to лечить the active персонаж based on his Защита during burst. Этот is useful if you plan to use him as a solo целитель.
               - b: Шанс крит. попадания circlet и допстаты
               - >2
-                 can be considered когда Горо is using Favonius Warbow to trigger the passive comfortably.
+                 can be considered когда Горо is using Боевой лук Фавония to trigger the passive comfortably.
               - b: Восст. энергии% допстаты can usually be more важно than getting the right главстат,
               - " as Горо's damage contribution to a отряд is negligible, while
                 being able to get Energy for his Взрыв стихии is a lot more важно."
@@ -12681,11 +12681,11 @@
           - p:
               - b: "О выборе оружия:"
               - "\n"
-              - b: "Favonius Lance: "
+              - b: "Копьё Фавония: "
               - >
                 With this оружие, try to aim for some Шанс крит. попадания статы to trigger
                 the оружие passive reliably.
-              - b: "Kitain Cross Spear:"
+              - b: "Крест-копьё Китаин:"
               - " Although the Мастерство стихий главстат isn't useful for Юнь Цзинь, the "
               - b: passive decreases её Восст. энергии requirements
               - " by alot, especially at higher refinements. "
@@ -12700,7 +12700,7 @@
               - b: "Regarding Артефакт Main Stats и Substats Priority:"
               - >-
                 
-                Шанс крит. попадания should only be considered когда Юнь Цзинь is equpping Favonius Lance to reliably proc the passive.
+                Шанс крит. попадания should only be considered когда Юнь Цзинь is equpping Копьё Фавония to reliably proc the passive.
     credits: null
   - code: geo-traveler
     elementCode: geo
@@ -13293,7 +13293,7 @@
         notes:
           - p:
               - b: "Этот kind of playstyle is very straightforward; stack as much ХП as
-                  possible. Prioritize ХП scaling polearms such as Black Tassel
+                  possible. Prioritize ХП scaling polearms such as Чёрная кисть
                   и artifact sets such as Стойкость Миллелита (4) to
                   capitalize on Чжун Ли's щит. "
               - Most of the time, especially on a ХП-focused Чжун Ли, casting
@@ -13307,10 +13307,10 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Favonius Lance: 
-              - Use this оружие over Black Tassel if you value the отряд энергия
+                  Копьё Фавония: 
+              - Use this оружие over Чёрная кисть if you value the отряд энергия
                 (Note that you need to build some amount of Шанс крит. попадания if you are
-                running Favonius Lance to trigger the passive).
+                running Копьё Фавония to trigger the passive).
       - code: burst / nuke
         isRecommended: true
         weapons:
@@ -13487,15 +13487,15 @@
           - p:
               - b: |-
                   О выборе оружия:
-                  Favonius Lance: 
+                  Копьё Фавония: 
               - >
                 Чжун Ли's lackluster particle generation can be problematic in
                 отряды without a reliable source of Гео энергия. With sufficient
-                энергия/Гео particles (то есть in a dual Гео отряд) Lithic Spear и
-                above will outperform Favonius Lance.
+                энергия/Гео particles (то есть in a dual Гео отряд) Каменное копьё и
+                above will outperform Копьё Фавония.
               - b: "Смертельный бой: "
               - In отряды с a reliable source of Гео энергия, Смертельный бой will
-                outperform The Catch.
+                outperform «Улов».
           - p:
               - b: "Об основных характеристиках:"
               - >-
@@ -13827,13 +13827,13 @@
               - b: "Меч драконьей кости:"
               - >2
                  When using Кокон сладких грёз, Меч драконьей кости stacks are prioritized over Husk of the Opulent Dreams stacks due to their conflicting nature in gaining stacks (Off-field и on-field).
-              - b: "Skyward Pride: "
+              - b: "Небесное величие: "
               - >
                 Can be a great или bad оружие for Итто depending on your Восст. энергии
                 needs. The less Восст. энергии you need (due to particle
                 generation from your отряд members или Восст. энергии from subs), the less
                 useful this оружие becomes.
-              - b: "Whiteblind:"
+              - b: "Белая тень:"
               - " Your rotations often start с 1 stack of this оружие, и
                 due to Итто's Взрыв стихии snapshotting Защита on cast, you're unable to
                 take advantage of further Защита% from the stacks."
@@ -15878,7 +15878,7 @@ weapons:
         Заряженная атака урон by "
       - b: 10%
       - " for 6s. Этот effect can have a maximum of 2 stacks. Additionally, когда
-        Элой equips Predator, Сила атаки is increased by "
+        Элой equips Хищник, Сила атаки is increased by "
       - b: "66."
       - |-
         
