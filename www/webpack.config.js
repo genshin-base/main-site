@@ -36,6 +36,9 @@ export default async function (env, argv) {
 				serveIndex: false,
 				watch: true,
 			},
+			historyApiFallback: {
+				rewrites: [{ from: /\/\w+/, to: '/index.html' }],
+			},
 		},
 		entry: `${SRC}/index.tsx`,
 		output: {

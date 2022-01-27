@@ -9,9 +9,8 @@ import './App.scss'
 
 export function App() {
 	let page = <FrontPage />
-	// if (~location.pathname.indexOf('build')) page = <BuildsPage />
-	// if (~location.pathname.indexOf('equipment')) page = <EquipmentPage />
-	page = <BuildsPage />
+	if (~location.pathname.indexOf('build')) page = <BuildsPage />
+	if (~location.pathname.indexOf('equipment')) page = <EquipmentPage />
 	return (
 		<div class="d-flex flex-column app-container">
 			<Header />

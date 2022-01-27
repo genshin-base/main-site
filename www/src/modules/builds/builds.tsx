@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'preact/hooks'
 
 import { CharacterPicker } from '#src/containers/character-picker/character-picker'
-import { LastUsedCharacters } from '#src/containers/character-picker/last-used-characters'
+import { FavouriteCharacters } from '#src/containers/character-picker/favourite-characters'
 import { getCharacterCodeFromHash } from '#src/hashstore'
 import { CharacterBuildDetailed } from './character-build-detailed'
 
@@ -23,7 +23,7 @@ export function Builds() {
 		<div className="builds container">
 			<h1 className="my-1">Character builds recomendations</h1>
 			{!selectedCharacterCode && <h5 className="mt-2 mb-3 opacity-75">Select character above</h5>}
-			<LastUsedCharacters />
+			<FavouriteCharacters />
 			{!selectedCharacterCode ? (
 				<CharacterPicker />
 			) : (

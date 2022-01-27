@@ -200,11 +200,7 @@ function MapWrap({
 				<div class="d-xl-none">Pinch to zoom</div>
 			</div>
 			{selectedSourceTab.markers !== 'external' && isLoaded(TeyvatMap) ? (
-				<TeyvatMap
-					classes="dungeon-location position-relative"
-					pos="auto"
-					markers={selectedSourceTab.markers}
-				/>
+				<TeyvatMap classes="position-relative" pos="auto" markers={selectedSourceTab.markers} />
 			) : TeyvatMap instanceof Error ? (
 				<div>Error.</div>
 			) : (

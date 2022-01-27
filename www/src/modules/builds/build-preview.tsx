@@ -22,6 +22,7 @@ import {
 } from './common'
 
 import './character-build-preview.scss'
+import { FavouriteCharacters } from '#src/containers/character-picker/favourite-characters'
 
 function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element {
 	const build = useBuildWithDelayedLocs(characterCode)
@@ -54,10 +55,10 @@ function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element
 		return (
 			<ul className="mb-1 list-unstyled ms-1 pt-1 ps-2">
 				{CIRCLET_GOBLET_SANDS.map(ac => (
-					<li className="mb-1">
+					<li>
 						<ItemAvatar
 							src={getArtifactTypeIconSrc(ac)}
-							classes="small-avatar small mb-1 me-1 mb-xxl-2 me-xxl-2 p-1 bg-dark with-padding align-middle"
+							classes="mb-1 mx-1 small-avatar bg-dark with-padding align-middle"
 						/>
 						{genArtMainStatDetail(role, ac, true)}
 					</li>
@@ -114,7 +115,6 @@ function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element
 	if (!isLoaded(build)) return <Spinner />
 	return (
 		<div className="character-build-preview">
-			<div>{build.character.name}</div>
 			{/* <div className="d-none d-xl-block">
 				<CharacterPortrait src={getCharacterPortraitSrc(characterCode)} classes="w-100" />
 			</div>
@@ -125,16 +125,18 @@ function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element
 				/>
 			</div> */}
 			<div>
-				<div className="d-none d-xl-block">
+				<div className="d-none d-xl-flex ">
+					<h5 className="py-2 m-0 me-2 d-block ">{build.character.name}</h5>
 					<Tabs
 						tabs={roleTabs}
 						titleFunc={makeRoleTitle}
 						selectedTab={selectedRoleTab}
 						onTabSelect={setSelectedRoleTab}
-						classes="mb-2"
+						classes="mb-2 flex-grow-1"
 					/>
 				</div>
-				<div className="d-xl-none">
+				<div className="d-flex d-xl-none align-items-center">
+					<h5 className="mb-0 pt-2 me-2">{build.character.name}</h5>
 					<BtnTabGroup
 						tabs={roleTabs}
 						titleFunc={makeRoleTitle}
@@ -143,8 +145,7 @@ function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element
 						classes="w-100 mt-3 mb-2"
 					/>
 				</div>
-				{/* todo link to build */}
-				<div className="row small">
+				<div className="row small gy-2">
 					<div className="col-lg-4 col-12">
 						<h6 className="opacity-75">Artifacts</h6>
 						<div>{artifactsListBlock}</div>
@@ -165,33 +166,32 @@ function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element
 						<h6 className="opacity-75">Materials</h6>
 						<div>{materialsBlock}</div>
 					</div>
+					<div className="col-6">
+						<a type="button" className="btn btn-link btn-sm w-100">
+							Full build info
+						</a>
+					</div>
+					<div className="col-6">
+						<a type="button" className="btn btn-link btn-sm w-100">
+							Character lore
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	)
 }
 export function BuildsPreviewsWrap({ classes = '' }: { classes?: string }): JSX.Element {
-	const characterCodes = ['amber', 'bennett', 'kokomi'] //todo
-
-	const [selectedCharacterCode, setSelectedCharacterCode] = useState<string>(characterCodes[0])
-	const characterAvatars = useMemo(
-		() =>
-			characterCodes.map(code => (
-				<ItemAvatar
-					src={getCharacterAvatarSrc(code)}
-					// rarity={charactersShortList.find(x => x.code === code)?.rarity ?? 5}
-					classes="mb-1 me-1 mb-xxl-2 me-xxl-2 small-avatar align-middle"
-					key={code}
-					onClick={() => setSelectedCharacterCode(code)}
-				/>
-			)),
-		[characterCodes],
-	)
+	const [selectedCharacterCode, setSelectedCharacterCode] = useState<string | null>(null)
 	return (
 		<div className={`character-build-preview ${classes}`}>
 			<h6 class="text-uppercase opacity-75">Favourite characters</h6>
-			{characterAvatars}
-			<BuildPreview characterCode={selectedCharacterCode} key={selectedCharacterCode} />
+			<FavouriteCharacters onCharacterSelect={setSelectedCharacterCode} shoudSelectFirst={true} />
+			{selectedCharacterCode ? (
+				<BuildPreview characterCode={selectedCharacterCode} key={selectedCharacterCode} />
+			) : (
+				<Spinner />
+			)}
 		</div>
 	)
 }

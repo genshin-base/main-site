@@ -136,11 +136,12 @@ export function genArtofactAdvice(
 			return (
 				<>
 					{genArtofactAdvice(art, build, isLastInList)}
-					{!isLastInList && (
-						<div className="text-start text-lg-center text-muted small ps-3">{set.op}</div>
-					)}
+					{!isLastInList && <ItemsJoinerWrap>{set.op}</ItemsJoinerWrap>}
 				</>
 			)
 		})
 	}
+}
+export function ItemsJoinerWrap({ children }: { children: JSX.Node }): JSX.Element {
+	return <div className="text-start text-lg-center text-muted small px-5">{children}</div>
 }

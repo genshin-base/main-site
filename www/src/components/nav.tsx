@@ -15,7 +15,7 @@ export function Nav({ isNavExpanded }: Props): JSX.Element {
 		<div className={`collapse navbar-collapse ${isNavExpanded ? 'show' : ''}`}>
 			<ul className="navbar-nav me-auto mb-2 mb-md-0">
 				<li className="nav-item">
-					<a className="nav-link active" href="#">
+					<a className="nav-link active" href="/builds">
 						Builds
 					</a>
 				</li>

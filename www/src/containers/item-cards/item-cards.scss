@@ -41,7 +41,8 @@
 	.map-header-bg {
 		z-index: -1;
 	}
-	.dungeon-location {
+	.map-wrap,
+	.map-wrap .teyvat-map {
 		height: 230px;
 	}
 }

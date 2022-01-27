@@ -9,7 +9,7 @@ export function Header() {
 		<header>
 			<div className="navbar navbar-expand-md navbar-dark bg-primary">
 				<div className="container">
-					<a className="navbar-brand" href="#">
+					<a className="navbar-brand" href="/">
 						Genshin Base
 					</a>
 					<button

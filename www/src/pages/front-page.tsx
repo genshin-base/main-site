@@ -1,9 +1,7 @@
 import { AlchemyCalculator } from '#src/containers/alchemy-calculator'
 import { BuildsPreviewsWrap } from '#src/modules/builds/build-preview'
-import { Builds } from '#src/modules/builds/builds'
 
 export function FrontPage() {
-	// return <Builds />
 	return (
 		<div className="dashboard container">
 			<h1 className="my-1">Dashboard</h1>

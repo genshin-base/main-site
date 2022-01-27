@@ -42,9 +42,9 @@ export function CharacterPickerMobile() {
 				{characters.map(x => (
 					<ItemAvatar
 						src={getCharacterAvatarSrc(x.code)}
-						rarity={x.rarity}
+						// rarity={x.rarity}
 						hash={makeCharacterBuildHash(x.code)}
-						classes="m-1"
+						classes={`m-1 border ${x.rarity === 5 ? 'border-warning' : 'border-light'}`}
 					/>
 				))}
 			</div>

@@ -24,6 +24,7 @@ import {
 	genSeeCharNotes,
 	genSimpleList,
 	getRoleData,
+	ItemsJoinerWrap,
 	makeRoleTitle,
 	notesToJSX,
 } from './common'
@@ -73,9 +74,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 							/>
 							{genNotes(item)}
 							{genSeeCharNotes(item)}
-							{isInList && !isLastInList && (
-								<div className="text-center text-muted small ">or</div>
-							)}
+							{isInList && !isLastInList && <ItemsJoinerWrap>or</ItemsJoinerWrap>}
 						</>
 					)
 				})}
@@ -106,10 +105,10 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 				<h6 className="text-uppercase opacity-75">Main artifact stats</h6>
 				<ul className="mb-1 list-unstyled ms-1">
 					{CIRCLET_GOBLET_SANDS.map(ac => (
-						<li className="mb-1">
+						<li>
 							<ItemAvatar
 								src={getArtifactTypeIconSrc(ac)}
-								classes="small-avatar small mb-1 me-1 mb-xxl-2 me-xxl-2 p-1 bg-dark with-padding align-middle"
+								classes="small-avatar small my-1 mx-1 bg-dark with-padding align-middle"
 							/>
 							<b className="text-muted">{ac} — </b>
 							{genArtMainStatDetail(role, ac)}
