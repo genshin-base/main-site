@@ -555,20 +555,20 @@
               - b: highly refined копьем Фавония
               - " может сделать его предпочтительным оружием
                  in a отряд comp где Сян Лин
-                не вызывает реакции и is instead used as an aura. "
+                не вызывает реакции и вместо этого используется как an aura. "
               - b: (то есть отряды Реверсивного Таяния)
           - p:
               - b: |-
                   Об оружии и Артефактах со статом Мастерство стихий:
                   Гроза драконов / Крест-копьё Китаин / Мастерство стихий допстаты:
-              - " In отряд comps где you can trigger"
+              - " В отрядах где можно вызывать"
               - b: " "
-              - "both "
-              - b: Пар и Перегрузка at the same time
+              - "и "
+              - b: Пар и Перегрузку одновременно
               - " (то есть Националка Райдэн), "
               - b: Мастерство стихий
-              - " gets more value, pushing these weapons и artifacts ahead in
-                damage."
+              - " gets more value, pushing these оружие и артефакты ahead в
+                уроне."
           - p:
               - b: |-
                   О комплектах артефактов:
@@ -576,11 +576,11 @@
               - " Этот комплект pulls ahead over "
               - b: Эмблема рассечённой судьбы (4)
               - >2
-                 on отряд comps где Сян Лин имеет более низкую потребность Восст. энергии (то есть Националка Райдэн).
+                 в отрядах где Сян Лин имеет более низкую потребность Восст. энергии (то есть Националка Райдэн).
               - b: "Изгнанник (2) Учёный (2): "
-              - "Этот комплект can be used as a "
+              - "Этот комплект может быть использован как "
               - b: very low investment support build to enable Реверсивное Таяние отряд comps
-              - " где Сян Лин is not triggering the reaction и is instead
+              - " где Сян Лин is not triggering the реакции и is instead
                 used as an aura и needs alot of Восст. энергии. Note that it
                 is "
               - b: not recommended to stay on this build as Сян Лин still does decent damage
@@ -722,7 +722,7 @@
         notes:
           - p:
               b: Не рекомендовано использовать Сян Лин как физ. ДД, поскольку Сян Лин восхитительна
-                как Off-field Пиро ДПС. Физ. Сян Лин хороша только для ранней игры.
+                как Off-field Пиро ДД. Физ Сян Лин хороша только для ранней игры.
           - p:
               - b: "О выборе оружия:"
               - "\n"
@@ -730,7 +730,7 @@
               - " Пика полумесяца is extremely strong on Сян Лин due to the
                 nature of её attack combo, Пика полумесяца continues to surpass
                 Нефритовый коршун in terms of Обычная/Заряженная атака
-                Damage."
+                урона."
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
@@ -876,8 +876,8 @@
               - atk%
             notes: null
             seeCharNotes: true
-          notes: Мастерство стихий sands is generally > Сила атаки%, но качество допстат и оружие выбор can
-            potentially favour Сила атаки% sands.
+          notes: Мастерство стихий часы как правило > Сила атаки%, но качество допстатов и выбор оружия
+            потенциально может favour Сила атаки% .
           seeCharNotes: false
         subStats:
           advices:
@@ -944,7 +944,7 @@
               - b: "[R2+]"
               - " Стальное жало is a different question because better buffs.
                 (Assuming you don't have a whale build's CR/CD статы, in which
-                case Меч Сокола с Мастерство стихий sands is just flat out better.)"
+                case Меч Сокола с Мастерство стихий часы is just flat out better.)"
           - p:
               - b: "Громогласный рёв ярости (4):"
               - " Этот комплект "
@@ -972,7 +972,7 @@
                 is able to overtake MIstsplitter Reforged due to its massive
                 Шанс крит. попадания% допстат, which allows you to vape consistently
                 despite the lack of Крит. урон/Шанс крит. попадания subs in your artifacts.
-                Этот assumes that your Мастерство стихий главстат pieces (sands, кубок, и
+                Этот assumes that your Мастерство стихий главстат pieces (часы, кубок, и
                 корона) lack Шанс крит. попадания допстаты. However, in the rare occasion
                 that your Мастерство стихий pieces manage to roll plenty of Crit subs,
                 Mistsplitter easily overtakes Jade Cutter.
@@ -2297,8 +2297,8 @@
               - b: " [C4]"
               - ", Тома gains 15 энергия когда he fires his Взрыв стихии. Этот
                 effectively reduces his энергия cost to 65 и makes it possible
-                to use Чёрная кисть с Восст. энергии sands instead of Восст. энергии оружие с Восст. энергии
-                sands to furthermore strengthen his shield."
+                to use Чёрная кисть с Восст. энергии часы instead of Восст. энергии оружие с Восст. энергии
+                часы to furthermore strengthen his shield."
     credits: null
   - code: diluc
     elementCode: pyro
@@ -2508,7 +2508,7 @@
               - b: |
                   Об основных характеристиках Choice:
               - If Дилюк is run alongside Син Цю где he can trigger vaporize
-                very often, you can run Мастерство стихий sands as an alternative to Сила атаки sands.
+                very often, you can run Мастерство стихий часы as an alternative to Сила атаки часы.
                 Мастерство стихий boosts Дилюк's reaction damage by a lot after all. Note that
                 когда Дилюк's Пиро imbued basic attack is active, he can trigger
                 Пар every 2 basic attacks due to internal время отката.
@@ -10190,7 +10190,7 @@
               - b: |
                   О приоритете основных характеристик:
               - If you're equipping an Сила атаки% оружие, try to aim for an Energy
-                Recharge sands и vice versa.
+                Recharge часы и vice versa.
     credits: null
   - code: sucrose
     elementCode: anemo
@@ -11585,19 +11585,19 @@
           - p:
               - b: |
                   О Сяо's Optimal Элементальный навык Rotation:
-              - Элементальный навык -> Элементальный навык -> Взрыв стихии -> Plunge Combo
+              - Элементальный навык -> Элементальный навык -> Взрыв стихии -> Атака в падении Combo
           - p:
               - b: |-
                   О комбо атаки в падении Сяо:
                   Best combo for Сяо когда fighting a single target:
               - |-
                 
-                Plunge -> обычная атака -> Заряженная атака -> Plunge
+                Атака в падении -> обычная атака -> Заряженная атака -> Атака в падении
           - p:
               - b: "Best combo for Сяо когда fighting multiple "
               - |-
                 враги:
-                Plunge -> обычная атака -> Plunge
+                Атака в падении -> обычная атака -> Атака в падении
         notes:
           - p:
               - "Сяо has issues с Energy regeneration because "
@@ -12214,7 +12214,7 @@
               - atk%
             notes: null
             seeCharNotes: false
-          notes: Сила атаки% sands когда below C6 и below Talent Level 9 Взрыв стихии.
+          notes: Сила атаки% часы когда below C6 и below Talent Level 9 Взрыв стихии.
           seeCharNotes: false
         subStats:
           advices:
