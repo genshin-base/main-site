@@ -212,14 +212,11 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 							</div>
 							<div className="flex-fill w-33 p-3">{artifactStatsAndSkillsBlock}</div>
 						</div>
-					</div>
-				</div>
-				<div className="row">
-					<div className="col col-3"></div>
-					<div className="col col-9">
-						<div className="p-3">
-							<h6 className="text-uppercase opacity-75">Notes</h6>
-							<div className="text-muted">{notesBlock}</div>
+						<div className="w-100">
+							<div className="p-3">
+								<h6 className="text-uppercase opacity-75">Notes</h6>
+								<div className="text-muted">{notesBlock}</div>
+							</div>
 						</div>
 					</div>
 				</div>
