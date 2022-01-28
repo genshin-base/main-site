@@ -1282,11 +1282,11 @@
                  These weapons have the highest Базовая атака in the game which is why it is ranked quite high. It is assuming you have достаточно Восст. энергии so you still can burst off время отката for the maximum Сила атаки бафф.
               - b: "Клятва свободы:"
               - >2
-                 In comps где Беннет can reliably trigger reactions (и thus trigger this sword's passive), the buffs provided by this оружие will be stronger than Меч Сокола.
+                 In comps где Беннет can reliably trigger reactions (и thus trigger this sword's passive), the buffs provided by this оружие will be stronger чем Меч Сокола.
               - b: "Вспышка во тьме: "
               - >
                 Этот оружие на данный момент has the highest Базовая атака for a 4 star
-                оружие (even more Базовая атака than some 5 stars like Skyward
+                оружие (even more Базовая атака чем some 5 stars like Skyward
                 Blade).
               - b: "Прототип: Злоба: "
               - Этот оружие has one of the highest Базовая атака for a 4 Star оружие
@@ -1454,12 +1454,12 @@
           notes: null
           seeCharNotes: false
         tips:
-          - p: Синь Янь's ES grants you a pyro status upon contact с shield. No matter how
+          - p: Синь Янь's ES grants you a pyro status upon contact с щит. No matter how
               many times you switch your персонажи, it'll still apply pyro
-              every instant you switch с shield. Этот allows you to cleanse
+              every instant you switch с щит. Этот allows you to cleanse
               every single elemental status that has been applied to you.
           - p: If the status doesn't get cleansed, switch on that персонаж one more time
-              с the shield. Пиро doesn't cleanse Гидро very efficiently, take
+              с the щит. Пиро doesn't cleanse Гидро very efficiently, take
               Cecilia Garden for example, you'll have to apply pyro on your
               персонаж 4 times before actually cleansing the hydro status.
         notes:
@@ -1476,7 +1476,7 @@
               - b: |-
                   О комплектах артефактов: 
                   Рыцарь крови (4): 
-              - Despite how dependant Синь Янь's playstyle can get с Charged
+              - Despite how dependant Синь Янь's стиль игры can get с Charged
                 Attacks, Рыцарь крови Full Set is still not recommended
                 due to it only coming in effect after a kill.
       - code: shield support
@@ -1603,7 +1603,7 @@
               seeCharNotes: false
           notes:
             - p: Крит. урон if C2
-            - p: If shield support, Восст. энергии takes priority over Сила атаки%
+            - p: If щит support, Восст. энергии takes priority over Сила атаки%
           seeCharNotes: false
         talents:
           advices:
@@ -1617,24 +1617,24 @@
               - b: |-
                   О комплектах артефактов: 
                   Церемония древней знати (4): 
-              - Этот комплект can be used on Синь Янь if nobody else on the отряд is
-                using this комплект for the partywide Сила атаки бафф.
+              - Этот комплект может быть использован для баффа Силы атаки всей пачки, если никто другой в отряде его
+                не использует.
           - p:
               - b: "О Стойкости Миллелита (4) и Церемониальном двуручном мече: "
               - >-
                 
-                Синь Янь support is mostly used for её щит и/или Взрыв стихии damage. If you want to use её as a Physical Support, она needs both её Ascension 4 Talent и 
+                Синь Янь как персонаж поддержки в основном используется для её щита и/или урона от Взрыва стихии. Если использовать ее как Физ саппорта, она needs both её Ascension 4 Talent и 
               - b: "[C4]"
-              - " to maximize её support capabilities, making её a somewhat
+              - " для максимального увеличения ее способностей поддержки, making её a somewhat
                 expensive выбор to be considered for Physical Support role.
                 However, the Стойкость Миллелита комплект gives её a new role
                 с a lower Constellation level prerequisite."
           - p:
               - b: "Стойкость Миллелита: "
-              - "Этот комплект gives Синь Янь a unique role among the shielders.
-                Currently, Синь Янь is one of the few shielders in the game who
+              - "Этот комплект gives Синь Янь уникальную роль среди щитовиков.
+                На данный момент, Синь Янь is one of the few shielders in the game who
                 can make full use of the Tenacity комплект's effects. If you can
-                maximize the uptime of Синь Янь's Level 3 shield, она can provide
+                maximize the uptime of Синь Янь's Level 3 щит, она can provide
                 a constant 30% щит Strength и 20% Atk boost to the отряд (as
                 long as the pulses hit an враг). Этот means that "
               - b: 	Церемониальный двуручный меч
@@ -1783,7 +1783,7 @@
               seeCharNotes: false
           notes:
             - p: Крит. урон if C2
-            - p: If shield support, Восст. энергии takes priority over Сила атаки%
+            - p: If щит support, Восст. энергии takes priority over Сила атаки%
           seeCharNotes: false
         talents:
           advices:
@@ -1812,11 +1812,11 @@
           - p:
               - b: "Стойкость Миллелита: "
               - "Этот комплект gives Синь Янь a unique role among the shielders.
-                Currently, Синь Янь is one of the few shielders in the game who
+                На данный момент, Синь Янь is one of the few shielders in the game who
                 can make full use of the Tenacity комплект's effects. If you can
-                maximize the uptime of Синь Янь's Level 3 shield, она can provide
+                maximize the uptime of Синь Янь's Level 3 щит, она can provide
                 a constant 30% щит Strength и 20% Atk boost to the отряд (as
-                long as the pulses hit an враг). Этот means that "
+                long as the pulses hit an враг). Это значит, что "
               - b: 	Церемониальный двуручный меч
               - " и Синь Янь's "
               - b: "[C2]"
@@ -1834,14 +1834,14 @@
           - p:
               - At
               - b: " [C2],"
-              - " её burst \"Riff Revolution\" has a 100% Шанс крит. попадания, which
+              - " её взрыв стихии \"Струны протеста\" имеет 100% Шанс крит. попадания, which
                 means you can build solely Крит. урон (instead of trying to get a
                 1:2 Шанс крит. попадания:Крит. урон ratio) if you're building её as a
                 Physical Взрыв стихии support."
           - p:
               b: Generally not recommended for Пиро Applications, as the pulses only happen at
                 щит Level 3, и are not very efficient at breaking Крио
-                shields.
+                щитов.
     credits: null
   - code: yanfei
     elementCode: pyro
@@ -2010,25 +2010,25 @@
               - b: |-
                   О выборе оружия:
                   Молитва святым ветрам: 
-              - Беннет бафф/ Thrilling Tales of Dragon Slayer's бафф + Noblesse
-                Oblige (4) will push Lost Prayer ahead of Небесный атлас и
+              - Беннет бафф/ Эпос о драконоборцах's бафф + Церемония
+                древней знати (4) will push Молитву святым ветрам ahead of Небесный атлас и
                 Память о пыли
               - b: |-
                   
                   Истории Додоко: 
-              - "On equal refinements, Widsith is better than Истории Додоко, но
+              - "On equal ранг пробуждения, Песнь странника is better чем Истории Додоко, но
                 assuming it's "
               - b: "[R5]"
               - " Истории Додоко vs "
               - b: "[R1]"
               - "-"
               - b: "[R3]"
-              - " Widsith, "
+              - " Песнь странника, "
               - b: "[R5]"
               - " Истории Додоко is better. "
-              - b: Note that Беннет бафф / Thrilling Tales of Dragon Slayer's бафф + Noblesse
-                  Oblige (4) бафф may push Widsith и Солнечная жемчужина above Dodoco
-                  Tales, even at low refinements.
+              - b: Note that Беннет бафф / Эпос о драконоборцах's бафф + Церемония древней
+                  знати (4) бафф may push Песнь странника и Солнечная жемчужина above Истории
+                  Додоко, even at low ранг пробуждения.
           - p:
               - b: |-
                   О наборе Артефактов:
@@ -2045,7 +2045,7 @@
               - |2
                  effects without casting Взрыв стихии.
               - b: "Встречная комета (4): "
-              - Running Янь Фэй с a shield персонаж also allows you to make
+              - Running Янь Фэй с a щит персонаж also allows you to make
                 use of a full Встречная комета 4-комплект as a placeholder until
                 you're able to find a good Горящая алая ведьма 4-комплект.
           - p:
@@ -2156,7 +2156,7 @@
           - b: "Эпос о драконоборцах:"
           - " 250+ Восст. энергии"
         notes:
-          - "Этот section is dedicated to a playstyle где Янь Фэй is utilised
+          - "Этот section is dedicated to a стиль игры где Янь Фэй is utilised
             as a primary shielder through её 4th Constellation. Due to the
             requirement of having to burst off время отката, this build has "
           - b: high энергия requirements.
@@ -2286,7 +2286,7 @@
           seeCharNotes: false
         tips: []
         notes:
-          - p: Тома ideally wants to focus on shield over damage, и his burst uptime is
+          - p: Тома ideally wants to focus on щит over damage, и his burst uptime is
               required to achieve better shields, which is why he needs Восст. энергии% on
               top of ХП%.
           - p:
@@ -2298,7 +2298,7 @@
               - ", Тома gains 15 энергия когда he fires his Взрыв стихии. Этот
                 effectively reduces his энергия cost to 65 и makes it possible
                 to use Чёрная кисть с Восст. энергии часы instead of Восст. энергии оружие с Восст. энергии
-                часы to furthermore strengthen his shield."
+                часы to furthermore strengthen his щит."
     credits: null
   - code: diluc
     elementCode: pyro
@@ -2474,7 +2474,7 @@
                 potentially lead to a damage loss due to losing Меч драконьей кости
                 stacks. However, когда paired с "
               - b: "Чжун Ли, "
-              - "the shield allows you to gain the "
+              - "the щит allows you to gain the "
               - b: "[C2] "
               - "бафф while not losing any stacks - running Чжун Ли с "
               - b: "[C2] "
@@ -2665,7 +2665,7 @@
           notes: null
           seeCharNotes: false
         tips: Кли's Attacks have a 50% chance of spawning a floating star. Floating
-          star removes the stamina cost for the next Заряженная атака и
+          star removes the выносливость cost for the next Заряженная атака и
           увеличивает 50% of its damage.
         notes:
           - p: Extremely squishy, Кли requires great positioning. Being tiny, this is hard
@@ -2674,30 +2674,30 @@
               - b: |-
                   О выборе оружия:
                   Молитва святым ветрам: 
-              - Беннет бафф/ Thrilling Tales of Dragon Slayer's бафф + Noblesse
-                Oblige (4) will push Lost Prayer ahead of Небесный атлас и
+              - Беннет бафф/ Эпос о драконоборцах's бафф + Noblesse
+                Oblige (4) will push Молитву святым ветрам ahead of Небесный атлас и
                 Память о пыли
               - b: |-
                   
                   Истории Додоко:
-              - " On equal refinements, Widsith и Солнечная жемчужина are better than
+              - " On equal ранг пробуждения, Песнь странника и Солнечная жемчужина are better чем
                 Истории Додоко, но когда assuming "
               - b: "[R5]"
               - " Истории Додоко vs "
               - b: "[R1]"
               - "-"
               - b: "[R3]"
-              - " Widsith/Pearl, Истории Додоко is better. "
-              - b: Note that Беннет бафф / Thrilling Tales of Dragon Slayer's бафф + Noblesse
-                  Oblige (4) бафф may push Widsith и Солнечная жемчужина above Dodoco
-                  Tales, even at low refinements.
+              - " Песнь странника/Солнечная жемчужина, Истории Додоко is better. "
+              - b: Note that Беннет бафф / Эпос о драконоборцах's бафф + Noblesse
+                  Oblige (4) бафф may push Песнь странника и Солнечная жемчужина above Dodoco
+                  Tales, even at low ранг пробуждения.
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
               - b: "Ступающий по лаве (4): "
               - "Кли's kit makes it harder to utilize Пар и Таяние the
                 same way another pyro carry would, но её constant pyro
-                наложение makes Lavawalkers a viable комплект. See KleefulFrame's
+                наложение makes Ступающий по лаве a viable комплект. See KleefulFrame's
                 great number "
               - a: breakdown here
                 href: https://docs.google.com/spreadsheets/d/1JJZPMoNOqXhX8Ez1cl63fNXESJZXx7kQaJEeQ-WLOEY/edit#gid=186983353
@@ -2706,13 +2706,13 @@
               - >
                 Этот комплект is лучший used on a Пар Кли, но do note that due
                 to Кли's fast Пиро наложение from all of её kits, она may
-                not be able to vape most of её Normal/ Заряженные атаки. 
+                not be able to vape most of её обычные / Заряженные атаки. 
               - b: "Странствующий ансамбль (4): "
               - Странствующий ансамбль увеличивает the Заряженная атака by another 35%
                 Damage бонус. It can serve as a decent ДПС выбор но due to how
                 clunky Кли's attack animations are, it's hard to put this in
                 actual practise as it requires you to dodge more и consume
-                more stamina, not to mention how the ДПС gets caught up by the
+                more выносливость, not to mention how the ДПС gets caught up by the
                 other builds mentioned above.
     credits:
       - a: In-depth Guide
@@ -2881,7 +2881,7 @@
               - b: "[C1]."
               - "\n"
               - b: N3CJ/N3CD
-              - " can be used to conserve stamina at the cost of damage."
+              - " can be used to conserve выносливость at the cost of damage."
           - p:
               b: "*N = обычная атака, C = Заряженная атака, J = Jump, D = Dash"
         notes:
@@ -2898,20 +2898,20 @@
               - >
                 is a very strong оружие когда fully stacked, maintaining the
                 stacks on Ху Тао isn't ideal in realistic situations making the
-                оружие less consistent than other options.
+                оружие less consistent чем other options.
               - b: "Смертельный бой: "
               - >
-                Смертельный бой is better than Гроза драконов когда you're not doing
+                Смертельный бой is better чем Гроза драконов когда you're not doing
                 Пар.
               - b: "Черногорская пика:"
               - " Despite seeming quite good due to the Крит. урон допстат,
-                Blackcliff performs only slightly better than an "
+                Blackcliff performs only slightly better чем an "
               - b: "[R5]"
               - >2
                  Белая кисть in practice as it is difficult to maintain stacks consistently. It is not recommended to buy this оружие specifically for Ху Тао и should only be used if you already have one.
               - b: "Покоритель вихря и Небесная ось: "
               - "Provides little to nothing to Ху Тао since она scales better
-                с ХП% than Сила атаки% с every spear in the game. "
+                с ХП% чем Сила атаки% с every spear in the game. "
               - b: >-
                   Base attack makes little difference on Ху Тао because она has
                   a very high ХП to Сила атаки conversion cap.
@@ -2924,7 +2924,7 @@
                   О комплектах артефактов: 
                   Воспоминания Симэнавы (4): 
               - >
-                Provides higher AA damage than 4CW но lowers your
+                Provides higher AA damage чем 4CW но lowers your
                 Взрыв стихии damage which hurts your AoE damage, also if you're unable
                 to burst, it might cause survivability issues if you're not
                 running a целитель.
@@ -2934,17 +2934,17 @@
                   (2):"
               - " All these options are almost on equal footing because both of
                 the sets have an equal overall damage output assuming you have
-                100% shield uptime когда using Bolide (4). The difference is, you
+                100% щит uptime когда using Bolide (4). The difference is, you
                 want to use 2/2 WT/CW когда focusing on Nuking и better
                 consistency, while 4 Bolide is for overall higher AA damage at
                 the expense of lower burst damage, although inconsistent if you
-                cannot keep your shield permanently."
+                cannot keep your щит permanently."
           - p:
               - b: |
                   О приоритетных допстатах в артефактах: 
               - Since Ху Тао is able to trigger Пар on most of её damage
                 output, Мастерство стихий is quite valuable on её. If you have
-                less than 100EM total (including from Сахароза Мастерство стихий share, 4pc
+                less чем 100EM total (including from Сахароза Мастерство стихий share, 4pc
                 Инструктор, и т.д) Мастерство стихий допстат take priority over Шанс крит. попадания / урон.
     credits: null
   - code: yoimiya
@@ -3102,7 +3102,7 @@
               - b: |-
                   О выборе оружия: 
                   Ржавый лук: 
-              - At higher refinements
+              - At higher ранг пробуждения
               - b: ", "
               - this оружие can outperform a low refined
               - b: " "
@@ -3115,7 +3115,7 @@
                 passive. 
               - b: "Прототип: Полумесяц: "
               - >
-                At higher refinements, this оружие can beat out Хамаюми, The
+                At higher ранг пробуждения, this оружие can beat out Хамаюми, The
                 Viridescent Hunt, и Черногорский боевой лук. Do note that you want
                 to proc the оружие passive by shooting on враг's weakspot for
                 this оружие to be good.
@@ -3130,7 +3130,7 @@
                   Горящая алая ведьма (2) +18% Сила атаки комплект (2): 
               - "The лучший "
               - b: generalist комплект
-              - " on Ёимия. Этот комплект is considered better than Shimenawa's
+              - " on Ёимия. Этот комплект is considered better чем Shimenawa's
                 Reminiscence (4) due to Ёимия's optimal combo which involves
                 using её Взрыв стихии before Элементальный навык, as "
               - a: detailed in xandy#7124's
@@ -3370,7 +3370,7 @@
           - p: There is an animation cancelling technique с Фишль ДПС. After 3 или 5
               basic attacks, shoot an Aim Shot to reset your attack combo. The
               faster you can do this, the better it is. Only use this for
-              animation cancelling когда you're out of stamina since it can be
+              animation cancelling когда you're out of выносливость since it can be
               pretty hard to replicate consistently.
           - p:
               - b: "О [C6] Фишль билде:"
@@ -3403,12 +3403,12 @@
                   
                   Вальс Нирваны Ночи:
               - >2
-                 Вальс Нирваны Ночи would be prioritized over Amos if you manage to get refinement 5 for pure Physical build Фишль.
+                 Вальс Нирваны Ночи would be prioritized over Amos if you manage to get ранг пробуждения 5 for pure Physical build Фишль.
               - b: "Прототип: Полумесяц:"
               - " If you manage to weave in a заряженный выстрел on враг weak spots
                 once every 9-10 сек., Прототип: Полумесяц could potentially
                 offer more ДПС, this оружие can be an option for those
-                interested in a more challenging playstyle."
+                interested in a more challenging стиль игры."
       - code: off-field dps
         isRecommended: true
         weapons:
@@ -4169,7 +4169,7 @@
           - p: Мастерство стихий Лиза ДПС aims to be the consistent trigger for reactions, Перегрузка is
               generally the лучший reaction for this комплект up. Avoid having a second
               Электро in the отряд for this build since this could mess up the
-              Пиро aura Лиза wants for this playstyle.
+              Пиро aura Лиза wants for this стиль игры.
           - p: Заряжен отряды will have a hard time trying to utilize Мастерство стихий ДПС Лиза, in
               these situations, build Электро ДПС или Off-Field ДПС Лиза instead.
           - p:
@@ -4495,7 +4495,7 @@
                 оружие can overtake Волчья погибель in personal damage.
               - b: Некованый
               - >
-                : The playstyle с this оружие becomes a lot more comfortable
+                : The стиль игры с this оружие becomes a lot more comfortable
                 without having to worry about snapshotting Волчья погибель /
                 Песнь разбитых сосен buffs for Sub DPSes, while also granting
                 more щит бонус for better щит uptime. A shielder is
@@ -4503,7 +4503,7 @@
               - b: Меч драконьей кости
               - ": At "
               - b: "[C6] "
-              - "и high refinement Меч драконьей кости, it is better to run an Сила атаки%
+              - "и high ранг пробуждения Меч драконьей кости, it is better to run an Сила атаки%
                 Кубок over Physical Damage% с Меч драконьей кости. Этот is due to
                 the oversaturation of damage bonuses (ascension stat + Serpent
                 Spine) in addition to the fact that Электро accounts for a
@@ -5039,7 +5039,7 @@
           seeCharNotes: false
         tips: []
         notes:
-          - p: Этот section is dedicated to a playstyle где Кэ Цин does not infuse её
+          - p: Этот section is dedicated to a стиль игры где Кэ Цин does not infuse её
               attacks с electro, и instead focuses on physical damage
               (white numbers). For this reason, you should be charged attacking
               after casting Stellar Restoration (E) instead of recasting it.
@@ -5678,7 +5678,7 @@
           seeCharNotes: false
         tips:
           - p: Activating XQ's Элементальный навык или Взрыв стихии applies Гидро to the
-              on-field персонаж с his shield. (Пиро in specific)
+              on-field персонаж с his щит. (Пиро in specific)
           - p: "Cleansing Электро may take an additional switch for your персонаж с the
               rain мечи active, while Крио would freeze you in place. "
         notes:
@@ -5916,7 +5916,7 @@
                 Use Заряженные атаки if you're going to be doing Пар ДПС,
                 Normal Attacks are for Заряжен ДПС.
 
-                Always activate your skill first, as it reduces stamina consumption и if you have 
+                Always activate your skill first, as it reduces выносливость consumption и if you have 
               - b: "[C2],"
               - " it will give 15% Гидро Damage бонус."
           - p:
@@ -6238,9 +6238,9 @@
           - p:
               b: "*NA = обычная атака, CA = Заряженная атака"
           - p:
-              b: "The Optimal combo provides more damage но consumes more stamina.
+              b: "The Optimal combo provides more damage но consumes more выносливость.
                 Recommended combo provides slightly less damage но is more
-                stamina efficient. "
+                выносливость efficient. "
         notes:
           - p:
               b: The Оружие Rankings here are under the assumption that Тарталья is used с
@@ -6253,13 +6253,13 @@
               - " Has varied performance depending on "
               - b: how many passive stacks you get.
               - " Getting"
-              - b: " 2-3 stacks at the start of your rotation can perform better than Thundering
+              - b: " 2-3 stacks at the start of your rotation can perform better чем Thundering
                   Pulse"
               - " while getting "
-              - b: no stacks can perform worse than Небесное крыло.
+              - b: no stacks can perform worse чем Небесное крыло.
               - "  Этот only applies if you are Vaporising Тарталья Взрыв стихии together
                 с Беннет."
-              - b: " In отряды without Беннет, Полярная звезда will всегда perform better than the
+              - b: " In отряды without Беннет, Полярная звезда will всегда perform better чем the
                   other options. "
               - "3 stacks can be achieved by doing "
               - b: Элементальный навык + 1 Normal + 1 Заряженная атака
@@ -6273,7 +6273,7 @@
                 stack).
               - b: "Громовой пульс:"
               - >2
-                 Slightly better than Небесное крыло depending on rotations - the more time you spend doing Normal Attacks, the more it pulls ahead over Небесное крыло, но it's not recommended to extend your Тарталья's melee rotation for this.
+                 Slightly better чем Небесное крыло depending on rotations - the more time you spend doing Normal Attacks, the more it pulls ahead over Небесное крыло, но it's not recommended to extend your Тарталья's melee rotation for this.
               - b: "Viridescent Hunt:"
               - " Offers a valuable passive that helps a lot in "
               - b: grouping враги,
@@ -6281,7 +6281,7 @@
                  which can offer a ton of damage from Riptide.
               - b: "Черногорский боевой лук:"
               - " Due to inconsistency of gaining stacks,"
-              - b: " falls off compared to other weapons at higher refinements."
+              - b: " falls off compared to other weapons at higher ранг пробуждения."
               - "\n"
               - b: "Прототип: Полумесяц:"
               - " Requires you to trigger its passive by hitting the враг's
@@ -6871,7 +6871,7 @@
               - "Этот оружие can provide Elemental урон% for the отряд in "
               - b: Электро-charged отряды
               - >2
-                 и will outperform Prototype Эмбер if you value damage more than healing.
+                 и will outperform Prototype Эмбер if you value damage more чем healing.
               - b: "Церемониальные мемуары: "
               - "Can be useful as Кокоми won't need to use её Взрыв стихии
                 to reset её skill длительность. Этот "
@@ -7020,7 +7020,7 @@
           notes: null
           seeCharNotes: false
         tips:
-          - p: "Due to Кокоми's high stamina cost on её Заряженные атаки, её лучший attack
+          - p: "Due to Кокоми's high выносливость cost on её Заряженные атаки, её лучший attack
               strings are: "
           - p:
               - At
@@ -7190,8 +7190,8 @@
               - skill
           notes: null
           seeCharNotes: true
-        tips: Диона's Элементальный навык grants you a cryo shield which allows cleansing.
-          Every time you swap персонажи с the shield up, it applies cryo.
+        tips: Диона's Элементальный навык grants you a cryo щит which allows cleansing.
+          Every time you swap персонажи с the щит up, it applies cryo.
           Этот acts as a cleanse.
         notes:
           - p: The shielding Диона puts out should offset the need for healing from её
@@ -7210,7 +7210,7 @@
               - "\n"
               - b: "Церемониальный лук: "
               - >
-                Prefered over Favonious especially at higher refinements due to
+                Prefered over Favonious especially at higher ранг пробуждения due to
                 having better щит uptime.
               - b: "Боевой лук Фавония:"
               - >2
@@ -7501,7 +7501,7 @@
                   О приоритетах талантов: 
               - >-
                 Prioritize Взрыв стихии on a Таяние отряд as it scales better
-                than his Элементальный навык.
+                чем his Элементальный навык.
 
                 Prioritize Элементальный навык on a Заморозка отряд to furthermore extend the длительность of the Крио infusion.
     credits: null
@@ -7643,7 +7643,7 @@
               seeCharNotes: false
           notes:
             - b: "crit-rate: "
-            - Generally has less value than the other offensive статы since you
+            - Generally has less value чем the other offensive статы since you
               already have 60-75% Шанс крит. попадания с Заблудший в метели и Крио
               Resonance alone
           seeCharNotes: false
@@ -7665,7 +7665,7 @@
               while having Заблудший в метели (4) equipped. In this отряд, Кэйа
               has 55% crit rate против Заморозка враги without any additional
               Crit статы, which means Шанс крит. попадания допстаты are generally
-              prioritized less than Сила атаки% или Крит. урон.
+              prioritized less чем Сила атаки% или Крит. урон.
           - p:
               - b: |-
                   О комплектах артефактов:
@@ -7812,7 +7812,7 @@
               while having Заблудший в метели (4) equipped. In this отряд, Кэйа
               has 55% crit rate против Заморозка враги without any additional
               Crit статы, which means Шанс крит. попадания допстаты are generally
-              prioritized less than Сила атаки% или Крит. урон.
+              prioritized less чем Сила атаки% или Крит. урон.
           - p:
               - b: |-
                   О комплектах артефактов:
@@ -8211,7 +8211,7 @@
               - " If Розария is being used с "
               - b: Чун Юнь to infuse её обычные атаки с Крио,
               - " её обычная атака talent will have "
-              - b: higher priority than Элементальный навык.
+              - b: higher priority чем Элементальный навык.
       - code: physical dps
         isRecommended: false
         weapons:
@@ -8584,7 +8584,7 @@
               - |2
                  can reduce this Восст. энергии requirement down to 140% или lower.
               - b: "Покоритель вихря:"
-              - " Этот ranking is assumed without a shield. "
+              - " Этот ranking is assumed without a щит. "
               - b: With a large amount of attack buffs such as Беннет, this оружие can fall off
                   compared to the other options due to overstacking Сила атаки%.
               - "\n"
@@ -8797,11 +8797,11 @@
               - " while staying in враг melee reach с Элементальный навык active.
                 Церемониальный меч увеличивает the uptime of её Элементальный навык, which in
                 turn увеличивает the uptime of the отряд's Сила атаки boost. If you find
-                that your Ци Ци's heals are often more than достаточно, you may
+                that your Ци Ци's heals are often more чем достаточно, you may
                 consider switching её to this artifact комплект. "
               - b: >-
                   Do note that other персонажи might utilize Церемониальный меч
-                  more than Ци Ци, such as Син Цю, Кадзуха, и т.д.
+                  more чем Ци Ци, such as Син Цю, Кадзуха, и т.д.
 
                   Ocean Hued Clam (4):
               - " Этот ranking assumes "
@@ -9544,7 +9544,7 @@
                 compared to the above options. 
               - b: "Акуомару:"
               - " Этот оружие will outperform Luxurious Sea Lord at higher
-                refinements."
+                ранг пробуждения."
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
@@ -9691,7 +9691,7 @@
             notes: null
             seeCharNotes: false
           notes: Корона главстат will be dependant on your overall статы, depending on
-            your статы, one can be better than the other
+            your статы, one can be better чем the other
           seeCharNotes: false
         subStats:
           advices:
@@ -9771,7 +9771,7 @@
                 Blackcliff has, how much time you're gonna spend doing Normal
                 Attacks, и how much you value the passive on Amenoma since it
                 gives you leeway in building Восст. энергии, one can be better
-                than the other. If you're running "
+                чем the other. If you're running "
               - b: Небесный меч
               - " или "
               - b: Амэнома Кагэути
@@ -9781,7 +9781,7 @@
               - b: |-
                   
                   Меч-флейта:
-              - " Offers slightly more damage potential than"
+              - " Offers slightly more damage potential чем"
               - b: " Амэнома Кагэути"
               - ", с the tradeoff being losing Kageuchi's энергия generation.
                 Decide for yourself which is better for your отряд и
@@ -9983,12 +9983,12 @@
               - b: "The Бесструнный: "
               - >
                 Placement was considering Элой is used on a Реверсивное Таяние отряд.
-                On Реверсивное Таяние Элой, Бесструнный especially at higher refinement
+                On Реверсивное Таяние Элой, Бесструнный especially at higher ранг пробуждения
                 levels can pull ahead of Громовой пульс.
               - b: "Прототип: Полумесяц: "
               - >
                 Assumes the passive is active by proccing a weak point shot.
-                Этот оружие especially at higher refinement levels can be as
+                Этот оружие especially at higher ранг пробуждения levels can be as
                 good as a Небесное крыло.
               - b: "Церемониальный лук: "
               - A pretty decent option to make Элой a Крио battery as её
@@ -10329,7 +10329,7 @@
                 other weapons on the list когда it comes to enabling your отряд.
               - b: >-2
                    It offers 48% Сила атаки boost to the персонаж you swap to which is equivalent to 1 главстат. Этот enables your ДПС more if compared to Церемониальные мемуары which only gives ~44EM, equivalent to only 2 допстаты.
-                  Widsith:
+                  Песнь странника:
               - " Этот оружие is only useful if you get the Мастерство стихий passive from it.
                 As such, it is "
               - b: not recommended for general gameplay
@@ -10646,7 +10646,7 @@
               - >-
                 Этот section is dedicated to utilising the Анемо Путешественница's
                 Элементальный навык / Взрыв стихии. Due to how little field time this
-                playstyle takes, the Путешественница can also fulfill the role of a
+                стиль игры takes, the Путешественница can also fulfill the role of a
                 quickswap style Sub-ДПС.
 
                 Анемо Путешественница can require 
@@ -10673,7 +10673,7 @@
               - " At ["
               - b: R5],
               - " this оружие will be "
-              - b: better than Церемониальный меч.
+              - b: better чем Церемониальный меч.
               - "\n"
               - b: "Меч Фавония:"
               - " Although this оружие does not provide much damage, "
@@ -11207,11 +11207,11 @@
                 between "
               - b: ~150% to no additional Восст. энергии% needed,
               - " depending on the "
-              - b: "number of stacks on the passive и the refinement of this оружие. "
+              - b: "number of stacks on the passive и the ранг пробуждения of this оружие. "
               - "As such, at "
               - b: higher refines / more stacks on the passive,
               - " this оружие can perform"
-              - b: " better than Небесный меч,"
+              - b: " better чем Небесный меч,"
               - " while at "
               - b: lower refines / less stacks, it can perform worse.
               - "\n"
@@ -11253,7 +11253,7 @@
               - b: "О приоритетных талантах:"
               - >-2
                  
-                If you prefer more damage than healing, prioritize Элементальный навык over Взрыв стихии since it scales better.
+                If you prefer more damage чем healing, prioritize Элементальный навык over Взрыв стихии since it scales better.
           - p:
               - b: For Support Джинн,
               - " you can either go for "
@@ -11780,7 +11780,7 @@
               - b: "Стальное жало: "
               - Стальное жало will yield the highest upfront Мастерство стихий и teamwide бафф
                 if compared to the other 4 star options,
-              - b: " if you manage to meet his энергия needs или simply don't need more than one
+              - b: " if you manage to meet his энергия needs или simply don't need more чем one
                   rotation, this would be the better option if compared to the
                   Восст. энергии weapons."
           - p:
@@ -11961,7 +11961,7 @@
                 оружие is highly competitive с the other top choices.
               - b: "Память о пыли: "
               - >
-                A really good Сила атаки stat stick which performs better than the
+                A really good Сила атаки stat stick which performs better чем the
                 other 5 star options if you don't consider external Сила атаки buffers
                 like Беннет, Пиро resonance, и т.д, но falls off с it
                 considered.
@@ -12119,7 +12119,7 @@
                  Falls off a bit if compared to Небесный атлас due to not being able to stack the passive reliably, но it's still a Crit оружие which makes stat building much easier.
               - b: "Память о пыли: "
               - >
-                A really good Сила атаки statstick which can perform better than the
+                A really good Сила атаки statstick which can perform better чем the
                 other options if you don't consider external Сила атаки buffers like
                 Беннет, Пиро resonance, и т.д, но falls off с it considered.
               - b: "Солнечная жемчужина:"
@@ -12245,7 +12245,7 @@
           - b: N1>N2>N3>N4>dash/hop,
           - " где N refers to each обычная атака in её 4 hit combo. Этот
             isn't всегда feasible due to cast time и N4 covers a lesser AoE
-            than N1-3 (as well as knockback issues), so the recommended rotation
+            чем N1-3 (as well as knockback issues), so the recommended rotation
             is "
           - b: N1>N2>N3>dash/hop.
         notes:
@@ -12288,11 +12288,11 @@
               - b: |-
                   
                   Встречная комета (4): 
-              - Optimally offers slightly less damage than Gladiator's, но is
+              - Optimally offers slightly less damage чем Gladiator's, но is
                 much easier to farm per resin и can have 100% uptime с
                 crystallise shields. Consider Конец гладиатора if you don't
                 want to farm for Архаичный камень as Артефакт Strongbox is much
-                more effective than elite bosses in terms of artifacts per
+                more effective чем elite bosses in terms of artifacts per
                 resin.
       - code: support
         isRecommended: false
@@ -12378,11 +12378,11 @@
             - attack
           notes: null
           seeCharNotes: false
-        tips: Use её заряженные атаки for healing as they are much faster than normal
+        tips: Use её заряженные атаки for healing as they are much faster чем normal
           attacks.
         notes:
           - p: Support Ноэлль is not на данный момент recommended in any content due to её
-              extremely lackluster healing и poor shield uptime.
+              extremely lackluster healing и poor щит uptime.
           - p:
               - b: |-
                   О выборе оружия:
@@ -12393,12 +12393,12 @@
                 cast to reliably reset время отката. Even с "
               - b: "[R5],"
               - >2
-                 the время отката is 16 сек. while Ноэлль's shield длительность is 12, so forced downtime is an issue.
+                 the время отката is 16 сек. while Ноэлль's щит длительность is 12, so forced downtime is an issue.
               - b: "Двуручный меч Фавония: "
               - "Relies on hitting crits to generate энергия. The 12 second
                 время отката at "
               - b: "[R1]"
-              - " matches с её shield время отката. Generally not recommended
+              - " matches с её щит время отката. Generally not recommended
                 unless you have an abundance of crit допстаты или wish to build
                 её pseudo-ДПС."
     credits: null
@@ -12559,7 +12559,7 @@
               - b: Шанс крит. попадания circlet и допстаты
               - >2
                  can be considered когда Горо is using Боевой лук Фавония to trigger the passive comfortably.
-              - b: Восст. энергии% допстаты can usually be more важно than getting the right главстат,
+              - b: Восст. энергии% допстаты can usually be more важно чем getting the right главстат,
               - " as Горо's damage contribution to a отряд is negligible, while
                 being able to get Energy for his Взрыв стихии is a lot more важно."
     credits: null
@@ -12688,7 +12688,7 @@
               - b: "Крест-копьё Китаин:"
               - " Although the Мастерство стихий главстат isn't useful for Юнь Цзинь, the "
               - b: passive decreases её Восст. энергии requirements
-              - " by alot, especially at higher refinements. "
+              - " by alot, especially at higher ранг пробуждения. "
               - b: "It can reduce её Восст. энергии% reqs from around ~20% at R1 to ~70% at R5. "
               - Note that
               - b: " она must cast Взрыв стихии first before Элементальный навык, as the passive drains 3
@@ -12870,7 +12870,7 @@
           When using your Элементальный навык, try to use the долгое нажатие variant of it over tapping, as it has a slight delay on the быстрое нажатие variant.
         notes:
           - p: Этот section is dedicated to utilising the Гео Путешественница's Гео Взрыв стихии
-              damage capabilities. Due to how little field time this playstyle
+              damage capabilities. Due to how little field time this стиль игры
               takes, the Путешественница can also fulfill the role of a quickswap style
               Sub-ДПС.
           - p:
@@ -13052,7 +13052,7 @@
               - b: "О комплектах артефактов:"
               - "\n"
               - b: "Конец гладиатора (2) Бледный огонь (2):"
-              - " Этот комплект is ranked higher than Бледный огонь (2) Bloodstained
+              - " Этот комплект is ranked higher чем Бледный огонь (2) Bloodstained
                 Chivalry (2) due to how much Гео Damage is in the Путешественница's
                 kit. If you truly prefer to have the highest physical damage
                 output, use Set 2 instead."
@@ -13292,7 +13292,7 @@
         tips: []
         notes:
           - p:
-              - b: "Этот kind of playstyle is very straightforward; stack as much ХП as
+              - b: "Этот kind of стиль игры is very straightforward; stack as much ХП as
                   possible. Prioritize ХП scaling polearms such as Чёрная кисть
                   и artifact sets such as Стойкость Миллелита (4) to
                   capitalize on Чжун Ли's щит. "
@@ -13302,7 +13302,7 @@
                 offers, и not for damage.
           - p: Note that if paired с Син Цю и/или Бэй Доу, the damage reduction from
               orbitals from Син Цю's Элементальный навык и Взрыв стихии и/или
-              Бэй Доу's Взрыв стихии can be utilized on Чжун Ли's shield,
+              Бэй Доу's Взрыв стихии can be utilized on Чжун Ли's щит,
               making it basically unbreakable.
           - p:
               - b: |-
@@ -13475,7 +13475,7 @@
               while his Элементальный навык Hold Cast (щит) scales с ХП и at
               Ascension 4, you would unlock a talent that allows your burst to
               scale с 33% of Чжун Ли's Max ХП, making him an amazing source
-              of shield и damage.
+              of щит и damage.
           - p:
               - b: |-
                   О комплектах артефактов:
@@ -13500,7 +13500,7 @@
               - b: "Об основных характеристиках:"
               - >-
                 
-                Ideally, you'll want Сила атаки%/Гео/Шанс крит. попадания-урон for maximum Взрыв стихии damage, as his Ascension 4 Talent scaling would be лучший benefitted using only one ХП главстат, any additional ХП stat is desirable as it goes to his shield durability/burst damage.
+                Ideally, you'll want Сила атаки%/Гео/Шанс крит. попадания-урон for maximum Взрыв стихии damage, as his Ascension 4 Talent scaling would be лучший benefitted using only one ХП главстат, any additional ХП stat is desirable as it goes to his щит durability/burst damage.
     credits: null
   - code: albedo
     elementCode: geo
@@ -13650,7 +13650,7 @@
               - "\n"
               - b: "Драгоценный омут:"
               - >2
-                 On a Hybrid build где Альбедо casts his Взрыв стихии, this оружие can be a better option than Киноварное веретено on certain situations, such as AoE где Альбедо's Взрыв стихии hits multiple враги или когда there are external Сила атаки buffs like Беннет's Взрыв стихии. On a pure Элементальный навык focused Альбедо или Single Target situations for Hybrid Альбедо, Киноварное веретено is the better option, so choose wisely.
+                 On a Hybrid build где Альбедо casts his Взрыв стихии, this оружие can be a better option чем Киноварное веретено on certain situations, such as AoE где Альбедо's Взрыв стихии hits multiple враги или когда there are external Сила атаки buffs like Беннет's Взрыв стихии. On a pure Элементальный навык focused Альбедо или Single Target situations for Hybrid Альбедо, Киноварное веретено is the better option, so choose wisely.
               - b: "Предвестник зари:"
               - >2
                  Альбедо's Элементальный навык scales с Defense, which is why the Базовая атака from the оружие doesn't matter that much. Предвестник зари offers a lot of Crit статы which is why it is one of the strongest weapons for him despite being a 3 star оружие. The downside of this оружие is that you'd need to keep Альбедо's ХП at 90% или higher to benefit from the passive, so it might be annoying to use против certain враги which has a ХП lowering debuff, even когда off-field, such as Corrosion.
@@ -13807,7 +13807,7 @@
               Взрыв стихии's Сила атаки boost и Гео infusion to deal significant damage
               during its uptime. His combos involve stacking и unleashing his
               Заряженные атаки, named Arataki Kesagiri. Arataki Kesigiri consumes
-              no stamina и can be casted continuously as long as he has
+              no выносливость и can be casted continuously as long as he has
               Superlative Superstrength stacks. Superlative Superstrength is
               capped at 5 stacks at any given time, и Итто gets those stacks
               когда his 2nd и 4th обычная атака string hits an враг.
@@ -13907,7 +13907,7 @@ artifacts:
   - code: brave-heart
     sets:
       "2": Сила атаки +18%
-      "4": Increases урон by 30% против враги с more than 50% ХП
+      "4": Increases урон by 30% против враги с more чем 50% ХП
   - code: gambler
     sets:
       "2": Элементальный навык урон increased by 20%
@@ -14043,7 +14043,7 @@ artifacts:
 
         (Этот урон is calculated similarly to Reactions such as Заряжен, и Сверхпроводник, но it is not под эффектом Мастерство стихий, персонаж Levels, или Reaction урон Bonuses).
 
-        Only one Sea-Dyed Foam can be produced every 3.5 сек.. Each Sea-Dyed Foam can accumulate up to 30,000 ХП (including overflow healing). There can be no more than one Sea-Dyed Foam active at any given time.
+        Only one Sea-Dyed Foam can be produced every 3.5 сек.. Each Sea-Dyed Foam can accumulate up to 30,000 ХП (including overflow healing). There can be no more чем one Sea-Dyed Foam active at any given time.
 
         Этот effect can still be triggered even когда the персонаж who is using this artifact комплект is not on the field.
 weapons:
@@ -14077,7 +14077,7 @@ weapons:
     passiveStat:
       - "Increases Сила атаки by "
       - b: 20/25/30/35/40%.
-      - " On hit, attacks против враги с less than 30% ХП увеличивать all
+      - " On hit, attacks против враги с less чем 30% ХП увеличивать all
         отряд members' Сила атаки by "
       - b: 40/50/60/70/80%
       - " for 12s. Can only occur once every 30s."
@@ -14494,7 +14494,7 @@ weapons:
       value1: 10.8
       value90: 49.6
     passiveStat:
-      - "Increases щит Strength by "
+      - "Increases shield Strength by "
       - b: 20/25/30/35/40%.
       - " Scoring hits on противники увеличивает Сила атаки by "
       - b: 4/5/6/7/8%
@@ -14559,7 +14559,7 @@ weapons:
       - " Elemental урон бонус for the персонаж's Elemental Type. The персонаж
         will obtain 1 stack of Mistsplitter's Emblem in each of the following
         scenarios: обычная атака deals Elemental урон (stack lasts 5s), casting
-        Взрыв стихии (stack lasts 10s); Energy is less than 100% (stack
+        Взрыв стихии (stack lasts 10s); Energy is less чем 100% (stack
         disappears когда Energy is full). Each stack's длительность is calculated
         independently."
   - code: lions-roar
@@ -14772,7 +14772,7 @@ weapons:
     passiveStat:
       - "Элементальный навык урон is increased by "
       - b: 40/50/60/70/80%
-      - " of Защита. The effect will be triggered no more than once every 1.5s и
+      - " of Защита. The effect will be triggered no more чем once every 1.5s и
         will be cleared 0.1s after the Элементальный навык deals урон."
   - code: cool-steel
     typeCode: sword
@@ -15104,7 +15104,7 @@ weapons:
       value1: 6.7
       value90: 30.6
     passiveStat:
-      - "Hitting an противник с a обычная атака decreases the stamina
+      - "Hitting an противник с a обычная атака decreases the выносливость
         consumption of sprint или alternate sprint by "
       - b: 14/16/18/20/22%
       - " for 5s. Additionally, using a sprint или alternate sprint ability
@@ -15265,7 +15265,7 @@ weapons:
         Attacks hits on враги have a 50% chance to trigger a vaccuum blade
         that deals "
       - b: 40/55/70/85/100%
-      - " of Сила атаки as урон in a small AoE. Этот effect can occur no more than once
+      - " of Сила атаки as урон in a small AoE. Этот effect can occur no more чем once
         every 2s."
   - code: staff-of-homa
     typeCode: polearm
@@ -15282,7 +15282,7 @@ weapons:
       - b: 20/25/30/35/40%.
       - " Additionally, provides an Сила атаки bonus based on "
       - b: 0.8/1/1.2/1.4/1.6%
-      - " of the wielder's max ХП. When the wielder's ХП is less than 50%, this
+      - " of the wielder's max ХП. When the wielder's ХП is less чем 50%, this
         Сила атаки bonus is increased by an additional "
       - b: 1/1.2/1.4/1.6/1.8%
       - " of max ХП."
@@ -15369,7 +15369,7 @@ weapons:
       - b: 16/20/24/28/32%
       - " и Защита is increased by "
       - b: 16/20/24/28/32%.
-      - " If there are less than 2 враги nearby, Сила атаки is increased by "
+      - " If there are less чем 2 враги nearby, Сила атаки is increased by "
       - b: 24/30/36/42/48%.
   - code: dragons-bane
     typeCode: polearm
@@ -15636,7 +15636,7 @@ weapons:
       - b: (12/24/40)/(15/30/50)/(18/36/60)/(21/42/70)/(24/48/80)%.
       - " The персонаж will obtain 1 stack of Thunder Emblem in each of the
         following scenarios: обычная атака deals урон (stack lasts 5s), casting
-        Элементальный навык (stack lasts 10s); Energy is less than 100% (stack
+        Элементальный навык (stack lasts 10s); Energy is less чем 100% (stack
         disappears когда Energy is full). Each stack's длительность is calculated
         independently."
   - code: polar-star
@@ -15825,7 +15825,7 @@ weapons:
       - b: 2/2.5/3/3.5/4%
       - " every second up to a max of "
       - b: 20/25/30/35/40%.
-      - " When the персонаж is on the field for more than 4s, the
+      - " When the персонаж is on the field for more чем 4s, the
         aforementioned урон бафф decreases by "
       - b: 4/5/6/7/8%
       - " per second until it reaches 0%."
