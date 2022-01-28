@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
 
 import { BS_BreakpointCode, BS_getCurrBreakpoint } from '#src/utils/bootstrap'
+import { RefObject } from 'preact'
 
 type Pending = { _type: 'pending' }
 
@@ -88,4 +89,75 @@ export function useWindowSize(): WindowSize {
 		return () => window.removeEventListener('resize', handleResize)
 	}, [])
 	return windowSize
+}
+
+declare global {
+	interface WindowEventMap {
+		'x-local-tab-storage': CustomEvent & { detail: { key: string } }
+	}
+}
+
+export function useLocalStorage<T>(key: string, initialValue: T): [T, (val: T) => unknown] {
+	const [value, setValueInner] = useState(() => {
+		const curRecord = localStorage.getItem(key)
+		try {
+			return curRecord ? JSON.parse(curRecord) : initialValue
+		} catch (ex) {
+			console.error(ex)
+			return initialValue
+		}
+	})
+
+	const setValueAndSave = useCallback(
+		(val: T) => {
+			localStorage.setItem(key, JSON.stringify(val))
+			setValueInner(val)
+			dispatchEvent(new CustomEvent('x-local-tab-storage', { detail: { key } }))
+		},
+		[key],
+	)
+
+	useEffect(() => {
+		function onStorage(e: StorageEvent | { detail: { key: string } }) {
+			const affectedKey = 'detail' in e ? e.detail.key : e.key
+			if (affectedKey === key) {
+				const curRecord = localStorage.getItem(key)
+				if (curRecord)
+					try {
+						setValueInner(JSON.parse(curRecord))
+					} catch (ex) {
+						console.log(ex)
+					}
+			}
+		}
+		addEventListener('storage', onStorage)
+		addEventListener('x-local-tab-storage', onStorage)
+		return () => {
+			removeEventListener('storage', onStorage)
+			removeEventListener('x-local-tab-storage', onStorage)
+		}
+	}, [key])
+
+	return [value, setValueAndSave]
+}
+export function useHover<T>(): [RefObject<T>, boolean] {
+	const [value, setValue] = useState<boolean>(false)
+	const ref: any = useRef<T | null>(null)
+	const handleMouseOver = (): void => setValue(true)
+	const handleMouseOut = (): void => setValue(false)
+	useEffect(
+		() => {
+			const node: any = ref.current
+			if (node) {
+				node.addEventListener('mouseover', handleMouseOver)
+				node.addEventListener('mouseout', handleMouseOut)
+				return () => {
+					node.removeEventListener('mouseover', handleMouseOver)
+					node.removeEventListener('mouseout', handleMouseOut)
+				}
+			}
+		},
+		[ref], // Recall only if ref changes
+	)
+	return [ref, value]
 }

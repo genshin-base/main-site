@@ -22,7 +22,7 @@ import {
 } from './common'
 
 import './character-build-preview.scss'
-import { FavouriteCharacters } from '#src/containers/character-picker/favourite-characters'
+import { FavoriteCharacters } from '#src/containers/character-picker/favorite-characters'
 
 function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element {
 	const build = useBuildWithDelayedLocs(characterCode)
@@ -34,17 +34,25 @@ function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element
 		if (!isLoaded(build)) return []
 		const role = getRoleData(build, selectedRoleTab.code)
 		if (!role) return []
-
+		const listTimit = 1
 		return (
 			<ol>
 				{role.artifacts.sets.map((set, i) => {
-					if (i > 2) return
+					if (i > listTimit) return
 					return (
 						<li key={i} className="pt-1">
 							{genArtofactAdvice(set.arts, build, false)}
 						</li>
 					)
 				})}
+				{/* //todo href */}
+				{role.artifacts.sets.length > listTimit ? (
+					<li className="pt-1 text-muted">
+						<a className="link-secondary text-muted" href="/builds">
+							more on build page
+						</a>
+					</li>
+				) : null}
 			</ol>
 		)
 	}, [build, selectedRoleTab])
@@ -185,8 +193,11 @@ export function BuildsPreviewsWrap({ classes = '' }: { classes?: string }): JSX.
 	const [selectedCharacterCode, setSelectedCharacterCode] = useState<string | null>(null)
 	return (
 		<div className={`character-build-preview ${classes}`}>
-			<h6 class="text-uppercase opacity-75">Favourite characters</h6>
-			<FavouriteCharacters onCharacterSelect={setSelectedCharacterCode} shoudSelectFirst={true} />
+			<h6 class="text-uppercase opacity-75">Favorite characters</h6>
+			<FavoriteCharacters
+				onCharacterSelect={setSelectedCharacterCode}
+				shoudSelectFirst={!selectedCharacterCode}
+			/>
 			{selectedCharacterCode ? (
 				<BuildPreview characterCode={selectedCharacterCode} key={selectedCharacterCode} />
 			) : (

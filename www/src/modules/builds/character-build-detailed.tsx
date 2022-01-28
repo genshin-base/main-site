@@ -27,6 +27,7 @@ import {
 	ItemsJoinerWrap,
 	makeRoleTitle,
 	notesToJSX,
+	ToggleCharFav,
 } from './common'
 
 import './character-build-detailed.scss'
@@ -190,9 +191,13 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 					</div>
 				</div>
 				<div className="row">
-					<div className="col col-3">
+					<div className="col col-3 position-relative">
 						<CharacterPortrait src={getCharacterPortraitSrc(characterCode)} classes="w-100" />
 						<div className="mt-3">{materialsBlock}</div>
+						<ToggleCharFav
+							classes="fs-3 position-absolute top-0 end-0 m-2"
+							characterCode={characterCode}
+						/>
 					</div>
 					<div className="col col-9">
 						<div className="d-flex">
@@ -264,9 +269,10 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 				>
 					<span className="fs-4 lh-1 opacity-75">‹ </span> Back
 				</a>
-				<h5 className="px-3 d-inline align-baseline">
+				<h5 className="ps-3 pe-1 d-inline align-baseline">
 					{isLoaded(build) ? build.character.name : ''}
 				</h5>
+				<ToggleCharFav classes="fs-3 d-inline align-middle d-xl-none" characterCode={characterCode} />
 			</div>
 			{CharacterDetailDesktop}
 			{CharacterDetailMobile}

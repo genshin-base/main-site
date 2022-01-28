@@ -9,7 +9,7 @@ export function SimpleSelect({
 	classes = '',
 }: {
 	options: Option[]
-	selectedOption: Option
+	selectedOption: Option | null
 	onOptionSelect(Option): unknown
 	classes?: string
 }): JSX.Element {
@@ -21,12 +21,15 @@ export function SimpleSelect({
 	)
 	return (
 		<select className={`form-select bg-dark text-light c-pointer ${classes}`} onChange={handleChange}>
+			<option value="" disabled selected hidden>
+				Select…
+			</option>
 			{options.map(o => (
 				<option
 					className="c-pointer"
 					key={o.code}
 					value={o.code}
-					selected={o.code === selectedOption.code}
+					selected={!!(selectedOption && o.code === selectedOption.code)}
 				>
 					{o.title}
 				</option>

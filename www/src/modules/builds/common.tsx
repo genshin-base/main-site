@@ -12,10 +12,13 @@ import { CharacterBuildInfoRole } from '#lib/parsing/helperteam/characters'
 import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
 import { mustBeDefined } from '#lib/utils/values'
 import { MapAllByCode } from '#src/api/utils'
+import { Tooltip } from '#src/components/tooltip'
 import { ArtifactDetailDd } from '#src/containers/item-cards/dd-cards'
 import { LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
-import { STAR } from '#src/utils/typography'
+import { useHover, useLocalStorage } from '#src/utils/hooks'
+import { HEART, HEART_EMPTY, STAR } from '#src/utils/typography'
+import { useCallback, useRef } from 'preact/hooks'
 
 export const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole> = {
 	title: '…',
@@ -144,4 +147,42 @@ export function genArtofactAdvice(
 }
 export function ItemsJoinerWrap({ children }: { children: JSX.Node }): JSX.Element {
 	return <div className="text-start text-lg-center text-muted small px-5">{children}</div>
+}
+export const MAX_CHARACTERS_TO_STORE = 5
+export function removeOldCharsFromList(codes: string[]): string[] {
+	return codes.slice(0, MAX_CHARACTERS_TO_STORE - 1)
+}
+
+export function ToggleCharFav({
+	characterCode,
+	classes,
+}: {
+	characterCode: string
+	classes?: string
+}): JSX.Element {
+	const [favCharCodes, setFavCharCodes] = useLocalStorage<string[]>('favoriteCharacterCodes', [])
+	const [elRef, isHovered] = useHover<HTMLDivElement>()
+	const isFav = ~favCharCodes.indexOf(characterCode)
+	const toggleFav = useCallback(() => {
+		setFavCharCodes(
+			removeOldCharsFromList(
+				isFav ? favCharCodes.filter(c => c !== characterCode) : [...favCharCodes, characterCode],
+			),
+		)
+	}, [characterCode, setFavCharCodes, favCharCodes, isFav])
+	return (
+		<div
+			role="button"
+			className={`user-select-none lh-1 ${isFav ? 'text-danger' : 'text-danger opacity-50'} ${classes}`}
+			onClick={toggleFav}
+			ref={elRef}
+		>
+			{isFav ? HEART : HEART_EMPTY}
+			{elRef.current && isHovered ? (
+				<Tooltip targetEl={elRef.current}>
+					{isFav ? 'Remove character from your favorites' : 'Add character to your favorites'}
+				</Tooltip>
+			) : null}
+		</div>
+	)
 }
