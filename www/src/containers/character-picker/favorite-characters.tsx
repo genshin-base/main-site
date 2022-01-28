@@ -28,7 +28,7 @@ export function FavoriteCharacters({
 			? favCharCodes.concat(
 					charactersShortListCodes.slice(0, MAX_CHARACTERS_TO_STORE - favCharCodes.length),
 			  )
-			: favCharCodes.slice(0, MAX_CHARACTERS_TO_STORE - 1)
+			: favCharCodes.slice(0, MAX_CHARACTERS_TO_STORE)
 	// const optsForSelect = useMemo(
 	// 	//todo выпилить или вставить нормальные имена
 	// 	() =>

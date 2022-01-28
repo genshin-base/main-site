@@ -150,7 +150,7 @@ export function ItemsJoinerWrap({ children }: { children: JSX.Node }): JSX.Eleme
 }
 export const MAX_CHARACTERS_TO_STORE = 5
 export function removeOldCharsFromList(codes: string[]): string[] {
-	return codes.slice(0, MAX_CHARACTERS_TO_STORE - 1)
+	return codes.slice(0, MAX_CHARACTERS_TO_STORE)
 }
 
 export function ToggleCharFav({
@@ -166,7 +166,7 @@ export function ToggleCharFav({
 	const toggleFav = useCallback(() => {
 		setFavCharCodes(
 			removeOldCharsFromList(
-				isFav ? favCharCodes.filter(c => c !== characterCode) : [...favCharCodes, characterCode],
+				isFav ? favCharCodes.filter(c => c !== characterCode) : [characterCode, ...favCharCodes],
 			),
 		)
 	}, [characterCode, setFavCharCodes, favCharCodes, isFav])
