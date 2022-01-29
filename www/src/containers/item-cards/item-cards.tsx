@@ -51,7 +51,7 @@ export function ItemAvatar<TItem, TRelated>({
 	return (
 		<a
 			href={hash}
-			className={`item-avatar position-relative small rounded-circle d-inline-block ${pointerClass} ${rarityClass} ${classes}`}
+			className={`item-avatar position-relative rounded-circle d-inline-block ${pointerClass} ${rarityClass} ${classes}`}
 			ref={elRef}
 			onClick={onClickLocal}
 		>

@@ -32,7 +32,6 @@ export function AlchemyCalculator({
 	)
 	return (
 		<div className={`alchemy-calculator overflow-hidden ${classes}`}>
-			<h6 class="text-uppercase opacity-75">alchemy calculator</h6>
 			<div className="input-group">
 				<input
 					type="number"

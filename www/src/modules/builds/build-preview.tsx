@@ -193,7 +193,6 @@ export function BuildsPreviewsWrap({ classes = '' }: { classes?: string }): JSX.
 	const [selectedCharacterCode, setSelectedCharacterCode] = useState<string | null>(null)
 	return (
 		<div className={`character-build-preview ${classes}`}>
-			<h6 class="text-uppercase opacity-75">Favorite characters</h6>
 			<FavoriteCharacters
 				onCharacterSelect={setSelectedCharacterCode}
 				shoudSelectFirst={!selectedCharacterCode}

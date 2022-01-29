@@ -452,7 +452,7 @@ export function OtherItemCard({
 			markerGroups,
 		}
 	}, [materialOnMap, related])
-
+	// item.craftedFrom3Code && console.log(getAllRelated(related.items, [item.craftedFrom3Code]))
 	return (
 		<Card
 			titleEl={item.name}
@@ -463,6 +463,7 @@ export function OtherItemCard({
 						{/* <ItemAvatar rarity={3} classes="large-avatar float-end" src={getItemIconSrc(item.code)} /> */}
 						{/* <h6 className="text-uppercase opacity-75">Описание</h6>
 				<div className="mb-3">{notesToJSX()}</div> */}
+						<h6 class="text-uppercase opacity-75">alchemy calculator</h6>
 						<AlchemyCalculator classes={'w-75'} iconSrc={getItemIconSrc(item.code)} />
 					</div>
 				) : null
