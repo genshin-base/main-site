@@ -300,8 +300,8 @@
         notes:
           - p: Из-за её плохих скейлов, этот раздел посвящен дешёвой сборке
               которая обеспечивает полезность и дает возможность ломать щиты благодаря 
-              быстрому наложению Пиро с помощью её Взрыва стихии. Из-за того, что её
-              генерация энергии очень низкая, прокачка её Восст. энергии
+              быстрому наложению Пиро с помощью её Взрыва стихии. Из-за того, что
+              генерация энергии Эмбер очень низкая, прокачка её Восст. энергии
               приоритетна.
           - p:
               - b: "О 4 частях Инструктора: "
@@ -507,11 +507,11 @@
           - p:
               - u:
                   b: |
-                    Рекомендуемый Восст. энергии thresholds: 
+                    Рекомендуемый порог Восст. энергии: 
               - b: "Националка/Отряд Тартальи: "
               - |
                 160-200 Восст. энергии%
-              - b: "Enabler for Реверсивное Таяние отряды:"
+              - b: "Активатор для отрядов Реверсивного Таяния:"
               - " 200-250 Восст. энергии%"
         notes:
           - p:
@@ -552,9 +552,9 @@
               - "\n"
               - b: "Копьё Фавония:"
               - " Полезность, обеспечиваемая "
-              - b: highly refined копьем Фавония
+              - b: копьем Фавония с высоким рангом пробуждения
               - " может сделать его предпочтительным оружием
-                 in a отряд comp где Сян Лин
+                 в отрядах где Сян Лин
                 не вызывает реакции и вместо этого используется как an aura. "
               - b: (то есть отряды Реверсивного Таяния)
           - p:
@@ -567,8 +567,7 @@
               - b: Пар и Перегрузку одновременно
               - " (то есть Националка Райдэн), "
               - b: Мастерство стихий
-              - " gets more value, pushing these оружие и артефакты ahead в
-                уроне."
+              - " больше ценится, выводя это оружие и артефакты вперед по наносимому урону."
           - p:
               - b: |-
                   О комплектах артефактов:
@@ -579,11 +578,11 @@
                  в отрядах где Сян Лин имеет более низкую потребность Восст. энергии (то есть Националка Райдэн).
               - b: "Изгнанник (2) Учёный (2): "
               - "Этот комплект может быть использован как "
-              - b: very low investment support build to enable Реверсивное Таяние отряд comps
-              - " где Сян Лин is not triggering the реакции и is instead
-                used as an aura и needs alot of Восст. энергии. Note that it
+              - b: очень бюджетный саппорт билд to enable Реверсивное Таяние отряды
+              - " где Сян Лин не вызывает реакции и вместо этого
+                используется как aura и требует много Восст. энергии. Обратите внимание на то, что
                 is "
-              - b: not recommended to stay on this build as Сян Лин still does decent damage
+              - b: не рекомендуется останавливаться на этом билде, так как Сян Лин still does decent damage
                   in these отряды.
       - code: physical dps
         isRecommended: false
@@ -721,22 +720,21 @@
         tips: []
         notes:
           - p:
-              b: Не рекомендовано использовать Сян Лин как физ. ДД, поскольку Сян Лин восхитительна
-                как Off-field Пиро ДД. Физ Сян Лин хороша только для ранней игры.
+              b: Не рекомендовано использовать Сян Лин как физ. ДПС, поскольку Сян Лин восхитительна
+                в роли Off-field Пиро ДПС. Физ Сян Лин хороша только для ранней игры.
           - p:
               - b: "О выборе оружия:"
               - "\n"
               - b: "Пика полумесяца:"
-              - " Пика полумесяца is extremely strong on Сян Лин due to the
-                nature of её attack combo, Пика полумесяца continues to surpass
-                Нефритовый коршун in terms of Обычная/Заряженная атака
-                урона."
+              - " Пика полумесяца очень сильна на Сян Лин благодаря
+                особенностям ее комбо-атак, Пика полумесяца продолжает превосходить
+                Нефритового коршуна в отношении урона с Обычных/Заряженных атак."
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
               - b: "Бледный огонь (4): "
-              - The passive from this комплект can have 100% uptime through using
-                Гоба off время отката.
+              - Пассивка этого комплекта может быть всегда активна при использовании
+                Гобы по откату.
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/xiangling/
@@ -876,8 +874,8 @@
               - atk%
             notes: null
             seeCharNotes: true
-          notes: Мастерство стихий часы как правило > Сила атаки%, но качество допстатов и выбор оружия
-            потенциально может favour Сила атаки% .
+          notes: Часы на Мастерство стихий как правило > Сила атаки %, но качество допстатов и выбор оружия
+            потенциально может сделать предпочтительнее часы на Силу атаки % .
           seeCharNotes: false
         subStats:
           advices:
@@ -898,14 +896,14 @@
                 - er
               notes: null
               seeCharNotes: false
-          notes: Мастерство стихий имеет более низкий приоритет, чем Сила атаки% когда используется Стальное жало
+          notes: Мастерство стихий имеет более низкий приоритет, чем Сила атаки% при использовании Стального жала
           seeCharNotes: false
         talents:
           advices:
             - skill
             - burst
             - attack
-          notes: обычная атака становится в приоритете только когда у вас есть C6 Беннет
+          notes: обычная атака становится в приоритете только при наличии C6 Беннета
           seeCharNotes: false
         tips:
           - p: Беннет's EB grants you a пиро статус as long as your персонажи are within
@@ -920,7 +918,7 @@
               - b: |-
                   О выборе оружия:
                   Вспышка во тьме: 
-              - "Вспышка во тьме has the potential to beat Стальное жало "
+              - "Вспышка во тьме имеет потенциал to beat Стальное жало "
               - b: "[R5],"
               - " но this requires the passive to be up, whenever damaged, your
                 passive is disabled for 5 сек. и you could be losing out a
@@ -934,12 +932,12 @@
                 Assuming a 
               - b: Таяние/Пар
               - " отряд, "
-              - b: Горящая алая ведьма (4) is your лучший комплект for damage.
+              - b: Горящая алая ведьма (4) это лучший комплект для урона.
               - >-
                 
-                Пиро Damage бонус will всегда be the лучший for cup. The combo for the highest Таяние/Пар damage is Чёрный меч и Мастерство стихий sand. 
+                Бонус Пиро урона всегда будет лучший для кубка. The combo for the highest Таяние/Пар damage is Чёрный меч и Мастерство стихий часы. 
               - b: "[R1]"
-              - " Стальное жало и Мастерство стихий sand turns out to have diminishing returns
+              - " Стальное жало и Мастерство стихий часы turns out to have diminishing returns
                 и isn't as good, но "
               - b: "[R2+]"
               - " Стальное жало is a different question because better buffs.
@@ -948,30 +946,30 @@
           - p:
               - b: "Громогласный рёв ярости (4):"
               - " Этот комплект "
-              - b: works лучший if paired с Электро supports such as Бэй Доу и Фишль/Лиза,
+              - b: работает лучше всего если находится в паре с Электро саппортами такими, как Бэй Доу и Фишль/Лиза,
               - |2
                  as it allows Беннет to accomplish 2 things: 
-                1) Rapidly spam E for raw pyro damage + overload
-                2) Generate tons of энергия for the entire отряд. 
+                1) Rapidly spam E for raw Пиро урон + Перегрузку
+                2) Генерировать тонну энергии для всего отряда. 
               - b: "Громогласный рёв ярости (4) also allows Беннет to quickly break the shields of the
                   Abyss Lectors "
               - >
                 in the Spiral Abyss. Этот comp is generally only recommended for
                 those с Бэй Доу on C2/C6.
-              - b: It's worth noting that the main-stat artifacts you want to farm for 4-TF
-                  Беннет varies from the main-stat artifacts you'd normally go
+              - b: It's worth noting that the main-stat артефакты you want to farm for 4-TF
+                  Беннет varies from the main-stat артефакты you'd normally go
                   for in other builds.
               - " "
               - b: Instead of Сила атаки/Мастерство стихий, Пиро, и Crit, you'd instead want to go for Мастерство стихий/Пиро/Мастерство стихий on
                   a 4-TF Беннет.
-              - " As such, this also means weapons that have Мастерство стихий допстаты such as
-                Iron sting take priority over other мечи."
+              - " As such, this also means оружия that have Мастерство стихий допстаты such as
+                Стальное жало take priority over другой мечи."
           - p:
               - >-
                 It is also worth noting that с 4 TF, Драгоценный омут
-                is able to overtake MIstsplitter Reforged due to its massive
+                is able to overtake Рассекающий туман due to its massive
                 Шанс крит. попадания% допстат, which allows you to vape consistently
-                despite the lack of Крит. урон/Шанс крит. попадания subs in your artifacts.
+                despite the lack of Крит. урон/Шанс крит. попадания subs in your артефактах.
                 Этот assumes that your Мастерство стихий главстат pieces (часы, кубок, и
                 корона) lack Шанс крит. попадания допстаты. However, in the rare occasion
                 that your Мастерство стихий pieces manage to roll plenty of Crit subs,
@@ -1279,7 +1277,7 @@
                   О выборе оружия:
                   Рассекающий туман, Меч Сокола:
               - >2
-                 These weapons have the highest Базовая атака in the game which is why it is ranked quite high. It is assuming you have достаточно Восст. энергии so you still can burst off время отката for the maximum Сила атаки бафф.
+                 These оружие have the highest Базовая атака in the game which is why it is ranked quite high. It is assuming you have достаточно Восст. энергии so you still can burst off время отката for the maximum Сила атаки бафф.
               - b: "Клятва свободы:"
               - >2
                  In comps где Беннет can reliably trigger reactions (и thus trigger this sword's passive), the buffs provided by this оружие will be stronger чем Меч Сокола.
@@ -1469,7 +1467,7 @@
               - b: "Меч драконьей кости: "
               - "It is worth noting that an "
               - b: "[R5] Меч драконьей кости"
-              - " can outperform all 5 star weapons at "
+              - " can outperform all 5 star оружие at "
               - b: "[R1]"
               - " с proper stack management"
           - p:
@@ -2000,7 +1998,7 @@
           Attack. Этот scales 80% of your Сила атаки и can trigger reactions as well
           due to having a separate internal время отката on its pyro наложение. 
         notes:
-          - p: Янь Фэй can have trouble trying to комплект up for её reaction ДПС. Пар is
+          - p: Янь Фэй can have trouble trying to сетап for её reaction ДПС. Пар is
               generally the more consistent option и you need Син Цю to make
               this work лучший. When running a Пар отряд с Син Цю, 3
               обычные атаки into a charged attack (N1>N2>N3>C) is the safest
@@ -2016,7 +2014,7 @@
               - b: |-
                   
                   Истории Додоко: 
-              - "On equal ранг пробуждения, Песнь странника is better чем Истории Додоко, но
+              - "On equal ранг пробуждения, Песнь странника лучше чем Истории Додоко, но
                 assuming it's "
               - b: "[R5]"
               - " Истории Додоко vs "
@@ -2025,7 +2023,7 @@
               - b: "[R3]"
               - " Песнь странника, "
               - b: "[R5]"
-              - " Истории Додоко is better. "
+              - " Истории Додоко лучше. "
               - b: Note that Беннет бафф / Эпос о драконоборцах's бафф + Церемония древней
                   знати (4) бафф may push Песнь странника и Солнечная жемчужина above Истории
                   Додоко, even at low ранг пробуждения.
@@ -2053,11 +2051,11 @@
                   О приоритетных допстатах в артефактах: 
               - Восст. энергии is prioritized over Мастерство стихий here since
                 она has an 80 энергия burst cost while её skill is also not very
-                efficient at generating particles for getting it back. A major
+                efficient at generating частицы for getting it back. A major
                 source of your энергия will be coming from враги as well as
                 potential pyro batteries like Беннет, so be sure to have её
-                pick the particles up as off-field персонажи only get 0.6x the
-                value of the particles.
+                pick the частицы up as off-field персонажи only get 0.6x the
+                value of the частицы.
       - code: |-
           shield support 
           [c4+ required]
@@ -2139,18 +2137,18 @@
           seeCharNotes: false
         talents:
           advices: []
-          notes: Янь Фэй's talent levels provide nothing for this role и it is not
+          notes: Янь Фэй's уровни таланта provide nothing for this role и it is not
             recommended to level them.
           seeCharNotes: false
         tips:
           - u:
               b: |
                 Восст. энергии Guidelines
-          - b: "Prototype Эмбер [R5]:"
+          - b: "Прототип: Янтарь [R5]:"
           - " 210 Восст. энергии"
           - u:
               b: "\n"
-          - b: "Prototype Эмбер [R1] /Кодекс Фавония:"
+          - b: "Прототип: Янтарь [R1] /Кодекс Фавония:"
           - |2
              240 Восст. энергии
           - b: "Эпос о драконоборцах:"
@@ -2454,7 +2452,7 @@
             - skill
             - burst
           notes: Worth noting that Дилюк's constellations boost his Элементальный навык's
-            damage, so talent prioritization can vary from player to player
+            damage, so талант prioritization can vary from player to player
           seeCharNotes: false
         tips:
           - p: You can interweave Normal Attacks while using his Элементальный навык.
@@ -2687,7 +2685,7 @@
               - b: "[R1]"
               - "-"
               - b: "[R3]"
-              - " Песнь странника/Солнечная жемчужина, Истории Додоко is better. "
+              - " Песнь странника/Солнечная жемчужина, Истории Додоко лучше. "
               - b: Note that Беннет бафф / Эпос о драконоборцах's бафф + Noblesse
                   Oblige (4) бафф may push Песнь странника и Солнечная жемчужина above Dodoco
                   Tales, even at low ранг пробуждения.
@@ -2887,7 +2885,7 @@
         notes:
           - p: Ху Тао is most effective когда used с Син Цю to proc Пар/Заморозка Таяние
               reactions which utilizes её BiS Set, Горящая алая ведьма (4).
-              Заморозка Таяние refers to freezing враги for Таяние комплект up, since
+              Заморозка Таяние refers to freezing враги for Таяние сетап, since
               unlike Дилюк или Кли, Ху Тао doesn't shatter замороженные враги.
           - p:
               - b: |-
@@ -2901,7 +2899,7 @@
                 оружие less consistent чем other options.
               - b: "Смертельный бой: "
               - >
-                Смертельный бой is better чем Гроза драконов когда you're not doing
+                Смертельный бой лучше чем Гроза драконов когда you're not doing
                 Пар.
               - b: "Черногорская пика:"
               - " Despite seeming quite good due to the Крит. урон допстат,
@@ -3111,7 +3109,7 @@
               - b: "Хамаюми: "
               - >
                 If you're using Воспоминания Симэнавы (4), this оружие
-                doesn't synergize well с that artifact комплект due to its
+                doesn't synergize well с that комплект артефактов due to its
                 passive. 
               - b: "Прототип: Полумесяц: "
               - >
@@ -3142,13 +3140,13 @@
               - >2
                  due to not being able to fully benefit from её Ascension 4 passive.
               - b: "Горящая алая ведьма (4): "
-              - The go-to artifact комплект for Пар focused Пиро carries,
+              - The go-to комплект артефактов for Пар focused Пиро carries,
               - b: " excels over the other options especially on a reaction focused отряд comp."
               - "\n"
               - b: "Ступающий по лаве (4): "
               - "Viable option on a "
               - b: mono Пиро отряд
-              - " comp где Ёимия can have 100% uptime on the artifact
+              - " comp где Ёимия can have 100% uptime on the артефакт
                 passive."
           - p:
               - b: |
@@ -3156,7 +3154,7 @@
               - Элементальный навык scales very poorly which is why it is the least
                 priority. If you do not care about её Взрыв стихии damage
                 output, you can prioritize Элементальный навык over Взрыв стихии,
-                но обычная атака talent still has the most priority since it's
+                но обычная атака талант still has the most priority since it's
                 the main source of Ёимия's damage.
     credits:
       - a: In-depth Guide
@@ -3359,7 +3357,7 @@
               - "Courtesy of "
               - i: paraszcazk#0148
           - p: "Due to how Полярная звезда works, your optimal rotation would be different from
-              other weapons:"
+              other оружие:"
           - p:
               b: Элементальный навык (Взрыв стихии) > NA > CA > Resummon Oz (To snapshot Полярная звезда stacks)
         notes:
@@ -3587,7 +3585,7 @@
                   The Бесструнный и Охотник во тьме:
               - " At "
               - b: "[R5],"
-              - " both these weapons are roughly equivalent to "
+              - " both these оружие are roughly equivalent to "
               - b: Громовой пульс
               - " и "
               - b: Небесное крыло.
@@ -3613,7 +3611,7 @@
               - b: "О комплектах артефактов:"
               - "\n"
               - b: "Thundersoothers (4):"
-              - " Этот artifact комплект will outperform "
+              - " Этот комплект артефактов will outperform "
               - b: Конец гладиатора(2) Громогласный рёв ярости(2)
               - " if used in a отряд comp где an electro aura is всегда present
                 (e.g. Электро/Электро-charged comps) therefore it is "
@@ -3821,7 +3819,7 @@
               - b: Небесное величие
               - " on a "
               - b: low Восст. энергии requirement Бэй Доу
-              - " (где она is paired с other Электро персонажи to battery
+              - " (где она is paired с other Электро персонажи to батарейка
                 её энергия needs). At "
               - b: "[R3+],"
               - " it becomes exponentially better и comes very close to "
@@ -4167,7 +4165,7 @@
         tips: []
         notes:
           - p: Мастерство стихий Лиза ДПС aims to be the consistent trigger for reactions, Перегрузка is
-              generally the лучший reaction for this комплект up. Avoid having a second
+              generally the лучший reaction for this сетап. Avoid having a second
               Электро in the отряд for this build since this could mess up the
               Пиро aura Лиза wants for this стиль игры.
           - p: Заряжен отряды will have a hard time trying to utilize Мастерство стихий ДПС Лиза, in
@@ -4309,11 +4307,11 @@
           notes: null
           seeCharNotes: false
         tips: Лиза's Hold cast does not require 4 full сек. of charging to reach
-          maximum damage threshold, as long as the indicator aligns с ring,
+          maximum damage порог, as long as the indicator aligns с ring,
           you can release your cast at max damage.
         notes:
           - p: >-
-              Can be built to комплект up for either Взрыв стихии damage или Quickswap Элементальный навык
+              Can be built to сетап for either Взрыв стихии damage или Quickswap Элементальный навык
               Nuke damage.
 
               Лиза works well с anemo персонажи which can keep враги in её ultimate radius.
@@ -4503,7 +4501,7 @@
               - b: Меч драконьей кости
               - ": At "
               - b: "[C6] "
-              - "и high ранг пробуждения Меч драконьей кости, it is better to run an Сила атаки%
+              - "и high ранг пробуждения Меч драконьей кости, it лучше to run an Сила атаки%
                 Кубок over Physical Damage% с Меч драконьей кости. Этот is due to
                 the oversaturation of damage bonuses (ascension stat + Serpent
                 Spine) in addition to the fact that Электро accounts for a
@@ -4513,7 +4511,7 @@
                 href: https://tinyurl.com/razoratk
               - ". "
               - b: It is also worth noting that an [R5] Меч драконьей кости с max stacks can
-                  outperform all 5✩ weapons at [R1].
+                  outperform all 5✩ оружие at [R1].
               - "\n"
               - b: Небесное величие
               - ": Небесное величие is viable с a Physical урон goblet, as the
@@ -4522,7 +4520,7 @@
               - b: |-
                   О комплектах артефактов: 
                   Бледный огонь (2) Рыцарь крови (2): 
-              - Этот комплект is better if your Сила атаки% is covered by your допстаты,
+              - Этот комплект лучше if your Сила атаки% is covered by your допстаты,
                 otherwise you would be better off running Конец гладиатора
                 (4).
               - b: " Этот is only recommended to those who have no immediate access to a decent
@@ -4700,13 +4698,13 @@
           notes: null
           seeCharNotes: false
         tips:
-          - p: For её Элементальный навык to generate particles, you need to perform a
+          - p: For её Элементальный навык to generate частицы, you need to perform a
              заряженный выстрел to place a Crowfeather after casting её Элементальный навык. If
-              the Crowfeather explosion hits an враг, it generates 3 particles.
+              the Crowfeather explosion hits an враг, it generates 3 частицы.
           - p:
               - "Crowfeathers generated from Сара's "
               - b: "[C2]"
-              - " do NOT generate particles."
+              - " do NOT generate частицы."
         notes:
           - p:
               - "Сара is a quickswap support who is able to бафф your active
@@ -5710,7 +5708,7 @@
                 Sword has the third лучший damage potential."
           - p:
               - "Big thanks to Quincy#6965 for helping us с the "
-              - a: weapons calculations
+              - a: оружие calculations
                 href: https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit#gid=0
               - i: .
           - p:
@@ -6457,7 +6455,7 @@
           - b: "[C2], "
           - "но can work without it. Do note that several 4 stars will out-dps
             Мона, as "
-          - b: Мона is better off as a Sub-ДПС/ Support.
+          - b: Мона лучше off as a Sub-ДПС/ Support.
       - code: nuke
         isRecommended: true
         weapons:
@@ -6609,7 +6607,7 @@
               - b: providing a huge damage burst
               - " (и additional omen debuff after proc)."
           - p:
-              b: Look to the Nuke Мона's Ability Tip section for Пар Nuke комплект up
+              b: Look to the Nuke Мона's Ability Tip section for Пар Nuke сетап
                 instructions.
       - code: freeze support
         isRecommended: true
@@ -6871,7 +6869,7 @@
               - "Этот оружие can provide Elemental урон% for the отряд in "
               - b: Электро-charged отряды
               - >2
-                 и will outperform Prototype Эмбер if you value damage more чем healing.
+                 и will outperform Прототип: Янтарь if you value damage more чем healing.
               - b: "Церемониальные мемуары: "
               - "Can be useful as Кокоми won't need to use её Взрыв стихии
                 to reset её skill длительность. Этот "
@@ -6884,9 +6882,9 @@
                   Стойкость Миллелита (4): 
               - "With proper extension of Кокоми's Элементальный навык, она can
                 maintain near "
-              - b: 100% uptime on this artifact комплект's 4 piece effect.
+              - b: 100% uptime on this артефакт комплект's 4 piece effect.
               - "\n"
-              - b: "Ocean Hued Clam (4):"
+              - b: "Моллюск морских красок (4):"
               - " Этот ranking assumes Кокоми is being used "
               - b: only for её Элементальный навык.
               - " If она is being used to attack onfield during Взрыв стихии,
@@ -6894,13 +6892,13 @@
               - b: overtake Стойкость Миллелита (4).
           - p:
               - b: |-
-                  Об основных характеристиках и Sub Stats: 
+                  Об основных характеристиках и допстатах: 
                   Восст. энергии:
               - " Prioritise Восст. энергии first to ensure you can всегда use
                 Взрыв стихии before the Элементальный навык expires in order to
                 maintain Гидро наложение. "
-              - b: Without Prototype Эмбер, Кокоми will need ~200-220% Восст. энергии (170-190%
-                  с Prototype Эмбер at [R1] и 150-170% at [R5])
+              - b: " Без Прототипа: Янтаря, Кокоми потребуется ~200-220% Восст. энергии (170-190%
+                  с Прототип: Янтарь at [R1] и 150-170% at [R5])
               - "\n"
               - b: "Сила атаки% / Гидро урон:"
               - " If Кокоми is just being used to maintain 100% uptime on её
@@ -7200,11 +7198,11 @@
               увеличивает её ultimate uptime, further lowering the healing
               needed.
           - p: As a support, Диона's typically used for three things; Shielding, Healing,
-              и Крио particle generation. Pairing Диона с Крио carries such
+              и генерация Крио частиц. Pairing Диона с Крио carries such
               as Гань Юй и Эола allows you to funnel энергия into your ДПС
               персонажи while providing them с quick shields for stagger
               resistance. Weapons such as Церемониальный лук и Боевой лук Фавония
-              greatly увеличивать её potential as a battery.
+              greatly увеличивать её potential as a батарейка.
           - p:
               - b: "О выборе оружия:"
               - "\n"
@@ -8210,7 +8208,7 @@
                   обычная атака:
               - " If Розария is being used с "
               - b: Чун Юнь to infuse её обычные атаки с Крио,
-              - " её обычная атака talent will have "
+              - " её обычная атака талант will have "
               - b: higher priority чем Элементальный навык.
       - code: physical dps
         isRecommended: false
@@ -8627,7 +8625,7 @@
                   комплект.
               - >-
                 
-                If you don't wish to hyperinvest onto Розария, она could still be used as a Шанс крит. попадания provider, you can build up to 88% Шанс крит. попадания и use skill to cap out 100% Шанс крит. попадания, then cast Взрыв стихии for the Шанс крит. попадания бафф. Этот can be easily achievable if you have an existing Шанс крит. попадания допстат polearm, otherwise just put on whatever Шанс крит. попадания Корона, Substats и Берсерк artifacts you may have to stack Шанс крит. попадания.
+                If you don't wish to hyperinvest onto Розария, она could still be used as a Шанс крит. попадания provider, you can build up to 88% Шанс крит. попадания и use skill to cap out 100% Шанс крит. попадания, then cast Взрыв стихии for the Шанс крит. попадания бафф. Этот can be easily achievable if you have an existing Шанс крит. попадания допстат polearm, otherwise just put on whatever Шанс крит. попадания Корона, Substats и Берсерк артефакты you may have to stack Шанс крит. попадания.
     credits: null
   - code: qiqi
     elementCode: cryo
@@ -8808,7 +8806,7 @@
               - b: Ци Ци does not get её Взрыв стихии up often
               - " и is instead relying mainly on её Элементальный навык for
                 healing. If она is in a отряд which "
-              - b: funds её достаточно энергия particles,
+              - b: funds её достаточно энергия частицы,
               - " или if она acts as the "
               - b: on-field ДПС,
               - " this комплект can "
@@ -9518,7 +9516,7 @@
           - p:
               b: "*NA = обычная атака"
         notes:
-          - p: Эола's оружие rankings assume that you're running её с a Крио battery
+          - p: Эола's оружие rankings assume that you're running её с a Крио батарейка
               (то есть Диона) instead of Беннет. Она would usually need 30%-60%+
               Восст. энергии from допстаты depending on what отряд и Крио
               batteries you use.
@@ -9538,9 +9536,9 @@
                   Небесное величие: 
               - >
                 Этот оружие is more forgiving towards Восст. энергии допстаты. If there is a
-                Крио battery unit in your отряд (Диона с Церемониальный лук или
+                Крио батарейка unit in your отряд (Диона с Церемониальный лук или
                 Кэйа с Меч Фавония) или if your отряд generates достаточно
-                particles on their own, Небесное величие loses effectiveness
+                частицы on their own, Небесное величие loses effectiveness
                 compared to the above options. 
               - b: "Акуомару:"
               - " Этот оружие will outperform Luxurious Sea Lord at higher
@@ -9737,7 +9735,7 @@
               - b: deals most of её damage from её Взрыв стихии
               - . Она has very high scalings on её burst at the cost of it
                 being 80 энергия. You will likely need
-              - b: " another Крио battery on the отряд "
+              - b: " another Крио батарейка on the отряд "
               - "to provide энергия for её (Диона, Кэйа, Розария, и т.д). Она has
                 a "
               - b: special dash
@@ -9784,7 +9782,7 @@
               - " Offers slightly more damage potential чем"
               - b: " Амэнома Кагэути"
               - ", с the tradeoff being losing Kageuchi's энергия generation.
-                Decide for yourself which is better for your отряд и
+                Decide for yourself which лучше for your отряд и
                 rotations."
     credits: null
   - code: aloy
@@ -9968,8 +9966,8 @@
                 и even then, она's still completely replaceable by other
                 персонажи.
               - b: " Она can be utilized on a Заморозка отряд "
-              - "где она can be a battery и nuke at the same time since она
-                provides 5 Крио particles on её Элементальный навык. "
+              - "где она can be a батарейка и nuke at the same time since она
+                provides 5 Крио частицы on её Элементальный навык. "
               - b: Она can also be utilized on a Таяние отряд
               - " где you can melt её Взрыв стихии for quite a decent
                 amount of damage."
@@ -9991,8 +9989,8 @@
                 Этот оружие especially at higher ранг пробуждения levels can be as
                 good as a Небесное крыло.
               - b: "Церемониальный лук: "
-              - A pretty decent option to make Элой a Крио battery as её
-                Элементальный навык provides 5 Крио particles.
+              - A pretty decent option to make Элой a Крио батарейка as её
+                Элементальный навык provides 5 Крио частицы.
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
@@ -10182,7 +10180,7 @@
               - >2
                  Этот оружие's passive can't be stacked off-field, но it's still an Сила атаки stat stick which provides Шэнь Хэ с a lot of Сила атаки.
               - b: "Копьё Фавония: "
-              - With this оружие, it is better to have some Шанс крит. попадания on Шэнь Хэ
+              - With this оружие, it лучше to have some Шанс крит. попадания on Шэнь Хэ
                 for the оружие passive to proc. (Do note that Крио Resonance
                 provides 15% Шанс крит. попадания on Крио-imbued враги, so the need for
                 Шанс крит. попадания on Шэнь Хэ is lowered)
@@ -10313,7 +10311,7 @@
               damage for the Characters benefitting from the Мастерство стихий boost. Её
               Ascension 4 Talent also boosts the entire отряд's Мастерство стихий by 20% of
               Сахароза's total Мастерство стихий, this is why you want to stack as much
-              elemental mastery as possible in её artifacts. As a support, most
+              elemental mastery as possible in её артефакты. As a support, most
               of Сахароза's value lies on её Ascension 1 и 4 talents, hence
               leveling её other talents (обычная атака, Элементальный навык, и Взрыв стихии) is
               not required.
@@ -10340,7 +10338,7 @@
               - b: " need Сахароза's Взрыв стихии up as often as possible for grouping."
               - >-2
                  You may need to get a few crit rate допстаты to trigger the passive reliably.
-                There are some отряд compositions in which Сахароза's Мастерство стихий is not a priority, such as Заморозка отряды или an Анемо battery for Сяо. In such situations it's better for Сахароза to use to Thrilling Tales of the Dragon Slayers.
+                There are some отряд compositions in which Сахароза's Мастерство стихий is not a priority, such as Заморозка отряды или an Анемо батарейка for Сяо. In such situations it's better for Сахароза to use to Thrilling Tales of the Dragon Slayers.
           - p:
               - b: "О приоритете Восст. энергии:"
               - >-2
@@ -10459,7 +10457,7 @@
             - skill
           notes: null
           seeCharNotes: false
-        tips: Use долгое нажатие Элементальный навык then immediately press it to generate more particles.
+        tips: Use долгое нажатие Элементальный навык then immediately press it to generate more частицы.
         notes:
           - p: Саю does more damage с Мастерство стихий builds и heals more с Сила атаки hybrid builds,
               Healing бонус hat can be used for better heals while maintaining
@@ -10472,7 +10470,7 @@
               - " Волчья погибель is a universal claymore that is capable of
                 buffing your teammates along с providing more healing in
                 Саю's case. It is лучший used once you achieve your Восст. энергии
-                threshold."
+                порог."
           - p:
               - b: |-
                   О комплектах артефактов:
@@ -10999,7 +10997,7 @@
         notes:
           - p: Джинн's Элементальный навык can deal fall damage based off враг's max ХП% и
               fall velocity if you aim it upwards. Do note that some 4 stars
-              outdps Джинн, Джинн is better off as a Support.
+              outdps Джинн, Джинн лучше off as a Support.
           - p:
               - b: |-
                   О выборе оружия:
@@ -11385,7 +11383,7 @@
           advices:
             - burst
             - skill
-          notes: For an Мастерство стихий-focused build, upgrading Венти's talent levels isn't a
+          notes: For an Мастерство стихий-focused build, upgrading Венти's уровни таланта isn't a
             necessity.
           seeCharNotes: false
         tips:
@@ -11526,7 +11524,7 @@
               seeCharNotes: true
           notes: It is worth noting that комплект bonuses do not увеличивать Сяо's damage by
             much, due to an oversaturation on урон% bonuses и Сила атаки% from various
-            sources. For this reason, it is better to opt out for artifact
+            sources. For this reason, it лучше to opt out for artifact
             pieces which have higher quality допстаты instead of trying to
             maintain a комплект bonus.
           seeCharNotes: false
@@ -11601,17 +11599,17 @@
         notes:
           - p:
               - "Сяо has issues с Energy regeneration because "
-              - b: he cannot generate any particles с his Элементальный навык while his Взрыв стихии is
+              - b: he cannot generate any частицы с his Элементальный навык while his Взрыв стихии is
                   active
               - ", so it is not suggested to use his Элементальный навык during
                 Взрыв стихии."
           - p: Start off a fight by casting the skill of your Анемо Battery и then casting
               his skill twice then cast your burst immediately. You will want to
-              be half way through your burst animation before the particles
+              be half way through your burst animation before the частицы
               reach you, so this way you can start off your burst с a portion
               of the энергия gauge already filled. Same goes for any other Анемо
               Battery (recommended below), cast skill и swap back to Сяо to
-              cast burst before the particles reach you.
+              cast burst before the частицы reach you.
           - p:
               - b: "You'll want to pair Сяо с another Анемо персонаж "
               - (Венти, Сахароза, Джинн или Анемо Путешественница) to help him gain энергия
@@ -11622,7 +11620,7 @@
           - p:
               - b: "О выборе оружия:"
               - >2
-                 With a proper anemo battery (e.g. Сахароза), Сяо needs as little as 120-130% Восст. энергии to maintain a high burst uptime. In these scenarios, unless there are no Восст. энергии from допстаты, you should всегда go for a non-Восст. энергии оружие as it will result in more damage.
+                 With a proper anemo батарейка (e.g. Сахароза), Сяо needs as little as 120-130% Восст. энергии to maintain a high burst uptime. In these scenarios, unless there are no Восст. энергии from допстаты, you should всегда go for a non-Восст. энергии оружие as it will result in more damage.
               - b: "Усмиритель бед: "
               - Этот оружие has a really high Базовая атака, which means you benefit
                 more from Сила атаки% buffs (e.g. Thrilling Tales of the Dragon
@@ -12274,8 +12272,8 @@
                 if compared с Меч драконьей кости или Белая тень.
               - b: "Двуручный меч Фавония: "
               - Only recommended с high refines, as its usefulness scales
-                с its particle generation capabilities. R5 allows её to
-                self-battery assuming some additional particles from враги,
+                с its генерации частиц capabilities. R5 allows её to
+                self-батарейка assuming some additional частицы from враги,
                 но a second Гео is всегда recommended regardless for resonance.
           - p:
               - b: |-
@@ -12292,7 +12290,7 @@
                 much easier to farm per resin и can have 100% uptime с
                 crystallise shields. Consider Конец гладиатора if you don't
                 want to farm for Архаичный камень as Артефакт Strongbox is much
-                more effective чем elite bosses in terms of artifacts per
+                more effective чем elite bosses in terms of артефакты per
                 resin.
       - code: support
         isRecommended: false
@@ -13473,7 +13471,7 @@
           - p: Чжун Ли's kit is лучший utilised as a Гео Взрыв стихии damage dealer for his short
               Взрыв стихии время отката (12s) и low энергия cost (40 Energy),
               while his Элементальный навык Hold Cast (щит) scales с ХП и at
-              Ascension 4, you would unlock a talent that allows your burst to
+              Ascension 4, you would unlock a талант that allows your burst to
               scale с 33% of Чжун Ли's Max ХП, making him an amazing source
               of щит и damage.
           - p:
@@ -13489,9 +13487,9 @@
                   О выборе оружия:
                   Копьё Фавония: 
               - >
-                Чжун Ли's lackluster particle generation can be problematic in
+                Чжун Ли's lackluster генерация частиц can be problematic in
                 отряды without a reliable source of Гео энергия. With sufficient
-                энергия/Гео particles (то есть in a dual Гео отряд) Каменное копьё и
+                энергия/Гео частицы (то есть in a dual Гео отряд) Каменное копьё и
                 above will outperform Копьё Фавония.
               - b: "Смертельный бой: "
               - In отряды с a reliable source of Гео энергия, Смертельный бой will
@@ -13632,7 +13630,7 @@
             - burst
           notes: null
           seeCharNotes: false
-        tips: Альбедо's Элементальный навык particle generation is completely RNG like
+        tips: Альбедо's Элементальный навык генерация частиц is completely RNG like
           Чжун Ли, но с better odds.
         notes:
           - p: Альбедо is a персонаж that can summon a Гео Construct from his Elemental
@@ -13830,8 +13828,8 @@
               - b: "Небесное величие: "
               - >
                 Can be a great или bad оружие for Итто depending on your Восст. энергии
-                needs. The less Восст. энергии you need (due to particle
-                generation from your отряд members или Восст. энергии from subs), the less
+                needs. The less Восст. энергии you need (due to генерацию
+                частиц от членов отряда или Восст. энергии from subs), the less
                 useful this оружие becomes.
               - b: "Белая тень:"
               - " Your rotations often start с 1 stack of this оружие, и
@@ -13840,8 +13838,8 @@
           - p:
               - b: "О комплектах артефактов: "
               - "\n"
-              - b: "Retracting Bolide (4):"
-              - " Bolide grants you an additional 40% Normal и Заряженная атака
+              - b: "Встречная комета (4):"
+              - " Встречная комета grants you an additional 40% Normal и Заряженная атака
                 урон когда shielded. Кристаллизация can be unreliable so a consistent
                 shielder is preferred, such as Чжун Ли."
     credits: null
