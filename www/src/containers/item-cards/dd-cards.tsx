@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'preact/hooks'
 
-import { GI_DomainTypeCode } from '#lib/genshin'
+import { GI_DomainTypeCode, MapCode, MapLocation } from '#lib/genshin'
 import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
 import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api/utils'
@@ -92,25 +92,25 @@ type MapWrapMarkerGroup = {
 
 function addMarkerGroupsByDomains(
 	markerGroups: MapWrapMarkerGroup[],
-	domains: { code: string; name: string; type: GI_DomainTypeCode; location: [number, number] }[],
+	domains: { code: string; name: string; type: GI_DomainTypeCode; location: MapLocation }[],
 ) {
 	for (const domain of domains) {
-		const [x, y] = domain.location
+		const loc = domain.location
 		const icon = getDomainIconSrc(domain.type)
-		markerGroups.push({ code: domain.code, title: domain.name, markers: [{ x, y, icon }] })
+		markerGroups.push({ code: domain.code, title: domain.name, markers: [{ ...loc, icon }] })
 	}
 }
 function addMarkerGroupsByEnemies(
 	markerGroups: MapWrapMarkerGroup[],
-	enemies: { code: string; name: string; locations: 'external' | [number, number][] }[],
+	enemies: { code: string; name: string; locations: 'external' | MapLocation[] }[],
 ) {
 	for (const enemy of enemies) {
 		const markers =
 			enemy.locations === 'external'
 				? 'external'
-				: enemy.locations.map(([x, y]): MapMarkerRaw => {
+				: enemy.locations.map((loc): MapMarkerRaw => {
 						const icon = getEnemyIconSrc(enemy.code)
-						return { x, y, icon, style: 'circle' }
+						return { ...loc, icon, style: 'circle' }
 				  })
 		markerGroups.push({ code: enemy.code, title: enemy.name, markers })
 	}
@@ -133,6 +133,8 @@ function MapWrap({
 	const goToNextGroup = () => {
 		setSelectedSourceTab(arrGetAfter(markerGroups, selectedSourceTab))
 	}
+
+	const [mapCode, setMapCode] = useState<MapCode>('enkanomiya')
 
 	const TeyvatMap = useFetch(() => LazyTeyvatMap.then(x => x.TeyvatMap), [])
 
@@ -200,7 +202,12 @@ function MapWrap({
 				<div class="d-xl-none">Pinch to zoom</div>
 			</div>
 			{selectedSourceTab.markers !== 'external' && isLoaded(TeyvatMap) ? (
-				<TeyvatMap classes="position-relative" pos="auto" markers={selectedSourceTab.markers} />
+				<TeyvatMap
+					classes="position-relative"
+					pos="auto"
+					mapCode={mapCode}
+					markers={selectedSourceTab.markers}
+				/>
 			) : TeyvatMap instanceof Error ? (
 				<div>Error.</div>
 			) : (
@@ -438,9 +445,7 @@ export function OtherItemCard({
 			const markers =
 				materialOnMap.locations === 'external'
 					? 'external'
-					: materialOnMap.locations.map(
-							([x, y]): MapMarkerRaw => ({ x, y, icon, style: 'outline' }),
-					  )
+					: materialOnMap.locations.map((loc): MapMarkerRaw => ({ ...loc, icon, style: 'outline' }))
 			markerGroups.push({ code: materialOnMap.code, title: materialOnMap.name, markers })
 		}
 

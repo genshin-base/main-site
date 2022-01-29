@@ -4,10 +4,12 @@ import {
 	loadTileImage,
 	LocMap,
 	SmoothTileContainer,
+	TileContainer,
 	TileLayer,
 } from 'locmap'
 import { useEffect, useRef } from 'preact/hooks'
 
+import { MapCode } from '#lib/genshin'
 import { clamp } from '#lib/utils/values'
 import { checkAvifSupport } from '#lib/utils/web_media'
 import { memo } from '#src/utils/preact-compat'
@@ -20,12 +22,14 @@ const DEFAULT_LEVEL = -1.2
 const MARKERS_AUTO_REGION_DOWNSCALE = 1.1
 const MARKER_ICON_SIZE_PX = 40
 
-let tileExt = 'jpg'
+type TileExt = 'jpg' | 'avif'
+
+let tileExt: TileExt = 'jpg'
 checkAvifSupport().then(ok => ok && (tileExt = 'avif'))
 
-const loadTile = loadTileImage(
-	(x, y, z) => `https://genshin-base.github.io/teyvat-map/v2.2/tiles/${tileExt}/${z}/${x}/${y}.${tileExt}`,
-)
+function tilePathFinc(x: number, y: number, z: number, mapCode: MapCode) {
+	return `https://genshin-base.github.io/teyvat-map/v2.4/tiles/${mapCode}/${tileExt}/${z}/${x}/${y}.${tileExt}`
+}
 
 /** @type {import('locmap').ProjectionConverter} */
 const MapProjection = {
@@ -49,8 +53,9 @@ const MapProjection = {
 }
 
 export type MapMarkerStyle = null | 'circle' | 'outline'
-export type MapMarkerRaw = { x: number; y: number; icon: string; style?: MapMarkerStyle }
+export type MapMarkerRaw = { map: MapCode; x: number; y: number; icon: string; style?: MapMarkerStyle }
 type MapMarker = {
+	map: MapCode
 	x: number
 	y: number
 	icon: null | HTMLImageElement | HTMLCanvasElement
@@ -59,16 +64,20 @@ type MapMarker = {
 
 export const TeyvatMap = memo(function TeyvatMap({
 	classes,
+	mapCode,
 	pos,
 	markers,
 }: {
 	classes?: string
+	mapCode: MapCode
 	pos: { x: number; y: number; level: number } | 'auto'
 	markers?: MapMarkerRaw[]
 }) {
 	const wrapRef = useRef<HTMLDivElement>(null)
 	const mapRef = useRef<LocMap | null>(null)
 	const markersLayerRef = useRef<MarkersLayer | null>(null)
+	const tileContainerRef = useRef<TileContainer | null>(null)
+	const mapCodeRef = useRef<MapCode>('teyvat')
 
 	/*
 	const markers_ = useFetch(() => apiGetJSONFile(`generated/locations.json`) as Promise<any[]>, [])
@@ -85,27 +94,37 @@ export const TeyvatMap = memo(function TeyvatMap({
 	useEffect(() => {
 		if (!wrapRef.current) return
 
+		const loadTile = loadTileImage((x, y, z) => tilePathFinc(x, y, z, mapCodeRef.current))
+		const tileContainer = new SmoothTileContainer(TILE_DRAW_WIDTH, loadTile, drawRectTilePlaceholder)
+
 		const map = new LocMap(wrapRef.current, MapProjection)
 		const markersLayer = new MarkersLayer()
 		map.setZoomRange(2 ** MIN_LEVEL * TILE_CONTENT_WIDTH, 2 ** MAX_LEVEL * TILE_CONTENT_WIDTH)
-		map.register(
-			new TileLayer(new SmoothTileContainer(TILE_DRAW_WIDTH, loadTile, drawRectTilePlaceholder)),
-		)
+		map.register(new TileLayer(tileContainer))
 		map.register(markersLayer)
 		map.register(new ControlLayer())
 		map.requestRedraw()
 		map.resize()
+
 		addEventListener('resize', map.resize)
 		mapRef.current = map
 		markersLayerRef.current = markersLayer
+		tileContainerRef.current = tileContainer
 
 		return () => {
 			map.getLayers().forEach(map.unregister)
 			removeEventListener('resize', map.resize)
 			mapRef.current = null
 			markersLayerRef.current = null
+			tileContainerRef.current = null
 		}
 	}, [])
+
+	useEffect(() => {
+		mapCodeRef.current = mapCode
+		markersLayerRef.current?.setMapCode(mapCode)
+		mapRef.current?.requestRedraw()
+	}, [mapCode])
 
 	useEffect(() => {
 		if (markers) markersLayerRef.current?.setMarkers(markers)
@@ -114,28 +133,32 @@ export const TeyvatMap = memo(function TeyvatMap({
 	useEffect(() => {
 		const map = mapRef.current
 		if (!map) return
-		const { x, y, level } = pos === 'auto' ? calcAutoPosition(map, markers ?? []) : pos
+		const { x, y, level } = pos === 'auto' ? calcAutoPosition(map, markers ?? [], mapCode) : pos
 		map.updateLocation(x, y, TILE_CONTENT_WIDTH * 2 ** level)
-	}, [pos, markers])
+	}, [pos, markers, mapCode])
 
 	return <div ref={wrapRef} class={'teyvat-map ' + classes}></div>
 })
 
-function calcAutoPosition(map: LocMap, markers: MapMarkerRaw[]) {
+function calcAutoPosition(map: LocMap, markers: MapMarkerRaw[], mapCode: MapCode) {
 	let xMin = 1e10
 	let xMax = -1e10
 	let yMin = 1e10
 	let yMax = -1e10
 	for (const marker of markers) {
+		if (marker.map !== mapCode) continue
 		if (xMin > marker.x) xMin = marker.x
 		if (xMax < marker.x) xMax = marker.x
 		if (yMin > marker.y) yMin = marker.y
 		if (yMax < marker.y) yMax = marker.y
 	}
+
 	const [w, h] = map.getViewBoxSize()
 	const zoom = Math.min(w / (xMax - xMin), h / (yMax - yMin)) / MARKERS_AUTO_REGION_DOWNSCALE
-	let level = zoom === Infinity ? DEFAULT_LEVEL : Math.log2(zoom)
+	// zoom==inf -> one marker, zoom<0 -> no markers
+	let level = zoom === Infinity || zoom < 0 ? DEFAULT_LEVEL : Math.log2(zoom)
 	level = clamp(MIN_LEVEL, level, MAX_LEVEL)
+
 	return { x: (xMin + xMax) / 2, y: (yMin + yMax) / 2, level }
 }
 
@@ -143,6 +166,7 @@ class MarkersLayer {
 	private map: LocMap | null = null
 	private markers: MapMarker[] = []
 	private iconCache: Map<string, HTMLImageElement | HTMLCanvasElement> = new Map()
+	private mapCode: MapCode = 'teyvat'
 
 	private loadMarkerImg(marker: MapMarker, src: string) {
 		const cachedImg = this.iconCache.get(src + '|' + marker.style)
@@ -162,11 +186,22 @@ class MarkersLayer {
 		}
 	}
 
+	setMapCode(mapCode: MapCode) {
+		this.mapCode = mapCode
+	}
+
 	setMarkers(rawMarkers: MapMarkerRaw[]) {
 		this.markers.length = 0
-		this.iconCache.clear()
-		for (const { x, y, icon: src, style = null } of rawMarkers) {
-			const marker = { x, y, icon: null, style }
+		{
+			const cache = this.iconCache
+			cache.clear()
+			for (const key of cache.keys()) {
+				if (cache.size < 30) break
+				cache.delete(key)
+			}
+		}
+		for (const { map, x, y, icon: src, style = null } of rawMarkers) {
+			const marker = { map, x, y, icon: null, style }
 			this.loadMarkerImg(marker, src)
 			this.markers.push(marker)
 		}
@@ -180,6 +215,7 @@ class MarkersLayer {
 
 		for (let i = 0, markers = this.markers; i < markers.length; i++) {
 			const marker = markers[i]
+			if (marker.map !== this.mapCode) continue
 
 			const x = map.lon2x(marker.x) - viewX
 			const y = map.lat2y(marker.y) - viewY

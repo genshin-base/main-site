@@ -62,6 +62,7 @@ import {
 } from '#lib/parsing/honeyhunter/enemies.js'
 import { applyWeaponsObtainData } from '#lib/parsing/wiki/weapons.js'
 import { applyItemsLocations } from '#lib/parsing/mihoyo/map.js'
+import { checkMihoyoFixesUsage, clearMihoyoFixesUsage } from '#lib/parsing/mihoyo/fixes.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -159,7 +160,6 @@ const fixes = {
 		skipEnemies: [
 			/^Millelith/i, //
 			/^Treasure Hoarders - Boss$/,
-			/Bathysmal Vishap$/i,
 		],
 		manualEnemyGroups: [
 			{ origNames: /^Ruin Guard$/ },
@@ -177,6 +177,10 @@ const fixes = {
 				name: { en: 'Wolves of the Rift', ru: 'Волк Разрыва' },
 			},
 		],
+	},
+	/** @type {import('#lib/parsing/mihoyo/fixes').MihoyoFixes} */
+	mihoyo: {
+		enemiesOnMap: [{ nameOnMap: 'Fatui Agent', useCode: 'fatui-pyro-agent' }],
 	},
 }
 
@@ -247,21 +251,23 @@ async function extractAndSaveBuildsData() {
 
 async function extractAllItemsData() {
 	const cd = DATA_CACHE_DIR
-	const fx = fixes.honeyhunter
-	clearHoneyhunterFixesUsage(fx)
+	const hhfx = fixes.honeyhunter
+	clearHoneyhunterFixesUsage(hhfx)
+	clearMihoyoFixesUsage(fixes.mihoyo)
 
-	const items = await extractItemsData(cd, LANGS, fx)
-	const artifacts = await extractArtifactsData(cd, LANGS, fx)
-	const weapons = await extractWeaponsData(cd, LANGS, items.id2item, fx)
-	const enemies = await extractEnemiesData(cd, LANGS, items.id2item, artifacts.id2item, fx)
-	const domains = await extractDomainsData(cd, LANGS, items.id2item, artifacts.id2item, enemies.id2item, fx)
-	const characters = await extractCharactersData(cd, LANGS, items.id2item, fx)
+	const items = await extractItemsData(cd, LANGS, hhfx)
+	const artifacts = await extractArtifactsData(cd, LANGS, hhfx)
+	const weapons = await extractWeaponsData(cd, LANGS, items.id2item, hhfx)
+	const enemies = await extractEnemiesData(cd, LANGS, items.id2item, artifacts.id2item, hhfx)
+	const domains = await extractDomainsData(cd, LANGS, items.id2item, artifacts.id2item, enemies.id2item, hhfx) //prettier-ignore
+	const characters = await extractCharactersData(cd, LANGS, items.id2item, hhfx)
 	const enemyGroups = makeEnemyGroups(enemies.code2item, fixes.honeyhunter)
 
 	await applyWeaponsObtainData(cd, weapons.code2item)
-	await applyItemsLocations(cd, enemies.code2item, enemyGroups.code2item, items.code2item)
+	await applyItemsLocations(cd, enemies.code2item, enemyGroups.code2item, items.code2item, fixes.mihoyo)
 
-	checkHoneyhunterFixesUsage(fx)
+	checkHoneyhunterFixesUsage(hhfx)
+	checkMihoyoFixesUsage(fixes.mihoyo)
 	progress()
 
 	return { items, artifacts, weapons, enemies, domains, characters, enemyGroups }
