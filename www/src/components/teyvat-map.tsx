@@ -145,7 +145,8 @@ function calcAutoPosition(map: LocMap, markers: MapMarkerRaw[]) {
 	}
 	const [w, h] = map.getViewBoxSize()
 	const zoom = Math.min(w / (xMax - xMin), h / (yMax - yMin)) / MARKERS_AUTO_REGION_DOWNSCALE
-	let level = zoom === Infinity ? DEFAULT_LEVEL : Math.log2(zoom)
+	// zoom==inf -> one marker, zoom<0 -> no markers
+	let level = zoom === Infinity || zoom < 0 ? DEFAULT_LEVEL : Math.log2(zoom)
 	level = clamp(MIN_LEVEL, level, MAX_LEVEL)
 	return { x: (xMin + xMax) / 2, y: (yMin + yMax) / 2, level }
 }
