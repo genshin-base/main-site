@@ -463,7 +463,7 @@ export function OtherItemCard({
 			titleEl={item.name}
 			classes={classes}
 			bodyEl={
-				item.craftedFrom3Code ? (
+				item.ancestryCodes.length > 0 ? (
 					<div className="">
 						{/* <ItemAvatar rarity={3} classes="large-avatar float-end" src={getItemIconSrc(item.code)} /> */}
 						{/* <h6 className="text-uppercase opacity-75">Описание</h6>
