@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'preact/hooks'
 
-import { GI_DomainTypeCode, MapLocation } from '#lib/genshin'
+import { GI_DomainTypeCode, MapCode, MapLocation } from '#lib/genshin'
 import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
 import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api/utils'
@@ -134,6 +134,8 @@ function MapWrap({
 		setSelectedSourceTab(arrGetAfter(markerGroups, selectedSourceTab))
 	}
 
+	const [mapCode, setMapCode] = useState<MapCode>('enkanomiya')
+
 	const TeyvatMap = useFetch(() => LazyTeyvatMap.then(x => x.TeyvatMap), [])
 
 	let sourceSelectEl
@@ -200,7 +202,12 @@ function MapWrap({
 				<div class="d-xl-none">Pinch to zoom</div>
 			</div>
 			{selectedSourceTab.markers !== 'external' && isLoaded(TeyvatMap) ? (
-				<TeyvatMap classes="position-relative" pos="auto" markers={selectedSourceTab.markers} />
+				<TeyvatMap
+					classes="position-relative"
+					pos="auto"
+					mapCode={mapCode}
+					markers={selectedSourceTab.markers}
+				/>
 			) : TeyvatMap instanceof Error ? (
 				<div>Error.</div>
 			) : (
