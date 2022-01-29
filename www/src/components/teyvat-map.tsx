@@ -4,10 +4,12 @@ import {
 	loadTileImage,
 	LocMap,
 	SmoothTileContainer,
+	TileContainer,
 	TileLayer,
 } from 'locmap'
 import { useEffect, useRef } from 'preact/hooks'
 
+import { MapCode } from '#lib/genshin'
 import { clamp } from '#lib/utils/values'
 import { checkAvifSupport } from '#lib/utils/web_media'
 import { memo } from '#src/utils/preact-compat'
@@ -20,12 +22,14 @@ const DEFAULT_LEVEL = -1.2
 const MARKERS_AUTO_REGION_DOWNSCALE = 1.1
 const MARKER_ICON_SIZE_PX = 40
 
-let tileExt = 'jpg'
+type TileExt = 'jpg' | 'avif'
+
+let tileExt: TileExt = 'jpg'
 checkAvifSupport().then(ok => ok && (tileExt = 'avif'))
 
-const loadTile = loadTileImage(
-	(x, y, z) => `https://genshin-base.github.io/teyvat-map/v2.2/tiles/${tileExt}/${z}/${x}/${y}.${tileExt}`,
-)
+function tilePathFinc(x: number, y: number, z: number, mapCode: MapCode) {
+	return `https://genshin-base.github.io/teyvat-map/v2.4/tiles/${mapCode}/${tileExt}/${z}/${x}/${y}.${tileExt}`
+}
 
 /** @type {import('locmap').ProjectionConverter} */
 const MapProjection = {
@@ -49,8 +53,9 @@ const MapProjection = {
 }
 
 export type MapMarkerStyle = null | 'circle' | 'outline'
-export type MapMarkerRaw = { x: number; y: number; icon: string; style?: MapMarkerStyle }
+export type MapMarkerRaw = { map: MapCode; x: number; y: number; icon: string; style?: MapMarkerStyle }
 type MapMarker = {
+	map: MapCode
 	x: number
 	y: number
 	icon: null | HTMLImageElement | HTMLCanvasElement
@@ -69,6 +74,8 @@ export const TeyvatMap = memo(function TeyvatMap({
 	const wrapRef = useRef<HTMLDivElement>(null)
 	const mapRef = useRef<LocMap | null>(null)
 	const markersLayerRef = useRef<MarkersLayer | null>(null)
+	const tileContainerRef = useRef<TileContainer | null>(null)
+	const mapCodeRef = useRef<MapCode>('teyvat')
 
 	/*
 	const markers_ = useFetch(() => apiGetJSONFile(`generated/locations.json`) as Promise<any[]>, [])
@@ -85,25 +92,29 @@ export const TeyvatMap = memo(function TeyvatMap({
 	useEffect(() => {
 		if (!wrapRef.current) return
 
+		const loadTile = loadTileImage((x, y, z) => tilePathFinc(x, y, z, mapCodeRef.current))
+		const tileContainer = new SmoothTileContainer(TILE_DRAW_WIDTH, loadTile, drawRectTilePlaceholder)
+
 		const map = new LocMap(wrapRef.current, MapProjection)
 		const markersLayer = new MarkersLayer()
 		map.setZoomRange(2 ** MIN_LEVEL * TILE_CONTENT_WIDTH, 2 ** MAX_LEVEL * TILE_CONTENT_WIDTH)
-		map.register(
-			new TileLayer(new SmoothTileContainer(TILE_DRAW_WIDTH, loadTile, drawRectTilePlaceholder)),
-		)
+		map.register(new TileLayer(tileContainer))
 		map.register(markersLayer)
 		map.register(new ControlLayer())
 		map.requestRedraw()
 		map.resize()
+
 		addEventListener('resize', map.resize)
 		mapRef.current = map
 		markersLayerRef.current = markersLayer
+		tileContainerRef.current = tileContainer
 
 		return () => {
 			map.getLayers().forEach(map.unregister)
 			removeEventListener('resize', map.resize)
 			mapRef.current = null
 			markersLayerRef.current = null
+			tileContainerRef.current = null
 		}
 	}, [])
 
@@ -165,8 +176,8 @@ class MarkersLayer {
 	setMarkers(rawMarkers: MapMarkerRaw[]) {
 		this.markers.length = 0
 		this.iconCache.clear()
-		for (const { x, y, icon: src, style = null } of rawMarkers) {
-			const marker = { x, y, icon: null, style }
+		for (const { map, x, y, icon: src, style = null } of rawMarkers) {
+			const marker = { map, x, y, icon: null, style }
 			this.loadMarkerImg(marker, src)
 			this.markers.push(marker)
 		}
