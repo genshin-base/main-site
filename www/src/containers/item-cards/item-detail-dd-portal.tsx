@@ -30,11 +30,12 @@ export const ItemDetailDdPortal = ({
 		const pos = calcPosForDd(targetEl.getBoundingClientRect(), wrapEl.getBoundingClientRect(), {
 			isAbsolute: true,
 			isCentered: true,
+			shouldFitInScreen: true,
 		})
 		;('bs-popover-top bs-popover-bottom')
 		wrapEl.className = `${defClassName} bs-popover-${pos.layoutPosition.y}`
-		wrapEl.style.left = `${Math.max(0, pos.left)}px`
-		wrapEl.style.top = `${Math.max(0, pos.top)}px`
+		wrapEl.style.left = `${pos.left}px`
+		wrapEl.style.top = `${pos.top}px`
 		setArrowStyle(
 			`position: absolute; transform: translate3d(${wrapEl.offsetWidth / 2 - 8}px, 0, 0); left: 0`,
 		)

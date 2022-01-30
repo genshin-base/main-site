@@ -4,7 +4,10 @@ import { GI_DomainTypeCode, GI_MAP_CODES, MapCode, MapLocation } from '#lib/gens
 import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
 import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api/utils'
-import { ItemDetailDdMobilePortal, ItemDetailDdPortal } from '#src/components/item-detail-dd-portal'
+import {
+	ItemDetailDdMobilePortal,
+	ItemDetailDdPortal,
+} from '#src/containers/item-cards/item-detail-dd-portal'
 import { SimpleSelect } from '#src/components/select'
 import { BtnTabGroup, tabTitleFromName, useSelectedable } from '#src/components/tabs'
 import { notesToJSX } from '#src/modules/builds/common'
