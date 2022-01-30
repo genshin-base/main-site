@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'preact/hooks'
 
-import { GI_DomainTypeCode, MapCode, MapLocation } from '#lib/genshin'
+import { GI_DomainTypeCode, GI_MAP_CODES, MapCode, MapLocation } from '#lib/genshin'
 import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
 import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api/utils'
@@ -20,6 +20,7 @@ import { AlchemyCalculator } from '../alchemy-calculator'
 import { ItemAvatar, LabeledItemAvatar } from './item-cards'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
+import Spinner from '#src/components/spinners'
 const LazyTeyvatMap = import('#src/components/teyvat-map')
 
 //переключалка для мобильного и десктопного вида
@@ -126,18 +127,26 @@ function MapWrap({
 	}
 	markerGroups: MapWrapMarkerGroup[]
 }): JSX.Element {
-	const [selectedSourceTab, setSelectedSourceTab] = useSelectedable(markerGroups)
-	const goToPrevGroup = () => {
-		setSelectedSourceTab(arrGetAfter(markerGroups, selectedSourceTab, -1))
-	}
-	const goToNextGroup = () => {
-		setSelectedSourceTab(arrGetAfter(markerGroups, selectedSourceTab))
-	}
+	const [selectedSource, setselectedSource] = useSelectedable(markerGroups)
 
-	const [mapCode, setMapCode] = useState<MapCode>('enkanomiya')
-
+	const [selectedMapCode, setMapCode] = useState<MapCode>(GI_MAP_CODES[0])
 	const TeyvatMap = useFetch(() => LazyTeyvatMap.then(x => x.TeyvatMap), [])
 
+	const setSourceAndFixMapCode = (selectedSource: MapWrapMarkerGroup) => {
+		if (
+			Array.isArray(selectedSource.markers) &&
+			!selectedSource.markers.find(m => m.map === selectedMapCode)
+		)
+			setMapCode(selectedSource.markers[0].map)
+		setselectedSource(selectedSource)
+	}
+	const goToPrevGroup = () => {
+		setSourceAndFixMapCode(arrGetAfter(markerGroups, selectedSource, -1))
+	}
+	const goToNextGroup = () => {
+		setSourceAndFixMapCode(arrGetAfter(markerGroups, selectedSource))
+	}
+	console.log(selectedMapCode)
 	let sourceSelectEl
 	if (!markerGroups.length) {
 		sourceSelectEl = null
@@ -147,8 +156,8 @@ function MapWrap({
 		sourceSelectEl = (
 			<BtnTabGroup
 				tabs={markerGroups}
-				selectedTab={selectedSourceTab}
-				onTabSelect={setSelectedSourceTab}
+				selectedTab={selectedSource}
+				onTabSelect={setSourceAndFixMapCode}
 				classes="w-100"
 			/>
 		)
@@ -164,8 +173,8 @@ function MapWrap({
 				</button>
 				<SimpleSelect
 					options={markerGroups}
-					selectedOption={selectedSourceTab}
-					onOptionSelect={setSelectedSourceTab}
+					selectedOption={selectedSource}
+					onOptionSelect={setSourceAndFixMapCode}
 					classes="w-100 rounded-0"
 				/>
 				<button
@@ -197,21 +206,37 @@ function MapWrap({
 					</div>
 				) : null}
 			</div>
+			<div className="map-tip position-absolute px-3 pt-1 lh-1 top-100 start-0 small text-muted opacity-75">
+				{GI_MAP_CODES.map(c => (
+					<div class="d-inline me-2" key={c} onClick={() => setMapCode(c)}>
+						<input
+							class="lh-1 align-middle c-pointer me-1"
+							type="radio"
+							id={c}
+							checked={c === selectedMapCode}
+						/>
+						<label class="lh-1 align-middle c-pointer text-capitalize" for={c}>
+							{c}
+							{/** todo l10n */}
+						</label>
+					</div>
+				))}
+			</div>
 			<div className="map-tip position-absolute px-3 pt-1 lh-1 top-100 end-0 small text-muted opacity-75 pe-none">
 				<div class="d-none d-xl-block">Scroll to zoom</div>
 				<div class="d-xl-none">Pinch to zoom</div>
 			</div>
-			{selectedSourceTab.markers !== 'external' && isLoaded(TeyvatMap) ? (
+			{selectedSource.markers !== 'external' && isLoaded(TeyvatMap) ? (
 				<TeyvatMap
 					classes="position-relative"
 					pos="auto"
-					mapCode={mapCode}
-					markers={selectedSourceTab.markers}
+					mapCode={selectedMapCode}
+					markers={selectedSource.markers}
 				/>
 			) : TeyvatMap instanceof Error ? (
 				<div>Error.</div>
 			) : (
-				<div>Loading...</div>
+				<Spinner />
 			)}
 		</div>
 	)
