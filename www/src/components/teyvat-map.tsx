@@ -3,11 +3,15 @@ import {
 	drawRectTilePlaceholder,
 	loadTileImage,
 	LocMap,
+	ProjectionConverter,
 	SmoothTileContainer,
 	TileContainer,
+	TileImgLoadFunc,
 	TileLayer,
+	TilePlaceholderDrawFunc,
 } from 'locmap'
 import { useEffect, useRef } from 'preact/hooks'
+import { makeTileMaskChecker } from 'teyvat-map/tiles/summary'
 
 import { MapCode } from '#lib/genshin'
 import { clamp } from '#lib/utils/values'
@@ -27,12 +31,20 @@ type TileExt = 'jpg' | 'avif'
 let tileExt: TileExt = 'jpg'
 checkAvifSupport().then(ok => ok && (tileExt = 'avif'))
 
+const TILES_ROOT = `https://genshin-base.github.io/teyvat-map/v2.4/tiles`
+
 function tilePathFinc(x: number, y: number, z: number, mapCode: MapCode) {
-	return `https://genshin-base.github.io/teyvat-map/v2.4/tiles/${mapCode}/${tileExt}/${z}/${x}/${y}.${tileExt}`
+	return `${TILES_ROOT}/${mapCode}/${tileExt}/${z}/${x}/${y}.${tileExt}`
 }
 
-/** @type {import('locmap').ProjectionConverter} */
-const MapProjection = {
+const tilesMask: Record<string, ReturnType<typeof makeTileMaskChecker> | undefined> = {}
+fetch(`${TILES_ROOT}/summary.json`)
+	.then(r => r.json())
+	.then(info => {
+		for (const code in info) tilesMask[code] = makeTileMaskChecker(info[code])
+	})
+
+const MapProjection: ProjectionConverter = {
 	x2lon(x, zoom) {
 		return (x / zoom) * TILE_CONTENT_WIDTH
 	},
@@ -96,8 +108,20 @@ export const TeyvatMap = memo(function TeyvatMap({
 	useEffect(() => {
 		if (!wrapRef.current) return
 
-		const loadTile = loadTileImage((x, y, z) => tilePathFinc(x, y, z, mapCodeRef.current))
-		const tileContainer = new SmoothTileContainer(TILE_DRAW_WIDTH, loadTile, drawRectTilePlaceholder)
+		function shouldDrawTile(x: number, y: number, z: number) {
+			const mask = tilesMask[mapCodeRef.current]
+			return !mask || mask(x, y, z)
+		}
+
+		const drawTilePlaceholder: TilePlaceholderDrawFunc = (map, x, y, z, drawX, drawY, tileW, scale) => {
+			if (shouldDrawTile(x, y, z)) drawRectTilePlaceholder(map, x, y, z, drawX, drawY, tileW, scale)
+		}
+
+		const loadTileInner = loadTileImage((x, y, z) => tilePathFinc(x, y, z, mapCodeRef.current))
+		const loadTile: TileImgLoadFunc = (x, y, z, onUpdate) => {
+			if (shouldDrawTile(x, y, z)) loadTileInner(x, y, z, onUpdate)
+		}
+		const tileContainer = new SmoothTileContainer(TILE_DRAW_WIDTH, loadTile, drawTilePlaceholder)
 
 		const map = new LocMap(wrapRef.current, MapProjection)
 		const markersLayer = new MarkersLayer()
