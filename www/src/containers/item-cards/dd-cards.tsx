@@ -127,7 +127,7 @@ function MapWrap({
 	}
 	markerGroups: MapWrapMarkerGroup[]
 }): JSX.Element {
-	const [selectedSource, setselectedSource] = useSelectedable(markerGroups)
+	const [selectedSource, setSelectedSource] = useSelectedable(markerGroups)
 
 	const [selectedMapCode, setMapCode] = useState<MapCode>(GI_MAP_CODES[0])
 	const TeyvatMap = useFetch(() => LazyTeyvatMap.then(x => x.TeyvatMap), [])
@@ -138,7 +138,7 @@ function MapWrap({
 			!selectedSource.markers.find(m => m.map === selectedMapCode)
 		)
 			setMapCode(selectedSource.markers[0].map)
-		setselectedSource(selectedSource)
+		setSelectedSource(selectedSource)
 	}
 	const goToPrevGroup = () => {
 		setSourceAndFixMapCode(arrGetAfter(markerGroups, selectedSource, -1))
@@ -146,7 +146,7 @@ function MapWrap({
 	const goToNextGroup = () => {
 		setSourceAndFixMapCode(arrGetAfter(markerGroups, selectedSource))
 	}
-	console.log(selectedMapCode)
+
 	let sourceSelectEl
 	if (!markerGroups.length) {
 		sourceSelectEl = null
@@ -187,6 +187,13 @@ function MapWrap({
 			</div>
 		)
 	}
+	const visibleMapCodes = useMemo(
+		() =>
+			GI_MAP_CODES.filter(
+				c => Array.isArray(selectedSource.markers) && selectedSource.markers.find(m => m.map === c),
+			),
+		[selectedSource],
+	)
 	return (
 		<div className={`map-wrap position-relative mb-3`}>
 			<div className="map-header position-absolute d-flex flex-row justify-content-between px-3 py-1 w-100">
@@ -206,16 +213,23 @@ function MapWrap({
 					</div>
 				) : null}
 			</div>
-			<div className="map-tip position-absolute px-3 pt-1 lh-1 top-100 start-0 small text-muted opacity-75">
-				{GI_MAP_CODES.map(c => (
-					<div class="d-inline me-2" key={c} onClick={() => setMapCode(c)}>
-						<input
-							class="lh-1 align-middle c-pointer me-1"
-							type="radio"
-							id={c}
-							checked={c === selectedMapCode}
-						/>
-						<label class="lh-1 align-middle c-pointer text-capitalize" for={c}>
+			<div className="map-tip position-absolute px-3 pt-1 lh-1 top-100 start-0 small text-muted opacity-75 user-select-none">
+				{visibleMapCodes.map(c => (
+					<div className="d-inline me-2" key={c} onClick={() => setMapCode(c)}>
+						{visibleMapCodes.length > 1 ? (
+							<input
+								className="lh-1 align-middle c-pointer me-1"
+								type="radio"
+								id={c}
+								checked={c === selectedMapCode}
+							/>
+						) : null}
+						<label
+							className={`lh-1 align-middle text-capitalize ${
+								visibleMapCodes.length > 1 ? 'c-pointer' : ''
+							}`}
+							for={c}
+						>
 							{c}
 							{/** todo l10n */}
 						</label>
