@@ -74,9 +74,11 @@ export const TeyvatMap = memo(function TeyvatMap({
 	markers?: MapMarkerRaw[]
 }) {
 	const wrapRef = useRef<HTMLDivElement>(null)
-	const mapRef = useRef<LocMap | null>(null)
-	const markersLayerRef = useRef<MarkersLayer | null>(null)
-	const tileContainerRef = useRef<TileContainer | null>(null)
+	const mapRef = useRef<{
+		map: LocMap
+		markersLayer: MarkersLayer
+		tileContainer: TileContainer
+	} | null>(null)
 	const mapCodeRef = useRef<MapCode>('teyvat')
 
 	/*
@@ -107,31 +109,29 @@ export const TeyvatMap = memo(function TeyvatMap({
 		map.resize()
 
 		addEventListener('resize', map.resize)
-		mapRef.current = map
-		markersLayerRef.current = markersLayer
-		tileContainerRef.current = tileContainer
+		mapRef.current = { map, markersLayer, tileContainer }
 
 		return () => {
 			map.getLayers().forEach(map.unregister)
 			removeEventListener('resize', map.resize)
 			mapRef.current = null
-			markersLayerRef.current = null
-			tileContainerRef.current = null
 		}
 	}, [])
 
 	useEffect(() => {
+		const m = mapRef.current
 		mapCodeRef.current = mapCode
-		markersLayerRef.current?.setMapCode(mapCode)
-		mapRef.current?.requestRedraw()
+		m?.markersLayer.setMapCode(mapCode)
+		m?.tileContainer.clearCache()
+		m?.map.requestRedraw()
 	}, [mapCode])
 
 	useEffect(() => {
-		if (markers) markersLayerRef.current?.setMarkers(markers)
+		mapRef.current?.markersLayer.setMarkers(markers ?? [])
 	}, [markers])
 
 	useEffect(() => {
-		const map = mapRef.current
+		const map = mapRef.current?.map
 		if (!map) return
 		const { x, y, level } = pos === 'auto' ? calcAutoPosition(map, markers ?? [], mapCode) : pos
 		map.updateLocation(x, y, TILE_CONTENT_WIDTH * 2 ** level)

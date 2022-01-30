@@ -54,7 +54,7 @@ import {
 	makeCharacterShortList,
 	makeWeaponsFullInfo,
 } from '#lib/parsing/combine.js'
-import { extractItemsData } from '#lib/parsing/honeyhunter/items.js'
+import { extractItemsData, getItemAncestryCodes } from '#lib/parsing/honeyhunter/items.js'
 import {
 	extractEnemiesData,
 	makeEnemyGroups,
@@ -307,10 +307,13 @@ async function extractAndSaveItemImages(overwriteExisting) {
 	const usedWeaponCodes = new Set(builds.characters.map(x => Array.from(getCharacterWeaponCodes(x))).flat())
 
 	const usedItemCodes = new Set()
-	for (const weapon of Object.values(weapons.code2item))
-		if (usedWeaponCodes.has(weapon.code)) for (const code of weapon.materialCodes) usedItemCodes.add(code)
 	for (const character of Object.values(characters.code2item))
 		for (const code of character.materialCodes) usedItemCodes.add(code)
+	for (const weapon of Object.values(weapons.code2item))
+		if (usedWeaponCodes.has(weapon.code)) for (const code of weapon.materialCodes) usedItemCodes.add(code)
+	for (const item of Object.values(items.code2item))
+		if (usedItemCodes.has(item.code))
+			for (const code of getItemAncestryCodes(item, items.code2item)) usedItemCodes.add(code)
 
 	const usedEmenyCodes = new Set()
 	for (const enemy of Object.values(enemies.code2item))
