@@ -157,6 +157,7 @@ export function useHover<T extends Element>(): [RefObject<T>, boolean] {
 			node.addEventListener('mouseover', handleMouseOver)
 			node.addEventListener('mouseout', handleMouseOut)
 			return () => {
+				setValue(false)
 				node.removeEventListener('mouseover', handleMouseOver)
 				node.removeEventListener('mouseout', handleMouseOut)
 			}
