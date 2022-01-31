@@ -1,79 +1,68 @@
-import { useCallback, useState } from 'preact/hooks'
+import { useCallback, useEffect, useState } from 'preact/hooks'
 import { ItemAvatar } from './item-cards/item-cards'
 import { getItemIconSrc } from '#src/utils/items'
+import { GI_RarityCode } from '#src/../../lib/genshin'
 
-const DEF_ICON = getItemIconSrc('philosophies-of-resistance')
+const DEF_ANCESTRY_CODES = [
+	'agnidus-agate-chunk',
+	'agnidus-agate-fragment',
+	'agnidus-agate-sliver',
+	'agnidus-agate-gemstone',
+]
 export function AlchemyCalculator({
 	classes = '',
-	iconSrc = DEF_ICON,
+	ancestryCodes = DEF_ANCESTRY_CODES,
 }: {
 	classes?: string
-	iconSrc?: string
+	ancestryCodes?: string[]
 }): JSX.Element {
-	const [values, setValues] = useState<number[]>([9, 3, 1])
+	const [values, setValues] = useState<number[]>([])
 	const onValueChange = useCallback(
 		e => {
-			const v = +e.target.value
-			let values
-			switch (+e.target.dataset.index) {
-				case 0:
-					values = [v, v / 3, v / 9]
-					break
-				case 1:
-					values = [v * 3, v, v / 3]
-					break
-				case 2:
-					values = [v * 9, v * 3, v]
-					break
-			}
-			setValues(values.map(v => Math.round(v)))
+			const value = +e.target.value
+			const index = +e.target.dataset.index
+			setValues(values.map((v, i) => (v = Math.floor(3 ** (index - i) * value))))
 		},
-		[setValues],
+		[setValues, values],
 	)
+	useEffect(() => {
+		setValues(ancestryCodes.map((c, i) => 3 ** (ancestryCodes.length - 1 - i)))
+	}, [ancestryCodes])
+	const startNotRoundClass = 'not-rounded-start'
+	const endNotRoundClass = 'not-rounded-end'
+	const endRoundClass = 'rounded-end'
 	return (
 		<div className={`alchemy-calculator overflow-hidden ${classes}`}>
 			<div className="input-group">
-				<input
-					type="number"
-					min="0"
-					className="form-control bg-dark text-light text-end pe-1"
-					onInput={onValueChange}
-					value={values[0]}
-					data-index="0"
-				/>
-				<ItemAvatar
-					src={iconSrc}
-					rarity={3}
-					classes="small-avatar with-padding input-group-avatar not-rounded-end not-rounded-start border-top border-bottom border-dark"
-				/>
-				<span className="input-group-text bg-3 ps-1">{'='}</span>
-				<input
-					type="number"
-					min="0"
-					className="form-control bg-dark text-light text-end pe-1"
-					onInput={onValueChange}
-					value={values[1]}
-					data-index="1"
-				/>
-				<ItemAvatar
-					src={iconSrc}
-					rarity={4}
-					classes="small-avatar with-padding input-group-avatar not-rounded-start not-rounded-end border-top border-bottom border-dark"
-				/>
-				<span className="input-group-text bg-4 ps-1">{'='}</span>
-				<input
-					type="number"
-					min="0"
-					className="form-control bg-dark text-light text-end pe-1"
-					onInput={onValueChange}
-					value={values[2]}
-					data-index="2"
-				/>
-				<ItemAvatar
-					src={iconSrc}
-					rarity={5}
-					classes="small-avatar with-padding input-group-avatar not-rounded-start rounded-end border-top border-bottom border-dark"
-				/>
+				{ancestryCodes.map((c, i) => {
+					const isFirst = i === 0
+					const isLast = i === ancestryCodes.length - 1
+					const rarity = 5 - (ancestryCodes.length - 1 - i)
+					return (
+						<>
+							{i !== 0 ? (
+								<span className={`input-group-text bg-${rarity - 1} ps-1`}>{'='}</span>
+							) : null}
+							<input
+								type="number"
+								min="0"
+								className={`form-control bg-dark text-light text-end pe-1 ${
+									!isFirst ? startNotRoundClass : ''
+								} ${endNotRoundClass}`}
+								onInput={onValueChange}
+								value={values[i]}
+								data-index={i}
+							/>
+							<ItemAvatar
+								src={getItemIconSrc(c)}
+								rarity={rarity as GI_RarityCode}
+								classes={`small-avatar with-padding input-group-avatar ${startNotRoundClass} ${
+									!isLast ? endNotRoundClass : endRoundClass
+								} border-top border-bottom border-dark`}
+							/>
+						</>
+					)
+				})}
 			</div>
 		</div>
 	)

@@ -502,6 +502,10 @@ export function OtherItemCard({
 		}
 	}, [materialOnMap, related])
 	// item.craftedFrom3Code && console.log(getAllRelated(related.items, [item.craftedFrom3Code]))
+	console.log(item.ancestryCodes)
+	const codesForCalc = useMemo(() => {
+		return [...item.ancestryCodes.reverse(), item.code]
+	}, [item])
 	return (
 		<Card
 			titleEl={item.name}
@@ -513,7 +517,7 @@ export function OtherItemCard({
 						{/* <h6 className="text-uppercase opacity-75">Описание</h6>
 				<div className="mb-3">{notesToJSX()}</div> */}
 						<h6 class="text-uppercase opacity-75">alchemy calculator</h6>
-						<AlchemyCalculator classes={'w-75'} iconSrc={getItemIconSrc(item.code)} />
+						<AlchemyCalculator ancestryCodes={codesForCalc} />
 					</div>
 				) : null
 			}
