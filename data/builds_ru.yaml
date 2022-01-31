@@ -906,9 +906,9 @@
           notes: обычная атака становится в приоритете только при наличии C6 Беннета
           seeCharNotes: false
         tips:
-          - p: Беннет's EB grants you a пиро статус as long as your персонажи are within
+          - p: Беннет's Взрыв стихии grants you a пиро статус as long as your персонажи are within
               his burst AoE (Крио in specific, since Пиро > Крио).
-          - p: For that, cast EB с Беннет, switch to the персонаж imbued с Крио и
+          - p: For that, cast Взрыв стихи с Беннет, switch to the персонаж imbued с Крио и
               walk on Беннет's Взрыв стихии field
           - p: Upon entering burst field, the Пиро status will continuously imbue you с
               Пиро, reacting с other элементы on you и eventually removing
@@ -955,9 +955,9 @@
                   Abyss Lectors "
               - >
                 in the Spiral Abyss. Этот comp is generally only recommended for
-                those с Бэй Доу on C2/C6.
-              - b: It's worth noting that the main-stat артефакты you want to farm for 4-TF
-                  Беннет varies from the main-stat артефакты you'd normally go
+                those с Бэй Доу на C2/C6.
+              - b: It's worth noting that the главстат артефакты you want to farm for 4-TF
+                  Беннет varies from the главстат артефакты you'd normally go
                   for in other builds.
               - " "
               - b: Instead of Сила атаки/Мастерство стихий, Пиро, и Crit, you'd instead want to go for Мастерство стихий/Пиро/Мастерство стихий on
@@ -975,7 +975,7 @@
                 that your Мастерство стихий pieces manage to roll plenty of Crit subs,
                 Mistsplitter easily overtakes Jade Cutter.
 
-                Recommended amount of Восст. энергии%: 130-150%. Worth noting that 
+                Рекомендованое количество of Восст. энергии%: 130-150%. Worth noting that 
               - b: с Громогласный рёв ярости (4), you have a lot more leeway когда it comes to Восст. энергии.
       - code: burst support
         isRecommended: true
@@ -1106,7 +1106,7 @@
             - skill
           notes: null
           seeCharNotes: false
-        tips: "Recommended amount of Восст. энергии%: 180-200"
+        tips: "Рекомендуется количество of Восст. энергии%: 180-200"
         notes:
           - "A Взрыв стихии Support Беннет "
           - b: "полностью игнорирует необходимость лечения "
@@ -1117,7 +1117,7 @@
              instead. 
             On this build, Беннет is 
           - b: built с offensive статы like Сила атаки%, Пиро Damage, и Crit статы while
-              having a good amount of Восст. энергии to burst off время отката.
+              having a good количество of Восст. энергии to burst off время отката.
           - "\ \n"
           - b: Prioritize Восст. энергии before offensive статы if you cannot cast your
               Взрыв стихии off время отката.
@@ -1254,7 +1254,7 @@
             - burst
           notes: null
           seeCharNotes: false
-        tips: "Recommended amount of Восст. энергии%: 200+"
+        tips: "Рекомендуется количество of Восст. энергии%: 200+"
         notes:
           - p:
               - b: Heals from his Взрыв стихии scale off of ХП,
@@ -1452,7 +1452,7 @@
           notes: null
           seeCharNotes: false
         tips:
-          - p: Синь Янь's ES grants you a pyro status upon contact с щит. No matter how
+          - p: Синь Янь's ЭН grants you a pyro status upon contact с щит. No matter how
               many times you switch your персонажи, it'll still apply pyro
               every instant you switch с щит. Этот allows you to cleanse
               every single elemental status that has been applied to you.
@@ -2456,14 +2456,14 @@
           seeCharNotes: false
         tips:
           - p: You can interweave Normal Attacks while using his Элементальный навык.
-          - p: ie. ES -> NA -> NA -> ES -> NA -> NA -> ES -> NA -> NA
+          - p: ie. ЭН -> ОА -> ОА -> ЭН -> ОА -> ОА -> ЭН -> ОА -> ОА
         notes:
           - p:
               - b: |-
                   О выборе оружия:
                   Краснорогий камнеруб: 
               - >
-                Depending on the amount of Сила атаки% buffs you're getting, this
+                Depending on the количество of Сила атаки% buffs you're getting, this
                 оружие can overtake Волчья погибель in personal damage.
               - b: "Меч драконьей кости: "
               - "Because Дилюк's "
@@ -3359,7 +3359,7 @@
           - p: "Due to how Полярная звезда works, your optimal rotation would be different from
               other оружие:"
           - p:
-              b: Элементальный навык (Взрыв стихии) > NA > CA > Resummon Oz (To snapshot Полярная звезда stacks)
+              b: Элементальный навык (Взрыв стихии) > ОА > ЗА > Resummon Oz (To snapshot Полярная звезда stacks)
         notes:
           - p:
               - b: "[C1] "
@@ -3614,7 +3614,7 @@
               - " Этот комплект артефактов will outperform "
               - b: Конец гладиатора(2) Громогласный рёв ярости(2)
               - " if used in a отряд comp где an electro aura is всегда present
-                (e.g. Электро/Электро-charged comps) therefore it is "
+                (напр. Электро/Электро-charged comps) therefore it is "
               - b: highly recommended within this niche.
               - "\n"
               - b: "Стойкость Миллелита (4): "
@@ -3810,7 +3810,7 @@
                   margin когда Беннет/Сара Сила атаки buffs are applied.
 
                   Краснорогий камнеруб: 
-              - Depending on the amount of Сила атаки% buffs you're getting, this
+              - Depending on the количество of Сила атаки% buffs you're getting, this
                 оружие can overtake Волчья погибель in personal damage.
               - b: |-
                   
@@ -4028,15 +4028,15 @@
               - b: "Optimal Лиза String: "
               - >-
                 
-                ES (быстрое нажатие) > NA x2 [until 3 stacks] > Fully-charged ES (Hold) > N2C. Repeat N2C until E is off-время отката, then repeat the string.
+                ЭН (быстрое нажатие) > ОА x2 [until 3 stacks] > Fully-charged ЭН (Hold) > N2C. Repeat N2C until E is off-время отката, then repeat the string.
           - p:
-              b: "*N/NA = Normal attack, C = Charged attack, ES = Элементальный навык"
+              b: "*N/ОА = Normal attack, C = Charged attack, ЭН = Элементальный навык"
         notes:
           - p:
               - b: |-
                   О комплектах артефактов:
                   Усмиряющий гром (4):
-              - " For отряды that focus on Заряжен reactions, "
+              - " Для отрядов фокусирующихся на реакциях Заряжен, "
               - b: Усмиряющий гром (4)
               - " can out dps "
               - b: Громогласный рёв ярости (2) +18% Сила атаки комплект (2),
@@ -4476,7 +4476,7 @@
           notes: null
           seeCharNotes: false
         tips: >
-          Рэйзор's EB grants you an Электро Status когда you basic attack while
+          Рэйзор's Взрыв стихии grants you an Электро Status когда you basic attack while
           burst is in-effect, that means it can be used for status-cleansing (no
           particular effective element).  Can only be done on himself.
         notes:
@@ -4489,7 +4489,7 @@
                 every scenario except crowd battles.
               - b: "Краснорогий камнеруб: "
               - >
-                Depending on the amount of Сила атаки% buffs you're getting, this
+                Depending on the количество of Сила атаки% buffs you're getting, this
                 оружие can overtake Волчья погибель in personal damage.
               - b: Некованый
               - >
@@ -5167,7 +5167,7 @@
               notes: null
               seeCharNotes: false
           notes:
-            - p: 4-pcs. Громогласный рёв ярости is Not Recommended for Электро ДПС Кэ Цин.
+            - p: 4-pcs. Громогласный рёв ярости is Not Рекомендуется for Электро ДПС Кэ Цин.
             - p: "Note: Артефакт recommendations are not ranked in order of recommendation,
                 read the notes for more info."
           seeCharNotes: false
@@ -5221,14 +5221,14 @@
             - burst
             - skill
           notes: "Note: Since Кэ Цин uses burst to get an extra 15% crit, it's much better
-            in leveling it.  Best course of action is to level NA и Взрыв стихии
+            in leveling it.  Best course of action is to level ОА и Взрыв стихии
             together. Don't forget to level skill to a decent level."
           seeCharNotes: false
         tips:
           - p:
               - b: "Preferred Элементальный навык Combo: "
-              - ES (Place stiletto, don't reactivate yet) -> EB -> ES
-                (Reactivation) -> Spam AA -> Repeat
+              - ЭН (Place stiletto, don't reactivate yet) -> ВС -> ЭН
+                (Reactivation) -> Spam AA -> Повторить
           - p:
               - b: "О ролях:"
               - >-
@@ -5445,13 +5445,13 @@
           - p:
               - |-
                 Взрыв стихии combo :
-                - Элементальный навык > Взрыв стихии > 4NA + CA (2 times) > 2NA + CA 
+                - Элементальный навык > Взрыв стихии > 4NA + ЗА (2 times) > 2NA + ЗА 
               - b: |
-                  (Recommended)
-              - "- Элементальный навык > Взрыв стихии > 3NA + CA (3 times) > 1NA + CA "
+                  (Рекомендуется)
+              - "- Элементальный навык > Взрыв стихии > 3NA + ЗА (3 times) > 1NA + ЗА "
               - b: (Optimal)
           - p:
-              b: "*NA = обычная атака, CA = Заряженная атака"
+              b: "*ОА = обычная атака, ЗА = Заряженная атака"
           - p: The recommended combo provides more room for error и offers slightly better
               AoE while the optimal combo provides slightly higher damage
         notes:
@@ -5459,7 +5459,7 @@
               - "Райдэн's Взрыв стихии damage depends on её "
               - b: отряд's энергия consumption prior to её Взрыв стихии
               - ", и её Взрыв стихии "
-              - b: restores a comfortable amount of энергия for её отряд
+              - b: restores a comfortable количество of энергия for её отряд
               - " (which is further amplified by её passive). Этот is
                 especially convenient on отряды that doesn't conflict с её
                 element и wants the энергия provision. (IE Эола, Электро,
@@ -5675,8 +5675,8 @@
           notes: null
           seeCharNotes: false
         tips:
-          - p: Activating XQ's Элементальный навык или Взрыв стихии applies Гидро to the
-              on-field персонаж с his щит. (Пиро in specific)
+          - p: Активация Элементального навыка или Взрыва стихии Син Цю накладывает Гидро на
+              активного персонажа с его щит. (Пиро in specific)
           - p: "Cleansing Электро may take an additional switch for your персонаж с the
               rain мечи active, while Крио would freeze you in place. "
         notes:
@@ -5691,7 +5691,7 @@
               - b: "[C6]"
               - |
                 ).
-              - b: "Sacrifical Sword:"
+              - b: "Церемониальный меч:"
               - >2
                  Этот is Син Цю's лучший in slot оружие if he doesnt have much Восст. энергии from допстаты, otherwise it is his second лучший in slot оружие.
               - b: "Предвестник зари:"
@@ -6228,16 +6228,16 @@
               - b: "Элементальный навык Combo:"
               - >-
                 
-                - 2 NA + 1 CA (Optimal)
+                - 2 ОА + 1 ЗА (Optimal)
 
-                - 3 NA + 1 CA (Recommended)
+                - 3 ОА + 1 ЗА (Рекомендуется)
 
-                - 5 NA + 1 CA (Recommended combo if using Ржавый лук или Громовой пульс)
+                - 5 ОА + 1 ЗА (Рекомендуется combo if using Ржавый лук или Громовой пульс)
           - p:
-              b: "*NA = обычная атака, CA = Заряженная атака"
+              b: "*ОА = обычная атака, ЗА = Заряженная атака"
           - p:
               b: "The Optimal combo provides more damage но consumes more выносливость.
-                Recommended combo provides slightly less damage но is more
+                Рекомендуется combo provides slightly less damage но is more
                 выносливость efficient. "
         notes:
           - p:
@@ -7032,7 +7032,7 @@
               such is only recommended in a Пар comp где the added Гидро
               наложение is favoured."
           - p:
-              b: "*NA = обычная атака, D = Dash"
+              b: "*ОА = обычная атака, D = Dash"
         notes:
           - p: ДПС Кокоми aims to maximise её onfield damage only during её Elemental
               Взрыв стихии's длительность. Outside of её Взрыв стихии, её damage is
@@ -7411,43 +7411,43 @@
               - skill
           notes: null
           seeCharNotes: true
-        tips: Чун Юнь's Взрыв стихии is calculated as Claymore damage, which means
-          it breaks Гео Structures/ Shields at a much easier rate и can proc
+        tips: Взрыв стихии Чун Юня считается уроном двуручного меча, что значит
+          что он разбивает Гео структуры/ щиты at a much easier rate и can proc
           shatter.
         notes:
           - p:
-              - "Чун Юнь is much preferred as a доп. ДПС/ Nuke over глав. ДПС as "
-              - b: his обычная атака scalings are very low,
-              - " even когда including Constellation 1. His "
+              - "Чун Юнь гораздо предпочтительней в роли доп. ДПСа/ Nuke чем глав. ДПС так "
+              - b: как скейлы его обычной атаки очень низкие,
+              - " даже когда у него есть Созвездие 1. Его "
               - b: "Взрыв стихии on the other hand hits extremely hard "
               - on later constellations и takes a much higher total damage
-                portion over his обычная атака. On top of that, you can Reverse
-                Таяние all 3 hits of his Взрыв стихии on враги applied с
-                strong Пиро, such as Беннет's Элементальный навык и Elemental
-                Взрыв стихии.
+                portion over his обычная атака. On top of that, можно делать реакцию Реверсивное
+                Таяние все три удара его Взрыва стихии по врагам, на которых наложено
+                сильное Пиро, например, Элементальный навык и
+                Взрыв стихии Беннета.
           - p:
               - "Чун Юнь is "
               - b: very niche
-              - " as he only performs well in certain отряды и can completely
-                destroy the other. He is mainly used on a отряд as an "
+              - " так как он работает хорошо только в определенных отрядах и может полностью
+                разрушить другие. He is mainly used on a отряд as an "
               - b: enabler,
               - " be it for "
               - b: Реверсивное Таяние отряды
-              - " (e.g. Таяние ДПС Беннет) или "
+              - " (напр. Таяние ДПС Беннет) или "
               - b: Заморозка отряды
-              - " (e.g. Заморозка ДПС Кэйа). He also "
-              - b: does not function well с Physical отряды
-              - " (e.g. Рэйзор, Эола) as it renders his Элементальный навык useless
-                because it converts their "
-              - b: обычная атака damage from Physical to Крио.
-              - " They're usually using a Physical Кубок, so if they got their
-                обычная атака converted from Physical to Крио, "
-              - b: they won't benefit from Physical урон бонус
-              - " from the goblet, thus it's a ДПС loss."
+              - " (напр. Заморозка ДПС Кэйа). Он также "
+              - b: не функционирует хорошо с Физическими отрядами
+              - " (напр. Рэйзор, Эола) as it renders его Элементальный навык бесполезным
+                потому, что он превращает "
+              - b: урон их обычных атак с физических в Крио.
+              - " Они обычно используют Физ. кубок, поэтому если их
+                обычная атака преобразуется с Физической в Крио, "
+              - b: они не получат преимуществ бонуса Физ. урона
+              - " с кубка, это приведет к потерям урона."
           - p:
               - At
               - b: " [C2],"
-              - " his Элементальный навык "
+              - " его Элементальный навык "
               - b: reduces ability время отката that is casted within the zone by 15%.
               - " Этот is one of the few abilities in the game that can reduce
                 время отката."
@@ -7464,7 +7464,7 @@
               - >2
                  is ranked higher as it provides more teamwide ДПС и does not come с the need to acquire stacks before engaging in combat.
               - b: "Redstone Thresher: "
-              - Depending on the amount of Сила атаки% buffs you're getting, this
+              - Depending on the количество of Сила атаки% buffs you're getting, this
                 оружие can overtake Волчья погибель in personal damage.
               - b: |-
                   
@@ -7492,16 +7492,16 @@
               - b: |-
                   О комплектах артефактов:
                   Церемония древней знати (4):
-              - " Чун Юнь is one of the лучший Noblesse holders since he has low
-                энергия requirements for his Взрыв стихии."
+              - " Чун Юнь один из лучших носителей Церемонии since he has low
+                энергия requirements для его Взрыва стихии."
           - p:
               - b: |
                   О приоритетах талантов: 
               - >-
-                Prioritize Взрыв стихии on a Таяние отряд as it scales better
+                Взрыв стихии приоритетен в Таяние отряд as it scales better
                 чем his Элементальный навык.
 
-                Prioritize Элементальный навык on a Заморозка отряд to furthermore extend the длительность of the Крио infusion.
+                Элементальный навык приоритетен в Заморозка отряд to furthermore extend the длительность of the Крио infusion.
     credits: null
   - code: Кэйа
     elementCode: cryo
@@ -8583,7 +8583,7 @@
                  can reduce this Восст. энергии requirement down to 140% или lower.
               - b: "Покоритель вихря:"
               - " Этот ranking is assumed without a щит. "
-              - b: With a large amount of attack buffs such as Беннет, this оружие can fall off
+              - b: With a large количество of attack buffs such as Беннет, this оружие can fall off
                   compared to the other options due to overstacking Сила атаки%.
               - "\n"
               - b: "Гроза драконов / Крест-копьё Китаин:"
@@ -9122,7 +9122,7 @@
               - b: " "
               - "A Гидро Support would be appreciated с Заблудший в метели (4)
                 Гань Юй. "
-              - b: Highly Recommended, especially for players who have Гань Юй at [C4].
+              - b: Highly Рекомендуется, especially for players who have Гань Юй at [C4].
       - code: off-field dps
         isRecommended: false
         weapons:
@@ -9502,19 +9502,19 @@
               - b: "Normal combo while no Взрыв стихии:"
               - |-
                 
-                NA Spam > быстрое нажатие Элементальный навык > NA Spam > быстрое нажатие Элементальный навык
+                ОА Spam > быстрое нажатие Элементальный навык > ОА Spam > быстрое нажатие Элементальный навык
           - p:
               - b: "Взрыв стихии combo:"
               - |-
                 
-                быстрое нажатие Элементальный навык > Взрыв стихии > 4 NA > Hold Элементальный навык > 4 NA
+                быстрое нажатие Элементальный навык > Взрыв стихии > 4 ОА > Hold Элементальный навык > 4 ОА
           - p:
               - b: "Взрыв стихии combo that generates more энергия at the cost of slightly less ДПС:"
               - >-
                 
-                быстрое нажатие Элементальный навык > Взрыв стихии > быстрое нажатие Элементальный навык > 4 NA > Dash Cancel > 2 NA > Hold Элементальный навык > 2 NA
+                быстрое нажатие Элементальный навык > Взрыв стихии > быстрое нажатие Элементальный навык > 4 ОА > Dash Cancel > 2 ОА > Hold Элементальный навык > 2 ОА
           - p:
-              b: "*NA = обычная атака"
+              b: "*ОА = обычная атака"
         notes:
           - p: Эола's оружие rankings assume that you're running её с a Крио батарейка
               (то есть Диона) instead of Беннет. Она would usually need 30%-60%+
@@ -9527,7 +9527,7 @@
               - b: |-
                   О выборе оружия:
                   Краснорогий камнеруб: 
-              - Depending on the amount of Сила атаки% buffs you're getting this оружие
+              - Depending on the количество of Сила атаки% buffs you're getting this оружие
                 can overtake Волчья погибель in personal
               - b: " "
               - damage.
@@ -9748,7 +9748,7 @@
               - " (paired с a Гидро enabler such as Мона, Син Цю, или even
                 Барбара) где она could gain huge benefits from the "
               - b: Заблудший в метели (4) artifact комплект.
-              - " Заблудший в метели (4) piece gives a huge amount of статы on a
+              - " Заблудший в метели (4) piece gives a huge количество of статы on a
                 Заморозка отряд, so try to get this artifact комплект as fast as you can.
                 Её Взрыв стихии also sticks on замороженные враги, но it also
                 has a small hitbox so you need to position it well so that it
@@ -9970,7 +9970,7 @@
                 provides 5 Крио частицы on её Элементальный навык. "
               - b: Она can also be utilized on a Таяние отряд
               - " где you can melt её Взрыв стихии for quite a decent
-                amount of damage."
+                количество of damage."
           - p:
               - b: "О выборе оружия:"
               - "\n"
@@ -10343,7 +10343,7 @@
               - b: "О приоритете Восст. энергии:"
               - >-2
                  
-                Ranking is based on the assumption that Сахароза has Церемониальные мемуары и is not valued for её Взрыв стихии in отряды that may not want Сахароза's Взрыв стихии interfering с elemental auras. Восст. энергии could be prioritized higher когда Сахароза is utilized in отряды that don't really mind which element is being applied first и last (e.g. Электро-charged).
+                Ranking is based on the assumption that Сахароза has Церемониальные мемуары и is not valued for её Взрыв стихии in отряды that may not want Сахароза's Взрыв стихии interfering с elemental auras. Восст. энергии could be prioritized higher когда Сахароза is utilized in отряды that don't really mind which element is being applied first и last (напр. Электро-charged).
     credits: null
   - code: sayu
     elementCode: anemo
@@ -10461,7 +10461,7 @@
         notes:
           - p: Саю does more damage с Мастерство стихий builds и heals more с Сила атаки hybrid builds,
               Healing бонус hat can be used for better heals while maintaining
-              respectable damage. Note that Саю wants a large amount of энергия
+              respectable damage. Note that Саю wants a large количество of энергия
               recharge когда used as the only anemo slot on the отряд (200%ish).
           - p:
               - b: "О выборе оружия:"
@@ -10677,7 +10677,7 @@
               - " Although this оружие does not provide much damage, "
               - b: the Energy generated by the passive can sometimes be more beneficial to your
                   отряд.
-              - " Make sure to build some amount of Шанс крит. попадания to reliably
+              - " Make sure to build some количество of Шанс крит. попадания to reliably
                 trigger the passive."
       - code: physical dps
         isRecommended: false
@@ -10835,7 +10835,7 @@
         tips: []
         notes:
           - p:
-              b: Not Recommended for End Game Content.
+              b: Not Рекомендуется for End Game Content.
           - p:
               - b: |-
                   О комплектах артефактов: 
@@ -11391,7 +11391,7 @@
               on-field for VV 4-комплект perk to proc on swirl first.(E > Q to avoid
               this issue)
           - p: You can infuse элементы onto Венти's Взрыв стихии if you walk up с an element
-              status on you. (e.g. Беннет Взрыв стихии > Венти Взрыв стихии > Walk up to
+              status on you. (напр. Беннет Взрыв стихии > Венти Взрыв стихии > Walk up to
               infuse Пиро)
           - p:
               - "Check out "
@@ -11620,10 +11620,10 @@
           - p:
               - b: "О выборе оружия:"
               - >2
-                 With a proper anemo батарейка (e.g. Сахароза), Сяо needs as little as 120-130% Восст. энергии to maintain a high burst uptime. In these scenarios, unless there are no Восст. энергии from допстаты, you should всегда go for a non-Восст. энергии оружие as it will result in more damage.
+                 With a proper anemo батарейка (напр. Сахароза), Сяо needs as little as 120-130% Восст. энергии to maintain a high burst uptime. In these scenarios, unless there are no Восст. энергии from допстаты, you should всегда go for a non-Восст. энергии оружие as it will result in more damage.
               - b: "Усмиритель бед: "
               - Этот оружие has a really high Базовая атака, which means you benefit
-                more from Сила атаки% buffs (e.g. Thrilling Tales of the Dragon
+                more from Сила атаки% buffs (напр. Thrilling Tales of the Dragon
                 Slayers) if compared с other weapons.
           - p:
               - b: "О комплектах артефактов: "
@@ -11761,7 +11761,7 @@
           - p:
               b: Similar to Венти, due to the Мастерство стихий buffs, a triple Мастерство стихий build will out-damage a
                 regular Сила атаки-Мастерство стихий/Анемо/Crit build as long as there are 2+ враги
-                due to the amount of swirls involved. Because of this, an ADC
+                due to the количество of swirls involved. Because of this, an ADC
                 (Attack/Damage/Crit) build isn't recommended unless he is in a
                 отряд whereby he cannot make use of his A4 passive или swirls.
                 (то есть mono Анемо/Гео отряды)
@@ -13045,7 +13045,7 @@
         tips: []
         notes:
           - p:
-              b: Not Recommended for End Game Content.
+              b: Not Рекомендуется for End Game Content.
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
@@ -13307,7 +13307,7 @@
                   О выборе оружия:
                   Копьё Фавония: 
               - Use this оружие over Чёрная кисть if you value the отряд энергия
-                (Note that you need to build some amount of Шанс крит. попадания if you are
+                (Note that you need to build some количество of Шанс крит. попадания if you are
                 running Копьё Фавония to trigger the passive).
       - code: burst / nuke
         isRecommended: true
@@ -14035,7 +14035,7 @@ artifacts:
       "4": >-
         When the персонаж equipping this artifact комплект heals a персонаж in the
         отряд, a Sea-Dyed Foam will appear for 3 сек., accumulating the
-        amount of ХП recovered from healing (including overflow healing). At the
+        количество of ХП recovered from healing (including overflow healing). At the
         end of the длительность, the Sea-Dyed Foam will explode, dealing урон to
         nearby противники based on 90% of the accumulated healing.
 
