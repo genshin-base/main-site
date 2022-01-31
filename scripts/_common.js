@@ -17,10 +17,10 @@ export const WWW_MEDIA_DIR = `${BASE_DIR}/www/public/media`
 
 const location = {
 	tag: '!loc',
-	identify: val => typeof val === 'object' && val !== null && 'map' in val && 'x' in val && 'y' in val,
+	identify: val => typeof val === 'object' && val !== null && 'mapCode' in val && 'x' in val && 'y' in val,
 	stringify(item, ctx, onComment, onChompKeep) {
-		const { map, x, y } = /**@type {import('#lib/genshin').MapLocation}*/ (item.value)
-		item = { value: `${map} ${x} ${y}` }
+		const { mapCode, x, y } = /**@type {import('#lib/genshin').MapLocation}*/ (item.value)
+		item = { value: `${mapCode} ${x} ${y}` }
 		return stringifyString(item, ctx, onComment, onChompKeep)
 	},
 	resolve(doc, node) {
@@ -28,7 +28,7 @@ const location = {
 		const x = parseFloat(xStr)
 		const y = parseFloat(yStr)
 		if (GI_MAP_CODES.includes(mapCode) && !isNaN(x) && !isNaN(y) && rem.length === 0)
-			return /**@type {import('#lib/genshin').MapLocation}*/ ({ map: mapCode, x, y })
+			return /**@type {import('#lib/genshin').MapLocation}*/ ({ mapCode, x, y })
 		throw new Error('wrong location: ' + node.strValue)
 	},
 }

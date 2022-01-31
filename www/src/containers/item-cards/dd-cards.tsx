@@ -6,6 +6,7 @@ import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api/utils'
 import { ItemDetailDdMobilePortal, ItemDetailDdPortal } from '#src/components/item-detail-dd-portal'
 import { SimpleSelect } from '#src/components/select'
+import Spinner from '#src/components/spinners'
 import { BtnTabGroup, tabTitleFromName, useSelectedable } from '#src/components/tabs'
 import { notesToJSX } from '#src/modules/builds/common'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
@@ -20,7 +21,6 @@ import { AlchemyCalculator } from '../alchemy-calculator'
 import { ItemAvatar, LabeledItemAvatar } from './item-cards'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
-import Spinner from '#src/components/spinners'
 const LazyTeyvatMap = import('#src/components/teyvat-map')
 
 //переключалка для мобильного и десктопного вида
@@ -134,10 +134,10 @@ function MapWrap({
 
 	const setSourceAndFixMapCode = (selectedSource: MapWrapMarkerGroup) => {
 		if (
-			Array.isArray(selectedSource.markers) &&
-			!selectedSource.markers.find(m => m.map === selectedMapCode)
+			selectedSource.markers !== 'external' &&
+			!selectedSource.markers.find(m => m.mapCode === selectedMapCode)
 		)
-			setMapCode(selectedSource.markers[0].map)
+			setMapCode(selectedSource.markers[0].mapCode)
 		setSelectedSource(selectedSource)
 	}
 	const goToPrevGroup = () => {
@@ -190,7 +190,9 @@ function MapWrap({
 	const visibleMapCodes = useMemo(
 		() =>
 			GI_MAP_CODES.filter(
-				c => Array.isArray(selectedSource.markers) && selectedSource.markers.find(m => m.map === c),
+				c =>
+					selectedSource.markers !== 'external' &&
+					selectedSource.markers.some(m => m.mapCode === c),
 			),
 		[selectedSource],
 	)
