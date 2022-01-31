@@ -65,9 +65,9 @@ const MapProjection: ProjectionConverter = {
 }
 
 export type MapMarkerStyle = null | 'circle' | 'outline'
-export type MapMarkerRaw = { map: MapCode; x: number; y: number; icon: string; style?: MapMarkerStyle }
+export type MapMarkerRaw = { mapCode: MapCode; x: number; y: number; icon: string; style?: MapMarkerStyle }
 type MapMarker = {
-	map: MapCode
+	mapCode: MapCode
 	x: number
 	y: number
 	icon: null | HTMLImageElement | HTMLCanvasElement
@@ -170,7 +170,7 @@ function calcAutoPosition(map: LocMap, markers: MapMarkerRaw[], mapCode: MapCode
 	let yMin = 1e10
 	let yMax = -1e10
 	for (const marker of markers) {
-		if (marker.map !== mapCode) continue
+		if (marker.mapCode !== mapCode) continue
 		if (xMin > marker.x) xMin = marker.x
 		if (xMax < marker.x) xMax = marker.x
 		if (yMin > marker.y) yMin = marker.y
@@ -193,7 +193,8 @@ class MarkersLayer {
 	private mapCode: MapCode = 'teyvat'
 
 	private loadMarkerImg(marker: MapMarker, src: string) {
-		const cachedImg = this.iconCache.get(src + '|' + marker.style)
+		const key = src + '|' + marker.style
+		const cachedImg = this.iconCache.get(key)
 		if (cachedImg) {
 			marker.icon = cachedImg
 			this.map?.requestRedraw()
@@ -207,6 +208,7 @@ class MarkersLayer {
 						: img
 				this.map?.requestRedraw()
 			}
+			this.iconCache.set(key, img)
 		}
 	}
 
@@ -218,15 +220,14 @@ class MarkersLayer {
 		this.markers.length = 0
 		{
 			const cache = this.iconCache
-			cache.clear()
 			for (const key of cache.keys()) {
 				if (cache.size < 30) break
 				cache.delete(key)
 			}
 		}
-		for (const { map, x, y, icon: src, style = null } of rawMarkers) {
-			const marker = { map, x, y, icon: null, style }
-			this.loadMarkerImg(marker, src)
+		for (const raw of rawMarkers) {
+			const marker = { ...raw, icon: null, style: raw.style ?? null }
+			this.loadMarkerImg(marker, raw.icon)
 			this.markers.push(marker)
 		}
 	}
@@ -239,7 +240,7 @@ class MarkersLayer {
 
 		for (let i = 0, markers = this.markers; i < markers.length; i++) {
 			const marker = markers[i]
-			if (marker.map !== this.mapCode) continue
+			if (marker.mapCode !== this.mapCode) continue
 
 			const x = map.lon2x(marker.x) - viewX
 			const y = map.lat2y(marker.y) - viewY

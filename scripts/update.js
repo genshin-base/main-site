@@ -77,24 +77,6 @@ const fixes = {
 		],
 		sheets: [
 			{
-				// у Барбары у столбца роли нет заголовка
-				title: /^hydro$/i,
-				fixFunc(sheet) {
-					for (const { values: cells = [] } of sheet.data[0].rowData) {
-						for (let i = 0; i < cells.length; i++) {
-							const cell = cells[i]
-							if (json_getText(cell).trim().toLocaleLowerCase() === 'barbara') {
-								if (cells.length > i + 1 && json_getText(cells[i + 1]).trim() === '') {
-									cells[i + 1].userEnteredValue = { stringValue: 'role' }
-									return true
-								}
-							}
-						}
-					}
-					return false
-				},
-			},
-			{
 				// у Эмбер один набор артефактов прописан в странном формате
 				title: /^pyro$/i,
 				fixFunc(sheet) {
@@ -180,7 +162,10 @@ const fixes = {
 	},
 	/** @type {import('#lib/parsing/mihoyo/fixes').MihoyoFixes} */
 	mihoyo: {
-		enemiesOnMap: [{ nameOnMap: 'Fatui Agent', useCode: 'fatui-pyro-agent' }],
+		enemiesOnMap: [
+			{ nameOnMap: 'Fatui Agent', useCode: 'fatui-pyro-agent' },
+			{ nameOnMap: 'Fatui Mirror Maiden', useCode: 'mirror-maiden' },
+		],
 	},
 }
 
@@ -205,6 +190,7 @@ if (args['--help'] || args['-h']) {
 		await prepareCacheDir(DATA_CACHE_DIR, !!args['--ignore-cache'])
 		await extractAndSaveAllItemsData()
 		await extractAndSaveBuildsData()
+		// await checkUsedItemsLocations()
 	}
 	if (updImgs) {
 		await prepareCacheDir(IMGS_CACHE_DIR, !!args['--ignore-cache'])
@@ -377,6 +363,41 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		})
 	})
 }
+
+/*
+async function checkUsedItemsLocations() {
+	const builds = await loadBuilds()
+	const characters = await loadCharacters()
+	const enemies = await loadEnemies()
+	const artifacts = await loadArtifacts()
+	const weapons = await loadWeapons()
+	const domains = await loadDomains()
+	const items = await loadItems()
+	const enemyGroups = await loadEnemyGroups()
+
+	excludeDomainBosses(enemies, domains)
+
+	for (const group of Object.values(enemyGroups))
+		if (group.locations.length === 0) warn(`enemy group '${group.code}' has no locations`)
+
+	const enemiesInGroups = new Set()
+	for (const group of Object.values(enemyGroups))
+		for (const code of group.enemyCodes) enemiesInGroups.add(code)
+	for (const enemy of Object.values(enemies))
+		if (!enemiesInGroups.has(enemy.code) && enemy.locations.length === 0)
+			warn(`enemy '${enemy.code}' has no locations`)
+
+	const dropCodes = new Set()
+	for (const enemy of Object.values(enemies)) for (const code of enemy.drop.itemCodes) dropCodes.add(code)
+	for (const domain of Object.values(domains)) for (const code of domain.drop.itemCodes) dropCodes.add(code)
+	for (const item of Object.values(items)) {
+		if (dropCodes.has(item.code)) continue
+		if (!item.types.some(x => x !== 'currency' && x !== 'ingredient')) continue
+		if (item.locations.length > 0) continue
+		warn(`item '${item.code}' has no locations`)
+	}
+}
+*/
 
 async function saveWwwData() {
 	info('updating www JSONs', { newline: false })
