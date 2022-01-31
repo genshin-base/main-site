@@ -2,6 +2,8 @@ import yaml from 'yaml'
 import { promises as fs } from 'fs'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path/posix'
+import { stringifyString } from 'yaml/util'
+import { GI_MAP_CODES } from '#lib/genshin.js'
 
 const __filename = fileURLToPath(import.meta.url)
 export const BASE_DIR = dirname(__filename) + '/..'
@@ -12,6 +14,25 @@ export const DATA_DIR = `${BASE_DIR}/data`
 export const WWW_API_FILE = `${BASE_DIR}/www/src/api/generated.ts`
 export const WWW_DYNAMIC_DIR = `${BASE_DIR}/www/public/generated`
 export const WWW_MEDIA_DIR = `${BASE_DIR}/www/public/media`
+
+const location = {
+	tag: '!loc',
+	identify: val => typeof val === 'object' && val !== null && 'map' in val && 'x' in val && 'y' in val,
+	stringify(item, ctx, onComment, onChompKeep) {
+		const { map, x, y } = /**@type {import('#lib/genshin').MapLocation}*/ (item.value)
+		item = { value: `${map} ${x} ${y}` }
+		return stringifyString(item, ctx, onComment, onChompKeep)
+	},
+	resolve(doc, node) {
+		const [mapCode, xStr, yStr, ...rem] = node.strValue.split(' ')
+		const x = parseFloat(xStr)
+		const y = parseFloat(yStr)
+		if (GI_MAP_CODES.includes(mapCode) && !isNaN(x) && !isNaN(y) && rem.length === 0)
+			return /**@type {import('#lib/genshin').MapLocation}*/ ({ map: mapCode, x, y })
+		throw new Error('wrong location: ' + node.strValue)
+	},
+}
+const customTags = [location]
 
 /**
  * @param {string} dirpath
@@ -30,7 +51,7 @@ const yamlCache = new Map()
  */
 async function saveYaml(fname, data) {
 	yamlCache.set(fname, data)
-	await fs.writeFile(`${DATA_DIR}/${fname}.yaml`, yaml.stringify(data))
+	await fs.writeFile(`${DATA_DIR}/${fname}.yaml`, yaml.stringify(data, { customTags }))
 }
 /**
  * @template T
@@ -39,7 +60,7 @@ async function saveYaml(fname, data) {
  */
 async function loadYaml(fname) {
 	if (yamlCache.has(fname)) return yamlCache.get(fname)
-	return yaml.parse(await fs.readFile(`${DATA_DIR}/${fname}.yaml`, 'utf-8'))
+	return yaml.parse(await fs.readFile(`${DATA_DIR}/${fname}.yaml`, 'utf-8'), { customTags })
 }
 
 /** @param {import('#lib/parsing/helperteam').BuildInfo} builds */
