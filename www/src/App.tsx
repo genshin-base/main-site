@@ -7,6 +7,7 @@ import { FrontPage } from './pages/front-page'
 
 import './App.scss'
 
+// import 'preact/debug'
 export function App() {
 	let page = <FrontPage />
 	if (~location.pathname.indexOf('build')) page = <BuildsPage />
