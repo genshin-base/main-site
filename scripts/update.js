@@ -432,28 +432,12 @@ async function saveWwwData() {
 	// }
 
 	for (const lang of LANGS) {
-		const buildArtifacts = makeArtifactsFullInfo(
-			builds.artifacts,
-			artifacts,
-			domains,
-			enemies,
-			builds.characters,
-			lang,
-		)
-		const buildWeapons = makeWeaponsFullInfo(builds.weapons, weapons, domains, items, lang)
+		const buildArtifacts = makeArtifactsFullInfo(builds.artifacts, artifacts, domains, enemies, builds.characters, lang) //prettier-ignore
+		const buildWeapons = makeWeaponsFullInfo(builds.weapons, weapons, domains, items, builds.characters, lang) //prettier-ignore
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 		for (const character of builds.characters) {
-			const fullInfo = makeCharacterFullInfo(
-				character,
-				characters,
-				buildArtifacts.artifacts,
-				buildWeapons.weapons,
-				domains,
-				enemies,
-				items,
-				lang,
-			)
+			const fullInfo = makeCharacterFullInfo(character, characters, buildArtifacts.artifacts, buildWeapons.weapons, domains, enemies, items, lang) //prettier-ignore
 			const locsInfo = extractFullInfoLocations(fullInfo)
 			await writeJson(`${WWW_DYNAMIC_DIR}/characters/${character.code}-locs-${lang}.json`, locsInfo)
 			await writeJson(`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`, fullInfo)
