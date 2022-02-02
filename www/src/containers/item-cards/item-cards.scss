@@ -13,7 +13,7 @@
 		height: var(--thumb-height-l);
 	}
 	&.input-group-avatar{
-		height: auto;
+		height: 38px;//todo может более ловкий размер понадобится
 	}
 	.image{
 		// object-fit: cover;

@@ -27,6 +27,9 @@ body,
 	background-color: rgb(114, 115, 119);
 	background: linear-gradient(-180deg, rgba(114, 115, 119, 1) 0%, rgba(162, 161, 159, 1) 100%);
 }
+.bg-dark-on-dark {
+	background-color: var(--bs-body-bg)!important
+}
 .w-33 {
 	width: 33.33%;
 }

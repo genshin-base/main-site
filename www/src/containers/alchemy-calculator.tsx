@@ -4,9 +4,9 @@ import { getItemIconSrc } from '#src/utils/items'
 import { GI_RarityCode } from '#src/../../lib/genshin'
 
 const DEF_ANCESTRY_CODES = [
-	'agnidus-agate-chunk',
-	'agnidus-agate-fragment',
 	'agnidus-agate-sliver',
+	'agnidus-agate-fragment',
+	'agnidus-agate-chunk',
 	'agnidus-agate-gemstone',
 ]
 export function AlchemyCalculator({

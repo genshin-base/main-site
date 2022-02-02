@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'preact/hooks'
 
-import { GI_DomainTypeCode, GI_MAP_CODES, MapCode, MapLocation } from '#lib/genshin'
+import { GI_DomainTypeCode, GI_MAP_CODES, GI_RarityCode, MapCode, MapLocation } from '#lib/genshin'
 import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
 import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api/utils'
@@ -24,8 +24,24 @@ import { AlchemyCalculator } from '../alchemy-calculator'
 import { ItemAvatar, LabeledItemAvatar } from './item-cards'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
+import { getCharacterAvatarSrc } from '#src/utils/characters'
 const LazyTeyvatMap = import('#src/components/teyvat-map')
-
+export function getRarityBorder(r: GI_RarityCode): string {
+	return r === 5 ? 'border-warning' : 'border-light'
+}
+function RecommendedFor({ charCodes }: { charCodes: string[] }): JSX.Element {
+	return (
+		<>
+			<h6 class="text-uppercase opacity-75">Recommended for</h6>
+			{charCodes.map(c => (
+				<ItemAvatar
+					src={getCharacterAvatarSrc(c)}
+					classes={`small-avatar mb-2 me-2 border ${getRarityBorder(4)}`}
+				/>
+			))}
+		</>
+	)
+}
 //переключалка для мобильного и десктопного вида
 export function CardDescMobileWrap({
 	children,
@@ -290,7 +306,7 @@ function ArtifactCard({
 			markerGroups,
 		}
 	}, [selectedArt, related])
-
+	console.log(artifacts)
 	return (
 		<Card
 			titleEl={title}
@@ -307,7 +323,7 @@ function ArtifactCard({
 				) : null
 			}
 			bodyEl={
-				<div className="mb-3">
+				<div className="">
 					<ItemAvatar
 						rarity={selectedArt.rarity}
 						classes="float-end me-2 large-avatar"
@@ -331,6 +347,7 @@ function ArtifactCard({
 							<div className="mb-3">{notesToJSX(selectedArt.sets[4])}</div>
 						</>
 					)}
+					{<RecommendedFor charCodes={selectedArt.recommendedTo} />}
 				</div>
 			}
 			mapEl={dataForMap.markerGroups.length ? <MapWrap {...dataForMap} /> : null}
@@ -440,6 +457,7 @@ export function WeaponCard({
 						<span className="opacity-75">Пассивная способность</span>
 						<div className="">{notesToJSX(weapon.passiveStat)}</div>
 					</div>
+					{/* {<RecommendedFor charCodes={weapon.recommendedTo} />} */}
 				</div>
 			}
 			mapEl={dataForMap.markerGroups.length ? <MapWrap {...dataForMap} /> : null}
