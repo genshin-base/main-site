@@ -52,6 +52,7 @@ import {
 	makeArtifactsFullInfo,
 	makeCharacterFullInfo,
 	makeCharacterShortList,
+	makeMaterialsTimetable,
 	makeWeaponsFullInfo,
 } from '#lib/parsing/combine.js'
 import { extractItemsData, getItemAncestryCodes } from '#lib/parsing/honeyhunter/items.js'
@@ -461,6 +462,10 @@ async function saveWwwData() {
 		await writeJson(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, buildArtifacts)
 		await writeJson(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, buildWeapons)
 
+		await fs.mkdir(`${WWW_DYNAMIC_DIR}/timetables`, { recursive: true })
+		const timetable = makeMaterialsTimetable(characters, domains, weapons, enemies, items, lang)
+		await writeJson(`${WWW_DYNAMIC_DIR}/timetables/materials-${lang}.json`, timetable)
+
 		progress()
 	}
 
@@ -479,7 +484,10 @@ import { apiGetJSONFile, mapAllByCode, MapAllByCode } from '#src/api/utils'
 const LANG = 'en'
 
 const get = <T>(prefix:string, signal:AbortSignal) =>
-	apiGetJSONFile(\`generated/\${prefix}-\${LANG}.json?v=${hash}\`, signal) as Promise<T>
+	apiGetJSONFile(\`generated/\${prefix}.json?v=${hash}\`, signal) as Promise<T>
+
+const getLang = <T>(prefix:string, signal:AbortSignal) =>
+	get<T>(prefix+'-'+LANG, signal)
 
 import type { CharacterShortInfo } from '#lib/parsing/combine'
 export const charactersShortList: CharacterShortInfo[] =
@@ -487,22 +495,27 @@ export const charactersShortList: CharacterShortInfo[] =
 
 import type { CharacterFullInfoWithRelated } from '#lib/parsing/combine'
 export function apiGetCharacter(code:string, signal:AbortSignal): Promise<MapAllByCode<CharacterFullInfoWithRelated>> {
-	return (get(\`characters/\${code}\`, signal) as Promise<CharacterFullInfoWithRelated>).then(mapAllByCode)
+	return (getLang(\`characters/\${code}\`, signal) as Promise<CharacterFullInfoWithRelated>).then(mapAllByCode)
 }
 
 import type { ExtractedLocationsInfo } from '#lib/parsing/combine'
 export function apiGetCharacterRelatedLocs(code:string, signal:AbortSignal): Promise<ExtractedLocationsInfo> {
-	return get(\`characters/\${code}-locs\`, signal) as Promise<ExtractedLocationsInfo>
+	return getLang(\`characters/\${code}-locs\`, signal) as Promise<ExtractedLocationsInfo>
 }
 
 import type { ArtifactsFullInfoWithRelated } from '#lib/parsing/combine'
 export function apiGetArtifacts(signal:AbortSignal): Promise<MapAllByCode<ArtifactsFullInfoWithRelated>> {
-	return (get(\`artifacts\`, signal) as Promise<ArtifactsFullInfoWithRelated>).then(mapAllByCode)
+	return (getLang(\`artifacts\`, signal) as Promise<ArtifactsFullInfoWithRelated>).then(mapAllByCode)
 }
 
 import type { WeaponsFullInfoWithRelated } from '#lib/parsing/combine'
 export function apiGetWeapons(signal:AbortSignal): Promise<MapAllByCode<WeaponsFullInfoWithRelated>> {
-	return (get(\`weapons\`, signal) as Promise<WeaponsFullInfoWithRelated>).then(mapAllByCode)
+	return (getLang(\`weapons\`, signal) as Promise<WeaponsFullInfoWithRelated>).then(mapAllByCode)
+}
+
+import type { MaterialsTimetableWithRelated } from '#lib/parsing/combine'
+export function apiMaterialsTimetable(signal:AbortSignal): Promise<MapAllByCode<MaterialsTimetableWithRelated>> {
+	return (getLang(\`timetables/materials\`, signal) as Promise<MaterialsTimetableWithRelated>).then(mapAllByCode)
 }
 
 import type { ChangelogsTable } from '#lib/parsing/helperteam/changelogs'
