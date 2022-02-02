@@ -170,7 +170,7 @@ function MapWrap({
 	if (!markerGroups.length) {
 		sourceSelectEl = null
 	} else if (markerGroups.length === 1) {
-		sourceSelectEl = <span className="align-self-center">{markerGroups[0].title}</span>
+		sourceSelectEl = <span className="align-self-center lh-1 ">{markerGroups[0].title}</span>
 	} else if (markerGroups.length < 4) {
 		sourceSelectEl = (
 			<BtnTabGroup
@@ -306,7 +306,6 @@ function ArtifactCard({
 			markerGroups,
 		}
 	}, [selectedArt, related])
-	console.log(artifacts)
 	return (
 		<Card
 			titleEl={title}
@@ -453,11 +452,11 @@ export function WeaponCard({
 							</div>
 						</div>
 					</div>
-					<div>
+					<div className="mb-3">
 						<span className="opacity-75">Пассивная способность</span>
 						<div className="">{notesToJSX(weapon.passiveStat)}</div>
 					</div>
-					{/* {<RecommendedFor charCodes={weapon.recommendedTo} />} */}
+					<RecommendedFor charCodes={weapon.recommendedTo} />
 				</div>
 			}
 			mapEl={dataForMap.markerGroups.length ? <MapWrap {...dataForMap} /> : null}
