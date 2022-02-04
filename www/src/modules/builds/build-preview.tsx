@@ -3,7 +3,7 @@ import { useMemo, useState } from 'preact/hooks'
 import { useBuildWithDelayedLocs } from '#src/api'
 import { getAllRelated } from '#src/api/utils'
 import Spinner from '#src/components/spinners'
-import { BtnTabGroup, Tabs, useSelectedable } from '#src/components/tabs'
+import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { FavoriteCharacters } from '#src/containers/character-picker/favorite-characters'
 import { OtherItemCardDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar } from '#src/containers/item-cards/item-cards'
@@ -27,7 +27,7 @@ function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element
 	const [build, isUpdating] = useBuildWithDelayedLocs(characterCode)
 
 	const roleTabs: BuildRoleOrDummy[] = isLoaded(build) ? build.character.roles : DUMMY_ROLES
-	const [selectedRoleTab, setSelectedRoleTab] = useSelectedable(roleTabs, [characterCode])
+	const [selectedRoleTab, setSelectedRoleTab] = useSelectable(roleTabs, [characterCode])
 
 	const artifactsListBlock = useMemo(() => {
 		if (!isLoaded(build)) return []

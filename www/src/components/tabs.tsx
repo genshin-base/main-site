@@ -82,7 +82,7 @@ export function BtnTabGroup<T extends Tab>({
  *    (полезно, если эти вкладки находятся врутри другого переключателя,
  *    например вкладки ролей, а над ними - переключатель персонажей).
  */
-export function useSelectedable<T extends Tab>(tabs: T[], args?: unknown[]): [T, (tab: T) => unknown] {
+export function useSelectable<T extends Tab>(tabs: T[], args?: unknown[]): [T, (tab: T) => unknown] {
 	const [tabCodes, setTabCodes] = useState<{ code: string; args: unknown[] }[]>([])
 
 	// eslint-disable-next-line react-hooks/exhaustive-deps

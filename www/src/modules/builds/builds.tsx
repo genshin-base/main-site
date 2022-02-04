@@ -27,7 +27,7 @@ export function Builds() {
 			{!selectedCharacterCode ? (
 				<CharacterPicker />
 			) : (
-				<CharacterBuildDetailed characterCode={selectedCharacterCode} key={selectedCharacterCode} />
+				<CharacterBuildDetailed characterCode={selectedCharacterCode} />
 			)}
 			<a
 				href="https://docs.google.com/spreadsheets/d/1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI/pubhtml#"

@@ -4,7 +4,7 @@ import { getRegionTime, GI_ROTATION_WEEKDAY_CODES } from '#lib/genshin'
 import { arrGetAfter } from '#lib/utils/collections'
 import { apiMaterialsTimetable } from '#src/api/generated'
 import Spinner from '#src/components/spinners'
-import { BtnTabGroup, Tabs, useSelectedable } from '#src/components/tabs'
+import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { isLoaded, useFetch, useLocalStorage } from '#src/utils/hooks'
 import { getItemIconSrc } from '#src/utils/items'
@@ -25,7 +25,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 		],
 		[weekdayCode, tomorrowCode],
 	)
-	const [selectedTab, setSelectedTab] = useSelectedable(tabs)
+	const [selectedTab, setSelectedTab] = useSelectable(tabs)
 
 	return (
 		<div className={`farm-today ${classes}`}>

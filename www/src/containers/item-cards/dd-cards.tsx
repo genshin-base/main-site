@@ -4,16 +4,17 @@ import { GI_DomainTypeCode, GI_MAP_CODES, GI_RarityCode, MapCode, MapLocation } 
 import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
 import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api/utils'
+import { SimpleSelect } from '#src/components/select'
+import Spinner from '#src/components/spinners'
+import { BtnTabGroup, tabTitleFromName, useSelectable } from '#src/components/tabs'
 import {
 	ItemDetailDdMobilePortal,
 	ItemDetailDdPortal,
 } from '#src/containers/item-cards/item-detail-dd-portal'
-import { SimpleSelect } from '#src/components/select'
-import Spinner from '#src/components/spinners'
-import { BtnTabGroup, tabTitleFromName, useSelectedable } from '#src/components/tabs'
 import { notesToJSX } from '#src/modules/builds/common'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
 import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
+import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { getDomainIconSrc } from '#src/utils/domains'
 import { getEnemyIconSrc } from '#src/utils/enemies'
 import { isLoaded, useFetch, useWindowSize } from '#src/utils/hooks'
@@ -24,7 +25,6 @@ import { AlchemyCalculator } from '../alchemy-calculator'
 import { ItemAvatar, LabeledItemAvatar } from './item-cards'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
-import { getCharacterAvatarSrc } from '#src/utils/characters'
 const LazyTeyvatMap = import('#src/components/teyvat-map')
 export function getRarityBorder(r: GI_RarityCode): string {
 	return r === 5 ? 'border-warning' : 'border-light'
@@ -146,7 +146,7 @@ function MapWrap({
 	}
 	markerGroups: MapWrapMarkerGroup[]
 }): JSX.Element {
-	const [selectedSource, setSelectedSource] = useSelectedable(markerGroups)
+	const [selectedSource, setSelectedSource] = useSelectable(markerGroups)
 
 	const [selectedMapCode, setMapCode] = useState<MapCode>(GI_MAP_CODES[0])
 	const TeyvatMap = useFetch(() => LazyTeyvatMap.then(x => x.TeyvatMap), [])
@@ -290,7 +290,7 @@ function ArtifactCard({
 	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
 	title: string
 }): JSX.Element {
-	const [selectedArt, setSelectedArt] = useSelectedable(artifacts)
+	const [selectedArt, setSelectedArt] = useSelectable(artifacts)
 
 	const dataForMap = useMemo(() => {
 		const srcs = selectedArt.obtainSources

@@ -4,7 +4,7 @@ import { useBuildWithDelayedLocs } from '#src/api'
 import { getAllRelated } from '#src/api/utils'
 import { CharacterPortrait } from '#src/components/characters'
 import Spinner from '#src/components/spinners'
-import { BtnTabGroup, Tabs, useSelectedable } from '#src/components/tabs'
+import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { OtherItemCardDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
@@ -36,7 +36,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 	const [build, isUpdating] = useBuildWithDelayedLocs(characterCode)
 
 	const roleTabs: BuildRoleOrDummy[] = isLoaded(build) ? build.character.roles : DUMMY_ROLES
-	const [selectedRoleTab, setSelectedRoleTab] = useSelectedable(roleTabs, [characterCode])
+	const [selectedRoleTab, setSelectedRoleTab] = useSelectable(roleTabs, [characterCode])
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
