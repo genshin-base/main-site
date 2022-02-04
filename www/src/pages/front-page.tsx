@@ -12,7 +12,7 @@ function Fieldset({ children, legend, classes = '' }) {
 }
 export function FrontPage() {
 	return (
-		<div className="dashboard container">
+		<div className="dashboard container ">
 			<h1 className="my-1">Dashboard</h1>
 			<div className="row">
 				<Fieldset legend="alchemy calculator">
@@ -20,7 +20,7 @@ export function FrontPage() {
 				</Fieldset>
 			</div>
 			<div className="row">
-				<Fieldset classes="col-lg-6 col-12" legend="farm today">
+				<Fieldset classes="col-lg-6 col-12" legend="what to farm">
 					<FarmToday />
 				</Fieldset>
 				<Fieldset classes="col-lg-6 col-12" legend="builds">

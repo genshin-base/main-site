@@ -30,7 +30,7 @@ export function ItemAvatar<TItem, TRelated>({
 	classes?: string
 	hash?: string
 	onClick?(): unknown
-	badge?: string
+	badge?: string | null | JSX.Node
 	ddProps?: DDProps<TItem, TRelated>
 }): JSX.Element {
 	;['bg-2', 'bg-3', 'bg-4', 'bg-5']
