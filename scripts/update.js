@@ -290,8 +290,8 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		else warn(`group '${group.code}': no icon image '${group.iconEnemyCode}'`)
 	}
 
-	const usedArtCodes = new Set(builds.characters.map(x => Array.from(getCharacterArtifactCodes(x))).flat())
-	const usedWeaponCodes = new Set(builds.characters.map(x => Array.from(getCharacterWeaponCodes(x))).flat())
+	const usedArtCodes = new Set(builds.characters.map(x => [...getCharacterArtifactCodes(x, true)]).flat())
+	const usedWeaponCodes = new Set(builds.characters.map(x => [...getCharacterWeaponCodes(x)]).flat())
 
 	const usedItemCodes = new Set()
 	for (const character of Object.values(characters.code2item))
