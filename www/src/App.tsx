@@ -7,8 +7,7 @@ import { FrontPage } from './pages/front-page'
 
 import './App.scss'
 
-// import 'preact/debug'
-export function App() {
+export function App(): JSX.Element {
 	let page = <FrontPage />
 	if (~location.pathname.indexOf('build')) page = <BuildsPage />
 	if (~location.pathname.indexOf('equipment')) page = <EquipmentPage />

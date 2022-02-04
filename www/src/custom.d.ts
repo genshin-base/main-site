@@ -17,3 +17,9 @@ declare module '*.png'
 declare module '*.jpeg'
 declare module '*.gif'
 declare module '*.json'
+
+declare namespace NodeJS {
+	interface ProcessEnv {
+		NODE_ENV: 'development' | 'production'
+	}
+}
