@@ -24,7 +24,7 @@ import {
 import './character-build-preview.scss'
 
 function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element {
-	const build = useBuildWithDelayedLocs(characterCode)
+	const [build, isUpdating] = useBuildWithDelayedLocs(characterCode)
 
 	const roleTabs: BuildRoleOrDummy[] = isLoaded(build) ? build.character.roles : DUMMY_ROLES
 	const [selectedRoleTab, setSelectedRoleTab] = useSelectedable(roleTabs, [characterCode])
@@ -121,7 +121,7 @@ function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element
 	}, [build])
 	if (!isLoaded(build)) return <Spinner />
 	return (
-		<div className="character-build-preview">
+		<div className="character-build-preview" style={{ opacity: isUpdating ? '0.5' : '1' }}>
 			{/* <div className="d-none d-xl-block">
 				<CharacterPortrait src={getCharacterPortraitSrc(characterCode)} classes="w-100" />
 			</div>

@@ -41,6 +41,19 @@ export function useFetch<T>(
 	return arrShallowEqual(oldArgs, args) ? data : PENDING
 }
 
+export function useFetchWithPrev<T>(
+	loadFunc: (abortSignal: AbortSignal) => Promise<T>,
+	args: unknown[],
+): [data: LoadingState<T>, isUpdating: boolean] {
+	const [prevData, setPrevData] = useState<LoadingState<T>>(PENDING)
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	const data = useFetch(loadFunc, args)
+	useEffect(() => {
+		if (isLoaded(data)) setPrevData(data)
+	}, [data])
+	return [isLoaded(data) ? data : prevData, data === PENDING]
+}
+
 export const useToggle = (initial: boolean): [boolean, () => void] => {
 	const [flagState, setFlagState] = useState(initial)
 	return [flagState, useCallback(() => setFlagState(status => !status), [])]

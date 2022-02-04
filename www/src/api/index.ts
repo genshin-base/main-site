@@ -8,14 +8,14 @@ import {
 	ItemShortInfo,
 } from '#lib/parsing/combine'
 import { promiseNever } from '#lib/utils/values'
-import { isLoaded, LoadingState, useFetch } from '#src/utils/hooks'
+import { isLoaded, LoadingState, useFetch, useFetchWithPrev } from '#src/utils/hooks'
 import { apiGetCharacter, apiGetCharacterRelatedLocs } from './generated'
 import { MapAllByCode, mapAllByCode } from './utils'
 
 export function useBuildWithDelayedLocs(
 	characterCode: string,
-): LoadingState<MapAllByCode<CharacterFullInfoWithRelated>> {
-	const build = useFetch(sig => apiGetCharacter(characterCode, sig), [characterCode])
+): [build: LoadingState<MapAllByCode<CharacterFullInfoWithRelated>>, isUpdating: boolean] {
+	const [build, isUpdating] = useFetchWithPrev(sig => apiGetCharacter(characterCode, sig), [characterCode])
 	const buildIsLoaded = isLoaded(build)
 
 	const locs = useFetch(
@@ -26,10 +26,11 @@ export function useBuildWithDelayedLocs(
 		[characterCode, buildIsLoaded],
 	)
 
-	return useMemo(
+	const buildWithLocs = useMemo(
 		() => (buildIsLoaded && isLoaded(locs) ? applyFullInfoLocationsImmut(build, locs) : build),
 		[build, buildIsLoaded, locs],
 	)
+	return [buildWithLocs, isUpdating]
 }
 
 function applyFullInfoLocationsImmut(

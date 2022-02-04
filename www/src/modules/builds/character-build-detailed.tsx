@@ -33,7 +33,7 @@ import {
 import './character-build-detailed.scss'
 
 export function CharacterBuildDetailed({ characterCode }: { characterCode: string }) {
-	const build = useBuildWithDelayedLocs(characterCode)
+	const [build, isUpdating] = useBuildWithDelayedLocs(characterCode)
 
 	const roleTabs: BuildRoleOrDummy[] = isLoaded(build) ? build.character.roles : DUMMY_ROLES
 	const [selectedRoleTab, setSelectedRoleTab] = useSelectedable(roleTabs, [characterCode])
