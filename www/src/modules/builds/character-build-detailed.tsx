@@ -36,7 +36,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 	const build = useBuildWithDelayedLocs(characterCode)
 
 	const roleTabs: BuildRoleOrDummy[] = isLoaded(build) ? build.character.roles : DUMMY_ROLES
-	const [selectedRoleTab, setSelectedRoleTab] = useSelectedable(roleTabs)
+	const [selectedRoleTab, setSelectedRoleTab] = useSelectedable(roleTabs, [characterCode])
 
 	useEffect(() => {
 		window.scrollTo(0, 0)

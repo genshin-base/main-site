@@ -1,9 +1,10 @@
+import { useEffect, useMemo } from 'preact/hooks'
+
 import { charactersShortList } from '#src/api/generated'
 import { SimpleSelect } from '#src/components/select'
 import { MAX_CHARACTERS_TO_STORE } from '#src/modules/builds/common'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { useLocalStorage } from '#src/utils/hooks'
-import { useCallback, useEffect, useMemo } from 'preact/hooks'
 import { ItemAvatar } from '../item-cards/item-cards'
 
 export function FavoriteCharacters({
