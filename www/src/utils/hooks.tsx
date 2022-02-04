@@ -1,6 +1,7 @@
 import { RefObject } from 'preact'
 import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
 
+import { arrShallowEqual } from '#src/../../lib/utils/collections'
 import { BS_BreakpointCode, BS_getCurrBreakpoint } from '#src/utils/bootstrap'
 
 type Pending = { _type: 'pending' }
@@ -18,19 +19,17 @@ export function useFetch<T>(
 	args: unknown[],
 ): LoadingState<T> {
 	const controller = useRef<AbortController | null>(null)
-	// data обёрнута в массив на случай, если loadFunc
-	// вернёт другую функцию: без обёртки её (возвращённую) вызовет setData
-	const [data, setData] = useState<[LoadingState<T>]>([PENDING])
+	const [[data, oldArgs], setData] = useState<[LoadingState<T>, unknown[]]>([PENDING, args])
 
 	useEffect(() => {
-		setData([PENDING])
+		setData([PENDING, args])
 		if (controller.current !== null) controller.current.abort()
 
 		let ac: AbortController | null = new AbortController()
 		controller.current = ac
 
 		loadFunc(ac.signal)
-			.then(res => setData([res]))
+			.then(res => setData([res, args]))
 			.finally(() => (ac = null))
 
 		return () => {
@@ -39,7 +38,7 @@ export function useFetch<T>(
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, args)
 
-	return data[0]
+	return arrShallowEqual(oldArgs, args) ? data : PENDING
 }
 
 export const useToggle = (initial: boolean): [boolean, () => void] => {

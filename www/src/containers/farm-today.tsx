@@ -3,13 +3,13 @@ import { useMemo } from 'preact/hooks'
 import { getRegionTime, GI_ROTATION_WEEKDAY_CODES } from '#lib/genshin'
 import { arrGetAfter } from '#lib/utils/collections'
 import { apiMaterialsTimetable } from '#src/api/generated'
+import Spinner from '#src/components/spinners'
+import { BtnTabGroup, Tabs, useSelectedable } from '#src/components/tabs'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { isLoaded, useFetch, useLocalStorage } from '#src/utils/hooks'
 import { getItemIconSrc } from '#src/utils/items'
-import { ItemAvatar } from './item-cards/item-cards'
-import Spinner from '#src/components/spinners'
-import { BtnTabGroup, Tabs, useSelectedable } from '#src/components/tabs'
 import { HEART } from '#src/utils/typography'
+import { ItemAvatar } from './item-cards/item-cards'
 
 export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 	const ttData = useFetch(apiMaterialsTimetable, [])
