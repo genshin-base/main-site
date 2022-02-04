@@ -7,3 +7,10 @@ export default function Spinner(): JSX.Element {
 		</div>
 	)
 }
+export function CentredSpinner(): JSX.Element {
+	return (
+		<div className="position-absolute top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
+			<Spinner />
+		</div>
+	)
+}

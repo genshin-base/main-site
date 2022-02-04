@@ -16,6 +16,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 	const { weekdayCode } = getRegionTime('europe')
 	const tomorrowCode = arrGetAfter(GI_ROTATION_WEEKDAY_CODES, weekdayCode)
 	const [favCharCodes] = useLocalStorage<string[]>('favoriteCharacterCodes', [])
+	const [favTalMaterialCodes] = useLocalStorage<string[]>('favoriteTalentMaterialCodes', [])
 
 	console.log(weekdayCode, tomorrowCode, isLoaded(ttData) ? ttData.timetable[weekdayCode] : null)
 	const tabs = useMemo(
@@ -56,6 +57,11 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 									<ItemAvatar
 										src={getItemIconSrc(asc.itemCode)}
 										classes="me-3 vertical-align-middle"
+										badge={
+											~favTalMaterialCodes.indexOf(asc.itemCode) ? (
+												<span className="text-danger">{HEART}</span>
+											) : null
+										}
 									/>
 								</div>
 								<div className="d-flex flex-nowrap">

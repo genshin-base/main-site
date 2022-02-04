@@ -11,7 +11,7 @@ import {
 	ItemDetailDdMobilePortal,
 	ItemDetailDdPortal,
 } from '#src/containers/item-cards/item-detail-dd-portal'
-import { notesToJSX } from '#src/modules/builds/common'
+import { notesToJSX, ToggleTalentMaterialFav } from '#src/modules/builds/common'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
 import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
@@ -518,14 +518,21 @@ export function OtherItemCard({
 			markerGroups,
 		}
 	}, [materialOnMap, related])
-	// item.craftedFrom3Code && console.log(getAllRelated(related.items, [item.craftedFrom3Code]))
-	console.log(item.ancestryCodes)
+
+	const isItemCharTalentMaterial = useMemo(() => ~item.types.indexOf('character-material-talent'), [item])
 	const codesForCalc = useMemo(() => {
 		return [...item.ancestryCodes.reverse(), item.code]
 	}, [item])
 	return (
 		<Card
-			titleEl={item.name}
+			titleEl={
+				<>
+					{item.name}{' '}
+					{isItemCharTalentMaterial ? (
+						<ToggleTalentMaterialFav itemCode={item.code} classes="d-inline align-middle p-1" />
+					) : null}
+				</>
+			}
 			classes={classes}
 			bodyEl={
 				item.ancestryCodes.length > 0 ? (

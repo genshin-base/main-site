@@ -186,3 +186,37 @@ export function ToggleCharFav({
 		</div>
 	)
 }
+
+export function ToggleTalentMaterialFav({
+	itemCode,
+	classes,
+}: {
+	itemCode: string
+	classes?: string
+}): JSX.Element {
+	const [favTalMatCodes, setTalMatCodes] = useLocalStorage<string[]>('favoriteTalentMaterialCodes', [])
+	const [elRef, isHovered] = useHover<HTMLDivElement>()
+	const isFav = ~favTalMatCodes.indexOf(itemCode)
+	const toggleFav = useCallback(() => {
+		setTalMatCodes(
+			removeOldCharsFromList(
+				isFav ? favTalMatCodes.filter(c => c !== itemCode) : [itemCode, ...favTalMatCodes],
+			),
+		)
+	}, [itemCode, setTalMatCodes, favTalMatCodes, isFav])
+	return (
+		<div
+			role="button"
+			className={`user-select-none lh-1 ${isFav ? 'text-danger' : 'text-danger opacity-50'} ${classes}`}
+			onClick={toggleFav}
+			ref={elRef}
+		>
+			{isFav ? HEART : HEART_EMPTY}
+			{elRef.current && isHovered ? (
+				<Tooltip targetEl={elRef.current}>
+					{isFav ? 'Remove material from your favorites' : 'Add material to your favorites'}
+				</Tooltip>
+			) : null}
+		</div>
+	)
+}

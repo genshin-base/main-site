@@ -2,7 +2,7 @@ import { useMemo, useState } from 'preact/hooks'
 
 import { useBuildWithDelayedLocs } from '#src/api'
 import { getAllRelated } from '#src/api/utils'
-import Spinner from '#src/components/spinners'
+import Spinner, { CentredSpinner } from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { FavoriteCharacters } from '#src/containers/character-picker/favorite-characters'
 import { OtherItemCardDetailDd } from '#src/containers/item-cards/dd-cards'
@@ -25,9 +25,9 @@ import './character-build-preview.scss'
 
 function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element {
 	const [build, isUpdating] = useBuildWithDelayedLocs(characterCode)
-
+	const displayingCharacterCode = isLoaded(build) ? build.character.code : characterCode
 	const roleTabs: BuildRoleOrDummy[] = isLoaded(build) ? build.character.roles : DUMMY_ROLES
-	const [selectedRoleTab, setSelectedRoleTab] = useSelectable(roleTabs, [characterCode])
+	const [selectedRoleTab, setSelectedRoleTab] = useSelectable(roleTabs, [displayingCharacterCode])
 
 	const artifactsListBlock = useMemo(() => {
 		if (!isLoaded(build)) return []
@@ -121,7 +121,7 @@ function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element
 	}, [build])
 	if (!isLoaded(build)) return <Spinner />
 	return (
-		<div className="character-build-preview" style={{ opacity: isUpdating ? '0.5' : '1' }}>
+		<div className="character-build-preview position-relative">
 			{/* <div className="d-none d-xl-block">
 				<CharacterPortrait src={getCharacterPortraitSrc(characterCode)} classes="w-100" />
 			</div>
@@ -131,7 +131,8 @@ function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element
 					classes="w-75 character-portrait-mobile"
 				/>
 			</div> */}
-			<div>
+			{isUpdating ? <CentredSpinner /> : null}
+			<div className={isUpdating ? 'opacity-50 pe-none' : ''}>
 				<div className="d-none d-xl-flex ">
 					<h5 className="py-2 m-0 me-2 d-block ">{build.character.name}</h5>
 					<Tabs
@@ -140,6 +141,7 @@ function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element
 						selectedTab={selectedRoleTab}
 						onTabSelect={setSelectedRoleTab}
 						classes="mb-2 flex-grow-1"
+						key={displayingCharacterCode}
 					/>
 				</div>
 				<div className="d-flex d-xl-none align-items-center">
@@ -150,6 +152,7 @@ function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element
 						selectedTab={selectedRoleTab}
 						onTabSelect={setSelectedRoleTab}
 						classes="w-100 mt-3 mb-2"
+						key={displayingCharacterCode}
 					/>
 				</div>
 				<div className="row small gy-2">
