@@ -160,6 +160,13 @@ const fixes = {
 				name: { en: 'Wolves of the Rift', ru: 'Волк Разрыва' },
 			},
 		],
+		domainMissingLocations: [
+			{ code: 'momiji-dyed-court', location: { mapCode: 'teyvat', x: 1619, y: 6098 } },
+			{ code: 'slumbering-court', location: { mapCode: 'teyvat', x: 3463, y: 6619 } },
+			{ code: 'violet-court', location: { mapCode: 'teyvat', x: 3187, y: 5529 } },
+			{ code: 'narukami-island-tenshukaku', location: { mapCode: 'teyvat', x: 3812, y: 5677 } },
+			{ code: 'court-of-flowing-sand', location: { mapCode: 'teyvat', x: 3657, y: 4725 } },
+		],
 	},
 	/** @type {import('#lib/parsing/mihoyo/fixes').MihoyoFixes} */
 	mihoyo: {
