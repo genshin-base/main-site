@@ -64,6 +64,7 @@ import {
 import { applyWeaponsObtainData } from '#lib/parsing/wiki/weapons.js'
 import { applyItemsLocations } from '#lib/parsing/mihoyo/map.js'
 import { checkMihoyoFixesUsage, clearMihoyoFixesUsage } from '#lib/parsing/mihoyo/fixes.js'
+import { applyDomainsRegion } from '#lib/parsing/wiki/domains.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -259,6 +260,7 @@ async function extractAllItemsData() {
 
 	await applyWeaponsObtainData(cd, weapons.code2item)
 	await applyItemsLocations(cd, enemies.code2item, enemyGroups.code2item, items.code2item, fixes.mihoyo)
+	await applyDomainsRegion(cd, domains.code2item)
 
 	checkHoneyhunterFixesUsage(hhfx)
 	checkMihoyoFixesUsage(fixes.mihoyo)
