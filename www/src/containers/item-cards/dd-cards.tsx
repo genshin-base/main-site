@@ -144,12 +144,14 @@ function addMarkerGroupsByEnemies(
 function MapWrap({
 	itemData,
 	markerGroups,
+	isItemFavable,
 }: {
 	itemData?: {
 		imgSrc: string
 		item: ItemShortInfo | ArtifactFullInfo | WeaponFullInfo
 	}
 	markerGroups: MapWrapMarkerGroup[]
+	isItemFavable?: boolean
 }): JSX.Element {
 	const [selectedSource, setSelectedSource] = useSelectable(markerGroups)
 
@@ -233,10 +235,10 @@ function MapWrap({
 				<div className="map-header-bg position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
 				{itemData && (
 					<div className="my-1 me-2 flex-shrink-1 d-flex">
-						{isItemWeaponPrimaryMaterial ? (
+						{isItemWeaponPrimaryMaterial && isItemFavable ? (
 							<ToggleWeaponPrimaryMaterialFav
 								itemCode={itemData.item.code}
-								classes="align-self-center p-1 flex-fill"
+								classes="align-self-center p-1 flex-fill fs-5"
 							/>
 						) : null}
 						<LabeledItemAvatar
@@ -492,7 +494,7 @@ export function WeaponCard({
 					<RecommendedFor charCodes={weapon.recommendedTo} />
 				</div>
 			}
-			mapEl={dataForMap.markerGroups.length ? <MapWrap {...dataForMap} /> : null}
+			mapEl={dataForMap.markerGroups.length ? <MapWrap isItemFavable={true} {...dataForMap} /> : null}
 			onCloseClick={onCloseClick}
 		></Card>
 	)

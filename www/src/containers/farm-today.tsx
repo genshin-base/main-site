@@ -16,6 +16,8 @@ import {
 	SK_FAV_TALENT_MATERIAL_CODES,
 	SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
 } from '#src/modules/builds/common'
+import { OtherItemCardDetailDd } from './item-cards/dd-cards'
+import { mustBeDefined } from '#src/../../lib/utils/values'
 
 export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 	const ttData = useFetch(apiMaterialsTimetable, [])
@@ -27,7 +29,6 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 	// const favWeapMatCodes = useMemo(() => [...favWeaponDatas.map(wd => wd[1])], [favWeaponDatas])
 	const [favWeapPrimMatCodes] = useLocalStorage<string[]>(SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES, [])
 
-	console.log(weekdayCode, tomorrowCode, isLoaded(ttData) ? ttData.timetable[weekdayCode] : null)
 	const tabs = useMemo(
 		() => [
 			{ code: weekdayCode, title: 'today' },
@@ -72,6 +73,15 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 													<span className="text-danger">{HEART}</span>
 												) : null
 											}
+											ddProps={{
+												DdComponent: OtherItemCardDetailDd,
+												ddItems: [
+													mustBeDefined(
+														ttData.items.find(i => i.code === asc.itemCode),
+													),
+												],
+												related: ttData.maps,
+											}}
 										/>
 									</div>
 									<div className="d-flex flex-nowrap">
@@ -106,6 +116,11 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 										<span className="text-danger">{HEART}</span>
 									) : null
 								}
+								ddProps={{
+									DdComponent: OtherItemCardDetailDd,
+									ddItems: [mustBeDefined(ttData.items.find(i => i.code === code))],
+									related: ttData.maps,
+								}}
 							/>
 						))}
 					</div>
