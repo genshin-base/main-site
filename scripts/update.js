@@ -55,7 +55,11 @@ import {
 	makeMaterialsTimetable,
 	makeWeaponsFullInfo,
 } from '#lib/parsing/combine.js'
-import { extractItemsData, getItemAncestryCodes } from '#lib/parsing/honeyhunter/items.js'
+import {
+	applyItemTypesByWeapons,
+	extractItemsData,
+	getItemAncestryCodes,
+} from '#lib/parsing/honeyhunter/items.js'
 import {
 	extractEnemiesData,
 	makeEnemyGroups,
@@ -64,6 +68,8 @@ import {
 import { applyWeaponsObtainData } from '#lib/parsing/wiki/weapons.js'
 import { applyItemsLocations } from '#lib/parsing/mihoyo/map.js'
 import { checkMihoyoFixesUsage, clearMihoyoFixesUsage } from '#lib/parsing/mihoyo/fixes.js'
+import { applyDomainsRegion } from '#lib/parsing/wiki/domains.js'
+import { applyCharactersReleaseVersion } from '#lib/parsing/wiki/characters.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -111,7 +117,7 @@ const fixes = {
 			],
 		},
 		items: (() => {
-			function addType(type) {
+			function addType(/**@type {import('#lib/parsing').ItemType}*/ type) {
 				return (/**@type {import('#lib/parsing').ItemData}*/ item) => {
 					if (item.types.includes(type)) return false
 					item.types.push(type)
@@ -121,7 +127,9 @@ const fixes = {
 			return [
 				// некоторые предметы используются для прокачки, но почему-то отсутствуют на
 				// https://genshin.honeyhunterworld.com/db/item/character-ascension-material-local-material/
-				{ code: 'spectral-nucleus', fixFunc: addType('character-material-local') },
+				{ code: 'spectral-nucleus', fixFunc: addType('character-material-secondary') },
+				{ code: 'spectral-heart', fixFunc: addType('character-material-secondary') },
+				{ code: 'spectral-husk', fixFunc: addType('character-material-secondary') },
 				{ code: 'dendrobium', fixFunc: addType('character-material-local') },
 				{ code: 'onikabuto', fixFunc: addType('character-material-local') },
 			]
@@ -257,8 +265,11 @@ async function extractAllItemsData() {
 	const characters = await extractCharactersData(cd, LANGS, items.id2item, hhfx)
 	const enemyGroups = makeEnemyGroups(enemies.code2item, fixes.honeyhunter)
 
+	await applyCharactersReleaseVersion(cd, characters.code2item)
 	await applyWeaponsObtainData(cd, weapons.code2item)
 	await applyItemsLocations(cd, enemies.code2item, enemyGroups.code2item, items.code2item, fixes.mihoyo)
+	await applyItemTypesByWeapons(items.code2item, weapons.code2item)
+	await applyDomainsRegion(cd, domains.code2item)
 
 	checkHoneyhunterFixesUsage(hhfx)
 	checkMihoyoFixesUsage(fixes.mihoyo)
@@ -439,8 +450,8 @@ async function saveWwwData() {
 	// }
 
 	for (const lang of LANGS) {
-		const buildArtifacts = makeArtifactsFullInfo(builds.artifacts, artifacts, domains, enemies, builds.characters, lang) //prettier-ignore
-		const buildWeapons = makeWeaponsFullInfo(builds.weapons, weapons, domains, items, builds.characters, lang) //prettier-ignore
+		const buildArtifacts = makeArtifactsFullInfo(builds.artifacts, artifacts, characters, domains, enemies, builds.characters, lang) //prettier-ignore
+		const buildWeapons = makeWeaponsFullInfo(builds.weapons, weapons, characters, domains, items, builds.characters, lang) //prettier-ignore
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 		for (const character of builds.characters) {
