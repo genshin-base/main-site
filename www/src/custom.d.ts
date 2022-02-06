@@ -23,3 +23,9 @@ declare namespace NodeJS {
 		NODE_ENV: 'development' | 'production'
 	}
 }
+
+declare const BUNDLE_ENV: {
+	ASSET_PATH: string
+	LANGS: string[]
+	LANG: string
+}

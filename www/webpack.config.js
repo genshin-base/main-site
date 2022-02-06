@@ -14,36 +14,29 @@ const SRC = __dirname + '/src'
 const LIB = __dirname + '/../lib'
 const DIST = __dirname + '/dist'
 const PUBLIC = __dirname + '/public'
+const LANGS = ['en', 'ru']
 
 export default async function (env, argv) {
+	return LANGS.map((lang, i) => makeConfig(env, argv, lang, i === 0))
+}
+
+function makeConfig(env, argv, lang, isMain) {
 	if (argv.mode !== 'production' && argv.mode !== 'development') throw new Error('wrong mode: ' + argv.mode)
 
 	const isProd = argv.mode === 'production'
 	const assetPath = '/'
 
 	return {
+		name: `build-${lang}`,
 		mode: argv.mode,
 		bail: isProd, //в прод-режиме останавливаем сборку после первой ошибки
 		stats: { preset: isProd ? 'normal' : 'errors-warnings' },
 		devtool: isProd ? 'source-map' : 'cheap-module-source-map',
-		devServer: {
-			hot: !isProd,
-			client: {
-				overlay: { errors: true, warnings: false },
-			},
-			static: {
-				directory: PUBLIC,
-				serveIndex: false,
-				watch: true,
-			},
-			historyApiFallback: {
-				rewrites: [{ from: /\/\w+/, to: '/index.html' }],
-			},
-		},
+		devServer: isMain ? makeDevServerConfig(isProd) : undefined,
 		entry: `${SRC}/index.tsx`,
 		output: {
 			path: DIST,
-			filename: isProd ? '[name].[contenthash:8].js' : '[name].js',
+			filename: isProd ? `[name].${lang}.[contenthash:8].js` : `[name].${lang}.js`,
 			// пока не нужно, см. file-loader
 			// assetModuleFilename: '[name].[hash:8][ext]',
 			publicPath: assetPath,
@@ -93,7 +86,11 @@ export default async function (env, argv) {
 				},
 				{
 					test: /\.s[ac]ss$/i,
-					use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+					use: [
+						{ loader: MiniCssExtractPlugin.loader, options: { emit: true } },
+						'css-loader',
+						'sass-loader',
+					],
 				},
 				// Новые-модные вебпаковые ассеты (https://webpack.js.org/guides/asset-modules/)
 				// экспортируют CommonJS, ради подключения которого вебпак добавляет в бандл
@@ -110,14 +107,19 @@ export default async function (env, argv) {
 				{
 					test: /\.(png|svg|json)$/,
 					loader: 'file-loader',
-					options: { name: '[name].[hash:8].[ext]' },
+					options: {
+						name: '[name].[hash:8].[ext]',
+						emitFile: isMain,
+					},
 				},
 			],
 		},
 		plugins: [
 			new webpack.DefinePlugin({
 				'process.env.NODE_ENV': JSON.stringify(argv.mode),
-				'process.env.ASSET_PATH': JSON.stringify(assetPath),
+				'BUNDLE_ENV.ASSET_PATH': JSON.stringify(assetPath),
+				'BUNDLE_ENV.LANGS': JSON.stringify(LANGS),
+				'BUNDLE_ENV.LANG': JSON.stringify(lang),
 			}),
 			new ESLintPlugin({
 				context: SRC,
@@ -126,12 +128,37 @@ export default async function (env, argv) {
 			}),
 			// заставляет писать пути к модулям в правильном регистре (даже в ОСях, где это необязательно)
 			!isProd && new CaseSensitivePathsPlugin({}),
+			new HtmlWebpackPlugin({
+				template: SRC + '/index.html',
+				minify: false,
+				filename: `${DIST}/index.${lang}.html`,
+			}),
 			new MiniCssExtractPlugin({ filename: isProd ? '[name].[contenthash:8].css' : '[name].css' }),
-			new HtmlWebpackPlugin({ template: SRC + '/index.html', minify: false }),
 			new PurgeCSSPlugin({
 				paths: glob.sync(`${SRC}/**/*`, { nodir: true }),
 				variables: true,
 			}),
 		].filter(Boolean),
+	}
+}
+
+function makeDevServerConfig(isProd) {
+	const langsEnLast = LANGS.slice().sort((a, b) => (a === 'en' ? 1 : -1))
+	return {
+		hot: !isProd,
+		client: {
+			overlay: { errors: true, warnings: false },
+		},
+		static: {
+			directory: PUBLIC,
+			serveIndex: false,
+			watch: true,
+		},
+		historyApiFallback: {
+			rewrites: langsEnLast.map(lang => ({
+				from: lang === 'en' ? /\// : new RegExp(`/${lang}(/|$)`),
+				to: `/index.${lang}.html`,
+			})),
+		},
 	}
 }
