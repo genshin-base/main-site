@@ -55,7 +55,11 @@ import {
 	makeMaterialsTimetable,
 	makeWeaponsFullInfo,
 } from '#lib/parsing/combine.js'
-import { extractItemsData, getItemAncestryCodes } from '#lib/parsing/honeyhunter/items.js'
+import {
+	applyItemTypesByWeapons,
+	extractItemsData,
+	getItemAncestryCodes,
+} from '#lib/parsing/honeyhunter/items.js'
 import {
 	extractEnemiesData,
 	makeEnemyGroups,
@@ -262,6 +266,7 @@ async function extractAllItemsData() {
 	await applyCharactersReleaseVersion(cd, characters.code2item)
 	await applyWeaponsObtainData(cd, weapons.code2item)
 	await applyItemsLocations(cd, enemies.code2item, enemyGroups.code2item, items.code2item, fixes.mihoyo)
+	await applyItemTypesByWeapons(items.code2item, weapons.code2item)
 	await applyDomainsRegion(cd, domains.code2item)
 
 	checkHoneyhunterFixesUsage(hhfx)
