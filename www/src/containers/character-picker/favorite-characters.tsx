@@ -2,10 +2,10 @@ import { useEffect, useMemo } from 'preact/hooks'
 
 import { charactersShortList } from '#src/api/generated'
 import { SimpleSelect } from '#src/components/select'
-import { MAX_CHARACTERS_TO_STORE } from '#src/modules/builds/common'
+import { MAX_SMTHS_TO_STORE } from '#src/modules/builds/common'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { useLocalStorage } from '#src/utils/hooks'
-import { ItemAvatar } from '../item-cards/item-cards'
+import { ItemAvatar } from '../item-cards/item-avatars'
 
 export function FavoriteCharacters({
 	classes = '',
@@ -25,11 +25,9 @@ export function FavoriteCharacters({
 		[favCharCodes],
 	)
 	const characterCodes =
-		favCharCodes.length < MAX_CHARACTERS_TO_STORE
-			? favCharCodes.concat(
-					charactersShortListCodes.slice(0, MAX_CHARACTERS_TO_STORE - favCharCodes.length),
-			  )
-			: favCharCodes.slice(0, MAX_CHARACTERS_TO_STORE)
+		favCharCodes.length < MAX_SMTHS_TO_STORE
+			? favCharCodes.concat(charactersShortListCodes.slice(0, MAX_SMTHS_TO_STORE - favCharCodes.length))
+			: favCharCodes.slice(0, MAX_SMTHS_TO_STORE)
 	// const optsForSelect = useMemo(
 	// 	//todo выпилить или вставить нормальные имена
 	// 	() =>

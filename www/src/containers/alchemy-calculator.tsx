@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'preact/hooks'
-import { ItemAvatar } from './item-cards/item-cards'
+import { ItemAvatar } from './item-cards/item-avatars'
 import { getItemIconSrc } from '#src/utils/items'
 import { GI_RarityCode } from '#src/../../lib/genshin'
 

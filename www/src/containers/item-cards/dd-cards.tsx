@@ -11,7 +11,12 @@ import {
 	ItemDetailDdMobilePortal,
 	ItemDetailDdPortal,
 } from '#src/containers/item-cards/item-detail-dd-portal'
-import { notesToJSX, ToggleTalentMaterialFav } from '#src/modules/builds/common'
+import {
+	notesToJSX,
+	ToggleTalentMaterialFav,
+	ToggleWeaponFav,
+	ToggleWeaponPrimaryMaterialFav,
+} from '#src/modules/builds/common'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
 import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
@@ -22,7 +27,7 @@ import { getItemIconSrc } from '#src/utils/items'
 import { BULLET, LEFT_POINTING, RIGHT_POINTING, TIMES } from '#src/utils/typography'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 import { AlchemyCalculator } from '../alchemy-calculator'
-import { ItemAvatar, LabeledItemAvatar } from './item-cards'
+import { ItemAvatar, LabeledItemAvatar } from './item-avatars'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
 const LazyTeyvatMap = import('#src/components/teyvat-map')
@@ -142,7 +147,7 @@ function MapWrap({
 }: {
 	itemData?: {
 		imgSrc: string
-		name: string
+		item: ItemShortInfo | ArtifactFullInfo | WeaponFullInfo
 	}
 	markerGroups: MapWrapMarkerGroup[]
 }): JSX.Element {
@@ -215,17 +220,32 @@ function MapWrap({
 			),
 		[selectedSource],
 	)
+	const isItemWeaponPrimaryMaterial = useMemo(
+		() =>
+			itemData?.item &&
+			'types' in itemData.item &&
+			~itemData?.item.types?.indexOf('weapon-material-primary'),
+		[itemData?.item],
+	)
 	return (
 		<div className={`map-wrap position-relative mb-3`}>
 			<div className="map-header position-absolute d-flex flex-row justify-content-between px-3 py-1 w-100">
 				<div className="map-header-bg position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
 				{itemData && (
-					<LabeledItemAvatar
-						classes="me-2 my-1 small-avatar"
-						avatarClasses="with-padding"
-						imgSrc={itemData.imgSrc}
-						title={itemData.name}
-					/>
+					<div className="my-1 me-2 flex-shrink-1 d-flex">
+						{isItemWeaponPrimaryMaterial ? (
+							<ToggleWeaponPrimaryMaterialFav
+								itemCode={itemData.item.code}
+								classes="align-self-center p-1 flex-fill"
+							/>
+						) : null}
+						<LabeledItemAvatar
+							classes="small-avatar"
+							avatarClasses="with-padding"
+							imgSrc={itemData.imgSrc}
+							title={itemData.item.name}
+						/>
+					</div>
 				)}
 				{markerGroups.length ? (
 					<div className={`d-flex flex-fill justify-content-end`}>
@@ -300,7 +320,7 @@ function ArtifactCard({
 
 		return {
 			itemData: {
-				name: selectedArt.name,
+				item: selectedArt,
 				imgSrc: getArtifactIconSrc(selectedArt.code),
 			},
 			markerGroups,
@@ -388,6 +408,7 @@ export function WeaponCard({
 }): JSX.Element {
 	const weapon = weapons[0] //пока оружие приходит только одно, а артефактов может придти несколько
 	const materials = getAllRelated(related.items, weapon.materialCodes)
+	const ascMaterial = materials.find(m => ~m.types.indexOf('weapon-material-primary'))
 	const [materialOnMap, setMaterialOnMap] = useState(materials[0])
 	const dataForMap = useMemo(() => {
 		const srcs = materialOnMap.obtainSources
@@ -397,7 +418,7 @@ export function WeaponCard({
 
 		return {
 			itemData: {
-				name: materialOnMap.name,
+				item: materialOnMap,
 				imgSrc: getItemIconSrc(materialOnMap.code),
 			},
 			markerGroups,
@@ -406,7 +427,19 @@ export function WeaponCard({
 
 	return (
 		<Card
-			titleEl={weapon.name}
+			titleEl={
+				weapon.name
+				// <>
+				// 	{weapon.name}{' '}
+				// 	{ascMaterial && (
+				// 		<ToggleWeaponFav
+				// 			weaponCode={weapon.code}
+				// 			weapMatCode={ascMaterial.code}
+				// 			classes="d-inline align-middle p-1"
+				// 		/>
+				// 	)}
+				// </>
+			}
 			classes={classes}
 			bodyEl={
 				<div className="">
@@ -512,7 +545,7 @@ export function OtherItemCard({
 
 		return {
 			itemData: {
-				name: materialOnMap.name,
+				item: materialOnMap,
 				imgSrc: getItemIconSrc(materialOnMap.code),
 			},
 			markerGroups,
@@ -520,6 +553,7 @@ export function OtherItemCard({
 	}, [materialOnMap, related])
 
 	const isItemCharTalentMaterial = useMemo(() => ~item.types.indexOf('character-material-talent'), [item])
+	const isItemWeaponPrimaryMaterial = useMemo(() => ~item.types.indexOf('weapon-material-primary'), [item])
 	const codesForCalc = useMemo(() => {
 		return [...item.ancestryCodes.reverse(), item.code]
 	}, [item])
@@ -530,6 +564,12 @@ export function OtherItemCard({
 					{item.name}{' '}
 					{isItemCharTalentMaterial ? (
 						<ToggleTalentMaterialFav itemCode={item.code} classes="d-inline align-middle p-1" />
+					) : null}
+					{isItemWeaponPrimaryMaterial ? (
+						<ToggleWeaponPrimaryMaterialFav
+							itemCode={item.code}
+							classes="d-inline align-middle p-1"
+						/>
 					) : null}
 				</>
 			}

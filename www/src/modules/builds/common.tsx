@@ -14,11 +14,11 @@ import { mustBeDefined } from '#lib/utils/values'
 import { MapAllByCode } from '#src/api/utils'
 import { Tooltip } from '#src/components/tooltip'
 import { ArtifactDetailDd } from '#src/containers/item-cards/dd-cards'
-import { LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
+import { LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
 import { useHover, useLocalStorage } from '#src/utils/hooks'
 import { HEART, HEART_EMPTY, STAR } from '#src/utils/typography'
-import { useCallback, useRef } from 'preact/hooks'
+import { useCallback, useMemo, useRef } from 'preact/hooks'
 
 export const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole> = {
 	title: '…',
@@ -148,9 +148,53 @@ export function genArtofactAdvice(
 export function ItemsJoinerWrap({ children }: { children: JSX.Node }): JSX.Element {
 	return <div className="text-start text-lg-center text-muted small px-5">{children}</div>
 }
-export const MAX_CHARACTERS_TO_STORE = 5
-export function removeOldCharsFromList(codes: string[]): string[] {
-	return codes.slice(0, MAX_CHARACTERS_TO_STORE)
+export const MAX_SMTHS_TO_STORE = 5
+export function removeOldSmthsFromList<T>(codes: T[]): T[] {
+	return codes.slice(0, MAX_SMTHS_TO_STORE)
+}
+//sk - storage key
+export const SK_FAV_CHAR_CODES = 'favoriteCharacterCodes'
+export const SK_FAV_TALENT_MATERIAL_CODES = 'favoriteTalentMaterialCodes'
+export const SK_FAV_WEAPON_DATAS = 'favoriteWeaponDatas'
+export const SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES = 'favoriteWeaponPrimaryMaterialCodes'
+export type STORAGE_WEAPON_DATA = [weaponCode: string, weaponMaterialCode: string]
+
+function ToggleSmthFav({
+	smthCode,
+	classes,
+	storageKey,
+	tipFav,
+	tipNotFav,
+}: {
+	smthCode: string
+	classes?: string
+	storageKey: string
+	tipFav: string
+	tipNotFav: string
+}): JSX.Element {
+	const [favSmthCodes, setFavSmthCodes] = useLocalStorage<string[]>(storageKey, [])
+	const [elRef, isHovered] = useHover<HTMLDivElement>()
+	const isFav = ~favSmthCodes.indexOf(smthCode)
+	const toggleFav = useCallback(() => {
+		setFavSmthCodes(
+			removeOldSmthsFromList(
+				isFav ? favSmthCodes.filter(c => c !== smthCode) : [smthCode, ...favSmthCodes],
+			),
+		)
+	}, [smthCode, setFavSmthCodes, favSmthCodes, isFav])
+	return (
+		<div
+			role="button"
+			className={`user-select-none lh-1 ${isFav ? 'text-danger' : 'text-danger opacity-50'} ${classes}`}
+			onClick={toggleFav}
+			ref={elRef}
+		>
+			{isFav ? HEART : HEART_EMPTY}
+			{elRef.current && isHovered ? (
+				<Tooltip targetEl={elRef.current}>{isFav ? tipFav : tipNotFav}</Tooltip>
+			) : null}
+		</div>
+	)
 }
 
 export function ToggleCharFav({
@@ -160,33 +204,34 @@ export function ToggleCharFav({
 	characterCode: string
 	classes?: string
 }): JSX.Element {
-	const [favCharCodes, setFavCharCodes] = useLocalStorage<string[]>('favoriteCharacterCodes', [])
-	const [elRef, isHovered] = useHover<HTMLDivElement>()
-	const isFav = ~favCharCodes.indexOf(characterCode)
-	const toggleFav = useCallback(() => {
-		setFavCharCodes(
-			removeOldCharsFromList(
-				isFav ? favCharCodes.filter(c => c !== characterCode) : [characterCode, ...favCharCodes],
-			),
-		)
-	}, [characterCode, setFavCharCodes, favCharCodes, isFav])
 	return (
-		<div
-			role="button"
-			className={`user-select-none lh-1 ${isFav ? 'text-danger' : 'text-danger opacity-50'} ${classes}`}
-			onClick={toggleFav}
-			ref={elRef}
-		>
-			{isFav ? HEART : HEART_EMPTY}
-			{elRef.current && isHovered ? (
-				<Tooltip targetEl={elRef.current}>
-					{isFav ? 'Remove character from your favorites' : 'Add character to your favorites'}
-				</Tooltip>
-			) : null}
-		</div>
+		<ToggleSmthFav
+			smthCode={characterCode}
+			classes={classes}
+			storageKey={SK_FAV_CHAR_CODES}
+			tipFav={'Remove character from your favorites'}
+			tipNotFav={'Add character to your favorites'}
+		/>
 	)
 }
 
+export function ToggleWeaponPrimaryMaterialFav({
+	itemCode,
+	classes,
+}: {
+	itemCode: string
+	classes?: string
+}): JSX.Element {
+	return (
+		<ToggleSmthFav
+			smthCode={itemCode}
+			classes={classes}
+			storageKey={SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES}
+			tipFav={'Remove material from your favorites'}
+			tipNotFav={'Add material to your favorites'}
+		/>
+	)
+}
 export function ToggleTalentMaterialFav({
 	itemCode,
 	classes,
@@ -194,16 +239,38 @@ export function ToggleTalentMaterialFav({
 	itemCode: string
 	classes?: string
 }): JSX.Element {
-	const [favTalMatCodes, setTalMatCodes] = useLocalStorage<string[]>('favoriteTalentMaterialCodes', [])
+	return (
+		<ToggleSmthFav
+			smthCode={itemCode}
+			classes={classes}
+			storageKey={SK_FAV_TALENT_MATERIAL_CODES}
+			tipFav={'Remove material from your favorites'}
+			tipNotFav={'Add material to your favorites'}
+		/>
+	)
+}
+export function ToggleWeaponFav({
+	weaponCode,
+	weapMatCode,
+	classes,
+}: {
+	weaponCode: string
+	weapMatCode: string
+	classes?: string
+}): JSX.Element {
+	const [favWeaponDatas, setWeaponDatas] = useLocalStorage<STORAGE_WEAPON_DATA[]>(SK_FAV_WEAPON_DATAS, [])
+	const favWeaponCodes = useMemo(() => favWeaponDatas.map(wd => wd[0]), [favWeaponDatas])
 	const [elRef, isHovered] = useHover<HTMLDivElement>()
-	const isFav = ~favTalMatCodes.indexOf(itemCode)
+	const isFav = ~favWeaponCodes.indexOf(weaponCode)
 	const toggleFav = useCallback(() => {
-		setTalMatCodes(
-			removeOldCharsFromList(
-				isFav ? favTalMatCodes.filter(c => c !== itemCode) : [itemCode, ...favTalMatCodes],
+		setWeaponDatas(
+			removeOldSmthsFromList(
+				isFav
+					? favWeaponDatas.filter(d => d[0] !== weaponCode)
+					: [[weaponCode, weapMatCode], ...favWeaponDatas],
 			),
 		)
-	}, [itemCode, setTalMatCodes, favTalMatCodes, isFav])
+	}, [weaponCode, weapMatCode, setWeaponDatas, favWeaponDatas, isFav])
 	return (
 		<div
 			role="button"
@@ -214,7 +281,7 @@ export function ToggleTalentMaterialFav({
 			{isFav ? HEART : HEART_EMPTY}
 			{elRef.current && isHovered ? (
 				<Tooltip targetEl={elRef.current}>
-					{isFav ? 'Remove material from your favorites' : 'Add material to your favorites'}
+					{isFav ? 'Remove weapon from your favorites' : 'Add weapon to your favorites'}
 				</Tooltip>
 			) : null}
 		</div>
