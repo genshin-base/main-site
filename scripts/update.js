@@ -117,7 +117,7 @@ const fixes = {
 			],
 		},
 		items: (() => {
-			function addType(type) {
+			function addType(/**@type {import('#lib/parsing').ItemType}*/ type) {
 				return (/**@type {import('#lib/parsing').ItemData}*/ item) => {
 					if (item.types.includes(type)) return false
 					item.types.push(type)
@@ -127,7 +127,9 @@ const fixes = {
 			return [
 				// некоторые предметы используются для прокачки, но почему-то отсутствуют на
 				// https://genshin.honeyhunterworld.com/db/item/character-ascension-material-local-material/
-				{ code: 'spectral-nucleus', fixFunc: addType('character-material-local') },
+				{ code: 'spectral-nucleus', fixFunc: addType('character-material-secondary') },
+				{ code: 'spectral-heart', fixFunc: addType('character-material-secondary') },
+				{ code: 'spectral-husk', fixFunc: addType('character-material-secondary') },
 				{ code: 'dendrobium', fixFunc: addType('character-material-local') },
 				{ code: 'onikabuto', fixFunc: addType('character-material-local') },
 			]
