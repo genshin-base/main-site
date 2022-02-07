@@ -265,8 +265,8 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 	)
 	return (
 		<div className="character-build-detailed mt-2 mb-3">
-			<div>
-				<a className="btn btn-secondary align-baseline" type="submit" href="/builds">
+			<div className="d-flex">
+				<a className="btn btn-secondary align-self-center" type="submit" href="/builds">
 					<span className="fs-4 lh-1 opacity-75">‹ </span> Back
 				</a>
 				<h5 className="ps-3 pe-1 m-0 align-self-center">
