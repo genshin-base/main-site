@@ -7,7 +7,6 @@ import Spinner from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { OtherItemCardDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
-import { makeCharacterBuildDeselectHash } from '#src/hashstore'
 import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import { getCharacterPortraitSrc, getCharacterSilhouetteSrc } from '#src/utils/characters'
 import { isLoaded } from '#src/utils/hooks'
@@ -263,11 +262,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 	return (
 		<div className="character-build-detailed mt-2 mb-3">
 			<div>
-				<a
-					className="btn btn-secondary align-baseline"
-					type="submit"
-					href={makeCharacterBuildDeselectHash()}
-				>
+				<a className="btn btn-secondary align-baseline" type="submit" href="/builds">
 					<span className="fs-4 lh-1 opacity-75">‹ </span> Back
 				</a>
 				<h5 className="ps-3 pe-1 d-inline align-baseline">

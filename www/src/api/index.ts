@@ -9,7 +9,7 @@ import {
 } from '#lib/parsing/combine'
 import { promiseNever } from '#lib/utils/values'
 import { isLoaded, LoadingState, useFetch, useFetchWithPrev } from '#src/utils/hooks'
-import { apiGetCharacter, apiGetCharacterRelatedLocs } from './generated'
+import { apiGetCharacter, apiGetCharacterRelatedLocs } from './endpoints'
 import { MapAllByCode, mapAllByCode } from './utils'
 
 export function useBuildWithDelayedLocs(

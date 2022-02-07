@@ -1,13 +1,12 @@
 import { charactersShortList } from '#src/api/generated'
 import { ItemAvatar } from '#src/containers/item-cards/item-avatars'
-import { makeCharacterBuildHash } from '#src/hashstore'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { elements } from '#src/utils/elements'
 import { GI_WeaponType, weaponTypes } from '#src/utils/weapons'
+import { getRarityBorder } from '../item-cards/dd-cards'
 import { CharacterPickerMobile } from './mobile-character-picker'
 
 import './character-picker.scss'
-import { getRarityBorder } from '../item-cards/dd-cards'
 
 function CharacterPickerDesktop({ weaponTypes }: { weaponTypes: GI_WeaponType[] }) {
 	return (
@@ -28,7 +27,7 @@ function CharacterPickerDesktop({ weaponTypes }: { weaponTypes: GI_WeaponType[] 
 											key={x.code}
 											src={getCharacterAvatarSrc(x.code)}
 											// rarity={x.rarity}
-											hash={makeCharacterBuildHash(x.code)}
+											hash={'/builds/' + x.code}
 											classes={`mb-1 me-1 mb-xxl-2 me-xxl-2 border ${getRarityBorder(
 												x.rarity,
 											)}`}

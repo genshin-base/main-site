@@ -1,12 +1,14 @@
-import { default as webpack } from 'webpack'
-import { default as CaseSensitivePathsPlugin } from 'case-sensitive-paths-webpack-plugin'
+import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin'
+import ESLintPlugin from 'eslint-webpack-plugin'
+import glob from 'glob'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { dirname } from 'path'
+import PurgeCSSPlugin from 'purgecss-webpack-plugin'
 import { fileURLToPath } from 'url'
-import { dirname } from 'path/posix'
-import { default as ESLintPlugin } from 'eslint-webpack-plugin'
-import { default as MiniCssExtractPlugin } from 'mini-css-extract-plugin'
-import { default as HtmlWebpackPlugin } from 'html-webpack-plugin'
-import { default as PurgeCSSPlugin } from 'purgecss-webpack-plugin'
-import { default as glob } from 'glob'
+import webpack from 'webpack'
+
+import { matchPath, paths } from './src/routes/paths.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -155,10 +157,20 @@ function makeDevServerConfig(isProd) {
 			watch: true,
 		},
 		historyApiFallback: {
-			rewrites: langsEnLast.map(lang => ({
-				from: lang === 'en' ? /\// : new RegExp(`/${lang}(/|$)`),
-				to: `/index.${lang}.html`,
-			})),
+			rewrites: [
+				{
+					from: /./,
+					to({ parsedUrl, match, request }) {
+						for (const lang of langsEnLast) {
+							for (const path_ of Object.values(paths)) {
+								const path = lang === 'en' ? path_ : ['/' + lang, ...path_]
+								if (matchPath(path, parsedUrl.pathname)) return `/index.${lang}.html`
+							}
+						}
+						return parsedUrl.pathname
+					},
+				},
+			],
 		},
 	}
 }

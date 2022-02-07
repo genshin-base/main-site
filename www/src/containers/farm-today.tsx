@@ -1,23 +1,24 @@
-import './farm-today.scss'
 import { useMemo } from 'preact/hooks'
 
 import { getRegionTime, GI_ROTATION_WEEKDAY_CODES } from '#lib/genshin'
 import { arrGetAfter } from '#lib/utils/collections'
-import { apiMaterialsTimetable } from '#src/api/generated'
+import { mustBeDefined } from '#src/../../lib/utils/values'
+import { apiMaterialsTimetable } from '#src/api/endpoints'
 import Spinner from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
-import { getCharacterAvatarSrc } from '#src/utils/characters'
-import { isLoaded, useFetch, useLocalStorage } from '#src/utils/hooks'
-import { getItemIconSrc } from '#src/utils/items'
-import { HEART } from '#src/utils/typography'
-import { ItemAvatar } from './item-cards/item-avatars'
 import {
 	SK_FAV_CHAR_CODES,
 	SK_FAV_TALENT_MATERIAL_CODES,
 	SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
 } from '#src/modules/builds/common'
+import { getCharacterAvatarSrc } from '#src/utils/characters'
+import { isLoaded, useFetch, useLocalStorage } from '#src/utils/hooks'
+import { getItemIconSrc } from '#src/utils/items'
+import { HEART } from '#src/utils/typography'
 import { OtherItemCardDetailDd } from './item-cards/dd-cards'
-import { mustBeDefined } from '#src/../../lib/utils/values'
+import { ItemAvatar } from './item-cards/item-avatars'
+
+import './farm-today.scss'
 
 export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 	const ttData = useFetch(apiMaterialsTimetable, [])
