@@ -19,4 +19,7 @@
 			background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
 		}
 	}
+	.muted-icon{
+		filter:saturate(0.3)
+	}
 }

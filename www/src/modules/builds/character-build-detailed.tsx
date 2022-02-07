@@ -9,7 +9,11 @@ import { OtherItemCardDetailDd, WeaponDetailDd } from '#src/containers/item-card
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
 import { makeCharacterBuildDeselectHash } from '#src/hashstore'
 import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
-import { getCharacterPortraitSrc, getCharacterSilhouetteSrc } from '#src/utils/characters'
+import {
+	getCharacterAvatarSrc,
+	getCharacterPortraitSrc,
+	getCharacterSilhouetteSrc,
+} from '#src/utils/characters'
 import { isLoaded } from '#src/utils/hooks'
 import { getItemIconSrc } from '#src/utils/items'
 import { pluralizeEN } from '#src/utils/strings'
@@ -19,7 +23,7 @@ import {
 	CIRCLET_GOBLET_SANDS,
 	DUMMY_ROLES,
 	genArtMainStatDetail,
-	genArtofactAdvice,
+	genArtifactAdvice,
 	genNotes,
 	genSeeCharNotes,
 	genSimpleList,
@@ -95,7 +99,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		return role.artifacts.sets.map((set, i) => {
 			return (
 				<li key={i} className="pt-1">
-					{genArtofactAdvice(set.arts, build)}
+					{genArtifactAdvice(set.arts, build)}
 					{genNotes(set)}
 					{genSeeCharNotes(set)}
 				</li>
@@ -262,18 +266,22 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 	)
 	return (
 		<div className="character-build-detailed mt-2 mb-3">
-			<div>
+			<div className="d-flex">
 				<a
-					className="btn btn-secondary align-baseline"
+					className="btn btn-secondary align-self-center "
 					type="submit"
 					href={makeCharacterBuildDeselectHash()}
 				>
 					<span className="fs-4 lh-1 opacity-75">‹ </span> Back
 				</a>
-				<h5 className="ps-3 pe-1 d-inline align-baseline">
+				<h5 className="ps-3 pe-1 m-0 align-self-center">
 					{isLoaded(build) ? build.character.name : ''}
 				</h5>
-				<ToggleCharFav classes="fs-3 d-inline align-middle d-xl-none" characterCode={characterCode} />
+				<ToggleCharFav classes="fs-3 align-self-center d-xl-none" characterCode={characterCode} />
+				<ItemAvatar
+					src={getCharacterAvatarSrc(characterCode)}
+					classes="d-xl-none large-avatar align-self-end mt-n5 ms-auto"
+				/>
 			</div>
 			{CharacterDetailDesktop}
 			{CharacterDetailMobile}

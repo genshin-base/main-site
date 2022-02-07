@@ -178,8 +178,8 @@ function MapWrap({
 	if (!markerGroups.length) {
 		sourceSelectEl = null
 	} else if (markerGroups.length === 1) {
-		sourceSelectEl = <span className="align-self-center lh-1 ">{markerGroups[0].title}</span>
-	} else if (markerGroups.length < 4) {
+		sourceSelectEl = <span className="align-self-center lh-1 small">{markerGroups[0].title}</span>
+	} else if (markerGroups.length < 3) {
 		sourceSelectEl = (
 			<BtnTabGroup
 				tabs={markerGroups}
@@ -235,7 +235,7 @@ function MapWrap({
 			<div className="map-header position-absolute d-flex flex-row justify-content-between px-3 py-1 w-100">
 				<div className="map-header-bg position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
 				{itemData && (
-					<div className="my-1 me-2 flex-shrink-1 d-flex">
+					<div className="me-2 flex-shrink-1 d-flex align-self-center">
 						{isItemWeaponPrimaryMaterial && isItemFavable ? (
 							<ToggleWeaponPrimaryMaterialFav
 								itemCode={itemData.item.code}
@@ -243,16 +243,16 @@ function MapWrap({
 							/>
 						) : null}
 						<LabeledItemAvatar
-							classes="small-avatar"
-							avatarClasses="with-padding"
+							classes="small-avatar small"
+							avatarClasses="with-padding "
 							imgSrc={itemData.imgSrc}
 							title={itemData.item.name}
 						/>
 					</div>
 				)}
 				{markerGroups.length ? (
-					<div className={`d-flex flex-fill justify-content-end`}>
-						<label className="me-1 text-muted align-self-center">Source:</label>
+					<div className={`d-flex flex-fill justify-content-end align-self-center`}>
+						<label className="me-1 text-muted align-self-center small">Source:</label>
 						{sourceSelectEl}
 					</div>
 				) : null}

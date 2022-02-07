@@ -15,7 +15,7 @@ import {
 	CIRCLET_GOBLET_SANDS,
 	DUMMY_ROLES,
 	genArtMainStatDetail,
-	genArtofactAdvice,
+	genArtifactAdvice,
 	genSimpleList,
 	getRoleData,
 	makeRoleTitle,
@@ -40,7 +40,7 @@ function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element
 					if (i > listTimit) return
 					return (
 						<li key={i} className="pt-1">
-							{genArtofactAdvice(set.arts, build, false)}
+							{genArtifactAdvice(set.arts, build, false)}
 						</li>
 					)
 				})}

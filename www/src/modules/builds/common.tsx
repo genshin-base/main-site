@@ -93,7 +93,7 @@ export function notesToJSX(tips: CompactTextParagraphs | null) {
 	return processObj(tips)
 }
 
-export function genArtofactAdvice(
+export function genArtifactAdvice(
 	set: ArtifactRef | ArtifactRefNode,
 	build: MapAllByCode<CharacterFullInfoWithRelated>,
 	isLast = true,
@@ -140,7 +140,7 @@ export function genArtofactAdvice(
 					const isLastInList = i >= set.arts.length - 1
 					return (
 						<>
-							{genArtofactAdvice(art, build, isLastInList)}
+							{genArtifactAdvice(art, build, isLastInList)}
 							{!isLastInList && <ItemsJoinerWrap>{set.op}</ItemsJoinerWrap>}
 						</>
 					)

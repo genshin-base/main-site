@@ -35,8 +35,8 @@ export function CharacterPickerMobile() {
 
 	const rows = elementGroups.map(({ element, characters }) => (
 		<div className="row" key={element.code}>
-			<div className="col-2 py-1 opacity-50">
-				<img className="rounded-circle d-block mx-auto" src={element.imgSrc} />
+			<div className="col-2 py-1">
+				<img className="rounded-circle d-block mx-auto opacity-50 muted-icon" src={element.imgSrc} />
 			</div>
 			<div className="col py-31">
 				{characters.map(x => (

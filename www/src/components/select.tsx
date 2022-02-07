@@ -7,11 +7,13 @@ export function SimpleSelect({
 	selectedOption,
 	onOptionSelect,
 	classes = '',
+	size = 1,
 }: {
 	options: Option[]
 	selectedOption: Option | null
 	onOptionSelect(Option): unknown
 	classes?: string
+	size?: number
 }): JSX.Element {
 	const handleChange = useCallback(
 		e => {
@@ -20,7 +22,11 @@ export function SimpleSelect({
 		[options, onOptionSelect],
 	)
 	return (
-		<select className={`form-select bg-dark text-light c-pointer ${classes}`} onChange={handleChange}>
+		<select
+			className={`form-select bg-dark text-light c-pointer ${classes}`}
+			onChange={handleChange}
+			size={size}
+		>
 			<option value="" disabled selected hidden>
 				Select…
 			</option>
