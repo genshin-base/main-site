@@ -122,7 +122,7 @@ export function genArtofactAdvice(
 				rarity={artifactForList.rarity}
 				title={artifactForList.name}
 				key={set.code}
-				avatarBadge={'x' + set.count}
+				avatarTopEndBadge={'x' + set.count}
 				avatarClasses="with-padding"
 				classes={`small ${isLast ? 'mb-1' : ''}`}
 				ddProps={{
@@ -134,19 +134,30 @@ export function genArtofactAdvice(
 		)
 	} else {
 		//ArtifactRefNode
-		return set.arts.map((art, i) => {
-			const isLastInList = i >= set.arts.length - 1
-			return (
-				<>
-					{genArtofactAdvice(art, build, isLastInList)}
-					{!isLastInList && <ItemsJoinerWrap>{set.op}</ItemsJoinerWrap>}
-				</>
-			)
-		})
+		return (
+			<ItemsListGroupWrap>
+				{set.arts.map((art, i) => {
+					const isLastInList = i >= set.arts.length - 1
+					return (
+						<>
+							{genArtofactAdvice(art, build, isLastInList)}
+							{!isLastInList && <ItemsJoinerWrap>{set.op}</ItemsJoinerWrap>}
+						</>
+					)
+				})}
+			</ItemsListGroupWrap>
+		)
 	}
 }
 export function ItemsJoinerWrap({ children }: { children: JSX.Node }): JSX.Element {
-	return <div className="text-start text-lg-center text-muted small px-5">{children}</div>
+	return <div className="text-start text-muted small px-5 my-n1">{children}</div>
+}
+export function ItemsListGroupWrap({
+	children,
+}: {
+	children: JSX.Node | (JSX.Element | null)[]
+}): JSX.Element {
+	return <div className="border-2 rounded border-secondary border-start ps-2">{children}</div>
 }
 export const MAX_SMTHS_TO_STORE = 5
 export function removeOldSmthsFromList<T>(codes: T[]): T[] {
@@ -214,7 +225,6 @@ export function ToggleCharFav({
 		/>
 	)
 }
-
 export function ToggleWeaponPrimaryMaterialFav({
 	itemCode,
 	classes,
@@ -249,6 +259,8 @@ export function ToggleTalentMaterialFav({
 		/>
 	)
 }
+
+//not used
 export function ToggleWeaponFav({
 	weaponCode,
 	weapMatCode,

@@ -11,6 +11,8 @@ $spacers: (
 	4: $spacer * 1.5,
 	5: $spacer * 3,
 );
+$enable-negative-margins: true;
+
 @import "dark-theme.scss";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";

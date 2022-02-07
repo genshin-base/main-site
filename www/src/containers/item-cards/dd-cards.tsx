@@ -14,7 +14,6 @@ import {
 import {
 	notesToJSX,
 	ToggleTalentMaterialFav,
-	ToggleWeaponFav,
 	ToggleWeaponPrimaryMaterialFav,
 } from '#src/modules/builds/common'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
@@ -38,12 +37,14 @@ function RecommendedFor({ charCodes }: { charCodes: string[] }): JSX.Element {
 	return (
 		<>
 			<h6 class="text-uppercase opacity-75">Recommended for</h6>
-			{charCodes.map(c => (
-				<ItemAvatar
-					src={getCharacterAvatarSrc(c)}
-					classes={`small-avatar mb-2 me-2 border ${getRarityBorder(4)}`}
-				/>
-			))}
+			{charCodes.length
+				? charCodes.map(c => (
+						<ItemAvatar
+							src={getCharacterAvatarSrc(c)}
+							classes={`small-avatar mb-2 me-2 border ${getRarityBorder(4)}`}
+						/>
+				  ))
+				: 'Nobody'}
 		</>
 	)
 }

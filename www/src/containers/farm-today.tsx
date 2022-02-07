@@ -68,7 +68,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 										<ItemAvatar
 											src={getItemIconSrc(asc.itemCode)}
 											classes="me-3 vertical-align-middle"
-											badge={
+											badgeTopStart={
 												~favTalMaterialCodes.indexOf(asc.itemCode) ? (
 													<span className="text-danger">{HEART}</span>
 												) : null
@@ -92,7 +92,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 												classes={`small-avatar my-2 me-2 ${
 													~favCharCodes.indexOf(c) ? 'order-1' : 'order-2'
 												}`}
-												badge={
+												badgeTopStart={
 													~favCharCodes.indexOf(c) ? (
 														<span className="text-danger">{HEART}</span>
 													) : null
@@ -111,7 +111,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 								key={code}
 								src={getItemIconSrc(code)}
 								classes="small-avatar me-3"
-								badge={
+								badgeTopStart={
 									~favWeapPrimMatCodes.indexOf(code) ? (
 										<span className="text-danger">{HEART}</span>
 									) : null

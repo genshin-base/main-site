@@ -22,7 +22,8 @@ export function ItemAvatar<TItem, TRelated>({
 	classes = '',
 	hash,
 	onClick,
-	badge,
+	badgeTopStart,
+	badgeTopEnd,
 	ddProps,
 }: {
 	src: string
@@ -30,7 +31,8 @@ export function ItemAvatar<TItem, TRelated>({
 	classes?: string
 	hash?: string
 	onClick?(): unknown
-	badge?: string | null | JSX.Node
+	badgeTopStart?: string | null | JSX.Node
+	badgeTopEnd?: string | null | JSX.Node
 	ddProps?: DDProps<TItem, TRelated>
 }): JSX.Element {
 	;['bg-2', 'bg-3', 'bg-4', 'bg-5']
@@ -56,9 +58,14 @@ export function ItemAvatar<TItem, TRelated>({
 			onClick={onClickLocal}
 		>
 			<img className="image" src={src} />
-			{badge && (
+			{badgeTopStart && (
 				<span className="position-absolute top-0 start-0 translate-middle badge rounded-pill opacity-75 small">
-					{badge}
+					{badgeTopStart}
+				</span>
+			)}
+			{badgeTopEnd && (
+				<span className="position-absolute top-0 start-100 translate-middle badge rounded-pill opacity-75 small">
+					{badgeTopEnd}
 				</span>
 			)}
 			{/* <span className="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-primary border border-light">
@@ -107,7 +114,8 @@ export function LabeledItemAvatar<TItem, TRelated>({
 	classes = '',
 	avatarClasses = '',
 	title,
-	avatarBadge,
+	avatarTopStartBadge,
+	avatarTopEndBadge,
 	ddProps,
 }: {
 	imgSrc: string
@@ -115,7 +123,8 @@ export function LabeledItemAvatar<TItem, TRelated>({
 	title: string
 	classes?: string
 	avatarClasses?: string
-	avatarBadge?: string
+	avatarTopStartBadge?: string
+	avatarTopEndBadge?: string
 	ddProps?: DDProps<TItem, TRelated>
 }): JSX.Element {
 	const elRef = useRef<HTMLDivElement>(null)
@@ -132,7 +141,8 @@ export function LabeledItemAvatar<TItem, TRelated>({
 			<ItemAvatar
 				classes={`small-avatar align-middle ${avatarClasses}`}
 				src={imgSrc}
-				badge={avatarBadge}
+				badgeTopStart={avatarTopStartBadge}
+				badgeTopEnd={avatarTopEndBadge}
 			/>
 			<ItemLabelText
 				rarity={rarity}

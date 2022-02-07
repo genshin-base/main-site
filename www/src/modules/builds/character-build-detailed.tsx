@@ -25,6 +25,7 @@ import {
 	genSimpleList,
 	getRoleData,
 	ItemsJoinerWrap,
+	ItemsListGroupWrap,
 	makeRoleTitle,
 	notesToJSX,
 	ToggleCharFav,
@@ -46,41 +47,44 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		if (!isLoaded(build)) return []
 		const role = getRoleData(build, selectedRoleTab.code)
 		if (!role) return []
-		return role.weapons.advices.map((advice, i) => (
-			<li key={i} className="pt-1">
-				{advice.similar.map((item, i) => {
-					const weapon = build.weapons.find(x => x.code === item.code)
-					if (!weapon) return null
-					const isInList = advice.similar.length > 1
-					const isLastInList = i >= advice.similar.length - 1
-					return (
-						<>
-							<LabeledItemAvatar
-								imgSrc={getWeaponIconSrc(weapon.code)}
-								title={
-									weapon.name +
-									(item.refine === null ? '' : ` [${item.refine}]`) +
-									(item.stacks === null
-										? ''
-										: ` (${item.stacks} ${pluralizeEN(item.stacks, 'stack', 'stacks')})`)
-								}
-								rarity={weapon.rarity}
-								avatarClasses="with-padding"
-								classes={`small ${!isInList || isLastInList ? 'mb-1' : ''}`}
-								ddProps={{
-									DdComponent: WeaponDetailDd,
-									ddItems: [weapon],
-									related: build.maps,
-								}}
-							/>
-							{genNotes(item)}
-							{genSeeCharNotes(item)}
-							{isInList && !isLastInList && <ItemsJoinerWrap>or</ItemsJoinerWrap>}
-						</>
-					)
-				})}
-			</li>
-		))
+		return role.weapons.advices.map((advice, i) => {
+			const isInList = advice.similar.length > 1
+			const map = advice.similar.map((item, i) => {
+				const weapon = build.weapons.find(x => x.code === item.code)
+				if (!weapon) return null
+				const isLastInList = i >= advice.similar.length - 1
+				return (
+					<>
+						<LabeledItemAvatar
+							imgSrc={getWeaponIconSrc(weapon.code)}
+							title={
+								weapon.name +
+								(item.refine === null ? '' : ` [${item.refine}]`) +
+								(item.stacks === null
+									? ''
+									: ` (${item.stacks} ${pluralizeEN(item.stacks, 'stack', 'stacks')})`)
+							}
+							rarity={weapon.rarity}
+							avatarClasses="with-padding"
+							classes={`small ${!isInList || isLastInList ? 'mb-1' : ''}`}
+							ddProps={{
+								DdComponent: WeaponDetailDd,
+								ddItems: [weapon],
+								related: build.maps,
+							}}
+						/>
+						{genNotes(item)}
+						{genSeeCharNotes(item)}
+						{isInList && !isLastInList && <ItemsJoinerWrap>or</ItemsJoinerWrap>}
+					</>
+				)
+			})
+			return (
+				<li key={i} className="pt-1">
+					{isInList ? <ItemsListGroupWrap>{map}</ItemsListGroupWrap> : map}
+				</li>
+			)
+		})
 	}, [build, selectedRoleTab])
 
 	const artifactsListBlock = useMemo(() => {
@@ -160,7 +164,7 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		if (!isLoaded(build)) return null
 		const materials = getAllRelated(build.maps.items, build.character.materialCodes)
 		return (
-			<div className="w-100 d-flex justify-content-between">
+			<div className="w-100 d-flex flex-wrap justify-content-between">
 				{materials.map(m => (
 					<ItemAvatar
 						classes="mb-2 mx-1 small-avatar with-padding"
