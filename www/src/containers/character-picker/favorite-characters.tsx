@@ -1,7 +1,6 @@
 import { useEffect, useMemo } from 'preact/hooks'
 
 import { charactersShortList } from '#src/api/generated'
-import { SimpleSelect } from '#src/components/select'
 import { MAX_SMTHS_TO_STORE } from '#src/modules/builds/common'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { useLocalStorage } from '#src/utils/hooks'

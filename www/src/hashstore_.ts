@@ -1,4 +1,4 @@
-import { charactersShortList } from '#src/api/generated'
+import { charactersShortList } from './api/generated'
 
 export function makeCharacterBuildHash(characterCode: string): string {
 	return '#~' + characterCode

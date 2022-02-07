@@ -1,14 +1,12 @@
 import { useMemo, useState } from 'preact/hooks'
 
+import { GI_ElementCode, GI_WeaponTypeCode } from '#lib/genshin'
 import { charactersShortList } from '#src/api/generated'
 import { ItemAvatar } from '#src/containers/item-cards/item-avatars'
-import { makeCharacterBuildHash } from '#src/hashstore'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { elements } from '#src/utils/elements'
 import { weaponTypes } from '#src/utils/weapons'
 
-import type { GI_ElementCode } from '#lib/genshin'
-import type { GI_WeaponTypeCode } from '#lib/genshin'
 export function CharacterPickerMobile() {
 	const [selectedElementCode, setSelectedElementCode] = useState<null | GI_ElementCode>(null)
 	const selectElement = el => setSelectedElementCode(selectedElementCode === el.code ? null : el.code)
@@ -43,7 +41,7 @@ export function CharacterPickerMobile() {
 					<ItemAvatar
 						src={getCharacterAvatarSrc(x.code)}
 						// rarity={x.rarity}
-						hash={makeCharacterBuildHash(x.code)}
+						hash={'/builds/' + x.code}
 						classes={`m-1 border ${x.rarity === 5 ? 'border-warning' : 'border-light'}`}
 					/>
 				))}

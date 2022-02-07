@@ -1,3 +1,5 @@
+import { useCallback, useMemo } from 'preact/hooks'
+
 import {
 	ART_GROUP_18_ATK_CODE,
 	ART_GROUP_18_ATK_DETAIL,
@@ -18,7 +20,6 @@ import { LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
 import { useHover, useLocalStorage } from '#src/utils/hooks'
 import { HEART, HEART_EMPTY, STAR } from '#src/utils/typography'
-import { useCallback, useMemo, useRef } from 'preact/hooks'
 
 export const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole> = {
 	title: '…',
