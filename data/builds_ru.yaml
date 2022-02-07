@@ -721,7 +721,7 @@
         notes:
           - p:
               b: Не рекомендовано использовать Сян Лин как физ. ДПС, поскольку Сян Лин восхитительна
-                в роли Off-field Пиро ДПС. Физ Сян Лин хороша только для ранней игры.
+                в роли карманного Пиро ДПСа. Физ Сян Лин хороша только для ранней игры.
           - p:
               - b: "О выборе оружия:"
               - "\n"
@@ -2024,7 +2024,7 @@
               - " Песнь странника, "
               - b: "[R5]"
               - " Истории Додоко лучше. "
-              - b: Note that Беннет бафф / Эпос о драконоборцах's бафф + Церемония древней
+              - b: Обратите внимание, что Беннет бафф / Эпос о драконоборцах's бафф + Церемония древней
                   знати (4) бафф may push Песнь странника и Солнечная жемчужина above Истории
                   Додоко, even at low ранг пробуждения.
           - p:
@@ -2035,7 +2035,7 @@
                 on the 4-piece effect, however она can instead "
               - b: maintain the 4-piece урон бафф over a longer длительность, making this комплект a good
                   alternative to the other options.
-              - " Note that this комплект loses out on some value at higher
+              - " Обратите внимание, что this комплект loses out on some value at higher
                 constellations, as она can't get её "
               - b: "[C4]"
               - " и "
@@ -2507,7 +2507,7 @@
                   Об основных характеристиках Choice:
               - If Дилюк is run alongside Син Цю где he can trigger vaporize
                 very often, you can run Мастерство стихий часы as an alternative to Сила атаки часы.
-                Мастерство стихий boosts Дилюк's reaction damage by a lot after all. Note that
+                Мастерство стихий boosts Дилюк's reaction damage by a lot after all. Обратите внимание, что
                 когда Дилюк's Пиро imbued basic attack is active, he can trigger
                 Пар every 2 basic attacks due to internal время отката.
     credits: null
@@ -2686,7 +2686,7 @@
               - "-"
               - b: "[R3]"
               - " Песнь странника/Солнечная жемчужина, Истории Додоко лучше. "
-              - b: Note that Беннет бафф / Эпос о драконоборцах's бафф + Noblesse
+              - b: Обратите внимание, что Беннет бафф / Эпос о драконоборцах's бафф + Noblesse
                   Oblige (4) бафф may push Песнь странника и Солнечная жемчужина above Dodoco
                   Tales, even at low ранг пробуждения.
           - p:
@@ -2702,7 +2702,7 @@
               - "\n"
               - b: "Горящая алая ведьма (4): "
               - >
-                Этот комплект is лучший used on a Пар Кли, но do note that due
+                Этот комплект is лучший used on a Пар Кли, но do обратите внимание, что due
                 to Кли's fast Пиро наложение from all of её kits, она may
                 not be able to vape most of её обычные / Заряженные атаки. 
               - b: "Странствующий ансамбль (4): "
@@ -3114,7 +3114,7 @@
               - b: "Прототип: Полумесяц: "
               - >
                 At higher ранг пробуждения, this оружие can beat out Хамаюми, The
-                Viridescent Hunt, и Черногорский боевой лук. Do note that you want
+                Viridescent Hunt, и Черногорский боевой лук. Do обратите внимание, что you want
                 to proc the оружие passive by shooting on враг's weakspot for
                 this оружие to be good.
               - b: "Рогатка: "
@@ -3364,7 +3364,7 @@
           - p:
               - b: "[C1] "
               - is recommended to even start Фишль's ДПС build, с Oz still
-                contributing to Physical ДПС even когда he's off-field.
+                contributing to Physical ДПС even когда he's не находится на поле боя.
           - p: There is an animation cancelling technique с Фишль ДПС. After 3 или 5
               basic attacks, shoot an Aim Shot to reset your attack combo. The
               faster you can do this, the better it is. Only use this for
@@ -3847,12 +3847,12 @@
               - "\n"
               - b: "Усмиряющий гром (4):"
               - >2
-                 Этот комплект seeks to maximise your Взрыв стихии damage in an Заряжен или mono Электро comps, take note that the комплект could be rendered useless когда против враги с non-Электро элементы imbued.
+                 Этот комплект seeks to maximise your Взрыв стихии damage in an Заряжен или mono Электро comps, take обратите внимание, что the комплект could be rendered useless когда против враги с non-Электро элементы imbued.
               - b: "Церемония древней знати (4): "
               - >
                 Этот комплект could be considered if your Бэй Доу can get её
                 Взрыв стихии off время отката и the отряд doesn't have a
-                Церемония древней знати (4) user yet, do note that sometimes Бэй Доу
+                Церемония древней знати (4) user yet, do обратите внимание, что sometimes Бэй Доу
                 doesn't benefit from the Сила атаки бафф from the 4 piece комплект if она's
                 the комплект holder, so Бэй Доу as a Церемония древней знати (4) holder isn't
                 really recommended.
@@ -5483,7 +5483,7 @@
               - Этот комплект acts as a low investment support oriented комплект.
               - b: " "
               - Райдэн is an excellent ToTM holder since её Элементальный навык has
-                100% uptime и procs very easily. Do note that if your Райдэн
+                100% uptime и procs very easily. Do обратите внимание, что if your Райдэн
                 is equipping this комплект, then она will sacrifice её personal
                 damage.
           - p:
@@ -5742,7 +5742,7 @@
               - "\n"
               - b: "Изгнанник (2) Учёный (2): "
               - "Этот комплект is a cheap beginner option to maintain burst uptime
-                well since it gives 40% Восст. энергии. Note that it is "
+                well since it gives 40% Восст. энергии. Обратите внимание, что it is "
               - b: not recommended to stay on this комплект as Син Цю contributes alot of damage in
                   his отряды.
           - p:
@@ -5906,7 +5906,7 @@
               will imbue you с a Гидро status, that means it can be used for
               status-cleansing (Пиро in specific, while other элементы may take
               more pulses).
-          - p: Take note that Гидро reacting с Крио status will freeze you in place, её
+          - p: Take обратите внимание, что Гидро reacting с Крио status will freeze you in place, её
               skill should be used in consideration of the environment
         notes:
           - p:
@@ -6044,7 +6044,7 @@
                  Acts as a place holder комплект for Возлюбленная юная дева if you want pure healing и have not been able to gather Возлюбленная юная дева (4) yet.
               - b: "Церемония древней знати (4): "
               - Usable option if you want Барбара to have more utility, но do
-                note that Барбара might have bad uptime on this комплект.
+                обратите внимание, что Барбара might have bad uptime on this комплект.
     credits: null
   - code: tartaglia
     elementCode: hydro
@@ -6293,7 +6293,7 @@
                 отряды. If Тарталья is being used as a "
               - b: "Nuke Support only for his Vaporised Взрыв стихии damage, R5 Бесструнный will rank
                   just below Громовой пульс. "
-              - Note that the stringless elemental skill passive does not affect
+              - Обратите внимание, что the stringless elemental skill passive does not affect
                 Тарталья's melee stance auto attacks.
           - p:
               - b: |-
@@ -6453,7 +6453,7 @@
         notes:
           - "Этот build is лучший utilised at "
           - b: "[C2], "
-          - "но can work without it. Do note that several 4 stars will out-dps
+          - "но can work without it. Do обратите внимание, что several 4 stars will out-dps
             Мона, as "
           - b: Мона лучше off as a Sub-ДПС/ Support.
       - code: nuke
@@ -6718,7 +6718,7 @@
               - b: provide Omen debuff
               - " from её burst as "
               - b: it is extendable via Заморозка mechanics.
-              - " Note that you must "
+              - " Обратите внимание, что you must "
               - b: "apply Крио before casting Мона's Взрыв стихии "
               - "for the extension to happen. Omen Заморозка extension can be done
                 by "
@@ -7492,8 +7492,8 @@
               - b: |-
                   О комплектах артефактов:
                   Церемония древней знати (4):
-              - " Чун Юнь один из лучших носителей Церемонии since he has low
-                энергия requirements для его Взрыва стихии."
+              - " Чун Юнь один из лучших носителей Церемонии, так как у него низкая
+                потребность в энергии для его Взрыва стихии."
           - p:
               - b: |
                   О приоритетах талантов: 
@@ -8785,7 +8785,7 @@
               - b: "[C1]."
               - >-2
                  Восст. энергии will greatly benefit Ци Ци, while её Взрыв стихии should be kept as a last resort.
-                Ци Ци's Взрыв стихии allows other персонажи to maximize ДПС field time while offering healing from being off-field. At Ascension 4, её обычная атака applies the healing talisman onto an враг с a время отката of 30 сек..
+                Ци Ци's Взрыв стихии allows other персонажи to maximize ДПС field time while offering healing с кармана. At Ascension 4, её обычная атака applies the healing talisman onto an враг с a время отката of 30 сек..
           - p:
               - b: "О выборе оружия и артефактов:"
               - "\n"
@@ -8798,7 +8798,7 @@
                 that your Ци Ци's heals are often more чем достаточно, you may
                 consider switching её to this artifact комплект. "
               - b: >-
-                  Do note that other персонажи might utilize Церемониальный меч
+                  Do обратите внимание, что other персонажи might utilize Церемониальный меч
                   more чем Ци Ци, such as Син Цю, Кадзуха, и т.д.
 
                   Ocean Hued Clam (4):
@@ -9960,7 +9960,7 @@
               - " which is quite hard to do considering the Bomblets are
                 scattered all over the place. One thing to note regarding Элой's
                 coil stacks is that "
-              - b: она can still get coil stacks even когда она's off-field.
+              - b: она can still get coil stacks even когда она's в кармане.
           - p:
               - Элой is very niche as она only performs well in certain comps
                 и even then, она's still completely replaceable by other
@@ -10161,7 +10161,7 @@
               - " Этот additional flat damage bonus "
               - b: only works on Крио attacks,
               - " so персонажи who doesn't deal Крио attacks doesn't benefit
-                from Шэнь Хэ's Элементальный навык, do note that "
+                from Шэнь Хэ's Элементальный навык, do обратите внимание, что "
               - b: Крио infusion from Анемо персонажи does act as a Крио attack, so it benefits
                   from Шэнь Хэ's Элементальный навык.
               - " Another thing to note is that "
@@ -10181,7 +10181,7 @@
                  Этот оружие's passive can't be stacked off-field, но it's still an Сила атаки stat stick which provides Шэнь Хэ с a lot of Сила атаки.
               - b: "Копьё Фавония: "
               - With this оружие, it лучше to have some Шанс крит. попадания on Шэнь Хэ
-                for the оружие passive to proc. (Do note that Крио Resonance
+                for the оружие passive to proc. (Do обратите внимание, что Крио Resonance
                 provides 15% Шанс крит. попадания on Крио-imbued враги, so the need for
                 Шанс крит. попадания on Шэнь Хэ is lowered)
           - p:
@@ -10319,7 +10319,7 @@
               - b: |
                   О выборе оружия: 
               - >
-                It's важно to note that these weapons were ranked based on
+                It's важно to обратите внимание, что these weapons were ranked based on
                 how much Мастерство стихий they offered you. However, this doesn't take into
                 account how much each catalyst benefits your entire отряд's ДПС.
               - b: "Эпос о драконоборцах: "
@@ -10461,7 +10461,7 @@
         notes:
           - p: Саю does more damage с Мастерство стихий builds и heals more с Сила атаки hybrid builds,
               Healing бонус hat can be used for better heals while maintaining
-              respectable damage. Note that Саю wants a large количество of энергия
+              respectable damage. Обратите внимание, что Саю wants a large количество of энергия
               recharge когда used as the only anemo slot on the отряд (200%ish).
           - p:
               - b: "О выборе оружия:"
@@ -10996,7 +10996,7 @@
           Dendro
         notes:
           - p: Джинн's Элементальный навык can deal fall damage based off враг's max ХП% и
-              fall velocity if you aim it upwards. Do note that some 4 stars
+              fall velocity if you aim it upwards. Do обратите внимание, что some 4 stars
               outdps Джинн, Джинн лучше off as a Support.
           - p:
               - b: |-
@@ -12535,7 +12535,7 @@
                 Casting Взрыв стихии regenerates a total of 6 Energy for each
                 of your отряд участник. Этот комплект reduces your Energy Requirements
                 by a bit for all of your отряд members, which can be quite
-                beneficial. Do note that this is a 4 star комплект so you're
+                beneficial. Do обратите внимание, что this is a 4 star комплект so you're
                 potentially missing out on 5 star stat scaling, which is a 34%
                 difference in главстат value и 25% difference in individual
                 допстат value.
@@ -12667,38 +12667,36 @@
         tips: []
         notes:
           - p:
-              - "Юнь Цзинь is a Support персонаж for обычная атака focused
-                персонажи who can deal off-field damage via её Elemental
-                Взрыв стихии. Юнь Цзинь's "
-              - b: Взрыв стихии grants nearby отряд members 30 stacks of additional flat
-                  damage bonus on Normal Attacks which scales с Юнь Цзинь's
-                  current Защита.
-              - " Этот means that external Защита buffs like from Горо's Elemental
-                Элементальный навык и/или Взрыв стихии doesn't provide much to Юнь Цзинь since it only
-                buffs active персонажи и not off-field ones."
+              - "Юнь Цзинь - это героиня поддержки для авто-атакеров, 
+                 которая наносит урон своим
+                Взрывом стихии. Взрыв стихии"
+              - b: Юнь Цзинь дает ближайшим членам отряда 30 зарядов
+                  бонусного урона обычных атак, который зависит от её текущей защиты.
+              - " Это значит, что внешние бафы Защиты, такие как
+                Элементальный навык и/или Взрыв стихии Горо не дают много Юнь Цзинь, из-за того, что 
+                бафают только активного персонажа и не бафают карманных."
           - p:
               - b: "О выборе оружия:"
               - "\n"
               - b: "Копьё Фавония: "
               - >
-                With this оружие, try to aim for some Шанс крит. попадания статы to trigger
-                the оружие passive reliably.
+                С этим оружием стоит раздобыть немного Шанса крит. попадания, чтобы активировать
+                пассивную способность копья.
               - b: "Крест-копьё Китаин:"
-              - " Although the Мастерство стихий главстат isn't useful for Юнь Цзинь, the "
-              - b: passive decreases её Восст. энергии requirements
-              - " by alot, especially at higher ранг пробуждения. "
-              - b: "It can reduce её Восст. энергии% reqs from around ~20% at R1 to ~70% at R5. "
-              - Note that
-              - b: " она must cast Взрыв стихии first before Элементальный навык, as the passive drains 3
-                  энергия initially когда Элементальный навык is cast. "
-              - If you only care about the Восст. энергии, this оружие can be
-                left at level 1 while still getting full effect from the
-                passive.
+              - " Хоть главстат Мастерства стихий и бесполезен для Юнь Цзинь, "
+              - b: его пассивка дает много Восст. энергии,
+              - " особенно на более высоком ранге пробуждения. "
+              - b: "Это может снизить её потребность Восст. энергии% примерно с ~20% на Р1 до ~70% на Р5. "
+              - Обратите внимание, что
+              - b: " она должна использовать Взрыв стихии перед Элементальным навыком, так как пассивка забирает 3 единицы
+                  энергии при использовании Элементального навыка. "
+              - Если вас волнует только Восст. энергии, это оружие можно
+                оставить на 1 уровне, при этом все еще получая полный эффект пассивки." 
           - p:
               - b: "О приоритетах в главстатах и допстатах при выборе артефактов:"
               - >-
                 
-                Шанс крит. попадания should only be considered когда Юнь Цзинь is equpping Копьё Фавония to reliably proc the passive.
+                Шанс крит. попадания стоит рассматривать только когда Юнь Цзинь экипирована Копьём Фавония, для надежного срабатывания пассивки.
     credits: null
   - code: geo-traveler
     elementCode: geo
@@ -13298,7 +13296,7 @@
                 Взрыв стихии is a ДПС loss due to the cast time, which is why
                 you'd only want to cast Взрыв стихии for the Crowd Control it
                 offers, и not for damage.
-          - p: Note that if paired с Син Цю и/или Бэй Доу, the damage reduction from
+          - p: Обратите внимание, что if paired с Син Цю и/или Бэй Доу, the damage reduction from
               orbitals from Син Цю's Элементальный навык и Взрыв стихии и/или
               Бэй Доу's Взрыв стихии can be utilized on Чжун Ли's щит,
               making it basically unbreakable.
@@ -13307,7 +13305,7 @@
                   О выборе оружия:
                   Копьё Фавония: 
               - Use this оружие over Чёрная кисть if you value the отряд энергия
-                (Note that you need to build some количество of Шанс крит. попадания if you are
+                (Обратите внимание, что you need to build some количество of Шанс крит. попадания if you are
                 running Копьё Фавония to trigger the passive).
       - code: burst / nuke
         isRecommended: true
