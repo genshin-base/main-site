@@ -1,8 +1,8 @@
+import icon_circlet from '#src/media/circlet.png'
 import icon_flower from '#src/media/flower.png'
+import icon_goblet from '#src/media/goblet.png'
 import icon_plume from '#src/media/plume.png'
 import icon_sands from '#src/media/sands.png'
-import icon_goblet from '#src/media/goblet.png'
-import icon_circlet from '#src/media/circlet.png'
 
 import type { GI_ArtifactTypeCode } from '#lib/genshin'
 
@@ -20,5 +20,5 @@ export function getArtifactTypeIconSrc(artifactTypeCode: string): string {
 export function getArtifactIconSrc(artifactCode: string): string {
 	return artifactCode === '18%-atk' || artifactCode === '20%-er'
 		? getArtifactTypeIconSrc('flower')
-		: process.env.ASSET_PATH + `media/artifacts/${artifactCode}.png`
+		: BUNDLE_ENV.ASSET_PATH + `media/artifacts/${artifactCode}.png`
 }

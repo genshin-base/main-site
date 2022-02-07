@@ -6,7 +6,7 @@
 	"main": "fetch.js",
 	"scripts": {
 		"dev": "webpack serve --mode=development --config=www/webpack.config.js",
-		"build": "webpack --mode=production  --config=www/webpack.config.js",
+		"build": "webpack --mode=production --config=www/webpack.config.js",
 		"test": "mocha './**/*.test.js' --parallel"
 	},
 	"author": "",

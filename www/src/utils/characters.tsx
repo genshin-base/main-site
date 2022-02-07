@@ -12,13 +12,13 @@ function unprefixTraveler(code: string) {
 }
 
 export function getCharacterAvatarSrc(code: string): string {
-	return process.env.ASSET_PATH + `media/characters/avatars/${unprefixTraveler(code)}.png`
+	return BUNDLE_ENV.ASSET_PATH + `media/characters/avatars/${unprefixTraveler(code)}.png`
 }
 
 export function getCharacterPortraitSrc(code: string): string {
-	return process.env.ASSET_PATH + `media/characters/portraits/${unprefixTraveler(code)}.png`
+	return BUNDLE_ENV.ASSET_PATH + `media/characters/portraits/${unprefixTraveler(code)}.png`
 }
 
 export function getCharacterSilhouetteSrc(code: string): string {
-	return process.env.ASSET_PATH + `media/characters/silhouettes/${unprefixTraveler(code)}.svg`
+	return BUNDLE_ENV.ASSET_PATH + `media/characters/silhouettes/${unprefixTraveler(code)}.svg`
 }

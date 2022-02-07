@@ -1,13 +1,11 @@
 
 import { apiGetJSONFile, mapAllByCode, MapAllByCode } from '#src/api/utils'
 
-const LANG = 'en'
-
 const get = <T>(prefix:string, signal:AbortSignal) =>
-	apiGetJSONFile(`generated/${prefix}.json?v=559ebd27`, signal) as Promise<T>
+	apiGetJSONFile(`generated/${prefix}.json?v=4c9fd690`, signal) as Promise<T>
 
 const getLang = <T>(prefix:string, signal:AbortSignal) =>
-	get<T>(prefix+'-'+LANG, signal)
+	get<T>(prefix+'-'+BUNDLE_ENV.LANG, signal)
 
 import type { CharacterShortInfo } from '#lib/parsing/combine'
 export const charactersShortList: CharacterShortInfo[] =

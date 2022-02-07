@@ -10,5 +10,5 @@
 			"#lib/*": ["../../lib/*"]
 		}
 	},
-	"exclude": ["dist"]
+	"include": ["src"]
 }
