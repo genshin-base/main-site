@@ -5452,8 +5452,8 @@
               - b: (Optimal)
           - p:
               b: "*ОА = обычная атака, ЗА = Заряженная атака"
-          - p: The recommended combo provides more room for error и offers slightly better
-              AoE while the optimal combo provides slightly higher damage
+          - p: The recommended combo предоставляет more room for error и offers slightly better
+              AoE while the optimal combo обеспечивает slightly higher damage
         notes:
           - p:
               - "Райдэн's Взрыв стихии damage depends on её "
@@ -6236,8 +6236,8 @@
           - p:
               b: "*ОА = обычная атака, ЗА = Заряженная атака"
           - p:
-              b: "The Optimal combo provides more damage но consumes more выносливость.
-                Рекомендуется combo provides slightly less damage но is more
+              b: "The Optimal combo обеспечивает больше урона но тратит больше выносливости.
+                Рекомендуется combo обеспечивает slightly less damage но is more
                 выносливость efficient. "
         notes:
           - p:
@@ -7222,7 +7222,7 @@
               - "\n"
               - b: "Церемония древней знати (4): "
               - >
-                Этот комплект provides an atk бафф while also increasing burst damage
+                Этот комплект обеспечивает an atk бафф while also increasing burst damage
                 - this комплект is usually used с healers because you want to use
                 damage sets on other support units such as Син Цю или Бэй Доу.
               - b: "Эмблема рассечённой судьбы (2) Tenacity of the Milellith (2): "
@@ -7462,7 +7462,7 @@
               - " "
               - b: Волчья погибель
               - >2
-                 is ranked higher as it provides more teamwide ДПС и does not come с the need to acquire stacks before engaging in combat.
+                 is ranked higher as it обеспечивает more teamwide ДПС и does not come с the need to acquire stacks before engaging in combat.
               - b: "Redstone Thresher: "
               - Depending on the количество of Сила атаки% buffs you're getting, this
                 оружие can overtake Волчья погибель in personal damage.
@@ -9563,7 +9563,7 @@
               - |2
                  Please visit the Ability Tips for её combo.
               - b: "Бледный огонь (2) Рыцарь крови (2): "
-              - Этот is a non-conditional, consistent artifact комплект that provides
+              - Этот is a non-conditional, consistent artifact комплект that обеспечивает
                 you a constant 50% Physical урон bonus. While that by itself is
                 amazing, Бледный огонь (4) can outperform this комплект because it also
                 has another 18% Сила атаки бафф и is easily maintained through её
@@ -9967,7 +9967,7 @@
                 персонажи.
               - b: " Она can be utilized on a Заморозка отряд "
               - "где она can be a батарейка и nuke at the same time since она
-                provides 5 Крио частицы on её Элементальный навык. "
+                обеспечивает 5 Крио частицы on её Элементальный навык. "
               - b: Она can also be utilized on a Таяние отряд
               - " где you can melt её Взрыв стихии for quite a decent
                 количество of damage."
@@ -9990,18 +9990,18 @@
                 good as a Небесное крыло.
               - b: "Церемониальный лук: "
               - A pretty decent option to make Элой a Крио батарейка as её
-                Элементальный навык provides 5 Крио частицы.
+                Элементальный навык обеспечивает 5 Крио частицы.
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
               - b: "Заблудший в метели (4): "
               - >
                 Этот artifact комплект is лучший used on a Заморозка-focused Элой as it
-                provides a ton of Crit Value.
+                обеспечивает a ton of Crit Value.
               - b: "Странствующий ансамбль (2): "
               - >
                 Этот artifact комплект bonus only benefits a Таяние-focused Элой,
-                Мастерство стихий provides nothing on a Заморозка Элой.
+                Мастерство стихий обеспечивает nothing on a Заморозка Элой.
               - b: "Церемония древней знати (4): "
               - Элой is one of the лучший Noblesse holders since она has low
                 энергия requirements и время отката for её Взрыв стихии.
@@ -10011,7 +10011,7 @@
               - b: "Мастерство стихий "
               - "is only an option if your Элой is played on a "
               - b: Реверсивное Таяние отряд
-              - " as it provides nothing to a Заморозка Элой. "
+              - " as it обеспечивает nothing to a Заморозка Элой. "
     credits: null
   - code: shenhe
     elementCode: cryo
@@ -10152,43 +10152,43 @@
         tips: []
         notes:
           - p:
-              - "Шэнь Хэ is a Support for Крио персонажи, capable of providing
-                damage buffs from её Элементальный навык и dealing damage while
-                providing Крио и Physical resistance shred from её Elemental
-                Взрыв стихии. Её "
-              - b: Элементальный навык gives a few stacks of additional flat damage bonus to all
-                  nearby отряд members (5 stacks on быстрое нажатие и 7 stacks on Hold).
-              - " Этот additional flat damage bonus "
-              - b: only works on Крио attacks,
-              - " so персонажи who doesn't deal Крио attacks doesn't benefit
-                from Шэнь Хэ's Элементальный навык, do обратите внимание, что "
-              - b: Крио infusion from Анемо персонажи does act as a Крио attack, so it benefits
-                  from Шэнь Хэ's Элементальный навык.
-              - " Another thing to note is that "
-              - b: the additional flat damage bonus Шэнь Хэ provides uses Шэнь Хэ's current Сила атаки,
+              - "Шэнь Хэ - это саппорт для Крио персонажей, бафает Крио урон
+                при использовании своего Элементального навыка, наносит урон и
+                снижает Крио и физ. сопротивление при использовании
+                Взрыва стихии. Её "
+              - b: Элементальный навык дает несколько зарядов бонусного урона для
+                  всех окружающих членов отряда (5 зарядов при быстром нажатии и 7 зарядов при долгом).
+              - " Этот бонус урона "
+              - b: работатет только для Крио атак,
+              - " так что персонажи, которые не наносят Крио урон, не получат бонус
+                от Элементального навыка Шэнь Хэ, обратите внимание, что "
+              - b: Крио инфузия от Анемо персонажей считается Крио атакой, следовательно
+                  получает бонус от её Элементального навыка.
+              - " Другой факт, на который стоит обратить внимание, это то, что "
+              - b: the additional flat damage bonus Шэнь Хэ provides uses Шэнь Хэ's текущая Сила атаки,
                   so it doesn't snapshot.
           - p:
               - b: |-
                   О выборе оружия:
                   Усмиритель бед:
               - >2
-                 The passive of this оружие works perfectly с Шэнь Хэ's Элементальный навык because it's dynamic. Этот оружие also has high Базовая атака which makes Сила атаки% допстаты really effective.
+                 Пассивная способность этого оружия идеально работает с Элементальным навыком Шэнь Хэ because it's dynamic. Это оружие так же имеет высокую Базовую атаку, что делает допстаты Силы атаки% действительно эффективными.
               - b: "Сияющая жатва:"
               - >2
-                 Этот оружие provides Восст. энергии и converts Восст. энергии to Сила атаки, which benefits Шэнь Хэ a lot.
+                 Этот оружие обеспечивает Восст. энергии и converts Восст. энергии to Сила атаки, which benefits Шэнь Хэ a lot.
               - b: "Покоритель вихря:"
               - >2
-                 Этот оружие's passive can't be stacked off-field, но it's still an Сила атаки stat stick which provides Шэнь Хэ с a lot of Сила атаки.
+                 Пассивка этого оружия не может быть заряжена из кармана, но оно все еще имеет допстат Силы атаки, который обеспечивает Шэнь Хэ большим количеством Силы атаки.
               - b: "Копьё Фавония: "
-              - With this оружие, it лучше to have some Шанс крит. попадания on Шэнь Хэ
-                for the оружие passive to proc. (Do обратите внимание, что Крио Resonance
-                provides 15% Шанс крит. попадания on Крио-imbued враги, so the need for
-                Шанс крит. попадания on Шэнь Хэ is lowered)
+              - С этим оружием, лучше иметь некоторое количество Шанса крит. попадания у Шэнь Хэ,
+                чтобы пассивка этого оружия прокала (обратите внимание, что Крио резонанс
+                увеличивает на 15% Шанс крит. попадания по замороженным врагам или врагам с Крио эффектом, так что потребность
+                Шанса крит. попадания у Шэнь Хэ не особенно высокая)
           - p:
               - b: |
                   О приоритете основных характеристик:
-              - If you're equipping an Сила атаки% оружие, try to aim for an Energy
-                Recharge часы и vice versa.
+              - При экипировании оружия с Силой атаки%, лучшим выбором станут часы на Восст.
+                энергии и наоборот.
     credits: null
   - code: sucrose
     elementCode: anemo
@@ -10476,7 +10476,7 @@
                   О комплектах артефактов:
                   Изумрудная тень:
               - " The bread и butter artifact комплект for Анемо units, this комплект
-                provides the ability to shred the враг's elemental resistance
+                обеспечивает the ability to shred the враг's elemental resistance
                 while also buffing Саю's swirl damage output."
     credits: null
   - code: anemo-traveler
@@ -11421,7 +11421,7 @@
               - " Elegy of the End yields slightly lower Венти damage compared
                 to an "
               - b: "[R5]"
-              - " Бесструнный (~7% assuming 50% Elegy бафф uptime), it provides a
+              - " Бесструнный (~7% assuming 50% Elegy бафф uptime), it обеспечивает a
                 отряд-wide Сила атаки и Мастерство стихий бафф which can be better in terms of total
                 отряд damage и comfortable Восст. энергии."
     credits:
@@ -11965,7 +11965,7 @@
                 considered.
               - b: "Песнь странника:"
               - >2
-                 A bursty оружие which has a really great passive, however Нин Гуан can only benefit from 2 out of the 3 passives that this оружие provides; Мастерство стихий bonus on Нин Гуан is basically useless.
+                 A bursty оружие which has a really great passive, however Нин Гуан can only benefit from 2 out of the 3 passives that this оружие обеспечивает; Мастерство стихий bonus on Нин Гуан is basically useless.
               - b: "Истории Додоко:"
               - " Being an Сила атаки оружие, it falls off if compared to the other 4
                 star options such as Солнечная жемчужина и Песнь странника с external
@@ -13633,7 +13633,7 @@
         notes:
           - p: Альбедо is a персонаж that can summon a Гео Construct from his Elemental
               Элементальный навык which deals damage on a 2 second interval whenever враги
-              in the field are damaged. His Взрыв стихии provides 125 Мастерство стихий to
+              in the field are damaged. His Взрыв стихии дает 125 Мастерство стихий to
               the отряд, which is good on отряды that rely on amplification
               reactions, such as Пар. It is worth noting that since his
               stat priority is focused on Защита (Элементальный навык scaling), you
@@ -14509,7 +14509,7 @@ weapons:
     passiveStat:
       - "ХП increased by "
       - b: 20/25/30/35/40%.
-      - " Additionally, provides an Сила атаки bonus based on "
+      - " Additionally, обеспечивает an Сила атаки bonus based on "
       - b: 1.2/1.5/1.8/2.1/2.4%
       - " of the wielder's max ХП."
   - code: freedom-sworn
