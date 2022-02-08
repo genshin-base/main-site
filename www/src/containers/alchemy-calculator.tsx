@@ -41,12 +41,18 @@ export function AlchemyCalculator({
 					return (
 						<>
 							{i !== 0 ? (
-								<span className={`input-group-text bg-${rarity - 1} ps-1`}>{'='}</span>
+								<span
+									className={`input-group-text text-dark border-light border-top border-bottom bg-${
+										rarity - 1
+									} ps-1`}
+								>
+									{'='}
+								</span>
 							) : null}
 							<input
 								type="number"
 								min="0"
-								className={`form-control bg-dark text-light text-end pe-1 ${
+								className={`form-control bg-dark text-light text-end border-secondary pe-1 ${
 									!isFirst ? startNotRoundClass : ''
 								} ${endNotRoundClass}`}
 								onInput={onValueChange}
@@ -57,8 +63,8 @@ export function AlchemyCalculator({
 								src={getItemIconSrc(c)}
 								rarity={rarity as GI_RarityCode}
 								classes={`small-avatar with-padding input-group-avatar ${startNotRoundClass} ${
-									!isLast ? endNotRoundClass : endRoundClass
-								} border-top border-bottom border-dark`}
+									!isLast ? endNotRoundClass : endRoundClass + ' border-end'
+								} border-top border-bottom border-light`}
 							/>
 						</>
 					)

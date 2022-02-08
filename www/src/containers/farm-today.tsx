@@ -61,7 +61,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 			{isLoaded(ttData) ? (
 				<>
 					<h6 className="opacity-75 text-capitalize">Talents</h6>
-					<div className="talents-wrap">
+					<div className="talents-wrap pt-1">
 						{ttData.timetable[selectedTab.code].characterAscensions.map(asc => (
 							<>
 								<div className="mb-3 ps-2 ms-1 d-flex align-items-center" key={asc.itemCode}>
@@ -85,12 +85,12 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 											}}
 										/>
 									</div>
-									<div className="d-flex flex-nowrap">
+									<div className="d-flex flex-wrap align-self-center pt-2">
 										{asc.characterCodes.map(c => (
 											<ItemAvatar
 												key={c}
 												src={getCharacterAvatarSrc(c)}
-												classes={`small-avatar my-2 me-2 ${
+												classes={`small-avatar mb-2 me-2 ${
 													~favCharCodes.indexOf(c) ? 'order-1' : 'order-2'
 												}`}
 												badgeTopStart={

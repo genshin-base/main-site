@@ -32,9 +32,9 @@ export function CharacterPickerMobile() {
 	}, [selectedElementCode, selectedWeaponTypeCode])
 
 	const rows = elementGroups.map(({ element, characters }) => (
-		<div className="row" key={element.code}>
+		<div className="row py-2" key={element.code}>
 			<div className="col-2 py-1">
-				<img className="rounded-circle d-block mx-auto opacity-50 muted-icon" src={element.imgSrc} />
+				<img className="rounded-circle d-block mx-auto muted-icon" src={element.imgSrc} />
 			</div>
 			<div className="col py-31">
 				{characters.map(x => (
