@@ -8,7 +8,7 @@ import PurgeCSSPlugin from 'purgecss-webpack-plugin'
 import { fileURLToPath } from 'url'
 import webpack from 'webpack'
 
-import { matchPath, paths } from './src/routes/paths.js'
+import { matchPath, paths, pathToStrings } from './src/routes/paths.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -130,16 +130,34 @@ function makeConfig(env, argv, lang, isMain) {
 			}),
 			// заставляет писать пути к модулям в правильном регистре (даже в ОСях, где это необязательно)
 			!isProd && new CaseSensitivePathsPlugin({}),
-			new HtmlWebpackPlugin({
-				template: SRC + '/index.html',
-				minify: false,
-				filename: `${DIST}/index.${lang}.html`,
-			}),
 			new MiniCssExtractPlugin({ filename: isProd ? '[name].[contenthash:8].css' : '[name].css' }),
 			new PurgeCSSPlugin({
 				paths: glob.sync(`${SRC}/**/*`, { nodir: true }),
 				variables: true,
 			}),
+			new HtmlWebpackPlugin({
+				template: SRC + '/index.html',
+				minify: false,
+				filename: `${DIST}/${lang === 'en' ? '' : lang + '/'}index.html`,
+			}),
+			isProd && {
+				apply(compiler) {
+					compiler.hooks.compilation.tap('CopyIndex', compilation => {
+						HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tapPromise(
+							'CopyIndex',
+							async (data, cb) => {
+								for (const path of Object.values(paths)) {
+									for (const fpath of pathToStrings('', prefixedPath(lang, path))) {
+										const src = new webpack.sources.RawSource(data.html, false)
+										compilation.emitAsset(fpath + '/index.html', src, {})
+									}
+								}
+								return data
+							},
+						)
+					})
+				},
+			},
 		].filter(Boolean),
 	}
 }
@@ -162,9 +180,9 @@ function makeDevServerConfig(isProd) {
 					from: /./,
 					to({ parsedUrl, match, request }) {
 						for (const lang of langsEnLast) {
-							for (const path_ of Object.values(paths)) {
-								const path = lang === 'en' ? path_ : ['/' + lang, ...path_]
-								if (matchPath(path, parsedUrl.pathname)) return `/index.${lang}.html`
+							for (const path of Object.values(paths)) {
+								if (matchPath(prefixedPath(lang, path), parsedUrl.pathname))
+									return (lang === 'en' ? '' : '/' + lang) + `/index.html`
 							}
 						}
 						return parsedUrl.pathname
@@ -173,4 +191,12 @@ function makeDevServerConfig(isProd) {
 			],
 		},
 	}
+}
+
+/**
+ * @param {string} lang
+ * @param {import('./src/routes/router').RoutePath} path
+ */
+function prefixedPath(lang, path) {
+	return lang === 'en' ? path : ['/' + lang, ...path]
 }
