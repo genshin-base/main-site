@@ -7,6 +7,7 @@ import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { FavoriteCharacters } from '#src/containers/character-picker/favorite-characters'
 import { OtherItemCardDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar } from '#src/containers/item-cards/item-avatars'
+import { A } from '#src/routes/router'
 import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import { isLoaded } from '#src/utils/hooks'
 import { getItemIconSrc } from '#src/utils/items'
@@ -47,9 +48,9 @@ function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element
 				{/* //todo href */}
 				{role.artifacts.sets.length > listTimit ? (
 					<li className="pt-1 text-muted">
-						<a className="link-secondary text-muted" href="/builds">
+						<A className="link-secondary text-muted" href="/builds">
 							more on build page
-						</a>
+						</A>
 					</li>
 				) : null}
 			</ol>
@@ -198,6 +199,7 @@ export function BuildsPreviewsWrap({ classes = '' }: { classes?: string }): JSX.
 			<FavoriteCharacters
 				onCharacterSelect={setSelectedCharacterCode}
 				shoudSelectFirst={!selectedCharacterCode}
+				navigateToCharacter={false}
 			/>
 			{selectedCharacterCode ? <BuildPreview characterCode={selectedCharacterCode} /> : <Spinner />}
 		</div>

@@ -1,5 +1,7 @@
 declare namespace JSX {
 	type Element = import('preact').JSX.Element
+	type HTMLAttributes<RefType extends EventTarget = EventTarget> =
+		import('preact').JSX.HTMLAttributes<RefType>
 	type TargetedEvent<
 		Target extends EventTarget = EventTarget,
 		TypedEvent extends Event = Event,

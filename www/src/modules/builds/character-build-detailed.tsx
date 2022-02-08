@@ -7,6 +7,7 @@ import Spinner from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { OtherItemCardDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
+import { A } from '#src/routes/router'
 import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import {
 	getCharacterAvatarSrc,
@@ -21,8 +22,8 @@ import {
 	BuildRoleOrDummy,
 	CIRCLET_GOBLET_SANDS,
 	DUMMY_ROLES,
-	genArtMainStatDetail,
 	genArtifactAdvice,
+	genArtMainStatDetail,
 	genNotes,
 	genSeeCharNotes,
 	genSimpleList,
@@ -266,9 +267,9 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 	return (
 		<div className="character-build-detailed mt-2 mb-3">
 			<div className="d-flex">
-				<a className="btn btn-secondary align-self-center" type="submit" href="/builds">
+				<A className="btn btn-secondary align-self-center" type="submit" href="/builds">
 					<span className="fs-4 lh-1 opacity-75">‹ </span> Back
-				</a>
+				</A>
 				<h5 className="ps-3 pe-1 m-0 align-self-center">
 					{isLoaded(build) ? build.character.name : ''}
 				</h5>

@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from 'preact/hooks'
 
 import { GI_RarityCode } from '#lib/genshin'
+import { A } from '#src/routes/router'
 
 import './item-cards.scss'
 
@@ -20,7 +21,7 @@ export function ItemAvatar<TItem, TRelated>({
 	src,
 	rarity,
 	classes = '',
-	hash,
+	href,
 	onClick,
 	badgeTopStart,
 	badgeTopEnd,
@@ -29,7 +30,7 @@ export function ItemAvatar<TItem, TRelated>({
 	src: string
 	rarity?: GI_RarityCode
 	classes?: string
-	hash?: string
+	href?: string
 	onClick?(): unknown
 	badgeTopStart?: string | null | JSX.Node
 	badgeTopEnd?: string | null | JSX.Node
@@ -51,8 +52,8 @@ export function ItemAvatar<TItem, TRelated>({
 		onClick && onClick()
 	}, [openDd, onClick])
 	return (
-		<a
-			href={hash}
+		<A
+			href={href}
 			className={`item-avatar position-relative rounded-circle d-inline-block ${pointerClass} ${rarityClass} ${classes}`}
 			ref={elRef}
 			onClick={onClickLocal}
@@ -80,7 +81,7 @@ export function ItemAvatar<TItem, TRelated>({
 					title={''}
 				/>
 			)}
-		</a>
+		</A>
 	)
 }
 export function ItemLabelText({

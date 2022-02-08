@@ -8,7 +8,7 @@ export function Builds({ code }: { code?: string }) {
 		<div className="builds container">
 			<h1 className="my-1">Character builds recomendations</h1>
 			{!selectedCharacterCode && <h5 className="mt-2 mb-3 opacity-75">Select character above</h5>}
-			<FavoriteCharacters />
+			<FavoriteCharacters navigateToCharacter={true} />
 			{!selectedCharacterCode ? (
 				<CharacterPicker />
 			) : (
