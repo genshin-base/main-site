@@ -10,12 +10,12 @@ export function FavoriteCharacters({
 	classes = '',
 	onCharacterSelect,
 	shoudSelectFirst,
-	makeCharacterHash,
+	navigateToCharacter,
 }: {
 	classes?: string
 	onCharacterSelect?(characterCode: string): void
 	shoudSelectFirst?: boolean
-	makeCharacterHash?(code: string): string
+	navigateToCharacter: boolean
 }): JSX.Element {
 	const [favCharCodes] = useLocalStorage<string[]>('favoriteCharacterCodes', [])
 	//todo sort characters by release date
@@ -49,11 +49,11 @@ export function FavoriteCharacters({
 					// rarity={charactersShortList.find(x => x.code === code)?.rarity ?? 5}
 					classes="mb-1 me-1 mb-xxl-2 me-xxl-2 small-avatar align-middle"
 					key={code}
-					hash={makeCharacterHash && makeCharacterHash(code)}
+					href={navigateToCharacter ? '/builds/' + code : undefined}
 					onClick={() => onCharacterSelect && onCharacterSelect(code)}
 				/>
 			)),
-		[characterCodes, onCharacterSelect, makeCharacterHash],
+		[characterCodes, onCharacterSelect, navigateToCharacter],
 	)
 	useEffect(() => {
 		shoudSelectFirst && onCharacterSelect && onCharacterSelect(characterCodes[0])

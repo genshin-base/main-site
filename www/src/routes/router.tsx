@@ -7,14 +7,19 @@ export type RoutePath = readonly (string | readonly [name: string, variants: rea
 
 type Routes = [RoutePath, ComponentType][]
 
+type SubRoute<T> = readonly [string, readonly T[]]
+type EmptySubRoute = readonly [string, readonly []]
 type PathProps<T extends RoutePath> = {
-	[K in keyof T as T[K] extends readonly [string, string[]] ? T[K][0] : never]: T[K] extends readonly [
-		string,
-		string[],
-	]
-		? T[K][1][number]
-		: never
+	[K in keyof T as T[K] extends EmptySubRoute
+		? never
+		: T[K] extends SubRoute<unknown>
+		? T[K][0]
+		: never]: T[K] extends SubRoute<infer A> ? A : never
+} & {
+	[K in keyof T as T[K] extends EmptySubRoute ? T[K][0] : never]?: undefined
 }
+
+const URL_LANG_PREFIX = BUNDLE_ENV.LANG === 'en' ? '' : '/ru'
 
 function findRoutedComponent(routes: Routes, url: string): [ComponentType, Record<string, string>] | null {
 	for (const [route, comp] of routes) {
@@ -24,18 +29,25 @@ function findRoutedComponent(routes: Routes, url: string): [ComponentType, Recor
 	return null
 }
 
+function pathSearchHash(url: { pathname: string; search: string; hash: string }) {
+	return url.pathname + url.search + url.hash
+}
+
 function handleAnchorClick(e: MouseEvent, routes: Routes) {
 	if (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || e.button !== 0) return
 
 	let elem = e.target
 	while (elem instanceof Element) {
 		if (elem instanceof HTMLAnchorElement) {
-			if (!elem.target || elem.target === '_self') {
+			if (elem.href && (!elem.target || elem.target === '_self')) {
 				const url = new URL(elem.href)
-				if (findRoutedComponent(routes, url.pathname)) {
-					history.pushState(null, '', url.pathname + url.search + url.hash)
-					e.preventDefault()
-					return true
+				if (url.origin === location.origin) {
+					if (findRoutedComponent(routes, url.pathname)) {
+						if (pathSearchHash(location) !== pathSearchHash(url))
+							history.pushState(null, '', pathSearchHash(url))
+						e.preventDefault()
+						return true
+					}
 				}
 			}
 		}
@@ -68,7 +80,13 @@ export function useRouter(routes: Routes) {
 	return <Comp {...props} />
 }
 
-export const route = <TPath extends RoutePath, TProps extends PathProps<TPath>>(
+export const route = <TPath extends RoutePath>(
 	path: TPath,
-	comp: ComponentType<TProps>,
-): [RoutePath, ComponentType] => [[BUNDLE_ENV.LANG === 'en' ? '' : '/ru', ...path], comp as ComponentType]
+	comp: ComponentType<PathProps<TPath>>,
+): [RoutePath, ComponentType] => [[URL_LANG_PREFIX, ...path], comp as ComponentType]
+
+export function A(props: JSX.HTMLAttributes<HTMLAnchorElement>) {
+	let href = props.href
+	if (href) href = URL_LANG_PREFIX + href
+	return <a {...props} href={href} />
+}

@@ -41,7 +41,7 @@ export function CharacterPickerMobile() {
 					<ItemAvatar
 						src={getCharacterAvatarSrc(x.code)}
 						// rarity={x.rarity}
-						hash={'/builds/' + x.code}
+						href={'/builds/' + x.code}
 						classes={`m-1 border ${x.rarity === 5 ? 'border-warning' : 'border-light'}`}
 					/>
 				))}

@@ -27,7 +27,7 @@ function CharacterPickerDesktop({ weaponTypes }: { weaponTypes: GI_WeaponType[] 
 											key={x.code}
 											src={getCharacterAvatarSrc(x.code)}
 											// rarity={x.rarity}
-											hash={'/builds/' + x.code}
+											href={'/builds/' + x.code}
 											classes={`mb-1 me-1 mb-xxl-2 me-xxl-2 border ${getRarityBorder(
 												x.rarity,
 											)}`}

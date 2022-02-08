@@ -1,5 +1,6 @@
 import { useCallback, useRef, useState } from 'preact/hooks'
 
+import { A } from '#src/routes/router'
 import { useClickAway } from '#src/utils/hooks'
 
 type Props = { isNavExpanded: boolean }
@@ -15,9 +16,9 @@ export function Nav({ isNavExpanded }: Props): JSX.Element {
 		<div className={`collapse navbar-collapse ${isNavExpanded ? 'show' : ''}`}>
 			<ul className="navbar-nav me-auto mb-2 mb-md-0">
 				<li className="nav-item">
-					<a className="nav-link active" href="/builds">
+					<A className="nav-link active" href="/builds">
 						Builds
-					</a>
+					</A>
 				</li>
 				<li className="nav-item">
 					<a className="nav-link active" href="#">

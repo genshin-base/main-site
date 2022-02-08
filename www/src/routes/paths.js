@@ -2,7 +2,7 @@ import { charactersShortList } from '../api/generated.js'
 
 export const paths = /** @type {const} */ ({
 	front: [''],
-	builds: ['/builds'],
+	builds: ['/builds', ['code', []]],
 	buildCharacters: ['/builds/', ['code', charactersShortList.map(x => x.code)]],
 	equipment: ['/equipment'],
 })
@@ -16,7 +16,7 @@ export function matchPath(path, url) {
 	let rem = url
 	const props = /**@type {Record<string, string>}*/ ({})
 	for (const part of path) {
-		let matched = false
+		let matched = true //на случай пустых variants
 		if (typeof part === 'string') {
 			;[rem, matched] = withoutPrefix(rem, part)
 		} else {
