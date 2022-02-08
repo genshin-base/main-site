@@ -36,22 +36,17 @@ function pathSearchHash(url: { pathname: string; search: string; hash: string })
 function handleAnchorClick(e: MouseEvent, routes: Routes) {
 	if (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || e.button !== 0) return
 
-	let elem = e.target
-	while (elem instanceof Element) {
-		if (elem instanceof HTMLAnchorElement) {
-			if (elem.href && (!elem.target || elem.target === '_self')) {
-				const url = new URL(elem.href)
-				if (url.origin === location.origin) {
-					if (findRoutedComponent(routes, url.pathname)) {
-						if (pathSearchHash(location) !== pathSearchHash(url))
-							history.pushState(null, '', pathSearchHash(url))
-						e.preventDefault()
-						return true
-					}
-				}
+	const a = e.target instanceof Element && e.target.closest('a')
+	if (a && a.href && (!a.target || a.target === '_self')) {
+		const url = new URL(a.href)
+		if (url.origin === location.origin) {
+			if (findRoutedComponent(routes, url.pathname)) {
+				if (pathSearchHash(location) !== pathSearchHash(url))
+					history.pushState(null, '', pathSearchHash(url))
+				e.preventDefault()
+				return true
 			}
 		}
-		elem = elem.parentElement
 	}
 }
 
