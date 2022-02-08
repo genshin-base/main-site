@@ -13,19 +13,19 @@ body,
 }
 .bg-5 {
 	background-color: rgb(149, 107, 69);
-	background: linear-gradient(-180deg, rgba(149, 107, 69, 1) 0%, rgba(218, 147, 84, 1) 100%);
+	background: linear-gradient(-180deg, #c69b78 0%, #d1c0ae 100%);
 }
 .bg-4 {
 	background-color: rgb(108, 101, 142);
-	background: linear-gradient(-180deg, rgba(108, 101, 142, 1) 0%, rgba(152, 119, 195, 1) 100%);
+	background: linear-gradient(-180deg, #ac86af 0%, #cdbcb4 100%);
 }
 .bg-3 {
 	background-color: rgb(106, 119, 151);
-	background: linear-gradient(-180deg, rgba(106, 119, 151, 1) 0%, rgba(111, 169, 205, 1) 100%);
+	background: linear-gradient(-180deg, #8c96b9 0%, #cac0b7 100%);
 }
 .bg-2 {
 	background-color: rgb(114, 115, 119);
-	background: linear-gradient(-180deg, rgba(114, 115, 119, 1) 0%, rgba(162, 161, 159, 1) 100%);
+	background: linear-gradient(-180deg, #81a18a 0%, #c8c1b1 100%);
 }
 .bg-dark-on-dark {
 	background-color: var(--bs-body-bg)!important
