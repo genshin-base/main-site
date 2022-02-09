@@ -94,7 +94,6 @@ export function useSelectable<T extends Tab>(tabs: T[], args?: unknown[]): [T, (
 
 	const setTab = useCallback(
 		(tab: T) => {
-			console.log('set', item, argsInner, tabCodes)
 			if (item) {
 				if (item.code !== tab.code) {
 					setTabCodes(tabCodes.filter(x => x !== item).concat({ ...item, code: tab.code }))
