@@ -2672,8 +2672,8 @@
               - b: |-
                   О выборе оружия:
                   Молитва святым ветрам: 
-              - Беннет бафф/ Эпос о драконоборцах's бафф + Noblesse
-                Oblige (4) will push Молитву святым ветрам ahead of Небесный атлас и
+              - Беннет бафф/ Эпос о драконоборцах's бафф + Церемония
+                древней знати (4) will push Молитву святым ветрам ahead of Небесный атлас и
                 Память о пыли
               - b: |-
                   
@@ -2686,8 +2686,8 @@
               - "-"
               - b: "[R3]"
               - " Песнь странника/Солнечная жемчужина, Истории Додоко лучше. "
-              - b: Обратите внимание, что Беннет бафф / Эпос о драконоборцах's бафф + Noblesse
-                  Oblige (4) бафф may push Песнь странника и Солнечная жемчужина above Dodoco
+              - b: Обратите внимание, что Беннет бафф / Эпос о драконоборцах's бафф + Церемония
+                  древней знати (4) бафф may push Песнь странника и Солнечная жемчужина above Dodoco
                   Tales, even at low ранг пробуждения.
           - p:
               - b: "О комплектах артефактов:"
@@ -3577,7 +3577,7 @@
           - p: Взрыв стихии и Элементальный навык both summon Oz, so make sure you're only using one
               at a time. Start с your Элементальный навык, use Взрыв стихии for second Oz rotation
               и alternate. Hopefully, by the time your second/third round of
-              Oz summoning is over, you'll have gained достаточно энергия to repeat
+              Oz summoning is over, you'll have gained достаточно энергия to повторить
               the loop.
           - p:
               - b: |-
@@ -4028,7 +4028,7 @@
               - b: "Optimal Лиза String: "
               - >-
                 
-                ЭН (быстрое нажатие) > ОА x2 [until 3 stacks] > Fully-charged ЭН (Hold) > N2C. Repeat N2C until E is off-время отката, then repeat the string.
+                ЭН (быстрое нажатие) > ОА x2 [until 3 stacks] > Fully-charged ЭН (Hold) > N2C. Повторить N2C until E is off-время отката, then повторить the string.
           - p:
               b: "*N/ОА = Normal attack, C = Charged attack, ЭН = Элементальный навык"
         notes:
@@ -11592,16 +11592,16 @@
                 
                 Атака в падении -> обычная атака -> Заряженная атака -> Атака в падении
           - p:
-              - b: "Best combo for Сяо когда fighting multiple "
+              - b: "Лучшее комбо для Сяо при сражении с несколькими "
               - |-
-                враги:
-                Атака в падении -> обычная атака -> Атака в падении
+                противниками:
+                Атака в падении -> обычная атака -> атака в падении
         notes:
           - p:
-              - "Сяо has issues с Energy regeneration because "
-              - b: he cannot generate any частицы с his Элементальный навык while his Взрыв стихии is
-                  active
-              - ", so it is not suggested to use his Элементальный навык during
+              - " У Сяо есть проблемы с восстановлением энергии из-за того, что "
+              - b: он не может генерировать частицы с помощью Элементального навыка пока активен его 
+                  Взрыв стихии
+              - ", поэтому не рекомендовано использовать его Элементальный навык пока длится
                 Взрыв стихии."
           - p: Start off a fight by casting the skill of your Анемо Battery и then casting
               his skill twice then cast your burst immediately. You will want to
@@ -11613,18 +11613,18 @@
           - p:
               - b: "You'll want to pair Сяо с another Анемо персонаж "
               - (Венти, Сахароза, Джинн или Анемо Путешественница) to help him gain энергия
-                while his Взрыв стихии is on время отката. Сяо's Взрыв стихии
-                ends когда you swap to another персонаж. Although he has two
-                charges of his Элементальный навык, only ONE charge comes back per
+                пока его Взрыв стихии в откате. Взрыв стихии Сяо
+                заканчивается при переключении на другого персонажа. Although у него есть два
+                заряда Элементального навыка, только ОДИН заряд вернется за
                 время отката.
           - p:
               - b: "О выборе оружия:"
               - >2
                  With a proper anemo батарейка (напр. Сахароза), Сяо needs as little as 120-130% Восст. энергии to maintain a high burst uptime. In these scenarios, unless there are no Восст. энергии from допстаты, you should всегда go for a non-Восст. энергии оружие as it will result in more damage.
               - b: "Усмиритель бед: "
-              - Этот оружие has a really high Базовая атака, which means you benefit
-                more from Сила атаки% buffs (напр. Thrilling Tales of the Dragon
-                Slayers) if compared с other weapons.
+              - У этого оружия действительно высокая Базовая атака, что подразумевает получение 
+                большего преимущества от бафов Силы атаки% (напр. Эпос о драконоборцах)
+                if compared с other weapons.
           - p:
               - b: "О комплектах артефактов: "
               - Prioritize Изумрудная тень over the other 2 +18% Сила атаки sets if
@@ -11750,11 +11750,11 @@
           notes: null
           seeCharNotes: false
         tips:
-          - "The element which is absorbed by Кадзуха's elemental burst follows
-            the priority of Пиро > Гидро > Электро > Крио, и can be absorbed
-            from both the active персонаж и враги. "
-          - b: (то есть Standing in Беннет burst will result in Кадзуха's Взрыв стихии infusing Пиро
-              as Беннет applies Пиро to the active персонаж)
+          - "Элемент который поглотит Элементальный взрыв Кадзухи находится в таком приоритете:
+             Пиро > Гидро > Электро > Крио, и способен поглотить как с 
+            активного персонажа так и с врагов. "
+          - b: (то есть нахождение в поле, созданном Взрывом стихии Беннета, наделит Взрыв стихии Кадзухи Пиро инфузией
+              так как Беннет накладывает эффект Пиро на активного персонажа)
         notes:
           - p: Кадзуха's 4th Ascension Passive encourages players to maximise Elemental
               Mastery in order to maximise his utility.
@@ -11772,8 +11772,8 @@
               - b: " stack as much Мастерство стихий while getting достаточно Восст. энергии (160-180%) for a consistent Взрыв стихии
                   uptime"
               - >
-                . Having Церемониальный меч или a second Анемо персонаж in the
-                отряд will also help reduce the needs for Восст. энергии и prioritize Мастерство стихий
+                . Наличие Церемониального меча или второго Анемо персонажа в
+                отряде также поможет уменьшить потребность в Восст. энергии и prioritize Мастерство стихий
                 допстат more.
               - b: "Стальное жало: "
               - Стальное жало will yield the highest upfront Мастерство стихий и teamwide бафф
@@ -11940,7 +11940,7 @@
             - skill
           notes: null
           seeCharNotes: false
-        tips: Нин Гуан's Элементальный навык has a 6 second internal время отката on generating
+        tips: Элементальный навык Нин Гуан has a 6 second internal время отката on generating
           энергия, so for the sake of maintaining Взрыв стихии uptime, wait 6
           сек. to cast again if you need энергия. It also breaks когда casted
           on top of another Гео Structure, you can intentionally use a structure
@@ -11952,9 +11952,9 @@
           - p:
               - b: "О выборе оружия: (с external Сила атаки buffs assumed)"
               - "\n"
-              - b: "Lost Prayers to the Sacred Winds: "
+              - b: "Молитва святым ветрам: "
               - >
-                A really good оружие с external Сила атаки buffs considered due to
+                Действительно достойное оружие с external Сила атаки buffs considered due to
                 having Шанс крит. попадания главстат. Even с 1 stack of passive, this
                 оружие is highly competitive с the other top choices.
               - b: "Память о пыли: "
@@ -12102,17 +12102,17 @@
             - attack
           notes: null
           seeCharNotes: false
-        tips: Walk through the Jade Screen created from Нин Гуан's Элементальный навык
-          before casting Взрыв стихии to benefit from the Гео урон% bonus
-          provided from её A4 Talent.
+        tips: Пройдите через Нефритовую ширму, созданную Элементальным навыком Нин Гуан
+          до активации Взрыва стихии для получения бонуса Гео урона%,
+          предоставленного её пассивным талантом 4 Фазы возвышения.
         notes:
-          - p: A Взрыв стихии Support Нин Гуан is basically a quickswap ДПС Нин Гуан, you don't
+          - p: Взрыв-саппорт\Ульт-саппорт Нин Гуан is basically a quickswap ДПС Нин Гуан, you don't
               do Normal Attacks & Заряженные атаки as much, so your main source
               of damage comes from your Элементальный навык и Взрыв стихии.
           - p:
               - b: "О выборе оружия: (с external Сила атаки buffs assumed)"
               - "\n"
-              - b: "Lost Prayers to the Sacred Winds:"
+              - b: "Молитва святым ветрам:"
               - >2
                  Falls off a bit if compared to Небесный атлас due to not being able to stack the passive reliably, но it's still a Crit оружие which makes stat building much easier.
               - b: "Память о пыли: "
@@ -12122,9 +12122,9 @@
                 Беннет, Пиро resonance, и т.д, но falls off с it considered.
               - b: "Солнечная жемчужина:"
               - " Due to Солнечная жемчужина's passive being able to бафф quite a huge
-                percentage of a quickswap Нин Гуан's damage (Взрыв стихии
-                Damage), с external Сила атаки buffs it performs similarly to Memory
-                of Dust."
+                percentage of a quickswap Нин Гуан's damage (урон Взрыва стихии),
+                 с external Сила атаки buffs it performs similarly to Память
+                о пыли."
     credits: null
   - code: noelle
     elementCode: geo
@@ -12239,7 +12239,7 @@
           notes: null
           seeCharNotes: false
         tips:
-          - "Optimal attack rotation is "
+          - "Оптимальная последовательность атак: "
           - b: N1>N2>N3>N4>dash/hop,
           - " где N refers to each обычная атака in её 4 hit combo. Этот
             isn't всегда feasible due to cast time и N4 covers a lesser AoE
@@ -12861,9 +12861,9 @@
           notes: null
           seeCharNotes: false
         tips: >-
-          Элементальный навык и Взрыв стихии have equal priorities.
+          Элементальный навык и Взрыв стихии имеют одинаковый приоритет.
 
-          When using your Элементальный навык, try to use the долгое нажатие variant of it over tapping, as it has a slight delay on the быстрое нажатие variant.
+          При использовании Элементального навыка, try to use the долгое нажатие variant of it over tapping, as it has a slight delay on the быстрое нажатие variant.
         notes:
           - p: Этот section is dedicated to utilising the Гео Путешественница's Гео Взрыв стихии
               damage capabilities. Due to how little field time this стиль игры
@@ -13217,7 +13217,7 @@
         notes:
           - |
             Optimal Physical Rotation:
-          - b: обычная атака until Spear Kick -> Dodge/Jump Cancel -> Repeat
+          - b: обычная атака until Spear Kick -> Dodge/Jump Cancel -> повторить
       - code: shield support
         isRecommended: true
         weapons:
