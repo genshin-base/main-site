@@ -1,5 +1,5 @@
 import { RefObject } from 'preact'
-import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'preact/hooks'
 
 import { arrShallowEqual } from '#src/../../lib/utils/collections'
 import { BS_BreakpointCode, BS_getCurrBreakpoint } from '#src/utils/bootstrap'
@@ -178,4 +178,47 @@ export function useHover<T extends Element>(): [RefObject<T>, boolean] {
 		[ref.current],
 	)
 	return [ref, value]
+}
+
+export const useWindowVisibility = () => {
+	const [isVisible, setIsVisible] = useState(document.visibilityState === 'visible') // Focus for first render
+	useEffect(() => {
+		const onVisibilityChange = () => setIsVisible(document.visibilityState === 'visible')
+		const onPageHide = () => setIsVisible(false)
+		const onPageShow = () => setIsVisible(true)
+		document.addEventListener('visibilitychange', onVisibilityChange)
+		window.addEventListener('pagehide', onPageHide)
+		window.addEventListener('pageshow ', onPageShow)
+		return () => {
+			document.removeEventListener('visibilitychange', onVisibilityChange)
+			window.removeEventListener('pagehide', onPageHide)
+			window.removeEventListener('pageshow ', onPageShow)
+		}
+	}, [])
+	return isVisible
+}
+
+export function useInterval(callback: () => void, delay: number | null) {
+	const savedCallback = useRef(callback)
+	// Remember the latest callback if it changes.
+	useLayoutEffect(() => {
+		savedCallback.current = callback
+	}, [callback])
+
+	// Set up the interval.
+	useEffect(() => {
+		// Don't schedule if no delay is specified.
+		// Note: 0 is a valid value for delay.
+		if (!delay && delay !== 0) {
+			return
+		}
+
+		const id = setInterval(() => savedCallback.current(), delay)
+		return () => clearInterval(id)
+	}, [delay])
+}
+
+export function useForceUpdate(): () => void {
+	const setValue = useState(0)[1]
+	return useRef(() => setValue(v => ~v)).current
 }

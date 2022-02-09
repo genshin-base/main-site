@@ -1,6 +1,6 @@
-import { useMemo } from 'preact/hooks'
+import { useMemo, useState } from 'preact/hooks'
 
-import { getRegionTime, GI_ROTATION_WEEKDAY_CODES } from '#lib/genshin'
+import { getRegionTime, GI_ROTATION_WEEKDAY_CODES, GI_ServerRegionCode } from '#lib/genshin'
 import { arrGetAfter } from '#lib/utils/collections'
 import { mustBeDefined } from '#src/../../lib/utils/values'
 import { apiMaterialsTimetable } from '#src/api/endpoints'
@@ -12,30 +12,57 @@ import {
 	SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
 } from '#src/modules/builds/common'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
-import { isLoaded, useFetch, useLocalStorage } from '#src/utils/hooks'
+import {
+	isLoaded,
+	useFetch,
+	useForceUpdate,
+	useInterval,
+	useLocalStorage,
+	useWindowVisibility,
+} from '#src/utils/hooks'
 import { getItemIconSrc } from '#src/utils/items'
-import { HEART } from '#src/utils/typography'
+import { BULLET, HEART } from '#src/utils/typography'
 import { OtherItemCardDetailDd } from './item-cards/dd-cards'
 import { ItemAvatar } from './item-cards/item-avatars'
 
 import './farm-today.scss'
+import { msToHmWords } from '#src/utils/dates'
+import { SK_DEFAULT_SELECTED_REGION_CODE, SK_SELECTED_REGION_CODE } from '#src/utils/local-storage-keys'
 
 export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 	const ttData = useFetch(apiMaterialsTimetable, [])
-	const { weekdayCode } = getRegionTime('europe')
+	const [selectedRegionCode] = useLocalStorage<GI_ServerRegionCode>(
+		SK_SELECTED_REGION_CODE,
+		SK_DEFAULT_SELECTED_REGION_CODE,
+	)
+	const { weekdayCode, resetIn } = getRegionTime(selectedRegionCode)
 	const tomorrowCode = arrGetAfter(GI_ROTATION_WEEKDAY_CODES, weekdayCode)
 	const [favCharCodes] = useLocalStorage<string[]>(SK_FAV_CHAR_CODES, [])
 	const [favTalMaterialCodes] = useLocalStorage<string[]>(SK_FAV_TALENT_MATERIAL_CODES, [])
 	// const [favWeaponDatas] = useLocalStorage<STORAGE_WEAPON_DATA[]>(SK_FAV_WEAPON_DATAS, [])
 	// const favWeapMatCodes = useMemo(() => [...favWeaponDatas.map(wd => wd[1])], [favWeaponDatas])
 	const [favWeapPrimMatCodes] = useLocalStorage<string[]>(SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES, [])
-
+	const isTabFocused = useWindowVisibility()
+	const forceUpdate = useForceUpdate()
+	useInterval(() => {
+		isTabFocused && forceUpdate()
+	}, 30 * 1000)
 	const tabs = useMemo(
 		() => [
-			{ code: weekdayCode, title: 'today' },
+			{
+				code: weekdayCode,
+				title: (
+					<>
+						today{' '}
+						<span className="text-muted">
+							{BULLET} {msToHmWords(resetIn)} until reset
+						</span>
+					</>
+				),
+			},
 			{ code: tomorrowCode, title: 'tomorrow' },
 		],
-		[weekdayCode, tomorrowCode],
+		[weekdayCode, tomorrowCode, resetIn],
 	)
 	const [selectedTab, setSelectedTab] = useSelectable(tabs)
 

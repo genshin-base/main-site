@@ -1,5 +1,6 @@
 import { AlchemyCalculator } from '#src/containers/alchemy-calculator'
 import { FarmToday } from '#src/containers/farm-today'
+import { RegionSwitch } from '#src/containers/region-switch'
 import { BuildsPreviewsWrap } from '#src/modules/builds/build-preview'
 
 function Fieldset({ children, legend, classes = '' }) {
@@ -15,7 +16,10 @@ export function FrontPage() {
 		<div className="dashboard container ">
 			<h1 className="my-1">Dashboard</h1>
 			<div className="row">
-				<Fieldset legend="alchemy calculator">
+				<Fieldset legend="Region switch" classes="col-lg-3 col-12">
+					<RegionSwitch />
+				</Fieldset>
+				<Fieldset legend="alchemy calculator" classes="col-lg-9 col-12">
 					<AlchemyCalculator />
 				</Fieldset>
 			</div>
