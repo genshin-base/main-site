@@ -29,10 +29,13 @@ import { AlchemyCalculator } from '../alchemy-calculator'
 import { ItemAvatar, LabeledItemAvatar } from './item-avatars'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
+
 const LazyTeyvatMap = import('#src/components/teyvat-map')
+
 export function getRarityBorder(r: GI_RarityCode): string {
 	return r === 5 ? 'border-warning' : 'border-light'
 }
+
 function RecommendedFor({ charCodes }: { charCodes: string[] }): JSX.Element {
 	return (
 		<>
@@ -48,6 +51,7 @@ function RecommendedFor({ charCodes }: { charCodes: string[] }): JSX.Element {
 		</>
 	)
 }
+
 //переключалка для мобильного и десктопного вида
 export function CardDescMobileWrap({
 	children,

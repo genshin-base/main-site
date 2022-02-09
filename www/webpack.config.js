@@ -55,8 +55,8 @@ function makeConfig(env, argv, lang, isMain) {
 			splitChunks: {
 				chunks: 'async',
 				cacheGroups: {
-					// отключает дефолтную группу, которая делает для вендоров отдельный чанк
-					default: {},
+					defaultVendors: false, //отключаем дефолтный отдельный чанк для вендоров
+					default: { name: 'async' },
 				},
 			},
 		},

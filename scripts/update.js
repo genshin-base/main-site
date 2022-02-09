@@ -70,6 +70,7 @@ import { applyItemsLocations } from '#lib/parsing/mihoyo/map.js'
 import { checkMihoyoFixesUsage, clearMihoyoFixesUsage } from '#lib/parsing/mihoyo/fixes.js'
 import { applyDomainsRegion } from '#lib/parsing/wiki/domains.js'
 import { applyCharactersReleaseVersion } from '#lib/parsing/wiki/characters.js'
+import { getEnemyCodeFromName } from '#lib/genshin.js'
 
 const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -116,24 +117,6 @@ const fixes = {
 				{ actually: 'released', name: 'Calamity Queller' },
 			],
 		},
-		items: (() => {
-			function addType(/**@type {import('#lib/parsing').ItemType}*/ type) {
-				return (/**@type {import('#lib/parsing').ItemData}*/ item) => {
-					if (item.types.includes(type)) return false
-					item.types.push(type)
-					return true
-				}
-			}
-			return [
-				// некоторые предметы используются для прокачки, но почему-то отсутствуют на
-				// https://genshin.honeyhunterworld.com/db/item/character-ascension-material-local-material/
-				{ code: 'spectral-nucleus', fixFunc: addType('character-material-secondary') },
-				{ code: 'spectral-heart', fixFunc: addType('character-material-secondary') },
-				{ code: 'spectral-husk', fixFunc: addType('character-material-secondary') },
-				{ code: 'dendrobium', fixFunc: addType('character-material-local') },
-				{ code: 'onikabuto', fixFunc: addType('character-material-local') },
-			]
-		})(),
 		travelerLangNames: {
 			anemo: {
 				en: 'Anemo Traveler',
@@ -175,6 +158,51 @@ const fixes = {
 			{ code: 'narukami-island-tenshukaku', location: { mapCode: 'teyvat', x: 3812, y: 5677 } },
 			{ code: 'court-of-flowing-sand', location: { mapCode: 'teyvat', x: 3657, y: 4725 } },
 		],
+		postProcess: {
+			items: (() => {
+				/**
+				 * @param {string} code
+				 * @param {import('#lib/parsing').ItemType} type
+				 */
+				function addItemType(code, type) {
+					return (/**@type {import('#lib/parsing').Code2ItemData}*/ code2item) => {
+						if (!code2item[code] || code2item[code].types.includes(type)) return false
+						code2item[code].types.push(type)
+						return true
+					}
+				}
+				return [
+					// некоторые предметы используются для прокачки, но почему-то отсутствуют на
+					// https://genshin.honeyhunterworld.com/db/item/character-ascension-material-local-material/
+					addItemType('spectral-nucleus', 'character-material-secondary'),
+					addItemType('spectral-heart', 'character-material-secondary'),
+					addItemType('spectral-husk', 'character-material-secondary'),
+					addItemType('dendrobium', 'character-material-local'),
+					addItemType('onikabuto', 'character-material-local'),
+				]
+			})(),
+			enemies: [
+				// Стаи вишапов нет ни в списке врагов, ни в списке данжей
+				(code2enemy, code2img) => {
+					// https://genshin.honeyhunterworld.com/db/item/i_216/?lang=EN
+					const name = {
+						en: 'Bathysmal Vishap Herd',
+						ru: 'Стая вишапов глубин',
+					}
+					// https://genshin-impact.fandom.com/wiki/Coral_Defenders
+					const code = getEnemyCodeFromName(name.en)
+					const artifactSetCodes = ['lucky-dog', 'the-exile', 'berserker', 'prayers-to-springtime', 'gladiators-finale', 'wanderers-troupe'] //prettier-ignore
+					const itemCodes = ['dragonheirs-false-fin', 'shivada-jade-gemstone', 'vajrada-amethyst-gemstone'] //prettier-ignore
+					const img =
+						'https://uploadstatic.mihoyo.com/ys-obc/2021/12/06/75379475/0d7fe8f319459a12e082eb96ab06060e_5630470111967973966.png'
+
+					if (code in code2enemy) return false
+					code2enemy[code] = { code, name, drop: { artifactSetCodes, itemCodes }, locations: [] }
+					code2img.set(code, img)
+					return true
+				},
+			],
+		},
 	},
 	/** @type {import('#lib/parsing/mihoyo/fixes').MihoyoFixes} */
 	mihoyo: {
@@ -434,7 +462,6 @@ async function saveWwwData() {
 
 	replaceEnemiesByGroups(enemies, enemyGroups)
 
-	await fs.rm(WWW_API_FILE, { force: true })
 	await fs.rm(WWW_DYNAMIC_DIR, { recursive: true, force: true })
 	await fs.mkdir(WWW_DYNAMIC_DIR, { recursive: true })
 
@@ -480,7 +507,7 @@ async function saveWwwData() {
 	const hash = md5sum.digest('hex').slice(0, 8)
 	const charactersShortInfo = makeCharacterShortList(builds.characters, characters)
 	await fs.writeFile(
-		WWW_API_FILE + '.tmp',
+		WWW_API_FILE,
 		`
 export const GENERATED_DATA_HASH = ${JSON.stringify(hash)}
 
@@ -488,6 +515,5 @@ export const GENERATED_DATA_HASH = ${JSON.stringify(hash)}
 export const charactersShortList = ${JSON.stringify(charactersShortInfo, null, '\t')}
 `,
 	)
-	await fs.rename(WWW_API_FILE + '.tmp', WWW_API_FILE)
 	progress()
 }
