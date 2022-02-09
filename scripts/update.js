@@ -209,6 +209,7 @@ const fixes = {
 		enemiesOnMap: [
 			{ nameOnMap: 'Fatui Agent', useCode: 'fatui-pyro-agent' },
 			{ nameOnMap: 'Fatui Mirror Maiden', useCode: 'mirror-maiden' },
+			{ nameOnMap: 'Electro Samachurl', useCode: 'bathysmal-vishap' },
 		],
 	},
 }

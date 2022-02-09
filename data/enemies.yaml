@@ -1938,30 +1938,7 @@ electro-samachurl:
   name:
     en: Electro Samachurl
     ru: Электро шамачурл
-  locations:
-    - !loc enkanomiya -1383 541
-    - !loc enkanomiya -1368 540
-    - !loc enkanomiya -1342 628
-    - !loc enkanomiya -1264 663
-    - !loc enkanomiya -1232 715
-    - !loc enkanomiya -1227 701
-    - !loc enkanomiya -592 -372
-    - !loc enkanomiya -515 -360
-    - !loc enkanomiya -508 -382
-    - !loc enkanomiya -471 -223
-    - !loc enkanomiya -363 -415
-    - !loc enkanomiya -357 -412
-    - !loc enkanomiya -349 -410
-    - !loc enkanomiya -172 590
-    - !loc enkanomiya -157 591
-    - !loc enkanomiya -157 599
-    - !loc enkanomiya 30 -581
-    - !loc enkanomiya 367 -172
-    - !loc enkanomiya 383 -164
-    - !loc enkanomiya 400 -156
-    - !loc enkanomiya 484 -238
-    - !loc enkanomiya 489 -236
-    - !loc enkanomiya 500 -235
+  locations: []
   drop:
     itemCodes:
       - damaged-mask
@@ -3360,5 +3337,4 @@ bathysmal-vishap-herd:
       - shivada-jade-gemstone
       - vajrada-amethyst-gemstone
   locations:
-    - !loc enkanomiya -46 -17
     - !loc enkanomiya -46 -17
