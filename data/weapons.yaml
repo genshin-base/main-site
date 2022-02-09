@@ -1,0 +1,1701 @@
+akuoumaru:
+  code: akuoumaru
+  typeCode: claymore
+  name:
+    en: Akuoumaru
+    ru: Акуомару
+  rarity: 4
+  materialCodes:
+    - golden-branch-of-a-distant-sea
+    - concealed-talon
+    - famed-handguard
+  obtainSources:
+    - event-wishes
+alley-hunter:
+  code: alley-hunter
+  typeCode: bow
+  name:
+    en: Alley Hunter
+    ru: Охотник во тьме
+  rarity: 4
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - slime-concentrate
+  obtainSources:
+    - event-wishes
+amenoma-kageuchi:
+  code: amenoma-kageuchi
+  typeCode: sword
+  name:
+    en: Amenoma Kageuchi
+    ru: Амэнома Кагэути
+  rarity: 4
+  materialCodes:
+    - golden-branch-of-a-distant-sea
+    - chaos-oculus
+    - famed-handguard
+  obtainSources:
+    - forging
+amos-bow:
+  code: amos-bow
+  typeCode: bow
+  name:
+    en: Amos' Bow
+    ru: Лук Амоса
+  rarity: 5
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - slime-concentrate
+  obtainSources:
+    - wishes
+apprentices-notes:
+  code: apprentices-notes
+  typeCode: catalyst
+  name:
+    en: Apprentice's Notes
+    ru: Записи ученика
+  rarity: 1
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - ominous-mask
+  obtainSources:
+    - chests
+    - investigation
+    - npc-shop
+aquila-favonia:
+  code: aquila-favonia
+  typeCode: sword
+  name:
+    en: Aquila Favonia
+    ru: Меч Сокола
+  rarity: 5
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - weathered-arrowhead
+  obtainSources:
+    - wishes
+beginners-protector:
+  code: beginners-protector
+  typeCode: polearm
+  name:
+    en: Beginner's Protector
+    ru: Копьё новичка
+  rarity: 1
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - forbidden-curse-scroll
+  obtainSources:
+    - chests
+    - investigation
+    - npc-shop
+black-tassel:
+  code: black-tassel
+  typeCode: polearm
+  name:
+    en: Black Tassel
+    ru: Чёрная кисть
+  rarity: 3
+  materialCodes:
+    - chunk-of-aerosiderite
+    - fossilized-bone-shard
+    - weathered-arrowhead
+  obtainSources:
+    - wishes
+    - quest
+blackcliff-agate:
+  code: blackcliff-agate
+  typeCode: catalyst
+  name:
+    en: Blackcliff Agate
+    ru: Черногорский агат
+  rarity: 4
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - forbidden-curse-scroll
+  obtainSources:
+    - in-game-shop
+blackcliff-longsword:
+  code: blackcliff-longsword
+  typeCode: sword
+  name:
+    en: Blackcliff Longsword
+    ru: Черногорский длинный меч
+  rarity: 4
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - weathered-arrowhead
+  obtainSources:
+    - in-game-shop
+blackcliff-pole:
+  code: blackcliff-pole
+  typeCode: polearm
+  name:
+    en: Blackcliff Pole
+    ru: Черногорская пика
+  rarity: 4
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - lieutenants-insignia
+  obtainSources:
+    - in-game-shop
+blackcliff-slasher:
+  code: blackcliff-slasher
+  typeCode: claymore
+  name:
+    en: Blackcliff Slasher
+    ru: Черногорская бритва
+  rarity: 4
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - lieutenants-insignia
+  obtainSources:
+    - in-game-shop
+blackcliff-warbow:
+  code: blackcliff-warbow
+  typeCode: bow
+  name:
+    en: Blackcliff Warbow
+    ru: Черногорский боевой лук
+  rarity: 4
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - energy-nectar
+  obtainSources:
+    - in-game-shop
+bloodtainted-greatsword:
+  code: bloodtainted-greatsword
+  typeCode: claymore
+  name:
+    en: Bloodtainted Greatsword
+    ru: Меч драконьей крови
+  rarity: 3
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - weathered-arrowhead
+  obtainSources:
+    - wishes
+calamity-queller:
+  code: calamity-queller
+  typeCode: polearm
+  name:
+    en: Calamity Queller
+    ru: Усмиритель бед
+  rarity: 5
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - energy-nectar
+  obtainSources:
+    - event-wishes
+cinnabar-spindle:
+  code: cinnabar-spindle
+  typeCode: sword
+  name:
+    en: Cinnabar Spindle
+    ru: Киноварное веретено
+  rarity: 4
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - chaos-core
+    - ominous-mask
+  obtainSources:
+    - events
+compound-bow:
+  code: compound-bow
+  typeCode: bow
+  name:
+    en: Compound Bow
+    ru: Составной лук
+  rarity: 4
+  materialCodes:
+    - chunk-of-aerosiderite
+    - fossilized-bone-shard
+    - lieutenants-insignia
+  obtainSources:
+    - forging
+cool-steel:
+  code: cool-steel
+  typeCode: sword
+  name:
+    en: Cool Steel
+    ru: Холодное лезвие
+  rarity: 3
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - weathered-arrowhead
+  obtainSources:
+    - wishes
+    - chests
+    - quest
+crescent-pike:
+  code: crescent-pike
+  typeCode: polearm
+  name:
+    en: Crescent Pike
+    ru: Пика полумесяца
+  rarity: 4
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - golden-raven-insignia
+  obtainSources:
+    - forging
+dark-iron-sword:
+  code: dark-iron-sword
+  typeCode: sword
+  name:
+    en: Dark Iron Sword
+    ru: Тёмный железный меч
+  rarity: 3
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - ominous-mask
+  obtainSources:
+    - quest
+deathmatch:
+  code: deathmatch
+  typeCode: polearm
+  name:
+    en: Deathmatch
+    ru: Смертельный бой
+  rarity: 4
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - energy-nectar
+  obtainSources:
+    - battle-pass
+debate-club:
+  code: debate-club
+  typeCode: claymore
+  name:
+    en: Debate Club
+    ru: Дубина переговоров
+  rarity: 3
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - ominous-mask
+  obtainSources:
+    - wishes
+dodoco-tales:
+  code: dodoco-tales
+  typeCode: catalyst
+  name:
+    en: Dodoco Tales
+    ru: Истории Додоко
+  rarity: 4
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - ominous-mask
+  obtainSources:
+    - events
+dragons-bane:
+  code: dragons-bane
+  typeCode: polearm
+  name:
+    en: Dragon's Bane
+    ru: Гроза драконов
+  rarity: 4
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - forbidden-curse-scroll
+  obtainSources:
+    - wishes
+dragonspine-spear:
+  code: dragonspine-spear
+  typeCode: polearm
+  name:
+    en: Dragonspine Spear
+    ru: Копьё Драконьего хребта
+  rarity: 4
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - mist-grass-wick
+    - lieutenants-insignia
+  obtainSources:
+    - forging
+    - quest
+dull-blade:
+  code: dull-blade
+  typeCode: sword
+  name:
+    en: Dull Blade
+    ru: Тупой меч
+  rarity: 1
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - weathered-arrowhead
+  obtainSources:
+    - chests
+    - investigation
+    - npc-shop
+elegy-for-the-end:
+  code: elegy-for-the-end
+  typeCode: bow
+  name:
+    en: Elegy for the End
+    ru: Элегия погибели
+  rarity: 5
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - black-crystal-horn
+    - lieutenants-insignia
+  obtainSources:
+    - event-wishes
+emerald-orb:
+  code: emerald-orb
+  typeCode: catalyst
+  name:
+    en: Emerald Orb
+    ru: Изумрудный шар
+  rarity: 3
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - golden-raven-insignia
+  obtainSources:
+    - wishes
+engulfing-lightning:
+  code: engulfing-lightning
+  typeCode: polearm
+  name:
+    en: Engulfing Lightning
+    ru: Сияющая жатва
+  rarity: 5
+  materialCodes:
+    - mask-of-the-kijin
+    - chaos-oculus
+    - famed-handguard
+  obtainSources:
+    - event-wishes
+everlasting-moonglow:
+  code: everlasting-moonglow
+  typeCode: catalyst
+  name:
+    en: Everlasting Moonglow
+    ru: Вечное лунное сияние
+  rarity: 5
+  materialCodes:
+    - golden-branch-of-a-distant-sea
+    - polarizing-prism
+    - spectral-nucleus
+  obtainSources:
+    - event-wishes
+eye-of-perception:
+  code: eye-of-perception
+  typeCode: catalyst
+  name:
+    en: Eye of Perception
+    ru: Око сознания
+  rarity: 4
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - ominous-mask
+  obtainSources:
+    - wishes
+favonius-codex:
+  code: favonius-codex
+  typeCode: catalyst
+  name:
+    en: Favonius Codex
+    ru: Кодекс Фавония
+  rarity: 4
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - forbidden-curse-scroll
+  obtainSources:
+    - wishes
+favonius-greatsword:
+  code: favonius-greatsword
+  typeCode: claymore
+  name:
+    en: Favonius Greatsword
+    ru: Двуручный меч Фавония
+  rarity: 4
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - lieutenants-insignia
+  obtainSources:
+    - wishes
+favonius-lance:
+  code: favonius-lance
+  typeCode: polearm
+  name:
+    en: Favonius Lance
+    ru: Копьё Фавония
+  rarity: 4
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - slime-concentrate
+  obtainSources:
+    - wishes
+favonius-sword:
+  code: favonius-sword
+  typeCode: sword
+  name:
+    en: Favonius Sword
+    ru: Меч Фавония
+  rarity: 4
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - weathered-arrowhead
+  obtainSources:
+    - wishes
+favonius-warbow:
+  code: favonius-warbow
+  typeCode: bow
+  name:
+    en: Favonius Warbow
+    ru: Боевой лук Фавония
+  rarity: 4
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - energy-nectar
+  obtainSources:
+    - wishes
+    - quest
+ferrous-shadow:
+  code: ferrous-shadow
+  typeCode: claymore
+  name:
+    en: Ferrous Shadow
+    ru: Металлическая тень
+  rarity: 3
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - energy-nectar
+  obtainSources:
+    - wishes
+festering-desire:
+  code: festering-desire
+  typeCode: sword
+  name:
+    en: Festering Desire
+    ru: Осквернённое желание
+  rarity: 4
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - black-crystal-horn
+    - lieutenants-insignia
+  obtainSources:
+    - events
+fillet-blade:
+  code: fillet-blade
+  typeCode: sword
+  name:
+    en: Fillet Blade
+    ru: Филейный нож
+  rarity: 3
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - golden-raven-insignia
+  obtainSources:
+    - chests
+    - quest
+freedom-sworn:
+  code: freedom-sworn
+  typeCode: sword
+  name:
+    en: Freedom-Sworn
+    ru: Клятва свободы
+  rarity: 5
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - forbidden-curse-scroll
+  obtainSources:
+    - event-wishes
+frostbearer:
+  code: frostbearer
+  typeCode: catalyst
+  name:
+    en: Frostbearer
+    ru: Плод вечной мерзлоты
+  rarity: 4
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - energy-nectar
+  obtainSources:
+    - forging
+hakushin-ring:
+  code: hakushin-ring
+  typeCode: catalyst
+  name:
+    en: Hakushin Ring
+    ru: Кольцо Хакусин
+  rarity: 4
+  materialCodes:
+    - golden-branch-of-a-distant-sea
+    - polarizing-prism
+    - forbidden-curse-scroll
+  obtainSources:
+    - forging
+halberd:
+  code: halberd
+  typeCode: polearm
+  name:
+    en: Halberd
+    ru: Алебарда Миллелита
+  rarity: 3
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - energy-nectar
+  obtainSources:
+    - chests
+hamayumi:
+  code: hamayumi
+  typeCode: bow
+  name:
+    en: Hamayumi
+    ru: Хамаюми
+  rarity: 4
+  materialCodes:
+    - narukamis-valor
+    - polarizing-prism
+    - weathered-arrowhead
+  obtainSources:
+    - forging
+harbinger-of-dawn:
+  code: harbinger-of-dawn
+  typeCode: sword
+  name:
+    en: Harbinger of Dawn
+    ru: Предвестник зари
+  rarity: 3
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - slime-concentrate
+  obtainSources:
+    - wishes
+    - quest
+hunters-bow:
+  code: hunters-bow
+  typeCode: bow
+  name:
+    en: Hunter's Bow
+    ru: Лук охотника
+  rarity: 1
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - golden-raven-insignia
+  obtainSources:
+    - chests
+    - investigation
+    - npc-shop
+iron-point:
+  code: iron-point
+  typeCode: polearm
+  name:
+    en: Iron Point
+    ru: Железный наконечник
+  rarity: 2
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - forbidden-curse-scroll
+  obtainSources:
+    - chests
+    - investigation
+    - npc-shop
+iron-sting:
+  code: iron-sting
+  typeCode: sword
+  name:
+    en: Iron Sting
+    ru: Стальное жало
+  rarity: 4
+  materialCodes:
+    - chunk-of-aerosiderite
+    - fossilized-bone-shard
+    - energy-nectar
+  obtainSources:
+    - forging
+katsuragikiri-nagamasa:
+  code: katsuragikiri-nagamasa
+  typeCode: claymore
+  name:
+    en: Katsuragikiri Nagamasa
+    ru: Кацурагикири Нагамаса
+  rarity: 4
+  materialCodes:
+    - narukamis-valor
+    - chaos-oculus
+    - famed-handguard
+  obtainSources:
+    - forging
+kitain-cross-spear:
+  code: kitain-cross-spear
+  typeCode: polearm
+  name:
+    en: Kitain Cross Spear
+    ru: Крест-копьё Китаин
+  rarity: 4
+  materialCodes:
+    - mask-of-the-kijin
+    - chaos-oculus
+    - golden-raven-insignia
+  obtainSources:
+    - forging
+lions-roar:
+  code: lions-roar
+  typeCode: sword
+  name:
+    en: Lion's Roar
+    ru: Драконий рык
+  rarity: 4
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - golden-raven-insignia
+  obtainSources:
+    - wishes
+lithic-blade:
+  code: lithic-blade
+  typeCode: claymore
+  name:
+    en: Lithic Blade
+    ru: Каменный меч
+  rarity: 4
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - weathered-arrowhead
+  obtainSources:
+    - event-wishes
+lithic-spear:
+  code: lithic-spear
+  typeCode: polearm
+  name:
+    en: Lithic Spear
+    ru: Каменное копьё
+  rarity: 4
+  materialCodes:
+    - chunk-of-aerosiderite
+    - fossilized-bone-shard
+    - weathered-arrowhead
+  obtainSources:
+    - event-wishes
+lost-prayer-to-the-sacred-winds:
+  code: lost-prayer-to-the-sacred-winds
+  typeCode: catalyst
+  name:
+    en: Lost Prayer to the Sacred Winds
+    ru: Молитва святым ветрам
+  rarity: 5
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - slime-concentrate
+  obtainSources:
+    - wishes
+luxurious-sea-lord:
+  code: luxurious-sea-lord
+  typeCode: claymore
+  name:
+    en: Luxurious Sea-Lord
+    ru: Благодатный владыка вод
+  rarity: 4
+  materialCodes:
+    - chunk-of-aerosiderite
+    - fossilized-bone-shard
+    - slime-concentrate
+  obtainSources:
+    - events
+magic-guide:
+  code: magic-guide
+  typeCode: catalyst
+  name:
+    en: Magic Guide
+    ru: Руководство по магии
+  rarity: 3
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - slime-concentrate
+  obtainSources:
+    - wishes
+mappa-mare:
+  code: mappa-mare
+  typeCode: catalyst
+  name:
+    en: Mappa Mare
+    ru: Морской атлас
+  rarity: 4
+  materialCodes:
+    - chunk-of-aerosiderite
+    - fossilized-bone-shard
+    - slime-concentrate
+  obtainSources:
+    - forging
+    - events
+memory-of-dust:
+  code: memory-of-dust
+  typeCode: catalyst
+  name:
+    en: Memory of Dust
+    ru: Память о пыли
+  rarity: 5
+  materialCodes:
+    - chunk-of-aerosiderite
+    - fossilized-bone-shard
+    - ominous-mask
+  obtainSources:
+    - event-wishes
+messenger:
+  code: messenger
+  typeCode: bow
+  name:
+    en: Messenger
+    ru: Посыльный
+  rarity: 3
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - golden-raven-insignia
+  obtainSources:
+    - chests
+mistsplitter-reforged:
+  code: mistsplitter-reforged
+  typeCode: sword
+  name:
+    en: Mistsplitter Reforged
+    ru: Рассекающий туман
+  rarity: 5
+  materialCodes:
+    - golden-branch-of-a-distant-sea
+    - chaos-oculus
+    - famed-handguard
+  obtainSources:
+    - wishes
+mitternachts-waltz:
+  code: mitternachts-waltz
+  typeCode: bow
+  name:
+    en: Mitternachts Waltz
+    ru: Вальс Нирваны Ночи
+  rarity: 4
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - golden-raven-insignia
+  obtainSources:
+    - event-wishes
+mouuns-moon:
+  code: mouuns-moon
+  typeCode: bow
+  name:
+    en: Mouun's Moon
+    ru: Луна Моун
+  rarity: 4
+  materialCodes:
+    - narukamis-valor
+    - polarizing-prism
+    - spectral-nucleus
+  obtainSources:
+    - event-wishes
+old-mercs-pal:
+  code: old-mercs-pal
+  typeCode: claymore
+  name:
+    en: Old Merc's Pal
+    ru: Лучший друг наёмника
+  rarity: 2
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - slime-concentrate
+  obtainSources:
+    - chests
+    - investigation
+    - npc-shop
+otherworldly-story:
+  code: otherworldly-story
+  typeCode: catalyst
+  name:
+    en: Otherworldly Story
+    ru: Потусторонняя история
+  rarity: 3
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - ominous-mask
+  obtainSources:
+    - chests
+    - quest
+pocket-grimoire:
+  code: pocket-grimoire
+  typeCode: catalyst
+  name:
+    en: Pocket Grimoire
+    ru: Карманный гримуар
+  rarity: 2
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - ominous-mask
+  obtainSources:
+    - chests
+    - investigation
+    - npc-shop
+polar-star:
+  code: polar-star
+  typeCode: bow
+  name:
+    en: Polar Star
+    ru: Полярная звезда
+  rarity: 5
+  materialCodes:
+    - mask-of-the-kijin
+    - concealed-talon
+    - spectral-nucleus
+  obtainSources:
+    - event-wishes
+predator:
+  code: predator
+  typeCode: bow
+  name:
+    en: Predator
+    ru: Хищник
+  rarity: 4
+  materialCodes:
+    - narukamis-valor
+    - polarizing-prism
+    - weathered-arrowhead
+  obtainSources:
+    - playstation
+primordial-jade-cutter:
+  code: primordial-jade-cutter
+  typeCode: sword
+  name:
+    en: Primordial Jade Cutter
+    ru: Драгоценный омут
+  rarity: 5
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - golden-raven-insignia
+  obtainSources:
+    - event-wishes
+primordial-jade-winged-spear:
+  code: primordial-jade-winged-spear
+  typeCode: polearm
+  name:
+    en: Primordial Jade Winged-Spear
+    ru: Нефритовый коршун
+  rarity: 5
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - lieutenants-insignia
+  obtainSources:
+    - wishes
+prototype-amber:
+  code: prototype-amber
+  typeCode: catalyst
+  name:
+    en: Prototype Amber
+    ru: "Прототип: Янтарь"
+  rarity: 4
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - weathered-arrowhead
+  obtainSources:
+    - forging
+prototype-archaic:
+  code: prototype-archaic
+  typeCode: claymore
+  name:
+    en: Prototype Archaic
+    ru: "Прототип: Архаичный"
+  rarity: 4
+  materialCodes:
+    - chunk-of-aerosiderite
+    - fossilized-bone-shard
+    - ominous-mask
+  obtainSources:
+    - forging
+prototype-crescent:
+  code: prototype-crescent
+  typeCode: bow
+  name:
+    en: Prototype Crescent
+    ru: "Прототип: Полумесяц"
+  rarity: 4
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - golden-raven-insignia
+  obtainSources:
+    - forging
+prototype-rancour:
+  code: prototype-rancour
+  typeCode: sword
+  name:
+    en: Prototype Rancour
+    ru: "Прототип: Злоба"
+  rarity: 4
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - lieutenants-insignia
+  obtainSources:
+    - forging
+    - adventure-rank-10
+prototype-starglitter:
+  code: prototype-starglitter
+  typeCode: polearm
+  name:
+    en: Prototype Starglitter
+    ru: "Прототип: Звёздный блеск"
+  rarity: 4
+  materialCodes:
+    - chunk-of-aerosiderite
+    - fossilized-bone-shard
+    - ominous-mask
+  obtainSources:
+    - forging
+rainslasher:
+  code: rainslasher
+  typeCode: claymore
+  name:
+    en: Rainslasher
+    ru: Дождерез
+  rarity: 4
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - forbidden-curse-scroll
+  obtainSources:
+    - wishes
+raven-bow:
+  code: raven-bow
+  typeCode: bow
+  name:
+    en: Raven Bow
+    ru: Лук ворона
+  rarity: 3
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - weathered-arrowhead
+  obtainSources:
+    - wishes
+recurve-bow:
+  code: recurve-bow
+  typeCode: bow
+  name:
+    en: Recurve Bow
+    ru: Изогнутый лук
+  rarity: 3
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - forbidden-curse-scroll
+  obtainSources:
+    - chests
+    - quest
+redhorn-stonethresher:
+  code: redhorn-stonethresher
+  typeCode: claymore
+  name:
+    en: Redhorn Stonethresher
+    ru: Краснорогий камнеруб
+  rarity: 5
+  materialCodes:
+    - narukamis-valor
+    - concealed-talon
+    - famed-handguard
+  obtainSources:
+    - event-wishes
+royal-bow:
+  code: royal-bow
+  typeCode: bow
+  name:
+    en: Royal Bow
+    ru: Королевский лук
+  rarity: 4
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - forbidden-curse-scroll
+  obtainSources:
+    - in-game-shop
+royal-greatsword:
+  code: royal-greatsword
+  typeCode: claymore
+  name:
+    en: Royal Greatsword
+    ru: Королевский двуручный меч
+  rarity: 4
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - slime-concentrate
+  obtainSources:
+    - in-game-shop
+royal-grimoire:
+  code: royal-grimoire
+  typeCode: catalyst
+  name:
+    en: Royal Grimoire
+    ru: Королевский гримуар
+  rarity: 4
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - lieutenants-insignia
+  obtainSources:
+    - in-game-shop
+royal-longsword:
+  code: royal-longsword
+  typeCode: sword
+  name:
+    en: Royal Longsword
+    ru: Меч аристократов
+  rarity: 4
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - ominous-mask
+  obtainSources:
+    - in-game-shop
+royal-spear:
+  code: royal-spear
+  typeCode: polearm
+  name:
+    en: Royal Spear
+    ru: Королевское копьё
+  rarity: 4
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - lieutenants-insignia
+  obtainSources:
+    - in-game-shop
+rust:
+  code: rust
+  typeCode: bow
+  name:
+    en: Rust
+    ru: Ржавый лук
+  rarity: 4
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - ominous-mask
+  obtainSources:
+    - wishes
+sacrificial-bow:
+  code: sacrificial-bow
+  typeCode: bow
+  name:
+    en: Sacrificial Bow
+    ru: Церемониальный лук
+  rarity: 4
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - slime-concentrate
+  obtainSources:
+    - wishes
+sacrificial-fragments:
+  code: sacrificial-fragments
+  typeCode: catalyst
+  name:
+    en: Sacrificial Fragments
+    ru: Церемониальные мемуары
+  rarity: 4
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - golden-raven-insignia
+  obtainSources:
+    - wishes
+sacrificial-greatsword:
+  code: sacrificial-greatsword
+  typeCode: claymore
+  name:
+    en: Sacrificial Greatsword
+    ru: Церемониальный двуручный меч
+  rarity: 4
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - weathered-arrowhead
+  obtainSources:
+    - wishes
+sacrificial-sword:
+  code: sacrificial-sword
+  typeCode: sword
+  name:
+    en: Sacrificial Sword
+    ru: Церемониальный меч
+  rarity: 4
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - forbidden-curse-scroll
+  obtainSources:
+    - wishes
+seasoned-hunters-bow:
+  code: seasoned-hunters-bow
+  typeCode: bow
+  name:
+    en: Seasoned Hunter's Bow
+    ru: Лук опытного охотника
+  rarity: 2
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - golden-raven-insignia
+  obtainSources:
+    - chests
+    - investigation
+    - npc-shop
+    - quest
+serpent-spine:
+  code: serpent-spine
+  typeCode: claymore
+  name:
+    en: Serpent Spine
+    ru: Меч драконьей кости
+  rarity: 4
+  materialCodes:
+    - chunk-of-aerosiderite
+    - fossilized-bone-shard
+    - energy-nectar
+  obtainSources:
+    - battle-pass
+sharpshooters-oath:
+  code: sharpshooters-oath
+  typeCode: bow
+  name:
+    en: Sharpshooter's Oath
+    ru: Клятва стрелка
+  rarity: 3
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - slime-concentrate
+  obtainSources:
+    - wishes
+silver-sword:
+  code: silver-sword
+  typeCode: sword
+  name:
+    en: Silver Sword
+    ru: Серебряный меч
+  rarity: 2
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - weathered-arrowhead
+  obtainSources:
+    - chests
+    - investigation
+    - npc-shop
+    - quest
+skyrider-greatsword:
+  code: skyrider-greatsword
+  typeCode: claymore
+  name:
+    en: Skyrider Greatsword
+    ru: Большой меч небесного всадника
+  rarity: 3
+  materialCodes:
+    - chunk-of-aerosiderite
+    - fossilized-bone-shard
+    - golden-raven-insignia
+  obtainSources:
+    - chests
+    - puzzle
+skyrider-sword:
+  code: skyrider-sword
+  typeCode: sword
+  name:
+    en: Skyrider Sword
+    ru: Меч небесного всадника
+  rarity: 3
+  materialCodes:
+    - chunk-of-aerosiderite
+    - fossilized-bone-shard
+    - lieutenants-insignia
+  obtainSources:
+    - wishes
+    - quest
+skyward-atlas:
+  code: skyward-atlas
+  typeCode: catalyst
+  name:
+    en: Skyward Atlas
+    ru: Небесный атлас
+  rarity: 5
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - weathered-arrowhead
+  obtainSources:
+    - wishes
+skyward-blade:
+  code: skyward-blade
+  typeCode: sword
+  name:
+    en: Skyward Blade
+    ru: Небесный меч
+  rarity: 5
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - slime-concentrate
+  obtainSources:
+    - wishes
+skyward-harp:
+  code: skyward-harp
+  typeCode: bow
+  name:
+    en: Skyward Harp
+    ru: Небесное крыло
+  rarity: 5
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - weathered-arrowhead
+  obtainSources:
+    - wishes
+skyward-pride:
+  code: skyward-pride
+  typeCode: claymore
+  name:
+    en: Skyward Pride
+    ru: Небесное величие
+  rarity: 5
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - slime-concentrate
+  obtainSources:
+    - wishes
+skyward-spine:
+  code: skyward-spine
+  typeCode: polearm
+  name:
+    en: Skyward Spine
+    ru: Небесная ось
+  rarity: 5
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - forbidden-curse-scroll
+  obtainSources:
+    - wishes
+slingshot:
+  code: slingshot
+  typeCode: bow
+  name:
+    en: Slingshot
+    ru: Рогатка
+  rarity: 3
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - ominous-mask
+  obtainSources:
+    - wishes
+snow-tombed-starsilver:
+  code: snow-tombed-starsilver
+  typeCode: claymore
+  name:
+    en: Snow-Tombed Starsilver
+    ru: Заснеженное звёздное серебро
+  rarity: 4
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - slime-concentrate
+  obtainSources:
+    - forging
+    - puzzle
+solar-pearl:
+  code: solar-pearl
+  typeCode: catalyst
+  name:
+    en: Solar Pearl
+    ru: Солнечная жемчужина
+  rarity: 4
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - energy-nectar
+  obtainSources:
+    - battle-pass
+song-of-broken-pines:
+  code: song-of-broken-pines
+  typeCode: claymore
+  name:
+    en: Song of Broken Pines
+    ru: Песнь разбитых сосен
+  rarity: 5
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - ominous-mask
+  obtainSources:
+    - event-wishes
+staff-of-homa:
+  code: staff-of-homa
+  typeCode: polearm
+  name:
+    en: Staff of Homa
+    ru: Посох Хомы
+  rarity: 5
+  materialCodes:
+    - chunk-of-aerosiderite
+    - ley-line-sprout
+    - slime-concentrate
+  obtainSources:
+    - event-wishes
+summit-shaper:
+  code: summit-shaper
+  typeCode: sword
+  name:
+    en: Summit Shaper
+    ru: Кромсатель пиков
+  rarity: 5
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - ominous-mask
+  obtainSources:
+    - event-wishes
+sword-of-descension:
+  code: sword-of-descension
+  typeCode: sword
+  name:
+    en: Sword of Descension
+    ru: Меч нисхождения
+  rarity: 4
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - golden-raven-insignia
+  obtainSources:
+    - playstation
+the-alley-flash:
+  code: the-alley-flash
+  typeCode: sword
+  name:
+    en: The Alley Flash
+    ru: Вспышка во тьме
+  rarity: 4
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - forbidden-curse-scroll
+  obtainSources:
+    - event-wishes
+the-bell:
+  code: the-bell
+  typeCode: claymore
+  name:
+    en: The Bell
+    ru: Меч-колокол
+  rarity: 4
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - energy-nectar
+  obtainSources:
+    - wishes
+the-black-sword:
+  code: the-black-sword
+  typeCode: sword
+  name:
+    en: The Black Sword
+    ru: Чёрный меч
+  rarity: 4
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - slime-concentrate
+  obtainSources:
+    - battle-pass
+the-catch:
+  code: the-catch
+  typeCode: polearm
+  name:
+    en: '"The Catch"'
+    ru: «Улов»
+  rarity: 4
+  materialCodes:
+    - mask-of-the-kijin
+    - chaos-oculus
+    - spectral-nucleus
+  obtainSources:
+    - fishing
+the-flute:
+  code: the-flute
+  typeCode: sword
+  name:
+    en: The Flute
+    ru: Меч-флейта
+  rarity: 4
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - slime-concentrate
+  obtainSources:
+    - wishes
+the-stringless:
+  code: the-stringless
+  typeCode: bow
+  name:
+    en: The Stringless
+    ru: Бесструнный
+  rarity: 4
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - weathered-arrowhead
+  obtainSources:
+    - wishes
+the-unforged:
+  code: the-unforged
+  typeCode: claymore
+  name:
+    en: The Unforged
+    ru: Некованый
+  rarity: 5
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - golden-raven-insignia
+  obtainSources:
+    - event-wishes
+the-viridescent-hunt:
+  code: the-viridescent-hunt
+  typeCode: bow
+  name:
+    en: The Viridescent Hunt
+    ru: Зелёный лук
+  rarity: 4
+  materialCodes:
+    - scattered-piece-of-decarabians-dream
+    - black-crystal-horn
+    - weathered-arrowhead
+  obtainSources:
+    - battle-pass
+the-widsith:
+  code: the-widsith
+  typeCode: catalyst
+  name:
+    en: The Widsith
+    ru: Песнь странника
+  rarity: 4
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - ominous-mask
+  obtainSources:
+    - wishes
+thrilling-tales-of-dragon-slayers:
+  code: thrilling-tales-of-dragon-slayers
+  typeCode: catalyst
+  name:
+    en: Thrilling Tales of Dragon Slayers
+    ru: Эпос о драконоборцах
+  rarity: 3
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - forbidden-curse-scroll
+  obtainSources:
+    - wishes
+thundering-pulse:
+  code: thundering-pulse
+  typeCode: bow
+  name:
+    en: Thundering Pulse
+    ru: Громовой пульс
+  rarity: 5
+  materialCodes:
+    - narukamis-valor
+    - polarizing-prism
+    - weathered-arrowhead
+  obtainSources:
+    - wishes
+travelers-handy-sword:
+  code: travelers-handy-sword
+  typeCode: sword
+  name:
+    en: Traveler's Handy Sword
+    ru: Меч путешественника
+  rarity: 3
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - forbidden-curse-scroll
+  obtainSources:
+    - chests
+    - quest
+twin-nephrite:
+  code: twin-nephrite
+  typeCode: catalyst
+  name:
+    en: Twin Nephrite
+    ru: Парный нефрит
+  rarity: 3
+  materialCodes:
+    - mist-veiled-primo-elixir
+    - mist-grass-wick
+    - lieutenants-insignia
+  obtainSources:
+    - chests
+vortex-vanquisher:
+  code: vortex-vanquisher
+  typeCode: polearm
+  name:
+    en: Vortex Vanquisher
+    ru: Покоритель вихря
+  rarity: 5
+  materialCodes:
+    - chunk-of-aerosiderite
+    - fossilized-bone-shard
+    - golden-raven-insignia
+  obtainSources:
+    - event-wishes
+waster-greatsword:
+  code: waster-greatsword
+  typeCode: claymore
+  name:
+    en: Waster Greatsword
+    ru: Двуручный меч богатыря
+  rarity: 1
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - slime-concentrate
+  obtainSources:
+    - chests
+    - investigation
+    - npc-shop
+wavebreakers-fin:
+  code: wavebreakers-fin
+  typeCode: polearm
+  name:
+    en: Wavebreaker's Fin
+    ru: Режущий волны плавник
+  rarity: 4
+  materialCodes:
+    - mask-of-the-kijin
+    - concealed-talon
+    - famed-handguard
+  obtainSources:
+    - event-wishes
+white-iron-greatsword:
+  code: white-iron-greatsword
+  typeCode: claymore
+  name:
+    en: White Iron Greatsword
+    ru: Меч из белого железа
+  rarity: 3
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - slime-concentrate
+  obtainSources:
+    - chests
+white-tassel:
+  code: white-tassel
+  typeCode: polearm
+  name:
+    en: White Tassel
+    ru: Белая кисть
+  rarity: 3
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - lieutenants-insignia
+  obtainSources:
+    - chests
+whiteblind:
+  code: whiteblind
+  typeCode: claymore
+  name:
+    en: Whiteblind
+    ru: Белая тень
+  rarity: 4
+  materialCodes:
+    - divine-body-from-guyun
+    - inspectors-sacrificial-knife
+    - golden-raven-insignia
+  obtainSources:
+    - forging
+windblume-ode:
+  code: windblume-ode
+  typeCode: bow
+  name:
+    en: Windblume Ode
+    ru: Ода анемонии
+  rarity: 4
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - ley-line-sprout
+    - energy-nectar
+  obtainSources:
+    - events
+wine-and-song:
+  code: wine-and-song
+  typeCode: catalyst
+  name:
+    en: Wine and Song
+    ru: Вино и песни
+  rarity: 4
+  materialCodes:
+    - boreal-wolfs-nostalgia
+    - ley-line-sprout
+    - golden-raven-insignia
+  obtainSources:
+    - event-wishes
+wolfs-gravestone:
+  code: wolfs-gravestone
+  typeCode: claymore
+  name:
+    en: Wolf's Gravestone
+    ru: Волчья погибель
+  rarity: 5
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - chaos-core
+    - forbidden-curse-scroll
+  obtainSources:
+    - wishes
