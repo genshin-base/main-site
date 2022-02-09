@@ -55,7 +55,7 @@ export function ItemAvatar<TItem, TRelated>({
 		<A
 			href={href}
 			className={`item-avatar position-relative rounded-circle d-inline-block ${pointerClass} ${rarityClass} ${classes}`}
-			ref={elRef}
+			innerRef={elRef}
 			onClick={onClickLocal}
 		>
 			<img className="image" src={src} />

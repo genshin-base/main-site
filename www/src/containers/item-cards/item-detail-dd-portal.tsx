@@ -27,6 +27,7 @@ export const ItemDetailDdPortal = ({
 		if (!wrapRef.current) return
 		if (!targetEl) return
 		const wrapEl = wrapRef.current
+		console.log(wrapEl, targetEl)
 		const pos = calcPosForDd(targetEl.getBoundingClientRect(), wrapEl.getBoundingClientRect(), {
 			isAbsolute: true,
 			isCentered: true,

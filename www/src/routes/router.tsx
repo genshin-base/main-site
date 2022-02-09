@@ -1,4 +1,4 @@
-import { ComponentType } from 'preact'
+import { ComponentType, h, Ref } from 'preact'
 import { useEffect, useState } from 'preact/hooks'
 
 import { matchPath } from './paths'
@@ -80,8 +80,15 @@ export const route = <TPath extends RoutePath>(
 	comp: ComponentType<PathProps<TPath>>,
 ): [RoutePath, ComponentType] => [[URL_LANG_PREFIX, ...path], comp as ComponentType]
 
-export function A(props: JSX.HTMLAttributes<HTMLAnchorElement>) {
-	let href = props.href
-	if (href) href = URL_LANG_PREFIX + href
-	return <a {...props} href={href} />
+export function A(
+	props: JSX.HTMLAttributes<HTMLAnchorElement> & { ref?: Ref<typeof A>; innerRef?: Ref<HTMLAnchorElement> },
+): JSX.Element {
+	props = Object.assign({}, props)
+	// @ts-ignore
+	props.ref = props.innerRef
+	delete props.innerRef
+	if (props.href) props.href = URL_LANG_PREFIX + props.href
+	// тайпскриптовый JSX-трансформер какой-то туповатый:
+	// он для <a {...props}/> генерит лишний Object.assign({}, props)
+	return h('a', props as Parameters<typeof h>[1])
 }
