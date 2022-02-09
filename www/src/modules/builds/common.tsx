@@ -20,6 +20,13 @@ import { LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
 import { useHover, useLocalStorage } from '#src/utils/hooks'
 import { HEART, HEART_EMPTY, STAR } from '#src/utils/typography'
+import {
+	SK_FAV_CHAR_CODES,
+	SK_FAV_TALENT_MATERIAL_CODES,
+	SK_FAV_WEAPON_DATAS,
+	SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
+	STORAGE_WEAPON_DATA,
+} from '#src/utils/local-storage-keys'
 
 export const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole> = {
 	title: '…',
@@ -164,13 +171,6 @@ export const MAX_SMTHS_TO_STORE = 5
 export function removeOldSmthsFromList<T>(codes: T[]): T[] {
 	return codes.slice(0, MAX_SMTHS_TO_STORE)
 }
-//sk - storage key
-export const SK_FAV_CHAR_CODES = 'favoriteCharacterCodes'
-export const SK_FAV_TALENT_MATERIAL_CODES = 'favoriteTalentMaterialCodes'
-export const SK_FAV_WEAPON_DATAS = 'favoriteWeaponDatas'
-export const SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES = 'favoriteWeaponPrimaryMaterialCodes'
-export type STORAGE_WEAPON_DATA = [weaponCode: string, weaponMaterialCode: string]
-
 function ToggleSmthFav({
 	smthCode,
 	classes,

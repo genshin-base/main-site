@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'preact/hooks'
+import { useMemo } from 'preact/hooks'
 
 import { getRegionTime, GI_ROTATION_WEEKDAY_CODES, GI_ServerRegionCode } from '#lib/genshin'
 import { arrGetAfter } from '#lib/utils/collections'
@@ -6,11 +6,7 @@ import { mustBeDefined } from '#src/../../lib/utils/values'
 import { apiMaterialsTimetable } from '#src/api/endpoints'
 import Spinner from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
-import {
-	SK_FAV_CHAR_CODES,
-	SK_FAV_TALENT_MATERIAL_CODES,
-	SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
-} from '#src/modules/builds/common'
+
 import { getCharacterAvatarSrc } from '#src/utils/characters'
 import {
 	isLoaded,
@@ -27,7 +23,13 @@ import { ItemAvatar } from './item-cards/item-avatars'
 
 import './farm-today.scss'
 import { msToHmWords } from '#src/utils/dates'
-import { SK_DEFAULT_SELECTED_REGION_CODE, SK_SELECTED_REGION_CODE } from '#src/utils/local-storage-keys'
+import {
+	SK_DEFAULT_SELECTED_REGION_CODE,
+	SK_FAV_CHAR_CODES,
+	SK_FAV_TALENT_MATERIAL_CODES,
+	SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
+	SK_SELECTED_REGION_CODE,
+} from '#src/utils/local-storage-keys'
 
 export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 	const ttData = useFetch(apiMaterialsTimetable, [])
