@@ -1,0 +1,234 @@
+adventurer:
+  code: adventurer
+  name:
+    en: Adventurer
+    ru: Искатель приключений
+  rarity: 3
+archaic-petra:
+  code: archaic-petra
+  name:
+    en: Archaic Petra
+    ru: Архаичный камень
+  rarity: 5
+berserker:
+  code: berserker
+  name:
+    en: Berserker
+    ru: Берсерк
+  rarity: 4
+blizzard-strayer:
+  code: blizzard-strayer
+  name:
+    en: Blizzard Strayer
+    ru: Заблудший в метели
+  rarity: 5
+bloodstained-chivalry:
+  code: bloodstained-chivalry
+  name:
+    en: Bloodstained Chivalry
+    ru: Рыцарь крови
+  rarity: 5
+brave-heart:
+  code: brave-heart
+  name:
+    en: Brave Heart
+    ru: Душа храбреца
+  rarity: 4
+crimson-witch-of-flames:
+  code: crimson-witch-of-flames
+  name:
+    en: Crimson Witch of Flames
+    ru: Горящая алая ведьма
+  rarity: 5
+defenders-will:
+  code: defenders-will
+  name:
+    en: Defender's Will
+    ru: Воля защитника
+  rarity: 4
+emblem-of-severed-fate:
+  code: emblem-of-severed-fate
+  name:
+    en: Emblem of Severed Fate
+    ru: Эмблема рассечённой судьбы
+  rarity: 5
+gambler:
+  code: gambler
+  name:
+    en: Gambler
+    ru: Азартный игрок
+  rarity: 4
+glacier-and-snowfield:
+  code: glacier-and-snowfield
+  name:
+    en: Glacier and Snowfield
+    ru: Снег и лёд
+  rarity: 5
+gladiators-finale:
+  code: gladiators-finale
+  name:
+    en: Gladiator's Finale
+    ru: Конец гладиатора
+  rarity: 5
+heart-of-depth:
+  code: heart-of-depth
+  name:
+    en: Heart of Depth
+    ru: Сердце глубин
+  rarity: 5
+husk-of-opulent-dreams:
+  code: husk-of-opulent-dreams
+  name:
+    en: Husk of Opulent Dreams
+    ru: Кокон сладких грёз
+  rarity: 5
+instructor:
+  code: instructor
+  name:
+    en: Instructor
+    ru: Инструктор
+  rarity: 4
+lavawalker:
+  code: lavawalker
+  name:
+    en: Lavawalker
+    ru: Ступающий по лаве
+  rarity: 5
+lucky-dog:
+  code: lucky-dog
+  name:
+    en: Lucky Dog
+    ru: Везунчик
+  rarity: 3
+maiden-beloved:
+  code: maiden-beloved
+  name:
+    en: Maiden Beloved
+    ru: Возлюбленная юная дева
+  rarity: 5
+martial-artist:
+  code: martial-artist
+  name:
+    en: Martial Artist
+    ru: Воин
+  rarity: 4
+noblesse-oblige:
+  code: noblesse-oblige
+  name:
+    en: Noblesse Oblige
+    ru: Церемония древней знати
+  rarity: 5
+ocean-hued-clam:
+  code: ocean-hued-clam
+  name:
+    en: Ocean-Hued Clam
+    ru: Моллюск морских красок
+  rarity: 5
+pale-flame:
+  code: pale-flame
+  name:
+    en: Pale Flame
+    ru: Бледный огонь
+  rarity: 5
+prayers-for-destiny:
+  code: prayers-for-destiny
+  name:
+    en: Prayers for Destiny
+    ru: Шаман воды
+  rarity: 4
+prayers-for-illumination:
+  code: prayers-for-illumination
+  name:
+    en: Prayers for Illumination
+    ru: Шаман огня
+  rarity: 4
+prayers-for-wisdom:
+  code: prayers-for-wisdom
+  name:
+    en: Prayers for Wisdom
+    ru: Шаман молнии
+  rarity: 4
+prayers-to-springtime:
+  code: prayers-to-springtime
+  name:
+    en: Prayers to Springtime
+    ru: Шаман льда
+  rarity: 4
+prayers-to-the-firmament:
+  code: prayers-to-the-firmament
+  name:
+    en: Prayers to the Firmament
+    ru: Шаман ветра
+  rarity: 4
+resolution-of-sojourner:
+  code: resolution-of-sojourner
+  name:
+    en: Resolution of Sojourner
+    ru: Решимость временщика
+  rarity: 4
+retracing-bolide:
+  code: retracing-bolide
+  name:
+    en: Retracing Bolide
+    ru: Встречная комета
+  rarity: 5
+scholar:
+  code: scholar
+  name:
+    en: Scholar
+    ru: Учёный
+  rarity: 4
+shimenawas-reminiscence:
+  code: shimenawas-reminiscence
+  name:
+    en: Shimenawa's Reminiscence
+    ru: Воспоминания Симэнавы
+  rarity: 5
+tenacity-of-the-millelith:
+  code: tenacity-of-the-millelith
+  name:
+    en: Tenacity of the Millelith
+    ru: Стойкость Миллелита
+  rarity: 5
+the-exile:
+  code: the-exile
+  name:
+    en: The Exile
+    ru: Изгнанник
+  rarity: 4
+thundering-fury:
+  code: thundering-fury
+  name:
+    en: Thundering Fury
+    ru: Громогласный рёв ярости
+  rarity: 5
+thundersoother:
+  code: thundersoother
+  name:
+    en: Thundersoother
+    ru: Усмиряющий гром
+  rarity: 5
+tiny-miracle:
+  code: tiny-miracle
+  name:
+    en: Tiny Miracle
+    ru: Маленькое чудо
+  rarity: 4
+traveling-doctor:
+  code: traveling-doctor
+  name:
+    en: Traveling Doctor
+    ru: Целитель
+  rarity: 3
+viridescent-venerer:
+  code: viridescent-venerer
+  name:
+    en: Viridescent Venerer
+    ru: Изумрудная тень
+  rarity: 5
+wanderers-troupe:
+  code: wanderers-troupe
+  name:
+    en: Wanderer's Troupe
+    ru: Странствующий ансамбль
+  rarity: 5
