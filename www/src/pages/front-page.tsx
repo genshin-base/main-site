@@ -19,7 +19,7 @@ export function FrontPage() {
 				<Fieldset legend="Region switch" classes="col-lg-3 col-12">
 					<RegionSwitch />
 				</Fieldset>
-				<Fieldset legend="alchemy calculator" classes="col-lg-9 col-12">
+				<Fieldset legend="alchemy calculator" classes="col-lg-6 col-12 offset-lg-3 offset-0">
 					<AlchemyCalculator />
 				</Fieldset>
 			</div>

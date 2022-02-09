@@ -23,7 +23,7 @@ export function SimpleSelect({
 	)
 	return (
 		<select
-			className={`form-select bg-dark text-light c-pointer ${classes}`}
+			className={`form-select border-secondary bg-dark text-light c-pointer ${classes}`}
 			onChange={handleChange}
 			size={size}
 		>
