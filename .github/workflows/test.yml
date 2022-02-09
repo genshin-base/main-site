@@ -1,0 +1,10 @@
+name: Dummy workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: echo test
