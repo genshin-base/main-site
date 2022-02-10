@@ -33,13 +33,13 @@
                   seeCharNotes: true
             - similar:
                 - code: sharpshooters-oath
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: windblume-ode
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -159,11 +159,11 @@
                  при попадании в слабое место, поэтому следует прокачать Крит. урон,
                  практически игнорируя Шанс крит. попадания. Но это может
                  измениться после "
-              - b: "[C4]."
+              - b: "[С4]."
               - |-
                 
                 После 
-              - b: "[C4],"
+              - b: "[С4],"
               - " становится доступным стиль игры, ориентированный на урон от её навыков. 
                  В этом случае стоит экипировать Горящую алую ведьму (4), 
                  пытаясь сохранить соотношение Шанса крит. попадания к Крит. урону как 1:2 для более частых критических ударов. 
@@ -173,20 +173,20 @@
               - "\n"
               - b: "Воспоминания Симэнавы:"
               - " На "
-              - b: "[C4]"
+              - b: "[С4]"
               - " этот сет больше подходит для глав. ДПС сборки Эмбер через Заряженную атаку, чем Странствующий ансамбль."
           - p:
               - b: "О выборе оружия:"
               - "\n"
               - b: "Прототип: Полумесяц: "
               - "Этот лук лучше, чем Небесное крыло, если он "
-              - b: "[R2+]."
+              - b: "[Р2+]."
               - "\n"
               - b: "Хамаюми:"
               - " Этот лук лучше Клятвы стрелка "
-              - b: "[R5]"
+              - b: "[Р5]"
               - " если он "
-              - b: "[R2+]."
+              - b: "[Р2+]."
       - code: support
         isRecommended: true
         weapons:
@@ -328,7 +328,7 @@
                   seeCharNotes: false
             - similar:
                 - code: the-catch
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -520,10 +520,10 @@
                    Беннетом, и со вторым баффером (то есть
                   Кадзухой/Сахарозой)
 
-                  Режущий волны плавник: [R5] Режущий волны плавник равен или превосходит "
+                  Режущий волны плавник: [Р5] Режущий волны плавник равен или превосходит "
               - b: |-
                   Посох Хомы, в зависимости от общей стоимости Взрыва стихии вашей команды.
-                  Гроза драконов: [R5] Гроза драконов
+                  Гроза драконов: [Р5] Гроза драконов
               - " превосходит"
               - b: " Нефритового коршуна."
               - "\n"
@@ -531,11 +531,11 @@
               снижает порог Восстановления энергии Сян Лин, до
                
                 "
-              - b: ~140% Восстановления энергии на [R1]
+              - b: ~140% Восстановления энергии на [Р1]
               - " и "
-              - b: ~110% Восстановления энергии на [R5].
+              - b: ~110% Восстановления энергии на [Р5].
               - " Это позволяет выбрать артефакты с атакующими допстатами, вместо допстатов на Восстановление энергии, и благодаря этому "
-              - b: "[R5] Крест-копьё Китаин"
+              - b: "[Р5] Крест-копьё Китаин"
               - " может превзойти "
               - b: Нефритового коршуна.
               - " Из-за значительного снижения порога Восстановления энергии комплект артефактов"
@@ -543,7 +543,7 @@
               - "  превзойдет "
               - b: Эмблему рассечённой судьбы (4).
               - "\n"
-              - b: "Каменное копьё: [R5] Каменное копьё"
+              - b: "Каменное копьё: [Р5] Каменное копьё"
               - " со "
               - b: 2 рангом пробуждения
               - " работает так же, как "
@@ -575,11 +575,11 @@
                  в отрядах, где Сян Лин имеет более низкую потребность Восстановления энергии (то есть Националка Райдэн).
               - b: "Изгнанник (2) Учёный (2): "
               - "Этот комплект может быть использован как "
-              - b: очень бюджетный саппорт билд для построения отрядов Реверсивного Таяния,
+              - b: очень бюджетный саппорт сборка для построения отрядов Реверсивного Таяния,
               - " где Сян Лин не вызывает реакции и вместо этого
                 используется для наложения Пиро и требует много Восстановления энергии. Обратите внимание на то, что
                 "
-              - b: не рекомендуется останавливаться на этом билде, так как Сян Лин будет наносить больше урона с более качественными артефактами.
+              - b: не рекомендуется останавливаться на этом сборке, так как Сян Лин будет наносить больше урона с более качественными артефактами.
       - code: physical dps
         isRecommended: false
         weapons:
@@ -781,7 +781,7 @@
                   seeCharNotes: false
             - similar:
                 - code: iron-sting
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -870,8 +870,8 @@
               - atk%
             notes: null
             seeCharNotes: true
-          notes: Часы на Мастерство стихий как правило > Сила атаки %, но качество допстатов и выбор оружия
-            потенциально может сделать предпочтительнее часы на Силу атаки % .
+          notes: Часы на Мастерство стихий, как правило, полезнее, чем на процент Силы атаки, но качество допстатов и выбор оружия
+            потенциально может сделать предпочтительнее часы на процент Силы атаки.
           seeCharNotes: false
         subStats:
           advices:
@@ -892,72 +892,64 @@
                 - er
               notes: null
               seeCharNotes: false
-          notes: Мастерство стихий имеет более низкий приоритет, чем Сила атаки% при использовании Стального жала
+          notes: Мастерство стихий имеет более низкий приоритет, чем процент Силы атаки при использовании Стального жала
           seeCharNotes: false
         talents:
           advices:
             - skill
             - burst
             - attack
-          notes: обычная атака становится в приоритете только при наличии C6 Беннета
+          notes: обычная атака становится в приоритете только при наличии С6 Беннета
           seeCharNotes: false
         tips:
-          - p: Беннет's Взрыв стихии grants you a пиро статус as long as your персонажи are within
-              his burst AoE (Крио in specific, since Пиро > Крио).
-          - p: For that, cast Взрыв стихи с Беннет, switch to the персонаж imbued с Крио и
-              walk on Беннет's Взрыв стихии field
-          - p: Upon entering burst field, the Пиро status will continuously imbue you с
-              Пиро, reacting с other элементы on you и eventually removing
-              them.
+          - p: Взрыв стихии Беннета накладывает на персонажа внутри области Пиро статус.
+          - p: Поэтому, если персонаж, на которого наложен эффект любой стихии, зайдет в область взрыва стихии Беннета,
+               то на него наложится Пиро, и будет вызвана соответствующая реакция. Таким образом можно снимать с персонажа нежелательные статусы.
+               Стоит учитывать, что враги при атаке персонажа, на котором наложено Пиро, могут так же вызвать реакцию и нанести увеличенный урон.
         notes:
           - p:
               - b: |-
                   О выборе оружия:
                   Вспышка во тьме: 
-              - "Вспышка во тьме имеет потенциал to beat Стальное жало "
-              - b: "[R5],"
-              - " но this requires the passive to be up, whenever damaged, your
-                passive is disabled for 5 секунд и you could be losing out a
-                lot of damage, especially if you are constantly being damaged."
+              - "Вспышка во тьме может быть лучше, чем Стальное жало "
+              - b: "[Р5],"
+              - " но только при условии, что ее пассивная способность будет всегда активна. После получения урона пассивка пять секунд
+                 не работает и теряется много урона. Это особенно критично, если персонаж все время получает урон."
           - p:
               - b: |-
                   О комплектах артефактов:
                   Горящая алая ведьма (4):
               - >-2
-                 Этот комплект works лучший с Чун Юнь on the same отряд for consistent Таяние.
-                Assuming a 
-              - b: Таяние/Пар
-              - " отряд, "
-              - b: Горящая алая ведьма (4) это лучший комплект для урона.
+                 Этот комплект лучше всего работает с Чун Юнем из-за постоянного Таяния.
+                В отряде, построенном на реакции 
+              - b: Таяния/Пара,
+              - Горящая алая ведьма (4) лучший комплект для урона.
               - >-
                 
-                Бонус Пиро урона всегда будет лучший для кубка. The combo for the highest Таяние/Пар damage is Чёрный меч и Мастерство стихий часы. 
-              - b: "[R1]"
-              - " Стальное жало и Мастерство стихий часы turns out to have diminishing returns
-                и isn't as good, но "
-              - b: "[R2+]"
-              - " Стальное жало is a different question because better buffs.
-                (Assuming you don't have a whale build's CR/CD статы, in which
-                case Меч Сокола с Мастерство стихий часы is just flat out better.)"
+                Кубок на бонус Пиро урона всегда лучший выбор. Лучшее сочетание для Таяния/Пара — Чёрный меч и часы на Мастерство стихий. 
+              - b: "[Р1]"
+              - " Стальное жало и часы на Мастерство стихий часы наносят меньше урона, но "
+              - b: "[Р2+]"
+              - " Стальное жало это другое дело из-за более сильного баффа. 
+                В случае, если у удалось собрать невероятно большие Шансы крита и Крит. урона, то Меч Сокола 
+                с часами на Мастерство стихий бесспорно лучше"
           - p:
               - b: "Громогласный рёв ярости (4):"
               - " Этот комплект "
-              - b: работает лучше всего если находится в паре с Электро саппортами такими, как Бэй Доу и Фишль/Лиза,
+              - b: работает лучше всего если находится в паре с Электро саппортами, например, с Бэй Доу, Фишль или Лизой,
               - |2
-                 as it allows Беннет to accomplish 2 things: 
-                1) Rapidly spam E for raw Пиро урон + Перегрузку
-                2) Генерировать тонну энергии для всего отряда. 
-              - b: "Громогласный рёв ярости (4) also allows Беннет to quickly break the shields of the
-                  Abyss Lectors "
+                это позволяет достичь Беннету две вещи: 
+                1) все время вызывать Перегрузку своим элементальным навыком
+                2) генерировать тонну энергии для всего отряда 
+              - b: "Громогласный рёв ярости (4) так же позволяет Беннету быстро ломать щиты
+                  Чтецов Бездны. "
               - >
-                in the Spiral Abyss. Этот comp is generally only recommended for
-                those с Бэй Доу на C2/C6.
-              - b: It's worth noting that the главстат артефакты you want to farm for 4-TF
-                  Беннет varies from the главстат артефакты you'd normally go
-                  for in other builds.
+                Эта команда рекомендована только с Бэй Доу на С2/С6.
+              - b: Следует обратить внимание, что главстаты артефактов, которые собираются в Громогласный рёв ярости (4)
+                  Беннет отличаются от главстатов артефакты, которые собираются обычно в других комплетах.
               - " "
-              - b: Instead of Сила атаки/Мастерство стихий, Пиро, и Crit, you'd instead want to go for Мастерство стихий/Пиро/Мастерство стихий on
-                  a 4-TF Беннет.
+              - b: Вместо Сила атаки или Мастерства стихий, Пиро, и Критов, you'd instead want to go for Мастерство стихий/Пиро/Мастерство стихий on
+                  a 4-TF Беннет.//todo обновить
               - " As such, this also means оружия that have Мастерство стихий допстаты such as
                 Стальное жало take priority over другой мечи."
           - p:
@@ -1094,7 +1086,7 @@
                 - em
               notes: null
               seeCharNotes: false
-          notes: Prioritize Восстановление энергии first if you can't burst off время отката
+          notes: Если не удается ультовать по откату, следует сфокусироваться на Восстановлении энергии.
           seeCharNotes: false
         talents:
           advices:
@@ -1102,21 +1094,18 @@
             - skill
           notes: null
           seeCharNotes: false
-        tips: "Рекомендуется количество of % Восстановление энергии: 180-200"
+        tips: "Рекомендуемой процент Восстановления энергии: 180-200"
         notes:
-          - "A Взрыв стихии Support Беннет "
+          - "Ульт-саппорт Беннет "
           - b: "полностью игнорирует необходимость лечения "
-          - "и is aimed for people who don't need that much healing from him
-            и prefer to "
-          - b: squeeze out more damage
+          - "и нацелен на людей, которым не нужно от него так много лечения, и которые хотят "
+          - b: выжать из него больше урона
           - |-2
-             instead. 
-            On this build, Беннет is 
-          - b: built с offensive статы like Сила атаки%, Пиро Damage, и Crit статы while
-              having a good количество of Восстановление энергии to burst off время отката.
+            В этой сборке Беннета
+          - b: предпочтительнее атакующие статы, такие как процент Силы атаки, Пиро урон и Криты, и
+              при этом достаточное количество Восстановления энергии ультовать по откату.
           - "\ \n"
-          - b: Prioritize Восстановление энергии before offensive статы if you cannot cast your
-              Взрыв стихии off время отката.
+          - b: Если не удается ультовать по откату, следует сфокусироваться на Восстановлении энергии.
       - code: support
         isRecommended: false
         weapons:
@@ -1250,41 +1239,37 @@
             - burst
           notes: null
           seeCharNotes: false
-        tips: "Рекомендуется количество of % Восстановление энергии: 200+"
+        tips: "Рекомендуемое количество Восстановления энергии: 200+"
         notes:
           - p:
-              - b: Heals from his Взрыв стихии scale off of ХП,
-              - " while his "
-              - b: damage бафф from Взрыв стихии only scales с your Базовая атака (персонаж Базовая атака
-                  stat и Оружие Базовая атака stat)
+              - b: Лечение его Взрыва стихии зависит от его ХП,
+              - " в то время, как "
+              - b: бафф урона от Взрыва стихии рассчитывается только от Базовой атаки, а именно Базовой атаки
+                  персонажа и Базовой атаки оружия.
               - "\n"
-              - b: НЕ увеличивать созвездие Беннета с 5 на 6 unless he is in a Пиро
-                  отряд и you know what you're doing. Этот is because Беннет
-                  turns all of your melee on-field персонаж's Auto Attacks into
-                  Пиро, which means that Беннет will lose a lot of his отряд
-                  comp potential.
+              - b: НЕ следует увеличивать созвездие Беннета с 5 на 6, если не уверен в необходимости. Потому что
+                  это созвездие преобразует все обычные атаки в области Взрыва стихии Беннета в 
+                  Пиро, из-за чего Беннет теряет гибкость в выборе отряда.
               - >-
                 
-                Although Беннет is usually considered a целитель, he already heals a lot even without necessarily building for ХП%, 
-              - b: if you find it unnecessary to build for ХП%, you can consider building him as
-                  a доп. ДПС.
+                Хотя Беннет часто рассматривается как целитель, он и так хорошо лечит, даже если не вкачивать его ХП, 
+              - b: поэтому лучше собирать его в ульт-дпса
           - p:
               - b: |-
                   О выборе оружия:
                   Рассекающий туман, Меч Сокола:
               - >2
-                 These оружие have the highest Базовая атака in the game which is why it is ranked quite high. It is assuming you have достаточно Восстановление энергии so you still can burst off время отката for the maximum Сила атаки бафф.
+                 У этого оружия самая высокая Базовая атака в игре, поэтому оно так высоко оценено. Предполагается, что Беннет имеет достаточно Восстановления энергии, чтобы ультовать по откату для максимального баффа силы атаки.
               - b: "Клятва свободы:"
               - >2
-                 In comps где Беннет can reliably trigger reactions (и thus trigger this sword's passive), the buffs provided by this оружие will be stronger чем Меч Сокола.
+                 В командах, где Беннет может часто вызывать реакции и таким образом активировать бафф меча, бафф этого меча будет лучше, чем бафф Меча Сокола.
               - b: "Вспышка во тьме: "
               - >
-                Этот оружие на данный момент has the highest Базовая атака for a 4 star
-                оружие (even more Базовая атака чем some 5 stars like Skyward
-                Blade).
+                У этого оружия на данный момент наибольшая Базовая атака из всего 4 звездочного
+                оружия. Даже больше некоторых 5 звездочных, например больше Небесного меча.
               - b: "Прототип: Злоба: "
-              - Этот оружие has one of the highest Базовая атака for a 4 Star оружие
-                (и this is also a оружие you could craft from the Blacksmith)
+              - Базовая атака этого оружия одна из наибольших среди 4 звездочных.
+                Так же этот меч можно выковать у кузнеца.
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/bennett/
@@ -1353,7 +1338,7 @@
                   seeCharNotes: false
             - similar:
                 - code: skyrider-greatsword
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -1462,9 +1447,9 @@
               - "\n"
               - b: "Меч драконьей кости: "
               - "It is worth noting that an "
-              - b: "[R5] Меч драконьей кости"
+              - b: "[Р5] Меч драконьей кости"
               - " can outperform all 5 star оружие at "
-              - b: "[R1]"
+              - b: "[Р1]"
               - " с proper stack management"
           - p:
               - b: |-
@@ -1596,8 +1581,8 @@
               notes: null
               seeCharNotes: false
           notes:
-            - p: Крит. урон if C2
-            - p: If щит support, Восстановление энергии takes priority over Сила атаки%
+            - p: Крит. урон if С2
+            - p: If щит support, Восстановление энергии takes priority over процент Сила атаки
           seeCharNotes: false
         talents:
           advices:
@@ -1618,7 +1603,7 @@
               - >-
                 
                 Синь Янь как персонаж поддержки в основном используется для её щита и/или урона от Взрыва стихии. Если использовать ее как Физ саппорта, она needs both её Ascension 4 Talent и 
-              - b: "[C4]"
+              - b: "[С4]"
               - " для максимального увеличения ее способностей поддержки, making её a somewhat
                 expensive выбор to be considered for Physical Support role.
                 However, the Стойкость Миллелита комплект gives её a new role
@@ -1633,21 +1618,21 @@
                 long as the pulses hit an враг). Этот means that "
               - b: 	Церемониальный двуручный меч
               - " и Синь Янь's "
-              - b: "[C2]"
+              - b: "[С2]"
               - " are crucial to making this комплект shine on её. Этот комплект isn't as
                 recommended for её if you have neither of the two."
           - p:
               - "щит uptime is also crucial to maximizing её Physical/щит
                 Support capabilities. If you have neither 	Церемониальный двуручный меч
                 nor at least "
-              - b: "[C2] "
+              - b: "[С2] "
               - "(но ideally "
-              - b: "[C4]"
+              - b: "[С4]"
               - ) on Синь Янь, you may want to build её as a Взрыв стихии Support
                 instead of Physical/щит Support.
           - p:
               - At
-              - b: " [C2],"
+              - b: " [С2],"
               - " её burst \"Riff Revolution\" has a 100% Шанс крит. попадания, which
                 means you can build solely Крит. урон (instead of trying to get a
                 1:2 Шанс крит. попадания:Крит. урон ratio) if you're building её as a
@@ -1776,8 +1761,8 @@
               notes: null
               seeCharNotes: false
           notes:
-            - p: Крит. урон if C2
-            - p: If щит support, Восстановление энергии takes priority over Сила атаки%
+            - p: Крит. урон if С2
+            - p: If щит support, Восстановление энергии takes priority over процент Сила атаки
           seeCharNotes: false
         talents:
           advices:
@@ -1798,7 +1783,7 @@
               - >-
                 
                 Синь Янь support is mostly used for её щит и/или Взрыв стихии damage. If you want to use её as a Physical Support, она needs both её Ascension 4 Talent и 
-              - b: "[C4]"
+              - b: "[С4]"
               - " to maximize её support capabilities, making её a somewhat
                 expensive выбор to be considered for Physical Support role.
                 However, the Стойкость Миллелита комплект gives её a new role
@@ -1813,21 +1798,21 @@
                 long as the pulses hit an враг). Это значит, что "
               - b: 	Церемониальный двуручный меч
               - " и Синь Янь's "
-              - b: "[C2]"
+              - b: "[С2]"
               - " are crucial to making this комплект shine on её. Этот комплект isn't as
                 recommended for её if you have neither of the two."
           - p:
               - "щит uptime is also crucial to maximizing её Physical/щит
                 Support capabilities. If you have neither 	Церемониальный двуручный меч
                 nor at least "
-              - b: "[C2] "
+              - b: "[С2] "
               - "(но ideally "
-              - b: "[C4]"
+              - b: "[С4]"
               - ) on Синь Янь, you may want to build её as a Взрыв стихии Support
                 instead of Physical/щит Support.
           - p:
               - At
-              - b: " [C2],"
+              - b: " [С2],"
               - " её взрыв стихии \"Струны протеста\" имеет 100% Шанс крит. попадания, which
                 means you can build solely Крит. урон (instead of trying to get a
                 1:2 Шанс крит. попадания:Крит. урон ratio) if you're building её as a
@@ -1864,13 +1849,13 @@
                   seeCharNotes: true
             - similar:
                 - code: the-widsith
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: dodoco-tales
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -2012,13 +1997,13 @@
                   Истории Додоко: 
               - "On equal ранг пробуждения, Песнь странника лучше чем Истории Додоко, но
                 assuming it's "
-              - b: "[R5]"
+              - b: "[Р5]"
               - " Истории Додоко vs "
-              - b: "[R1]"
+              - b: "[Р1]"
               - "-"
-              - b: "[R3]"
+              - b: "[Р3]"
               - " Песнь странника, "
-              - b: "[R5]"
+              - b: "[Р5]"
               - " Истории Додоко лучше. "
               - b: Обратите внимание, что Беннет бафф / Эпос о драконоборцах's бафф + Церемония древней
                   знати (4) бафф may push Песнь странника и Солнечная жемчужина above Истории
@@ -2033,9 +2018,9 @@
                   alternative to the other options.
               - " Обратите внимание, что this комплект loses out on some value at higher
                 constellations, as она can't get её "
-              - b: "[C4]"
+              - b: "[С4]"
               - " и "
-              - b: "[C6]"
+              - b: "[С6]"
               - |2
                  effects without casting Взрыв стихии.
               - b: "Встречная комета (4): "
@@ -2140,11 +2125,11 @@
           - u:
               b: |
                 Восстановление энергии Guidelines
-          - b: "Прототип: Янтарь [R5]:"
+          - b: "Прототип: Янтарь [Р5]:"
           - " 210 Восстановление энергии"
           - u:
               b: "\n"
-          - b: "Прототип: Янтарь [R1] /Кодекс Фавония:"
+          - b: "Прототип: Янтарь [Р1] /Кодекс Фавония:"
           - |2
              240 Восстановление энергии
           - b: "Эпос о драконоборцах:"
@@ -2177,7 +2162,7 @@
                   seeCharNotes: false
             - similar:
                 - code: the-catch
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -2288,7 +2273,7 @@
                   О выборе оружия:
                   Чёрная кисть: 
               - At
-              - b: " [C4]"
+              - b: " [С4]"
               - ", Тома gains 15 энергия когда he fires his Взрыв стихии. Этот
                 effectively reduces his энергия cost to 65 и makes it possible
                 to use Чёрная кисть с Восстановление энергии часы instead of Восстановление энергии оружие с Восстановление энергии
@@ -2459,19 +2444,19 @@
                   О выборе оружия:
                   Краснорогий камнеруб: 
               - >
-                Depending on the количество of Сила атаки% buffs you're getting, this
+                Depending on the количество of процент Сила атаки buffs you're getting, this
                 оружие can overtake Волчья погибель in personal damage.
               - b: "Меч драконьей кости: "
               - "Because Дилюк's "
-              - b: "[C2] "
+              - b: "[С2] "
               - "requires you to get hit to gain the Сила атаки бафф, it can
                 potentially lead to a damage loss due to losing Меч драконьей кости
                 stacks. However, когда paired с "
               - b: "Чжун Ли, "
               - "the щит allows you to gain the "
-              - b: "[C2] "
+              - b: "[С2] "
               - "бафф while not losing any stacks - running Чжун Ли с "
-              - b: "[C2] "
+              - b: "[С2] "
               - "Дилюк is "
               - b: highly recommended.
               - "\n"
@@ -2484,7 +2469,7 @@
               - "или obvious reasons, this оружие is only recommended когда Дилюк
                 is in a отряд comp где he can consistently proc vaporize (то есть
                 когда paired с Син Цю). "
-              - b: Дождерез will also outperform Небесное величие at [R3+].
+              - b: Дождерез will also outperform Небесное величие at [Р3+].
           - p:
               - b: |-
                   О комплектах артефактов:
@@ -2534,7 +2519,7 @@
                   seeCharNotes: true
             - similar:
                 - code: dodoco-tales
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -2676,11 +2661,11 @@
                   Истории Додоко:
               - " On equal ранг пробуждения, Песнь странника и Солнечная жемчужина are better чем
                 Истории Додоко, но когда assuming "
-              - b: "[R5]"
+              - b: "[Р5]"
               - " Истории Додоко vs "
-              - b: "[R1]"
+              - b: "[Р1]"
               - "-"
-              - b: "[R3]"
+              - b: "[Р3]"
               - " Песнь странника/Солнечная жемчужина, Истории Додоко лучше. "
               - b: Обратите внимание, что Беннет бафф / Эпос о драконоборцах's бафф + Церемония
                   древней знати (4) бафф may push Песнь странника и Солнечная жемчужина above Dodoco
@@ -2872,7 +2857,7 @@
               - " и "
               - b: N2CD
               - " for "
-              - b: "[C1]."
+              - b: "[С1]."
               - "\n"
               - b: N3CJ/N3CD
               - " can be used to conserve выносливость at the cost of damage."
@@ -2900,12 +2885,12 @@
               - b: "Черногорская пика:"
               - " Despite seeming quite good due to the Крит. урон допстат,
                 Blackcliff performs only slightly better чем an "
-              - b: "[R5]"
+              - b: "[Р5]"
               - >2
                  Белая кисть in practice as it is difficult to maintain stacks consistently. It is not recommended to buy this оружие specifically for Ху Тао и should only be used if you already have one.
               - b: "Покоритель вихря и Небесная ось: "
               - "Provides little to nothing to Ху Тао since она scales better
-                с ХП% чем Сила атаки% с every spear in the game. "
+                с ХП% чем процент Сила атаки с every spear in the game. "
               - b: >-
                   Base attack makes little difference on Ху Тао because она has
                   a very high ХП to Сила атаки conversion cap.
@@ -3121,7 +3106,7 @@
           - p:
               - b: |-
                   Об Артефактах:  
-                  Горящая алая ведьма (2) +18% Сила атаки комплект (2): 
+                  Горящая алая ведьма (2) +18процент Сила атаки комплект (2): 
               - " Лучший "
               - b: generalist комплект
               - " on Ёимия. Этот комплект is considered better чем Воспоминания
@@ -3358,7 +3343,7 @@
               b: Элементальный навык (Взрыв стихии) > ОА > ЗА > Resummon Oz (To snapshot Полярная звезда stacks)
         notes:
           - p:
-              - b: "[C1] "
+              - b: "[С1] "
               - is recommended to even start Фишль's ДПС build, с Oz still
                 contributing to Physical ДПС even когда he's не находится на поле боя.
           - p: There is an animation cancelling technique с Фишль ДПС. After 3 или 5
@@ -3367,9 +3352,9 @@
               animation cancelling когда you're out of выносливость since it can be
               pretty hard to replicate consistently.
           - p:
-              - b: "О [C6] Фишль билде:"
+              - b: "О [С6] Фишль сборке:"
               - " At "
-              - b: "[C6],"
+              - b: "[С6],"
               - " Oz will be dealing about 60% of the ДПС и it'd be better to
                 invest on "
               - b: Конец гладиатора (2) Громогласный рёв ярости (2)
@@ -3381,7 +3366,7 @@
                   О выборе оружия:
                   Небесное крыло и Полярная звезда: 
               - "Due to the aforementioned Электро/физ. split at "
-              - b: "[C6],"
+              - b: "[С6],"
               - " "
               - b: Полярная звезда
               - " will surpass "
@@ -3580,7 +3565,7 @@
                   О выборе оружия: 
                   The Бесструнный и Охотник во тьме:
               - " At "
-              - b: "[R5],"
+              - b: "[Р5],"
               - " both these оружие are roughly equivalent to "
               - b: Громовой пульс
               - " и "
@@ -3602,7 +3587,7 @@
               - " Этот оружие will be ranked above "
               - b: Ода анемонии
               - " at "
-              - b: "[R5]."
+              - b: "[Р5]."
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
@@ -3615,7 +3600,7 @@
               - "\n"
               - b: "Стойкость Миллелита (4): "
               - "Works as a low/no investment Фишль build. Этот комплект trades off
-                Фишль's damage in return for a отряд wide 20 Сила атаки% бафф. "
+                Фишль's damage in return for a отряд wide 20 процент Сила атаки бафф. "
               - b: Не рекомендовано добывать этот комплект специально для Фишль.
               - " Only use this комплект if you have pieces while farming for the
                 Бледный огонь комплект for your Physical DPSes."
@@ -3806,7 +3791,7 @@
                   margin когда Беннет/Сара Сила атаки buffs are applied.
 
                   Краснорогий камнеруб: 
-              - Depending on the количество of Сила атаки% buffs you're getting, this
+              - Depending on the количество of процент Сила атаки buffs you're getting, this
                 оружие can overtake Волчья погибель in personal damage.
               - b: |-
                   
@@ -3817,7 +3802,7 @@
               - b: low Восстановление энергии requirement Бэй Доу
               - " (где она is paired с other Электро персонажи to батарейка
                 её энергия needs). At "
-              - b: "[R3+],"
+              - b: "[Р3+],"
               - " it becomes exponentially better и comes very close to "
               - b: Меч драконьей кости
               - " и "
@@ -3837,7 +3822,7 @@
               - " In отряд comps где Бэй Доу has "
               - b: low Восстановление энергии requirements
               - " (то есть когда paired с electro batteries), a "
-              - b: Церемония древней знати (2) / Громогласный рёв ярости (2) / +18% Сила атаки комплект (2) [Choose Two]
+              - b: Церемония древней знати (2) / Громогласный рёв ярости (2) / +18процент Сила атаки комплект (2) [Choose Two]
               - " will outperform"
               - b: " Эмблема рассечённой судьбы (4)."
               - "\n"
@@ -4035,9 +4020,9 @@
               - " Для отрядов фокусирующихся на реакциях Заряжен, "
               - b: Усмиряющий гром (4)
               - " can out dps "
-              - b: Громогласный рёв ярости (2) +18% Сила атаки комплект (2),
+              - b: Громогласный рёв ярости (2) +18процент Сила атаки комплект (2),
               - " said комплект is only recommended below "
-              - b: Громогласный рёв ярости (2) +18% Сила атаки комплект (2)
+              - b: Громогласный рёв ярости (2) +18процент Сила атаки комплект (2)
               - " due to the potential inconsistency."
           - p: Электро ДПС Лиза plays around Заряжен reaction отряды ideally, for
               Перегрузка Лиза отряды, you would be building for Мастерство стихий ДПС since you
@@ -4485,7 +4470,7 @@
                 every scenario except crowd battles.
               - b: "Краснорогий камнеруб: "
               - >
-                Depending on the количество of Сила атаки% buffs you're getting, this
+                Depending on the количество of процент Сила атаки buffs you're getting, this
                 оружие can overtake Волчья погибель in personal damage.
               - b: Некованый
               - >
@@ -4496,8 +4481,8 @@
                 required for this, с Чжун Ли being the most ideal option.
               - b: Меч драконьей кости
               - ": At "
-              - b: "[C6] "
-              - "и high ранг пробуждения Меч драконьей кости, it лучше to run an Сила атаки%
+              - b: "[С6] "
+              - "и high ранг пробуждения Меч драконьей кости, it лучше to run an процент Сила атаки
                 Кубок over Physical Damage% с Меч драконьей кости. Этот is due to
                 the oversaturation of damage bonuses (ascension stat + Serpent
                 Spine) in addition to the fact that Электро accounts for a
@@ -4506,8 +4491,8 @@
               - a: found here
                 href: https://tinyurl.com/razoratk
               - ". "
-              - b: It is also worth noting that an [R5] Меч драконьей кости с max stacks can
-                  outperform all 5✩ оружие at [R1].
+              - b: It is also worth noting that an [Р5] Меч драконьей кости с max stacks can
+                  outperform all 5✩ оружие at [Р1].
               - "\n"
               - b: Небесное величие
               - ": Небесное величие is viable с a Physical урон goblet, as the
@@ -4516,7 +4501,7 @@
               - b: |-
                   О комплектах артефактов: 
                   Бледный огонь (2) Рыцарь крови (2): 
-              - Этот комплект лучше if your Сила атаки% is covered by your допстаты,
+              - Этот комплект лучше if your процент Сила атаки is covered by your допстаты,
                 otherwise you would be better off running Конец гладиатора
                 (4).
               - b: " Этот is only recommended to those who have no immediate access to a decent
@@ -4699,7 +4684,7 @@
               the Crowfeather explosion hits an враг, it generates 3 частицы.
           - p:
               - "Crowfeathers generated from Сара's "
-              - b: "[C2]"
+              - b: "[С2]"
               - " do NOT generate частицы."
         notes:
           - p:
@@ -4713,7 +4698,7 @@
               - .
           - p:
               - "At "
-              - b: "[C2]"
+              - b: "[С2]"
               - ", you can skip the заряженный выстрел as it immediately drops a
                 Crowfeather, и save it for later on if you wanna swap back to
                 её to extend её buffs. You can also use Элементальный навык
@@ -4721,7 +4706,7 @@
                 Crowfeather dropped by её Элементальный навык, then swap to other
                 персонаж so that персонаж can benefit from Сара's Сила атаки бафф.
                 It's worth mentioning that Сара's Крит. урон бафф at "
-              - b: "[C6] "
+              - b: "[С6] "
               - doesn't snapshot и it also doesn't show on the статы page, so
                 don't freak out когда you don't see it there.
           - p:
@@ -4736,7 +4721,7 @@
                 if compared с Небесное крыло, но this оружие can be considered
                 over Небесное крыло since Сара is able to trigger the оружие
                 passive quite easily с её Взрыв стихии to provide your
-                отряд members с another 100 Мастерство стихий и 20% Сила атаки бафф for 12
+                отряд members с another 100 Мастерство стихий и 20процент Сила атаки бафф for 12
                 секунд, it also has Восстановление энергии допстат which is very
                 valuable on a Взрыв стихии Support Сара.
           - p:
@@ -4893,25 +4878,25 @@
                   seeCharNotes: false
             - similar:
                 - code: prototype-rancour
-                  refine: R3+
+                  refine: Р3+
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: the-black-sword
-                  refine: R2+
+                  refine: Р2+
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: prototype-rancour
-                  refine: R1-R2
+                  refine: Р1-Р2
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: the-black-sword
-                  refine: R1
+                  refine: Р1
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -4941,7 +4926,7 @@
                   seeCharNotes: false
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -5047,7 +5032,7 @@
               - b: "Бледный огонь (2) Рыцарь крови (2): "
               - |2
                  Этот комплект should only be used until getting 4PF.
-              - b: "Рыцарь крови (2) +18% Сила атаки комплект (2): "
+              - b: "Рыцарь крови (2) +18процент Сила атаки комплект (2): "
               - |
                 The generalist Physical ДПС комплект.
               - b: "Встречная комета (4): "
@@ -5108,7 +5093,7 @@
                   seeCharNotes: false
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -5236,18 +5221,18 @@
                   О выборе оружия: 
                   Кромсатель пиков: 
               - "Этот оружие can only beat Jade Cutter "
-              - b: "[R1] "
+              - b: "[Р1] "
               - "когда it's shielded at "
-              - b: "[R2]."
+              - b: "[Р2]."
               - "\n"
               - b: "Чёрный меч:"
               - " On a quickswap Кэ Цин, this оружие will be shifted below
                 Предвестник зари "
-              - b: "[R5]."
+              - b: "[Р5]."
           - p:
               - b: |-
                   О комплектах артефактов: 
-                  Громогласный рёв ярости (2) +18% Сила атаки комплект (2): 
+                  Громогласный рёв ярости (2) +18процент Сила атаки комплект (2): 
               - >
                 Этот комплект is a generalist комплект, which means it can be used
                 generally anywhere, whether it be Co-op или Abyss, или other
@@ -5302,7 +5287,7 @@
                   seeCharNotes: false
             - similar:
                 - code: the-catch
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -5469,7 +5454,7 @@
               - "\n"
               - b: "Режущий волны плавник:"
               - " "
-              - b: "[R5]"
+              - b: "[Р5]"
               - " Режущий волны плавник is relatively equal Посох Хомы, depending
                 on your total отряд burst cost."
           - p:
@@ -5540,7 +5525,7 @@
                   seeCharNotes: false
             - similar:
                 - code: festering-desire
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -5558,7 +5543,7 @@
                   seeCharNotes: false
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -5682,9 +5667,9 @@
               - b: "Драгоценный омут: "
               - "Этот is Син Цю's лучший in slot оружие if ran с sufficient Восстановление энергии
                 (240% Восстановление энергии before "
-              - b: "[C6]"
+              - b: "[С6]"
               - " и 170-190% Восстановление энергии after "
-              - b: "[C6]"
+              - b: "[С6]"
               - |
                 ).
               - b: "Церемониальный меч:"
@@ -5692,12 +5677,12 @@
                  Этот is Син Цю's лучший in slot оружие if he doesnt have much Восстановление энергии from допстаты, otherwise it is his second лучший in slot оружие.
               - b: "Предвестник зари:"
               - " Этот is a great оружие for Син Цю, assuming he's either "
-              - b: "[C6]"
+              - b: "[С6]"
               - " или teamed с another Гидро персонаж for энергия generation."
           - p:
-              - b: "О приоритете оружия на [C6]:"
+              - b: "О приоритете оружия на [С6]:"
               - " When Син Цю is "
-              - b: "[C6],"
+              - b: "[С6],"
               - " Mistsplitter и Jade Cutter has the лучший damage potential
                 given достаточно Восстановление энергии (170-190%), Небесный меч has the second лучший
                 damage potential (same Восстановление энергии requirement as Jade), и Sacrificial
@@ -5712,7 +5697,7 @@
               - "\n"
               - b: "Эмблема рассечённой судьбы (4):"
               - " If you already have an invested "
-              - b: "[C6]"
+              - b: "[С6]"
               - >2
                  Син Цю build с Церемония древней знати (2) Сердце глубин (2) и Церемониальный меч, you don't need to farm for this комплект. 
               - b: "Церемония древней знати (4): "
@@ -5745,7 +5730,7 @@
               - b: "О приоритете основных характеристик:"
               - >-
                 
-                Ideally you would be running Сила атаки% Sands когда your Восстановление энергии needs are fulfilled. (200% if Церемониальный меч, 230%+ for others).
+                Ideally you would be running процент Сила атаки Sands когда your Восстановление энергии needs are fulfilled. (200% if Церемониальный меч, 230%+ for others).
     credits:
       - a: In-depth Guide
         href: https://docs.google.com/document/d/1RQI5IjLZKqsVhQzRDr7FTYgQX66jKB28PnwoZVlQ4_k/edit
@@ -5911,7 +5896,7 @@
                 Normal Attacks are for Заряжен ДПС.
 
                 Always activate your skill first, as it reduces выносливость consumption и if you have 
-              - b: "[C2],"
+              - b: "[С2],"
               - " it will give 15% Гидро Damage бонус."
           - p:
               - b: "О выборе оружия:"
@@ -6210,7 +6195,7 @@
               - b: "Optimal skill длительность for [C0]:"
               - |2
                  7s, 9s или 12s.
-              - b: "Optimal skill длительность for [C1]:"
+              - b: "Optimal skill длительность for [С1]:"
               - " 9s, 11s или 14s."
           - p:
               - b: "Melee Взрыв стихии:"
@@ -6287,14 +6272,14 @@
               - b: отряды где you are Vaporising your Взрыв стихии,
               - " as the Мастерство стихий допстат loses alot of value in other
                 отряды. If Тарталья is being used as a "
-              - b: "Nuke Support only for his Vaporised Взрыв стихии damage, R5 Бесструнный will rank
+              - b: "Nuke Support only for his Vaporised Взрыв стихии damage, Р5 Бесструнный will rank
                   just below Громовой пульс. "
               - Обратите внимание, что the stringless elemental skill passive does not affect
                 Тарталья's melee stance auto attacks.
           - p:
               - b: |-
                   О комплектах артефактов:
-                  Сердце глубин (2) +18% Сила атаки комплект (2): 
+                  Сердце глубин (2) +18процент Сила атаки комплект (2): 
               - "Этот комплект is "
               - b: only about 1-2 допстаты behind Сердце глубин (4),
               - >2
@@ -6448,7 +6433,7 @@
         tips: "\n"
         notes:
           - "Этот build is лучший utilised at "
-          - b: "[C2], "
+          - b: "[С2], "
           - "но can work without it. Do обратите внимание, что several 4 stars will out-dps
             Мона, as "
           - b: Мона лучше off as a Sub-ДПС/ Support.
@@ -6894,12 +6879,12 @@
                 Взрыв стихии before the Элементальный навык expires in order to
                 maintain Гидро наложение. "
               - b: " Без Прототипа: Янтаря, Кокоми потребуется ~200-220% Восстановление энергии (170-190%
-                  с Прототип: Янтарь at [R1] и 150-170% at [R5])
+                  с Прототип: Янтарь at [Р1] и 150-170% at [Р5])
               - "\n"
-              - b: "Сила атаки% / Гидро урон:"
+              - b: "процент Сила атаки / Гидро урон:"
               - " If Кокоми is just being used to maintain 100% uptime on её
                 Элементальный навык without using обычные атаки during Elemental
-                Взрыв стихии, Сила атаки% / Гидро урон главстат can be used to sacrifice её
+                Взрыв стихии, процент Сила атаки / Гидро урон главстат can be used to sacrifice её
                 healing to instead maximise damage from Элементальный навык."
       - code: dps
         isRecommended: false
@@ -7022,7 +7007,7 @@
               - |
                 N2D 
               - At
-              - b: " [C1]:"
+              - b: " [С1]:"
               - " N3D*"
           - p: "*N3D might result in a loss of Бэй Доу Stormbreaker hits (ДПС loss), и as
               such is only recommended in a Пар comp где the added Гидро
@@ -7038,7 +7023,7 @@
                   О выборе оружия:
                   Эпос о драконоборцах: 
               - "Although this оружие doesn't provide as much personal damage
-                for Кокоми, the 48% Сила атаки бафф is usually more worth in most
+                for Кокоми, the 48процент Сила атаки бафф is usually more worth in most
                 cases. "
               - b: Этот can be её лучший оружие in for overall отряд ДПС if you don't already have
                   another TTDS user in your отряд.
@@ -7052,7 +7037,7 @@
                   О выборе Артефактов:
                   Стойкость Миллелита (4): 
               - Although this комплект offers the lowest personal dmg for Кокоми, the
-                20% Сила атаки отряд бафф can sometimes be better for overall отряд ДПС.
+                20процент Сила атаки отряд бафф can sometimes be better for overall отряд ДПС.
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/kokomi/
@@ -7281,7 +7266,7 @@
                   seeCharNotes: true
             - similar:
                 - code: luxurious-sea-lord
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -7442,7 +7427,7 @@
               - " с кубка, это приведет к потерям урона."
           - p:
               - At
-              - b: " [C2],"
+              - b: " [С2],"
               - " его Элементальный навык "
               - b: reduces ability время отката that is casted within the zone by 15%.
               - " Этот is one of the few abilities in the game that can reduce
@@ -7460,13 +7445,13 @@
               - >2
                  is ranked higher as it обеспечивает more teamwide ДПС и does not come с the need to acquire stacks before engaging in combat.
               - b: "Redstone Thresher: "
-              - Depending on the количество of Сила атаки% buffs you're getting, this
+              - Depending on the количество of процент Сила атаки buffs you're getting, this
                 оружие can overtake Волчья погибель in personal damage.
               - b: |-
                   
                   Акуомару:
               - " At "
-              - b: "[R1],"
+              - b: "[Р1],"
               - " "
               - b: Акуомару
               - " beats "
@@ -7478,7 +7463,7 @@
               - " only beats "
               - b: Благодатный владыка вод
               - " if "
-              - b: "[R2]"
+              - b: "[Р2]"
               - |2
                  и above otherwise.
               - b: "	Церемониальный двуручный меч: "
@@ -7649,7 +7634,7 @@
           notes: If not paired с Чун Юнь, Элементальный навык takes priority over Normal Attacks
           seeCharNotes: false
         tips:
-          - b: "[C1]"
+          - b: "[С1]"
           - " против Крио affected враги"
         notes:
           - p:
@@ -7659,7 +7644,7 @@
               while having Заблудший в метели (4) equipped. In this отряд, Кэйа
               has 55% crit rate против Заморозка враги without any additional
               Crit статы, which means Шанс крит. попадания допстаты are generally
-              prioritized less чем Сила атаки% или Крит. урон.
+              prioritized less чем процент Сила атаки или Крит. урон.
           - p:
               - b: |-
                   О комплектах артефактов:
@@ -7806,7 +7791,7 @@
               while having Заблудший в метели (4) equipped. In this отряд, Кэйа
               has 55% crit rate против Заморозка враги without any additional
               Crit статы, which means Шанс крит. попадания допстаты are generally
-              prioritized less чем Сила атаки% или Крит. урон.
+              prioritized less чем процент Сила атаки или Крит. урон.
           - p:
               - b: |-
                   О комплектах артефактов:
@@ -7887,7 +7872,7 @@
                   seeCharNotes: false
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -8009,7 +7994,7 @@
               - " These weapons' rankings are assumed с "
               - b: Реверсивное Таяние отряды
               - " где the passive и Мастерство стихий stat would be useful. At"
-              - b: " [R5],"
+              - b: " [Р5],"
               - " these weapons would "
               - b: outperform Кромсатель пиков.
           - p:
@@ -8074,7 +8059,7 @@
                   seeCharNotes: false
             - similar:
                 - code: the-catch
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -8092,7 +8077,7 @@
                   seeCharNotes: true
             - similar:
                 - code: white-tassel
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -8186,7 +8171,7 @@
                   О выборе оружия:
                   Режущий волны плавник:
               - " At "
-              - b: "[R5],"
+              - b: "[Р5],"
               - " this оружие can perform similar to "
               - b: |-
                   Посох Хомы.
@@ -8260,7 +8245,7 @@
                   seeCharNotes: false
             - similar:
                 - code: white-tassel
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -8374,7 +8359,7 @@
             "
           - b: "[C0], "
           - "this artifact комплект is only recommended at "
-          - b: "[C2+]."
+          - b: "[С2+]."
       - code: burst support
         isRecommended: true
         weapons:
@@ -8403,7 +8388,7 @@
                   notes: null
                   seeCharNotes: false
                 - code: the-catch
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -8458,7 +8443,7 @@
                   seeCharNotes: false
             - similar:
                 - code: white-tassel
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -8574,31 +8559,31 @@
               - b: " those weapons may fall off if compared с weapons с more offensive
                   допстаты."
               - " Розария's "
-              - b: "[C4]"
+              - b: "[С4]"
               - |2
                  can reduce this Восстановление энергии requirement down to 140% или lower.
               - b: "Покоритель вихря:"
               - " Этот ranking is assumed without a щит. "
               - b: With a large количество of attack buffs such as Беннет, this оружие can fall off
-                  compared to the other options due to overstacking Сила атаки%.
+                  compared to the other options due to overstacking процент Сила атаки.
               - "\n"
               - b: "Гроза драконов / Крест-копьё Китаин:"
               - " These weapons are only used if Розария is played in a отряд
                 comp in which она "
               - b: constantly triggers Реверсивное Таяние.
               - " "
-              - b: "[R5] Гроза драконов can outperform «Улов», и [R5] Kitain's Cross Spear
+              - b: "[Р5] Гроза драконов can outperform «Улов», и [Р5] Kitain's Cross Spear
                   is on par с Смертельный бой."
               - "\n"
               - b: "Режущий волны плавник: "
               - At
-              - b: " [R5],"
+              - b: " [Р5],"
               - " this оружие can perform"
               - b: " similar to Посох Хомы."
               - "\n"
               - b: "Каменное копьё: "
               - At
-              - b: " [R5],"
+              - b: " [Р5],"
               - " this оружие can perform "
               - b: similar to Покоритель вихря.
           - p:
@@ -8778,7 +8763,7 @@
           - p:
               - "Ци Ци's Взрыв стихии has an 80 энергия cost с её skill not
                 generating any энергия until "
-              - b: "[C1]."
+              - b: "[С1]."
               - >-2
                  Восстановление энергии will greatly benefit Ци Ци, while её Взрыв стихии should be kept as a last resort.
                 Ци Ци's Взрыв стихии allows other персонажи to maximize ДПС field time while offering healing с кармана. At Ascension 4, её обычная атака applies the healing talisman onto an враг с a время отката of 30 секунд.
@@ -8961,7 +8946,7 @@
                 (4) due to its passive.
               - b: "Прототип: Полумесяц: "
               - "At "
-              - b: "[R5]"
+              - b: "[Р5]"
               - " с good uptime on its passive, it can potentially beat
                 Небесное крыло. However, do bear in mind that not all враги have
                 weak spots that you can headshot, which does affect its
@@ -9111,14 +9096,14 @@
                   О комплектах артефактов:
                   Заблудший в метели (4): 
               - Этот комплект is the go to комплект for a Заморозка отряд comp, whereas you
-                focus all your статы on Крит. урон while prioritizing Сила атаки% over
+                focus all your статы on Крит. урон while prioritizing процент Сила атаки over
                 Шанс крит. попадания%. Этот has high damage и энергия sustainability while
                 also be used outside of Заморозка comps for a flat 20% Шанс крит. попадания
                 против враги с a Крио status.
               - b: " "
               - "A Гидро Support would be appreciated с Заблудший в метели (4)
                 Гань Юй. "
-              - b: Highly Рекомендуется, especially for players who have Гань Юй at [C4].
+              - b: Highly Рекомендуется, especially for players who have Гань Юй at [С4].
       - code: off-field dps
         isRecommended: false
         weapons:
@@ -9304,7 +9289,7 @@
               - b: "Церемония древней знати (4):"
               - " Этот комплект is a pure support комплект for Гань Юй, focuses on её using
                 её burst и switching out to to your глав. ДПС for extra damage
-                (Gives a 20% Сила атаки бафф) и to trigger reactions. "
+                (Gives a 20процент Сила атаки бафф) и to trigger reactions. "
               - b: >
                   Use this комплект if you are only using её Взрыв стихии и to support
                   your глав. ДПС.
@@ -9362,12 +9347,12 @@
                   seeCharNotes: false
             - similar:
                 - code: luxurious-sea-lord
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
                 - code: akuoumaru
-                  refine: R1
+                  refine: Р1
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -9397,7 +9382,7 @@
                   seeCharNotes: false
             - similar:
                 - code: skyrider-greatsword
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -9523,7 +9508,7 @@
               - b: |-
                   О выборе оружия:
                   Краснорогий камнеруб: 
-              - Depending on the количество of Сила атаки% buffs you're getting this оружие
+              - Depending on the количество of процент Сила атаки buffs you're getting this оружие
                 can overtake Волчья погибель in personal
               - b: " "
               - damage.
@@ -9547,7 +9532,7 @@
                 condition fulfilled in order to outperform Бледный огонь (2)
                 Рыцарь крови (2). If you are able to sustain the
                 conditional бафф, you will be able to achieve a 50% Physical урон
-                бонус + 18% Сила атаки. Without using your Взрыв стихии, you can
+                бонус + 18процент Сила атаки. Without using your Взрыв стихии, you can
                 sustain the Бледный огонь's 4 piece комплект bonus because each stack
                 lasts 7s и it refreshes per stack, и Эола's Элементальный навык
                 время отката is only 4 секунд когда doing 1-taps, therefore you can
@@ -9555,14 +9540,14 @@
                 not use Hold Элементальный навык cast until your Lightfall Sword is nearly
                 about to end. Этот restriction is only for players who don't
                 have Эола "
-              - b: "[C2+]."
+              - b: "[С2+]."
               - |2
                  Please visit the Ability Tips for её combo.
               - b: "Бледный огонь (2) Рыцарь крови (2): "
               - Этот is a non-conditional, consistent artifact комплект that обеспечивает
                 you a constant 50% Physical урон bonus. While that by itself is
                 amazing, Бледный огонь (4) can outperform this комплект because it also
-                has another 18% Сила атаки бафф и is easily maintained through её
+                has another 18процент Сила атаки бафф и is easily maintained through её
                 low быстрое нажатие skill время отката.
     credits: null
   - code: ayaka
@@ -9625,7 +9610,7 @@
                   seeCharNotes: true
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -9754,7 +9739,7 @@
               - "\n"
               - b: "Меч Сокола:"
               - >2
-                 While Меч Сокола has Physical Damage% as a главстат, which is basically useless on Аяка, it is still a good statstick as it has a high Базовая атака и Сила атаки% бафф from the passive.
+                 While Меч Сокола has Physical Damage% as a главстат, which is basically useless on Аяка, it is still a good statstick as it has a high Базовая атака и процент Сила атаки бафф from the passive.
               - b: "Драгоценный омут:"
               - >2
                  With Заблудший в метели (4) и Крио Resonance, this оружие overcrits, so avoid getting Шанс крит. попадания допстаты.
@@ -9845,7 +9830,7 @@
                   seeCharNotes: true
             - similar:
                 - code: slingshot
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -10322,7 +10307,7 @@
               - Этот оружие does not provide any Мастерство стихий, however it overtakes the
                 other weapons on the list когда it comes to enabling your отряд.
               - b: >-2
-                   It offers 48% Сила атаки boost to the персонаж you swap to which is equivalent to 1 главстат. Этот enables your ДПС more if compared to Церемониальные мемуары which only gives ~44EM, equivalent to only 2 допстаты.
+                   It offers 48процент Сила атаки boost to the персонаж you swap to which is equivalent to 1 главстат. Этот enables your ДПС more if compared to Церемониальные мемуары which only gives ~44EM, equivalent to only 2 допстаты.
                   Песнь странника:
               - " Этот оружие is only useful if you get the Мастерство стихий passive from it.
                 As such, it is "
@@ -10541,7 +10526,7 @@
                   notes: null
                   seeCharNotes: false
                 - code: amenoma-kageuchi
-                  refine: R1
+                  refine: Р1
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -10663,9 +10648,9 @@
               - "\n"
               - b: "Амэнома Кагэути:"
               - " Этот оружие "
-              - b: reduces your % Восстановление энергии requirements to ~135% at [R1] и ~110% at [R5].
+              - b: reduces your % Восстановление энергии requirements to ~135% at [Р1] и ~110% at [Р5].
               - " At ["
-              - b: R5],
+              - b: Р5],
               - " this оружие will be "
               - b: better чем Церемониальный меч.
               - "\n"
@@ -10723,7 +10708,7 @@
                   seeCharNotes: false
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -11000,7 +10985,7 @@
                   Рассекающий туман:
               - " If Джинн is used с a way to infuse её attacks с an
                 element (Чун Юнь / "
-              - b: "[C6]"
+              - b: "[С6]"
               - " Беннет), Рассекающий туман will outperform Драгоценный омут
                  as you get full value out of the passive."
       - code: burst support
@@ -11032,7 +11017,7 @@
                   notes: null
                   seeCharNotes: false
                 - code: festering-desire
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -11283,19 +11268,19 @@
                   seeCharNotes: false
             - similar:
                 - code: windblume-ode
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: alley-hunter
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: raven-bow
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -11413,10 +11398,10 @@
                 Венти's Рассеивание reaction. Этот is due to Венти's burst
                 snapshotting his статы (excluding Мастерство стихий toward transformative
                 reactions such as Рассеивание) at the time of cast. While an "
-              - b: "[R1]"
+              - b: "[Р1]"
               - " Elegy of the End yields slightly lower Венти damage compared
                 to an "
-              - b: "[R5]"
+              - b: "[Р5]"
               - " Бесструнный (~7% assuming 50% Elegy бафф uptime), it обеспечивает a
                 отряд-wide Сила атаки и Мастерство стихий бафф which can be better in terms of total
                 отряд damage и comfortable Восстановление энергии."
@@ -11519,7 +11504,7 @@
               notes: null
               seeCharNotes: true
           notes: It is worth noting that комплект bonuses do not увеличивать Сяо's damage by
-            much, due to an oversaturation on урон% bonuses и Сила атаки% from various
+            much, due to an oversaturation on урон% bonuses и процент Сила атаки from various
             sources. For this reason, it лучше to opt out for artifact
             pieces which have higher quality допстаты instead of trying to
             maintain a комплект bonus.
@@ -11623,8 +11608,8 @@
                 if compared с other weapons.
           - p:
               - b: "О комплектах артефактов: "
-              - Prioritize Изумрудная тень over the other 2 +18% Сила атаки sets if
-                there are external Сила атаки% бафф sources on your отряд.
+              - Prioritize Изумрудная тень over the other 2 +18процент Сила атаки sets if
+                there are external процент Сила атаки бафф sources on your отряд.
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/xiao/
@@ -11842,7 +11827,7 @@
                   seeCharNotes: false
             - similar:
                 - code: dodoco-tales
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -12009,7 +11994,7 @@
                   seeCharNotes: false
             - similar:
                 - code: dodoco-tales
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -12160,7 +12145,7 @@
                   stacks: null
                   notes: null
                   seeCharNotes: true
-          notes: "[C6] is assumed for this ranking."
+          notes: "[С6] is assumed for this ranking."
           seeCharNotes: false
         artifacts:
           sets:
@@ -12208,7 +12193,7 @@
               - atk%
             notes: null
             seeCharNotes: false
-          notes: Сила атаки% часы когда below C6 и below Talent Level 9 Взрыв стихии.
+          notes: процент Сила атаки часы когда below С6 и below Talent Level 9 Взрыв стихии.
           seeCharNotes: false
         subStats:
           advices:
@@ -12246,9 +12231,9 @@
           - p:
               - b: >
                   It's recommended to avoid building a ДПС Ноэлль if она's not
-                  [C5+].
+                  [С5+].
               - "Ноэлль ДПС is лучший optimized at "
-              - b: "[C6]"
+              - b: "[С6]"
               - " где она converts an additional 50% Защита into Сила атаки. Её ability
                 to sustain её отряд с shields, heals и AOE damage makes for
                 a reliable ДПС когда your отряд is built around её."
@@ -12268,7 +12253,7 @@
                 if compared с Меч драконьей кости или Белая тень.
               - b: "Двуручный меч Фавония: "
               - Only recommended с high refines, as its usefulness scales
-                с its генерации частиц capabilities. R5 allows её to
+                с its генерации частиц capabilities. Р5 allows её to
                 self-батарейка assuming some additional частицы from враги,
                 но a second Гео is всегда recommended regardless for resonance.
           - p:
@@ -12300,7 +12285,7 @@
                   seeCharNotes: false
             - similar:
                 - code: sacrificial-greatsword
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -12382,16 +12367,16 @@
                   О выборе оружия:
                   	Церемониальный двуручный меч: 
               - "Does not proc on Ноэлль's "
-              - b: "[C4]"
+              - b: "[С4]"
               - " if она's off field, so a high refine is needed for the initial
                 cast to reliably reset время отката. Even с "
-              - b: "[R5],"
+              - b: "[Р5],"
               - >2
                  the время отката is 16 секунд while Ноэлль's щит длительность is 12, so forced downtime is an issue.
               - b: "Двуручный меч Фавония: "
               - "Relies on hitting crits to generate энергия. The 12 second
                 время отката at "
-              - b: "[R1]"
+              - b: "[Р1]"
               - " matches с её щит время отката. Generally not recommended
                 unless you have an abundance of crit допстаты или wish to build
                 её pseudo-ДПС."
@@ -12490,7 +12475,7 @@
           notes: null
           seeCharNotes: false
         tips:
-          - b: "[C2] "
+          - b: "[С2] "
           - extends the длительность of Горо's Взрыв стихии from 9 секунд to 12
             секунд if you can obtain the required Кристаллизация shields. Этот
             allows his teammates to gain the 3 Гео 15% Гео урон% bonus for a
@@ -12512,13 +12497,13 @@
                 on buffing Защита и Гео урон, he's a specialised support geared
                 towards Гео ДПС that scales с Защита, such as Ноэлль или Итто. He
                 can see niche use at "
-              - b: "[C6]"
+              - b: "[С6]"
               - " с other Гео персонажи as well."
           - p:
               - b: "О выборе оружия:"
               - "\n"
               - b: "Элегия погибели:"
-              - " Elegy offers a helpful Восстановление энергии допстат alongside an Мастерство стихий и Сила атаки%
+              - " Elegy offers a helpful Восстановление энергии допстат alongside an Мастерство стихий и процент Сила атаки
                 бафф for your teammates. While not directly useful in отряды
                 centered around Ноэлль или Итто, this could possibly be a good
                 выбор for future Гео ДПС персонажи, или in a отряд which
@@ -12547,7 +12532,7 @@
               - " (и potentially a "
               - b: Healing бонус
               - " главстат on Корона) can be considered at"
-              - b: " [C4]"
+              - b: " [С4]"
               - >2
                  due to being able to лечить the active персонаж based on his Защита during burst. Этот is useful if you plan to use him as a solo целитель.
               - b: Шанс крит. попадания circlet и допстаты
@@ -12728,7 +12713,7 @@
                   seeCharNotes: false
             - similar:
                 - code: festering-desire
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -12740,7 +12725,7 @@
                   seeCharNotes: true
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -12920,7 +12905,7 @@
                   seeCharNotes: false
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -13492,7 +13477,7 @@
               - b: "Об основных характеристиках:"
               - >-
                 
-                Ideally, you'll want Сила атаки%/Гео/Шанс крит. попадания-урон for maximum Взрыв стихии damage, as his Ascension 4 Talent scaling would be лучший benefitted using only one ХП главстат, any additional ХП stat is desirable as it goes to his щит durability/burst damage.
+                Ideally, you'll want процент Сила атаки/Гео/Шанс крит. попадания-урон for maximum Взрыв стихии damage, as his Ascension 4 Talent scaling would be лучший benefitted using only one ХП главстат, any additional ХП stat is desirable as it goes to his щит durability/burst damage.
     credits: null
   - code: albedo
     elementCode: geo
@@ -13509,7 +13494,7 @@
                   notes: null
                   seeCharNotes: false
                 - code: cinnabar-spindle
-                  refine: R5
+                  refine: Р5
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -14729,7 +14714,7 @@ weapons:
       value90: 35.2
     passiveStat:
       - "Hitting враги с Normal или Заряженные атаки grants a 50% chance to
-        deal 200% Сила атаки as урон  in a small AoE. Этот effect can only occur once
+        deal 200процент Сила атаки as урон  in a small AoE. Этот effect can only occur once
         every 10s. Additionally, if the Путешественница equips the Меч нисхождения,
         their atk is increased by 66.  "
       - b: Этот is a preregistration reward PS4 Путешественница only exclusive оружие.
