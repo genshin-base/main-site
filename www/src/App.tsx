@@ -8,6 +8,7 @@ import { paths } from './routes/paths'
 import { route, useRouter } from './routes/router'
 
 import './App.scss'
+import './animations.scss'
 
 const routes = [
 	route(paths.front, FrontPage),

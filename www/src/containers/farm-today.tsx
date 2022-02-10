@@ -8,21 +8,13 @@ import Spinner from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 
 import { getCharacterAvatarSrc } from '#src/utils/characters'
-import {
-	isLoaded,
-	useFetch,
-	useForceUpdate,
-	useInterval,
-	useLocalStorage,
-	useWindowVisibility,
-} from '#src/utils/hooks'
+import { isLoaded, useFetch, useForceUpdate, useLocalStorage, useVisibleTicker } from '#src/utils/hooks'
 import { getItemIconSrc } from '#src/utils/items'
-import { BULLET, HEART } from '#src/utils/typography'
+import { HEART } from '#src/utils/typography'
 import { OtherItemCardDetailDd } from './item-cards/dd-cards'
 import { ItemAvatar } from './item-cards/item-avatars'
 
 import './farm-today.scss'
-import { msToHmWords } from '#src/utils/dates'
 import {
 	SK_DEFAULT_SELECTED_REGION_CODE,
 	SK_FAV_CHAR_CODES,
@@ -37,37 +29,28 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 		SK_SELECTED_REGION_CODE,
 		SK_DEFAULT_SELECTED_REGION_CODE,
 	)
-	const { weekdayCode, resetIn } = getRegionTime(selectedRegionCode)
+	const { weekdayCode } = getRegionTime(selectedRegionCode)
 	const tomorrowCode = arrGetAfter(GI_ROTATION_WEEKDAY_CODES, weekdayCode)
 	const [favCharCodes] = useLocalStorage<string[]>(SK_FAV_CHAR_CODES, [])
 	const [favTalMaterialCodes] = useLocalStorage<string[]>(SK_FAV_TALENT_MATERIAL_CODES, [])
 	// const [favWeaponDatas] = useLocalStorage<STORAGE_WEAPON_DATA[]>(SK_FAV_WEAPON_DATAS, [])
 	// const favWeapMatCodes = useMemo(() => [...favWeaponDatas.map(wd => wd[1])], [favWeaponDatas])
 	const [favWeapPrimMatCodes] = useLocalStorage<string[]>(SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES, [])
-	const isTabFocused = useWindowVisibility()
 	const forceUpdate = useForceUpdate()
-	useInterval(() => {
-		isTabFocused && forceUpdate()
-	}, 30 * 1000)
+	useVisibleTicker(() => {
+		forceUpdate()
+	}, 60 * 1000)
 	const tabs = useMemo(
 		() => [
 			{
 				code: weekdayCode,
-				title: (
-					<>
-						today{' '}
-						<span className="text-muted">
-							{BULLET} {msToHmWords(resetIn)} until reset
-						</span>
-					</>
-				),
+				title: 'today',
 			},
 			{ code: tomorrowCode, title: 'tomorrow' },
 		],
-		[weekdayCode, tomorrowCode, resetIn],
+		[weekdayCode, tomorrowCode],
 	)
-	const [selectedTab, setSelectedTab] = useSelectable(tabs)
-
+	const [selectedTab, setSelectedTab] = useSelectable(tabs, [selectedRegionCode])
 	return (
 		<div className={`farm-today ${classes}`}>
 			<div className="d-none d-xl-flex">

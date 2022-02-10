@@ -197,7 +197,9 @@ export const useWindowVisibility = () => {
 	}, [])
 	return isVisible
 }
-
+/*
+ * not used
+ *
 export function useInterval(callback: () => void, delay: number | null) {
 	const savedCallback = useRef(callback)
 	// Remember the latest callback if it changes.
@@ -217,8 +219,24 @@ export function useInterval(callback: () => void, delay: number | null) {
 		return () => clearInterval(id)
 	}, [delay])
 }
-
+*/
 export function useForceUpdate(): () => void {
 	const setValue = useState(0)[1]
 	return useRef(() => setValue(v => ~v)).current
+}
+export function useVisibleTicker(callback: () => void, interval: number) {
+	const isVisible = useWindowVisibility()
+
+	useEffect(() => {
+		if (!isVisible) return
+		let id
+		function callbackInner() {
+			callback()
+			id = setTimeout(callbackInner, interval - (Date.now() % interval) + 10)
+		}
+		callbackInner()
+		return () => clearTimeout(id)
+		// калбек не должен перезапускать таймер
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [interval, isVisible])
 }

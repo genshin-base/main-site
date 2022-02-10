@@ -1,6 +1,7 @@
 import { AlchemyCalculator } from '#src/containers/alchemy-calculator'
 import { FarmToday } from '#src/containers/farm-today'
 import { RegionSwitch } from '#src/containers/region-switch'
+import { TimeUntilDayReset } from '#src/containers/time-until-day-reset'
 import { BuildsPreviewsWrap } from '#src/modules/builds/build-preview'
 
 function Fieldset({ children, legend, classes = '' }) {
@@ -19,7 +20,10 @@ export function FrontPage() {
 				<Fieldset legend="Region switch" classes="col-lg-3 col-12">
 					<RegionSwitch />
 				</Fieldset>
-				<Fieldset legend="alchemy calculator" classes="col-lg-6 col-12 offset-lg-3 offset-0">
+				<Fieldset legend="Until day reset" classes="col-lg-3 col-12">
+					<TimeUntilDayReset classes="fs-4" />
+				</Fieldset>
+				<Fieldset legend="alchemy calculator" classes="col-lg-6 col-12 ">
 					<AlchemyCalculator />
 				</Fieldset>
 			</div>
