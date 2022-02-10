@@ -2928,7 +2928,7 @@
                 running a целитель.
               - b: Встречная комета (4)
               - " и "
-              - b: "Странствующий ансамбль / Стойкость Миллелита (2) + Crimson's Witch of Flame
+              - b: "Странствующий ансамбль / Стойкость Миллелита (2) + Горящая алая ведьма
                   (2):"
               - " All these options are almost on equal footing because both of
                 the sets have an equal overall damage output assuming you have
@@ -3114,7 +3114,7 @@
               - b: "Прототип: Полумесяц: "
               - >
                 At higher ранг пробуждения, this оружие can beat out Хамаюми, The
-                Viridescent Hunt, и Черногорский боевой лук. Do обратите внимание, что you want
+                Viridescent Hunt, и Черногорский боевой лук. Обратите внимание, что you want
                 to proc the оружие passive by shooting on враг's weakspot for
                 this оружие to be good.
               - b: "Рогатка: "
@@ -3126,10 +3126,10 @@
               - b: |-
                   Об Артефактах:  
                   Горящая алая ведьма (2) +18% Сила атаки комплект (2): 
-              - "The лучший "
+              - " Лучший "
               - b: generalist комплект
-              - " on Ёимия. Этот комплект is considered better чем Shimenawa's
-                Reminiscence (4) due to Ёимия's optimal combo which involves
+              - " on Ёимия. Этот комплект is considered better чем Воспоминания
+                Симэнавы (4) due to Ёимия's optimal combo which involves
                 using её Взрыв стихии before Элементальный навык, as "
               - a: detailed in xandy#7124's
                 href: https://docs.google.com/spreadsheets/d/1pxwDSKZLmZjuwykSXVCw0e_jRUoaCCy_X3RIoimjtWY/edit#gid=1385855695
@@ -3151,8 +3151,8 @@
           - p:
               - b: |
                   О приоритетных талантах: 
-              - Элементальный навык scales very poorly which is why it is the least
-                priority. If you do not care about её Взрыв стихии damage
+              - Элементальный навык скейлится очень слабо, поэтому он имеет самый низкий
+                приоритет. If you do not care about её Взрыв стихии damage
                 output, you can prioritize Элементальный навык over Взрыв стихии,
                 но обычная атака талант still has the most priority since it's
                 the main source of Ёимия's damage.
@@ -3391,9 +3391,9 @@
               - " will surpass "
               - b: |-
                   Небесное крыло.
-                  Viridescent Hunt: 
-              - Viridescent Hunt is a really good investment that even surpasses
-                Amos in a situation где there are crowds of враги, although
+                  Зелёный лук: 
+              - Зелёный лук is a really good investment that even surpasses
+                Амос in a situation где there are crowds of враги, although
                 it's not as efficient towards massive single targets или really
                 agile targets. It offers crowd ДПС that is severely lacking due
                 to Фишль's single target attacks.
@@ -3574,7 +3574,7 @@
           - p:
               i: Courtesy of itsjaeYOU#2868
         notes:
-          - p: Взрыв стихии и Элементальный навык both summon Oz, so make sure you're only using one
+          - p: И Взрыв стихии и Элементальный навык призывают Оза, so make sure you're only using one
               at a time. Start с your Элементальный навык, use Взрыв стихии for second Oz rotation
               и alternate. Hopefully, by the time your second/third round of
               Oz summoning is over, you'll have gained достаточно энергия to повторить
@@ -3610,7 +3610,7 @@
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
-              - b: "Thundersoothers (4):"
+              - b: "Усмиряющий гром (4):"
               - " Этот комплект артефактов will outperform "
               - b: Конец гладиатора(2) Громогласный рёв ярости(2)
               - " if used in a отряд comp где an electro aura is всегда present
@@ -3620,7 +3620,7 @@
               - b: "Стойкость Миллелита (4): "
               - "Works as a low/no investment Фишль build. Этот комплект trades off
                 Фишль's damage in return for a отряд wide 20 Сила атаки% бафф. "
-              - b: Not recommended to specifically farm this комплект for Фишль.
+              - b: Не рекомендовано добывать этот комплект специально для Фишль.
               - " Only use this комплект if you have pieces while farming for the
                 Бледный огонь комплект for your Physical DPSes."
     credits: null
@@ -3837,7 +3837,7 @@
                 in a "
               - b: damage loss
               - " as compared to prioritising offensive статы such as "
-              - b: Сила атаки/Crit.
+              - b: Сила атаки/Крит.
               - " In отряд comps где Бэй Доу has "
               - b: low Восст. энергии requirements
               - " (то есть когда paired с electro batteries), a "
@@ -3852,7 +3852,7 @@
               - >
                 Этот комплект could be considered if your Бэй Доу can get её
                 Взрыв стихии off время отката и the отряд doesn't have a
-                Церемония древней знати (4) user yet, do обратите внимание, что sometimes Бэй Доу
+                Церемония древней знати (4) user yet, обратите внимание, что sometimes Бэй Доу
                 doesn't benefit from the Сила атаки бафф from the 4 piece комплект if она's
                 the комплект holder, so Бэй Доу as a Церемония древней знати (4) holder isn't
                 really recommended.
@@ -13799,36 +13799,36 @@
           seeCharNotes: false
         tips: []
         notes:
-          - p: Итто is a Гео ДПС персонаж who takes advantage of his Elemental
-              Взрыв стихии's Сила атаки boost и Гео infusion to deal significant damage
+          - p: Итто - это Гео ДПС, who takes advantage of his
+              Взрыв стихии's Сила атаки boost и Гео инфузии to deal significant damage
               during its uptime. His combos involve stacking и unleashing his
-              Заряженные атаки, named Arataki Kesagiri. Arataki Kesigiri consumes
-              no выносливость и can be casted continuously as long as he has
-              Superlative Superstrength stacks. Superlative Superstrength is
-              capped at 5 stacks at any given time, и Итто gets those stacks
-              когда his 2nd и 4th обычная атака string hits an враг.
-              Activating his Взрыв стихии allows his 1st и 3rd Normal
-              Attack to also generate stacks. Итто's Элементальный навык deals
-              damage to враги on cast и summons a taunt, Ushi, which is
-              considered a Гео Construct. Этот initial cast damage grants Итто 1
-              Superlative Superstrength stack, и upon Ushi leaving the field,
-              Итто is granted another stack. When Ushi takes damage, Итто gains
-              a stack (capped at 1 stack per 2 сек.). Итто's Взрыв стихии
-              converts his Normal и Заряженные атаки into Гео урон, увеличивает
-              Итто's обычная атака Speed и converts a portion of Итто's
-              current Защита to Сила атаки.
+              Заряженные атаки, named Аратаки кэсагири. Аратаки кэсагири не тратит
+              выносливость и can be casted continuously as long as he has
+              уровни Невероятной силы. Невероятная сила
+              ограничена 5 уровнями в любой момент времени, и Итто получает эти уровни
+              когда его 2 и 4 обычная атака попадает по врагу.
+              Активация его Взрыва стихии позволяет 1 и 3 обычной
+              атаке тоже получать уровни. Элементальный навык Итто deals
+              damage to враги on cast и summons a taunt, Уси, который считается
+              Гео конструкцией. Этот initial cast damage grants Итто 1
+              уровень Невероятной силы, и upon Уси leaving the field,
+              Итто is granted another уровень. When Уси takes damage, Итто gains
+              a уровень (capped at 1 уровень per 2 сек.). Взрыв стихии Итто
+              преобразовывает обычные и Заряженные атаки в Гео урон, увеличивает
+              скорость его обычных атак и converts a portion текущей
+              Защиты Итто в Силу атаки.
           - p:
               - b: "О выборе оружия:"
               - "\n"
               - b: "Меч драконьей кости:"
               - >2
-                 When using Кокон сладких грёз, Меч драконьей кости stacks are prioritized over Husk of the Opulent Dreams stacks due to their conflicting nature in gaining stacks (Off-field и on-field).
+                 При использовании Кокона сладких грёз, Меч драконьей кости stacks are prioritized over Кокон сладких грёз stacks due to their conflicting nature in gaining stacks (Off-field и on-field).
               - b: "Небесное величие: "
               - >
-                Can be a great или bad оружие for Итто depending on your Восст. энергии
-                needs. The less Восст. энергии you need (due to генерацию
-                частиц от членов отряда или Восст. энергии from subs), the less
-                useful this оружие becomes.
+                Может быть отличным или плохим оружием для Итто в зависимости от потребности Восст. 
+                энергии. Чем меньше необходимость Восст. энергии (зависит от генерации
+                частиц от членов отряда или Восст. энергии накопленные в допстатах), тем менее
+                полезным становится это оружие.
               - b: "Белая тень:"
               - " Your rotations often start с 1 stack of this оружие, и
                 due to Итто's Взрыв стихии snapshotting Защита on cast, you're unable to
