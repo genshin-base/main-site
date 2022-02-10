@@ -64,13 +64,14 @@ const MapProjection: ProjectionConverter = {
 	},
 }
 
-export type MapMarkerStyle = null | 'circle' | 'outline'
+export type MapMarkerStyle = null | undefined | 'circle' | 'outline'
 export type MapMarkerRaw = { mapCode: MapCode; x: number; y: number; icon: string; style?: MapMarkerStyle }
+type MapMarkerIcon = { img: null | HTMLImageElement | HTMLCanvasElement }
 type MapMarker = {
 	mapCode: MapCode
 	x: number
 	y: number
-	icon: null | HTMLImageElement | HTMLCanvasElement
+	icon: MapMarkerIcon
 	style: MapMarkerStyle
 }
 
@@ -92,18 +93,6 @@ export const TeyvatMap = memo(function TeyvatMap({
 		tileContainer: TileContainer
 	} | null>(null)
 	const mapCodeRef = useRef<MapCode>('teyvat')
-
-	/*
-	const markers_ = useFetch(() => apiGetJSONFile(`generated/locations.json`) as Promise<any[]>, [])
-	if (isLoaded(markers_))
-		markers = markers_
-			.filter(x => x.locations.length > 0 && x.type === 'domain')
-			.map(x => ({
-				x: x.locations[0][0],
-				y: x.locations[0][1],
-				icon,
-			}))
-	*/
 
 	useEffect(() => {
 		if (!wrapRef.current) return
@@ -189,26 +178,28 @@ function calcAutoPosition(map: LocMap, markers: MapMarkerRaw[], mapCode: MapCode
 class MarkersLayer {
 	private map: LocMap | null = null
 	private markers: MapMarker[] = []
-	private iconCache: Map<string, HTMLImageElement | HTMLCanvasElement> = new Map()
+	private iconCache: Map<string, MapMarkerIcon> = new Map()
 	private mapCode: MapCode = 'teyvat'
 
-	private loadMarkerImg(marker: MapMarker, src: string) {
-		const key = src + '|' + marker.style
-		const cachedImg = this.iconCache.get(key)
-		if (cachedImg) {
-			marker.icon = cachedImg
-			this.map?.requestRedraw()
+	private loadMarkerImg(src: string, style: MapMarkerStyle) {
+		const key = src + '|' + style
+		const cachedIcon = this.iconCache.get(key)
+		if (cachedIcon) {
+			if (cachedIcon.img) this.map?.requestRedraw()
+			return cachedIcon
 		} else {
 			const img = new Image()
+			const icon: MapMarkerIcon = { img: null }
 			img.src = src
 			img.onload = () => {
-				marker.icon =
-					marker.style === 'outline'
+				icon.img =
+					style === 'outline'
 						? makeCanvasWithShadow(img, 1, 'black') //
 						: img
 				this.map?.requestRedraw()
 			}
-			this.iconCache.set(key, img)
+			this.iconCache.set(key, icon)
+			return icon
 		}
 	}
 
@@ -226,8 +217,7 @@ class MarkersLayer {
 			}
 		}
 		for (const raw of rawMarkers) {
-			const marker = { ...raw, icon: null, style: raw.style ?? null }
-			this.loadMarkerImg(marker, raw.icon)
+			const marker = { ...raw, icon: this.loadMarkerImg(raw.icon, raw.style), style: raw.style }
 			this.markers.push(marker)
 		}
 	}
@@ -256,7 +246,7 @@ class MarkersLayer {
 				rc.fill()
 			}
 
-			const img = marker.icon
+			const img = marker.icon.img
 			if (img !== null) {
 				const isImg = 'naturalWidth' in img
 				const nw = isImg ? img.naturalWidth : img.width
