@@ -47,7 +47,7 @@ export function FavoriteCharacters({
 				<ItemAvatar
 					src={getCharacterAvatarSrc(code)}
 					// rarity={charactersShortList.find(x => x.code === code)?.rarity ?? 5}
-					classes="mb-1 me-1 mb-xxl-2 me-xxl-2 small-avatar align-middle"
+					classes="me-1 small-avatar"
 					key={code}
 					href={navigateToCharacter ? '/builds/' + code : undefined}
 					onClick={() => onCharacterSelect && onCharacterSelect(code)}
@@ -59,8 +59,8 @@ export function FavoriteCharacters({
 		shoudSelectFirst && onCharacterSelect && onCharacterSelect(characterCodes[0])
 	}, [onCharacterSelect, characterCodes, shoudSelectFirst])
 	return (
-		<div className={`last-used-characters py-sm-1 py-2 ${classes}`}>
-			<label className="opacity-75 pe-2 mb-sm-1 align-middle ">Favorite characters: </label>
+		<div className={`favourite-characters ${classes}`}>
+			<label className="opacity-75 pe-2 align-middle py-1">Favorite characters </label>
 			<br className="d-xl-none" />
 			{charactersElems}
 			{/* {optsForSelect.length ? (

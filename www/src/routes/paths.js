@@ -2,7 +2,7 @@ import { charactersShortList } from '../api/generated.js'
 
 export const paths = /** @type {const} */ ({
 	front: [''],
-	builds: ['/builds', ['code', []]],
+	builds: ['/builds'],
 	buildCharacters: ['/builds/', ['code', charactersShortList.map(x => x.code)]],
 	equipment: ['/equipment'],
 })

@@ -2,7 +2,7 @@ import { AlchemyCalculator } from '#src/containers/alchemy-calculator'
 import { FarmToday } from '#src/containers/farm-today'
 import { RegionSwitch } from '#src/containers/region-switch'
 import { TimeUntilDayReset } from '#src/containers/time-until-day-reset'
-import { BuildsPreviewsWrap } from '#src/modules/builds/build-preview'
+import { BuildsPreviewsWrap } from '#src/modules/builds/character-build-preview'
 
 function Fieldset({ children, legend, classes = '' }) {
 	return (
@@ -12,7 +12,7 @@ function Fieldset({ children, legend, classes = '' }) {
 		</fieldset>
 	)
 }
-export function FrontPage() {
+export function FrontPage(): JSX.Element {
 	return (
 		<div className="dashboard container ">
 			<h1 className="my-1">Dashboard</h1>

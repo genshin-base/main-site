@@ -1,4 +1,4 @@
-export default function Spinner(): JSX.Element {
+export function Spinner(): JSX.Element {
 	return (
 		<div class="d-flex justify-content-center">
 			<div class="spinner-border" role="status">

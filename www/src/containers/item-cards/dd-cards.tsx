@@ -5,7 +5,7 @@ import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/co
 import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api/utils'
 import { SimpleSelect } from '#src/components/select'
-import Spinner from '#src/components/spinners'
+import { Spinner } from '#src/components/spinners'
 import { BtnTabGroup, tabTitleFromName, useSelectable } from '#src/components/tabs'
 import {
 	ItemDetailDdMobilePortal,
@@ -415,7 +415,6 @@ export function WeaponCard({
 }): JSX.Element {
 	const weapon = weapons[0] //пока оружие приходит только одно, а артефактов может придти несколько
 	const materials = getAllRelated(related.items, weapon.materialCodes)
-	const ascMaterial = materials.find(m => ~m.types.indexOf('weapon-material-primary'))
 	const [materialOnMap, setMaterialOnMap] = useState(materials[0])
 	const dataForMap = useMemo(() => {
 		const srcs = materialOnMap.obtainSources

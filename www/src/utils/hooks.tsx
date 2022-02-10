@@ -1,5 +1,5 @@
 import { RefObject } from 'preact'
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'preact/hooks'
+import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
 
 import { arrShallowEqual } from '#src/../../lib/utils/collections'
 import { BS_BreakpointCode, BS_getCurrBreakpoint } from '#src/utils/bootstrap'

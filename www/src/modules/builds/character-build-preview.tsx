@@ -2,7 +2,7 @@ import { useMemo, useState } from 'preact/hooks'
 
 import { useBuildWithDelayedLocs } from '#src/api'
 import { getAllRelated } from '#src/api/utils'
-import Spinner, { CentredSpinner } from '#src/components/spinners'
+import { Spinner, CentredSpinner } from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { FavoriteCharacters } from '#src/containers/character-picker/favorite-characters'
 import { OtherItemCardDetailDd } from '#src/containers/item-cards/dd-cards'
@@ -24,7 +24,7 @@ import {
 
 import './character-build-preview.scss'
 
-function BuildPreview({ characterCode }: { characterCode: string }): JSX.Element {
+function CharacterBuildPreview({ characterCode }: { characterCode: string }): JSX.Element {
 	const [build, isUpdating] = useBuildWithDelayedLocs(characterCode)
 	const displayingCharacterCode = isLoaded(build) ? build.character.code : characterCode
 	const roleTabs: BuildRoleOrDummy[] = isLoaded(build) ? build.character.roles : DUMMY_ROLES
@@ -200,8 +200,13 @@ export function BuildsPreviewsWrap({ classes = '' }: { classes?: string }): JSX.
 				onCharacterSelect={setSelectedCharacterCode}
 				shoudSelectFirst={!selectedCharacterCode}
 				navigateToCharacter={false}
+				classes="mb-2"
 			/>
-			{selectedCharacterCode ? <BuildPreview characterCode={selectedCharacterCode} /> : <Spinner />}
+			{selectedCharacterCode ? (
+				<CharacterBuildPreview characterCode={selectedCharacterCode} />
+			) : (
+				<Spinner />
+			)}
 		</div>
 	)
 }

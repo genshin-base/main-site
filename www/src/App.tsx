@@ -1,7 +1,7 @@
 import { PageWrap } from './components/page-wrap'
 import { Footer } from './containers/footer'
 import { Header } from './containers/header'
-import { BuildsPage } from './pages/builds'
+import { BuildsPage_BuildDetail, BuildsPage_CharSelect } from './pages/builds'
 import { EquipmentPage } from './pages/equipment'
 import { FrontPage } from './pages/front-page'
 import { paths } from './routes/paths'
@@ -12,8 +12,8 @@ import './animations.scss'
 
 const routes = [
 	route(paths.front, FrontPage),
-	route(paths.builds, BuildsPage),
-	route(paths.buildCharacters, BuildsPage),
+	route(paths.builds, BuildsPage_CharSelect),
+	route(paths.buildCharacters, BuildsPage_BuildDetail),
 	route(paths.equipment, EquipmentPage),
 ]
 

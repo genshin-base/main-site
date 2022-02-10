@@ -1,9 +1,9 @@
-.animation-glow {
-	animation: animationGlow infinite linear 1s;
+.animation-time-glow {
+	animation: animationTimeGlow infinite linear 1s;
 }
-@keyframes animationGlow {
+@keyframes animationTimeGlow {
 	0% {
-		opacity: 0.75;
+		opacity: 0.5;
 	}
 	100% {
 		opacity: 1;

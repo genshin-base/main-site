@@ -1,9 +1,7 @@
-import { useEffect, useMemo } from 'preact/hooks'
-
-import { useBuildWithDelayedLocs } from '#src/api'
-import { getAllRelated } from '#src/api/utils'
+import { useMemo } from 'preact/hooks'
+import { getAllRelated, MapAllByCode } from '#src/api/utils'
 import { CharacterPortrait } from '#src/components/characters'
-import Spinner from '#src/components/spinners'
+import { CentredSpinner } from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { OtherItemCardDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
@@ -14,14 +12,13 @@ import {
 	getCharacterPortraitSrc,
 	getCharacterSilhouetteSrc,
 } from '#src/utils/characters'
-import { isLoaded } from '#src/utils/hooks'
+
 import { getItemIconSrc } from '#src/utils/items'
 import { pluralizeEN } from '#src/utils/strings'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 import {
 	BuildRoleOrDummy,
 	CIRCLET_GOBLET_SANDS,
-	DUMMY_ROLES,
 	genArtifactAdvice,
 	genArtMainStatDetail,
 	genNotes,
@@ -36,19 +33,20 @@ import {
 } from './common'
 
 import './character-build-detailed.scss'
+import { CharacterFullInfoWithRelated } from '#src/../../lib/parsing/combine'
 
-export function CharacterBuildDetailed({ characterCode }: { characterCode: string }) {
-	const [build, isUpdating] = useBuildWithDelayedLocs(characterCode)
-
-	const roleTabs: BuildRoleOrDummy[] = isLoaded(build) ? build.character.roles : DUMMY_ROLES
+export function CharacterBuildDetailed({
+	build,
+	isUpdating,
+}: {
+	build: MapAllByCode<CharacterFullInfoWithRelated>
+	isUpdating: boolean
+}): JSX.Element {
+	const roleTabs: BuildRoleOrDummy[] = build.character.roles
+	const characterCode = build.character.code
 	const [selectedRoleTab, setSelectedRoleTab] = useSelectable(roleTabs, [characterCode])
 
-	useEffect(() => {
-		window.scrollTo(0, 0)
-	}, [])
-
 	const weaponListBlock = useMemo(() => {
-		if (!isLoaded(build)) return []
 		const role = getRoleData(build, selectedRoleTab.code)
 		if (!role) return []
 		return role.weapons.advices.map((advice, i) => {
@@ -92,7 +90,6 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 	}, [build, selectedRoleTab])
 
 	const artifactsListBlock = useMemo(() => {
-		if (!isLoaded(build)) return []
 		const role = getRoleData(build, selectedRoleTab.code)
 		if (!role) return []
 
@@ -107,7 +104,6 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		})
 	}, [build, selectedRoleTab])
 	const artifactStatsAndSkillsBlock = useMemo(() => {
-		if (!isLoaded(build)) return null
 		const role = getRoleData(build, selectedRoleTab.code)
 		return (
 			<>
@@ -154,7 +150,6 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		)
 	}, [build, selectedRoleTab])
 	const notesBlock = useMemo(() => {
-		if (!isLoaded(build)) return null
 		const role = getRoleData(build, selectedRoleTab.code)
 		return (
 			<>
@@ -165,7 +160,6 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		)
 	}, [build, selectedRoleTab])
 	const materialsBlock = useMemo(() => {
-		if (!isLoaded(build)) return null
 		const materials = getAllRelated(build.maps.items, build.character.materialCodes)
 		return (
 			<div className="w-100 d-flex flex-wrap justify-content-between">
@@ -183,12 +177,15 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 			</div>
 		)
 	}, [build])
-	if (!isLoaded(build)) return <Spinner />
 	const CharacterDetailDesktop = (
 		<div className="d-none d-xl-block">
-			<div className="container float-end">
+			<div className="container">
 				<div className="row">
-					<div className="col col-3"></div>
+					<div className="col col-3 p-0">
+						<A className="btn btn-secondary align-self-center" type="submit" href="/builds">
+							<span className="fs-4 lh-1 opacity-75">‹ </span> Back
+						</A>
+					</div>
 					<div className="col col-9">
 						<Tabs
 							tabs={roleTabs}
@@ -199,13 +196,15 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 					</div>
 				</div>
 				<div className="row">
-					<div className="col col-3 position-relative">
-						<CharacterPortrait src={getCharacterPortraitSrc(characterCode)} classes="w-100" />
-						<div className="mt-3">{materialsBlock}</div>
-						<ToggleCharFav
-							classes="fs-3 position-absolute top-0 end-0 m-2"
-							characterCode={characterCode}
-						/>
+					<div className="col col-3 pt-3">
+						<div className="position-relative">
+							<CharacterPortrait src={getCharacterPortraitSrc(characterCode)} classes="w-100" />
+							<div className="mt-3">{materialsBlock}</div>
+							<ToggleCharFav
+								classes="fs-3 position-absolute top-0 end-0"
+								characterCode={characterCode}
+							/>
+						</div>
 					</div>
 					<div className="col col-9">
 						<div className="d-flex">
@@ -265,22 +264,23 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		</div>
 	)
 	return (
-		<div className="character-build-detailed mt-2 mb-3">
-			<div className="d-flex">
+		<div className="character-build-detailed mt-2 mb-3 position-relative">
+			<div className="d-flex d-xl-none mt-3">
 				<A className="btn btn-secondary align-self-center" type="submit" href="/builds">
 					<span className="fs-4 lh-1 opacity-75">‹ </span> Back
 				</A>
-				<h5 className="ps-3 pe-1 m-0 align-self-center">
-					{isLoaded(build) ? build.character.name : ''}
-				</h5>
-				<ToggleCharFav classes="fs-3 align-self-center d-xl-none" characterCode={characterCode} />
+				<h5 className="ps-3 pe-1 m-0 align-self-center">{build.character.name}</h5>
+				<ToggleCharFav classes="fs-3 align-self-center" characterCode={characterCode} />
 				<ItemAvatar
 					src={getCharacterAvatarSrc(characterCode)}
-					classes="d-xl-none large-avatar align-self-end mt-n5 ms-auto"
+					classes="large-avatar align-self-end mt-n5 ms-auto"
 				/>
 			</div>
-			{CharacterDetailDesktop}
-			{CharacterDetailMobile}
+			{isUpdating ? <CentredSpinner /> : null}
+			<div className={isUpdating ? 'opacity-50 pe-none' : ''}>
+				{CharacterDetailDesktop}
+				{CharacterDetailMobile}
+			</div>
 		</div>
 	)
 }

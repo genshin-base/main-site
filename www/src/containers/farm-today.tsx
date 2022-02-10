@@ -4,7 +4,7 @@ import { getRegionTime, GI_ROTATION_WEEKDAY_CODES, GI_ServerRegionCode } from '#
 import { arrGetAfter } from '#lib/utils/collections'
 import { mustBeDefined } from '#src/../../lib/utils/values'
 import { apiMaterialsTimetable } from '#src/api/endpoints'
-import Spinner from '#src/components/spinners'
+import { Spinner } from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 
 import { getCharacterAvatarSrc } from '#src/utils/characters'
