@@ -153,37 +153,37 @@
         tips: []
         notes:
           - p:
-              - "ДПС Эмбер будет сосредоточен на максимизации урона от Заряженной атаки по
-                 слабым местам врага, так как пассивный талант 4 Фазы возвышения Эмбер «Подавляющий огонь» увеличивает Силу атаки на
-                 15% на 10 сек. после попадания в слабое место. Критическое попадание также гарантировано
-                 при попадании в слабое место, поэтому мы стремимся прокачать Крит. урон,
-                 практически игнорируя Шанс крит. попадания, это может
+              - "ДПС Эмбер будет сосредоточена на максимизации урона от Заряженной атаки по
+                 слабым местам врага, так как пассивный талант, открывающийся на 60 уровне, увеличивает Силу атаки на
+                 15% на 10 секунд после попадания в слабое место. Критическое попадание также гарантировано
+                 при попадании в слабое место, поэтому следует прокачать Крит. урон,
+                 практически игнорируя Шанс крит. попадания. Но это может
                  измениться после "
               - b: "[C4]."
               - |-
                 
                 После 
               - b: "[C4],"
-              - " становится доступным стиль игры, ориентированный на урон от её навыков, 
-                 с этой сборкой вы захотите экипировать Горящую алую ведьму (4), 
-                 пытаясь сохранить соотношение Шанса крит. попадания: Крит. урона 1: 2 для более частых критических ударов. 
-                 Этот стиль игры безопаснее, последовательнее и имеет больше урона по площади по сравнению со сборкой от Заряженной атаки."
+              - " становится доступным стиль игры, ориентированный на урон от её навыков. 
+                 В этом случае стоит экипировать Горящую алую ведьму (4), 
+                 пытаясь сохранить соотношение Шанса крит. попадания к Крит. урону как 1:2 для более частых критических ударов. 
+                 Этот стиль игры безопаснее, стабильнее и даёт больше урона по площади по сравнению со сборкой от Заряженной атаки."
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
               - b: "Воспоминания Симэнавы:"
               - " На "
               - b: "[C4]"
-              - " этот сет превзойдет Странствующий ансамбль для мейн ДПС сборки Эмбер через Заряженную атаку."
+              - " этот сет больше подходит для глав. ДПС сборки Эмбер через Заряженную атаку, чем Странствующий ансамбль."
           - p:
               - b: "О выборе оружия:"
               - "\n"
               - b: "Прототип: Полумесяц: "
-              - "Этот лук победит Небесное крыло, если он "
+              - "Этот лук лучше, чем Небесное крыло, если он "
               - b: "[R2+]."
               - "\n"
               - b: "Хамаюми:"
-              - " Этот лук превзойдет Клятву стрелка "
+              - " Этот лук лучше Клятвы стрелка "
               - b: "[R5]"
               - " если он "
               - b: "[R2+]."
@@ -299,13 +299,13 @@
         tips: []
         notes:
           - p: Из-за её плохих скейлов, этот раздел посвящен дешёвой сборке
-              которая обеспечивает полезность и дает возможность ломать щиты благодаря 
-              быстрому наложению Пиро с помощью её Взрыва стихии. Из-за того, что
-              генерация энергии Эмбер очень низкая, прокачка её Восст. энергии
+              которая полезна за счет возможности ломать щиты благодаря 
+              быстрому наложению Пиро с помощью Взрыва стихии. Из-за того, что
+              генерация энергии у Эмбер очень низкая, прокачка её Восстановления энергии
               приоритетна.
           - p:
-              - b: "О 4 частях Инструктора: "
-              - Этот набор предпочтительнее 4 частей Церемонии древней знати, если Эмбер используется в качестве поддержки в команде испарения с Ху Тао.
+              - b: "О полном комплекте Инструктора: "
+              - Этот набор предпочтительнее полного комплекта Церемонии древней знати, если Эмбер используется в качестве поддержки в команде испарения с Ху Тао.
     credits: null
   - code: xiangling
     elementCode: pyro
@@ -507,12 +507,12 @@
           - p:
               - u:
                   b: |
-                    Рекомендуемый порог Восст. энергии: 
+                    Рекомендуемый порог Восстановление энергии: 
               - b: "Националка/Отряд Тартальи: "
               - |
-                160-200 Восст. энергии%
+                160-200 Восстановление энергии%
               - b: "Активатор для отрядов Реверсивного Таяния:"
-              - " 200-250 Восст. энергии%"
+              - " 200-250 Восстановление энергии%"
         notes:
           - p:
               - b: >-
@@ -528,18 +528,18 @@
               - b: " Нефритового коршуна."
               - "\n"
               - b: "Крест-копьё Китаин: Пассивное умение Крест-копья Китаина значительно 
-              снижает порог Восст. энергии Сян Лин, до
+              снижает порог Восстановление энергии Сян Лин, до
                
                 "
-              - b: ~140 Восст. энергии% на [R1]
+              - b: ~140 Восстановление энергии% на [R1]
               - " и "
-              - b: ~110 Восст. энергии% at [R5].
-              - " Это позволяет вам распределить куски с Восст. энергии на другие атакующие
+              - b: ~110 Восстановление энергии% at [R5].
+              - " Это позволяет вам распределить куски с Восстановление энергии на другие атакующие
                  допстаты и благодаря этому "
               - b: "[R5] Крест-копьё Китаин"
               - " может превзойти "
               - b: Нефритового коршуна.
-              - " Из-за значительного снижения порога Восст. энергии комплект артефактов"
+              - " Из-за значительного снижения порога Восстановление энергии комплект артефактов"
               - b: Горящая алая ведьма (4)
               - "  превзойдет "
               - b: Эмблему рассечённой судьбы (4).
@@ -575,12 +575,12 @@
               - " Этот комплект pulls ahead over "
               - b: Эмблема рассечённой судьбы (4)
               - >2
-                 в отрядах где Сян Лин имеет более низкую потребность Восст. энергии (то есть Националка Райдэн).
+                 в отрядах где Сян Лин имеет более низкую потребность Восстановление энергии (то есть Националка Райдэн).
               - b: "Изгнанник (2) Учёный (2): "
               - "Этот комплект может быть использован как "
               - b: очень бюджетный саппорт билд to enable Реверсивное Таяние отряды
               - " где Сян Лин не вызывает реакции и вместо этого
-                используется как aura и требует много Восст. энергии. Обратите внимание на то, что
+                используется как aura и требует много Восстановление энергии. Обратите внимание на то, что
                 is "
               - b: не рекомендуется останавливаться на этом билде, так как Сян Лин still does decent damage
                   in these отряды.
@@ -921,7 +921,7 @@
               - "Вспышка во тьме имеет потенциал to beat Стальное жало "
               - b: "[R5],"
               - " но this requires the passive to be up, whenever damaged, your
-                passive is disabled for 5 сек. и you could be losing out a
+                passive is disabled for 5 секунд и you could be losing out a
                 lot of damage, especially if you are constantly being damaged."
           - p:
               - b: |-
@@ -975,8 +975,8 @@
                 that your Мастерство стихий pieces manage to roll plenty of Crit subs,
                 Mistsplitter easily overtakes Jade Cutter.
 
-                Рекомендованое количество of Восст. энергии%: 130-150%. Worth noting that 
-              - b: с Громогласный рёв ярости (4), you have a lot more leeway когда it comes to Восст. энергии.
+                Рекомендованое количество of Восстановление энергии%: 130-150%. Worth noting that 
+              - b: с Громогласный рёв ярости (4), you have a lot more leeway когда it comes to Восстановление энергии.
       - code: burst support
         isRecommended: true
         weapons:
@@ -1098,7 +1098,7 @@
                 - em
               notes: null
               seeCharNotes: false
-          notes: Prioritize Восст. энергии first if you can't burst off время отката
+          notes: Prioritize Восстановление энергии first if you can't burst off время отката
           seeCharNotes: false
         talents:
           advices:
@@ -1106,7 +1106,7 @@
             - skill
           notes: null
           seeCharNotes: false
-        tips: "Рекомендуется количество of Восст. энергии%: 180-200"
+        tips: "Рекомендуется количество of Восстановление энергии%: 180-200"
         notes:
           - "A Взрыв стихии Support Беннет "
           - b: "полностью игнорирует необходимость лечения "
@@ -1117,9 +1117,9 @@
              instead. 
             On this build, Беннет is 
           - b: built с offensive статы like Сила атаки%, Пиро Damage, и Crit статы while
-              having a good количество of Восст. энергии to burst off время отката.
+              having a good количество of Восстановление энергии to burst off время отката.
           - "\ \n"
-          - b: Prioritize Восст. энергии before offensive статы if you cannot cast your
+          - b: Prioritize Восстановление энергии before offensive статы if you cannot cast your
               Взрыв стихии off время отката.
       - code: support
         isRecommended: false
@@ -1254,7 +1254,7 @@
             - burst
           notes: null
           seeCharNotes: false
-        tips: "Рекомендуется количество of Восст. энергии%: 200+"
+        tips: "Рекомендуется количество of Восстановление энергии%: 200+"
         notes:
           - p:
               - b: Heals from his Взрыв стихии scale off of ХП,
@@ -1277,7 +1277,7 @@
                   О выборе оружия:
                   Рассекающий туман, Меч Сокола:
               - >2
-                 These оружие have the highest Базовая атака in the game which is why it is ranked quite high. It is assuming you have достаточно Восст. энергии so you still can burst off время отката for the maximum Сила атаки бафф.
+                 These оружие have the highest Базовая атака in the game which is why it is ranked quite high. It is assuming you have достаточно Восстановление энергии so you still can burst off время отката for the maximum Сила атаки бафф.
               - b: "Клятва свободы:"
               - >2
                  In comps где Беннет can reliably trigger reactions (и thus trigger this sword's passive), the buffs provided by this оружие will be stronger чем Меч Сокола.
@@ -1601,7 +1601,7 @@
               seeCharNotes: false
           notes:
             - p: Крит. урон if C2
-            - p: If щит support, Восст. энергии takes priority over Сила атаки%
+            - p: If щит support, Восстановление энергии takes priority over Сила атаки%
           seeCharNotes: false
         talents:
           advices:
@@ -1781,7 +1781,7 @@
               seeCharNotes: false
           notes:
             - p: Крит. урон if C2
-            - p: If щит support, Восст. энергии takes priority over Сила атаки%
+            - p: If щит support, Восстановление энергии takes priority over Сила атаки%
           seeCharNotes: false
         talents:
           advices:
@@ -2049,7 +2049,7 @@
           - p:
               - b: |
                   О приоритетных допстатах в артефактах: 
-              - Восст. энергии is prioritized over Мастерство стихий here since
+              - Восстановление энергии is prioritized over Мастерство стихий here since
                 она has an 80 энергия burst cost while её skill is also not very
                 efficient at generating частицы for getting it back. A major
                 source of your энергия will be coming from враги as well as
@@ -2143,16 +2143,16 @@
         tips:
           - u:
               b: |
-                Восст. энергии Guidelines
+                Восстановление энергии Guidelines
           - b: "Прототип: Янтарь [R5]:"
-          - " 210 Восст. энергии"
+          - " 210 Восстановление энергии"
           - u:
               b: "\n"
           - b: "Прототип: Янтарь [R1] /Кодекс Фавония:"
           - |2
-             240 Восст. энергии
+             240 Восстановление энергии
           - b: "Эпос о драконоборцах:"
-          - " 250+ Восст. энергии"
+          - " 250+ Восстановление энергии"
         notes:
           - "Этот section is dedicated to a стиль игры где Янь Фэй is utilised
             as a primary shielder through её 4th Constellation. Due to the
@@ -2285,7 +2285,7 @@
         tips: []
         notes:
           - p: Тома ideally wants to focus on щит over damage, и his burst uptime is
-              required to achieve better shields, which is why he needs Восст. энергии% on
+              required to achieve better shields, which is why he needs Восстановление энергии% on
               top of ХП%.
           - p:
               - b: |-
@@ -2295,7 +2295,7 @@
               - b: " [C4]"
               - ", Тома gains 15 энергия когда he fires his Взрыв стихии. Этот
                 effectively reduces his энергия cost to 65 и makes it possible
-                to use Чёрная кисть с Восст. энергии часы instead of Восст. энергии оружие с Восст. энергии
+                to use Чёрная кисть с Восстановление энергии часы instead of Восстановление энергии оружие с Восстановление энергии
                 часы to furthermore strengthen his щит."
     credits: null
   - code: diluc
@@ -3404,7 +3404,7 @@
                  Вальс Нирваны Ночи would be prioritized over Amos if you manage to get ранг пробуждения 5 for pure Physical build Фишль.
               - b: "Прототип: Полумесяц:"
               - " If you manage to weave in a заряженный выстрел on враг weak spots
-                once every 9-10 сек., Прототип: Полумесяц could potentially
+                once every 9-10 секунд, Прототип: Полумесяц could potentially
                 offer more ДПС, this оружие can be an option for those
                 interested in a more challenging стиль игры."
       - code: off-field dps
@@ -3781,7 +3781,7 @@
                 - em
               notes: null
               seeCharNotes: false
-          notes: Prioritize Восст. энергии first if you can't burst off время отката
+          notes: Prioritize Восстановление энергии first if you can't burst off время отката
           seeCharNotes: false
         talents:
           advices:
@@ -3818,7 +3818,7 @@
               - "Акуомару outperforms "
               - b: Небесное величие
               - " on a "
-              - b: low Восст. энергии requirement Бэй Доу
+              - b: low Восстановление энергии requirement Бэй Доу
               - " (где она is paired с other Электро персонажи to батарейка
                 её энергия needs). At "
               - b: "[R3+],"
@@ -3832,14 +3832,14 @@
               - b: "Эмблема рассечённой судьбы (4): "
               - "Even after considering the 4-piece комплект effect, you should
                 refrain from investing into "
-              - b: Восст. энергии
+              - b: Восстановление энергии
               - " beyond what is needed to burst off время отката as it will result
                 in a "
               - b: damage loss
               - " as compared to prioritising offensive статы such as "
               - b: Сила атаки/Крит.
               - " In отряд comps где Бэй Доу has "
-              - b: low Восст. энергии requirements
+              - b: low Восстановление энергии requirements
               - " (то есть когда paired с electro batteries), a "
               - b: Церемония древней знати (2) / Громогласный рёв ярости (2) / +18% Сила атаки комплект (2) [Choose Two]
               - " will outperform"
@@ -3858,7 +3858,7 @@
                 really recommended.
               - b: "Учёный (2) Изгнанник (2): "
               - Этот комплект acts as a cheap beginner's option to provide Бэй Доу
-                с 40% Восст. энергии to help maintain её Взрыв стихии
+                с 40% Восстановление энергии to help maintain её Взрыв стихии
                 uptime.
     credits:
       - a: In-depth Guide
@@ -4172,8 +4172,8 @@
               these situations, build Электро ДПС или Off-Field ДПС Лиза instead.
           - p:
               - b: "О приоритете характеристик:"
-              - " Try to invest both into Мастерство стихий и Восст. энергии. The goal is to try stack as
-                much Мастерство стихий while getting достаточно Восст. энергии (170-190%) for a comfortable
+              - " Try to invest both into Мастерство стихий и Восстановление энергии. The goal is to try stack as
+                much Мастерство стихий while getting достаточно Восстановление энергии (170-190%) for a comfortable
                 Взрыв стихии uptime depending on your отряды."
       - code: off-field dps
         isRecommended: true
@@ -4306,7 +4306,7 @@
             - attack
           notes: null
           seeCharNotes: false
-        tips: Лиза's Hold cast does not require 4 full сек. of charging to reach
+        tips: Лиза's Hold cast does not require 4 full секунд of charging to reach
           maximum damage порог, as long as the indicator aligns с ring,
           you can release your cast at max damage.
         notes:
@@ -4689,7 +4689,7 @@
                 - atk
               notes: null
               seeCharNotes: false
-          notes: Prioritize Восст. энергии first if you can't burst off время отката
+          notes: Prioritize Восстановление энергии first if you can't burst off время отката
           seeCharNotes: false
         talents:
           advices:
@@ -4741,7 +4741,7 @@
                 over Небесное крыло since Сара is able to trigger the оружие
                 passive quite easily с её Взрыв стихии to provide your
                 отряд members с another 100 Мастерство стихий и 20% Сила атаки бафф for 12
-                сек., it also has Восст. энергии допстат which is very
+                секунд, it also has Восстановление энергии допстат which is very
                 valuable on a Взрыв стихии Support Сара.
           - p:
               - b: |-
@@ -4861,13 +4861,13 @@
           notes: null
           seeCharNotes: false
         tips: []
-        notes: Путешественница can provide a lot of энергия и Восст. энергии to the on-field
+        notes: Путешественница can provide a lot of энергия и Восстановление энергии to the on-field
           персонаж through their Элементальный навык pick up или Взрыв стихии
           procs. Этот is especially useful с a damage dealer that doesn't
           conflict с traveler's element и can benefit from the abundance of
           энергия. Due to the low damage scaling on Электро Путешественница's Elemental
           Элементальный навык и Взрыв стихии, its recommended to build Электро Путешественница by just
-          stacking Восст. энергии to amplify the batterying power.
+          stacking Восстановление энергии to amplify the batterying power.
     credits: null
   - code: keqing
     elementCode: electro
@@ -5061,7 +5061,7 @@
               - b: "Рыцарь крови (4): "
               - Этот комплект is for general solo и Abyss content где there are
                 multiple mobs that can be killed с заряженные атаки within 10
-                сек., this is for dealing с a crowd, in other words, AoE.
+                секунд, this is for dealing с a crowd, in other words, AoE.
                 I
               - b: t is not recommended because of the kill condition.
       - code: electro dps
@@ -5464,7 +5464,7 @@
                 especially convenient on отряды that doesn't conflict с её
                 element и wants the энергия provision. (IE Эола, Электро,
                 National отряды, и т.д.). Райдэн has no issues с firing её ult
-                off время отката after reaching about 200% Восст. энергии, но it
+                off время отката after reaching about 200% Восстановление энергии, но it
                 is possible to raise it higher for better энергия restoration for
                 её отряд."
           - p:
@@ -5666,7 +5666,7 @@
                 - atk
               notes: null
               seeCharNotes: false
-          notes: Prioritize Восст. энергии first if you can't burst off время отката
+          notes: Prioritize Восстановление энергии first if you can't burst off время отката
           seeCharNotes: false
         talents:
           advices:
@@ -5684,16 +5684,16 @@
               - b: "О выборе оружия:"
               - "\n"
               - b: "Драгоценный омут: "
-              - "Этот is Син Цю's лучший in slot оружие if ran с sufficient Восст. энергии
-                (240% Восст. энергии before "
+              - "Этот is Син Цю's лучший in slot оружие if ran с sufficient Восстановление энергии
+                (240% Восстановление энергии before "
               - b: "[C6]"
-              - " и 170-190% Восст. энергии after "
+              - " и 170-190% Восстановление энергии after "
               - b: "[C6]"
               - |
                 ).
               - b: "Церемониальный меч:"
               - >2
-                 Этот is Син Цю's лучший in slot оружие if he doesnt have much Восст. энергии from допстаты, otherwise it is his second лучший in slot оружие.
+                 Этот is Син Цю's лучший in slot оружие if he doesnt have much Восстановление энергии from допстаты, otherwise it is his second лучший in slot оружие.
               - b: "Предвестник зари:"
               - " Этот is a great оружие for Син Цю, assuming he's either "
               - b: "[C6]"
@@ -5703,8 +5703,8 @@
               - " When Син Цю is "
               - b: "[C6],"
               - " Mistsplitter и Jade Cutter has the лучший damage potential
-                given достаточно Восст. энергии (170-190%), Небесный меч has the second лучший
-                damage potential (same Восст. энергии requirement as Jade), и Sacrificial
+                given достаточно Восстановление энергии (170-190%), Небесный меч has the second лучший
+                damage potential (same Восстановление энергии requirement as Jade), и Sacrificial
                 Sword has the third лучший damage potential."
           - p:
               - "Big thanks to Quincy#6965 for helping us с the "
@@ -5742,14 +5742,14 @@
               - "\n"
               - b: "Изгнанник (2) Учёный (2): "
               - "Этот комплект is a cheap beginner option to maintain burst uptime
-                well since it gives 40% Восст. энергии. Обратите внимание, что it is "
+                well since it gives 40% Восстановление энергии. Обратите внимание, что it is "
               - b: not recommended to stay on this комплект as Син Цю contributes alot of damage in
                   his отряды.
           - p:
               - b: "О приоритете основных характеристик:"
               - >-
                 
-                Ideally you would be running Сила атаки% Sands когда your Восст. энергии needs are fulfilled. (200% if Церемониальный меч, 230%+ for others).
+                Ideally you would be running Сила атаки% Sands когда your Восстановление энергии needs are fulfilled. (200% if Церемониальный меч, 230%+ for others).
     credits:
       - a: In-depth Guide
         href: https://docs.google.com/document/d/1RQI5IjLZKqsVhQzRDr7FTYgQX66jKB28PnwoZVlQ4_k/edit
@@ -5902,7 +5902,7 @@
           notes: null
           seeCharNotes: false
         tips:
-          - p: Барбара's skill gives you a pulse of healing every 5 сек., every pulse
+          - p: Барбара's skill gives you a pulse of healing every 5 секунд, every pulse
               will imbue you с a Гидро status, that means it can be used for
               status-cleansing (Пиро in specific, while other элементы may take
               more pulses).
@@ -6035,7 +6035,7 @@
         tips: []
         notes:
           - p: Use Элементальный навык и/или Взрыв стихии и immediately switch. Generally,
-              run Восст. энергии if you want more consistent heals from Взрыв стихии.
+              run Восстановление энергии if you want more consistent heals from Взрыв стихии.
           - p:
               - b: "О комплектах артефактов:"
               - "\n"
@@ -6219,7 +6219,7 @@
           - p:
               - b: "Melee Взрыв стихии:"
               - " Only to be used in situations где you need only 1 rotation
-                to clear as the Восст. энергии requirement to maintain burst uptime is quite
+                to clear as the Восстановление энергии requirement to maintain burst uptime is quite
                 high "
               - b: (170-190%),
               - " you'll всегда want to start your rotations с Ranged Взрыв стихии
@@ -6309,7 +6309,7 @@
                 other options. However, it outperforms "
               - b: "Сердце глубин (4) "
               - "if used in a single rotation setting "
-              - b: (ignoring Восст. энергии).
+              - b: (ignoring Восстановление энергии).
     credits:
       - a: In-depth Guide
         href: https://tinyurl.com/4nnv5euy
@@ -6591,7 +6591,7 @@
 
           2. Cast Взрыв стихии (should react и remove Пиро status on the враг after using Взрыв стихии)
 
-          3. Wait 2.5 сек. for Мона's burst ICD (Мона should stay on field if you have Беннет, to keep the бафф)
+          3. Wait 2.5 секунд for Мона's burst ICD (Мона should stay on field if you have Беннет, to keep the бафф)
 
           4. Swap to Пиро персонаж и apply Пиро on враг
 
@@ -6697,7 +6697,7 @@
                 - atk%
               notes: null
               seeCharNotes: false
-          notes: Offensive статы aren't needed, just stack Восст. энергии for comfortable Elemental
+          notes: Offensive статы aren't needed, just stack Восстановление энергии for comfortable Elemental
             Взрыв стихии uptime
           seeCharNotes: false
         talents:
@@ -6734,7 +6734,7 @@
               - " "
               - b: Этот however comes с an assumption that с TTDS, you still have 100%
                   Взрыв стихии uptime.
-              - " If you do not, pick the other Восст. энергии оружие options
+              - " If you do not, pick the other Восстановление энергии оружие options
                 for more Взрыв стихии uptime."
     credits: null
   - code: kokomi
@@ -6893,11 +6893,11 @@
           - p:
               - b: |-
                   Об основных характеристиках и допстатах: 
-                  Восст. энергии:
-              - " Prioritise Восст. энергии first to ensure you can всегда use
+                  Восстановление энергии:
+              - " Prioritise Восстановление энергии first to ensure you can всегда use
                 Взрыв стихии before the Элементальный навык expires in order to
                 maintain Гидро наложение. "
-              - b: " Без Прототипа: Янтаря, Кокоми потребуется ~200-220% Восст. энергии (170-190%
+              - b: " Без Прототипа: Янтаря, Кокоми потребуется ~200-220% Восстановление энергии (170-190%
                   с Прототип: Янтарь at [R1] и 150-170% at [R5])
               - "\n"
               - b: "Сила атаки% / Гидро урон:"
@@ -7226,7 +7226,7 @@
                 - this комплект is usually used с healers because you want to use
                 damage sets on other support units such as Син Цю или Бэй Доу.
               - b: "Эмблема рассечённой судьбы (2) Tenacity of the Milellith (2): "
-              - Provides both Восст. энергии и ХП which are both valuable for a support
+              - Provides both Восстановление энергии и ХП which are both valuable for a support
                 diona, increasing ult uptime и healing strength respectively.
           - p:
               - b: "О выборе главстатов:"
@@ -7669,7 +7669,7 @@
                   О комплектах артефактов:
                   Бледный огонь (4):
               - " Этот комплект is difficult to fully utilise due to Кэйа's skill
-                время отката being 6 сек.. The full комплект effect requires 2 stacks
+                время отката being 6 секунд. The full комплект effect requires 2 stacks
                 to be active at any given time, so maintaining stacks can be
                 difficult когда considering rotations between персонажи."
       - code: physical dps
@@ -7816,7 +7816,7 @@
                   О комплектах артефактов:
                   Бледный огонь (4):
               - " Этот комплект is difficult to fully utilise due to Кэйа's skill
-                время отката being 6 сек.. The full комплект effect requires 2 stacks
+                время отката being 6 секунд. The full комплект effect requires 2 stacks
                 to be active at any given time, so maintaining stacks can be
                 difficult когда considering rotations between персонажи."
       - code: burst support
@@ -8008,7 +8008,7 @@
               - " In отряды с a "
               - b: 2nd Крио unit generating энергия,
               - >2
-                 this оружие would have a lower priority as the Восст. энергии stat would mostly be wasted.
+                 this оружие would have a lower priority as the Восстановление энергии stat would mostly be wasted.
               - b: "Драконий рык / Вспышка во тьме / Стальное жало:"
               - " These weapons' rankings are assumed с "
               - b: Реверсивное Таяние отряды
@@ -8024,7 +8024,7 @@
                 Кэйа is a good holder of "
               - b: Инструктор (4)
               - >2
-                 for Реверсивное Таяние отряды. Aside from Восст. энергии%, most of his other main статы don't matter as much, making this one of his budget support builds. 
+                 for Реверсивное Таяние отряды. Aside from Восстановление энергии%, most of his other main статы don't matter as much, making this one of his budget support builds. 
               - b: "Церемония древней знати (4): "
               - Этот комплект is only recommended if there is no other участник of the
                 отряд running Церемония древней знати (4).
@@ -8182,7 +8182,7 @@
               - b: "О допстатах: "
               - >-
                 
-                Розария does not need much Восст. энергии if paired с Кэйа. If paired с another Крио unit such as Чун Юнь или Аяка, она will need ~130-150% Восст. энергии
+                Розария does not need much Восстановление энергии if paired с Кэйа. If paired с another Крио unit such as Чун Юнь или Аяка, она will need ~130-150% Восстановление энергии
 
                 Compared to Кэйа, Розария has even less desire for Шанс крит. попадания, as её Ascension 1 Talent includes an extra 12% Шанс крит. попадания once skill hits the back of an враг.
           - p:
@@ -8367,7 +8367,7 @@
           - "\n"
           - b: "Бледный огонь (4):"
           - >2
-             Этот комплект is difficult to fully utilise due to Розария's skill время отката being 6 сек.. The full комплект effect requires 2 stacks to be active at any given time, so maintaining stacks can be difficult когда considering rotations between персонажи.
+             Этот комплект is difficult to fully utilise due to Розария's skill время отката being 6 секунд. The full комплект effect requires 2 stacks to be active at any given time, so maintaining stacks can be difficult когда considering rotations between персонажи.
           - b: "Конец гладиатора (4): "
           - |
             The 4 piece комплект passive doesn't work с Пика полумесяца.
@@ -8571,16 +8571,16 @@
           - p:
               - b: "О выборе оружия:"
               - " Этот section was calculated с "
-              - b: 160% Восст. энергии requirement,
+              - b: 160% Восстановление энергии requirement,
               - " which is why "
-              - b: Восст. энергии допстаты weapons are valued highly here,
-              - " с lower Восст. энергии reqs,"
+              - b: Восстановление энергии допстаты weapons are valued highly here,
+              - " с lower Восстановление энергии reqs,"
               - b: " those weapons may fall off if compared с weapons с more offensive
                   допстаты."
               - " Розария's "
               - b: "[C4]"
               - |2
-                 can reduce this Восст. энергии requirement down to 140% или lower.
+                 can reduce this Восстановление энергии requirement down to 140% или lower.
               - b: "Покоритель вихря:"
               - " Этот ranking is assumed without a щит. "
               - b: With a large количество of attack buffs such as Беннет, this оружие can fall off
@@ -8784,8 +8784,8 @@
                 generating any энергия until "
               - b: "[C1]."
               - >-2
-                 Восст. энергии will greatly benefit Ци Ци, while её Взрыв стихии should be kept as a last resort.
-                Ци Ци's Взрыв стихии allows other персонажи to maximize ДПС field time while offering healing с кармана. At Ascension 4, её обычная атака applies the healing talisman onto an враг с a время отката of 30 сек..
+                 Восстановление энергии will greatly benefit Ци Ци, while её Взрыв стихии should be kept as a last resort.
+                Ци Ци's Взрыв стихии allows other персонажи to maximize ДПС field time while offering healing с кармана. At Ascension 4, её обычная атака applies the healing talisman onto an враг с a время отката of 30 секунд.
           - p:
               - b: "О выборе оружия и артефактов:"
               - "\n"
@@ -9518,7 +9518,7 @@
         notes:
           - p: Эола's оружие rankings assume that you're running её с a Крио батарейка
               (то есть Диона) instead of Беннет. Она would usually need 30%-60%+
-              Восст. энергии from допстаты depending on what отряд и Крио
+              Восстановление энергии from допстаты depending on what отряд и Крио
               batteries you use.
           - p: Эола's Взрыв стихии does not snapshot. Этот means that any buffs Эола has
               upon casting Взрыв стихии will not be taken into effect if the бафф
@@ -9535,7 +9535,7 @@
                   
                   Небесное величие: 
               - >
-                Этот оружие is more forgiving towards Восст. энергии допстаты. If there is a
+                Этот оружие is more forgiving towards Восстановление энергии допстаты. If there is a
                 Крио батарейка unit in your отряд (Диона с Церемониальный лук или
                 Кэйа с Меч Фавония) или if your отряд generates достаточно
                 частицы on their own, Небесное величие loses effectiveness
@@ -9554,7 +9554,7 @@
                 бонус + 18% Сила атаки. Without using your Взрыв стихии, you can
                 sustain the Бледный огонь's 4 piece комплект bonus because each stack
                 lasts 7s и it refreshes per stack, и Эола's Элементальный навык
-                время отката is only 4 сек. когда doing 1-taps, therefore you can
+                время отката is only 4 секунд когда doing 1-taps, therefore you can
                 keep the condition up. When using this комплект, it is recommended to
                 not use Hold Элементальный навык cast until your Lightfall Sword is nearly
                 about to end. Этот restriction is only for players who don't
@@ -9765,10 +9765,10 @@
               - b: "Небесный меч, Черногорский длинный меч, Чёрный меч, Амэнома Кагэути:"
               - " These 4 weapons will give a similar output, so it's not worth
                 getting или building another когда you already have one. Depends
-                on how much Восст. энергии you're running, how much stacks your
+                on how much Восстановление энергии you're running, how much stacks your
                 Blackcliff has, how much time you're gonna spend doing Normal
                 Attacks, и how much you value the passive on Amenoma since it
-                gives you leeway in building Восст. энергии, one can be better
+                gives you leeway in building Восстановление энергии, one can be better
                 чем the other. If you're running "
               - b: Небесный меч
               - " или "
@@ -9956,7 +9956,7 @@
                 getting coil stacks for её Крио infusion can be quite
                 unreliable.
               - b: " Элой needs 4 coil stacks to get the Крио infusion и you can only get 1
-                  stack every 0.1 сек."
+                  stack every 0.1 секунд"
               - " which is quite hard to do considering the Bomblets are
                 scattered all over the place. One thing to note regarding Элой's
                 coil stacks is that "
@@ -10175,7 +10175,7 @@
                  Пассивная способность этого оружия идеально работает с Элементальным навыком Шэнь Хэ because it's dynamic. Это оружие так же имеет высокую Базовую атаку, что делает допстаты Силы атаки% действительно эффективными.
               - b: "Сияющая жатва:"
               - >2
-                 Этот оружие обеспечивает Восст. энергии и converts Восст. энергии to Сила атаки, which benefits Шэнь Хэ a lot.
+                 Этот оружие обеспечивает Восстановление энергии и converts Восстановление энергии to Сила атаки, which benefits Шэнь Хэ a lot.
               - b: "Покоритель вихря:"
               - >2
                  Пассивка этого оружия не может быть заряжена из кармана, но оно все еще имеет допстат Силы атаки, который обеспечивает Шэнь Хэ большим количеством Силы атаки.
@@ -10340,10 +10340,10 @@
                  You may need to get a few crit rate допстаты to trigger the passive reliably.
                 There are some отряд compositions in which Сахароза's Мастерство стихий is not a priority, such as Заморозка отряды или an Анемо батарейка for Сяо. In such situations it's better for Сахароза to use to Thrilling Tales of the Dragon Slayers.
           - p:
-              - b: "О приоритете Восст. энергии:"
+              - b: "О приоритете Восстановление энергии:"
               - >-2
                  
-                Ranking is based on the assumption that Сахароза has Церемониальные мемуары и is not valued for её Взрыв стихии in отряды that may not want Сахароза's Взрыв стихии interfering с elemental auras. Восст. энергии could be prioritized higher когда Сахароза is utilized in отряды that don't really mind which element is being applied first и last (напр. Электро-charged).
+                Ranking is based on the assumption that Сахароза has Церемониальные мемуары и is not valued for её Взрыв стихии in отряды that may not want Сахароза's Взрыв стихии interfering с elemental auras. Восстановление энергии could be prioritized higher когда Сахароза is utilized in отряды that don't really mind which element is being applied first и last (напр. Электро-charged).
     credits: null
   - code: sayu
     elementCode: anemo
@@ -10469,7 +10469,7 @@
               - b: "Волчья погибель:"
               - " Волчья погибель is a universal claymore that is capable of
                 buffing your teammates along с providing more healing in
-                Саю's case. It is лучший used once you achieve your Восст. энергии
+                Саю's case. It is лучший used once you achieve your Восстановление энергии
                 порог."
           - p:
               - b: |-
@@ -10648,7 +10648,7 @@
                 quickswap style Sub-ДПС.
 
                 Анемо Путешественница can require 
-              - b: up to 160% Восст. энергии.
+              - b: up to 160% Восстановление энергии.
           - p:
               - b: "О выборе оружия:"
               - |-
@@ -10667,7 +10667,7 @@
               - "\n"
               - b: "Амэнома Кагэути:"
               - " Этот оружие "
-              - b: reduces your Восст. энергии% requirements to ~135% at [R1] и ~110% at [R5].
+              - b: reduces your Восстановление энергии% requirements to ~135% at [R1] и ~110% at [R5].
               - " At ["
               - b: R5],
               - " this оружие will be "
@@ -11201,9 +11201,9 @@
               - b: |-
                   О выборе оружия:
                   Амэнома Кагэути: 
-              - "Этот оружие can lower your Восст. энергии% requirements from anywhere
+              - "Этот оружие can lower your Восстановление энергии% requirements from anywhere
                 between "
-              - b: ~150% to no additional Восст. энергии% needed,
+              - b: ~150% to no additional Восстановление энергии% needed,
               - " depending on the "
               - b: "number of stacks on the passive и the ранг пробуждения of this оружие. "
               - "As such, at "
@@ -11257,7 +11257,7 @@
               - " you can either go for "
               - b: more Сила атаки for stronger heals, но relatively lower Взрыв стихии uptime,
               - " или "
-              - b: more Восст. энергии for lower heals,
+              - b: more Восстановление энергии for lower heals,
               - b: " но higher Взрыв стихии uptime."
               - " Choosing between these two is up to personal preference,
                 although"
@@ -11401,7 +11401,7 @@
                 ragdolled in Венти's burst. (Sheet has not been updated since
                 Янь Фэй release)"
         notes:
-          - p: Этот build focuses on damage over Восст. энергии because of his Восст. энергии ascension stat. Этот
+          - p: Этот build focuses on damage over Восстановление энергии because of his Восстановление энергии ascension stat. Этот
               оружие order is in the assumption of Мастерство стихий Венти, as Crit Венти's
               damage potential is limited to either extremely high investment или
               single target situations.
@@ -11423,7 +11423,7 @@
               - b: "[R5]"
               - " Бесструнный (~7% assuming 50% Elegy бафф uptime), it обеспечивает a
                 отряд-wide Сила атаки и Мастерство стихий бафф which can be better in terms of total
-                отряд damage и comfortable Восст. энергии."
+                отряд damage и comfortable Восстановление энергии."
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/venti/
@@ -11620,7 +11620,7 @@
           - p:
               - b: "О выборе оружия:"
               - >2
-                 With a proper anemo батарейка (напр. Сахароза), Сяо needs as little as 120-130% Восст. энергии to maintain a high burst uptime. In these scenarios, unless there are no Восст. энергии from допстаты, you should всегда go for a non-Восст. энергии оружие as it will result in more damage.
+                 With a proper anemo батарейка (напр. Сахароза), Сяо needs as little as 120-130% Восстановление энергии to maintain a high burst uptime. In these scenarios, unless there are no Восстановление энергии from допстаты, you should всегда go for a non-Восстановление энергии оружие as it will result in more damage.
               - b: "Усмиритель бед: "
               - У этого оружия действительно высокая Базовая атака, что подразумевает получение 
                 большего преимущества от бафов Силы атаки% (напр. Эпос о драконоборцах)
@@ -11769,18 +11769,18 @@
               - b: |
                   О выборе оружия: 
               - The ultimate goal is to try
-              - b: " stack as much Мастерство стихий while getting достаточно Восст. энергии (160-180%) for a consistent Взрыв стихии
+              - b: " stack as much Мастерство стихий while getting достаточно Восстановление энергии (160-180%) for a consistent Взрыв стихии
                   uptime"
               - >
                 . Наличие Церемониального меча или второго Анемо персонажа в
-                отряде также поможет уменьшить потребность в Восст. энергии и prioritize Мастерство стихий
+                отряде также поможет уменьшить потребность в Восстановление энергии и prioritize Мастерство стихий
                 допстат more.
               - b: "Стальное жало: "
               - Стальное жало will yield the highest upfront Мастерство стихий и teamwide бафф
                 if compared to the other 4 star options,
               - b: " if you manage to meet his энергия needs или simply don't need more чем one
                   rotation, this would be the better option if compared to the
-                  Восст. энергии weapons."
+                  Восстановление энергии weapons."
           - p:
               - b: |-
                   О комплектах артефактов:
@@ -11942,7 +11942,7 @@
           seeCharNotes: false
         tips: Элементальный навык Нин Гуан has a 6 second internal время отката on generating
           энергия, so for the sake of maintaining Взрыв стихии uptime, wait 6
-          сек. to cast again if you need энергия. It also breaks когда casted
+          секунд to cast again if you need энергия. It also breaks когда casted
           on top of another Гео Structure, you can intentionally use a structure
           to break your first screen.
         notes:
@@ -12266,7 +12266,7 @@
                 conflicting nature in gaining stacks (Off-field и on-field)
               - b: "Небесное величие: "
               - >
-                Useful if you are unable to get Восст. энергии from your допстаты. Does
+                Useful if you are unable to get Восстановление энергии from your допстаты. Does
                 really well while its passive is active, но falls off in
                 sustained fights. Comfort option that has quite a big power gap
                 if compared с Меч драконьей кости или Белая тень.
@@ -12281,7 +12281,7 @@
                   Кокон сладких грёз (4): 
               - Ноэлль snapshots её Защита on burst cast. To get the full 4
                 stacks' Защита% boost during your first burst, you need to wait 12
-                сек. off field before swapping in. In abyss, time spent
+                секунд off field before swapping in. In abyss, time spent
                 before the chamber starts still generates stacks.
               - b: |-
                   
@@ -12391,7 +12391,7 @@
                 cast to reliably reset время отката. Even с "
               - b: "[R5],"
               - >2
-                 the время отката is 16 сек. while Ноэлль's щит длительность is 12, so forced downtime is an issue.
+                 the время отката is 16 секунд while Ноэлль's щит длительность is 12, so forced downtime is an issue.
               - b: "Двуручный меч Фавония: "
               - "Relies on hitting crits to generate энергия. The 12 second
                 время отката at "
@@ -12495,8 +12495,8 @@
           seeCharNotes: false
         tips:
           - b: "[C2] "
-          - extends the длительность of Горо's Взрыв стихии from 9 сек. to 12
-            сек. if you can obtain the required Кристаллизация shields. Этот
+          - extends the длительность of Горо's Взрыв стихии from 9 секунд to 12
+            секунд if you can obtain the required Кристаллизация shields. Этот
             allows his teammates to gain the 3 Гео 15% Гео урон% bonus for a
             longer длительность, so it's preferable to use Взрыв стихии as your last
             ability before swapping into your ДПС.
@@ -12522,7 +12522,7 @@
               - b: "О выборе оружия:"
               - "\n"
               - b: "Элегия погибели:"
-              - " Elegy offers a helpful Восст. энергии допстат alongside an Мастерство стихий и Сила атаки%
+              - " Elegy offers a helpful Восстановление энергии допстат alongside an Мастерство стихий и Сила атаки%
                 бафф for your teammates. While not directly useful in отряды
                 centered around Ноэлль или Итто, this could possibly be a good
                 выбор for future Гео ДПС персонажи, или in a отряд which
@@ -12541,8 +12541,8 @@
                 допстат value.
               - b: "Церемония древней знати (4): "
               - The effectiveness of this комплект увеличивает if you've already met
-                the Восст. энергии requirement for Горо. At that point, you'd no longer
-                need to run the recommended Восст. энергии% sets, which means you can opt
+                the Восстановление энергии requirement for Горо. At that point, you'd no longer
+                need to run the recommended Восстановление энергии% sets, which means you can opt
                 for this instead.
           - p:
               - b: "О приоритетных главстатах и допстатах в артефактах:"
@@ -12557,7 +12557,7 @@
               - b: Шанс крит. попадания circlet и допстаты
               - >2
                  can be considered когда Горо is using Боевой лук Фавония to trigger the passive comfortably.
-              - b: Восст. энергии% допстаты can usually be more важно чем getting the right главстат,
+              - b: Восстановление энергии% допстаты can usually be more важно чем getting the right главстат,
               - " as Горо's damage contribution to a отряд is negligible, while
                 being able to get Energy for his Взрыв стихии is a lot more важно."
     credits: null
@@ -12684,13 +12684,13 @@
                 пассивную способность копья.
               - b: "Крест-копьё Китаин:"
               - " Хоть главстат Мастерства стихий и бесполезен для Юнь Цзинь, "
-              - b: его пассивка дает много Восст. энергии,
+              - b: его пассивка дает много Восстановление энергии,
               - " особенно на более высоком ранге пробуждения. "
-              - b: "Это может снизить её потребность Восст. энергии% примерно с ~20% на Р1 до ~70% на Р5. "
+              - b: "Это может снизить её потребность Восстановление энергии% примерно с ~20% на Р1 до ~70% на Р5. "
               - Обратите внимание, что
               - b: " она должна использовать Взрыв стихии перед Элементальным навыком, так как пассивка забирает 3 единицы
                   энергии при использовании Элементального навыка. "
-              - Если вас волнует только Восст. энергии, это оружие можно
+              - Если вас волнует только Восстановление энергии, это оружие можно
                 оставить на 1 уровне, при этом все еще получая полный эффект пассивки." 
           - p:
               - b: "О приоритетах в главстатах и допстатах при выборе артефактов:"
@@ -13055,8 +13055,8 @@
               - b: |-
                   
                   Бледный огонь (4): Этот комплект is not recommended 
-              - due to the Путешественница's Элементальный навык время отката being 6 сек.,
-                which means the 4 piece комплект effect only kicks in 6 сек. into
+              - due to the Путешественница's Элементальный навык время отката being 6 секунд,
+                which means the 4 piece комплект effect only kicks in 6 секунд into
                 every rotation, и also gives the player a very little time
                 window to keep up the 4 piece комплект effect.
     credits: null
@@ -13476,10 +13476,10 @@
               - b: |-
                   О комплектах артефактов:
                   Эмблема рассечённой судьбы (4): 
-              - On higher Восст. энергии requirements, this комплект pulls ahead of Архаичный камень
+              - On higher Восстановление энергии requirements, this комплект pulls ahead of Архаичный камень
                 (2) Церемония древней знати (2), however it's not recommended to stack
-                Восст. энергии to fully benefit from the 4 piece комплект effect since by
-                stacking Восст. энергии, you sacrifice other offensive статы.
+                Восстановление энергии to fully benefit from the 4 piece комплект effect since by
+                stacking Восстановление энергии, you sacrifice other offensive статы.
           - p:
               - b: |-
                   О выборе оружия:
@@ -13663,14 +13663,14 @@
               - "\n"
               - b: "Кокон сладких грёз (4):"
               - >2
-                 Due to Альбедо's skill snapshotting upon cast, you need to either wait ~12 сек. before starting a domain/fight to reach max stacks или recast his skill to benefit from the Защита и Гео урон bonus provided by the 4 piece комплект effect.
+                 Due to Альбедо's skill snapshotting upon cast, you need to either wait ~12 секунд before starting a domain/fight to reach max stacks или recast his skill to benefit from the Защита и Гео урон bonus provided by the 4 piece комплект effect.
               - b: "Tenacity of the Milelith (4):"
               - >2
                  Этот комплект is used for the 4 piece комплект effect which has good uptime on Альбедо. Worth noting that this комплект decreases your Элементальный навык damage by a lot if compared to the other offensive sets.
               - b: "Церемония древней знати (4):"
               - " If you don't have another персонаж in your отряд that has
                 this комплект, you can use this комплект on Альбедо. You might want to get
-                some Восст. энергии допстаты to maintain your Взрыв стихии
+                some Восстановление энергии допстаты to maintain your Взрыв стихии
                 uptime for this. It is also worth noting that this комплект decreases
                 your Элементальный навык damage by a lot if compared to the other
                 offensive sets."
@@ -13678,7 +13678,7 @@
               - b: "О приоритетных допстатах в артефактах:"
               - >-
                 
-                Сила атаки и Восст. энергии допстаты are only valuable on a Hybrid Альбедо that casts his Взрыв стихии.
+                Сила атаки и Восстановление энергии допстаты are only valuable on a Hybrid Альбедо that casts his Взрыв стихии.
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/albedo/
@@ -13813,7 +13813,7 @@
               Гео конструкцией. Этот initial cast damage grants Итто 1
               уровень Невероятной силы, и upon Уси leaving the field,
               Итто is granted another уровень. When Уси takes damage, Итто gains
-              a уровень (capped at 1 уровень per 2 сек.). Взрыв стихии Итто
+              a уровень (capped at 1 уровень per 2 секунд). Взрыв стихии Итто
               преобразовывает обычные и Заряженные атаки в Гео урон, увеличивает
               скорость его обычных атак и converts a portion текущей
               Защиты Итто в Силу атаки.
@@ -13826,8 +13826,8 @@
               - b: "Небесное величие: "
               - >
                 Может быть отличным или плохим оружием для Итто в зависимости от потребности Восст. 
-                энергии. Чем меньше необходимость Восст. энергии (зависит от генерации
-                частиц от членов отряда или Восст. энергии накопленные в допстатах), тем менее
+                энергии. Чем меньше необходимость Восстановление энергии (зависит от генерации
+                частиц от членов отряда или Восстановление энергии накопленные в допстатах), тем менее
                 полезным становится это оружие.
               - b: "Белая тень:"
               - " Your rotations often start с 1 stack of this оружие, и
@@ -13845,7 +13845,7 @@ artifacts:
   - code: adventurer
     sets:
       "2": Увеличивает макс. ХП на 1,000 ед.
-      "4": В течении 5 сек. после открытия любого сундука восстанавливает 30% ХП
+      "4": В течении 5 секунд после открытия любого сундука восстанавливает 30% ХП
   - code: lucky-dog
     sets:
       "2": Защита increased by 100
@@ -13877,7 +13877,7 @@ artifacts:
       "4": When ХП is below 70%, Шанс крит. попадания увеличивает by an additional 24%
   - code: the-exile
     sets:
-      "2": Восст. энергии +20%
+      "2": Восстановление энергии +20%
       "4": Using an Взрыв стихии regenerates 2 Energy for all отряд members
         (excluding the wearer) every 2s for 6s. Этот effect cannot stack. (the
         in-game description is incorrect)
@@ -13911,7 +13911,7 @@ artifacts:
         occur once every 15s
   - code: scholar
     sets:
-      "2": Восст. энергии +20%
+      "2": Восстановление энергии +20%
       "4": Gaining Energy gives 3 Energy to all отряд members who have a bow или a
         catalyst equipped. Can only occur once every 3s
   - code: gladiators-finale
@@ -14006,8 +14006,8 @@ artifacts:
         Once 2 stacks are reached the 2 комплект effect is increased by 100%.
   - code: emblem-of-severed-fate
     sets:
-      "2": Восст. энергии +20%
-      "4": Increases Взрыв стихии урон by 25% of Восст. энергии. A maximum of 75%
+      "2": Восстановление энергии +20%
+      "4": Increases Взрыв стихии урон by 25% of Восстановление энергии. A maximum of 75%
         bonus урон can be obtained in this way.
   - code: shimenawas-reminiscence
     sets:
@@ -14025,21 +14025,21 @@ artifacts:
 
         When off the field, the персонаж gains 1 stack every 3s.
         Curiosity can stack up to 4 times, each providing 6% Защита и a 6% Гео
-        урон бонус. When 6 сек. pass without gaining a Curiosity stack, 1
+        урон бонус. When 6 секунд pass without gaining a Curiosity stack, 1
         stack is lost."
   - code: ocean-hued-clam
     sets:
       "2": персонаж Healing Effectiveness +15%
       "4": >-
         When the персонаж equipping this artifact комплект heals a персонаж in the
-        отряд, a Sea-Dyed Foam will appear for 3 сек., accumulating the
+        отряд, a Sea-Dyed Foam will appear for 3 секунд, accumulating the
         количество of ХП recovered from healing (including overflow healing). At the
         end of the длительность, the Sea-Dyed Foam will explode, dealing урон to
         nearby противники based on 90% of the accumulated healing.
 
         (Этот урон is calculated similarly to Reactions such as Заряжен, и Сверхпроводник, но it is not под эффектом Мастерство стихий, персонаж Levels, или Reaction урон Bonuses).
 
-        Only one Sea-Dyed Foam can be produced every 3.5 сек.. Each Sea-Dyed Foam can accumulate up to 30,000 ХП (including overflow healing). There can be no more чем one Sea-Dyed Foam active at any given time.
+        Only one Sea-Dyed Foam can be produced every 3.5 секунд. Each Sea-Dyed Foam can accumulate up to 30,000 ХП (including overflow healing). There can be no more чем one Sea-Dyed Foam active at any given time.
 
         Этот effect can still be triggered even когда the персонаж who is using this artifact комплект is not on the field.
 weapons:
@@ -15295,12 +15295,12 @@ weapons:
     passiveStat:
       - "Сила атаки increased by "
       - b: 28/35/42/49/56%
-      - " of Восст. энергии over the base 100%. You can gain a maximum bonus of
+      - " of Восстановление энергии over the base 100%. You can gain a maximum bonus of
         "
       - b: 80/90/100/110/120%
       - " Сила атаки. Gain "
       - b: 30/35/40/45/50%
-      - " Восст. энергии for 12s after using an Взрыв стихии."
+      - " Восстановление энергии for 12s after using an Взрыв стихии."
   - code: calamity-queller
     typeCode: polearm
     mainStat:
