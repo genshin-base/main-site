@@ -1709,7 +1709,7 @@
                     count: 2
               notes: null
               seeCharNotes: false
-          notes: Run ДПС статы if the sets above is what you're using.
+          notes: вспомогательный ДПС собирает статы как у глав ДПС.
           seeCharNotes: false
         mainStats:
           circlet:
@@ -1752,7 +1752,7 @@
               seeCharNotes: false
           notes:
             - p: Крит. урон if С2
-            - p: If щит support, Восстановление энергии takes priority over процент Сила атаки
+            - p: В случае щитовика, Восстановление энергии более важно, чем процент Силы атаки
           seeCharNotes: false
         talents:
           advices:
@@ -1766,13 +1766,13 @@
               - b: |-
                   О комплектах артефактов: 
                   Церемония древней знати (4): 
-              - Этот комплект can be used on Синь Янь if nobody else on the отряд is
-                using this комплект for the partywide Сила атаки бафф.
+              - Этот комплект может быть использован Синь Янь, если никто другой в отяде
+                его не использует.
           - p:
               - b: "О Стойкости Миллелита (4) и Церемониальном двуручном мече: "
               - >-
                 
-                Синь Янь support is mostly used for её щит и/или Взрыв стихии damage. If you want to use её as a Physical Support, она needs both её Ascension 4 Talent и 
+                Синь Янь в основном используется для ее щита и/или урона от Взрыва стихий. Для использования в роли физ саппорта, ей необходим её пассивный талант на 60 уровне и 
               - b: "[С4]"
               - " to maximize её support capabilities, making её a somewhat
                 expensive выбор to be considered for Physical Support role.
