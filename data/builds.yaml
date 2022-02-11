@@ -329,7 +329,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-            - similar:
                 - code: the-catch
                   refine: R5
                   stacks: null
@@ -2424,8 +2423,8 @@ characters:
             seeCharNotes: false
           sands:
             codes:
-              - atk%
               - em
+              - atk%
             notes: null
             seeCharNotes: false
           notes: null
@@ -2484,16 +2483,18 @@ characters:
               - "Diluc is "
               - b: highly recommended.
               - "\n"
-              - b: "Blackcliff Slasher: T"
+              - b: "Blackcliff Slasher: "
               - >
-                his weapon has excellent DPS potential when facing against
+                This weapon has excellent DPS potential when facing against
                 crowds, but at the same time it's potential will not be utilized
                 at single target situations.
-              - b: "Rainslasher: F"
-              - "or obvious reasons, this weapon is only recommended when Diluc
+              - b: "Rainslasher: "
+              - "For obvious reasons, this weapon is only recommended when Diluc
                 is in a team comp where he can consistently proc vaporize (i.e.
-                when paired with Xingqiu). "
-              - b: Rainslasher will also outperform Skyward Pride at [R3+].
+                when paired with Xingqiu). Rainslasher will also outperform "
+              - b: Skyward Pride
+              - " at "
+              - b: "[R3+]. Due to its EM mainstat, it is recommended to go ATK% sands instead."
           - p:
               - b: |-
                   Regarding Artifact Sets:
@@ -2701,8 +2702,8 @@ characters:
               - "Klee's kit makes it harder to utilize Vaporize and Melt the
                 same way another pyro carry would, but her constant pyro
                 application makes Lavawalkers a viable set. See KleefulFrame's
-                great number "
-              - a: breakdown here
+                great number breakdown "
+              - a: here.
                 href: https://docs.google.com/spreadsheets/d/1JJZPMoNOqXhX8Ez1cl63fNXESJZXx7kQaJEeQ-WLOEY/edit#gid=186983353
               - "\n"
               - b: "Crimson Witch of Flames (4): "
@@ -3133,15 +3134,11 @@ characters:
                   Crimson Witch of Flames (2) +18% ATK set (2): 
               - "The best "
               - b: generalist set
-              - " on Yoimiya. This set is considered better than Shimenawa's
-                Reminiscence (4) due to Yoimiya's optimal combo which involves
-                using her Elemental Burst before Elemental Skill, as "
-              - a: detailed in xandy#7124's
-                href: https://docs.google.com/spreadsheets/d/1pxwDSKZLmZjuwykSXVCw0e_jRUoaCCy_X3RIoimjtWY/edit#gid=1385855695
-              - " sheet. "
-              - b: Shimenawa's Reminiscence (4) offers more personal damage on Yoimiya but it
+              - >2
+                 on Yoimiya as it is competitive with the other options for personal damage and works in every situation. 
+              - b: "Shimenawa's Reminiscence (4): Offers more personal damage on Yoimiya but it
                   sacrifices her Elemental Burst uptime which translates to
-                  lower overall team DPS
+                  lower overall team DPS"
               - >2
                  due to not being able to fully benefit from her Ascension 4 passive.
               - b: "Crimson Witch of Flames (4): "
@@ -3149,7 +3146,7 @@ characters:
               - b: " excels over the other options especially on a reaction focused team comp."
               - "\n"
               - b: "Lavawalker (4): "
-              - "Viable option on a "
+              - "Good option on a "
               - b: mono Pyro team
               - " comp where Yoimiya can have 100% uptime on the artifact
                 passive."
@@ -5519,7 +5516,7 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: sacrificial-sword
-                  refine: null
+                  refine: R3+
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -5546,7 +5543,7 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: false
+                  seeCharNotes: true
             - similar:
                 - code: festering-desire
                   refine: R5
@@ -5686,19 +5683,36 @@ characters:
               rain swords active, while Cryo would freeze you in place. "
         notes:
           - p:
-              - b: "Regarding Weapon Choices:"
+              - b: |
+                  Regarding Weapon Choices:
+              - "The weapon rankings assume you are running enough Energy
+                Recharge to get Xingqiu's burst up off cooldown. This is usually
+                "
+              - b: 180-200% ER for Sacrificial Sword before [C6] and 150-170% ER after [C6],
+              - " while "
+              - b: ~240% ER for other weapons before [C6] and ~190% ER after [C6].
               - "\n"
               - b: "Primordial Jade Cutter: "
               - "This is Xingqiu's best in slot weapon if ran with sufficient ER
                 (240% ER before "
               - b: "[C6]"
-              - " and 170-190% ER after "
+              - " and 190% ER after "
               - b: "[C6]"
               - |
                 ).
               - b: "Sacrifical Sword:"
-              - >2
-                 This is Xingqiu's best in slot weapon if he doesnt have much ER from substats, otherwise it is his second best in slot weapon.
+              - " This ranking assumes you can trigger the passive on every
+                Elemental Skill. This is only possible at "
+              - b: "[R3+]"
+              - " if you are using Elemental Skill off cooldown. "
+              - b: |-
+                  At lower refines, this weapon would rank below Skyward Blade.
+                  Favonius Sword: 
+              - "Although this weapon has lower damage potential on Xingqiu, the
+                "
+              - b: extra team energy generated by the passive may be more useful than his
+                  personal damage in some teams.
+              - "\n"
               - b: "Harbinger of Dawn:"
               - " This is a great weapon for Xingqiu, assuming he's either "
               - b: "[C6]"
@@ -5712,8 +5726,8 @@ characters:
                 damage potential (same ER requirement as Jade), and Sacrificial
                 Sword has the third best damage potential."
           - p:
-              - "Big thanks to Quincy#6965 for helping us with the "
-              - a: weapons calculations
+              - "Big thanks to Quincy#6965 for helping us with "
+              - a: the weapons calculations
                 href: https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit#gid=0
               - i: .
           - p:
@@ -5754,7 +5768,7 @@ characters:
               - b: "Regarding Main Stats Priority:"
               - >-
                 
-                Ideally you would be running ATK% Sands when your ER needs are fulfilled. (200% if Sacrificial Sword, 230%+ for others).
+                Ideally you would be running ATK% Sands when your ER needs are fulfilled. (~180-200% if Sacrificial Sword, ~240% for others).
     credits:
       - a: In-depth Guide
         href: https://docs.google.com/document/d/1RQI5IjLZKqsVhQzRDr7FTYgQX66jKB28PnwoZVlQ4_k/edit
@@ -5831,11 +5845,6 @@ characters:
           seeCharNotes: false
         artifacts:
           sets:
-            - arts:
-                code: shimenawas-reminiscence
-                count: 4
-              notes: null
-              seeCharNotes: false
             - arts:
                 code: heart-of-depth
                 count: 4
@@ -6810,7 +6819,6 @@ characters:
           circlet:
             codes:
               - healing-bonus
-              - atk%
             notes: null
             seeCharNotes: false
           goblet:
@@ -6823,7 +6831,6 @@ characters:
             codes:
               - hp%
               - er
-              - atk%
             notes: null
             seeCharNotes: false
           notes: null
@@ -6905,11 +6912,10 @@ characters:
               - b: Without Prototype Amber, Kokomi will need ~200-220% Energy Recharge (170-190%
                   with Prototype Amber at [R1] and 150-170% at [R5])
               - "\n"
-              - b: "ATK% / Hydro DMG:"
-              - " If Kokomi is just being used to maintain 100% uptime on her
-                Elemental Skill without using normal attacks during Elemental
-                Burst, ATK% / Hydro DMG mainstat can be used to sacrifice her
-                healing to instead maximise damage from Elemental Skill."
+              - b: "Hydro DMG:"
+              - " This can be used to sacrifice some of Kokomi's healing to
+                boost her damage if she is attacking onfield during Elemental
+                Burst."
       - code: dps
         isRecommended: false
         weapons:
@@ -7039,9 +7045,9 @@ characters:
           - p:
               b: "*NA = Normal Attack, D = Dash"
         notes:
-          - p: DPS Kokomi aims to maximise her onfield damage only during her Elemental
-              Burst's duration. Outside of her Elemental Burst, her damage is
-              lackluster and not worth building for.
+          - p: DPS Kokomi aims to maximise her onfield damage during her Elemental Burst's
+              duration. Outside of her Elemental Burst, her damage is lackluster
+              and not worth building for.
           - p:
               - b: |-
                   Regarding Weapon Choices:
@@ -7513,7 +7519,7 @@ characters:
     weaponTypeCode: sword
     roles:
       - code: cryo dps
-        isRecommended: true
+        isRecommended: false
         weapons:
           advices:
             - similar:
@@ -8596,8 +8602,8 @@ characters:
                 comp in which she "
               - b: constantly triggers Reverse Melt.
               - " "
-              - b: "[R5] Dragon's Bane can outperform The Catch, and [R5] Kitain's Cross Spear
-                  is on par with Deathmatch."
+              - b: "[R5] Dragon's Bane can outperform \"The Catch\", and [R5] Kitain's Cross
+                  Spear is on par with Deathmatch."
               - "\n"
               - b: "Wavebreaker's Fin: "
               - At
@@ -8830,9 +8836,9 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: false
+                  seeCharNotes: true
             - similar:
-                - code: thundering-pulse
+                - code: polar-star
                   refine: null
                   stacks: null
                   notes: null
@@ -8842,7 +8848,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: polar-star
+                - code: thundering-pulse
                   refine: null
                   stacks: null
                   notes: null
@@ -8861,13 +8867,7 @@ characters:
             - similar:
                 - code: blackcliff-warbow
                   refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: the-viridescent-hunt
-                  refine: null
-                  stacks: null
+                  stacks: 1
                   notes: null
                   seeCharNotes: false
           notes: null
@@ -8925,19 +8925,15 @@ characters:
               notes: null
               seeCharNotes: false
             - codes:
-                - atk%
-              notes: null
-              seeCharNotes: false
-            - codes:
                 - em
               notes: null
               seeCharNotes: false
             - codes:
-                - atk
+                - atk%
               notes: null
               seeCharNotes: false
             - codes:
-                - er
+                - atk
               notes: null
               seeCharNotes: false
           notes: null
@@ -8948,8 +8944,10 @@ characters:
             - skill
             - burst
           notes: null
-          seeCharNotes: false
-        tips: []
+          seeCharNotes: true
+        tips: In some teams and situations, using Ganyu's Elemental Burst can be
+          detrimental to overall damage due to stealing Pyro aura, thus reducing
+          the amount of CAs melting.
         notes:
           - p: Ganyu's Level 2 Charged Shot applies two instances Cryo as they do not share
               the same ICD, which allows you to trigger Melt reaction twice for
@@ -8969,35 +8967,39 @@ characters:
                 This weapon doesn't synergize well with Shimenawa's Reminiscence
                 (4) due to its passive.
               - b: "Prototype Crescent: "
-              - "At "
-              - b: "[R5]"
-              - " with good uptime on its passive, it can potentially beat
-                Skyward Harp. However, do bear in mind that not all enemies have
-                weak spots that you can headshot, which does affect its
-                performance significantly."
+              - At higher refinement levels with good uptime on its passive, it
+                can potentially be on par with Skyward Harp. However, do bear in
+                mind that not all enemies have weak spots that you can headshot,
+                which does affect its performance significantly.
+          - p:
+              - b: |
+                  Regarding Talent Priority:
+              - Ganyu's Elemental Burst is low priority on a Melt Build since
+                most of the times, you don't cast her burst at all so that it
+                doesn't steal your Melt reaction.
       - code: freeze dps
         isRecommended: true
         weapons:
           advices:
             - similar:
-                - code: amos-bow
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: thundering-pulse
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
                 - code: polar-star
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: true
             - similar:
+                - code: thundering-pulse
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
                 - code: skyward-harp
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: amos-bow
                   refine: null
                   stacks: null
                   notes: null
@@ -9007,15 +9009,15 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: false
+                  seeCharNotes: true
             - similar:
                 - code: blackcliff-warbow
                   refine: null
-                  stacks: null
+                  stacks: 1
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: the-viridescent-hunt
+                - code: hamayumi
                   refine: null
                   stacks: null
                   notes: null
@@ -9081,21 +9083,19 @@ characters:
           seeCharNotes: false
         talents:
           advices:
-            - - attack
-              - burst
+            - burst
+            - attack
             - skill
           notes: null
           seeCharNotes: false
-        tips:
-          - p: When using her Elemental Burst, make sure to stand inside to benefit from the
-              Cryo DMG Bonus buff.
-          - p: Make sure to not overcap on Crit Rate (25%-45% Crit Rate since Ganyu's A1
-              passive only affects her Charged Shot and subsequent Bloom effect)
+        tips: Try to not overcap on Crit Rate (within the range of 25%-45% Crit Rate)
+          since Ganyu's A1 passive only affects her Charged Shot and subsequent
+          Blooms.
         notes:
           - p: Freeze Ganyu gives a lot of i-frames since you would be spamming Elemental
               Burst from all of your party members off cooldown. Ganyu's
               Elemental Burst can deal a ton of damage based on how grouped the
-              enemies are.
+              enemies are, due to the quadratic scaling on her Elemental Burst.
           - p:
               - b: |-
                   Regarding Weapon Choices: 
@@ -9103,31 +9103,25 @@ characters:
               - "This weapon is much harder to optimize with, due to having a
                 very high Crit Rate stat resulting in your Crit Rate going well
                 above 100%. However, if optimised properly "
-              - b: (i.e. very little Crit Rate rolls and more rolls into ATK/Crit DMG),
-              - " it pulls ahead of the other two options."
+              - b: (i.e. very little Crit Rate substats),
+              - " it pulls quite far ahead of all the other options."
               - b: |-
                   
-                  Thundering Pulse and Skyward Harp:
+                  Amos' Bow:
               - >2
-                 In quickswap heavy rotations (Ganyu Mona Venti Diona) where you usually don't do a lot of Charged Shots, these two weapons could pull ahead of Amos' Bow.
+                 In quickswap heavy rotations (Ganyu Mona Venti Diona) where you usually don't do a lot of Charged Shots, this weapon performs worse than the other 5 star options listed.
               - b: "Prototype Crescent: "
-              - Similar to the Melt Build, Crescent can pull ahead of Skyward
-                Harp at high refines and with good uptime on its passive.
-                However, its performance is affected by enemies having/not
-                having a weak spot you can consistently headshot.
+              - Similar to the Melt Build, this weapon at higher refinement
+                levels and good passive uptime can pull ahead of some of the 5
+                star options such as Thundering Pulse and Skyward Harp. However,
+                do bear in mind that not all enemies have weak spots that you
+                can headshot, which does affect its performance significantly.
           - p:
               - b: |-
                   Regarding Artifact Sets:
                   Blizzard Strayer (4): 
-              - This set is the go to set for a Frozen team comp, whereas you
-                focus all your stats on Crit DMG while prioritizing ATK% over
-                Crit Rate%. This has high damage and energy sustainability while
-                also be used outside of Freeze comps for a flat 20% Crit Rate
-                against enemies with a Cryo status.
-              - b: " "
-              - "A Hydro Support would be appreciated with Blizzard Strayer (4)
-                Ganyu. "
-              - b: Highly Recommended, especially for players who have Ganyu at [C4].
+              - This set is the go to set for a Frozen team comp due to the huge
+                stats it provides.
       - code: off-field dps
         isRecommended: false
         weapons:
@@ -9193,6 +9187,11 @@ characters:
         artifacts:
           sets:
             - arts:
+                code: blizzard-strayer
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
                 op: and
                 arts:
                   - code: noblesse-oblige
@@ -9200,7 +9199,7 @@ characters:
                   - code: blizzard-strayer
                     count: 2
               notes: null
-              seeCharNotes: true
+              seeCharNotes: false
             - arts:
                 code: emblem-of-severed-fate
                 count: 4
@@ -9291,12 +9290,8 @@ characters:
               - b: |-
                   Regarding Weapon Choices:
                   Prototype Crescent: 
-              - >
-                This weapon might pull ahead of some of the other options if you
+              - This weapon might pull ahead of some of the other options if you
                 activate the buff before casting Elemental Burst.
-              - b: "Blackcliff Warbow: "
-              - Might be dificult to activate the passive and gain stacks since
-                Ganyu is most of the time off field.
               - b: |-
                   
                   Elegy for the End: 
@@ -9305,23 +9300,13 @@ characters:
           - p:
               - b: |-
                   Regarding Artifact Sets:
-                  Noblesse Oblige (2) Blizzard Strayer (2): 
+                  Blizzard Strayer (4): 
               - >
-                This set is the generalist set, it focuses on dealing damage
-                with her Elemental Burst and constantly affecting enemies with
-                Cryo for reactions.
+                This set offers a huge amount of stats, use this set only if
+                your Ganyu is used on a Freeze team.
               - b: "Noblesse Oblige (4):"
-              - " This set is a pure support set for Ganyu, focuses on her using
-                her burst and switching out to to your main dps for extra damage
-                (Gives a 20% ATK buff) and to trigger reactions. "
-              - b: >
-                  Use this set if you are only using her Burst and to support
-                  your main DPS.
-              - "It is also worth noting that on a Freeze comp, a Sub DPS Ganyu
-                can also equip "
-              - b: Blizzard Strayer (4)
-              - " as it offers high stat values. "
-              - b: This set pulls ahead of the other options on a Freeze comp.
+              - " This set provides Ganyu with more utility so that she can buff
+                your whole party's ATK by 20%."
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/ganyu/
@@ -11543,8 +11528,9 @@ characters:
           goblet:
             codes:
               - anemo-dmg
+              - atk%
             notes: null
-            seeCharNotes: false
+            seeCharNotes: true
           sands:
             codes:
               - atk%
@@ -11634,6 +11620,10 @@ characters:
               - b: "Regarding Artifact Sets: "
               - Prioritize Viridescent Venerer over the other 2 +18% ATK sets if
                 there are external ATK% buff sources on your team.
+          - p:
+              - b: "Regarding Artifact Main Stats: "
+              - Anemo DMG% goblets are recommended for Xiao. ATK% goblets serve
+                as a good alternative for him.
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/xiao/
@@ -11706,7 +11696,7 @@ characters:
               notes: null
               seeCharNotes: true
           notes: null
-          seeCharNotes: true
+          seeCharNotes: false
         mainStats:
           circlet:
             codes:
@@ -11758,8 +11748,9 @@ characters:
           - "The element which is absorbed by Kazuha's elemental burst follows
             the priority of Pyro > Hydro > Electro > Cryo, and can be absorbed
             from both the active character and enemies. "
-          - b: (i.e. Standing in Bennett burst will result in Kazuha's Burst infusing Pyro
-              as Bennett applies Pyro to the active character)
+          - b: (i.e. Standing in Bennett 's Elemental Burst will result in Kazuha's
+              Elemental Burst infusing Pyro as Bennett's Elemental Burst applies
+              Pyro to the active character)
         notes:
           - p: Kazuha's 4th Ascension Passive encourages players to maximise Elemental
               Mastery in order to maximise his utility.
@@ -13314,7 +13305,7 @@ characters:
               - Use this weapon over Black Tassel if you value the team energy
                 (Note that you need to build some amount of Crit Rate if you are
                 running Favonius Lance to trigger the passive).
-      - code: burst / nuke
+      - code: burst support
         isRecommended: true
         weapons:
           advices:
@@ -13331,14 +13322,24 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
+                - code: skyward-spine
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
                 - code: vortex-vanquisher
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: calamity-queller
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: the-catch
-                  refine: null
+                  refine: R5
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -13347,21 +13348,9 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: skyward-spine
-                  refine: null
-                  stacks: null
-                  notes: null
                   seeCharNotes: false
             - similar:
-                - code: favonius-lance
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: blackcliff-pole
+                - code: engulfing-lightning
                   refine: null
                   stacks: null
                   notes: null
@@ -13369,11 +13358,17 @@ characters:
             - similar:
                 - code: lithic-spear
                   refine: null
-                  stacks: 1
+                  stacks: 3
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: prototype-starglitter
+                - code: blackcliff-pole
+                  refine: null
+                  stacks: 0
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: favonius-lance
                   refine: null
                   stacks: null
                   notes: null
@@ -13383,37 +13378,29 @@ characters:
         artifacts:
           sets:
             - arts:
-                op: and
-                arts:
-                  - code: archaic-petra
-                    count: 2
-                  - code: noblesse-oblige
-                    count: 2
-              notes: null
-              seeCharNotes: false
-            - arts:
                 code: emblem-of-severed-fate
                 count: 4
               notes: null
-              seeCharNotes: true
+              seeCharNotes: false
             - arts:
-                op: or
+                op: and
                 arts:
                   - code: noblesse-oblige
                     count: 2
                   - code: archaic-petra
                     count: 2
-                  - code: 18%-atk
-                    count: 2
-                  - code: tenacity-of-the-millelith
-                    count: 2
               notes: null
-              seeCharNotes: false
+              seeCharNotes: true
             - arts:
                 code: noblesse-oblige
                 count: 4
               notes: null
-              seeCharNotes: false
+              seeCharNotes: true
+            - arts:
+                code: tenacity-of-the-millelith
+                count: 4
+              notes: null
+              seeCharNotes: true
           notes: null
           seeCharNotes: false
         mainStats:
@@ -13433,7 +13420,7 @@ characters:
               - atk%
               - hp%
             notes: null
-            seeCharNotes: false
+            seeCharNotes: true
           notes: null
           seeCharNotes: false
         subStats:
@@ -13473,37 +13460,33 @@ characters:
           seeCharNotes: false
         tips: []
         notes:
-          - p: Zhongli's kit is best utilised as a Geo Burst damage dealer for his short
-              Elemental Burst cooldown (12s) and low energy cost (40 Energy),
-              while his Elemental Skill Hold Cast (Shield) scales with HP and at
-              Ascension 4, you would unlock a talent that allows your burst to
-              scale with 33% of Zhongli's Max HP, making him an amazing source
-              of shield and damage.
+          - p: Zhongli can be utilized as a Geo Burst damage dealer due to his short
+              Elemental Burst cooldown (12s) and low energy cost (40 Energy).
+              His Elemental Skill Hold Cast (Shield) scales with HP and at
+              Ascension 4, you would unlock a talent that allows your Elemental
+              Burst to scale with 33% of Zhongli's Max HP, making him a great
+              source of Shield and damage.
           - p:
-              - b: |-
-                  Regarding Artifact Sets:
-                  Emblem of Severed Fate (4): 
-              - On higher ER requirements, this set pulls ahead of Archaic Petra
-                (2) Noblesse Oblige (2), however it's not recommended to stack
-                ER to fully benefit from the 4 piece set effect since by
-                stacking ER, you sacrifice other offensive stats.
+              - b: |
+                  Regarding Artifact Main Stats:
+              - ATK sands provides more damage than HP sands, but it does have
+                lesser Shield HP. If you want more Shield HP, you can consider
+                running a HP sands.
           - p:
-              - b: |-
-                  Regarding Weapon Choices:
-                  Favonius Lance: 
+              - b: "Regarding Artifact Sets:"
+              - "\n"
+              - b: "Noblesse Oblige (2) Archaic Petra (2): "
               - >
-                Zhongli's lackluster particle generation can be problematic in
-                teams without a reliable source of Geo energy. With sufficient
-                energy/Geo particles (i.e. in a dual Geo team) Lithic Spear and
-                above will outperform Favonius Lance.
-              - b: "Deathmatch: "
-              - In teams with a reliable source of Geo energy, Deathmatch will
-                outperform The Catch.
-          - p:
-              - b: "Regarding Main Stats:"
-              - >-
-                
-                Ideally, you'll want ATK%/Geo/Crit Rate-DMG for maximum Elemental Burst damage, as his Ascension 4 Talent scaling would be best benefitted using only one HP main stat, any additional HP stat is desirable as it goes to his shield durability/burst damage.
+                On lower ER requirements where Zhongli doesn't need to worry
+                about his energy needs, this set pulls ahead of Emblem of
+                Severed Fate (4).
+              - b: "Noblesse Oblige (4):"
+              - >2
+                 This set provides Zhongli more utility when casting his Elemental Burst, you can use this set on Zhongli if there is nobody else on the team who's equipping this set.
+              - b: "Tenacity of the Millelith (4): "
+              - Just like Noblesse Oblige (4), this set provides Zhongli with
+                more utility if his Elemental Skill hits an enemy. This set also
+                provides Zhongli with stronger shields.
     credits: null
   - code: albedo
     elementCode: geo
@@ -14036,7 +14019,7 @@ artifacts:
         stack is lost."
   - code: ocean-hued-clam
     sets:
-      "2": Character Healing Effectiveness +15%
+      "2": Healing Bonus +15%.
       "4": >-
         When the character equipping this artifact set heals a character in the
         party, a Sea-Dyed Foam will appear for 3 seconds, accumulating the
@@ -15974,6 +15957,34 @@ weapons:
       - " Otherwise, it decreases DMG by 10%."
 changelogsTable:
   rows:
+    - date: February 3, 2022
+      changes: Updated Artifact notes for Yoimiya
+      appliedBy: ceeeleste
+    - date: February 2, 2022
+      changes: Removed Shimenawa's Reminiscence (4) from Barbara DPS
+      appliedBy: Ascarotte
+    - date: January 31, 2022
+      changes: Updated Freeze and Melt Ganyu section
+      appliedBy: 2ri
+    - date: January 27, 2022
+      changes: Edited Diluc mainstat rankings and added notes for Rainslasher
+      appliedBy: LarryTheCableGuy
+    - date: January 25, 2022
+      changes: Updated Weapon notes for Xingqiu
+      appliedBy: ceeeleste
+    - date: January 25, 2022
+      changes: Removed ATK% Mainstats from Support Kokomi
+      appliedBy: ceeeleste
+    - date: January 25, 2022
+      changes: Fixed Ocean-Hued Clam 2 piece effect's description in the Artifacts
+        sheet.
+      appliedBy: LarryTheCableGuy
+    - date: January 23, 2022
+      changes: Updated Kaeya's preferred Role
+      appliedBy: Ascarotte
+    - date: January 23, 2022
+      changes: Updated Burst Support Zhongli section
+      appliedBy: 2ri
     - date: January 22, 2022
       changes: Updated Bennett Support and Burst Support weapon rankings
       appliedBy: Loli, [Creed]
