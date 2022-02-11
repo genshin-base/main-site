@@ -1433,31 +1433,30 @@
           notes: null
           seeCharNotes: false
         tips:
-          - p: ЭН Синь Янь grants you a Пиро эффект upon contact со щитом. Не важно как
-              часто переключаться между героями, it'll still наложит Пиро
-              every instant you switch с щит. Этот позволяет снимать
+          - p: Элементальный навык Синь Янь накладывает Пиро статус на активного персонажа. Не важно как
+              часто переключаться между героями, он наложит Пиро
+              при каждом переключении. Этот позволяет снимать
               любой элементальный статус, который был наложен на персонажей.
-          - p: If the status doesn't get cleansed, switch on that персонаж one more time
-              с the щит. Пиро doesn't cleanse Гидро very efficiently, take
-              Cecilia Garden for example, you'll have to apply pyro on your
-              персонаж 4 times before actually cleansing the hydro status.
+          - p: Если статус не был снят, следует переключиться на этого персонажа еще раз. Пиро плохо снимает Гидро эффект, например 
+              в Саду Сесилии нужно наложить на персонажа Пиро четыре раза
+              персонаж чтобы снять Гидро статус.
         notes:
           - p:
               - b: "О выборе оружия:"
               - "\n"
               - b: "Меч драконьей кости: "
-              - "It is worth noting that an "
+              - "Стоит обратить внимание, что "
               - b: "[Р5] Меч драконьей кости"
-              - " can outperform all 5 star оружие at "
+              - " может превзойти всё пятизвездочное оружие с "
               - b: "[Р1]"
-              - " с proper stack management"
+              - " при правильном использовании баффа"
           - p:
               - b: |-
                   О комплектах артефактов: 
                   Рыцарь крови (4): 
-              - Despite how dependant Синь Янь's стиль игры can get с Charged
-                Attacks, Рыцарь крови Full Set is still not recommended
-                due to it only coming in effect after a kill.
+              - Не смотря на то, что стиль игры за Синь Янь's стиль игры строится вокруг ее
+                заряженных атак, полный комплект Рыцаря крови не рекомендуется
+                так как его бафф накладывается только после убийства.
       - code: shield support
         isRecommended: false
         weapons:
@@ -1581,8 +1580,8 @@
               notes: null
               seeCharNotes: false
           notes:
-            - p: Крит. урон if С2
-            - p: Если Щит саппорт, Восстановление энергии становится приоритетнее процента Сила атаки
+            - p: Крит. урон, если С2
+            - p: Если Щит саппорт, Восстановление энергии становится приоритетнее процента Силы атаки
           seeCharNotes: false
         talents:
           advices:
@@ -1602,45 +1601,36 @@
               - b: "О Стойкости Миллелита (4) и Церемониальном двуручном мече: "
               - >-
                 
-                Синь Янь как персонаж поддержки в основном используется для щита и/или урона от Взрыва стихии. Если использовать ее как Физ саппорта, она needs both её Ascension 4 Talent и 
+                Синь Янь как персонаж поддержки в основном используется для щита и/или урона от Взрыва стихии. 
+                Если использовать ее как Физ саппорта, ей нужны её пассивный талант на 60 уровне и 
               - b: "[С4]"
-              - " для максимального увеличения ее способностей поддержки, making её a somewhat
-                expensive выбор to be considered for Physical Support role.
-                However, the Стойкость Миллелита комплект gives её a new role
-                с a lower Constellation level prerequisite."
+              - " для максимального увеличения ее способностей поддержки, что делает её
+                довольно дорогим выбором для роли Физ саппорта.
+                Однако, комплект Стойкость Миллелита даёт ей новую роль, не требующую такой высокий уровень созвездия."
           - p:
               - b: "Стойкость Миллелита: "
-              - "Этот комплект gives Синь Янь уникальную роль среди щитовиков.
-                На данный момент, Синь Янь is one of the few shielders in the game who
-                can make full use of the Tenacity комплект's effects. If you can
-                maximize the uptime of Синь Янь's Level 3 щит, она can provide
-                a constant 30% щит Strength и 20% Atk boost to the отряд (as
-                long as the pulses hit an враг). Этот means that "
+              - "Этот комплект даёт Синь Янь уникальную роль среди щитовиков.
+                На данный момент, Синь Янь одна из немногих из щитовиков, кто
+                может полностью использовать бонусы комплекта Стойкость Миллелита. Если
+                максимизировать время активности щита третьего уровня Синь Янь, она сможет предоставить
+                постоянный бафф на 30% стойкости щита и 20% бонуса урона отряду,
+                пока пульсирования щита ударяют врага. Это означает, что "
               - b: 	Церемониальный двуручный меч
-              - " и Синь Янь's "
+              - " и Синь Янь "
               - b: "[С2]"
-              - " are crucial to making this комплект shine on её. Этот комплект isn't as
-                recommended for её if you have neither of the two."
+              - " крайне важны чтобы комплект сиял на ней. В противном случае, комплект не настолько рекомендуется.
+                и лучше собрать ее в ульт саппорта или щитовика.
+                "
           - p:
-              - "щит uptime is also crucial to maximizing её Physical/щит
-                Support capabilities. If you have neither 	Церемониальный двуручный меч
-                nor at least "
-              - b: "[С2] "
-              - "(но ideally "
-              - b: "[С4]"
-              - ) on Синь Янь, you may want to build её as a Взрыв стихии Support
-                instead of Physical/щит Support.
-          - p:
-              - At
+              - На
               - b: " [С2],"
-              - " её burst \"Riff Revolution\" has a 100% Шанс крит. попадания, which
-                means you can build solely Крит. урон (instead of trying to get a
-                1:2 Шанс крит. попадания:Крит. урон ratio) if you're building её as a
-                Physical Взрыв стихии support."
+              - " её взрыв стихии имеет 100% Шанс крит. попадания, что означает
+                что можно собирать только Крит. урон, вместо обычного подхода со сбором 
+                1:2 Шанс крит. попадания:Крит. урону, в случае если собирать её как
+                саппорта с физическим Взрывом стихии."
           - p:
-              b: Generally not recommended for Пиро Applications, as the pulses only happen at
-                щит Level 3, и are not very efficient at breaking Крио
-                shields.
+              b: В целом, не рекомендуется для накладывания Пиро, так как щит пульсирует только на третьем уровне,
+                и не эффективен чтобы ломать Крио-щиты врагов.
       - code: sub-dps
         isRecommended: false
         weapons:
@@ -1786,7 +1776,7 @@
               - b: "[С4]"
               - " to maximize её support capabilities, making её a somewhat
                 expensive выбор to be considered for Physical Support role.
-                However, the Стойкость Миллелита комплект gives её a new role
+                However, the Стойкость Миллелита комплект даёт её a new role
                 с a lower Constellation level prerequisite."
           - p:
               - b: "Стойкость Миллелита: "
@@ -1794,7 +1784,7 @@
                 На данный момент, Синь Янь единственная из щитовиков в игре, которая
                 can make full use of the Tenacity комплект's effects. If you can
                 maximize the uptime of Синь Янь's Level 3 щит, она can provide
-                a constant 30% щит Strength и 20% Atk boost to the отряд (as
+                a constant 30% щит Strength и 20% Atk boost отряду (as
                 long as the pulses hit an враг). Это значит, что "
               - b: 	Церемониальный двуручный меч
               - " и Синь Янь's "
@@ -2437,7 +2427,7 @@
           seeCharNotes: false
         tips:
           - p: You can interweave Normal Attacks while using his Элементальный навык.
-          - p: ie. ЭН -> ОА -> ОА -> ЭН -> ОА -> ОА -> ЭН -> ОА -> ОА
+          - p: ie. Элементальный навык -> ОА -> ОА -> Элементальный навык -> ОА -> ОА -> Элементальный навык -> ОА -> ОА
         notes:
           - p:
               - b: |-
@@ -4009,9 +3999,9 @@
               - b: "Optimal Лиза String: "
               - >-
                 
-                ЭН (быстрое нажатие) > ОА x2 [until 3 stacks] > Fully-charged ЭН (Hold) > N2C. Повторить N2C until E is off-время отката, then повторить the string.
+                Элементальный навык (быстрое нажатие) > ОА x2 [until 3 stacks] > Fully-charged Элементальный навык (Hold) > N2C. Повторить N2C until E is off-время отката, then повторить the string.
           - p:
-              b: "*N/ОА = Normal attack, C = Charged attack, ЭН = Элементальный навык"
+              b: "*N/ОА = Normal attack, C = Charged attack, Элементальный навык = Элементальный навык"
         notes:
           - p:
               - b: |-
@@ -5208,7 +5198,7 @@
         tips:
           - p:
               - b: "Preferred Элементальный навык Combo: "
-              - ЭН (Place stiletto, don't reactivate yet) -> ВС -> ЭН
+              - Элементальный навык (Place stiletto, don't reactivate yet) -> ВС -> Элементальный навык
                 (Reactivation) -> Spam AA -> Повторить
           - p:
               - b: "О ролях:"
@@ -5723,7 +5713,7 @@
               - "\n"
               - b: "Изгнанник (2) Учёный (2): "
               - "Этот комплект is a cheap beginner option to maintain burst uptime
-                well since it gives 40% Восстановление энергии. Обратите внимание, что it is "
+                well since it даёт 40% Восстановление энергии. Обратите внимание, что it is "
               - b: not recommended to stay on this комплект as Син Цю contributes alot of damage in
                   his отряды.
           - p:
@@ -5883,7 +5873,7 @@
           notes: null
           seeCharNotes: false
         tips:
-          - p: Барбара's skill gives you a pulse of healing every 5 секунд, every pulse
+          - p: Барбара's skill даёт you a pulse of healing every 5 секунд, every pulse
               will imbue you с a Гидро status, that means it can be used for
               status-cleansing (Пиро in specific, while other элементы may take
               more pulses).
@@ -6248,7 +6238,7 @@
               - " OR a"
               - b: " Ranged Normal + quick Aimed shot "
               - >
-                gives 2 stacks (which can be followed by Элементальный навык for the 3rd
+                даёт 2 stacks (which can be followed by Элементальный навык for the 3rd
                 stack).
               - b: "Громовой пульс:"
               - >2
@@ -6836,7 +6826,7 @@
           seeCharNotes: false
         tips: >
           Кокоми's Взрыв стихии dynamically alters её skill's damage, this
-          means that you cannot use её Взрыв стихии to snapshot the бафф onto the
+          означает, что you cannot use её Взрыв стихии to snapshot the бафф onto the
           Элементальный навык и swap out.
         notes:
           - p: Support Кокоми focuses on just using её Взрыв стихии before её Elemental
@@ -9068,7 +9058,7 @@
           - p: Make sure to not overcap on Шанс крит. попадания (25%-45% Шанс крит. попадания since Гань Юй's A1
               passive only affects её заряженный выстрел и subsequent Bloom effect)
         notes:
-          - p: Заморозка Гань Юй gives a lot of i-frames since you would be spamming Elemental
+          - p: Заморозка Гань Юй даёт a lot of i-frames since you would be spamming Elemental
               Взрыв стихии from all of your отряд members off время отката. Гань Юй's
               Взрыв стихии can deal a ton of damage based on how grouped the
               враги are.
@@ -9289,7 +9279,7 @@
               - b: "Церемония древней знати (4):"
               - " Этот комплект is a pure support комплект for Гань Юй, focuses on её using
                 её burst и switching out to to your глав. ДПС for extra damage
-                (Gives a 20процент Сила атаки бафф) и to trigger reactions. "
+                (даёт a 20процент Сила атаки бафф) и to trigger reactions. "
               - b: >
                   Use this комплект if you are only using её Взрыв стихии и to support
                   your глав. ДПС.
@@ -9501,7 +9491,7 @@
               (то есть Диона) instead of Беннет. Она would usually need 30%-60%+
               Восстановление энергии from допстаты depending on what отряд и Крио
               batteries you use.
-          - p: Эола's Взрыв стихии does not snapshot. Этот means that any buffs Эола has
+          - p: Эола's Взрыв стихии does not snapshot. Этот означает, что any buffs Эола has
               upon casting Взрыв стихии will not be taken into effect if the бафф
               длительность expires before the Lightfall Sword hits.
           - p:
@@ -9729,7 +9719,7 @@
               - " (paired с a Гидро enabler such as Мона, Син Цю, или even
                 Барбара) где она could gain huge benefits from the "
               - b: Заблудший в метели (4) artifact комплект.
-              - " Заблудший в метели (4) piece gives a huge количество of статы on a
+              - " Заблудший в метели (4) piece даёт a huge количество of статы on a
                 Заморозка отряд, so try to get this artifact комплект as fast as you can.
                 Её Взрыв стихии also sticks on замороженные враги, но it also
                 has a small hitbox so you need to position it well so that it
@@ -9749,7 +9739,7 @@
                 on how much Восстановление энергии you're running, how much stacks your
                 Blackcliff has, how much time you're gonna spend doing Normal
                 Attacks, и how much you value the passive on Amenoma since it
-                gives you leeway in building Восстановление энергии, one can be better
+                даёт you leeway in building Восстановление энергии, one can be better
                 чем the other. If you're running "
               - b: Небесный меч
               - " или "
@@ -10137,7 +10127,7 @@
                 при использовании своего Элементального навыка, наносит урон и
                 снижает Крио и физ. сопротивление при использовании
                 Взрыва стихии. Её "
-              - b: Элементальный навык дает несколько зарядов бонусного урона для
+              - b: Элементальный навык даёт несколько зарядов бонусного урона для
                   всех окружающих членов отряда (5 зарядов при быстром нажатии и 7 зарядов при долгом).
               - " Этот бонус урона "
               - b: работатет только для Крио атак,
@@ -10307,7 +10297,7 @@
               - Этот оружие does not provide any Мастерство стихий, however it overtakes the
                 other weapons on the list когда it comes to enabling your отряд.
               - b: >-2
-                   It offers 48процент Сила атаки boost to the персонаж you swap to which is equivalent to 1 главстат. Этот enables your ДПС more if compared to Церемониальные мемуары which only gives ~44EM, equivalent to only 2 допстаты.
+                   It offers 48процент Сила атаки boost to the персонаж you swap to which is equivalent to 1 главстат. Этот enables your ДПС more if compared to Церемониальные мемуары which only даёт ~44EM, equivalent to only 2 допстаты.
                   Песнь странника:
               - " Этот оружие is only useful if you get the Мастерство стихий passive from it.
                 As such, it is "
@@ -11196,7 +11186,7 @@
               - "\n"
               - b: "Клятва свободы: "
               - "The ranking here only "
-              - b: assumes Джинн's personal damage и not the utility it gives.
+              - b: assumes Джинн's personal damage и not the utility it даёт.
               - b: " "
               - "If you want to furthermore бафф your глав. ДПС, you can give
                 this sword to Джинн as она "
@@ -11217,8 +11207,8 @@
                   
                   Церемония древней знати (4)
               - " is the other option for "
-              - b: providing utilities to the отряд.
-              - " Этот комплект gives a "
+              - b: providing utilities отряду.
+              - " Этот комплект даёт a "
               - b: "20% partywide Сила атаки boost "
               - |
                 after Джинн casts её Взрыв стихии.
@@ -12486,7 +12476,7 @@
               - "Горо — это персонаж поддержки, that can give increasing buffs to
                 your отряд members from his Элементальный навык и Взрыв стихии
                 based on the number of Гео персонажи in your отряд (capped at
-                3). Casting his Элементальный навык sets up a banner which gives
+                3). Casting his Элементальный навык sets up a banner which даёт
                 flat Защита (1 Гео), сопротивление прерыванию (2 Гео) и Гео урон%
                 бонус (3 Гео) for your active персонаж standing inside the
                 banner radius. Casting his Взрыв стихии creates a field
@@ -12651,7 +12641,7 @@
               - "Юнь Цзинь - это героиня поддержки для авто-атакеров, 
                  которая наносит урон своим
                 Взрывом стихии. Взрыв стихии"
-              - b: Юнь Цзинь дает ближайшим членам отряда 30 зарядов
+              - b: Юнь Цзинь даёт ближайшим членам отряда 30 зарядов
                   бонусного урона обычных атак, который зависит от её текущей защиты.
               - " Это значит, что внешние бафы Защиты, такие как
                 Элементальный навык и/или Взрыв стихии Горо не дают много Юнь Цзинь, из-за того, что 
@@ -12665,7 +12655,7 @@
                 пассивную способность копья.
               - b: "Крест-копьё Китаин:"
               - " Хоть главстат Мастерства стихий и бесполезен для Юнь Цзинь, "
-              - b: его пассивка дает много Восстановление энергии,
+              - b: его пассивка даёт много Восстановление энергии,
               - " особенно на более высоком ранге пробуждения. "
               - b: "Это может снизить её потребность % Восстановление энергии примерно с ~20% на Р1 до ~70% на Р5. "
               - Обратите внимание, что
@@ -13038,7 +13028,7 @@
                   Бледный огонь (4): Этот комплект is not recommended 
               - due to the Путешественница's Элементальный навык время отката being 6 секунд,
                 which means the 4 piece комплект effect only kicks in 6 секунд into
-                every rotation, и also gives the player a very little time
+                every rotation, и also даёт the player a very little time
                 window to keep up the 4 piece комплект effect.
     credits: null
   - code: zhongli
@@ -13614,7 +13604,7 @@
         notes:
           - p: Альбедо is a персонаж that can summon a Гео Construct from his Elemental
               Элементальный навык which deals damage on a 2 second interval whenever враги
-              in the field are damaged. His Взрыв стихии дает 125 Мастерство стихий to
+              in the field are damaged. His Взрыв стихии даёт 125 Мастерство стихий to
               the отряд, which is good on отряды that rely on amplification
               reactions, such as Пар. It is worth noting that since his
               stat priority is focused on Защита (Элементальный навык scaling), you
@@ -13893,7 +13883,7 @@ artifacts:
   - code: scholar
     sets:
       "2": Восстановление энергии +20%
-      "4": Gaining Energy gives 3 Energy to all отряд members who have a bow или a
+      "4": Gaining Energy даёт 3 Energy to all отряд members who have a bow или a
         catalyst equipped. Can only occur once every 3s
   - code: gladiators-finale
     sets:
