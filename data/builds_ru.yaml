@@ -1266,7 +1266,7 @@
               - b: "Вспышка во тьме: "
               - >
                 У этого оружия на данный момент наибольшая Базовая атака из всего 4 звездочного
-                оружия. Даже больше некоторых 5 звездочных, например больше Небесного меча.
+                оружия. Даже больше некоторых 5 звездочных, например, больше Небесного меча.
               - b: "Прототип: Злоба: "
               - Базовая атака этого оружия одна из наибольших среди 4 звездочных.
                 Так же этот меч можно выковать у кузнеца.
@@ -1433,10 +1433,10 @@
           notes: null
           seeCharNotes: false
         tips:
-          - p: Синь Янь's ЭН grants you a pyro status upon contact с щит. No matter how
-              many times you switch your персонажи, it'll still apply pyro
-              every instant you switch с щит. Этот allows you to cleanse
-              every single elemental status that has been applied to you.
+          - p: ЭН Синь Янь grants you a Пиро эффект upon contact со щитом. Не важно как
+              часто переключаться между героями, it'll still наложит Пиро
+              every instant you switch с щит. Этот позволяет снимать
+              любой элементальный статус, который был наложен на персонажей.
           - p: If the status doesn't get cleansed, switch on that персонаж one more time
               с the щит. Пиро doesn't cleanse Гидро very efficiently, take
               Cecilia Garden for example, you'll have to apply pyro on your
@@ -1582,7 +1582,7 @@
               seeCharNotes: false
           notes:
             - p: Крит. урон if С2
-            - p: If щит support, Восстановление энергии takes priority over процент Сила атаки
+            - p: Если Щит саппорт, Восстановление энергии становится приоритетнее процента Сила атаки
           seeCharNotes: false
         talents:
           advices:
@@ -1602,7 +1602,7 @@
               - b: "О Стойкости Миллелита (4) и Церемониальном двуручном мече: "
               - >-
                 
-                Синь Янь как персонаж поддержки в основном используется для её щита и/или урона от Взрыва стихии. Если использовать ее как Физ саппорта, она needs both её Ascension 4 Talent и 
+                Синь Янь как персонаж поддержки в основном используется для щита и/или урона от Взрыва стихии. Если использовать ее как Физ саппорта, она needs both её Ascension 4 Talent и 
               - b: "[С4]"
               - " для максимального увеличения ее способностей поддержки, making её a somewhat
                 expensive выбор to be considered for Physical Support role.
@@ -1790,8 +1790,8 @@
                 с a lower Constellation level prerequisite."
           - p:
               - b: "Стойкость Миллелита: "
-              - "Этот комплект gives Синь Янь a unique role among the shielders.
-                На данный момент, Синь Янь is one of the few shielders in the game who
+              - "Этот комплект даёт Синь Янь уникальную роль среди щитовиков.
+                На данный момент, Синь Янь единственная из щитовиков в игре, которая
                 can make full use of the Tenacity комплект's effects. If you can
                 maximize the uptime of Синь Янь's Level 3 щит, она can provide
                 a constant 30% щит Strength и 20% Atk boost to the отряд (as
@@ -1813,13 +1813,13 @@
           - p:
               - At
               - b: " [С2],"
-              - " её взрыв стихии \"Струны протеста\" имеет 100% Шанс крит. попадания, which
-                means you can build solely Крит. урон (instead of trying to get a
-                1:2 Шанс крит. попадания:Крит. урон ratio) if you're building её as a
-                Physical Взрыв стихии support."
+              - " её взрыв стихии \"Струны протеста\" имеет 100% Шанс крит. попадания, что значит
+                 you can build solely Крит. урон (вмето попыток получить соотношение
+                1:2 Шанс крит. попадания:Крит. урон) при её сборке как
+                Физ. ульт. саппорта."
           - p:
-              b: Generally not recommended for Пиро Applications, as the pulses only happen at
-                щит Level 3, и are not very efficient at breaking Крио
+              b: Не рекомендовано для наложения Пиро, as the pulses only happen на
+                3 уровне щита, и не очень эффективно для разбивания Крио
                 щитов.
     credits: null
   - code: yanfei
@@ -1975,9 +1975,9 @@
           notes: null
           seeCharNotes: false
         tips: >
-          Янь Фэй's Ascension 4 Talent does a second hit after a Crit Charge
+          Талант 4 фазы возвышения Янь Фэй does a second hit after a Crit Charge
           Attack. Этот scales 80% of your Сила атаки и can trigger reactions as well
-          due to having a separate internal время отката on its pyro наложение. 
+          due to having a separate internal время отката on its Пиро наложение. 
         notes:
           - p: Янь Фэй can have trouble trying to сетап for её reaction ДПС. Пар is
               generally the more consistent option и you need Син Цю to make
@@ -1995,7 +1995,7 @@
               - b: |-
                   
                   Истории Додоко: 
-              - "On equal ранг пробуждения, Песнь странника лучше чем Истории Додоко, но
+              - "На одинаковом ранге пробуждения, Песнь странника лучше чем Истории Додоко, но
                 assuming it's "
               - b: "[Р5]"
               - " Истории Додоко vs "
@@ -2024,9 +2024,9 @@
               - |2
                  effects without casting Взрыв стихии.
               - b: "Встречная комета (4): "
-              - Running Янь Фэй с a щит персонаж also allows you to make
-                use of a full Встречная комета 4-комплект as a placeholder until
-                you're able to find a good Горящая алая ведьма 4-комплект.
+              - Использование Янь Фэй с щитовиком также позволяет you to make
+                use of a full Встречная комета (4) комплект as a placeholder until
+                you're able to find a good Горящая алая ведьма (4) комплект.
           - p:
               - b: |
                   О приоритетных допстатах в артефактах: 
@@ -2118,8 +2118,8 @@
           seeCharNotes: false
         talents:
           advices: []
-          notes: Янь Фэй's уровни таланта provide nothing for this role и it is not
-            recommended to level them.
+          notes: Уровни талантов Янь Фэй provide nothing for this role и не
+            рекомендовано их повышать.
           seeCharNotes: false
         tips:
           - u:
