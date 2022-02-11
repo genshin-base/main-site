@@ -44,7 +44,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 		() => [
 			{
 				code: weekdayCode,
-				title: 'today',
+				title: 'today, ' + weekdayCode, //todo l10n
 			},
 			{ code: tomorrowCode, title: 'tomorrow' },
 		],
@@ -123,7 +123,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 							<ItemAvatar
 								key={code}
 								src={getItemIconSrc(code)}
-								classes="small-avatar me-3"
+								classes="small-avatar me-3 with-padding"
 								badgeTopStart={
 									~favWeapPrimMatCodes.indexOf(code) ? (
 										<span className="text-danger">{HEART}</span>

@@ -5,11 +5,11 @@ body,
 .app-container {
 	min-height: 100vh;
 }
-
+// h: 16 *2, *3, *5
 :root {
-	--thumb-height: 3rem;
-	--thumb-height-sm: 2rem;
-	--thumb-height-l: 5rem;
+	--thumb-height-sm: 32px;
+	--thumb-height: 48px;
+	--thumb-height-l: 80px;
 }
 .bg-5 {
 	background-color: rgb(149, 107, 69);
