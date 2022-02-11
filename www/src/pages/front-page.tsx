@@ -17,7 +17,7 @@ export function FrontPage(): JSX.Element {
 		<div className="dashboard container ">
 			<h1 className="my-1">Dashboard</h1>
 			<div className="row">
-				<Fieldset legend="Region switch" classes="col-lg-3 col-12">
+				<Fieldset legend="Region" classes="col-lg-3 col-12">
 					<RegionSwitch />
 				</Fieldset>
 				<Fieldset legend="Until day reset" classes="col-lg-3 col-12">
