@@ -328,6 +328,7 @@ async function extractAndSaveAllItemsData() {
 async function extractAndSaveItemImages(overwriteExisting) {
 	const builds = await loadBuilds()
 
+	info('extracting data', { newline: false })
 	const { items, artifacts, weapons, enemies, characters, enemyGroups } = await extractAllItemsData()
 
 	replaceEnemiesByGroups(enemies.code2item, enemyGroups.code2item)
@@ -369,15 +370,20 @@ async function extractAndSaveItemImages(overwriteExisting) {
 	}
 
 	const shouldProcess = async dest => overwriteExisting || !(await exists(dest))
-	const resize64 = (i, o) => resize(i, o, '64x64')
+	const processNormal = (i, o) => mediaChain(i, o, (i, o) => resize(i, o, '64x64'), pngquant, optipng)
+	const processLarge = (i, o) => mediaChain(i, o, (i, o) => resize(i, o, '120x120'), pngquant, optipng)
+	async function* processIfShould(mediaFPath, mediaFunc) {
+		const dest = `${WWW_MEDIA_DIR}/${mediaFPath}`
+		if (await shouldProcess(dest)) yield src => mediaFunc(src, dest)
+	}
 
 	await processGroup('items', async () => {
 		const { code2img } = items
 		for (const code of code2img.keys()) if (!usedItemCodes.has(code)) code2img.delete(code)
 
-		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'items', async code => {
-			const dest = `${WWW_MEDIA_DIR}/items/${code}.png`
-			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
+		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'items', async function* (code) {
+			yield* processIfShould(`items/${code}.png`, processNormal)
+			yield* processIfShould(`items/${code}.large.png`, processLarge)
 		})
 	})
 
@@ -385,9 +391,9 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		const { code2img } = artifacts
 		for (const code of code2img.keys()) if (!usedArtCodes.has(code)) code2img.delete(code)
 
-		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'artifacts', async code => {
-			const dest = `${WWW_MEDIA_DIR}/artifacts/${code}.png`
-			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
+		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'artifacts', async function* (code) {
+			yield* processIfShould(`artifacts/${code}.png`, processNormal)
+			yield* processIfShould(`artifacts/${code}.large.png`, processLarge)
 		})
 	})
 
@@ -395,9 +401,9 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		const { code2img } = weapons
 		for (const code of code2img.keys()) if (!usedWeaponCodes.has(code)) code2img.delete(code)
 
-		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'weapons', async code => {
-			const dest = `${WWW_MEDIA_DIR}/weapons/${code}.png`
-			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
+		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'weapons', async function* (code) {
+			yield* processIfShould(`weapons/${code}.png`, processNormal)
+			yield* processIfShould(`weapons/${code}.large.png`, processLarge)
 		})
 	})
 
@@ -405,9 +411,8 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		const { code2img } = enemies
 		for (const code of code2img.keys()) if (!usedEmenyCodes.has(code)) code2img.delete(code)
 
-		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'enemies', async code => {
-			const dest = `${WWW_MEDIA_DIR}/enemies/${code}.png`
-			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
+		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'enemies', async function* (code) {
+			yield* processIfShould(`enemies/${code}.png`, processNormal)
 		})
 	})
 }

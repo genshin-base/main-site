@@ -1,4 +1,6 @@
 import { useMemo } from 'preact/hooks'
+
+import { CharacterFullInfoWithRelated } from '#src/../../lib/parsing/combine'
 import { getAllRelated, MapAllByCode } from '#src/api/utils'
 import { CharacterPortrait } from '#src/components/characters'
 import { CentredSpinner } from '#src/components/spinners'
@@ -8,11 +10,10 @@ import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-a
 import { A } from '#src/routes/router'
 import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import {
-	getCharacterAvatarSrc,
+	getCharacterAvatarLargeSrc,
 	getCharacterPortraitSrc,
 	getCharacterSilhouetteSrc,
 } from '#src/utils/characters'
-
 import { getItemIconSrc } from '#src/utils/items'
 import { pluralizeEN } from '#src/utils/strings'
 import { getWeaponIconSrc } from '#src/utils/weapons'
@@ -33,7 +34,6 @@ import {
 } from './common'
 
 import './character-build-detailed.scss'
-import { CharacterFullInfoWithRelated } from '#src/../../lib/parsing/combine'
 
 export function CharacterBuildDetailed({
 	build,
@@ -272,7 +272,7 @@ export function CharacterBuildDetailed({
 				<h5 className="ps-3 pe-1 m-0 align-self-center">{build.character.name}</h5>
 				<ToggleCharFav classes="fs-3 align-self-center" characterCode={characterCode} />
 				<ItemAvatar
-					src={getCharacterAvatarSrc(characterCode)}
+					src={getCharacterAvatarLargeSrc(characterCode)}
 					classes="large-avatar align-self-end mt-n5 ms-auto"
 				/>
 			</div>

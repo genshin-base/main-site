@@ -20,14 +20,21 @@ const commands = {
 		checkCharacterCode(code)
 		await fs.mkdir(`${WWW_MEDIA_DIR}/characters/avatars`, { recursive: true })
 		const dest = `${WWW_MEDIA_DIR}/characters/avatars/${code}.png`
+		const destLarge = `${WWW_MEDIA_DIR}/characters/avatars/${code}.large.png`
+
 		// prettier-ignore
-		const circleResize = (i, o) => magick(i, o, [
+		const makeCircleResize = (size) => (i, o) => magick(i, o, [
 			'\(', '+clone', '-alpha', 'transparent', '-fill', 'white', '-draw', 'circle %[fx:w/2],%[fx:h/2] %[fx:w],%[fx:h/2]', '\)',
 			'-define', 'compose:sync=false', '-compose', 'multiply', '-composite',
-			'-resize', '72x72'
+			'-resize', size
 		])
-		await mediaChain(src, dest, circleResize, pngquant, optipng)
+		const circleResizeNormal = makeCircleResize('72x72')
+		const circleResizeLarge = makeCircleResize('120x120')
+
+		await mediaChain(src, dest, circleResizeNormal, pngquant, optipng)
 		info(`saved to ${relativeToCwd(dest)}`)
+		await mediaChain(src, destLarge, circleResizeLarge, pngquant, optipng)
+		info(`saved to ${relativeToCwd(destLarge)}`)
 	},
 	async portrait() {
 		const { code, src } = needItemImageArgs('character')
@@ -73,6 +80,7 @@ function needItemImageArgs(itemType) {
 
 /** @param {string} code */
 async function checkCharacterCode(code) {
+	if (code === 'traveler') return
 	const names = await loadCharacters()
 	if (!(code in names)) warn(`character '${code}' is unknown`)
 }

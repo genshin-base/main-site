@@ -16,7 +16,7 @@ import {
 	ToggleTalentMaterialFav,
 	ToggleWeaponPrimaryMaterialFav,
 } from '#src/modules/builds/common'
-import { getArtifactIconSrc } from '#src/utils/artifacts'
+import { getArtifactIconLargeSrc, getArtifactIconSrc } from '#src/utils/artifacts'
 import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { getDomainIconSrc } from '#src/utils/domains'
@@ -24,7 +24,7 @@ import { getEnemyIconSrc } from '#src/utils/enemies'
 import { isLoaded, useFetch, useWindowSize } from '#src/utils/hooks'
 import { getItemIconSrc } from '#src/utils/items'
 import { BULLET, LEFT_POINTING, RIGHT_POINTING, TIMES } from '#src/utils/typography'
-import { getWeaponIconSrc } from '#src/utils/weapons'
+import { getWeaponIconLageSrc } from '#src/utils/weapons'
 import { AlchemyCalculator } from '../alchemy-calculator'
 import { ItemAvatar, LabeledItemAvatar } from './item-avatars'
 
@@ -353,7 +353,7 @@ function ArtifactCard({
 					<ItemAvatar
 						rarity={selectedArt.rarity}
 						classes="float-end me-2 large-avatar"
-						src={getArtifactIconSrc(selectedArt.code)}
+						src={getArtifactIconLargeSrc(selectedArt.code)}
 					/>
 					{selectedArt.sets[1] && (
 						<>
@@ -454,7 +454,7 @@ export function WeaponCard({
 							<ItemAvatar
 								rarity={weapon.rarity}
 								classes="mb-2 large-avatar"
-								src={getWeaponIconSrc(weapon.code)}
+								src={getWeaponIconLageSrc(weapon.code)}
 							/>
 						</div>
 
