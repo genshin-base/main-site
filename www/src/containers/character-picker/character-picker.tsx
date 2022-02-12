@@ -19,7 +19,7 @@ function CharacterPickerDesktop({ weaponTypes }: { weaponTypes: GI_WeaponType[] 
 							<img className="rounded-circle d-block mx-auto" src={el.imgSrc} />
 						</div>
 						{weaponTypes.map(wType => (
-							<div className={`col col-2 pt-3 pb-2 ${isLastRowClass}`} key={wType.code}>
+							<div className={`col col-2 pt-3 pb-2 px-2 ${isLastRowClass}`} key={wType.code}>
 								{charactersShortList
 									.filter(x => x.elementCode === el.code && x.weaponTypeCode === wType.code)
 									.map(x => (
