@@ -43,6 +43,14 @@ export async function prepareCacheDir(dirpath, clear) {
 	await fs.mkdir(dirpath, { recursive: true })
 }
 
+/**
+ * @param {string} content
+ * @returns {any}
+ */
+export function parseYaml(content) {
+	return yaml.parse(content, { customTags })
+}
+
 const yamlCache = new Map()
 /**
  * @template T
@@ -60,7 +68,7 @@ async function saveYaml(fname, data) {
  */
 async function loadYaml(fname) {
 	if (yamlCache.has(fname)) return yamlCache.get(fname)
-	return yaml.parse(await fs.readFile(`${DATA_DIR}/${fname}.yaml`, 'utf-8'), { customTags })
+	return parseYaml(await fs.readFile(`${DATA_DIR}/${fname}.yaml`, 'utf-8'))
 }
 
 /** @param {import('#lib/parsing/helperteam').BuildInfo} builds */

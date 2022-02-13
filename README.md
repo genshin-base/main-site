@@ -48,3 +48,11 @@
 Посмотреть лог автоисправлений опечаток: `env NODE_DEBUG=typo ./scripts/update.js`
 
 Посмотреть лог автоисправлений стилей: `env NODE_DEBUG=style ./scripts/update.js` (выравнивание ссылок по словам и т.д.)
+
+## Гугл и его АПИ
+
+ * создать новый проект в Google Cloud Platform'е ([console.cloud.google.com](https://console.cloud.google.com));
+ * включить проекту АПИ гуглотаблиц (APIs & Services → найти "sheets" → включить);
+ * создать в проекте виртуальный акк, от имени коротого будут ходить запросы (настройки Google Sheets API, вкладка "CREDENTIALS");
+ * создать акку ключ, с которым он будет ходить по запросам;
+ * положить ключ в `google.private_key.json` в корне проекта.
