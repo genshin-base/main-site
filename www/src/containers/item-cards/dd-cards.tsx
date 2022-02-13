@@ -581,7 +581,9 @@ export function OtherItemCard({
 			}
 			classes={classes}
 			bodyEl={
-				item.ancestryCodes.length > 0 ? (
+				item.code === 'brilliant-diamond-gemstone' ? (
+					'Obtained during storyline quests' //todo l10n
+				) : item.ancestryCodes.length > 0 ? (
 					<div className="">
 						{/* <ItemAvatar rarity={3} classes="large-avatar float-end" src={getItemIconSrc(item.code)} /> */}
 						{/* <h6 className="text-uppercase opacity-75">Описание</h6>

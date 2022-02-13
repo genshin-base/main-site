@@ -5,7 +5,12 @@ import { MAX_SMTHS_TO_STORE } from '#src/modules/builds/common'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { useLocalStorage } from '#src/utils/hooks'
 import { ItemAvatar } from '../item-cards/item-avatars'
+import { elements } from '#src/utils/elements'
 
+const codeToBadge = (code: string) => {
+	const e = elements.find(e => code === `${e.code}-traveler`)
+	return e ? <img className="badge-element-icon d-block ms-n1 mb-n1" src={e.imgSrc} /> : null
+}
 export function FavoriteCharacters({
 	classes = '',
 	onCharacterSelect,
@@ -51,6 +56,7 @@ export function FavoriteCharacters({
 					key={code}
 					href={navigateToCharacter ? '/builds/' + code : undefined}
 					onClick={() => onCharacterSelect && onCharacterSelect(code)}
+					badgeTopEnd={codeToBadge(code)}
 				/>
 			)),
 		[characterCodes, onCharacterSelect, navigateToCharacter],
