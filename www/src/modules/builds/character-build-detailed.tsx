@@ -34,6 +34,7 @@ import {
 } from './common'
 
 import './character-build-detailed.scss'
+import { BlockHeader } from '#src/components/block-header'
 
 export function CharacterBuildDetailed({
 	build,
@@ -107,7 +108,7 @@ export function CharacterBuildDetailed({
 		const role = getRoleData(build, selectedRoleTab.code)
 		return (
 			<>
-				<h6 className="text-uppercase opacity-75">Main artifact stats</h6>
+				<BlockHeader>Main artifact stats</BlockHeader>
 				<ul className="mb-1 list-unstyled ms-1">
 					{CIRCLET_GOBLET_SANDS.map(ac => (
 						<li>
@@ -123,7 +124,7 @@ export function CharacterBuildDetailed({
 				<div className="opacity-75 small">
 					{notesToJSX(role.mainStats.notes)} {genSeeCharNotes(role.mainStats)}
 				</div>
-				<h6 className="text-uppercase opacity-75 mt-3">Sub artifact stats</h6>
+				<BlockHeader classes="mt-3">Sub artifact stats</BlockHeader>
 				<ol className="mb-1">
 					{role.subStats.advices.map(advice => {
 						return (
@@ -137,7 +138,7 @@ export function CharacterBuildDetailed({
 				<div className="opacity-75 small">
 					{notesToJSX(role.subStats.notes)} {genSeeCharNotes(role.subStats)}
 				</div>
-				<h6 className="text-uppercase opacity-75 mt-3">Talent Priority</h6>
+				<BlockHeader classes="mt-3">Talent Priority</BlockHeader>
 				<ol>
 					{role.talents.advices.map(advice => {
 						return <li>{advice}</li>
@@ -209,11 +210,11 @@ export function CharacterBuildDetailed({
 					<div className="col col-9">
 						<div className="d-flex">
 							<div className="flex-fill w-33 p-3">
-								<h6 className="text-uppercase opacity-75">Weapon</h6>
+								<BlockHeader>Weapon</BlockHeader>
 								<ol className="items-list">{weaponListBlock}</ol>
 							</div>
 							<div className="flex-fill w-33 p-3">
-								<h6 className="text-uppercase opacity-75">Artifacts</h6>
+								<BlockHeader>Artifacts</BlockHeader>
 								<ol className="items-list">{artifactsListBlock}</ol>
 								<div></div>
 							</div>
@@ -221,7 +222,7 @@ export function CharacterBuildDetailed({
 						</div>
 						<div className="w-100">
 							<div className="p-3">
-								<h6 className="text-uppercase opacity-75">Notes</h6>
+								<BlockHeader>Notes</BlockHeader>
 								<div className="text-muted">{notesBlock}</div>
 							</div>
 						</div>
@@ -244,21 +245,21 @@ export function CharacterBuildDetailed({
 			/>
 			<div className="">
 				<div className="my-3">
-					<h6 className="text-uppercase opacity-75">Ascension materials</h6>
+					<BlockHeader>Ascension materials</BlockHeader>
 					{materialsBlock}
 				</div>
 				<div className="my-3">
-					<h6 className="text-uppercase opacity-75">Artifacts</h6>
+					<BlockHeader>Artifacts</BlockHeader>
 					<ol className="items-list">{artifactsListBlock}</ol>
 				</div>
 				<div className="my-3">{artifactStatsAndSkillsBlock}</div>
 				<div className="my-3">
-					<h6 className="text-uppercase opacity-75">Weapon</h6>
+					<BlockHeader>Weapon</BlockHeader>
 					<ol className="items-list">{weaponListBlock}</ol>
 				</div>
 			</div>
 			<div>
-				<h6 className="text-uppercase opacity-75">Notes</h6>
+				<BlockHeader>Notes</BlockHeader>
 				<div className="opacity-75">{notesBlock}</div>
 			</div>
 		</div>

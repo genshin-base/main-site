@@ -15,7 +15,7 @@ export function Equipment() {
 	)
 	return (
 		<div className="equipment container">
-			<h1 className="my-1">Character equipment</h1>
+			<h1 className="my-1 letter-spacing-1">Character equipment</h1>
 			<Tabs classes="w-100" tabs={cats} onTabSelect={selectCat} selectedTab={selectedCat} />
 			<WeaponsList />
 		</div>

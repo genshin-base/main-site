@@ -29,6 +29,7 @@ import { AlchemyCalculator } from '../alchemy-calculator'
 import { ItemAvatar, LabeledItemAvatar } from './item-avatars'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
+import { BlockHeader } from '#src/components/block-header'
 
 const LazyTeyvatMap = import('#src/components/teyvat-map')
 
@@ -39,7 +40,7 @@ export function getRarityBorder(r: GI_RarityCode): string {
 function RecommendedFor({ charCodes }: { charCodes: string[] }): JSX.Element {
 	return (
 		<>
-			<h6 class="text-uppercase opacity-75">Recommended for</h6>
+			<BlockHeader>Recommended for</BlockHeader>
 			{charCodes.length
 				? charCodes.map(c => (
 						<ItemAvatar
@@ -357,19 +358,19 @@ function ArtifactCard({
 					/>
 					{selectedArt.sets[1] && (
 						<>
-							<h6 className="text-uppercase opacity-75">1 piece bonus</h6>
+							<BlockHeader>1 piece bonus</BlockHeader>
 							<div className="mb-3">{notesToJSX(selectedArt.sets[1])}</div>
 						</>
 					)}
 					{selectedArt.sets[2] && (
 						<>
-							<h6 className="text-uppercase opacity-75">2 pieces bonus</h6>
+							<BlockHeader>2 pieces bonus</BlockHeader>
 							<div className="mb-3">{notesToJSX(selectedArt.sets[2])}</div>
 						</>
 					)}
 					{selectedArt.sets[4] && (
 						<>
-							<h6 className="text-uppercase opacity-75">4 pieces bonus</h6>
+							<BlockHeader>4 pieces bonus</BlockHeader>
 							<div className="mb-3">{notesToJSX(selectedArt.sets[4])}</div>
 						</>
 					)}
@@ -471,7 +472,7 @@ export function WeaponCard({
 						</div>
 					</div>
 					<div className="overflow-hidden">
-						<h6 className="text-uppercase opacity-75 d-inline-block me-1">{weapon.typeCode}</h6>
+						<BlockHeader classes="d-inline-block me-1">{weapon.typeCode}</BlockHeader>
 
 						<span className="mb-2 text-muted">
 							{BULLET} {weapon.obtainSources.join(', ')}
@@ -586,9 +587,9 @@ export function OtherItemCard({
 				) : item.ancestryCodes.length > 0 ? (
 					<div className="">
 						{/* <ItemAvatar rarity={3} classes="large-avatar float-end" src={getItemIconSrc(item.code)} /> */}
-						{/* <h6 className="text-uppercase opacity-75">Описание</h6>
+						{/* <BlockHeader>Описание</BlockHeader>
 				<div className="mb-3">{notesToJSX()}</div> */}
-						<h6 class="text-uppercase opacity-75">alchemy calculator</h6>
+						<BlockHeader>alchemy calculator</BlockHeader>
 						<AlchemyCalculator ancestryCodes={codesForCalc} />
 					</div>
 				) : null

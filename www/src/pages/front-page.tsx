@@ -15,7 +15,7 @@ function Fieldset({ children, legend, classes = '' }) {
 export function FrontPage(): JSX.Element {
 	return (
 		<div className="dashboard container ">
-			<h1 className="my-1">Dashboard</h1>
+			<h1 className="my-1 letter-spacing-1">Dashboard</h1>
 			<div className="row">
 				<Fieldset legend="Region" classes="col-lg-3 col-12">
 					<RegionSwitch />

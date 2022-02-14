@@ -9,7 +9,7 @@ import { useEffect } from 'preact/hooks'
 export function BuildsPage_CharSelect(): JSX.Element {
 	return (
 		<div className="builds container">
-			<h1 className="my-1">Character builds recomendations</h1>
+			<h1 className="my-1 letter-spacing-1">Character builds recomendations</h1>
 			<h5 className="mt-2 mb-3 opacity-75">Select character above</h5>
 			<FavoriteCharacters navigateToCharacter={true} classes="mb-2" />
 			<CharacterPicker />
@@ -24,7 +24,7 @@ export function BuildsPage_BuildDetail({ code }: { code: string }): JSX.Element 
 	if (!isLoaded(build)) return <Spinner />
 	return (
 		<div className="builds container">
-			<h1 className={`my-1 ${BUNDLE_ENV.LANG === 'en' ? 'text-capitalize' : ''}`}>
+			<h1 className={`my-1 letter-spacing-1 ${BUNDLE_ENV.LANG === 'en' ? 'text-capitalize' : ''}`}>
 				<span className="d-none d-xl-inline">{build.character.name}</span> build recomendations
 			</h1>
 			<FavoriteCharacters navigateToCharacter={true} />
