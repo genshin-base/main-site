@@ -50,6 +50,13 @@ export async function prepareCacheDir(dirpath, clear) {
 export function parseYaml(content) {
 	return yaml.parse(content, { customTags })
 }
+/**
+ * @param {any} data
+ * @returns {string}
+ */
+export function stringifyYaml(data) {
+	return yaml.stringify(data, { customTags })
+}
 
 const yamlCache = new Map()
 /**
@@ -59,7 +66,7 @@ const yamlCache = new Map()
  */
 async function saveYaml(fname, data) {
 	yamlCache.set(fname, data)
-	await fs.writeFile(`${DATA_DIR}/${fname}.yaml`, yaml.stringify(data, { customTags }))
+	await fs.writeFile(`${DATA_DIR}/${fname}.yaml`, stringifyYaml(data))
 }
 /**
  * @template T
