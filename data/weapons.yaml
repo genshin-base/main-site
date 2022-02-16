@@ -639,6 +639,19 @@ iron-sting:
     - energy-nectar
   obtainSources:
     - forging
+kaguras-verity:
+  code: kaguras-verity
+  typeCode: catalyst
+  name:
+    en: Kagura's Verity
+    ru: Истина кагура
+  rarity: 5
+  materialCodes:
+    - mask-of-the-kijin
+    - concealed-talon
+    - spectral-nucleus
+  obtainSources:
+    - event-wishes
 katsuragikiri-nagamasa:
   code: katsuragikiri-nagamasa
   typeCode: claymore
@@ -822,6 +835,19 @@ mouuns-moon:
     - spectral-nucleus
   obtainSources:
     - event-wishes
+oathsworn-eye:
+  code: oathsworn-eye
+  typeCode: catalyst
+  name:
+    en: Oathsworn Eye
+    ru: Око клятвы
+  rarity: 4
+  materialCodes:
+    - golden-branch-of-a-distant-sea
+    - concealed-talon
+    - spectral-nucleus
+  obtainSources:
+    - events
 old-mercs-pal:
   code: old-mercs-pal
   typeCode: claymore

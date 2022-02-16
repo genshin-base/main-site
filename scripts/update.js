@@ -118,6 +118,8 @@ const fixes = {
 				{ actually: 'released', name: 'Predator' },
 				{ actually: 'released', name: "Mouun's Moon" },
 				{ actually: 'released', name: 'Calamity Queller' },
+				{ actually: 'released', name: "Kagura's Verity" },
+				{ actually: 'released', name: 'Oathsworn Eye' },
 			],
 		},
 		travelerLangNames: {
