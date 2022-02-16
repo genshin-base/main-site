@@ -72,7 +72,7 @@ import { applyDomainsRegion } from '#lib/parsing/wiki/domains.js'
 import { applyCharactersReleaseVersion } from '#lib/parsing/wiki/characters.js'
 import { getEnemyCodeFromName } from '#lib/genshin.js'
 
-const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
+const HELPERTEAM_DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
 const LANGS = ['en', 'ru']
 
@@ -266,7 +266,7 @@ async function extractAndSaveBuildsData() {
 		`${BASE_DIR}/google.private_key.json`,
 		`${CACHE_DIR}/google.access_token.json`,
 		`${DATA_CACHE_DIR}/spreadsheet.json`,
-		DOC_ID,
+		HELPERTEAM_DOC_ID,
 		[
 			'sheets.properties',
 			'sheets.data.rowData.values.userEnteredValue',

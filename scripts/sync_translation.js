@@ -3,10 +3,17 @@ import { promises as fs } from 'fs'
 import { loadSpreadsheet, updateSpreadsheet } from '#lib/google.js'
 import { json_extractText, json_getText, json_packText } from '#lib/parsing/helperteam/json.js'
 import { error, info, warn } from '#lib/utils/logs.js'
-import { YAMLError } from 'yaml/util'
-import { BASE_DIR, CACHE_DIR, parseYaml, stringifyYaml } from './_common.js'
+import {
+	BASE_DIR,
+	CACHE_DIR,
+	GENERATED_DATA_DIR,
+	parseYaml,
+	stringifyYaml,
+	TRANSLATED_DATA_DIR,
+} from './_common.js'
 import { parseArgs, relativeToCwd } from '#lib/utils/os.js'
 import { mustBeNotNull } from '#lib/utils/values.js'
+import { buildsConvertLangMode } from '#lib/parsing/helperteam/index.js'
 
 const DOC_ID = '1i5KQPYepEm1a6Gu56vN6Ixprb892zixNbrFcrIB39Bc' //test
 // const DOC_ID = '1UA7RwCWBG_Nyp78sQuM7XTj6mNVG_Rv-uafMB2k37Pc'
@@ -45,18 +52,7 @@ async function upload() {
 	for (const [name, fpath] of items) {
 		const lang = mustBeNotNull(name.match(/^-*(.*)$/))[1]
 		const buildText = await fs.readFile(fpath, 'utf-8')
-		try {
-			builds.push({ lang, data: parseYaml(buildText) })
-		} catch (ex) {
-			if (ex instanceof YAMLError) {
-				const lineNum = pos => buildText.slice(0, pos).split('\n').length
-				error(ex.message)
-				if (ex.source?.['resolved']) error(`  value: ${(ex.source?.['resolved'] + '').trim()}`)
-				if (ex.source?.range)
-					error(`  lines ${lineNum(ex.source.range.start)}-${lineNum(ex.source.range.end)}`)
-				process.exit(1)
-			} else throw ex
-		}
+		builds.push({ lang, data: parseYaml(buildText) })
 	}
 
 	const spreadsheet = await loadSpreadsheet(
@@ -171,71 +167,28 @@ async function upload() {
 async function download() {
 	if (needHelp) {
 		console.log(`Usage:
-  ${thisScript} download --base=generated-builds.yaml --out=output-builds.yaml --langs=ru,en [-h|--help]`)
+  ${thisScript} download --langs=en,ru [--base=generated-builds.yaml] [--out=output-dir] [-h|--help]`)
 		process.exit(2)
 	}
 
-	const baseFPath = args['--base']
-	const outFPath = args['--out']
+	const baseFPath = args['--base'] ?? `${GENERATED_DATA_DIR}/builds.yaml`
+	const outDirPath = args['--out'] ?? TRANSLATED_DATA_DIR
 	const langs = args['--langs']
 		.split(',')
 		.map(x => x.trim().toLocaleLowerCase())
 		.filter(x => x !== '')
 
-	/** @type {import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>} */
-	const builds = await parseYaml(await fs.readFile(baseFPath, 'utf-8'))
-
-	/** @type {import('#lib/parsing/helperteam/types').BuildInfo<'multilang'>} */
-	const langBuilds = {
-		...builds,
-		characters: builds.characters.map(char => ({
-			...char,
-			credits: {},
-			roles: char.roles.map(role => ({
-				...role,
-				artifacts: {
-					...role.artifacts,
-					sets: role.artifacts.sets.map(set => ({ ...set, notes: {} })),
-					notes: {},
-				},
-				weapons: {
-					...role.weapons,
-					advices: role.weapons.advices.map(x => ({
-						...x,
-						similar: x.similar.map(x => ({ ...x, notes: {} })),
-					})),
-					notes: {},
-				},
-				mainStats: {
-					...role.mainStats,
-					notes: {},
-					sands: { ...role.mainStats.sands, notes: {} },
-					circlet: { ...role.mainStats.circlet, notes: {} },
-					goblet: { ...role.mainStats.goblet, notes: {} },
-				},
-				subStats: {
-					...role.subStats,
-					notes: {},
-					advices: role.subStats.advices.map(x => ({ ...x, notes: {} })),
-				},
-				talents: {
-					...role.talents,
-					notes: {},
-				},
-				tips: {},
-				notes: {},
-			})),
-		})),
-		artifacts: builds.artifacts.map(art => ({
-			...art,
-			sets: '1' in art.sets ? { 1: {} } : { 2: {}, 4: {} },
-		})),
-		weapons: builds.weapons.map(weapon => ({
-			...weapon,
-			passiveStat: {},
-		})),
+	if (langs.length === 0) {
+		error(`need at least one lang`)
+		process.exit(1)
 	}
 
+	info(`reading generated build...`)
+	/** @type {import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>} */
+	const builds = await parseYaml(await fs.readFile(baseFPath, 'utf-8'))
+	const langBuilds = buildsConvertLangMode(builds, 'multilang', () => ({}))
+
+	info(`loading spreadsheet...`)
 	const spreadsheet = await loadSpreadsheet(
 		`${BASE_DIR}/google.private_key.json`,
 		`${CACHE_DIR}/google.access_token.json`,
@@ -249,6 +202,7 @@ async function download() {
 	)
 	const sheets = mustGetSheets(spreadsheet.sheets)
 
+	info(`merging translations...`)
 	{
 		const lang2col = makeLangColMap(sheets.characters)
 		const extractTexts = extractLangTexts.bind(null, lang2col, langs)
@@ -345,7 +299,14 @@ async function download() {
 		}
 	}
 
-	await fs.writeFile(outFPath, stringifyYaml(langBuilds))
+	info(`saving...`)
+	await fs.mkdir(`${outDirPath}/characters`, { recursive: true })
+	for (const character of langBuilds.characters)
+		await fs.writeFile(`${outDirPath}/characters/${character.code}.yaml`, stringifyYaml(character))
+	await fs.writeFile(`${outDirPath}/artifacts.yaml`, stringifyYaml(langBuilds.artifacts))
+	await fs.writeFile(`${outDirPath}/weapons.yaml`, stringifyYaml(langBuilds.weapons))
+
+	info(`done.`)
 }
 
 /** @param {import('#lib/google.js').Sheet[]} sheets */
