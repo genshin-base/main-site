@@ -841,6 +841,9 @@ hilichurl:
     - !loc enkanomiya -69 -103
     - !loc enkanomiya -66 -55
     - !loc enkanomiya -63 -52
+    - !loc enkanomiya -44 -208
+    - !loc enkanomiya -40 -189
+    - !loc enkanomiya -39 -185
     - !loc teyvat -30 1159
     - !loc teyvat -29 1164
     - !loc teyvat -28 1195
@@ -2352,8 +2355,10 @@ ruin-guard:
     - !loc teyvat -1707 1540
     - !loc teyvat -1648 2499
     - !loc enkanomiya -1415 665
+    - !loc teyvat -1287 2949
     - !loc teyvat -1237 2065
     - !loc enkanomiya -1229 323
+    - !loc teyvat -961 1993
     - !loc teyvat -929 -366
     - !loc teyvat -841 2389
     - !loc teyvat -748 -200
@@ -2414,11 +2419,13 @@ ruin-hunter:
     en: Ruin Hunter
     ru: Руинный охотник
   locations:
+    - !loc teyvat -2527 1505
     - !loc teyvat -1932 2623
     - !loc teyvat -1846 1975
     - !loc teyvat -1719 2957
     - !loc teyvat -1350 2809
     - !loc teyvat -575 1982
+    - !loc teyvat -120 2641
     - !loc enkanomiya 144 328
     - !loc teyvat 3440 4651
   drop:
@@ -2440,6 +2447,7 @@ ruin-grader:
     en: Ruin Grader
     ru: Руинный молотильщик
   locations:
+    - !loc teyvat 394 1694
     - !loc teyvat 450 1784
     - !loc enkanomiya 627 -231
     - !loc teyvat 3496 4614

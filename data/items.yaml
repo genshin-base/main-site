@@ -673,7 +673,6 @@ calla-lily:
     - !loc teyvat 628 -138
     - !loc teyvat 712 38
     - !loc teyvat 407 -21
-    - !loc teyvat 407 -21
     - !loc teyvat 191 557
     - !loc teyvat 161 481
     - !loc teyvat -207 -281
@@ -1759,6 +1758,9 @@ sea-ganoderma:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -381 6199
+    - !loc teyvat 51 6424
+    - !loc teyvat 406 5975
     - !loc teyvat 4168 4567
     - !loc teyvat 4170 4564
     - !loc teyvat 4174 4552
@@ -1968,9 +1970,9 @@ small-lamp-grass:
     - !loc teyvat -194 157
     - !loc teyvat -276 116
     - !loc teyvat -251 224
-    - !loc teyvat -452 12
-    - !loc teyvat -446 9
-    - !loc teyvat -441 13
+    - !loc teyvat -435 17
+    - !loc teyvat -434 7
+    - !loc teyvat -429 13
     - !loc teyvat -595 230
     - !loc teyvat -588 225
     - !loc teyvat 346 -55
@@ -2021,7 +2023,7 @@ small-lamp-grass:
     - !loc teyvat 415 -44
     - !loc teyvat 422 8
     - !loc teyvat 424 34
-    - !loc teyvat -446 15
+    - !loc teyvat -433 17
     - !loc teyvat -500 -3
     - !loc teyvat -588 221
     - !loc teyvat -629 451
@@ -3956,7 +3958,7 @@ geoculus:
     - !loc teyvat -2494 1357
     - !loc teyvat -2399 1372
     - !loc teyvat -1373 368
-    - !loc teyvat -1341 617
+    - !loc teyvat -1328 604
     - !loc teyvat -1199 847
     - !loc teyvat -1268 651
     - !loc teyvat -1284 532
@@ -5072,14 +5074,44 @@ amethyst-lump:
     - !loc teyvat 3817 4769
     - !loc teyvat 3815 4772
     - !loc teyvat 3823 4774
-    - !loc enkanomiya -122 558
-    - !loc enkanomiya -120 564
-    - !loc enkanomiya -121 559
+    - !loc enkanomiya -142 392
+    - !loc enkanomiya -143 393
+    - !loc enkanomiya 535 141
+    - !loc enkanomiya -337 -487
+    - !loc enkanomiya -344 -492
+    - !loc enkanomiya -344 -502
+    - !loc enkanomiya 70 -80
+    - !loc enkanomiya 76 -75
+    - !loc enkanomiya -244 501
+    - !loc enkanomiya -245 501
+    - !loc enkanomiya 403 998
+    - !loc enkanomiya 405 1001
+    - !loc enkanomiya 411 1047
+    - !loc enkanomiya 414 1046
+    - !loc enkanomiya 419 1050
+    - !loc enkanomiya 403 1072
+    - !loc enkanomiya 402 1071
+    - !loc enkanomiya 398 1073
+    - !loc enkanomiya 397 1072
+    - !loc enkanomiya -127 572
+    - !loc enkanomiya 857 -1021
+    - !loc enkanomiya 861 -1014
+    - !loc enkanomiya 858 -1016
+    - !loc enkanomiya 866 -1062
+    - !loc enkanomiya 867 -1063
+    - !loc enkanomiya 861 -1058
+    - !loc enkanomiya -497 -1034
+    - !loc enkanomiya -499 -1034
+    - !loc enkanomiya -499 -1035
+    - !loc enkanomiya -1380 516
+    - !loc enkanomiya -136 560
+    - !loc enkanomiya -126 568
+    - !loc enkanomiya -128 559
     - !loc enkanomiya 590 -275
     - !loc enkanomiya 595 -279
     - !loc enkanomiya 516 -265
     - !loc enkanomiya 541 -235
-    - !loc enkanomiya 528 138
+    - !loc enkanomiya 529 138
     - !loc enkanomiya -301 509
     - !loc enkanomiya -303 506
     - !loc enkanomiya -230 117
@@ -5092,9 +5124,9 @@ amethyst-lump:
     - !loc enkanomiya -373 814
     - !loc enkanomiya -377 806
     - !loc enkanomiya 2 349
-    - !loc enkanomiya -19 351
-    - !loc enkanomiya -7 357
-    - !loc enkanomiya -12 349
+    - !loc enkanomiya -13 347
+    - !loc enkanomiya -2 354
+    - !loc enkanomiya -9 347
     - !loc enkanomiya 55 475
     - !loc enkanomiya 50 470
     - !loc enkanomiya 49 462
@@ -5199,6 +5231,10 @@ berry:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat 225 6013
+    - !loc teyvat 294 6140
+    - !loc teyvat 456 5862
+    - !loc teyvat 1787 7297
     - !loc teyvat 514 244
     - !loc teyvat 322 194
     - !loc teyvat 2071 8412
@@ -6389,6 +6425,7 @@ crystal-core:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -384 554
     - !loc teyvat 3463 5267
     - !loc teyvat -81 1259
     - !loc teyvat 1037 997
@@ -6563,7 +6600,7 @@ crystal-core:
     - !loc teyvat -1969 796
     - !loc teyvat -1958 904
     - !loc teyvat -376 524
-    - !loc teyvat -380 561
+    - !loc teyvat -481 525
     - !loc teyvat -302 510
     - !loc teyvat -345 583
     - !loc teyvat -317 564
@@ -7262,6 +7299,11 @@ fowl:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -559 778
+    - !loc teyvat -562 779
+    - !loc teyvat -557 779
+    - !loc teyvat -613 767
+    - !loc teyvat -604 760
     - !loc teyvat -2022 2575
     - !loc teyvat 2595 5870
     - !loc teyvat 2602 5877
@@ -9001,6 +9043,36 @@ mint:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat 101 6165
+    - !loc teyvat 118 6211
+    - !loc teyvat 141 6214
+    - !loc teyvat 160 6206
+    - !loc teyvat 176 6182
+    - !loc teyvat 169 6119
+    - !loc teyvat 191 6146
+    - !loc teyvat 185 6177
+    - !loc teyvat 221 6219
+    - !loc teyvat 216 6292
+    - !loc teyvat 167 6285
+    - !loc teyvat 97 6265
+    - !loc teyvat 8 6236
+    - !loc teyvat -81 6155
+    - !loc teyvat -140 6203
+    - !loc teyvat -228 6130
+    - !loc teyvat 247 5988
+    - !loc teyvat 435 5826
+    - !loc teyvat 488 6094
+    - !loc teyvat 457 6163
+    - !loc teyvat 434 6190
+    - !loc teyvat 399 6227
+    - !loc teyvat 521 6318
+    - !loc teyvat 484 6371
+    - !loc teyvat 438 6416
+    - !loc teyvat 1754 7127
+    - !loc teyvat 1624 7392
+    - !loc teyvat 1913 7329
+    - !loc teyvat 1775 7283
+    - !loc teyvat 1784 7266
     - !loc teyvat -2052 2795
     - !loc teyvat 1613 8690
     - !loc teyvat 2357 8568
@@ -10636,6 +10708,12 @@ mushroom:
     - !loc teyvat 978 -595
     - !loc teyvat 852 -515
     - !loc teyvat 451 -473
+    - !loc enkanomiya 397 1037
+    - !loc enkanomiya 421 1046
+    - !loc enkanomiya 426 1021
+    - !loc enkanomiya -481 -1049
+    - !loc enkanomiya -479 -1049
+    - !loc enkanomiya -479 -1047
     - !loc enkanomiya -302 407
     - !loc enkanomiya -567 -319
     - !loc enkanomiya -570 -319
@@ -11583,6 +11661,14 @@ seagrass:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat 1623 7280
+    - !loc teyvat 1627 7276
+    - !loc teyvat 1699 7353
+    - !loc teyvat 1701 7349
+    - !loc teyvat 1931 7326
+    - !loc teyvat 1926 7323
+    - !loc teyvat 1816 7317
+    - !loc teyvat 1817 7314
     - !loc teyvat 2309 8632
     - !loc teyvat 2303 8636
     - !loc teyvat 2042 8828
@@ -12334,6 +12420,25 @@ sweet-flower:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -174 6209
+    - !loc teyvat 182 5934
+    - !loc teyvat 192 5945
+    - !loc teyvat 235 5996
+    - !loc teyvat 302 6035
+    - !loc teyvat 327 5988
+    - !loc teyvat 384 5959
+    - !loc teyvat 600 6092
+    - !loc teyvat 559 6069
+    - !loc teyvat 452 6183
+    - !loc teyvat 411 6236
+    - !loc teyvat 457 6351
+    - !loc teyvat 509 6334
+    - !loc teyvat 445 6351
+    - !loc teyvat 418 6359
+    - !loc teyvat 1737 7142
+    - !loc teyvat 1637 7284
+    - !loc teyvat 1688 7343
+    - !loc teyvat 1820 7279
     - !loc teyvat -2031 2495
     - !loc teyvat 2212 8403
     - !loc teyvat 2222 8468
@@ -13390,12 +13495,24 @@ unagi-meat:
     - !loc teyvat -64 5863
     - !loc teyvat -155 5837
     - !loc teyvat -161 5830
-    - !loc enkanomiya -464 -256
-    - !loc enkanomiya -463 -258
-    - !loc enkanomiya -457 -257
-    - !loc enkanomiya -457 -259
-    - !loc enkanomiya -1429 343
-    - !loc enkanomiya -1432 343
+    - !loc enkanomiya -631 -1070
+    - !loc enkanomiya -632 -1072
+    - !loc enkanomiya -632 -1073
+    - !loc enkanomiya 955 -993
+    - !loc enkanomiya 952 -997
+    - !loc enkanomiya 957 -1000
+    - !loc enkanomiya -226 -19
+    - !loc enkanomiya -222 -22
+    - !loc enkanomiya -222 -24
+    - !loc enkanomiya 357 -189
+    - !loc enkanomiya 356 -186
+    - !loc enkanomiya 354 -184
+    - !loc enkanomiya -465 -252
+    - !loc enkanomiya -465 -263
+    - !loc enkanomiya -464 -253
+    - !loc enkanomiya -463 -262
+    - !loc enkanomiya -1428 341
+    - !loc enkanomiya -1432 340
 vitalized-dragontooth:
   code: vitalized-dragontooth
   name:

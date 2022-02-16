@@ -82,7 +82,6 @@ type CharacterBuildInfoRole<T extends LangMode> = {
 type CharacterBuildInfo<T extends LangMode> = {
 	code: string
 	elementCode: GI_ElementCode
-	weaponTypeCode: GI_WeaponTypeCode
 	roles: CharacterBuildInfoRole<T>[]
 	credits: LangsIf<T, CompactTextParagraphs | null>
 }

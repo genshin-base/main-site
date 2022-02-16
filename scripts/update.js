@@ -110,7 +110,10 @@ const fixes = {
 	/** @type {import('#lib/parsing/honeyhunter/fixes').HoneyhunterFixes} */
 	honeyhunter: {
 		statuses: {
-			// некоторые предметы почему-то находятся в таблице нерелизнутого
+			// некоторые персонажи и предметы почему-то находятся в таблице нерелизнутого
+			characters: [
+				{ actually: 'released', name: 'Yae Miko' }, //
+			],
 			weapons: [
 				{ actually: 'released', name: 'Predator' },
 				{ actually: 'released', name: "Mouun's Moon" },
