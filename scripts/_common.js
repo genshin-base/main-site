@@ -78,9 +78,9 @@ async function loadYaml(fname) {
 	return parseYaml(await fs.readFile(`${DATA_DIR}/${fname}.yaml`, 'utf-8'))
 }
 
-/** @param {import('#lib/parsing/helperteam').BuildInfo} builds */
+/** @param {import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>} builds */
 export const saveBuilds = builds => saveYaml('builds', builds)
-/** @returns {Promise<import('#lib/parsing/helperteam').BuildInfo>} */
+/** @returns {Promise<import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>>} */
 export const loadBuilds = () => loadYaml('builds')
 
 /** @param {import('#lib/parsing').Code2CharacterData} characters */

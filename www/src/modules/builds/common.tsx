@@ -9,9 +9,8 @@ import {
 	ART_GROUP_20_ER_INSIDE_CODES,
 } from '#lib/genshin'
 import { CharacterFullInfoWithRelated } from '#lib/parsing/combine'
-import { ArtifactRef, ArtifactRefNode } from '#lib/parsing/helperteam/artifacts'
-import { CharacterBuildInfoRole } from '#lib/parsing/helperteam/characters'
 import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
+import { ArtifactRef, ArtifactRefNode, CharacterBuildInfoRole } from '#lib/parsing/helperteam/types'
 import { mustBeDefined } from '#lib/utils/values'
 import { MapAllByCode } from '#src/api/utils'
 import { Tooltip } from '#src/components/tooltip'
@@ -19,7 +18,6 @@ import { ArtifactDetailDd } from '#src/containers/item-cards/dd-cards'
 import { LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
 import { useHover, useLocalStorage } from '#src/utils/hooks'
-import { HEART, HEART_EMPTY, STAR } from '#src/utils/typography'
 import {
 	SK_FAV_CHAR_CODES,
 	SK_FAV_TALENT_MATERIAL_CODES,
@@ -27,14 +25,15 @@ import {
 	SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
 	STORAGE_WEAPON_DATA,
 } from '#src/utils/local-storage-keys'
+import { HEART, HEART_EMPTY, STAR } from '#src/utils/typography'
 
-export const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole> = {
+export const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole<'monolang'>> = {
 	title: '…',
 	code: '',
 }
 export const DUMMY_ROLES = [DUMMY_ROLE]
 
-export type BuildRoleOrDummy = CharacterBuildInfoRole | typeof DUMMY_ROLE
+export type BuildRoleOrDummy = CharacterBuildInfoRole<'monolang'> | typeof DUMMY_ROLE
 
 export function makeRoleTitle(r: BuildRoleOrDummy) {
 	return (
@@ -51,7 +50,7 @@ export function getRoleData(build: CharacterFullInfoWithRelated, selectedCode: s
 	return mustBeDefined(build.character.roles.find(x => x.code === selectedCode))
 }
 export function genArtMainStatDetail(
-	role: CharacterBuildInfoRole,
+	role: CharacterBuildInfoRole<'monolang'>,
 	itemCode: 'circlet' | 'goblet' | 'sands',
 	isShort?: boolean,
 ) {

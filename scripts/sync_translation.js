@@ -2,7 +2,7 @@
 import { promises as fs } from 'fs'
 import { loadSpreadsheet, updateSpreadsheet } from '#lib/google.js'
 import { json_extractText, json_getText, json_packText } from '#lib/parsing/helperteam/json.js'
-import { error, info } from '#lib/utils/logs.js'
+import { error, info, warn } from '#lib/utils/logs.js'
 import { YAMLError } from 'yaml/util'
 import { BASE_DIR, CACHE_DIR, parseYaml, stringifyYaml } from './_common.js'
 import { parseArgs, relativeToCwd } from '#lib/utils/os.js'
@@ -38,7 +38,8 @@ async function upload() {
 		process.exit(2)
 	}
 
-	const builds = /** @type {{lang:string, data:import('#lib/parsing/helperteam').BuildInfo}[]} */ ([])
+	/** @type {{lang:string, data:import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>}[]} */
+	const builds = []
 
 	const items = Object.entries(args).filter(([k, v]) => k !== 'cmd')
 	for (const [name, fpath] of items) {
@@ -168,18 +169,72 @@ async function upload() {
 }
 
 async function download() {
-	const wrongArgs = process.argv.length < 5
-	if (needHelp || wrongArgs) {
+	if (needHelp) {
 		console.log(`Usage:
-  ${thisScript} download generated-builds.yaml output-builds.yaml [-h|--help]`)
-		process.exit(wrongArgs ? 1 : 2)
+  ${thisScript} download --base=generated-builds.yaml --out=output-builds.yaml --langs=ru,en [-h|--help]`)
+		process.exit(2)
 	}
 
-	const inFPath = process.argv[3]
-	const outFPath = process.argv[4]
+	const baseFPath = args['--base']
+	const outFPath = args['--out']
+	const langs = args['--langs']
+		.split(',')
+		.map(x => x.trim().toLocaleLowerCase())
+		.filter(x => x !== '')
 
-	/** @type {import('#lib/parsing/helperteam').BuildInfo} */
-	const builds = await parseYaml(await fs.readFile(inFPath, 'utf-8'))
+	/** @type {import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>} */
+	const builds = await parseYaml(await fs.readFile(baseFPath, 'utf-8'))
+
+	/** @type {import('#lib/parsing/helperteam/types').BuildInfo<'multilang'>} */
+	const langBuilds = {
+		...builds,
+		characters: builds.characters.map(char => ({
+			...char,
+			credits: {},
+			roles: char.roles.map(role => ({
+				...role,
+				artifacts: {
+					...role.artifacts,
+					sets: role.artifacts.sets.map(set => ({ ...set, notes: {} })),
+					notes: {},
+				},
+				weapons: {
+					...role.weapons,
+					advices: role.weapons.advices.map(x => ({
+						...x,
+						similar: x.similar.map(x => ({ ...x, notes: {} })),
+					})),
+					notes: {},
+				},
+				mainStats: {
+					...role.mainStats,
+					notes: {},
+					sands: { ...role.mainStats.sands, notes: {} },
+					circlet: { ...role.mainStats.circlet, notes: {} },
+					goblet: { ...role.mainStats.goblet, notes: {} },
+				},
+				subStats: {
+					...role.subStats,
+					notes: {},
+					advices: role.subStats.advices.map(x => ({ ...x, notes: {} })),
+				},
+				talents: {
+					...role.talents,
+					notes: {},
+				},
+				tips: {},
+				notes: {},
+			})),
+		})),
+		artifacts: builds.artifacts.map(art => ({
+			...art,
+			sets: '1' in art.sets ? { 1: {} } : { 2: {}, 4: {} },
+		})),
+		weapons: builds.weapons.map(weapon => ({
+			...weapon,
+			passiveStat: {},
+		})),
+	}
 
 	const spreadsheet = await loadSpreadsheet(
 		`${BASE_DIR}/google.private_key.json`,
@@ -195,7 +250,8 @@ async function download() {
 	const sheets = mustGetSheets(spreadsheet.sheets)
 
 	{
-		const langs = sheets.characters.data[0].rowData[0].values ?? []
+		const lang2col = makeLangColMap(sheets.characters)
+		const extractTexts = extractLangTexts.bind(null, lang2col, langs)
 
 		let curCharacter = null
 		let curRole = null
@@ -208,53 +264,88 @@ async function download() {
 			const label0 = json_getText(cells[0]).trim()
 			if (label0 && !label0.includes(':')) {
 				// персонаж
-				curCharacter = builds.characters.find(x => x.code === label0)
+				curCharacter = langBuilds.characters.find(x => x.code === label0)
 				if (!curCharacter) throw new Error(`wrong character '${label0}'`)
 			} else if (label0.includes(':')) {
 				// персонаж:роль
 				const [charCode, roleCode] = label0.split(':', 2)
-				curCharacter = builds.characters.find(x => x.code === charCode)
+				curCharacter = langBuilds.characters.find(x => x.code === charCode)
 				if (!curCharacter) throw new Error(`wrong character in '${label0}'`)
 				curRole = curCharacter.roles.find(x => x.code === roleCode)
 				if (!curCharacter) throw new Error(`wrong role in '${label0}'`)
 			}
 
-			const dataColNum = 2
-
 			const field = json_getText(cells[1]).trim()
 			if (curCharacter && !curRole) {
 				if (field === 'credits') {
-					curCharacter.credits = extractTextOrNull(cells[dataColNum])
+					curCharacter.credits = extractTexts(cells)
 				} else throw new Error(`'${curCharacter.code}': unexpected field '${field}'`)
 			} else if (curCharacter && curRole) {
 				const errPrefix = `'${curCharacter.code}' '${curRole.code}'`
 				let m
 				if (field === 'notes') {
-					curRole.notes = extractTextOrNull(cells[dataColNum])
+					curRole.notes = extractTexts(cells)
 				} else if (field === 'tips') {
-					curRole.tips = extractTextOrNull(cells[dataColNum])
+					curRole.tips = extractTexts(cells)
 				} else if (field === 'weapon notes') {
-					curRole.weapons.notes = extractTextOrNull(cells[dataColNum])
+					curRole.weapons.notes = extractTexts(cells)
 				} else if (field === 'artifact notes') {
-					curRole.artifacts.notes = extractTextOrNull(cells[dataColNum])
+					curRole.artifacts.notes = extractTexts(cells)
 				} else if ((m = field.match(/^weapon #(\d+) (\S+) notes$/)) !== null) {
 					const [, index, code] = m
 					if (+index >= curRole.weapons.advices.length)
 						throw new Error(`${errPrefix}: wrong weapon advice #${index}`)
 					const weapon = curRole.weapons.advices[+index].similar.find(x => x.code === code)
 					if (!weapon) throw new Error(`${errPrefix}: unknown weapon '${code}'`)
-					weapon.notes = extractTextOrNull(cells[dataColNum])
+					weapon.notes = extractTexts(cells)
 				} else if ((m = field.match(/^artifact #(\d+) notes$/)) !== null) {
 					const [, index] = m
 					if (+index >= curRole.artifacts.sets.length)
 						throw new Error(`${errPrefix}: wrong art advice #${index}`)
-					curRole.artifacts.sets[+index].notes = extractTextOrNull(cells[dataColNum])
+					curRole.artifacts.sets[+index].notes = extractTexts(cells)
 				} else throw new Error(`${errPrefix}: unexpected field '${field}'`)
 			}
 		}
 	}
+	{
+		const lang2col = makeLangColMap(sheets.artifacts)
+		const extractTexts = extractLangTexts.bind(null, lang2col, langs)
 
-	await fs.writeFile(outFPath, stringifyYaml(builds))
+		for (const { values: cells = [] } of sheets.artifacts.data[0].rowData.slice(1)) {
+			if (cells.length === 0) continue
+
+			const code = json_getText(cells[0]).trim()
+			if (code === '') continue
+
+			const artifact = langBuilds.artifacts.find(x => x.code === code)
+			if (!artifact) throw new Error(`wrong artifact '${code}'`)
+
+			const countStr = json_getText(cells[1]).trim()
+			const m = countStr.match(/^x(1|2|4)$/)
+			if (!m) throw new Error(`artifact '${code}': wrong count '${countStr}'`)
+			const count = m[1]
+
+			artifact.sets[count] = extractTexts(cells)
+		}
+	}
+	{
+		const lang2col = makeLangColMap(sheets.weapons)
+		const extractTexts = extractLangTexts.bind(null, lang2col, langs)
+
+		for (const { values: cells = [] } of sheets.weapons.data[0].rowData.slice(1)) {
+			if (cells.length === 0) continue
+
+			const code = json_getText(cells[0]).trim()
+			if (code === '') continue
+
+			const weapon = langBuilds.weapons.find(x => x.code === code)
+			if (!weapon) throw new Error(`wrong weapon '${code}'`)
+
+			weapon.passiveStat = extractTexts(cells)
+		}
+	}
+
+	await fs.writeFile(outFPath, stringifyYaml(langBuilds))
 }
 
 /** @param {import('#lib/google.js').Sheet[]} sheets */
@@ -326,4 +417,33 @@ function addRowTo(rows, maxCols, ...items) {
 	)
 	while (values.length < maxCols) values.push({ userEnteredValue: { stringValue: '' } })
 	rows.push({ values })
+}
+
+/** @param {import('#lib/google').Sheet} sheet */
+function makeLangColMap(sheet) {
+	return new Map(
+		(sheet.data[0].rowData[0].values ?? []).map((cell, i) => {
+			return [json_getText(cell).trim().toLocaleLowerCase(), i]
+		}),
+	)
+}
+
+/**
+ * @param {Map<string, number>} lang2col
+ * @param {string[]} langs
+ * @param {import('#lib/google').CellData[]} cells
+ */
+function extractLangTexts(lang2col, langs, cells) {
+	/** @type {Record<string, import('#lib/parsing/helperteam/text').CompactTextParagraphs>} */
+	const res = {}
+	for (const lang of langs) {
+		const col = lang2col.get(lang)
+		if (!col) throw new Error(`col for lang '${lang}' not found`)
+		const text = extractTextOrNull(cells[col])
+		if (text !== null) res[lang] = text
+	}
+	const size = Object.keys(res).length
+	if (size > 0 && size !== langs.length)
+		warn(`expected translation for [${langs}], got onlt for [${Object.keys(res)}]`)
+	return res
 }
