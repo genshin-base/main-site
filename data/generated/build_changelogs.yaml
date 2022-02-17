@@ -1,0 +1,1977 @@
+rows:
+  - date: February 15, 2022
+    changes: Added Oathsworn Eye and Kagura's Verity to respective weapon sheets
+    appliedBy: Potaaato
+  - date: February 13, 2022
+    changes: Updated Weapon rankings, Mainstats and Notes for Yoimiya
+    appliedBy: ceeeleste
+  - date: February 3, 2022
+    changes: Updated Artifact notes for Yoimiya
+    appliedBy: ceeeleste
+  - date: February 2, 2022
+    changes: Removed Shimenawa's Reminiscence (4) from Barbara DPS
+    appliedBy: Ascarotte
+  - date: January 31, 2022
+    changes: Updated Freeze and Melt Ganyu section
+    appliedBy: 2ri
+  - date: January 27, 2022
+    changes: Edited Diluc mainstat rankings and added notes for Rainslasher
+    appliedBy: LarryTheCableGuy
+  - date: January 25, 2022
+    changes: Updated Weapon notes for Xingqiu
+    appliedBy: ceeeleste
+  - date: January 25, 2022
+    changes: Removed ATK% Mainstats from Support Kokomi
+    appliedBy: ceeeleste
+  - date: January 25, 2022
+    changes: Fixed Ocean-Hued Clam 2 piece effect's description in the Artifacts sheet.
+    appliedBy: LarryTheCableGuy
+  - date: January 23, 2022
+    changes: Updated Kaeya's preferred Role
+    appliedBy: Ascarotte
+  - date: January 23, 2022
+    changes: Updated Burst Support Zhongli section
+    appliedBy: 2ri
+  - date: January 22, 2022
+    changes: Updated Bennett Support and Burst Support weapon rankings
+    appliedBy: Loli, [Creed]
+  - date: January 21, 2022
+    changes: Added Shimenawa's Reminiscence (4) to Yanfei DPS section
+    appliedBy: ceeeleste
+  - date: January 11, 2022
+    changes: Added Kitain Cross Spear to Yun Jin section
+    appliedBy: ceeeleste
+  - date: January 10, 2022
+    changes: Added Calamity Queller to Xiao section
+    appliedBy: 2ri
+  - date: January 10, 2022
+    changes: Added Shenhe section and Yun Jin section
+    appliedBy: Luo, 2ri, Shiro
+  - date: January 9, 2022
+    changes: Removed 4p EoSF and non-ER weapons from Amber support section.
+    appliedBy: Hyper
+  - date: January 9, 2022
+    changes: Added +18% ATK set (2) +18% ATK set (2) to Fischl subdps and removed
+      gambler
+    appliedBy: Shiro
+  - date: January 7, 2022
+    changes: Added Calamity Queller to weapon sheets
+    appliedBy: LarryTheCableGuy
+  - date: January 6, 2022
+    changes: Removed some 4* artifact options for Amber, Xiangling, Diluc, Razor,
+      Beidou, Fischl, Kaeya, Anemo MC, Mona
+    appliedBy: ceeeleste
+  - date: January 5, 2022
+    changes: Updated Ningguang section
+    appliedBy: 2ri
+  - date: January 3, 2022
+    changes: Added Redhorn Stonethresher notes to Chongyun and Razor
+    appliedBy: Loli
+  - date: December 29, 2021
+    changes: Added Redhorn Stonethresher to Diluc, Beidou, Chongyun, Eula, Razor.
+    appliedBy: Ascarotte
+  - date: December 25, 2021
+    changes: Added disclaimer to support Noelle regarding underwhelming performance
+    appliedBy: Shiro
+  - date: December 24, 2021
+    changes: Added Ocean-Hued Clam to Jean Burst Support + its relevant notes.
+    appliedBy: LarryTheCableGuy, ceeeleste, [Creed]
+  - date: December 19, 2021
+    changes: Added Arataki Itto section (WIP)
+    appliedBy: 2ri, Shiro
+  - date: December 18, 2021
+    changes: Edited mainstat recommendations for Support Gorou
+    appliedBy: ceeeleste
+  - date: December 18, 2021
+    changes: Added Mouun's Moon to Childe DPS
+    appliedBy: ceeeleste
+  - date: December 18, 2021
+    changes: Edited Childe DPS Weapon rankings + notes regarding Stringless
+    appliedBy: ceeeleste
+  - date: December 18, 2021
+    changes: Edited Childe DPS Artifact rankings + notes regarding Shimenawa's
+      Reminiscence.
+    appliedBy: LarryTheCableGuy
+  - date: December 18, 2021
+    changes: Added Redhorn Stonethresher to Claymore sheet.
+    appliedBy: LarryTheCableGuy
+  - date: December 17, 2012
+    changes: Updated Polar Star notes for Childe DPS
+    appliedBy: ceeeleste
+  - date: December 16, 2021
+    changes: Added Gorou Support section with notes
+    appliedBy: Shiro, Luo, 2ri, [Creed]
+  - date: December 14, 2021
+    changes: Added Redhorn Stonethresher for DPS Noelle and added notes regarding
+      Serpent Spine stacks while using Husk of Opulent Dreams
+    appliedBy: Ascarotte, Loli
+  - date: December 13, 2021
+    changes: Edited mainstat recommendations for DPS Bennett + notes
+    appliedBy: LarryTheCableGuy
+  - date: December 12, 2021
+    changes: Updated Weapon rankings and notes regarding Amenoma Kageuchi for Burst
+      Support Jean
+    appliedBy: 2ri, ceeeleste
+  - date: December 12, 2021
+    changes: Removed notes regarding Serpent Spine for Eula
+    appliedBy: Ascarotte
+  - date: December 10, 2021
+    changes: Updated Anemo MC Anemo DPS weapon ranking and notes
+    appliedBy: ceeeleste
+  - date: December 10, 2021
+    changes: Edited notes regarding Blizzard Strayer on Xingqiu.
+    appliedBy: LarryTheCableGuy, ceeeleste
+  - date: December 9, 2021
+    changes: "Edited Kaeya Cryo DPS talent priority "
+    appliedBy: LarryTheCableGuy, ceeeleste
+  - date: December 9, 2021
+    changes: Edited Kaeya Burst Support artifact rankings and its relevant notes +
+      Updated Noblesse Oblige (4) placements on different characters (Venti,
+      Sara, Xingqiu)
+    appliedBy: Helper Team
+  - date: December 7, 2021
+    changes: Fixed Ocean-Hued Clam's description in the Artifacts sheet and added
+      Cinnabar Spindle to Weapons sheet.
+    appliedBy: LarryTheCableGuy
+  - date: December 6, 2021
+    changes: "Updated Melt DPS Ganyu Weapon rankings and adjusted notes for Hamayumi
+      and Prototype Crescent. "
+    appliedBy: Ascarotte
+  - date: December 3, 2021
+    changes: Updated Cinnabar Spindle ranking and adjusted notes on Primordial Jade
+      Cutter on Albedo section
+    appliedBy: 2ri, ceeeleste
+  - date: December 2, 2021
+    changes: Added Husk of Opulent Dreams to Shield Support Xinyan
+    appliedBy: LarryTheCableGuy
+  - date: December 2, 2021
+    changes: "Added Shield Support section to Yanfei "
+    appliedBy: Helper Team
+  - date: December 2, 2021
+    changes: Added Ocean-Hued Clam and Husk of Opulent Dreams to Artifacts sheet.
+    appliedBy: LarryTheCableGuy
+  - date: November 30, 2021
+    changes: Added Wavebreaker's Fin to Raiden
+    appliedBy: Luo
+  - date: November 29, 2021
+    changes: Added Ocean Hued Clam (4) to Qiqi Support
+    appliedBy: ceeeleste
+  - date: November 28, 2021
+    changes: Updated Bennett DPS weapon ranking
+    appliedBy: ceeeleste
+  - date: November 28, 2021
+    changes: Added Ocean Hued Clam (4) to Kokomi Support
+    appliedBy: ceeeleste
+  - date: November 25, 2021
+    changes: Added Ocean Hued Clam (4) to Kokomi DPS
+    appliedBy: ceeeleste
+  - date: November 25, 2021
+    changes: Updated Albedo section
+    appliedBy: Loli, 2ri
+  - date: November 24, 2021
+    changes: Added Husk of Opulent Dreams (4) for Noelle support and attached notes
+    appliedBy: Shiro
+  - date: November 24, 2021
+    changes: Added notes regarding Husk of Opulent Dreams (4) for Albedo Off-Field DPS
+    appliedBy: Loli
+  - date: November 24, 2021
+    changes: "Added Husk of Opulent Dreams to Albedo Off-Field DPS and Noelle DPS
+      artifact options "
+    appliedBy: Loli
+  - date: November 24, 2021
+    changes: "Updated Yoimiya's Weapon Ranking + Added the necessary notes. "
+    appliedBy: "[Creed]"
+  - date: November 23,2021
+    changes: Added weapon notes regarding Lost Prayer to the Sacred Winds in Klee
+      and Yanfei DPS notes
+    appliedBy: Loli
+  - date: November 23,2021
+    changes: Removed Royal Longsword from Electro DPS Keqing weapons
+    appliedBy: Loli
+  - date: November 23,2021
+    changes: Removed Iron Sting and Royal Longsword from Physical DPS Keqing weapons
+    appliedBy: Loli
+  - date: November 23,2021
+    changes: Added Amenoma Kageuchi to Electro Keqing weapons
+    appliedBy: ceeeleste
+  - date: November 22,2021
+    changes: Update EM Sucrose weapon rankings and notes
+    appliedBy: ceeeleste, Ascarotte, Judgement
+  - date: November 22,2021
+    changes: Updated Weapon rankings and notes in Rosaria Sections
+    appliedBy: ceeeleste, 2ri
+  - date: November 22,2021
+    changes: Added Mouun's Moon on Burst Support Sara section
+    appliedBy: 2ri
+  - date: November 19, 2021
+    changes: Updated Burst Support Kaeya weapon rankings and notes
+    appliedBy: ceeeleste, LarryTheCableGuy
+  - date: November 16, 2021
+    changes: Added Mouun's Moon and Wavebreaker to respective weapon sheets
+    appliedBy: Potaaato
+  - date: November 14, 2021
+    changes: Added Thundering Fury to EM Kazuha and included notes
+    appliedBy: ceeeleste
+  - date: November 10, 2021
+    changes: Updated Amber's preferred role and Main DPS Weapons.
+    appliedBy: Hyper
+  - date: November 10, 2021
+    changes: Updated Off Field DPS Venti notes regarding Elegy for the End
+    appliedBy: Loli
+  - date: November 10, 2021
+    changes: Added Kokomi's optimal attack rotations in ability tips
+    appliedBy: LarryTheCableGuy
+  - date: November 7, 2021
+    changes: Updated Blackcliff Slasher ranking for Diluc
+    appliedBy: Folie
+  - date: November 7, 2021
+    changes: Added Wavebreaker's Fin to rosaria and changed weapon orders
+    appliedBy: Luo, [Creed]
+  - date: November 3, 2021
+    changes: Added Thoma section
+    appliedBy: Luo
+  - date: November 3, 2021
+    changes: Updated Off Field DPS Xiangling weapon rankings and notes
+    appliedBy: ceeeleste
+  - date: November 2, 2021
+    changes: Updated Off Field DPS Venti weapon rankings
+    appliedBy: Loli
+  - date: November 1, 2021
+    changes: "Edited Akuoumaru's ranking on Beidou's section and added its related
+      notes. "
+    appliedBy: "[Creed]"
+  - date: October 31, 2021
+    changes: Added Akuoumaru to Chongyun and its relevant notes, added Serpent Spine
+      notes.
+    appliedBy: Ascarotte, LarryTheCableGuy
+  - date: October 31, 2021
+    changes: Updated Rainslasher weapon notes for Diluc
+    appliedBy: ceeeleste
+  - date: October 31, 2021
+    changes: Added Mistsplitter Reforged to Jean and changed weapon rankings + notes
+    appliedBy: ceeeleste
+  - date: October 29, 2021
+    changes: Moved Lisa Electro DPS optimal attack string from notes to ability notes
+    appliedBy: Loli
+  - date: October 29, 2021
+    changes: Removed Rust from Off Field DPS Fischl
+    appliedBy: Loli
+  - date: October 28, 2021
+    changes: Edited Childe notes.
+    appliedBy: Luo
+  - date: October 27, 2021
+    changes: Fixed typo in Amos Bow description.
+    appliedBy: Hyper
+  - date: October 27, 2021
+    changes: Edited notes regarding Tenacity of the Millelith on Fischl Off-field DPS
+    appliedBy: LarryTheCableGuy
+  - date: October 27, 2021
+    changes: Revamped Fischl Weapon rankings and added relevant notes
+    appliedBy: LarryTheCableGuy
+  - date: October 26, 2021
+    changes: Added Engulfing Lightning to Xiao and changed weapon rankings.
+    appliedBy: Luo
+  - date: October 26, 2021
+    changes: Added Polar Star to Fischl DPS Rankings and its relevant notes, edited
+      rankings and Ability Tips
+    appliedBy: LarryTheCableGuy
+  - date: October 23, 2021
+    changes: Edited Hu Tao weapon rankings
+    appliedBy: Ascarotte
+  - date: October 23, 2021
+    changes: Added Polar Star to Sara's Section.
+    appliedBy: "[Creed]"
+  - date: October 23, 2021
+    changes: Added Polar Star to all Ganyu Sections + Notes
+    appliedBy: Ascarotte, LarryTheCableGuy
+  - date: October 20, 2021
+    changes: "Added Polar Star to Fischl Off-Field DPS "
+    appliedBy: LarryTheCableGuy
+  - date: October 19, 2021
+    changes: Added Shimenawa's Reminiscence (4) to childe and edited notes.
+    appliedBy: Luo
+  - date: October 19, 2021
+    changes: Added Burst Support Aloy section
+    appliedBy: 2ri, Ascarotte
+  - date: October 15, 2021
+    changes: "Added notes regarding (4) Crimson Witch for Xiangling's off-field DPS
+      section. "
+    appliedBy: "[Creed]"
+  - date: October 15, 2021
+    changes: Added Akuoumaru to Beidou Section and its relevant notes, edited
+      Serpent Spine and Emblem notes
+    appliedBy: LarryTheCableGuy
+  - date: October 15, 2021
+    changes: Added Akuoumaru to Eula DPS and its relevant notes
+    appliedBy: Loli
+  - date: October 15, 2021
+    changes: Added refinement details for Polar Star
+    appliedBy: LarryTheCableGuy
+  - date: October 15, 2021
+    changes: Added Polar Star to Childe DPS and its relevant notes
+    appliedBy: LarryTheCableGuy
+  - date: October 12, 2021
+    changes: Added Akuoumaru and Polar Star to respective weapon sheets
+    appliedBy: Potaaato
+  - date: October 5, 2021
+    changes: Added Sacrificial Fragments for Kokomi, removed Skyward Atlas, added
+      link to Kokomi guide
+    appliedBy: ceeeleste
+  - date: October 5, 2021
+    changes: Added Amenoma Kageuchi for Xingqiu and updated his weapon order and notes.
+    appliedBy: Luo
+  - date: October 5, 2021
+    changes: Updated link to In-depth Guide for Childe
+    appliedBy: Helper Team
+  - date: October 5, 2021
+    changes: Edited Childe Weapon rankings, Notes and Ability Tips
+    appliedBy: Judgement, LarryTheCableGuy, 2ri
+  - date: October 4, 2021
+    changes: Added DPS section to Kokomi
+    appliedBy: ceeeleste
+  - date: October 2, 2021
+    changes: Updated Kokomi Support section
+    appliedBy: ceeeleste
+  - date: October 2, 2021
+    changes: Added a note regarding Elegy for the End on Burst Support Sara
+    appliedBy: 2ri
+  - date: October 1, 2021
+    changes: Updated Lisa Weapon, Artifact and Main Stat rankings, and Notes
+    appliedBy: Folie, LarryTheCableGuy
+  - date: September 30, 2021
+    changes: Removed Skyward Spine from Shield Support Zhongli
+    appliedBy: 2ri
+  - date: September 30, 2021
+    changes: Updated Hu Tao ability tips
+    appliedBy: Loli
+  - date: September 28, 2021
+    changes: Added Luxurious Sea-Lord and Everlasting Moonglow to weapon sheets
+    appliedBy: Potaaato
+  - date: September 28, 2021
+    changes: Added Luxurious Sea-Lord to Beidou, Xinyan, Chongyun, Eula, and Diluc
+    appliedBy: Ascarotte
+  - date: September 26,2021
+    changes: "Edited notes regarding Serpent Spine for Diluc "
+    appliedBy: LarryTheCableGuy
+  - date: September 25,2021
+    changes: Adjusted freeze Ganyu talent priority
+    appliedBy: Luo
+  - date: September 25,2021
+    changes: Added refinement details for The Catch and Engulfing Lightning
+    appliedBy: LarryTheCableGuy
+  - date: September 24, 2021
+    changes: Added Support section to Kokomi
+    appliedBy: Loli
+  - date: September 22, 2021
+    changes: Added Shimenawa Reminiscence (4) for Amber DPS.
+    appliedBy: Hyper
+  - date: September 20, 2021
+    changes: Added notes regarding Prototype Crescent VS Skyward Harp for Ganyu's
+      Melt/Freeze Builds.
+    appliedBy: "[Creed]"
+  - date: September 19, 2021
+    changes: Redone Venti guide to streamline weapon prio and clean up notes
+    appliedBy: Shiro
+  - date: September 18, 2021
+    changes: Moved Credits sheet to inbetween Title and Changelogs
+    appliedBy: Shiro
+  - date: September 18, 2021
+    changes: Redone Noelle guide, removed Hu Tao in-depth guide from notes due to
+      KQM remake soon
+    appliedBy: Shiro
+  - date: September 16, 2021
+    changes: Updated Amber Main DPS weapon rankings.
+    appliedBy: Hyper
+  - date: September 16, 2021
+    changes: Updated Yoimiya's notes regarding Crimson Witch of Flames (2) +18% ATK
+      set (2)
+    appliedBy: ceeeleste, 2ri
+  - date: September 15, 2021
+    changes: Split Support / Nuke Zhongli to Shield Support and Burst / Nuke Zhongli
+    appliedBy: 2ri, Loli
+  - date: September 15, 2021
+    changes: Renamed various SUB DPS as OFF-FIELD DPS and BURST SUPPORT and Raiden
+      from SUB DPS to ELECTRO DPS
+    appliedBy: Helper Team
+  - date: September 15, 2021
+    changes: Updated Rosaria Sections
+    appliedBy: Folie, 2ri, ceeeleste, Judgement
+  - date: September 13, 2021
+    changes: Added various In-depth Guides from respective Mains Server and KQM
+    appliedBy: Helper Team
+  - date: September 12, 2021
+    changes: Updated Weapon Rankings and Added Notes for Geo MC
+    appliedBy: Ascarotte
+  - date: September 10, 2021
+    changes: Updated Xiangling weapon rankings
+    appliedBy: LarryTheCableGuy, ceeeleste
+  - date: September 10, 2021
+    changes: Removed confusing note on Pyro DPS Xiangling, added note for Kitain
+      Cross Spear
+    appliedBy: LarryTheCableGuy, ceeeleste
+  - date: September 9, 2021
+    changes: Removed Raiden Shogun notes regarding The Catch
+    appliedBy: Loli
+  - date: September 8, 2021
+    changes: Added amenoma to Kaeya subdps section, changed childe and mona
+      subdps/nuke tags to nuke and merged beidou sub dps with electro dps
+      section.
+    appliedBy: Luo
+  - date: September 7, 2021
+    changes: Updated Amber Main DPS weapon rankings.
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Edited Hutao Weapon rankings, notes, substat priority and ability tips
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Updated Ability Notes for Raiden Shogun
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Added Sub DPS section for Raiden Shogun
+    appliedBy: Luo
+  - date: September 5, 2021
+    changes: Added Sub DPS / Support section for Kujou Sara
+    appliedBy: Judgement
+  - date: September 5, 2021
+    changes: Revamped Zhongli Phys DPS weapon rankings
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Renamed Electro Traveler's role to Support
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Added Mistsplitter Reforged to Anemo Traveler.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Updated Weapon Rankings and Weapon Notes for Zhongli Nuke/Sub DPS
+    appliedBy: Loli, 2ri
+  - date: September 5, 2021
+    changes: Removed The Halberd from Zhongli Support/Nuke
+    appliedBy: tyler_bot
+  - date: September 5, 2021
+    changes: Added The Catch To Zhongli Support/Nuke
+    appliedBy: tyler_bot
+  - date: September 5, 2021
+    changes: Added Engulfing Thunder and The Catch to Xiangling Sub DPS/Pyro DPS and
+      their notes.
+    appliedBy: LarryTheCableGuy, ceeeleste
+  - date: September 5, 2021
+    changes: Revamped Xiangling Sub DPS/Pyro DPS to assume Vape comps.
+    appliedBy: LarryTheCableGuy, ceeeleste
+  - date: September 5, 2021
+    changes: Added Kitain Cross Spear to Rosaria Cryo DPS
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Added Heart of Depth (2) +18% ATK set (2) on DPS Childe with notes
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Updated SUB DPS Ganyu Section and added some notes
+    appliedBy: Ascarotte, 2ri
+  - date: September 5, 2021
+    changes: Added emblem set to kaeya subdps section
+    appliedBy: Luo
+  - date: September 5, 2021
+    changes: Added Thundering Pulse to Amber MDPS section.
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Updated Xingqiu's notes regarding EoSF for C6 Xingqiu.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Removed TTDS from Sub DPS/Nuke Mona weapon list, removed Noblesse
+      Oblige (2) Heart of Depth (2) from Freeze Support Mona artifact list
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Added Hamayumi to Melt DPS Ganyu section with notes
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: "Added Thundering Pulse to Fischl Sub-DPS section "
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added Sayu weapons, artifact set, and notes respectively
+    appliedBy: Luo
+  - date: September 5, 2021
+    changes: Updated Diona Support notes regarding 2 specific sets
+    appliedBy: Adeptus
+  - date: September 5, 2021
+    changes: Added Thundering Pulse to most bow users' sections (Ganyu, Fischl,
+      Childe, etc.)
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Added Yoimiya's recommended weapons, artifacts, and talent level priority.
+    appliedBy: Luo, 2ri, tyler_bot
+  - date: September 5, 2021
+    changes: Updated Xiao's artifact set & notes regarding that
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: "Added a clarification to Thrilling Tales for Sucrose. "
+    appliedBy: tyler_bot
+  - date: September 5, 2021
+    changes: Updated Kaeya Sub DPS Section.
+    appliedBy: Ascarotte, Folie
+  - date: September 5, 2021
+    changes: Updated Notes regarding 4 EoSF vs 2 NO + 2 HoD under Xingqiu's section.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Removed note on 4CW on Xiangling
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Kazuha Notes wording.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added Shimenawa Reminiscence (4) for Barbara DPS.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Split Ganyu DPS into Melt and Freeze DPS Sections.
+    appliedBy: Folie, Ascarotte, 2ri
+  - date: September 5, 2021
+    changes: Updated Jean Sub DPS Section.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added Lithic Spear for Xiangling Sub DPS.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Noelle Support Notes.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Removed outdated information regarding R5 Rust in Childe Notes.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Edited Burst / Support Jean notes.
+    appliedBy: Adeptus
+  - date: September 5, 2021
+    changes: Edited / reformatted notes on Ayaka
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Added notes on 4 Noblesse Oblige for Chongyun
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added notes on Sacrificial Greatsword for Chongyun
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: "Added Amenoma Kageuchi to Kazuha\r\n"
+    appliedBy: Luo
+  - date: September 5, 2021
+    changes: Added Emblem of Severed Fate (2-set and 4-set) to multiple character
+      sections [Chongyun, Zhongli, Ganyu, etc.]
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: "Added Emblem Of Severed Fate (4) to Jean Support "
+    appliedBy: tyler_bot
+  - date: September 5, 2021
+    changes: Added Tenacity of the Milelith (4) and notes regarding Main Stats and
+      Substats priority on Freeze Support Mona
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Added The Flute on Ayaka Weapon Priority with notes
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: "Removed Prototype Starglitter from Xiangling Sub Dps "
+    appliedBy: tyler_bot, Loli
+  - date: September 5, 2021
+    changes: "Added Kitain Cross Spear to Xiangling sub dps "
+    appliedBy: tyler_bot, Loli
+  - date: September 5, 2021
+    changes: Swapped Crimson Witch (4) and Lavawalker (4) for Klee artifacts
+    appliedBy: tyler_bot
+  - date: September 5, 2021
+    changes: Added Amenoma Kageuchi to Qiqi's section + Skyward Blade to EMC's section.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Removed Eye Of Perception, Frostbearer, and Royal Grimore for Klee Dps
+    appliedBy: tyler_bot
+  - date: September 5, 2021
+    changes: "Reformatted Kaedehara Kazuha's + Kamisato Ayaka's section headers. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Added Skyward Blade on Ayaka Weapon Priority
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Updated Anemo MC Anemo DPS section's notes and artifact priority
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Updated all Gladiator's Finale (2) options with +18% ATK (2) for all
+      characters
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Updated Artifact Recommendations for Support Xinyan
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Added Shimenawa's Reminiscence (4) for Hutao and Ganyu
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Added Shimenawa's Reminiscence (2) Gladiator's Finale (2) for Xiao
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Reformatted Bennett's section + Added notes regarding Primordial Jade
+      Cutter VS Mistsplitter Reforged under his Thundering Fury (4) artifact
+      breakdown.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Removed Favonius Codex for Mona Sub Dps/Burst
+    appliedBy: tyler_bot
+  - date: September 5, 2021
+    changes: "Removed Eye Of Perception and Frostbearer for Mona dps "
+    appliedBy: tyler_bot
+  - date: September 5, 2021
+    changes: Added Amenoma Kageuchi to Jean subdps section
+    appliedBy: Luo
+  - date: September 5, 2021
+    changes: Updated Amber Support notes, artifact and substat rankings.
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Replaced all Gladiator's Finale (2) and Shimenawa's Reminiscence (2)
+      with +18% ATK (2) for Cryo Sections
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Updated Weapon Rankings for Cryo DPS Kaeya Section
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Updated Weapon Rankings for Cryo DPS Rosaria Section
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Adjusted inconsistencies with rosaria phys dps notes arrangement and
+      grammar
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Updated Ganyu DPS notes
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Added DPS Ayaka section
+    appliedBy: 2ri, Folie
+  - date: September 5, 2021
+    changes: "Added emblem of severed fates to xiangling "
+    appliedBy: Luo
+  - date: September 5, 2021
+    changes: Added Hamayumi to Amber DPS section and notes on Prototype Crescent.
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Changed file linked under Xingqiu Sub-DPS section.
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Added Mistsplitter Reforged to various dps
+    appliedBy: Luo
+  - date: September 5, 2021
+    changes: Added Emblem of Severed Fate to Xingqiu Sub DPS.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Xingqiu Sub DPS Weapon List
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added Emblem of Severed Fate to Beidou Sub DPS.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Various Formatting and Typo Fixes.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Re-ordered Xingqiu Sub-DPS weapon rankings.
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Added Mistsplitter Reforged to Bennett Support and Keqing Electro DPS
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added Mistsplitter Reforged under Xingqiu Sub-DPS's weapon prio rankings.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Split Bennett Support Section into Sub DPS and Support
+    appliedBy: 2ri, Hyper
+  - date: September 5, 2021
+    changes: Added 4 star Inazuma weapons on respective weapon sheets
+    appliedBy: Potaaato
+  - date: September 5, 2021
+    changes: Added Mistsplitter Reforged and Thundering Pulse to Sword and Bow sheet
+    appliedBy: Potaaato
+  - date: September 5, 2021
+    changes: Updated Xiangling Notes
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Removed Archaic Petra artifact utilization example from Fischl description
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added Skyward Blade and Festering Desire to Kazuha weapon priority
+    appliedBy: Luo
+  - date: September 5, 2021
+    changes: "Edited Kazuha ability tips regarding infusion priority "
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Removed EM sands reccomendation from Amber Support section.
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Updated Jean Sub DPS Weapon Rankings.
+    appliedBy: Ascarotte, 2ri
+  - date: September 5, 2021
+    changes: Updated Razor's Weapon Rankings and Notes
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added Freedom-Sworn on Sub DPS Jean with notes
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Added Quincy's xingqiu guide to ability tips, edited ER requirements for c6
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Added Emblem of Severed Fate and Shimenawa's Reminiscence to Artifact Sheet
+    appliedBy: Potaaato
+  - date: September 5, 2021
+    changes: "Added notes regarding the optimal amounts of ER% for Bennett, Beidou,
+      and Fischl. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Added Dodoco Tales to Mona DPS
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Edited Kazuha Notes
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Edited Kazuha Support weapon rankings
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: "Removed Kazuha Sub DPS Notes and added Support Notes "
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Deleted Kazuha Sub Dps section
+    appliedBy: Helper team
+  - date: September 5, 2021
+    changes: Highlighted Kazuha's Support Role as preferred role & Added note about
+      Kazuha Sub DPS
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Added Summit Shaper to Xingqiu Weapons
+    appliedBy: Hyper, Tyler_bot
+  - date: September 5, 2021
+    changes: Added weapon guide by Quincy to Xingqiu Notes
+    appliedBy: Hyper, Tyler_bot
+  - date: September 5, 2021
+    changes: Added a note to Xingqiu weapon oder in regards to C6
+    appliedBy: Hyper, Tyler_bot
+  - date: September 5, 2021
+    changes: Updated Kaeya's Cryo DPS Artifacts Rankings
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added Sub DPS section for Kazuha
+    appliedBy: Luo
+  - date: September 5, 2021
+    changes: Added notes regarding Freedom-Sworn on Bennett Support
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Updated Bennett Support weapon rankings
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Removed note on Kazuha's CC capability
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Revised some sections that needed proper creditting.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes:
+      - s: Added Anemo DMG to goblet priority in Kazuha support section
+      - " (removed as of first of July), redid notes + added WIP to everything"
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Added Kazuha section with weapon, skill order, notes, stat priority, etc.
+    appliedBy: Luo, Ascarotte, Loli
+  - date: September 5, 2021
+    changes: Removed weapons up to Prototype Archaic for Razor DPS
+    appliedBy: Tyler_Bot
+  - date: September 5, 2021
+    changes: "Added notes regarding defender's will on Albedo "
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added Mitternachts Waltz R1 to Sub DPS Fischl and edited artifact
+      rankings + added notes for gambler
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added EM DPS for Lisa's section
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added new Crediting section towards Theorycrafters and Authors
+      responsible for more comprehensive guides
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added Freedom-Sworn to Bennet's DPS and Support section.
+    appliedBy: Ascarotte, [Creed]
+  - date: September 5, 2021
+    changes: Removed Energy Recharge from Fischl Sub DPS Main Stats Priority and
+      Reordered Weapons Section
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Removed Blackcliff Slasher and Skyrider's Greatsword from Xinyan DPS
+    appliedBy: Tyler_bot
+  - date: September 5, 2021
+    changes: Added Freedom-Sworn to Sword sheet
+    appliedBy: Potaaato
+  - date: September 5, 2021
+    changes: Fixed typo In Halberd's description
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: "Updated Ganyu DPS weapons list "
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Removed weapons up to Prototype Rancour for Jean DPS
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Removed weapons up to Frostbearer for Ningguang DPS
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Updated Ningguang weapon refinement explanation in Notes.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Xingqiu energy requirements (Outdated Changelog Edit)
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Removed weapons up to Blackcliff Longsword for Kaeya physical DPS
+    appliedBy: Tyler_bot
+  - date: September 5, 2021
+    changes: Updated Xingqiu Sub DPS Weapon List
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Bolded all refinement details / situational assumptions in all weapon
+      rankings for formatting purposes
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Removed weapons up to the best craftable weapon (Mappa Mare) for Yanfei
+    appliedBy: Tyler_bot
+  - date: September 5, 2021
+    changes: Removed weapons up to the best craftable weapon (Iron Sting) for Bennet
+    appliedBy: Tyler_bot
+  - date: September 5, 2021
+    changes: Removed Snowtombed Starsilver from Diluc's DPS Weapons
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Removed various weapons from Xinyan's DPS Weapons
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Removed Debate Club from Razor and Eula DPS Weapons
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Reformatted Anemo, Geo, and Cryo sections + Fixed capitalization and
+      formatting issues.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Removed a note from Zhongli Nuke section about shieldbot since
+      shieldbot notes was already added
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Removed Compound Bow and Messenger from Amber DPS weapons.
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Updated Xiao weapon rankings
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Ningguang Sub DPS ability tips
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Added notes regarding Zhongli Shield Bot build
+    appliedBy: Helper Team
+  - date: September 5, 2021
+    changes: Fixed Xiangling Pyro DPS Artifact ranking
+    appliedBy: Folie, Ascarotte
+  - date: September 5, 2021
+    changes: Fixed numerous miswording and spelling mistakes
+    appliedBy: Adeptus
+  - date: September 5, 2021
+    changes: Updated Favonius weapon series' passives
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Reordered Amber's Support weapons + Added Skyward Harp & Viridescent
+      hunt and additional notes.
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Added 2 CW 2 Glad to Amber DPS section.
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Added Deathmatch to Rosaria's Sub DPS section.
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: Added notes regarding high refine Serpent Spine for Eula and Xinyan
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Rosaria highlighted role has been changed to Sub DPS.
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Added Freeze Support Section for Mona.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Removed Qiqi's DPS section.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Removed Albedo DPS section, reworded subdps notes
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Merged Chongyun Support section into Sub DPS/ Nuke section, updated
+      Weapon priorities, Talent priorities, and Notes regarding to those
+      changes.
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Reordered Amber's DPS weapon ranking + Added Viridescent hunt.
+    appliedBy: Hyper
+  - date: September 5, 2021
+    changes: "Reordered Ganyu's Sub DPS weapon ranking priority. "
+    appliedBy: "[Creed], Ascarotte"
+  - date: September 5, 2021
+    changes: "Reformatted Ganyu's Sub DPS weapon ranking priority + Added Alley
+      Hunter and additional notes. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: "Removed Pale Flame 4 and added notes regarding why for Geo MC's Phys
+      DPS section "
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Rosaria Phys DPS Artifact Priority + Notes regarding Pale Flame (4)
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Replaced Fillet Blade with Harbinger of Dawn in Anemo MC's Anemo DPS
+      weapon prio
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Updated Rosaria/Kaeya Notes regarding Pale Flame (4)
+    appliedBy: Shiro, Folie
+  - date: September 5, 2021
+    changes: Updated Xingqiu notes for c6 weapon order
+    appliedBy: Luo
+  - date: September 5, 2021
+    changes: Updated Ningguang DPS Weapons, Ability Tips and Notes.
+    appliedBy: Tyler, Folie
+  - date: September 5, 2021
+    changes: Removed Geo & Anemo MC elemental DPS normal attack talent priorities
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Added additional notes regarding 4-TF Bennett in his DPS section.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Updated Ningguang weapon order and notes
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Updated Xiangling roles, weapon order and notes
+    appliedBy: Luo
+  - date: September 5, 2021
+    changes: Added +18% ATK set (2) to builds which included the "brave / sojourner"
+      abominations
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Updated Support Qiqi Artifact priority.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Reworded Venti subdps notes slightly
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Removed Support/ Sub DPS Jean Normal Attack Talent Priorities and
+      updated notes.
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Updated EM Build Sucrose Talent Priorities and added notes regarding
+      levelling her talents up.
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Revamped Razor notes regarding Serpent Spine and Blackcliff Slasher
+      playstyle
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Moved Noelle Support section notes on healing to ability tips instead
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Amber DPS Section with Crimson Witch of Flames (4).
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Qiqi Section wording.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Ganyu Notes Section wording.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Kaeya Freeze DPS Ability Tips and Sub DPS wording.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Zhongli Physical DPS section regarding HP Mainstat sands and
+      Crescent Pike placement.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Bennett DPS Weapon Rankings with Skyward Blade.
+    appliedBy: Folie, Ascarotte
+  - date: September 5, 2021
+    changes: Updated Yanfei DPS and Klee DPS notes regarding Dodoco tales
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: "Edited Zhongli's Artifact priority for Phys DPS, edited notes and
+      updated his optimal attack string. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: "Edited MoD rankings for Yanfei, removed MoD note for both Yanfei and
+      Klee and edited notes regarding Dodoco Tales for Yanfei and Klee "
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Xingqiu Notes regarding ER/ATK% Sands selection.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added Tenacity of the Millelith (4) to Sub DPS Fischl with notes
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Reworded Venti's notes
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: "Added notes to EM Sucrose. "
+    appliedBy: Tyler_bot, Folie
+  - date: September 5, 2021
+    changes: Added Vortex Vanquisher to Xiangling and Rosaria Sub DPS Weapon sections.
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Changed the star to be on Sucrose's EM BUILD section instead of Anemo DPS.
+    appliedBy: "[Creed], Loli"
+  - date: September 5, 2021
+    changes: "Removed Sucrose's support section - Replaced it with a new section: EM
+      BUILD."
+    appliedBy: "[Creed], Loli"
+  - date: September 5, 2021
+    changes: Changed the star to be on DPS instead of Support for Noelle
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated notes for Yanfei DPS
+    appliedBy: Loli, LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Changed Venti weapon order and notes
+    appliedBy: Luo, LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Removed ER sands from Venti + edited mainstat choices rankings
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added Dodoco Tales to Yanfei with notes
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Edited Bennett DPS substat priority + notes
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated and Reformatted the weapon priority rankings of Qiqi's DPS section.
+    appliedBy: "[Creed], Folie, LarryTheCableGuy"
+  - date: September 5, 2021
+    changes: Edited Memory of Dust weapon ranking for Klee
+    appliedBy: LarryTheCableGuy, Tyler
+  - date: September 5, 2021
+    changes: Updated Fischl Sub DPS Notes regarding Thundering Fury 4-set and
+      Skill/Burst rotation order.
+    appliedBy: Folie, Shiro
+  - date: September 5, 2021
+    changes: Added Dodoco Tales to Klee and changed Klee weapon order and notes
+    appliedBy: Luo, [Creed], Tyler
+  - date: September 5, 2021
+    changes: Added an additional note that clarified the rankings of Sucrose's
+      Support section.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Reformatted Sucrose's Support section.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: "Reordered Fischl Substat priority "
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added Mitternachts Waltz to Fischl Sub DPS Section.
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: "Swapped EM and Crit for Venti circlet options. "
+    appliedBy: tyler_bot
+  - date: September 5, 2021
+    changes: Added Mitternachts Waltz to Fischl DPS Section.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added refinement stats to Mitternachts Waltz
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Temporal Elemental Mastery priority for all sections.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: "Added Dodoco Tales to Ningguang "
+    appliedBy: tyler_bot
+  - date: September 5, 2021
+    changes: Updated recommended main stat options for Venti Sub DPS
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Updated Jean Support to Support/ Sub DPS, Artifacts substats priorities
+      and Talent priorities
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Updated Bennett Support substat priority
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Fixed Blackcliff Agate naming (previously Blackcliff Amulet) and
+      reworded Mona's vaporise combo in ability tips
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Added Pale Flame (4) to Kaeya Physical DPS Section
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added Dodoco Tales to Catalyst sheet and Mitternachts Waltz to bow sheet
+    appliedBy: Potaaato
+  - date: September 5, 2021
+    changes: Removed Beidou Physical DPS Section.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added DEF% cup to Albedo subdps and edited notes
+    appliedBy: Luo
+  - date: September 5, 2021
+    changes: Updated Venti weapon order
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Added Gladiator's Finale (2) and Noblesse Oblige (2) as an aditional
+      artifact option for Ningguang's DPS section.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Updated Xiao weapon order and edited notes
+    appliedBy: Luo
+  - date: September 5, 2021
+    changes: Added notes regarding Xiao artifacts.
+    appliedBy: Tyler_bot, LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added energy recharge sands to Ganyu Support
+    appliedBy: Tyler_bot
+  - date: September 5, 2021
+    changes: Updated Beidou and Xingqiu substat priority
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Added that Xiao can skill 3 times at c1 and collect all particles,
+      changed Eula's talent priority
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Updated Xiao's notes regarding his optimal skill rotation + optimal
+      combos in specific situations.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: "Updated the Notes under Diona's support section + Added additional
+      notes regarding her weapon priority rankings. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Updated Hutao DPS Weapon ranking and Note section.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Ganyu Sub DPS Weapons (Windblume Ode).
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Edited Xingqiu weapon rankings + notes (for FD).
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added a star to Eula (because she deserves it) + updated Eula notes.
+    appliedBy: LarryTheCableGuy, Ascarotte
+  - date: September 5, 2021
+    changes: Rearranged Lisa Sub DPS substat priority, with a justification for
+      Energy Recharge.
+    appliedBy: Tyler_Bot, LarryTheCableGuy
+  - date: September 5, 2021
+    changes: "Added Thrilling Tales to Lisa sub dps. "
+    appliedBy: Tyler_Bot, LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Copy pasted Jean's DPS Weapons rankings into anemo traveler and Geo
+      Traveler's Physical DPS build.
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Removed an incorrect note from Qiqi section regarding 4maidens
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Removed ER sands from Xiao
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Fixed the error of leaving Aquila Favonia out on Cryo Kaeya DPS section.
+    appliedBy: Potaaato, Folie
+  - date: September 5, 2021
+    changes: Edited Mona DPS Notes
+    appliedBy: LarryTheCableGuy, Judgement
+  - date: September 5, 2021
+    changes: Updated Xingqiu Artifact Rankings, Substats Priority, and Notes
+      regarding to those changes.
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Removed Burst DPS Klee section.
+    appliedBy: 2ri
+  - date: September 5, 2021
+    changes: Updated Eula Combo, Weapon, Main Stat and Note sections.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Beidou Weapons and Notes section.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Removed Normal Attack Talent from relevant Sub-DPS/Support sections
+    appliedBy: LarryTheCableGuy, Folie, Loli
+  - date: September 5, 2021
+    changes: Updated Eula weapon ranking.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Barbara Artifact options.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Jean DPS Artifact options.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Bennett Artifact and Note sections.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Albedo Note sections.
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Reformatted Jean Support's weapon ranking priority.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Added Instructor (4) to Diona's support build.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Updated Eula Notes
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Added Songs of Broken Pines on Physical DPS Beidou
+    appliedBy: Sonarchy
+  - date: September 5, 2021
+    changes: Added Wanderer and Crimson Witch options for Diluc, Yanfei and Bennett DPS
+    appliedBy: Sonarchy
+  - date: September 5, 2021
+    changes: Added Wanderer options for Chongyun Sub DPS
+    appliedBy: Sonarchy
+  - date: September 5, 2021
+    changes: "Added Gladiator and Wanderer options for Xiangling Sub DPS "
+    appliedBy: Sonarchy
+  - date: September 5, 2021
+    changes: Updated Barbara DPS Section
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: "Edited Support Bennett weapon rankings + Notes for consistency "
+    appliedBy: "[Creed], LarryTheCableGuy"
+  - date: September 5, 2021
+    changes: Added Eula notes on The Unforged
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added Song of Broken Pines to Xinyan
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Added Song Of Broken Pines to Diluc
+    appliedBy: Tyler_Bot
+  - date: September 5, 2021
+    changes: Added Song of Broken Pines to Razor
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Geo & Anemo MC's DPS recommendations - Removed Physical Build.
+    appliedBy: "[Creed], LarryTheCableGuy, Loli, Folie"
+  - date: September 5, 2021
+    changes: Updated Bennett DPS's Artifact Priority - Added Thundering Fury (4) as
+      a recommended artifact set.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Updated Eula DPS Ability Tips
+    appliedBy: Loli, Ascarotte
+  - date: September 5, 2021
+    changes: Updated Fischl DPS Weapon Rankings and Notes
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added Song of Broken Pines to Claymore sheet
+    appliedBy: Potaaato
+  - date: September 5, 2021
+    changes: Added Eula DPS - Weapon, Artifact recommendations, Stat, Talent
+      priorities, Ability tips, Notes
+    appliedBy: Adeptus, Luosen, Folie, [Creed], LarryTheCableGuy, Shiro, Ascarotte,
+      Potaaato
+  - date: September 5, 2021
+    changes: Updated Xingqiu Artifacts and Notes
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Fischl Sub DPS Weapon Rankings
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: "Collapsed Lisa's Sub DPS & Support section together. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Removed the star from Sucrose Sub DPS section, revamped Sucrose's role
+      from Sub DPS to DPS, updated talent priorities
+    appliedBy: Loli, 2ri
+  - date: September 5, 2021
+    changes: Updated Venti artifacts
+    appliedBy: tyler_bot
+  - date: September 5, 2021
+    changes: Updated Mona's artifact, mainstats priority, notes and ability tip
+      sections.
+    appliedBy: 2ri, Folie
+  - date: September 5, 2021
+    changes: "Added a Sub DPS Section for Lisa + Added a link to KQM's Lisa Analysis. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: "Added link to Mona Library  "
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Shifted Prototype Rancour placements for Bennett Support + Notes
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Keqing and Jean notes - reduce clutter
+    appliedBy: Adeptus
+  - date: September 5, 2021
+    changes: Updated ZL notes Page
+    appliedBy: Luosen
+  - date: September 5, 2021
+    changes: Updated numerous notes pages to remove clutter
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Updated Jean mainstat, substat choices, and weapon choices
+    appliedBy: tyler_bot, Folie
+  - date: September 5, 2021
+    changes: Updated subdps Fischl mainstat choices
+    appliedBy: tyler_bot, Folie
+  - date: September 5, 2021
+    changes: Updated Venti mainstat choices
+    appliedBy: tyler_bot, Folie
+  - date: September 5, 2021
+    changes: Updated Amber support weapon rankings
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Added Pale Flame(4) to Zhongli main DPS
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Fischl DPS weapon rankings and DPS notes
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: "Updated Kaeya Cryo DPS's weapon priority, skill priority, and artifact
+      priority. Added notes with regards to these changes. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: []
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Updated Jean's stat choices
+    appliedBy: tyler_bot
+  - date: September 5, 2021
+    changes: Added Kaeya Physical DPS section and updated weapon recommendations
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Fischl Notes
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Fischl DPS Weapons
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Zhongli's support notes to include shieldbot
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Updated Diona's weapon recommendations and notes
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Added pale flame as a side option to 2glad 2bloodstained for zhong dps
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Removed yucky comments on debate club (level 70 stuff)
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Added Recurve Bow to Diona section, and removed The Stringless + Notes
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Physical Rosaria's Artifacts
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: "Updated Yanfei's Notes - Weapon and Artifact Set Priority. "
+    appliedBy: "[Creed], Folie, LarryTheCableGuy"
+  - date: September 5, 2021
+    changes: Updated Ganyu Section
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated wording on Ganyu DPS notes
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Added Lavawalkers to Klee section
+    appliedBy: Tyler_Bot
+  - date: September 5, 2021
+    changes: Updated Venti Sub DPS Weapon order
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Added link to a library detailing keqing's attack rotations
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Removed 4✩ER based weapons from Physical Keqing.
+    appliedBy: LarryTheCableGuy, [Creed], Enku
+  - date: September 5, 2021
+    changes: Updated Yanfei notes and ability tips to include optimal attack
+      rotation + changed some wording
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Updated Xingqiu ability tips to include updated link to Xingqiu
+      handbook due to feedback survey
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Updated Noelle DPS notes due to feedback survey
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Edited Fischl Notes
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added Tenacity of the Millelith (4) as a recommended artifact set for
+      support Xinyan and Qiqi, added additional notes to explain how to increase
+      their support effectiveness.
+    appliedBy: KamijouKid
+  - date: September 5, 2021
+    changes: Adjusted Klee's weapon priority rankings for DPS + Adjusted Yanfei's
+      weapon priority rankings for DPS
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: "Added an additional note in Ningguang's Sub-DPS section to clarify her
+      weapon priority rankings. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Added a few recommended artifact sets for Yanfei
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: "Added Noblesse Oblige (4) as a recommended artifact set for Qiqi
+      Support. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: "Added Viridiscent Venerer (2) and Gladiator's Finale (2) as a
+      recommended artifact set for Venti. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: "Fixed an error with Zhongli's Aritfact Priority + Reformatted
+      Zhongli's Artifact Prio. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Added Tenacity of the Millelith to Zhongli Sub DPS + Notes
+    appliedBy: LarryTheCableGuy, Loli
+  - date: September 5, 2021
+    changes: Revamped Physical Keqing Artifacts + Notes
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: "Added Pale Flame/BSC to Xinyan DPS "
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added Pale Flame/Tenacity of the Millelith sets
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Updated Albedo Sub DPS Artifact order
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Added Tenacity of the Millelith (4) to Albedo's Sub DPS artifact options
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Added Yanfei to Pyro sheet
+    appliedBy: Potaaato, Folie
+  - date: September 5, 2021
+    changes: Added 2 Crimson 2 Noblesse to Klee's artifact options
+    appliedBy: Tyler_Bot
+  - date: September 5, 2021
+    changes: "Added an additional note under Albedo's Talent Priority as a DPS. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Added Rainslasher to Diluc + Notes
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added Black Tassel to Zhongli Sub-DPS
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added Deathmatch to Xiangling Sub-DPS
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added Thundersoother(4) to Fischl Sub-DPS + Notes.
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Swapped rankings of Blackcliff and Deathmatch in Xiao DPS list
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Added Summit Shaper to Albedo Sub DPS Section.
+    appliedBy: Adeptus
+  - date: September 5, 2021
+    changes: Moved Deathmatch above Skyward Spine and Favonius Spear for Zhongli
+      Support and modified notes accordingly.
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: "Added notes to Albedo's Sub DPS section. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Revamped Ningguang's Sub DPS/Nuke Weapon Rankings + Notes.
+    appliedBy: LarryTheCableGuy, Miss Ahri
+  - date: September 5, 2021
+    changes: Added Harbringer of Dawn to Xingqiu's Sub DPS Weapon Options + notes.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Updated Xiao mainstat choices + notes.
+    appliedBy: LarryTheCableGuy, Judgement
+  - date: September 5, 2021
+    changes: Removed Energy Recharge mainstat recommendation from Xiao
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: "Added Eye of Perception to DPS Lisa weapon rankings "
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added Tenacity of the Millelith and Pale Flame to artifact sheet
+    appliedBy: Potaaato
+  - date: September 5, 2021
+    changes: Updated Diona talent priority + notes
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Ganyu Notes
+    appliedBy: Adeptus
+  - date: September 5, 2021
+    changes: Added Lion's Roar to Support Jean
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Support Sucrose notes
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: "Updated weapon rankings for Phys DPS Rosaria + Notes "
+    appliedBy: LarryTheCableGuy, Judgement, Folie
+  - date: September 5, 2021
+    changes: Updated weapon rankings for Cryo DPS Rosaria + Notes
+    appliedBy: LarryTheCableGuy, Judgement
+  - date: September 5, 2021
+    changes: Added elemental mastery to substat priority for Sub DPS Rosaria + notes
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Fixed Rosaria font standardisation and added link to reverse melt
+      tricks in Sub DPS
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Added Alley Hunter to bow sheet
+    appliedBy: Potaaato
+  - date: September 5, 2021
+    changes: Added Windblume Ode to sub DPS/Nuke Childe
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added notes regarding physical and sub DPS Rosaria
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Diluc notes regarding Serpent Spine R5
+    appliedBy: Luosen
+  - date: September 5, 2021
+    changes: Added notes and weapon order to Rosaria dps
+    appliedBy: Luosen
+  - date: September 5, 2021
+    changes: "Added Alley Hunter to Childe Sub DPS "
+    appliedBy: LarryTheCableGuy, Ascarotte, Adeptus
+  - date: September 5, 2021
+    changes: "Updated Fischl Sub DPS's weapon priority. "
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Childe Notes.
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: "Updated Fischl Sub DPS's weapon priority. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Added Alley Hunter to Fischl Sub DPS
+    appliedBy: Tyler_Bot
+  - date: September 5, 2021
+    changes: Added Alley Hunter to Venti Sub DPS
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Updated Hu Tao Notes
+    appliedBy: Adeptus
+  - date: September 5, 2021
+    changes: Added Skyward Blade as an option for Kaeya Sub-DPS and revamped Kaeya's
+      overall weapon recommendations. An additional footnote was added to
+      Kaeya's Sub-DPS weapon recs to avoid confusion.
+    appliedBy: "[Creed], Ascarotte, LarryTheCableGuy"
+  - date: September 5, 2021
+    changes: "Removed Cold Steel and Fillet Blade as 3-star options for Kaeya
+      Sub-DPS and replaced it with Harbringer of Dawn. "
+    appliedBy: "[Creed], Ascarotte, LarryTheCableGuy"
+  - date: September 5, 2021
+    changes: "Adjusted Mona Sub-DPS/Nuke's weapon priority and added Solar Pearl. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Added notes regarding ATK goblet with Serpent Spine on Razor.
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added notes regarding mainstat choices for Diona
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: "Revamped Geo MC's weapon priority for both Main DPS and Sub DPS/Nuke
+      Build, updated Geo MC's artifact priority for both set-ups. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Added Hu Tao DPS notes in regards to Retracing Bolide
+    appliedBy: Adeptus
+  - date: September 5, 2021
+    changes: Added Retracing Bolide to Hu Tao Artifact Recommendations
+    appliedBy: Adeptus
+  - date: September 5, 2021
+    changes: "Added Festering Desire to Qiqi Support's weapon prio. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: "Updated the weapon prio of Chongyun support and added an additional
+      note. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: "Updated Kaeya DPS's artifact priority and added an additional footnote
+      for his weapon prio. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: >
+      Updated weapon priority for Jean Support, editted formatting/numbering of
+      Jean's weapon prio and added Primordial Jade Cutter.
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Updated notes for Zhongli Sub DPS/Nuke and added Lithic Spear.
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Swapped favonius and elegy for diona
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Changed some Arti prio for Nuke Childe, editted formatting for Jean.
+    appliedBy: Twofu
+  - date: September 5, 2021
+    changes: Added a link to a spreadsheet detailing who can hit enemies sucked and
+      ragdolled into Venti's burst.
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Added another link to a Noelle overview video in her DPS ability tips
+      and moved the original video link to DPS notes.
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Updated Chongyun notes and weapon recommendation order
+    appliedBy: Ascarotte
+  - date: September 5, 2021
+    changes: Updated artifact set recommendations for Amber
+    appliedBy: "[Creed], LarryTheCableGuy"
+  - date: September 5, 2021
+    changes: Updated notes, artifacts and talent priority recommendations for Diluc
+    appliedBy: "[Creed], LarryTheCableGuy"
+  - date: September 5, 2021
+    changes: []
+    appliedBy: "[Creed], LarryTheCableGuy"
+  - date: September 5, 2021
+    changes: Updated Xingqiu's Sub DPS weapon priority/order
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Added Ability Tips to Venti on VV's effects.
+    appliedBy: LarryTheCableGuy
+  - date: September 5, 2021
+    changes: Updated Diona artifacts
+    appliedBy: Tyler_Bot
+  - date: September 5, 2021
+    changes: Added Widsith to Sucrose Support, adjusted Thrilling Tales' Priority
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: "Updated Sucrose's Support weapon priority/order + Updated Sucrose's
+      overall notes as a Support. "
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: |-
+      Added Lost Prayer to the Sacred Winds to Mona Sub DPS/Nuke
+      Added Skyward Atlas to Mona Sub DPS/Nuke
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: []
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Updated Mona's Sub DPS/Nuke weapon priority/order
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Added elemental mastery as alternatives to ATK/ER Sands for Amber
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: Added elemental mastery as alternatives to ATK/ER Sands for Xiangling
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: |-
+      Updated Xiangling's Sub DPS weapon priority/order
+      Added Staff of Homa and Primordial Jade Winged-Spear to Xiangling Sub DPS
+      Updated Xiangling's overall class notes/description
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: []
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: []
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: []
+    appliedBy: "[Creed]"
+  - date: September 5, 2021
+    changes: >-
+      Updated Ningguang weapon priorities and updated Skill Notes + Overall
+      Class Notes. 
+
+      Homing fix didn't fix the EB issue of one Star Gem hitting the ground before it can home in.
+    appliedBy: Ahri
+  - date: September 5, 2021
+    changes: Added elemental mastery as alternatives to ATK/hp sands for hutao klee
+      and diluc
+    appliedBy: Luosen
+  - date: September 5, 2021
+    changes: Updated Klee DPS weapon order
+    appliedBy: Luosen
+  - date: September 5, 2021
+    changes: Updated Jean Support Artifact Set and Notes
+    appliedBy: Adeptus
+  - date: September 5, 2021
+    changes: Updated Fischl support notes and weapon order
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Updated Venti's Sub DPS weapon order
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Added Windblume Ode to Venti Sub DPS
+    appliedBy: Loli
+  - date: September 5, 2021
+    changes: Added Windblume Ode to Bow sheet
+    appliedBy: Potaaato
+  - date: September 5, 2021
+    changes: Added The Alley Flash and Wine and Song to sword and catalyst sheet
+    appliedBy: Potaaato
+  - date: September 5, 2021
+    changes: Reordered Venti's weapons and further added to his notes
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Updated Geo Traveler's weapon order for both builds
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Added Elegy for the End to Amber, Venti, Fischl and Diona
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Updated Childe Build Guide
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added Alley Flash to Bennett (support) build and changed weapon order
+    appliedBy: Luosen
+  - date: September 5, 2021
+    changes: Added Elegy for the End to Venti notes
+    appliedBy: Luosen
+  - date: September 5, 2021
+    changes: Added Elegy for the End to Bows sheet
+    appliedBy: Potaaato
+  - date: September 5, 2021
+    changes: Changes Venti's notes to include ability to swirl 7 times
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Added Rainslasher to Claymore sheet
+    appliedBy: Potaaato
+  - date: September 5, 2021
+    changes: Added Burst stat prioritization to Support Bennett build
+    appliedBy: Folie
+  - date: September 5, 2021
+    changes: Added link to KeqingMains Hu Tao guide in ability tips for Hu Tao
+    appliedBy: Shiro
+  - date: September 5, 2021
+    changes: Updated Diluc notes
+    appliedBy: Luosen
+  - date: September 5, 2021
+    changes: Added Hu Tao Ability tips
+    appliedBy: Adeptus
+  - date: September 5, 2021
+    changes: Added Hu Tao DPS Weapon, Artifact - Main/Sub Stat Recommendation,
+      Talent Prioritization and Notes
+    appliedBy: Adeptus, Luosen & Potaaato
+  - date: September 5, 2021
+    changes: Overhaul of Beidou's weapon order, artifact order, talent order and
+      ability tips. Added Physical DPS and Electro DPS
+    appliedBy: Shiro
+  - date: Februrary 25, 2021
+    changes: Updated Amber DPS weapon order
+    appliedBy: Folie
+  - date: Februrary 25, 2021
+    changes: Updated Xiao weapon order
+    appliedBy: Luosen
+  - date: Februrary 23, 2021
+    changes: Added Staff of Homa, Lithic Spear, and Lithic Blade to weapon sheets
+    appliedBy: Potaaato
+  - date: Februrary 23, 2021
+    changes: "Added Staff of Homa to Xiao DPS and Zhongli "
+    appliedBy: Luosen
+  - date: Februrary 23, 2021
+    changes: Added Lithic Spear to Xiao DPS
+    appliedBy: Luosen
+  - date: Februrary 23, 2021
+    changes: Added Lithic Blade to Diluc DPS and Xinyan DPS
+    appliedBy: Luosen
+  - date: Februrary 21, 2021
+    changes: Updated Ningguang Sub DPS Talent Priority
+    appliedBy: Loli
+  - date: Februrary 21, 2021
+    changes: Updated Ningguang Sub DPS Ability Tips
+    appliedBy: Loli
+  - date: Februrary 21, 2021
+    changes: Swapped star from Xiangling DPS to sub DPS
+    appliedBy: Shiro
+  - date: Februrary 18, 2021
+    changes: Updated venti sub dps weapon order and notes
+    appliedBy: Luosen
+  - date: Februrary 18, 2021
+    changes: Updated Razor DPS weapon order and notes
+    appliedBy: Luosen
+  - date: Februrary 18, 2021
+    changes: Updated Xiao notes
+    appliedBy: KamijouKid
+  - date: Februrary 18, 2021
+    changes: Updated Keqing Quickswap weapon order
+    appliedBy: Enku
+  - date: Februrary 18, 2021
+    changes: Updated Xiangling Support weapon order
+    appliedBy: Luosen
+  - date: Februrary 18, 2021
+    changes: Updated Diluc DPS weapon priority
+    appliedBy: Shiro
+  - date: Februrary 18, 2021
+    changes: Updated Noelle DPS with weapon overhaul and updated notes.
+    appliedBy: Shiro
+  - date: Februrary 12, 2021
+    changes: Added heart of depth and retracing bolide to Ganyu DPS build and
+      updated notes
+    appliedBy: Luosen
+  - date: Februrary 9, 2021
+    changes: Updated Fischl support notes and added details for clarity
+    appliedBy: Ahri
+  - date: Februrary 7, 2021
+    changes: Added Primordial Jade Cutter to Geo MC DPS and Sub DPS
+    appliedBy: Adeptus
+  - date: Februrary 7, 2021
+    changes: Added Eye of Perception to Mona DPS
+    appliedBy: Shiro
+  - date: Februrary 7, 2021
+    changes: Updated Albedo notes
+    appliedBy: Luosen
+  - date: Februrary 6, 2021
+    changes: Updated Xiao ability tips
+    appliedBy: Luosen
+  - date: Februrary 4, 2021
+    changes: Added Primordial Jade Cutter to sword section
+    appliedBy: Potaaato
+  - date: Februrary 4, 2021
+    changes: Updated Keqing weapons for physical and electro (Quickswap and
+      Sustained) builds
+    appliedBy: Enku
+  - date: Februrary 3, 2021
+    changes: Updated Ganyu dps notes
+    appliedBy: Adeptus
+  - date: Februrary 3, 2021
+    changes: Added Primordial Jade Cutter to all the builds
+    appliedBy: Luosen
+  - date: Februrary 3, 2021
+    changes: Added Xiao build
+    appliedBy: Luosen
+  - date: Februrary 2, 2021
+    changes: Removed Diona DPS build
+    appliedBy: Luosen
+  - date: Februrary 1, 2021
+    changes: Updated Chongyun subdps/nuke artifact orders, description, talent
+      order, and main stats rec.
+    appliedBy: Luosen
+  - date: Februrary 1, 2021
+    changes: Removed wanderer's troupe 4pc from venti's artifact list
+    appliedBy: Luosen
+  - date: Februrary 1, 2021
+    changes: Updated many character's roles. The term "support" is often confusing
+      and misleading.
+    appliedBy: Luosen
+  - date: Februrary 1, 2021
+    changes: Added festering desire to traveler anemo support
+    appliedBy: Luosen
+  - date: Februrary 1, 2021
+    changes: Updated klee, jean (dps), chongyun and albedo (dps) weapon order
+    appliedBy: Luosen
+  - date: Februrary 1, 2021
+    changes: Added blackcliff weapons to many characters
+    appliedBy: Luosen
+  - date: Februrary 1, 2021
+    changes: Updated Venti dps artifact order
+    appliedBy: Luosen
+  - date: Februrary 1, 2021
+    changes: Swapped Archaic and Rainslasher for Beidou Sub DPS
+    appliedBy: Shiro
+  - date: Februrary 1, 2021
+    changes: Added Whiteblind to Claymore sheet
+    appliedBy: Potaaato
+  - date: Februrary 1, 2021
+    changes: Removed all Team comp maker related sheets
+    appliedBy: Potaaato
+  - date: Februrary 1, 2021
+    changes: Updated weapon sheets to be categorized by weapon type
+    appliedBy: Potaaato
+  - date: Februrary 1, 2021
+    changes: Removed 3/4/5 star weapon sheets
+    appliedBy: Potaaato
+  - date: Februrary 1, 2021
+    changes: Updated Noelle DPS main stat priorities for sands
+    appliedBy: Shiro
+  - date: Februrary 1, 2021
+    changes: Updated Ganyu notes
+    appliedBy: Luosen
+  - date: Februrary 1, 2021
+    changes: Added Theorycrafting Library links to Razor and Childe's ability tips
+    appliedBy: Shiro
+  - date: Februrary 1, 2021
+    changes: Updated Traveler (both) DPS sections to reorder Sword of Descension
+    appliedBy: Shiro
+  - date: Februrary 1, 2021
+    changes: Added Primordial Winged Jade Spear to 5 star weapon sheet
+    appliedBy: Potaaato
+  - date: Februrary 1, 2021
+    changes: Updated Noelle DPS to include new tips in notes section for C6
+    appliedBy: Shiro
+  - date: Februrary 1, 2021
+    changes: Added Ganyu DPS and Support Ability tips
+    appliedBy: Aidan
+  - date: Februrary 1, 2021
+    changes: Added Ganyu Support Notes
+    appliedBy: Aidan
+  - date: Februrary 1, 2021
+    changes: Added Ganyu DPS Notes
+    appliedBy: Adeptus
+  - date: Februrary 1, 2021
+    changes: Added Ganyu Support Artifacts, Weapons, and Artifact stats priority -
+      Changed BiS to Harp
+    appliedBy: Adeptus
+  - date: Februrary 1, 2021
+    changes: Marked Ganyu's recommended role as DPS
+    appliedBy: Gian
+  - date: Februrary 1, 2021
+    changes: Updated several casing and typographical errors; realigned the ROLE
+      with the NOTES ROLE description.
+    appliedBy: Gian
+  - date: Februrary 1, 2021
+    changes: Added Ganyu DPS Artifact Sets
+    appliedBy: |-
+      Adeptus &
+      Aidan
+  - date: Februrary 1, 2021
+    changes: Added Talent Priority and Artifact Stats Priority
+    appliedBy: |-
+      Adeptus &
+      Aidan
+  - date: Februrary 1, 2021
+    changes: Added 2 Glad + 2 BSC on Jean DPS
+    appliedBy: Shiro
+  - date: Februrary 1, 2021
+    changes: Added Ganyu DPS Weapon recommendations
+    appliedBy: Adeptus
+  - date: Februrary 1, 2021
+    changes: Added Memory of Dust to Several Catalyst characters' weapon recommendations
+    appliedBy: Adeptus
+  - date: Februrary 1, 2021
+    changes: Updated Talent Priority format - streamlined text
+    appliedBy: Genshin Helper Team
+  - date: Februrary 1, 2021
+    changes: Updated Stat Priority for all characters - now Main Stat / Sub Stat
+    appliedBy: Genshin Helper Team
+  - date: Februrary 1, 2021
+    changes: Updated numerous characters Stat Priority orders
+    appliedBy: Shiro
+  - date: Februrary 1, 2021
+    changes: Updated Xiangling Support late game stat priority, changed "SUPPORT" to
+      "SUB DPS"
+    appliedBy: Shiro
+  - date: Februrary 1, 2021
+    changes: Changed Venti Support tag to DPS/under-invested, changed notes.
+    appliedBy: Luosen
+  - date: Februrary 1, 2021
+    changes: Updated Jean Support weapon order and notes
+    appliedBy: Luosen
+  - date: Februrary 1, 2021
+    changes: Updated Childe's Support section to BURST DPS/Nuke section, added all info
+    appliedBy: Shiro
+  - date: Februrary 1, 2021
+    changes: Updated Overview tab with Title tab.
+    appliedBy: Uero-Ro
+  - date: Februrary 1, 2021
+    changes: Reordered Venti talent order and Diona's stat priority
+    appliedBy: Shiro
+  - date: Februrary 1, 2021
+    changes: "Updated some minimal typographical errors with the mnemonics of
+      Constellations [C] and Refinements [R] "
+    appliedBy: Gian
+  - date: Februrary 1, 2021
+    changes: Added Festering Desire on Bennett DPS
+    appliedBy: Adeptus
+  - date: Februrary 1, 2021
+    changes: Updated Mona DPS Artifacts and Notes
+    appliedBy: Adeptus
+  - date: Februrary 1, 2021
+    changes: Updated Artifact format for each character
+    appliedBy: Adeptus
+  - date: Februrary 1, 2021
+    changes: Updated Xingqiu artifacts
+    appliedBy: Luosen
+  - date: Februrary 1, 2021
+    changes: Removed weapon comparison sheet and database
+    appliedBy: Potaaato
