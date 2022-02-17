@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { promises as fs } from 'fs'
-import { extractBuilds } from '#lib/parsing/helperteam/index.js'
+import { buildsConvertLangMode, extractBuilds } from '#lib/parsing/helperteam/index.js'
 import { loadSpreadsheetCached } from '#lib/google.js'
 import { json_getText } from '#lib/parsing/helperteam/json.js'
 import {
@@ -44,6 +44,8 @@ import {
 	WWW_DYNAMIC_DIR,
 	WWW_MEDIA_DIR,
 	WWW_API_FILE,
+	TRANSLATED_DATA_DIR,
+	loadTranslatedBuilds,
 } from './_common.js'
 import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
 import {
@@ -460,7 +462,6 @@ async function checkUsedItemsLocations() {
 async function saveWwwData() {
 	info('updating www JSONs', { newline: false })
 
-	const builds = await loadBuilds()
 	const characters = await loadCharacters()
 	const enemies = await loadEnemies()
 	const artifacts = await loadArtifacts()
@@ -468,6 +469,20 @@ async function saveWwwData() {
 	const domains = await loadDomains()
 	const items = await loadItems()
 	const enemyGroups = await loadEnemyGroups()
+
+	const builds = await (async () => {
+		if (await exists(TRANSLATED_DATA_DIR)) {
+			return {
+				...(await loadTranslatedBuilds()),
+				changelogsTable: (await loadBuilds()).changelogsTable,
+			}
+		} else {
+			warn('data/translations not exists, using parsed english version')
+			return buildsConvertLangMode(await loadBuilds(), 'multilang', en =>
+				en === null ? {} : Object.fromEntries(LANGS.map(lang => [lang, en])),
+			)
+		}
+	})()
 
 	excludeDomainBosses(enemies, domains)
 

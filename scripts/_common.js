@@ -1,7 +1,7 @@
 import yaml from 'yaml'
 import { promises as fs } from 'fs'
 import { fileURLToPath } from 'url'
-import { dirname } from 'path/posix'
+import { dirname } from 'path'
 import { stringifyString, YAMLError } from 'yaml/util'
 import { GI_MAP_CODES } from '#lib/genshin.js'
 import { error } from '#lib/utils/logs.js'
@@ -73,30 +73,48 @@ export function stringifyYaml(data) {
 }
 
 const yamlCache = new Map()
-/**
- * @template T
- * @param {string} fname
- * @param {T} data
- */
-async function saveGeneratedYaml(fname, data) {
-	yamlCache.set(fname, data)
-	await fs.mkdir(`${GENERATED_DATA_DIR}`, { recursive: true })
-	await fs.writeFile(`${GENERATED_DATA_DIR}/${fname}.yaml`, stringifyYaml(data))
+/** @param {string} fpath */
+async function saveYaml(fpath, data) {
+	yamlCache.set(fpath, data)
+	await fs.mkdir(dirname(fpath), { recursive: true })
+	await fs.writeFile(fpath, stringifyYaml(data))
 }
-/**
- * @template T
- * @param {string} fname
- * @returns {Promise<T>}
- */
-async function loadGeneratedYaml(fname) {
-	if (yamlCache.has(fname)) return yamlCache.get(fname)
-	return parseYaml(await fs.readFile(`${GENERATED_DATA_DIR}/${fname}.yaml`, 'utf-8'))
+/** @param {string} fpath */
+async function loadYaml(fpath) {
+	if (yamlCache.has(fpath)) return yamlCache.get(fpath)
+	return parseYaml(await fs.readFile(fpath, 'utf-8'))
 }
+/** @param {string} fname */
+const saveGeneratedYaml = (fname, data) => saveYaml(`${GENERATED_DATA_DIR}/${fname}.yaml`, data)
+/** @param {string} fname */
+const loadGeneratedYaml = fname => loadYaml(`${GENERATED_DATA_DIR}/${fname}.yaml`)
 
 /** @param {import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>} builds */
 export const saveBuilds = builds => saveGeneratedYaml('builds', builds)
 /** @returns {Promise<import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>>} */
 export const loadBuilds = () => loadGeneratedYaml('builds')
+
+/** @param {import('#lib/parsing/helperteam/types').BuildInfo<'multilang'>} builds */
+export async function saveTranslatedBuilds(builds) {
+	const dirpath = `${TRANSLATED_DATA_DIR}/builds`
+	await fs.mkdir(`${dirpath}/characters`, { recursive: true })
+	for (const character of builds.characters)
+		await fs.writeFile(`${dirpath}/characters/${character.code}.yaml`, stringifyYaml(character))
+	await fs.writeFile(`${dirpath}/artifacts.yaml`, stringifyYaml(builds.artifacts))
+	await fs.writeFile(`${dirpath}/weapons.yaml`, stringifyYaml(builds.weapons))
+}
+/** @returns {Promise<import('#lib/parsing/helperteam/types').BuildInfo<'multilang'>>} */
+export async function loadTranslatedBuilds() {
+	const dirpath = `${TRANSLATED_DATA_DIR}/builds`
+	return {
+		characters: await Promise.all(
+			(await fs.readdir(`${dirpath}/characters`)).map(x => loadYaml(`${dirpath}/characters/${x}`)),
+		),
+		artifacts: await loadYaml(`${dirpath}/artifacts.yaml`),
+		weapons: await loadYaml(`${dirpath}/weapons.yaml`),
+		changelogsTable: { rows: [] },
+	}
+}
 
 /** @param {import('#lib/parsing').Code2CharacterData} characters */
 export const saveCharacters = characters => saveGeneratedYaml('characters', characters)

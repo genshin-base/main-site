@@ -3,20 +3,13 @@ import { promises as fs } from 'fs'
 import { loadSpreadsheet, updateSpreadsheet } from '#lib/google.js'
 import { json_extractText, json_getText, json_packText } from '#lib/parsing/helperteam/json.js'
 import { error, info, warn } from '#lib/utils/logs.js'
-import {
-	BASE_DIR,
-	CACHE_DIR,
-	GENERATED_DATA_DIR,
-	parseYaml,
-	stringifyYaml,
-	TRANSLATED_DATA_DIR,
-} from './_common.js'
+import { BASE_DIR, CACHE_DIR, GENERATED_DATA_DIR, parseYaml, saveTranslatedBuilds } from './_common.js'
 import { parseArgs, relativeToCwd } from '#lib/utils/os.js'
 import { mustBeNotNull } from '#lib/utils/values.js'
 import { buildsConvertLangMode } from '#lib/parsing/helperteam/index.js'
 
-const DOC_ID = '1i5KQPYepEm1a6Gu56vN6Ixprb892zixNbrFcrIB39Bc' //test
-// const DOC_ID = '1UA7RwCWBG_Nyp78sQuM7XTj6mNVG_Rv-uafMB2k37Pc'
+// const DOC_ID = '1i5KQPYepEm1a6Gu56vN6Ixprb892zixNbrFcrIB39Bc' //test
+const DOC_ID = '1UA7RwCWBG_Nyp78sQuM7XTj6mNVG_Rv-uafMB2k37Pc'
 
 const args = parseArgs()
 const needHelp = args['--help'] || args['-h']
@@ -167,12 +160,11 @@ async function upload() {
 async function download() {
 	if (needHelp) {
 		console.log(`Usage:
-  ${thisScript} download --langs=en,ru [--base=generated-builds.yaml] [--out=output-dir] [-h|--help]`)
+  ${thisScript} download --langs=en,ru [--base=generated-builds.yaml] [-h|--help]`)
 		process.exit(2)
 	}
 
 	const baseFPath = args['--base'] ?? `${GENERATED_DATA_DIR}/builds.yaml`
-	const outDirPath = args['--out'] ?? TRANSLATED_DATA_DIR
 	const langs = args['--langs']
 		.split(',')
 		.map(x => x.trim().toLocaleLowerCase())
@@ -300,11 +292,7 @@ async function download() {
 	}
 
 	info(`saving...`)
-	await fs.mkdir(`${outDirPath}/characters`, { recursive: true })
-	for (const character of langBuilds.characters)
-		await fs.writeFile(`${outDirPath}/characters/${character.code}.yaml`, stringifyYaml(character))
-	await fs.writeFile(`${outDirPath}/artifacts.yaml`, stringifyYaml(langBuilds.artifacts))
-	await fs.writeFile(`${outDirPath}/weapons.yaml`, stringifyYaml(langBuilds.weapons))
+	await saveTranslatedBuilds(langBuilds)
 
 	info(`done.`)
 }
