@@ -8,7 +8,7 @@ import type {
 	MaterialsTimetableWithRelated,
 	WeaponsFullInfoWithRelated,
 } from '#lib/parsing/combine'
-import type { ChangelogsTable } from '#lib/parsing/helperteam/changelogs'
+import type { ChangelogsTable } from '#lib/parsing/helperteam/types'
 
 const get = <T>(prefix: string, signal: AbortSignal) =>
 	apiGetJSONFile(`generated/${prefix}.json?v=${GENERATED_DATA_HASH}`, signal) as Promise<T>

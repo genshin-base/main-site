@@ -2,7 +2,7 @@ import { useMemo, useState } from 'preact/hooks'
 
 import { useBuildWithDelayedLocs } from '#src/api'
 import { getAllRelated } from '#src/api/utils'
-import { Spinner, CentredSpinner } from '#src/components/spinners'
+import { CentredSpinner, Spinner } from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { FavoriteCharacters } from '#src/containers/character-picker/favorite-characters'
 import { OtherItemCardDetailDd } from '#src/containers/item-cards/dd-cards'
@@ -15,8 +15,8 @@ import {
 	BuildRoleOrDummy,
 	CIRCLET_GOBLET_SANDS,
 	DUMMY_ROLES,
-	genArtMainStatDetail,
 	genArtifactAdvice,
+	genArtMainStatDetail,
 	genSimpleList,
 	getRoleData,
 	makeRoleTitle,
@@ -45,17 +45,16 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 						</li>
 					)
 				})}
-				{/* //todo href */}
 				{role.artifacts.sets.length > listTimit ? (
 					<li className="pt-1 text-muted">
-						<A className="link-secondary text-muted" href="/builds">
+						<A className="link-secondary text-muted" href={`/builds/` + characterCode}>
 							more on build page
 						</A>
 					</li>
 				) : null}
 			</ol>
 		)
-	}, [build, selectedRoleTab])
+	}, [characterCode, build, selectedRoleTab])
 
 	const artifactMainStatsBlock = useMemo(() => {
 		if (!isLoaded(build)) return null
@@ -183,9 +182,10 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 						</a>
 					</div>
 					<div className="col-6">
-						<a type="button" className="btn btn-link btn-sm w-100">
+						{/* TODO */}
+						{/* <a type="button" className="btn btn-link btn-sm w-100">
 							Character lore
-						</a>
+						</a> */}
 					</div>
 				</div>
 			</div>
