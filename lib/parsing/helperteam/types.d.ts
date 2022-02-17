@@ -1,5 +1,4 @@
 import type { GI_ElementCode, GI_WeaponTypeCode } from '#lib/genshin'
-import type { ChangelogsTable } from './changelogs'
 import type { CompactTextParagraphs } from './text'
 
 // === Common ===
@@ -87,11 +86,16 @@ type CharacterBuildInfo<T extends LangMode> = {
 	credits: LangsIf<T, CompactTextParagraphs | null>
 }
 
+// === Changelogs ===
+
+type ChangelogsTable = {
+	rows: { date: string; changes: CompactTextParagraphs; appliedBy: string }[]
+}
+
 // === Builds ===
 
 type BuildInfo<T extends LangMode> = {
 	characters: CharacterBuildInfo<T>[]
 	artifacts: ArtifactInfo<T>[]
 	weapons: WeaponInfo<T>[]
-	changelogsTable: ChangelogsTable
 }

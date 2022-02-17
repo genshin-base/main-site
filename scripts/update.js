@@ -46,6 +46,8 @@ import {
 	WWW_API_FILE,
 	TRANSLATED_DATA_DIR,
 	loadTranslatedBuilds,
+	loadBuildChangelogs,
+	saveBuildChangelogs,
 } from './_common.js'
 import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
 import {
@@ -279,11 +281,12 @@ async function extractAndSaveBuildsData() {
 	progress()
 
 	clearHelperteamFixesUsage(fixes.helperteam)
-	const build = await extractBuilds(spreadsheet, knownCodes, fixes.helperteam)
+	const { builds, changelogs } = await extractBuilds(spreadsheet, knownCodes, fixes.helperteam)
 	checkHelperteamFixesUsage(fixes.helperteam)
 
 	await fs.mkdir(DATA_DIR, { recursive: true })
-	await saveBuilds(build)
+	await saveBuilds(builds)
+	await saveBuildChangelogs(changelogs)
 	progress()
 }
 
@@ -472,10 +475,7 @@ async function saveWwwData() {
 
 	const builds = await (async () => {
 		if (await exists(TRANSLATED_DATA_DIR)) {
-			return {
-				...(await loadTranslatedBuilds()),
-				changelogsTable: (await loadBuilds()).changelogsTable,
-			}
+			return await loadTranslatedBuilds()
 		} else {
 			warn('data/translations not exists, using parsed english version')
 			return buildsConvertLangMode(await loadBuilds(), 'multilang', en =>
@@ -483,6 +483,7 @@ async function saveWwwData() {
 			)
 		}
 	})()
+	const buildChangelogs = await loadBuildChangelogs()
 
 	excludeDomainBosses(enemies, domains)
 
@@ -524,11 +525,8 @@ async function saveWwwData() {
 		progress()
 	}
 
-	await writeJson(`${WWW_DYNAMIC_DIR}/changelogs.json`, builds.changelogsTable)
-	await writeJson(
-		`${WWW_DYNAMIC_DIR}/changelogs-recent.json`,
-		makeRecentChangelogsTable(builds.changelogsTable),
-	)
+	await writeJson(`${WWW_DYNAMIC_DIR}/changelogs.json`, buildChangelogs)
+	await writeJson(`${WWW_DYNAMIC_DIR}/changelogs-recent.json`, makeRecentChangelogsTable(buildChangelogs))
 
 	const hash = md5sum.digest('hex').slice(0, 8)
 	const charactersShortInfo = makeCharacterShortList(builds.characters, characters)

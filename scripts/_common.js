@@ -94,6 +94,11 @@ export const saveBuilds = builds => saveGeneratedYaml('builds', builds)
 /** @returns {Promise<import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>>} */
 export const loadBuilds = () => loadGeneratedYaml('builds')
 
+/** @param {import('#lib/parsing/helperteam/types').ChangelogsTable} builds */
+export const saveBuildChangelogs = builds => saveGeneratedYaml('build_changelogs', builds)
+/** @returns {Promise<import('#lib/parsing/helperteam/types').ChangelogsTable>} */
+export const loadBuildChangelogs = () => loadGeneratedYaml('build_changelogs')
+
 /** @param {import('#lib/parsing/helperteam/types').BuildInfo<'multilang'>} builds */
 export async function saveTranslatedBuilds(builds) {
 	const dirpath = `${TRANSLATED_DATA_DIR}/builds`
@@ -112,7 +117,6 @@ export async function loadTranslatedBuilds() {
 		),
 		artifacts: await loadYaml(`${dirpath}/artifacts.yaml`),
 		weapons: await loadYaml(`${dirpath}/weapons.yaml`),
-		changelogsTable: { rows: [] },
 	}
 }
 
