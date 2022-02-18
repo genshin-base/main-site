@@ -4,6 +4,7 @@ import { GI_DomainTypeCode, GI_MAP_CODES, GI_RarityCode, MapCode, MapLocation } 
 import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
 import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api/utils'
+import { BlockHeader } from '#src/components/block-header'
 import { SimpleSelect } from '#src/components/select'
 import { Spinner } from '#src/components/spinners'
 import { BtnTabGroup, tabTitleFromName, useSelectable } from '#src/components/tabs'
@@ -29,8 +30,6 @@ import { AlchemyCalculator } from '../alchemy-calculator'
 import { ItemAvatar, LabeledItemAvatar } from './item-avatars'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
-import { BlockHeader } from '#src/components/block-header'
-
 const LazyTeyvatMap = import('#src/components/teyvat-map')
 
 export function getRarityBorder(r: GI_RarityCode): string {
@@ -482,15 +481,17 @@ export function WeaponCard({
 						<div className="me-2">
 							<div className="opacity-75">Базовая атака</div>
 							<div className="mb-2">
-								{weapon.mainStat.value1} / {weapon.mainStat.value90}
+								{weapon.atk.base} / {weapon.atk.max}
 							</div>
 						</div>
-						<div>
-							<div className="opacity-75">{weapon.subStat.code} </div>
-							<div className="mb-2">
-								{weapon.subStat.value1} / {weapon.subStat.value90}
+						{weapon.subStat && (
+							<div>
+								<div className="opacity-75">{weapon.subStat.code}</div>
+								<div className="mb-2">
+									{weapon.subStat.base} / {weapon.subStat.max}
+								</div>
 							</div>
-						</div>
+						)}
 					</div>
 					<div className="mb-3">
 						<span className="opacity-75">Пассивная способность</span>

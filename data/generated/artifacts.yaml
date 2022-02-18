@@ -4,231 +4,597 @@ adventurer:
     en: Adventurer
     ru: Искатель приключений
   rarity: 3
+  sets:
+    "2":
+      en: Max HP increased by 1000.
+      ru: Увеличивает макс. HP на 1000 ед.
+    "4":
+      en: Opening a chest regenerates 30% Max HP over 5s.
+      ru: В течение 5 сек. после открытия любого сундука восстанавливает 30% HP.
 archaic-petra:
   code: archaic-petra
   name:
     en: Archaic Petra
     ru: Архаичный камень
   rarity: 5
+  sets:
+    "2":
+      en: Gain a 15% Geo DMG Bonus.
+      ru: Увеличивает бонус Гео урона на 15%.
+    "4":
+      en: Upon obtaining an Elemental Shard created through a Crystallize Reaction,
+        all party members gain a 35% DMG Bonus for that particular element for
+        10s. Only one form of Elemental DMG Bonus can be gained in this manner
+        at any one time.
+      ru: Подобранный элементальный осколок, образованный реакцией Кристалл,
+        увеличивает бонус элементального урона всех членов отряда на 35% в
+        течение 10 сек. Одновременно можно иметь бонус урона только одного
+        элемента.
 berserker:
   code: berserker
   name:
     en: Berserker
     ru: Берсерк
   rarity: 4
+  sets:
+    "2":
+      en: CRIT Rate +12%
+      ru: Увеличивает шанс крит. попадания на 12%.
+    "4":
+      en: When HP is below 70%, CRIT Rate increases by an additional 24%.
+      ru: Увеличивает шанс крит. попадания на 24% при HP ниже 70%.
 blizzard-strayer:
   code: blizzard-strayer
   name:
     en: Blizzard Strayer
     ru: Заблудший в метели
   rarity: 5
+  sets:
+    "2":
+      en: Cryo DMG Bonus +15%
+      ru: Увеличивает бонус Крио урона на 15%.
+    "4":
+      en: When a character attacks an opponent affected by Cryo, their CRIT Rate is
+        increased by 20%. If the opponent is Frozen, CRIT Rate is increased by
+        an additional 20%.
+      ru: Атаки по противникам с эффектом Крио увеличивают шанс крит. попадания на
+        20%. Если противник имеет статус Заморозка, то дополнительно увеличивает
+        шанс крит. попадания на 20%.
 bloodstained-chivalry:
   code: bloodstained-chivalry
   name:
     en: Bloodstained Chivalry
     ru: Рыцарь крови
   rarity: 5
+  sets:
+    "2":
+      en: Physical DMG +25%
+      ru: Увеличивает физ. урон на 25%.
+    "4":
+      en: After defeating an opponent, increases Charged Attack DMG by 50%, and
+        reduces its Stamina cost to 0 for 10s.
+      ru: После победы над противником увеличивает урон заряженной атаки на 50% и
+        обнуляет стоимость выносливости заряженной атаки на 10 сек.
 brave-heart:
   code: brave-heart
   name:
     en: Brave Heart
     ru: Душа храбреца
   rarity: 4
+  sets:
+    "2":
+      en: ATK +18%.
+      ru: Увеличивает силу атаки на 18%.
+    "4":
+      en: Increases DMG by 30% against opponents with more than 50% HP.
+      ru: Увеличивает на 30% урон против врагов с HP выше 50%.
 crimson-witch-of-flames:
   code: crimson-witch-of-flames
   name:
     en: Crimson Witch of Flames
     ru: Горящая алая ведьма
   rarity: 5
+  sets:
+    "2":
+      en: Pyro DMG Bonus +15%
+      ru: Увеличивает бонус Пиро урона на 15%.
+    "4":
+      en: Increases Overloaded and Burning DMG by 40%. Increases Vaporize and Melt DMG
+        by 15%. Using Elemental Skill increases the 2-Piece Set Bonus by 50% of
+        its starting value for 10s. Max 3 stacks.
+      ru: Увеличивает урон статусов Перегрузка и Горение на 40%, а урон статусов Пар и
+        Таяние - на 15%. Использование элементального навыка увеличивает эффекты
+        набора из двух вещей на 50% в течение 10 сек. Может складываться до 3
+        раз.
 defenders-will:
   code: defenders-will
   name:
     en: Defender's Will
     ru: Воля защитника
   rarity: 4
+  sets:
+    "2":
+      en: DEF +30%
+      ru: Увеличивает защиту на 30%.
+    "4":
+      en: For each different element present in your own party, the wearer's Elemental
+        RES to that corresponding element is increased by 30%.
+      ru: За каждого члена вашего отряда с неповторяющимся элементом повышает
+        сопротивление к соответствующему элементу на 30%.
 emblem-of-severed-fate:
   code: emblem-of-severed-fate
   name:
     en: Emblem of Severed Fate
     ru: Эмблема рассечённой судьбы
   rarity: 5
+  sets:
+    "2":
+      en: Energy Recharge +20%
+      ru: Увеличивает скорость восстановления энергии на 20%.
+    "4":
+      en: Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75%
+        bonus DMG can be obtained in this way.
+      ru: Увеличивает урон взрыва стихий на величину, равную 25% от значения
+        восстановления энергии. Эффект можно увеличить максимум до 75%.
 gambler:
   code: gambler
   name:
     en: Gambler
     ru: Азартный игрок
   rarity: 4
+  sets:
+    "2":
+      en: Increases Elemental Skill DMG by 20%.
+      ru: Увеличивает урон элементальных навыков на 20%.
+    "4":
+      en: Defeating an opponent has a 100% chance to remove Elemental Skill CD. Can
+        only occur once every 15s.
+      ru: Победа над противником со 100% шансом восстанавливает время отката
+        элементального навыка. Может возникнуть раз в 15 сек.
 glacier-and-snowfield:
   code: glacier-and-snowfield
   name:
     en: Glacier and Snowfield
     ru: Снег и лёд
   rarity: 5
+  sets:
+    "2":
+      en: Cryo DMG Bonus +15%
+      ru: Увеличивает бонус Крио урона на 15%.
+    "4":
+      en: Increases Superconduct DMG by 100%. Increases Melt DMG by 15%. Using an
+        Elemental Burst increases Cryo DMG Bonus by 30% for 10s.
+      ru: Увеличивает урон статуса Сверхпроводник на 100%, а урон статуса Таяние - на
+        15%. Взрыв стихии увеличивает Крио урон на 30% в течение 10 сек.
 gladiators-finale:
   code: gladiators-finale
   name:
     en: Gladiator's Finale
     ru: Конец гладиатора
   rarity: 5
+  sets:
+    "2":
+      en: ATK +18%.
+      ru: Увеличивает силу атаки на 18%.
+    "4":
+      en: If the wielder of this artifact set uses a Sword, Claymore or Polearm,
+        increases their Normal Attack DMG by 35%.
+      ru: Увеличивает урон обычной атаки на 35%, если персонаж использует одноручное,
+        двуручное или древковое оружие.
 heart-of-depth:
   code: heart-of-depth
   name:
     en: Heart of Depth
     ru: Сердце глубин
   rarity: 5
+  sets:
+    "2":
+      en: Hydro DMG Bonus +15%
+      ru: Увеличивает бонус Гидро урона на 15%.
+    "4":
+      en: After using Elemental Skill, increases Normal Attack and Charged Attack DMG
+        by 30% for 15s.
+      ru: Увеличивает урон обычной и заряженной атаки на 30% в течение 15 сек. после
+        использования элементального навыка.
 husk-of-opulent-dreams:
   code: husk-of-opulent-dreams
   name:
     en: Husk of Opulent Dreams
     ru: Кокон сладких грёз
   rarity: 5
+  sets:
+    "2":
+      en: DEF +30%
+      ru: Увеличивает защиту на 30%.
+    "4":
+      en: "A character equipped with this Artifact set will obtain the Curiosity
+        effect in the following conditions: When on the field, the character
+        gains 1 stack after hitting an opponent with a Geo attack, triggering a
+        maximum of once every 0.3s. When off the field, the character gains 1
+        stack every 3s. Curiosity can stack up to 4 times, each providing 6% DEF
+        and a 6% Geo DMG Bonus. When 6 seconds pass without gaining a Curiosity
+        stack, 1 stack is lost."
+      ru: "Персонаж, экипированный этим набором артефактов, получает эффект
+        Любопытства в следующих ситуациях: 1 уровень Любопытства даётся
+        активному персонажу после попадания по противнику атакой Гео (не чаще
+        чем раз в 0,3 сек.); когда персонаж находится вне поля боя, он получает
+        1 ур. Любопытства каждые 3 сек. Любопытство может складываться до 4 ур.,
+        каждый ур. прибавляет 6% к защите и 6% к Гео урону. Если персонаж не
+        получает Любопытство в течение 6 сек., то он теряет 1 накопленный
+        уровень Любопытства."
 instructor:
   code: instructor
   name:
     en: Instructor
     ru: Инструктор
   rarity: 4
+  sets:
+    "2":
+      en: Increases Elemental Mastery by 80.
+      ru: Увеличивает мастерство стихий на 80 ед.
+    "4":
+      en: Upon triggering an Elemental Reaction, increases all party members'
+        Elemental Mastery by 120 for 8s.
+      ru: Вызов элементальной реакции увеличивает мастерство стихий всех членов отряда
+        на 120 ед. в течение 8 сек.
 lavawalker:
   code: lavawalker
   name:
     en: Lavawalker
     ru: Ступающий по лаве
   rarity: 5
+  sets:
+    "2":
+      en: Pyro RES increased by 40%.
+      ru: "Пиро сопротивление: +40%"
+    "4":
+      en: Increases DMG against opponents affected by Pyro by 35%.
+      ru: Увеличивает урон против врагов, находящихся под действием Пиро, на 35%.
 lucky-dog:
   code: lucky-dog
   name:
     en: Lucky Dog
     ru: Везунчик
   rarity: 3
+  sets:
+    "2":
+      en: DEF increased by 100.
+      ru: Увеличивает защиту на 100 ед.
+    "4":
+      en: Picking up Mora restores 300 HP.
+      ru: Поднятие монет восстанавливает 300 HP.
 maiden-beloved:
   code: maiden-beloved
   name:
     en: Maiden Beloved
     ru: Возлюбленная юная дева
   rarity: 5
+  sets:
+    "2":
+      en: Character Healing Effectiveness +15%
+      ru: Увеличивает эффективность лечения на 15%.
+    "4":
+      en: Using an Elemental Skill or Burst increases healing received by all party
+        members by 20% for 10s.
+      ru: Увеличивает получаемое лечение всех членов отряда на 20% в течение 10 сек.
+        после использования элементального навыка или взрыва стихии.
 martial-artist:
   code: martial-artist
   name:
     en: Martial Artist
     ru: Воин
   rarity: 4
+  sets:
+    "2":
+      en: Increases Normal Attack and Charged Attack DMG by 15%.
+      ru: Увеличивает урон обычной и заряженной атаки на 15%.
+    "4":
+      en: After using Elemental Skill, increases Normal Attack and Charged Attack DMG
+        by 25% for 8s.
+      ru: Увеличивает урон обычной и заряженной атаки на 25% в течение 8 сек. после
+        использования элементального навыка.
 noblesse-oblige:
   code: noblesse-oblige
   name:
     en: Noblesse Oblige
     ru: Церемония древней знати
   rarity: 5
+  sets:
+    "2":
+      en: Elemental Burst DMG +20%
+      ru: Увеличивает урон взрыва стихии на 20%.
+    "4":
+      en: Using an Elemental Burst increases all party members' ATK by 20% for 12s.
+        This effect cannot stack.
+      ru: Активация взрыва стихии увеличивает силу атаки всех членов отряда на 20% в
+        течение 12 сек. Эффект не складывается.
 ocean-hued-clam:
   code: ocean-hued-clam
   name:
     en: Ocean-Hued Clam
     ru: Моллюск морских красок
   rarity: 5
+  sets:
+    "2":
+      en: Healing Bonus +15%.
+      ru: Повышает бонус лечения на 15%.
+    "4":
+      en: When the character equipping this artifact set heals a character in the
+        party, a Sea-Dyed Foam will appear for 3 seconds, accumulating the
+        amount of HP recovered from healing (including overflow healing). At the
+        end of the duration, the Sea-Dyed Foam will explode, dealing DMG to
+        nearby opponents based on 90% of the accumulated healing. (This DMG is
+        calculated similarly to Reactions such as Electro-Charged, and
+        Superconduct, but is not affected by Elemental Mastery, Character
+        Levels, or Reaction DMG Bonuses). Only one Sea-Dyed Foam can be produced
+        every 3.5 seconds. Each Sea-Dyed Foam can accumulate up to 30,000 HP
+        (including overflow healing). There can be no more than one Sea-Dyed
+        Foam active at any given time. This effect can still be triggered even
+        when the character who is using this artifact set is not on the field.
+      ru: Экипированный этим набором артефактов персонаж при лечении соратников
+        создаёт на 3 сек. Пузырь морских красок. Пузырь регистрирует
+        восстановленное при лечении HP (в том числе избыточное, когда лечение
+        превышает максимум здоровья). После окончания действия Пузырь взрывается
+        и наносит окружающим врагам урон в размере 90% учтённого объёма лечения
+        (урон рассчитывается так же, как для эффектов Заряжен и Сверхпроводник,
+        но на него не действуют бонусы мастерства стихий, уровня и реакций).
+        Пузырь морских красок можно создавать не чаще чем раз в 3,5 сек. Пузырь
+        может записать до 30 000 восстановленного HP, в том числе HP избыточного
+        лечения. Для отряда не может существовать больше одного Пузыря морских
+        красок одновременно. Этот эффект действует, даже если персонаж,
+        экипированный набором артефактов, не находится на поле боя.
 pale-flame:
   code: pale-flame
   name:
     en: Pale Flame
     ru: Бледный огонь
   rarity: 5
+  sets:
+    "2":
+      en: Physical DMG is increased by 25%.
+      ru: Увеличивает физ. урон на 25%.
+    "4":
+      en: When an Elemental Skill hits an opponent, ATK is increased by 9% for 7s.
+        This effect stacks up to 2 times and can be triggered once every 0.3s.
+        Once 2 stacks are reached, the 2-set effect is increased by 100%.
+      ru: Когда элементальный навык попадает по врагам, атака увеличивается на 9% в
+        течение 7 сек. Эффект может складываться до 2 раз и возникнуть не чаще 1
+        раза за 0,3 сек. На 2 уровне складывания эффект набора из 2 вещей
+        увеличивается на 100%.
 prayers-for-destiny:
   code: prayers-for-destiny
   name:
     en: Prayers for Destiny
     ru: Шаман воды
   rarity: 4
+  sets:
+    "1":
+      en: Affected by Hydro for 40% less time.
+      ru: Уменьшает длительность полученного Гидро эффекта на 40%.
 prayers-for-illumination:
   code: prayers-for-illumination
   name:
     en: Prayers for Illumination
     ru: Шаман огня
   rarity: 4
+  sets:
+    "1":
+      en: Affected by Pyro for 40% less time.
+      ru: Уменьшает длительность полученного Пиро эффекта на 40%.
 prayers-for-wisdom:
   code: prayers-for-wisdom
   name:
     en: Prayers for Wisdom
     ru: Шаман молнии
   rarity: 4
+  sets:
+    "1":
+      en: Affected by Electro for 40% less time.
+      ru: Уменьшает длительность полученного Электро эффекта на 40%.
 prayers-to-springtime:
   code: prayers-to-springtime
   name:
     en: Prayers to Springtime
     ru: Шаман льда
   rarity: 4
+  sets:
+    "1":
+      en: Affected by Cryo for 40% less time.
+      ru: Уменьшает длительность полученного Крио эффекта на 40%.
 prayers-to-the-firmament:
   code: prayers-to-the-firmament
   name:
     en: Prayers to the Firmament
     ru: Шаман ветра
   rarity: 4
+  sets:
+    "1":
+      en: Affected by Anemo for 40% less time.
+      ru: Уменьшает длительность полученного Анемо эффекта на 40%.
 resolution-of-sojourner:
   code: resolution-of-sojourner
   name:
     en: Resolution of Sojourner
     ru: Решимость временщика
   rarity: 4
+  sets:
+    "2":
+      en: ATK +18%.
+      ru: Увеличивает силу атаки на 18%.
+    "4":
+      en: Increases Charged Attack CRIT Rate by 30%.
+      ru: Увеличивает шанс крит. попадания заряженной атаки на 30%.
 retracing-bolide:
   code: retracing-bolide
   name:
     en: Retracing Bolide
     ru: Встречная комета
   rarity: 5
+  sets:
+    "2":
+      en: Increases Shield Strength by 35%.
+      ru: Увеличивает прочность щита на 35%.
+    "4":
+      en: While protected by a shield, gain an additional 40% Normal and Charged
+        Attack DMG.
+      ru: Под защитой щита увеличивает урон обычной и заряженной атаки на 40%.
 scholar:
   code: scholar
   name:
     en: Scholar
     ru: Учёный
   rarity: 4
+  sets:
+    "2":
+      en: Energy Recharge +20%
+      ru: Увеличивает скорость восстановления энергии на 20%.
+    "4":
+      en: Gaining Elemental Particles or Orbs gives 3 Energy to all party members who
+        have a bow or a catalyst equipped. Can only occur once every 3s.
+      ru: Получение элементальных сфер или частиц восстанавливает 3 ед. энергии членам
+        отряда, экипированным стрелковым оружием или катализатором. Может
+        возникнуть раз в 3 сек.
 shimenawas-reminiscence:
   code: shimenawas-reminiscence
   name:
     en: Shimenawa's Reminiscence
     ru: Воспоминания Симэнавы
   rarity: 5
+  sets:
+    "2":
+      en: ATK +18%.
+      ru: Увеличивает силу атаки на 18%.
+    "4":
+      en: When casting an Elemental Skill, if the character has 15 or more Energy,
+        they lose 15 Energy and Normal/Charged/Plunging Attack DMG is increased
+        by 50% for 10s. This effect will not trigger again during that duration.
+      ru: При использовании элементального навыка, если у персонажа 15 или более
+        единиц энергии, он теряет 15 единиц энергии, а урон обычной атаки,
+        заряженной атаки и атаки в падении увеличивается на 50% в течение 10
+        сек. Эффект нельзя активировать повторно в течение этого времени.
 tenacity-of-the-millelith:
   code: tenacity-of-the-millelith
   name:
     en: Tenacity of the Millelith
     ru: Стойкость Миллелита
   rarity: 5
+  sets:
+    "2":
+      en: HP increased by 20%.
+      ru: Увеличивает НР на 20%
+    "4":
+      en: When an Elemental Skill hits an opponent, the ATK of all nearby party
+        members is increased by 20% and their Shield Strength is increased by
+        30% for 3s. This effect can be triggered once every 0.5s. This effect
+        can still be triggered even when the character who is using this
+        artifact set is not on the field.
+      ru: Когда элементальный навык попадает по врагам, атака всех находящихся
+        поблизости персонажей в отряде, увеличивается на 20%, а прочность их
+        щита увеличивается на 30%. Эффект длится 3 сек. и может возникнуть 1 раз
+        в 0,5 сек. Этот эффект может быть активирован, даже если персонаж,
+        экипированный этим набором артефактов, не находится на поле боя.
 the-exile:
   code: the-exile
   name:
     en: The Exile
     ru: Изгнанник
   rarity: 4
+  sets:
+    "2":
+      en: Energy Recharge +20%
+      ru: Увеличивает скорость восстановления энергии на 20%.
+    "4":
+      en: Using an Elemental Burst regenerates 2 Energy for all party members
+        (excluding the wearer) every 2s for 6s. This effect cannot stack.
+      ru: Использование взрыва стихии восстанавливает 2 ед. энергии остальным членам
+        отряда (но не выбранному персонажу) каждые 2 сек. в течение 6 сек.
+        Эффект не может складываться.
 thundering-fury:
   code: thundering-fury
   name:
     en: Thundering Fury
     ru: Громогласный рёв ярости
   rarity: 5
+  sets:
+    "2":
+      en: Electro DMG Bonus +15%
+      ru: Увеличивает бонус Электро урона на 15%.
+    "4":
+      en: Increases damage caused by Overloaded, Electro-Charged and Superconduct by
+        40%. Triggering such effects decreases Elemental Skill CD by 1s. Can
+        only occur once every 0.8s.
+      ru: Увеличивает урон статусов Перегрузка, Заряжен и Сверхпроводник на 40%.
+        Наложение этих статусов уменьшает время отката элементального навыка на
+        1 сек. Может возникнуть раз в 0,8 сек.
 thundersoother:
   code: thundersoother
   name:
     en: Thundersoother
     ru: Усмиряющий гром
   rarity: 5
+  sets:
+    "2":
+      en: Electro RES increased by 40%.
+      ru: Повышает Электро сопротивление на +40%.
+    "4":
+      en: Increases DMG against opponents affected by Electro by 35%.
+      ru: Увеличивает урон против врагов, находящихся под действием Электро, на 35%.
 tiny-miracle:
   code: tiny-miracle
   name:
     en: Tiny Miracle
     ru: Маленькое чудо
   rarity: 4
+  sets:
+    "2":
+      en: All Elemental RES increased by 20%.
+      ru: Увеличивает сопротивление ко всем элементам на 20%.
+    "4":
+      en: Incoming elemental DMG increases corresponding Elemental RES by 30% for 10s.
+        Can only occur once every 10s.
+      ru: Получаемый элементальный урон повышает сопротивление к соответствующему
+        элементу на 30% в течение 10 сек. Может возникнуть раз в 10 сек.
 traveling-doctor:
   code: traveling-doctor
   name:
     en: Traveling Doctor
     ru: Целитель
   rarity: 3
+  sets:
+    "2":
+      en: Increases incoming healing by 20%.
+      ru: Увеличивает получаемое лечение на 20%.
+    "4":
+      en: Using Elemental Burst restores 20% HP.
+      ru: Использование взрыва стихии восстанавливает 20% HP.
 viridescent-venerer:
   code: viridescent-venerer
   name:
     en: Viridescent Venerer
     ru: Изумрудная тень
   rarity: 5
+  sets:
+    "2":
+      en: Anemo DMG Bonus +15%
+      ru: Увеличивает бонус Анемо урона на 15%.
+    "4":
+      en: Increases Swirl DMG by 60%. Decreases opponent's Elemental RES to the
+        element infused in the Swirl by 40% for 10s.
+      ru: Увеличивает урон Рассеивания на 60%. При взаимодействии Рассеивания с другим
+        элементом, также понижает сопротивление противника к соответствующему
+        элементу на 40% в течение 10 сек.
 wanderers-troupe:
   code: wanderers-troupe
   name:
     en: Wanderer's Troupe
     ru: Странствующий ансамбль
   rarity: 5
+  sets:
+    "2":
+      en: Increases Elemental Mastery by 80.
+      ru: Увеличивает мастерство стихий на 80 ед.
+    "4":
+      en: Increases Charged Attack DMG by 35% if the character uses a Catalyst or a
+        Bow.
+      ru: Увеличивает урон заряженной атаки на 35%, если персонаж использует
+        катализатор или стрелковое оружие.

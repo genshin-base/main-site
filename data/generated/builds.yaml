@@ -1213,7 +1213,7 @@ characters:
         mainStats:
           circlet:
             codes:
-              - healing-bonus%
+              - healing%
               - hp%
             notes: null
             seeCharNotes: false
@@ -5981,7 +5981,7 @@ characters:
         mainStats:
           circlet:
             codes:
-              - healing-bonus
+              - healing
             notes: null
             seeCharNotes: false
           goblet:
@@ -6786,7 +6786,7 @@ characters:
         mainStats:
           circlet:
             codes:
-              - healing-bonus
+              - healing
             notes: null
             seeCharNotes: false
           goblet:
@@ -6949,7 +6949,7 @@ characters:
         mainStats:
           circlet:
             codes:
-              - healing-bonus
+              - healing
             notes: null
             seeCharNotes: false
           goblet:
@@ -7128,7 +7128,7 @@ characters:
           circlet:
             codes:
               - hp%
-              - healing-bonus
+              - healing
             notes: null
             seeCharNotes: false
           goblet:
@@ -8707,7 +8707,7 @@ characters:
         mainStats:
           circlet:
             codes:
-              - healing-bonus
+              - healing
               - atk%
             notes: null
             seeCharNotes: false
@@ -10356,7 +10356,7 @@ characters:
         mainStats:
           circlet:
             codes:
-              - healing-bonus
+              - healing
               - em
             notes: null
             seeCharNotes: false
@@ -12388,7 +12388,7 @@ characters:
             codes:
               - crit-rate
               - def%
-              - healing-bonus
+              - healing
             notes: null
             seeCharNotes: true
           goblet:

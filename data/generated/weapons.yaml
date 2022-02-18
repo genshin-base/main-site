@@ -5,6 +5,21 @@ akuoumaru:
     en: Akuoumaru
     ru: Акуомару
   rarity: 4
+  atk:
+    base: 9
+    max: 510
+  subStat:
+    code: atk
+    base: 9
+    max: 41
+  specialAbility:
+    en: For every point of the entire party's combined maximum Energy capacity, the
+      Elemental Burst DMG of the character equipping this weapon is increased
+      by  0.12%. A maximum of  40% increased Elemental Burst DMG can be achieved
+      this way.
+    ru: Урон взрыва стихии экипированного этим оружием персонажа увеличивается
+      на  0,12% за каждую единицу суммы макс. энергии каждого члена отряда.
+      Бонус урона не может превышать  40%.
   materialCodes:
     - golden-branch-of-a-distant-sea
     - concealed-talon
@@ -18,6 +33,23 @@ alley-hunter:
     en: Alley Hunter
     ru: Охотник во тьме
   rarity: 4
+  atk:
+    base: 6
+    max: 565
+  subStat:
+    code: atk
+    base: 6
+    max: 27
+  specialAbility:
+    en: While the character equipped with this weapon is in the party but not on the
+      field, their DMG increases by  2% every second up to a max of  20%. When
+      the character is on the field for more than 4s, the aforementioned DMG
+      buff decreases by  4% per second until it reaches 0%.
+    ru: Увеличивает урон экипированного этим оружием персонажа, когда тот не на поле
+      боя, на  2% в сек. Таким способом макс. количество наносимого урона может
+      быть увеличено до  20%. Через 4 сек. после появления персонажа на поле боя
+      бонус повышения урона от данного эффекта начнёт убывать по  4% в сек.,
+      пока не опустится до 0%.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -31,6 +63,25 @@ amenoma-kageuchi:
     en: Amenoma Kageuchi
     ru: Амэнома Кагэути
   rarity: 4
+  atk:
+    base: 12
+    max: 454
+  subStat:
+    code: atk
+    base: 12
+    max: 55
+  specialAbility:
+    en: After casting an Elemental Skill, gain 1 Succession Seed. This effect can be
+      triggered once every 5s. The Succession Seed lasts for 30s. Up to 3
+      Succession Seeds may exist simultaneously. After using an Elemental Burst,
+      all Succession Seeds are consumed and after 2s, the character
+      regenerates  6 Energy for each seed consumed.
+    ru: После применения элементального навыка получает 1 семя наследия. Эффект
+      может возникнуть 1 раз каждые 5 сек. Семя наследия действует в течение 30
+      сек. Одновременно может существовать до 3 семян наследия. После
+      использования взрыва стихии все семена наследия расходуются, и через 2
+      сек. персонаж восстанавливает  6 единиц элементальной энергии за каждое
+      расходуемое семя.
   materialCodes:
     - golden-branch-of-a-distant-sea
     - chaos-oculus
@@ -44,6 +95,20 @@ amos-bow:
     en: Amos' Bow
     ru: Лук Амоса
   rarity: 5
+  atk:
+    base: 10
+    max: 608
+  subStat:
+    code: atk
+    base: 10
+    max: 49
+  specialAbility:
+    en: Increases Normal and Charged Attack DMG by  12%. After a Normal or Charged
+      Attack is fired, DMG dealt increases by a further  8% every 0.1s the arrow
+      is in the air for up to 5 times.
+    ru: Увеличивает урон обычной и заряженной атаки на  12%. Каждые 0,1 сек. полёта
+      стрелы, выпущенной обычной или заряженной атакой, увеличивают её урон
+      на  8%. Эффект может складываться до 5 раз.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -57,6 +122,13 @@ apprentices-notes:
     en: Apprentice's Notes
     ru: Записи ученика
   rarity: 1
+  atk:
+    base: 0
+    max: 185
+  subStat: null
+  specialAbility:
+    en: ""
+    ru: ""
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -72,6 +144,22 @@ aquila-favonia:
     en: Aquila Favonia
     ru: Меч Сокола
   rarity: 5
+  atk:
+    base: 9
+    max: 674
+  subStat:
+    code: phys-dmg
+    base: 9
+    max: 41
+  specialAbility:
+    en: "ATK is increased by  20%. Triggers on taking DMG: the soul of the Falcon of
+      the West awakens, holding the banner of resistance aloft, regenerating HP
+      equal to  100% of ATK and dealing  200% of ATK as DMG to surrounding
+      opponents. This effect can only occur once every 15s."
+    ru: Увеличивает силу атаки на  20%. При получении урона пробуждается душа Сокола
+      Запада, несущего знамя сопротивления. Восстанавливает HP, равное  100% от
+      силы атаки, и наносит  200% урона окружающим врагам. Может возникнуть раз
+      в 15 сек.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -85,6 +173,13 @@ beginners-protector:
     en: Beginner's Protector
     ru: Копьё новичка
   rarity: 1
+  atk:
+    base: 0
+    max: 185
+  subStat: null
+  specialAbility:
+    en: ""
+    ru: ""
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -100,6 +195,16 @@ black-tassel:
     en: Black Tassel
     ru: Чёрная кисть
   rarity: 3
+  atk:
+    base: 10
+    max: 354
+  subStat:
+    code: hp
+    base: 10
+    max: 46
+  specialAbility:
+    en: Increases DMG against slimes by  40%.
+    ru: Увеличивает урон по слаймам на  40%.
   materialCodes:
     - chunk-of-aerosiderite
     - fossilized-bone-shard
@@ -114,6 +219,20 @@ blackcliff-agate:
     en: Blackcliff Agate
     ru: Черногорский агат
   rarity: 4
+  atk:
+    base: 12
+    max: 510
+  subStat:
+    code: crit-dmg
+    base: 12
+    max: 55
+  specialAbility:
+    en: After defeating an enemy, ATK is increased by  12% for 30s. This effect has
+      a maximum of 3 stacks, and the duration of each stack is independent of
+      the others.
+    ru: Побеждённые противники увеличивают силу атаки на  12%. Длится 30 сек. Эффект
+      может складываться до 3 раз. Длительность добавочных эффектов друг от
+      друга не зависит.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -127,6 +246,20 @@ blackcliff-longsword:
     en: Blackcliff Longsword
     ru: Черногорский длинный меч
   rarity: 4
+  atk:
+    base: 8
+    max: 565
+  subStat:
+    code: crit-dmg
+    base: 8
+    max: 36
+  specialAbility:
+    en: After defeating an opponent, ATK is increased by  12% for 30s. This effect
+      has a maximum of 3 stacks, and the duration of each stack is independent
+      of the others.
+    ru: Побеждённые противники увеличивают силу атаки на  12%. Длится 30 сек. Эффект
+      может складываться до 3 раз. Длительность добавочных эффектов друг от
+      друга не зависит.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -140,6 +273,20 @@ blackcliff-pole:
     en: Blackcliff Pole
     ru: Черногорская пика
   rarity: 4
+  atk:
+    base: 12
+    max: 510
+  subStat:
+    code: crit-dmg
+    base: 12
+    max: 55
+  specialAbility:
+    en: After defeating an enemy, ATK is increased by  12% for 30s. This effect has
+      a maximum of 3 stacks, and the duration of each stack is independent of
+      the others.
+    ru: Побеждённые противники увеличивают силу атаки на  12%. Длится 30 сек. Эффект
+      может складываться до 3 раз. Длительность добавочных эффектов друг от
+      друга не зависит.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -153,6 +300,20 @@ blackcliff-slasher:
     en: Blackcliff Slasher
     ru: Черногорская бритва
   rarity: 4
+  atk:
+    base: 12
+    max: 510
+  subStat:
+    code: crit-dmg
+    base: 12
+    max: 55
+  specialAbility:
+    en: After defeating an opponent, ATK is increased by  12% for 30s. This effect
+      has a maximum of 3 stacks, and the duration of each stack is independent
+      of the others.
+    ru: Побеждённые противники увеличивают силу атаки на  12%. Длится 30 сек. Эффект
+      может складываться до 3 раз. Длительность добавочных эффектов друг от
+      друга не зависит.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -166,6 +327,20 @@ blackcliff-warbow:
     en: Blackcliff Warbow
     ru: Черногорский боевой лук
   rarity: 4
+  atk:
+    base: 8
+    max: 565
+  subStat:
+    code: crit-dmg
+    base: 8
+    max: 36
+  specialAbility:
+    en: After defeating an enemy, ATK is increased by  12% for 30s. This effect has
+      a maximum of 3 stacks, and the duration of each stack is independent of
+      the others.
+    ru: Побеждённые противники увеличивают силу атаки на  12%. Длится 30 сек. Эффект
+      может складываться до 3 раз. Длительность добавочных эффектов друг от
+      друга не зависит.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -179,6 +354,17 @@ bloodtainted-greatsword:
     en: Bloodtainted Greatsword
     ru: Меч драконьей крови
   rarity: 3
+  atk:
+    base: 41
+    max: 354
+  subStat:
+    code: em
+    base: 41
+    max: 187
+  specialAbility:
+    en: Increases DMG dealt against opponents affected by Pyro or Electro by  12%.
+    ru: Увеличивает на  12% урон против врагов, находящихся под действием Пиро или
+      Электро элементов.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -192,6 +378,23 @@ calamity-queller:
     en: Calamity Queller
     ru: Усмиритель бед
   rarity: 5
+  atk:
+    base: 3
+    max: 741
+  subStat:
+    code: atk
+    base: 3
+    max: 16
+  specialAbility:
+    en: Gain  12% All Elemental DMG Bonus. Obtain Consummation for 20s after using
+      an Elemental Skill, causing ATK to increase by  3.2% per second. This ATK
+      increase has a maximum of 6 stacks. When the character equipped with this
+      weapon is not on the field, Consummation's ATK increase is doubled.
+    ru: Даёт  12% бонус урона всеми элементами. Запуск элементального навыка
+      накладывает Совершенствование на 20 сек., в результате чего сила атаки
+      увеличивается на  3,2% в секунду. Может складываться до 6 раз. Когда
+      персонаж, экипированный этим оружием, не на поле боя, бонус атаки от
+      Совершенствования удваивается.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -205,6 +408,20 @@ cinnabar-spindle:
     en: Cinnabar Spindle
     ru: Киноварное веретено
   rarity: 4
+  atk:
+    base: 15
+    max: 454
+  subStat:
+    code: def
+    base: 15
+    max: 69
+  specialAbility:
+    en: Elemental Skill DMG is increased by  40% of DEF. The effect will be
+      triggered no more than once every 1.5s and will be cleared 0.1s after the
+      Elemental Skill deals DMG.
+    ru: Урон элементального навыка повышается на  40% от защиты. Эффект возникает
+      раз в 1,5 сек. и исчезает через 0,1 сек. после нанесения урона врагу
+      элементальным навыком.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - chaos-core
@@ -218,6 +435,19 @@ compound-bow:
     en: Compound Bow
     ru: Составной лук
   rarity: 4
+  atk:
+    base: 15
+    max: 454
+  subStat:
+    code: phys-dmg
+    base: 15
+    max: 69
+  specialAbility:
+    en: Normal Attack and Charged Attack hits increase ATK by  4% and Normal ATK SPD
+      by  1.2% for 6s. Max 4 stacks. Can only occur once every 0.3s.
+    ru: Попадания обычной и заряженной атакой увеличивают силу атаки на  4% и
+      скорость атаки на  1,2% в течение 6 сек. Эффект может складываться до 4
+      раз. Может возникнуть раз в 0,3 сек.
   materialCodes:
     - chunk-of-aerosiderite
     - fossilized-bone-shard
@@ -231,6 +461,17 @@ cool-steel:
     en: Cool Steel
     ru: Холодное лезвие
   rarity: 3
+  atk:
+    base: 7
+    max: 401
+  subStat:
+    code: atk
+    base: 7
+    max: 35
+  specialAbility:
+    en: Increases DMG against opponents affected by Hydro or Cryo by  12%.
+    ru: Увеличивает урон против врагов, находящихся под Гидро или Крио эффектом,
+      на  12%.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -246,6 +487,18 @@ crescent-pike:
     en: Crescent Pike
     ru: Пика полумесяца
   rarity: 4
+  atk:
+    base: 7
+    max: 565
+  subStat:
+    code: phys-dmg
+    base: 7
+    max: 34
+  specialAbility:
+    en: After picking up an Elemental Orb/Particle, Normal and Charged Attacks deal
+      additional DMG equal to  20% of ATK for 5s.
+    ru: В течение 5 сек. после поднятия элементальной сферы или частицы обычные и
+      заряженные атаки наносят дополнительный урон, равный  20% от силы атаки.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -259,6 +512,18 @@ dark-iron-sword:
     en: Dark Iron Sword
     ru: Тёмный железный меч
   rarity: 3
+  atk:
+    base: 31
+    max: 401
+  subStat:
+    code: em
+    base: 31
+    max: 141
+  specialAbility:
+    en: Upon causing an Overloaded, Superconduct, Electro-Charged, or an
+      Electro-infused Swirl reaction, ATK is increased by  20% for 12s.
+    ru: Увеличивает силу атаки на  20% в течение 12 сек при нанесении статусов
+      Перегрузка, Сверхпроводник, Заряжен или Электро Рассеивание.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -272,6 +537,19 @@ deathmatch:
     en: Deathmatch
     ru: Смертельный бой
   rarity: 4
+  atk:
+    base: 8
+    max: 454
+  subStat:
+    code: crit-rate
+    base: 8
+    max: 36
+  specialAbility:
+    en: If there are at least 2 opponents nearby, ATK is increased by  16% and DEF
+      is increased by  16%. If there are fewer than 2 opponents nearby, ATK is
+      increased by  24%.
+    ru: Если рядом 2 врага и более, сила атаки и защита увеличиваются на  16%; если
+      рядом менее 2 врагов, сила атаки увеличивается на  24%.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -285,6 +563,20 @@ debate-club:
     en: Debate Club
     ru: Дубина переговоров
   rarity: 3
+  atk:
+    base: 7
+    max: 401
+  subStat:
+    code: atk
+    base: 7
+    max: 35
+  specialAbility:
+    en: After using an Elemental Skill, on hit, Normal and Charged Attacks deal
+      additional DMG equal to  60% of ATK in a small AoE. Effect lasts 15s. DMG
+      can only occur once every 3s.
+    ru: При попадании Элементальным навыком Обычные и Заряженные атаки наносят
+      дополнительные  60% урона по небольшой площади в течение 15 сек. Может
+      возникнуть раз в 3 сек.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -298,6 +590,19 @@ dodoco-tales:
     en: Dodoco Tales
     ru: Истории Додоко
   rarity: 4
+  atk:
+    base: 12
+    max: 454
+  subStat:
+    code: atk
+    base: 12
+    max: 55
+  specialAbility:
+    en: Normal Attack hits on opponents increase Charged Attack DMG by  16% for 6s.
+      Charged Attack hits on opponents increase ATK by  8% for 6s.
+    ru: Попадания обычной атакой увеличивают урон заряженной атаки на  16% в течение
+      6 сек., а попадания заряженной атакой увеличивают силу атаки на  8% в
+      течение 6 сек.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -311,6 +616,17 @@ dragons-bane:
     en: Dragon's Bane
     ru: Гроза драконов
   rarity: 4
+  atk:
+    base: 48
+    max: 454
+  subStat:
+    code: em
+    base: 48
+    max: 221
+  specialAbility:
+    en: Increases DMG against opponents affected by Hydro or Pyro by  20%.
+    ru: Увеличивает на  20% урон против врагов, находящихся под действием Гидро или
+      Пиро элементов.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -324,6 +640,22 @@ dragonspine-spear:
     en: Dragonspine Spear
     ru: Копьё Драконьего хребта
   rarity: 4
+  atk:
+    base: 15
+    max: 454
+  subStat:
+    code: phys-dmg
+    base: 15
+    max: 69
+  specialAbility:
+    en: Hitting an opponent with Normal and Charged Attacks has a  60% chance of
+      forming and dropping an Everfrost Icicle above them, dealing AoE DMG equal
+      to  80% of ATK. Opponents affected by Cryo are instead dealt DMG equal
+      to  200% of ATK. Can only occur once every 10s.
+    ru: Попадания обычной или заряженной атакой имеют  60% шанс создать над
+      противником ледяной кристалл и уронить его, нанося  80% урона силы атаки
+      по площади. Если противник имеет эффект Крио, то наносит ему  200% урона
+      силы атаки. Может возникнуть раз в 10 сек.
   materialCodes:
     - boreal-wolfs-nostalgia
     - mist-grass-wick
@@ -338,6 +670,13 @@ dull-blade:
     en: Dull Blade
     ru: Тупой меч
   rarity: 1
+  atk:
+    base: 0
+    max: 185
+  subStat: null
+  specialAbility:
+    en: ""
+    ru: ""
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -353,6 +692,35 @@ elegy-for-the-end:
     en: Elegy for the End
     ru: Элегия погибели
   rarity: 5
+  atk:
+    base: 12
+    max: 608
+  subStat:
+    code: er
+    base: 12
+    max: 55
+  specialAbility:
+    en: 'A part of the "Millennial Movement" that wanders amidst the winds.
+      Increases Elemental Mastery by  60. When the Elemental Skills or Elemental
+      Bursts of the character wielding this weapon hit opponents, that character
+      gains a Sigil of Remembrance. This effect can be triggered once every 0.2s
+      and can be triggered even if said character is not on the field. When you
+      possess 4 Sigils of Remembrance, all of them will be consumed and all
+      nearby party members will obtain the "Millennial Movement: Farewell Song"
+      effect for 12s. "Millennial Movement: Farewell Song" increases Elemental
+      Mastery by  100 and increases ATK by  20%. Once this effect is triggered,
+      you will not gain Sigils of Remembrance for 20s. Of the many effects of
+      the "Millennial Movement," buffs of the same type will not stack.'
+    ru: "Часть Тысячелетней симфонии, что блуждает среди ветров. Увеличивает
+      мастерство стихий на  60 ед. При попадании элементальным навыком или
+      взрывом стихии по противнику персонаж получает один Талисман воспоминаний.
+      Он может возникнуть раз в 0,2 сек., даже когда персонаж в отряде, но не
+      активен. Четыре собранных Талисмана воспоминаний пропадают, на 12 сек.
+      наделяя ближайших членов отряда эффектом «Тысячелетняя симфония:
+      Прощальный гимн». Их мастерство стихии повышается на  100 ед., а сила
+      атаки - на  20%. В течение 20 сек. после активации эффекта Талисманы
+      воспоминаний появляться не будут. Тысячелетняя симфония с эффектами,
+      влияющими на те же навыки, не складывается."
   materialCodes:
     - boreal-wolfs-nostalgia
     - black-crystal-horn
@@ -366,6 +734,18 @@ emerald-orb:
     en: Emerald Orb
     ru: Изумрудный шар
   rarity: 3
+  atk:
+    base: 20
+    max: 448
+  subStat:
+    code: em
+    base: 20
+    max: 94
+  specialAbility:
+    en: Upon causing a Vaporize, Electro-Charged, Frozen, or a Hydro-infused Swirl
+      reaction, increases ATK by  20% for 12s.
+    ru: Увеличивает силу атаки на  20% в течение 12 сек при нанесении статусов Пар,
+      Заряжен, Заморозка или Гидро рассеивание.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -379,6 +759,20 @@ engulfing-lightning:
     en: Engulfing Lightning
     ru: Сияющая жатва
   rarity: 5
+  atk:
+    base: 12
+    max: 608
+  subStat:
+    code: er
+    base: 12
+    max: 55
+  specialAbility:
+    en: ATK increased by  28% of Energy Recharge over the base 100%. You can gain a
+      maximum bonus of  80% ATK. Gain  30% Energy Recharge for 12s after using
+      an Elemental Burst.
+    ru: Увеличивает силу атаки на  28% от показателя восстановления энергии свыше
+      100%. Вы можете получить бонус силы атаки до  80%. Также даёт  30%
+      восстановления энергии на 12 сек. после активации взрыва стихии.
   materialCodes:
     - mask-of-the-kijin
     - chaos-oculus
@@ -392,6 +786,23 @@ everlasting-moonglow:
     en: Everlasting Moonglow
     ru: Вечное лунное сияние
   rarity: 5
+  atk:
+    base: 10
+    max: 608
+  subStat:
+    code: hp
+    base: 10
+    max: 49
+  specialAbility:
+    en: Healing Bonus increased by  10%, Normal Attack DMG is increased by  1% of
+      the Max HP of the character equipping this weapon. For 12s after using an
+      Elemental Burst, Normal Attacks that hit opponents will restore 0.6
+      Energy. Energy can be restored this way once every 0.1s.
+    ru: Увеличивает бонус лечения на  10%, а также повышает урон обычной атаки
+      на  1% от макс. HP экипированного этим оружием персонажа. В течение 12
+      сек. после использования взрыва стихии попадания обычной атакой по
+      противнику восстанавливают 0,6 ед. энергии. Энергию можно восстановить не
+      чаще, чем раз в 0,1 сек.
   materialCodes:
     - golden-branch-of-a-distant-sea
     - polarizing-prism
@@ -405,6 +816,21 @@ eye-of-perception:
     en: Eye of Perception
     ru: Око сознания
   rarity: 4
+  atk:
+    base: 12
+    max: 454
+  subStat:
+    code: atk
+    base: 12
+    max: 55
+  specialAbility:
+    en: Normal and Charged Attacks have a 50% chance to fire a Bolt of Perception,
+      dealing  240% ATK as DMG. This bolt can bounce between opponents a maximum
+      of 4 times. This effect can occur once every  12s.
+    ru: При попадании обычной или заряженной атакой появляется 50% шанс запустить
+      Око сознания, которое наносит  240% урона силы атаки. Оно способно
+      отразиться от противника к противнику до 4 раз. Может возникнуть раз в  12
+      сек.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -418,6 +844,19 @@ favonius-codex:
     en: Favonius Codex
     ru: Кодекс Фавония
   rarity: 4
+  atk:
+    base: 10
+    max: 510
+  subStat:
+    code: er
+    base: 10
+    max: 45
+  specialAbility:
+    en: CRIT Hits have a  60% chance to generate a small amount of Elemental
+      Particles, which will regenerate 6 Energy for the character. Can only
+      occur once every  12s.
+    ru: Критические атаки имеют  60% шанс создать элементальные частицы, которые
+      восстанавливают 6 ед. энергии. Возникает раз в  12 сек.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -431,6 +870,19 @@ favonius-greatsword:
     en: Favonius Greatsword
     ru: Двуручный меч Фавония
   rarity: 4
+  atk:
+    base: 13
+    max: 454
+  subStat:
+    code: er
+    base: 13
+    max: 61
+  specialAbility:
+    en: CRIT Hits have a  60% chance to generate a small amount of Elemental
+      Particles, which will regenerate 6 Energy for the character. Can only
+      occur once every  12s.
+    ru: Критические атаки имеют  60% шанс создать элементальные частицы, которые
+      восстанавливают 6 ед. энергии. Возникает раз в  12 сек.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -444,6 +896,19 @@ favonius-lance:
     en: Favonius Lance
     ru: Копьё Фавония
   rarity: 4
+  atk:
+    base: 6
+    max: 565
+  subStat:
+    code: er
+    base: 6
+    max: 30
+  specialAbility:
+    en: CRIT Hits have a  60% chance to generate a small amount of Elemental
+      Particles, which will regenerate 6 Energy for the character. Can only
+      occur once every  12s.
+    ru: Критические атаки имеют  60% шанс создать элементальные частицы, которые
+      восстанавливают 6 ед. энергии. Возникает раз в  12 сек.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -457,6 +922,19 @@ favonius-sword:
     en: Favonius Sword
     ru: Меч Фавония
   rarity: 4
+  atk:
+    base: 13
+    max: 454
+  subStat:
+    code: er
+    base: 13
+    max: 61
+  specialAbility:
+    en: CRIT Hits have a  60% chance to generate a small amount of Elemental
+      Particles, which will regenerate 6 Energy for the character. Can only
+      occur once every  12s.
+    ru: Критические атаки имеют  60% шанс создать элементальные частицы, которые
+      восстанавливают 6 ед. энергии. Возникает раз в  12 сек.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -470,6 +948,19 @@ favonius-warbow:
     en: Favonius Warbow
     ru: Боевой лук Фавония
   rarity: 4
+  atk:
+    base: 13
+    max: 454
+  subStat:
+    code: er
+    base: 13
+    max: 61
+  specialAbility:
+    en: CRIT Hits have a  60% chance to generate a small amount of Elemental
+      Particles, which will regenerate 6 Energy for the character. Can only
+      occur once every  12s.
+    ru: Критические атаки имеют  60% шанс создать элементальные частицы, которые
+      восстанавливают 6 ед. энергии. Возникает раз в  12 сек.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -484,6 +975,18 @@ ferrous-shadow:
     en: Ferrous Shadow
     ru: Металлическая тень
   rarity: 3
+  atk:
+    base: 7
+    max: 401
+  subStat:
+    code: hp
+    base: 7
+    max: 35
+  specialAbility:
+    en: When HP falls below  70%, increases Charged Attack DMG by  30% and Charged
+      Attacks become harder to interrupt.
+    ru: При HP ниже  70% врагу становится труднее прервать заряженную атаку. Также
+      увеличивает урон заряженной атаки на  30%.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -497,6 +1000,17 @@ festering-desire:
     en: Festering Desire
     ru: Осквернённое желание
   rarity: 4
+  atk:
+    base: 10
+    max: 510
+  subStat:
+    code: er
+    base: 10
+    max: 45
+  specialAbility:
+    en: Increases Elemental Skill DMG by  16% and Elemental Skill CRIT Rate by  6%.
+    ru: Увеличивает урон элементального навыка на  16%, и его шанс крит. попадания -
+      на  6%.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - black-crystal-horn
@@ -510,6 +1024,18 @@ fillet-blade:
     en: Fillet Blade
     ru: Филейный нож
   rarity: 3
+  atk:
+    base: 7
+    max: 401
+  subStat:
+    code: atk
+    base: 7
+    max: 35
+  specialAbility:
+    en: On hit, has a 50% chance to deal  240% ATK DMG to a single opponent. Can
+      only occur once every  15s.
+    ru: При попадании с 50% вероятностью наносит  240% урона одной цели. Может
+      возникнуть раз в  15 сек.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -524,6 +1050,35 @@ freedom-sworn:
     en: Freedom-Sworn
     ru: Клятва свободы
   rarity: 5
+  atk:
+    base: 43
+    max: 608
+  subStat:
+    code: em
+    base: 43
+    max: 198
+  specialAbility:
+    en: 'A part of the "Millennial Movement" that wanders amidst the winds.
+      Increases DMG by  10%. When the character wielding this weapon triggers
+      Elemental Reactions, they gain a Sigil of Rebellion. This effect can be
+      triggered once every 0.5s and can be triggered even if said character is
+      not on the field. When you possess 2 Sigils of Rebellion, all of them will
+      be consumed and all nearby party members will obtain "Millennial Movement:
+      Song of Resistance" for 12s. "Millennial Movement: Song of Resistance"
+      increases Normal, Charged and Plunging Attack DMG by  16% and increases
+      ATK by  20%. Once this effect is triggered, you will not gain Sigils of
+      Rebellion for 20s. Of the many effects of the "Millennial Movement," buffs
+      of the same type will not stack.'
+    ru: "Часть Тысячелетней симфонии, что блуждает среди ветров. Увеличивает
+      наносимый урон на  10%. Вызов элементальной реакции даёт персонажу один
+      Талисман воодушевления. Он может возникнуть раз в 0,5 сек., даже когда
+      персонаж в отряде, но не активен. Два собранных Талисмана воодушевления
+      пропадают, на 12 сек. наделяя ближайших членов отряда эффектом
+      «Тысячелетняя симфония: Гимн восстания», который увеличивает урон,
+      наносимый обычной атакой, заряженной атакой и атакой в падении, на  16%, а
+      силу атаки - на  20%. В течение 20 сек. после активации эффекта Талисманы
+      воодушевления появляться не будут. Тысячелетняя симфония с эффектами,
+      влияющими на те же навыки, не складывается."
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -537,6 +1092,22 @@ frostbearer:
     en: Frostbearer
     ru: Плод вечной мерзлоты
   rarity: 4
+  atk:
+    base: 9
+    max: 510
+  subStat:
+    code: atk
+    base: 9
+    max: 41
+  specialAbility:
+    en: Hitting an opponent with Normal and Charged Attacks has a  60% chance of
+      forming and dropping an Everfrost Icicle above them, dealing AoE DMG equal
+      to  80% of ATK. Opponents affected by Cryo are instead dealt DMG equal
+      to  200% of ATK. Can only occur once every 10s.
+    ru: Попадания обычной или заряженной атакой имеют  60% шанс создать над
+      противником ледяной кристалл и уронить его, нанося  80% урона силы атаки
+      по площади. Если противник имеет эффект Крио, то наносит ему  200% урона
+      силы атаки. Может возникнуть раз в 10 сек.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -550,6 +1121,23 @@ hakushin-ring:
     en: Hakushin Ring
     ru: Кольцо Хакусин
   rarity: 4
+  atk:
+    base: 6
+    max: 565
+  subStat:
+    code: er
+    base: 6
+    max: 30
+  specialAbility:
+    en: After the character equipped with this weapon triggers an Electro elemental
+      reaction, nearby party members of an Elemental Type involved in the
+      elemental reaction receive a  10% Elemental DMG Bonus for their element,
+      lasting 6s. Elemental Bonuses gained in this way cannot be stacked.
+    ru: Когда персонаж, экипированный этим оружием, вызывает реакцию, связанную с
+      элементом Электро, все находящиеся рядом члены отряда, чей элемент
+      соответствует этой реакции, получают  10% бонус урона к своему элементу на
+      6 сек. Элементальные бонусы урона, полученные таким образом, не
+      суммируются.
   materialCodes:
     - golden-branch-of-a-distant-sea
     - polarizing-prism
@@ -563,6 +1151,18 @@ halberd:
     en: Halberd
     ru: Алебарда Миллелита
   rarity: 3
+  atk:
+    base: 5
+    max: 448
+  subStat:
+    code: atk
+    base: 5
+    max: 23
+  specialAbility:
+    en: Normal Attacks deal an additional  160% ATK as DMG. Can only occur once
+      every 10s.
+    ru: Обычные атаки наносят дополнительные  160% урона. Может возникнуть раз в 10
+      сек.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -576,6 +1176,20 @@ hamayumi:
     en: Hamayumi
     ru: Хамаюми
   rarity: 4
+  atk:
+    base: 12
+    max: 454
+  subStat:
+    code: atk
+    base: 12
+    max: 55
+  specialAbility:
+    en: Increases Normal Attack DMG by  16% and Charged Attack DMG by  12%. When the
+      equipping character's Energy reaches 100%, this effect is increased by
+      100%.
+    ru: Увеличивает урон обычной атаки на  16% и урон заряженной атаки на  12%.
+      Когда элементальная энергия персонажа с этим оружием достигает 100%,
+      эффект увеличивается на 100%.
   materialCodes:
     - narukamis-valor
     - polarizing-prism
@@ -589,6 +1203,16 @@ harbinger-of-dawn:
     en: Harbinger of Dawn
     ru: Предвестник зари
   rarity: 3
+  atk:
+    base: 10
+    max: 401
+  subStat:
+    code: crit-dmg
+    base: 10
+    max: 46
+  specialAbility:
+    en: When HP is above 90%, increases CRIT Rate by  14%.
+    ru: Увеличивает шанс крит. попадания на  14% при HP выше 90%.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -603,6 +1227,13 @@ hunters-bow:
     en: Hunter's Bow
     ru: Лук охотника
   rarity: 1
+  atk:
+    base: 0
+    max: 185
+  subStat: null
+  specialAbility:
+    en: ""
+    ru: ""
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -618,6 +1249,13 @@ iron-point:
     en: Iron Point
     ru: Железный наконечник
   rarity: 2
+  atk:
+    base: 0
+    max: 243
+  subStat: null
+  specialAbility:
+    en: ""
+    ru: ""
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -633,6 +1271,19 @@ iron-sting:
     en: Iron Sting
     ru: Стальное жало
   rarity: 4
+  atk:
+    base: 36
+    max: 510
+  subStat:
+    code: em
+    base: 36
+    max: 165
+  specialAbility:
+    en: Dealing Elemental DMG increases all DMG by  6% for 6s. Max 2 stacks. Can
+      occur once every 1s.
+    ru: Нанесённый Элементальный урон увеличивает весь урон на  6% в течение 6 сек.
+      Эффект может складываться до 2 раз. Может возникнуть не чаще 1 раза за 1
+      сек.
   materialCodes:
     - chunk-of-aerosiderite
     - fossilized-bone-shard
@@ -646,6 +1297,23 @@ kaguras-verity:
     en: Kagura's Verity
     ru: Истина кагура
   rarity: 5
+  atk:
+    base: 14
+    max: 608
+  subStat:
+    code: crit-dmg
+    base: 14
+    max: 66
+  specialAbility:
+    en: Gains the Kagura Dance effect when using an Elemental Skill, causing the
+      Elemental Skill DMG of the character wielding this weapon to increase
+      by  12% for 12s. Max 3 stacks. This character will gain  12% All Elemental
+      DMG Bonus when they possess 3 stacks.
+    ru: Использование элементального навыка наделяет экипированного этим оружием
+      персонажа эффектом «Танец кагура», который увеличивает урон его
+      элементального навыка на  12%. Этот эффект длится 16 сек. и может
+      складываться до 3 раз. На 3 уровне эффекта персонаж получает  12% бонус
+      урона всеми элементами.
   materialCodes:
     - mask-of-the-kijin
     - concealed-talon
@@ -659,6 +1327,23 @@ katsuragikiri-nagamasa:
     en: Katsuragikiri Nagamasa
     ru: Кацурагикири Нагамаса
   rarity: 4
+  atk:
+    base: 10
+    max: 510
+  subStat:
+    code: er
+    base: 10
+    max: 45
+  specialAbility:
+    en: Increases Elemental Skill DMG by  6%. After Elemental Skill hits an
+      opponent, the character loses 3 Energy but regenerates  3 Energy every 2s
+      for the next 6s. This effect can occur once every 10s. Can be triggered
+      even when the character is not on the field.
+    ru: Увеличивает урон элементального навыка на  6%. Когда элементальный навык
+      поражает противника, персонаж теряет 3 единицы энергии, но
+      восстанавливает  3 единицы энергии каждые 2 сек. в течение следующих 6
+      сек. Эффект может возникнуть один раз в 10 сек. Эффект может сработать,
+      даже когда персонаж не находится на поле.
   materialCodes:
     - narukamis-valor
     - chaos-oculus
@@ -672,6 +1357,23 @@ kitain-cross-spear:
     en: Kitain Cross Spear
     ru: Крест-копьё Китаин
   rarity: 4
+  atk:
+    base: 24
+    max: 565
+  subStat:
+    code: em
+    base: 24
+    max: 110
+  specialAbility:
+    en: Increases Elemental Skill DMG by  6%. After Elemental Skill hits an
+      opponent, the character loses 3 Energy but regenerates  3 Energy every 2s
+      for the next 6s. This effect can occur once every 10s. Can be triggered
+      even when the character is not on the field.
+    ru: Увеличивает урон элементального навыка на  6%. Когда элементальный навык
+      поражает противника, персонаж теряет 3 единицы энергии, но
+      восстанавливает  3 единицы энергии каждые 2 сек. в течение следующих 6
+      сек. Эффект может возникнуть один раз в 10 сек. Эффект может сработать,
+      даже когда персонаж не находится на поле.
   materialCodes:
     - mask-of-the-kijin
     - chaos-oculus
@@ -685,6 +1387,17 @@ lions-roar:
     en: Lion's Roar
     ru: Драконий рык
   rarity: 4
+  atk:
+    base: 9
+    max: 510
+  subStat:
+    code: atk
+    base: 9
+    max: 41
+  specialAbility:
+    en: Increases DMG against opponents affected by Pyro or Electro by  20%.
+    ru: Увеличивает на  20% урон против врагов, находящихся под действием Пиро или
+      Электро элементов.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -698,6 +1411,20 @@ lithic-blade:
     en: Lithic Blade
     ru: Каменный меч
   rarity: 4
+  atk:
+    base: 9
+    max: 510
+  subStat:
+    code: atk
+    base: 9
+    max: 41
+  specialAbility:
+    en: For every character in the party who hails from Liyue, the character who
+      equips this weapon gains a  7% ATK increase and a  3% CRIT Rate increase.
+      This effect stacks up to 4 times.
+    ru: С каждым членом отряда из Ли Юэ сила атаки экипированного этим оружием
+      персонажа увеличивается на  7%, а его шанс крит. попадания - на  3%.
+      Эффект может складываться до 4 раз.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -711,6 +1438,20 @@ lithic-spear:
     en: Lithic Spear
     ru: Каменное копьё
   rarity: 4
+  atk:
+    base: 6
+    max: 565
+  subStat:
+    code: atk
+    base: 6
+    max: 27
+  specialAbility:
+    en: For every character in the party who hails from Liyue, the character who
+      equips this weapon gains a  7% ATK increase and a  3% CRIT Rate increase.
+      This effect stacks up to 4 times.
+    ru: С каждым членом отряда из Ли Юэ сила атаки экипированного этим оружием
+      персонажа увеличивается на  7%, а его шанс крит. попадания - на  3%.
+      Эффект может складываться до 4 раз.
   materialCodes:
     - chunk-of-aerosiderite
     - fossilized-bone-shard
@@ -724,6 +1465,20 @@ lost-prayer-to-the-sacred-winds:
     en: Lost Prayer to the Sacred Winds
     ru: Молитва святым ветрам
   rarity: 5
+  atk:
+    base: 7
+    max: 608
+  subStat:
+    code: crit-rate
+    base: 7
+    max: 33
+  specialAbility:
+    en: Increases Movement SPD by 10%. When in battle, gain an  8% Elemental DMG
+      Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves
+      combat.
+    ru: Увеличивает скорость передвижения на 10%. Во время битвы даёт  8% бонус
+      элементального урона каждые 4 сек. Может складываться до 4 раз. Эффект
+      оканчивается, если персонаж погибает или покидает поле боя.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -737,6 +1492,21 @@ luxurious-sea-lord:
     en: Luxurious Sea-Lord
     ru: Благодатный владыка вод
   rarity: 4
+  atk:
+    base: 12
+    max: 454
+  subStat:
+    code: atk
+    base: 12
+    max: 55
+  specialAbility:
+    en: Increases Elemental Burst DMG by  12%. When Elemental Burst hits opponents,
+      there is a 100% chance of summoning a huge onrush of tuna that deals  100%
+      ATK as AoE DMG. This effect can occur once every 15s.
+    ru: Увеличивает урон взрыва стихии на  12%. При попадании взрывом стихии по
+      противнику с вероятностью в 100% призывается Титанический тунец, который
+      совершает атаку и наносит урон по площади, равный  100% от силы атаки.
+      Может возникнуть раз в 15 сек.
   materialCodes:
     - chunk-of-aerosiderite
     - fossilized-bone-shard
@@ -750,6 +1520,17 @@ magic-guide:
     en: Magic Guide
     ru: Руководство по магии
   rarity: 3
+  atk:
+    base: 41
+    max: 354
+  subStat:
+    code: em
+    base: 41
+    max: 187
+  specialAbility:
+    en: Increases DMG against opponents affected by Hydro or Electro by  12%.
+    ru: Увеличивает на  12% урон против врагов, находящихся под действием Гидро или
+      Электро элементов.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -763,6 +1544,18 @@ mappa-mare:
     en: Mappa Mare
     ru: Морской атлас
   rarity: 4
+  atk:
+    base: 24
+    max: 565
+  subStat:
+    code: em
+    base: 24
+    max: 110
+  specialAbility:
+    en: Triggering an Elemental reaction grants a  8% Elemental DMG Bonus for 10s.
+      Max 2 stacks.
+    ru: В течение 10 сек. после вызова элементальной реакции увеличивает бонус
+      элементального урона на  8%. Может складываться до 2 раз.
   materialCodes:
     - chunk-of-aerosiderite
     - fossilized-bone-shard
@@ -777,6 +1570,21 @@ memory-of-dust:
     en: Memory of Dust
     ru: Память о пыли
   rarity: 5
+  atk:
+    base: 10
+    max: 608
+  subStat:
+    code: atk
+    base: 10
+    max: 49
+  specialAbility:
+    en: Increases Shield Strength by  20%. Scoring hits on opponents increases ATK
+      by  4% for 8s. Max 5 stacks. Can only occur once every 0.3s. While
+      protected by a shield, this ATK increase effect is increased by 100%.
+    ru: Увеличивает прочность щита на  20%. При попадании увеличивает силу атаки
+      на  4% в течение 8 сек. Эффект может складываться до 5 раз и возникнуть
+      раз в 0,3 сек. Кроме того, под защитой щита бонус силы атаки данного
+      эффекта увеличивается на 100%.
   materialCodes:
     - chunk-of-aerosiderite
     - fossilized-bone-shard
@@ -790,6 +1598,18 @@ messenger:
     en: Messenger
     ru: Посыльный
   rarity: 3
+  atk:
+    base: 6
+    max: 448
+  subStat:
+    code: crit-dmg
+    base: 6
+    max: 31
+  specialAbility:
+    en: Charged Attack hits on weak points deal an additional  100% ATK DMG as CRIT
+      DMG. Can only occur once every 10s.
+    ru: При попадании заряженной атакой по слабому месту дополнительно наносит  100%
+      урона в качестве крит. урона. Может возникнуть раз в 10 сек.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -803,6 +1623,32 @@ mistsplitter-reforged:
     en: Mistsplitter Reforged
     ru: Рассекающий туман
   rarity: 5
+  atk:
+    base: 9
+    max: 674
+  subStat:
+    code: crit-dmg
+    base: 9
+    max: 44
+  specialAbility:
+    en: "Gain a  12% Elemental DMG Bonus for all elements and receive the might of
+      the Mistsplitter's Emblem. At stack levels 1/2/3, the Mistsplitter's
+      Emblem provides a  8/16/28% Elemental DMG Bonus for the character's
+      Elemental Type. The character will obtain 1 stack of Mistsplitter's Emblem
+      in each of the following scenarios: Normal Attack deals Elemental DMG
+      (stack lasts 5s), casting Elemental Burst (stack lasts 10s); Energy is
+      less than 100% (stack disappears when Energy is full). Each stack's
+      duration is calculated independently."
+    ru: "Все типы элементального урона получают  12% бонуса урона, а также силу
+      Эмблемы рассекателя тумана. На уровнях эмблемы 1, 2 или 3 персонаж
+      получает  8%, 16% или 28% бонуса к элементальному урону своей стихии
+      соответственно. Персонаж получает 1 уровень Эмблемы рассекателя тумана в
+      каждом из следующих случаев: при нанесении элементального урона обычной
+      атакой, эмблема действует 5 сек.; при применении взрыва стихии, эмблема
+      действует 10 сек.; когда элементальная энергия персонажа ниже 100%,
+      полученная таким образом эмблема действует до тех пор, пока персонаж не
+      восстановит всю свою элементальную энергию. Продолжительность действия
+      каждого уровня эмблемы рассчитывается индивидуально."
   materialCodes:
     - golden-branch-of-a-distant-sea
     - chaos-oculus
@@ -816,6 +1662,20 @@ mitternachts-waltz:
     en: Mitternachts Waltz
     ru: Вальс Нирваны Ночи
   rarity: 4
+  atk:
+    base: 11
+    max: 510
+  subStat:
+    code: phys-dmg
+    base: 11
+    max: 51
+  specialAbility:
+    en: Normal Attack hits on opponents increase Elemental Skill DMG by  20% for 5s.
+      Elemental Skill hits on opponents increase Normal Attack DMG by  20% for
+      5s.
+    ru: Попадания обычной атакой увеличивают урон элементального навыка на  20% в
+      течение 5 сек., а попадания элементальным навыком увеличивают урон обычной
+      атаки на  20% в течение 5 сек.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -829,6 +1689,21 @@ mouuns-moon:
     en: Mouun's Moon
     ru: Луна Моун
   rarity: 4
+  atk:
+    base: 6
+    max: 565
+  subStat:
+    code: atk
+    base: 6
+    max: 27
+  specialAbility:
+    en: For every point of the entire party's combined maximum Energy capacity, the
+      Elemental Burst DMG of the character equipping this weapon is increased
+      by  0.12%. A maximum of  40% increased Elemental Burst DMG can be achieved
+      this way.
+    ru: Урон взрыва стихии экипированного этим оружием персонажа увеличивается
+      на  0,12% за каждую единицу суммы макс. энергии каждого члена отряда.
+      Бонус урона не может превышать  40%.
   materialCodes:
     - narukamis-valor
     - polarizing-prism
@@ -842,6 +1717,17 @@ oathsworn-eye:
     en: Oathsworn Eye
     ru: Око клятвы
   rarity: 4
+  atk:
+    base: 6
+    max: 565
+  subStat:
+    code: atk
+    base: 6
+    max: 27
+  specialAbility:
+    en: Increases Energy Recharge by  24% for 10s after using an Elemental Skill.
+    ru: Использование элементального навыка увеличивает восстановление энергии
+      на  24% в течение 10 сек.
   materialCodes:
     - golden-branch-of-a-distant-sea
     - concealed-talon
@@ -855,6 +1741,13 @@ old-mercs-pal:
     en: Old Merc's Pal
     ru: Лучший друг наёмника
   rarity: 2
+  atk:
+    base: 0
+    max: 243
+  subStat: null
+  specialAbility:
+    en: ""
+    ru: ""
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -870,6 +1763,16 @@ otherworldly-story:
     en: Otherworldly Story
     ru: Потусторонняя история
   rarity: 3
+  atk:
+    base: 8
+    max: 401
+  subStat:
+    code: er
+    base: 8
+    max: 39
+  specialAbility:
+    en: Picking up an Elemental Energy Orb/Particle recovers  1% HP.
+    ru: Подобранные элементальные сферы и частицы восстанавливают  1% HP.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -884,6 +1787,13 @@ pocket-grimoire:
     en: Pocket Grimoire
     ru: Карманный гримуар
   rarity: 2
+  atk:
+    base: 0
+    max: 243
+  subStat: null
+  specialAbility:
+    en: ""
+    ru: ""
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -899,6 +1809,28 @@ polar-star:
     en: Polar Star
     ru: Полярная звезда
   rarity: 5
+  atk:
+    base: 7
+    max: 608
+  subStat:
+    code: crit-rate
+    base: 7
+    max: 33
+  specialAbility:
+    en: Elemental Skill and Elemental Burst DMG increased by  12%. After a Normal
+      Attack, Charged Attack, Elemental Skill or Elemental Burst hits an
+      opponent, 1 stack of Ashen Nightstar will be gained for 12s. When 1/2/3/4
+      stacks of Ashen Nightstar are present, ATK is increased by  10/20/30/48%.
+      The stack of Ashen Nightstar created by the Normal Attack, Charged Attack,
+      Elemental Skill or Elemental Burst will be counted independently of the
+      others.
+    ru: Урон, наносимый элементальным навыком и взрывом стихии, увеличивается
+      на  12%. Когда обычная атака, заряженная атака, элементальный навык или
+      взрыв стихии попадают по врагу, возникает 1 ур. эффекта Звезда полярной
+      ночи, который длится 12 сек. При 1/2/3/4 ур. эффекта Звезда полярной ночи
+      сила атаки повышается на  10/20/30/48%. Уровни эффекта Звезда полярной
+      ночи, созданные обычной атакой, заряженной атакой, элементальным навыком и
+      взрывом стихии, существуют независимо.
   materialCodes:
     - mask-of-the-kijin
     - concealed-talon
@@ -912,6 +1844,23 @@ predator:
     en: Predator
     ru: Хищник
   rarity: 4
+  atk:
+    base: 9
+    max: 510
+  subStat:
+    code: atk
+    base: 9
+    max: 41
+  specialAbility:
+    en: "Effective only on the following platform: \\n \"PlayStation
+      Network\"\\nDealing Cryo DMG to opponents increases this character's
+      Normal and Charged Attack DMG by 10% for 6s. This effect can have a
+      maximum of 2 stacks. Additionally, when Aloy equips Predator, ATK is
+      increased by 66."
+    ru: Действует только для игроков\n "PlayStation Network".\nНанесённый
+      противникам Крио урон повышает урон обычной и заряженной атаки персонажа
+      на 10% в течение 6 сек. Эффект может складываться до 2 раз. Кроме этого,
+      когда Хищником экипирована Элой, сила атаки повышается на 66 ед.
   materialCodes:
     - narukamis-valor
     - polarizing-prism
@@ -925,6 +1874,18 @@ primordial-jade-cutter:
     en: Primordial Jade Cutter
     ru: Драгоценный омут
   rarity: 5
+  atk:
+    base: 9
+    max: 542
+  subStat:
+    code: crit-rate
+    base: 9
+    max: 44
+  specialAbility:
+    en: HP increased by  20%. Additionally, provides an ATK Bonus based on  1.2% of
+      the wielder's Max HP.
+    ru: Увеличивает HP на  20%. Также даёт бонус атаки, равный  1,2% от макс. HP
+      экипированного этим оружием персонажа.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -938,6 +1899,20 @@ primordial-jade-winged-spear:
     en: Primordial Jade Winged-Spear
     ru: Нефритовый коршун
   rarity: 5
+  atk:
+    base: 4
+    max: 674
+  subStat:
+    code: crit-rate
+    base: 4
+    max: 22
+  specialAbility:
+    en: On hit, increases ATK by  3.2% for 6s. Max 7 stacks. This effect can only
+      occur once every 0.3s. While in possession of the maximum possible stacks,
+      DMG dealt is increased by  12%.
+    ru: При попадании увеличивает силу атаки на  3,2% в течение 6 сек. Эффект может
+      складываться до 7 раз и возникает не чаще, чем раз в 0,3 сек. На 7 уровне
+      складывания увеличивает урон на  12%.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -951,6 +1926,19 @@ prototype-amber:
     en: Prototype Amber
     ru: "Прототип: Янтарь"
   rarity: 4
+  atk:
+    base: 9
+    max: 510
+  subStat:
+    code: hp
+    base: 9
+    max: 41
+  specialAbility:
+    en: Using an Elemental Burst regenerates  4 Energy every 2s for 6s. All party
+      members will regenerate  4% HP every 2s for this duration.
+    ru: В течение 6 сек. после использования взрыва стихий восстанавливается  4 ед.
+      энергии каждые 2 сек., а все члены отряда восстанавливают по  4% HP каждые
+      2 сек.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -964,6 +1952,20 @@ prototype-archaic:
     en: Prototype Archaic
     ru: "Прототип: Архаичный"
   rarity: 4
+  atk:
+    base: 6
+    max: 565
+  subStat:
+    code: atk
+    base: 6
+    max: 27
+  specialAbility:
+    en: On hit, Normal or Charged Attacks have a 50% chance to deal an
+      additional  240% ATK DMG to opponents within a small AoE. Can only occur
+      once every 15s.
+    ru: При попадании обычной или заряженной атакой имеет 50% шанс нанести
+      дополнительные  240% урона в небольшом радиусе. Может возникнуть раз в 15
+      сек.
   materialCodes:
     - chunk-of-aerosiderite
     - fossilized-bone-shard
@@ -977,6 +1979,18 @@ prototype-crescent:
     en: Prototype Crescent
     ru: "Прототип: Полумесяц"
   rarity: 4
+  atk:
+    base: 9
+    max: 510
+  subStat:
+    code: atk
+    base: 9
+    max: 41
+  specialAbility:
+    en: Charged Attack hits on weak points increase Movement SPD by 10% and ATK
+      by  36% for 10s.
+    ru: Попадания заряженной атакой по слабым местам увеличивают скорость
+      передвижения на 10% и силу атаки на  36% в течение 10 сек.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -990,6 +2004,19 @@ prototype-rancour:
     en: Prototype Rancour
     ru: "Прототип: Злоба"
   rarity: 4
+  atk:
+    base: 7
+    max: 565
+  subStat:
+    code: phys-dmg
+    base: 7
+    max: 34
+  specialAbility:
+    en: On hit, Normal or Charged Attacks increase ATK and DEF by  4% for 6s. Max 4
+      stacks. This effect can only occur once every 0.3s.
+    ru: Попадания обычной или заряженной атакой увеличивают силу атаки и защиту
+      на  4% в течение 6 сек. Эффект может складываться до 4 раз и возникает раз
+      в 0,3 сек.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -1004,6 +2031,18 @@ prototype-starglitter:
     en: Prototype Starglitter
     ru: "Прототип: Звёздный блеск"
   rarity: 4
+  atk:
+    base: 10
+    max: 510
+  subStat:
+    code: er
+    base: 10
+    max: 45
+  specialAbility:
+    en: After using an Elemental Skill, increases Normal and Charged Attack DMG
+      by  8% for 12s. Max 2 stacks.
+    ru: Использование элементального навыка увеличивает урон обычной и заряженной
+      атаки на  8% в течение 12 сек. Эффект может складываться до 2 раз.
   materialCodes:
     - chunk-of-aerosiderite
     - fossilized-bone-shard
@@ -1017,6 +2056,17 @@ rainslasher:
     en: Rainslasher
     ru: Дождерез
   rarity: 4
+  atk:
+    base: 36
+    max: 510
+  subStat:
+    code: em
+    base: 36
+    max: 165
+  specialAbility:
+    en: Increases DMG against opponents affected by Hydro or Electro by  20%.
+    ru: Увеличивает на  20% урон против врагов, находящихся под действием Гидро или
+      Электро элементов.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -1030,6 +2080,17 @@ raven-bow:
     en: Raven Bow
     ru: Лук ворона
   rarity: 3
+  atk:
+    base: 20
+    max: 448
+  subStat:
+    code: em
+    base: 20
+    max: 94
+  specialAbility:
+    en: Increases DMG against opponents affected by Hydro or Pyro by  12%.
+    ru: Увеличивает на  12% урон против врагов, находящихся под действием Гидро или
+      Пиро элементов.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -1043,6 +2104,16 @@ recurve-bow:
     en: Recurve Bow
     ru: Изогнутый лук
   rarity: 3
+  atk:
+    base: 10
+    max: 354
+  subStat:
+    code: hp
+    base: 10
+    max: 46
+  specialAbility:
+    en: Defeating an opponent restores  8% HP.
+    ru: Победа над противником восстанавливает  8% HP.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -1057,6 +2128,18 @@ redhorn-stonethresher:
     en: Redhorn Stonethresher
     ru: Краснорогий камнеруб
   rarity: 5
+  atk:
+    base: 19
+    max: 542
+  subStat:
+    code: crit-dmg
+    base: 19
+    max: 88
+  specialAbility:
+    en: DEF is increased by  28%. Normal and Charged Attack DMG is increased by  40%
+      of DEF.
+    ru: Защита повышается на  28%, урон обычных и заряженных атак повышается на  40%
+      защиты.
   materialCodes:
     - narukamis-valor
     - concealed-talon
@@ -1070,6 +2153,19 @@ royal-bow:
     en: Royal Bow
     ru: Королевский лук
   rarity: 4
+  atk:
+    base: 9
+    max: 510
+  subStat:
+    code: atk
+    base: 9
+    max: 41
+  specialAbility:
+    en: Upon damaging an opponent, increases CRIT Rate by  8%. Max 5 stacks. A CRIT
+      Hit removes all stacks.
+    ru: При нанесении урона противнику повышает шанс крит. попадания на  8%. Эффект
+      может складываться до 5 раз. Добавочный шанс крит. попадания исчезает с
+      первым крит. попаданием.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -1083,6 +2179,19 @@ royal-greatsword:
     en: Royal Greatsword
     ru: Королевский двуручный меч
   rarity: 4
+  atk:
+    base: 6
+    max: 565
+  subStat:
+    code: atk
+    base: 6
+    max: 27
+  specialAbility:
+    en: Upon damaging an opponent, increases CRIT Rate by  8%. Max 5 stacks. A CRIT
+      Hit removes all stacks.
+    ru: При нанесении урона противнику повышает шанс крит. попадания на  8%. Эффект
+      может складываться до 5 раз. Добавочный шанс крит. попадания исчезает с
+      первым крит. попаданием.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -1096,6 +2205,19 @@ royal-grimoire:
     en: Royal Grimoire
     ru: Королевский гримуар
   rarity: 4
+  atk:
+    base: 6
+    max: 565
+  subStat:
+    code: atk
+    base: 6
+    max: 27
+  specialAbility:
+    en: Upon damaging an opponent, increases CRIT Rate by  8%. Max 5 stacks. A CRIT
+      Hit removes all stacks.
+    ru: При нанесении урона противнику повышает шанс крит. попадания на  8%. Эффект
+      может складываться до 5 раз. Добавочный шанс крит. попадания исчезает с
+      первым крит. попаданием.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -1109,6 +2231,19 @@ royal-longsword:
     en: Royal Longsword
     ru: Меч аристократов
   rarity: 4
+  atk:
+    base: 9
+    max: 510
+  subStat:
+    code: atk
+    base: 9
+    max: 41
+  specialAbility:
+    en: Upon damaging an opponent, increases CRIT Rate by  8%. Max 5 stacks. A CRIT
+      Hit removes all stacks.
+    ru: При нанесении урона противнику повышает шанс крит. попадания на  8%. Эффект
+      может складываться до 5 раз. Добавочный шанс крит. попадания исчезает с
+      первым крит. попаданием.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -1122,6 +2257,19 @@ royal-spear:
     en: Royal Spear
     ru: Королевское копьё
   rarity: 4
+  atk:
+    base: 6
+    max: 565
+  subStat:
+    code: atk
+    base: 6
+    max: 27
+  specialAbility:
+    en: Upon damaging an opponent, increases CRIT Rate by  8%. Max 5 stacks. A CRIT
+      Hit removes all stacks.
+    ru: При нанесении урона противнику повышает шанс крит. попадания на  8%. Эффект
+      может складываться до 5 раз. Добавочный шанс крит. попадания исчезает с
+      первым крит. попаданием.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -1135,6 +2283,17 @@ rust:
     en: Rust
     ru: Ржавый лук
   rarity: 4
+  atk:
+    base: 9
+    max: 510
+  subStat:
+    code: atk
+    base: 9
+    max: 41
+  specialAbility:
+    en: Increases Normal Attack DMG by  40% but decreases Charged Attack DMG by 10%.
+    ru: Увеличивает урон обычной атаки на  40%, но понижает урон заряженной атаки на
+      10%.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -1148,6 +2307,18 @@ sacrificial-bow:
     en: Sacrificial Bow
     ru: Церемониальный лук
   rarity: 4
+  atk:
+    base: 6
+    max: 565
+  subStat:
+    code: er
+    base: 6
+    max: 30
+  specialAbility:
+    en: After damaging an opponent with an Elemental Skill, the skill has a  40%
+      chance to end its own CD. Can only occur once every  30s.
+    ru: Когда элементальный навык наносит урон, есть  40% вероятность, что его откат
+      моментально восстановится. Может возникнуть раз в  30 сек.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1161,6 +2332,18 @@ sacrificial-fragments:
     en: Sacrificial Fragments
     ru: Церемониальные мемуары
   rarity: 4
+  atk:
+    base: 48
+    max: 454
+  subStat:
+    code: em
+    base: 48
+    max: 221
+  specialAbility:
+    en: After damaging an opponent with an Elemental Skill, the skill has a  40%
+      chance to end its own CD. Can only occur once every  30s.
+    ru: Когда элементальный навык наносит урон, есть  40% вероятность, что его откат
+      моментально восстановится. Может возникнуть раз в  30 сек.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -1174,6 +2357,18 @@ sacrificial-greatsword:
     en: Sacrificial Greatsword
     ru: Церемониальный двуручный меч
   rarity: 4
+  atk:
+    base: 6
+    max: 565
+  subStat:
+    code: er
+    base: 6
+    max: 30
+  specialAbility:
+    en: After damaging an opponent with an Elemental Skill, the skill has a  40%
+      chance to end its own CD. Can only occur once every  30s.
+    ru: Когда элементальный навык наносит урон, есть  40% вероятность, что его откат
+      моментально восстановится. Может возникнуть раз в  30 сек.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1187,6 +2382,18 @@ sacrificial-sword:
     en: Sacrificial Sword
     ru: Церемониальный меч
   rarity: 4
+  atk:
+    base: 13
+    max: 454
+  subStat:
+    code: er
+    base: 13
+    max: 61
+  specialAbility:
+    en: After damaging an opponent with an Elemental Skill, the skill has a  40%
+      chance to end its own CD. Can only occur once every  30s.
+    ru: Когда элементальный навык наносит урон, есть  40% вероятность, что его откат
+      моментально восстановится. Может возникнуть раз в  30 сек.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -1200,6 +2407,13 @@ seasoned-hunters-bow:
     en: Seasoned Hunter's Bow
     ru: Лук опытного охотника
   rarity: 2
+  atk:
+    base: 0
+    max: 243
+  subStat: null
+  specialAbility:
+    en: ""
+    ru: ""
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1216,6 +2430,22 @@ serpent-spine:
     en: Serpent Spine
     ru: Меч драконьей кости
   rarity: 4
+  atk:
+    base: 6
+    max: 510
+  subStat:
+    code: crit-rate
+    base: 6
+    max: 27
+  specialAbility:
+    en: Every 4s a character is on the field, they will deal  6% more DMG and
+      take  3% more DMG. This effect has a maximum of 5 stacks and will not be
+      reset if the character leaves the field, but will be reduced by 1 stack
+      when the character takes DMG.
+    ru: Каждые 4 сек. увеличивает наносимый персонажем урон на  6% и получаемый им
+      урон на  3%, пока тот активен. Может складываться до 5 раз, не
+      сбрасывается при смене персонажа, при получении урона снижается на 1
+      уровень складывания.
   materialCodes:
     - chunk-of-aerosiderite
     - fossilized-bone-shard
@@ -1229,6 +2459,16 @@ sharpshooters-oath:
     en: Sharpshooter's Oath
     ru: Клятва стрелка
   rarity: 3
+  atk:
+    base: 10
+    max: 401
+  subStat:
+    code: crit-dmg
+    base: 10
+    max: 46
+  specialAbility:
+    en: Increases DMG against weak spots by  24%.
+    ru: Увеличивает урон по слабым местам противников на  24%.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1242,6 +2482,13 @@ silver-sword:
     en: Silver Sword
     ru: Серебряный меч
   rarity: 2
+  atk:
+    base: 0
+    max: 243
+  subStat: null
+  specialAbility:
+    en: ""
+    ru: ""
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -1258,6 +2505,19 @@ skyrider-greatsword:
     en: Skyrider Greatsword
     ru: Большой меч небесного всадника
   rarity: 3
+  atk:
+    base: 9
+    max: 401
+  subStat:
+    code: phys-dmg
+    base: 9
+    max: 43
+  specialAbility:
+    en: On hit, Normal or Charged Attacks increase ATK by  6% for 6s. Max 4 stacks.
+      Can occur once every 0.5s.
+    ru: При попадании обычной или заряженной атакой сила атаки увеличивается на  6%
+      в течение 6 сек. Эффект может складываться до 4 раз. Может возникнуть раз
+      в 0,5 сек.
   materialCodes:
     - chunk-of-aerosiderite
     - fossilized-bone-shard
@@ -1272,6 +2532,18 @@ skyrider-sword:
     en: Skyrider Sword
     ru: Меч небесного всадника
   rarity: 3
+  atk:
+    base: 11
+    max: 354
+  subStat:
+    code: er
+    base: 11
+    max: 52
+  specialAbility:
+    en: Using an Elemental Burst grants a  12% increase in ATK and Movement SPD for
+      15s.
+    ru: Активация взрыва стихии увеличивает силу атаки и скорость передвижения
+      на  12% в течение 15 сек.
   materialCodes:
     - chunk-of-aerosiderite
     - fossilized-bone-shard
@@ -1286,6 +2558,21 @@ skyward-atlas:
     en: Skyward Atlas
     ru: Небесный атлас
   rarity: 5
+  atk:
+    base: 7
+    max: 674
+  subStat:
+    code: atk
+    base: 7
+    max: 33
+  specialAbility:
+    en: Increases Elemental DMG Bonus by  12%. Normal Attack hits have a 50% chance
+      to earn the favor of the clouds, which actively seek out nearby opponents
+      to attack for 15s, dealing  160% ATK DMG. Can only occur once every 30s.
+    ru: Увеличивает бонус элементального урона на  12%. При попадании обычной атакой
+      есть 50% шанс получить благословение облаков, которые в течение 15 сек.
+      атакуют ближайших врагов и наносят им  160% урона. Может возникнуть раз в
+      30 сек.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1299,6 +2586,22 @@ skyward-blade:
     en: Skyward Blade
     ru: Небесный меч
   rarity: 5
+  atk:
+    base: 12
+    max: 608
+  subStat:
+    code: er
+    base: 12
+    max: 55
+  specialAbility:
+    en: "CRIT Rate increased by  4%. Gains Skypiercing Might upon using an Elemental
+      Burst: Increases Movement SPD by  10%, increases ATK SPD by  10%, and
+      Normal and Charged hits deal additional DMG equal to  20% of ATK.
+      Skypiercing Might lasts for 12s."
+    ru: Увеличивает шанс крит. попадания на  4%. Взрыв стихии пробуждает силу небес,
+      которая увеличивает скорость передвижения и атаки на  10%, а обычные и
+      заряженные атаки при попадании наносят дополнительный урон, равный  20% от
+      силы атаки. Все эффекты длятся 12 сек.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1312,6 +2615,18 @@ skyward-harp:
     en: Skyward Harp
     ru: Небесное крыло
   rarity: 5
+  atk:
+    base: 4
+    max: 674
+  subStat:
+    code: crit-rate
+    base: 4
+    max: 22
+  specialAbility:
+    en: Increases CRIT DMG by  20%. Hits have a  60% chance to inflict a small AoE
+      attack, dealing 125% Physical ATK DMG. Can only occur once every  4s.
+    ru: Увеличивает крит. урон на  20%. При попадании есть  60% шанс нанести 125%
+      физ. урона в небольшом радиусе. Может возникнуть раз в  4 сек.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1325,6 +2640,21 @@ skyward-pride:
     en: Skyward Pride
     ru: Небесное величие
   rarity: 5
+  atk:
+    base: 8
+    max: 674
+  subStat:
+    code: er
+    base: 8
+    max: 36
+  specialAbility:
+    en: Increases all DMG by  8%. After using an Elemental Burst, Normal or Charged
+      Attack, on hit, creates a vacuum blade that does  80% of ATK as DMG to
+      opponents along its path. Lasts for 20s or 8 vacuum blades.
+    ru: Увеличивает наносимый урон на  8%. После активации взрыва стихий попадания
+      обычными или заряженными атаками запускают неосязаемое лезвие, которое
+      наносит  80% урона всем врагам на своём пути. Длится 20 сек. или 8
+      неосязаемых лезвий.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1338,6 +2668,22 @@ skyward-spine:
     en: Skyward Spine
     ru: Небесная ось
   rarity: 5
+  atk:
+    base: 8
+    max: 674
+  subStat:
+    code: er
+    base: 8
+    max: 36
+  specialAbility:
+    en: Increases CRIT Rate by  8% and increases Normal ATK SPD by  12%.
+      Additionally, Normal and Charged Attacks hits on opponents have a  50%
+      chance to trigger a vacuum blade that deals  40% of ATK as DMG in a small
+      AoE. This effect can occur no more than once every 2s.
+    ru: Увеличивает шанс крит. попадания на  8% и скорость обычной атаки на  12%.
+      При попадании обычной или заряженной атакой есть  50% шанс активировать
+      неосязаемое лезвие, которое наносит  40% урона в небольшом радиусе. Может
+      возникнуть раз в 2 сек.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -1351,6 +2697,19 @@ slingshot:
     en: Slingshot
     ru: Рогатка
   rarity: 3
+  atk:
+    base: 6
+    max: 354
+  subStat:
+    code: crit-rate
+    base: 6
+    max: 31
+  specialAbility:
+    en: If a Normal or Charged Attack hits a target within 0.3s of being fired,
+      increases DMG by  36%. Otherwise, decreases DMG by 10%.
+    ru: Если обычная или заряженная стрела поразила цель в течение 0,3 сек. после
+      выстрела, то её урон увеличивается на  36%. В противном случае урон
+      уменьшается на 10%.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -1364,6 +2723,22 @@ snow-tombed-starsilver:
     en: Snow-Tombed Starsilver
     ru: Заснеженное звёздное серебро
   rarity: 4
+  atk:
+    base: 7
+    max: 565
+  subStat:
+    code: phys-dmg
+    base: 7
+    max: 34
+  specialAbility:
+    en: Hitting an opponent with Normal and Charged Attacks has a  60% chance of
+      forming and dropping an Everfrost Icicle above them, dealing AoE DMG equal
+      to  80% of ATK. Opponents affected by Cryo are instead dealt DMG equal
+      to  200% of ATK. Can only occur once every 10s.
+    ru: Попадания обычной или заряженной атакой имеют  60% шанс создать над
+      противником ледяной кристалл и уронить его, нанося  80% урона силы атаки
+      по площади. Если противник имеет эффект Крио, то наносит ему  200% урона
+      силы атаки. Может возникнуть раз в 10 сек.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -1378,6 +2753,21 @@ solar-pearl:
     en: Solar Pearl
     ru: Солнечная жемчужина
   rarity: 4
+  atk:
+    base: 6
+    max: 510
+  subStat:
+    code: crit-rate
+    base: 6
+    max: 27
+  specialAbility:
+    en: Normal Attack hits increase Elemental Skill and Elemental Burst DMG by  20%
+      for 6s. Likewise, Elemental Skill or Elemental Burst hits increase Normal
+      Attack DMG by  20% for 6s.
+    ru: Попадания обычной атакой увеличивают урон элементальных навыков и взрыва
+      стихии на  20% в течение 6 сек. И наоборот, попадания элементальными
+      навыками и взрывом стихии увеличивают урон обычной атаки на  20% в течение
+      6 сек.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -1391,6 +2781,33 @@ song-of-broken-pines:
     en: Song of Broken Pines
     ru: Песнь разбитых сосен
   rarity: 5
+  atk:
+    base: 4
+    max: 741
+  subStat:
+    code: phys-dmg
+    base: 4
+    max: 20
+  specialAbility:
+    en: 'A part of the "Millennial Movement" that wanders amidst the winds.
+      Increases ATK by  16%, and when Normal or Charged Attacks hit opponents,
+      the character gains a Sigil of Whispers. This effect can be triggered once
+      every 0.3s. When you possess 4 Sigils of Whispers, all of them will be
+      consumed and all nearby party members will obtain the "Millennial
+      Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn"
+      increases Normal ATK SPD by  12% and increases ATK by  20%. Once this
+      effect is triggered, you will not gain Sigils of Whispers for 20s. Of the
+      many effects of the "Millennial Movement," buffs of the same type will not
+      stack.'
+    ru: "Часть Тысячелетней симфонии, что блуждает среди ветров. Увеличивает силу
+      атаки на  16% и при попадании обычной или заряженной атакой даёт персонажу
+      Печать шёпота. Этот эффект может возникнуть раз в 0,3 сек. После получения
+      4-ой Печати шёпота все они тратятся, и все окружающие члены отряда
+      получают эффект «Тысячелетняя симфония: Гимн знамени» на 12 сек.
+      «Тысячелетняя симфония: Гимн знамени» увеличивает скорость обычной атаки
+      на  12% и силу атаки на  20%. После активации этого эффекта вы не сможете
+      получать Печати шёпота в течение 20 сек. При наличии нескольких эффектов
+      Тысячелетней симфонии усиления одного типа не складываются."
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -1404,6 +2821,21 @@ staff-of-homa:
     en: Staff of Homa
     ru: Посох Хомы
   rarity: 5
+  atk:
+    base: 14
+    max: 608
+  subStat:
+    code: crit-dmg
+    base: 14
+    max: 66
+  specialAbility:
+    en: HP increased by  20%. Additionally, provides an ATK Bonus based on  0.8% of
+      the wielder's Max HP. When the wielder's HP is less than 50%, this ATK
+      Bonus is increased by an additional  1% of Max HP.
+    ru: Увеличивает HP на  20%. Также даёт бонус атаки, равный  0,8% от макс. HP
+      экипированного этим оружием персонажа. Когда HP экипированного этим
+      оружием персонажа опускается ниже 50%, его сила атаки дополнительно
+      увеличивается на  1% от его макс. HP.
   materialCodes:
     - chunk-of-aerosiderite
     - ley-line-sprout
@@ -1417,6 +2849,21 @@ summit-shaper:
     en: Summit Shaper
     ru: Кромсатель пиков
   rarity: 5
+  atk:
+    base: 10
+    max: 608
+  subStat:
+    code: atk
+    base: 10
+    max: 49
+  specialAbility:
+    en: Increases Shield Strength by  20%. Scoring hits on opponents increases ATK
+      by  4% for 8s. Max 5 stacks. Can only occur once every 0.3s. While
+      protected by a shield, this ATK increase effect is increased by 100%.
+    ru: Увеличивает прочность щита на  20%. При попадании увеличивает силу атаки
+      на  4% в течение 8 сек. Эффект может складываться до 5 раз и возникнуть
+      раз в 0,3 сек. Кроме того, под защитой щита бонус силы атаки данного
+      эффекта увеличивается на 100%.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -1430,6 +2877,24 @@ sword-of-descension:
     en: Sword of Descension
     ru: Меч нисхождения
   rarity: 4
+  atk:
+    base: 7
+    max: 440
+  subStat:
+    code: atk
+    base: 7
+    max: 35
+  specialAbility:
+    en: 'Effective only on the following platform: \n "PlayStation Network"\nHitting
+      opponents with Normal and Charged Attacks grants a  50% chance to
+      deal  200% ATK as DMG in a small AoE. This effect can only occur once
+      every 10s. Additionally, if the Traveler equips the Sword of Descension,
+      their ATK is increased by  66.'
+    ru: Действует только для игроков\n "PlayStation Network".\nАтакуя противников
+      обычными и заряженными атаками, вы получаете  50% шанс нанести урон,
+      равный  200% силы атаки в небольшом радиусе. Эффект может возникнуть 1 раз
+      в 10 сек. Кроме того, если Путешественник экипирован Мечом нисхождения,
+      его сила атаки увеличивается на  66 единиц.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1443,6 +2908,18 @@ the-alley-flash:
     en: The Alley Flash
     ru: Вспышка во тьме
   rarity: 4
+  atk:
+    base: 12
+    max: 620
+  subStat:
+    code: em
+    base: 12
+    max: 55
+  specialAbility:
+    en: Increases DMG dealt by the character equipping this weapon by  12%. Taking
+      DMG disables this effect for 5s.
+    ru: Увеличивает урон персонажа на  12%. После получения урона эффект пропадает
+      на 5 сек.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -1456,6 +2933,21 @@ the-bell:
     en: The Bell
     ru: Меч-колокол
   rarity: 4
+  atk:
+    base: 9
+    max: 510
+  subStat:
+    code: hp
+    base: 9
+    max: 41
+  specialAbility:
+    en: Taking DMG generates a shield which absorbs DMG up to  20% of Max HP. This
+      shield lasts for 10s or until broken, and can only be triggered once
+      every  45s. While protected by a shield, the character gains  12%
+      increased DMG.
+    ru: При получении урона генерируется щит, который в течение 10 сек. поглощает
+      урон, равный  20% от макс. HP. Может возникнуть раз в  45 сек. Под защитой
+      щита увеличивает урон персонажа на  12%.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -1469,6 +2961,20 @@ the-black-sword:
     en: The Black Sword
     ru: Чёрный меч
   rarity: 4
+  atk:
+    base: 6
+    max: 510
+  subStat:
+    code: crit-rate
+    base: 6
+    max: 27
+  specialAbility:
+    en: Increases DMG dealt by Normal and Charged Attacks by  20%. Additionally,
+      regenerates  60% of ATK as HP when Normal and Charged Attacks score a CRIT
+      Hit. This effect can occur once every 5s.
+    ru: Увеличивает урон обычной и заряженной атаки на  20%. Крит. попадания обычной
+      и заряженной атакой восстанавливают HP, равное  60% от силы атаки. Может
+      возникнуть раз в 5 сек.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1482,6 +2988,16 @@ the-catch:
     en: '"The Catch"'
     ru: «Улов»
   rarity: 4
+  atk:
+    base: 10
+    max: 510
+  subStat:
+    code: er
+    base: 10
+    max: 45
+  specialAbility:
+    en: Increases Elemental Burst DMG by  16% and Elemental Burst CRIT Rate by  6%.
+    ru: Повышает урон взрыва стихии на  16% и его шанс крит. попадания на  6%.
   materialCodes:
     - mask-of-the-kijin
     - chaos-oculus
@@ -1495,6 +3011,22 @@ the-flute:
     en: The Flute
     ru: Меч-флейта
   rarity: 4
+  atk:
+    base: 9
+    max: 510
+  subStat:
+    code: atk
+    base: 9
+    max: 41
+  specialAbility:
+    en: Normal or Charged Attacks grant a Harmonic on hits. Gaining 5 Harmonics
+      triggers the power of music and deals  100% ATK DMG to surrounding
+      opponents. Harmonics last up to 30s, and a maximum of 1 can be gained
+      every 0.5s.
+    ru: Попадания обычной или заряженной атакой дают музыкальную ноту. При
+      накоплении 5 нот активируется сила музыки, которая наносит  100% урона
+      окружающим врагам. Ноты исчезают через 30 сек. Новую ноту можно получить
+      раз в 0,5 сек.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1508,6 +3040,16 @@ the-stringless:
     en: The Stringless
     ru: Бесструнный
   rarity: 4
+  atk:
+    base: 36
+    max: 510
+  subStat:
+    code: em
+    base: 36
+    max: 165
+  specialAbility:
+    en: Increases Elemental Skill and Elemental Burst DMG by  24%.
+    ru: Увеличивает урон элементальных навыков и взрыва стихии на  24%.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -1521,6 +3063,21 @@ the-unforged:
     en: The Unforged
     ru: Некованый
   rarity: 5
+  atk:
+    base: 10
+    max: 608
+  subStat:
+    code: atk
+    base: 10
+    max: 49
+  specialAbility:
+    en: Increases Shield Strength by  20%. Scoring hits on opponents increases ATK
+      by  4% for 8s. Max 5 stacks. Can only occur once every 0.3s. While
+      protected by a shield, this ATK increase effect is increased by 100%.
+    ru: Увеличивает прочность щита на  20%. При попадании увеличивает силу атаки
+      на  4% в течение 8 сек. Эффект может складываться до 5 раз и возникнуть
+      раз в 0,3 сек. Кроме того, под защитой щита бонус силы атаки данного
+      эффекта увеличивается на 100%.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -1534,6 +3091,21 @@ the-viridescent-hunt:
     en: The Viridescent Hunt
     ru: Зелёный лук
   rarity: 4
+  atk:
+    base: 6
+    max: 510
+  subStat:
+    code: crit-rate
+    base: 6
+    max: 27
+  specialAbility:
+    en: Upon hit, Normal and Aimed Shot Attacks have a 50% chance to generate a
+      Cyclone, which will continuously attract surrounding opponents,
+      dealing  40% of ATK as DMG to these opponents every 0.5s for 4s. This
+      effect can only occur once every  14s.
+    ru: При попадании обычной или заряженной атакой появляется 50% шанс создать
+      Циклон, который притягивает к себе врагов и наносит им  40% урона каждые
+      0,5 сек. в течение 4 сек. Может возникнуть раз в  14 сек.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -1547,6 +3119,22 @@ the-widsith:
     en: The Widsith
     ru: Песнь странника
   rarity: 4
+  atk:
+    base: 12
+    max: 510
+  subStat:
+    code: crit-dmg
+    base: 12
+    max: 55
+  specialAbility:
+    en: "When the character takes the field, they will gain a random theme song for
+      10s. This can only occur once every 30s. Recitative: ATK is increased
+      by  60%. Aria: Increases all Elemental DMG by  48%. Interlude: Elemental
+      Mastery is increased by  240."
+    ru: "При переключении на персонажа в течение 10 сек. играет случайная
+      музыкальная тема. Может возникнуть раз в 30 сек. Речитатив: увеличивает
+      силу атаки на  60%; Ария: увеличивает элементальный урон на  48%;
+      Интерлюдия: увеличивает мастерство стихий на  240."
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1560,6 +3148,18 @@ thrilling-tales-of-dragon-slayers:
     en: Thrilling Tales of Dragon Slayers
     ru: Эпос о драконоборцах
   rarity: 3
+  atk:
+    base: 7
+    max: 401
+  subStat:
+    code: hp
+    base: 7
+    max: 35
+  specialAbility:
+    en: When switching characters, the new character taking the field has their ATK
+      increased by  24% for 10s. This effect can only occur once every 20s.
+    ru: При переключении персонажа увеличивает силу атаки вошедшего на поле боя
+      персонажа на  24% в течение 10 сек. Может возникнуть раз в 20 сек.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1573,6 +3173,29 @@ thundering-pulse:
     en: Thundering Pulse
     ru: Громовой пульс
   rarity: 5
+  atk:
+    base: 14
+    max: 608
+  subStat:
+    code: crit-dmg
+    base: 14
+    max: 66
+  specialAbility:
+    en: "Increases ATK by  20% and grants the might of the Thunder Emblem. At stack
+      levels 1/2/3, the Thunder Emblem increases Normal Attack DMG
+      by  12/24/40%. The character will obtain 1 stack of Thunder Emblem in each
+      of the following scenarios: Normal Attack deals DMG (stack lasts 5s),
+      casting Elemental Skill (stack lasts 10s); Energy is less than 100% (stack
+      disappears when Energy is full). Each stack's duration is calculated
+      independently."
+    ru: "Увеличивает силу атаки на  20% и дарует мощь Громовой эмблемы. На уровнях
+      эмблемы 1, 2 или 3 урон обычной атаки увеличивается на  12%, 24% или 40%
+      соответственно. Персонаж получает 1 уровень Громовой эмблемы в каждом из
+      следующих случаев: при нанесении урона обычной атакой (эмблема действует 5
+      сек.); при применении элементального навыка (эмблема действует 10 сек.);
+      когда элементальная энергия персонажа ниже 100% (эмблема исчезнет, когда
+      элементальная энергия полностью восстановится). Продолжительность действия
+      каждого уровня эмблемы рассчитывается индивидуально."
   materialCodes:
     - narukamis-valor
     - polarizing-prism
@@ -1586,6 +3209,16 @@ travelers-handy-sword:
     en: Traveler's Handy Sword
     ru: Меч путешественника
   rarity: 3
+  atk:
+    base: 6
+    max: 448
+  subStat:
+    code: def
+    base: 6
+    max: 29
+  specialAbility:
+    en: Each Elemental Orb or Particle collected restores  1% HP.
+    ru: Подобранные элементальные сферы и частицы восстанавливают  1% HP.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -1600,6 +3233,17 @@ twin-nephrite:
     en: Twin Nephrite
     ru: Парный нефрит
   rarity: 3
+  atk:
+    base: 3
+    max: 448
+  subStat:
+    code: crit-rate
+    base: 3
+    max: 15
+  specialAbility:
+    en: Defeating an opponent increases Movement SPD and ATK by  12% for 15s.
+    ru: Победа над противником увеличивает скорость передвижения и силу атаки
+      на  12% в течение 15 сек.
   materialCodes:
     - mist-veiled-primo-elixir
     - mist-grass-wick
@@ -1613,6 +3257,21 @@ vortex-vanquisher:
     en: Vortex Vanquisher
     ru: Покоритель вихря
   rarity: 5
+  atk:
+    base: 10
+    max: 608
+  subStat:
+    code: atk
+    base: 10
+    max: 49
+  specialAbility:
+    en: Increases Shield Strength by  20%. Scoring hits on opponents increases ATK
+      by  4% for 8s. Max 5 stacks. Can only occur once every 0.3s. While
+      protected by a shield, this ATK increase effect is increased by 100%.
+    ru: Увеличивает прочность щита на  20%. При попадании увеличивает силу атаки
+      на  4% в течение 8 сек. Эффект может складываться до 5 раз и возникнуть
+      раз в 0,3 сек. Кроме того, под защитой щита бонус силы атаки данного
+      эффекта увеличивается на 100%.
   materialCodes:
     - chunk-of-aerosiderite
     - fossilized-bone-shard
@@ -1626,6 +3285,13 @@ waster-greatsword:
     en: Waster Greatsword
     ru: Двуручный меч богатыря
   rarity: 1
+  atk:
+    base: 0
+    max: 185
+  subStat: null
+  specialAbility:
+    en: ""
+    ru: ""
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1641,6 +3307,21 @@ wavebreakers-fin:
     en: Wavebreaker's Fin
     ru: Режущий волны плавник
   rarity: 4
+  atk:
+    base: 3
+    max: 620
+  subStat:
+    code: atk
+    base: 3
+    max: 13
+  specialAbility:
+    en: For every point of the entire party's combined maximum Energy capacity, the
+      Elemental Burst DMG of the character equipping this weapon is increased
+      by  0.12%. A maximum of  40% increased Elemental Burst DMG can be achieved
+      this way.
+    ru: Урон взрыва стихии экипированного этим оружием персонажа увеличивается
+      на  0,12% за каждую единицу суммы макс. энергии каждого члена отряда.
+      Бонус урона не может превышать  40%.
   materialCodes:
     - mask-of-the-kijin
     - concealed-talon
@@ -1654,6 +3335,16 @@ white-iron-greatsword:
     en: White Iron Greatsword
     ru: Меч из белого железа
   rarity: 3
+  atk:
+    base: 9
+    max: 401
+  subStat:
+    code: def
+    base: 9
+    max: 43
+  specialAbility:
+    en: Defeating an opponent restores  8% HP.
+    ru: Победа над противником восстанавливает  8% HP.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -1667,6 +3358,16 @@ white-tassel:
     en: White Tassel
     ru: Белая кисть
   rarity: 3
+  atk:
+    base: 5
+    max: 401
+  subStat:
+    code: crit-rate
+    base: 5
+    max: 23
+  specialAbility:
+    en: Increases Normal Attack DMG by  24%.
+    ru: Увеличивает урон обычной атаки на  24%.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -1680,6 +3381,19 @@ whiteblind:
     en: Whiteblind
     ru: Белая тень
   rarity: 4
+  atk:
+    base: 11
+    max: 510
+  subStat:
+    code: def
+    base: 11
+    max: 51
+  specialAbility:
+    en: On hit, Normal or Charged Attacks increase ATK and DEF by  6% for 6s. Max 4
+      stacks. This effect can only occur once every 0.5s.
+    ru: При попадании Обычной или Заряженной атакой Сила атаки и Защита
+      увеличиваются на  6% в течение 6 сек. Эффект может складываться до 4 раз.
+      Может возникнуть не чаще 1 раза за 0,5 сек.
   materialCodes:
     - divine-body-from-guyun
     - inspectors-sacrificial-knife
@@ -1693,6 +3407,18 @@ windblume-ode:
     en: Windblume Ode
     ru: Ода анемонии
   rarity: 4
+  atk:
+    base: 36
+    max: 510
+  subStat:
+    code: em
+    base: 36
+    max: 165
+  specialAbility:
+    en: After using an Elemental Skill, receive a boon from the ancient wish of the
+      Windblume, increasing ATK by  16% for 6s.
+    ru: Использование элементального навыка накладывает Древнее желание анемонии,
+      которое увеличивает силу атаки на  16% в течение 6 сек.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - ley-line-sprout
@@ -1706,6 +3432,21 @@ wine-and-song:
     en: Wine and Song
     ru: Вино и песни
   rarity: 4
+  atk:
+    base: 6
+    max: 565
+  subStat:
+    code: er
+    base: 6
+    max: 30
+  specialAbility:
+    en: Hitting an opponent with a Normal Attack decreases the Stamina consumption
+      of Sprint or Alternate Sprint by  14% for 5s. Additionally, using a Sprint
+      or Alternate Sprint ability increases ATK by  20% for 5s.
+    ru: Попадания обычной атакой уменьшают потребление выносливости спринта и
+      навыков, заменяющих спринт, на  14% в течение 5 сек. Кроме того,
+      использование спринта или навыка, заменяющего спринт, увеличивает силу
+      атаки на  20% в течение 5 сек.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1719,6 +3460,20 @@ wolfs-gravestone:
     en: Wolf's Gravestone
     ru: Волчья погибель
   rarity: 5
+  atk:
+    base: 10
+    max: 608
+  subStat:
+    code: atk
+    base: 10
+    max: 49
+  specialAbility:
+    en: Increases ATK by  20%. On hit, attacks against opponents with less than 30%
+      HP increase all party members' ATK by  40% for 12s. Can only occur once
+      every 30s.
+    ru: Увеличивает силу атаки на  20%. При попадании по цели с HP меньше 30%
+      увеличивает силу атаки всех членов отряда на  40% в течение 12 сек. Может
+      возникнуть не чаще 1 раза за 30 сек.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
