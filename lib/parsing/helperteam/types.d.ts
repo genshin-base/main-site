@@ -1,4 +1,4 @@
-import type { GI_ElementCode, GI_WeaponTypeCode } from '#lib/genshin'
+import type { GI_ElementCode } from '#lib/genshin'
 import type { CompactTextParagraphs } from './text'
 
 // === Common ===
@@ -13,13 +13,6 @@ type BottomNotes<T extends LangMode> = {
 }
 
 // === Artifacts ===
-
-type ArtifactInfo<T extends LangMode> = {
-	code: string
-	sets:
-		| { '1': LangsIf<T, CompactTextParagraphs> }
-		| { '2': LangsIf<T, CompactTextParagraphs>; '4': LangsIf<T, CompactTextParagraphs> }
-}
 
 type ArtifactRef = { code: string; count: number }
 
@@ -41,16 +34,6 @@ type ArtifactMainStatAdvices<T extends LangMode> = {
 type ArtifactSubStatAdvices<T extends LangMode> = { advices: ArtifactStatAdvice<T>[] } & BottomNotes<T>
 
 // === Weapons ===
-
-type WeaponInfoStat = { code: string; value1: number; value90: number }
-
-type WeaponInfo<T extends LangMode> = {
-	code: string
-	typeCode: GI_WeaponTypeCode
-	mainStat: WeaponInfoStat
-	subStat: WeaponInfoStat
-	passiveStat: LangsIf<T, CompactTextParagraphs>
-}
 
 type WeaponRef<T extends LangMode> = {
 	code: string
@@ -96,6 +79,4 @@ type ChangelogsTable = {
 
 type BuildInfo<T extends LangMode> = {
 	characters: CharacterBuildInfo<T>[]
-	artifacts: ArtifactInfo<T>[]
-	weapons: WeaponInfo<T>[]
 }

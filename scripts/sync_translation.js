@@ -57,8 +57,6 @@ async function upload() {
 	const sheets = mustGetSheets(spreadsheet.sheets)
 
 	const characterRows = /**@type {import('#lib/google').RowData[]}*/ ([])
-	const weaponRows = /**@type {import('#lib/google').RowData[]}*/ ([])
-	const artifactRows = /**@type {import('#lib/google').RowData[]}*/ ([])
 	1
 	{
 		const addRow = addRowTo.bind(null, characterRows, 2 + builds.length)
@@ -100,38 +98,6 @@ async function upload() {
 
 		for (let i = 0; i < 10; i++) addRow()
 	}
-	{
-		info('processing weapons')
-
-		const addRow = addRowTo.bind(null, weaponRows, 2 + builds.length)
-		addRow('', '', ...builds.map(x => x.lang))
-		addRow()
-
-		for (const weapons of zip(builds.map(x => x.data.weapons))) {
-			const code = ensureSameCode(weapons)
-			addRow(code, 'passive', ...weapons.map(x => packTextOrBlank(x.passiveStat)))
-		}
-		for (let i = 0; i < 10; i++) addRow()
-	}
-	{
-		info('processing artifacts')
-
-		const addRow = addRowTo.bind(null, artifactRows, 2 + builds.length)
-		addRow('', '', ...builds.map(x => x.lang))
-		addRow()
-
-		for (const artifacts of zip(builds.map(x => x.data.artifacts))) {
-			const code = ensureSameCode(artifacts)
-			if (textsAreBlank(artifacts.map(x => x.sets['1'] ?? null))) {
-				addRow(code, 'x2', ...artifacts.map(x => packTextOrBlank(x.sets['2'] ?? null)))
-				addRow(code, 'x4', ...artifacts.map(x => packTextOrBlank(x.sets['4'] ?? null)))
-			} else {
-				addRow(code, 'x1', ...artifacts.map(x => packTextOrBlank(x.sets['1'] ?? null)))
-			}
-			addRow()
-		}
-		for (let i = 0; i < 10; i++) addRow()
-	}
 
 	info('uploading...')
 	await updateSpreadsheet(
@@ -139,20 +105,18 @@ async function upload() {
 		`${CACHE_DIR}/google.access_token.json`,
 		DOC_ID,
 		[
-			{ id: sheets.characters.properties.sheetId, rows: characterRows },
-			{ id: sheets.weapons.properties.sheetId, rows: weaponRows },
-			{ id: sheets.artifacts.properties.sheetId, rows: artifactRows },
-		].map(({ id, rows }) => ({
-			updateCells: {
-				rows,
-				fields: '*',
-				start: {
-					sheetId: id,
-					rowIndex: 0,
-					columnIndex: 0,
+			{
+				updateCells: {
+					rows: characterRows,
+					fields: '*',
+					start: {
+						sheetId: sheets.characters.properties.sheetId,
+						rowIndex: 0,
+						columnIndex: 0,
+					},
 				},
 			},
-		})),
+		],
 	)
 	info('done.')
 }
@@ -253,43 +217,6 @@ async function download() {
 			}
 		}
 	}
-	{
-		const lang2col = makeLangColMap(sheets.artifacts)
-		const extractTexts = extractLangTexts.bind(null, lang2col, langs)
-
-		for (const { values: cells = [] } of sheets.artifacts.data[0].rowData.slice(1)) {
-			if (cells.length === 0) continue
-
-			const code = json_getText(cells[0]).trim()
-			if (code === '') continue
-
-			const artifact = langBuilds.artifacts.find(x => x.code === code)
-			if (!artifact) throw new Error(`wrong artifact '${code}'`)
-
-			const countStr = json_getText(cells[1]).trim()
-			const m = countStr.match(/^x(1|2|4)$/)
-			if (!m) throw new Error(`artifact '${code}': wrong count '${countStr}'`)
-			const count = m[1]
-
-			artifact.sets[count] = extractTexts(cells)
-		}
-	}
-	{
-		const lang2col = makeLangColMap(sheets.weapons)
-		const extractTexts = extractLangTexts.bind(null, lang2col, langs)
-
-		for (const { values: cells = [] } of sheets.weapons.data[0].rowData.slice(1)) {
-			if (cells.length === 0) continue
-
-			const code = json_getText(cells[0]).trim()
-			if (code === '') continue
-
-			const weapon = langBuilds.weapons.find(x => x.code === code)
-			if (!weapon) throw new Error(`wrong weapon '${code}'`)
-
-			weapon.passiveStat = extractTexts(cells)
-		}
-	}
 
 	info(`saving...`)
 	await saveTranslatedBuilds(langBuilds)
@@ -306,8 +233,6 @@ function mustGetSheets(sheets) {
 	}
 	return {
 		characters: mustGet(/characters/i),
-		weapons: mustGet(/weapons/i),
-		artifacts: mustGet(/artifacts/i),
 	}
 }
 
