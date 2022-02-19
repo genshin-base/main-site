@@ -2,7 +2,7 @@
 import { promises as fs } from 'fs'
 import { loadSpreadsheet, updateSpreadsheet } from '#lib/google.js'
 import { json_extractText, json_getText, json_packText } from '#lib/parsing/helperteam/json.js'
-import { error, info, warn } from '#lib/utils/logs.js'
+import { error, info, tryWithContext, warn } from '#lib/utils/logs.js'
 import { BASE_DIR, CACHE_DIR, GENERATED_DATA_DIR, parseYaml, saveTranslatedBuilds } from './_common.js'
 import { parseArgs, relativeToCwd } from '#lib/utils/os.js'
 import { mustBeNotNull } from '#lib/utils/values.js'
@@ -165,55 +165,64 @@ async function download() {
 
 		let curCharacter = null
 		let curRole = null
-		for (const { values: cells = [] } of sheets.characters.data[0].rowData.slice(1)) {
+		for (let i = 1; i < sheets.characters.data[0].rowData.length; i++) {
+			const { values: cells = [] } = sheets.characters.data[0].rowData[i]
 			if (cells.length === 0) {
 				curCharacter = curRole = null
 				continue
 			}
 
-			const label0 = json_getText(cells[0]).trim()
-			if (label0 && !label0.includes(':')) {
-				// персонаж
-				curCharacter = langBuilds.characters.find(x => x.code === label0)
-				if (!curCharacter) throw new Error(`wrong character '${label0}'`)
-			} else if (label0.includes(':')) {
-				// персонаж:роль
-				const [charCode, roleCode] = label0.split(':', 2)
-				curCharacter = langBuilds.characters.find(x => x.code === charCode)
-				if (!curCharacter) throw new Error(`wrong character in '${label0}'`)
-				curRole = curCharacter.roles.find(x => x.code === roleCode)
-				if (!curCharacter) throw new Error(`wrong role in '${label0}'`)
-			}
+			try {
+				const label0 = json_getText(cells[0]).trim()
+				if (label0 && !label0.includes(':')) {
+					// персонаж
+					curCharacter = langBuilds.characters.find(x => x.code === label0)
+					if (!curCharacter) throw new Error(`wrong character '${label0}'`)
+				} else if (label0.includes(':')) {
+					// персонаж:роль
+					const [charCode, roleCode] = label0.split(':', 2)
+					curCharacter = langBuilds.characters.find(x => x.code === charCode)
+					if (!curCharacter) throw new Error(`wrong character in '${label0}'`)
+					curRole = curCharacter.roles.find(x => x.code === roleCode)
+					if (!curRole)
+						throw new Error(
+							`wrong role in '${label0}', correct: ` + curCharacter.roles.map(x => x.code),
+						)
+				}
 
-			const field = json_getText(cells[1]).trim()
-			if (curCharacter && !curRole) {
-				if (field === 'credits') {
-					curCharacter.credits = extractTexts(cells)
-				} else throw new Error(`'${curCharacter.code}': unexpected field '${field}'`)
-			} else if (curCharacter && curRole) {
-				const errPrefix = `'${curCharacter.code}' '${curRole.code}'`
-				let m
-				if (field === 'notes') {
-					curRole.notes = extractTexts(cells)
-				} else if (field === 'tips') {
-					curRole.tips = extractTexts(cells)
-				} else if (field === 'weapon notes') {
-					curRole.weapons.notes = extractTexts(cells)
-				} else if (field === 'artifact notes') {
-					curRole.artifacts.notes = extractTexts(cells)
-				} else if ((m = field.match(/^weapon #(\d+) (\S+) notes$/)) !== null) {
-					const [, index, code] = m
-					if (+index >= curRole.weapons.advices.length)
-						throw new Error(`${errPrefix}: wrong weapon advice #${index}`)
-					const weapon = curRole.weapons.advices[+index].similar.find(x => x.code === code)
-					if (!weapon) throw new Error(`${errPrefix}: unknown weapon '${code}'`)
-					weapon.notes = extractTexts(cells)
-				} else if ((m = field.match(/^artifact #(\d+) notes$/)) !== null) {
-					const [, index] = m
-					if (+index >= curRole.artifacts.sets.length)
-						throw new Error(`${errPrefix}: wrong art advice #${index}`)
-					curRole.artifacts.sets[+index].notes = extractTexts(cells)
-				} else throw new Error(`${errPrefix}: unexpected field '${field}'`)
+				const field = json_getText(cells[1]).trim()
+				if (curCharacter && !curRole) {
+					if (field === 'credits') {
+						curCharacter.credits = extractTexts(cells)
+					} else throw new Error(`'${curCharacter.code}': unexpected field '${field}'`)
+				} else if (curCharacter && curRole) {
+					const errPrefix = `'${curCharacter.code}' '${curRole.code}'`
+					let m
+					if (field === 'notes') {
+						curRole.notes = extractTexts(cells)
+					} else if (field === 'tips') {
+						curRole.tips = extractTexts(cells)
+					} else if (field === 'weapon notes') {
+						curRole.weapons.notes = extractTexts(cells)
+					} else if (field === 'artifact notes') {
+						curRole.artifacts.notes = extractTexts(cells)
+					} else if ((m = field.match(/^weapon #(\d+) (\S+) notes$/)) !== null) {
+						const [, index, code] = m
+						if (+index >= curRole.weapons.advices.length)
+							throw new Error(`${errPrefix}: wrong weapon advice #${index}`)
+						const weapon = curRole.weapons.advices[+index].similar.find(x => x.code === code)
+						if (!weapon) throw new Error(`${errPrefix}: unknown weapon '${code}'`)
+						weapon.notes = extractTexts(cells)
+					} else if ((m = field.match(/^artifact #(\d+) notes$/)) !== null) {
+						const [, index] = m
+						if (+index >= curRole.artifacts.sets.length)
+							throw new Error(`${errPrefix}: wrong art advice #${index}`)
+						curRole.artifacts.sets[+index].notes = extractTexts(cells)
+					} else throw new Error(`${errPrefix}: unexpected field '${field}'`)
+				}
+			} catch (ex) {
+				if (ex.constructor !== Error) throw ex
+				throw new Error(`on doc row ${i + 1}: ${ex.message}`)
 			}
 		}
 	}

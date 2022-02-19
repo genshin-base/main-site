@@ -105,8 +105,6 @@ export async function saveTranslatedBuilds(builds) {
 	await fs.mkdir(`${dirpath}/characters`, { recursive: true })
 	for (const character of builds.characters)
 		await fs.writeFile(`${dirpath}/characters/${character.code}.yaml`, stringifyYaml(character))
-	await fs.writeFile(`${dirpath}/artifacts.yaml`, stringifyYaml(builds.artifacts))
-	await fs.writeFile(`${dirpath}/weapons.yaml`, stringifyYaml(builds.weapons))
 }
 /** @returns {Promise<import('#lib/parsing/helperteam/types').BuildInfo<'multilang'>>} */
 export async function loadTranslatedBuilds() {
@@ -115,8 +113,6 @@ export async function loadTranslatedBuilds() {
 		characters: await Promise.all(
 			(await fs.readdir(`${dirpath}/characters`)).map(x => loadYaml(`${dirpath}/characters/${x}`)),
 		),
-		artifacts: await loadYaml(`${dirpath}/artifacts.yaml`),
-		weapons: await loadYaml(`${dirpath}/weapons.yaml`),
 	}
 }
 
