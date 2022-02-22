@@ -3,12 +3,12 @@ import { useEffect, useMemo } from 'preact/hooks'
 import { charactersShortList } from '#src/api/generated'
 import { MAX_SMTHS_TO_STORE } from '#src/modules/builds/common'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
+import { elements } from '#src/utils/elements'
 import { useLocalStorage } from '#src/utils/hooks'
 import { ItemAvatar } from '../item-cards/item-avatars'
-import { elements } from '#src/utils/elements'
 
 const codeToBadge = (code: string) => {
-	const e = elements.find(e => code === `${e.code}-traveler`)
+	const e = elements.find(e => code === `traveler-${e.code}`)
 	return e ? <img className="badge-element-icon d-block ms-n1 mb-n1" src={e.imgSrc} /> : null
 }
 export function FavoriteCharacters({

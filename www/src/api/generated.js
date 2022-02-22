@@ -1,5 +1,5 @@
 
-export const GENERATED_DATA_HASH = "1d19a13c"
+export const GENERATED_DATA_HASH = "704bafbf"
 
 /** @type {import('#lib/parsing/combine').CharacterShortInfo[]} */
 export const charactersShortList = [
@@ -112,19 +112,19 @@ export const charactersShortList = [
 		"rarity": 4
 	},
 	{
-		"code": "electro-traveler",
-		"elementCode": "electro",
-		"weaponTypeCode": "sword",
-		"rarity": 5
-	},
-	{
-		"code": "anemo-traveler",
+		"code": "traveler-anemo",
 		"elementCode": "anemo",
 		"weaponTypeCode": "sword",
 		"rarity": 5
 	},
 	{
-		"code": "geo-traveler",
+		"code": "traveler-electro",
+		"elementCode": "electro",
+		"weaponTypeCode": "sword",
+		"rarity": 5
+	},
+	{
+		"code": "traveler-geo",
 		"elementCode": "geo",
 		"weaponTypeCode": "sword",
 		"rarity": 5

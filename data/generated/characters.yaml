@@ -538,11 +538,11 @@ thoma:
     - agnidus-agate-gemstone
     - fluorescent-fungus
     - golden-raven-insignia
-anemo-traveler:
-  code: anemo-traveler
+traveler-anemo:
+  code: traveler-anemo
   name:
-    en: Traveler
-    ru: Путешественник
+    en: Anemo Traveler
+    ru: Анемо Путешественник
   rarity: 5
   weaponTypeCode: sword
   releaseVersion: "1.0"
@@ -555,11 +555,11 @@ anemo-traveler:
     - windwheel-aster
     - forbidden-curse-scroll
     - ominous-mask
-geo-traveler:
-  code: geo-traveler
+traveler-geo:
+  code: traveler-geo
   name:
-    en: Traveler
-    ru: Путешественник
+    en: Geo Traveler
+    ru: Гео Путешественник
   rarity: 5
   weaponTypeCode: sword
   releaseVersion: "1.0"
@@ -577,11 +577,11 @@ geo-traveler:
     - forbidden-curse-scroll
     - ominous-mask
     - weathered-arrowhead
-electro-traveler:
-  code: electro-traveler
+traveler-electro:
+  code: traveler-electro
   name:
-    en: Traveler
-    ru: Путешественник
+    en: Electro Traveler
+    ru: Электро Путешественник
   rarity: 5
   weaponTypeCode: sword
   releaseVersion: "1.0"

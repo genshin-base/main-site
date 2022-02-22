@@ -4731,7 +4731,7 @@ characters:
                 ATK by 20%, use this set on Sara if there's nobody else in the
                 party who's equipping one.
     credits: null
-  - code: electro-traveler
+  - code: traveler-electro
     elementCode: electro
     roles:
       - code: support
@@ -10418,7 +10418,7 @@ characters:
                 provides the ability to shred the enemy's elemental resistance
                 while also buffing Sayu's swirl damage output."
     credits: null
-  - code: anemo-traveler
+  - code: traveler-anemo
     elementCode: anemo
     roles:
       - code: anemo dps
@@ -12631,7 +12631,7 @@ characters:
                 
                 Crit Rate should only be considered when Yun Jin is equpping Favonius Lance to reliably proc the passive.
     credits: null
-  - code: geo-traveler
+  - code: traveler-geo
     elementCode: geo
     roles:
       - code: geo dps
