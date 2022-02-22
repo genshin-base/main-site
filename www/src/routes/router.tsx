@@ -19,7 +19,7 @@ type PathProps<T extends RoutePath> = {
 	[K in keyof T as T[K] extends EmptySubRoute ? T[K][0] : never]?: undefined
 }
 
-const URL_LANG_PREFIX = BUNDLE_ENV.LANG === 'en' ? '' : '/ru'
+const URL_LANG_PREFIX = makeUrlLangPrefix(BUNDLE_ENV.LANG)
 
 function findRoutedComponent(routes: Routes, url: string): [ComponentType, Record<string, string>] | null {
 	for (const [route, comp] of routes) {
@@ -79,6 +79,16 @@ export const route = <TPath extends RoutePath>(
 	path: TPath,
 	comp: ComponentType<PathProps<TPath>>,
 ): [RoutePath, ComponentType] => [[URL_LANG_PREFIX, ...path], comp as ComponentType]
+
+export function makeUrlLangPrefix(lang: string): string {
+	return lang === 'en' ? '' : '/ru'
+}
+
+export function makeLocationHrefForLang(lang: string): string {
+	const url = location.pathname + location.search + location.hash
+	const prefix = makeUrlLangPrefix(lang)
+	return prefix + (url.startsWith(URL_LANG_PREFIX) ? url.slice(URL_LANG_PREFIX.length) : url)
+}
 
 export function A(
 	props: JSX.HTMLAttributes<HTMLAnchorElement> & { ref?: Ref<typeof A>; innerRef?: Ref<HTMLAnchorElement> },

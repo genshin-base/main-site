@@ -1,7 +1,9 @@
 import { useCallback, useRef, useState } from 'preact/hooks'
 
-import { A } from '#src/routes/router'
+import { $LANG_NAME, $LANG_NAMES } from '#src/i18n'
+import { A, makeLocationHrefForLang } from '#src/routes/router'
 import { useClickAway } from '#src/utils/hooks'
+import { VARIATION_SELECTOR } from '#src/utils/typography'
 
 type Props = { isNavExpanded: boolean }
 
@@ -10,8 +12,10 @@ export function Nav({ isNavExpanded }: Props): JSX.Element {
 	const ddRef = useRef(null)
 	const closeDd = useCallback(() => isExpanded && setIsExpanded(false), [setIsExpanded, isExpanded])
 	const openDd = useCallback(() => !isExpanded && setIsExpanded(true), [setIsExpanded, isExpanded])
-	useClickAway(ddRef, closeDd)
+
 	// TODO клик мимо компонента
+	useClickAway(ddRef, closeDd)
+
 	return (
 		<div className={`collapse navbar-collapse ${isNavExpanded ? 'show' : ''}`}>
 			<ul className="navbar-nav me-auto mb-2 mb-md-0">
@@ -34,7 +38,7 @@ export function Nav({ isNavExpanded }: Props): JSX.Element {
 						role="button"
 						onClick={openDd}
 					>
-						English
+						🌐{VARIATION_SELECTOR} {$LANG_NAME}
 					</a>
 					{/* todo почему-то не добавляется класс dropdown-menu-end */}
 					<ul
@@ -42,16 +46,15 @@ export function Nav({ isNavExpanded }: Props): JSX.Element {
 						style={'right: 0'}
 						ref={ddRef}
 					>
-						<li>
-							<a className="dropdown-item" href="#">
-								English
-							</a>
-						</li>
-						<li>
-							<a className="dropdown-item" href="#">
-								Русский
-							</a>
-						</li>
+						{BUNDLE_ENV.LANGS.map(lang => (
+							<li key={lang}>
+								{/* Тут будет неправильная ссылка, если сменится страница,
+								пока развёрнут этот дропдаун. Но такого же не будет, да?.. */}
+								<a className="dropdown-item" href={makeLocationHrefForLang(lang)}>
+									{$LANG_NAMES[lang]}
+								</a>
+							</li>
+						))}
 					</ul>
 				</li>
 			</ul>
