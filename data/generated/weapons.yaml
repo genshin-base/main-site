@@ -211,7 +211,7 @@ black-tassel:
     - weathered-arrowhead
   obtainSources:
     - wishes
-    - quest
+    - quests
 blackcliff-agate:
   code: blackcliff-agate
   typeCode: catalyst
@@ -479,7 +479,7 @@ cool-steel:
   obtainSources:
     - wishes
     - chests
-    - quest
+    - quests
 crescent-pike:
   code: crescent-pike
   typeCode: polearm
@@ -529,7 +529,7 @@ dark-iron-sword:
     - inspectors-sacrificial-knife
     - ominous-mask
   obtainSources:
-    - quest
+    - quests
 deathmatch:
   code: deathmatch
   typeCode: polearm
@@ -662,7 +662,7 @@ dragonspine-spear:
     - lieutenants-insignia
   obtainSources:
     - forging
-    - quest
+    - quests
 dull-blade:
   code: dull-blade
   typeCode: sword
@@ -967,7 +967,7 @@ favonius-warbow:
     - energy-nectar
   obtainSources:
     - wishes
-    - quest
+    - quests
 ferrous-shadow:
   code: ferrous-shadow
   typeCode: claymore
@@ -1042,7 +1042,7 @@ fillet-blade:
     - golden-raven-insignia
   obtainSources:
     - chests
-    - quest
+    - quests
 freedom-sworn:
   code: freedom-sworn
   typeCode: sword
@@ -1219,8 +1219,7 @@ harbinger-of-dawn:
     - slime-concentrate
   obtainSources:
     - wishes
-    - quest
-    - quest
+    - quests
 hunters-bow:
   code: hunters-bow
   typeCode: bow
@@ -1780,7 +1779,7 @@ otherworldly-story:
     - ominous-mask
   obtainSources:
     - chests
-    - quest
+    - quests
 pocket-grimoire:
   code: pocket-grimoire
   typeCode: catalyst
@@ -2121,8 +2120,7 @@ recurve-bow:
     - forbidden-curse-scroll
   obtainSources:
     - chests
-    - quest
-    - quest
+    - quests
 redhorn-stonethresher:
   code: redhorn-stonethresher
   typeCode: claymore
@@ -2424,7 +2422,7 @@ seasoned-hunters-bow:
     - chests
     - investigation
     - npc-shop
-    - quest
+    - quests
 serpent-spine:
   code: serpent-spine
   typeCode: claymore
@@ -2499,7 +2497,7 @@ silver-sword:
     - chests
     - investigation
     - npc-shop
-    - quest
+    - quests
 skyrider-greatsword:
   code: skyrider-greatsword
   typeCode: claymore
@@ -2526,7 +2524,7 @@ skyrider-greatsword:
     - golden-raven-insignia
   obtainSources:
     - chests
-    - puzzle
+    - puzzles
 skyrider-sword:
   code: skyrider-sword
   typeCode: sword
@@ -2552,7 +2550,7 @@ skyrider-sword:
     - lieutenants-insignia
   obtainSources:
     - wishes
-    - quest
+    - quests
 skyward-atlas:
   code: skyward-atlas
   typeCode: catalyst
@@ -2710,7 +2708,7 @@ slingshot:
     en: If a Normal or Charged Attack hits a target within 0.3s of being fired,
       increases DMG by  36%. Otherwise, decreases DMG by 10%.
     ru: Если обычная или заряженная стрела поразила цель в течение 0,3 сек. после
-      выстрела, то её урон увеличивается на  36%. В противном случае, урон
+      выстрела, то её урон увеличивается на  36%. В противном случае урон
       уменьшается на 10%.
   materialCodes:
     - divine-body-from-guyun
@@ -2747,7 +2745,7 @@ snow-tombed-starsilver:
     - slime-concentrate
   obtainSources:
     - forging
-    - puzzle
+    - puzzles
 solar-pearl:
   code: solar-pearl
   typeCode: catalyst
@@ -3227,7 +3225,7 @@ travelers-handy-sword:
     - forbidden-curse-scroll
   obtainSources:
     - chests
-    - quest
+    - quests
 twin-nephrite:
   code: twin-nephrite
   typeCode: catalyst

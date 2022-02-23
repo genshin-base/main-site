@@ -115,9 +115,7 @@ const fixes = {
 	honeyhunter: {
 		statuses: {
 			// некоторые персонажи и предметы почему-то находятся в таблице нерелизнутого
-			characters: [
-				{ actually: 'released', name: 'Yae Miko' }, //
-			],
+			characters: [],
 			weapons: [
 				{ actually: 'released', name: 'Predator' },
 				{ actually: 'released', name: "Mouun's Moon" },

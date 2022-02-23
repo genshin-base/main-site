@@ -567,6 +567,7 @@ slime:
     - !loc teyvat 613 326
     - !loc teyvat 614 725
     - !loc teyvat 618 329
+    - !loc teyvat 619 721
     - !loc teyvat 619 730
     - !loc teyvat 620 677
     - !loc teyvat 623 269
@@ -2304,7 +2305,6 @@ abyss-mage:
     - !loc teyvat -809 887
     - !loc teyvat -783 779
     - !loc teyvat -777 1298
-    - !loc teyvat -658 -546
     - !loc teyvat -657 -545
     - !loc teyvat -640 1931
     - !loc teyvat -562 92
@@ -2410,6 +2410,8 @@ wolves-of-the-rift:
     - !loc teyvat 1675 8503
     - !loc teyvat 1730 8310
     - !loc teyvat 1733 8314
+    - !loc teyvat 1759 8550
+    - !loc teyvat 1766 8544
     - !loc teyvat 1820 8943
     - !loc teyvat 1825 8935
     - !loc teyvat 1858 8235
@@ -3286,6 +3288,7 @@ whopperflower:
     - !loc teyvat -636 829
     - !loc teyvat -541 120
     - !loc teyvat -525 633
+    - !loc teyvat -474 733
     - !loc teyvat -463 1791
     - !loc teyvat -452 1714
     - !loc teyvat -433 1934
@@ -3328,6 +3331,7 @@ whopperflower:
     - !loc teyvat 907 -417
     - !loc teyvat 1000 1023
     - !loc teyvat 1207 825
+    - !loc teyvat 1323 6276
     - !loc teyvat 1336 6279
     - !loc teyvat 1409 6266
     - !loc teyvat 1474 5834

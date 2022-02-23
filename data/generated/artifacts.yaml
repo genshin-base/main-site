@@ -121,6 +121,29 @@ defenders-will:
         RES to that corresponding element is increased by 30%.
       ru: За каждого члена вашего отряда с неповторяющимся элементом повышает
         сопротивление к соответствующему элементу на 30%.
+echoes-of-an-offering:
+  code: echoes-of-an-offering
+  name:
+    en: Echoes of an Offering
+    ru: Отголоски подношения
+  rarity: 5
+  sets:
+    "2":
+      en: ATK +18%.
+      ru: Увеличивает силу атаки на 18%.
+    "4":
+      en: When Normal Attacks hit opponents, there is a 36% chance that it will
+        trigger Valley Rite, which will increase Normal Attack DMG by 60% of
+        ATK. This effect will be dispelled 0.05s after a Normal Attack deals
+        DMG. If a Normal Attack fails to trigger Valley Rite, the odds of it
+        triggering the next time will increase by 20%. This trigger can occur
+        once every 0.3s.
+      ru: "Попадания обычной атакой с 36% шансом активируют Ритуал долины: урон
+        обычной атаки повышается на 60% от силы атаки. Через 0,05 сек. после
+        нанесения урона обычной атакой эффект исчезает. Если обычной атаке не
+        удалось активировать этот эффект, шанс его активации следующим
+        попаданием возрастает на 20%. Шанс активации возникает не чаще одного
+        раза в 0,3 сек."
 emblem-of-severed-fate:
   code: emblem-of-severed-fate
   name:
@@ -567,6 +590,30 @@ traveling-doctor:
     "4":
       en: Using Elemental Burst restores 20% HP.
       ru: Использование взрыва стихии восстанавливает 20% HP.
+vermillion-hereafter:
+  code: vermillion-hereafter
+  name:
+    en: Vermillion Hereafter
+    ru: Киноварное загробье
+  rarity: 5
+  sets:
+    "2":
+      en: ATK +18%.
+      ru: Увеличивает силу атаки на 18%.
+    "4":
+      en: After using an Elemental Burst, this character will gain the Nascent Light
+        effect, increasing their ATK by 8% for 16s. When the character's HP
+        decreases, Their ATK will further increase by 10%. This increase can
+        occur this way a maximum of 4 times. This effect can be triggered once
+        every 0.8s. Nascent Light will be dispelled when the character leaves
+        the field. If an Elemental Burst is used again during the duration of
+        Nascent Light, the original Nascent Light will be dispelled.
+      ru: После активации взрыва стихии на 16 сек. создаёт Скрытое сияние, которое
+        повышает силу атаки на 8%. Сила атаки персонажа увеличивается ещё на
+        10%, когда он теряет HP. Этот эффект может возникнуть максимум 4 раза и
+        не чаще, чем раз в 0,8 сек. Скрытое сияние исчезает, когда персонаж
+        покидает поле боя. При повторной активации взрыва стихии существующее
+        Скрытое сияние снимается.
 viridescent-venerer:
   code: viridescent-venerer
   name:

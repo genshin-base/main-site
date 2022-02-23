@@ -305,9 +305,9 @@ characters:
               energy generation being extremely poor, her Energy Recharge
               options are prioritized.
           - p:
-              - b: "Regarding 4p Instructors: "
-              - This set is preferred over 4p Noblesse Oblige when Amber is used
-                as support in a Hu Tao vaporize team.
+              - b: "Regarding Instructors (4): "
+              - This set is preferred over Noblesse Oblige (4) when Amber is
+                used as support in a Hu Tao vaporize team.
     credits: null
   - code: xiangling
     elementCode: pyro
@@ -322,28 +322,8 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: engulfing-lightning
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: the-catch
-                  refine: R5
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
             - similar:
                 - code: primordial-jade-winged-spear
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: skyward-spine
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: deathmatch
                   refine: null
                   stacks: null
                   notes: null
@@ -354,16 +334,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: wavebreakers-fin
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-                - code: dragons-bane
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: kitain-cross-spear
                   refine: null
@@ -388,7 +358,13 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes:
+            - p: ~= Engulfing Lightning (5✩)
+            - p: ~= "The Catch" (4✩) [R5]
+            - p: ~= Skyward Spine (5✩)
+            - p: ~= Deathmatch (4✩)
+            - p: ~= Wavebreaker's Fin (4✩)*
+            - p: ~= Dragon's Bane (4✩)*
           seeCharNotes: false
         artifacts:
           sets:
@@ -522,8 +498,10 @@ characters:
 
                   Wavebreaker's Fin: [R5] Wavebreaker's Fin
               - " is equal to or outperforms "
+              - b: Staff of Homa,
+              - " depending on your total team burst cost."
               - b: |-
-                  Staff of Homa, depending on your total team burst cost.
+                  
                   Dragon's Bane: [R5] Dragon's Bane
               - " outperforms"
               - b: " Primordial Jade-Winged Spear."
@@ -578,10 +556,10 @@ characters:
               - "This set can be used as a "
               - b: very low investment support build to enable Reverse Melt team comps
               - " where Xiangling is not triggering the reaction and is instead
-                used as an aura and needs alot of Energy Recharge. Note that it
+                used as an aura and needs a lot of Energy Recharge. Note that it
                 is "
-              - b: not recommended to stay on this build as Xiangling still does decent damage
-                  in these teams.
+              - b: not recommended to stay on this build as Xiangling can still contribute
+                  respectable damage with offensive stats.
       - code: physical dps
         isRecommended: false
         weapons:
@@ -909,9 +887,10 @@ characters:
               his burst AoE (Cryo in specific, since Pyro > Cryo).
           - p: For that, cast EB with Bennett, switch to the character imbued with Cryo and
               walk on Bennett's Burst field
-          - p: Upon entering burst field, the Pyro status will continuously imbue you with
-              Pyro, reacting with other elements on you and eventually removing
-              them.
+          - p: >
+              Upon entering burst field, the Pyro status will continuously imbue
+              you with Pyro, reacting with other elements on you and eventually
+              removing them.
         notes:
           - p:
               - b: |-
@@ -1106,9 +1085,8 @@ characters:
         tips: "Recommended amount of ER%: 180-200"
         notes:
           - "A Burst Support Bennett "
-          - b: "completely ignores the need for healing "
-          - "and is aimed for people who don't need that much healing from him
-            and prefer to "
+          - b: "completely ignores the need for excess healing potential "
+          - "and is aimed for people who prefer to "
           - b: squeeze out more damage
           - |-2
              instead. 
@@ -1643,19 +1621,17 @@ characters:
               - b: "[C2] "
               - "(but ideally "
               - b: "[C4]"
-              - ) on Xinyan, you may want to build her as a Burst Support
+              - >-
+                ) on Xinyan, you may want to build her as a Burst Support
                 instead of Physical/Shield Support.
-          - p:
-              - At
+
+                At
               - b: " [C2],"
-              - " her burst \"Riff Revolution\" has a 100% Crit Rate, which
-                means you can build solely Crit Dmg (instead of trying to get a
-                1:2 Crit Rate:Crit DMG ratio) if you're building her as a
-                Physical Burst support."
-          - p:
-              b: Generally not recommended for Pyro Applications, as the pulses only happen at
-                Shield Level 3, and are not very efficient at breaking Cryo
-                shields.
+              - >2
+                 her burst "Riff Revolution" has a 100% Crit Rate, which means you can build solely Crit Dmg (instead of trying to get a 1:2 Crit Rate:Crit DMG ratio) if you're building her as a Physical Burst support.
+              - b: Generally not recommended for Pyro Applications, as the pulses only happen at
+                  Shield Level 3, and are not very efficient at breaking Cryo
+                  shields.
       - code: sub-dps
         isRecommended: false
         weapons:
@@ -1823,19 +1799,17 @@ characters:
               - b: "[C2] "
               - "(but ideally "
               - b: "[C4]"
-              - ) on Xinyan, you may want to build her as a Burst Support
+              - >-
+                ) on Xinyan, you may want to build her as a Burst Support
                 instead of Physical/Shield Support.
-          - p:
-              - At
+
+                At
               - b: " [C2],"
-              - " her burst \"Riff Revolution\" has a 100% Crit Rate, which
-                means you can build solely Crit Dmg (instead of trying to get a
-                1:2 Crit Rate:Crit DMG ratio) if you're building her as a
-                Physical Burst support."
-          - p:
-              b: Generally not recommended for Pyro Applications, as the pulses only happen at
-                Shield Level 3, and are not very efficient at breaking Cryo
-                shields.
+              - >2
+                 her burst "Riff Revolution" has a 100% Crit Rate, which means you can build solely Crit Dmg (instead of trying to get a 1:2 Crit Rate:Crit DMG ratio) if you're building her as a Physical Burst support.
+              - b: Generally not recommended for Pyro Applications, as the pulses only happen at
+                  Shield Level 3, and are not very efficient at breaking Cryo
+                  shields.
     credits: null
   - code: yanfei
     elementCode: pyro
@@ -1846,11 +1820,6 @@ characters:
           advices:
             - similar:
                 - code: skyward-atlas
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: memory-of-dust
                   refine: null
                   stacks: null
                   notes: null
@@ -1897,7 +1866,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes: ~= Memory of Dust (5✩)
           seeCharNotes: false
         artifacts:
           sets:
@@ -2290,7 +2259,7 @@ characters:
               - " Thoma gains 15 energy when he fires his Elemental Burst. This
                 effectively reduces his energy cost to 65 and makes it possible
                 to use Black Tassel with ER sands instead of ER weapon with ER
-                sands to furthermore strengthen his shield."
+                sands to further strengthen his shield."
     credits: null
   - code: diluc
     elementCode: pyro
@@ -2519,11 +2488,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: memory-of-dust
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
             - similar:
                 - code: lost-prayer-to-the-sacred-winds
                   refine: null
@@ -2566,7 +2530,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes: ~= Memory of Dust (5✩)
           seeCharNotes: true
         artifacts:
           sets:
@@ -2974,6 +2938,24 @@ characters:
                   notes: null
                   seeCharNotes: true
             - similar:
+                - code: hamayumi
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: prototype-crescent
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: slingshot
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
                 - code: the-viridescent-hunt
                   refine: null
                   stacks: null
@@ -2985,24 +2967,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-            - similar:
-                - code: prototype-crescent
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: hamayumi
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: slingshot
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
           notes: null
           seeCharNotes: false
         artifacts:
@@ -3048,6 +3012,7 @@ characters:
           sands:
             codes:
               - atk%
+              - em
             notes: null
             seeCharNotes: false
           notes: null
@@ -3092,25 +3057,24 @@ characters:
                   Rust: 
               - At higher refinements
               - b: ", "
-              - >
-                this weapon can outperform a low refined Amos' Bow and Skyward
-                Harp. 
+              - "this weapon can "
+              - b: "outperform a low refined Amos' Bow and Skyward Harp. "
+              - "\n"
               - b: "Hamayumi: "
-              - >
-                If you're using Shimenawa's Reminiscence (4), this weapon
-                doesn't synergize well with that artifact set due to its
-                passive. 
+              - "If you're using Shimenawa's Reminiscence (4), "
+              - b: "this weapon doesn't synergize well with that artifact set due to its
+                  passive. "
+              - "\n"
               - b: "Prototype Crescent: "
-              - >
-                At higher refinements, this weapon can beat out Hamayumi, The
-                Viridescent Hunt, and Blackcliff Warbow. Do note that you want
-                to proc the weapon passive by shooting on enemy's weakspot for
-                this weapon to be good.
+              - "Note that you want to proc the weapon passive by doing a "
+              - b: quick charged shot on the enemy's weakspot
+              - |2
+                 for this weapon to be good.
               - b: "Slingshot: "
-              - With external ATK buffs (like from Bennett's Elemental Burst,
-                Pyro Resonance, Noblesse Oblige effect, etc), this weapon is
-                competitive to a low refined Rust, assuming you are still in
-                range for Slingshot's passive and you have good ATK buff uptime.
+              - "With a large amount of external ATK buffs, this weapon is "
+              - b: competitive to R1 Rust.
+              - " Note that you have to be in range for Slingshot's passive and
+                have good uptime on the ATK buffs."
           - p:
               - b: |-
                   Regarding Artifacts:  
@@ -3133,6 +3097,15 @@ characters:
               - b: mono Pyro team
               - " comp where Yoimiya can have 100% uptime on the artifact
                 passive."
+          - p:
+              - b: |-
+                  Regarding Mainstats:
+                  Elemental Mastery:
+              - " A good option if Yoimiya is "
+              - b: triggering Vaporise and/or Overload.
+              - " Having Bennett in the team favours Elemental Mastery sands
+                slightly more than ATK sands, however it is recommended to just
+                use whichever has better substats."
           - p:
               - b: |
                   Regarding Talent Priorities: 
@@ -3547,14 +3520,7 @@ characters:
             - burst
           notes: null
           seeCharNotes: false
-        tips:
-          - p:
-              - "See "
-              - a: here
-                href: https://bit.ly/3vPdxxA
-              - " for more specifics regarding the weapon rankings."
-          - p:
-              i: Courtesy of itsjaeYOU#2868
+        tips: null
         notes:
           - p: Elemental Burst and Skill both summon Oz, so make sure you're only using one
               at a time. Start with your Skill, use Burst for second Oz rotation
@@ -3869,11 +3835,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: the-widsith
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
             - similar:
                 - code: solar-pearl
                   refine: null
@@ -3916,7 +3877,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes: ~= The Widsith (4✩)
           seeCharNotes: false
         artifacts:
           sets:
@@ -4037,11 +3998,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: favonius-codex
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
             - similar:
                 - code: magic-guide
                   refine: null
@@ -4060,7 +4016,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes: ~= Favonius Codex (4✩)
           seeCharNotes: false
         artifacts:
           sets:
@@ -4956,7 +4912,7 @@ characters:
               notes: null
               seeCharNotes: true
           notes: null
-          seeCharNotes: true
+          seeCharNotes: false
         mainStats:
           circlet:
             codes:
@@ -5091,11 +5047,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: amenoma-kageuchi
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
             - similar:
                 - code: skyward-blade
                   refine: null
@@ -5108,7 +5059,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes: ~= Amenoma Kageuchi (4✩)
           seeCharNotes: true
         artifacts:
           sets:
@@ -5421,7 +5372,7 @@ characters:
           - p:
               b: "*NA = Normal Attack, CA = Charged Attack"
           - p: The recommended combo provides more room for error and offers slightly better
-              AoE while the optimal combo provides slightly higher damage
+              AoE while the optimal combo provides slightly higher damage.
         notes:
           - p:
               - "Raiden's Elemental Burst damage depends on her "
@@ -5462,6 +5413,205 @@ characters:
       - a: In-depth Guide
         href: https://keqingmains.com/raiden/
       - " from Raiden Mains + KQM"
+  - code: yae-miko
+    elementCode: electro
+    roles:
+      - code: off-field dps
+        isRecommended: true
+        weapons:
+          advices:
+            - similar:
+                - code: kaguras-verity
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: skyward-atlas
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: lost-prayer-to-the-sacred-winds
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: solar-pearl
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: oathsworn-eye
+                  refine: R5
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: hakushin-ring
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: mappa-mare
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+          notes: ~= The Widsith (4✩)*
+          seeCharNotes: false
+        artifacts:
+          sets:
+            - arts:
+                code: emblem-of-severed-fate
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: thundersoother
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: tenacity-of-the-millelith
+                count: 4
+              notes: null
+              seeCharNotes: true
+          notes: ~= +18% ATK set (2) / Thundering Fury (2) / Emblem of Severed Fate (2)*
+            [Choose Two]
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes:
+              - crit-rate
+              - dmg
+            notes: null
+            seeCharNotes: false
+          goblet:
+            codes:
+              - electro-dmg
+            notes: null
+            seeCharNotes: false
+          sands:
+            codes:
+              - er
+              - atk%
+            notes: null
+            seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        subStats:
+          advices:
+            - codes:
+                - crit-rate
+                - dmg
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk%
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - em
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk
+              notes: null
+              seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices:
+            - skill
+            - burst
+          notes: null
+          seeCharNotes: true
+        tips:
+          - p: Start your rotations with Yae's Elemental Skill to amplify her Elemental
+              Burst damage.
+          - p: |-
+              Burst combo:
+              - Skill > Skill > Skill > Burst > Skill > Skill > Skill
+          - p:
+              - "Take note that "
+              - b: none of Yae Miko's abilities snapshot.
+        notes:
+          - p:
+              - b: "Regarding Weapon Choices:"
+              - "\n"
+              - b: "Solar Pearl: "
+              - "This weapon benefits a lot from refines and attack buffs like
+                Bennett. "
+              - b: "[R5] Solar Pearl without buffs, "
+              - or a
+              - b: " low refine Solar Pearl with Bennett buff"
+              - >2
+                 can perform similar to Skyward Atlas. Note that you should do a Normal Attack when you swap in and before you swap out of Yae Miko to keep good uptime on the passive.
+              - b: "The Widsith:"
+              - " Despite Yae's A4 bonus, the EM buff is bad. "
+              - b: Over many rotations Widsith will be worse than equal refinement Solar Pearl
+                  regardless of buff, and can be worse than Oathsworn if you
+                  only get the EM buff.
+              - " If you are trying for one rotation speedruns and are willing
+                to reset till you get the DMG% or ATK buff, "
+              - b: this weapon ranks much higher
+              - >2
+                 and can outperform the 5 stars. Otherwise, it is recommended to use the other options above Widsith for more consistent damage.
+              - b: "Hakushin Ring: "
+              - "This weapon's passive can buff your other team members, which "
+              - b: may be more beneficial than Yae Miko's personal damage
+              - " depending on the team and rotation used. Note that the passive
+                cannot be triggered when off-field."
+          - p:
+              - b: "Regarding Artifact Choices:"
+              - "\n"
+              - b: "Emblem of Severed Fate (4): "
+              - "This set works best for Yae in "
+              - b: multi-target scenarios where her Elemental Burst hits multiple enemies.
+              - " This set also provides more value if she's"
+              - b: " used WITHOUT Raiden (due to the higher ER requirements)."
+              - "\n"
+              - b: "+18% ATK set (2) / Thundering Fury (2) / Emblem of Severed Fate (2): "
+              - "Using a combination of these artifact sets works best for Yae
+                in "
+              - b: single-target scenarios.
+              - " These also provide more value if she's "
+              - b: "paired WITH Raiden (due to lower ER requirements). "
+              - "\n"
+              - b: "Thundersoother (4): "
+              - >
+                Assuming you are able to maintain 100% uptime on its passive,
+                this is Yae's BiS set. This set works best for Yae in
+                Electro-charged teams.
+              - b: "Tenacity of the Milelith (4): "
+              - "This set trades Yae's personal damage for a team wide 20% ATK
+                buff. It is "
+              - b: not recommended to specifically farm this set for Yae.
+              - " Only use this if you already have good pieces from farming
+                Pale Flame for your Physical DPSes."
+          - p:
+              - b: "Regarding Talent Priority: "
+              - " Do note that Yae's Elemental Burst does more damage than her
+                Elemental Skill when it hits multiple enemies."
+          - p:
+              - "Big thanks to "
+              - b: Fob#6835
+              - " for helping us with "
+              - a: "the "
+                href: https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994
+              - a:
+                  b: weapon/artifact rankings.
+                href: https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994
+    credits: null
   - code: xingqiu
     elementCode: hydro
     roles:
@@ -6033,11 +6183,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: thundering-pulse
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: skyward-harp
                   refine: null
@@ -6068,34 +6213,23 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: prototype-crescent
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: rust
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: hamayumi
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: the-stringless
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: slingshot
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes:
+            - p: ~= Thundering Pulse (5✩)*
+            - p: ~= Prototype Crescent (4✩)*
+            - p: ~= Hamayumi (4✩)
+            - p: ~= The Stringless (4✩)*
           seeCharNotes: false
         artifacts:
           sets:
@@ -7600,9 +7734,8 @@ characters:
               seeCharNotes: false
           notes:
             - b: "crit-rate: "
-            - Generally has less value than the other offensive stats since you
-              already have 60-75% Crit Rate with Blizzard Strayer and Cryo
-              Resonance alone
+            - Generally has less value than the other offensive stats due to
+              Blizzard Strayer and Cryo Resonance
           seeCharNotes: false
         talents:
           advices:
@@ -8347,11 +8480,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: engulfing-lightning
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
             - similar:
                 - code: primordial-jade-winged-spear
                   refine: null
@@ -8364,48 +8492,18 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: the-catch
-                  refine: R5
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
             - similar:
                 - code: vortex-vanquisher
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: deathmatch
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: dragons-bane
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-                - code: wavebreakers-fin
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: blackcliff-pole
                   refine: null
                   stacks: 1
                   notes: null
                   seeCharNotes: false
-                - code: lithic-spear
-                  refine: null
-                  stacks: 2
-                  notes: null
-                  seeCharNotes: true
-                - code: kitain-cross-spear
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: favonius-lance
                   refine: null
@@ -8424,7 +8522,14 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes:
+            - p: ~= Engulfing Lightning (5✩)
+            - p: ~= "The Catch" (4✩) [R5]
+            - p: ~= Deathmatch (4✩)
+            - p: ~= Dragon's Bane (4✩)*
+            - p: ~= Wavebreaker's Fin (4✩)*
+            - p: ~= Lithic Spear (4✩) (2 stacks)*
+            - p: ~= Kitain Cross Spear (4✩)*
           seeCharNotes: false
         artifacts:
           sets:
@@ -8530,20 +8635,16 @@ characters:
               - b: "Regarding Weapon Choices:"
               - " This section was calculated with "
               - b: 160% ER requirement,
-              - " which is why "
-              - b: ER substats weapons are valued highly here,
-              - " with lower ER reqs,"
-              - b: " those weapons may fall off if compared with weapons with more offensive
-                  substats."
-              - " Rosaria's "
+              - " which is why"
+              - b: " ER substats weapons are valued highly here. "
+              - "With lower ER reqs, those weapons may fall off if compared with
+                weapons with more offensive substats. Rosaria's "
               - b: "[C4]"
               - |2
                  can reduce this ER requirement down to 140% or lower.
               - b: "Vortex Vanquisher:"
-              - " This ranking is assumed without a shield. "
-              - b: With a large amount of attack buffs such as Bennett, this weapon can fall off
-                  compared to the other options due to overstacking ATK%.
-              - "\n"
+              - >2
+                 This ranking is assumed without a shield. With a large amount of attack buffs such as Bennett, this weapon can fall off compared to the other options due to overstacking ATK%.
               - b: "Dragon's Bane / Kitain Cross Spear:"
               - " These weapons are only used if Rosaria is played in a team
                 comp in which she "
@@ -8554,14 +8655,12 @@ characters:
               - b: "Wavebreaker's Fin: "
               - At
               - b: " [R5],"
-              - " this weapon can perform"
-              - b: " similar to Staff of Homa."
-              - "\n"
+              - |2
+                 this weapon can perform similar to Staff of Homa.
               - b: "Lithic Spear: "
               - At
               - b: " [R5],"
-              - " this weapon can perform "
-              - b: similar to Vortex Vanquisher.
+              - " this weapon can perform similar to Vortex Vanquisher."
           - p:
               - b: |-
                   Regarding Artifact Sets:
@@ -9076,16 +9175,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: skyward-harp
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: polar-star
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
             - similar:
                 - code: amos-bow
                   refine: null
@@ -9110,23 +9199,17 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: blackcliff-warbow
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: the-viridescent-hunt
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: elegy-for-the-end
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: true
-          notes: null
+          notes:
+            - p: ~= Skyward Harp (5✩)
+            - p: ~= Polar Star (5✩)
+            - p: ~= Blackcliff Warbow (4✩)
+            - p: ~= Viridescent Hunt (4✩)*
           seeCharNotes: false
         artifacts:
           sets:
@@ -9274,11 +9357,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: redhorn-stonethresher
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: the-unforged
                   refine: null
@@ -9303,11 +9381,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: akuoumaru
-                  refine: R1
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: blackcliff-slasher
                   refine: null
@@ -9338,7 +9411,9 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes:
+            - p: ~= Redhorn Stonethresher (5✩)*
+            - p: ~= Akuoumaru (4✩) [R1]*
           seeCharNotes: false
         artifacts:
           sets:
@@ -9537,33 +9612,17 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: blackcliff-longsword
-                  refine: null
-                  stacks: 1
-                  notes: null
-                  seeCharNotes: false
-                - code: the-black-sword
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: amenoma-kageuchi
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: the-flute
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: harbinger-of-dawn
                   refine: R5
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes:
+            - p: ~= Blackcliff Longsword (1 stack) (4✩)
+            - p: ~= The Black Sword (4✩)
+            - p: ~= Amenoma Kageuchi (4✩)
+            - p: ~= The Flute (4✩)*
           seeCharNotes: false
         artifacts:
           sets:
@@ -9940,7 +9999,7 @@ characters:
               - b: "Elemental Mastery "
               - "is only an option if your Aloy is played on a "
               - b: Reverse Melt team
-              - " as it provides nothing to a Freeze Aloy. "
+              - " as it provides nothing to a Freeze Aloy."
     credits: null
   - code: shenhe
     elementCode: cryo
@@ -10138,6 +10197,12 @@ characters:
                   notes: null
                   seeCharNotes: true
             - similar:
+                - code: hakushin-ring
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
                 - code: magic-guide
                   refine: null
                   stacks: null
@@ -10252,8 +10317,19 @@ characters:
               - b: "Thrilling Tales of Dragon Slayers: "
               - This weapon does not provide any EM, however it overtakes the
                 other weapons on the list when it comes to enabling your team.
-              - b: >-2
-                   It offers 48% ATK boost to the character you swap to which is equivalent to 1 main stat. This enables your DPS more if compared to Sacrificial Fragments which only gives ~44EM, equivalent to only 2 substats.
+              - b: " It offers 48% ATK boost to the character you swap to which is equivalent to
+                  1 main stat. "
+              - This enables your DPS more if compared to Sacrificial Fragments
+                which only gives ~44EM, equivalent to only 2 substats.
+              - b: |-
+                  
+                  Hakushin Ring: 
+              - "Hakushin Ring is a good option for teams where Sucrose can "
+              - b: swirl Electro
+              - " to trigger its damage-boosting passive. In Electro - Charged
+                teams, she can buff Hydro DMG% as well."
+              - b: |-
+                  
                   Widsith:
               - " This weapon is only useful if you get the EM passive from it.
                 As such, it is "
@@ -10424,11 +10500,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: mistsplitter-reforged
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
             - similar:
                 - code: sacrificial-sword
                   refine: null
@@ -10447,16 +10518,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: skyward-blade
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: festering-desire
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
             - similar:
                 - code: aquila-favonia
                   refine: null
@@ -10469,23 +10530,18 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: amenoma-kageuchi
-                  refine: R1
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-                - code: favonius-sword
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: dark-iron-sword
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes:
+            - p: ~= Mistsplitter Reforged (5✩)
+            - p: ~= Skyward Blade (5✩)
+            - p: ~= Festering Desire (4✩)
+            - p: ~= Amenoma Kageuchi (4✩) [R1]*
+            - p: ~= Favonius Sword (4✩)*
           seeCharNotes: false
         artifacts:
           sets:
@@ -10959,16 +11015,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: festering-desire
-                  refine: R5
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: amenoma-kageuchi
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: freedom-sworn
                   refine: null
@@ -10993,23 +11039,17 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: lions-roar
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: blackcliff-longsword
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
             - similar:
                 - code: fillet-blade
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes:
+            - p: ~= Festering Desire (4✩) [R5]
+            - p: ~= Amenoma Kageuchi (4✩)*
+            - p: ~= Lion's Roar (4✩)
+            - p: ~= Blackcliff Longsword (4✩)
           seeCharNotes: false
         artifacts:
           sets:
@@ -11375,11 +11415,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: calamity-queller
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: deathmatch
                   refine: null
@@ -11428,7 +11463,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes: ~= Calamity Queller (5✩)*
           seeCharNotes: false
         artifacts:
           sets:
@@ -11578,16 +11613,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: favonius-sword
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: skyward-blade
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
             - similar:
                 - code: amenoma-kageuchi
                   refine: null
@@ -11606,7 +11631,9 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes:
+            - p: ~= Favonius Sword (4✩)
+            - p: ~= Skyward Blade (5✩)
           seeCharNotes: false
         artifacts:
           sets:
@@ -11743,11 +11770,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: lost-prayer-to-the-sacred-winds
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: memory-of-dust
                   refine: null
@@ -11756,11 +11778,6 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: solar-pearl
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: the-widsith
                   refine: null
                   stacks: null
                   notes: null
@@ -11783,7 +11800,9 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes:
+            - p: ~= Lost Prayer to the Sacred Winds (5✩)*
+            - p: ~= The Widsith (4✩)
           seeCharNotes: false
         artifacts:
           sets:
@@ -11921,11 +11940,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: solar-pearl
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: the-widsith
                   refine: null
@@ -11950,7 +11964,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes: ~= Solar Pearl (4✩)*
           seeCharNotes: false
         artifacts:
           sets:
@@ -12679,23 +12693,15 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: the-black-sword
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: the-alley-flash
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
             - similar:
                 - code: sword-of-descension
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes:
+            - p: ~= The Black Sword (4✩)
+            - p: ~= The Alley Flash (4✩)
           seeCharNotes: false
         artifacts:
           sets:
@@ -13247,16 +13253,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: vortex-vanquisher
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: calamity-queller
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
             - similar:
                 - code: the-catch
                   refine: R5
@@ -13293,7 +13289,9 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: null
+          notes:
+            - p: ~= Vortex Vanquisher (5✩)
+            - p: ~= Calamity Queller (5✩)
           seeCharNotes: false
         artifacts:
           sets:
@@ -13421,29 +13419,21 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: cinnabar-spindle
-                  refine: R5
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: harbinger-of-dawn
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: mistsplitter-reforged
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: freedom-sworn
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: true
-          notes: null
+          notes:
+            - p: ~= Cinnabar Spindle (4✩) [R5]*
+            - p: ~= Mistsplitter Reforged (5✩)*
           seeCharNotes: false
         artifacts:
           sets:

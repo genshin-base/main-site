@@ -669,6 +669,20 @@ xinyan:
     - agnidus-agate-gemstone
     - violetgrass
     - golden-raven-insignia
+yae-miko:
+  code: yae-miko
+  name:
+    en: Yae Miko
+    ru: Яэ Мико
+  rarity: 5
+  weaponTypeCode: catalyst
+  releaseVersion: "2.5"
+  materialCodes:
+    - philosophies-of-light
+    - dragonheirs-false-fin
+    - vajrada-amethyst-gemstone
+    - sea-ganoderma
+    - famed-handguard
 yanfei:
   code: yanfei
   name:
