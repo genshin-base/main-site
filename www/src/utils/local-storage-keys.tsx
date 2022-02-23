@@ -1,7 +1,7 @@
-import { GI_ServerRegionCode } from '#src/../../lib/genshin'
+import { GI_ServerRegionCode, guessCurrentRegion } from '#lib/genshin'
 
 export const SK_SELECTED_REGION_CODE = 'selected-region-code'
-export const SK_DEFAULT_SELECTED_REGION_CODE: GI_ServerRegionCode = 'europe'
+export const SK_DEFAULT_SELECTED_REGION_CODE: GI_ServerRegionCode = guessCurrentRegion()
 
 //sk - storage key
 export const SK_FAV_CHAR_CODES = 'favoriteCharacterCodes'
