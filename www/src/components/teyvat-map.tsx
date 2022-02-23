@@ -227,6 +227,7 @@ class MarkersLayer {
 		if (!rc) return
 
 		const [viewX, viewY] = map.getViewBoxShift()
+		const zoomDownscale = Math.min(1, (map.getZoom() / TILE_DRAW_WIDTH - 1) / 2 + 1)
 
 		for (let i = 0, markers = this.markers; i < markers.length; i++) {
 			const marker = markers[i]
@@ -234,9 +235,8 @@ class MarkersLayer {
 
 			const x = map.lon2x(marker.x) - viewX
 			const y = map.lat2y(marker.y) - viewY
-			const downscale = Math.min(1, (map.getZoom() / TILE_DRAW_WIDTH - 1) / 2 + 1)
-			const size = MARKER_ICON_SIZE_PX * downscale
-			const lineW = 1.5 * downscale
+			const size = MARKER_ICON_SIZE_PX * zoomDownscale
+			const lineW = 1.5 * zoomDownscale
 			const isCircled = marker.style === 'circle'
 
 			if (isCircled) {

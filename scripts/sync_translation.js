@@ -2,7 +2,7 @@
 import { promises as fs } from 'fs'
 import { loadSpreadsheet, updateSpreadsheet } from '#lib/google.js'
 import { json_extractText, json_getText, json_packText } from '#lib/parsing/helperteam/json.js'
-import { error, info, tryWithContext, warn } from '#lib/utils/logs.js'
+import { error, info, warn } from '#lib/utils/logs.js'
 import { BASE_DIR, CACHE_DIR, GENERATED_DATA_DIR, parseYaml, saveTranslatedBuilds } from './_common.js'
 import { parseArgs, relativeToCwd } from '#lib/utils/os.js'
 import { mustBeNotNull } from '#lib/utils/values.js'
