@@ -16,6 +16,7 @@ import { MapAllByCode } from '#src/api/utils'
 import { Tooltip } from '#src/components/tooltip'
 import { ArtifactDetailDd } from '#src/containers/item-cards/dd-cards'
 import { LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
+import { I18N_CONJUCTIONS, I18N_STAT_NAME } from '#src/i18n/i18n'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
 import { useHover, useLocalStorage } from '#src/utils/hooks'
 import {
@@ -26,7 +27,6 @@ import {
 	STORAGE_WEAPON_DATA,
 } from '#src/utils/local-storage-keys'
 import { HEART, HEART_EMPTY, STAR } from '#src/utils/typography'
-import { I18N_CONJUCTIONS, I18N_STAT_NAMES } from '#src/i18n/i18n'
 
 export const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole<'monolang'>> = {
 	title: '…',
@@ -57,7 +57,7 @@ export function genArtMainStatDetail(
 ) {
 	return (
 		<span className="">
-			{genSimpleList(role.mainStats[itemCode].codes.map(c => I18N_STAT_NAMES[c]))}
+			{genSimpleList(role.mainStats[itemCode].codes.map(I18N_STAT_NAME))}
 			{isShort
 				? ' ' + genNotes(role.mainStats[itemCode]) + genSeeCharNotes(role.mainStats[itemCode])
 				: null}

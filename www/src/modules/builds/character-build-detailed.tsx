@@ -1,12 +1,28 @@
 import { useMemo } from 'preact/hooks'
 
+import { arrOrItemToArr } from '#lib/utils/collections'
 import { CharacterFullInfoWithRelated } from '#src/../../lib/parsing/combine'
 import { getAllRelated, MapAllByCode } from '#src/api/utils'
+import { BlockHeader } from '#src/components/block-header'
 import { CharacterPortrait } from '#src/components/characters'
 import { CentredSpinner } from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { OtherItemCardDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
+import {
+	I18N_ART_STATS_PRIORITY,
+	I18N_ART_TYPE,
+	I18N_ARTIFACTS,
+	I18N_ASC_MATERIALS,
+	I18N_BACK,
+	I18N_CONJUCTIONS,
+	I18N_NOTES,
+	I18N_STAT_NAME,
+	I18N_SUBSTATS_PRIORITY,
+	I18N_TALENT_NAME,
+	I18N_TALENTS_PRIORITY,
+	I18N_WEAPONS,
+} from '#src/i18n/i18n'
 import { A } from '#src/routes/router'
 import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import {
@@ -34,22 +50,6 @@ import {
 } from './common'
 
 import './character-build-detailed.scss'
-import { BlockHeader } from '#src/components/block-header'
-import {
-	I18N_ARTIFACTS,
-	I18N_ART_STATS_PRIORITY,
-	I18N_BACK,
-	I18N_ASC_MATERIALS,
-	I18N_NOTES,
-	I18N_SUBSTATS_PRIORITY,
-	I18N_TALENTS_PRIORITY,
-	I18N_WEAPONS,
-	I18N_ART_TYPES,
-	I18N_STAT_NAMES,
-	I18N_TALENT_NAMES,
-	I18N_CONJUCTIONS,
-} from '#src/i18n/i18n'
-import { arrOrItemToArr } from '#src/../../lib/utils/collections'
 
 export function CharacterBuildDetailed({
 	build,
@@ -133,7 +133,7 @@ export function CharacterBuildDetailed({
 								src={getArtifactTypeIconSrc(ac)}
 								classes="small-avatar small my-1 mx-1 bg-dark with-padding align-middle"
 							/>
-							<b className="text-muted">{I18N_ART_TYPES[ac]} — </b>
+							<b className="text-muted">{I18N_ART_TYPE(ac)} — </b>
 							{genArtMainStatDetail(role, ac)}
 						</li>
 					))}
@@ -146,7 +146,7 @@ export function CharacterBuildDetailed({
 					{role.subStats.advices.map(advice => {
 						return (
 							<li>
-								{genSimpleList(advice.codes.map(c => I18N_STAT_NAMES[c]))}
+								{genSimpleList(advice.codes.map(I18N_STAT_NAME))}
 								{' ' + genNotes(advice) + genSeeCharNotes(advice)}
 							</li>
 						)
@@ -158,7 +158,7 @@ export function CharacterBuildDetailed({
 				<BlockHeader classes="mt-3">{I18N_TALENTS_PRIORITY}</BlockHeader>
 				<ol className="small">
 					{role.talents.advices.map(advice => {
-						return <li>{arrOrItemToArr(advice).map(a => I18N_TALENT_NAMES[a])}</li>
+						return <li>{arrOrItemToArr(advice).map(I18N_TALENT_NAME)}</li>
 					})}
 				</ol>
 				<div className="opacity-75 small">

@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'preact/hooks'
 
+import { arrOrItemToArr } from '#src/../../lib/utils/collections'
 import { useBuildWithDelayedLocs } from '#src/api'
 import { getAllRelated } from '#src/api/utils'
 import { CentredSpinner, Spinner } from '#src/components/spinners'
@@ -7,6 +8,17 @@ import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { FavoriteCharacters } from '#src/containers/character-picker/favorite-characters'
 import { OtherItemCardDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar } from '#src/containers/item-cards/item-avatars'
+import {
+	I18N_ART_STATS_PRIORITY,
+	I18N_ARTIFACTS,
+	I18N_ASC_MATERIALS,
+	I18N_FULL_BUILD_INFO,
+	I18N_MORE_ON_BUILDS_PAGE,
+	I18N_STAT_NAME,
+	I18N_SUBSTATS_PRIORITY,
+	I18N_TALENT_NAME,
+	I18N_TALENTS_PRIORITY,
+} from '#src/i18n/i18n'
 import { A } from '#src/routes/router'
 import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import { isLoaded } from '#src/utils/hooks'
@@ -23,18 +35,6 @@ import {
 } from './common'
 
 import './character-build-preview.scss'
-import {
-	I18N_ARTIFACTS,
-	I18N_ART_STATS_PRIORITY,
-	I18N_FULL_BUILD_INFO,
-	I18N_ASC_MATERIALS,
-	I18N_MORE_ON_BUILDS_PAGE,
-	I18N_SUBSTATS_PRIORITY,
-	I18N_TALENTS_PRIORITY,
-	I18N_TALENT_NAMES,
-	I18N_STAT_NAMES,
-} from '#src/i18n/i18n'
-import { arrOrItemToArr } from '#src/../../lib/utils/collections'
 
 function CharacterBuildPreview({ characterCode }: { characterCode: string }): JSX.Element {
 	const [build, isUpdating] = useBuildWithDelayedLocs(characterCode)
@@ -91,7 +91,7 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 		return (
 			<ol className="mb-1 pt-2 small">
 				{role.subStats.advices.map(advice => {
-					return <li>{genSimpleList(advice.codes.map(c => I18N_STAT_NAMES[c]))}</li>
+					return <li>{genSimpleList(advice.codes.map(I18N_STAT_NAME))}</li>
 				})}
 			</ol>
 		)
@@ -104,7 +104,7 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 			<>
 				<ol className="small">
 					{role.talents.advices.map(advice => {
-						return <li>{arrOrItemToArr(advice).map(a => I18N_TALENT_NAMES[a])}</li>
+						return <li>{arrOrItemToArr(advice).map(I18N_TALENT_NAME)}</li>
 					})}
 				</ol>
 			</>

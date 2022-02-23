@@ -13,6 +13,24 @@ import {
 	ItemDetailDdPortal,
 } from '#src/containers/item-cards/item-detail-dd-portal'
 import {
+	I18N_ALCHEMY_CALC,
+	I18N_BASE_ATTACK,
+	I18N_ERROR,
+	I18N_FOR_NOBODY,
+	I18N_MAP_CODES_NAME,
+	I18N_OBTAINED_DURING_STORYLINE,
+	I18N_PIECE_BONUS,
+	I18N_PIECES_BONUS,
+	I18N_PINCH_TO_ZOOM,
+	I18N_RECOMENDED_FOR,
+	I18N_SCROLL_TO_ZOOM,
+	I18N_SECONDARY_STAT,
+	I18N_SOURCE,
+	I18N_STAT_NAME,
+	I18N_WEAPON_OBTAIN_SOURCE_NAME,
+	I18N_WEAPON_TYPE_NAME,
+} from '#src/i18n/i18n'
+import {
 	notesToJSX,
 	ToggleTalentMaterialFav,
 	ToggleWeaponPrimaryMaterialFav,
@@ -30,24 +48,6 @@ import { AlchemyCalculator } from '../alchemy-calculator'
 import { ItemAvatar, LabeledItemAvatar } from './item-avatars'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
-import {
-	I18N_ALCHEMY_CALC,
-	I18N_BASE_ATTACK,
-	I18N_ERROR,
-	I18N_FOR_NOBODY,
-	I18N_MAP_CODES_NAME,
-	I18N_OBTAINED_DURING_STORYLINE,
-	I18N_PIECES_BONUS,
-	I18N_PIECE_BONUS,
-	I18N_PINCH_TO_ZOOM,
-	I18N_RECOMENDED_FOR,
-	I18N_SCROLL_TO_ZOOM,
-	I18N_SECONDARY_STAT,
-	I18N_SOURCE,
-	I18N_STAT_NAMES,
-	I18N_WEAPON_OBTAIN_SOURCE_NAMES,
-	I18N_WEAPON_TYPE_NAMES,
-} from '#src/i18n/i18n'
 const LazyTeyvatMap = import('#src/components/teyvat-map')
 
 export function getRarityBorder(r: GI_RarityCode): string {
@@ -489,11 +489,10 @@ export function WeaponCard({
 					</div>
 					<div className="overflow-hidden">
 						<BlockHeader classes="d-inline-block me-1">
-							{I18N_WEAPON_TYPE_NAMES[weapon.typeCode]}
+							{I18N_WEAPON_TYPE_NAME(weapon.typeCode)}
 						</BlockHeader>
 						<span className="mb-2 text-muted">
-							{BULLET}{' '}
-							{weapon.obtainSources.map(o => I18N_WEAPON_OBTAIN_SOURCE_NAMES[o]).join(', ')}
+							{BULLET} {weapon.obtainSources.map(I18N_WEAPON_OBTAIN_SOURCE_NAME).join(', ')}
 						</span>
 					</div>
 					<div className="d-flex">
@@ -505,7 +504,7 @@ export function WeaponCard({
 						</div>
 						{weapon.subStat && (
 							<div className="ms-1">
-								<div className="opacity-75">{I18N_STAT_NAMES[weapon.subStat.code]}</div>
+								<div className="opacity-75">{I18N_STAT_NAME(weapon.subStat.code)}</div>
 								<div className="mb-2">
 									{weapon.subStat.base} / {weapon.subStat.max}
 								</div>

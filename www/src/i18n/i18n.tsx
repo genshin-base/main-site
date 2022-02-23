@@ -1,11 +1,11 @@
 import {
 	GI_ArtifactTypeCode,
+	GI_KnownStatBonusCode,
 	GI_WeaponObtainSource,
 	GI_WeaponTypeCode,
 	MapCode,
-} from '#src/../../lib/genshin'
-import { GI_TalentCode } from '#src/../../lib/parsing/helperteam/types'
-import { artifactTypes } from '#src/utils/artifacts'
+} from '#lib/genshin'
+import { GI_TalentCode } from '#lib/parsing/helperteam/types'
 
 type Lang = 'en' | 'ru'
 const LANG = BUNDLE_ENV.LANG as Lang
@@ -61,93 +61,19 @@ export const I18N_MORE_ON_BUILDS_PAGE = l('more on build page', 'продолж�
 export const I18N_BACK = l('Back', 'Назад')[LANG]
 export const I18N_NOTES = l('Notes', 'Примечания')[LANG]
 
-const artTypes = artifactTypes.map(t => t.code)
-type ArtTypeNames = Record<GI_ArtifactTypeCode, string>
-const artTypeNamesEN: ArtTypeNames = artTypes.reduce((p, c) => {
-	p[c] = c
-	return p
-}, {} as ArtTypeNames)
-const artTypeNamesRU: ArtTypeNames = {
+const artTypeNamesRU: Record<GI_ArtifactTypeCode, string> = {
 	flower: 'цветок',
 	plume: 'перо',
 	sands: 'часы',
 	goblet: 'кубок',
 	circlet: 'корона',
 }
-export const I18N_ART_TYPES: ArtTypeNames = l(artTypeNamesEN, artTypeNamesRU)[LANG]
+export const I18N_ART_TYPE = {
+	en: (code: GI_ArtifactTypeCode) => code as string,
+	ru: (code: GI_ArtifactTypeCode) => artTypeNamesRU[code],
+}[LANG]
 
-//todo нормальный тип
-type GI_StatCode =
-	| 'def'
-	| 'def%'
-	| 'dmg'
-	| 'dmg%'
-	| 'atk'
-	| 'atk%'
-	| 'hp'
-	| 'hp%'
-	| 'em'
-	| 'er'
-	| 'er%'
-	| 'healing'
-	| 'healing%'
-	| 'crit-rate'
-	| 'crit-rate%'
-	| 'crit-dmg'
-	| 'crit-dmg%'
-	| 'phys-dmg'
-	| 'cryo-dmg'
-	| 'geo-dmg'
-	| 'anemo-dmg'
-	| 'hydro-dmg'
-	| 'electro-dmg'
-	| 'pyro-dmg'
-	| 'phys-dmg%'
-	| 'cryo-dmg%'
-	| 'geo-dmg%'
-	| 'anemo-dmg%'
-	| 'hydro-dmg%'
-	| 'electro-dmg%'
-	| 'pyro-dmg%'
-const statCodes: GI_StatCode[] = [
-	'def',
-	'def%',
-	'dmg',
-	'dmg%',
-	'atk',
-	'atk%',
-	'hp',
-	'hp%',
-	'em',
-	'er',
-	'er%',
-	'healing',
-	'healing%',
-	'crit-rate',
-	'crit-rate%',
-	'crit-dmg',
-	'crit-dmg%',
-	'phys-dmg',
-	'cryo-dmg',
-	'geo-dmg',
-	'anemo-dmg',
-	'hydro-dmg',
-	'electro-dmg',
-	'pyro-dmg',
-	'phys-dmg%',
-	'cryo-dmg%',
-	'geo-dmg%',
-	'anemo-dmg%',
-	'hydro-dmg%',
-	'electro-dmg%',
-	'pyro-dmg%',
-]
-type StatNames = Record<GI_StatCode, string>
-const statNamesEN: StatNames = statCodes.reduce((p, c) => {
-	p[c] = c.replace(/-/g, ' ')
-	return p
-}, {} as StatNames)
-const statNamesRu: StatNames = {
+const statNamesRu: Record<GI_KnownStatBonusCode, string> = {
 	def: 'защита',
 	'def%': '% защиты',
 	dmg: 'урон',
@@ -180,33 +106,28 @@ const statNamesRu: StatNames = {
 	'electro-dmg%': '% электро урона',
 	'pyro-dmg%': '% пиро урона',
 }
-export const I18N_STAT_NAMES: StatNames = l(statNamesEN, statNamesRu)[LANG]
+export const I18N_STAT_NAME = {
+	en: (code: string) => code.replace(/-/g, ' '),
+	ru: (code: string) => statNamesRu[code] ?? code,
+}[LANG]
 
-const talentTypes: GI_TalentCode[] = ['attack', 'skill', 'burst']
 type TalentTypeNames = Record<GI_TalentCode, string>
-const talentTypesNamesEN: TalentTypeNames = talentTypes.reduce((p, c) => {
-	p[c] = c
-	return p
-}, {} as TalentTypeNames)
 const talentTypesNamesRU: TalentTypeNames = {
 	attack: 'обычная атака',
 	skill: 'элементальный навык',
 	burst: 'взрыв стихии',
 }
+export const I18N_TALENT_NAME = {
+	en: (code: GI_TalentCode) => code,
+	ru: (code: GI_TalentCode) => talentTypesNamesRU[code],
+}[LANG]
 
-export const I18N_TALENT_NAMES: TalentTypeNames = l(talentTypesNamesEN, talentTypesNamesRU)[LANG]
-type ConjuctionTypes = 'or' | 'and'
-const conjTypes: ConjuctionTypes[] = ['or', 'and']
-const conjTypesNamesEN: Record<ConjuctionTypes, string> = conjTypes.reduce((p, c) => {
-	p[c] = c
-	return p
-}, {} as Record<ConjuctionTypes, string>)
-const conjTypesNamesRU: Record<ConjuctionTypes, string> = {
-	or: 'или',
-	and: 'и',
-}
+type ConjuctionType = 'or' | 'and'
+export const I18N_CONJUCTIONS: Record<ConjuctionType, string> = {
+	en: { or: 'or', and: 'and' },
+	ru: { or: 'или', and: 'и' },
+}[LANG]
 
-export const I18N_CONJUCTIONS: Record<ConjuctionTypes, string> = l(conjTypesNamesEN, conjTypesNamesRU)[LANG]
 export const I18N_RECOMENDED_FOR = l('Recommended for', 'Рекомендуется для')[LANG]
 export const I18N_FOR_NOBODY = l('Nobody', 'Никому')[LANG]
 export const I18N_SOURCE = l('Source', 'Источник')[LANG]
@@ -244,10 +165,6 @@ export const I18N_CREATED_BY_US = l(
 )[LANG]
 
 type WeaponTypeNames = Record<GI_WeaponTypeCode, string>
-const weaponTypeNamesEN: WeaponTypeNames = talentTypes.reduce((p, c) => {
-	p[c] = c
-	return p
-}, {} as WeaponTypeNames)
 const weaponTypeNamesRU: WeaponTypeNames = {
 	claymore: 'Двуручный меч',
 	sword: 'Меч',
@@ -255,13 +172,12 @@ const weaponTypeNamesRU: WeaponTypeNames = {
 	polearm: 'Копье',
 	bow: 'Лук',
 }
-export const I18N_WEAPON_TYPE_NAMES: WeaponTypeNames = l(weaponTypeNamesEN, weaponTypeNamesRU)[LANG]
+export const I18N_WEAPON_TYPE_NAME = {
+	en: (code: GI_WeaponTypeCode) => code,
+	ru: (code: GI_WeaponTypeCode) => weaponTypeNamesRU[code],
+}[LANG]
 
 type WeaponObtainSourceNames = Record<GI_WeaponObtainSource, string>
-const weaponObtainSourceNamesEN: WeaponObtainSourceNames = talentTypes.reduce((p, c) => {
-	p[c] = c.replace(/-/g, ' ')
-	return p
-}, {} as WeaponObtainSourceNames)
 const weaponObtainSourceNamesRU: WeaponObtainSourceNames = {
 	wishes: 'молитвы',
 	'event-wishes': 'молитвы события',
@@ -278,10 +194,10 @@ const weaponObtainSourceNamesRU: WeaponObtainSourceNames = {
 	'adventure-rank-10': '10 ранг приключений',
 	playstation: 'плейстейшн',
 }
-export const I18N_WEAPON_OBTAIN_SOURCE_NAMES: WeaponObtainSourceNames = l(
-	weaponObtainSourceNamesEN,
-	weaponObtainSourceNamesRU,
-)[LANG]
+export const I18N_WEAPON_OBTAIN_SOURCE_NAME = {
+	en: (code: GI_WeaponObtainSource) => code.replace(/-/g, ' '),
+	ru: (code: GI_WeaponObtainSource) => weaponObtainSourceNamesRU[code],
+}[LANG]
 export const I18N_OBTAINED_DURING_STORYLINE = l(
 	'Obtained during storyline quests',
 	'Выдаётся во время прохождения сюжетных заданий',
