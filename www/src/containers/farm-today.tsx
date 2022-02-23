@@ -22,6 +22,15 @@ import {
 	SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
 	SK_SELECTED_REGION_CODE,
 } from '#src/utils/local-storage-keys'
+import {
+	I18N_DUNGEONS,
+	I18N_TALENTS,
+	I18N_TODAY,
+	I18N_TOMORROW,
+	I18N_WEAPONS,
+	I18N_WEEKDAYS,
+	I18N_WHY_ADD_TO_FAVS_TIP,
+} from '#src/i18n/i18n'
 
 export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 	const ttData = useFetch(apiMaterialsTimetable, [])
@@ -29,7 +38,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 		SK_SELECTED_REGION_CODE,
 		SK_DEFAULT_SELECTED_REGION_CODE,
 	)
-	const { weekdayCode } = getRegionTime(selectedRegionCode)
+	const { weekdayMonSun, weekdayCode } = getRegionTime(selectedRegionCode)
 	const tomorrowCode = arrGetAfter(GI_ROTATION_WEEKDAY_CODES, weekdayCode)
 	const [favCharCodes] = useLocalStorage<string[]>(SK_FAV_CHAR_CODES, [])
 	const [favTalMaterialCodes] = useLocalStorage<string[]>(SK_FAV_TALENT_MATERIAL_CODES, [])
@@ -44,17 +53,17 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 		() => [
 			{
 				code: weekdayCode,
-				title: 'today, ' + weekdayCode, //todo l10n
+				title: `${I18N_WEEKDAYS[weekdayMonSun]}, ${I18N_TODAY}`,
 			},
-			{ code: tomorrowCode, title: 'tomorrow' },
+			{ code: tomorrowCode, title: I18N_TOMORROW },
 		],
-		[weekdayCode, tomorrowCode],
+		[weekdayCode, tomorrowCode, weekdayMonSun],
 	)
 	const [selectedTab, setSelectedTab] = useSelectable(tabs, [selectedRegionCode])
 	return (
 		<div className={`farm-today ${classes}`}>
 			<div className="d-none d-xl-flex">
-				<h5 className="py-2 m-0 me-2 d-block ">Dungeons</h5>
+				<h5 className="py-2 m-0 me-2 d-block ">{I18N_DUNGEONS}</h5>
 				<Tabs
 					tabs={tabs}
 					selectedTab={selectedTab}
@@ -72,7 +81,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 			</div>
 			{isLoaded(ttData) ? (
 				<>
-					<h6 className="opacity-75 text-capitalize">Talents</h6>
+					<h6 className="opacity-75 text-capitalize">{I18N_TALENTS}</h6>
 					<div className="talents-wrap pt-1">
 						{ttData.timetable[selectedTab.code].characterAscensions.map(asc => (
 							<>
@@ -117,7 +126,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 							</>
 						))}
 					</div>
-					<h6 class="opacity-75 text-capitalize">Weapons</h6>
+					<h6 class="opacity-75 text-capitalize">{I18N_WEAPONS}</h6>
 					<div className="ps-2 ms-1">
 						{ttData.timetable[selectedTab.code].weaponMaterialCodes.map(code => (
 							<ItemAvatar
@@ -141,9 +150,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 			) : (
 				<Spinner />
 			)}
-			<div className="text-muted small text-center px-2 mx-1 py-3">
-				Add characters, weapons or items to your favorites to see them here.
-			</div>
+			<div className="text-muted small text-center px-2 mx-1 py-3">{I18N_WHY_ADD_TO_FAVS_TIP}</div>
 		</div>
 	)
 }

@@ -35,6 +35,21 @@ import {
 
 import './character-build-detailed.scss'
 import { BlockHeader } from '#src/components/block-header'
+import {
+	I18N_ARTIFACTS,
+	I18N_ART_STATS_PRIORITY,
+	I18N_BACK,
+	I18N_ASC_MATERIALS,
+	I18N_NOTES,
+	I18N_SUBSTATS_PRIORITY,
+	I18N_TALENTS_PRIORITY,
+	I18N_WEAPONS,
+	I18N_ART_TYPES,
+	I18N_STAT_NAMES,
+	I18N_TALENT_NAMES,
+	I18N_CONJUCTIONS,
+} from '#src/i18n/i18n'
+import { arrOrItemToArr } from '#src/../../lib/utils/collections'
 
 export function CharacterBuildDetailed({
 	build,
@@ -78,7 +93,9 @@ export function CharacterBuildDetailed({
 						/>
 						{genNotes(item)}
 						{genSeeCharNotes(item)}
-						{isInList && !isLastInList && <ItemsJoinerWrap>or</ItemsJoinerWrap>}
+						{isInList && !isLastInList && (
+							<ItemsJoinerWrap>{I18N_CONJUCTIONS.or}</ItemsJoinerWrap>
+						)}
 					</>
 				)
 			})
@@ -108,15 +125,15 @@ export function CharacterBuildDetailed({
 		const role = getRoleData(build, selectedRoleTab.code)
 		return (
 			<>
-				<BlockHeader>Main artifact stats</BlockHeader>
-				<ul className="mb-1 list-unstyled ms-1">
+				<BlockHeader>{I18N_ART_STATS_PRIORITY}</BlockHeader>
+				<ul className="mb-1 list-unstyled ms-1 small">
 					{CIRCLET_GOBLET_SANDS.map(ac => (
 						<li>
 							<ItemAvatar
 								src={getArtifactTypeIconSrc(ac)}
 								classes="small-avatar small my-1 mx-1 bg-dark with-padding align-middle"
 							/>
-							<b className="text-muted">{ac} — </b>
+							<b className="text-muted">{I18N_ART_TYPES[ac]} — </b>
 							{genArtMainStatDetail(role, ac)}
 						</li>
 					))}
@@ -124,12 +141,12 @@ export function CharacterBuildDetailed({
 				<div className="opacity-75 small">
 					{notesToJSX(role.mainStats.notes)} {genSeeCharNotes(role.mainStats)}
 				</div>
-				<BlockHeader classes="mt-3">Sub artifact stats</BlockHeader>
-				<ol className="mb-1">
+				<BlockHeader classes="mt-3">{I18N_SUBSTATS_PRIORITY}</BlockHeader>
+				<ol className="mb-1 small">
 					{role.subStats.advices.map(advice => {
 						return (
 							<li>
-								{genSimpleList(advice.codes)}
+								{genSimpleList(advice.codes.map(c => I18N_STAT_NAMES[c]))}
 								{' ' + genNotes(advice) + genSeeCharNotes(advice)}
 							</li>
 						)
@@ -138,10 +155,10 @@ export function CharacterBuildDetailed({
 				<div className="opacity-75 small">
 					{notesToJSX(role.subStats.notes)} {genSeeCharNotes(role.subStats)}
 				</div>
-				<BlockHeader classes="mt-3">Talent Priority</BlockHeader>
-				<ol>
+				<BlockHeader classes="mt-3">{I18N_TALENTS_PRIORITY}</BlockHeader>
+				<ol className="small">
 					{role.talents.advices.map(advice => {
-						return <li>{advice}</li>
+						return <li>{arrOrItemToArr(advice).map(a => I18N_TALENT_NAMES[a])}</li>
 					})}
 				</ol>
 				<div className="opacity-75 small">
@@ -184,7 +201,7 @@ export function CharacterBuildDetailed({
 				<div className="row">
 					<div className="col col-3 p-0">
 						<A className="btn btn-secondary align-self-center" type="submit" href="/builds">
-							<span className="fs-4 lh-1 opacity-75">‹ </span> Back
+							<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
 						</A>
 					</div>
 					<div className="col col-9">
@@ -210,11 +227,11 @@ export function CharacterBuildDetailed({
 					<div className="col col-9">
 						<div className="d-flex">
 							<div className="flex-fill w-33 p-3">
-								<BlockHeader>Weapon</BlockHeader>
+								<BlockHeader>{I18N_WEAPONS}</BlockHeader>
 								<ol className="items-list">{weaponListBlock}</ol>
 							</div>
 							<div className="flex-fill w-33 p-3">
-								<BlockHeader>Artifacts</BlockHeader>
+								<BlockHeader>{I18N_ARTIFACTS}</BlockHeader>
 								<ol className="items-list">{artifactsListBlock}</ol>
 								<div></div>
 							</div>
@@ -222,7 +239,7 @@ export function CharacterBuildDetailed({
 						</div>
 						<div className="w-100">
 							<div className="p-3">
-								<BlockHeader>Notes</BlockHeader>
+								<BlockHeader>{I18N_NOTES}</BlockHeader>
 								<div className="text-muted">{notesBlock}</div>
 							</div>
 						</div>
@@ -245,21 +262,21 @@ export function CharacterBuildDetailed({
 			/>
 			<div className="">
 				<div className="my-3">
-					<BlockHeader>Ascension materials</BlockHeader>
+					<BlockHeader>{I18N_ASC_MATERIALS}</BlockHeader>
 					{materialsBlock}
 				</div>
 				<div className="my-3">
-					<BlockHeader>Artifacts</BlockHeader>
+					<BlockHeader>{I18N_ARTIFACTS}</BlockHeader>
 					<ol className="items-list">{artifactsListBlock}</ol>
 				</div>
 				<div className="my-3">{artifactStatsAndSkillsBlock}</div>
 				<div className="my-3">
-					<BlockHeader>Weapon</BlockHeader>
+					<BlockHeader>{I18N_WEAPONS}</BlockHeader>
 					<ol className="items-list">{weaponListBlock}</ol>
 				</div>
 			</div>
 			<div>
-				<BlockHeader>Notes</BlockHeader>
+				<BlockHeader>{I18N_NOTES}</BlockHeader>
 				<div className="opacity-75">{notesBlock}</div>
 			</div>
 		</div>
@@ -268,7 +285,7 @@ export function CharacterBuildDetailed({
 		<div className="character-build-detailed mt-2 mb-3 position-relative">
 			<div className="d-flex d-xl-none mt-3">
 				<A className="btn btn-secondary align-self-center" type="submit" href="/builds">
-					<span className="fs-4 lh-1 opacity-75">‹ </span> Back
+					<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
 				</A>
 				<h5 className="ps-3 pe-1 m-0 align-self-center">{build.character.name}</h5>
 				<ToggleCharFav classes="fs-3 align-self-center" characterCode={characterCode} />

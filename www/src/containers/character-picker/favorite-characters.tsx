@@ -6,6 +6,7 @@ import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { useLocalStorage } from '#src/utils/hooks'
 import { ItemAvatar } from '../item-cards/item-avatars'
 import { elements } from '#src/utils/elements'
+import { I18N_FAV_CHARACTERS } from '#src/i18n/i18n'
 
 const codeToBadge = (code: string) => {
 	const e = elements.find(e => code === `${e.code}-traveler`)
@@ -66,7 +67,7 @@ export function FavoriteCharacters({
 	}, [onCharacterSelect, characterCodes, shoudSelectFirst])
 	return (
 		<div className={`favourite-characters ${classes}`}>
-			<label className="opacity-75 pe-2 align-middle py-1">Favorite characters </label>
+			<label className="opacity-75 pe-2 align-middle py-1">{I18N_FAV_CHARACTERS}</label>
 			<br className="d-xl-none" />
 			{charactersElems}
 			{/* {optsForSelect.length ? (

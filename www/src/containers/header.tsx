@@ -1,3 +1,4 @@
+import { A } from '#src/routes/router'
 import { useState } from 'preact/hooks'
 
 import { Nav } from '../components/nav'
@@ -9,9 +10,9 @@ export function Header() {
 		<header>
 			<div className="navbar navbar-expand-md navbar-dark bg-primary">
 				<div className="container">
-					<a className="navbar-brand" href="/">
+					<A className="navbar-brand" href="/">
 						Genshin Base
-					</a>
+					</A>
 					<button
 						className="navbar-toggler"
 						type="button"

@@ -47,8 +47,8 @@ type WeaponAdvices<T extends LangMode> = { advices: SimilarWeaponAdvice<T>[] } &
 
 // === Characters ===
 
-type TalentCode = 'attack' | 'skill' | 'burst'
-type TalentAdvices<T extends LangMode> = { advices: (TalentCode | TalentCode[])[] } & BottomNotes<T>
+export type GI_TalentCode = 'attack' | 'skill' | 'burst'
+type TalentAdvices<T extends LangMode> = { advices: (GI_TalentCode | GI_TalentCode[])[] } & BottomNotes<T>
 
 type CharacterBuildInfoRole<T extends LangMode> = {
 	code: string

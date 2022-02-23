@@ -2,12 +2,20 @@ import { AlchemyCalculator } from '#src/containers/alchemy-calculator'
 import { FarmToday } from '#src/containers/farm-today'
 import { RegionSwitch } from '#src/containers/region-switch'
 import { TimeUntilDayReset } from '#src/containers/time-until-day-reset'
+import {
+	I18N_ALCHEMY_CALC,
+	I18N_BUILDS,
+	I18N_DASHBOARD,
+	I18N_REGION,
+	I18N_UNTIL_DAY_RESET,
+	I18N_WHAT_TO_FARM,
+} from '#src/i18n/i18n'
 import { BuildsPreviewsWrap } from '#src/modules/builds/character-build-preview'
 
 function Fieldset({ children, legend, classes = '' }) {
 	return (
 		<fieldset className={`my-2 ${classes}`}>
-			<legend className="text-capitalize opacity-75 mb-2">{legend}</legend>
+			<legend className="opacity-75 mb-2">{legend}</legend>
 			{children}
 		</fieldset>
 	)
@@ -15,23 +23,23 @@ function Fieldset({ children, legend, classes = '' }) {
 export function FrontPage(): JSX.Element {
 	return (
 		<div className="dashboard container ">
-			<h1 className="my-1 letter-spacing-1">Dashboard</h1>
+			<h1 className="my-1 letter-spacing-1">{I18N_DASHBOARD}</h1>
 			<div className="row">
-				<Fieldset legend="Region" classes="col-lg-3 col-12">
+				<Fieldset legend={I18N_REGION} classes="col-lg-3 col-12">
 					<RegionSwitch />
 				</Fieldset>
-				<Fieldset legend="Until day reset" classes="col-lg-3 col-12">
+				<Fieldset legend={I18N_UNTIL_DAY_RESET} classes="col-lg-3 col-12">
 					<TimeUntilDayReset classes="fs-4" />
 				</Fieldset>
-				<Fieldset legend="alchemy calculator" classes="col-lg-6 col-12 ">
+				<Fieldset legend={I18N_ALCHEMY_CALC} classes="col-lg-6 col-12 ">
 					<AlchemyCalculator />
 				</Fieldset>
 			</div>
 			<div className="row">
-				<Fieldset classes="col-lg-6 col-12" legend="what to farm">
+				<Fieldset classes="col-lg-6 col-12" legend={I18N_WHAT_TO_FARM}>
 					<FarmToday />
 				</Fieldset>
-				<Fieldset classes="col-lg-6 col-12" legend="builds">
+				<Fieldset classes="col-lg-6 col-12" legend={I18N_BUILDS}>
 					<BuildsPreviewsWrap />
 				</Fieldset>
 			</div>

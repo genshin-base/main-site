@@ -23,6 +23,18 @@ import {
 } from './common'
 
 import './character-build-preview.scss'
+import {
+	I18N_ARTIFACTS,
+	I18N_ART_STATS_PRIORITY,
+	I18N_FULL_BUILD_INFO,
+	I18N_ASC_MATERIALS,
+	I18N_MORE_ON_BUILDS_PAGE,
+	I18N_SUBSTATS_PRIORITY,
+	I18N_TALENTS_PRIORITY,
+	I18N_TALENT_NAMES,
+	I18N_STAT_NAMES,
+} from '#src/i18n/i18n'
+import { arrOrItemToArr } from '#src/../../lib/utils/collections'
 
 function CharacterBuildPreview({ characterCode }: { characterCode: string }): JSX.Element {
 	const [build, isUpdating] = useBuildWithDelayedLocs(characterCode)
@@ -48,7 +60,7 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 				{role.artifacts.sets.length > listTimit ? (
 					<li className="pt-1 text-muted">
 						<A className="link-secondary text-muted" href={`/builds/` + characterCode}>
-							more on build page
+							{I18N_MORE_ON_BUILDS_PAGE}
 						</A>
 					</li>
 				) : null}
@@ -60,7 +72,7 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 		if (!isLoaded(build)) return null
 		const role = getRoleData(build, selectedRoleTab.code)
 		return (
-			<ul className="mb-1 list-unstyled ms-1 pt-1 ps-2">
+			<ul className="mb-1 list-unstyled ms-1 pt-1 ps-2 small">
 				{CIRCLET_GOBLET_SANDS.map(ac => (
 					<li>
 						<ItemAvatar
@@ -77,9 +89,9 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 		if (!isLoaded(build)) return null
 		const role = getRoleData(build, selectedRoleTab.code)
 		return (
-			<ol className="mb-1 pt-2">
+			<ol className="mb-1 pt-2 small">
 				{role.subStats.advices.map(advice => {
-					return <li>{genSimpleList(advice.codes)}</li>
+					return <li>{genSimpleList(advice.codes.map(c => I18N_STAT_NAMES[c]))}</li>
 				})}
 			</ol>
 		)
@@ -90,9 +102,9 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 		const role = getRoleData(build, selectedRoleTab.code)
 		return (
 			<>
-				<ol>
+				<ol className="small">
 					{role.talents.advices.map(advice => {
-						return <li>{advice}</li>
+						return <li>{arrOrItemToArr(advice).map(a => I18N_TALENT_NAMES[a])}</li>
 					})}
 				</ol>
 			</>
@@ -157,36 +169,40 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 				</div>
 				<div className="row small gy-2">
 					<div className="col-lg-4 col-12">
-						<h6 className="opacity-75">Artifacts</h6>
+						<h6 className="opacity-75">{I18N_ARTIFACTS}</h6>
 						<div>{artifactsListBlock}</div>
 					</div>
 					<div className="col-lg-4 col-6">
-						<h6 className="opacity-75">Artifact stats priority</h6>
+						<h6 className="opacity-75">{I18N_ART_STATS_PRIORITY}</h6>
 						<div>{artifactMainStatsBlock}</div>
 					</div>
 					<div className="col-lg-4 col-6">
-						<h6 className="opacity-75">Substats priority</h6>
+						<h6 className="opacity-75">{I18N_SUBSTATS_PRIORITY}</h6>
 						<div>{artifactSubStatsBlock}</div>
 					</div>
 					<div className="col-lg-4 col-6">
-						<h6 className="opacity-75">Talents Priority</h6>
+						<h6 className="opacity-75">{I18N_TALENTS_PRIORITY}</h6>
 						<div>{talentsBlock}</div>
 					</div>
 					<div className="col-lg-8 col-6">
-						<h6 className="opacity-75">Materials</h6>
+						<h6 className="opacity-75">{I18N_ASC_MATERIALS}</h6>
 						<div>{materialsBlock}</div>
 					</div>
-					<div className="col-6">
-						<a type="button" className="btn btn-link btn-sm w-100">
-							Full build info
-						</a>
+					<div className="col-12">
+						<A
+							type="button"
+							className="btn btn-link btn-sm w-100"
+							href={`/builds/` + characterCode}
+						>
+							{I18N_FULL_BUILD_INFO}
+						</A>
 					</div>
-					<div className="col-6">
-						{/* TODO */}
-						{/* <a type="button" className="btn btn-link btn-sm w-100">
-							Character lore
-						</a> */}
-					</div>
+					{/* TODO */}
+					{/* <div className="col-6">
+						<A type="button" className="btn btn-link btn-sm w-100">
+							{I18N_CHAR_LORE}
+						</A>
+					</div> */}
 				</div>
 			</div>
 		</div>

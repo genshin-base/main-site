@@ -26,6 +26,7 @@ import {
 	STORAGE_WEAPON_DATA,
 } from '#src/utils/local-storage-keys'
 import { HEART, HEART_EMPTY, STAR } from '#src/utils/typography'
+import { I18N_CONJUCTIONS, I18N_STAT_NAMES } from '#src/i18n/i18n'
 
 export const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole<'monolang'>> = {
 	title: '…',
@@ -56,7 +57,7 @@ export function genArtMainStatDetail(
 ) {
 	return (
 		<span className="">
-			{genSimpleList(role.mainStats[itemCode].codes)}
+			{genSimpleList(role.mainStats[itemCode].codes.map(c => I18N_STAT_NAMES[c]))}
 			{isShort
 				? ' ' + genNotes(role.mainStats[itemCode]) + genSeeCharNotes(role.mainStats[itemCode])
 				: null}
@@ -148,7 +149,7 @@ export function genArtifactAdvice(
 					return (
 						<>
 							{genArtifactAdvice(art, build, isLastInList)}
-							{!isLastInList && <ItemsJoinerWrap>{set.op}</ItemsJoinerWrap>}
+							{!isLastInList && <ItemsJoinerWrap>{I18N_CONJUCTIONS[set.op]}</ItemsJoinerWrap>}
 						</>
 					)
 				})}
@@ -156,7 +157,7 @@ export function genArtifactAdvice(
 		)
 	}
 }
-export function ItemsJoinerWrap({ children }: { children: JSX.Node }): JSX.Element {
+export function ItemsJoinerWrap({ children }): JSX.Element {
 	return <div className="text-start text-muted small px-5 my-n1">{children}</div>
 }
 export function ItemsListGroupWrap({

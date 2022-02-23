@@ -30,6 +30,24 @@ import { AlchemyCalculator } from '../alchemy-calculator'
 import { ItemAvatar, LabeledItemAvatar } from './item-avatars'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
+import {
+	I18N_ALCHEMY_CALC,
+	I18N_BASE_ATTACK,
+	I18N_ERROR,
+	I18N_FOR_NOBODY,
+	I18N_MAP_CODES_NAME,
+	I18N_OBTAINED_DURING_STORYLINE,
+	I18N_PIECES_BONUS,
+	I18N_PIECE_BONUS,
+	I18N_PINCH_TO_ZOOM,
+	I18N_RECOMENDED_FOR,
+	I18N_SCROLL_TO_ZOOM,
+	I18N_SECONDARY_STAT,
+	I18N_SOURCE,
+	I18N_STAT_NAMES,
+	I18N_WEAPON_OBTAIN_SOURCE_NAMES,
+	I18N_WEAPON_TYPE_NAMES,
+} from '#src/i18n/i18n'
 const LazyTeyvatMap = import('#src/components/teyvat-map')
 
 export function getRarityBorder(r: GI_RarityCode): string {
@@ -39,7 +57,7 @@ export function getRarityBorder(r: GI_RarityCode): string {
 function RecommendedFor({ charCodes }: { charCodes: string[] }): JSX.Element {
 	return (
 		<>
-			<BlockHeader>Recommended for</BlockHeader>
+			<BlockHeader>{I18N_RECOMENDED_FOR}</BlockHeader>
 			{charCodes.length
 				? charCodes.map(c => (
 						<ItemAvatar
@@ -47,7 +65,7 @@ function RecommendedFor({ charCodes }: { charCodes: string[] }): JSX.Element {
 							classes={`small-avatar mb-2 me-2 border ${getRarityBorder(4)}`}
 						/>
 				  ))
-				: 'Nobody'}
+				: I18N_FOR_NOBODY}
 		</>
 	)
 }
@@ -256,7 +274,7 @@ function MapWrap({
 				)}
 				{markerGroups.length ? (
 					<div className={`d-flex flex-fill justify-content-end align-self-center`}>
-						<label className="me-1 text-muted align-self-center small">Source:</label>
+						<label className="me-1 text-muted align-self-center small">{I18N_SOURCE}:</label>
 						{sourceSelectEl}
 					</div>
 				) : null}
@@ -278,15 +296,14 @@ function MapWrap({
 							}`}
 							for={c}
 						>
-							{c}
-							{/** todo l10n */}
+							{I18N_MAP_CODES_NAME[c]}
 						</label>
 					</div>
 				))}
 			</div>
 			<div className="map-tip position-absolute px-3 pt-1 lh-1 top-100 end-0 small text-muted opacity-75 pe-none">
-				<div class="d-none d-xl-block">Scroll to zoom</div>
-				<div class="d-xl-none">Pinch to zoom</div>
+				<div class="d-none d-xl-block">{I18N_SCROLL_TO_ZOOM}</div>
+				<div class="d-xl-none">{I18N_PINCH_TO_ZOOM}</div>
 			</div>
 			{selectedSource.markers !== 'external' && isLoaded(TeyvatMap) ? (
 				<TeyvatMap
@@ -296,7 +313,7 @@ function MapWrap({
 					markers={selectedSource.markers}
 				/>
 			) : TeyvatMap instanceof Error ? (
-				<div>Error.</div>
+				<div>{I18N_ERROR}.</div>
 			) : (
 				<Spinner />
 			)}
@@ -357,19 +374,19 @@ function ArtifactCard({
 					/>
 					{selectedArt.sets[1] && (
 						<>
-							<BlockHeader>1 piece bonus</BlockHeader>
+							<BlockHeader>{I18N_PIECE_BONUS(1)}</BlockHeader>
 							<div className="mb-3">{notesToJSX(selectedArt.sets[1])}</div>
 						</>
 					)}
 					{selectedArt.sets[2] && (
 						<>
-							<BlockHeader>2 pieces bonus</BlockHeader>
+							<BlockHeader>{I18N_PIECES_BONUS(2)}</BlockHeader>
 							<div className="mb-3">{notesToJSX(selectedArt.sets[2])}</div>
 						</>
 					)}
 					{selectedArt.sets[4] && (
 						<>
-							<BlockHeader>4 pieces bonus</BlockHeader>
+							<BlockHeader>{I18N_PIECES_BONUS(4)}</BlockHeader>
 							<div className="mb-3">{notesToJSX(selectedArt.sets[4])}</div>
 						</>
 					)}
@@ -471,22 +488,24 @@ export function WeaponCard({
 						</div>
 					</div>
 					<div className="overflow-hidden">
-						<BlockHeader classes="d-inline-block me-1">{weapon.typeCode}</BlockHeader>
-
+						<BlockHeader classes="d-inline-block me-1">
+							{I18N_WEAPON_TYPE_NAMES[weapon.typeCode]}
+						</BlockHeader>
 						<span className="mb-2 text-muted">
-							{BULLET} {weapon.obtainSources.join(', ')}
+							{BULLET}{' '}
+							{weapon.obtainSources.map(o => I18N_WEAPON_OBTAIN_SOURCE_NAMES[o]).join(', ')}
 						</span>
 					</div>
 					<div className="d-flex">
 						<div className="me-2">
-							<div className="opacity-75">Базовая атака</div>
+							<div className="opacity-75">{I18N_BASE_ATTACK}</div>
 							<div className="mb-2">
 								{weapon.atk.base} / {weapon.atk.max}
 							</div>
 						</div>
 						{weapon.subStat && (
-							<div>
-								<div className="opacity-75">{weapon.subStat.code}</div>
+							<div className="ms-1">
+								<div className="opacity-75">{I18N_STAT_NAMES[weapon.subStat.code]}</div>
 								<div className="mb-2">
 									{weapon.subStat.base} / {weapon.subStat.max}
 								</div>
@@ -494,7 +513,7 @@ export function WeaponCard({
 						)}
 					</div>
 					<div className="mb-3">
-						<span className="opacity-75">Пассивная способность</span>
+						<span className="opacity-75">{I18N_SECONDARY_STAT}</span>
 						<div className="">{notesToJSX(weapon.passiveStat)}</div>
 					</div>
 					<RecommendedFor charCodes={weapon.recommendedTo} />
@@ -584,13 +603,13 @@ export function OtherItemCard({
 			classes={classes}
 			bodyEl={
 				item.code === 'brilliant-diamond-gemstone' ? (
-					'Obtained during storyline quests' //todo l10n
+					I18N_OBTAINED_DURING_STORYLINE
 				) : item.ancestryCodes.length > 0 ? (
 					<div className="">
 						{/* <ItemAvatar rarity={3} classes="large-avatar float-end" src={getItemIconSrc(item.code)} /> */}
 						{/* <BlockHeader>Описание</BlockHeader>
 				<div className="mb-3">{notesToJSX()}</div> */}
-						<BlockHeader>alchemy calculator</BlockHeader>
+						<BlockHeader>{I18N_ALCHEMY_CALC}</BlockHeader>
 						<AlchemyCalculator ancestryCodes={codesForCalc} />
 					</div>
 				) : null
