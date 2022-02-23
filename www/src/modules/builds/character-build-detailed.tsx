@@ -7,7 +7,7 @@ import { BlockHeader } from '#src/components/block-header'
 import { CharacterPortrait } from '#src/components/characters'
 import { CentredSpinner } from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
-import { OtherItemCardDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
+import { OtherItemCard, WeaponCard } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
 import {
 	I18N_ART_STATS_PRIORITY,
@@ -85,11 +85,7 @@ export function CharacterBuildDetailed({
 							rarity={weapon.rarity}
 							avatarClasses="with-padding"
 							classes={`small ${!isInList || isLastInList ? 'mb-1' : ''}`}
-							ddProps={{
-								DdComponent: WeaponDetailDd,
-								ddItems: [weapon],
-								related: build.maps,
-							}}
+							ddComponent={<WeaponCard weapon={weapon} related={build.maps} />}
 						/>
 						{genNotes(item)}
 						{genSeeCharNotes(item)}
@@ -185,11 +181,7 @@ export function CharacterBuildDetailed({
 					<ItemAvatar
 						classes="mb-2 mx-1 small-avatar with-padding"
 						src={getItemIconSrc(m.code)}
-						ddProps={{
-							DdComponent: OtherItemCardDetailDd,
-							ddItems: [m],
-							related: build.maps,
-						}}
+						ddComponent={<OtherItemCard item={m} related={build.maps} />}
 					/>
 				))}
 			</div>

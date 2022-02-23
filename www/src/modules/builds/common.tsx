@@ -14,7 +14,7 @@ import { ArtifactRef, ArtifactRefNode, CharacterBuildInfoRole } from '#lib/parsi
 import { mustBeDefined } from '#lib/utils/values'
 import { MapAllByCode } from '#src/api/utils'
 import { Tooltip } from '#src/components/tooltip'
-import { ArtifactDetailDd } from '#src/containers/item-cards/dd-cards'
+import { ArtifactCard } from '#src/containers/item-cards/dd-cards'
 import { LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
 import { I18N_CONJUCTIONS, I18N_STAT_NAME } from '#src/i18n/i18n'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
@@ -133,11 +133,13 @@ export function genArtifactAdvice(
 				avatarTopEndBadge={'x' + set.count}
 				avatarClasses="with-padding"
 				classes={`small ${isLast ? 'mb-1' : ''}`}
-				ddProps={{
-					DdComponent: ArtifactDetailDd,
-					ddItems: artifactsForDd,
-					related: build.maps,
-				}}
+				ddComponent={
+					<ArtifactCard
+						artifacts={artifactsForDd}
+						related={build.maps}
+						title={artifactForList.name}
+					/>
+				}
 			/>
 		)
 	} else {

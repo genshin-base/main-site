@@ -45,7 +45,7 @@ import { getItemIconSrc } from '#src/utils/items'
 import { BULLET, LEFT_POINTING, RIGHT_POINTING, TIMES } from '#src/utils/typography'
 import { getWeaponIconLageSrc } from '#src/utils/weapons'
 import { AlchemyCalculator } from '../alchemy-calculator'
-import { ItemAvatar, LabeledItemAvatar } from './item-avatars'
+import { DdContext, ItemAvatar, LabeledItemAvatar } from './item-avatars'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
 const LazyTeyvatMap = import('#src/components/teyvat-map')
@@ -96,28 +96,30 @@ function Card({
 	selectorEl,
 	bodyEl,
 	mapEl,
-	onCloseClick,
 }: {
 	classes?: string
 	titleEl: JSX.Nodes | string
 	selectorEl?: JSX.Nodes
 	bodyEl?: JSX.Nodes
 	mapEl?: JSX.Nodes
-	onCloseClick?: () => void
 }): JSX.Element {
 	return (
 		<div className={`item-detail-popover-card card ${classes}`}>
 			<h3 className="card-header fs-4 d-flex">
 				<span className="flex-fill">{titleEl}</span>{' '}
-				{onCloseClick && (
-					<span
-						class="fs-4 lh-1 opacity-75 float-end ps-2 mt-1 c-pointer"
-						type="button"
-						onClick={onCloseClick}
-					>
-						{TIMES}
-					</span>
-				)}
+				<DdContext.Consumer>
+					{ddContext =>
+						ddContext.onClickAway && (
+							<span
+								class="fs-4 lh-1 opacity-75 float-end ps-2 mt-1 c-pointer"
+								type="button"
+								onClick={ddContext.onClickAway}
+							>
+								{TIMES}
+							</span>
+						)
+					}
+				</DdContext.Consumer>
 			</h3>
 			{selectorEl && <div class="p-3">{selectorEl}</div>}
 			<div
@@ -321,14 +323,12 @@ function MapWrap({
 	)
 }
 
-function ArtifactCard({
-	onCloseClick,
+export function ArtifactCard({
 	classes,
 	artifacts,
 	related,
 	title,
 }: {
-	onCloseClick?: () => void
 	classes?: string
 	artifacts: ArtifactFullInfo[]
 	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
@@ -394,43 +394,20 @@ function ArtifactCard({
 				</div>
 			}
 			mapEl={dataForMap.markerGroups.length ? <MapWrap {...dataForMap} /> : null}
-			onCloseClick={onCloseClick}
 		></Card>
 	)
 }
 
-export function ArtifactDetailDd({
-	onClickAway,
-	targetEl,
-	items,
-	related,
-	title,
-}: {
-	onClickAway: () => void
-	targetEl: HTMLElement | null | undefined
-	items: ArtifactFullInfo[]
-	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
-	title: string
-}): JSX.Element {
-	return (
-		<CardDescMobileWrap onClickAway={onClickAway} targetEl={targetEl}>
-			<ArtifactCard onCloseClick={onClickAway} artifacts={items} related={related} title={title} />
-		</CardDescMobileWrap>
-	)
-}
-
 export function WeaponCard({
-	onCloseClick,
 	classes,
-	weapons,
+	weapon,
 	related,
 }: {
 	onCloseClick?: () => void
 	classes?: string
-	weapons: WeaponFullInfo[]
+	weapon: WeaponFullInfo
 	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
 }): JSX.Element {
-	const weapon = weapons[0] //пока оружие приходит только одно, а артефактов может придти несколько
 	const materials = getAllRelated(related.items, weapon.materialCodes)
 	const [materialOnMap, setMaterialOnMap] = useState(materials[0])
 	const dataForMap = useMemo(() => {
@@ -519,40 +496,20 @@ export function WeaponCard({
 				</div>
 			}
 			mapEl={dataForMap.markerGroups.length ? <MapWrap isItemFavable={true} {...dataForMap} /> : null}
-			onCloseClick={onCloseClick}
 		></Card>
-	)
-}
-export function WeaponDetailDd({
-	onClickAway,
-	targetEl,
-	items,
-	related,
-}: {
-	onClickAway: () => void
-	targetEl: HTMLElement | null | undefined
-	items: WeaponFullInfo[]
-	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
-}): JSX.Element {
-	return (
-		<CardDescMobileWrap onClickAway={onClickAway} targetEl={targetEl}>
-			<WeaponCard onCloseClick={onClickAway} weapons={items} related={related} />
-		</CardDescMobileWrap>
 	)
 }
 
 export function OtherItemCard({
-	onCloseClick,
 	classes,
-	items,
+	item,
 	related,
 }: {
 	onCloseClick?: () => void
 	classes?: string
-	items: ItemShortInfo[]
+	item: ItemShortInfo
 	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
 }): JSX.Element {
-	const item = items[0] //пока предмет приходит только одно, а артефактов может придти несколько
 	const materials = getAllRelated(related.items, [item.code])
 	const materialOnMap = materials[0]
 	const dataForMap = useMemo(() => {
@@ -614,24 +571,6 @@ export function OtherItemCard({
 				) : null
 			}
 			mapEl={dataForMap.markerGroups.length ? <MapWrap {...dataForMap} /> : null}
-			onCloseClick={onCloseClick}
 		></Card>
-	)
-}
-export function OtherItemCardDetailDd({
-	onClickAway,
-	targetEl,
-	items,
-	related,
-}: {
-	onClickAway: () => void
-	targetEl: HTMLElement | null | undefined
-	items: ItemShortInfo[]
-	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
-}): JSX.Element {
-	return (
-		<CardDescMobileWrap onClickAway={onClickAway} targetEl={targetEl}>
-			<OtherItemCard onCloseClick={onClickAway} items={items} related={related} />
-		</CardDescMobileWrap>
 	)
 }

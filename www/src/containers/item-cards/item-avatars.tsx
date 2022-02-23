@@ -4,20 +4,10 @@ import { GI_RarityCode } from '#lib/genshin'
 import { A } from '#src/routes/router'
 
 import './item-cards.scss'
+import { createContext } from 'preact'
+import { CardDescMobileWrap } from './dd-cards'
 
-interface DdComponentProps<TItem, TRelated> {
-	onClickAway(): unknown
-	targetEl: HTMLElement
-	items: TItem[]
-	related: TRelated
-	title: string
-}
-interface DDProps<TItem, TRelated> {
-	ddItems?: TItem[]
-	related?: TRelated
-	DdComponent?: preact.ComponentType<DdComponentProps<TItem, TRelated>>
-}
-export function ItemAvatar<TItem, TRelated>({
+export function ItemAvatar({
 	src,
 	rarity,
 	classes = '',
@@ -25,7 +15,7 @@ export function ItemAvatar<TItem, TRelated>({
 	onClick,
 	badgeTopStart,
 	badgeTopEnd,
-	ddProps,
+	ddComponent,
 }: {
 	src: string
 	rarity?: GI_RarityCode
@@ -34,7 +24,7 @@ export function ItemAvatar<TItem, TRelated>({
 	onClick?(): unknown
 	badgeTopStart?: string | null | JSX.Node
 	badgeTopEnd?: string | null | JSX.Node
-	ddProps?: DDProps<TItem, TRelated>
+	ddComponent?: JSX.Element
 }): JSX.Element {
 	;['bg-2', 'bg-3', 'bg-4', 'bg-5']
 	const rarityClass = rarity ? 'bg-' + rarity : 'bg-dark'
@@ -43,45 +33,40 @@ export function ItemAvatar<TItem, TRelated>({
 	const [isExpanded, setIsExpanded] = useState(false)
 	const closeDd = useCallback(() => isExpanded && setIsExpanded(false), [setIsExpanded, isExpanded])
 	const openDd = useCallback(() => !isExpanded && setIsExpanded(true), [setIsExpanded, isExpanded])
-	const DdComponent = ddProps?.DdComponent,
-		ddItems = ddProps?.ddItems,
-		related = ddProps?.related
-	const pointerClass = DdComponent || onClick ? 'c-pointer' : ''
+	const pointerClass = ddComponent || onClick ? 'c-pointer' : ''
 	const onClickLocal = useCallback(() => {
 		openDd && openDd()
 		onClick && onClick()
 	}, [openDd, onClick])
 	return (
-		<A
-			href={href}
-			className={`item-avatar position-relative rounded-circle d-inline-block ${pointerClass} ${rarityClass} ${classes}`}
-			innerRef={elRef}
-			onClick={onClickLocal}
-		>
-			<img className="image" src={src} />
-			{badgeTopStart && (
-				<span className="position-absolute top-0 start-0 translate-middle badge rounded-pill opacity-75 small">
-					{badgeTopStart}
-				</span>
-			)}
-			{badgeTopEnd && (
-				<span className="position-absolute top-0 start-100 translate-middle badge rounded-pill opacity-75 small">
-					{badgeTopEnd}
-				</span>
-			)}
-			{/* <span className="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-primary border border-light">
+		<DdContext.Provider value={{ onClickAway: closeDd }}>
+			<A
+				href={href}
+				className={`item-avatar position-relative rounded-circle d-inline-block ${pointerClass} ${rarityClass} ${classes}`}
+				innerRef={elRef}
+				onClick={onClickLocal}
+			>
+				<img className="image" src={src} />
+				{badgeTopStart && (
+					<span className="position-absolute top-0 start-0 translate-middle badge rounded-pill opacity-75 small">
+						{badgeTopStart}
+					</span>
+				)}
+				{badgeTopEnd && (
+					<span className="position-absolute top-0 start-100 translate-middle badge rounded-pill opacity-75 small">
+						{badgeTopEnd}
+					</span>
+				)}
+				{/* <span className="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-primary border border-light">
 				4
 			</span> */}
-			{isExpanded && elRef.current && DdComponent && ddItems?.length && related && (
-				<DdComponent
-					onClickAway={closeDd}
-					targetEl={elRef.current}
-					items={ddItems}
-					related={related}
-					title={''}
-				/>
-			)}
-		</A>
+				{isExpanded && elRef.current && ddComponent && (
+					<CardDescMobileWrap onClickAway={closeDd} targetEl={elRef.current}>
+						{ddComponent}
+					</CardDescMobileWrap>
+				)}
+			</A>
+		</DdContext.Provider>
 	)
 }
 export function ItemLabelText({
@@ -108,8 +93,12 @@ export function ItemLabelText({
 	//todo c-pointer text-decoration-underline-dotted для интерактивных
 	return <label className={`${classes} ${rarityClass}`}>{title}</label>
 }
-
-export function LabeledItemAvatar<TItem, TRelated>({
+export const DdContext = createContext({
+	onClickAway: () => {
+		return
+	},
+})
+export function LabeledItemAvatar({
 	imgSrc,
 	rarity,
 	classes = '',
@@ -117,7 +106,7 @@ export function LabeledItemAvatar<TItem, TRelated>({
 	title,
 	avatarTopStartBadge,
 	avatarTopEndBadge,
-	ddProps,
+	ddComponent,
 }: {
 	imgSrc: string
 	rarity?: GI_RarityCode
@@ -126,39 +115,33 @@ export function LabeledItemAvatar<TItem, TRelated>({
 	avatarClasses?: string
 	avatarTopStartBadge?: string
 	avatarTopEndBadge?: string
-	ddProps?: DDProps<TItem, TRelated>
+	ddComponent?: JSX.Element
 }): JSX.Element {
 	const elRef = useRef<HTMLDivElement>(null)
 	const [isExpanded, setIsExpanded] = useState(false)
 	const closeDd = useCallback(() => isExpanded && setIsExpanded(false), [setIsExpanded, isExpanded])
 	const openDd = useCallback(() => !isExpanded && setIsExpanded(true), [setIsExpanded, isExpanded])
-	//todo c-pointer для интерактивных
-	const DdComponent = ddProps?.DdComponent,
-		ddItems = ddProps?.ddItems,
-		related = ddProps?.related
-	const pointerClass = DdComponent ? 'c-pointer' : ''
+	const pointerClass = ddComponent ? 'c-pointer' : ''
 	return (
-		<div className={`text-nowrap ${pointerClass} ${classes}`} ref={elRef} onClick={openDd}>
-			<ItemAvatar
-				classes={`small-avatar align-middle ${avatarClasses}`}
-				src={imgSrc}
-				badgeTopStart={avatarTopStartBadge}
-				badgeTopEnd={avatarTopEndBadge}
-			/>
-			<ItemLabelText
-				rarity={rarity}
-				classes={`text-wrap align-middle lh-1 ps-1 mw-75 ${pointerClass}`}
-				title={title}
-			></ItemLabelText>
-			{isExpanded && elRef.current && DdComponent && ddItems?.length && related && (
-				<DdComponent
-					onClickAway={closeDd}
-					targetEl={elRef.current}
-					items={ddItems}
-					related={related}
-					title={title}
+		<DdContext.Provider value={{ onClickAway: closeDd }}>
+			<div className={`text-nowrap ${pointerClass} ${classes}`} ref={elRef} onClick={openDd}>
+				<ItemAvatar
+					classes={`small-avatar align-middle ${avatarClasses}`}
+					src={imgSrc}
+					badgeTopStart={avatarTopStartBadge}
+					badgeTopEnd={avatarTopEndBadge}
 				/>
-			)}
-		</div>
+				<ItemLabelText
+					rarity={rarity}
+					classes={`text-wrap align-middle lh-1 ps-1 mw-75 ${pointerClass}`}
+					title={title}
+				></ItemLabelText>
+				{isExpanded && elRef.current && ddComponent && (
+					<CardDescMobileWrap onClickAway={closeDd} targetEl={elRef.current}>
+						{ddComponent}
+					</CardDescMobileWrap>
+				)}
+			</div>
+		</DdContext.Provider>
 	)
 }

@@ -11,7 +11,7 @@ import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { isLoaded, useFetch, useForceUpdate, useLocalStorage, useVisibleTicker } from '#src/utils/hooks'
 import { getItemIconSrc } from '#src/utils/items'
 import { HEART } from '#src/utils/typography'
-import { OtherItemCardDetailDd } from './item-cards/dd-cards'
+import { OtherItemCard } from './item-cards/dd-cards'
 import { ItemAvatar } from './item-cards/item-avatars'
 
 import './farm-today.scss'
@@ -95,15 +95,14 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 													<span className="text-danger">{HEART}</span>
 												) : null
 											}
-											ddProps={{
-												DdComponent: OtherItemCardDetailDd,
-												ddItems: [
-													mustBeDefined(
+											ddComponent={
+												<OtherItemCard
+													item={mustBeDefined(
 														ttData.items.find(i => i.code === asc.itemCode),
-													),
-												],
-												related: ttData.maps,
-											}}
+													)}
+													related={ttData.maps}
+												/>
+											}
 										/>
 									</div>
 									<div className="d-flex flex-wrap align-self-center pt-2">
@@ -138,11 +137,12 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 										<span className="text-danger">{HEART}</span>
 									) : null
 								}
-								ddProps={{
-									DdComponent: OtherItemCardDetailDd,
-									ddItems: [mustBeDefined(ttData.items.find(i => i.code === code))],
-									related: ttData.maps,
-								}}
+								ddComponent={
+									<OtherItemCard
+										item={mustBeDefined(ttData.items.find(i => i.code === code))}
+										related={ttData.maps}
+									/>
+								}
 							/>
 						))}
 					</div>

@@ -6,7 +6,6 @@ import { getAllRelated } from '#src/api/utils'
 import { CentredSpinner, Spinner } from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { FavoriteCharacters } from '#src/containers/character-picker/favorite-characters'
-import { OtherItemCardDetailDd } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar } from '#src/containers/item-cards/item-avatars'
 import {
 	I18N_ART_STATS_PRIORITY,
@@ -35,6 +34,7 @@ import {
 } from './common'
 
 import './character-build-preview.scss'
+import { OtherItemCard } from '#src/containers/item-cards/dd-cards'
 
 function CharacterBuildPreview({ characterCode }: { characterCode: string }): JSX.Element {
 	const [build, isUpdating] = useBuildWithDelayedLocs(characterCode)
@@ -121,11 +121,7 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 					<ItemAvatar
 						classes="mb-2 mx-1 small-avatar with-padding flex-shrink-0"
 						src={getItemIconSrc(m.code)}
-						ddProps={{
-							DdComponent: OtherItemCardDetailDd,
-							ddItems: [m],
-							related: build.maps,
-						}}
+						ddComponent={<OtherItemCard item={m} related={build.maps} />}
 					/>
 				))}
 			</div>
