@@ -127,7 +127,7 @@ export const I18N_CONJUCTIONS: Record<ConjuctionType, string> = {
 export const I18N_RECOMENDED_FOR = { en: 'Recommended for', ru: 'Рекомендуется для' }[LANG]
 export const I18N_FOR_NOBODY = { en: 'Nobody', ru: 'Никому' }[LANG]
 export const I18N_SOURCE = { en: 'Source', ru: 'Источник' }[LANG]
-export const I18N_SCROLL_TO_ZOOM = { en: 'Scroll to zoom', ru: 'Зум колесиком' }[LANG]
+export const I18N_SCROLL_TO_ZOOM = { en: 'Scroll to zoom', ru: 'Зум колёсиком' }[LANG]
 export const I18N_PINCH_TO_ZOOM = { en: 'Pinch to zoom', ru: 'Зум щипком' }[LANG]
 export const I18N_ERROR = { en: 'Error, reload page', ru: 'Ошибка, перезагрузите страницу' }[LANG]
 export const I18N_PIECE_BONUS = {
@@ -150,7 +150,7 @@ export const I18N_CHAR_BUILD_RECS = {
 	ru: 'Рекомендуемые сборки персонажей',
 }[LANG]
 export const I18N_SELECT_CHAR_ABOVE = { en: 'Select character above', ru: 'Выберите персонажа' }[LANG]
-export const I18N_BUILD_RECS_FOR = { en: 'build recomendations', ru: 'Рекомендованный билд для' }[LANG]
+export const I18N_BUILD_RECS_FOR = { en: 'build recomendations', ru: 'билд' }[LANG]
 export const I18N_BASED_ON_GIHT = {
 	en: "Based on Genshin Impact Helper Team's Character Builds",
 	ru: 'Основано на табличке Геншин Импакт Хелпер Тимы (англ.)',
