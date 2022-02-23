@@ -10,27 +10,33 @@ import webpack from 'webpack'
 
 import { matchPath, paths, pathToStrings } from './src/routes/paths.js'
 
+const LANGS = ['en', 'ru']
+const ASSET_PATH = '/'
+
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const SRC = __dirname + '/src'
 const LIB = __dirname + '/../lib'
 const DIST = __dirname + '/dist'
 const PUBLIC = __dirname + '/public'
-const LANGS = ['en', 'ru']
 
 export default async function (env, argv) {
-	return LANGS.map((lang, i) => makeConfig(env, argv, lang, i === 0))
+	const mode = argv.mode
+	if (mode !== 'production' && mode !== 'development') throw new Error('wrong mode: ' + mode)
+	return LANGS.map((lang, i) => makeConfig(mode, lang, i === 0))
 }
 
-function makeConfig(env, argv, lang, isMain) {
-	if (argv.mode !== 'production' && argv.mode !== 'development') throw new Error('wrong mode: ' + argv.mode)
-
-	const isProd = argv.mode === 'production'
-	const assetPath = '/'
+/**
+ * @param {'production'|'development'} mode
+ * @param {string} lang
+ * @param {boolean} isMain
+ */
+function makeConfig(mode, lang, isMain) {
+	const isProd = mode === 'production'
 
 	return {
 		name: `build-${lang}`,
-		mode: argv.mode,
+		mode: mode,
 		bail: isProd, //в прод-режиме останавливаем сборку после первой ошибки
 		stats: { preset: isProd ? 'normal' : 'errors-warnings' },
 		devtool: isProd ? 'source-map' : 'cheap-module-source-map',
@@ -41,7 +47,7 @@ function makeConfig(env, argv, lang, isMain) {
 			filename: isProd ? `[name].${lang}.[contenthash:8].js` : `[name].${lang}.js`,
 			// пока не нужно, см. file-loader
 			// assetModuleFilename: '[name].[hash:8][ext]',
-			publicPath: assetPath,
+			publicPath: ASSET_PATH,
 		},
 		experiments: {
 			outputModule: true,
@@ -118,8 +124,8 @@ function makeConfig(env, argv, lang, isMain) {
 		},
 		plugins: [
 			new webpack.DefinePlugin({
-				'process.env.NODE_ENV': JSON.stringify(argv.mode),
-				'BUNDLE_ENV.ASSET_PATH': JSON.stringify(assetPath),
+				'process.env.NODE_ENV': JSON.stringify(mode),
+				'BUNDLE_ENV.ASSET_PATH': JSON.stringify(ASSET_PATH),
 				'BUNDLE_ENV.LANGS': JSON.stringify(LANGS),
 				'BUNDLE_ENV.LANG': JSON.stringify(lang),
 			}),
@@ -136,22 +142,31 @@ function makeConfig(env, argv, lang, isMain) {
 				variables: true,
 			}),
 			new HtmlWebpackPlugin({
-				template: SRC + '/index.html',
+				template: `${SRC}/index.html`,
 				minify: false,
 				filename: `${DIST}/${lang === 'en' ? '' : lang + '/'}index.html`,
 			}),
+			isMain &&
+				new HtmlWebpackPlugin({
+					template: `${SRC}/404.html`,
+					templateParameters: { LANGS },
+					inject: false,
+					minify: false,
+					filename: `${DIST}/404.html`,
+				}),
 			isProd && {
 				apply(compiler) {
 					compiler.hooks.compilation.tap('CopyIndex', compilation => {
 						HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tapPromise(
 							'CopyIndex',
 							async (data, cb) => {
-								for (const path of Object.values(paths)) {
-									for (const fpath of pathToStrings('', prefixedPath(lang, path))) {
-										const src = new webpack.sources.RawSource(data.html, false)
-										compilation.emitAsset(fpath + '/index.html', src, {})
+								if (data.outputName.endsWith('index.html'))
+									for (const path of Object.values(paths)) {
+										for (const fpath of pathToStrings('', prefixedPath(lang, path))) {
+											const src = new webpack.sources.RawSource(data.html, false)
+											compilation.emitAsset(fpath + '/index.html', src, {})
+										}
 									}
-								}
 								return data
 							},
 						)
@@ -185,7 +200,7 @@ function makeDevServerConfig(isProd) {
 									return (lang === 'en' ? '' : '/' + lang) + `/index.html`
 							}
 						}
-						return parsedUrl.pathname
+						return '/404.html'
 					},
 				},
 			],

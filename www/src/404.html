@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/png" href="/media/favicon.png" />
+		<title>404</title>
+
+		<style>
+			body {
+				background-color: #222;
+				font-family: sans-serif;
+				color: white;
+			}
+			a {
+				color: #00bc8c;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>404</h1>
+		<%
+		for (const lang of LANGS) {
+			const mainText = lang === 'ru' ? 'страница не найдена' : 'page not found'
+			const homeText = lang === 'ru' ? 'домой' : 'go home'
+			const url = lang === 'en' ? '/' : `/${lang}/`
+		%>
+		<div class="message" data-lang="<%= lang %>" <%= lang === 'en' ? '' : 'style="display:none"' %>>
+			<%= mainText %>.
+			<a href="<%= url %>"><%= homeText %></a>
+		</div>
+		<% } %>
+
+		<script>
+			const elems = document.querySelectorAll(`.message`)
+			const curElem = [...elems].find(elem => {
+				const lang = elem.dataset.lang
+				if (lang === 'en') return false
+				const prefix = `/${lang}`
+				return location.pathname.startsWith(prefix+'/') || location.pathname === prefix
+			})
+			if (curElem)
+				for (const elem of elems) {
+					elem.style.display = elem === curElem ? '' : 'none'
+				}
+		</script>
+	</body>
+</html>
