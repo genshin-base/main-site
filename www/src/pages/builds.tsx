@@ -31,17 +31,7 @@ export function BuildsPage_BuildDetail({ code }: { code: string }): JSX.Element 
 	return (
 		<div className="builds container">
 			<h1 className={`my-1 letter-spacing-1 ${BUNDLE_ENV.LANG === 'en' ? 'text-capitalize' : ''}`}>
-				{BUNDLE_ENV.LANG === 'en' ? (
-					<>
-						<span className="d-none d-xl-inline">{build.character.name}</span>{' '}
-						{I18N_BUILD_RECS_FOR}
-					</>
-				) : (
-					<>
-						{I18N_BUILD_RECS_FOR}{' '}
-						<span className="d-none d-xl-inline">{build.character.name}</span>
-					</>
-				)}
+				<span className="d-none d-xl-inline">{build.character.name}</span> {I18N_BUILD_RECS_FOR}
 			</h1>
 			<FavoriteCharacters navigateToCharacter={true} />
 			<CharacterBuildDetailed build={build} isUpdating={isUpdating} />
