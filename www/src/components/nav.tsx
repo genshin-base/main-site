@@ -48,22 +48,24 @@ export function Nav({ isNavExpanded }: Props): JSX.Element {
 						style={'right: 0'}
 						ref={ddRef}
 					>
-						{BUNDLE_ENV.LANGS.map(lang => {
-							const langName = I18N_LANG_NAMES[lang]
-							const isActiveLang = langName === I18N_LANG_NAME
-							return (
-								<li key={lang}>
-									{/* Тут будет неправильная ссылка, если сменится страница,
-								пока развёрнут этот дропдаун. Но такого же не будет, да?.. */}
-									<a
-										className={`dropdown-item ${isActiveLang ? 'active' : ''}`}
-										href={makeLocationHrefForLang(lang)}
-									>
-										{I18N_LANG_NAMES[lang]}
-									</a>
-								</li>
-							)
-						})}
+						{/* В переключатеях будут неправильные ссылки, если сменится страница,
+						а список языков не будет перерендерен (если тут таки появится useMemo).
+						Так что явно генерим сожержимое списка после разворачивания дропдауна. */}
+						{isExpanded &&
+							BUNDLE_ENV.LANGS.map(lang => {
+								const langName = I18N_LANG_NAMES[lang]
+								const isActiveLang = langName === I18N_LANG_NAME
+								return (
+									<li key={lang}>
+										<a
+											className={`dropdown-item ${isActiveLang ? 'active' : ''}`}
+											href={makeLocationHrefForLang(lang)}
+										>
+											{I18N_LANG_NAMES[lang]}
+										</a>
+									</li>
+								)
+							})}
 					</ul>
 				</li>
 			</ul>

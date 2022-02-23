@@ -87,7 +87,9 @@ export function makeUrlLangPrefix(lang: string): string {
 export function makeLocationHrefForLang(lang: string): string {
 	const url = location.pathname + location.search + location.hash
 	const prefix = makeUrlLangPrefix(lang)
-	return prefix + (url.startsWith(URL_LANG_PREFIX) ? url.slice(URL_LANG_PREFIX.length) : url)
+	let newUrl = prefix + (url.startsWith(URL_LANG_PREFIX) ? url.slice(URL_LANG_PREFIX.length) : url)
+	if (newUrl === '') newUrl = '/'
+	return newUrl
 }
 
 export function A(

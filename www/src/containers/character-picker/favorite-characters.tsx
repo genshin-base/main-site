@@ -9,7 +9,7 @@ import { elements } from '#src/utils/elements'
 import { I18N_FAV_CHARACTERS } from '#src/i18n/i18n'
 
 const codeToBadge = (code: string) => {
-	const e = elements.find(e => code === `${e.code}-traveler`)
+	const e = elements.find(e => code === `traveler-${e.code}`)
 	return e ? <img className="badge-element-icon d-block ms-n1 mb-n1" src={e.imgSrc} /> : null
 }
 export function FavoriteCharacters({

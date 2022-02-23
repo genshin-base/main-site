@@ -8,7 +8,7 @@
 // }
 
 function unprefixTraveler(code: string) {
-	return code.endsWith('-traveler') ? 'traveler' : code
+	return code.startsWith('traveler-') ? 'traveler' : code
 }
 
 export function getCharacterAvatarSrc(code: string): string {
