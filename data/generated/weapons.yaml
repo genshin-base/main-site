@@ -1220,6 +1220,7 @@ harbinger-of-dawn:
   obtainSources:
     - wishes
     - quest
+    - quest
 hunters-bow:
   code: hunters-bow
   typeCode: bow
@@ -2121,6 +2122,7 @@ recurve-bow:
   obtainSources:
     - chests
     - quest
+    - quest
 redhorn-stonethresher:
   code: redhorn-stonethresher
   typeCode: claymore
@@ -2708,7 +2710,7 @@ slingshot:
     en: If a Normal or Charged Attack hits a target within 0.3s of being fired,
       increases DMG by  36%. Otherwise, decreases DMG by 10%.
     ru: Если обычная или заряженная стрела поразила цель в течение 0,3 сек. после
-      выстрела, то её урон увеличивается на  36%. В противном случае урон
+      выстрела, то её урон увеличивается на  36%. В противном случае, урон
       уменьшается на 10%.
   materialCodes:
     - divine-body-from-guyun

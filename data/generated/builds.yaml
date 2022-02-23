@@ -2974,24 +2974,6 @@ characters:
                   notes: null
                   seeCharNotes: true
             - similar:
-                - code: hamayumi
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: prototype-crescent
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: slingshot
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
                 - code: the-viridescent-hunt
                   refine: null
                   stacks: null
@@ -3003,6 +2985,24 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+            - similar:
+                - code: prototype-crescent
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: hamayumi
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: slingshot
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
           notes: null
           seeCharNotes: false
         artifacts:
@@ -3048,7 +3048,6 @@ characters:
           sands:
             codes:
               - atk%
-              - em
             notes: null
             seeCharNotes: false
           notes: null
@@ -3093,24 +3092,25 @@ characters:
                   Rust: 
               - At higher refinements
               - b: ", "
-              - "this weapon can "
-              - b: "outperform a low refined Amos' Bow and Skyward Harp. "
-              - "\n"
+              - >
+                this weapon can outperform a low refined Amos' Bow and Skyward
+                Harp. 
               - b: "Hamayumi: "
-              - "If you're using Shimenawa's Reminiscence (4), "
-              - b: "this weapon doesn't synergize well with that artifact set due to its
-                  passive. "
-              - "\n"
+              - >
+                If you're using Shimenawa's Reminiscence (4), this weapon
+                doesn't synergize well with that artifact set due to its
+                passive. 
               - b: "Prototype Crescent: "
-              - "Note that you want to proc the weapon passive by doing a "
-              - b: quick charged shot on the enemy's weakspot
-              - |2
-                 for this weapon to be good.
+              - >
+                At higher refinements, this weapon can beat out Hamayumi, The
+                Viridescent Hunt, and Blackcliff Warbow. Do note that you want
+                to proc the weapon passive by shooting on enemy's weakspot for
+                this weapon to be good.
               - b: "Slingshot: "
-              - "With a large amount of external ATK buffs, this weapon is "
-              - b: competitive to R1 Rust.
-              - " Note that you have to be in range for Slingshot's passive and
-                have good uptime on the ATK buffs."
+              - With external ATK buffs (like from Bennett's Elemental Burst,
+                Pyro Resonance, Noblesse Oblige effect, etc), this weapon is
+                competitive to a low refined Rust, assuming you are still in
+                range for Slingshot's passive and you have good ATK buff uptime.
           - p:
               - b: |-
                   Regarding Artifacts:  
@@ -3133,15 +3133,6 @@ characters:
               - b: mono Pyro team
               - " comp where Yoimiya can have 100% uptime on the artifact
                 passive."
-          - p:
-              - b: |-
-                  Regarding Mainstats:
-                  Elemental Mastery:
-              - " A good option if Yoimiya is "
-              - b: triggering Vaporise and/or Overload.
-              - " Having Bennett in the team favours Elemental Mastery sands
-                slightly more than ATK sands, however it is recommended to just
-                use whichever has better substats."
           - p:
               - b: |
                   Regarding Talent Priorities: 
@@ -5471,10 +5462,6 @@ characters:
       - a: In-depth Guide
         href: https://keqingmains.com/raiden/
       - " from Raiden Mains + KQM"
-  - code: yae-miko
-    elementCode: electro
-    roles: []
-    credits: null
   - code: xingqiu
     elementCode: hydro
     roles:
