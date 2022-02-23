@@ -51,9 +51,10 @@ export const I18N_TALENTS_PRIORITY = { en: 'Talents Priority', ru: 'Приори
 export const I18N_ASC_MATERIALS = { en: 'Ascension materials', ru: 'Материалы возвышения' }[LANG]
 export const I18N_FULL_BUILD_INFO = { en: 'Full build info', ru: 'Полная информация о билде' }[LANG]
 export const I18N_CHAR_LORE = { en: 'Character lore', ru: 'Лор персонажа' }[LANG]
-export const I18N_MORE_ON_BUILDS_PAGE = { en: 'more on build page', ru: 'продолжение на странице билда' }[
-	LANG
-]
+export const I18N_MORE_ON_BUILDS_PAGE = {
+	en: 'more on build page',
+	ru: 'продолжение на странице билда',
+}[LANG]
 export const I18N_BACK = { en: 'Back', ru: 'Назад' }[LANG]
 export const I18N_NOTES = { en: 'Notes', ru: 'Примечания' }[LANG]
 
@@ -185,14 +186,14 @@ const weaponObtainSourceNamesRU: WeaponObtainSourceNames = {
 	fishing: 'рыболовля',
 	'npc-shop': 'магазин НПС',
 	chests: 'сундуки',
-	quest: 'квесты',
-	puzzle: 'паззл',
+	quests: 'квесты',
+	puzzles: 'паззл',
 	investigation: 'исследование мира',
 	'adventure-rank-10': '10 ранг приключений',
 	playstation: 'плейстейшн',
 }
 export const I18N_WEAPON_OBTAIN_SOURCE_NAME = {
-	en: (code: GI_WeaponObtainSource) => code.replace(/-/g, ' '),
+	en: (code: GI_WeaponObtainSource) => code.replace(/-/g, ' ').replace(/\bnpc\b/, 'NPC'),
 	ru: (code: GI_WeaponObtainSource) => weaponObtainSourceNamesRU[code],
 }[LANG]
 export const I18N_OBTAINED_DURING_STORYLINE = {
