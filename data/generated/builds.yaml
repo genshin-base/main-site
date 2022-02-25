@@ -322,8 +322,28 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: engulfing-lightning
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: the-catch
+                  refine: R5
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: primordial-jade-winged-spear
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: skyward-spine
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: deathmatch
                   refine: null
                   stacks: null
                   notes: null
@@ -334,6 +354,16 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: wavebreakers-fin
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+                - code: dragons-bane
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: kitain-cross-spear
                   refine: null
@@ -358,13 +388,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes:
-            - p: ~= Engulfing Lightning (5✩)
-            - p: ~= "The Catch" (4✩) [R5]
-            - p: ~= Skyward Spine (5✩)
-            - p: ~= Deathmatch (4✩)
-            - p: ~= Wavebreaker's Fin (4✩)*
-            - p: ~= Dragon's Bane (4✩)*
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -1824,6 +1848,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: memory-of-dust
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: lost-prayer-to-the-sacred-winds
                   refine: null
@@ -1866,7 +1895,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: ~= Memory of Dust (5✩)
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -2339,9 +2368,9 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: false
+                  seeCharNotes: true
           notes: null
-          seeCharNotes: true
+          seeCharNotes: false
         artifacts:
           sets:
             - arts:
@@ -2488,6 +2517,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: memory-of-dust
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: lost-prayer-to-the-sacred-winds
                   refine: null
@@ -2529,9 +2563,9 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: false
-          notes: ~= Memory of Dust (5✩)
-          seeCharNotes: true
+                  seeCharNotes: true
+          notes: null
+          seeCharNotes: false
         artifacts:
           sets:
             - arts:
@@ -3835,6 +3869,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: the-widsith
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: solar-pearl
                   refine: null
@@ -3877,7 +3916,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: ~= The Widsith (4✩)
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -3998,6 +4037,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: favonius-codex
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: magic-guide
                   refine: null
@@ -4016,7 +4060,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: ~= Favonius Codex (4✩)
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -5047,6 +5091,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: amenoma-kageuchi
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: skyward-blade
                   refine: null
@@ -5058,9 +5107,9 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: false
-          notes: ~= Amenoma Kageuchi (4✩)
-          seeCharNotes: true
+                  seeCharNotes: true
+          notes: null
+          seeCharNotes: false
         artifacts:
           sets:
             - arts:
@@ -5450,6 +5499,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: the-widsith
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: hakushin-ring
                   refine: null
@@ -5462,7 +5516,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: ~= The Widsith (4✩)*
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -6183,6 +6237,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: thundering-pulse
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: skyward-harp
                   refine: null
@@ -6213,23 +6272,34 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: prototype-crescent
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: rust
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: hamayumi
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: the-stringless
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: slingshot
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes:
-            - p: ~= Thundering Pulse (5✩)*
-            - p: ~= Prototype Crescent (4✩)*
-            - p: ~= Hamayumi (4✩)
-            - p: ~= The Stringless (4✩)*
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -8480,6 +8550,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: engulfing-lightning
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: primordial-jade-winged-spear
                   refine: null
@@ -8492,18 +8567,48 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: the-catch
+                  refine: R5
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: vortex-vanquisher
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: deathmatch
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: dragons-bane
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+                - code: wavebreakers-fin
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: blackcliff-pole
                   refine: null
                   stacks: 1
                   notes: null
                   seeCharNotes: false
+                - code: lithic-spear
+                  refine: null
+                  stacks: 2
+                  notes: null
+                  seeCharNotes: true
+                - code: kitain-cross-spear
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: favonius-lance
                   refine: null
@@ -8522,14 +8627,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes:
-            - p: ~= Engulfing Lightning (5✩)
-            - p: ~= "The Catch" (4✩) [R5]
-            - p: ~= Deathmatch (4✩)
-            - p: ~= Dragon's Bane (4✩)*
-            - p: ~= Wavebreaker's Fin (4✩)*
-            - p: ~= Lithic Spear (4✩) (2 stacks)*
-            - p: ~= Kitain Cross Spear (4✩)*
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -9175,6 +9273,16 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: skyward-harp
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: polar-star
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: amos-bow
                   refine: null
@@ -9199,17 +9307,23 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: blackcliff-warbow
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: the-viridescent-hunt
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: elegy-for-the-end
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: true
-          notes:
-            - p: ~= Skyward Harp (5✩)
-            - p: ~= Polar Star (5✩)
-            - p: ~= Blackcliff Warbow (4✩)
-            - p: ~= Viridescent Hunt (4✩)*
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -9357,6 +9471,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: redhorn-stonethresher
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: the-unforged
                   refine: null
@@ -9381,6 +9500,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: akuoumaru
+                  refine: R1
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: blackcliff-slasher
                   refine: null
@@ -9411,9 +9535,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes:
-            - p: ~= Redhorn Stonethresher (5✩)*
-            - p: ~= Akuoumaru (4✩) [R1]*
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -9612,17 +9734,33 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: blackcliff-longsword
+                  refine: null
+                  stacks: 1
+                  notes: null
+                  seeCharNotes: false
+                - code: the-black-sword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: amenoma-kageuchi
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: the-flute
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: harbinger-of-dawn
                   refine: R5
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes:
-            - p: ~= Blackcliff Longsword (1 stack) (4✩)
-            - p: ~= The Black Sword (4✩)
-            - p: ~= Amenoma Kageuchi (4✩)
-            - p: ~= The Flute (4✩)*
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -10500,6 +10638,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: mistsplitter-reforged
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: sacrificial-sword
                   refine: null
@@ -10518,6 +10661,16 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: skyward-blade
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: festering-desire
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: aquila-favonia
                   refine: null
@@ -10530,18 +10683,23 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: amenoma-kageuchi
+                  refine: R1
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+                - code: favonius-sword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: dark-iron-sword
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes:
-            - p: ~= Mistsplitter Reforged (5✩)
-            - p: ~= Skyward Blade (5✩)
-            - p: ~= Festering Desire (4✩)
-            - p: ~= Amenoma Kageuchi (4✩) [R1]*
-            - p: ~= Favonius Sword (4✩)*
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -11015,6 +11173,16 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: festering-desire
+                  refine: R5
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: amenoma-kageuchi
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: freedom-sworn
                   refine: null
@@ -11039,17 +11207,23 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: lions-roar
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: blackcliff-longsword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: fillet-blade
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes:
-            - p: ~= Festering Desire (4✩) [R5]
-            - p: ~= Amenoma Kageuchi (4✩)*
-            - p: ~= Lion's Roar (4✩)
-            - p: ~= Blackcliff Longsword (4✩)
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -11415,6 +11589,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: calamity-queller
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: deathmatch
                   refine: null
@@ -11463,7 +11642,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: ~= Calamity Queller (5✩)*
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -11613,6 +11792,16 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: favonius-sword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: skyward-blade
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: amenoma-kageuchi
                   refine: null
@@ -11631,9 +11820,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes:
-            - p: ~= Favonius Sword (4✩)
-            - p: ~= Skyward Blade (5✩)
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -11770,6 +11957,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: lost-prayer-to-the-sacred-winds
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: memory-of-dust
                   refine: null
@@ -11778,6 +11970,11 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: solar-pearl
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: the-widsith
                   refine: null
                   stacks: null
                   notes: null
@@ -11800,9 +11997,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes:
-            - p: ~= Lost Prayer to the Sacred Winds (5✩)*
-            - p: ~= The Widsith (4✩)
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -11940,6 +12135,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: solar-pearl
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: the-widsith
                   refine: null
@@ -11964,7 +12164,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes: ~= Solar Pearl (4✩)*
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -12096,9 +12296,9 @@ characters:
                 - code: favonius-greatsword
                   refine: null
                   stacks: null
-                  notes: null
+                  notes: "[C6] is assumed for this ranking."
                   seeCharNotes: true
-          notes: "[C6] is assumed for this ranking."
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -12693,15 +12893,23 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: the-black-sword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: the-alley-flash
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: sword-of-descension
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes:
-            - p: ~= The Black Sword (4✩)
-            - p: ~= The Alley Flash (4✩)
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -13253,6 +13461,16 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: vortex-vanquisher
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: calamity-queller
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: the-catch
                   refine: R5
@@ -13289,9 +13507,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-          notes:
-            - p: ~= Vortex Vanquisher (5✩)
-            - p: ~= Calamity Queller (5✩)
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
@@ -13419,21 +13635,29 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: cinnabar-spindle
+                  refine: R5
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: harbinger-of-dawn
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: mistsplitter-reforged
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: freedom-sworn
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: true
-          notes:
-            - p: ~= Cinnabar Spindle (4✩) [R5]*
-            - p: ~= Mistsplitter Reforged (5✩)*
+          notes: null
           seeCharNotes: false
         artifacts:
           sets:
