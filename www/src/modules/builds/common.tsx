@@ -11,7 +11,7 @@ import {
 import { CharacterFullInfoWithRelated } from '#lib/parsing/combine'
 import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
 import { ArtifactRef, ArtifactRefNode, CharacterBuildInfoRole } from '#lib/parsing/helperteam/types'
-import { mustBeDefined } from '#lib/utils/values'
+import { mustBeDefined, warnUnlessNever } from '#lib/utils/values'
 import { MapAllByCode } from '#src/api/utils'
 import { Tooltip } from '#src/components/tooltip'
 import { ArtifactCard } from '#src/containers/item-cards/dd-cards'
@@ -88,12 +88,17 @@ export function notesToJSX(tips: CompactTextParagraphs | null) {
 	function processObj(tip: TextNode) {
 		if (typeof tip === 'string') return processString(tip)
 		if ('p' in tip) return <p>{notesToJSX(tip.p)}</p>
-		if ('b' in tip) return <b className="opacity-75 text-normal">{notesToJSX(tip.b)}</b>
+		if ('b' in tip) return <b class="opacity-75 text-normal">{notesToJSX(tip.b)}</b>
 		if ('i' in tip) return <i>{notesToJSX(tip.i)}</i>
 		if ('u' in tip) return <u>{notesToJSX(tip.u)}</u>
 		if ('s' in tip) return <s>{notesToJSX(tip.s)}</s>
 		if ('a' in tip) return <a href={tip.href}>{notesToJSX(tip.a)}</a>
-		console.warn('unknown element type in notes: ', tip)
+		if ('weapon' in tip)
+			return <span class="text-decoration-underline-dotted">{notesToJSX(tip.weapon)}</span>
+		if ('artifact' in tip)
+			return <span class="text-decoration-underline-dotted">{notesToJSX(tip.artifact)}</span>
+		if ('item' in tip) return <span class="text-decoration-underline-dotted">{notesToJSX(tip.item)}</span>
+		warnUnlessNever('unknown element type in notes: ', tip)
 		return <span>{JSON.stringify(tip)}</span>
 	}
 	if (!tips) return null

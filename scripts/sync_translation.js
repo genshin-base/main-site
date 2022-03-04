@@ -3,10 +3,22 @@ import { promises as fs } from 'fs'
 import { loadSpreadsheet, updateSpreadsheet } from '#lib/google.js'
 import { json_extractText, json_getText, json_packText } from '#lib/parsing/helperteam/json.js'
 import { error, info, warn } from '#lib/utils/logs.js'
-import { BASE_DIR, CACHE_DIR, GENERATED_DATA_DIR, parseYaml, saveTranslatedBuilds } from './_common.js'
+import {
+	BASE_DIR,
+	CACHE_DIR,
+	GENERATED_DATA_DIR,
+	loadArtifacts,
+	loadItems,
+	loadWeapons,
+	parseYaml,
+	saveTranslatedBuilds,
+} from './_common.js'
 import { parseArgs, relativeToCwd } from '#lib/utils/os.js'
 import { mustBeNotNull } from '#lib/utils/values.js'
 import { buildsConvertLangMode } from '#lib/parsing/helperteam/index.js'
+import { getInlineText } from '#lib/parsing/helperteam/text.js'
+import { trigramMustGetWithThresh, TrigramSearcher } from '#lib/trigrams.js'
+import { ART_GROUP_18_ATK_CODE, ART_GROUP_20_ER_CODE } from '#lib/genshin.js'
 
 // const DOC_ID = '1i5KQPYepEm1a6Gu56vN6Ixprb892zixNbrFcrIB39Bc' //test
 const DOC_ID = '1UA7RwCWBG_Nyp78sQuM7XTj6mNVG_Rv-uafMB2k37Pc'
@@ -144,6 +156,31 @@ async function download() {
 	const builds = await parseYaml(await fs.readFile(baseFPath, 'utf-8'))
 	const langBuilds = buildsConvertLangMode(builds, 'multilang', () => ({}))
 
+	info(`reading items data...`)
+	/**
+	 * @template {{code:string, name:Record<string,string>}} T
+	 * @param {Record<string, T>} code2item
+	 */
+	function makeSearcher(code2item, type) {
+		const s = /**@type {TrigramSearcher<{name:string, code:string}>}*/ (new TrigramSearcher())
+		for (const item of Object.values(code2item))
+			for (const lang of langs) {
+				if (!(lang in item.name)) {
+					error(`${type} '${item.code}' has no ${lang}-name`)
+					process.exit(1)
+				}
+				s.add(item.name[lang], { name: item.name[lang], code: item.code })
+			}
+		return s
+	}
+	const searchers = {
+		artifacts: makeSearcher(await loadArtifacts(), 'artifact'),
+		weapons: makeSearcher(await loadWeapons(), 'weapon'),
+		items: makeSearcher(await loadItems(), 'item'),
+	}
+	for (const code of [ART_GROUP_18_ATK_CODE, ART_GROUP_20_ER_CODE])
+		searchers.artifacts.add(code, { name: code, code })
+
 	info(`loading spreadsheet...`)
 	const spreadsheet = await loadSpreadsheet(
 		`${BASE_DIR}/google.private_key.json`,
@@ -161,7 +198,7 @@ async function download() {
 	info(`merging translations...`)
 	{
 		const lang2col = makeLangColMap(sheets.characters)
-		const extractTexts = extractLangTexts.bind(null, lang2col, langs)
+		const extractTexts = extractLangTexts.bind(null, lang2col, langs, searchers)
 
 		let curCharacter = null
 		let curRole = null
@@ -246,14 +283,6 @@ function mustGetSheets(sheets) {
 }
 
 /**
- * @param {import('#lib/google').CellData} data
- */
-function extractTextOrNull(data) {
-	const pars = json_extractText(data)
-	return Array.isArray(pars) && pars.length === 0 ? null : pars
-}
-
-/**
  * @template T
  * @param {T[][]} arrs
  * @returns {T[][]}
@@ -312,17 +341,74 @@ function makeLangColMap(sheet) {
 }
 
 /**
+ * @typedef {{
+ *   artifacts: TrigramSearcher<{name:string, code:string}>,
+ *   weapons: TrigramSearcher<{name:string, code:string}>,
+ *   items: TrigramSearcher<{name:string, code:string}>,
+ * }} ItemSearchers
+ */
+
+/**
+ * @param {import('#lib/parsing/helperteam/text').TextNodeA} node
+ * @param {ItemSearchers} searchers
+ * @returns {import('#lib/parsing/helperteam/text').TextNodeInline}
+ */
+function mustMapSpecialLinks(node, searchers) {
+	if (!node.href.startsWith('#')) return node
+	let m
+	if ((m = node.href.match(/^#weapon(?::(.+)|$)/))) {
+		const name = m[1] ?? getInlineText(node.a).trim()
+		const code = trigramMustGetWithThresh(searchers.weapons, name, x => x.name).code
+		return { weapon: node.a, code }
+	} else if ((m = node.href.match(/^#artifact(?::(.+)|$)/))) {
+		let name = m[1] ?? getInlineText(node.a).trim()
+		name = name.replace(/\s+\(\d+\)$/, '') // cut "... (4)"
+		const code = trigramMustGetWithThresh(searchers.artifacts, name, x => x.name).code
+		return { artifact: node.a, code }
+	} else if ((m = node.href.match(/^#item(?::(.+)|$)/))) {
+		const name = m[1] ?? getInlineText(node.a).trim()
+		const code = trigramMustGetWithThresh(searchers.items, name, x => x.name).code
+		return { item: node.a, code }
+	} else {
+		warn(`special link '${getInlineText(node)}': wrong type: '${node.href}', using as regular <a>`)
+		return node
+	}
+}
+/**
+ * @param {import('#lib/google').CellData|undefined} data
+ * @param {ItemSearchers} searchers
+ */
+function extractTextOrNull(data, searchers) {
+	let prevNode = null
+	function mapInlineNode(/**@type {import('#lib/parsing/helperteam/text').TextNodeInline}*/ node) {
+		if (typeof node !== 'string' && 'a' in node)
+			try {
+				node = mustMapSpecialLinks(node, searchers)
+			} catch (ex) {
+				throw prevNode
+					? new Error(`after '${getInlineText(prevNode).slice(-16)}': ` + ex.message)
+					: ex
+			}
+		prevNode = node
+		return node
+	}
+	const pars = json_extractText(data, null, null, null, mapInlineNode)
+	return Array.isArray(pars) && pars.length === 0 ? null : pars
+}
+
+/**
  * @param {Map<string, number>} lang2col
  * @param {string[]} langs
+ * @param {ItemSearchers} searchers
  * @param {import('#lib/google').CellData[]} cells
  */
-function extractLangTexts(lang2col, langs, cells) {
+function extractLangTexts(lang2col, langs, searchers, cells) {
 	/** @type {Record<string, import('#lib/parsing/helperteam/text').CompactTextParagraphs>} */
 	const res = {}
 	for (const lang of langs) {
 		const col = lang2col.get(lang)
 		if (!col) throw new Error(`col for lang '${lang}' not found`)
-		const text = extractTextOrNull(cells[col])
+		const text = extractTextOrNull(cells.at(col), searchers)
 		if (text !== null) res[lang] = text
 	}
 	const size = Object.keys(res).length
