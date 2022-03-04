@@ -343,6 +343,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: calamity-queller
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
                 - code: deathmatch
                   refine: null
                   stacks: null
@@ -2742,31 +2747,22 @@ characters:
             - similar:
                 - code: blackcliff-pole
                   refine: null
-                  stacks: null
+                  stacks: 1
                   notes: null
                   seeCharNotes: false
-            - similar:
-                - code: vortex-vanquisher
+                - code: lithic-spear
                   refine: null
-                  stacks: null
+                  stacks: 2
                   notes: null
                   seeCharNotes: false
-            - similar:
                 - code: white-tassel
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: true
-            - similar:
-                - code: skyward-spine
+                - code: vortex-vanquisher
                   refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: lithic-spear
-                  refine: null
-                  stacks: 2
+                  stacks: 3
                   notes: null
                   seeCharNotes: false
           notes: null
@@ -2882,17 +2878,24 @@ characters:
               - b: |-
                   Regarding Weapon Choices:
                   Primordial Jade Winged-Spear: 
+              - "Is better than the "
+              - b: "[R1] "
+              - "variants of "
+              - b: Dragon's Bane
+              - " and "
+              - b: "Deathmatch "
               - >
-                While this is a very strong weapon when fully stacked,
-                maintaining the stacks on Hu Tao isn't ideal in realistic
-                situations making the weapon less consistent than other options.
+                with ideal stacking. While this is a very strong weapon when
+                fully stacked, maintaining the stacks on Hu Tao isn't ideal in
+                realistic situations making the weapon less consistent than
+                other options.
               - b: "Deathmatch: "
               - >
                 Deathmatch is better than Dragon's Bane when you're not doing
                 Vaporize.
               - b: "Blackcliff Pole:"
               - " Despite seeming quite good due to the Crit DMG substat,
-                Blackcliff performs only slightly better than an "
+                Blackcliff at 1 stack performs only slightly better than an "
               - b: "[R5]"
               - >2
                  White Tassel in practice as it is difficult to maintain stacks consistently. It is not recommended to buy this weapon specifically for Hu Tao and should only be used if you already have one.
@@ -2900,8 +2903,8 @@ characters:
               - "Provides little to nothing to Hu Tao since she scales better
                 with HP% than ATK% with every spear in the game. "
               - b: >-
-                  Base attack makes little difference on Hu Tao because she has
-                  a very high HP to ATK conversion cap.
+                  Base ATK makes little difference on Hu Tao because she has a
+                  very high HP to ATK conversion cap.
 
                   White Tassel: 
               - White Tassel requires your combos to be more focused on Normal
@@ -5631,15 +5634,19 @@ characters:
               - b: "Emblem of Severed Fate (4): "
               - "This set works best for Yae in "
               - b: multi-target scenarios where her Elemental Burst hits multiple enemies.
-              - " This set also provides more value if she's"
-              - b: " used WITHOUT Raiden (due to the higher ER requirements)."
+              - " This set also"
+              - b: " provides more value"
+              - " if she's used WITHOUT Raiden"
+              - b: " (due to the higher ER requirements)."
               - "\n"
               - b: "+18% ATK set (2) / Thundering Fury (2) / Emblem of Severed Fate (2): "
               - "Using a combination of these artifact sets works best for Yae
                 in "
               - b: single-target scenarios.
-              - " These also provide more value if she's "
-              - b: "paired WITH Raiden (due to lower ER requirements). "
+              - " These also"
+              - b: " provide more value"
+              - " if she's paired WITH Raiden"
+              - b: " (due to lower ER requirements). "
               - "\n"
               - b: "Thundersoother (4): "
               - >
@@ -7834,153 +7841,6 @@ characters:
                 cooldown being 6 seconds. The full set effect requires 2 stacks
                 to be active at any given time, so maintaining stacks can be
                 difficult when considering rotations between characters."
-      - code: physical dps
-        isRecommended: false
-        weapons:
-          advices:
-            - similar:
-                - code: aquila-favonia
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: summit-shaper
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: primordial-jade-cutter
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: mistsplitter-reforged
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: prototype-rancour
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: the-black-sword
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: blackcliff-longsword
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-          notes: null
-          seeCharNotes: false
-        artifacts:
-          sets:
-            - arts:
-                op: and
-                arts:
-                  - code: pale-flame
-                    count: 2
-                  - code: bloodstained-chivalry
-                    count: 2
-              notes: null
-              seeCharNotes: false
-            - arts:
-                code: pale-flame
-                count: 4
-              notes: null
-              seeCharNotes: true
-            - arts:
-                code: gladiators-finale
-                count: 4
-              notes: null
-              seeCharNotes: false
-            - arts:
-                op: or
-                arts:
-                  - code: pale-flame
-                    count: 2
-                  - code: bloodstained-chivalry
-                    count: 2
-                  - code: 18%-atk
-                    count: 2
-              notes: null
-              seeCharNotes: false
-          notes: null
-          seeCharNotes: false
-        mainStats:
-          circlet:
-            codes:
-              - crit-rate
-              - dmg
-            notes: null
-            seeCharNotes: false
-          goblet:
-            codes:
-              - phys-dmg
-            notes: null
-            seeCharNotes: false
-          sands:
-            codes:
-              - atk%
-            notes: null
-            seeCharNotes: false
-          notes: null
-          seeCharNotes: false
-        subStats:
-          advices:
-            - codes:
-                - crit-rate
-                - dmg
-              notes: null
-              seeCharNotes: false
-            - codes:
-                - atk%
-              notes: null
-              seeCharNotes: false
-            - codes:
-                - atk
-              notes: null
-              seeCharNotes: false
-            - codes:
-                - er
-              notes: null
-              seeCharNotes: false
-          notes: null
-          seeCharNotes: false
-        talents:
-          advices:
-            - attack
-            - burst
-            - skill
-          notes: null
-          seeCharNotes: false
-        tips: null
-        notes:
-          - p:
-              b: Cryo DPS Kaeya is recommended over Physical DPS Kaeya since most of his kit
-                scales with Cryo.
-          - p: Kaeya Cryo DPS is mostly used in a team with Chongyun and Xingqiu/Barbara
-              while having Blizzard Strayer (4) equipped. In this team, Kaeya
-              has 55% crit rate against Frozen enemies without any additional
-              Crit stats, which means Crit Rate substats are generally
-              prioritized less than ATK% or Crit DMG.
-          - p:
-              - b: |-
-                  Regarding Artifact Sets:
-                  Pale Flame (4):
-              - " This set is difficult to fully utilise due to Kaeya's skill
-                cooldown being 6 seconds. The full set effect requires 2 stacks
-                to be active at any given time, so maintaining stacks can be
-                difficult when considering rotations between characters."
       - code: burst support
         isRecommended: true
         weapons:
@@ -8371,175 +8231,6 @@ characters:
               - b: Chongyun to infuse her normal attacks with Cryo,
               - " her Normal Attack talent will have "
               - b: higher priority than Skill.
-      - code: physical dps
-        isRecommended: false
-        weapons:
-          advices:
-            - similar:
-                - code: primordial-jade-winged-spear
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: vortex-vanquisher
-                  refine: null
-                  stacks: null
-                  notes: shielded
-                  seeCharNotes: false
-            - similar:
-                - code: staff-of-homa
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: crescent-pike
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: deathmatch
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: skyward-spine
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: lithic-spear
-                  refine: null
-                  stacks: 2
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: blackcliff-pole
-                  refine: null
-                  stacks: 1
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: white-tassel
-                  refine: R5
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-          notes: null
-          seeCharNotes: false
-        artifacts:
-          sets:
-            - arts:
-                op: and
-                arts:
-                  - code: pale-flame
-                    count: 2
-                  - code: bloodstained-chivalry
-                    count: 2
-              notes: null
-              seeCharNotes: false
-            - arts:
-                code: pale-flame
-                count: 4
-              notes: null
-              seeCharNotes: true
-            - arts:
-                code: gladiators-finale
-                count: 4
-              notes: null
-              seeCharNotes: true
-            - arts:
-                op: or
-                arts:
-                  - code: bloodstained-chivalry
-                    count: 2
-                  - code: pale-flame
-                    count: 2
-                  - code: 18%-atk
-                    count: 2
-              notes: null
-              seeCharNotes: false
-            - arts:
-                code: blizzard-strayer
-                count: 4
-              notes: null
-              seeCharNotes: true
-            - arts:
-                code: retracing-bolide
-                count: 4
-              notes: null
-              seeCharNotes: false
-          notes: null
-          seeCharNotes: false
-        mainStats:
-          circlet:
-            codes:
-              - crit-rate
-              - dmg
-            notes: null
-            seeCharNotes: false
-          goblet:
-            codes:
-              - phys-dmg
-            notes: null
-            seeCharNotes: false
-          sands:
-            codes:
-              - atk%
-            notes: null
-            seeCharNotes: false
-          notes: null
-          seeCharNotes: false
-        subStats:
-          advices:
-            - codes:
-                - crit-rate
-                - dmg
-              notes: null
-              seeCharNotes: false
-            - codes:
-                - atk%
-              notes: null
-              seeCharNotes: false
-            - codes:
-                - er
-              notes: null
-              seeCharNotes: false
-            - codes:
-                - atk
-              notes: null
-              seeCharNotes: false
-          notes: null
-          seeCharNotes: false
-        talents:
-          advices:
-            - attack
-            - burst
-            - skill
-          notes: null
-          seeCharNotes: false
-        tips: null
-        notes:
-          - b: "Regarding Artifact Sets:"
-          - "\n"
-          - b: "Pale Flame (4):"
-          - >2
-             This set is difficult to fully utilise due to Rosaria's skill cooldown being 6 seconds. The full set effect requires 2 stacks to be active at any given time, so maintaining stacks can be difficult when considering rotations between characters.
-          - b: "Gladiator's Finale (4): "
-          - |
-            The 4 piece set passive doesn't work with Crescent Pike.
-          - b: "Blizzard Strayer (4): "
-          - "Rosaria's Elemental Burst is required to maintain uptime for
-            Blizzard Strayer (4) (due to Fischl/Beidou stealing Cryo procs for
-            Superconduct). Due to the low uptime of Rosaria's Elemental Burst at
-            "
-          - b: "[C0], "
-          - "this artifact set is only recommended at "
-          - b: "[C2+]."
       - code: burst support
         isRecommended: true
         weapons:
@@ -8614,7 +8305,7 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: false
+                  seeCharNotes: true
             - similar:
                 - code: prototype-starglitter
                   refine: null
@@ -8758,7 +8449,12 @@ characters:
               - b: "Lithic Spear: "
               - At
               - b: " [R5],"
-              - " this weapon can perform similar to Vortex Vanquisher."
+              - |2
+                 this weapon can perform similar to Vortex Vanquisher.
+              - b: "Favonius Lance: "
+              - Although this weapon's damage is lower for Rosaria, the extra
+                energy generated from the passive can be very valuable in alot
+                of teams that need a Cryo battery (Eula, Ayaka, etc).
           - p:
               - b: |-
                   Regarding Artifact Sets:
@@ -10986,165 +10682,6 @@ characters:
   - code: jean
     elementCode: anemo
     roles:
-      - code: dps
-        isRecommended: false
-        weapons:
-          advices:
-            - similar:
-                - code: primordial-jade-cutter
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: mistsplitter-reforged
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: aquila-favonia
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: summit-shaper
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: skyward-blade
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: blackcliff-longsword
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: the-black-sword
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: prototype-rancour
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-          notes: null
-          seeCharNotes: false
-        artifacts:
-          sets:
-            - arts:
-                op: and
-                arts:
-                  - code: bloodstained-chivalry
-                    count: 2
-                  - code: pale-flame
-                    count: 2
-              notes: null
-              seeCharNotes: false
-            - arts:
-                code: gladiators-finale
-                count: 4
-              notes: null
-              seeCharNotes: false
-            - arts:
-                op: or
-                arts:
-                  - code: bloodstained-chivalry
-                    count: 2
-                  - code: pale-flame
-                    count: 2
-                  - code: 18%-atk
-                    count: 2
-              notes: null
-              seeCharNotes: false
-            - arts:
-                op: and
-                arts:
-                  - code: 18%-atk
-                    count: 2
-                  - code: viridescent-venerer
-                    count: 2
-              notes: null
-              seeCharNotes: false
-          notes: null
-          seeCharNotes: false
-        mainStats:
-          circlet:
-            codes:
-              - crit-rate
-              - dmg
-            notes: null
-            seeCharNotes: false
-          goblet:
-            codes:
-              - phys-dmg
-            notes: null
-            seeCharNotes: false
-          sands:
-            codes:
-              - atk%
-            notes: null
-            seeCharNotes: false
-          notes: null
-          seeCharNotes: false
-        subStats:
-          advices:
-            - codes:
-                - crit-rate
-                - dmg
-              notes: null
-              seeCharNotes: false
-            - codes:
-                - atk%
-              notes: null
-              seeCharNotes: false
-            - codes:
-                - er
-              notes: null
-              seeCharNotes: false
-            - codes:
-                - em
-              notes: null
-              seeCharNotes: false
-            - codes:
-                - atk
-              notes: null
-              seeCharNotes: false
-          notes: null
-          seeCharNotes: false
-        talents:
-          advices:
-            - attack
-            - skill
-            - burst
-          notes: null
-          seeCharNotes: false
-        tips: Jean's Elemental Burst continuously imbues characters in zone with Anemo
-          status, that means it can cleanse all elemental statuses aside from
-          Dendro
-        notes:
-          - p: Jean's Elemental Skill can deal fall damage based off enemy's max HP% and
-              fall velocity if you aim it upwards. Do note that some 4 stars
-              outdps Jean, Jean is better off as a Support.
-          - p:
-              - b: |-
-                  Regarding Weapon Choices:
-                  Mistsplitter Reforged:
-              - " If Jean is used with a way to infuse her attacks with an
-                element (Chongyun / "
-              - b: "[C6]"
-              - " Bennett), Mistsplitter Reforged will outperform Primordial
-                Jade Cutter as you get full value out of the passive."
       - code: burst support
         isRecommended: true
         weapons:
@@ -11231,17 +10768,17 @@ characters:
                 code: viridescent-venerer
                 count: 4
               notes: null
-              seeCharNotes: false
+              seeCharNotes: true
             - arts:
                 code: noblesse-oblige
                 count: 4
               notes: null
-              seeCharNotes: false
+              seeCharNotes: true
             - arts:
                 code: ocean-hued-clam
                 count: 4
               notes: null
-              seeCharNotes: false
+              seeCharNotes: true
             - arts:
                 op: and
                 arts:
@@ -11283,19 +10820,22 @@ characters:
             codes:
               - crit-rate
               - dmg
+              - em
             notes: null
-            seeCharNotes: false
+            seeCharNotes: true
           goblet:
             codes:
               - anemo-dmg
+              - em
             notes: null
-            seeCharNotes: false
+            seeCharNotes: true
           sands:
             codes:
               - atk%
               - er
+              - em
             notes: null
-            seeCharNotes: false
+            seeCharNotes: true
           notes: null
           seeCharNotes: false
         subStats:
@@ -11328,79 +10868,74 @@ characters:
             - - burst
               - skill
           notes: null
-          seeCharNotes: false
+          seeCharNotes: true
         tips: null
         notes:
           - p:
-              - "Jean's Elemental Skill can be used to push smaller mobs and
-                stagger bigger ones. "
+              - "Jean's Elemental Skill can be used to fling smaller mobs into
+                the air to deal fall damage, and to stagger bigger ones. "
               - b: Her healing scales with ATK.
           - p:
               - b: |-
                   Regarding Weapon Choices:
                   Amenoma Kageuchi: 
-              - "This weapon can lower your ER% requirements from anywhere
-                between "
-              - b: ~150% to no additional ER% needed,
-              - " depending on the "
-              - b: "number of stacks on the passive and the refinement of this weapon. "
-              - "As such, at "
-              - b: higher refines / more stacks on the passive,
-              - " this weapon can perform"
-              - b: " better than Skyward Blade,"
-              - " while at "
-              - b: lower refines / less stacks, it can perform worse.
-              - "\n"
-              - b: "Freedom-Sworn: "
-              - "The ranking here only "
-              - b: "assumes Jean's personal damage and not the utility it gives. "
-              - "If you want to furthermore buff your main DPS, you can give
-                this sword to Jean as she "
-              - b: can trigger Freedom-Sworn's skill relatively easily since Anemo is always
-                  trigger.
-              - "\ \n"
-              - b: "Lion's Roar:"
-              - " Depending on passive uptime, it can be ranked over Favonius
-                (at 50% uptime) and even Aquila (at 100% uptime)."
-          - p:
-              - b: "Regarding Artifact Sets:"
-              - "\n"
-              - b: "Viridescent Venerer (4) "
-              - "is the bread and butter for Anemo characters in general, as it
-                is "
-              - b: commonly used for the 40% elemental resistance shred.
+              - This weapon can lower your ER% requirements from anywhere
+                between ~150% to no additional ER% needed, depending on the
+                number of stacks on the passive and the refinement of this
+                weapon. As such, at higher refines / more stacks on the passive,
+                this weapon can perform better than Skyward Blade, while at
+                lower refines / less stacks, it can perform worse.
               - b: |-
                   
-                  Noblesse Oblige (4)
-              - " is the other option for "
-              - b: providing utilities to the team.
-              - " This set gives a "
-              - b: "20% partywide ATK boost "
-              - |
-                after Jean casts her Elemental Burst.
-              - b: Ocean-Hued Clam (4)
-              - " is the best set for Jean's personal damage, as the damage it
-                deals scales with Jean's burst healing. However, because Jean's
-                total damage output is on the low end, it is generally
-                recommended to prioritize utility options such as Noblesse
-                Oblige or Viridescent Venerer over this set."
+                  Freedom-Sworn: 
+              - >
+                The ranking here only assumes Jean's personal damage and not the
+                utility it gives. If you want to furthermore buff your main DPS,
+                you can give this sword to Jean as she can trigger
+                Freedom-Sworn's skill relatively easily since Anemo is always
+                trigger. 
+              - b: "Lion's Roar: "
+              - "Depending on passive uptime, it can be ranked over "
+              - b: Favonius Sword
+              - " (at 50% uptime) and even "
+              - b: "Aquila Favonia "
+              - (at 100% uptime).
           - p:
-              - b: "Regarding Talent Priorities:"
-              - >-2
-                 
-                If you prefer more damage than healing, prioritize Elemental Skill over Elemental Burst since it scales better.
+              - b: |-
+                  Regarding Artifact Sets:
+                  Viridescent Venerer (4): 
+              - "The bread and butter for Anemo characters in general, as it is "
+              - b: |-
+                  commonly used for the 40% elemental resistance shred.
+                  Noblesse Oblige (4):
+              - >2
+                 Another ther option for providing utilities to the team. This set gives a 20% partywide ATK boost after Jean casts her Elemental Burst.
+              - b: "Ocean-Hued Clam (4): "
+              - The best set for Jean's personal damage, as the damage it deals
+                scales with Jean's burst healing. However, because Jean's total
+                damage output is on the low end, it is generally recommended to
+                prioritize utility options such as Noblesse Oblige or
+                Viridescent Venerer over this set.
           - p:
-              - b: For Support Jean,
-              - " you can either go for "
-              - b: more ATK for stronger heals, but relatively lower Burst uptime,
-              - " or "
-              - b: more ER for lower heals,
-              - b: " but higher Burst uptime."
-              - " Choosing between these two is up to personal preference,
-                although"
-              - b: " if another Anemo character is on the team, Jean has very little energy
-                  problem"
-              - " and can potentially go full Sub DPS build."
+              - b: "Regarding Mainstat Choices:"
+              - |-
+                
+                Elemental Mastery should only be used 
+              - b: when Jean is paired with Bennett,
+              - " as her burst ticks will swirl the self applied Pyro from
+                Bennett's burst, acting as a damage source and Pyro application.
+                Because of this, high burst uptime is required and so weapons
+                with EM and ER passives are preferred. "
+              - b: (Freedom Sworn, Skyward Blade,  Favonius Sword, Sacrificial Sword, Iron
+                  Sting, Amenoma Kageuchi)
+          - p:
+              - b: |
+                  Regarding Talent Priorities: 
+              - >-
+                If you prefer more damage than healing, prioritize Elemental
+                Skill over Elemental Burst since it scales better.
+
+                For Support Jean, you can either go for more ATK for stronger heals, but relatively lower Burst uptime, or more ER for lower heals, but higher Burst uptime. Choosing between these two is up to personal preference, although if another Anemo character is on the team, Jean has very little energy problem and can potentially go full Sub DPS build.
     credits: null
   - code: venti
     elementCode: anemo
@@ -11912,7 +11447,7 @@ characters:
               - b: " stack as much EM while getting enough ER (160-180%) for a consistent Burst
                   uptime."
               - >2
-                 Having Sacrificial Sword or a second Anemo character in the team will also help reduce the needs for ER and prioritize EM substat more.
+                 Having Sacrificial Sword or a second Anemo character in the team will also help reduce the needs for ER and prioritize EM substats more.
               - b: "Iron Sting: "
               - Iron Sting will yield the highest upfront EM and teamwide buff
                 if compared to the other 4 star options,

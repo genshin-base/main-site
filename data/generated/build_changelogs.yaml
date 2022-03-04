@@ -1,4 +1,16 @@
 rows:
+  - date: March 1, 2022
+    changes: "Added Elemental Mastery options to Jean "
+    appliedBy: LarryTheCableGuy
+  - date: February 27, 2022
+    changes: Added Calamity Queller to Off-Field DPS Xiangling
+    appliedBy: ceeeleste
+  - date: February 27, 2022
+    changes: Added Favonius Lance notes to Burst Support Rosaria
+    appliedBy: ceeeleste
+  - date: February 27, 2022
+    changes: Removed Physical Kaeya, Rosaria and Jean sections
+    appliedBy: Ascarotte
   - date: February 20, 2022
     changes: Indented equivalent weapons in all rankings, added indent to all notes
       sections and changed them to "Fit to Data". Also reordered some bolding

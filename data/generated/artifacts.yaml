@@ -133,17 +133,17 @@ echoes-of-an-offering:
       ru: Увеличивает силу атаки на 18%.
     "4":
       en: When Normal Attacks hit opponents, there is a 36% chance that it will
-        trigger Valley Rite, which will increase Normal Attack DMG by 60% of
+        trigger Valley Rite, which will increase Normal Attack DMG by 70% of
         ATK. This effect will be dispelled 0.05s after a Normal Attack deals
         DMG. If a Normal Attack fails to trigger Valley Rite, the odds of it
         triggering the next time will increase by 20%. This trigger can occur
-        once every 0.3s.
+        once every 0.2s.
       ru: "Попадания обычной атакой с 36% шансом активируют Ритуал долины: урон
-        обычной атаки повышается на 60% от силы атаки. Через 0,05 сек. после
+        обычной атаки повышается на 70% от силы атаки. Через 0,05 сек. после
         нанесения урона обычной атакой эффект исчезает. Если обычной атаке не
         удалось активировать этот эффект, шанс его активации следующим
         попаданием возрастает на 20%. Шанс активации возникает не чаще одного
-        раза в 0,3 сек."
+        раза в 0,2 сек."
 emblem-of-severed-fate:
   code: emblem-of-severed-fate
   name:
@@ -603,7 +603,7 @@ vermillion-hereafter:
     "4":
       en: After using an Elemental Burst, this character will gain the Nascent Light
         effect, increasing their ATK by 8% for 16s. When the character's HP
-        decreases, Their ATK will further increase by 10%. This increase can
+        decreases, their ATK will further increase by 10%. This increase can
         occur this way a maximum of 4 times. This effect can be triggered once
         every 0.8s. Nascent Light will be dispelled when the character leaves
         the field. If an Elemental Burst is used again during the duration of

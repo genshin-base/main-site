@@ -83,10 +83,7 @@ const LANGS = ['en', 'ru']
 const fixes = {
 	/** @type {import('#lib/parsing/helperteam/fixes').HelperteamFixes} */
 	helperteam: {
-		roleNotes: [
-			{ character: 'kaeya', role: 'cryo dps', searchAs: 'dps' },
-			{ character: 'kaeya', role: 'physical dps', searchAs: 'dps' },
-		],
+		roleNotes: [{ character: 'kaeya', role: 'cryo dps', searchAs: 'dps' }],
 		sheets: [
 			{
 				// у Эмбер один набор артефактов прописан в странном формате

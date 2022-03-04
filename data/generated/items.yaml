@@ -3039,6 +3039,20 @@ molten-moment:
     - code: dream-solvent
       count: 1
   locations: []
+mudra-of-the-malefic-general:
+  code: mudra-of-the-malefic-general
+  name:
+    en: Mudra of the Malefic General
+    ru: Мудра зловещего генерала
+  types:
+    - character-material-talent
+  rarity: 5
+  craftedFrom:
+    - code: tears-of-the-calamitous-god
+      count: 1
+    - code: dream-solvent
+      count: 1
+  locations: []
 philosophies-of-ballad:
   code: philosophies-of-ballad
   name:
@@ -3307,6 +3321,34 @@ teachings-of-transience:
   rarity: 2
   craftedFrom: []
   locations: []
+tears-of-the-calamitous-god:
+  code: tears-of-the-calamitous-god
+  name:
+    en: Tears of the Calamitous God
+    ru: Слезы очищения божества бедствий
+  types:
+    - character-material-talent
+  rarity: 5
+  craftedFrom:
+    - code: mudra-of-the-malefic-general
+      count: 1
+    - code: dream-solvent
+      count: 1
+  locations: []
+the-meaning-of-aeons:
+  code: the-meaning-of-aeons
+  name:
+    en: The Meaning of Aeons
+    ru: Смысл эонов
+  types:
+    - character-material-talent
+  rarity: 5
+  craftedFrom:
+    - code: mudra-of-the-malefic-general
+      count: 1
+    - code: dream-solvent
+      count: 1
+  locations: []
 tusk-of-monoceros-caeli:
   code: tusk-of-monoceros-caeli
   name:
@@ -3371,6 +3413,7 @@ anemoculus:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat 689 653
     - !loc teyvat -1069 -262
     - !loc teyvat 625 596
     - !loc teyvat 637 795
@@ -4809,6 +4852,11 @@ amethyst-lump:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat 3745 4888
+    - !loc teyvat 3163 6701
+    - !loc teyvat 3162 6698
+    - !loc teyvat 2651 5880
+    - !loc teyvat 3747 4885
     - !loc teyvat 1777 8110
     - !loc teyvat 1784 8262
     - !loc teyvat 1784 8262
@@ -6424,6 +6472,34 @@ crystal-core:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -225 441
+    - !loc teyvat -222 449
+    - !loc teyvat -209 445
+    - !loc teyvat -1631 2986
+    - !loc teyvat 3586 7068
+    - !loc teyvat 2351 6064
+    - !loc teyvat 2349 6061
+    - !loc teyvat -223 1402
+    - !loc teyvat -224 1396
+    - !loc teyvat -234 1394
+    - !loc teyvat -241 1393
+    - !loc teyvat -313 1063
+    - !loc teyvat -322 1060
+    - !loc teyvat 548 1545
+    - !loc teyvat 243 1663
+    - !loc teyvat 238 1654
+    - !loc teyvat -1635 2989
+    - !loc teyvat -1647 2989
+    - !loc teyvat -1651 2983
+    - !loc teyvat -1639 2988
+    - !loc teyvat -1758 1670
+    - !loc teyvat -1776 1661
+    - !loc teyvat -1762 1641
+    - !loc teyvat -1929 1604
+    - !loc teyvat -470 524
+    - !loc teyvat -478 527
+    - !loc teyvat -389 447
+    - !loc teyvat 1053 895
     - !loc teyvat -384 554
     - !loc teyvat 3463 5267
     - !loc teyvat -81 1259
@@ -6876,6 +6952,8 @@ electro-crystal:
     - !loc teyvat 923 -128
     - !loc teyvat 422 -345
     - !loc teyvat 580 -336
+    - !loc enkanomiya -687 -221
+    - !loc enkanomiya -694 -219
     - !loc enkanomiya -1362 539
     - !loc enkanomiya -1378 520
     - !loc enkanomiya -1390 533
@@ -7099,6 +7177,9 @@ fish:
     - !loc teyvat -841 -542
     - !loc teyvat -822 -538
     - !loc teyvat 723 42
+    - !loc enkanomiya -233 491
+    - !loc enkanomiya -235 491
+    - !loc enkanomiya -237 491
 flaming-flower-stamen:
   code: flaming-flower-stamen
   name:
@@ -8921,7 +9002,6 @@ matsutake:
     - !loc teyvat 433 826
     - !loc teyvat 703 1010
     - !loc teyvat -1038 -210
-    - !loc teyvat -316 259
     - !loc teyvat -395 377
     - !loc teyvat -353 1709
     - !loc teyvat -419 1694
@@ -8980,7 +9060,6 @@ matsutake:
     - !loc teyvat -855 667
     - !loc teyvat -399 -437
     - !loc teyvat -397 -275
-    - !loc teyvat -607 366
     - !loc teyvat -381 -272
     - !loc teyvat -418 -397
     - !loc teyvat -327 -43
@@ -10708,6 +10787,14 @@ mushroom:
     - !loc teyvat 978 -595
     - !loc teyvat 852 -515
     - !loc teyvat 451 -473
+    - !loc enkanomiya -284 441
+    - !loc enkanomiya -455 -414
+    - !loc enkanomiya -413 -382
+    - !loc enkanomiya -355 -275
+    - !loc enkanomiya -383 -257
+    - !loc enkanomiya -715 -201
+    - !loc enkanomiya -813 -179
+    - !loc enkanomiya -812 -182
     - !loc enkanomiya 397 1037
     - !loc enkanomiya 421 1046
     - !loc enkanomiya 426 1021
@@ -13351,6 +13438,16 @@ sweet-flower:
     - !loc teyvat 979 -509
     - !loc teyvat 782 -379
     - !loc teyvat -406 -316
+    - !loc enkanomiya -327 771
+    - !loc enkanomiya -312 832
+    - !loc enkanomiya 16 462
+    - !loc enkanomiya -57 417
+    - !loc enkanomiya -472 -255
+    - !loc enkanomiya -412 -504
+    - !loc enkanomiya -609 -259
+    - !loc enkanomiya -743 -225
+    - !loc enkanomiya -727 -241
+    - !loc enkanomiya -700 -262
     - !loc enkanomiya -607 -332
     - !loc enkanomiya -574 -337
     - !loc enkanomiya -531 -360
