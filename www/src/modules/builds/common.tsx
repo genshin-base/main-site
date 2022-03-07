@@ -1,13 +1,6 @@
 import { useCallback, useMemo } from 'preact/hooks'
 
-import {
-	ART_GROUP_18_ATK_CODE,
-	ART_GROUP_18_ATK_DETAIL,
-	ART_GROUP_18_ATK_INSIDE_CODES,
-	ART_GROUP_20_ER_CODE,
-	ART_GROUP_20_ER_DETAIL,
-	ART_GROUP_20_ER_INSIDE_CODES,
-} from '#lib/genshin'
+import { ART_GROUP_DETAILS } from '#lib/genshin'
 import { CharacterFullInfoWithRelated } from '#lib/parsing/combine'
 import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
 import { ArtifactRef, ArtifactRefNode, CharacterBuildInfoRole } from '#lib/parsing/helperteam/types'
@@ -15,9 +8,9 @@ import { mustBeDefined, warnUnlessNever } from '#lib/utils/values'
 import { MapAllByCode } from '#src/api/utils'
 import { Tooltip } from '#src/components/tooltip'
 import { ArtifactCard } from '#src/containers/item-cards/dd-cards'
-import { LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
+import { ItemDetailsLabel, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
 import { I18N_CONJUCTIONS, I18N_STAT_NAME } from '#src/i18n/i18n'
-import { getArtifactIconSrc } from '#src/utils/artifacts'
+import { getAllArtifacts, getArtifactIconSrc } from '#src/utils/artifacts'
 import { useHover, useLocalStorage } from '#src/utils/hooks'
 import {
 	SK_FAV_CHAR_CODES,
@@ -77,7 +70,7 @@ export function genSeeCharNotes(item: { seeCharNotes: boolean }) {
 	return '' //TODO
 	return item.seeCharNotes ? notesWrap(' (see notes)') : ''
 }
-export function notesToJSX(tips: CompactTextParagraphs | null) {
+export function notesToJSX(tips: CompactTextParagraphs | null): JSX.Nodes {
 	function processString(str: string) {
 		return str
 			.split('\n')
@@ -94,15 +87,23 @@ export function notesToJSX(tips: CompactTextParagraphs | null) {
 		if ('s' in tip) return <s>{notesToJSX(tip.s)}</s>
 		if ('a' in tip) return <a href={tip.href}>{notesToJSX(tip.a)}</a>
 		if ('weapon' in tip)
-			return <span class="text-decoration-underline-dotted">{notesToJSX(tip.weapon)}</span>
+			return (
+				<ItemDetailsLabel type="weapon" code={tip.code}>
+					{notesToJSX(tip.weapon)}
+				</ItemDetailsLabel>
+			)
 		if ('artifact' in tip)
-			return <span class="text-decoration-underline-dotted">{notesToJSX(tip.artifact)}</span>
-		if ('item' in tip) return <span class="text-decoration-underline-dotted">{notesToJSX(tip.item)}</span>
+			return (
+				<ItemDetailsLabel type="artifact" code={tip.code}>
+					{notesToJSX(tip.artifact)}
+				</ItemDetailsLabel>
+			)
+		if ('item' in tip) return <>{notesToJSX(tip.item)}</>
 		warnUnlessNever('unknown element type in notes: ', tip)
 		return <span>{JSON.stringify(tip)}</span>
 	}
 	if (!tips) return null
-	if (Array.isArray(tips)) return tips.map(processObj)
+	if (Array.isArray(tips)) return tips.map(processObj).flat()
 	return processObj(tips)
 }
 
@@ -114,21 +115,9 @@ export function genArtifactAdvice(
 	// todo notes
 	if ('code' in set) {
 		//ArtifactRef
-		let artifactsForDd, artifactForList
-		switch (set.code) {
-			case ART_GROUP_18_ATK_CODE:
-				artifactsForDd = ART_GROUP_18_ATK_INSIDE_CODES.map(code => build.maps.artifacts.get(code))
-				artifactForList = ART_GROUP_18_ATK_DETAIL
-				break
-			case ART_GROUP_20_ER_CODE:
-				artifactsForDd = ART_GROUP_20_ER_INSIDE_CODES.map(code => build.maps.artifacts.get(code))
-				artifactForList = ART_GROUP_20_ER_DETAIL
-				break
-			default:
-				artifactForList = build.maps.artifacts.get(set.code)
-				artifactsForDd = [artifactForList]
-		}
+		const artifactsForDd = getAllArtifacts(set.code, build.maps.artifacts)
 		if (!artifactsForDd.length) return null
+		const artifactForList = ART_GROUP_DETAILS[set.code] ?? artifactsForDd[0]
 		return (
 			<LabeledItemAvatar
 				imgSrc={getArtifactIconSrc(set.code)}

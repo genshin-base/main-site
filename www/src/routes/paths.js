@@ -17,7 +17,7 @@ export function matchPath(path, url) {
 	let rem = url
 	const props = /**@type {Record<string, string>}*/ ({})
 	for (const part of path) {
-		let matched = true //на случай пустых variants
+		let matched = true //true на случай пустых variants
 		if (typeof part === 'string') {
 			;[rem, matched] = withoutPrefix(rem, part)
 		} else {

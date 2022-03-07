@@ -1,4 +1,10 @@
-import { ART_GROUP_18_ATK_CODE, ART_GROUP_20_ER_CODE, GI_ArtifactTypeCode } from '#lib/genshin'
+import {
+	ART_GROUP_18_ATK_CODE,
+	ART_GROUP_18_ATK_INSIDE_CODES,
+	ART_GROUP_20_ER_CODE,
+	ART_GROUP_20_ER_INSIDE_CODES,
+	GI_ArtifactTypeCode,
+} from '#lib/genshin'
 import icon_circlet from '#src/media/circlet.png'
 import icon_flower from '#src/media/flower.png'
 import icon_goblet from '#src/media/goblet.png'
@@ -30,4 +36,19 @@ export function getArtifactIconLargeSrc(artifactCode: string): string {
 	return isGroup(artifactCode)
 		? icon_flower
 		: BUNDLE_ENV.ASSET_PATH + `media/artifacts/${artifactCode}.large.png`
+}
+
+function getAllOrNone<T>(codes: string[], map: Map<string, T>) {
+	const res: T[] = []
+	for (const code of codes) {
+		const item = map.get(code)
+		if (!item) return []
+		res.push(item)
+	}
+	return res
+}
+export function getAllArtifacts<T>(code: string, artsMap: Map<string, T>): T[] {
+	if (code === ART_GROUP_18_ATK_CODE) return getAllOrNone(ART_GROUP_18_ATK_INSIDE_CODES, artsMap)
+	if (code === ART_GROUP_20_ER_CODE) return getAllOrNone(ART_GROUP_20_ER_INSIDE_CODES, artsMap)
+	return getAllOrNone([code], artsMap)
 }

@@ -1,3 +1,5 @@
+import { useEffect } from 'preact/hooks'
+
 import { useBuildWithDelayedLocs } from '#src/api'
 import { Spinner } from '#src/components/spinners'
 import { CharacterPicker } from '#src/containers/character-picker/character-picker'
@@ -10,7 +12,6 @@ import {
 } from '#src/i18n/i18n'
 import { CharacterBuildDetailed } from '#src/modules/builds/character-build-detailed'
 import { isLoaded } from '#src/utils/hooks'
-import { useEffect } from 'preact/hooks'
 
 export function BuildsPage_CharSelect(): JSX.Element {
 	return (

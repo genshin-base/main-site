@@ -8,7 +8,7 @@ import { CharacterPortrait } from '#src/components/characters'
 import { CentredSpinner } from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { OtherItemCard, WeaponCard } from '#src/containers/item-cards/dd-cards'
-import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
+import { ItemAvatar, ItemsDataContext, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
 import {
 	I18N_ART_STATS_PRIORITY,
 	I18N_ART_TYPE,
@@ -274,23 +274,25 @@ export function CharacterBuildDetailed({
 		</div>
 	)
 	return (
-		<div className="character-build-detailed mt-2 mb-3 position-relative">
-			<div className="d-flex d-xl-none mt-3">
-				<A className="btn btn-secondary align-self-center" type="submit" href="/builds">
-					<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
-				</A>
-				<h5 className="ps-3 pe-1 m-0 align-self-center">{build.character.name}</h5>
-				<ToggleCharFav classes="fs-3 align-self-center" characterCode={characterCode} />
-				<ItemAvatar
-					src={getCharacterAvatarLargeSrc(characterCode)}
-					classes="large-avatar align-self-end mt-n5 ms-auto"
-				/>
+		<ItemsDataContext.Provider value={build.maps}>
+			<div className="character-build-detailed mt-2 mb-3 position-relative">
+				<div className="d-flex d-xl-none mt-3">
+					<A className="btn btn-secondary align-self-center" type="submit" href="/builds">
+						<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
+					</A>
+					<h5 className="ps-3 pe-1 m-0 align-self-center">{build.character.name}</h5>
+					<ToggleCharFav classes="fs-3 align-self-center" characterCode={characterCode} />
+					<ItemAvatar
+						src={getCharacterAvatarLargeSrc(characterCode)}
+						classes="large-avatar align-self-end mt-n5 ms-auto"
+					/>
+				</div>
+				{isUpdating ? <CentredSpinner /> : null}
+				<div className={isUpdating ? 'opacity-50 pe-none' : ''}>
+					{CharacterDetailDesktop}
+					{CharacterDetailMobile}
+				</div>
 			</div>
-			{isUpdating ? <CentredSpinner /> : null}
-			<div className={isUpdating ? 'opacity-50 pe-none' : ''}>
-				{CharacterDetailDesktop}
-				{CharacterDetailMobile}
-			</div>
-		</div>
+		</ItemsDataContext.Provider>
 	)
 }

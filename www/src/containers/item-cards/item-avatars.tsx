@@ -1,11 +1,20 @@
-import { useCallback, useRef, useState } from 'preact/hooks'
+import { createContext } from 'preact'
+import { useCallback, useContext, useRef, useState } from 'preact/hooks'
 
-import { GI_RarityCode } from '#lib/genshin'
+import { ART_GROUP_DETAILS, GI_RarityCode } from '#lib/genshin'
+import {
+	ArtifactFullInfo,
+	DomainShortInfo,
+	EnemyShortInfo,
+	ItemShortInfo,
+	WeaponFullInfo,
+} from '#lib/parsing/combine'
+import { mustBeNever } from '#src/../../lib/utils/values'
 import { A } from '#src/routes/router'
+import { getAllArtifacts } from '#src/utils/artifacts'
+import { ArtifactCard, CardDescMobileWrap, WeaponCard } from './dd-cards'
 
 import './item-cards.scss'
-import { createContext } from 'preact'
-import { CardDescMobileWrap } from './dd-cards'
 
 export function ItemAvatar({
 	src,
@@ -69,35 +78,115 @@ export function ItemAvatar({
 		</DdContext.Provider>
 	)
 }
-export function ItemLabelText({
+
+function ItemLabel({
 	rarity,
 	classes = '',
-	title,
+	children,
 }: {
-	rarity?: GI_RarityCode
-	title: string
+	rarity?: GI_RarityCode | null
 	classes?: string
+	children: JSX.Nodes
 }): JSX.Element {
-	let rarityClass = ''
-	switch (rarity) {
-		case 5:
-			rarityClass = 'text-warning'
-			break
-		case 4:
-			rarityClass = 'text-primary'
-			break
-		default:
-			rarityClass = ''
-			break
-	}
+	const rarityClass =
+		rarity === 5 //
+			? 'text-warning'
+			: rarity === 4
+			? 'text-primary'
+			: ''
 	//todo c-pointer text-decoration-underline-dotted для интерактивных
-	return <label className={`${classes} ${rarityClass}`}>{title}</label>
+	return <label class={`${classes} ${rarityClass}`}>{children}</label>
 }
+
+function ItemDd({
+	classes = '',
+	children,
+	ddComponent,
+}: {
+	classes?: string
+	ddComponent?: JSX.Element | null
+	children: JSX.Nodes
+}): JSX.Element {
+	const elRef = useRef<HTMLButtonElement>(null)
+	const [isExpanded, setIsExpanded] = useState(false)
+
+	const closeDd = useCallback(() => setIsExpanded(false), [])
+	const openDd = useCallback(() => setIsExpanded(true), [])
+
+	const pointerClass = ddComponent ? 'c-pointer' : ''
+	return (
+		<DdContext.Provider value={{ onClickAway: closeDd }}>
+			<button
+				className={`btn-reset ${pointerClass} ${classes}`}
+				ref={elRef}
+				onClick={openDd}
+				disabled={!ddComponent}
+			>
+				{children}
+				{isExpanded && elRef.current && ddComponent && (
+					<CardDescMobileWrap onClickAway={closeDd} targetEl={elRef.current}>
+						{ddComponent}
+					</CardDescMobileWrap>
+				)}
+			</button>
+		</DdContext.Provider>
+	)
+}
+
+export const ItemsDataContext = createContext({
+	weapons: new Map<string, WeaponFullInfo>(),
+	artifacts: new Map<string, ArtifactFullInfo>(),
+	domains: new Map<string, DomainShortInfo>(),
+	enemies: new Map<string, EnemyShortInfo>(),
+	items: new Map<string, ItemShortInfo>(),
+})
+
+export function ItemDetailsLabel({
+	classes = '',
+	type,
+	code,
+	children,
+}: {
+	classes?: string
+	type: 'weapon' | 'artifact'
+	code: string
+	children: JSX.Nodes
+}): JSX.Element {
+	const maps = useContext(ItemsDataContext)
+
+	let ddComp: JSX.Element | undefined = undefined
+	let rarity: GI_RarityCode | undefined = undefined
+	if (type === 'weapon') {
+		const weapon = maps.weapons.get(code)
+		if (weapon) {
+			ddComp = <WeaponCard weapon={weapon} related={maps} />
+			rarity = weapon.rarity
+		}
+	} else if (type === 'artifact') {
+		const artifacts = getAllArtifacts(code, maps.artifacts)
+		if (artifacts.length > 0) {
+			const details = ART_GROUP_DETAILS[code] ?? artifacts[0]
+			ddComp = <ArtifactCard title={details.name} artifacts={artifacts} related={maps} />
+			rarity = artifacts[0].rarity
+		}
+	} else mustBeNever(type)
+
+	const interactiveLabelClass = ddComp ? 'text-decoration-underline-dotted' : ''
+	return (
+		<ItemDd ddComponent={ddComp} classes={`d-inline ${classes}`}>
+			<ItemLabel classes={`${interactiveLabelClass} c-inherit`} rarity={rarity}>
+				{children}
+			</ItemLabel>
+		</ItemDd>
+	)
+}
+
 export const DdContext = createContext({
 	onClickAway: () => {
 		return
 	},
 })
+
 export function LabeledItemAvatar({
 	imgSrc,
 	rarity,
@@ -117,31 +206,21 @@ export function LabeledItemAvatar({
 	avatarTopEndBadge?: string
 	ddComponent?: JSX.Element
 }): JSX.Element {
-	const elRef = useRef<HTMLDivElement>(null)
-	const [isExpanded, setIsExpanded] = useState(false)
-	const closeDd = useCallback(() => isExpanded && setIsExpanded(false), [setIsExpanded, isExpanded])
-	const openDd = useCallback(() => !isExpanded && setIsExpanded(true), [setIsExpanded, isExpanded])
-	const pointerClass = ddComponent ? 'c-pointer' : ''
+	const interactiveLabelClass = ddComponent ? 'text-decoration-underline-dotted' : ''
 	return (
-		<DdContext.Provider value={{ onClickAway: closeDd }}>
-			<div className={`text-nowrap ${pointerClass} ${classes}`} ref={elRef} onClick={openDd}>
-				<ItemAvatar
-					classes={`small-avatar align-middle ${avatarClasses}`}
-					src={imgSrc}
-					badgeTopStart={avatarTopStartBadge}
-					badgeTopEnd={avatarTopEndBadge}
-				/>
-				<ItemLabelText
-					rarity={rarity}
-					classes={`text-wrap align-middle lh-1 ps-1 mw-75 ${pointerClass}`}
-					title={title}
-				></ItemLabelText>
-				{isExpanded && elRef.current && ddComponent && (
-					<CardDescMobileWrap onClickAway={closeDd} targetEl={elRef.current}>
-						{ddComponent}
-					</CardDescMobileWrap>
-				)}
-			</div>
-		</DdContext.Provider>
+		<ItemDd ddComponent={ddComponent} classes={`w-100 text-nowrap ${classes}`}>
+			<ItemAvatar
+				classes={`small-avatar align-middle ${avatarClasses}`}
+				src={imgSrc}
+				badgeTopStart={avatarTopStartBadge}
+				badgeTopEnd={avatarTopEndBadge}
+			/>
+			<ItemLabel
+				classes={'text-wrap align-middle lh-1 ps-1 mw-75 c-inherit ' + interactiveLabelClass}
+				rarity={rarity}
+			>
+				{title}
+			</ItemLabel>
+		</ItemDd>
 	)
 }
