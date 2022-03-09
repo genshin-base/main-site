@@ -28,6 +28,7 @@ export function BuildsPage_BuildDetail({ code }: { code: string }): JSX.Element 
 	useEffect(() => {
 		window.scrollTo(0, 0)
 	}, [])
+
 	if (!isLoaded(build)) return <Spinner />
 	return (
 		<div className="builds container">

@@ -1,9 +1,8 @@
 import { getRegionTime, GI_ServerRegionCode } from '#lib/genshin'
-
-import { useForceUpdate, useLocalStorage, useVisibleTicker } from '#src/utils/hooks'
 import { msToHmWords } from '#src/utils/dates'
+import { useForceUpdate, useLocalStorage, useVisibleTicker } from '#src/utils/hooks'
 import { SK_DEFAULT_SELECTED_REGION_CODE, SK_SELECTED_REGION_CODE } from '#src/utils/local-storage-keys'
-import { BULLET } from '#src/utils/typography'
+import { BULLET, ELLIPSIS } from '#src/utils/typography'
 
 export function TimeUntilDayReset({ classes = '' }: { classes?: string }): JSX.Element {
 	const [selectedRegionCode] = useLocalStorage<GI_ServerRegionCode>(
@@ -17,7 +16,7 @@ export function TimeUntilDayReset({ classes = '' }: { classes?: string }): JSX.E
 	}, 60 * 1000)
 	return (
 		<div className={`time-until-day-reset ${classes}`}>
-			{msToHmWords(resetIn)}
+			{BUNDLE_ENV.IS_SSR ? ELLIPSIS : msToHmWords(resetIn)}
 			<span className="animation-time-glow ps-1">{BULLET}</span>
 		</div>
 	)

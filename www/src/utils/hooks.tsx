@@ -1,7 +1,8 @@
 import { RefObject } from 'preact'
 import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
 
-import { arrShallowEqual } from '#src/../../lib/utils/collections'
+import { arrShallowEqual } from '#lib/utils/collections'
+import { isPromise } from '#lib/utils/values'
 import { BS_BreakpointCode, BS_getCurrBreakpoint } from '#src/utils/bootstrap'
 
 type Pending = { _type: 'pending' }
@@ -15,43 +16,50 @@ export function isLoaded<T>(value: LoadingState<T>): value is T {
 }
 
 export function useFetch<T>(
-	loadFunc: (abortSignal: AbortSignal) => Promise<T>,
+	loadFunc: (abortSignal: AbortSignal) => T,
 	args: unknown[],
-): LoadingState<T> {
+): LoadingState<Awaited<T>> {
 	const controller = useRef<AbortController | null>(null)
-	const [[data, oldArgs], setData] = useState<[LoadingState<T>, unknown[]]>([PENDING, args])
+	const prevArgs = useRef<unknown[] | null>(null)
+	const data = useRef<LoadingState<Awaited<T>>>(PENDING)
+	const foceUpdate = useForceUpdate()
 
-	useEffect(() => {
-		setData([PENDING, args])
+	if (prevArgs.current === null || !arrShallowEqual(prevArgs.current, args)) {
 		if (controller.current !== null) controller.current.abort()
-
-		let ac: AbortController | null = new AbortController()
+		const ac: AbortController | null = new AbortController()
 		controller.current = ac
 
-		loadFunc(ac.signal)
-			.then(res => setData([res, args]))
-			.finally(() => (ac = null))
-
-		return () => {
-			if (ac !== null) ac.abort()
+		const res = loadFunc(ac.signal)
+		if (isPromise(res)) {
+			res.then(res => (data.current = res as Awaited<T>))
+				.catch(err => (data.current = err))
+				.finally(foceUpdate)
+			data.current = PENDING
+		} else {
+			data.current = res as Awaited<T>
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, args)
 
-	return arrShallowEqual(oldArgs, args) ? data : PENDING
+		prevArgs.current = args
+	}
+
+	// абортим при отмонтировании компонента
+	useEffect(() => {
+		return () => {
+			if (controller.current !== null) controller.current.abort()
+		}
+	}, [])
+	return data.current
 }
 
 export function useFetchWithPrev<T>(
-	loadFunc: (abortSignal: AbortSignal) => Promise<T>,
+	loadFunc: (abortSignal: AbortSignal) => Promise<T> | T,
 	args: unknown[],
 ): [data: LoadingState<T>, isUpdating: boolean] {
-	const [prevData, setPrevData] = useState<LoadingState<T>>(PENDING)
+	const prevDataRef = useRef<LoadingState<T>>(PENDING)
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const data = useFetch(loadFunc, args)
-	useEffect(() => {
-		if (isLoaded(data)) setPrevData(data)
-	}, [data])
-	return [isLoaded(data) ? data : prevData, data === PENDING]
+	if (isLoaded(data)) prevDataRef.current = data
+	return [isLoaded(data) ? data : prevDataRef.current, data === PENDING]
 }
 
 export const useToggle = (initial: boolean): [boolean, () => void] => {
@@ -181,7 +189,10 @@ export function useHover<T extends Element>(): [RefObject<T>, boolean] {
 }
 
 export const useWindowVisibility = () => {
-	const [isVisible, setIsVisible] = useState(document.visibilityState === 'visible') // Focus for first render
+	const [isVisible, setIsVisible] = useState(
+		// Focus for first render
+		BUNDLE_ENV.IS_SSR ? true : document.visibilityState === 'visible',
+	)
 	useEffect(() => {
 		const onVisibilityChange = () => setIsVisible(document.visibilityState === 'visible')
 		const onPageHide = () => setIsVisible(false)

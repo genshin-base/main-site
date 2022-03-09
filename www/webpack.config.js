@@ -1,3 +1,4 @@
+import fs from 'fs'
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin'
 import ESLintPlugin from 'eslint-webpack-plugin'
 import glob from 'glob'
@@ -7,6 +8,7 @@ import { dirname } from 'path'
 import PurgeCSSPlugin from 'purgecss-webpack-plugin'
 import { fileURLToPath } from 'url'
 import webpack from 'webpack'
+import { Deferred, mustBeDefined } from '../lib/utils/values.js'
 
 import { matchPath, paths, pathToStrings } from './src/routes/paths.js'
 
@@ -22,32 +24,46 @@ const PUBLIC = __dirname + '/public'
 
 export default async function (env, argv) {
 	const mode = argv.mode
+	const prerender = !env['no-prerender']
 	if (mode !== 'production' && mode !== 'development') throw new Error('wrong mode: ' + mode)
-	return LANGS.map((lang, i) => makeConfig(mode, lang, i === 0))
+
+	const ssrBuildReady = prerender ? new Deferred() : null
+	const configs = []
+	LANGS.forEach((lang, i) => {
+		configs.push(makeConfig(mode, i === 0, { isSSR: false, lang, ssrBuildReady }))
+	})
+	if (ssrBuildReady) configs.push(makeConfig(mode, false, { isSSR: true, ssrBuildReady }))
+	return configs
 }
 
 /**
  * @param {'production'|'development'} mode
- * @param {string} lang
  * @param {boolean} isMain
+ * @param {{isSSR:false, ssrBuildReady:Deferred<void>|null, lang:string}
+ *   | {isSSR:true, ssrBuildReady:Deferred<void>}} type
  */
-function makeConfig(mode, lang, isMain) {
+function makeConfig(mode, isMain, type) {
 	const isProd = mode === 'production'
+	const suffix = type.isSSR ? 'ssr' : type.lang
+	const dist = DIST + '/' + (type.isSSR ? 'ssr' : 'browser')
 
 	return {
-		name: `build-${lang}`,
+		name: `build-${suffix}`,
 		mode: mode,
 		bail: isProd, //в прод-режиме останавливаем сборку после первой ошибки
 		stats: { preset: isProd ? 'normal' : 'errors-warnings' },
 		devtool: isProd ? 'source-map' : 'cheap-module-source-map',
 		devServer: isMain ? makeDevServerConfig(isProd) : undefined,
 		entry: `${SRC}/index.tsx`,
+		target: type.isSSR ? 'node' : 'web',
 		output: {
-			path: DIST,
-			filename: isProd ? `[name].${lang}.[contenthash:8].js` : `[name].${lang}.js`,
+			path: dist,
+			filename: isProd && !type.isSSR ? `[name].${suffix}.[contenthash:8].js` : `[name].${suffix}.js`,
 			// пока не нужно, см. file-loader
 			// assetModuleFilename: '[name].[hash:8][ext]',
 			publicPath: ASSET_PATH,
+			// чтоб в бандле был экспорт
+			...(type.isSSR ? { libraryTarget: 'module', chunkFormat: 'module' } : {}),
 		},
 		experiments: {
 			outputModule: true,
@@ -57,9 +73,9 @@ function makeConfig(mode, lang, isMain) {
 			alias: { '#lib': LIB, '#src': SRC },
 		},
 		optimization: {
-			minimize: isProd,
+			minimize: isProd && !type.isSSR,
 			splitChunks: {
-				chunks: 'async',
+				chunks: type.isSSR ? () => false : 'async',
 				cacheGroups: {
 					defaultVendors: false, //отключаем дефолтный отдельный чанк для вендоров
 					default: { name: 'async' },
@@ -127,7 +143,8 @@ function makeConfig(mode, lang, isMain) {
 				'process.env.NODE_ENV': JSON.stringify(mode),
 				'BUNDLE_ENV.ASSET_PATH': JSON.stringify(ASSET_PATH),
 				'BUNDLE_ENV.LANGS': JSON.stringify(LANGS),
-				'BUNDLE_ENV.LANG': JSON.stringify(lang),
+				'BUNDLE_ENV.LANG': type.isSSR ? 'global._SSR_LANG' : JSON.stringify(type.lang),
+				'BUNDLE_ENV.IS_SSR': JSON.stringify(type.isSSR),
 			}),
 			new ESLintPlugin({
 				context: SRC,
@@ -141,39 +158,108 @@ function makeConfig(mode, lang, isMain) {
 				paths: glob.sync(`${SRC}/**/*`, { nodir: true }),
 				variables: true,
 			}),
-			new HtmlWebpackPlugin({
-				template: `${SRC}/index.html`,
-				minify: false,
-				filename: `${DIST}/${lang === 'en' ? '' : lang + '/'}index.html`,
-			}),
+			!type.isSSR &&
+				new HtmlWebpackPlugin({
+					template: `${SRC}/index.html`,
+					minify: false,
+					filename: `${dist}/${type.lang === 'en' ? '' : type.lang + '/'}_common_index.html`,
+				}),
 			isMain &&
 				new HtmlWebpackPlugin({
 					template: `${SRC}/404.html`,
 					templateParameters: { LANGS },
 					inject: false,
 					minify: false,
-					filename: `${DIST}/404.html`,
+					filename: `${dist}/404.html`,
 				}),
-			isProd && {
-				apply(compiler) {
-					compiler.hooks.compilation.tap('CopyIndex', compilation => {
-						HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tapPromise(
-							'CopyIndex',
-							async (data, cb) => {
-								if (data.outputName.endsWith('index.html'))
-									for (const path of Object.values(paths)) {
-										for (const fpath of pathToStrings('', prefixedPath(lang, path))) {
-											const src = new webpack.sources.RawSource(data.html, false)
-											compilation.emitAsset(fpath + '/index.html', src, {})
-										}
-									}
-								return data
-							},
-						)
-					})
+			isProd && !type.isSSR && copyIndexHtmls(type.lang, type.ssrBuildReady),
+			isProd &&
+				type.isSSR && {
+					apply(compiler) {
+						compiler.hooks.done.tap('SignalBuildEnd', compilation => {
+							type.ssrBuildReady.resolve()
+						})
+					},
 				},
-			},
 		].filter(Boolean),
+	}
+}
+
+let pagePrerenderSemaphore = Promise.resolve()
+/**
+ * @param {string} lang
+ * @param {Deferred<void>|null} ssrBuildReady
+ */
+function copyIndexHtmls(lang, ssrBuildReady) {
+	/**
+	 * @template T
+	 * @param {string} pathname
+	 * @param {() => Promise<T>|T} func
+	 * @returns {Promise<T>}
+	 */
+	async function withPageEnv(pathname, func) {
+		const items = {
+			_SSR_LANG: lang,
+			_SSR_READ_PUBLIC: path =>
+				fs.readFileSync(PUBLIC + new URL('http://a.com/' + path).pathname, { encoding: 'utf-8' }),
+			self: {},
+			navigator: { language: lang },
+			location: { pathname },
+			localStorage: { getItem: () => undefined, setItem: () => undefined },
+		}
+
+		Object.assign(global, items)
+		const res = await func()
+		for (const attr in items) delete global[attr]
+
+		return res
+	}
+
+	return {
+		apply(compiler) {
+			compiler.hooks.compilation.tap('PrepareIndexHTMLs', compilation => {
+				HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tapPromise(
+					'PrepareIndexHTMLs',
+					async data => {
+						if (data.outputName.endsWith('_common_index.html')) {
+							await pagePrerenderSemaphore
+							await (pagePrerenderSemaphore = (async () => {
+								let renderPage = null
+								if (ssrBuildReady) {
+									await ssrBuildReady.promise
+									;({ renderPage } = await withPageEnv('/', () =>
+										// файлу нужен суффикс, чтоб он для каждого языка импортировался отдельно со своим _SSR_LANG
+										import(DIST + '/ssr/main.ssr.js?lang=' + lang),
+									))
+								}
+
+								compilation.deleteAsset(data.outputName)
+								for (const path of Object.values(paths)) {
+									for (const url of pathToStrings('', prefixedPath(lang, path))) {
+										let html = mustBeDefined(data.html)
+										if (renderPage) html = await withPageEnv(url, () => renderPage(html))
+
+										const src = new webpack.sources.RawSource(html, false)
+										const fpath = cutLeadingSlash(url + '/index.html')
+										compilation.emitAsset(fpath, src, {})
+									}
+								}
+							})())
+						}
+						return data
+					},
+				)
+
+				HtmlWebpackPlugin.getHooks(compilation).afterEmit.tapPromise(
+					'PrepareIndexHTMLs',
+					async data => {
+						if (data.outputName.endsWith('_common_index.html'))
+							compilation.deleteAsset(data.outputName)
+						return data
+					},
+				)
+			})
+		},
 	}
 }
 
@@ -214,4 +300,9 @@ function makeDevServerConfig(isProd) {
  */
 function prefixedPath(lang, path) {
 	return lang === 'en' ? path : ['/' + lang, ...path]
+}
+
+/** @param {string} str */
+function cutLeadingSlash(str) {
+	return str.startsWith('/') ? str.slice(1) : str
 }

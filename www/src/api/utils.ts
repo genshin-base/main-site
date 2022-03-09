@@ -1,7 +1,11 @@
 import { DomainShortInfo, EnemyShortInfo, ItemShortInfo } from '#lib/parsing/combine'
 
-export function apiGetJSONFile<T>(path: string, signal?: AbortSignal | null): Promise<T> {
-	return fetch(BUNDLE_ENV.ASSET_PATH + path, { method: 'GET', signal }).then(x => x.json())
+export function apiGetJSONFile<T>(path: string, signal?: AbortSignal | null): Promise<T> | T {
+	if (BUNDLE_ENV.IS_SSR) {
+		return JSON.parse(global._SSR_READ_PUBLIC(path))
+	} else {
+		return fetch(BUNDLE_ENV.ASSET_PATH + path, { method: 'GET', signal }).then(x => x.json())
+	}
 }
 
 type MapByCodeInner<T> = T extends (infer A)[] ? (A extends { code: string } ? Map<string, A> : never) : never

@@ -80,14 +80,15 @@ export const route = <TPath extends RoutePath>(
 	comp: ComponentType<PathProps<TPath>>,
 ): [RoutePath, ComponentType] => [[URL_LANG_PREFIX, ...path], comp as ComponentType]
 
-export function makeUrlLangPrefix(lang: string): string {
+function makeUrlLangPrefix(lang: string): string {
 	return lang === 'en' ? '' : '/ru'
 }
 
 export function makeLocationHrefForLang(lang: string): string {
 	const url = location.pathname + location.search + location.hash
-	const prefix = makeUrlLangPrefix(lang)
-	let newUrl = prefix + (url.startsWith(URL_LANG_PREFIX) ? url.slice(URL_LANG_PREFIX.length) : url)
+	const curPrefix = URL_LANG_PREFIX
+	const newPrefix = makeUrlLangPrefix(lang)
+	let newUrl = newPrefix + (url.startsWith(curPrefix) ? url.slice(curPrefix.length) : url)
 	if (newUrl === '') newUrl = '/'
 	return newUrl
 }

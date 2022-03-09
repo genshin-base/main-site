@@ -6,22 +6,6 @@ import { mustBeDefined } from '#src/../../lib/utils/values'
 import { apiMaterialsTimetable } from '#src/api/endpoints'
 import { Spinner } from '#src/components/spinners'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
-
-import { getCharacterAvatarSrc } from '#src/utils/characters'
-import { isLoaded, useFetch, useForceUpdate, useLocalStorage, useVisibleTicker } from '#src/utils/hooks'
-import { getItemIconSrc } from '#src/utils/items'
-import { HEART } from '#src/utils/typography'
-import { OtherItemCard } from './item-cards/dd-cards'
-import { ItemAvatar } from './item-cards/item-avatars'
-
-import './farm-today.scss'
-import {
-	SK_DEFAULT_SELECTED_REGION_CODE,
-	SK_FAV_CHAR_CODES,
-	SK_FAV_TALENT_MATERIAL_CODES,
-	SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
-	SK_SELECTED_REGION_CODE,
-} from '#src/utils/local-storage-keys'
 import {
 	I18N_DUNGEONS,
 	I18N_TALENTS,
@@ -31,6 +15,21 @@ import {
 	I18N_WEEKDAYS,
 	I18N_WHY_ADD_TO_FAVS_TIP,
 } from '#src/i18n/i18n'
+import { getCharacterAvatarSrc } from '#src/utils/characters'
+import { isLoaded, useFetch, useForceUpdate, useLocalStorage, useVisibleTicker } from '#src/utils/hooks'
+import { getItemIconSrc } from '#src/utils/items'
+import {
+	SK_DEFAULT_SELECTED_REGION_CODE,
+	SK_FAV_CHAR_CODES,
+	SK_FAV_TALENT_MATERIAL_CODES,
+	SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
+	SK_SELECTED_REGION_CODE,
+} from '#src/utils/local-storage-keys'
+import { HEART } from '#src/utils/typography'
+import { OtherItemCard } from './item-cards/dd-cards'
+import { ItemAvatar } from './item-cards/item-avatars'
+
+import './farm-today.scss'
 
 export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 	const ttData = useFetch(apiMaterialsTimetable, [])
@@ -60,26 +59,31 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 		[weekdayCode, tomorrowCode, weekdayMonSun],
 	)
 	const [selectedTab, setSelectedTab] = useSelectable(tabs, [selectedRegionCode])
+
 	return (
 		<div className={`farm-today ${classes}`}>
-			<div className="d-none d-xl-flex">
-				<h5 className="py-2 m-0 me-2 d-block ">{I18N_DUNGEONS}</h5>
-				<Tabs
-					tabs={tabs}
-					selectedTab={selectedTab}
-					onTabSelect={setSelectedTab}
-					classes="mb-2 flex-grow-1"
-				/>
-			</div>
-			<div className="d-block d-xl-none">
-				<BtnTabGroup
-					tabs={tabs}
-					selectedTab={selectedTab}
-					onTabSelect={setSelectedTab}
-					classes="w-100 mb-2"
-				/>
-			</div>
-			{isLoaded(ttData) ? (
+			{!BUNDLE_ENV.IS_SSR && (
+				<>
+					<div className="d-none d-xl-flex">
+						<h5 className="py-2 m-0 me-2 d-block ">{I18N_DUNGEONS}</h5>
+						<Tabs
+							tabs={tabs}
+							selectedTab={selectedTab}
+							onTabSelect={setSelectedTab}
+							classes="mb-2 flex-grow-1"
+						/>
+					</div>
+					<div className="d-block d-xl-none">
+						<BtnTabGroup
+							tabs={tabs}
+							selectedTab={selectedTab}
+							onTabSelect={setSelectedTab}
+							classes="w-100 mb-2"
+						/>
+					</div>
+				</>
+			)}
+			{isLoaded(ttData) && !BUNDLE_ENV.IS_SSR ? (
 				<>
 					<h6 className="opacity-75 text-capitalize">{I18N_TALENTS}</h6>
 					<div className="talents-wrap pt-1">

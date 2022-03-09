@@ -29,7 +29,7 @@ const MARKER_ICON_SIZE_PX = 40
 type TileExt = 'jpg' | 'avif'
 
 let tileExt: TileExt = 'jpg'
-checkAvifSupport().then(ok => ok && (tileExt = 'avif'))
+if (!BUNDLE_ENV.IS_SSR) checkAvifSupport().then(ok => ok && (tileExt = 'avif'))
 
 const TILES_ROOT = `https://genshin-base.github.io/teyvat-map/v2.4/tiles`
 
@@ -38,11 +38,12 @@ function tilePathFinc(x: number, y: number, z: number, mapCode: MapCode) {
 }
 
 const tilesMask: Record<string, ReturnType<typeof makeTileMaskChecker> | undefined> = {}
-fetch(`${TILES_ROOT}/summary.json`)
-	.then(r => r.json())
-	.then(info => {
-		for (const code in info) tilesMask[code] = makeTileMaskChecker(info[code])
-	})
+if (!BUNDLE_ENV.IS_SSR)
+	fetch(`${TILES_ROOT}/summary.json`)
+		.then(r => r.json())
+		.then(info => {
+			for (const code in info) tilesMask[code] = makeTileMaskChecker(info[code])
+		})
 
 const MapProjection: ProjectionConverter = {
 	x2lon(x, zoom) {

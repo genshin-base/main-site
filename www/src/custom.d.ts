@@ -30,4 +30,5 @@ declare const BUNDLE_ENV: {
 	ASSET_PATH: string
 	LANGS: string[]
 	LANG: string
+	IS_SSR: boolean
 }
