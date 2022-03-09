@@ -17,7 +17,7 @@ import {
 } from '#src/i18n/i18n'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { isLoaded, useFetch, useForceUpdate, useLocalStorage, useVisibleTicker } from '#src/utils/hooks'
-import { getItemIconSrc } from '#src/utils/items'
+import { getItemIconLargeSrc, getItemIconSrc } from '#src/utils/items'
 import {
 	SK_DEFAULT_SELECTED_REGION_CODE,
 	SK_FAV_CHAR_CODES,
@@ -92,7 +92,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 								<div className="mb-3 ps-2 ms-1 d-flex align-items-center" key={asc.itemCode}>
 									<div>
 										<ItemAvatar
-											src={getItemIconSrc(asc.itemCode)}
+											src={getItemIconLargeSrc(asc.itemCode)}
 											classes="me-3 vertical-align-middle"
 											badgeTopStart={
 												~favTalMaterialCodes.indexOf(asc.itemCode) ? (
