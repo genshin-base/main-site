@@ -25,6 +25,9 @@ jobs:
       - run: npm install --release
         working-directory: ${{ env.GITHUB_WORKSPACE }}
 
+      - run: ./scripts/update.js www
+        working-directory: ${{ env.GITHUB_WORKSPACE }}
+
       - run: npm run build
         working-directory: ${{ env.GITHUB_WORKSPACE }}
 

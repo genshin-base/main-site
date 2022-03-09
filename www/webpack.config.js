@@ -24,8 +24,8 @@ const PUBLIC = __dirname + '/public'
 
 export default async function (env, argv) {
 	const mode = argv.mode
-	const prerender = !env['no-prerender']
 	if (mode !== 'production' && mode !== 'development') throw new Error('wrong mode: ' + mode)
+	const prerender = !env['no-prerender'] && mode === 'production'
 
 	const ssrBuildReady = prerender ? new Deferred() : null
 	const configs = []
@@ -283,7 +283,7 @@ function makeDevServerConfig(isProd) {
 						for (const lang of langsEnLast) {
 							for (const path of Object.values(paths)) {
 								if (matchPath(prefixedPath(lang, path), parsedUrl.pathname))
-									return (lang === 'en' ? '' : '/' + lang) + `/index.html`
+									return (lang === 'en' ? '' : '/' + lang) + `/_common_index.html`
 							}
 						}
 						return '/404.html'
