@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "webpack serve --mode=development --config=www/webpack.config.js",
 		"build": "webpack --mode=production --config=www/webpack.config.js",
-		"test": "mocha './www/src/**/*.test.js' --parallel"
+		"test": "mocha './www/src/**/*.test.js' './lib/**/*.test.js' --parallel"
 	},
 	"author": "",
 	"license": "ISC",
@@ -41,6 +41,7 @@
 		"eslint-webpack-plugin": "^3.1.1",
 		"html-webpack-plugin": "^5.5.0",
 		"locmap": "github:3bl3gamer/locmap#v1.8.0",
+		"marked": "^4.0.12",
 		"mini-css-extract-plugin": "^2.4.5",
 		"node-stream-zip": "^1.15.0",
 		"preact": "^10.6.4",

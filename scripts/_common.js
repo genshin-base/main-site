@@ -5,6 +5,9 @@ import { dirname } from 'path'
 import { stringifyString, YAMLError } from 'yaml/util'
 import { GI_MAP_CODES } from '#lib/genshin.js'
 import { error } from '#lib/utils/logs.js'
+import { textNodesToMarkdown } from '#lib/parsing/helperteam/text.js'
+import { getBuildsFormattedBlocks } from '#lib/parsing/helperteam/index.js'
+import { objForEach } from '#lib/utils/collections.js'
 
 const __filename = fileURLToPath(import.meta.url)
 export const BASE_DIR = dirname(__filename) + '/..'
@@ -17,6 +20,8 @@ export const TRANSLATED_DATA_DIR = `${DATA_DIR}/translated`
 export const WWW_API_FILE = `${BASE_DIR}/www/src/api/generated.js`
 export const WWW_DYNAMIC_DIR = `${BASE_DIR}/www/public/generated`
 export const WWW_MEDIA_DIR = `${BASE_DIR}/www/public/media`
+
+const MARKDOWN_MODE = process.env['DATA_MARKDOWN'] === '1'
 
 const location = {
 	tag: '!loc',
@@ -35,7 +40,19 @@ const location = {
 		throw new Error('wrong location: ' + node.strValue)
 	},
 }
-const customTags = [location]
+const markdownItems = new Set()
+const markdown = {
+	tag: '!md',
+	identify: val => MARKDOWN_MODE && markdownItems.has(val),
+	stringify(item, ctx, onComment, onChompKeep) {
+		item = { value: textNodesToMarkdown(item.value) }
+		return stringifyString(item, ctx, onComment, onChompKeep)
+	},
+	resolve(doc, node) {
+		return node.strValue
+	},
+}
+const customTags = [location, markdown]
 
 /**
  * @param {string} dirpath
@@ -69,7 +86,18 @@ export function parseYaml(content) {
  * @returns {string}
  */
 export function stringifyYaml(data) {
-	return yaml.stringify(data, { customTags })
+	try {
+		objForEach(data, val => {
+			if (typeof val === 'object' && val !== null && 'en' in val) {
+				for (const attr in val) if (typeof val[attr] !== 'string') markdownItems.add(val[attr])
+				return 'skip-children'
+			}
+		})
+		if (MARKDOWN_MODE) yaml.scalarOptions.str.fold.lineWidth = 90 //TODO: failsafe https://eemeli.org/yaml/v1/#built-in-custom-tags
+		return yaml.stringify(data, { customTags })
+	} finally {
+		markdownItems.clear()
+	}
 }
 
 const yamlCache = new Map()
@@ -90,7 +118,10 @@ const saveGeneratedYaml = (fname, data) => saveYaml(`${GENERATED_DATA_DIR}/${fna
 const loadGeneratedYaml = fname => loadYaml(`${GENERATED_DATA_DIR}/${fname}.yaml`)
 
 /** @param {import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>} builds */
-export const saveBuilds = builds => saveGeneratedYaml('builds', builds)
+export const saveBuilds = builds => {
+	for (const item of getBuildsFormattedBlocks(builds)) markdownItems.add(item)
+	return saveGeneratedYaml('builds', builds)
+}
 /** @returns {Promise<import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>>} */
 export const loadBuilds = () => loadGeneratedYaml('builds')
 
