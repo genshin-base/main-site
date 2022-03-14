@@ -1,0 +1,83 @@
+{
+	"scopeName": "todo-comment.injection",
+	"injectionSelector": "L:meta.property.yaml",
+	"patterns": [
+		{
+			"include": "#block-markdown"
+		},
+		{
+			"include": "#inline-markdown"
+		}
+	],
+	"repository": {
+		"block-markdown": {
+			"begin": "(!md)\\s+(\\|)([+-])?\\s*\\n?",
+			"end": "^(?=\\S)|(?!\\G)",
+			"name": "meta.embedded.markdown.block",
+			"beginCaptures": {
+				"1": {
+					"name": "storage.type.tag-handle.yaml"
+				},
+				"2": {
+					"name": "keyword.control.flow.block-scalar.literal.yaml"
+				},
+				"3": {
+					"name": "storage.modifier.chomping-indicator.yaml"
+				}
+			},
+			"patterns": [
+				{
+					"begin": "^([ ]+)(?! )",
+					"end": "^(?!\\1|\\s*$)",
+					"patterns": [
+						{
+							"include": "#markdown-patterns"
+						}
+					]
+				}
+			]
+		},
+		"inline-markdown": {
+			"begin": "(!md)\\b",
+			"end": "c",
+			"name": "meta.embedded.markdown.inline",
+			"beginCaptures": {
+				"1": {
+					"name": "storage.type.tag-handle.yaml"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#markdown-patterns"
+				}
+			]
+		},
+		"markdown-patterns": {
+			"patterns": [
+				{
+					"include": "text.html.markdown#inline"
+				},
+				{
+					"include": "text.html.basic"
+				},
+				{
+					"comment": "",
+					"begin": "(?:^\\s*|\\G)(#{1,6})\\s*(?=[\\S[^#]])",
+					"end": "\\s*(#{1,6})?$\\n?",
+					"contentName": "entity.name.section.markdown",
+					"name": "markup.heading.${1/(#)(#)?(#)?(#)?(#)?(#)?/${6:?6:${5:?5:${4:?4:${3:?3:${2:?2:1}}}}}/}.markdown",
+					"captures": {
+						"1": {
+							"name": "punctuation.definition.heading.markdown"
+						}
+					},
+					"patterns": [
+						{
+							"include": "text.html.markdown#inline"
+						}
+					]
+				}
+			]
+		}
+	}
+}
