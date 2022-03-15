@@ -5,8 +5,8 @@ import { dirname } from 'path'
 import { stringifyString, YAMLError } from 'yaml/util'
 import { GI_MAP_CODES } from '#lib/genshin.js'
 import { error } from '#lib/utils/logs.js'
-import { textNodesToMarkdown } from '#lib/parsing/helperteam/text.js'
-import { getBuildsFormattedBlocks } from '#lib/parsing/helperteam/index.js'
+import { textNodesFromMarkdown, textNodesToMarkdown } from '#lib/parsing/helperteam/text.js'
+import { buildsConvertLangMode, getBuildsFormattedBlocks } from '#lib/parsing/helperteam/index.js'
 import { objForEach } from '#lib/utils/collections.js'
 
 const __filename = fileURLToPath(import.meta.url)
@@ -17,6 +17,10 @@ export const IMGS_CACHE_DIR = `${CACHE_DIR}/imgs`
 export const DATA_DIR = `${BASE_DIR}/data`
 export const GENERATED_DATA_DIR = `${DATA_DIR}/generated`
 export const TRANSLATED_DATA_DIR = `${DATA_DIR}/translated`
+export const TRANSLATED_BUILDS_DIR = `${TRANSLATED_DATA_DIR}/builds`
+export const TRANSLATED_BUILDS_REF_FPATH = `${TRANSLATED_BUILDS_DIR}/reference.yaml`
+export const TRANSLATED_BUILDS_LANG_FPATH = (/**@type {string}*/ lang) =>
+	`${TRANSLATED_BUILDS_DIR}/${lang}.md`
 export const WWW_API_FILE = `${BASE_DIR}/www/src/api/generated.js`
 export const WWW_DYNAMIC_DIR = `${BASE_DIR}/www/public/generated`
 export const WWW_MEDIA_DIR = `${BASE_DIR}/www/public/media`
@@ -100,6 +104,32 @@ export function stringifyYaml(data) {
 	}
 }
 
+/**
+ * @param {[import('#lib/parsing/helperteam/text').CompactTextParagraphs|null, string][]} blocks
+ * @returns {string}
+ */
+export function textBlocksToMarkdown(blocks) {
+	const res = []
+	for (const [paragraph, path] of blocks) {
+		if (paragraph === null) continue
+		if (typeof paragraph === 'object' && Object.keys(paragraph).length === 0) continue //fix for old empty paragraps `{}`
+		res.push('# === ' + path + ' ===\n\n' + textNodesToMarkdown(paragraph))
+	}
+	return res.join('\n\n\n')
+}
+/**
+ * @param {string} text
+ * @returns {[import('#lib/parsing/helperteam/text').CompactTextParagraphs, string][]}
+ */
+export function textBlocksFromMarkdown(text) {
+	const chunks = text.split(/(?:^|\n)# ===(.*?)===\n/g)
+	const res = /**@type {ReturnType<typeof textBlocksFromMarkdown>}*/ ([])
+	for (let i = 1; i < chunks.length; i += 2) {
+		res.push([textNodesFromMarkdown(chunks[i + 1]), chunks[i].trim()])
+	}
+	return res
+}
+
 const yamlCache = new Map()
 /** @param {string} fpath */
 async function saveYaml(fpath, data) {
@@ -125,26 +155,55 @@ export const saveBuilds = builds => {
 /** @returns {Promise<import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>>} */
 export const loadBuilds = () => loadGeneratedYaml('builds')
 
+/** @returns {Promise<import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>>} */
+export const loadTranslationReferenceBuilds = () => loadYaml(TRANSLATED_BUILDS_REF_FPATH)
+
 /** @param {import('#lib/parsing/helperteam/types').ChangelogsTable} builds */
 export const saveBuildChangelogs = builds => saveGeneratedYaml('build_changelogs', builds)
 /** @returns {Promise<import('#lib/parsing/helperteam/types').ChangelogsTable>} */
 export const loadBuildChangelogs = () => loadGeneratedYaml('build_changelogs')
 
-/** @param {import('#lib/parsing/helperteam/types').BuildInfo<'multilang'>} builds */
-export async function saveTranslatedBuilds(builds) {
-	const dirpath = `${TRANSLATED_DATA_DIR}/builds`
-	await fs.mkdir(`${dirpath}/characters`, { recursive: true })
-	for (const character of builds.characters)
-		await fs.writeFile(`${dirpath}/characters/${character.code}.yaml`, stringifyYaml(character))
+/**
+ * @param {import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>} refBuilds
+ * @param {import('#lib/parsing/helperteam/types').BuildInfo<'multilang'>} langBuilds
+ * @param {string[]} langs
+ */
+export async function saveTranslatedBuilds(refBuilds, langBuilds, langs) {
+	await saveYaml(TRANSLATED_BUILDS_REF_FPATH, refBuilds)
+	for (const lang of langs) {
+		const blocks = getBuildsFormattedBlocks(langBuilds)
+		const content = textBlocksToMarkdown([...blocks].map(([item, path]) => [item[lang] ?? null, path]))
+		await fs.writeFile(TRANSLATED_BUILDS_LANG_FPATH(lang), content)
+	}
 }
 /** @returns {Promise<import('#lib/parsing/helperteam/types').BuildInfo<'multilang'>>} */
 export async function loadTranslatedBuilds() {
-	const dirpath = `${TRANSLATED_DATA_DIR}/builds`
-	return {
-		characters: await Promise.all(
-			(await fs.readdir(`${dirpath}/characters`)).map(x => loadYaml(`${dirpath}/characters/${x}`)),
-		),
+	/** @type {import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>} */
+	const refBuilds = await loadYaml(TRANSLATED_BUILDS_REF_FPATH)
+	const langBuilds = buildsConvertLangMode(refBuilds, 'multilang', () => ({}))
+
+	const langs = (await fs.readdir(TRANSLATED_BUILDS_DIR))
+		.filter(x => x.endsWith('.md'))
+		.map(x => x.slice(0, -3))
+
+	const langPath2block = new Map()
+	for (const lang of langs) {
+		const text = await fs.readFile(TRANSLATED_BUILDS_LANG_FPATH(lang), { encoding: 'utf-8' })
+		for (const [block, path] of textBlocksFromMarkdown(text)) {
+			langPath2block.set(lang + '|' + path, block)
+		}
 	}
+
+	for (const [langBlock, path] of getBuildsFormattedBlocks(langBuilds)) {
+		for (const lang of langs) {
+			const block = langPath2block.get(lang + '|' + path)
+			if (block !== undefined) langBlock[lang] = block
+		}
+		const foundLangs = Object.keys(langBlock)
+		if (foundLangs.length !== langs.length && foundLangs.length !== 0)
+			throw Error(`wrong langs: expected ${langs}, got ${foundLangs}`)
+	}
+	return langBuilds
 }
 
 /** @param {import('#lib/parsing').Code2CharacterData} characters */

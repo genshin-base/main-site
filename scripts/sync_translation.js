@@ -265,7 +265,7 @@ async function download() {
 	}
 
 	info(`saving...`)
-	await saveTranslatedBuilds(langBuilds)
+	await saveTranslatedBuilds(builds, langBuilds, langs)
 
 	info(`done.`)
 }
