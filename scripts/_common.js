@@ -132,7 +132,7 @@ export function textBlocksFromMarkdown(text) {
 
 const yamlCache = new Map()
 /** @param {string} fpath */
-async function saveYaml(fpath, data) {
+export async function saveYaml(fpath, data) {
 	yamlCache.set(fpath, data)
 	await fs.mkdir(dirname(fpath), { recursive: true })
 	await fs.writeFile(fpath, stringifyYaml(data))

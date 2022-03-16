@@ -267,6 +267,10 @@ async function download() {
 	info(`saving...`)
 	await saveTranslatedBuilds(builds, langBuilds, langs)
 
+	// await saveYaml('a.yaml', langBuilds)
+	// const t = await loadTranslatedBuilds()
+	// await saveYaml('b.yaml', t)
+
 	info(`done.`)
 }
 
