@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url'
 import { dirname } from 'path'
 import { stringifyString, YAMLError } from 'yaml/util'
 import { GI_MAP_CODES } from '#lib/genshin.js'
-import { error } from '#lib/utils/logs.js'
+import { error, warn } from '#lib/utils/logs.js'
 import { textNodesFromMarkdown, textNodesToMarkdown } from '#lib/parsing/helperteam/text.js'
 import { buildsConvertLangMode, getBuildsFormattedBlocks } from '#lib/parsing/helperteam/index.js'
 import { objForEach } from '#lib/utils/collections.js'
@@ -119,13 +119,36 @@ export function textBlocksToMarkdown(blocks) {
 }
 /**
  * @param {string} text
- * @returns {[import('#lib/parsing/helperteam/text').CompactTextParagraphs, string][]}
+ * @returns {{
+ *   block: import('#lib/parsing/helperteam/text').CompactTextParagraphs,
+ *   src: string,
+ *   path: string,
+ * }[]}
  */
 export function textBlocksFromMarkdown(text) {
 	const chunks = text.split(/(?:^|\n)# ===(.*?)===\n/g)
 	const res = /**@type {ReturnType<typeof textBlocksFromMarkdown>}*/ ([])
+	if (chunks[0].trim() !== '') warn(`markdown text blocks: dropping prefix ${JSON.stringify(chunks[0])}`)
+
+	const replaces =
+		/**@type {{item:ReturnType<typeof textBlocksFromMarkdown>[number], fromPath:string}[]}*/ ([])
 	for (let i = 1; i < chunks.length; i += 2) {
-		res.push([textNodesFromMarkdown(chunks[i + 1]), chunks[i].trim()])
+		const src = chunks[i + 1]
+		/**@type {ReturnType<typeof textBlocksFromMarkdown>[number]}*/
+		const item = { block: '', src, path: chunks[i].trim() }
+
+		const m = src.match(/`replace-from:(.+?)`/)
+		if (m) {
+			replaces.push({ item, fromPath: m[1] })
+		} else {
+			item.block = textNodesFromMarkdown(src)
+		}
+		res.push(item)
+	}
+	for (const { item, fromPath } of replaces) {
+		const src = res.find(x => x.path === fromPath)
+		if (!src) throw new Error(`can not find block '${fromPath}' for replacement in '${item.path}'`)
+		item.block = textNodesFromMarkdown(src.src)
 	}
 	return res
 }
@@ -182,28 +205,34 @@ export async function loadTranslatedBuilds() {
 	const refBuilds = await loadYaml(TRANSLATED_BUILDS_REF_FPATH)
 	const langBuilds = buildsConvertLangMode(refBuilds, 'multilang', () => ({}))
 
-	const langs = (await fs.readdir(TRANSLATED_BUILDS_DIR))
-		.filter(x => x.endsWith('.md'))
-		.map(x => x.slice(0, -3))
-
+	const lang2blocks = await loadTranslatedBuildsBlocks()
 	const langPath2block = new Map()
-	for (const lang of langs) {
-		const text = await fs.readFile(TRANSLATED_BUILDS_LANG_FPATH(lang), { encoding: 'utf-8' })
-		for (const [block, path] of textBlocksFromMarkdown(text)) {
+	for (const [lang, blocks] of Object.entries(lang2blocks)) {
+		for (const { block, path } of blocks) {
 			langPath2block.set(lang + '|' + path, block)
 		}
 	}
 
 	for (const [langBlock, path] of getBuildsFormattedBlocks(langBuilds)) {
-		for (const lang of langs) {
+		for (const lang in lang2blocks) {
 			const block = langPath2block.get(lang + '|' + path)
 			if (block !== undefined) langBlock[lang] = block
 		}
-		const foundLangs = Object.keys(langBlock)
-		if (foundLangs.length !== langs.length && foundLangs.length !== 0)
-			throw Error(`wrong langs: expected ${langs}, got ${foundLangs}`)
 	}
 	return langBuilds
+}
+export async function loadTranslatedBuildsBlocks() {
+	const langs = (await fs.readdir(TRANSLATED_BUILDS_DIR))
+		.filter(x => x.endsWith('.md'))
+		.map(x => x.slice(0, -3))
+
+	/** @type {Record<string, ReturnType<typeof textBlocksFromMarkdown>>} */
+	const lang2blocks = {}
+	for (const lang of langs) {
+		const text = await fs.readFile(TRANSLATED_BUILDS_LANG_FPATH(lang), { encoding: 'utf-8' })
+		lang2blocks[lang] = textBlocksFromMarkdown(text)
+	}
+	return lang2blocks
 }
 
 /** @param {import('#lib/parsing').Code2CharacterData} characters */

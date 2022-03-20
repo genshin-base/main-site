@@ -1,31 +1,49 @@
 #!/usr/bin/env node
 import { promises as fs } from 'fs'
 import { getBuildsFormattedBlocks } from '#lib/parsing/helperteam/index.js'
-import { error, info } from '#lib/utils/logs.js'
+import { error, fatal, info } from '#lib/utils/logs.js'
 import { parseArgs, relativeToCwd } from '#lib/utils/os.js'
 import {
 	CACHE_DIR,
 	GENERATED_DATA_DIR,
+	loadArtifacts,
 	loadBuilds,
+	loadItems,
+	loadTranslatedBuildsBlocks,
 	loadTranslationReferenceBuilds,
+	loadWeapons,
 	textBlocksToMarkdown,
 	TRANSLATED_BUILDS_LANG_FPATH,
 	TRANSLATED_BUILDS_REF_FPATH,
 } from './_common.js'
+import { walkTextNodes } from '#lib/parsing/helperteam/text.js'
 
 const args = parseArgs()
+const needHelp = args['--help'] || args['-h']
+const thisScript = `node ${relativeToCwd(process.argv[1])}`
 
 function printUsage() {
 	console.log(`Usage:
-  node ${relativeToCwd(process.argv[1])} --langs=en,ru [-h|--help]`)
+  ${thisScript} <${Object.keys(commands).join('|')}> [-h|--help]`)
 }
 
-if (args['--help'] || args['-h']) {
-	printUsage()
-	process.exit(2)
-}
+const commands = { changes, verify }
 
 ;(async () => {
+	if (args['cmd'] in commands) {
+		await commands[args['cmd']]()
+	} else {
+		printUsage()
+		process.exit(needHelp ? 2 : 1)
+	}
+})().catch(fatal)
+
+async function changes() {
+	if (needHelp) {
+		console.log(`Usage:
+  ${thisScript} changes --langs=en,ru [-h|--help]`)
+		process.exit(2)
+	}
 	if (!args['--langs']) throw new Error('--langs are required')
 	const langs = args['--langs'].split(',')
 
@@ -39,9 +57,8 @@ if (args['--help'] || args['-h']) {
 	const curBuilds = await loadBuilds()
 	const refBuilds = await loadTranslationReferenceBuilds()
 
-	const charCode2index = new Map(curBuilds.characters.map((x, i) => [x.code, i]))
-	const charSortFunc = (a, b) => (charCode2index.get(a.code) ?? 999) - (charCode2index.get(b.code) ?? 999)
-	refBuilds.characters.sort(charSortFunc)
+	curBuilds.characters.sort((a, b) => a.code.localeCompare(b.code))
+	refBuilds.characters.sort((a, b) => a.code.localeCompare(b.code))
 
 	info('saving texts...')
 	await fs.writeFile(curBuildsTextFPath, textBlocksToMarkdown([...getBuildsFormattedBlocks(curBuilds)]))
@@ -54,6 +71,8 @@ if (args['--help'] || args['-h']) {
 	info('  ' + relativeToCwd(curBuildsTextFPath))
 	info('apply changes to:')
 	for (const lang of langs) info('  ' + relativeToCwd(TRANSLATED_BUILDS_LANG_FPATH(lang)))
+	info('varify the result:')
+	info(`  ${thisScript} verify --ref=generated`)
 	info(
 		`and copy ${relativeToCwd(`${GENERATED_DATA_DIR}/builds.yaml`)}` +
 			` to ${relativeToCwd(TRANSLATED_BUILDS_REF_FPATH)}`,
@@ -63,4 +82,90 @@ if (args['--help'] || args['-h']) {
 	info(`  code --diff ${relativeToCwd(refBuildsTextFPath)} ${relativeToCwd(curBuildsTextFPath)}`)
 	info('  code ' + langs.map(lang => relativeToCwd(TRANSLATED_BUILDS_LANG_FPATH(lang))).join(' '))
 	info('  split window with Ctrl+\\')
-})().catch(error)
+}
+
+async function verify() {
+	if (needHelp) {
+		console.log(`Usage:
+  ${thisScript} verify [--ref=generated] [-h|--help]`)
+		process.exit(2)
+	}
+
+	const refBuilds =
+		args['--ref'] === 'generated' ? await loadBuilds() : await loadTranslationReferenceBuilds()
+	const lang2blocks = await loadTranslatedBuildsBlocks()
+
+	const langs = Object.keys(lang2blocks)
+	info(`found langs: ${langs}`)
+
+	// дублирование блоков
+	const lang2blockMaps = Object.fromEntries(langs.map(x => [x, new Map()]))
+	for (const [lang, blocks] of Object.entries(lang2blocks)) {
+		for (const { block, path } of blocks) {
+			if (lang2blockMaps[lang].has(path))
+				error(`texts: ${lang}: block '${path}' appears multiple times`)
+			lang2blockMaps[lang].set(path, block)
+		}
+	}
+
+	// полупереведённые блоки (есть не для каждого языка)
+	for (const [, path] of getBuildsFormattedBlocks(refBuilds)) {
+		const missingLangs = langs.filter(x => !lang2blockMaps[x].has(path))
+		if (missingLangs.length > 0 && missingLangs.length < langs.length) {
+			error(`texts: block '${path}': not found for langs: ${missingLangs}`)
+		}
+	}
+
+	// неиспользованные блоки
+	for (const [lang, blocks] of Object.entries(lang2blocks)) {
+		const unusedPaths = new Set(blocks.map(x => x.path))
+		for (const [, path] of getBuildsFormattedBlocks(refBuilds)) {
+			unusedPaths.delete(path)
+		}
+		for (const path of unusedPaths) {
+			error(`texts: ${lang}: block '${path}': is unused`)
+		}
+	}
+
+	const artifacts = await loadArtifacts()
+	const weapons = await loadWeapons()
+	const items = await loadItems()
+
+	// for (const [lang, blocks] of Object.entries(lang2blocks)) {
+	// 	for (const { src, path } of blocks) {
+	// 		const linkRe = /(?<!\\)\[(.+?)(?<!\\)\]\((.+?)\)/g
+	// 		let res
+	// 		while ((res = linkRe.exec(src)) !== null) {
+	// 			const [, text, href] = res
+	// 		}
+	// 	}
+	// }
+
+	// корректность кодов в ссылках на предметы
+	for (const [lang, blocks] of Object.entries(lang2blocks)) {
+		for (const { block, path } of blocks) {
+			for (const node of walkTextNodes(block)) {
+				if (typeof node !== 'string' && 'a' in node) {
+					if (node.href.trim().startsWith('#')) {
+						const linkStr = `[${node.a}](${node.href})`
+						let m
+						if ((m = node.href.match(/#weapon:(.*)/))) {
+							if (!(m[1] in weapons))
+								error(`texts: ${lang}: block '${path}': wrong weapon code: ${linkStr}`)
+						} else if ((m = node.href.match(/#artifact:(.*)/))) {
+							if (!(m[1] in artifacts))
+								error(`texts: ${lang}: block '${path}': wrong artifact code: ${linkStr}`)
+						} else if ((m = node.href.match(/#item:(.*)/))) {
+							if (!(m[1] in items))
+								error(`texts: ${lang}: block '${path}': wrong item code: ${linkStr}`)
+						} else {
+							error(`texts: ${lang}: block '${path}': wrong special link: ${linkStr}`)
+						}
+					}
+				}
+			}
+		}
+	}
+
+	info('done.')
+}

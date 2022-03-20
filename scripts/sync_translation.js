@@ -2,7 +2,7 @@
 import { promises as fs } from 'fs'
 import { loadSpreadsheet, updateSpreadsheet } from '#lib/google.js'
 import { json_extractText, json_getText, json_packText } from '#lib/parsing/helperteam/json.js'
-import { error, info, warn } from '#lib/utils/logs.js'
+import { error, fatal, info, warn } from '#lib/utils/logs.js'
 import {
 	BASE_DIR,
 	CACHE_DIR,
@@ -41,7 +41,7 @@ const commands = { upload, download }
 		printUsage()
 		process.exit(needHelp ? 2 : 1)
 	}
-})().catch(error)
+})().catch(fatal)
 
 async function upload() {
 	if (needHelp) {
@@ -154,7 +154,9 @@ async function download() {
 	info(`reading generated build...`)
 	/** @type {import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>} */
 	const builds = await parseYaml(await fs.readFile(baseFPath, 'utf-8'))
-	const langBuilds = buildsConvertLangMode(builds, 'multilang', () => ({}))
+	const langBuilds = buildsConvertLangMode(builds, 'multilang', block =>
+		block === null ? {} : Object.fromEntries(langs.map(lang => [lang, block])),
+	)
 
 	info(`reading items data...`)
 	/**
@@ -265,6 +267,7 @@ async function download() {
 	}
 
 	info(`saving...`)
+	langBuilds.characters.sort((a, b) => a.code.localeCompare(b.code)) //сортировка по коду для удобства поиска
 	await saveTranslatedBuilds(builds, langBuilds, langs)
 
 	// await saveYaml('a.yaml', langBuilds)
