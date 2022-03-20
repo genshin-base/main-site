@@ -31,7 +31,7 @@ Equipping this weapon will decrease Albedo's own damage significantly but he is 
 [Husk of Opulent Dreams (4)](#artifact:husk-of-opulent-dreams)<br>
 Due to Albedo's skill snapshotting upon cast, you need to either wait \~12 seconds before starting a domain/fight to reach max stacks or recast his skill to benefit from the DEF and Geo DMG bonus provided by the 4 piece set effect.
 
-[Tenacity of the Milelith (4)](#artifact:tenacity-of-the-millelith)<br>
+[Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith)<br>
 This set is used for the 4 piece set effect which has good uptime on Albedo. Worth noting that this set decreases your Elemental Skill damage by a lot if compared to the other offensive sets.
 
 [Noblesse Oblige (4)](#artifact:noblesse-oblige)<br>
@@ -980,7 +980,6 @@ Wanderer's Troupe increases the Charged Attack by another 35% Damage Bonus. It c
 Kokomi's Elemental Burst dynamically alters her skill's damage, this means that you cannot use her Burst to snapshot the buff onto the Skill and swap out.<br>
 
 
-
 # === characters.#kokomi.roles.#support.notes ===
 
 Support Kokomi focuses on just using her Elemental Burst before her Elemental Skill's duration ends to refresh her skill duration. This allows 100% uptime on Hydro application from her Elemental Skill for Freeze / Electro-charge teams.
@@ -1020,7 +1019,6 @@ At **\[C1\]:** N3D
 \*NA = Normal Attack, D = Dash
 
 N3D might result in a loss of Beidou Stormbreaker hits (DPS loss), and as such is only recommended in a Vaporize comp where the added Hydro application is favoured.
-
 
 
 # === characters.#kokomi.roles.#dps.notes ===
@@ -1135,7 +1133,6 @@ These options prioritize Lisa's Elemental Burst uptime as a defense shredding to
 # === characters.#mona.roles.#dps.tips ===
 
 <br>
-
 
 
 # === characters.#mona.roles.#dps.notes ===
@@ -1370,7 +1367,6 @@ This set acts as a low investment support oriented set. Raiden is an excellent T
 # === characters.#razor.roles.#dps.tips ===
 
 Razor's EB grants you an Electro Status when you basic attack while burst is in-effect, that means it can be used for status-cleansing (no particular effective element).  Can only be done on himself.<br>
-
 
 
 # === characters.#razor.roles.#dps.notes ===
@@ -1838,6 +1834,7 @@ Prioritize Viridescent Venerer over the other 2 +18% ATK sets if there are exter
 
 Anemo DMG% goblets are recommended for Xiao. ATK% goblets serve as a good alternative for him.
 
+
 # === characters.#xingqiu.credits ===
 
 [In-depth Guide](https://docs.google.com/document/d/1RQI5IjLZKqsVhQzRDr7FTYgQX66jKB28PnwoZVlQ4_k/edit) by Quincy#6965
@@ -1967,41 +1964,56 @@ If shield support, ER takes priority over ATK%
 
 # === characters.#yae-miko.roles.#off-field_dps.artifacts.notes ===
 
-\~= +18% ATK set (2) / Thundering Fury (2) / Emblem of Severed Fate (2)\* \[Choose Two\]
+\~= [+18% ATK set (2)](#artifact:18%-atk) / [Thundering Fury (2)](#artifact:thundering-fury) / [Emblem of Severed Fate (2)](#artifact:emblem-of-severed-fate)\* \[Choose Two\]
 
 
 # === characters.#yae-miko.roles.#off-field_dps.tips ===
 
 Start your rotations with Yae's Elemental Skill to amplify her Elemental Burst damage.
 
-Burst combo:<br>
-- Skill > Skill > Skill > Burst > Skill > Skill > Skill
+**Burst combo**<br>
+Skill > Skill > Skill > Burst > Skill > Skill > Skill
 
-Take note that **none of Yae Miko's abilities snapshot.**
+Take note that none of Yae Miko's abilities snapshot.
 
 
 # === characters.#yae-miko.roles.#off-field_dps.notes ===
 
-**Regarding Weapon Choices:**<br>
-**Solar Pearl:** This weapon benefits a lot from refines and attack buffs like Bennett. **\[R5\] Solar Pearl without buffs,** or a **low refine Solar Pearl with Bennett buff** can perform similar to Skyward Atlas. Note that you should do a Normal Attack when you swap in and before you swap out of Yae Miko to keep good uptime on the passive.<br>
-**The Widsith:** Despite Yae's A4 bonus, the EM buff is bad. **Over many rotations Widsith will be worse than equal refinement Solar Pearl regardless of buff, and can be worse than Oathsworn if you only get the EM buff.** If you are trying for one rotation speedruns and are willing to reset till you get the DMG% or ATK buff, **this weapon ranks much higher** and can outperform the 5 stars. Otherwise, it is recommended to use the other options above Widsith for more consistent damage.<br>
-**Hakushin Ring:** This weapon's passive can buff your other team members, which **may be more beneficial than Yae Miko's personal damage** depending on the team and rotation used. Note that the passive cannot be triggered when off-field.
+**Regarding Weapon Choices**
 
-**Regarding Artifact Choices:**<br>
-**Emblem of Severed Fate (4):** This set works best for Yae in **multi-target scenarios where her Elemental Burst hits multiple enemies.** This set also **provides more value** if she's used WITHOUT Raiden **(due to the higher ER requirements).**<br>
-**+18% ATK set (2) / Thundering Fury (2) / Emblem of Severed Fate (2):** Using a combination of these artifact sets works best for Yae in **single-target scenarios.** These also **provide more value** if she's paired WITH Raiden **(due to lower ER requirements).** <br>
-**Thundersoother (4):** Assuming you are able to maintain 100% uptime on its passive, this is Yae's BiS set. This set works best for Yae in Electro-charged teams.<br>
-**Tenacity of the Milelith (4):** This set trades Yae's personal damage for a team wide 20% ATK buff. It is **not recommended to specifically farm this set for Yae.** Only use this if you already have good pieces from farming Pale Flame for your Physical DPSes.
+**[Solar Pearl](#weapon:solar-pearl)**<br>
+This weapon benefits a lot from refines and attack buffs like Bennett. \[R5\] Solar Pearl without buffs, or a low refine Solar Pearl with Bennett buff can perform similar to [Skyward Atlas](#weapon:skyward-atlas). Note that you should do a Normal Attack when you swap in and before you swap out of Yae Miko to keep good uptime on the passive.
 
-**Regarding Talent Priority:**  Do note that Yae's Elemental Burst does more damage than her Elemental Skill when it hits multiple enemies.
+**[The Widsith](#weapon:the-widsith)**<br>
+Despite Yae's A4 bonus, the EM buff is bad. **Over many rotations Widsith will be worse than equal refinement [Solar Pearl](#weapon:solar-pearl) regardless of buff, and can be worse than [Oathsworn](#weapon:oathsworn-eye) if you only get the EM buff.** If you are trying for one rotation speedruns and are willing to reset till you get the DMG% or ATK buff, **this weapon ranks much higher** and can outperform the 5 stars. Otherwise, it is recommended to use the other options above Widsith for more consistent damage.
 
-Big thanks to **Fob#6835** for helping us with [the ](https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994)**[weapon/artifact rankings.](https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994)**
+**[Hakushin Ring](#weapon:hakushin-ring)**<br>
+This weapon's passive can buff your other team members, which **may be more beneficial than Yae Miko's personal damage** depending on the team and rotation used. Note that the passive cannot be triggered when off-field.
+
+**Regarding Artifact Choices**
+
+**[Emblem of Severed Fate (4)](#artifact:emblem-of-severed-fate)**<br>
+This set works best for Yae in **multi-target scenarios** where her Elemental Burst hits multiple enemies. This set also provides more value if she's used WITHOUT Raiden (due to the higher ER requirements).
+
+**[+18% ATK set (2)](#artifact:18%-atk) / [Thundering Fury (2)](#artifact:thundering-fury) / [Emblem of Severed Fate (2)](#artifact:emblem-of-severed-fate)**<br>
+Using a combination of these artifact sets works best for Yae in **single-target scenarios.** These also **provide more value** if she's paired WITH Raiden (due to lower ER requirements).
+
+**[Thundersoother (4)](#artifact:thundersoother)**<br>
+Assuming you are able to maintain 100% uptime on its passive, this is Yae's BiS set. This set works best for Yae in Electro-charged teams.
+
+**[Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith)**<br>
+This set trades Yae's personal damage for a team wide 20% ATK buff. It is **not recommended to specifically farm this set for Yae.** Only use this if you already have good pieces from farming Pale Flame for your Physical DPSes.
+
+**Regarding Talent Priority**
+
+Do note that Yae's Elemental Burst does more damage than her Elemental Skill when it hits multiple enemies.
+
+Big thanks to _Fob#6835_ for helping us with [the weapon/artifact rankings.](https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994)
 
 
 # === characters.#yanfei.roles.#dps.tips ===
 
 Yanfei's Ascension 4 Talent does a second hit after a Crit Charge Attack. This scales 80% of your ATK and can trigger reactions as well due to having a separate internal cooldown on its pyro application. <br>
-
 
 
 # === characters.#yanfei.roles.#dps.notes ===

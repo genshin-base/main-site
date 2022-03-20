@@ -979,7 +979,6 @@ Note: Since Keqing uses burst to get an extra 15% crit, it's much better in leve
 Взрыв стихии Кокоми увеличивает урон её Элементального навыка, но только тогда, когда сама Кокоми находится на поле боя.<br>
 
 
-
 # === characters.#kokomi.roles.#support.notes ===
 
 Саппорт Кокоми использует Взрыв стихии только для того, чтобы продлить время действия её Элементального навыка. Это позволяет всё время держать медузу на поле боя и стабильно накладывать Гидро на противников.
@@ -1135,11 +1134,9 @@ EM DPS Lisa's Talent Levels are not a necessity
 <br>
 
 
-
 # === characters.#mona.roles.#dps.notes ===
 
 Этот билд лучше работает на \[С2\]. Некоторые 4 звездочные персонажи могут выдавать больший урон, чем ДПС Мона, поэтому Мона лучше как доп. ДПС или героиня поддержки.<br>
-
 
 
 # === characters.#mona.roles.#nuke.tips ===
@@ -1155,7 +1152,6 @@ EM DPS Lisa's Talent Levels are not a necessity
 # === characters.#mona.roles.#nuke.notes ===
 
 Элементальный навык Моны отвлекает врагов и накладывает на них Гидро, её Взрыв стихии наносит огромный урон и навешивает дебафф на противников, а также лишает маленьких врагов возможности двигаться, если разница уровня Моны и врага меньше 20.<br>
-
 
 
 # === characters.#mona.roles.#freeze_support.mainStats.notes ===
@@ -1258,7 +1254,6 @@ Offensive stats aren't needed, just stack ER for comfortable Elemental Burst upt
 
 Оптимальная последовательность атак: три-четыре обычных атаки, затем прыжок или сприт, чтобы начать серию атак сначала
 <br>
-
 
 
 # === characters.#noelle.roles.#dps.notes ===
@@ -1797,7 +1792,6 @@ _**Рекомендуемый порог Восстановления энерг
 Следует обратить внимание, что у Сяо много собственных баффов на Силу атаки, и комплект артефактов на +18 Силы атаки дает ему не так много. Поэтому можно пренебречь бонусом комплекта и собрать любые артефакты с хорошими допстатами.<br>
 
 
-
 # === characters.#xiao.roles.#dps.tips ===
 
 **Оптимальная последовательность атак Сяо**<br>
@@ -1834,6 +1828,7 @@ _**Рекомендуемый порог Восстановления энерг
 **О главстате артефактов**
 
 Для Сяо рекомендуются кубки с бонусом процента Анемо урона. Кубки с процентом Атаки будут неплохой альтернативой.
+
 
 # === characters.#xingqiu.credits ===
 
@@ -1960,41 +1955,56 @@ Prioritize Energy Recharge first if you can't burst off cooldown
 
 # === characters.#yae-miko.roles.#off-field_dps.artifacts.notes ===
 
-\~= +18% ATK set (2) / Thundering Fury (2) / Emblem of Severed Fate (2)\* \[Choose Two\]
+\~= [18% Силы атаки (2)](#artifact:18%-atk) / [Громогласный рёв ярости (2)](#artifact:thundering-fury) / [Эмблема рассечённой судьбы (2)](#artifact:emblem-of-severed-fate)\* \[Выберите два\]
 
 
 # === characters.#yae-miko.roles.#off-field_dps.tips ===
 
-Start your rotations with Yae's Elemental Skill to amplify her Elemental Burst damage.
+Перед Взрывом стихии Яэ Мико нужно трижды использовать свой Элементальный навык, чтобы увеличить урон Взрыва.
 
-Burst combo:<br>
-- Skill > Skill > Skill > Burst > Skill > Skill > Skill
+**Комбо Взрыва стихии**<br>
+Элементальный навык (ЭН)> ЭН > ЭН > Взрыв стихии > ЭН > ЭН > ЭН
 
-Take note that **none of Yae Miko's abilities snapshot.**
+Обратите внимание на то, что ни одна из способностей Яэ Мико не снапшотает.
 
 
 # === characters.#yae-miko.roles.#off-field_dps.notes ===
 
-**Regarding Weapon Choices:**<br>
-**Solar Pearl:** This weapon benefits a lot from refines and attack buffs like Bennett. **\[R5\] Solar Pearl without buffs,** or a **low refine Solar Pearl with Bennett buff** can perform similar to Skyward Atlas. Note that you should do a Normal Attack when you swap in and before you swap out of Yae Miko to keep good uptime on the passive.<br>
-**The Widsith:** Despite Yae's A4 bonus, the EM buff is bad. **Over many rotations Widsith will be worse than equal refinement Solar Pearl regardless of buff, and can be worse than Oathsworn if you only get the EM buff.** If you are trying for one rotation speedruns and are willing to reset till you get the DMG% or ATK buff, **this weapon ranks much higher** and can outperform the 5 stars. Otherwise, it is recommended to use the other options above Widsith for more consistent damage.<br>
-**Hakushin Ring:** This weapon's passive can buff your other team members, which **may be more beneficial than Yae Miko's personal damage** depending on the team and rotation used. Note that the passive cannot be triggered when off-field.
+**О выборе оружия**
 
-**Regarding Artifact Choices:**<br>
-**Emblem of Severed Fate (4):** This set works best for Yae in **multi-target scenarios where her Elemental Burst hits multiple enemies.** This set also **provides more value** if she's used WITHOUT Raiden **(due to the higher ER requirements).**<br>
-**+18% ATK set (2) / Thundering Fury (2) / Emblem of Severed Fate (2):** Using a combination of these artifact sets works best for Yae in **single-target scenarios.** These also **provide more value** if she's paired WITH Raiden **(due to lower ER requirements).** <br>
-**Thundersoother (4):** Assuming you are able to maintain 100% uptime on its passive, this is Yae's BiS set. This set works best for Yae in Electro-charged teams.<br>
-**Tenacity of the Milelith (4):** This set trades Yae's personal damage for a team wide 20% ATK buff. It is **not recommended to specifically farm this set for Yae.** Only use this if you already have good pieces from farming Pale Flame for your Physical DPSes.
+**[Солнечная жемчужина](#weapon:solar-pearl)**<br>
+Урон этого оружия сильно зависит от Ранга пробуждения и баффов атаки, например, баффа Беннета. Солнечная жемчужина может быть сравнима по урону с [Небесным атласом](#weapon:skyward-atlas) на \[Р5\] без баффов атаки, или наоборот, на низком Ранге пробуждения, но с баффами атаки, например, от Беннета. Следует не забывать использовать обычную атаку при переключении с Яэ и на Яэ, чтобы поддерживать бафф бонуса оружия.
 
-**Regarding Talent Priority:**  Do note that Yae's Elemental Burst does more damage than her Elemental Skill when it hits multiple enemies.
+**[Песнь странника](#weapon:the-widsith)**<br>
+Несмотря на талант от возвышения Яэ на 60 уровне, бонус Мастерства стихий этого оружия плох для неё. Песнь странника будет хуже, чем [Солнечная жемчужина](#weapon:solar-pearl) с тем же Рангом пробуждения, и хуже, чем [Око клятвы](#weapon:oathsworn-eye), в случае баффа на Мастерство стихий. Если же испрользовать это оружие только с бонусами на урон, сбрасывая бонус на Мастерство стихий, то это оружие может превзойти пятизвездочное. В целом, рекомендуется использовать другое оружие для более стабильного нанесения урона.
 
-Big thanks to **Fob#6835** for helping us with [the ](https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994)**[weapon/artifact rankings.](https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994)**
+**[Кольцо Хакусин](#weapon:hakushin-ring)**<br>
+Пассивная способность этого оружия может баффать других членов отряда, что в некоторых отрядах может быть предпочтительнее, чем личный урон Яэ Мико. Обратите внимание на то, что пассивка не может быть активирована из кармана.
+
+**О выборе артефактов**
+
+**[Эмблема рассечённой судьбы (4)](#artifact:emblem-of-severed-fate)**<br>
+Этот комплект лучше всего подходит для ситуации, когда Взрыв стихии Яэ попадает одновременно по нескольким противникам. Также, этот комплект лучше подходит для игры без Райдэн в отряде, из-за большей необходимости в Восстановлении энергии.
+
+**[18% Силы атаки (2)](#artifact:18%-atk) / [Громогласный рёв ярости (2)](#artifact:thundering-fury) / [Эмблема рассечённой судьбы (2)](#artifact:emblem-of-severed-fate)**<br>
+Набор этих артефактов лучше подходит для ситуации, когда Яэ сражается с одним противником. Также, этот набор лучше подходит для игры вместе с Райдэн в отряде благодаря  меньшей необходимости в Восстановлении энергии.
+
+**[Усмиряющий гром (4)](#artifact:thundersoother)**<br>
+Если все время поддерживать действие бонуса комплекта, то это лучшие артефакты для Яэ. Лучше всего этот комплект подходит для Яэ в командах построенных через реакцию Заряжен.
+
+**[Стойкость Миллелита (4)](#artifact:tenacity-of-the-millelith)**<br>
+С этим комплектом Яэ теряет в личном уроне, но зато даёт  20% бонус Атаки всему отряду. Не рекомендуется собирать этот комплект специально для Яэ, и его использовать можно только если уже есть хорошие артефакты с этого подземелья.
+
+**О приоритете талантов**
+
+Обратите внимание на то, что Взрыв стихии наносит больше урона, чем Элементальный навык при битве с группой врагов.
+
+Спасибо _Fob#6835_ за помощь в составлении [рейтинга артефактов и оружия.](https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994)
 
 
 # === characters.#yanfei.roles.#dps.tips ===
 
 Пассивное умение 60 уровня Янь Фэй наносит второй удар после крита Заряженной атакой. Урон этого удара равен 80% Силы атаки и тоже может вызывать реакцию, благодаря собственному времени отката наложения Пиро. <br>
-
 
 
 # === characters.#yanfei.roles.#dps.notes ===
