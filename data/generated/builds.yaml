@@ -5669,9 +5669,9 @@ characters:
               - " for helping us with "
               - a: "the "
                 href: https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994
-              - a:
-                  b: weapon/artifact rankings.
-                href: https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994
+              - b:
+                  a: weapon/artifact rankings.
+                  href: https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994
     credits: null
   - code: xingqiu
     elementCode: hydro

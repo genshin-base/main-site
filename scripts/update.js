@@ -15,7 +15,7 @@ import { makeRecentChangelogsTable } from '#lib/parsing/helperteam/changelogs.js
 import { trigramSearcherFromStrings } from '#lib/trigrams.js'
 import { createHash } from 'crypto'
 import { exists, parseArgs, relativeToCwd } from '#lib/utils/os.js'
-import { error, fatal, info, progress, warn } from '#lib/utils/logs.js'
+import { fatal, info, progress, warn } from '#lib/utils/logs.js'
 import { checkHelperteamFixesUsage, clearHelperteamFixesUsage } from '#lib/parsing/helperteam/fixes.js'
 import { checkHoneyhunterFixesUsage, clearHoneyhunterFixesUsage } from '#lib/parsing/honeyhunter/fixes.js'
 import {
@@ -206,6 +206,12 @@ const fixes = {
 					return true
 				},
 			],
+		},
+		descriptionLangFix(text, lang) {
+			if (lang === 'ru') {
+				text = text.replace(/\bHP\b/g, 'ХП')
+			}
+			return text
 		},
 	},
 	/** @type {import('#lib/parsing/mihoyo/fixes').MihoyoFixes} */

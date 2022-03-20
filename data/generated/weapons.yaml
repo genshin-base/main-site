@@ -157,7 +157,7 @@ aquila-favonia:
       equal to  100% of ATK and dealing  200% of ATK as DMG to surrounding
       opponents. This effect can only occur once every 15s."
     ru: Увеличивает силу атаки на  20%. При получении урона пробуждается душа Сокола
-      Запада, несущего знамя сопротивления. Восстанавливает HP, равное  100% от
+      Запада, несущего знамя сопротивления. Восстанавливает ХП, равное  100% от
       силы атаки, и наносит  200% урона окружающим врагам. Может возникнуть раз
       в 15 сек.
   materialCodes:
@@ -799,7 +799,7 @@ everlasting-moonglow:
       Elemental Burst, Normal Attacks that hit opponents will restore 0.6
       Energy. Energy can be restored this way once every 0.1s.
     ru: Увеличивает бонус лечения на  10%, а также повышает урон обычной атаки
-      на  1% от макс. HP экипированного этим оружием персонажа. В течение 12
+      на  1% от макс. ХП экипированного этим оружием персонажа. В течение 12
       сек. после использования взрыва стихии попадания обычной атакой по
       противнику восстанавливают 0,6 ед. энергии. Энергию можно восстановить не
       чаще, чем раз в 0,1 сек.
@@ -985,7 +985,7 @@ ferrous-shadow:
   specialAbility:
     en: When HP falls below  70%, increases Charged Attack DMG by  30% and Charged
       Attacks become harder to interrupt.
-    ru: При HP ниже  70% врагу становится труднее прервать заряженную атаку. Также
+    ru: При ХП ниже  70% врагу становится труднее прервать заряженную атаку. Также
       увеличивает урон заряженной атаки на  30%.
   materialCodes:
     - scattered-piece-of-decarabians-dream
@@ -1212,7 +1212,7 @@ harbinger-of-dawn:
     max: 46
   specialAbility:
     en: When HP is above 90%, increases CRIT Rate by  14%.
-    ru: Увеличивает шанс крит. попадания на  14% при HP выше 90%.
+    ru: Увеличивает шанс крит. попадания на  14% при ХП выше 90%.
   materialCodes:
     - boreal-wolfs-nostalgia
     - ley-line-sprout
@@ -1772,7 +1772,7 @@ otherworldly-story:
     max: 39
   specialAbility:
     en: Picking up an Elemental Energy Orb/Particle recovers  1% HP.
-    ru: Подобранные элементальные сферы и частицы восстанавливают  1% HP.
+    ru: Подобранные элементальные сферы и частицы восстанавливают  1% ХП.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -1884,7 +1884,7 @@ primordial-jade-cutter:
   specialAbility:
     en: HP increased by  20%. Additionally, provides an ATK Bonus based on  1.2% of
       the wielder's Max HP.
-    ru: Увеличивает HP на  20%. Также даёт бонус атаки, равный  1,2% от макс. HP
+    ru: Увеличивает ХП на  20%. Также даёт бонус атаки, равный  1,2% от макс. ХП
       экипированного этим оружием персонажа.
   materialCodes:
     - mist-veiled-primo-elixir
@@ -1937,7 +1937,7 @@ prototype-amber:
     en: Using an Elemental Burst regenerates  4 Energy every 2s for 6s. All party
       members will regenerate  4% HP every 2s for this duration.
     ru: В течение 6 сек. после использования взрыва стихий восстанавливается  4 ед.
-      энергии каждые 2 сек., а все члены отряда восстанавливают по  4% HP каждые
+      энергии каждые 2 сек., а все члены отряда восстанавливают по  4% ХП каждые
       2 сек.
   materialCodes:
     - mist-veiled-primo-elixir
@@ -2113,7 +2113,7 @@ recurve-bow:
     max: 46
   specialAbility:
     en: Defeating an opponent restores  8% HP.
-    ru: Победа над противником восстанавливает  8% HP.
+    ru: Победа над противником восстанавливает  8% ХП.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -2832,10 +2832,10 @@ staff-of-homa:
     en: HP increased by  20%. Additionally, provides an ATK Bonus based on  0.8% of
       the wielder's Max HP. When the wielder's HP is less than 50%, this ATK
       Bonus is increased by an additional  1% of Max HP.
-    ru: Увеличивает HP на  20%. Также даёт бонус атаки, равный  0,8% от макс. HP
-      экипированного этим оружием персонажа. Когда HP экипированного этим
+    ru: Увеличивает ХП на  20%. Также даёт бонус атаки, равный  0,8% от макс. ХП
+      экипированного этим оружием персонажа. Когда ХП экипированного этим
       оружием персонажа опускается ниже 50%, его сила атаки дополнительно
-      увеличивается на  1% от его макс. HP.
+      увеличивается на  1% от его макс. ХП.
   materialCodes:
     - chunk-of-aerosiderite
     - ley-line-sprout
@@ -2946,7 +2946,7 @@ the-bell:
       every  45s. While protected by a shield, the character gains  12%
       increased DMG.
     ru: При получении урона генерируется щит, который в течение 10 сек. поглощает
-      урон, равный  20% от макс. HP. Может возникнуть раз в  45 сек. Под защитой
+      урон, равный  20% от макс. ХП. Может возникнуть раз в  45 сек. Под защитой
       щита увеличивает урон персонажа на  12%.
   materialCodes:
     - scattered-piece-of-decarabians-dream
@@ -2973,7 +2973,7 @@ the-black-sword:
       regenerates  60% of ATK as HP when Normal and Charged Attacks score a CRIT
       Hit. This effect can occur once every 5s.
     ru: Увеличивает урон обычной и заряженной атаки на  20%. Крит. попадания обычной
-      и заряженной атакой восстанавливают HP, равное  60% от силы атаки. Может
+      и заряженной атакой восстанавливают ХП, равное  60% от силы атаки. Может
       возникнуть раз в 5 сек.
   materialCodes:
     - boreal-wolfs-nostalgia
@@ -3218,7 +3218,7 @@ travelers-handy-sword:
     max: 29
   specialAbility:
     en: Each Elemental Orb or Particle collected restores  1% HP.
-    ru: Подобранные элементальные сферы и частицы восстанавливают  1% HP.
+    ru: Подобранные элементальные сферы и частицы восстанавливают  1% ХП.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -3344,7 +3344,7 @@ white-iron-greatsword:
     max: 43
   specialAbility:
     en: Defeating an opponent restores  8% HP.
-    ru: Победа над противником восстанавливает  8% HP.
+    ru: Победа над противником восстанавливает  8% ХП.
   materialCodes:
     - dream-of-the-dandelion-gladiator
     - chaos-core
@@ -3471,7 +3471,7 @@ wolfs-gravestone:
     en: Increases ATK by  20%. On hit, attacks against opponents with less than 30%
       HP increase all party members' ATK by  40% for 12s. Can only occur once
       every 30s.
-    ru: Увеличивает силу атаки на  20%. При попадании по цели с HP меньше 30%
+    ru: Увеличивает силу атаки на  20%. При попадании по цели с ХП меньше 30%
       увеличивает силу атаки всех членов отряда на  40% в течение 12 сек. Может
       возникнуть не чаще 1 раза за 30 сек.
   materialCodes:
