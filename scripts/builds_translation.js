@@ -12,11 +12,14 @@ import {
 	loadTranslatedBuildsBlocks,
 	loadTranslationReferenceBuilds,
 	loadWeapons,
+	textBlocksSrcToMarkdown,
 	textBlocksToMarkdown,
 	TRANSLATED_BUILDS_LANG_FPATH,
 	TRANSLATED_BUILDS_REF_FPATH,
 } from './_common.js'
 import { walkTextNodes } from '#lib/parsing/helperteam/text.js'
+import { trigramMustGetWithThresh, TrigramSearcher } from '#lib/trigrams.js'
+import { ART_GROUP_18_ATK_CODE, ART_GROUP_20_ER_CODE } from '#lib/genshin.js'
 
 const args = parseArgs()
 const needHelp = args['--help'] || args['-h']
@@ -27,7 +30,7 @@ function printUsage() {
   ${thisScript} <${Object.keys(commands).join('|')}> [-h|--help]`)
 }
 
-const commands = { changes, verify }
+const commands = { changes, verify, 'autofill-links': autofillLinks }
 
 ;(async () => {
 	if (args['cmd'] in commands) {
@@ -82,6 +85,91 @@ async function changes() {
 	info(`  code --diff ${relativeToCwd(refBuildsTextFPath)} ${relativeToCwd(curBuildsTextFPath)}`)
 	info('  code ' + langs.map(lang => relativeToCwd(TRANSLATED_BUILDS_LANG_FPATH(lang))).join(' '))
 	info('  split window with Ctrl+\\')
+}
+
+async function autofillLinks() {
+	if (needHelp) {
+		console.log(`Usage:
+  ${thisScript} autofill-links [-h|--help]`)
+		process.exit(2)
+	}
+
+	info(`loading builds translations...`)
+	const lang2blocks = await loadTranslatedBuildsBlocks()
+	const langs = Object.keys(lang2blocks)
+
+	info(`reading items data...`)
+	/**
+	 * @template {{code:string, name:Record<string,string>}} T
+	 * @param {Record<string, T>} code2item
+	 */
+	function makeSearcher(code2item, type) {
+		const s = /**@type {TrigramSearcher<{name:string, code:string}>}*/ (new TrigramSearcher())
+		for (const item of Object.values(code2item))
+			for (const lang of langs) {
+				if (!(lang in item.name)) {
+					error(`${type} '${item.code}' has no ${lang}-name`)
+					process.exit(1)
+				}
+				s.add(item.name[lang], { name: item.name[lang], code: item.code })
+			}
+		return s
+	}
+	const searchers = {
+		artifacts: makeSearcher(await loadArtifacts(), 'artifact'),
+		weapons: makeSearcher(await loadWeapons(), 'weapon'),
+		items: makeSearcher(await loadItems(), 'item'),
+	}
+	for (const code of [ART_GROUP_18_ATK_CODE, ART_GROUP_20_ER_CODE])
+		searchers.artifacts.add(code, { name: code, code })
+
+	info('searching special links...')
+	for (const [lang, blocks] of Object.entries(lang2blocks)) {
+		for (const block of blocks) {
+			const replaces = []
+
+			const linkRe = /(?<!\\)\[(.+?)(?<!\\)\]\((.+?)\)/g
+			let res
+			while ((res = linkRe.exec(block.src)) !== null) {
+				const full = res[0]
+				const label = res[1].trim()
+				const query = label.replace(/\s*\(\d+\)$/, '') //cut '... (2)'
+				const href = res[2].trim()
+
+				function add(searcher, prefix) {
+					try {
+						const code = trigramMustGetWithThresh(searcher, query, x => x.name).code
+						replaces.push({ index: res.index, length: full.length, label, href: prefix + code })
+					} catch (ex) {
+						throw new Error(
+							`texts: ${lang}: block '${block.path}': can not find item: ` + ex.message,
+						)
+					}
+				}
+
+				if (href === '#weapon') {
+					add(searchers.weapons, '#weapon:')
+				} else if (href === '#artifact') {
+					add(searchers.artifacts, '#artifact:')
+				} else if (href === '#item') {
+					add(searchers.items, '#item:')
+				}
+			}
+			for (const { index, length, label, href } of replaces.reverse()) {
+				info(`${href}\t<- ${label}`)
+				const link = `[${label}](${href})`
+				block.src = block.src.slice(0, index) + link + block.src.slice(index + length)
+			}
+		}
+	}
+
+	info('saving files...')
+	for (const [lang, blocks] of Object.entries(lang2blocks)) {
+		const content = textBlocksSrcToMarkdown(blocks)
+		await fs.writeFile(TRANSLATED_BUILDS_LANG_FPATH(lang), content)
+	}
+
+	info('done.')
 }
 
 async function verify() {

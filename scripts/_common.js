@@ -109,13 +109,24 @@ export function stringifyYaml(data) {
  * @returns {string}
  */
 export function textBlocksToMarkdown(blocks) {
-	const res = []
+	const items = []
 	for (const [paragraph, path] of blocks) {
 		if (paragraph === null) continue
 		if (typeof paragraph === 'object' && Object.keys(paragraph).length === 0) continue //fix for old empty paragraps `{}`
-		res.push('# === ' + path + ' ===\n\n' + textNodesToMarkdown(paragraph))
+		items.push({ src: textNodesToMarkdown(paragraph), path, replacedFrom: null })
 	}
-	return res.join('\n\n\n')
+	return textBlocksSrcToMarkdown(items)
+}
+/**
+ * @param {{src:string, path:string, replacedFrom:string|null}[]} blocks
+ * @returns {string}
+ */
+export function textBlocksSrcToMarkdown(blocks) {
+	return blocks
+		.map(({ src, path, replacedFrom }) => {
+			return '# === ' + path + ' ===\n\n' + (replacedFrom ? `\`replace-from:${replacedFrom}\`` : src)
+		})
+		.join('\n\n\n')
 }
 /**
  * @param {string} text
@@ -123,32 +134,32 @@ export function textBlocksToMarkdown(blocks) {
  *   block: import('#lib/parsing/helperteam/text').CompactTextParagraphs,
  *   src: string,
  *   path: string,
+ *   replacedFrom: string|null,
  * }[]}
  */
 export function textBlocksFromMarkdown(text) {
-	const chunks = text.split(/(?:^|\n)# ===(.*?)===\n/g)
+	const chunks = text.split(/(?:^|\n+)# ===(.*?)===\n+/g)
 	const res = /**@type {ReturnType<typeof textBlocksFromMarkdown>}*/ ([])
 	if (chunks[0].trim() !== '') warn(`markdown text blocks: dropping prefix ${JSON.stringify(chunks[0])}`)
 
-	const replaces =
-		/**@type {{item:ReturnType<typeof textBlocksFromMarkdown>[number], fromPath:string}[]}*/ ([])
 	for (let i = 1; i < chunks.length; i += 2) {
 		const src = chunks[i + 1]
 		/**@type {ReturnType<typeof textBlocksFromMarkdown>[number]}*/
-		const item = { block: '', src, path: chunks[i].trim() }
+		const item = { block: '', src, path: chunks[i].trim(), replacedFrom: null }
 
 		const m = src.match(/`replace-from:(.+?)`/)
-		if (m) {
-			replaces.push({ item, fromPath: m[1] })
-		} else {
-			item.block = textNodesFromMarkdown(src)
-		}
+		if (m) item.replacedFrom = m[1]
+		else item.block = textNodesFromMarkdown(src)
 		res.push(item)
 	}
-	for (const { item, fromPath } of replaces) {
-		const src = res.find(x => x.path === fromPath)
-		if (!src) throw new Error(`can not find block '${fromPath}' for replacement in '${item.path}'`)
-		item.block = textNodesFromMarkdown(src.src)
+	for (const item of res) {
+		if (item.replacedFrom !== null) {
+			const src = res.find(x => x.path === item.replacedFrom)
+			if (!src)
+				throw new Error(`can not find block '${item.replacedFrom}' for replacement in '${item.path}'`)
+			item.block = textNodesFromMarkdown(src.src)
+			item.src = src.src
+		}
 	}
 	return res
 }
