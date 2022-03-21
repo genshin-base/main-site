@@ -15,7 +15,6 @@ import {
 	I18N_WEEKDAYS,
 	I18N_WHY_ADD_TO_FAVS_TIP,
 } from '#src/i18n/i18n'
-import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { isLoaded, useFetch, useForceUpdate, useLocalStorage, useVisibleTicker } from '#src/utils/hooks'
 import { getItemIconLargeSrc, getItemIconSrc } from '#src/utils/items'
 import {
@@ -27,7 +26,7 @@ import {
 } from '#src/utils/local-storage-keys'
 import { HEART } from '#src/utils/typography'
 import { OtherItemCard } from './item-cards/dd-cards'
-import { ItemAvatar } from './item-cards/item-avatars'
+import { CharacterAvatar, ItemAvatar } from './item-cards/item-avatars'
 
 import './farm-today.scss'
 
@@ -111,9 +110,9 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 									</div>
 									<div className="d-flex flex-wrap align-self-center pt-2">
 										{asc.characterCodes.map(c => (
-											<ItemAvatar
+											<CharacterAvatar
 												key={c}
-												src={getCharacterAvatarSrc(c)}
+												code={c}
 												classes={`small-avatar mb-2 me-2 ${
 													~favCharCodes.indexOf(c) ? 'order-1' : 'order-2'
 												}`}

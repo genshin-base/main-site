@@ -4,14 +4,8 @@ import { charactersShortList } from '#src/api/generated'
 import { I18N_FAV_CHARACTERS } from '#src/i18n/i18n'
 import { MAX_SMTHS_TO_STORE } from '#src/modules/builds/common'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
-import { elements } from '#src/utils/elements'
 import { useLocalStorage } from '#src/utils/hooks'
-import { ItemAvatar } from '../item-cards/item-avatars'
-
-const codeToBadge = (code: string) => {
-	const e = elements.find(e => code === `traveler-${e.code}`)
-	return e ? <img className="badge-element-icon d-block ms-n1 mb-n1" src={e.imgSrc} /> : null
-}
+import { CharacterAvatar } from '../item-cards/item-avatars'
 
 export function FavoriteCharacters({
 	classes = '',
@@ -56,20 +50,19 @@ export function FavoriteCharacters({
 	const charactersElems = useMemo(
 		() =>
 			characterCodes.map(code => (
-				<ItemAvatar
-					src={getCharacterAvatarSrc(code)}
+				<CharacterAvatar
+					code={code}
 					// rarity={charactersShortList.find(x => x.code === code)?.rarity ?? 5}
 					classes="me-1 small-avatar"
 					key={code}
 					href={navigateToCharacter ? '/builds/' + code : undefined}
 					onClick={() => onCharacterSelect && onCharacterSelect(code)}
-					badgeTopEnd={codeToBadge(code)}
 				/>
 			)),
 		[characterCodes, onCharacterSelect, navigateToCharacter],
 	)
 	return (
-		<div className={`favourite-characters ${classes}`}>
+		<div className={`favorite-characters ${classes}`}>
 			<label className="opacity-75 pe-2 align-middle py-1">{I18N_FAV_CHARACTERS}</label>
 			<br className="d-xl-none" />
 			{charactersElems}

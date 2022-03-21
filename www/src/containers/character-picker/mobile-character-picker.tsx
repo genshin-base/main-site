@@ -2,8 +2,7 @@ import { useMemo, useState } from 'preact/hooks'
 
 import { GI_ElementCode, GI_WeaponTypeCode } from '#lib/genshin'
 import { charactersShortList } from '#src/api/generated'
-import { ItemAvatar } from '#src/containers/item-cards/item-avatars'
-import { getCharacterAvatarSrc } from '#src/utils/characters'
+import { CharacterAvatar, ItemAvatar } from '#src/containers/item-cards/item-avatars'
 import { elements } from '#src/utils/elements'
 import { weaponTypes } from '#src/utils/weapons'
 
@@ -34,15 +33,15 @@ export function CharacterPickerMobile() {
 	const rows = elementGroups.map(({ element, characters }) => (
 		<div className="row py-2" key={element.code}>
 			<div className="col-2 py-1">
-				<img className="rounded-circle d-block mx-auto muted-icon" src={element.imgSrc} />
+				<ItemAvatar isNoBg={true} classes="d-block mx-auto muted-icon" src={element.imgSrc} />
 			</div>
 			<div className="col py-31">
 				{characters.map(x => (
-					<ItemAvatar
-						src={getCharacterAvatarSrc(x.code)}
-						// rarity={x.rarity}
+					<CharacterAvatar
+						code={x.code}
+						rarity={x.rarity}
 						href={'/builds/' + x.code}
-						classes={`m-1 border ${x.rarity === 5 ? 'border-warning' : 'border-light'}`}
+						classes={`m-1`}
 					/>
 				))}
 			</div>
@@ -56,8 +55,8 @@ export function CharacterPickerMobile() {
 				<div className="d-inline">
 					<div className="d-inline">
 						{elements.map(el => (
-							<img
-								className={`character-avatar small-avatar rounded-circle bg-secondary p-1 m-1 ${
+							<ItemAvatar
+								classes={`small-avatar bg-secondary p-1 m-1 ${
 									selectedElementCode && selectedElementCode !== el.code ? 'opacity-25' : ''
 								}`}
 								key={el.code}
@@ -69,8 +68,8 @@ export function CharacterPickerMobile() {
 					<br />
 					<div className="d-inline">
 						{weaponTypes.map(wt => (
-							<img
-								className={`character-avatar small-avatar rounded-circle bg-secondary p-1 m-1 ${
+							<ItemAvatar
+								classes={`small-avatar bg-secondary p-1 m-1 ${
 									selectedWeaponTypeCode && selectedWeaponTypeCode !== wt.code
 										? 'opacity-25'
 										: ''

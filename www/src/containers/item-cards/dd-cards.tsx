@@ -37,7 +37,6 @@ import {
 } from '#src/modules/builds/common'
 import { getArtifactIconLargeSrc, getArtifactIconSrc } from '#src/utils/artifacts'
 import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
-import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { getDomainIconSrc } from '#src/utils/domains'
 import { getEnemyIconSrc } from '#src/utils/enemies'
 import { isLoaded, useFetch, useWindowSize } from '#src/utils/hooks'
@@ -45,7 +44,7 @@ import { getItemIconSrc } from '#src/utils/items'
 import { BULLET, LEFT_POINTING, RIGHT_POINTING, TIMES } from '#src/utils/typography'
 import { getWeaponIconLageSrc } from '#src/utils/weapons'
 import { AlchemyCalculator } from '../alchemy-calculator'
-import { DdContext, ItemAvatar, LabeledItemAvatar } from './item-avatars'
+import { CharacterAvatar, DdContext, ItemAvatar, LabeledItemAvatar } from './item-avatars'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
 const LazyTeyvatMap = import('#src/components/teyvat-map')
@@ -60,8 +59,9 @@ function RecommendedFor({ charCodes }: { charCodes: string[] }): JSX.Element {
 			<BlockHeader>{I18N_RECOMENDED_FOR}</BlockHeader>
 			{charCodes.length
 				? charCodes.map(c => (
-						<ItemAvatar
-							src={getCharacterAvatarSrc(c)}
+						<CharacterAvatar
+							key={c}
+							code={c}
 							classes={`small-avatar mb-2 me-2 border ${getRarityBorder(4)}`}
 						/>
 				  ))

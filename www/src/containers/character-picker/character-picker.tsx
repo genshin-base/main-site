@@ -1,6 +1,5 @@
 import { charactersShortList } from '#src/api/generated'
-import { ItemAvatar } from '#src/containers/item-cards/item-avatars'
-import { getCharacterAvatarSrc } from '#src/utils/characters'
+import { CharacterAvatar, ItemAvatar } from '#src/containers/item-cards/item-avatars'
 import { elements } from '#src/utils/elements'
 import { GI_WeaponType, weaponTypes } from '#src/utils/weapons'
 import { getRarityBorder } from '../item-cards/dd-cards'
@@ -16,21 +15,19 @@ function CharacterPickerDesktop({ weaponTypes }: { weaponTypes: GI_WeaponType[] 
 				return (
 					<div className="row" key={el.code}>
 						<div className="col col-2 pt-3 pb-2 opacity-50 rounded-start">
-							<img className="rounded-circle d-block mx-auto" src={el.imgSrc} />
+							<ItemAvatar classes="d-block mx-auto" src={el.imgSrc} />
 						</div>
 						{weaponTypes.map(wType => (
 							<div className={`col col-2 pt-3 pb-2 px-2 ${isLastRowClass}`} key={wType.code}>
 								{charactersShortList
 									.filter(x => x.elementCode === el.code && x.weaponTypeCode === wType.code)
 									.map(x => (
-										<ItemAvatar
+										<CharacterAvatar
 											key={x.code}
-											src={getCharacterAvatarSrc(x.code)}
-											// rarity={x.rarity}
+											code={x.code}
+											rarity={x.rarity}
 											href={'/builds/' + x.code}
-											classes={`mb-1 me-1 mb-xxl-2 me-xxl-2 border ${getRarityBorder(
-												x.rarity,
-											)}`}
+											classes={`mb-1 me-1 mb-xxl-2 me-xxl-2`}
 										/>
 									))}
 							</div>
@@ -50,7 +47,7 @@ export function CharacterPicker() {
 					<div className="col col-2 pb-3 pt-2"></div>
 					{weaponTypes.map((wt, i) => (
 						<div className="col col-2 pb-3 pt-2 rounded-top " key={wt.code}>
-							<img className="rounded-circle d-block mx-auto" src={wt.imgSrc} />
+							<ItemAvatar classes="d-block mx-auto" isNoBg={true} src={wt.imgSrc} />
 						</div>
 					))}
 				</div>

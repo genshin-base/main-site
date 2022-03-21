@@ -12,31 +12,41 @@ import {
 import { mustBeNever } from '#src/../../lib/utils/values'
 import { A } from '#src/routes/router'
 import { getAllArtifacts } from '#src/utils/artifacts'
-import { ArtifactCard, CardDescMobileWrap, WeaponCard } from './dd-cards'
+import { ArtifactCard, CardDescMobileWrap, getRarityBorder, WeaponCard } from './dd-cards'
 
 import './item-cards.scss'
+import { elements } from '#src/utils/elements'
+import { getCharacterAvatarSrc } from '#src/utils/characters'
 
-export function ItemAvatar({
-	src,
-	rarity,
-	classes = '',
-	href,
-	onClick,
-	badgeTopStart,
-	badgeTopEnd,
-	ddComponent,
-}: {
-	src: string
+interface ItemAvatarCommonProps {
 	rarity?: GI_RarityCode
+	isNoBg?: boolean
 	classes?: string
 	href?: string
 	onClick?(): unknown
 	badgeTopStart?: string | null | JSX.Node
 	badgeTopEnd?: string | null | JSX.Node
 	ddComponent?: JSX.Element
-}): JSX.Element {
+}
+interface ItemAvatarProps extends ItemAvatarCommonProps {
+	src: string
+}
+interface CharacterAvatarProps extends ItemAvatarCommonProps {
+	code: string //todo charcode
+}
+export function ItemAvatar({
+	src,
+	rarity,
+	classes = '',
+	href,
+	isNoBg,
+	onClick,
+	badgeTopStart,
+	badgeTopEnd,
+	ddComponent,
+}: ItemAvatarProps): JSX.Element {
 	;['bg-2', 'bg-3', 'bg-4', 'bg-5']
-	const rarityClass = rarity ? 'bg-' + rarity : 'bg-dark'
+	const rarityClass = isNoBg ? '' : rarity ? 'bg-' + rarity : 'bg-dark'
 
 	const elRef = useRef<HTMLAnchorElement>(null)
 	const [isExpanded, setIsExpanded] = useState(false)
@@ -78,7 +88,24 @@ export function ItemAvatar({
 		</DdContext.Provider>
 	)
 }
-
+const codeToBadge = (code: string) => {
+	const e = elements.find(e => code === `traveler-${e.code}`)
+	return e ? <img className="badge-element-icon d-block ms-n1 mb-n1" src={e.imgSrc} /> : null
+}
+export function CharacterAvatar(props: CharacterAvatarProps) {
+	const classesLocal = props.rarity
+		? `${props.classes} border ${getRarityBorder(props.rarity)}`
+		: props.classes
+	return (
+		<ItemAvatar
+			{...props}
+			rarity={undefined} //обработкой рарности персонажа занимается этот компонент, а не итемаватар
+			classes={classesLocal}
+			src={getCharacterAvatarSrc(props.code)}
+			badgeTopEnd={codeToBadge(props.code)}
+		/>
+	)
+}
 function ItemLabel({
 	rarity,
 	classes = '',

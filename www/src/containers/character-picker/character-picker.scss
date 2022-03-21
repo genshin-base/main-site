@@ -1,8 +1,4 @@
 .character-picker {
-	img {
-		width: var(--thumb-height);
-		height: var(--thumb-height);
-	}
 	.big-table {
 		.col:nth-child(even) {
 			--bs-bg-opacity: 0.5;
