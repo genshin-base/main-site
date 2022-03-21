@@ -74,7 +74,7 @@ async function changes() {
 	info('  ' + relativeToCwd(curBuildsTextFPath))
 	info('apply changes to:')
 	for (const lang of langs) info('  ' + relativeToCwd(TRANSLATED_BUILDS_LANG_FPATH(lang)))
-	info('varify the result:')
+	info('verify the result:')
 	info(`  ${thisScript} verify --ref=generated`)
 	info(
 		`and copy ${relativeToCwd(`${GENERATED_DATA_DIR}/builds.yaml`)}` +
