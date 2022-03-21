@@ -26,15 +26,13 @@ export default async function (env, argv) {
 	const mode = argv.mode
 	if (mode !== 'production' && mode !== 'development') throw new Error('wrong mode: ' + mode)
 	const prerender = !env['no-prerender'] && mode === 'production'
-	// в WSL2 до сих пор не допилен inotify для внешней ФС https://github.com/microsoft/WSL/issues/4739
-	const watchPoll = parseInt(env['watch-poll']) || undefined
 
 	const ssrBuildReady = prerender ? new Deferred() : null
 	const configs = []
 	LANGS.forEach((lang, i) => {
-		configs.push(makeConfig(mode, i === 0, { isSSR: false, lang, ssrBuildReady }, watchPoll))
+		configs.push(makeConfig(mode, i === 0, { isSSR: false, lang, ssrBuildReady }))
 	})
-	if (ssrBuildReady) configs.push(makeConfig(mode, false, { isSSR: true, ssrBuildReady }, watchPoll))
+	if (ssrBuildReady) configs.push(makeConfig(mode, false, { isSSR: true, ssrBuildReady }))
 	return configs
 }
 
@@ -44,7 +42,7 @@ export default async function (env, argv) {
  * @param {{isSSR:false, ssrBuildReady:Deferred<void>|null, lang:string}
  *   | {isSSR:true, ssrBuildReady:Deferred<void>}} type
  */
-function makeConfig(mode, isMain, type, watchPoll) {
+function makeConfig(mode, isMain, type) {
 	const isProd = mode === 'production'
 	const suffix = type.isSSR ? 'ssr' : type.lang
 	const dist = DIST + '/' + (type.isSSR ? 'ssr' : 'browser')
@@ -56,7 +54,6 @@ function makeConfig(mode, isMain, type, watchPoll) {
 		stats: { preset: isProd ? 'normal' : 'errors-warnings' },
 		devtool: isProd ? 'source-map' : 'cheap-module-source-map',
 		devServer: isMain ? makeDevServerConfig(isProd) : undefined,
-		watchOptions: { poll: watchPoll },
 		entry: `${SRC}/index.tsx`,
 		target: type.isSSR ? 'node' : 'web',
 		output: {

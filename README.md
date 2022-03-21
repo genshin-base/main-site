@@ -6,8 +6,6 @@
 
 `npm run dev`
 
-`npm run dev -- --env watch-poll=1000`, если не повезло с inotify'ем (например, в WSL2)
-
 
 ## Переводы
 
