@@ -1,4 +1,22 @@
 rows:
+  - date: March 18, 2022
+    changes: Updated Electro MC Talent Priorities and Ability Tips
+    appliedBy: Loli
+  - date: March 17, 2022
+    changes: Updated Xiao Notes and removed unnecessary wording
+    appliedBy: Folie
+  - date: March 16, 2022
+    changes: Updated Mainstat/Substat priority for Support Kokomi
+    appliedBy: ceeeleste
+  - date: March 5, 2022
+    changes: Updated Yanfei and Mona Notes
+    appliedBy: Folie
+  - date: March 5, 2022
+    changes: Added Kagura's Verity to Lisa sections
+    appliedBy: Folie
+  - date: March 5, 2022
+    changes: Updated Raiden and Beidou substat priority
+    appliedBy: Folie
   - date: March 1, 2022
     changes: "Added Elemental Mastery options to Jean "
     appliedBy: LarryTheCableGuy
@@ -9,7 +27,13 @@ rows:
     changes: Added Favonius Lance notes to Burst Support Rosaria
     appliedBy: ceeeleste
   - date: February 27, 2022
-    changes: Removed Physical Kaeya, Rosaria and Jean sections
+    changes:
+      - p: Removed Physical Kaeya, Rosaria and Jean sections
+      - p:
+          i: "*This change is done in the consideration of having better f2p on-field DPS
+            options like Crescent Pike Xiangling and how their damage
+            contribution of Normal Attacks results in lower yield when
+            optimizing their damage."
     appliedBy: Ascarotte
   - date: February 20, 2022
     changes: Indented equivalent weapons in all rankings, added indent to all notes

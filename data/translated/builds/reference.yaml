@@ -580,7 +580,7 @@ characters:
               - " This set pulls ahead over "
               - b: Emblem of Severed Fate (4)
               - >2
-                 on team comps where Xiangling has lower Energy Recharge requirements (i.e. Raiden National).
+                 on team comps where Xiangling triggers Overloads in addition to Vaporise (i.e. Raiden National).
               - b: "The Exile (2) Scholar (2): "
               - "This set can be used as a "
               - b: very low investment support build to enable Reverse Melt team comps
@@ -2036,8 +2036,6 @@ characters:
               - " Note that this set loses out on some value at higher
                 constellations, as she can't get her "
               - b: "[C4]"
-              - " and "
-              - b: "[C6]"
               - |2
                  effects without casting Burst.
               - b: "Retracing Bolide (4): "
@@ -3758,11 +3756,11 @@ characters:
               notes: null
               seeCharNotes: false
             - codes:
-                - atk
+                - em
               notes: null
               seeCharNotes: false
             - codes:
-                - em
+                - atk
               notes: null
               seeCharNotes: false
           notes: Prioritize Energy Recharge first if you can't burst off cooldown
@@ -3854,6 +3852,12 @@ characters:
         isRecommended: false
         weapons:
           advices:
+            - similar:
+                - code: kaguras-verity
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: skyward-atlas
                   refine: null
@@ -4030,6 +4034,17 @@ characters:
               can be the consistent trigger with supports that apply constant
               Pyro off-field. You can still have an Overload team with an
               Electro DPS Lisa, however, if the situation prefers it.
+          - p:
+              - |
+                Regarding Weapons:
+              - b: "Kagura's Verity: "
+              - "Kagura's ranking at the top is based on executing the specific
+                rotation of Tap E > N2 > Tap E > N2 > Tap E > Q > N1 > Hold E >
+                N1 > CA > N3 > N2 > CA for max stacks. For more details please
+                see the weapon calculations "
+              - a: here
+                href: https://docs.google.com/spreadsheets/d/1kBaIxbNUUkShl-OwbOxMK4wyPQvL-WWeOko7yfWRIxw/edit#gid=0
+              - .
       - code: em dps
         isRecommended: false
         weapons:
@@ -4161,6 +4176,12 @@ characters:
         isRecommended: true
         weapons:
           advices:
+            - similar:
+                - code: kaguras-verity
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: skyward-atlas
                   refine: null
@@ -4300,6 +4321,13 @@ characters:
           - p:
               - b: |-
                   Regarding Weapon Choice:
+                  Kagura's Verity:
+              - " Similar to the above mentioning, this weapon's ranking is
+                based on executing a specific rotation, but the rotation is
+                different for Off-Field DPS. The rotation is Tap E > N2 > Tap E
+                > Q > Hold E (3 Stack)."
+              - b: |-
+                  
                   Thrilling Tales Of Dragon Slayers:
               - " This option is "
               - b: "only recommended on a low investment Lisa "
@@ -4829,11 +4857,12 @@ characters:
           seeCharNotes: false
         talents:
           advices:
-            - burst
             - skill
+            - burst
           notes: null
           seeCharNotes: false
-        tips: null
+        tips: It is not recommended to level Elemental Skill and Burst past talent level
+          7 as the amount of energy generated does not increase.
         notes: Traveler can provide a lot of energy and Energy Recharge to the on-field
           character through their Elemental Skill pick up or Elemental Burst
           procs. This is especially useful with a damage dealer that doesn't
@@ -5395,11 +5424,11 @@ characters:
               notes: null
               seeCharNotes: false
             - codes:
-                - atk
+                - em
               notes: null
               seeCharNotes: false
             - codes:
-                - em
+                - atk
               notes: null
               seeCharNotes: false
           notes: null
@@ -5669,9 +5698,9 @@ characters:
               - " for helping us with "
               - a: "the "
                 href: https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994
-              - a:
-                  b: weapon/artifact rankings.
-                href: https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994
+              - b:
+                  a: weapon/artifact rankings.
+                  href: https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994
     credits: null
   - code: xingqiu
     elementCode: hydro
@@ -5953,13 +5982,13 @@ characters:
         weapons:
           advices:
             - similar:
-                - code: skyward-atlas
+                - code: lost-prayer-to-the-sacred-winds
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: lost-prayer-to-the-sacred-winds
+                - code: skyward-atlas
                   refine: null
                   stacks: null
                   notes: null
@@ -6832,7 +6861,7 @@ characters:
                 code: tenacity-of-the-millelith
                 count: 4
               notes: null
-              seeCharNotes: false
+              seeCharNotes: true
             - arts:
                 op: and
                 arts:
@@ -6907,6 +6936,12 @@ characters:
               - b: "reapplying Cryo and Hydro aura consistently "
               - (this can be done with Cryo/ Hydro infused Venti Elemental Burst
                 + on-field Cryo/ Hydro aura).
+          - p:
+              - b: |-
+                  Regarding Artifact Sets:
+                  Tenacity of the Millelith (4):
+              - " Run this set if there's already another character with
+                Noblesse Oblige (4) on the team."
           - p:
               - b: |-
                   Regarding Weapon Choices:
@@ -6985,6 +7020,7 @@ characters:
           circlet:
             codes:
               - healing
+              - hp%
             notes: null
             seeCharNotes: false
           goblet:
@@ -6995,20 +7031,20 @@ characters:
             seeCharNotes: false
           sands:
             codes:
-              - hp%
               - er
+              - hp%
             notes: null
             seeCharNotes: false
           notes: null
-          seeCharNotes: true
+          seeCharNotes: false
         subStats:
           advices:
             - codes:
-                - hp%
+                - er
               notes: null
               seeCharNotes: false
             - codes:
-                - er
+                - hp%
               notes: null
               seeCharNotes: false
             - codes:
@@ -7024,7 +7060,7 @@ characters:
               notes: null
               seeCharNotes: false
           notes: null
-          seeCharNotes: true
+          seeCharNotes: false
         talents:
           advices:
             - skill
@@ -7075,8 +7111,8 @@ characters:
               - " Prioritise Energy Recharge first to ensure you can always use
                 Elemental Burst before the Elemental Skill expires in order to
                 maintain Hydro application. "
-              - b: Without Prototype Amber, Kokomi will need ~200-220% Energy Recharge (170-190%
-                  with Prototype Amber at [R1] and 150-170% at [R5])
+              - b: Without Prototype Amber, Kokomi will need ~200-220%+ Energy Recharge
+                  (170-190% with Prototype Amber at [R1] and 150-170% at [R5])
               - "\n"
               - b: "Hydro DMG:"
               - " This can be used to sacrifice some of Kokomi's healing to
@@ -7825,9 +7861,6 @@ characters:
           - b: "[C1]"
           - " against Cryo affected enemies"
         notes:
-          - p:
-              b: Cryo DPS Kaeya is recommended over Physical DPS Kaeya since most of his kit
-                scales with Cryo.
           - p: Kaeya Cryo DPS is mostly used in a team with Chongyun and Xingqiu/Barbara
               while having Blizzard Strayer (4) equipped. In this team, Kaeya
               has 55% crit rate against Frozen enemies without any additional
@@ -11278,9 +11311,7 @@ characters:
               his skill twice then cast your burst immediately. You will want to
               be half way through your burst animation before the particles
               reach you, so this way you can start off your burst with a portion
-              of the energy gauge already filled. Same goes for any other Anemo
-              Battery (recommended below), cast skill and swap back to Xiao to
-              cast burst before the particles reach you.
+              of the energy gauge already filled.
           - p:
               - b: "You'll want to pair Xiao with another Anemo character "
               - (Venti, Sucrose, Jean or Anemo Traveler) to help him gain energy
