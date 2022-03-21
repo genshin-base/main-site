@@ -74,10 +74,10 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 		return (
 			<ul className="mb-1 list-unstyled ms-1 pt-1 ps-2 small">
 				{CIRCLET_GOBLET_SANDS.map(ac => (
-					<li>
+					<li className="my-1 ms-1">
 						<ItemAvatar
 							src={getArtifactTypeIconSrc(ac)}
-							classes="mb-1 mx-1 small-avatar bg-dark with-padding align-middle"
+							classes="me-1 small-avatar bg-dark with-padding align-middle"
 						/>
 						{genArtMainStatDetail(role, ac, true)}
 					</li>
