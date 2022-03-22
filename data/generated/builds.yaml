@@ -1596,15 +1596,15 @@ characters:
             - codes:
                 - crit-rate
                 - dmg
-              notes: null
+              notes: Crit DMG if C2
               seeCharNotes: false
             - codes:
                 - er
               notes: null
               seeCharNotes: false
           notes:
-            - p: Crit DMG if C2
-            - p: If shield support, ER takes priority over ATK%
+            - b: "er: "
+            - If shield support, ER takes priority over ATK%
           seeCharNotes: false
         talents:
           advices:
@@ -1774,15 +1774,15 @@ characters:
             - codes:
                 - crit-rate
                 - dmg
-              notes: null
+              notes: Crit DMG if C2
               seeCharNotes: false
             - codes:
                 - er
               notes: null
               seeCharNotes: false
           notes:
-            - p: Crit DMG if C2
-            - p: If shield support, ER takes priority over ATK%
+            - b: "er: "
+            - If shield support, ER takes priority over ATK%
           seeCharNotes: false
         talents:
           advices:
