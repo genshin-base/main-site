@@ -1689,6 +1689,11 @@ Crit Rate / DMG will have higher priority for a full Crit build
 Эти мечи уменьшают время отката Взрыва стихии. Если Восстановления энергии достаточно и без них, то они проигрывают по урону другим вариантам.
 
 
+# === characters.#traveler-geo.roles.#physical_dps.artifacts.notes ===
+
+Cмотри заметки к [Бледному огню (4)](#artifact:pale-flame)
+
+
 # === characters.#traveler-geo.roles.#physical_dps.notes ===
 
 Подходит только для новичков.

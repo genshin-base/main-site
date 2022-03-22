@@ -186,13 +186,27 @@ async function verify() {
 	const langs = Object.keys(lang2blocks)
 	info(`found langs: ${langs}`)
 
+	let errored = false
+	function err(msg) {
+		error(msg)
+		errored = true
+	}
+
 	// дублирование блоков
 	const lang2blockMaps = Object.fromEntries(langs.map(x => [x, new Map()]))
 	for (const [lang, blocks] of Object.entries(lang2blocks)) {
 		for (const { block, path } of blocks) {
-			if (lang2blockMaps[lang].has(path))
-				error(`texts: ${lang}: block '${path}' appears multiple times`)
+			if (lang2blockMaps[lang].has(path)) err(`${lang}: block '${path}' appears multiple times`)
 			lang2blockMaps[lang].set(path, block)
+		}
+	}
+
+	// пропущенные блоки (есть текст в исходнике, нет в переводах)
+	for (const [lang, blocks] of Object.entries(lang2blocks)) {
+		const usedPaths = new Set(blocks.map(x => x.path))
+		for (const [block, path] of getBuildsFormattedBlocks(refBuilds)) {
+			if (block === null) continue
+			if (!usedPaths.has(path)) err(`${lang}: block '${path}' missing in translation`)
 		}
 	}
 
@@ -200,7 +214,7 @@ async function verify() {
 	for (const [, path] of getBuildsFormattedBlocks(refBuilds)) {
 		const missingLangs = langs.filter(x => !lang2blockMaps[x].has(path))
 		if (missingLangs.length > 0 && missingLangs.length < langs.length) {
-			error(`texts: block '${path}': not found for langs: ${missingLangs}`)
+			err(`block '${path}': not found for langs: ${missingLangs}`)
 		}
 	}
 
@@ -211,7 +225,7 @@ async function verify() {
 			unusedPaths.delete(path)
 		}
 		for (const path of unusedPaths) {
-			error(`texts: ${lang}: block '${path}': is unused`)
+			err(`${lang}: block '${path}': is unused`)
 		}
 	}
 
@@ -239,15 +253,14 @@ async function verify() {
 						let m
 						if ((m = node.href.match(/#weapon:(.*)/))) {
 							if (!(m[1] in weapons))
-								error(`texts: ${lang}: block '${path}': wrong weapon code: ${linkStr}`)
+								err(`${lang}: block '${path}': wrong weapon code: ${linkStr}`)
 						} else if ((m = node.href.match(/#artifact:(.*)/))) {
 							if (!(m[1] in artifacts))
-								error(`texts: ${lang}: block '${path}': wrong artifact code: ${linkStr}`)
+								err(`${lang}: block '${path}': wrong artifact code: ${linkStr}`)
 						} else if ((m = node.href.match(/#item:(.*)/))) {
-							if (!(m[1] in items))
-								error(`texts: ${lang}: block '${path}': wrong item code: ${linkStr}`)
+							if (!(m[1] in items)) err(`${lang}: block '${path}': wrong item code: ${linkStr}`)
 						} else {
-							error(`texts: ${lang}: block '${path}': wrong special link: ${linkStr}`)
+							err(`${lang}: block '${path}': wrong special link: ${linkStr}`)
 						}
 					}
 				}
@@ -255,5 +268,6 @@ async function verify() {
 		}
 	}
 
-	info('done.')
+	info('done, ' + (errored ? 'with errors' : 'seems OK.'))
+	if (errored) process.exit(1)
 }

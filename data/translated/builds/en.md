@@ -1684,6 +1684,11 @@ This section is dedicated to utilising the Geo Traveler's Geo Elemental Burst da
 These weapons help in bursting off cooldown, but if you're not having issues with energy, then these weapons falls behind in terms of damage.
 
 
+# === characters.#traveler-geo.roles.#physical_dps.artifacts.notes ===
+
+Check notes for Pale Flame (4)
+
+
 # === characters.#traveler-geo.roles.#physical_dps.notes ===
 
 Not Recommended for End Game Content.

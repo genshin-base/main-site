@@ -2371,9 +2371,9 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: true
+                  seeCharNotes: false
           notes: null
-          seeCharNotes: false
+          seeCharNotes: true
         artifacts:
           sets:
             - arts:
@@ -2566,9 +2566,9 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: true
+                  seeCharNotes: false
           notes: null
-          seeCharNotes: false
+          seeCharNotes: true
         artifacts:
           sets:
             - arts:
@@ -5139,9 +5139,9 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: true
+                  seeCharNotes: false
           notes: null
-          seeCharNotes: false
+          seeCharNotes: true
         artifacts:
           sets:
             - arts:
@@ -11862,9 +11862,9 @@ characters:
                 - code: favonius-greatsword
                   refine: null
                   stacks: null
-                  notes: "[C6] is assumed for this ranking."
+                  notes: null
                   seeCharNotes: true
-          notes: null
+          notes: "[C6] is assumed for this ranking."
           seeCharNotes: false
         artifacts:
           sets:
