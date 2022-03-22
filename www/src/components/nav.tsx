@@ -1,6 +1,12 @@
 import { useCallback, useRef, useState } from 'preact/hooks'
 
-import { I18N_ABOUT_SITE, I18N_BUILDS, I18N_LANG_NAME, I18N_LANG_NAMES } from '#src/i18n/i18n'
+import {
+	I18N_ABOUT_SITE,
+	I18N_BUILDS,
+	I18N_LANG_NAME,
+	I18N_LANG_NAMES,
+	I18N_OUR_DISCORD,
+} from '#src/i18n/i18n'
 import { A, makeLocationHrefForLang } from '#src/routes/router'
 import { useClickAway } from '#src/utils/hooks'
 import { VARIATION_SELECTOR } from '#src/utils/typography'
@@ -29,6 +35,11 @@ export function Nav({ isNavExpanded }: Props): JSX.Element {
 					<A className="nav-link active" href="#">
 						{I18N_ABOUT_SITE}
 					</A>
+				</li>
+				<li className="nav-item">
+					<a className="nav-link" target="_blank" href="#">
+						{I18N_OUR_DISCORD}
+					</a>
 				</li>
 			</ul>
 			<ul className="navbar-nav mb-2 mb-md-0 float-md-end">

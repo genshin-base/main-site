@@ -157,6 +157,7 @@ export const I18N_BASED_ON_GIHT = {
 	ru: 'Основано на табличке Геншин Импакт Хелпер Тимы (англ.)',
 }[LANG]
 export const I18N_ABOUT_SITE = { en: 'About', ru: 'О сайте' }[LANG]
+export const I18N_OUR_DISCORD = { en: 'Our Discord', ru: 'Наш Дискорд' }[LANG]
 export const I18N_CREATED_BY_US = {
 	en: 'Designed and coded by Absolute Evil Studio',
 	ru: 'Задизайнено и закожено в Абсолют Ивел студии',
