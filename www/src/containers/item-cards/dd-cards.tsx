@@ -59,11 +59,7 @@ function RecommendedFor({ charCodes }: { charCodes: string[] }): JSX.Element {
 			<BlockHeader>{I18N_RECOMENDED_FOR}</BlockHeader>
 			{charCodes.length
 				? charCodes.map(c => (
-						<CharacterAvatar
-							key={c}
-							code={c}
-							classes={`small-avatar mb-2 me-2 border ${getRarityBorder(4)}`}
-						/>
+						<CharacterAvatar key={c} code={c} isNoBg={true} classes={`small-avatar mb-2 me-2`} />
 				  ))
 				: I18N_FOR_NOBODY}
 		</>
@@ -267,6 +263,7 @@ function MapWrap({
 							/>
 						) : null}
 						<LabeledItemAvatar
+							isNoBg={true}
 							classes="small-avatar small"
 							avatarClasses="with-padding "
 							imgSrc={itemData.imgSrc}
@@ -457,7 +454,9 @@ export function WeaponCard({
 								<ItemAvatar
 									key={m.code}
 									rarity={2}
-									classes="mb-2 mx-1 small-avatar with-padding"
+									classes={`mb-2 mx-1 small-avatar with-padding ${
+										materialOnMap.code !== m.code && 'opacity-50'
+									}`}
 									src={getItemIconSrc(m.code)}
 									onClick={() => setMaterialOnMap(m)}
 								/>

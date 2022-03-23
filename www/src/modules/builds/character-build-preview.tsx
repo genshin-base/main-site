@@ -17,6 +17,7 @@ import {
 	I18N_SUBSTATS_PRIORITY,
 	I18N_TALENT_NAME,
 	I18N_TALENTS_PRIORITY,
+	I18N_CHOOSE_FROM_FAV,
 } from '#src/i18n/i18n'
 import { A } from '#src/routes/router'
 import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
@@ -205,13 +206,15 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 	)
 }
 export function BuildsPreviewsWrap({ classes = '' }: { classes?: string }): JSX.Element {
-	const [selectedCharacterCode, setSelectedCharacterCode] = useState<string | null>(null)
+	const [selectedCharacterCode, setSelectedCharacterCode] = useState<string | undefined>(undefined)
 	return (
 		<div className={`character-build-preview ${classes}`}>
 			<FavoriteCharacters
 				onCharacterSelect={setSelectedCharacterCode}
 				shoudSelectFirst={!selectedCharacterCode}
+				selectedCharacterCode={selectedCharacterCode}
 				navigateToCharacter={false}
+				blockLabel={I18N_CHOOSE_FROM_FAV}
 				classes="mb-2"
 			/>
 			{selectedCharacterCode ? (

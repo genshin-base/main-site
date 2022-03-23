@@ -15,7 +15,7 @@ function CharacterPickerDesktop({ weaponTypes }: { weaponTypes: GI_WeaponType[] 
 				return (
 					<div className="row" key={el.code}>
 						<div className="col col-2 pt-3 pb-2 opacity-50 rounded-start">
-							<ItemAvatar classes="d-block mx-auto" src={el.imgSrc} />
+							<ItemAvatar classes="d-block mx-auto" isNoBg={true} src={el.imgSrc} />
 						</div>
 						{weaponTypes.map(wType => (
 							<div className={`col col-2 pt-3 pb-2 px-2 ${isLastRowClass}`} key={wType.code}>

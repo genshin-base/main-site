@@ -3,25 +3,28 @@ import { useEffect, useMemo } from 'preact/hooks'
 import { charactersShortList } from '#src/api/generated'
 import { I18N_FAV_CHARACTERS } from '#src/i18n/i18n'
 import { MAX_SMTHS_TO_STORE } from '#src/modules/builds/common'
-import { getCharacterAvatarSrc } from '#src/utils/characters'
 import { useLocalStorage } from '#src/utils/hooks'
 import { CharacterAvatar } from '../item-cards/item-avatars'
-
+const shortListReversed = charactersShortList.reverse()
 export function FavoriteCharacters({
 	classes = '',
 	onCharacterSelect,
 	shoudSelectFirst,
 	navigateToCharacter,
+	selectedCharacterCode,
+	blockLabel = I18N_FAV_CHARACTERS,
 }: {
 	classes?: string
 	onCharacterSelect?(characterCode: string): void
 	shoudSelectFirst?: boolean
 	navigateToCharacter: boolean
+	selectedCharacterCode?: string
+	blockLabel?: string
 }): JSX.Element {
 	const [favCharCodes] = useLocalStorage<string[]>('favoriteCharacterCodes', [])
 	//todo sort characters by release date
 	const charactersShortListCodes = useMemo(
-		() => charactersShortList.map(c => c.code).filter(c => (~favCharCodes.indexOf(c) ? false : c)),
+		() => shortListReversed.map(c => c.code).filter(c => (~favCharCodes.indexOf(c) ? false : c)),
 		[favCharCodes],
 	)
 	const characterCodes =
@@ -53,7 +56,9 @@ export function FavoriteCharacters({
 				<CharacterAvatar
 					code={code}
 					// rarity={charactersShortList.find(x => x.code === code)?.rarity ?? 5}
-					classes="me-1 small-avatar"
+					classes={`me-1 small-avatar ${
+						selectedCharacterCode && selectedCharacterCode !== code && 'opacity-50'
+					}`}
 					key={code}
 					href={navigateToCharacter ? '/builds/' + code : undefined}
 					onClick={() => onCharacterSelect && onCharacterSelect(code)}
@@ -63,7 +68,7 @@ export function FavoriteCharacters({
 	)
 	return (
 		<div className={`favorite-characters ${classes}`}>
-			<label className="opacity-75 pe-2 align-middle py-1">{I18N_FAV_CHARACTERS}</label>
+			<label className="opacity-75 pe-2 align-middle py-1">{blockLabel}</label>
 			<br className="d-xl-none" />
 			{charactersElems}
 			{/* {optsForSelect.length ? (

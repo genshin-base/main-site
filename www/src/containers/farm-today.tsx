@@ -113,6 +113,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 											<CharacterAvatar
 												key={c}
 												code={c}
+												isNoBg={true}
 												classes={`small-avatar mb-2 me-2 ${
 													~favCharCodes.indexOf(c) ? 'order-1' : 'order-2'
 												}`}

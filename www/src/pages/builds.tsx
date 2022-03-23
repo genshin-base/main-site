@@ -35,7 +35,7 @@ export function BuildsPage_BuildDetail({ code }: { code: string }): JSX.Element 
 			<h1 className={`my-1 letter-spacing-1 ${BUNDLE_ENV.LANG === 'en' ? 'text-capitalize' : ''}`}>
 				<span className="d-none d-xl-inline">{build.character.name}</span> {I18N_BUILD_RECS_FOR}
 			</h1>
-			<FavoriteCharacters navigateToCharacter={true} />
+			<FavoriteCharacters navigateToCharacter={true} selectedCharacterCode={code} />
 			<CharacterBuildDetailed build={build} isUpdating={isUpdating} />
 			<div className="col-lg-9 offset-lg-3 col-12">
 				<a

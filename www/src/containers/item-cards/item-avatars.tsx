@@ -223,7 +223,9 @@ export function LabeledItemAvatar({
 	avatarTopStartBadge,
 	avatarTopEndBadge,
 	ddComponent,
+	isNoBg = false,
 }: {
+	isNoBg?: boolean
 	imgSrc: string
 	rarity?: GI_RarityCode
 	title: string
@@ -241,6 +243,7 @@ export function LabeledItemAvatar({
 				src={imgSrc}
 				badgeTopStart={avatarTopStartBadge}
 				badgeTopEnd={avatarTopEndBadge}
+				isNoBg={isNoBg}
 			/>
 			<ItemLabel
 				classes={'text-wrap align-middle lh-1 ps-1 mw-75 c-inherit ' + interactiveLabelClass}

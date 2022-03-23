@@ -44,6 +44,10 @@ export const I18N_WHY_ADD_TO_FAVS_TIP = {
 	ru: 'Добавьте персонажей, оружие и предметы в избранные, чтобы отметить их здесь',
 }[LANG]
 export const I18N_FAV_CHARACTERS = { en: 'Favorite characters', ru: 'Избранные персонажи' }[LANG]
+export const I18N_CHOOSE_FROM_FAV = {
+	en: 'Choose from favorite',
+	ru: 'Выберите из избранных',
+}[LANG]
 export const I18N_ARTIFACTS = { en: 'Artifacts', ru: 'Артефакты' }[LANG]
 export const I18N_ART_STATS_PRIORITY = { en: 'Artifact stats priority', ru: 'Приоритетные главстаты' }[LANG]
 export const I18N_SUBSTATS_PRIORITY = { en: 'Substats priority', ru: 'Приоритетные сабстаты' }[LANG]
