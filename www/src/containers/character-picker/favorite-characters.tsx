@@ -68,7 +68,7 @@ export function FavoriteCharacters({
 	)
 	return (
 		<div className={`favorite-characters ${classes}`}>
-			<label className="opacity-75 pe-2 align-middle py-1">{blockLabel}</label>
+			<label className="opacity-75 pe-2 align-middle py-1">{blockLabel}:</label>
 			<br className="d-xl-none" />
 			{charactersElems}
 			{/* {optsForSelect.length ? (
