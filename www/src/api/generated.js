@@ -1,5 +1,5 @@
 
-export const GENERATED_DATA_HASH = "ca6bc51b"
+export const GENERATED_DATA_HASH = "a495281a"
 
 /** @type {import('#lib/parsing/combine').CharacterShortInfo[]} */
 export const charactersShortList = [
@@ -298,3 +298,20 @@ export const charactersShortList = [
 		"rarity": 5
 	}
 ]
+
+/** @type {import('#lib/parsing').ArtifcatSetGroupCodes} */
+export const ART_GROUP_CODES = {
+	"18%-atk": [
+		"echoes-of-an-offering",
+		"gladiators-finale",
+		"shimenawas-reminiscence",
+		"vermillion-hereafter",
+		"brave-heart",
+		"resolution-of-sojourner"
+	],
+	"20%-er": [
+		"emblem-of-severed-fate",
+		"scholar",
+		"the-exile"
+	]
+}

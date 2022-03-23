@@ -1639,7 +1639,6 @@ Anemo Traveler can either go for a **full Elemental Mastery** build or a **full 
 
 [Sacrificial Sword](#weapon:sacrificial-sword)<br>
 This weapon's ranking assumes you make use of the passive Elemental Skill reset, however doing so will require you to **stay onfield for a much longer period of time which may not be ideal sometimes.**<br>
-, но придётся дольше оставаться на поле боя, что может быть некстати.
 
 [Amenoma Kageuchi](#weapon:amenoma-kageuchi)<br>
 This weapon **reduces your ER% requirements to \~135% at \[R1\] and \~110% at \[R5\].** At \[**R5\],** this weapon will be **better than Sacrificial Sword.**
@@ -1943,6 +1942,7 @@ Despite how dependant Xinyan's playstyle can get with Charged Attacks, Bloodstai
 
 **ER:** takes priority over ATK% for shield support
 
+
 # === characters.#xinyan.roles.#shield_support.subStats.advices.1.notes ===
 
 Crit DMG if C2
@@ -1976,6 +1976,7 @@ Run DPS stats if the sets above is what you're using.
 # === characters.#xinyan.roles.#sub-dps.subStats.notes ===
 
 **ER:** takes priority over ATK% for shield support
+
 
 # === characters.#xinyan.roles.#sub-dps.subStats.advices.1.notes ===
 

@@ -1979,6 +1979,7 @@ Prioritize Energy Recharge first if you can't burst off cooldown
 
 **Восстановление энергии:** для щита приоритетнее процента атаки
 
+
 # === characters.#xinyan.roles.#sub-dps.subStats.advices.1.notes ===
 
 крит урон, если С2

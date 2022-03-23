@@ -1,10 +1,5 @@
-import {
-	ART_GROUP_18_ATK_CODE,
-	ART_GROUP_18_ATK_INSIDE_CODES,
-	ART_GROUP_20_ER_CODE,
-	ART_GROUP_20_ER_INSIDE_CODES,
-	GI_ArtifactTypeCode,
-} from '#lib/genshin'
+import { ART_GROUP_18_ATK_CODE, ART_GROUP_20_ER_CODE, GI_ArtifactTypeCode } from '#lib/genshin'
+import { ART_GROUP_CODES } from '#src/api/generated'
 import icon_circlet from '#src/media/circlet.png'
 import icon_flower from '#src/media/flower.png'
 import icon_goblet from '#src/media/goblet.png'
@@ -48,7 +43,6 @@ function getAllOrNone<T>(codes: string[], map: Map<string, T>) {
 	return res
 }
 export function getAllArtifacts<T>(code: string, artsMap: Map<string, T>): T[] {
-	if (code === ART_GROUP_18_ATK_CODE) return getAllOrNone(ART_GROUP_18_ATK_INSIDE_CODES, artsMap)
-	if (code === ART_GROUP_20_ER_CODE) return getAllOrNone(ART_GROUP_20_ER_INSIDE_CODES, artsMap)
+	if (code in ART_GROUP_CODES) return getAllOrNone(ART_GROUP_CODES[code], artsMap)
 	return getAllOrNone([code], artsMap)
 }

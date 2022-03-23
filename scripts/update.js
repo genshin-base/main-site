@@ -75,6 +75,7 @@ import { checkMihoyoFixesUsage, clearMihoyoFixesUsage } from '#lib/parsing/mihoy
 import { applyDomainsRegion } from '#lib/parsing/wiki/domains.js'
 import { applyCharactersReleaseVersion } from '#lib/parsing/wiki/characters.js'
 import { getEnemyCodeFromName } from '#lib/genshin.js'
+import { getArtifactSpecialGroupCodes } from '#lib/parsing/honeyhunter/artifacts.js'
 
 const HELPERTEAM_DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -341,6 +342,7 @@ async function extractAndSaveItemImages(overwriteExisting) {
 
 	info('extracting data', { newline: false })
 	const { items, artifacts, weapons, enemies, characters, enemyGroups } = await extractAllItemsData()
+	const artGroupCodes = getArtifactSpecialGroupCodes(artifacts.code2item)
 
 	replaceEnemiesByGroups(enemies.code2item, enemyGroups.code2item)
 	for (const group of Object.values(enemyGroups.code2item)) {
@@ -349,7 +351,9 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		else warn(`group '${group.code}': no icon image '${group.iconEnemyCode}'`)
 	}
 
-	const usedArtCodes = new Set(builds.characters.map(x => [...getCharacterArtifactCodes(x, true)]).flat())
+	const usedArtCodes = new Set(
+		builds.characters.map(x => [...getCharacterArtifactCodes(x, artGroupCodes)]).flat(),
+	)
 	const usedWeaponCodes = new Set(builds.characters.map(x => [...getCharacterWeaponCodes(x)]).flat())
 
 	const usedItemCodes = new Set()
@@ -474,6 +478,8 @@ async function saveWwwData() {
 	const items = await loadItems()
 	const enemyGroups = await loadEnemyGroups()
 
+	const artGroupCodes = getArtifactSpecialGroupCodes(artifacts)
+
 	const builds = await (async () => {
 		if (await exists(TRANSLATED_DATA_DIR)) {
 			return await loadTranslatedBuilds()
@@ -510,7 +516,9 @@ async function saveWwwData() {
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 		for (const character of builds.characters) {
-			const fullInfo = makeCharacterFullInfo(character, characters, buildArtifacts.artifacts, buildWeapons.weapons, domains, enemies, items, lang) //prettier-ignore
+			const fullInfo = makeCharacterFullInfo(
+				character, characters, buildArtifacts.artifacts, buildWeapons.weapons,
+				domains, enemies, items, artGroupCodes, lang) //prettier-ignore
 			const locsInfo = extractFullInfoLocations(fullInfo)
 			await writeJson(`${WWW_DYNAMIC_DIR}/characters/${character.code}-locs-${lang}.json`, locsInfo)
 			await writeJson(`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`, fullInfo)
@@ -538,6 +546,9 @@ export const GENERATED_DATA_HASH = ${JSON.stringify(hash)}
 
 /** @type {import('#lib/parsing/combine').CharacterShortInfo[]} */
 export const charactersShortList = ${JSON.stringify(charactersShortInfo, null, '\t')}
+
+/** @type {import('#lib/parsing').ArtifcatSetGroupCodes} */
+export const ART_GROUP_CODES = ${JSON.stringify(artGroupCodes, null, '\t')}
 `,
 	)
 	progress()
