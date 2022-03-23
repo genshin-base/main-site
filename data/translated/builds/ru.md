@@ -107,7 +107,7 @@
 
 # === characters.#ayaka.roles.#dps.mainStats.notes ===
 
-Circlet main stat will be dependant on your overall stats, depending on your stats, one can be better than the other
+Выбор главстата короны зависит от общих статов персонажа
 
 
 # === characters.#ayaka.roles.#dps.subStats.notes ===
@@ -1689,6 +1689,11 @@ Crit Rate / DMG will have higher priority for a full Crit build
 Эти мечи уменьшают время отката Взрыва стихии. Если Восстановления энергии достаточно и без них, то они проигрывают по урону другим вариантам.
 
 
+# === characters.#traveler-geo.roles.#physical_dps.artifacts.notes ===
+
+Cмотри заметки к [Бледному огню (4)](#artifact:pale-flame)
+
+
 # === characters.#traveler-geo.roles.#physical_dps.notes ===
 
 Подходит только для новичков.
@@ -1939,9 +1944,12 @@ Prioritize Energy Recharge first if you can't burst off cooldown
 
 # === characters.#xinyan.roles.#shield_support.subStats.notes ===
 
-крит урон, если С2
+**Восстановление энергии:** для щита приоритетнее процента атаки
 
-для щита Восстановление энергии приоритетнее процента атаки
+
+# === characters.#xinyan.roles.#shield_support.subStats.advices.1.notes ===
+
+крит урон, если С2
 
 
 # === characters.#xinyan.roles.#shield_support.notes ===
@@ -1969,9 +1977,11 @@ Prioritize Energy Recharge first if you can't burst off cooldown
 
 # === characters.#xinyan.roles.#sub-dps.subStats.notes ===
 
-крит урон, если С2
+**Восстановление энергии:** для щита приоритетнее процента атаки
 
-для щита Восстановление энергии приоритетнее процента атаки
+# === characters.#xinyan.roles.#sub-dps.subStats.advices.1.notes ===
+
+крит урон, если С2
 
 
 # === characters.#xinyan.roles.#sub-dps.notes ===

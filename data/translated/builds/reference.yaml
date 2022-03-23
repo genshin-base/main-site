@@ -1596,15 +1596,15 @@ characters:
             - codes:
                 - crit-rate
                 - dmg
-              notes: null
+              notes: Crit DMG if C2
               seeCharNotes: false
             - codes:
                 - er
               notes: null
               seeCharNotes: false
           notes:
-            - p: Crit DMG if C2
-            - p: If shield support, ER takes priority over ATK%
+            - b: "er: "
+            - If shield support, ER takes priority over ATK%
           seeCharNotes: false
         talents:
           advices:
@@ -1774,15 +1774,15 @@ characters:
             - codes:
                 - crit-rate
                 - dmg
-              notes: null
+              notes: Crit DMG if C2
               seeCharNotes: false
             - codes:
                 - er
               notes: null
               seeCharNotes: false
           notes:
-            - p: Crit DMG if C2
-            - p: If shield support, ER takes priority over ATK%
+            - b: "er: "
+            - If shield support, ER takes priority over ATK%
           seeCharNotes: false
         talents:
           advices:
@@ -2371,9 +2371,9 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: true
+                  seeCharNotes: false
           notes: null
-          seeCharNotes: false
+          seeCharNotes: true
         artifacts:
           sets:
             - arts:
@@ -2566,9 +2566,9 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: true
+                  seeCharNotes: false
           notes: null
-          seeCharNotes: false
+          seeCharNotes: true
         artifacts:
           sets:
             - arts:
@@ -5139,9 +5139,9 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: true
+                  seeCharNotes: false
           notes: null
-          seeCharNotes: false
+          seeCharNotes: true
         artifacts:
           sets:
             - arts:
@@ -11862,9 +11862,9 @@ characters:
                 - code: favonius-greatsword
                   refine: null
                   stacks: null
-                  notes: "[C6] is assumed for this ranking."
+                  notes: null
                   seeCharNotes: true
-          notes: null
+          notes: "[C6] is assumed for this ranking."
           seeCharNotes: false
         artifacts:
           sets:

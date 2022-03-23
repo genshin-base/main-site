@@ -6,7 +6,16 @@
 
 `npm run dev`
 
-`npm run dev -- --env watch-poll=1000`, если не повезло с inotify'ем (например, в WSL2)
+
+## Переводы
+
+Можно сначала скопировать/переименовать папку `cache` на случай, если какой-то из сайтов с данными временно приляжет.
+
+`./scripts/update.js data --ignore-cache`
+
+`./scripts/builds_translation.js changes --langs en,ru`
+
+Дальше — по инструкции из выхлопа последнего скрипта.
 
 
 ## Скрипты
@@ -43,6 +52,21 @@
 Сжимает, оптимизурует и сохраняет в `public/media` портрет персонажа (вроде [такого](https://genshin-impact.fandom.com/wiki/Amber?file=Character+Amber+Portrait.png)) и его силуэт в svg.
 
 В системе должны быть установлены `imagemagick`, `pngquant`, `optipng` и `potrace`.
+
+
+## builds_translation.js
+
+`./scripts/builds_translation.js changes --langs en,ru`
+
+Помогает найти изменения в тексте билдов, чтоб обновить переводы. Экспортирует тексты из файлов билдов. Подробнее он напишет в консоли.
+
+`./scripts/builds_translation.js verify`
+
+Ищет ошибки в файлах с переводами билдов (в заголовках `# ===`, в ссылках на предметы).
+
+`./scripts/builds_translation.js autofill-links`
+
+Вписывает коды предметов в ссылки типа `[...](#weapon)`. **Изменяет файлы с переводами!** Очень рекомендуется сделать этим файлам `git add data/translated/builds/*.md` перед вызовом скрипта, а после убедиться, что ничего не сломалось.
 
 
 ## Очепятки

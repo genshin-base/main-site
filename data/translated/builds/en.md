@@ -1684,6 +1684,11 @@ This section is dedicated to utilising the Geo Traveler's Geo Elemental Burst da
 These weapons help in bursting off cooldown, but if you're not having issues with energy, then these weapons falls behind in terms of damage.
 
 
+# === characters.#traveler-geo.roles.#physical_dps.artifacts.notes ===
+
+Check notes for Pale Flame (4)
+
+
 # === characters.#traveler-geo.roles.#physical_dps.notes ===
 
 Not Recommended for End Game Content.
@@ -1936,9 +1941,11 @@ Despite how dependant Xinyan's playstyle can get with Charged Attacks, Bloodstai
 
 # === characters.#xinyan.roles.#shield_support.subStats.notes ===
 
-Crit DMG if C2
+**ER:** takes priority over ATK% for shield support
 
-If shield support, ER takes priority over ATK%
+# === characters.#xinyan.roles.#shield_support.subStats.advices.1.notes ===
+
+Crit DMG if C2
 
 
 # === characters.#xinyan.roles.#shield_support.notes ===
@@ -1968,9 +1975,11 @@ Run DPS stats if the sets above is what you're using.
 
 # === characters.#xinyan.roles.#sub-dps.subStats.notes ===
 
-Crit DMG if C2
+**ER:** takes priority over ATK% for shield support
 
-If shield support, ER takes priority over ATK%
+# === characters.#xinyan.roles.#sub-dps.subStats.advices.1.notes ===
+
+Crit DMG if C2
 
 
 # === characters.#xinyan.roles.#sub-dps.notes ===
