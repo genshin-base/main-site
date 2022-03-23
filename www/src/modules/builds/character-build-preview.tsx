@@ -73,12 +73,13 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 		if (!isLoaded(build)) return null
 		const role = getRoleData(build, selectedRoleTab.code)
 		return (
-			<ul className="mb-1 list-unstyled ms-1 pt-1 ps-2 small">
+			<ul className="mb-1 list-unstyled ms-1 pt-1 ps-1 small">
 				{CIRCLET_GOBLET_SANDS.map(ac => (
 					<li className="my-1 ms-1">
 						<ItemAvatar
 							src={getArtifactTypeIconSrc(ac)}
-							classes="me-1 small-avatar bg-dark with-padding align-middle"
+							isNoBg={true}
+							classes="small-avatar with-padding align-middle"
 						/>
 						{genArtMainStatDetail(role, ac, true)}
 					</li>
