@@ -125,15 +125,15 @@ const fixes = {
 		travelerLangNames: {
 			anemo: {
 				en: 'Anemo Traveler',
-				ru: 'Анемо Путешественник',
+				ru: 'Анемо Путешественница',
 			},
 			geo: {
 				en: 'Geo Traveler',
-				ru: 'Гео Путешественник',
+				ru: 'Гео Путешественница',
 			},
 			electro: {
 				en: 'Electro Traveler',
-				ru: 'Электро Путешественник',
+				ru: 'Электро Путешественница',
 			},
 		},
 		skipEnemies: [

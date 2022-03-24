@@ -542,7 +542,7 @@ traveler-anemo:
   code: traveler-anemo
   name:
     en: Anemo Traveler
-    ru: Анемо Путешественник
+    ru: Анемо Путешественница
   rarity: 5
   weaponTypeCode: sword
   releaseVersion: "1.0"
@@ -559,7 +559,7 @@ traveler-geo:
   code: traveler-geo
   name:
     en: Geo Traveler
-    ru: Гео Путешественник
+    ru: Гео Путешественница
   rarity: 5
   weaponTypeCode: sword
   releaseVersion: "1.0"
@@ -581,7 +581,7 @@ traveler-electro:
   code: traveler-electro
   name:
     en: Electro Traveler
-    ru: Электро Путешественник
+    ru: Электро Путешественница
   rarity: 5
   weaponTypeCode: sword
   releaseVersion: "1.0"
