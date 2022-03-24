@@ -742,8 +742,9 @@ characters:
               - The passive from this set can have 100% uptime through using
                 Guoba off cooldown.
     credits:
-      a: In-depth Guide from KQM
-      href: https://keqingmains.com/xiangling/
+      - a: In-depth Guide
+        href: https://keqingmains.com/xiangling/
+      - " from KQM"
   - code: bennett
     elementCode: pyro
     roles:
@@ -2705,8 +2706,9 @@ characters:
                 more stamina, not to mention how the DPS gets caught up by the
                 other builds mentioned above.
     credits:
-      a: In-depth Guide from Klee Mains + KQM
-      href: https://keqingmains.com/klee/
+      - a: In-depth Guide
+        href: https://keqingmains.com/klee/
+      - " from Klee Mains + KQM"
   - code: hu-tao
     elementCode: pyro
     roles:
@@ -3838,8 +3840,9 @@ characters:
                 with 40% Energy Recharge to help maintain her Elemental Burst
                 uptime.
     credits:
-      a: In-depth Guide from Beidou Mains + KQM
-      href: https://keqingmains.com/beidou/
+      - a: In-depth Guide
+        href: https://keqingmains.com/beidou/
+      - " from Beidou Mains + KQM"
   - code: lisa
     elementCode: electro
     roles:
@@ -4037,9 +4040,8 @@ characters:
                 rotation of Tap E > N2 > Tap E > N2 > Tap E > Q > N1 > Hold E >
                 N1 > CA > N3 > N2 > CA for max stacks. For more details please
                 see the weapon calculations "
-              - a: here
+              - a: here.
                 href: https://docs.google.com/spreadsheets/d/1kBaIxbNUUkShl-OwbOxMK4wyPQvL-WWeOko7yfWRIxw/edit#gid=0
-              - .
       - code: em dps
         isRecommended: false
         weapons:
@@ -4508,8 +4510,9 @@ characters:
                 can be "
               - a: found here.
                 href: https://tinyurl.com/razoratk
-              - b: " It is also worth noting that an [R5] Serpent Spine with max stacks can
-                  outperform all 5✩ weapons at [R1]."
+              - " "
+              - b: It is also worth noting that an [R5] Serpent Spine with max stacks can
+                  outperform all 5✩ weapons at [R1].
               - "\n"
               - b: "Skyward Pride:"
               - " Skyward Pride is viable with a Physical DMG goblet, as the
@@ -4525,8 +4528,9 @@ characters:
                   Pale Flame (4) set, otherwise you would be better off
                   investing on Pale Flame pieces, regardless of weapon choice."
     credits:
-      a: In-depth Guide from Razor Mains + KQM
-      href: https://keqingmains.com/razor/
+      - a: In-depth Guide
+        href: https://keqingmains.com/razor/
+      - " from Razor Mains + KQM"
   - code: kujou-sara
     elementCode: electro
     roles:
@@ -5263,8 +5267,9 @@ characters:
                 you'd want to be using Starward Sword (Q) all the time, which is
                 your main source of DPS with this set.
     credits:
-      a: In-depth Guide from KQM
-      href: https://keqingmains.com/keqing/
+      - a: In-depth Guide
+        href: https://keqingmains.com/keqing/
+      - " from KQM"
   - code: raiden-shogun
     elementCode: electro
     roles:
@@ -5479,8 +5484,9 @@ characters:
                   entirely depends on the substats, whether she has external
                   buffs, and which weapon she is running. "
               - "You can find a more detailed list of suggestions "
-              - a: from ZΛNTO#4984's mastersheet here or run it on a calculator/optimizer.
+              - a: from ZΛNTO#4984's mastersheet
                 href: https://docs.google.com/spreadsheets/d/1VdRUAKFUoKkceIghV5tCfr3kfoiH59mcFOMorI9jYrw/edit#gid=1372936118
+              - " here or run it on a calculator/optimizer."
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/raiden/
@@ -5687,9 +5693,8 @@ characters:
               - "Big thanks to "
               - b: Fob#6835
               - " for helping us with "
-              - a: the weapon/artifact rankings
+              - a: the weapon/artifact rankings.
                 href: https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994
-              - b: .
     credits: null
   - code: xingqiu
     elementCode: hydro
@@ -5917,9 +5922,8 @@ characters:
                 Sword has the third best damage potential."
           - p:
               - "Big thanks to Quincy#6965 for helping us with "
-              - a: the weapons calculations
+              - a: the weapons calculations.
                 href: https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit#gid=0
-              - i: .
           - p:
               - b: "Regarding Artifact Set:"
               - "\n"
@@ -5960,8 +5964,9 @@ characters:
                 
                 Ideally you would be running ATK% Sands when your ER needs are fulfilled. (~180-200% if Sacrificial Sword, ~240% for others).
     credits:
-      a: In-depth Guide by Quincy#6965
-      href: https://docs.google.com/document/d/1RQI5IjLZKqsVhQzRDr7FTYgQX66jKB28PnwoZVlQ4_k/edit
+      - a: In-depth Guide
+        href: https://docs.google.com/document/d/1RQI5IjLZKqsVhQzRDr7FTYgQX66jKB28PnwoZVlQ4_k/edit
+      - " by Quincy#6965"
   - code: barbara
     elementCode: hydro
     roles:
@@ -7259,8 +7264,9 @@ characters:
               - Although this set offers the lowest personal dmg for Kokomi, the
                 20% ATK team buff can sometimes be better for overall team DPS.
     credits:
-      a: In-depth Guide from Kokomi Mains + KQM
-      href: https://keqingmains.com/kokomi/
+      - a: In-depth Guide
+        href: https://keqingmains.com/kokomi/
+      - " from Kokomi Mains + KQM"
   - code: diona
     elementCode: cryo
     roles:
@@ -8071,8 +8077,9 @@ characters:
               - This set is only recommended if there is no other member of the
                 team running Noblesse Oblige (4).
     credits:
-      a: In-depth Guide from Kaeya Mains + KQM
-      href: https://keqingmains.com/kaeya/
+      - a: In-depth Guide
+        href: https://keqingmains.com/kaeya/
+      - " from Kaeya Mains + KQM"
   - code: rosaria
     elementCode: cryo
     roles:
@@ -9164,8 +9171,9 @@ characters:
               - " This set provides Ganyu with more utility so that she can buff
                 your whole party's ATK by 20%."
     credits:
-      a: In-depth Guide from Ganyu Mains + KQM
-      href: https://keqingmains.com/ganyu/
+      - a: In-depth Guide
+        href: https://keqingmains.com/ganyu/
+      - " from Ganyu Mains + KQM"
   - code: eula
     elementCode: cryo
     roles:
@@ -11114,8 +11122,9 @@ characters:
                 party-wide ATK and EM buff which can be better in terms of total
                 team damage and comfortable ER."
     credits:
-      a: In-depth Guide from KQM
-      href: https://keqingmains.com/venti/
+      - a: In-depth Guide
+        href: https://keqingmains.com/venti/
+      - " from KQM"
   - code: xiao
     elementCode: anemo
     roles:
@@ -13353,8 +13362,9 @@ characters:
                 
                 ATK and Energy Recharge substats are only valuable on a Hybrid Albedo that casts his Elemental Burst.
     credits:
-      a: In-depth Guide from Albedo Mains + KQM
-      href: https://keqingmains.com/albedo/
+      - a: In-depth Guide
+        href: https://keqingmains.com/albedo/
+      - " from Albedo Mains + KQM"
   - code: itto
     elementCode: geo
     roles:
