@@ -84,6 +84,10 @@ function makeUrlLangPrefix(lang: string): string {
 	return lang === 'en' ? '' : '/ru'
 }
 
+export function isOnRoute(path: RoutePath): boolean {
+	return matchPath([URL_LANG_PREFIX, ...path], location.pathname) !== null
+}
+
 export function makeLocationHrefForLang(lang: string): string {
 	const url = location.pathname + location.search + location.hash
 	const curPrefix = URL_LANG_PREFIX
