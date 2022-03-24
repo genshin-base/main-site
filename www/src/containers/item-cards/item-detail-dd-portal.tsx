@@ -1,4 +1,4 @@
-import { useCallback, useLayoutEffect, useRef, useState } from 'preact/hooks'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'preact/hooks'
 
 import { calcPosForDd } from '#src/utils/calc-pos-for-dd'
 import { useClickAway, useWindowSize } from '#src/utils/hooks'
@@ -12,12 +12,14 @@ export const ItemDetailDdPortal = ({
 	classes = '',
 	targetEl,
 	contentKey = null,
+	shouldScrollToTop,
 }: {
 	onClickAway?(): void
 	children: JSX.Nodes
 	classes?: string
 	targetEl: HTMLElement | null | undefined
 	contentKey?: string | null | undefined
+	shouldScrollToTop?: boolean
 }): JSX.Element => {
 	modalsEl ??= document.querySelector('.modals') as Element
 	const wrapRef: preact.RefObject<HTMLDivElement> | null = useRef(null)
@@ -41,6 +43,13 @@ export const ItemDetailDdPortal = ({
 		)
 	}, [wrapRef, targetEl, defClassName, setArrowStyle])
 	useLayoutEffect(onResize)
+	useEffect(() => {
+		if (!shouldScrollToTop) return
+		const wrapEl = wrapRef.current
+		if (!wrapEl) return
+		const elTop = wrapEl.getBoundingClientRect().top
+		if (elTop < 0) scrollTo(0, scrollY + elTop)
+	}, [])
 	useWindowSize()
 	useClickAway(wrapRef, onClickAway)
 	//todo обновлять позицию, когда загрузилась картинка

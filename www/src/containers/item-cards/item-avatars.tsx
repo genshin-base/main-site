@@ -12,11 +12,15 @@ import {
 import { mustBeNever } from '#src/../../lib/utils/values'
 import { A } from '#src/routes/router'
 import { getAllArtifacts } from '#src/utils/artifacts'
-import { ArtifactCard, CardDescMobileWrap, getRarityBorder, WeaponCard } from './dd-cards'
+import { ArtifactCard, CardDescMobileWrap, WeaponCard } from './dd-cards'
 
 import './item-cards.scss'
 import { elements } from '#src/utils/elements'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
+
+export function getRarityBorder(r: GI_RarityCode): string {
+	return r === 5 ? 'border-warning' : 'border-light'
+}
 
 interface ItemAvatarCommonProps {
 	rarity?: GI_RarityCode

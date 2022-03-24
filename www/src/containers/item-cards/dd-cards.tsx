@@ -49,10 +49,6 @@ import { CharacterAvatar, DdContext, ItemAvatar, LabeledItemAvatar } from './ite
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
 const LazyTeyvatMap = import('#src/components/teyvat-map')
 
-export function getRarityBorder(r: GI_RarityCode): string {
-	return r === 5 ? 'border-warning' : 'border-light'
-}
-
 function RecommendedFor({ charCodes }: { charCodes: string[] }): JSX.Element {
 	return (
 		<>
@@ -80,7 +76,7 @@ export function CardDescMobileWrap({
 	return BS_isBreakpointLessThen(windowSize.breakpoint, 'xl') ? (
 		<ItemDetailDdMobilePortal onClickAway={onClickAway}>{children}</ItemDetailDdMobilePortal>
 	) : (
-		<ItemDetailDdPortal onClickAway={onClickAway} targetEl={targetEl}>
+		<ItemDetailDdPortal onClickAway={onClickAway} targetEl={targetEl} shouldScrollToTop={true}>
 			{children}
 		</ItemDetailDdPortal>
 	)
@@ -312,7 +308,9 @@ function MapWrap({
 					markers={selectedSource.markers}
 				/>
 			) : TeyvatMap instanceof Error ? (
-				<div>{I18N_ERROR}.</div>
+				<div className="text-muted position-absolute top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
+					{I18N_ERROR}
+				</div>
 			) : (
 				<Spinner />
 			)}

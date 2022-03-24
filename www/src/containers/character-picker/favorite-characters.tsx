@@ -64,7 +64,7 @@ export function FavoriteCharacters({
 					onClick={() => onCharacterSelect && onCharacterSelect(code)}
 				/>
 			)),
-		[characterCodes, onCharacterSelect, navigateToCharacter],
+		[characterCodes, onCharacterSelect, navigateToCharacter, selectedCharacterCode],
 	)
 	return (
 		<div className={`favorite-characters ${classes}`}>

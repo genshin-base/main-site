@@ -2,7 +2,6 @@ import { charactersShortList } from '#src/api/generated'
 import { CharacterAvatar, ItemAvatar } from '#src/containers/item-cards/item-avatars'
 import { elements } from '#src/utils/elements'
 import { GI_WeaponType, weaponTypes } from '#src/utils/weapons'
-import { getRarityBorder } from '../item-cards/dd-cards'
 import { CharacterPickerMobile } from './mobile-character-picker'
 
 import './character-picker.scss'
