@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { promises as fs } from 'fs'
 import { magick, mediaChain, optipng, pngquant, resize, runCmd } from '#lib/media.js'
-import { info, warn } from '#lib/utils/logs.js'
+import { fatal, info, warn } from '#lib/utils/logs.js'
 import { parseArgs, relativeToCwd } from '#lib/utils/os.js'
 import { BASE_DIR, loadCharacters, WWW_MEDIA_DIR } from './_common.js'
 
@@ -61,7 +61,7 @@ const commands = {
 		printUsage()
 		process.exit(needHelp ? 2 : 1)
 	}
-})().catch(console.error)
+})().catch(fatal)
 
 /** @param {string} itemType */
 function needItemImageArgs(itemType) {

@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
 
 import { arrShallowEqual } from '#lib/utils/collections'
 import { isPromise } from '#lib/utils/values'
+import { logError } from '#src/errors'
 import { BS_BreakpointCode, BS_getCurrBreakpoint } from '#src/utils/bootstrap'
 
 type Pending = { _type: 'pending' }
@@ -123,7 +124,7 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, (val: T) =
 			const curRecord = localStorage.getItem(key) //reading 'localStorage' from window may fail with SecurityError
 			return curRecord ? JSON.parse(curRecord) : initialValue //JSON parsing may fail
 		} catch (ex) {
-			console.error(ex)
+			logError(ex)
 			return initialValue
 		}
 	})

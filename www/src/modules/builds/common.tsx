@@ -3,11 +3,13 @@ import { useCallback, useMemo } from 'preact/hooks'
 import { CharacterFullInfoWithRelated } from '#lib/parsing/combine'
 import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
 import { ArtifactRef, ArtifactRefNode, CharacterBuildInfoRole } from '#lib/parsing/helperteam/types'
-import { mustBeDefined, warnUnlessNever } from '#lib/utils/values'
+import { mustBeDefined, staticNever } from '#lib/utils/values'
+import { ART_GROUP_CODES } from '#src/api/generated'
 import { MapAllByCode } from '#src/api/utils'
 import { Tooltip } from '#src/components/tooltip'
 import { ArtifactCard } from '#src/containers/item-cards/dd-cards'
 import { ItemLabelWithDd, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
+import { logError } from '#src/errors'
 import { I18N_ART_GROUP_NAME, I18N_CONJUCTIONS, I18N_STAT_NAME } from '#src/i18n/i18n'
 import { getAllArtifacts, getArtifactIconSrc } from '#src/utils/artifacts'
 import { useHover, useLocalStorage } from '#src/utils/hooks'
@@ -19,7 +21,6 @@ import {
 	STORAGE_WEAPON_DATA,
 } from '#src/utils/local-storage-keys'
 import { HEART, HEART_EMPTY, STAR } from '#src/utils/typography'
-import { ART_GROUP_CODES } from '#src/api/generated'
 
 export const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole<'monolang'>> = {
 	title: '…',
@@ -98,7 +99,8 @@ export function notesToJSX(tips: CompactTextParagraphs | null): JSX.Nodes {
 				</ItemLabelWithDd>
 			)
 		if ('item' in tip) return <>{notesToJSX(tip.item)}</>
-		warnUnlessNever('unknown element type in notes: ', tip)
+		staticNever(tip)
+		logError('unknown text node: ' + JSON.stringify(tip))
 		return <span>{JSON.stringify(tip)}</span>
 	}
 	if (!tips) return null
