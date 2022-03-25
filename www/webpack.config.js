@@ -8,9 +8,10 @@ import { dirname } from 'path'
 import PurgeCSSPlugin from 'purgecss-webpack-plugin'
 import { fileURLToPath } from 'url'
 import webpack from 'webpack'
-import { Deferred, mustBeDefined } from '../lib/utils/values.js'
 
+import { Deferred, mustBeDefined } from '#lib/utils/values.js'
 import { matchPath, paths, pathToStrings } from './src/routes/paths.js'
+import { runAndReadStdout } from '#lib/utils/os.js'
 
 const LANGS = ['en', 'ru']
 const ASSET_PATH = '/'
@@ -27,22 +28,26 @@ export default async function (env, argv) {
 	if (mode !== 'production' && mode !== 'development') throw new Error('wrong mode: ' + mode)
 	const prerender = !env['no-prerender'] && mode === 'production'
 
+	const commitHash = (await runAndReadStdout('git', ['rev-parse', 'HEAD'])).trim()
+
+	const cfg = makeConfig.bind(null, mode, commitHash)
 	const ssrBuildReady = prerender ? new Deferred() : null
 	const configs = []
 	LANGS.forEach((lang, i) => {
-		configs.push(makeConfig(mode, i === 0, { isSSR: false, lang, ssrBuildReady }))
+		configs.push(cfg(i === 0, { isSSR: false, lang, ssrBuildReady }))
 	})
-	if (ssrBuildReady) configs.push(makeConfig(mode, false, { isSSR: true, ssrBuildReady }))
+	if (ssrBuildReady) configs.push(cfg(false, { isSSR: true, ssrBuildReady }))
 	return configs
 }
 
 /**
  * @param {'production'|'development'} mode
+ * @param {string} commitHash
  * @param {boolean} isMain
  * @param {{isSSR:false, ssrBuildReady:Deferred<void>|null, lang:string}
  *   | {isSSR:true, ssrBuildReady:Deferred<void>}} type
  */
-function makeConfig(mode, isMain, type) {
+function makeConfig(mode, commitHash, isMain, type) {
 	const isProd = mode === 'production'
 	const suffix = type.isSSR ? 'ssr' : type.lang
 	const dist = DIST + '/' + (type.isSSR ? 'ssr' : 'browser')
@@ -145,6 +150,7 @@ function makeConfig(mode, isMain, type) {
 				'BUNDLE_ENV.LANGS': JSON.stringify(LANGS),
 				'BUNDLE_ENV.LANG': type.isSSR ? 'global._SSR_LANG' : JSON.stringify(type.lang),
 				'BUNDLE_ENV.IS_SSR': JSON.stringify(type.isSSR),
+				'BUNDLE_ENV.COMMIT_HASH': JSON.stringify(commitHash),
 			}),
 			new ESLintPlugin({
 				context: SRC,

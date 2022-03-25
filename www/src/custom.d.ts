@@ -31,4 +31,5 @@ declare const BUNDLE_ENV: {
 	LANGS: string[]
 	LANG: string
 	IS_SSR: boolean
+	COMMIT_HASH: string
 }

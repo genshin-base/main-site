@@ -30,7 +30,7 @@ function sendNewItem(level, rollbarBody) {
 			environment: process.env.NODE_ENV,
 			body: rollbarBody,
 			level,
-			// code_version: '' TODO
+			code_version: BUNDLE_ENV.COMMIT_HASH,
 			platform: 'browser',
 			context: location.href,
 			client: {
