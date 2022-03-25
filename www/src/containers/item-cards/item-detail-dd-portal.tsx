@@ -49,7 +49,7 @@ export const ItemDetailDdPortal = ({
 		if (!wrapEl) return
 		const elTop = wrapEl.getBoundingClientRect().top
 		if (elTop < 0) scrollTo(0, scrollY + elTop)
-	}, [])
+	})
 	useWindowSize()
 	useClickAway(wrapRef, onClickAway)
 	//todo обновлять позицию, когда загрузилась картинка

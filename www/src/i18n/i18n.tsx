@@ -50,8 +50,8 @@ export const I18N_CHOOSE_FROM_FAV = {
 }[LANG]
 export const I18N_ARTIFACTS = { en: 'Artifacts', ru: 'Артефакты' }[LANG]
 export const I18N_ART_STATS_PRIORITY = { en: 'Artifact stats priority', ru: 'Приоритетные главстаты' }[LANG]
-export const I18N_SUBSTATS_PRIORITY = { en: 'Substats priority', ru: 'Приоритетные сабстаты' }[LANG]
-export const I18N_TALENTS_PRIORITY = { en: 'Talents Priority', ru: 'Приоритетные умения' }[LANG]
+export const I18N_SUBSTATS_PRIORITY = { en: 'Substats priority', ru: 'Приоритетные допстаты' }[LANG]
+export const I18N_TALENTS_PRIORITY = { en: 'Talents Priority', ru: 'Приоритетные таланты' }[LANG]
 export const I18N_ASC_MATERIALS = { en: 'Ascension materials', ru: 'Материалы возвышения' }[LANG]
 export const I18N_FULL_BUILD_INFO = { en: 'Full build info', ru: 'Полная информация о билде' }[LANG]
 export const I18N_CHAR_LORE = { en: 'Character lore', ru: 'Лор персонажа' }[LANG]
@@ -130,7 +130,7 @@ export const I18N_CONJUCTIONS: Record<ConjuctionType, string> = {
 }[LANG]
 
 export const I18N_RECOMENDED_FOR = { en: 'Recommended for', ru: 'Рекомендуется для' }[LANG]
-export const I18N_FOR_NOBODY = { en: 'Nobody', ru: 'Никому' }[LANG]
+export const I18N_FOR_NOBODY = { en: 'Nobody', ru: 'Никого' }[LANG]
 export const I18N_SOURCE = { en: 'Source', ru: 'Источник' }[LANG]
 export const I18N_SCROLL_TO_ZOOM = { en: 'Scroll to zoom', ru: 'Зум колёсиком' }[LANG]
 export const I18N_PINCH_TO_ZOOM = { en: 'Pinch to zoom', ru: 'Зум щипком' }[LANG]
@@ -204,4 +204,8 @@ export const I18N_WEAPON_OBTAIN_SOURCE_NAME = {
 export const I18N_OBTAINED_DURING_STORYLINE = {
 	en: 'Obtained during storyline quests',
 	ru: 'Выдаётся во время прохождения сюжетных заданий',
+}[LANG]
+export const I18N_ART_GROUP_NAME = {
+	en: { '18%-atk': 'ATK +18%', '20%-er': 'Energy Recharge +20%' },
+	ru: { '18%-atk': 'Сила атаки +18%', '20%-er': 'Восстановление энергии +20%' },
 }[LANG]

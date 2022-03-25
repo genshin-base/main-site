@@ -1,6 +1,5 @@
 import { useCallback, useMemo } from 'preact/hooks'
 
-import { ART_GROUP_DETAILS } from '#lib/genshin'
 import { CharacterFullInfoWithRelated } from '#lib/parsing/combine'
 import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
 import { ArtifactRef, ArtifactRefNode, CharacterBuildInfoRole } from '#lib/parsing/helperteam/types'
@@ -8,8 +7,8 @@ import { mustBeDefined, warnUnlessNever } from '#lib/utils/values'
 import { MapAllByCode } from '#src/api/utils'
 import { Tooltip } from '#src/components/tooltip'
 import { ArtifactCard } from '#src/containers/item-cards/dd-cards'
-import { ItemDetailsLabel, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
-import { I18N_CONJUCTIONS, I18N_STAT_NAME } from '#src/i18n/i18n'
+import { ItemLabelWithDd, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
+import { I18N_ART_GROUP_NAME, I18N_CONJUCTIONS, I18N_STAT_NAME } from '#src/i18n/i18n'
 import { getAllArtifacts, getArtifactIconSrc } from '#src/utils/artifacts'
 import { useHover, useLocalStorage } from '#src/utils/hooks'
 import {
@@ -20,6 +19,7 @@ import {
 	STORAGE_WEAPON_DATA,
 } from '#src/utils/local-storage-keys'
 import { HEART, HEART_EMPTY, STAR } from '#src/utils/typography'
+import { ART_GROUP_CODES } from '#src/api/generated'
 
 export const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole<'monolang'>> = {
 	title: '…',
@@ -87,15 +87,15 @@ export function notesToJSX(tips: CompactTextParagraphs | null): JSX.Nodes {
 		if ('a' in tip) return <a href={tip.href}>{notesToJSX(tip.a)}</a>
 		if ('weapon' in tip)
 			return (
-				<ItemDetailsLabel type="weapon" code={tip.code}>
+				<ItemLabelWithDd type="weapon" code={tip.code}>
 					{notesToJSX(tip.weapon)}
-				</ItemDetailsLabel>
+				</ItemLabelWithDd>
 			)
 		if ('artifact' in tip)
 			return (
-				<ItemDetailsLabel type="artifact" code={tip.code}>
+				<ItemLabelWithDd type="artifact" code={tip.code}>
 					{notesToJSX(tip.artifact)}
-				</ItemDetailsLabel>
+				</ItemLabelWithDd>
 			)
 		if ('item' in tip) return <>{notesToJSX(tip.item)}</>
 		warnUnlessNever('unknown element type in notes: ', tip)
@@ -106,6 +106,19 @@ export function notesToJSX(tips: CompactTextParagraphs | null): JSX.Nodes {
 	return processObj(tips)
 }
 
+export function getCoverArtifactForSet(code, artsForDd) {
+	let coverArt
+	if (code in ART_GROUP_CODES) {
+		coverArt = {
+			name: I18N_ART_GROUP_NAME[code],
+			code: code,
+			rarity: 5,
+		}
+	} else {
+		coverArt = artsForDd[0]
+	}
+	return coverArt
+}
 export function genArtifactAdvice(
 	set: ArtifactRef | ArtifactRefNode,
 	build: MapAllByCode<CharacterFullInfoWithRelated>,
@@ -116,22 +129,18 @@ export function genArtifactAdvice(
 		//ArtifactRef
 		const artifactsForDd = getAllArtifacts(set.code, build.maps.artifacts)
 		if (!artifactsForDd.length) return null
-		const artifactForList = ART_GROUP_DETAILS[set.code] ?? artifactsForDd[0]
+		const coverArt = getCoverArtifactForSet(set.code, artifactsForDd)
 		return (
 			<LabeledItemAvatar
 				imgSrc={getArtifactIconSrc(set.code)}
-				rarity={artifactForList.rarity}
-				title={artifactForList.name}
+				rarity={coverArt.rarity}
+				title={coverArt.name}
 				key={set.code}
 				avatarTopEndBadge={'x' + set.count}
 				avatarClasses="with-padding"
 				classes={`small ${isLast ? 'mb-1' : ''}`}
 				ddComponent={
-					<ArtifactCard
-						artifacts={artifactsForDd}
-						related={build.maps}
-						title={artifactForList.name}
-					/>
+					<ArtifactCard artifacts={artifactsForDd} related={build.maps} title={coverArt.name} />
 				}
 			/>
 		)

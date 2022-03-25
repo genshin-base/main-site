@@ -59,8 +59,8 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 					)
 				})}
 				{role.artifacts.sets.length > listTimit ? (
-					<li className="pt-1 text-muted">
-						<A className="link-secondary text-muted" href={`/builds/` + characterCode}>
+					<li className="pt-1">
+						<A className="link-secondary text-muted small" href={`/builds/` + characterCode}>
 							{I18N_MORE_ON_BUILDS_PAGE}
 						</A>
 					</li>

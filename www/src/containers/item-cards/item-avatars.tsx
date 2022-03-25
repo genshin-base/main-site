@@ -1,7 +1,7 @@
 import { createContext } from 'preact'
 import { useCallback, useContext, useRef, useState } from 'preact/hooks'
 
-import { ART_GROUP_DETAILS, GI_RarityCode } from '#lib/genshin'
+import { GI_RarityCode } from '#lib/genshin'
 import {
 	ArtifactFullInfo,
 	DomainShortInfo,
@@ -17,6 +17,7 @@ import { ArtifactCard, CardDescMobileWrap, WeaponCard } from './dd-cards'
 import './item-cards.scss'
 import { elements } from '#src/utils/elements'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
+import { getCoverArtifactForSet } from '#src/modules/builds/common'
 
 export function getRarityBorder(r: GI_RarityCode): string {
 	return r === 5 ? 'border-warning' : 'border-light'
@@ -172,7 +173,7 @@ export const ItemsDataContext = createContext({
 	items: new Map<string, ItemShortInfo>(),
 })
 
-export function ItemDetailsLabel({
+export function ItemLabelWithDd({
 	classes = '',
 	type,
 	code,
@@ -196,8 +197,8 @@ export function ItemDetailsLabel({
 	} else if (type === 'artifact') {
 		const artifacts = getAllArtifacts(code, maps.artifacts)
 		if (artifacts.length > 0) {
-			const details = ART_GROUP_DETAILS[code] ?? artifacts[0]
-			ddComp = <ArtifactCard title={details.name} artifacts={artifacts} related={maps} />
+			const coverArtifact = getCoverArtifactForSet(code, artifacts)
+			ddComp = <ArtifactCard title={coverArtifact.name} artifacts={artifacts} related={maps} />
 			rarity = artifacts[0].rarity
 		}
 	} else mustBeNever(type)

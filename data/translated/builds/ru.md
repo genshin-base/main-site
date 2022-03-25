@@ -1,6 +1,6 @@
 # === characters.#albedo.credits ===
 
-[Глубокий разбор](https://keqingmains.com/albedo/) от Альбедо мейнеров и ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/albedo/) от Альбедо мейнеров и ККМ (англ.)
 
 
 # === characters.#albedo.roles.#off-field_dps.tips ===
@@ -176,12 +176,12 @@ Crit Rate loses value here assuming you're running Blizzard Strayer (4), if you'
 
 # === characters.#beidou.credits ===
 
-[Глубокий разбор](https://keqingmains.com/beidou/) от Бэй Доу мейнеров и ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/beidou/) от Бэй Доу мейнеров и ККМ (англ.)
 
 
 # === characters.#beidou.roles.#off-field_dps.subStats.notes ===
 
-Prioritize Energy Recharge first if you can't burst off cooldown
+В первую очередь, стоит прокачивать Восстановление энергии до тех пор, пока не получится ультовать по откату.
 
 
 # === characters.#beidou.roles.#off-field_dps.tips ===
@@ -214,27 +214,27 @@ Prioritize Energy Recharge first if you can't burst off cooldown
 Этот комплект может быть рассмотрен, если Бэй Доу может использовать свой Взрыв стихии по откату и в отряде больше никто не носит комплект Церемонии древней знати (4).
 
 **[Учёный (2) ](#artifact:scholar)+ [Изгнанник (2)](#artifact:the-exile)**<br>
-Этот комплект — дешевый вариант для начинающих, помогающий поддерживать аптайм Врыва Стихии Бэй Доу.
+Этот комплект — дешевый вариант для начинающих, помогающий поддерживать аптайм Врыва стихии Бэй Доу.
 
 
 # === characters.#bennett.credits ===
 
-[Глубокий разбор](https://keqingmains.com/bennett/) от ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/bennett/) от ККМ (англ.)
 
 
 # === characters.#bennett.roles.#dps.mainStats.notes ===
 
-EM sands is generally > ATK%, but substat quality and weapon choice can potentially favour ATK% sands.
+EM часы is generally > ATK%, but substat quality and weapon choice can potentially favour ATK% sands.
 
 
 # === characters.#bennett.roles.#dps.subStats.notes ===
 
-Elemental Mastery has lower priority than ATK% when using Iron Sting
+Мастерство стихий has lower priority, чем Силы атаки% при использовании Iron Sting
 
 
 # === characters.#bennett.roles.#dps.talents.notes ===
 
-Normal Attack is only a priority if you have C6 Bennett
+Имеет смысл прокачивать обычную атаку только если есть С6 Беннет.
 
 
 # === characters.#bennett.roles.#dps.tips ===
@@ -273,7 +273,7 @@ Normal Attack is only a priority if you have C6 Bennett
 
 # === characters.#bennett.roles.#burst_support.subStats.notes ===
 
-Prioritize Energy Recharge first if you can't burst off cooldown
+В первую очередь, стоит прокачивать Восстановление энергии до тех пор, пока не получится ультовать по откату.
 
 
 # === characters.#bennett.roles.#burst_support.tips ===
@@ -478,7 +478,7 @@ Worth noting that Diluc's constellations boost his Elemental Skill's damage, so 
 
 # === characters.#fischl.roles.#dps.tips ===
 
-[Более глубокий разбор оружия (англ.)](https://bit.ly/3xOMZyh)
+[Более подробный разбор оружия (англ.)](https://bit.ly/3xOMZyh)
 
 Учитывая то, как работает Полярная звезда, оптимальная последовательность атак будет отличаться от другого оружия:
 
@@ -539,7 +539,7 @@ Worth noting that Diluc's constellations boost his Elemental Skill's damage, so 
 
 # === characters.#ganyu.credits ===
 
-[Глубокий разбор](https://keqingmains.com/ganyu/) от Гань Юй мейнеров и ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/ganyu/) от Гань Юй мейнеров и ККМ (англ.)
 
 
 # === characters.#ganyu.roles.#melt_dps.tips ===
@@ -775,7 +775,7 @@ Worth noting that Diluc's constellations boost his Elemental Skill's damage, so 
 
 # === characters.#kaeya.credits ===
 
-[Глубокий разбор](https://keqingmains.com/kaeya/) от Кэйа мейнеров и ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/kaeya/) от Кэйа мейнеров и ККМ (англ.)
 
 
 # === characters.#kaeya.roles.#cryo_dps.subStats.notes ===
@@ -829,7 +829,7 @@ Worth noting that Diluc's constellations boost his Elemental Skill's damage, so 
 
 # === characters.#kazuha.credits ===
 
-[Глубокий разбор](https://keqingmains.com/kazuha/) от ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/kazuha/) от ККМ (англ.)
 
 
 # === characters.#kazuha.roles.#em_build.tips ===
@@ -858,7 +858,7 @@ Worth noting that Diluc's constellations boost his Elemental Skill's damage, so 
 
 # === characters.#keqing.credits ===
 
-[Глубокий разбор](https://keqingmains.com/keqing/) от ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/keqing/) от ККМ (англ.)
 
 
 # === characters.#keqing.roles.#physical_dps.talents.notes ===
@@ -935,7 +935,7 @@ Note: Since Keqing uses burst to get an extra 15% crit, it's much better in leve
 
 # === characters.#klee.credits ===
 
-[Глубокий разбор](https://keqingmains.com/klee/) от Кли мейнеров и ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/klee/) от Кли мейнеров и ККМ (англ.)
 
 
 # === characters.#klee.roles.#dps.tips ===
@@ -969,7 +969,7 @@ Note: Since Keqing uses burst to get an extra 15% crit, it's much better in leve
 
 # === characters.#kokomi.credits ===
 
-[Глубокий разбор](https://keqingmains.com/kokomi/) от Кокоми мейнеров и ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/kokomi/) от Кокоми мейнеров и ККМ (англ.)
 
 
 # === characters.#kokomi.roles.#support.tips ===
@@ -1038,7 +1038,7 @@ Note: Since Keqing uses burst to get an extra 15% crit, it's much better in leve
 
 # === characters.#kujou-sara.roles.#burst_support.subStats.notes ===
 
-Prioritize Energy Recharge first if you can't burst off cooldown
+В первую очередь, стоит прокачивать Восстановление энергии до тех пор, пока не получится ультовать по откату.
 
 
 # === characters.#kujou-sara.roles.#burst_support.tips ===
@@ -1069,7 +1069,7 @@ Prioritize Energy Recharge first if you can't burst off cooldown
 
 # === characters.#lisa.credits ===
 
-[Глубокий разбор](https://keqingmains.com/lisa/)  от  Лиза мейнеров и ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/lisa/)  от  Лиза мейнеров и ККМ (англ.)
 
 
 # === characters.#lisa.roles.#electro_dps.tips ===
@@ -1332,7 +1332,7 @@ Offensive stats aren't needed, just stack ER for comfortable Elemental Burst upt
 
 **О выборе оружия и артефактов**
 
-[Церемониальный меч ](#weapon:sacrificial-sword)**и**[ Стойкость Миллелита (4)](#artifact:tenacity-of-the-millelith)<br>
+[Церемониальный меч](#weapon:sacrificial-sword) и [ Стойкость Миллелита (4)](#artifact:tenacity-of-the-millelith)<br>
 Стойкость Миллелита на Ци Ци дает хороший бафф Силы атаки отряду. Церемониальный меч увеличивает время активности её Элементального навыка, что в свою очередь увеличивает время действия баффа Силы атаки от артефактов. Если Ци Ци лечит слишком сильно, можно переодеть её в этот комплект. Но стоит учитывать, что Церемониальный меч на некоторых других персонажах будет полезнее.
 
 [Моллюск морских красок (4)](#artifact:ocean-hued-clam)<br>
@@ -1341,7 +1341,7 @@ Offensive stats aren't needed, just stack ER for comfortable Elemental Burst upt
 
 # === characters.#raiden-shogun.credits ===
 
-[Глубокий разбор](https://keqingmains.com/raiden/) от Райдэн мейнеров и ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/raiden/) от Райдэн мейнеров и ККМ (англ.)
 
 
 # === characters.#raiden-shogun.roles.#electro_dps.tips ===
@@ -1382,7 +1382,7 @@ Offensive stats aren't needed, just stack ER for comfortable Elemental Burst upt
 
 # === characters.#razor.credits ===
 
-[Глубокий разбор](https://keqingmains.com/razor/) от Рэйзор мейнеров и ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/razor/) от Рэйзор мейнеров и ККМ (англ.)
 
 
 # === characters.#razor.roles.#dps.tips ===
@@ -1559,7 +1559,7 @@ Sucrose's Talent Levels are not a necessity.
 
 # === characters.#tartaglia.credits ===
 
-[Глубокий разбор](https://tinyurl.com/4nnv5euy)  от Тарталья мейнеров
+[Подробный разбор](https://tinyurl.com/4nnv5euy)  от Тарталья мейнеров
 
 
 # === characters.#tartaglia.roles.#dps.tips ===
@@ -1709,7 +1709,7 @@ Cмотри заметки к [Бледному огню (4)](#artifact:pale-fla
 
 # === characters.#venti.credits ===
 
-[Глубокий разбор](https://keqingmains.com/venti/) от ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/venti/) от ККМ (англ.)
 
 
 # === characters.#venti.roles.#off-field_dps.subStats.notes ===
@@ -1746,7 +1746,7 @@ For an EM-focused build, upgrading Venti's talent levels isn't a necessity.
 
 # === characters.#xiangling.credits ===
 
-[Глубокий разбор](https://keqingmains.com/xiangling/) от ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/xiangling/) от ККМ (англ.)
 
 
 # === characters.#xiangling.roles.#off-field_dps.tips ===
@@ -1815,7 +1815,7 @@ _**Рекомендуемый порог Восстановления энерг
 
 # === characters.#xiao.credits ===
 
-[Глубокий разбор](https://keqingmains.com/xiao/) от Сяо мейнеров и ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/xiao/) от Сяо мейнеров и ККМ (англ.)
 
 
 # === characters.#xiao.roles.#dps.artifacts.notes ===
@@ -1863,12 +1863,12 @@ _**Рекомендуемый порог Восстановления энерг
 
 # === characters.#xingqiu.credits ===
 
-[Глубокий разбор](https://docs.google.com/document/d/1RQI5IjLZKqsVhQzRDr7FTYgQX66jKB28PnwoZVlQ4_k/edit) от Quincy#6965 (англ.)
+[Подробный разбор](https://docs.google.com/document/d/1RQI5IjLZKqsVhQzRDr7FTYgQX66jKB28PnwoZVlQ4_k/edit) от Quincy#6965 (англ.)
 
 
 # === characters.#xingqiu.roles.#off-field_dps.subStats.notes ===
 
-Prioritize Energy Recharge first if you can't burst off cooldown
+В первую очередь, стоит прокачивать Восстановление энергии до тех пор, пока не получится ультовать по откату.
 
 
 # === characters.#xingqiu.roles.#off-field_dps.tips ===
@@ -2030,7 +2030,7 @@ Prioritize Energy Recharge first if you can't burst off cooldown
 Если все время поддерживать действие бонуса комплекта, то это лучшие артефакты для Яэ. Лучше всего этот комплект подходит для Яэ в командах построенных через реакцию Заряжен.
 
 **[Стойкость Миллелита (4)](#artifact:tenacity-of-the-millelith)**<br>
-С этим комплектом Яэ теряет в личном уроне, но зато даёт  20% бонус Атаки всему отряду. Не рекомендуется собирать этот комплект специально для Яэ, и его использовать можно только если уже есть хорошие артефакты с этого подземелья.
+С этим комплектом Яэ теряет в личном уроне, но зато даёт  20% бонус Атаки всему отряду. Не рекомендуется добывать этот комплект специально для Яэ, и его использовать можно только если уже есть хорошие артефакты с этого подземелья.
 
 **О приоритете талантов**
 
@@ -2090,7 +2090,7 @@ _**Восстановление энергии и оружие**_
 
 # === characters.#yoimiya.credits ===
 
-[Глубокий разбор](https://keqingmains.com/yoimiya/) от Ёимия мейнеров и ККМ (англ.)
+[Подробный разбор](https://keqingmains.com/yoimiya/) от Ёимия мейнеров и ККМ (англ.)
 
 
 # === characters.#yoimiya.roles.#dps.notes ===
@@ -2126,7 +2126,7 @@ _**Восстановление энергии и оружие**_
 **О главстатах**
 
 **Мастерство стихий**<br>
-Хороший вариант для Ёимии — вызывать Испарение или Перегрузку. Если в команде есть Беннетт, пески на Мастерство стихий будут немного полезнее, чем на Силу атаки. Но рекомендуется использовать те, у которых лучше сабстаты.
+Хороший вариант для Ёимии — вызывать Испарение или Перегрузку. Если в команде есть Беннетт, часы на Мастерство стихий будут немного полезнее, чем на Силу атаки. Но рекомендуется использовать те, у которых лучше допстаты.
 
 **О приоритетных талантах**
 
