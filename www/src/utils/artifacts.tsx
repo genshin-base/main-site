@@ -1,4 +1,4 @@
-import { ART_GROUP_18_ATK_CODE, ART_GROUP_20_ER_CODE, GI_ArtifactTypeCode } from '#lib/genshin'
+import { GI_ARTIFACT_GROUP_CODES, GI_ArtifactTypeCode } from '#lib/genshin'
 import { ART_GROUP_CODES } from '#src/api/generated'
 import icon_circlet from '#src/media/circlet.png'
 import icon_flower from '#src/media/flower.png'
@@ -20,7 +20,7 @@ export function getArtifactTypeIconSrc(artifactTypeCode: string): string {
 }
 
 function isGroup(code: string) {
-	return code === ART_GROUP_18_ATK_CODE || code === ART_GROUP_20_ER_CODE
+	return (GI_ARTIFACT_GROUP_CODES as string[]).includes(code)
 }
 
 export function getArtifactIconSrc(artifactCode: string): string {

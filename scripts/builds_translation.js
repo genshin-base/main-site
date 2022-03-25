@@ -19,7 +19,7 @@ import {
 } from './_common.js'
 import { walkTextNodes } from '#lib/parsing/helperteam/text.js'
 import { trigramMustGetWithThresh, TrigramSearcher } from '#lib/trigrams.js'
-import { ART_GROUP_18_ATK_CODE, ART_GROUP_20_ER_CODE } from '#lib/genshin.js'
+import { GI_ARTIFACT_GROUP_CODES } from '#lib/genshin.js'
 
 const args = parseArgs()
 const needHelp = args['--help'] || args['-h']
@@ -120,8 +120,7 @@ async function autofillLinks() {
 		weapons: makeSearcher(await loadWeapons(), 'weapon'),
 		items: makeSearcher(await loadItems(), 'item'),
 	}
-	for (const code of [ART_GROUP_18_ATK_CODE, ART_GROUP_20_ER_CODE])
-		searchers.artifacts.add(code, { name: code, code })
+	for (const code of GI_ARTIFACT_GROUP_CODES) searchers.artifacts.add(code, { name: code, code })
 
 	info('searching special links...')
 	for (const [lang, blocks] of Object.entries(lang2blocks)) {

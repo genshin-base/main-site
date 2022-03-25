@@ -547,7 +547,7 @@ export const GENERATED_DATA_HASH = ${JSON.stringify(hash)}
 /** @type {import('#lib/parsing/combine').CharacterShortInfo[]} */
 export const charactersShortList = ${JSON.stringify(charactersShortInfo, null, '\t')}
 
-/** @type {import('#lib/parsing').ArtifcatSetGroupCodes} */
+/** @type {import('#lib/parsing').ArtifcatSetGroupsCodes} */
 export const ART_GROUP_CODES = ${JSON.stringify(artGroupCodes, null, '\t')}
 `,
 	)

@@ -1,4 +1,5 @@
 import {
+	GI_ArtifactGroupCode,
 	GI_ArtifactTypeCode,
 	GI_KnownStatBonusCode,
 	GI_WeaponObtainSource,
@@ -205,7 +206,7 @@ export const I18N_OBTAINED_DURING_STORYLINE = {
 	en: 'Obtained during storyline quests',
 	ru: 'Выдаётся во время прохождения сюжетных заданий',
 }[LANG]
-export const I18N_ART_GROUP_NAME = {
+export const I18N_ART_GROUP_NAME: Record<GI_ArtifactGroupCode, string> = {
 	en: { '18%-atk': 'ATK +18%', '20%-er': 'Energy Recharge +20%' },
 	ru: { '18%-atk': 'Сила атаки +18%', '20%-er': 'Восстановление энергии +20%' },
 }[LANG]

@@ -18,7 +18,7 @@ import { mustBeNotNull } from '#lib/utils/values.js'
 import { buildsConvertLangMode } from '#lib/parsing/helperteam/index.js'
 import { getInlineText } from '#lib/parsing/helperteam/text.js'
 import { trigramMustGetWithThresh, TrigramSearcher } from '#lib/trigrams.js'
-import { ART_GROUP_18_ATK_CODE, ART_GROUP_20_ER_CODE } from '#lib/genshin.js'
+import { GI_ARTIFACT_GROUP_CODES } from '#lib/genshin.js'
 
 // const DOC_ID = '1i5KQPYepEm1a6Gu56vN6Ixprb892zixNbrFcrIB39Bc' //test
 const DOC_ID = '1UA7RwCWBG_Nyp78sQuM7XTj6mNVG_Rv-uafMB2k37Pc'
@@ -180,8 +180,7 @@ async function download() {
 		weapons: makeSearcher(await loadWeapons(), 'weapon'),
 		items: makeSearcher(await loadItems(), 'item'),
 	}
-	for (const code of [ART_GROUP_18_ATK_CODE, ART_GROUP_20_ER_CODE])
-		searchers.artifacts.add(code, { name: code, code })
+	for (const code of GI_ARTIFACT_GROUP_CODES) searchers.artifacts.add(code, { name: code, code })
 
 	info(`loading spreadsheet...`)
 	const spreadsheet = await loadSpreadsheet(

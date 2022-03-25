@@ -1,5 +1,5 @@
 
-export const GENERATED_DATA_HASH = "6b4a3cc2"
+export const GENERATED_DATA_HASH = "52cb44b3"
 
 /** @type {import('#lib/parsing/combine').CharacterShortInfo[]} */
 export const charactersShortList = [
@@ -299,7 +299,7 @@ export const charactersShortList = [
 	}
 ]
 
-/** @type {import('#lib/parsing').ArtifcatSetGroupCodes} */
+/** @type {import('#lib/parsing').ArtifcatSetGroupsCodes} */
 export const ART_GROUP_CODES = {
 	"18%-atk": [
 		"echoes-of-an-offering",
