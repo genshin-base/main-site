@@ -216,18 +216,18 @@ export const I18N_ART_GROUP_NAME: Record<GI_ArtifactGroupCode, string> = {
 	ru: { '18%-atk': 'Сила атаки +18%', '20%-er': 'Восстановление энергии +20%' },
 }[LANG]
 
+const pluralizeHours = {
+	en: (hours: number) => pluralizeEN(hours, 'hour', 'hours'),
+	ru: (hours: number) => pluralizeRU(hours, 'час', 'часа', 'часов'),
+}[LANG]
+const pluralizeMinutes = {
+	en: (minutes: number) => pluralizeEN(minutes, 'minute', 'minutes'),
+	ru: (minutes: number) => pluralizeRU(minutes, 'минута', 'минуты', 'минут'),
+}[LANG]
 export function I18N_MS_TO_HM_WORDS(duration: number): string {
 	const minutes = Math.floor((duration / (1000 * 60)) % 60)
 	const hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
-	const hoursLabel = {
-		en: pluralizeEN(hours, 'hour', 'hours'),
-		ru: pluralizeRU(hours, 'час', 'часа', 'часов'),
-	}[LANG]
-	const minutesLabel = {
-		en: pluralizeEN(minutes, 'minute', 'minutes'),
-		ru: pluralizeRU(minutes, 'минута', 'минуты', 'минут'),
-	}[LANG]
-	return `${hours} ${hoursLabel} ${minutes} ${minutesLabel}`
+	return `${hours} ${pluralizeHours(hours)} ${minutes} ${pluralizeMinutes(minutes)}`
 }
 
 function pluralizeEN(n: number, w0: string, w1: string): string {
@@ -247,5 +247,4 @@ function pluralizeRU(n: number, w0: string, w1: string, w3: string): string {
 	} else {
 		return w3
 	}
-	return w0
 }
