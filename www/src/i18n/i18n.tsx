@@ -7,6 +7,7 @@ import {
 	MapCode,
 } from '#lib/genshin'
 import { GI_TalentCode } from '#lib/parsing/helperteam/types'
+import { LINK_DISCORD_INVITE } from '#src/utils/links'
 
 type Lang = 'en' | 'ru'
 const LANG = BUNDLE_ENV.LANG as Lang
@@ -135,6 +136,55 @@ export const I18N_FOR_NOBODY = { en: 'Nobody', ru: 'Никого' }[LANG]
 export const I18N_SOURCE = { en: 'Source', ru: 'Источник' }[LANG]
 export const I18N_SCROLL_TO_ZOOM = { en: 'Scroll to zoom', ru: 'Зум колёсиком' }[LANG]
 export const I18N_PINCH_TO_ZOOM = { en: 'Pinch to zoom', ru: 'Зум щипком' }[LANG]
+export const I18N_CANCEL = { en: 'cancel', ru: 'отмена' }[LANG]
+export const I18N_SUBMIT = { en: 'submit', ru: 'отправить' }[LANG]
+export const I18N_SUBMIT_BUG_SUCCESS = { en: 'Message sent. Thank you', ru: 'Сообщение отправлено. Спасибо' }[
+	LANG
+]
+export const I18N_SUBMIT_BUG_ERROR = {
+	en: 'Error happened while sending message. Please try again later, or contact us on Discord',
+	ru: 'Не удалось отправить сообщение. Попробуйте позже, или напишите нам в Дискорде',
+}[LANG]
+export const I18N_YOUR_MESSAGE_HERE = { en: 'Your message here', ru: 'Текст сообщения' }[LANG]
+export const I18N_REPORT_BUG_GUIDE = {
+	en: (
+		<>
+			<p>
+				Please, describe your problem here. You can upload images on{' '}
+				<a href="https://imgur.com/upload" target="_blank">
+					imgur.com
+				</a>{' '}
+				and use generated links to them in your message.
+			</p>
+			<p>
+				Or message us on{' '}
+				<a href={LINK_DISCORD_INVITE} target="_blank">
+					our Discord server
+				</a>
+				!
+			</p>
+		</>
+	),
+	ru: (
+		<>
+			<p>
+				Пожалуйста, опишите проблему в поле ниже. Если требуется, вы можете загрузить скриншоты на
+				сайт{' '}
+				<a href="https://imgur.com/upload" target="_blank">
+					imgur.com
+				</a>{' '}
+				и вставить ссылки на скриншоты в своё сообщение.
+			</p>
+			<p>
+				Или напишите нам на{' '}
+				<a href={LINK_DISCORD_INVITE} target="_blank">
+					нaшем сервере в Дискорде
+				</a>
+				!
+			</p>
+		</>
+	),
+}[LANG]
 export const I18N_ERROR = { en: 'Error, reload page', ru: 'Ошибка, перезагрузите страницу' }[LANG]
 export const I18N_PIECE_BONUS = {
 	en: (n: number) => `${n} piece bonus`,
@@ -166,6 +216,10 @@ export const I18N_OUR_DISCORD = { en: 'Our Discord', ru: 'Наш Дискорд'
 export const I18N_CREATED_BY_US = {
 	en: 'Designed and coded by Absolute Evil Studio',
 	ru: 'Задизайнено и закожено в Абсолют Ивел студии',
+}[LANG]
+export const I18N_REPORT_BUG = {
+	en: 'Report a bug',
+	ru: 'Сообщить об ошибке',
 }[LANG]
 
 type WeaponTypeNames = Record<GI_WeaponTypeCode, string>

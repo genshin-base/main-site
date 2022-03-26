@@ -2036,7 +2036,7 @@ _**Рекомендуемый порог Восстановления энерг
 
 Обратите внимание на то, что Взрыв стихии наносит больше урона, чем Элементальный навык при битве с группой врагов.
 
-Спасибо _Fob#6835_ за помощь в составлении [рейтинга артефактов и оружия.](https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994)
+Спасибо _Fob#6835_ за помощь в составлении [рейтинга артефактов и оружия (англ.)](https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994)
 
 
 # === characters.#yanfei.roles.#dps.tips ===

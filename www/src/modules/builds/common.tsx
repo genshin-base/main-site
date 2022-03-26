@@ -85,7 +85,12 @@ export function notesToJSX(tips: CompactTextParagraphs | null): JSX.Nodes {
 		if ('b' in tip) return <b class="opacity-75 text-normal">{notesToJSX(tip.b)}</b>
 		if ('i' in tip) return <i>{notesToJSX(tip.i)}</i>
 		if ('s' in tip) return <s>{notesToJSX(tip.s)}</s>
-		if ('a' in tip) return <a href={tip.href}>{notesToJSX(tip.a)}</a>
+		if ('a' in tip)
+			return (
+				<a href={tip.href} target="_blank">
+					{notesToJSX(tip.a)}
+				</a>
+			)
 		if ('weapon' in tip)
 			return (
 				<ItemLabelWithDd type="weapon" code={tip.code}>

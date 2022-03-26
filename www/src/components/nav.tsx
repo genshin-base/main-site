@@ -12,6 +12,7 @@ import { A, isOnRoute, makeLocationHrefForLang } from '#src/routes/router'
 import { useClickAway } from '#src/utils/hooks'
 import { VARIATION_SELECTOR } from '#src/utils/typography'
 import { GlobeIcon } from './globe-icon'
+import { LINK_DISCORD_INVITE } from '#src/utils/links'
 
 type Props = { isNavExpanded: boolean }
 
@@ -40,7 +41,7 @@ export function Nav({ isNavExpanded }: Props): JSX.Element {
 					</A>
 				</li>
 				<li className="nav-item">
-					<a className="nav-link" target="_blank" href="#">
+					<a className="nav-link" target="_blank" href={LINK_DISCORD_INVITE}>
 						{I18N_OUR_DISCORD}
 					</a>
 				</li>
