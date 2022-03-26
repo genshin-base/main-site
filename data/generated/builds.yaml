@@ -32,13 +32,13 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: sharpshooters-oath
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: windblume-ode
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -328,7 +328,7 @@ characters:
                   notes: null
                   seeCharNotes: false
                 - code: the-catch
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -790,7 +790,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: iron-sting
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -1359,7 +1359,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: skyrider-greatsword
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -1865,13 +1865,13 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: the-widsith
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: dodoco-tales
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -2174,7 +2174,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: the-catch
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -2531,7 +2531,7 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: dodoco-tales
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -4895,25 +4895,25 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: prototype-rancour
-                  refine: R3+
+                  refine: 3+
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: the-black-sword
-                  refine: R2+
+                  refine: 2+
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: prototype-rancour
-                  refine: R1-R2
+                  refine: 1-2
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: the-black-sword
-                  refine: R1
+                  refine: "1"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -4943,7 +4943,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -5110,7 +5110,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -5303,7 +5303,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: the-catch
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -5524,7 +5524,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: oathsworn-eye
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -5711,7 +5711,7 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: sacrificial-sword
-                  refine: R3+
+                  refine: 3+
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -5741,7 +5741,7 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: festering-desire
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -5759,7 +5759,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -7489,7 +7489,7 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: luxurious-sea-lord
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -7939,7 +7939,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -8125,7 +8125,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: the-catch
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -8143,7 +8143,7 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: white-tassel
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -8285,7 +8285,7 @@ characters:
                   notes: null
                   seeCharNotes: false
                 - code: the-catch
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -8340,7 +8340,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: white-tassel
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -9218,12 +9218,12 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: luxurious-sea-lord
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
                 - code: akuoumaru
-                  refine: R1
+                  refine: "1"
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -9253,7 +9253,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: skyrider-greatsword
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -9478,7 +9478,7 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -9697,7 +9697,7 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: slingshot
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -10406,7 +10406,7 @@ characters:
                   notes: null
                   seeCharNotes: false
                 - code: amenoma-kageuchi
-                  refine: R1
+                  refine: "1"
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -10588,7 +10588,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -10737,7 +10737,7 @@ characters:
                   notes: null
                   seeCharNotes: false
                 - code: festering-desire
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -10984,19 +10984,19 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: windblume-ode
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: alley-hunter
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: raven-bow
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -11540,7 +11540,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: dodoco-tales
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -11707,7 +11707,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: dodoco-tales
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -11997,7 +11997,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: sacrificial-greatsword
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -12424,7 +12424,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: festering-desire
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -12436,7 +12436,7 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -12616,7 +12616,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: harbinger-of-dawn
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -13032,7 +13032,7 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: the-catch
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -13195,7 +13195,7 @@ characters:
                   notes: null
                   seeCharNotes: false
                 - code: cinnabar-spindle
-                  refine: R5
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: true
