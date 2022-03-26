@@ -29,9 +29,6 @@ export const I18N_EUROPE = { en: 'Europe', ru: 'Европа' }[LANG]
 export const I18N_MINUTE = { en: 'minute', ru: 'минута' }[LANG]
 export const I18N_MINUTES = { en: 'minutes', ru: 'минуты' }[LANG]
 export const I18N_MINUTES_3 = { en: 'minutes', ru: 'минут' }[LANG]
-export const I18N_HOUR = { en: 'hour', ru: 'час' }[LANG]
-export const I18N_HOURS = { en: 'hours', ru: 'часа' }[LANG]
-export const I18N_HOURS_3 = { en: 'hours', ru: 'часов' }[LANG]
 export const I18N_TODAY = { en: 'today', ru: 'сегодня' }[LANG]
 export const I18N_WEEKDAYS = {
 	en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
@@ -41,6 +38,14 @@ export const I18N_TOMORROW = { en: 'tomorrow', ru: 'завтра' }[LANG]
 export const I18N_DUNGEONS = { en: 'Dungeons', ru: 'Подземелья' }[LANG]
 export const I18N_TALENTS = { en: 'Talents', ru: 'Таланты' }[LANG]
 export const I18N_WEAPONS = { en: 'Weapons', ru: 'Оружие' }[LANG]
+export const I18N_WEAPON_STACKS_COUNT = {
+	en: (stacks: number) => stacks + ' ' + pluralizeEN(stacks, 'stack', 'stacks'),
+	ru: (stacks: number) => stacks + ' ' + pluralizeRU(stacks, 'стак', 'стака', 'стаков'),
+}[LANG]
+export const I18N_WEAPON_REFINE = {
+	en: (refine: string) => 'R' + refine,
+	ru: (refine: string) => 'Р' + refine,
+}[LANG]
 export const I18N_WHY_ADD_TO_FAVS_TIP = {
 	en: 'Add characters, weapons or items to your favorites to see them marked here.',
 	ru: 'Добавьте персонажей, оружие и предметы в избранные, чтобы отметить их здесь',
@@ -264,3 +269,36 @@ export const I18N_ART_GROUP_NAME: Record<GI_ArtifactGroupCode, string> = {
 	en: { '18%-atk': 'ATK +18%', '20%-er': 'Energy Recharge +20%' },
 	ru: { '18%-atk': 'Сила атаки +18%', '20%-er': 'Восстановление энергии +20%' },
 }[LANG]
+
+const pluralizeHours = {
+	en: (hours: number) => pluralizeEN(hours, 'hour', 'hours'),
+	ru: (hours: number) => pluralizeRU(hours, 'час', 'часа', 'часов'),
+}[LANG]
+const pluralizeMinutes = {
+	en: (minutes: number) => pluralizeEN(minutes, 'minute', 'minutes'),
+	ru: (minutes: number) => pluralizeRU(minutes, 'минута', 'минуты', 'минут'),
+}[LANG]
+export function I18N_MS_TO_HM_WORDS(duration: number): string {
+	const minutes = Math.floor((duration / (1000 * 60)) % 60)
+	const hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
+	return `${hours} ${pluralizeHours(hours)} ${minutes} ${pluralizeMinutes(minutes)}`
+}
+
+function pluralizeEN(n: number, w0: string, w1: string): string {
+	if (n < 0) n = -n
+	const d0 = n % 10
+	const d10 = n % 100
+
+	if (d10 === 11 || d10 === 12 || d0 === 0 || (d0 >= 2 && d0 <= 9)) return w1
+	return w0
+}
+function pluralizeRU(n: number, w0: string, w1: string, w3: string): string {
+	if (n < 0) n = -n
+	if (n % 10 === 1 && n % 100 !== 11) {
+		return w0
+	} else if (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)) {
+		return w1
+	} else {
+		return w3
+	}
+}

@@ -207,6 +207,52 @@ const fixes = {
 					return true
 				},
 			],
+			domains: [
+				code2domain => {
+					const code = 'end-of-the-oneiric-euthymia'
+					if (code in code2domain) return false
+					code2domain[code] = {
+						code,
+						type: 'trounce',
+						name: {
+							en: 'End of the Oneiric Euthymia',
+							ru: 'Конец Царства Онейроса',
+						},
+						region: 'inazuma',
+						location: { mapCode: 'teyvat', x: 3656, y: 4808 },
+						drop: {
+							itemCodes: [
+								'mudra-of-the-malefic-general',
+								'tears-of-the-calamitous-god',
+								'the-meaning-of-aeons',
+								'mora',
+								'adventure-exp',
+								'companionship-exp',
+								'vajrada-amethyst-chunk',
+								'vajrada-amethyst-fragment',
+								'vajrada-amethyst-gemstone',
+								'vajrada-amethyst-sliver',
+								'dream-solvent',
+								'northlander-bow-billet',
+								'northlander-catalyst-billet',
+								'northlander-claymore-billet',
+								'northlander-polearm-billet',
+								'northlander-sword-billet',
+							],
+							artifactSetCodes: [
+								'berserker',
+								'instructor',
+								'the-exile',
+								'gladiators-finale',
+								'wanderers-troupe',
+							],
+						},
+						bossCode: null,
+						dropTimetable: {},
+					}
+					return true
+				},
+			],
 		},
 		descriptionLangFix(text, lang) {
 			if (lang === 'ru') {
@@ -220,7 +266,6 @@ const fixes = {
 		enemiesOnMap: [
 			{ nameOnMap: 'Fatui Agent', useCode: 'fatui-pyro-agent' },
 			{ nameOnMap: 'Fatui Mirror Maiden', useCode: 'mirror-maiden' },
-			{ nameOnMap: 'Electro Samachurl', useCode: 'bathysmal-vishap' },
 		],
 	},
 }

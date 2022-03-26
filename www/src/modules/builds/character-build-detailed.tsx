@@ -21,6 +21,8 @@ import {
 	I18N_SUBSTATS_PRIORITY,
 	I18N_TALENT_NAME,
 	I18N_TALENTS_PRIORITY,
+	I18N_WEAPON_REFINE,
+	I18N_WEAPON_STACKS_COUNT,
 	I18N_WEAPONS,
 } from '#src/i18n/i18n'
 import { A } from '#src/routes/router'
@@ -31,7 +33,6 @@ import {
 	getCharacterSilhouetteSrc,
 } from '#src/utils/characters'
 import { getItemIconSrc } from '#src/utils/items'
-import { pluralizeEN } from '#src/utils/strings'
 import { getWeaponIconSrc } from '#src/utils/weapons'
 import {
 	BuildRoleOrDummy,
@@ -77,10 +78,8 @@ export function CharacterBuildDetailed({
 							imgSrc={getWeaponIconSrc(weapon.code)}
 							title={
 								weapon.name +
-								(item.refine === null ? '' : ` [${item.refine}]`) +
-								(item.stacks === null
-									? ''
-									: ` (${item.stacks} ${pluralizeEN(item.stacks, 'stack', 'stacks')})`)
+								(item.refine === null ? '' : ` [${I18N_WEAPON_REFINE(item.refine)}]`) +
+								(item.stacks === null ? '' : ` (${I18N_WEAPON_STACKS_COUNT(item.stacks)})`)
 							}
 							rarity={weapon.rarity}
 							avatarClasses="with-padding"
