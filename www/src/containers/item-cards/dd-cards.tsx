@@ -97,18 +97,17 @@ function Card({
 }): JSX.Element {
 	return (
 		<div className={`item-detail-popover-card card ${classes}`}>
-			<h3 className="card-header fs-4 d-flex">
+			<h3 className="card-header fs-4 d-flex position-relative">
 				<span className="flex-fill">{titleEl}</span>{' '}
 				<DdContext.Consumer>
 					{ddContext =>
 						ddContext.onClickAway && (
-							<span
-								class="fs-4 lh-1 opacity-75 float-end ps-2 mt-1 c-pointer"
+							<button
 								type="button"
+								class="btn-close btn-sm position-absolute end-0 top-50 translate-middle"
+								aria-label="Close"
 								onClick={ddContext.onClickAway}
-							>
-								{TIMES}
-							</span>
+							></button>
 						)
 					}
 				</DdContext.Consumer>
@@ -201,7 +200,7 @@ function MapWrap({
 				tabs={markerGroups}
 				selectedTab={selectedSource}
 				onTabSelect={setSourceAndFixMapCode}
-				classes="w-100"
+				classes="w-100 btn-group-sm"
 			/>
 		)
 	} else {
@@ -356,7 +355,8 @@ export function ArtifactCard({
 						titleFunc={tabTitleFromName}
 						selectedTab={selectedArt}
 						onTabSelect={setSelectedArt}
-						classes="w-100"
+						classes="w-100 btn-group-sm"
+						visibleTabsLength={3}
 					/>
 				) : null
 			}

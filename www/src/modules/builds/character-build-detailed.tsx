@@ -250,7 +250,7 @@ export function CharacterBuildDetailed({
 				tabs={roleTabs}
 				selectedTab={selectedRoleTab}
 				onTabSelect={setSelectedRoleTab}
-				classes="w-100 mt-3 mb-0"
+				classes="w-100 btn-group-sm mt-3 mb-0"
 			/>
 			<div className="">
 				<div className="my-3">

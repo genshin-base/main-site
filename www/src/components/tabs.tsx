@@ -47,30 +47,61 @@ export function BtnTabGroup<T extends Tab>({
 	selectedTab,
 	onTabSelect,
 	classes = '',
+	visibleTabsLength,
 }: {
 	tabs: T[]
 	titleFunc?: (tab: T) => string | JSX.Element
 	selectedTab: T
 	onTabSelect: (tab: T) => void
 	classes?: string
+	visibleTabsLength?: number
 }): JSX.Element {
+	const tabsGrouped: T[][] = []
+	if (visibleTabsLength) {
+		tabsGrouped[0] = tabs.slice(0, visibleTabsLength)
+		tabsGrouped[1] = tabs.slice(visibleTabsLength, tabs.length - 1)
+	} else {
+		tabsGrouped[0] = tabs
+	}
+	// todo бордеррадиусы или другой дизайн
 	return (
-		<div class={`btn-group ${classes}`}>
-			{tabs.map(t => (
-				<button
-					type="button"
-					disabled={tabs.length === 1}
-					className={`btn btn-sm lh-sm ${
-						t.code === selectedTab.code ? 'btn-primary' : 'btn-outline-primary'
-					} `}
-					key={t.code}
-					onClick={e => {
-						onTabSelect(t)
-					}}
-				>
-					{titleFunc ? titleFunc(t) : 'title' in t ? t.title : t.code}
-				</button>
-			))}
+		<div>
+			<div class={`btn-group ${classes}`}>
+				{tabsGrouped[0].map(t => (
+					<button
+						type="button"
+						disabled={tabs.length === 1}
+						className={`btn lh-sm ${
+							t.code === selectedTab.code ? 'btn-primary' : 'btn-outline-primary'
+						} `}
+						key={t.code}
+						onClick={e => {
+							onTabSelect(t)
+						}}
+					>
+						{titleFunc ? titleFunc(t) : 'title' in t ? t.title : t.code}
+					</button>
+				))}
+			</div>
+			{visibleTabsLength && tabsGrouped[1].length ? (
+				<div class={`btn-group ${classes}`}>
+					{tabsGrouped[1].map(t => (
+						<button
+							type="button"
+							disabled={tabs.length === 1}
+							className={`btn lh-sm ${
+								t.code === selectedTab.code ? 'btn-primary' : 'btn-outline-primary'
+							} `}
+							key={t.code}
+							onClick={e => {
+								onTabSelect(t)
+							}}
+						>
+							{titleFunc ? titleFunc(t) : 'title' in t ? t.title : t.code}
+						</button>
+					))}
+				</div>
+			) : null}
 		</div>
 	)
 }

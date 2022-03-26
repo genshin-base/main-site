@@ -77,7 +77,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 							tabs={tabs}
 							selectedTab={selectedTab}
 							onTabSelect={setSelectedTab}
-							classes="w-100 mb-2"
+							classes="w-100 mb-2 btn-group-sm"
 						/>
 					</div>
 				</>

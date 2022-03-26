@@ -161,7 +161,7 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 						titleFunc={makeRoleTitle}
 						selectedTab={selectedRoleTab}
 						onTabSelect={setSelectedRoleTab}
-						classes="w-100 mt-3 mb-2"
+						classes="w-100 mt-3 mb-2 btn-group-sm"
 						key={displayingCharacterCode}
 					/>
 				</div>
