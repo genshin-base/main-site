@@ -964,3 +964,37 @@ hidden-palace-of-lianshan-formula:
   region: liyue
   location: !loc teyvat -334 1600
   bossCode: null
+end-of-the-oneiric-euthymia:
+  code: end-of-the-oneiric-euthymia
+  type: trounce
+  name:
+    en: End of the Oneiric Euthymia
+    ru: Конец Царства Онейроса
+  region: inazuma
+  location: !loc teyvat 3656 4808
+  drop:
+    itemCodes:
+      - mudra-of-the-malefic-general
+      - tears-of-the-calamitous-god
+      - the-meaning-of-aeons
+      - mora
+      - adventure-exp
+      - companionship-exp
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
+      - dream-solvent
+      - northlander-bow-billet
+      - northlander-catalyst-billet
+      - northlander-claymore-billet
+      - northlander-polearm-billet
+      - northlander-sword-billet
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - gladiators-finale
+      - wanderers-troupe
+  bossCode: null
+  dropTimetable: {}
