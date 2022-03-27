@@ -155,7 +155,7 @@ export const I18N_REPORT_BUG_GUIDE = {
 	en: (
 		<>
 			<p>
-				Please, describe your problem here. You can upload images on{' '}
+				Please describe your problem here. You can upload images on{' '}
 				<a href="https://imgur.com/upload" target="_blank">
 					imgur.com
 				</a>{' '}
