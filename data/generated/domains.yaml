@@ -1,480 +1,3 @@
-clear-pool-and-mountain-cavern:
-  code: clear-pool-and-mountain-cavern
-  type: artifacts
-  name:
-    en: Clear Pool and Mountain Cavern
-    ru: Чистая вода и горная пещера
-  drop:
-    itemCodes:
-      - adventure-exp
-      - companionship-exp
-      - mora
-    artifactSetCodes:
-      - bloodstained-chivalry
-      - bloodstained-chivalry
-      - gambler
-      - gambler
-      - noblesse-oblige
-      - noblesse-oblige
-      - scholar
-      - scholar
-  dropTimetable: {}
-  region: liyue
-  location: !loc teyvat -2181 1045
-  bossCode: null
-domain-of-guyun:
-  code: domain-of-guyun
-  type: artifacts
-  name:
-    en: Domain of Guyun
-    ru: Владения Гуюнь
-  drop:
-    itemCodes:
-      - adventure-exp
-      - companionship-exp
-      - mora
-    artifactSetCodes:
-      - archaic-petra
-      - archaic-petra
-      - brave-heart
-      - brave-heart
-      - lucky-dog
-      - lucky-dog
-      - retracing-bolide
-      - retracing-bolide
-  dropTimetable: {}
-  region: liyue
-  location: !loc teyvat 215 2630
-  bossCode: null
-hidden-palace-of-zhou-formula:
-  code: hidden-palace-of-zhou-formula
-  type: artifacts
-  name:
-    en: Hidden Palace of Zhou Formula
-    ru: Скрытый дворец Уван
-  drop:
-    itemCodes:
-      - adventure-exp
-      - companionship-exp
-      - mora
-    artifactSetCodes:
-      - crimson-witch-of-flames
-      - crimson-witch-of-flames
-      - defenders-will
-      - defenders-will
-      - lavawalker
-      - lavawalker
-      - martial-artist
-      - martial-artist
-  dropTimetable: {}
-  region: liyue
-  location: !loc teyvat -1145 643
-  bossCode: null
-midsummer-courtyard:
-  code: midsummer-courtyard
-  type: artifacts
-  name:
-    en: Midsummer Courtyard
-    ru: Июльские сады
-  drop:
-    itemCodes:
-      - adventure-exp
-      - companionship-exp
-      - mora
-    artifactSetCodes:
-      - adventurer
-      - adventurer
-      - resolution-of-sojourner
-      - resolution-of-sojourner
-      - thundering-fury
-      - thundering-fury
-      - thundersoother
-      - thundersoother
-  dropTimetable: {}
-  region: mondstadt
-  location: !loc teyvat 809 -153
-  bossCode: null
-momiji-dyed-court:
-  code: momiji-dyed-court
-  type: artifacts
-  name:
-    en: Momiji-Dyed Court
-    ru: Кленовый зал
-  drop:
-    itemCodes:
-      - adventure-exp
-      - companionship-exp
-      - mora
-    artifactSetCodes:
-      - emblem-of-severed-fate
-      - emblem-of-severed-fate
-      - resolution-of-sojourner
-      - resolution-of-sojourner
-      - shimenawas-reminiscence
-      - shimenawas-reminiscence
-      - tiny-miracle
-      - tiny-miracle
-  dropTimetable: {}
-  region: inazuma
-  location: !loc teyvat 1619 6098
-  bossCode: null
-peak-of-vindagnyr:
-  code: peak-of-vindagnyr
-  type: artifacts
-  name:
-    en: Peak of Vindagnyr
-    ru: Пик Виндагнира
-  drop:
-    itemCodes:
-      - adventure-exp
-      - companionship-exp
-      - mora
-    artifactSetCodes:
-      - blizzard-strayer
-      - blizzard-strayer
-      - defenders-will
-      - defenders-will
-      - gambler
-      - gambler
-      - heart-of-depth
-      - heart-of-depth
-  dropTimetable: {}
-  region: mondstadt
-  location: !loc teyvat 75 1297
-  bossCode: null
-ridge-watch:
-  code: ridge-watch
-  type: artifacts
-  name:
-    en: Ridge Watch
-    ru: Горный дозор
-  drop:
-    itemCodes:
-      - adventure-exp
-      - companionship-exp
-      - mora
-    artifactSetCodes:
-      - brave-heart
-      - brave-heart
-      - martial-artist
-      - martial-artist
-      - pale-flame
-      - pale-flame
-      - tenacity-of-the-millelith
-      - tenacity-of-the-millelith
-  dropTimetable: {}
-  region: liyue
-  location: !loc teyvat -430 868
-  bossCode: null
-slumbering-court:
-  code: slumbering-court
-  type: artifacts
-  name:
-    en: Slumbering Court
-    ru: Дремлющий сад
-  drop:
-    itemCodes:
-      - adventure-exp
-      - companionship-exp
-      - mora
-    artifactSetCodes:
-      - brave-heart
-      - brave-heart
-      - defenders-will
-      - defenders-will
-      - husk-of-opulent-dreams
-      - husk-of-opulent-dreams
-      - ocean-hued-clam
-      - ocean-hued-clam
-  dropTimetable: {}
-  region: inazuma
-  location: !loc teyvat 3463 6619
-  bossCode: null
-valley-of-remembrance:
-  code: valley-of-remembrance
-  type: artifacts
-  name:
-    en: Valley of Remembrance
-    ru: Долина воспоминаний
-  drop:
-    itemCodes:
-      - adventure-exp
-      - companionship-exp
-      - mora
-    artifactSetCodes:
-      - maiden-beloved
-      - maiden-beloved
-      - tiny-miracle
-      - tiny-miracle
-      - traveling-doctor
-      - traveling-doctor
-      - viridescent-venerer
-      - viridescent-venerer
-  dropTimetable: {}
-  region: mondstadt
-  location: !loc teyvat -89 637
-  bossCode: null
-forsaken-rift:
-  code: forsaken-rift
-  type: talents
-  name:
-    en: Forsaken Rift
-    ru: Забытый каньон
-  drop:
-    itemCodes:
-      - adventure-exp
-      - companionship-exp
-      - guide-to-ballad
-      - guide-to-freedom
-      - guide-to-resistance
-      - mora
-      - philosophies-of-ballad
-      - philosophies-of-freedom
-      - philosophies-of-resistance
-      - teachings-of-ballad
-      - teachings-of-freedom
-      - teachings-of-resistance
-    artifactSetCodes: []
-  dropTimetable:
-    mon:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-freedom
-        - mora
-        - philosophies-of-freedom
-        - teachings-of-freedom
-    tue:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-resistance
-        - mora
-        - philosophies-of-resistance
-        - teachings-of-resistance
-    wed:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-ballad
-        - mora
-        - philosophies-of-ballad
-        - teachings-of-ballad
-    thu:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-freedom
-        - mora
-        - philosophies-of-freedom
-        - teachings-of-freedom
-    fri:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-resistance
-        - mora
-        - philosophies-of-resistance
-        - teachings-of-resistance
-    sat:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-ballad
-        - mora
-        - philosophies-of-ballad
-        - teachings-of-ballad
-    sun:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-ballad
-        - guide-to-freedom
-        - guide-to-resistance
-        - mora
-        - philosophies-of-ballad
-        - philosophies-of-freedom
-        - philosophies-of-resistance
-        - teachings-of-ballad
-        - teachings-of-freedom
-        - teachings-of-resistance
-  region: mondstadt
-  location: !loc teyvat 143 657
-  bossCode: null
-taishan-mansion:
-  code: taishan-mansion
-  type: talents
-  name:
-    en: Taishan Mansion
-    ru: Тайшаньфу
-  drop:
-    itemCodes:
-      - adventure-exp
-      - companionship-exp
-      - guide-to-diligence
-      - guide-to-gold
-      - guide-to-prosperity
-      - mora
-      - philosophies-of-diligence
-      - philosophies-of-gold
-      - philosophies-of-prosperity
-      - teachings-of-diligence
-      - teachings-of-gold
-      - teachings-of-prosperity
-    artifactSetCodes: []
-  dropTimetable:
-    mon:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-prosperity
-        - mora
-        - philosophies-of-prosperity
-        - teachings-of-prosperity
-    tue:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-diligence
-        - mora
-        - philosophies-of-diligence
-        - teachings-of-diligence
-    wed:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-gold
-        - mora
-        - philosophies-of-gold
-        - teachings-of-gold
-    thu:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-prosperity
-        - mora
-        - philosophies-of-prosperity
-        - teachings-of-prosperity
-    fri:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-diligence
-        - mora
-        - philosophies-of-diligence
-        - teachings-of-diligence
-    sat:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-gold
-        - mora
-        - philosophies-of-gold
-        - teachings-of-gold
-    sun:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-diligence
-        - guide-to-gold
-        - guide-to-prosperity
-        - mora
-        - philosophies-of-diligence
-        - philosophies-of-gold
-        - philosophies-of-prosperity
-        - teachings-of-diligence
-        - teachings-of-gold
-        - teachings-of-prosperity
-  region: liyue
-  location: !loc teyvat -1919 1677
-  bossCode: null
-violet-court:
-  code: violet-court
-  type: talents
-  name:
-    en: Violet Court
-    ru: Фиалковый зал
-  drop:
-    itemCodes:
-      - adventure-exp
-      - companionship-exp
-      - guide-to-elegance
-      - guide-to-light
-      - guide-to-transience
-      - mora
-      - philosophies-of-elegance
-      - philosophies-of-light
-      - philosophies-of-transience
-      - teachings-of-elegance
-      - teachings-of-light
-      - teachings-of-transience
-    artifactSetCodes: []
-  dropTimetable:
-    mon:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-transience
-        - mora
-        - philosophies-of-transience
-        - teachings-of-transience
-    tue:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-elegance
-        - mora
-        - philosophies-of-elegance
-        - teachings-of-elegance
-    wed:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-light
-        - mora
-        - philosophies-of-light
-        - teachings-of-light
-    thu:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-transience
-        - mora
-        - philosophies-of-transience
-        - teachings-of-transience
-    fri:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-elegance
-        - mora
-        - philosophies-of-elegance
-        - teachings-of-elegance
-    sat:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-light
-        - mora
-        - philosophies-of-light
-        - teachings-of-light
-    sun:
-      itemCodes:
-        - adventure-exp
-        - companionship-exp
-        - guide-to-elegance
-        - guide-to-light
-        - guide-to-transience
-        - mora
-        - philosophies-of-elegance
-        - philosophies-of-light
-        - philosophies-of-transience
-        - teachings-of-elegance
-        - teachings-of-light
-        - teachings-of-transience
-  region: inazuma
-  location: !loc teyvat 3187 5529
-  bossCode: null
 beneath-the-dragon-queller:
   code: beneath-the-dragon-queller
   type: trounce
@@ -530,143 +53,6 @@ beneath-the-dragon-queller:
   region: liyue
   location: !loc teyvat -2504 1722
   bossCode: azhdaha
-confront-stormterror:
-  code: confront-stormterror
-  type: trounce
-  name:
-    en: Confront Stormterror
-    ru: Пройдите дальше в логово Ужаса Бури
-  drop:
-    itemCodes:
-      - adventure-exp
-      - companionship-exp
-      - dream-solvent
-      - dvalins-claw
-      - dvalins-plume
-      - dvalins-sigh
-      - mora
-      - northlander-bow-billet
-      - northlander-catalyst-billet
-      - northlander-claymore-billet
-      - northlander-polearm-billet
-      - northlander-sword-billet
-      - vajrada-amethyst-chunk
-      - vajrada-amethyst-fragment
-      - vajrada-amethyst-gemstone
-      - vajrada-amethyst-sliver
-      - varunada-lazurite-chunk
-      - varunada-lazurite-fragment
-      - varunada-lazurite-gemstone
-      - varunada-lazurite-sliver
-      - vayuda-turquoise-chunk
-      - vayuda-turquoise-fragment
-      - vayuda-turquoise-gemstone
-      - vayuda-turquoise-sliver
-    artifactSetCodes:
-      - berserker
-      - berserker
-      - gladiators-finale
-      - gladiators-finale
-      - instructor
-      - instructor
-      - the-exile
-      - the-exile
-      - wanderers-troupe
-      - wanderers-troupe
-  dropTimetable: {}
-  region: mondstadt
-  location: !loc teyvat -883 -316
-  bossCode: stormterror
-enter-the-golden-house:
-  code: enter-the-golden-house
-  type: trounce
-  name:
-    en: Enter the Golden House
-    ru: Золотая палата
-  drop:
-    itemCodes:
-      - adventure-exp
-      - companionship-exp
-      - dream-solvent
-      - mora
-      - northlander-bow-billet
-      - northlander-catalyst-billet
-      - northlander-claymore-billet
-      - northlander-polearm-billet
-      - northlander-sword-billet
-      - shadow-of-the-warrior
-      - shard-of-a-foul-legacy
-      - shivada-jade-chunk
-      - shivada-jade-fragment
-      - shivada-jade-gemstone
-      - shivada-jade-sliver
-      - tusk-of-monoceros-caeli
-      - vajrada-amethyst-chunk
-      - vajrada-amethyst-fragment
-      - vajrada-amethyst-gemstone
-      - vajrada-amethyst-sliver
-      - varunada-lazurite-chunk
-      - varunada-lazurite-fragment
-      - varunada-lazurite-gemstone
-      - varunada-lazurite-sliver
-    artifactSetCodes:
-      - berserker
-      - berserker
-      - gladiators-finale
-      - gladiators-finale
-      - instructor
-      - instructor
-      - the-exile
-      - the-exile
-      - wanderers-troupe
-      - wanderers-troupe
-  dropTimetable: {}
-  region: liyue
-  location: !loc teyvat -1002 3243
-  bossCode: childe
-narukami-island-tenshukaku:
-  code: narukami-island-tenshukaku
-  type: trounce
-  name:
-    en: "Narukami Island: Tenshukaku"
-    ru: "Остров Наруками: Тэнсюкаку"
-  drop:
-    itemCodes:
-      - adventure-exp
-      - agnidus-agate-chunk
-      - agnidus-agate-fragment
-      - agnidus-agate-gemstone
-      - agnidus-agate-sliver
-      - ashen-heart
-      - companionship-exp
-      - dream-solvent
-      - hellfire-butterfly
-      - molten-moment
-      - mora
-      - northlander-bow-billet
-      - northlander-catalyst-billet
-      - northlander-claymore-billet
-      - northlander-polearm-billet
-      - northlander-sword-billet
-      - shivada-jade-chunk
-      - shivada-jade-fragment
-      - shivada-jade-gemstone
-      - shivada-jade-sliver
-    artifactSetCodes:
-      - berserker
-      - berserker
-      - gladiators-finale
-      - gladiators-finale
-      - instructor
-      - instructor
-      - the-exile
-      - the-exile
-      - wanderers-troupe
-      - wanderers-troupe
-  dropTimetable: {}
-  region: inazuma
-  location: !loc teyvat 3812 5677
-  bossCode: la-signora
 cecilia-garden:
   code: cecilia-garden
   type: weapons
@@ -766,6 +152,77 @@ cecilia-garden:
   region: mondstadt
   location: !loc teyvat -513 79
   bossCode: null
+clear-pool-and-mountain-cavern:
+  code: clear-pool-and-mountain-cavern
+  type: artifacts
+  name:
+    en: Clear Pool and Mountain Cavern
+    ru: Чистая вода и горная пещера
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+    artifactSetCodes:
+      - bloodstained-chivalry
+      - bloodstained-chivalry
+      - gambler
+      - gambler
+      - noblesse-oblige
+      - noblesse-oblige
+      - scholar
+      - scholar
+  dropTimetable: {}
+  region: liyue
+  location: !loc teyvat -2181 1045
+  bossCode: null
+confront-stormterror:
+  code: confront-stormterror
+  type: trounce
+  name:
+    en: Confront Stormterror
+    ru: Пройдите дальше в логово Ужаса Бури
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - dream-solvent
+      - dvalins-claw
+      - dvalins-plume
+      - dvalins-sigh
+      - mora
+      - northlander-bow-billet
+      - northlander-catalyst-billet
+      - northlander-claymore-billet
+      - northlander-polearm-billet
+      - northlander-sword-billet
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
+      - varunada-lazurite-chunk
+      - varunada-lazurite-fragment
+      - varunada-lazurite-gemstone
+      - varunada-lazurite-sliver
+      - vayuda-turquoise-chunk
+      - vayuda-turquoise-fragment
+      - vayuda-turquoise-gemstone
+      - vayuda-turquoise-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - the-exile
+      - the-exile
+      - wanderers-troupe
+      - wanderers-troupe
+  dropTimetable: {}
+  region: mondstadt
+  location: !loc teyvat -883 -316
+  bossCode: stormterror
 court-of-flowing-sand:
   code: court-of-flowing-sand
   type: weapons
@@ -864,6 +321,198 @@ court-of-flowing-sand:
         - narukamis-wisdom
   region: inazuma
   location: !loc teyvat 3657 4725
+  bossCode: null
+domain-of-guyun:
+  code: domain-of-guyun
+  type: artifacts
+  name:
+    en: Domain of Guyun
+    ru: Владения Гуюнь
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+    artifactSetCodes:
+      - archaic-petra
+      - archaic-petra
+      - brave-heart
+      - brave-heart
+      - lucky-dog
+      - lucky-dog
+      - retracing-bolide
+      - retracing-bolide
+  dropTimetable: {}
+  region: liyue
+  location: !loc teyvat 215 2630
+  bossCode: null
+end-of-the-oneiric-euthymia:
+  code: end-of-the-oneiric-euthymia
+  type: trounce
+  name:
+    en: End of the Oneiric Euthymia
+    ru: Конец Царства Онейроса
+  region: inazuma
+  location: !loc teyvat 3656 4808
+  drop:
+    itemCodes:
+      - mudra-of-the-malefic-general
+      - tears-of-the-calamitous-god
+      - the-meaning-of-aeons
+      - mora
+      - adventure-exp
+      - companionship-exp
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
+      - dream-solvent
+      - northlander-bow-billet
+      - northlander-catalyst-billet
+      - northlander-claymore-billet
+      - northlander-polearm-billet
+      - northlander-sword-billet
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - gladiators-finale
+      - wanderers-troupe
+  bossCode: null
+  dropTimetable: {}
+enter-the-golden-house:
+  code: enter-the-golden-house
+  type: trounce
+  name:
+    en: Enter the Golden House
+    ru: Золотая палата
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - dream-solvent
+      - mora
+      - northlander-bow-billet
+      - northlander-catalyst-billet
+      - northlander-claymore-billet
+      - northlander-polearm-billet
+      - northlander-sword-billet
+      - shadow-of-the-warrior
+      - shard-of-a-foul-legacy
+      - shivada-jade-chunk
+      - shivada-jade-fragment
+      - shivada-jade-gemstone
+      - shivada-jade-sliver
+      - tusk-of-monoceros-caeli
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
+      - varunada-lazurite-chunk
+      - varunada-lazurite-fragment
+      - varunada-lazurite-gemstone
+      - varunada-lazurite-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - the-exile
+      - the-exile
+      - wanderers-troupe
+      - wanderers-troupe
+  dropTimetable: {}
+  region: liyue
+  location: !loc teyvat -1002 3243
+  bossCode: childe
+forsaken-rift:
+  code: forsaken-rift
+  type: talents
+  name:
+    en: Forsaken Rift
+    ru: Забытый каньон
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - guide-to-ballad
+      - guide-to-freedom
+      - guide-to-resistance
+      - mora
+      - philosophies-of-ballad
+      - philosophies-of-freedom
+      - philosophies-of-resistance
+      - teachings-of-ballad
+      - teachings-of-freedom
+      - teachings-of-resistance
+    artifactSetCodes: []
+  dropTimetable:
+    mon:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-freedom
+        - mora
+        - philosophies-of-freedom
+        - teachings-of-freedom
+    tue:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-resistance
+        - mora
+        - philosophies-of-resistance
+        - teachings-of-resistance
+    wed:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-ballad
+        - mora
+        - philosophies-of-ballad
+        - teachings-of-ballad
+    thu:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-freedom
+        - mora
+        - philosophies-of-freedom
+        - teachings-of-freedom
+    fri:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-resistance
+        - mora
+        - philosophies-of-resistance
+        - teachings-of-resistance
+    sat:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-ballad
+        - mora
+        - philosophies-of-ballad
+        - teachings-of-ballad
+    sun:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-ballad
+        - guide-to-freedom
+        - guide-to-resistance
+        - mora
+        - philosophies-of-ballad
+        - philosophies-of-freedom
+        - philosophies-of-resistance
+        - teachings-of-ballad
+        - teachings-of-freedom
+        - teachings-of-resistance
+  region: mondstadt
+  location: !loc teyvat 143 657
   bossCode: null
 hidden-palace-of-lianshan-formula:
   code: hidden-palace-of-lianshan-formula
@@ -964,37 +613,388 @@ hidden-palace-of-lianshan-formula:
   region: liyue
   location: !loc teyvat -334 1600
   bossCode: null
-end-of-the-oneiric-euthymia:
-  code: end-of-the-oneiric-euthymia
-  type: trounce
+hidden-palace-of-zhou-formula:
+  code: hidden-palace-of-zhou-formula
+  type: artifacts
   name:
-    en: End of the Oneiric Euthymia
-    ru: Конец Царства Онейроса
-  region: inazuma
-  location: !loc teyvat 3656 4808
+    en: Hidden Palace of Zhou Formula
+    ru: Скрытый дворец Уван
   drop:
     itemCodes:
-      - mudra-of-the-malefic-general
-      - tears-of-the-calamitous-god
-      - the-meaning-of-aeons
-      - mora
       - adventure-exp
       - companionship-exp
-      - vajrada-amethyst-chunk
-      - vajrada-amethyst-fragment
-      - vajrada-amethyst-gemstone
-      - vajrada-amethyst-sliver
+      - mora
+    artifactSetCodes:
+      - crimson-witch-of-flames
+      - crimson-witch-of-flames
+      - defenders-will
+      - defenders-will
+      - lavawalker
+      - lavawalker
+      - martial-artist
+      - martial-artist
+  dropTimetable: {}
+  region: liyue
+  location: !loc teyvat -1145 643
+  bossCode: null
+midsummer-courtyard:
+  code: midsummer-courtyard
+  type: artifacts
+  name:
+    en: Midsummer Courtyard
+    ru: Июльские сады
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+    artifactSetCodes:
+      - adventurer
+      - adventurer
+      - resolution-of-sojourner
+      - resolution-of-sojourner
+      - thundering-fury
+      - thundering-fury
+      - thundersoother
+      - thundersoother
+  dropTimetable: {}
+  region: mondstadt
+  location: !loc teyvat 809 -153
+  bossCode: null
+momiji-dyed-court:
+  code: momiji-dyed-court
+  type: artifacts
+  name:
+    en: Momiji-Dyed Court
+    ru: Кленовый зал
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+    artifactSetCodes:
+      - emblem-of-severed-fate
+      - emblem-of-severed-fate
+      - resolution-of-sojourner
+      - resolution-of-sojourner
+      - shimenawas-reminiscence
+      - shimenawas-reminiscence
+      - tiny-miracle
+      - tiny-miracle
+  dropTimetable: {}
+  region: inazuma
+  location: !loc teyvat 1619 6098
+  bossCode: null
+narukami-island-tenshukaku:
+  code: narukami-island-tenshukaku
+  type: trounce
+  name:
+    en: "Narukami Island: Tenshukaku"
+    ru: "Остров Наруками: Тэнсюкаку"
+  drop:
+    itemCodes:
+      - adventure-exp
+      - agnidus-agate-chunk
+      - agnidus-agate-fragment
+      - agnidus-agate-gemstone
+      - agnidus-agate-sliver
+      - ashen-heart
+      - companionship-exp
       - dream-solvent
+      - hellfire-butterfly
+      - molten-moment
+      - mora
       - northlander-bow-billet
       - northlander-catalyst-billet
       - northlander-claymore-billet
       - northlander-polearm-billet
       - northlander-sword-billet
+      - shivada-jade-chunk
+      - shivada-jade-fragment
+      - shivada-jade-gemstone
+      - shivada-jade-sliver
     artifactSetCodes:
       - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
       - instructor
       - the-exile
-      - gladiators-finale
+      - the-exile
       - wanderers-troupe
-  bossCode: null
+      - wanderers-troupe
   dropTimetable: {}
+  region: inazuma
+  location: !loc teyvat 3812 5677
+  bossCode: la-signora
+peak-of-vindagnyr:
+  code: peak-of-vindagnyr
+  type: artifacts
+  name:
+    en: Peak of Vindagnyr
+    ru: Пик Виндагнира
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+    artifactSetCodes:
+      - blizzard-strayer
+      - blizzard-strayer
+      - defenders-will
+      - defenders-will
+      - gambler
+      - gambler
+      - heart-of-depth
+      - heart-of-depth
+  dropTimetable: {}
+  region: mondstadt
+  location: !loc teyvat 75 1297
+  bossCode: null
+ridge-watch:
+  code: ridge-watch
+  type: artifacts
+  name:
+    en: Ridge Watch
+    ru: Горный дозор
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+    artifactSetCodes:
+      - brave-heart
+      - brave-heart
+      - martial-artist
+      - martial-artist
+      - pale-flame
+      - pale-flame
+      - tenacity-of-the-millelith
+      - tenacity-of-the-millelith
+  dropTimetable: {}
+  region: liyue
+  location: !loc teyvat -430 868
+  bossCode: null
+slumbering-court:
+  code: slumbering-court
+  type: artifacts
+  name:
+    en: Slumbering Court
+    ru: Дремлющий сад
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+    artifactSetCodes:
+      - brave-heart
+      - brave-heart
+      - defenders-will
+      - defenders-will
+      - husk-of-opulent-dreams
+      - husk-of-opulent-dreams
+      - ocean-hued-clam
+      - ocean-hued-clam
+  dropTimetable: {}
+  region: inazuma
+  location: !loc teyvat 3463 6619
+  bossCode: null
+taishan-mansion:
+  code: taishan-mansion
+  type: talents
+  name:
+    en: Taishan Mansion
+    ru: Тайшаньфу
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - guide-to-diligence
+      - guide-to-gold
+      - guide-to-prosperity
+      - mora
+      - philosophies-of-diligence
+      - philosophies-of-gold
+      - philosophies-of-prosperity
+      - teachings-of-diligence
+      - teachings-of-gold
+      - teachings-of-prosperity
+    artifactSetCodes: []
+  dropTimetable:
+    mon:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-prosperity
+        - mora
+        - philosophies-of-prosperity
+        - teachings-of-prosperity
+    tue:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-diligence
+        - mora
+        - philosophies-of-diligence
+        - teachings-of-diligence
+    wed:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-gold
+        - mora
+        - philosophies-of-gold
+        - teachings-of-gold
+    thu:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-prosperity
+        - mora
+        - philosophies-of-prosperity
+        - teachings-of-prosperity
+    fri:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-diligence
+        - mora
+        - philosophies-of-diligence
+        - teachings-of-diligence
+    sat:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-gold
+        - mora
+        - philosophies-of-gold
+        - teachings-of-gold
+    sun:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-diligence
+        - guide-to-gold
+        - guide-to-prosperity
+        - mora
+        - philosophies-of-diligence
+        - philosophies-of-gold
+        - philosophies-of-prosperity
+        - teachings-of-diligence
+        - teachings-of-gold
+        - teachings-of-prosperity
+  region: liyue
+  location: !loc teyvat -1919 1677
+  bossCode: null
+valley-of-remembrance:
+  code: valley-of-remembrance
+  type: artifacts
+  name:
+    en: Valley of Remembrance
+    ru: Долина воспоминаний
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+    artifactSetCodes:
+      - maiden-beloved
+      - maiden-beloved
+      - tiny-miracle
+      - tiny-miracle
+      - traveling-doctor
+      - traveling-doctor
+      - viridescent-venerer
+      - viridescent-venerer
+  dropTimetable: {}
+  region: mondstadt
+  location: !loc teyvat -89 637
+  bossCode: null
+violet-court:
+  code: violet-court
+  type: talents
+  name:
+    en: Violet Court
+    ru: Фиалковый зал
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - guide-to-elegance
+      - guide-to-light
+      - guide-to-transience
+      - mora
+      - philosophies-of-elegance
+      - philosophies-of-light
+      - philosophies-of-transience
+      - teachings-of-elegance
+      - teachings-of-light
+      - teachings-of-transience
+    artifactSetCodes: []
+  dropTimetable:
+    mon:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-transience
+        - mora
+        - philosophies-of-transience
+        - teachings-of-transience
+    tue:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-elegance
+        - mora
+        - philosophies-of-elegance
+        - teachings-of-elegance
+    wed:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-light
+        - mora
+        - philosophies-of-light
+        - teachings-of-light
+    thu:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-transience
+        - mora
+        - philosophies-of-transience
+        - teachings-of-transience
+    fri:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-elegance
+        - mora
+        - philosophies-of-elegance
+        - teachings-of-elegance
+    sat:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-light
+        - mora
+        - philosophies-of-light
+        - teachings-of-light
+    sun:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-elegance
+        - guide-to-light
+        - guide-to-transience
+        - mora
+        - philosophies-of-elegance
+        - philosophies-of-light
+        - philosophies-of-transience
+        - teachings-of-elegance
+        - teachings-of-light
+        - teachings-of-transience
+  region: inazuma
+  location: !loc teyvat 3187 5529
+  bossCode: null
