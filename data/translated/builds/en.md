@@ -1616,7 +1616,7 @@ Due to this set requiring Childe to have around 140% Energy Recharge to reliably
 
 # === characters.#thoma.roles.#support.subStats.notes ===
 
-Crit Rate is an option when using Favonius Lance.
+Crit Rate is an option when using [Favonius Lance](#weapon:favonius-lance).
 
 
 # === characters.#thoma.roles.#support.notes ===
@@ -2085,7 +2085,7 @@ Yanfei's talent levels provide nothing for this role and it is not recommended t
 
 # === characters.#yanfei.roles.#shield_support__[c4+_required].tips ===
 
-_**Energy Recharge Guidelines**_
+**Energy Recharge Guidelines**
 
 Prototype Amber \[R5\]: 210 ER<br>
 Prototype Amber \[R1\] /Favonius Codex: 240 ER<br>

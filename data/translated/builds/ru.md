@@ -5,7 +5,7 @@
 
 # === characters.#albedo.roles.#off-field_dps.tips ===
 
-Альбедо's Элементальный навык генерация частиц is completely RNG like Чжун Ли, но с better odds.
+Элементальный навык Альбедо создаёт частицы энергии случайно, но немного чаще, чем навык Чжуна Ли.
 
 
 # === characters.#albedo.roles.#off-field_dps.notes ===
@@ -112,7 +112,7 @@
 
 # === characters.#ayaka.roles.#dps.subStats.notes ===
 
-Crit Rate loses value here assuming you're running Blizzard Strayer (4), if you're not using that artifact set, then it has the same priority as Crit DMG
+Шанс крита не в приоритете, так как предполагается использование [Заблудшего в метели (4)](#artifact:blizzard-strayer). Без этого набора Шанс крита так же важен, как и Крит урон.
 
 
 # === characters.#ayaka.roles.#dps.tips ===
@@ -224,12 +224,12 @@ Crit Rate loses value here assuming you're running Blizzard Strayer (4), if you'
 
 # === characters.#bennett.roles.#dps.mainStats.notes ===
 
-EM часы is generally > ATK%, but substat quality and weapon choice can potentially favour ATK% sands.
+Обычно бонус Мастерства в часах приоритетнее Процента атаки, но окончательный выбор зависит от сабстатов и оружия.
 
 
 # === characters.#bennett.roles.#dps.subStats.notes ===
 
-Мастерство стихий has lower priority, чем Силы атаки% при использовании Iron Sting
+Процент атаки важнее Мастерства стихий при использовании [Стального жала](#weapon:iron-sting)
 
 
 # === characters.#bennett.roles.#dps.talents.notes ===
@@ -359,12 +359,12 @@ EM часы is generally > ATK%, but substat quality and weapon choice can poten
 
 # === characters.#diluc.roles.#dps.subStats.advices.2.notes ===
 
-higher prio in Vaporize/Melt comps
+приоритетнее в командах Испарения и Таянья
 
 
 # === characters.#diluc.roles.#dps.talents.notes ===
 
-Worth noting that Diluc's constellations boost his Elemental Skill's damage, so talent prioritization can vary from player to player
+Элементальный навык становится приоритетнее с ростом уровня созвездия.
 
 
 # === characters.#diluc.roles.#dps.tips ===
@@ -868,7 +868,7 @@ Worth noting that Diluc's constellations boost his Elemental Skill's damage, so 
 
 # === characters.#keqing.roles.#physical_dps.talents.notes ===
 
-Refer to Notes below
+См. примечания ниже
 
 
 # === characters.#keqing.roles.#physical_dps.notes ===
@@ -897,12 +897,12 @@ Refer to Notes below
 
 Громогласный рёв ярости (4) не рекомендуется для Электро ДПС Кэ Цин.
 
-Обратите внимание, что артефакты отсортированы не по рейтингу. Подробности в описании<br>
+Обратите внимание, что артефакты отсортированы не по рейтингу. Подробности в описании.
 
 
 # === characters.#keqing.roles.#electro_dps.talents.notes ===
 
-Note: Since Keqing uses burst to get an extra 15% crit, it's much better in leveling it.  Best course of action is to level NA and Burst together. Don't forget to level skill to a decent level.
+Кэ Цин получает 15% бонуса Крита от Взрыва стихии, поэтому его и Обычную атаку стоит прокачивать вместе. Но и про Элементальный навык забывать не нужно.
 
 
 # === characters.#keqing.roles.#electro_dps.tips ===
@@ -1111,7 +1111,7 @@ Note: Since Keqing uses burst to get an extra 15% crit, it's much better in leve
 
 # === characters.#lisa.roles.#em_dps.talents.notes ===
 
-EM DPS Lisa's Talent Levels are not a necessity
+для Лизы в роли EM DPS уровни талантов не очень важны
 
 
 # === characters.#lisa.roles.#em_dps.notes ===
@@ -1179,12 +1179,12 @@ EM DPS Lisa's Talent Levels are not a necessity
 
 # === characters.#mona.roles.#freeze_support.mainStats.notes ===
 
-Offensive stats aren't actually needed on a Freeze Support Mona, focus on Artifact Set Bonus
+Атакующие статы Моне для этой роли не нужны, лучше сфокусироваься на бонусе набора артефактов
 
 
 # === characters.#mona.roles.#freeze_support.subStats.notes ===
 
-Offensive stats aren't needed, just stack ER for comfortable Elemental Burst uptime
+Атакующие статы не нужны, лучше собрать достаточно Восстановления энергии для своевременного накопления Взрыва стихии.
 
 
 # === characters.#mona.roles.#freeze_support.tips ===
@@ -1529,7 +1529,7 @@ Offensive stats aren't needed, just stack ER for comfortable Elemental Burst upt
 
 # === characters.#sucrose.roles.#em_build.talents.notes ===
 
-Sucrose's Talent Levels are not a necessity.
+Прокачивать таланты необязательно
 
 
 # === characters.#sucrose.roles.#em_build.tips ===
@@ -1622,7 +1622,7 @@ Sucrose's Talent Levels are not a necessity.
 
 # === characters.#thoma.roles.#support.subStats.notes ===
 
-Crit Rate is an option when using Favonius Lance.
+Шанс крита важнее для [Копья Фавония](#weapon:favonius-lance).
 
 
 # === characters.#thoma.roles.#support.notes ===
@@ -1637,7 +1637,7 @@ Crit Rate is an option when using Favonius Lance.
 
 # === characters.#traveler-anemo.roles.#anemo_dps.subStats.notes ===
 
-Crit Rate / DMG will have higher priority for a full Crit build
+Бонусы Шанса крита и Урона приоритетнее для сборки через криты
 
 
 # === characters.#traveler-anemo.roles.#anemo_dps.notes ===
@@ -1725,12 +1725,12 @@ Cмотри заметки к [Бледному огню (4)](#artifact:pale-fla
 
 # === characters.#venti.roles.#off-field_dps.subStats.notes ===
 
-Crit Rate / DMG isn't as important in a triple EM build, which is what is assumed here.
+Предполагается тройной бонус Мастерства стихий (часы-кубок-корона), при этом Шанс крита и Урон не очень важны.
 
 
 # === characters.#venti.roles.#off-field_dps.talents.notes ===
 
-For an EM-focused build, upgrading Venti's talent levels isn't a necessity.
+Для сборки на Мастерство стихий прокачивать таланты необязательно.
 
 
 # === characters.#venti.roles.#off-field_dps.tips ===
@@ -2082,12 +2082,12 @@ _**Рекомендуемый порог Восстановления энерг
 
 # === characters.#yanfei.roles.#shield_support__[c4+_required].talents.notes ===
 
-Yanfei's talent levels provide nothing for this role and it is not recommended to level them.
+Дл яэтой роли таланты Янь Фэй прокачивать необязательно.
 
 
 # === characters.#yanfei.roles.#shield_support__[c4+_required].tips ===
 
-_**Восстановление энергии и оружие**_
+**Восстановление энергии и оружие**
 
 Прототип: Янтарь \[Р5\]: 210 Восстановления энергии<br>
 Прототип: Янтарь \[Р1\] или Кодекс Фавония: 240 Восстановления энергии<br>
