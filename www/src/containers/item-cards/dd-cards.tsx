@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'preact/hooks'
 
-import { GI_DomainTypeCode, GI_MAP_CODES, MapCode, MapLocation } from '#lib/genshin'
+import { GI_DomainTypeCode, MapCode, MapLocation } from '#lib/genshin'
 import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
 import { arrGetAfter } from '#lib/utils/collections'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api/utils'
@@ -169,17 +169,26 @@ function MapWrap({
 	markerGroups: MapWrapMarkerGroup[]
 	isItemFavable?: boolean
 }): JSX.Element {
+	const TeyvatMap = useFetch(() => LazyTeyvatMap.then(x => x.TeyvatMap), [])
+
 	const [selectedSource, setSelectedSource] = useSelectable(markerGroups)
 
-	const [selectedMapCode, setMapCode] = useState<MapCode>(GI_MAP_CODES[0])
-	const TeyvatMap = useFetch(() => LazyTeyvatMap.then(x => x.TeyvatMap), [])
+	const visibleMapCodeTabs = useMemo(() => {
+		if (selectedSource.markers === 'external') return []
+		const mapCodes = new Set<MapCode>()
+		for (const marker of selectedSource.markers) mapCodes.add(marker.mapCode)
+		return Array.from(mapCodes, code => ({ code }))
+	}, [selectedSource])
+
+	const [selectedMapCodeTab, setMapCodeTab] = useSelectable(visibleMapCodeTabs)
+	const selectedMapCode = selectedMapCodeTab.code
 
 	const setSourceAndFixMapCode = (selectedSource: MapWrapMarkerGroup) => {
 		if (
 			selectedSource.markers !== 'external' &&
 			!selectedSource.markers.find(m => m.mapCode === selectedMapCode)
 		)
-			setMapCode(selectedSource.markers[0].mapCode)
+			setMapCodeTab({ code: selectedSource.markers[0].mapCode })
 		setSelectedSource(selectedSource)
 	}
 	const goToPrevGroup = () => {
@@ -229,15 +238,7 @@ function MapWrap({
 			</div>
 		)
 	}
-	const visibleMapCodes = useMemo(
-		() =>
-			GI_MAP_CODES.filter(
-				c =>
-					selectedSource.markers !== 'external' &&
-					selectedSource.markers.some(m => m.mapCode === c),
-			),
-		[selectedSource],
-	)
+
 	const isItemWeaponPrimaryMaterial = useMemo(
 		() =>
 			itemData?.item &&
@@ -245,6 +246,7 @@ function MapWrap({
 			~itemData?.item.types?.indexOf('weapon-material-primary'),
 		[itemData?.item],
 	)
+
 	return (
 		<div className={`map-wrap position-relative mb-3`}>
 			<div className="map-header position-absolute d-flex flex-row justify-content-between px-3 py-1 w-100">
@@ -274,23 +276,23 @@ function MapWrap({
 				) : null}
 			</div>
 			<div className="map-tip position-absolute px-3 pt-1 lh-1 top-100 start-0 small text-muted opacity-75 user-select-none">
-				{visibleMapCodes.map(c => (
-					<div className="d-inline me-2" key={c} onClick={() => setMapCode(c)}>
-						{visibleMapCodes.length > 1 ? (
+				{visibleMapCodeTabs.map(({ code }) => (
+					<div className="d-inline me-2" key={code} onClick={() => setMapCodeTab({ code })}>
+						{visibleMapCodeTabs.length > 1 ? (
 							<input
 								className="lh-1 align-middle c-pointer me-1"
 								type="radio"
-								id={c}
-								checked={c === selectedMapCode}
+								id={code}
+								checked={code === selectedMapCode}
 							/>
 						) : null}
 						<label
 							className={`lh-1 align-middle text-capitalize ${
-								visibleMapCodes.length > 1 ? 'c-pointer' : ''
+								visibleMapCodeTabs.length > 1 ? 'c-pointer' : ''
 							}`}
-							for={c}
+							for={code}
 						>
-							{I18N_MAP_CODES_NAME[c]}
+							{I18N_MAP_CODES_NAME[code]}
 						</label>
 					</div>
 				))}
