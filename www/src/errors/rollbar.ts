@@ -1,7 +1,7 @@
 const ROLLBAR_TOKEN = 'f5661155727c4a9e9db4d770357a0bcf'
 
 export function sendError(class_: string, message: string): Promise<void> {
-	return sendNewItem('error', {
+	return sendNewItem('error', undefined, {
 		trace: {
 			frames: [],
 			exception: {
@@ -14,7 +14,7 @@ export function sendError(class_: string, message: string): Promise<void> {
 }
 
 export function sendMessage(msg: string): Promise<void> {
-	return sendNewItem('warning', {
+	return sendNewItem('warning', 'msg:' + Date.now(), {
 		message: {
 			body: msg,
 		},
@@ -24,7 +24,7 @@ export function sendMessage(msg: string): Promise<void> {
 /**
  * {@link https://explorer.docs.rollbar.com/#operation/create-item}
  */
-function sendNewItem(level, rollbarBody) {
+function sendNewItem(level, fingerprint, rollbarBody) {
 	const body = JSON.stringify({
 		data: {
 			environment: process.env.NODE_ENV,
@@ -36,10 +36,11 @@ function sendNewItem(level, rollbarBody) {
 			client: {
 				javascript: {
 					browser: navigator.userAgent,
-					// code_version: '' TODO
+					// code_version: ''
 					// source_map_enabled: false,
 				},
 			},
+			fingerprint,
 		},
 	})
 	const headers = {
