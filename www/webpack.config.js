@@ -212,6 +212,7 @@ function copyIndexHtmls(lang, ssrBuildReady) {
 			navigator: { language: lang },
 			location: { pathname },
 			localStorage: { getItem: () => undefined, setItem: () => undefined },
+			document: { title: '' },
 		}
 
 		Object.assign(global, items)
