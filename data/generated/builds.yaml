@@ -1234,7 +1234,8 @@ characters:
               - hp%
             notes: null
             seeCharNotes: false
-          notes: null
+          notes: Main stats aren't as important. Stack Energy Recharge for comfortable
+            Elemental Burst uptime instead.
           seeCharNotes: false
         subStats:
           advices:
@@ -4829,7 +4830,8 @@ characters:
               - er
             notes: null
             seeCharNotes: false
-          notes: null
+          notes: Main stats aren't as important. Stack Energy Recharge for comfortable
+            Elemental Burst uptime instead.
           seeCharNotes: false
         subStats:
           advices:
@@ -7019,7 +7021,6 @@ characters:
           goblet:
             codes:
               - hp%
-              - hydro-dmg
             notes: null
             seeCharNotes: false
           sands:
@@ -7028,7 +7029,9 @@ characters:
               - hp%
             notes: null
             seeCharNotes: false
-          notes: null
+          notes: Mainstats are not important for Tenacity of the Millelith (4) if you do
+            not need the extra healing. Focus on Energy Recharge substats
+            instead.
           seeCharNotes: false
         subStats:
           advices:
@@ -7106,11 +7109,6 @@ characters:
                 maintain Hydro application. "
               - b: Without Prototype Amber, Kokomi will need ~200-220%+ Energy Recharge
                   (170-190% with Prototype Amber at [R1] and 150-170% at [R5])
-              - "\n"
-              - b: "Hydro DMG:"
-              - " This can be used to sacrifice some of Kokomi's healing to
-                boost her damage if she is attacking onfield during Elemental
-                Burst."
       - code: dps
         isRecommended: false
         weapons:
