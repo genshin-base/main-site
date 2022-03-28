@@ -9,7 +9,7 @@ akuoumaru:
     base: 9
     max: 510
   subStat:
-    code: atk
+    code: atk%
     base: 9
     max: 41
   specialAbility:
@@ -37,7 +37,7 @@ alley-hunter:
     base: 6
     max: 565
   subStat:
-    code: atk
+    code: atk%
     base: 6
     max: 27
   specialAbility:
@@ -67,7 +67,7 @@ amenoma-kageuchi:
     base: 12
     max: 454
   subStat:
-    code: atk
+    code: atk%
     base: 12
     max: 55
   specialAbility:
@@ -99,7 +99,7 @@ amos-bow:
     base: 10
     max: 608
   subStat:
-    code: atk
+    code: atk%
     base: 10
     max: 49
   specialAbility:
@@ -382,7 +382,7 @@ calamity-queller:
     base: 3
     max: 741
   subStat:
-    code: atk
+    code: atk%
     base: 3
     max: 16
   specialAbility:
@@ -465,7 +465,7 @@ cool-steel:
     base: 7
     max: 401
   subStat:
-    code: atk
+    code: atk%
     base: 7
     max: 35
   specialAbility:
@@ -567,7 +567,7 @@ debate-club:
     base: 7
     max: 401
   subStat:
-    code: atk
+    code: atk%
     base: 7
     max: 35
   specialAbility:
@@ -594,7 +594,7 @@ dodoco-tales:
     base: 12
     max: 454
   subStat:
-    code: atk
+    code: atk%
     base: 12
     max: 55
   specialAbility:
@@ -820,7 +820,7 @@ eye-of-perception:
     base: 12
     max: 454
   subStat:
-    code: atk
+    code: atk%
     base: 12
     max: 55
   specialAbility:
@@ -1028,7 +1028,7 @@ fillet-blade:
     base: 7
     max: 401
   subStat:
-    code: atk
+    code: atk%
     base: 7
     max: 35
   specialAbility:
@@ -1096,7 +1096,7 @@ frostbearer:
     base: 9
     max: 510
   subStat:
-    code: atk
+    code: atk%
     base: 9
     max: 41
   specialAbility:
@@ -1155,7 +1155,7 @@ halberd:
     base: 5
     max: 448
   subStat:
-    code: atk
+    code: atk%
     base: 5
     max: 23
   specialAbility:
@@ -1180,7 +1180,7 @@ hamayumi:
     base: 12
     max: 454
   subStat:
-    code: atk
+    code: atk%
     base: 12
     max: 55
   specialAbility:
@@ -1391,7 +1391,7 @@ lions-roar:
     base: 9
     max: 510
   subStat:
-    code: atk
+    code: atk%
     base: 9
     max: 41
   specialAbility:
@@ -1415,7 +1415,7 @@ lithic-blade:
     base: 9
     max: 510
   subStat:
-    code: atk
+    code: atk%
     base: 9
     max: 41
   specialAbility:
@@ -1442,7 +1442,7 @@ lithic-spear:
     base: 6
     max: 565
   subStat:
-    code: atk
+    code: atk%
     base: 6
     max: 27
   specialAbility:
@@ -1496,7 +1496,7 @@ luxurious-sea-lord:
     base: 12
     max: 454
   subStat:
-    code: atk
+    code: atk%
     base: 12
     max: 55
   specialAbility:
@@ -1574,7 +1574,7 @@ memory-of-dust:
     base: 10
     max: 608
   subStat:
-    code: atk
+    code: atk%
     base: 10
     max: 49
   specialAbility:
@@ -1693,7 +1693,7 @@ mouuns-moon:
     base: 6
     max: 565
   subStat:
-    code: atk
+    code: atk%
     base: 6
     max: 27
   specialAbility:
@@ -1721,7 +1721,7 @@ oathsworn-eye:
     base: 6
     max: 565
   subStat:
-    code: atk
+    code: atk%
     base: 6
     max: 27
   specialAbility:
@@ -1848,7 +1848,7 @@ predator:
     base: 9
     max: 510
   subStat:
-    code: atk
+    code: atk%
     base: 9
     max: 41
   specialAbility:
@@ -1956,7 +1956,7 @@ prototype-archaic:
     base: 6
     max: 565
   subStat:
-    code: atk
+    code: atk%
     base: 6
     max: 27
   specialAbility:
@@ -1983,7 +1983,7 @@ prototype-crescent:
     base: 9
     max: 510
   subStat:
-    code: atk
+    code: atk%
     base: 9
     max: 41
   specialAbility:
@@ -2157,7 +2157,7 @@ royal-bow:
     base: 9
     max: 510
   subStat:
-    code: atk
+    code: atk%
     base: 9
     max: 41
   specialAbility:
@@ -2183,7 +2183,7 @@ royal-greatsword:
     base: 6
     max: 565
   subStat:
-    code: atk
+    code: atk%
     base: 6
     max: 27
   specialAbility:
@@ -2209,7 +2209,7 @@ royal-grimoire:
     base: 6
     max: 565
   subStat:
-    code: atk
+    code: atk%
     base: 6
     max: 27
   specialAbility:
@@ -2235,7 +2235,7 @@ royal-longsword:
     base: 9
     max: 510
   subStat:
-    code: atk
+    code: atk%
     base: 9
     max: 41
   specialAbility:
@@ -2261,7 +2261,7 @@ royal-spear:
     base: 6
     max: 565
   subStat:
-    code: atk
+    code: atk%
     base: 6
     max: 27
   specialAbility:
@@ -2287,7 +2287,7 @@ rust:
     base: 9
     max: 510
   subStat:
-    code: atk
+    code: atk%
     base: 9
     max: 41
   specialAbility:
@@ -2562,7 +2562,7 @@ skyward-atlas:
     base: 7
     max: 674
   subStat:
-    code: atk
+    code: atk%
     base: 7
     max: 33
   specialAbility:
@@ -2853,7 +2853,7 @@ summit-shaper:
     base: 10
     max: 608
   subStat:
-    code: atk
+    code: atk%
     base: 10
     max: 49
   specialAbility:
@@ -2881,7 +2881,7 @@ sword-of-descension:
     base: 7
     max: 440
   subStat:
-    code: atk
+    code: atk%
     base: 7
     max: 35
   specialAbility:
@@ -3015,7 +3015,7 @@ the-flute:
     base: 9
     max: 510
   subStat:
-    code: atk
+    code: atk%
     base: 9
     max: 41
   specialAbility:
@@ -3067,7 +3067,7 @@ the-unforged:
     base: 10
     max: 608
   subStat:
-    code: atk
+    code: atk%
     base: 10
     max: 49
   specialAbility:
@@ -3261,7 +3261,7 @@ vortex-vanquisher:
     base: 10
     max: 608
   subStat:
-    code: atk
+    code: atk%
     base: 10
     max: 49
   specialAbility:
@@ -3311,7 +3311,7 @@ wavebreakers-fin:
     base: 3
     max: 620
   subStat:
-    code: atk
+    code: atk%
     base: 3
     max: 13
   specialAbility:
@@ -3464,7 +3464,7 @@ wolfs-gravestone:
     base: 10
     max: 608
   subStat:
-    code: atk
+    code: atk%
     base: 10
     max: 49
   specialAbility:
