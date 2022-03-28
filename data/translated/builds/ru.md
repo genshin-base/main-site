@@ -2082,7 +2082,7 @@ _**Рекомендуемый порог Восстановления энерг
 
 # === characters.#yanfei.roles.#shield_support__[c4+_required].talents.notes ===
 
-Дл яэтой роли таланты Янь Фэй прокачивать необязательно.
+Для этой роли таланты Янь Фэй прокачивать необязательно.
 
 
 # === characters.#yanfei.roles.#shield_support__[c4+_required].tips ===
