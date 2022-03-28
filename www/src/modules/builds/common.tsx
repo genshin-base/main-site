@@ -51,10 +51,9 @@ export function genArtMainStatDetail(
 ) {
 	return (
 		<span className="">
-			{genSimpleList(role.mainStats[itemCode].codes.map(I18N_STAT_NAME))}
-			{isShort
-				? ' ' + genNotes(role.mainStats[itemCode]) + genSeeCharNotes(role.mainStats[itemCode])
-				: null}
+			{genSimpleList(role.mainStats[itemCode].codes.map(I18N_STAT_NAME))}{' '}
+			{!isShort && genNotes(role.mainStats[itemCode])}
+			{!isShort && genSeeCharNotes(role.mainStats[itemCode])}
 		</span>
 	)
 }
@@ -62,10 +61,10 @@ export function genSimpleList(arr: string[]) {
 	return arr.join(', ')
 }
 export function notesWrap(str) {
-	return <div className="text-muted small">{str}</div>
+	return <span className="text-muted small">{str}</span>
 }
 export function genNotes(item: { notes: CompactTextParagraphs | null }) {
-	return item.notes === null ? '' : notesWrap(JSON.stringify(item.notes))
+	return item.notes === null ? '' : notesWrap(notesToJSX(item.notes))
 }
 export function genSeeCharNotes(item: { seeCharNotes: boolean }) {
 	return '' //TODO

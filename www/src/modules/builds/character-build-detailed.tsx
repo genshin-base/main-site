@@ -142,8 +142,8 @@ export function CharacterBuildDetailed({
 					{role.subStats.advices.map(advice => {
 						return (
 							<li>
-								{genSimpleList(advice.codes.map(I18N_STAT_NAME))}
-								{' ' + genNotes(advice) + genSeeCharNotes(advice)}
+								{genSimpleList(advice.codes.map(I18N_STAT_NAME))} {genNotes(advice)}
+								{genSeeCharNotes(advice)}
 							</li>
 						)
 					})}
