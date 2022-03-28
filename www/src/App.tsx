@@ -9,12 +9,14 @@ import { route, useRouter } from './routes/router'
 
 import './App.scss'
 import './animations.scss'
+import { AboutPage } from './pages/about'
 
 const routes = [
 	route(paths.front, FrontPage),
 	route(paths.builds, BuildsPage_CharSelect),
 	route(paths.buildCharacters, BuildsPage_BuildDetail),
 	route(paths.equipment, EquipmentPage),
+	route(paths.about, AboutPage),
 ]
 
 export function App(): JSX.Element {

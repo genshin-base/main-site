@@ -25,18 +25,25 @@ export function Nav({ isNavExpanded }: Props): JSX.Element {
 	// TODO клик мимо компонента
 	useClickAway(ddRef, closeDd)
 
-	const isOnBuildsPages = isOnRoute(paths.builds) || isOnRoute(paths.buildCharacters)
-
+	const isPageActive = routs => routs.some(r => isOnRoute(r))
 	return (
 		<div className={`collapse navbar-collapse ${isNavExpanded ? 'show' : ''}`}>
 			<ul className="navbar-nav me-auto mb-2 mb-md-0">
 				<li className="nav-item">
-					<A className={'nav-link' + (isOnBuildsPages ? ' active' : '')} href="/builds">
+					<A
+						className={`nav-link ${
+							isPageActive([paths.builds, paths.buildCharacters]) ? ' active' : ''
+						}`}
+						href={paths.builds[0]}
+					>
 						{I18N_BUILDS}
 					</A>
 				</li>
 				<li className="nav-item">
-					<A className="nav-link" href="#">
+					<A
+						className={`nav-link ${isPageActive([paths.about]) ? ' active' : ''}`}
+						href={paths.about[0]}
+					>
 						{I18N_ABOUT_SITE}
 					</A>
 				</li>

@@ -10,7 +10,7 @@ import { GI_TalentCode } from '#lib/parsing/helperteam/types'
 import { LINK_DISCORD_INVITE } from '#src/utils/links'
 
 type Lang = 'en' | 'ru'
-const LANG = BUNDLE_ENV.LANG as Lang
+export const LANG = BUNDLE_ENV.LANG as Lang
 export const I18N_LANG_NAMES: Record<Lang, string> = {
 	en: 'English',
 	ru: 'Русский',
@@ -216,7 +216,7 @@ export const I18N_BASED_ON_GIHT = {
 	en: "Based on Genshin Impact Helper Team's Character Builds",
 	ru: 'Основано на табличке Геншин Импакт Хелпер Тимы (англ.)',
 }[LANG]
-export const I18N_ABOUT_SITE = { en: 'About', ru: 'О сайте' }[LANG]
+export const I18N_ABOUT_SITE = { en: 'Site history', ru: 'История сайта' }[LANG]
 export const I18N_OUR_DISCORD = { en: 'Our Discord', ru: 'Наш Дискорд' }[LANG]
 export const I18N_CREATED_BY_US = {
 	en: 'Designed and coded by Absolute Evil Studio',

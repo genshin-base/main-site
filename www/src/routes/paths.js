@@ -5,6 +5,7 @@ export const paths = /** @type {const} */ ({
 	builds: ['/builds'],
 	buildCharacters: ['/builds/', ['code', charactersShortList.map(x => x.code)]],
 	equipment: ['/equipment'],
+	about: ['/about'],
 })
 
 /**
