@@ -1,6 +1,7 @@
 import { PageWrap } from './components/page-wrap'
 import { Footer } from './containers/footer'
 import { Header } from './containers/header'
+import { AboutPage } from './pages/about'
 import { BuildsPage_BuildDetail, BuildsPage_CharSelect } from './pages/builds'
 import { EquipmentPage } from './pages/equipment'
 import { FrontPage } from './pages/front-page'
@@ -9,7 +10,6 @@ import { route, useRouter } from './routes/router'
 
 import './App.scss'
 import './animations.scss'
-import { AboutPage } from './pages/about'
 
 const routes = [
 	route(paths.front, FrontPage),

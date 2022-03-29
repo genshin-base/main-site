@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { promises as fs } from 'fs'
-import { buildsConvertLangMode, extractBuilds } from '#lib/parsing/helperteam/index.js'
+import { extractBuilds } from '#lib/parsing/helperteam/index.js'
 import { loadSpreadsheetCached } from '#lib/google.js'
 import { json_getText } from '#lib/parsing/helperteam/json.js'
 import {
@@ -76,6 +76,7 @@ import { applyDomainsRegion } from '#lib/parsing/wiki/domains.js'
 import { applyCharactersReleaseVersion } from '#lib/parsing/wiki/characters.js'
 import { getEnemyCodeFromName } from '#lib/genshin.js'
 import { getArtifactSpecialGroupCodes } from '#lib/parsing/honeyhunter/artifacts.js'
+import { buildsConvertLangMode } from '#lib/parsing/helperteam/build_texts.js'
 
 const HELPERTEAM_DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 

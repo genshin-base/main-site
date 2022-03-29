@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { promises as fs } from 'fs'
-import { getBuildsFormattedBlocks } from '#lib/parsing/helperteam/index.js'
+import { getBuildsFormattedBlocks } from '#lib/parsing/helperteam/build_texts.js'
 import { error, fatal, info } from '#lib/utils/logs.js'
 import { parseArgs, relativeToCwd } from '#lib/utils/os.js'
 import {
