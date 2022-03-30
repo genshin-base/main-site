@@ -10,7 +10,7 @@ import { Tooltip } from '#src/components/tooltip'
 import { ArtifactCard } from '#src/containers/item-cards/dd-cards'
 import { ItemLabelWithDd, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
 import { logError } from '#src/errors'
-import { I18N_ART_GROUP_NAME, I18N_CONJUCTIONS, I18N_STAT_NAME } from '#src/i18n/i18n'
+import { I18N_ART_GROUP_NAME, I18N_CONJUCTIONS, I18N_FAV_TIPS, I18N_STAT_NAME } from '#src/i18n/i18n'
 import { getAllArtifacts, getArtifactIconSrc } from '#src/utils/artifacts'
 import { useHover, useLocalStorage } from '#src/utils/hooks'
 import {
@@ -231,8 +231,8 @@ export function ToggleCharFav({
 			smthCode={characterCode}
 			classes={classes}
 			storageKey={SK_FAV_CHAR_CODES}
-			tipFav={'Remove character from your favorites'}
-			tipNotFav={'Add character to your favorites'}
+			tipFav={I18N_FAV_TIPS.remove.character}
+			tipNotFav={I18N_FAV_TIPS.add.character}
 		/>
 	)
 }
@@ -248,8 +248,8 @@ export function ToggleWeaponPrimaryMaterialFav({
 			smthCode={itemCode}
 			classes={classes}
 			storageKey={SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES}
-			tipFav={'Remove material from your favorites'}
-			tipNotFav={'Add material to your favorites'}
+			tipFav={I18N_FAV_TIPS.remove.material}
+			tipNotFav={I18N_FAV_TIPS.add.material}
 		/>
 	)
 }
@@ -265,8 +265,8 @@ export function ToggleTalentMaterialFav({
 			smthCode={itemCode}
 			classes={classes}
 			storageKey={SK_FAV_TALENT_MATERIAL_CODES}
-			tipFav={'Remove material from your favorites'}
-			tipNotFav={'Add material to your favorites'}
+			tipFav={I18N_FAV_TIPS.remove.material}
+			tipNotFav={I18N_FAV_TIPS.add.material}
 		/>
 	)
 }
@@ -304,7 +304,7 @@ export function ToggleWeaponFav({
 			{isFav ? HEART : HEART_EMPTY}
 			{elRef.current && isHovered ? (
 				<Tooltip targetEl={elRef.current}>
-					{isFav ? 'Remove weapon from your favorites' : 'Add weapon to your favorites'}
+					{isFav ? I18N_FAV_TIPS.remove.weapon : I18N_FAV_TIPS.add.weapon}
 				</Tooltip>
 			) : null}
 		</div>

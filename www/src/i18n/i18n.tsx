@@ -51,6 +51,33 @@ export const I18N_WHY_ADD_TO_FAVS_TIP = {
 	ru: 'Добавьте персонажей и предметы в избранные, чтобы отметить их здесь',
 }[LANG]
 export const I18N_FAV_CHARACTERS = { en: 'Favorite characters', ru: 'Избранные персонажи' }[LANG]
+
+export const I18N_FAV_TIPS = {
+	en: (() => {
+		const add = (s: string) => `Add ${s} to favourites`
+		const remove = (s: string) => `Remove ${s} from favourites`
+		return {
+			add: { weapon: add('weapon'), character: add('character'), material: add('material') },
+			remove: {
+				weapon: remove('weapon'),
+				character: remove('character'),
+				material: remove('material'),
+			},
+		}
+	})(),
+	ru: (() => {
+		const add = (s: string) => `Добавить ${s} в избранное`
+		const remove = (s: string) => `Убрать ${s} из избранного`
+		return {
+			add: { weapon: add('оружие'), character: add('персонажа'), material: add('материал') },
+			remove: {
+				weapon: remove('оружие'),
+				character: remove('персонажа'),
+				material: remove('материал'),
+			},
+		}
+	})(),
+}[LANG]
 export const I18N_CHOOSE_FROM_FAV = {
 	en: 'Choose from favorite',
 	ru: 'Выберите из избранных',
