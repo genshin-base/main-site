@@ -239,6 +239,7 @@ export const I18N_CHAR_BUILD_RECS = {
 }[LANG]
 export const I18N_SELECT_CHAR_ABOVE = { en: 'Select character above', ru: 'Выберите персонажа' }[LANG]
 export const I18N_BUILD_RECS_FOR = { en: 'build recomendations', ru: 'билд' }[LANG]
+export const I18N_RECOMENDED = { en: 'Recomended', ru: 'Рекомендуемый' }[LANG]
 export const I18N_BASED_ON_GIHT = {
 	en: "Based on Genshin Impact Helper Team's Character Builds",
 	ru: 'Основано на табличке Геншин Импакт Хелпер Тимы (англ.)',
