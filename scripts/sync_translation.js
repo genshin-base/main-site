@@ -15,7 +15,7 @@ import {
 } from './_common.js'
 import { parseArgs, relativeToCwd } from '#lib/utils/os.js'
 import { mustBeNotNull } from '#lib/utils/values.js'
-import { buildsConvertLangMode } from '#lib/parsing/helperteam/index.js'
+import { buildsConvertLangMode } from '#lib/parsing/helperteam/build_texts.js'
 import { getInlineText } from '#lib/parsing/helperteam/text.js'
 import { trigramMustGetWithThresh, TrigramSearcher } from '#lib/trigrams.js'
 import { GI_ARTIFACT_GROUP_CODES } from '#lib/genshin.js'

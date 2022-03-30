@@ -17,7 +17,7 @@ import {
 	TRANSLATED_BUILDS_LANG_FPATH,
 	TRANSLATED_BUILDS_REF_FPATH,
 } from './_common.js'
-import { walkTextNodes } from '#lib/parsing/helperteam/text.js'
+import { textNodesToMarkdown, walkTextNodes } from '#lib/parsing/helperteam/text.js'
 import { trigramMustGetWithThresh, TrigramSearcher } from '#lib/trigrams.js'
 import { GI_ARTIFACT_GROUP_CODES } from '#lib/genshin.js'
 
@@ -30,7 +30,7 @@ function printUsage() {
   ${thisScript} <${Object.keys(commands).join('|')}> [-h|--help]`)
 }
 
-const commands = { changes, verify, 'autofill-links': autofillLinks }
+const commands = { changes, verify, 'autofill-links': autofillLinks, 'add-new-blocks': addNewBlocks }
 
 ;(async () => {
 	if (args['cmd'] in commands) {
@@ -85,6 +85,41 @@ async function changes() {
 	info(`  code --diff ${relativeToCwd(refBuildsTextFPath)} ${relativeToCwd(curBuildsTextFPath)}`)
 	info('  code ' + langs.map(lang => relativeToCwd(TRANSLATED_BUILDS_LANG_FPATH(lang))).join(' '))
 	info('  split window with Ctrl+\\')
+}
+
+async function addNewBlocks() {
+	if (needHelp) {
+		console.log(`Usage:
+  ${thisScript} add-new-blocks [-h|--help]`)
+		process.exit(2)
+	}
+
+	info(`loading builds...`)
+	const refBuilds = await loadTranslationReferenceBuilds()
+	const lang2blocks = await loadTranslatedBuildsBlocks()
+
+	refBuilds.characters.sort((a, b) => a.code.localeCompare(b.code))
+
+	info(`adding...`)
+	for (const [lang, blocks] of Object.entries(lang2blocks)) {
+		/** @type {Map<string, typeof blocks[number]>} */
+		const path2block = new Map()
+
+		for (const [block, path] of getBuildsFormattedBlocks(refBuilds)) {
+			if (block === null) continue
+			if (path2block.has(path)) continue
+			path2block.set(path, { block, path, replacedFrom: null, src: textNodesToMarkdown(block) })
+		}
+
+		for (const block of blocks) {
+			path2block.set(block.path, block)
+		}
+
+		const content = textBlocksSrcToMarkdown([...path2block.values()])
+		await fs.writeFile(TRANSLATED_BUILDS_LANG_FPATH(lang), content)
+	}
+
+	info(`done.`)
 }
 
 async function autofillLinks() {

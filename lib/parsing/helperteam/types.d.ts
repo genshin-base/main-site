@@ -52,6 +52,7 @@ type TalentAdvices<T extends LangMode> = { advices: (GI_TalentCode | GI_TalentCo
 
 type CharacterBuildInfoRole<T extends LangMode> = {
 	code: string
+	name: LangsIf<T, CompactTextParagraphs | null>
 	isRecommended: boolean
 	weapons: WeaponAdvices<T>
 	artifacts: ArtifactSetAdvices<T>

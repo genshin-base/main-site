@@ -3,6 +3,11 @@
 [In-depth Guide](https://keqingmains.com/albedo/) from Albedo Mains + KQM
 
 
+# === characters.#albedo.roles.#off-field_dps.name ===
+
+off-field dps
+
+
 # === characters.#albedo.roles.#off-field_dps.tips ===
 
 Albedo's Elemental Skill particle generation is completely RNG like Zhongli, but with better odds.
@@ -42,6 +47,11 @@ If you don't have another character in your party that has this set, you can use
 ATK and Energy Recharge substats are only valuable on a Hybrid Albedo that casts his Elemental Burst.
 
 
+# === characters.#aloy.roles.#burst_support.name ===
+
+burst support
+
+
 # === characters.#aloy.roles.#burst_support.notes ===
 
 Aloy is much preferred as a Burst Support over Main DPS as getting coil stacks for her Cryo infusion can be quite unreliable. **Aloy needs 4 coil stacks to get the Cryo infusion and you can only get 1 stack every 0.1 seconds** which is quite hard to do considering the Bomblets are scattered all over the place. One thing to note regarding Aloy's coil stacks is that **she can still get coil stacks even when she's off-field.**
@@ -76,6 +86,11 @@ This artifact set bonus only benefits a Melt-focused Aloy, Elemental Mastery pro
 Aloy is one of the best Noblesse holders since she has low energy requirements and cooldown for her Elemental Burst.
 
 
+# === characters.#amber.roles.#dps.name ===
+
+dps
+
+
 # === characters.#amber.roles.#dps.notes ===
 
 Amber DPS will be focused on maximizing Charged Shot damage on enemy weak spots as Amber's Ascension 4 Talent increases ATK by 15% for 10s after hitting a weak spot. Crit is also guaranteed when you land your shot on a weak spot so we aim to maximize Crit DMG with little to no dependance on Crit Rate, this could change after \[C4\].
@@ -96,6 +111,11 @@ This bow will beat Skyward Harp if it's \[R2+\].
 This bow will beat Sharpshooter's Oath \[R5\] if it's \[R2+\].
 
 
+# === characters.#amber.roles.#support.name ===
+
+support
+
+
 # === characters.#amber.roles.#support.notes ===
 
 Due to her poor scalings, this section is dedicated to a low-investment build that provides utility and shieldbreaking capabilities by abusing her quick Pyro application on her Elemental Burst. Due to her energy generation being extremely poor, her Energy Recharge options are prioritized.
@@ -103,6 +123,11 @@ Due to her poor scalings, this section is dedicated to a low-investment build th
 **Regarding [Instructors (4)](#artifact:instructor)**
 
 This set is preferred over 4p Noblesse Oblige when Amber is used as support in a Hu Tao vaporize team.
+
+
+# === characters.#ayaka.roles.#dps.name ===
+
+dps
 
 
 # === characters.#ayaka.roles.#dps.mainStats.notes ===
@@ -143,6 +168,11 @@ These 4 weapons will give a similar output, so it's not worth getting or buildin
 Offers slightly more damage potential than **Amenoma Kageuchi,** with the tradeoff being losing Kageuchi's energy generation. Decide for yourself which is better for your team and rotations.
 
 
+# === characters.#barbara.roles.#dps.name ===
+
+dps
+
+
 # === characters.#barbara.roles.#dps.tips ===
 
 Barbara's skill gives you a pulse of healing every 5 seconds, every pulse will imbue you with a Hydro status, that means it can be used for status-cleansing (Pyro in specific, while other elements may take more pulses).
@@ -161,6 +191,11 @@ Always activate your skill first, as it reduces stamina consumption and if you h
 This weapon requires stacks to be utilized, and in Vaporize DPS comps, you usually don't want to give up the first few Vaporize hits to stack up Memory of Dust's perk.
 
 
+# === characters.#barbara.roles.#support.name ===
+
+support
+
+
 # === characters.#barbara.roles.#support.notes ===
 
 Use Elemental Skill and/or Elemental Burst and immediately switch. Generally, run ER if you want more consistent heals from Elemental Burst.
@@ -177,6 +212,11 @@ Usable option if you want Barbara to have more utility, but do note that Barbara
 # === characters.#beidou.credits ===
 
 [In-depth Guide](https://keqingmains.com/beidou/) from Beidou Mains + KQM
+
+
+# === characters.#beidou.roles.#off-field_dps.name ===
+
+off-field dps
 
 
 # === characters.#beidou.roles.#off-field_dps.subStats.notes ===
@@ -220,6 +260,11 @@ This set acts as a cheap beginner's option to provide Beidou with 40% Energy Rec
 # === characters.#bennett.credits ===
 
 [In-depth Guide](https://keqingmains.com/bennett/) from KQM
+
+
+# === characters.#bennett.roles.#dps.name ===
+
+dps
 
 
 # === characters.#bennett.roles.#dps.mainStats.notes ===
@@ -273,6 +318,11 @@ It is also worth noting that with 4 TF, Primordial Jade Cutter is able to overta
 Recommended amount of ER%: 130-150%. Worth noting that **with Thundering Fury (4), you have a lot more leeway when it comes to ER.**
 
 
+# === characters.#bennett.roles.#burst_support.name ===
+
+burst support
+
+
 # === characters.#bennett.roles.#burst_support.subStats.notes ===
 
 Prioritize Energy Recharge first if you can't burst off cooldown
@@ -287,6 +337,11 @@ Recommended amount of ER%: 180-200
 
 A Burst Support Bennett **completely ignores the need for excess healing potential** and is aimed for people who prefer to squeeze out more damage instead. On this build, Bennett is built with offensive stats like ATK%, Pyro Damage, and Crit stats while having a good amount of Energy Recharge to burst off cooldown.<br>
 **Prioritize Energy Recharge before offensive stats if you cannot cast your Elemental Burst off cooldown.**
+
+
+# === characters.#bennett.roles.#support.name ===
+
+support
 
 
 # === characters.#bennett.roles.#support.mainStats.notes ===
@@ -320,6 +375,11 @@ This weapon currently has the highest Base ATK for a 4 star weapon (even more Ba
 
 [Prototype Rancour](#weapon:prototype-rancour)<br>
 This weapon has one of the highest Base ATK for a 4 Star weapon (and this is also a weapon you could craft from the Blacksmith)
+
+
+# === characters.#chongyun.roles.#burst_support.name ===
+
+burst support
 
 
 # === characters.#chongyun.roles.#burst_support.tips ===
@@ -358,6 +418,11 @@ Chongyun is one of the best Noblesse holders since he has low energy requirement
 
 Prioritize Elemental Burst on a Melt team as it scales better than his Elemental Skill.<br>
 Prioritize Elemental Skill on a Freeze team to furthermore extend the duration of the Cryo infusion.
+
+
+# === characters.#diluc.roles.#dps.name ===
+
+dps
 
 
 # === characters.#diluc.roles.#dps.subStats.advices.2.notes ===
@@ -406,6 +471,11 @@ For those who are still reluctant on farming for Crimson Witch of Flames (Pre-AR
 If Diluc is run alongside Xingqiu where he can trigger vaporize very often, you can run EM sands as an alternative to ATK sands. EM boosts Diluc's reaction damage by a lot after all. Note that when Diluc's Pyro imbued basic attack is active, he can trigger Vaporize every 2 basic attacks due to internal cooldown.
 
 
+# === characters.#diona.roles.#support.name ===
+
+support
+
+
 # === characters.#diona.roles.#support.tips ===
 
 Diona's Elemental Skill grants you a cryo shield which allows cleansing. Every time you swap characters with the shield up, it applies cryo. This acts as a cleanse.
@@ -443,6 +513,11 @@ Full Stack HP% is recommended if you want stronger shields but a weaker heal. Yo
 **Regarding Talent Priority**
 
 Prioritise whichever your Diona is geared for (shielder or healer), if built for a balance between the two, level both equally.
+
+
+# === characters.#eula.roles.#dps.name ===
+
+dps
 
 
 # === characters.#eula.roles.#dps.tips ===
@@ -485,6 +560,11 @@ This is Eula's optimal artifact set and it relies on having a condition fulfille
 This is a non-conditional, consistent artifact set that provides you a constant 50% Physical DMG bonus. While that by itself is amazing, Pale Flame (4) can outperform this set because it also has another 18% ATK buff and is easily maintained through her low tap skill cooldown.
 
 
+# === characters.#fischl.roles.#dps.name ===
+
+dps
+
+
 # === characters.#fischl.roles.#dps.tips ===
 
 See [here](https://bit.ly/3xOMZyh) for more specifics regarding the weapon rankings.
@@ -521,6 +601,11 @@ Mitternachts Waltz would be prioritized over Amos if you manage to get refinemen
 If you manage to weave in a Charged Shot on enemy weak spots once every 9-10 seconds, Prototype Crescent could potentially offer more DPS, this weapon can be an option for those interested in a more challenging playstyle.
 
 
+# === characters.#fischl.roles.#off-field_dps.name ===
+
+off-field dps
+
+
 # === characters.#fischl.roles.#off-field_dps.notes ===
 
 Elemental Burst and Skill both summon Oz, so make sure you're only using one at a time. Start with your Skill, use Burst for second Oz rotation and alternate. Hopefully, by the time your second/third round of Oz summoning is over, you'll have gained enough energy to repeat the loop.
@@ -553,6 +638,11 @@ Works as a low/no investment Fischl build. This set trades off Fischl's damage i
 [In-depth Guide](https://keqingmains.com/ganyu/) from Ganyu Mains + KQM
 
 
+# === characters.#ganyu.roles.#melt_dps.name ===
+
+melt dps
+
+
 # === characters.#ganyu.roles.#melt_dps.tips ===
 
 In some teams and situations, using Ganyu's Elemental Burst can be detrimental to overall damage due to stealing Pyro aura, thus reducing the amount of CAs melting.
@@ -576,6 +666,11 @@ At higher refinement levels with good uptime on its passive, it can potentially 
 **Regarding Talent Priority**
 
 Ganyu's Elemental Burst is low priority on a Melt Build since most of the times, you don't cast her burst at all so that it doesn't steal your Melt reaction.
+
+
+# === characters.#ganyu.roles.#freeze_dps.name ===
+
+freeze dps
 
 
 # === characters.#ganyu.roles.#freeze_dps.tips ===
@@ -602,6 +697,11 @@ Similar to the Melt Build, this weapon at higher refinement levels and good pass
 
 **[Blizzard Strayer (4)](#artifact:blizzard-strayer)**<br>
 This set is the go to set for a Frozen team comp due to the huge stats it provides.
+
+
+# === characters.#ganyu.roles.#off-field_dps.name ===
+
+off-field dps
 
 
 # === characters.#ganyu.roles.#off-field_dps.subStats.advices.0.notes ===
@@ -642,6 +742,11 @@ This set offers a huge amount of stats, use this set only if your Ganyu is used 
 This set provides Ganyu with more utility so that she can buff your whole party's ATK by 20%.
 
 
+# === characters.#gorou.roles.#support.name ===
+
+support
+
+
 # === characters.#gorou.roles.#support.tips ===
 
 **\[C2\]** extends the duration of Gorou's Elemental Burst from 9 seconds to 12 seconds if you can obtain the required Crystallize shields. This allows his teammates to gain the 3 Geo 15% Geo DMG% bonus for a longer duration, so it's preferable to use Burst as your last ability before swapping into your DPS.
@@ -671,6 +776,11 @@ The effectiveness of this set increases if you've already met the ER requirement
 **Crit Rate circlet and substats** can be considered when Gorou is using Favonius Warbow to trigger the passive comfortably.
 
 **ER% substats can usually be more important than getting the right mainstat,** as Gorou's damage contribution to a team is negligible, while being able to get Energy for his Burst is a lot more important.
+
+
+# === characters.#hu-tao.roles.#dps.name ===
+
+dps
 
 
 # === characters.#hu-tao.roles.#dps.tips ===
@@ -717,6 +827,11 @@ Provides higher AA damage than 4CW but lowers your Elemental Burst damage which 
 Since Hu Tao is able to trigger Vaporize on most of her damage output, Elemental Mastery is quite valuable on her. If you have less than 100EM total (including from Sucrose EM share, 4pc Instructor, etc) EM substat take priority over Crit Rate / DMG.
 
 
+# === characters.#itto.roles.#dps.name ===
+
+dps
+
+
 # === characters.#itto.roles.#dps.notes ===
 
 Arataki Itto is a Geo DPS Character who takes advantage of his Elemental Burst's ATK boost and Geo infusion to deal significant damage during its uptime. His combos involve stacking and unleashing his Charged Attacks, named Arataki Kesagiri. Arataki Kesigiri consumes no stamina and can be casted continuously as long as he has Superlative Superstrength stacks. Superlative Superstrength is capped at 5 stacks at any given time, and Itto gets those stacks when his 2nd and 4th Normal Attack string hits an enemy. Activating his Elemental Burst allows his 1st and 3rd Normal Attack to also generate stacks.
@@ -738,6 +853,11 @@ Your rotations often start with 1 stack of this weapon, and due to Itto's Burst 
 
 [Retracting Bolide (4)](#artifact:retracing-bolide)<br>
 Bolide grants you an additional 40% Normal and Charged Attack DMG when shielded. Crystallize can be unreliable so a consistent shielder is preferred, such as Zhongli.
+
+
+# === characters.#jean.roles.#burst_support.name ===
+
+burst support
 
 
 # === characters.#jean.roles.#burst_support.notes ===
@@ -784,6 +904,11 @@ Choosing between these two is up to personal preference, although if another Ane
 [In-depth Guide](https://keqingmains.com/kaeya/) from Kaeya Mains + KQM
 
 
+# === characters.#kaeya.roles.#cryo_dps.name ===
+
+cryo dps
+
+
 # === characters.#kaeya.roles.#cryo_dps.subStats.notes ===
 
 **crit-rate:** Generally has less value than the other offensive stats due to [Blizzard Strayer](#artifact:blizzard-strayer) and Cryo Resonance
@@ -807,6 +932,11 @@ Kaeya Cryo DPS is mostly used in a team with Chongyun and Xingqiu/Barbara while 
 
 [Pale Flame (4)](#artifact:pale-flame)<br>
 This set is difficult to fully utilise due to Kaeya's skill cooldown being 6 seconds. The full set effect requires 2 stacks to be active at any given time, so maintaining stacks can be difficult when considering rotations between characters.
+
+
+# === characters.#kaeya.roles.#burst_support.name ===
+
+burst support
 
 
 # === characters.#kaeya.roles.#burst_support.notes ===
@@ -838,6 +968,11 @@ This set is only recommended if there is no other member of the team running Nob
 [In-depth Guide](https://keqingmains.com/kazuha/) from KQM
 
 
+# === characters.#kazuha.roles.#em_build.name ===
+
+em build
+
+
 # === characters.#kazuha.roles.#em_build.tips ===
 
 The element which is absorbed by Kazuha's elemental burst follows the priority of Pyro > Hydro > Electro > Cryo, and can be absorbed from both the active character and enemies. **(i.e. Standing in Bennett 's Elemental Burst will result in Kazuha's Elemental Burst infusing Pyro as Bennett's Elemental Burst applies Pyro to the active character)**
@@ -867,6 +1002,11 @@ This is a niche build that excels **only in AOE situations and with specific tea
 [In-depth Guide](https://keqingmains.com/keqing/) from KQM
 
 
+# === characters.#keqing.roles.#physical_dps.name ===
+
+physical dps
+
+
 # === characters.#keqing.roles.#physical_dps.talents.notes ===
 
 Refer to Notes below
@@ -892,6 +1032,11 @@ This set should only be used with a consistent shielder (i.e. Zhongli/Diona) for
 
 **[Bloodstained Chivalry (4)](#artifact:bloodstained-chivalry)**<br>
 This set is for general solo and Abyss content where there are multiple mobs that can be killed with charged attacks within 10 seconds, this is for dealing with a crowd, in other words, AoE. I**t is not recommended because of the kill condition.**
+
+
+# === characters.#keqing.roles.#electro_dps.name ===
+
+electro dps
 
 
 # === characters.#keqing.roles.#electro_dps.artifacts.notes ===
@@ -944,6 +1089,11 @@ This set is used for Burst/Quickswap AoE Keqing. With this set, you'd want to be
 [In-depth Guide](https://keqingmains.com/klee/) from Klee Mains + KQM
 
 
+# === characters.#klee.roles.#dps.name ===
+
+dps
+
+
 # === characters.#klee.roles.#dps.tips ===
 
 Klee's Attacks have a 50% chance of spawning a floating star. Floating star removes the stamina cost for the next Charged Attack and increases 50% of its damage.
@@ -976,6 +1126,11 @@ Wanderer's Troupe increases the Charged Attack by another 35% Damage Bonus. It c
 # === characters.#kokomi.credits ===
 
 [In-depth Guide](https://keqingmains.com/kokomi/) from Kokomi Mains + KQM
+
+
+# === characters.#kokomi.roles.#support.name ===
+
+support
 
 
 # === characters.#kokomi.roles.#support.mainStats.notes ===
@@ -1014,6 +1169,11 @@ This ranking assumes Kokomi is being used **only for her Elemental Skill.** If s
 Prioritise Energy Recharge first to ensure you can always use Elemental Burst before the Elemental Skill expires in order to maintain Hydro application. **Without Prototype Amber, Kokomi will need \~200-220%+ Energy Recharge (170-190% with Prototype Amber at \[R1\] and 150-170% at \[R5\])**
 
 
+# === characters.#kokomi.roles.#dps.name ===
+
+dps
+
+
 # === characters.#kokomi.roles.#dps.tips ===
 
 Due to Kokomi's high stamina cost on her Charged Attacks, her best attack strings are:
@@ -1042,6 +1202,11 @@ This weapon can provide Elemental DMG% for the team in Electro-charged teams, an
 
 **[Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith)**<br>
 Although this set offers the lowest personal dmg for Kokomi, the 20% ATK team buff can sometimes be better for overall team DPS.
+
+
+# === characters.#kujou-sara.roles.#burst_support.name ===
+
+burst support
 
 
 # === characters.#kujou-sara.roles.#burst_support.subStats.notes ===
@@ -1080,6 +1245,11 @@ Universal support set that is able to buff your party member's ATK by 20%, use t
 [In-depth Guide](https://keqingmains.com/lisa/)  from  Lisa Mains + KQM
 
 
+# === characters.#lisa.roles.#electro_dps.name ===
+
+electro dps
+
+
 # === characters.#lisa.roles.#electro_dps.tips ===
 
 **Optimal Lisa String**
@@ -1104,6 +1274,11 @@ Electro DPS Lisa plays around Electro-Charge reaction teams ideally, for Overloa
 Kagura's ranking at the top is based on executing the specific rotation of Tap E > N2 > Tap E > N2 > Tap E > Q > N1 > Hold E > N1 > CA > N3 > N2 > CA for max stacks. For more details please see the [weapon calculations here](https://docs.google.com/spreadsheets/d/1kBaIxbNUUkShl-OwbOxMK4wyPQvL-WWeOko7yfWRIxw/edit#gid=0).
 
 
+# === characters.#lisa.roles.#em_dps.name ===
+
+em dps
+
+
 # === characters.#lisa.roles.#em_dps.talents.notes ===
 
 EM DPS Lisa's Talent Levels are not a necessity
@@ -1118,6 +1293,11 @@ Electro-Charge teams will have a hard time trying to utilize EM DPS Lisa, in the
 **Regarding Stats Priority**
 
 Try to invest both into EM and ER. The goal is to try stack as much EM while getting enough ER (170-190%) for a comfortable Burst uptime depending on your teams.
+
+
+# === characters.#lisa.roles.#off-field_dps.name ===
+
+off-field dps
 
 
 # === characters.#lisa.roles.#off-field_dps.tips ===
@@ -1143,6 +1323,11 @@ This option is **only recommended on a low investment Lisa** whereby she is focu
 These options prioritize Lisa's Elemental Burst uptime as a defense shredding tool.
 
 
+# === characters.#mona.roles.#dps.name ===
+
+dps
+
+
 # === characters.#mona.roles.#dps.tips ===
 
 <br>
@@ -1151,6 +1336,11 @@ These options prioritize Lisa's Elemental Burst uptime as a defense shredding to
 # === characters.#mona.roles.#dps.notes ===
 
 This build is best utilised at **\[C2\],** but can work without it. Do note that several 4 stars will out-dps Mona, as **Mona is better off as a Sub-DPS/ Support.**
+
+
+# === characters.#mona.roles.#nuke.name ===
+
+nuke
 
 
 # === characters.#mona.roles.#nuke.tips ===
@@ -1168,6 +1358,11 @@ To make Mona's burst damage trigger the Vaporize 2.0x multiplier:<br>
 Mona's **Elemental Skill provides taunt** and procs wet status on enemies, her **Elemental Burst is also capable of rendering smaller enemies immobile** (Mona needs to be at least 20 levels within the enemy's level) and **providing a huge damage burst** (and additional omen debuff after proc).
 
 **Look to the Nuke Mona's Ability Tip section for Vaporize Nuke set up instructions.**
+
+
+# === characters.#mona.roles.#freeze_support.name ===
+
+freeze support
 
 
 # === characters.#mona.roles.#freeze_support.mainStats.notes ===
@@ -1202,6 +1397,11 @@ Run this set if there's already another character with [Noblesse Oblige (4)](#ar
 Generally the best option on Freeze Support Mona because she can furthermore buff the ATK of your Main DPS. This however comes with an assumption that with TTDS, you still have 100% Elemental Burst uptime. If you do not, pick the other Energy Recharge weapon options for more Elemental Burst uptime.
 
 
+# === characters.#ningguang.roles.#dps.name ===
+
+dps
+
+
 # === characters.#ningguang.roles.#dps.tips ===
 
 Ningguang's Elemental Skill has a 6 second internal cooldown on generating energy, so for the sake of maintaining Elemental Burst uptime, wait 6 seconds to cast again if you need energy. It also breaks when casted on top of another Geo Structure, you can intentionally use a structure to break your first screen.
@@ -1233,6 +1433,11 @@ Being an ATK weapon, it falls off if compared to the other 4 star options such a
 Bolide grants you an additional 40% Normal and Charged Attack DMG when shielded. Crystallize can be unreliable so a consistent shielder is preferred, such as Zhongli.
 
 
+# === characters.#ningguang.roles.#burst_support.name ===
+
+burst support
+
+
 # === characters.#ningguang.roles.#burst_support.tips ===
 
 Walk through the Jade Screen created from Ningguang's Elemental Skill before casting Elemental Burst to benefit from the Geo DMG% bonus provided from her A4 Talent.
@@ -1254,6 +1459,11 @@ A really good ATK statstick which can perform better than the other options if y
 
 [Solar Pearl](#weapon:solar-pearl)<br>
 Due to Solar Pearl's passive being able to buff quite a huge percentage of a quickswap Ningguang's damage (Elemental Burst Damage), with external ATK buffs it performs similarly to Memory of Dust.
+
+
+# === characters.#noelle.roles.#dps.name ===
+
+dps
 
 
 # === characters.#noelle.roles.#dps.weapons.notes ===
@@ -1301,6 +1511,11 @@ Noelle snapshots her DEF on burst cast. To get the full 4 stacks' DEF% boost dur
 Optimally offers slightly less damage than Gladiator's, but is much easier to farm per resin and can have 100% uptime with crystallise shields. Consider Gladiator's Finale if you don't want to farm for [Archaic Petra](#artifact:archaic-petra) as Artifact Strongbox is much more effective than elite bosses in terms of artifacts per resin.
 
 
+# === characters.#noelle.roles.#support.name ===
+
+support
+
+
 # === characters.#noelle.roles.#support.artifacts.notes ===
 
 Ideally just run with whatever DEF% main stats you have. Set bonuses are not important, focus on stacking DEF.
@@ -1324,6 +1539,11 @@ Does not proc on Noelle's **\[C4\]** if she's off field, so a high refine is nee
 Relies on hitting crits to generate energy. The 12 second cooldown at **\[R1\]** matches with her shield cooldown. Generally not recommended unless you have an abundance of crit substats or wish to build her pseudo-DPS.
 
 
+# === characters.#qiqi.roles.#support.name ===
+
+support
+
+
 # === characters.#qiqi.roles.#support.notes ===
 
 Qiqi's Burst has an 80 energy cost with her skill not generating any energy until **\[C1\].** Energy Recharge will greatly benefit Qiqi, while her Burst should be kept as a last resort.<br>
@@ -1341,6 +1561,11 @@ This ranking assumes **Qiqi does not get her Elemental Burst up often** and is i
 # === characters.#raiden-shogun.credits ===
 
 [In-depth Guide](https://keqingmains.com/raiden/) from Raiden Mains + KQM
+
+
+# === characters.#raiden-shogun.roles.#electro_dps.name ===
+
+electro dps
 
 
 # === characters.#raiden-shogun.roles.#electro_dps.tips ===
@@ -1382,6 +1607,11 @@ This set acts as a low investment support oriented set. Raiden is an excellent T
 [In-depth Guide](https://keqingmains.com/razor/) from Razor Mains + KQM
 
 
+# === characters.#razor.roles.#dps.name ===
+
+dps
+
+
 # === characters.#razor.roles.#dps.tips ===
 
 Razor's EB grants you an Electro Status when you basic attack while burst is in-effect, that means it can be used for status-cleansing (no particular effective element).  Can only be done on himself.<br>
@@ -1412,6 +1642,11 @@ Skyward Pride is viable with a Physical DMG goblet, as the damage dealt through 
 This set is better if your ATK% is covered by your substats, otherwise you would be better off running Gladiator's Finale (4). **This is only recommended to those who have no immediate access to a decent Pale Flame (4) set, otherwise you would be better off investing on Pale Flame pieces, regardless of weapon choice.**
 
 
+# === characters.#rosaria.roles.#cryo_dps.name ===
+
+cryo dps
+
+
 # === characters.#rosaria.roles.#cryo_dps.notes ===
 
 **Regarding Substats**
@@ -1432,6 +1667,11 @@ Rosaria gets alot of Crit rate from **Blizzard Strayer (4) and Cryo Resonance.**
 
 **Normal Attack**<br>
 If Rosaria is being used with **Chongyun to infuse her normal attacks with Cryo,** her Normal Attack talent will have **higher priority than Skill.**
+
+
+# === characters.#rosaria.roles.#burst_support.name ===
+
+burst support
 
 
 # === characters.#rosaria.roles.#burst_support.tips ===
@@ -1479,6 +1719,11 @@ Elemental Mastery is only recommended if Rosaria is to be utilized as a Reverse 
 If you don't wish to hyperinvest onto Rosaria, she could still be used as a Crit Rate provider, you can build up to 88% Crit Rate and use skill to cap out 100% Crit Rate, then cast Elemental Burst for the Crit Rate buff. This can be easily achievable if you have an existing Crit Rate substat polearm, otherwise just put on whatever Crit Rate Circlet, Substats and Berserker artifacts you may have to stack Crit Rate.
 
 
+# === characters.#sayu.roles.#support.name ===
+
+support
+
+
 # === characters.#sayu.roles.#support.tips ===
 
 Use hold Skill then immediately press it to generate more particles.
@@ -1497,6 +1742,11 @@ Wolf's Gravestone is a universal claymore that is capable of buffing your teamma
 
 [Viridescent Venerer](#artifact:viridescent-venerer)<br>
 The bread and butter artifact set for Anemo units, this set provides the ability to shred the enemy's elemental resistance while also buffing Sayu's swirl damage output.
+
+
+# === characters.#shenhe.roles.#support.name ===
+
+support
 
 
 # === characters.#shenhe.roles.#support.notes ===
@@ -1520,6 +1770,11 @@ With this weapon, it is better to have some Crit Rate on Shenhe for the weapon p
 **Regarding Main Stats Priority**
 
 If you're equipping an ATK% weapon, try to aim for an Energy Recharge sands and vice versa.
+
+
+# === characters.#sucrose.roles.#em_build.name ===
+
+em build
 
 
 # === characters.#sucrose.roles.#em_build.talents.notes ===
@@ -1561,6 +1816,11 @@ Ranking is based on the assumption that Sucrose has [Sacrificial Fragments](#wea
 # === characters.#tartaglia.credits ===
 
 [In-depth Guide](https://tinyurl.com/4nnv5euy)  from Childe Mains
+
+
+# === characters.#tartaglia.roles.#dps.name ===
+
+dps
 
 
 # === characters.#tartaglia.roles.#dps.tips ===
@@ -1614,6 +1874,11 @@ This set is **only about 1-2 substats behind Heart of Depth (4),** you can opt o
 Due to this set requiring Childe to have around 140% Energy Recharge to reliably burst every rotation, it falls behind the other options. However, it outperforms **Heart of Depth (4)** if used in a single rotation setting **(ignoring ER).**
 
 
+# === characters.#thoma.roles.#support.name ===
+
+support
+
+
 # === characters.#thoma.roles.#support.subStats.notes ===
 
 Crit Rate is an option when using [Favonius Lance](#weapon:favonius-lance).
@@ -1627,6 +1892,11 @@ Thoma ideally wants to focus on shield over damage, and his burst uptime is requ
 
 [Black Tassel](#weapon:black-tassel)<br>
 At \[C4\], Thoma gains 15 energy when he fires his Elemental Burst. This effectively reduces his energy cost to 65 and makes it possible to use Black Tassel with ER sands instead of ER weapon with ER sands to furthermore strengthen his shield.
+
+
+# === characters.#traveler-anemo.roles.#anemo_dps.name ===
+
+anemo dps
 
 
 # === characters.#traveler-anemo.roles.#anemo_dps.subStats.notes ===
@@ -1654,6 +1924,11 @@ This weapon **reduces your ER% requirements to \~135% at \[R1\] and \~110% at \[
 Although this weapon does not provide much damage, **the Energy generated by the passive can sometimes be more beneficial to your team.** Make sure to build some amount of Crit rate to reliably trigger the passive.
 
 
+# === characters.#traveler-anemo.roles.#physical_dps.name ===
+
+physical dps
+
+
 # === characters.#traveler-anemo.roles.#physical_dps.notes ===
 
 **Not Recommended for End Game Content.**
@@ -1662,6 +1937,12 @@ Although this weapon does not provide much damage, **the Energy generated by the
 
 [Pale Flame (4)](#artifact:pale-flame)<br>
 When running this set, make sure you do Press Cast and not Hold Cast, as the Hold Cast Skill Cooldown would be too long for you to refresh your stacks.
+
+
+# === characters.#traveler-electro.roles.#support.name ===
+
+support
+
 
 # === characters.#traveler-electro.roles.#support.mainStats.notes ===
 
@@ -1678,6 +1959,11 @@ It is not recommended to level Elemental Skill and Burst past talent level 7 as 
 Traveler can provide a lot of energy and Energy Recharge to the on-field character through their Elemental Skill pick up or Elemental Burst procs. This is especially useful with a damage dealer that doesn't conflict with traveler's element and can benefit from the abundance of energy. Due to the low damage scaling on Electro Traveler's Elemental Skill and Burst, its recommended to build Electro Traveler by just stacking Energy Recharge to amplify the batterying power.
 
 
+# === characters.#traveler-geo.roles.#geo_dps.name ===
+
+geo dps
+
+
 # === characters.#traveler-geo.roles.#geo_dps.tips ===
 
 Skill and Burst have equal priorities.<br>
@@ -1692,6 +1978,11 @@ This section is dedicated to utilising the Geo Traveler's Geo Elemental Burst da
 
 **[Festering Desire](#weapon:festering-desire), [Skyward Blade](#weapon:skyward-blade), [Amenoma Kageuchi](#weapon:amenoma-kageuchi)**<br>
 These weapons help in bursting off cooldown, but if you're not having issues with energy, then these weapons falls behind in terms of damage.
+
+
+# === characters.#traveler-geo.roles.#physical_dps.name ===
+
+physical dps
 
 
 # === characters.#traveler-geo.roles.#physical_dps.artifacts.notes ===
@@ -1715,6 +2006,11 @@ This set is ranked higher than Pale Flame (2) Bloodstained Chivalry (2) due to h
 # === characters.#venti.credits ===
 
 [In-depth Guide](https://keqingmains.com/venti/) from KQM
+
+
+# === characters.#venti.roles.#off-field_dps.name ===
+
+off-field dps
 
 
 # === characters.#venti.roles.#off-field_dps.subStats.notes ===
@@ -1752,6 +2048,11 @@ Elegy for the End's ATK buff DOES NOT buff Venti's burst if Venti is the one equ
 # === characters.#xiangling.credits ===
 
 [In-depth Guide](https://keqingmains.com/xiangling/) from KQM
+
+
+# === characters.#xiangling.roles.#off-field_dps.name ===
+
+off-field dps
 
 
 # === characters.#xiangling.roles.#off-field_dps.tips ===
@@ -1803,6 +2104,11 @@ This set pulls ahead over Emblem of Severed Fate (4) on team comps where Xiangli
 This set can be used as a **very low investment support build to enable Reverse Melt team comps** where Xiangling is not triggering the reaction and is instead used as an aura and needs a lot of Energy Recharge. Note that it is **not recommended to stay on this build as Xiangling can still contribute respectable damage with offensive stats.**
 
 
+# === characters.#xiangling.roles.#physical_dps.name ===
+
+physical dps
+
+
 # === characters.#xiangling.roles.#physical_dps.notes ===
 
 **It is not recommended to run Physical DPS Xiangling since Xiangling excels more as an Off-field Pyro DPS.** Physical Xiangling is only good for early game.
@@ -1821,6 +2127,11 @@ The passive from this set can have 100% uptime through using Guoba off cooldown.
 # === characters.#xiao.credits ===
 
 [In-depth Guide](https://keqingmains.com/xiao/) from Xiao Mains + KQM
+
+
+# === characters.#xiao.roles.#dps.name ===
+
+dps
 
 
 # === characters.#xiao.roles.#dps.artifacts.notes ===
@@ -1869,6 +2180,11 @@ Anemo DMG% goblets are recommended for Xiao. ATK% goblets serve as a good altern
 # === characters.#xingqiu.credits ===
 
 [In-depth Guide](https://docs.google.com/document/d/1RQI5IjLZKqsVhQzRDr7FTYgQX66jKB28PnwoZVlQ4_k/edit) by Quincy#6965
+
+
+# === characters.#xingqiu.roles.#off-field_dps.name ===
+
+off-field dps
 
 
 # === characters.#xingqiu.roles.#off-field_dps.subStats.notes ===
@@ -1929,6 +2245,11 @@ This set is a cheap beginner option to maintain burst uptime well since it gives
 Ideally you would be running ATK% Sands when your ER needs are fulfilled. (\~180-200% if Sacrificial Sword, \~240% for others).
 
 
+# === characters.#xinyan.roles.#dps.name ===
+
+dps
+
+
 # === characters.#xinyan.roles.#dps.tips ===
 
 Xinyan's ES grants you a pyro status upon contact with shield. No matter how many times you switch your characters, it'll still apply pyro every instant you switch with shield. This allows you to cleanse every single elemental status that has been applied to you.
@@ -1949,14 +2270,19 @@ It is worth noting that an **\[R5\] Serpent Spine** can outperform all 5 star we
 Despite how dependant Xinyan's playstyle can get with Charged Attacks, Bloodstained Chivalry Full Set is still not recommended due to it only coming in effect after a kill.
 
 
-# === characters.#xinyan.roles.#shield_support.subStats.notes ===
+# === characters.#xinyan.roles.#shield_support.name ===
 
-**ER:** takes priority over ATK% for shield support
+shield support
 
 
 # === characters.#xinyan.roles.#shield_support.subStats.advices.1.notes ===
 
 Crit DMG if C2
+
+
+# === characters.#xinyan.roles.#shield_support.subStats.notes ===
+
+**ER:** takes priority over ATK% for shield support
 
 
 # === characters.#xinyan.roles.#shield_support.notes ===
@@ -1979,14 +2305,14 @@ At \[C2\], her burst "Riff Revolution" has a 100% Crit Rate, which means you can
 **Generally not recommended for Pyro Applications, as the pulses only happen at Shield Level 3, and are not very efficient at breaking Cryo shields.**
 
 
+# === characters.#xinyan.roles.#sub-dps.name ===
+
+shield support
+
+
 # === characters.#xinyan.roles.#sub-dps.artifacts.notes ===
 
 Run DPS stats if the sets above is what you're using.
-
-
-# === characters.#xinyan.roles.#sub-dps.subStats.notes ===
-
-**ER:** takes priority over ATK% for shield support
 
 
 # === characters.#xinyan.roles.#sub-dps.subStats.advices.1.notes ===
@@ -1994,9 +2320,19 @@ Run DPS stats if the sets above is what you're using.
 Crit DMG if C2
 
 
+# === characters.#xinyan.roles.#sub-dps.subStats.notes ===
+
+**ER:** takes priority over ATK% for shield support
+
+
 # === characters.#xinyan.roles.#sub-dps.notes ===
 
 `replace-from:characters.#xinyan.roles.#shield_support.notes`
+
+
+# === characters.#yae-miko.roles.#off-field_dps.name ===
+
+off-field dps
 
 
 # === characters.#yae-miko.roles.#off-field_dps.artifacts.notes ===
@@ -2048,6 +2384,11 @@ Do note that Yae's Elemental Burst does more damage than her Elemental Skill whe
 Big thanks to _Fob#6835_ for helping us with [the weapon/artifact rankings.](https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994)
 
 
+# === characters.#yanfei.roles.#dps.name ===
+
+dps
+
+
 # === characters.#yanfei.roles.#dps.tips ===
 
 Yanfei's Ascension 4 Talent does a second hit after a Crit Charge Attack. This scales 80% of your ATK and can trigger reactions as well due to having a separate internal cooldown on its pyro application. <br>
@@ -2078,6 +2419,11 @@ Running Yanfei with a shield character also allows you to make use of a full Ret
 Energy Recharge is prioritized over Elemental Mastery here since she has an 80 energy burst cost while her skill is also not very efficient at generating particles for getting it back. A major source of your energy will be coming from enemies as well as potential pyro batteries like Bennett, so be sure to have her pick the particles up as off-field characters only get 0.6x the value of the particles.
 
 
+# === characters.#yanfei.roles.#shield_support__[c4+_required].name ===
+
+shield support \[C4+ required\]
+
+
 # === characters.#yanfei.roles.#shield_support__[c4+_required].talents.notes ===
 
 Yanfei's talent levels provide nothing for this role and it is not recommended to level them.
@@ -2100,6 +2446,11 @@ This section is dedicated to a playstyle where Yanfei is utilised as a primary s
 # === characters.#yoimiya.credits ===
 
 [In-depth Guide](https://keqingmains.com/yoimiya/) from Yoimiya Mains + KQM
+
+
+# === characters.#yoimiya.roles.#dps.name ===
+
+dps
 
 
 # === characters.#yoimiya.roles.#dps.notes ===
@@ -2142,6 +2493,11 @@ A good option if Yoimiya is **triggering Vaporise and/or Overload.** Having Benn
 Elemental Skill scales very poorly which is why it is the least priority. If you do not care about her Elemental Burst damage output, you can prioritize Elemental Skill over Elemental Burst, but Normal Attack talent still has the most priority since it's the main source of Yoimiya's damage.
 
 
+# === characters.#yun-jin.roles.#support.name ===
+
+support
+
+
 # === characters.#yun-jin.roles.#support.notes ===
 
 Yun Jin is a Support character for Normal Attack focused characters who can deal off-field damage via her Elemental Burst. Yun Jin's **Elemental Burst grants nearby party members 30 stacks of additional flat damage bonus on Normal Attacks which scales with Yun Jin's current DEF.** This means that external DEF buffs like from Gorou's Elemental Skill and/or Burst doesn't provide much to Yun Jin since it only buffs active characters and not off-field ones.
@@ -2159,10 +2515,20 @@ Although the EM mainstat isn't useful for Yun Jin, the **passive decreases her E
 Crit Rate should only be considered when Yun Jin is equpping Favonius Lance to reliably proc the passive.
 
 
+# === characters.#zhongli.roles.#physical_dps.name ===
+
+physical dps
+
+
 # === characters.#zhongli.roles.#physical_dps.notes ===
 
 **Optimal Physical Rotation:**<br>
 Normal Attack until Spear Kick -> Dodge/Jump Cancel -> Repeat
+
+
+# === characters.#zhongli.roles.#shield_support.name ===
+
+shield support
 
 
 # === characters.#zhongli.roles.#shield_support.notes ===
@@ -2175,6 +2541,11 @@ Note that if paired with Xingqiu and/or Beidou, the damage reduction from orbita
 
 [Favonius Lance](#weapon:favonius-lance)<br>
 Use this weapon over [Black Tassel](#weapon:black-tassel) if you value the team energy (Note that you need to build some amount of Crit Rate if you are running Favonius Lance to trigger the passive).
+
+
+# === characters.#zhongli.roles.#burst_support.name ===
+
+burst support
 
 
 # === characters.#zhongli.roles.#burst_support.notes ===

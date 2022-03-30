@@ -3,6 +3,7 @@ characters:
     elementCode: pyro
     roles:
       - code: dps
+        name: dps
         isRecommended: false
         weapons:
           advices:
@@ -189,6 +190,7 @@ characters:
               - " if it's "
               - b: "[R2+]."
       - code: support
+        name: support
         isRecommended: true
         weapons:
           advices:
@@ -313,6 +315,7 @@ characters:
     elementCode: pyro
     roles:
       - code: off-field dps
+        name: off-field dps
         isRecommended: true
         weapons:
           advices:
@@ -589,6 +592,7 @@ characters:
               - b: not recommended to stay on this build as Xiangling can still contribute
                   respectable damage with offensive stats.
       - code: physical dps
+        name: physical dps
         isRecommended: false
         weapons:
           advices:
@@ -749,6 +753,7 @@ characters:
     elementCode: pyro
     roles:
       - code: dps
+        name: dps
         isRecommended: false
         weapons:
           advices:
@@ -982,6 +987,7 @@ characters:
                 Recommended amount of ER%: 130-150%. Worth noting that 
               - b: with Thundering Fury (4), you have a lot more leeway when it comes to ER.
       - code: burst support
+        name: burst support
         isRecommended: true
         weapons:
           advices:
@@ -1125,6 +1131,7 @@ characters:
           - b: Prioritize Energy Recharge before offensive stats if you cannot cast your
               Elemental Burst off cooldown.
       - code: support
+        name: support
         isRecommended: false
         weapons:
           advices:
@@ -1301,6 +1308,7 @@ characters:
     elementCode: pyro
     roles:
       - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:
@@ -1481,6 +1489,7 @@ characters:
                 Attacks, Bloodstained Chivalry Full Set is still not recommended
                 due to it only coming in effect after a kill.
       - code: shield support
+        name: shield support
         isRecommended: false
         weapons:
           advices:
@@ -1662,6 +1671,7 @@ characters:
                   Shield Level 3, and are not very efficient at breaking Cryo
                   shields.
       - code: sub-dps
+        name: sub-dps
         isRecommended: false
         weapons:
           advices:
@@ -1844,6 +1854,7 @@ characters:
     elementCode: pyro
     roles:
       - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:
@@ -2055,6 +2066,9 @@ characters:
       - code: |-
           shield support 
           [c4+ required]
+        name: |-
+          shield support 
+          [c4+ required]
         isRecommended: false
         weapons:
           advices:
@@ -2158,6 +2172,7 @@ characters:
     elementCode: pyro
     roles:
       - code: support
+        name: support
         isRecommended: true
         weapons:
           advices:
@@ -2296,6 +2311,7 @@ characters:
     elementCode: pyro
     roles:
       - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:
@@ -2510,6 +2526,7 @@ characters:
     elementCode: pyro
     roles:
       - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:
@@ -2714,6 +2731,7 @@ characters:
     elementCode: pyro
     roles:
       - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:
@@ -2938,6 +2956,7 @@ characters:
     elementCode: pyro
     roles:
       - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:
@@ -3156,6 +3175,7 @@ characters:
     elementCode: electro
     roles:
       - code: dps
+        name: dps
         isRecommended: false
         weapons:
           advices:
@@ -3397,6 +3417,7 @@ characters:
                 offer more DPS, this weapon can be an option for those
                 interested in a more challenging playstyle."
       - code: off-field dps
+        name: off-field dps
         isRecommended: true
         weapons:
           advices:
@@ -3610,6 +3631,7 @@ characters:
     elementCode: electro
     roles:
       - code: off-field dps
+        name: off-field dps
         isRecommended: true
         weapons:
           advices:
@@ -3848,6 +3870,7 @@ characters:
     elementCode: electro
     roles:
       - code: electro dps
+        name: electro dps
         isRecommended: false
         weapons:
           advices:
@@ -4044,6 +4067,7 @@ characters:
               - a: here.
                 href: https://docs.google.com/spreadsheets/d/1kBaIxbNUUkShl-OwbOxMK4wyPQvL-WWeOko7yfWRIxw/edit#gid=0
       - code: em dps
+        name: em dps
         isRecommended: false
         weapons:
           advices:
@@ -4171,6 +4195,7 @@ characters:
                 much EM while getting enough ER (170-190%) for a comfortable
                 Burst uptime depending on your teams."
       - code: off-field dps
+        name: off-field dps
         isRecommended: true
         weapons:
           advices:
@@ -4343,6 +4368,7 @@ characters:
     elementCode: electro
     roles:
       - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:
@@ -4536,6 +4562,7 @@ characters:
     elementCode: electro
     roles:
       - code: burst support
+        name: burst support
         isRecommended: true
         weapons:
           advices:
@@ -4755,6 +4782,7 @@ characters:
     elementCode: electro
     roles:
       - code: support
+        name: support
         isRecommended: true
         weapons:
           advices:
@@ -4874,6 +4902,7 @@ characters:
     elementCode: electro
     roles:
       - code: physical dps
+        name: physical dps
         isRecommended: true
         weapons:
           advices:
@@ -5065,6 +5094,7 @@ characters:
                 I
               - b: t is not recommended because of the kill condition.
       - code: electro dps
+        name: electro dps
         isRecommended: true
         weapons:
           advices:
@@ -5276,6 +5306,7 @@ characters:
     elementCode: electro
     roles:
       - code: electro dps
+        name: electro dps
         isRecommended: true
         weapons:
           advices:
@@ -5497,6 +5528,7 @@ characters:
     elementCode: electro
     roles:
       - code: off-field dps
+        name: off-field dps
         isRecommended: true
         weapons:
           advices:
@@ -5702,6 +5734,7 @@ characters:
     elementCode: hydro
     roles:
       - code: off-field dps
+        name: off-field dps
         isRecommended: true
         weapons:
           advices:
@@ -5973,6 +6006,7 @@ characters:
     elementCode: hydro
     roles:
       - code: dps
+        name: dps
         isRecommended: false
         weapons:
           advices:
@@ -6134,6 +6168,7 @@ characters:
                 comps, you usually don't want to give up the first few Vaporize
                 hits to stack up Memory of Dust's perk.
       - code: support
+        name: support
         isRecommended: true
         weapons:
           advices:
@@ -6259,6 +6294,7 @@ characters:
     elementCode: hydro
     roles:
       - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:
@@ -6525,6 +6561,7 @@ characters:
     elementCode: hydro
     roles:
       - code: dps
+        name: dps
         isRecommended: false
         weapons:
           advices:
@@ -6663,6 +6700,7 @@ characters:
             Mona, as "
           - b: Mona is better off as a Sub-DPS/ Support.
       - code: nuke
+        name: nuke
         isRecommended: true
         weapons:
           advices:
@@ -6816,6 +6854,7 @@ characters:
               b: Look to the Nuke Mona's Ability Tip section for Vaporize Nuke set up
                 instructions.
       - code: freeze support
+        name: freeze support
         isRecommended: true
         weapons:
           advices:
@@ -6952,6 +6991,7 @@ characters:
     elementCode: hydro
     roles:
       - code: support
+        name: support
         isRecommended: true
         weapons:
           advices:
@@ -7110,6 +7150,7 @@ characters:
               - b: Without Prototype Amber, Kokomi will need ~200-220%+ Energy Recharge
                   (170-190% with Prototype Amber at [R1] and 150-170% at [R5])
       - code: dps
+        name: dps
         isRecommended: false
         weapons:
           advices:
@@ -7269,6 +7310,7 @@ characters:
     elementCode: cryo
     roles:
       - code: support
+        name: support
         isRecommended: true
         weapons:
           advices:
@@ -7446,6 +7488,7 @@ characters:
     elementCode: cryo
     roles:
       - code: burst support
+        name: burst support
         isRecommended: true
         weapons:
           advices:
@@ -7705,6 +7748,7 @@ characters:
     elementCode: cryo
     roles:
       - code: cryo dps
+        name: cryo dps
         isRecommended: false
         weapons:
           advices:
@@ -7866,6 +7910,7 @@ characters:
                 to be active at any given time, so maintaining stacks can be
                 difficult when considering rotations between characters."
       - code: burst support
+        name: burst support
         isRecommended: true
         weapons:
           advices:
@@ -8082,6 +8127,7 @@ characters:
     elementCode: cryo
     roles:
       - code: cryo dps
+        name: cryo dps
         isRecommended: false
         weapons:
           advices:
@@ -8256,6 +8302,7 @@ characters:
               - " her Normal Attack talent will have "
               - b: higher priority than Skill.
       - code: burst support
+        name: burst support
         isRecommended: true
         weapons:
           advices:
@@ -8505,6 +8552,7 @@ characters:
     elementCode: cryo
     roles:
       - code: support
+        name: support
         isRecommended: true
         weapons:
           advices:
@@ -8689,6 +8737,7 @@ characters:
     elementCode: cryo
     roles:
       - code: melt dps
+        name: melt dps
         isRecommended: true
         weapons:
           advices:
@@ -8839,6 +8888,7 @@ characters:
                 most of the times, you don't cast her burst at all so that it
                 doesn't steal your Melt reaction.
       - code: freeze dps
+        name: freeze dps
         isRecommended: true
         weapons:
           advices:
@@ -8984,6 +9034,7 @@ characters:
               - This set is the go to set for a Frozen team comp due to the huge
                 stats it provides.
       - code: off-field dps
+        name: off-field dps
         isRecommended: false
         weapons:
           advices:
@@ -9176,6 +9227,7 @@ characters:
     elementCode: cryo
     roles:
       - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:
@@ -9421,6 +9473,7 @@ characters:
     elementCode: cryo
     roles:
       - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:
@@ -9636,6 +9689,7 @@ characters:
     elementCode: cryo
     roles:
       - code: burst support
+        name: burst support
         isRecommended: true
         weapons:
           advices:
@@ -9863,6 +9917,7 @@ characters:
     elementCode: cryo
     roles:
       - code: support
+        name: support
         isRecommended: true
         weapons:
           advices:
@@ -10039,6 +10094,7 @@ characters:
     elementCode: anemo
     roles:
       - code: em build
+        name: em build
         isRecommended: true
         weapons:
           advices:
@@ -10210,6 +10266,7 @@ characters:
     elementCode: anemo
     roles:
       - code: support
+        name: support
         isRecommended: true
         weapons:
           advices:
@@ -10343,6 +10400,7 @@ characters:
     elementCode: anemo
     roles:
       - code: anemo dps
+        name: anemo dps
         isRecommended: true
         weapons:
           advices:
@@ -10539,6 +10597,7 @@ characters:
               - " Make sure to build some amount of Crit rate to reliably
                 trigger the passive."
       - code: physical dps
+        name: physical dps
         isRecommended: false
         weapons:
           advices:
@@ -10707,6 +10766,7 @@ characters:
     elementCode: anemo
     roles:
       - code: burst support
+        name: burst support
         isRecommended: true
         weapons:
           advices:
@@ -10965,6 +11025,7 @@ characters:
     elementCode: anemo
     roles:
       - code: off-field dps
+        name: off-field dps
         isRecommended: true
         weapons:
           advices:
@@ -11127,6 +11188,7 @@ characters:
     elementCode: anemo
     roles:
       - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:
@@ -11334,6 +11396,7 @@ characters:
     elementCode: anemo
     roles:
       - code: em build
+        name: em build
         isRecommended: true
         weapons:
           advices:
@@ -11505,6 +11568,7 @@ characters:
     elementCode: geo
     roles:
       - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:
@@ -11671,6 +11735,7 @@ characters:
                 DMG when shielded. Crystallize can be unreliable so a consistent
                 shielder is preferred, such as Zhongli."
       - code: burst support
+        name: burst support
         isRecommended: false
         weapons:
           advices:
@@ -11822,6 +11887,7 @@ characters:
     elementCode: geo
     roles:
       - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:
@@ -11984,6 +12050,7 @@ characters:
                 more effective than elite bosses in terms of artifacts per
                 resin.
       - code: support
+        name: support
         isRecommended: false
         weapons:
           advices:
@@ -12095,6 +12162,7 @@ characters:
     elementCode: geo
     roles:
       - code: support
+        name: support
         isRecommended: true
         weapons:
           advices:
@@ -12255,6 +12323,7 @@ characters:
     elementCode: geo
     roles:
       - code: support
+        name: support
         isRecommended: true
         weapons:
           advices:
@@ -12393,6 +12462,7 @@ characters:
     elementCode: geo
     roles:
       - code: geo dps
+        name: geo dps
         isRecommended: true
         weapons:
           advices:
@@ -12567,6 +12637,7 @@ characters:
                 having issues with energy, then these weapons falls behind in
                 terms of damage."
       - code: physical dps
+        name: physical dps
         isRecommended: false
         weapons:
           advices:
@@ -12754,6 +12825,7 @@ characters:
     elementCode: geo
     roles:
       - code: physical dps
+        name: physical dps
         isRecommended: false
         weapons:
           advices:
@@ -12908,6 +12980,7 @@ characters:
             Optimal Physical Rotation:
           - b: Normal Attack until Spear Kick -> Dodge/Jump Cancel -> Repeat
       - code: shield support
+        name: shield support
         isRecommended: true
         weapons:
           advices:
@@ -12997,6 +13070,7 @@ characters:
                 (Note that you need to build some amount of Crit Rate if you are
                 running Favonius Lance to trigger the passive).
       - code: burst support
+        name: burst support
         isRecommended: true
         weapons:
           advices:
@@ -13183,6 +13257,7 @@ characters:
     elementCode: geo
     roles:
       - code: off-field dps
+        name: off-field dps
         isRecommended: true
         weapons:
           advices:
@@ -13367,6 +13442,7 @@ characters:
     elementCode: geo
     roles:
       - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:

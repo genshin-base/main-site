@@ -86,7 +86,6 @@ export function textBlocksToMarkdown(blocks) {
 	const items = []
 	for (const [paragraph, path] of blocks) {
 		if (paragraph === null) continue
-		if (typeof paragraph === 'object' && Object.keys(paragraph).length === 0) continue //fix for old empty paragraps `{}`
 		items.push({ src: textNodesToMarkdown(paragraph), path, replacedFrom: null })
 	}
 	return textBlocksSrcToMarkdown(items)
