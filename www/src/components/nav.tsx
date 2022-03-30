@@ -6,13 +6,14 @@ import {
 	I18N_LANG_NAME,
 	I18N_LANG_NAMES,
 	I18N_OUR_DISCORD,
+	I18N_SUPPORT_US,
 } from '#src/i18n/i18n'
 import { paths } from '#src/routes/paths'
 import { A, isOnRoute, makeLocationHrefForLang } from '#src/routes/router'
 import { useClickAway } from '#src/utils/hooks'
 import { VARIATION_SELECTOR } from '#src/utils/typography'
 import { GlobeIcon } from './globe-icon'
-import { LINK_DISCORD_INVITE } from '#src/utils/links'
+import { LINK_DISCORD_INVITE, LINK_KO_FI } from '#src/utils/links'
 
 type Props = { isNavExpanded: boolean }
 
@@ -54,6 +55,11 @@ export function Nav({ isNavExpanded }: Props): JSX.Element {
 				</li>
 			</ul>
 			<ul className="navbar-nav mb-2 mb-md-0 float-md-end">
+				<li className="nav-item">
+					<a className="nav-link" target="_blank" href={LINK_KO_FI}>
+						{I18N_SUPPORT_US}
+					</a>
+				</li>
 				<li className="nav-item dropdown">
 					<a
 						className={`nav-link dropdown-toggle ${isExpanded ? 'show' : ''}`}

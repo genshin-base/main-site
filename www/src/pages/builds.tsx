@@ -13,6 +13,7 @@ import {
 } from '#src/i18n/i18n'
 import { CharacterBuildDetailed } from '#src/modules/builds/character-build-detailed'
 import { isLoaded } from '#src/utils/hooks'
+import { LINK_HELPER_TEAM_TABLE } from '#src/utils/links'
 
 export function BuildsPage_CharSelect(): JSX.Element {
 	return (
@@ -41,7 +42,8 @@ export function BuildsPage_BuildDetail({ code }: { code: string }): JSX.Element 
 			<CharacterBuildDetailed build={build} isUpdating={isUpdating} />
 			<div className="col-lg-9 offset-lg-3 col-12">
 				<a
-					href="https://docs.google.com/spreadsheets/d/1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI/pubhtml#"
+					href={LINK_HELPER_TEAM_TABLE}
+					target="_blank"
 					className="fs-6 d-block my-3 text-center text-muted small"
 				>
 					{I18N_BASED_ON_GIHT}

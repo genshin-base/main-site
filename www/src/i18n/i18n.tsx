@@ -244,7 +244,7 @@ export const I18N_BASED_ON_GIHT = {
 	en: "Based on Genshin Impact Helper Team's Character Builds",
 	ru: 'Основано на табличке Геншин Импакт Хелпер Тимы (англ.)',
 }[LANG]
-export const I18N_ABOUT_SITE = { en: 'Site history', ru: 'История сайта' }[LANG]
+export const I18N_ABOUT_SITE = { en: 'Site History', ru: 'История сайта' }[LANG]
 export const I18N_OUR_DISCORD = { en: 'Our Discord', ru: 'Наш Дискорд' }[LANG]
 export const I18N_CREATED_BY_US = {
 	en: 'Designed and coded by Absolute Evil Studio',
@@ -253,6 +253,10 @@ export const I18N_CREATED_BY_US = {
 export const I18N_REPORT_BUG = {
 	en: 'Report a bug',
 	ru: 'Сообщить об ошибке',
+}[LANG]
+export const I18N_SUPPORT_US = {
+	en: 'Support Us',
+	ru: 'Поддержать нас',
 }[LANG]
 
 type WeaponTypeNames = Record<GI_WeaponTypeCode, string>
