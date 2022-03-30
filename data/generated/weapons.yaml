@@ -199,7 +199,7 @@ black-tassel:
     base: 10
     max: 354
   subStat:
-    code: hp
+    code: hp%
     base: 10
     max: 46
   specialAbility:
@@ -790,7 +790,7 @@ everlasting-moonglow:
     base: 10
     max: 608
   subStat:
-    code: hp
+    code: hp%
     base: 10
     max: 49
   specialAbility:
@@ -979,7 +979,7 @@ ferrous-shadow:
     base: 7
     max: 401
   subStat:
-    code: hp
+    code: hp%
     base: 7
     max: 35
   specialAbility:
@@ -1930,7 +1930,7 @@ prototype-amber:
     base: 9
     max: 510
   subStat:
-    code: hp
+    code: hp%
     base: 9
     max: 41
   specialAbility:
@@ -2108,7 +2108,7 @@ recurve-bow:
     base: 10
     max: 354
   subStat:
-    code: hp
+    code: hp%
     base: 10
     max: 46
   specialAbility:
@@ -2937,7 +2937,7 @@ the-bell:
     base: 9
     max: 510
   subStat:
-    code: hp
+    code: hp%
     base: 9
     max: 41
   specialAbility:
@@ -3152,7 +3152,7 @@ thrilling-tales-of-dragon-slayers:
     base: 7
     max: 401
   subStat:
-    code: hp
+    code: hp%
     base: 7
     max: 35
   specialAbility:
