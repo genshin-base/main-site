@@ -248,6 +248,7 @@ export function CharacterBuildDetailed({
 			/>
 			<BtnTabGroup
 				tabs={roleTabs}
+				titleFunc={makeRoleTitle}
 				selectedTab={selectedRoleTab}
 				onTabSelect={setSelectedRoleTab}
 				classes="w-100 btn-group-sm mt-3 mb-0"

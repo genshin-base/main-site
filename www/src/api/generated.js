@@ -1,5 +1,5 @@
 
-export const GENERATED_DATA_HASH = "82b3456b"
+export const GENERATED_DATA_HASH = "4ffa6265"
 
 /** @type {import('#lib/parsing/combine').CharacterShortInfo[]} */
 export const charactersShortList = [

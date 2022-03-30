@@ -22,8 +22,8 @@ import {
 } from '#src/utils/local-storage-keys'
 import { HEART, HEART_EMPTY, STAR } from '#src/utils/typography'
 
-export const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole<'monolang'>> = {
-	title: '…',
+export const DUMMY_ROLE: { code: string; name: string } & Partial<CharacterBuildInfoRole<'monolang'>> = {
+	name: '…',
 	code: '',
 }
 export const DUMMY_ROLES = [DUMMY_ROLE]
@@ -36,7 +36,7 @@ export function makeRoleTitle(r: BuildRoleOrDummy) {
 			{r.isRecommended && (
 				<span className="fs-4 lh-1 opacity-75 text-warning align-bottom">{STAR}</span>
 			)}
-			{r.code}
+			{r.name}
 		</span>
 	)
 }
