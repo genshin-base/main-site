@@ -312,13 +312,22 @@ function makeCanvasWithShadow(img: HTMLImageElement, blur: number, color: string
 class MovementClampLayer {
 	private mapCode: MapCode = 'teyvat'
 	private isGrabbing = false
+	private isZoomIn = false
+	// расширение границ таскаяни, в координатах карты
+	private xOffset = 0
+	private yOffset = 0
 
 	onEvent: MapEventHandlers = (() => {
 		const down = () => {
 			this.isGrabbing = true
 		}
-		const up = map => {
+		const up = (map: LocMap) => {
 			this.isGrabbing = false
+			map.requestRedraw()
+		}
+		let zoomInTimeout = 0
+		const stopZoomIn = (map: LocMap) => {
+			this.isZoomIn = false
 			map.requestRedraw()
 		}
 		return {
@@ -326,14 +335,49 @@ class MovementClampLayer {
 			singleUp: up,
 			doubleDown: down,
 			doubleUp: up,
+			mapZoom: (map, { delta }) => {
+				if (delta > 1) {
+					this.isZoomIn = true
+					clearTimeout(zoomInTimeout)
+					zoomInTimeout = window.setTimeout(stopZoomIn, 100, map)
+				}
+			},
 		}
 	})()
 
 	redraw(map: LocMap) {
-		if (this.isGrabbing) return
 		const summary = lowestLayerSummaries[this.mapCode]
 		if (!summary) return
 
+		if (!this.isGrabbing) {
+			this.xOffset *= 0.9
+			this.yOffset *= 0.9
+		}
+		let [dLon, dLat] = this.getLonLatDelta(map, summary)
+		if (this.isGrabbing || this.isZoomIn) {
+			// В режиме увеличения границы раздвигаются вместе (одинаково) с перемещением,
+			// так что они не мешают и не сдвигают карту. А после зума будут плавно сдвинуты обратно.
+			// В режиме таскания границы раздвигаются медленее перемещения карты.
+			// Это создаёт эффект "трения": карта у границ начинает двигаться медленее, чем курсор.
+			const k = this.isZoomIn ? 1 : 0.25
+			this.xOffset += Math.abs(dLon) * k
+			this.yOffset += Math.abs(dLat) * k
+			;[dLon, dLat] = this.getLonLatDelta(map, summary)
+		}
+
+		const dx = map.lon2x(dLon)
+		const dy = map.lat2y(dLat)
+
+		if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
+			map.move(dx, dy)
+		}
+	}
+
+	setMapCode(code: MapCode) {
+		this.mapCode = code
+	}
+
+	private getLonLatDelta(map: LocMap, summary: TileLayerSummary): [number, number] {
 		// eslint-disable-next-line prefer-const
 		let [layer, [left, top, right, bottom]] = summary
 		right += 1
@@ -352,36 +396,22 @@ class MovementClampLayer {
 		top += vBorder
 		bottom -= vBorder
 
+		if (right < left) left = right = (left + right) / 2
+		if (bottom < top) top = bottom = (top + bottom) / 2
+		left -= this.xOffset
+		right += this.xOffset
+		top -= this.yOffset
+		bottom += this.yOffset
+
 		const lon = map.getLon()
 		const lat = map.getLat()
 
 		let dLon = 0
 		let dLat = 0
-		if (left < right) {
-			if (lon < left) dLon = lon - left
-			if (lon > right) dLon = lon - right
-		} else {
-			dLon = (lon - left + lon - right) / 2
-		}
-		if (top < bottom) {
-			if (lat < top) dLat = lat - top
-			if (lat > bottom) dLat = lat - bottom
-		} else {
-			dLat = (lat - top + lat - bottom) / 2
-		}
-
-		if (dLon !== 0 || dLat !== 0) {
-			let dx = map.lon2x(dLon)
-			let dy = map.lat2y(dLat)
-			if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
-				dx /= 4
-				dy /= 4
-			}
-			map.move(dx, dy)
-		}
-	}
-
-	setMapCode(code: MapCode) {
-		this.mapCode = code
+		if (lon < left) dLon = lon - left
+		if (lon > right) dLon = lon - right
+		if (lat < top) dLat = lat - top
+		if (lat > bottom) dLat = lat - bottom
+		return [dLon, dLat]
 	}
 }
