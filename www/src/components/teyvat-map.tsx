@@ -143,6 +143,7 @@ export const TeyvatMap = memo(function TeyvatMap({
 		const m = mapRef.current
 		mapCodeRef.current = mapCode
 		m?.markersLayer.setMapCode(mapCode)
+		m?.movementClampLayer.setMapCode(mapCode)
 		m?.tileContainer.clearCache()
 		m?.map.requestRedraw()
 	}, [mapCode])
@@ -354,10 +355,14 @@ class MovementClampLayer {
 			let dx = map.lon2x(dLon)
 			let dy = map.lat2y(dLat)
 			if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
-				dx /= 2
-				dy /= 2
+				dx /= 4
+				dy /= 4
 			}
 			map.move(dx, dy)
 		}
+	}
+
+	setMapCode(code: MapCode) {
+		this.mapCode = code
 	}
 }
