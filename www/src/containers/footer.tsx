@@ -1,5 +1,6 @@
-import { I18N_CREATED_BY_US, I18N_REPORT_BUG } from '#src/i18n/i18n'
+import { I18N_CREATED_BY_US, I18N_ORDER_SITE_FROM_US, I18N_REPORT_BUG } from '#src/i18n/i18n'
 import { ReportBugModal } from '#src/modals/report-bug'
+import { LINK_GOOGLE_FORM_ORDER_SITE } from '#src/utils/links'
 import { useCallback, useState } from 'preact/hooks'
 
 export function Footer() {
@@ -23,6 +24,11 @@ export function Footer() {
 					{isReportBugModalVisible && <ReportBugModal onClickAway={closeRepBugModal} />}
 				</div>
 				<div className="text-center">{I18N_CREATED_BY_US}</div>
+				<div className="text-center">
+					<a href={LINK_GOOGLE_FORM_ORDER_SITE} target="_blank">
+						{I18N_ORDER_SITE_FROM_US}
+					</a>
+				</div>
 			</div>
 		</footer>
 	)

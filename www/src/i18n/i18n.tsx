@@ -258,6 +258,10 @@ export const I18N_SUPPORT_US = {
 	en: 'Support Us',
 	ru: 'Поддержать нас',
 }[LANG]
+export const I18N_ORDER_SITE_FROM_US = {
+	en: 'Request a site from us',
+	ru: 'Закажите у нас сайт',
+}[LANG]
 
 type WeaponTypeNames = Record<GI_WeaponTypeCode, string>
 const weaponTypeNamesRU: WeaponTypeNames = {
