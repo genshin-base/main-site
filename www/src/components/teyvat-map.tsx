@@ -11,7 +11,7 @@ import {
 	TilePlaceholderDrawFunc,
 } from 'locmap'
 import { useEffect, useRef } from 'preact/hooks'
-import { makeTileMaskChecker } from 'teyvat-map/tiles/summary'
+import { makeTileMaskChecker, TileLayerSummary } from 'teyvat-map/tiles/summary'
 
 import { MapCode } from '#lib/genshin'
 import { clamp } from '#lib/utils/values'
@@ -37,12 +37,16 @@ function tilePathFinc(x: number, y: number, z: number, mapCode: MapCode) {
 	return `${TILES_ROOT}/${mapCode}/${tileExt}/${z}/${x}/${y}.${tileExt}`
 }
 
+const lowestLayerSummaries: Record<string, TileLayerSummary | undefined> = {}
 const tilesMask: Record<string, ReturnType<typeof makeTileMaskChecker> | undefined> = {}
 if (!BUNDLE_ENV.IS_SSR)
 	fetch(`${TILES_ROOT}/summary.json`)
 		.then(r => r.json())
-		.then(info => {
-			for (const code in info) tilesMask[code] = makeTileMaskChecker(info[code])
+		.then((summaries: Record<string, TileLayerSummary[]>) => {
+			for (const code in summaries) {
+				lowestLayerSummaries[code] = summaries[code][0]
+				tilesMask[code] = makeTileMaskChecker(summaries[code])
+			}
 		})
 
 const MapProjection: ProjectionConverter = {
@@ -91,6 +95,7 @@ export const TeyvatMap = memo(function TeyvatMap({
 	const mapRef = useRef<{
 		map: LocMap
 		markersLayer: MarkersLayer
+		movementClampLayer: MovementClampLayer
 		tileContainer: TileContainer
 	} | null>(null)
 	const mapCodeRef = useRef<MapCode>('teyvat')
@@ -115,7 +120,9 @@ export const TeyvatMap = memo(function TeyvatMap({
 
 		const map = new LocMap(wrapRef.current, MapProjection)
 		const markersLayer = new MarkersLayer()
+		const movementClampLayer = new MovementClampLayer()
 		map.setZoomRange(2 ** MIN_LEVEL * TILE_CONTENT_WIDTH, 2 ** MAX_LEVEL * TILE_CONTENT_WIDTH)
+		map.register(movementClampLayer)
 		map.register(new TileLayer(tileContainer))
 		map.register(markersLayer)
 		map.register(new ControlLayer())
@@ -123,7 +130,7 @@ export const TeyvatMap = memo(function TeyvatMap({
 		map.resize()
 
 		addEventListener('resize', map.resize)
-		mapRef.current = { map, markersLayer, tileContainer }
+		mapRef.current = { map, markersLayer, movementClampLayer, tileContainer }
 
 		return () => {
 			map.getLayers().forEach(map.unregister)
@@ -298,4 +305,59 @@ function makeCanvasWithShadow(img: HTMLImageElement, blur: number, color: string
 		for (let i = 0; i < 3; i++) rc.drawImage(img, 0, 0)
 	}
 	return canvas
+}
+
+class MovementClampLayer {
+	private mapCode: MapCode = 'teyvat'
+
+	redraw(map: LocMap) {
+		const summary = lowestLayerSummaries[this.mapCode]
+		if (!summary) return
+
+		// eslint-disable-next-line prefer-const
+		let [layer, [left, top, right, bottom]] = summary
+		right += 1
+		bottom += 1
+		const layerScale = TILE_CONTENT_WIDTH * 0.5 ** layer
+		left *= layerScale
+		top *= layerScale
+		right *= layerScale
+		bottom *= layerScale
+
+		const [viewWidth, viewHeight] = map.getViewBoxSize()
+		const hBorder = map.x2lon(viewWidth / 2)
+		const vBorder = map.y2lat(viewHeight / 2)
+		left += hBorder
+		right -= hBorder
+		top += vBorder
+		bottom -= vBorder
+
+		const lon = map.getLon()
+		const lat = map.getLat()
+
+		let dLon = 0
+		let dLat = 0
+		if (left < right) {
+			if (lon < left) dLon = lon - left
+			if (lon > right) dLon = lon - right
+		} else {
+			dLon = (lon - left + lon - right) / 2
+		}
+		if (top < bottom) {
+			if (lat < top) dLat = lat - top
+			if (lat > bottom) dLat = lat - bottom
+		} else {
+			dLat = (lat - top + lat - bottom) / 2
+		}
+
+		if (dLon !== 0 || dLat !== 0) {
+			let dx = map.lon2x(dLon)
+			let dy = map.lat2y(dLat)
+			if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
+				dx /= 2
+				dy /= 2
+			}
+			map.move(dx, dy)
+		}
+	}
 }
