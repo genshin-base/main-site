@@ -3,6 +3,7 @@ import {
 	drawRectTilePlaceholder,
 	loadTileImage,
 	LocMap,
+	MapEventHandlers,
 	ProjectionConverter,
 	SmoothTileContainer,
 	TileContainer,
@@ -310,8 +311,26 @@ function makeCanvasWithShadow(img: HTMLImageElement, blur: number, color: string
 
 class MovementClampLayer {
 	private mapCode: MapCode = 'teyvat'
+	private isGrabbing = false
+
+	onEvent: MapEventHandlers = (() => {
+		const down = () => {
+			this.isGrabbing = true
+		}
+		const up = map => {
+			this.isGrabbing = false
+			map.requestRedraw()
+		}
+		return {
+			singleDown: down,
+			singleUp: up,
+			doubleDown: down,
+			doubleUp: up,
+		}
+	})()
 
 	redraw(map: LocMap) {
+		if (this.isGrabbing) return
 		const summary = lowestLayerSummaries[this.mapCode]
 		if (!summary) return
 
