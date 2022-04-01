@@ -14,7 +14,6 @@ import {
 } from '#src/i18n/i18n'
 import { CharacterBuildDetailed } from '#src/modules/builds/character-build-detailed'
 import { isLoaded, useDocumentTitle } from '#src/utils/hooks'
-import { LINK_HELPER_TEAM_TABLE } from '#src/utils/links'
 
 export function BuildsPage_CharSelect(): JSX.Element {
 	useDocumentTitle(I18N_CHAR_BUILD_RECS + I18N_PAGE_TITLE_POSTFIX)
