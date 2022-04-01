@@ -257,6 +257,14 @@ export const I18N_SUPPORT_US = {
 	en: 'Support Us',
 	ru: 'Поддержать нас',
 }[LANG]
+export const I18N_SUPPORT_VIA_KO_FI = {
+	en: 'Ko-fi, if you have PayPal',
+	ru: 'Ко-фи, если у вас есть Пейпал',
+}[LANG]
+export const I18N_SUPPORT_VIA_DON_ALERTS = {
+	en: 'DonationAlerts',
+	ru: 'Донейшн Алертс',
+}[LANG]
 export const I18N_ORDER_SITE_FROM_US = {
 	en: 'Request a site from us',
 	ru: 'Закажите у нас сайт',
