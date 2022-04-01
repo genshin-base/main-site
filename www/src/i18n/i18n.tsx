@@ -301,6 +301,10 @@ export const I18N_COPYRIGHTS = {
 	en: 'Copyrights',
 	ru: 'Авторские права',
 }[LANG]
+export const I18N_SEE_NOTES = {
+	en: 'see notes',
+	ru: 'см. заметки',
+}[LANG]
 
 type WeaponTypeNames = Record<GI_WeaponTypeCode, string>
 const weaponTypeNamesRU: WeaponTypeNames = {
