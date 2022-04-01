@@ -1,5 +1,5 @@
 import { RefObject } from 'preact'
-import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'preact/hooks'
 
 import { arrShallowEqual } from '#lib/utils/collections'
 import { isPromise } from '#lib/utils/values'
@@ -253,17 +253,18 @@ export function useVisibleTicker(callback: () => void, interval: number) {
 	}, [interval, isVisible])
 }
 export function useDocumentTitle(title: string, shouldRestoreOnUnmount = false) {
-	const defaultTitle = useRef(document.title)
+	const defaultTitle = useRef(document.title).current
 
-	useEffect(() => {
+	// useEffect не подходит: он не сработает при серверном рендере
+	useMemo(() => {
 		document.title = title
 	}, [title])
 
 	useEffect(() => {
 		return () => {
 			if (shouldRestoreOnUnmount) {
-				document.title = defaultTitle.current
+				document.title = defaultTitle
 			}
 		}
-	}, [shouldRestoreOnUnmount])
+	}, [shouldRestoreOnUnmount, defaultTitle])
 }
