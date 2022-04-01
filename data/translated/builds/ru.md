@@ -634,7 +634,7 @@
 
 # === characters.#ganyu.roles.#melt_dps.name ===
 
-ДД через таяние
+ДД через Таяние
 
 
 # === characters.#ganyu.roles.#melt_dps.tips ===
@@ -664,7 +664,7 @@
 
 # === characters.#ganyu.roles.#freeze_dps.name ===
 
-ДД через заморзку
+ДД через Заморзку
 
 
 # === characters.#ganyu.roles.#freeze_dps.tips ===
@@ -1369,7 +1369,7 @@
 
 # === characters.#mona.roles.#freeze_support.name ===
 
-Саппорт для заморозки
+Саппорт для Заморозки
 
 
 # === characters.#mona.roles.#freeze_support.mainStats.notes ===
