@@ -22,7 +22,7 @@ import {
 	I18N_PIECE_BONUS,
 	I18N_PIECES_BONUS,
 	I18N_PINCH_TO_ZOOM,
-	I18N_RECOMENDED_FOR,
+	I18N_RECOMMENDED_FOR,
 	I18N_SCROLL_TO_ZOOM,
 	I18N_SECONDARY_STAT,
 	I18N_SOURCE,
@@ -52,7 +52,7 @@ const LazyTeyvatMap = import('#src/components/teyvat-map')
 function RecommendedFor({ charCodes }: { charCodes: string[] }): JSX.Element {
 	return (
 		<>
-			<BlockHeader>{I18N_RECOMENDED_FOR}</BlockHeader>
+			<BlockHeader>{I18N_RECOMMENDED_FOR}</BlockHeader>
 			{charCodes.length
 				? charCodes.map(c => (
 						<CharacterAvatar key={c} code={c} isNoBg={true} classes={`small-avatar mb-2 me-2`} />

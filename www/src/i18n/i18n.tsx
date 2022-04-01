@@ -8,6 +8,7 @@ import {
 } from '#lib/genshin'
 import { GI_TalentCode } from '#lib/parsing/helperteam/types'
 import { LINK_DISCORD_INVITE } from '#src/utils/links'
+import { NBSP } from '#src/utils/typography'
 
 type Lang = 'en' | 'ru'
 export const LANG = BUNDLE_ENV.LANG as Lang
@@ -165,7 +166,7 @@ export const I18N_CONJUCTIONS: Record<ConjuctionType, string> = {
 	ru: { or: 'или', and: 'и' },
 }[LANG]
 
-export const I18N_RECOMENDED_FOR = { en: 'Recommended for', ru: 'Рекомендуется для' }[LANG]
+export const I18N_RECOMMENDED_FOR = { en: 'Recommended for', ru: 'Рекомендуется для' }[LANG]
 export const I18N_FOR_NOBODY = { en: 'Nobody', ru: 'Никого' }[LANG]
 export const I18N_SOURCE = { en: 'Source', ru: 'Источник' }[LANG]
 export const I18N_SCROLL_TO_ZOOM = { en: 'Scroll to zoom', ru: 'Зум колёсиком' }[LANG]
@@ -176,8 +177,8 @@ export const I18N_SUBMIT_BUG_SUCCESS = { en: 'Message sent. Thank you', ru: 'С�
 	LANG
 ]
 export const I18N_SUBMIT_BUG_ERROR = {
-	en: 'Error happened while sending message. Please try again later, or contact us on Discord',
-	ru: 'Не удалось отправить сообщение. Попробуйте позже, или напишите нам в Дискорде',
+	en: 'Error happened while sending message. Please disable adblock or try again later, or contact us on Discord',
+	ru: 'Не удалось отправить сообщение. Выключите блокировщик рекламы или попробуйте позже, а лучше напишите нам в Дискорде',
 }[LANG]
 export const I18N_YOUR_MESSAGE_HERE = { en: 'Your message here', ru: 'Текст сообщения' }[LANG]
 export const I18N_REPORT_BUG_GUIDE = {
@@ -236,21 +237,17 @@ export const I18N_MAP_CODES_NAME: MapCodeName = {
 	ru: { teyvat: 'Тейват', enkanomiya: 'Энканомия' },
 }[LANG]
 export const I18N_CHAR_BUILD_RECS = {
-	en: 'Character builds recomendations',
+	en: 'Character builds recommendations',
 	ru: 'Рекомендуемые сборки персонажей',
 }[LANG]
 export const I18N_SELECT_CHAR_ABOVE = { en: 'Select character above', ru: 'Выберите персонажа' }[LANG]
-export const I18N_BUILD_RECS_FOR = { en: 'build recomendations', ru: 'билд' }[LANG]
-export const I18N_RECOMENDED = { en: 'Recomended', ru: 'Рекомендуемый' }[LANG]
-export const I18N_BASED_ON_GIHT = {
-	en: "Based on Genshin Impact Helper Team's Character Builds",
-	ru: 'Основано на табличке Геншин Импакт Хелпер Тимы (англ.)',
-}[LANG]
+export const I18N_BUILD_RECS_FOR = { en: 'build recommendations', ru: 'билд' }[LANG]
+export const I18N_RECOMMENDED = { en: 'Recommended', ru: 'Рекомендуемый' }[LANG]
 export const I18N_ABOUT_SITE = { en: 'Site History', ru: 'История сайта' }[LANG]
 export const I18N_OUR_DISCORD = { en: 'Our Discord', ru: 'Наш Дискорд' }[LANG]
 export const I18N_CREATED_BY_US = {
-	en: 'Designed and coded by Absolute Evil Studio',
-	ru: 'Задизайнено и закожено в Абсолют Ивел студии',
+	en: `Designed and coded by${NBSP}Absolute${NBSP}Evil${NBSP}Studio`,
+	ru: `Задизайнено и запрограммировано в${NBSP}Абсолют${NBSP}Ивел${NBSP}студии`,
 }[LANG]
 export const I18N_REPORT_BUG = {
 	en: 'Report a bug',
@@ -263,6 +260,38 @@ export const I18N_SUPPORT_US = {
 export const I18N_ORDER_SITE_FROM_US = {
 	en: 'Request a site from us',
 	ru: 'Закажите у нас сайт',
+}[LANG]
+export const I18N_NOT_AFFILIATED_WITH_MIHOYO = {
+	en: 'We are not affiliated with MiHoYo',
+	ru: 'Мы не связаны с Михуё',
+}[LANG]
+export const I18N_C_MIHOYO = {
+	en: 'Genshin Impact, items and characters illustrations are trademarks and copyrights of MiHoYo.',
+	ru: 'Геншин Импакт, иллюстрации персонажей и предметов принадлежат Михуё',
+}[LANG]
+export const I18N_HELPER_TEAM_TABLE = {
+	en: 'Helper Team',
+	ru: 'Хелпер Тим',
+}[LANG]
+export const I18N_HONEY_IMPACT = {
+	en: 'Honey Impact',
+	ru: 'Хани Импакт',
+}[LANG]
+export const I18N_GI_MAP = {
+	en: 'Genshin Map',
+	ru: 'Карта Геншина',
+}[LANG]
+export const I18N_GI_WIKI = {
+	en: 'Genshin Wiki',
+	ru: 'Вики Геншина',
+}[LANG]
+export const I18N_WE_USE_DATA_FROM = {
+	en: 'We use data from',
+	ru: 'Использованные источники',
+}[LANG]
+export const I18N_COPYRIGHTS = {
+	en: 'Copyrights',
+	ru: 'Авторские права',
 }[LANG]
 
 type WeaponTypeNames = Record<GI_WeaponTypeCode, string>
