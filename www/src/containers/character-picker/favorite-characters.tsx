@@ -3,8 +3,10 @@ import { useEffect, useMemo } from 'preact/hooks'
 import { charactersShortList } from '#src/api/generated'
 import { I18N_FAV_CHARACTERS } from '#src/i18n/i18n'
 import { MAX_SMTHS_TO_STORE } from '#src/modules/builds/common'
-import { useLocalStorage } from '#src/utils/hooks'
+import { useVersionedStorage } from '#src/utils/hooks'
+import { SV_FAV_CHAR_CODES } from '#src/utils/local-storage-keys'
 import { CharacterAvatar } from '../item-cards/item-avatars'
+
 const shortListReversed = charactersShortList.reverse()
 export function FavoriteCharacters({
 	classes = '',
@@ -21,7 +23,7 @@ export function FavoriteCharacters({
 	selectedCharacterCode?: string
 	blockLabel?: string
 }): JSX.Element {
-	const [favCharCodes] = useLocalStorage<string[]>('favoriteCharacterCodes', [])
+	const [favCharCodes] = useVersionedStorage(SV_FAV_CHAR_CODES)
 	//todo sort characters by release date
 	const charactersShortListCodes = useMemo(
 		() => shortListReversed.map(c => c.code).filter(c => (~favCharCodes.indexOf(c) ? false : c)),

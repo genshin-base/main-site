@@ -165,6 +165,39 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, (val: T) =
 	return [value, setValueAndSave]
 }
 
+export type Migration<TIn, TOut> = (val: TIn) => TOut
+type MigrationResult<T> = T extends Migration<infer _A, infer B> ? B : never
+type Last<T> = T extends readonly [...infer _I, infer L] ? L : never
+type VersionedValue<T> = { version: number; value: T }
+
+export function useVersionedStorage<T extends readonly Migration<unknown, unknown>[]>({
+	key,
+	versions,
+}: {
+	key: string
+	versions: T
+}): [MigrationResult<Last<T>>, (val: MigrationResult<Last<T>>) => unknown] {
+	const [val, setVal] = useLocalStorage<VersionedValue<unknown> | null>(key, null)
+
+	let version = -1
+	let value = null as unknown
+	if (val && typeof val === 'object' && 'version' in val) {
+		;({ version, value } = val)
+	}
+	for (let i = version + 1; i < versions.length; i++) {
+		value = versions[i](value)
+		version = i
+	}
+
+	const setValInner = useCallback(
+		(value: MigrationResult<Last<T>>) => {
+			setVal({ version, value })
+		},
+		[setVal, version],
+	)
+	return [value as MigrationResult<Last<T>>, setValInner]
+}
+
 export function useHover<T extends Element>(): [RefObject<T>, boolean] {
 	const [value, setValue] = useState<boolean>(false)
 	const ref = useRef<T | null>(null)

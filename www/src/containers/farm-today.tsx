@@ -1,6 +1,6 @@
 import { useMemo } from 'preact/hooks'
 
-import { getRegionTime, GI_ROTATION_WEEKDAY_CODES, GI_ServerRegionCode } from '#lib/genshin'
+import { getRegionTime, GI_ROTATION_WEEKDAY_CODES } from '#lib/genshin'
 import { arrGetAfter } from '#lib/utils/collections'
 import { mustBeDefined } from '#src/../../lib/utils/values'
 import { apiMaterialsTimetable } from '#src/api/endpoints'
@@ -15,14 +15,13 @@ import {
 	I18N_WEEKDAYS,
 	I18N_WHY_ADD_TO_FAVS_TIP,
 } from '#src/i18n/i18n'
-import { isLoaded, useFetch, useForceUpdate, useLocalStorage, useVisibleTicker } from '#src/utils/hooks'
+import { isLoaded, useFetch, useForceUpdate, useVersionedStorage, useVisibleTicker } from '#src/utils/hooks'
 import { getItemIconLargeSrc, getItemIconSrc } from '#src/utils/items'
 import {
-	SK_DEFAULT_SELECTED_REGION_CODE,
-	SK_FAV_CHAR_CODES,
-	SK_FAV_TALENT_MATERIAL_CODES,
-	SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
-	SK_SELECTED_REGION_CODE,
+	SV_FAV_CHAR_CODES,
+	SV_FAV_TALENT_MATERIAL_CODES,
+	SV_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
+	SV_SELECTED_REGION_CODE,
 } from '#src/utils/local-storage-keys'
 import { HEART } from '#src/utils/typography'
 import { OtherItemCard } from './item-cards/dd-cards'
@@ -32,17 +31,14 @@ import './farm-today.scss'
 
 export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 	const ttData = useFetch(apiMaterialsTimetable, [])
-	const [selectedRegionCode] = useLocalStorage<GI_ServerRegionCode>(
-		SK_SELECTED_REGION_CODE,
-		SK_DEFAULT_SELECTED_REGION_CODE,
-	)
+	const [selectedRegionCode] = useVersionedStorage(SV_SELECTED_REGION_CODE)
 	const { weekdayMonSun, weekdayCode } = getRegionTime(selectedRegionCode)
 	const tomorrowCode = arrGetAfter(GI_ROTATION_WEEKDAY_CODES, weekdayCode)
-	const [favCharCodes] = useLocalStorage<string[]>(SK_FAV_CHAR_CODES, [])
-	const [favTalMaterialCodes] = useLocalStorage<string[]>(SK_FAV_TALENT_MATERIAL_CODES, [])
+	const [favCharCodes] = useVersionedStorage(SV_FAV_CHAR_CODES)
+	const [favTalMaterialCodes] = useVersionedStorage(SV_FAV_TALENT_MATERIAL_CODES)
 	// const [favWeaponDatas] = useLocalStorage<STORAGE_WEAPON_DATA[]>(SK_FAV_WEAPON_DATAS, [])
 	// const favWeapMatCodes = useMemo(() => [...favWeaponDatas.map(wd => wd[1])], [favWeaponDatas])
-	const [favWeapPrimMatCodes] = useLocalStorage<string[]>(SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES, [])
+	const [favWeapPrimMatCodes] = useVersionedStorage(SV_FAV_WEAPON_PRIMARY_MATERIAL_CODES)
 	const forceUpdate = useForceUpdate()
 	useVisibleTicker(() => {
 		forceUpdate()

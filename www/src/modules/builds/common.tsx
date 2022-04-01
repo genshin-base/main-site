@@ -12,13 +12,13 @@ import { ItemLabelWithDd, LabeledItemAvatar } from '#src/containers/item-cards/i
 import { logError } from '#src/errors'
 import { I18N_ART_GROUP_NAME, I18N_CONJUCTIONS, I18N_FAV_TIPS, I18N_STAT_NAME } from '#src/i18n/i18n'
 import { getAllArtifacts, getArtifactIconSrc } from '#src/utils/artifacts'
-import { useHover, useLocalStorage } from '#src/utils/hooks'
+import { Migration, useHover, useVersionedStorage } from '#src/utils/hooks'
 import {
-	SK_FAV_CHAR_CODES,
-	SK_FAV_TALENT_MATERIAL_CODES,
-	SK_FAV_WEAPON_DATAS,
-	SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
-	STORAGE_WEAPON_DATA,
+	SV_FAV_CHAR_CODES,
+	SV_FAV_TALENT_MATERIAL_CODES,
+	SV_FAV_WEAPON_DATAS,
+	SV_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
+	SV_FavCodes,
 } from '#src/utils/local-storage-keys'
 import { HEART, HEART_EMPTY, STAR } from '#src/utils/typography'
 
@@ -181,7 +181,13 @@ export const MAX_SMTHS_TO_STORE = 5
 export function removeOldSmthsFromList<T>(codes: T[]): T[] {
 	return codes.slice(0, MAX_SMTHS_TO_STORE)
 }
-function ToggleSmthFav({
+
+function ToggleSmthFav<
+	TStorageKey extends {
+		key: string
+		versions: readonly [...Migration<unknown, unknown>[], Migration<unknown, SV_FavCodes>]
+	},
+>({
 	smthCode,
 	classes,
 	storageKey,
@@ -190,11 +196,11 @@ function ToggleSmthFav({
 }: {
 	smthCode: string
 	classes?: string
-	storageKey: string
+	storageKey: TStorageKey
 	tipFav: string
 	tipNotFav: string
 }): JSX.Element {
-	const [favSmthCodes, setFavSmthCodes] = useLocalStorage<string[]>(storageKey, [])
+	const [favSmthCodes, setFavSmthCodes] = useVersionedStorage(storageKey)
 	const [elRef, isHovered] = useHover<HTMLDivElement>()
 	const isFav = ~favSmthCodes.indexOf(smthCode)
 	const toggleFav = useCallback(() => {
@@ -230,7 +236,7 @@ export function ToggleCharFav({
 		<ToggleSmthFav
 			smthCode={characterCode}
 			classes={classes}
-			storageKey={SK_FAV_CHAR_CODES}
+			storageKey={SV_FAV_CHAR_CODES}
 			tipFav={I18N_FAV_TIPS.remove.character}
 			tipNotFav={I18N_FAV_TIPS.add.character}
 		/>
@@ -247,7 +253,7 @@ export function ToggleWeaponPrimaryMaterialFav({
 		<ToggleSmthFav
 			smthCode={itemCode}
 			classes={classes}
-			storageKey={SK_FAV_WEAPON_PRIMARY_MATERIAL_CODES}
+			storageKey={SV_FAV_WEAPON_PRIMARY_MATERIAL_CODES}
 			tipFav={I18N_FAV_TIPS.remove.material}
 			tipNotFav={I18N_FAV_TIPS.add.material}
 		/>
@@ -264,7 +270,7 @@ export function ToggleTalentMaterialFav({
 		<ToggleSmthFav
 			smthCode={itemCode}
 			classes={classes}
-			storageKey={SK_FAV_TALENT_MATERIAL_CODES}
+			storageKey={SV_FAV_TALENT_MATERIAL_CODES}
 			tipFav={I18N_FAV_TIPS.remove.material}
 			tipNotFav={I18N_FAV_TIPS.add.material}
 		/>
@@ -281,7 +287,7 @@ export function ToggleWeaponFav({
 	weapMatCode: string
 	classes?: string
 }): JSX.Element {
-	const [favWeaponDatas, setWeaponDatas] = useLocalStorage<STORAGE_WEAPON_DATA[]>(SK_FAV_WEAPON_DATAS, [])
+	const [favWeaponDatas, setWeaponDatas] = useVersionedStorage(SV_FAV_WEAPON_DATAS)
 	const favWeaponCodes = useMemo(() => favWeaponDatas.map(wd => wd[0]), [favWeaponDatas])
 	const [elRef, isHovered] = useHover<HTMLDivElement>()
 	const isFav = ~favWeaponCodes.indexOf(weaponCode)

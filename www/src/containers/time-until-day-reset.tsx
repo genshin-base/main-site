@@ -1,14 +1,11 @@
-import { getRegionTime, GI_ServerRegionCode } from '#lib/genshin'
+import { getRegionTime } from '#lib/genshin'
 import { I18N_MS_TO_HM_WORDS } from '#src/i18n/i18n'
-import { useForceUpdate, useLocalStorage, useVisibleTicker } from '#src/utils/hooks'
-import { SK_DEFAULT_SELECTED_REGION_CODE, SK_SELECTED_REGION_CODE } from '#src/utils/local-storage-keys'
+import { useForceUpdate, useVersionedStorage, useVisibleTicker } from '#src/utils/hooks'
+import { SV_SELECTED_REGION_CODE } from '#src/utils/local-storage-keys'
 import { BULLET, ELLIPSIS } from '#src/utils/typography'
 
 export function TimeUntilDayReset({ classes = '' }: { classes?: string }): JSX.Element {
-	const [selectedRegionCode] = useLocalStorage<GI_ServerRegionCode>(
-		SK_SELECTED_REGION_CODE,
-		SK_DEFAULT_SELECTED_REGION_CODE,
-	)
+	const [selectedRegionCode] = useVersionedStorage(SV_SELECTED_REGION_CODE)
 	const { resetIn } = getRegionTime(selectedRegionCode)
 	const forceUpdate = useForceUpdate()
 	useVisibleTicker(() => {
