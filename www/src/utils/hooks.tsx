@@ -252,3 +252,18 @@ export function useVisibleTicker(callback: () => void, interval: number) {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [interval, isVisible])
 }
+export function useDocumentTitle(title: string, shouldRestoreOnUnmount = false) {
+	const defaultTitle = useRef(document.title)
+
+	useEffect(() => {
+		document.title = title
+	}, [title])
+
+	useEffect(() => {
+		return () => {
+			if (shouldRestoreOnUnmount) {
+				document.title = defaultTitle.current
+			}
+		}
+	}, [shouldRestoreOnUnmount])
+}

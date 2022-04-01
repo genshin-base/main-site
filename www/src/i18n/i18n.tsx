@@ -16,7 +16,9 @@ export const I18N_LANG_NAMES: Record<Lang, string> = {
 	ru: 'Русский',
 }
 export const I18N_LANG_NAME = I18N_LANG_NAMES[LANG]
-
+const titlePostfix = ' — Genshin Base'
+export const I18N_PAGE_TITLE_POSTFIX = { en: titlePostfix, ru: titlePostfix }[LANG]
+export const I18N_LOADING = { en: 'Loading', ru: 'Загрузка' }[LANG]
 export const I18N_DASHBOARD = { en: 'Dashboard', ru: 'Самое важное' }[LANG]
 export const I18N_REGION = { en: 'Region', ru: 'Регион' }[LANG]
 export const I18N_UNTIL_DAY_RESET = { en: 'Until Day Reset', ru: 'До нового дня' }[LANG]

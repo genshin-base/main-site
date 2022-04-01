@@ -1,7 +1,9 @@
 import { I18N_ABOUT_SITE_CONTENT, I18N_ABOUT_SITE_EPIGRAPH } from '#src/i18n/about-site'
-import { I18N_ABOUT_SITE } from '#src/i18n/i18n'
+import { I18N_ABOUT_SITE, I18N_PAGE_TITLE_POSTFIX } from '#src/i18n/i18n'
+import { useDocumentTitle } from '#src/utils/hooks'
 
 export function AboutPage(): JSX.Element {
+	useDocumentTitle(I18N_ABOUT_SITE + I18N_PAGE_TITLE_POSTFIX)
 	return (
 		<div className="builds container">
 			<h1 className={`my-1 letter-spacing-1 ${BUNDLE_ENV.LANG === 'en' ? 'text-capitalize' : ''}`}>

@@ -6,11 +6,13 @@ import {
 	I18N_ALCHEMY_CALC,
 	I18N_BUILDS,
 	I18N_DASHBOARD,
+	I18N_PAGE_TITLE_POSTFIX,
 	I18N_REGION,
 	I18N_UNTIL_DAY_RESET,
 	I18N_WHAT_TO_FARM,
 } from '#src/i18n/i18n'
 import { BuildsPreviewsWrap } from '#src/modules/builds/character-build-preview'
+import { useDocumentTitle } from '#src/utils/hooks'
 
 function Fieldset({ children, legend, classes = '' }) {
 	return (
@@ -21,6 +23,7 @@ function Fieldset({ children, legend, classes = '' }) {
 	)
 }
 export function FrontPage(): JSX.Element {
+	useDocumentTitle(I18N_DASHBOARD + I18N_PAGE_TITLE_POSTFIX)
 	return (
 		<div className="dashboard container ">
 			<h1 className="my-1 letter-spacing-1">{I18N_DASHBOARD}</h1>
