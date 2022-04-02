@@ -281,12 +281,16 @@ export function CharacterBuildDetailed({
 					<A className="btn btn-secondary align-self-center" type="submit" href="/builds">
 						<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
 					</A>
-					<h5 className="ps-3 pe-1 m-0 align-self-center">{build.character.name}</h5>
-					<ToggleCharFav classes="fs-3 align-self-center" characterCode={characterCode} />
-					<ItemAvatar
-						src={getCharacterAvatarLargeSrc(characterCode)}
-						classes="large-avatar align-self-end mt-n5 ms-auto"
-					/>
+					<h5 className="ps-3 pe-1 m-0 align-self-center w-50 d-inline-block overflow-hidden text-truncate text-wrap">
+						{build.character.name}
+					</h5>
+					<div className="align-self-end ms-auto d-flex">
+						<ToggleCharFav classes="fs-3" characterCode={characterCode} />
+						<ItemAvatar
+							src={getCharacterAvatarLargeSrc(characterCode)}
+							classes="large-avatar mt-n5 align-self-end"
+						/>
+					</div>
 				</div>
 				{isUpdating ? <CentredSpinner /> : null}
 				<div className={isUpdating ? 'opacity-50 pe-none' : ''}>

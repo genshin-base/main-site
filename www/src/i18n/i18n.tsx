@@ -51,7 +51,7 @@ export const I18N_WEAPON_REFINE = {
 }[LANG]
 export const I18N_WHY_ADD_TO_FAVS_TIP = {
 	en: 'Add characters or items to your favorites to see them marked here.',
-	ru: 'Добавьте персонажей и предметы в избранные, чтобы отметить их здесь',
+	ru: 'Добавьте персонажей и предметы в избранные, чтобы выделить их здесь',
 }[LANG]
 export const I18N_FAV_CHARACTERS = { en: 'Favorite characters', ru: 'Избранные персонажи' }[LANG]
 
@@ -242,7 +242,7 @@ export const I18N_CHAR_BUILD_RECS = {
 }[LANG]
 export const I18N_SELECT_CHAR_ABOVE = { en: 'Select character above', ru: 'Выберите персонажа' }[LANG]
 export const I18N_BUILD_RECS_FOR = { en: 'build recommendations', ru: 'билд' }[LANG]
-export const I18N_RECOMMENDED = { en: 'Recommended', ru: 'Рекомендуемый' }[LANG]
+export const I18N_RECOMMENDED_RU_ONLY = { en: '', ru: 'Рекомендуемый' }[LANG]
 export const I18N_ABOUT_SITE = { en: 'Site History', ru: 'История сайта' }[LANG]
 export const I18N_OUR_DISCORD = { en: 'Our Discord', ru: 'Наш Дискорд' }[LANG]
 export const I18N_CREATED_BY_US = {
