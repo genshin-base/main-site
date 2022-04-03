@@ -64,7 +64,7 @@ export const I18N_ABOUT_SITE_CONTENT = {
 			</p>
 			<p>
 				We have many plans for the future. Our goal is to make the most complete and useful site about
-				Genshin . And we need your help. Message to us on{' '}
+				Genshin. And we need your help. Message to us on{' '}
 				<a className="link" target="_blank" href={LINK_DISCORD_INVITE}>
 					Discord
 				</a>{' '}
