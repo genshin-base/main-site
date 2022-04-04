@@ -233,8 +233,8 @@ export const I18N_BASE_ATTACK = { en: 'Base attack', ru: 'Базовая ата�
 export const I18N_SECONDARY_STAT = { en: 'Secondary Stat', ru: 'Пассивная способность' }[LANG]
 type MapCodeName = Record<MapCode, string>
 export const I18N_MAP_CODES_NAME: MapCodeName = {
-	en: { teyvat: 'Teyvat', enkanomiya: 'Enkanomiya' },
-	ru: { teyvat: 'Тейват', enkanomiya: 'Энканомия' },
+	en: { teyvat: 'Teyvat', enkanomiya: 'Enkanomiya', chasm: 'The Chasm' },
+	ru: { teyvat: 'Тейват', enkanomiya: 'Энканомия', chasm: 'Разлом' },
 }[LANG]
 export const I18N_CHAR_BUILD_RECS = {
 	en: 'Character builds recommendations',
