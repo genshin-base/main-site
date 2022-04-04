@@ -766,10 +766,19 @@ cor-lapis:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -2744 2971
+    - !loc teyvat -2744 2980
+    - !loc teyvat -2741 2980
+    - !loc teyvat -2728 3208
+    - !loc teyvat -2724 3207
+    - !loc teyvat -2640 2840
     - !loc teyvat -2639 1606
     - !loc teyvat -2637 1703
+    - !loc teyvat -2627 3224
     - !loc teyvat -2624 1571
     - !loc teyvat -2611 1611
+    - !loc teyvat -2610 3226
+    - !loc teyvat -2606 3228
     - !loc teyvat -2603 1611
     - !loc teyvat -2603 1621
     - !loc teyvat -2602 1611
@@ -783,12 +792,20 @@ cor-lapis:
     - !loc teyvat -2565 1659
     - !loc teyvat -2563 1522
     - !loc teyvat -2557 1566
+    - !loc teyvat -2550 2915
+    - !loc teyvat -2549 2903
     - !loc teyvat -2548 1571
+    - !loc teyvat -2481 3288
+    - !loc teyvat -2475 3287
+    - !loc teyvat -2472 3287
     - !loc teyvat -2402 1216
     - !loc teyvat -2394 1222
+    - !loc teyvat -2363 2814
     - !loc teyvat -2357 1232
+    - !loc teyvat -2322 3169
     - !loc teyvat -2304 1006
     - !loc teyvat -2299 986
+    - !loc teyvat -2281 3113
     - !loc teyvat -2267 1329
     - !loc teyvat -2264 1325
     - !loc teyvat -2228 1695
@@ -908,6 +925,13 @@ cor-lapis:
     - !loc teyvat 196 2569
     - !loc teyvat 203 2595
     - !loc teyvat 220 2573
+    - !loc chasm -413 -147
+    - !loc chasm -168 -406
+    - !loc chasm -167 -410
+    - !loc chasm -51 -121
+    - !loc chasm -50 -124
+    - !loc chasm 20 -446
+    - !loc chasm 44 -371
 crystal-marrow:
   code: crystal-marrow
   name:
@@ -1384,6 +1408,12 @@ noctilucous-jade:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -2730 3108
+    - !loc teyvat -2477 2835
+    - !loc teyvat -2473 2837
+    - !loc teyvat -2352 2499
+    - !loc teyvat -2347 2502
+    - !loc teyvat -2342 2499
     - !loc teyvat -2191 1106
     - !loc teyvat -2020 3203
     - !loc teyvat -2017 3203
@@ -1430,6 +1460,24 @@ noctilucous-jade:
     - !loc teyvat -330 1652
     - !loc teyvat 67 2778
     - !loc teyvat 76 2755
+    - !loc chasm -405 -343
+    - !loc chasm -401 -346
+    - !loc chasm -388 -406
+    - !loc chasm -331 -348
+    - !loc chasm -116 -409
+    - !loc chasm -94 -453
+    - !loc chasm -89 -453
+    - !loc chasm -56 -109
+    - !loc chasm 6 22
+    - !loc chasm 108 537
+    - !loc chasm 110 534
+    - !loc chasm 112 540
+    - !loc chasm 147 -339
+    - !loc chasm 215 -174
+    - !loc chasm 217 -179
+    - !loc chasm 221 -177
+    - !loc chasm 229 -513
+    - !loc chasm 236 -512
 philanemo-mushroom:
   code: philanemo-mushroom
   name:
@@ -1500,25 +1548,62 @@ qingxin:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -2820 3122
+    - !loc teyvat -2809 3107
+    - !loc teyvat -2808 3014
+    - !loc teyvat -2807 2963
+    - !loc teyvat -2806 2988
+    - !loc teyvat -2779 3132
+    - !loc teyvat -2757 2895
+    - !loc teyvat -2715 3090
+    - !loc teyvat -2693 3126
+    - !loc teyvat -2669 2898
+    - !loc teyvat -2669 3166
+    - !loc teyvat -2658 2959
+    - !loc teyvat -2637 3310
+    - !loc teyvat -2574 2720
+    - !loc teyvat -2567 3193
+    - !loc teyvat -2562 2672
+    - !loc teyvat -2562 2726
     - !loc teyvat -2546 1739
     - !loc teyvat -2541 1546
+    - !loc teyvat -2525 3073
+    - !loc teyvat -2525 3166
+    - !loc teyvat -2517 3267
     - !loc teyvat -2514 1472
     - !loc teyvat -2514 1478
+    - !loc teyvat -2513 3168
     - !loc teyvat -2509 1473
     - !loc teyvat -2507 1476
+    - !loc teyvat -2501 2750
     - !loc teyvat -2491 1365
+    - !loc teyvat -2490 3236
+    - !loc teyvat -2477 2810
+    - !loc teyvat -2466 2692
+    - !loc teyvat -2451 2688
+    - !loc teyvat -2446 2670
+    - !loc teyvat -2442 2706
     - !loc teyvat -2440 1606
+    - !loc teyvat -2434 3304
+    - !loc teyvat -2425 3358
     - !loc teyvat -2415 1446
     - !loc teyvat -2413 1444
     - !loc teyvat -2411 1446
+    - !loc teyvat -2401 3025
+    - !loc teyvat -2399 3348
     - !loc teyvat -2392 1542
     - !loc teyvat -2388 1541
+    - !loc teyvat -2342 3033
     - !loc teyvat -2321 1384
     - !loc teyvat -2317 1276
+    - !loc teyvat -2293 3049
+    - !loc teyvat -2289 3076
+    - !loc teyvat -2249 3129
     - !loc teyvat -2247 1177
     - !loc teyvat -2218 1565
     - !loc teyvat -2216 1560
     - !loc teyvat -2213 1560
+    - !loc teyvat -2208 2991
     - !loc teyvat -2202 834
     - !loc teyvat -2176 910
     - !loc teyvat -2150 1799
@@ -2155,26 +2240,70 @@ violetgrass:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -2812 3002
+    - !loc teyvat -2810 3004
+    - !loc teyvat -2809 3002
+    - !loc teyvat -2808 3005
+    - !loc teyvat -2806 3008
+    - !loc teyvat -2689 3165
+    - !loc teyvat -2654 3191
+    - !loc teyvat -2652 3185
+    - !loc teyvat -2652 3199
+    - !loc teyvat -2642 3172
+    - !loc teyvat -2621 3191
+    - !loc teyvat -2603 2934
+    - !loc teyvat -2600 2934
+    - !loc teyvat -2598 3191
+    - !loc teyvat -2592 3174
+    - !loc teyvat -2591 3175
+    - !loc teyvat -2588 3192
+    - !loc teyvat -2567 3186
+    - !loc teyvat -2563 3187
+    - !loc teyvat -2520 3092
+    - !loc teyvat -2517 3093
     - !loc teyvat -2499 1376
     - !loc teyvat -2494 1354
+    - !loc teyvat -2488 3201
+    - !loc teyvat -2488 3201
+    - !loc teyvat -2488 3333
+    - !loc teyvat -2485 3332
+    - !loc teyvat -2482 3332
     - !loc teyvat -2471 1423
     - !loc teyvat -2468 1403
+    - !loc teyvat -2458 3226
+    - !loc teyvat -2450 2775
+    - !loc teyvat -2445 3230
+    - !loc teyvat -2442 3228
     - !loc teyvat -2438 1603
+    - !loc teyvat -2429 3245
     - !loc teyvat -2423 1456
     - !loc teyvat -2422 1595
     - !loc teyvat -2404 1437
     - !loc teyvat -2401 1540
+    - !loc teyvat -2392 3118
+    - !loc teyvat -2386 2884
     - !loc teyvat -2385 1549
     - !loc teyvat -2383 1533
+    - !loc teyvat -2382 3108
+    - !loc teyvat -2379 3127
+    - !loc teyvat -2377 2884
+    - !loc teyvat -2337 2790
+    - !loc teyvat -2334 2793
     - !loc teyvat -2333 1381
     - !loc teyvat -2322 1373
     - !loc teyvat -2317 1373
     - !loc teyvat -2312 1396
     - !loc teyvat -2308 1384
+    - !loc teyvat -2298 3153
+    - !loc teyvat -2293 3143
+    - !loc teyvat -2292 3143
+    - !loc teyvat -2291 3141
     - !loc teyvat -2287 1407
     - !loc teyvat -2268 1398
     - !loc teyvat -2194 826
     - !loc teyvat -2182 876
+    - !loc teyvat -2177 3062
+    - !loc teyvat -2167 3104
     - !loc teyvat -2132 958
     - !loc teyvat -2129 954
     - !loc teyvat -2127 966
@@ -2503,7 +2632,9 @@ dark-statuette:
   types:
     - character-material-secondary
   rarity: 3
-  craftedFrom: []
+  craftedFrom:
+    - code: gloomy-statuette
+      count: 3
   locations: []
 deathly-statuette:
   code: deathly-statuette
@@ -2512,8 +2643,11 @@ deathly-statuette:
     ru: Смертельная статуэтка
   types:
     - character-material-secondary
+    - weapon-material-secondary
   rarity: 4
-  craftedFrom: []
+  craftedFrom:
+    - code: dark-statuette
+      count: 3
   locations: []
 divining-scroll:
   code: divining-scroll
@@ -3174,6 +3308,16 @@ ring-of-boreas:
       count: 1
     - code: dream-solvent
       count: 1
+  locations: []
+runic-fang:
+  code: runic-fang
+  name:
+    en: Runic Fang
+    ru: Рунический клык
+  types:
+    - character-material-talent
+  rarity: 4
+  craftedFrom: []
   locations: []
 shadow-of-the-warrior:
   code: shadow-of-the-warrior
@@ -3926,6 +4070,7 @@ geo-sigil:
     - !loc teyvat -1134 879
     - !loc teyvat -1115 538
     - !loc teyvat -1109 538
+    - !loc teyvat -1106 2240
     - !loc teyvat -1104 1415
     - !loc teyvat -1103 1338
     - !loc teyvat -1098 1437
@@ -3945,6 +4090,7 @@ geo-sigil:
     - !loc teyvat -962 3228
     - !loc teyvat -952 963
     - !loc teyvat -941 1605
+    - !loc teyvat -912 829
     - !loc teyvat -879 565
     - !loc teyvat -838 1999
     - !loc teyvat -810 667
@@ -4307,6 +4453,7 @@ mora:
   rarity: 3
   craftedFrom: []
   locations:
+    - !loc teyvat -2244 3059
     - !loc teyvat -1871 1811
     - !loc teyvat -1871 2209
     - !loc teyvat -1836 1822
@@ -4356,6 +4503,16 @@ mora:
     - !loc teyvat 2680 5891
     - !loc teyvat 2687 5871
     - !loc teyvat 2689 5877
+    - !loc chasm -515 -260
+    - !loc chasm -513 -262
+    - !loc chasm -499 -287
+    - !loc chasm -495 -279
+    - !loc chasm -389 -165
+    - !loc chasm -346 -411
+    - !loc chasm -294 -145
+    - !loc chasm -290 -154
+    - !loc chasm -19 -508
+    - !loc chasm 337 -159
 original-essence-(invalidated):
   code: original-essence-(invalidated)
   name:
@@ -4393,7 +4550,7 @@ primogem:
     ru: Камень Истока
   types:
     - currency
-  rarity: 5
+  rarity: 4
   craftedFrom: []
   locations: []
 pyro-sigil:
@@ -4512,6 +4669,8 @@ akai-maou:
     - !loc teyvat 2953 4875
     - !loc teyvat 3326 6752
     - !loc enkanomiya -178 422
+    - !loc chasm -176 92
+    - !loc chasm -105 -171
 betta:
   code: betta
   name:
@@ -4530,6 +4689,7 @@ betta:
     - !loc teyvat -1195 505
     - !loc teyvat -801 1687
     - !loc teyvat -657 3062
+    - !loc chasm -105 -171
 bitter-pufferfish:
   code: bitter-pufferfish
   name:
@@ -4545,6 +4705,7 @@ bitter-pufferfish:
     - !loc teyvat 60 271
     - !loc teyvat 1877 5721
     - !loc teyvat 2953 4880
+    - !loc chasm -105 -171
 brown-shirakodai:
   code: brown-shirakodai
   name:
@@ -4563,6 +4724,7 @@ brown-shirakodai:
     - !loc teyvat -1192 506
     - !loc teyvat -1163 1014
     - !loc teyvat -803 1691
+    - !loc chasm -105 -171
 crystalfish:
   code: crystalfish
   name:
@@ -4586,6 +4748,7 @@ crystalfish:
     - !loc teyvat 2043 8356
     - !loc teyvat 3404 6777
     - !loc enkanomiya -1176 777
+    - !loc chasm -176 92
 dawncatcher:
   code: dawncatcher
   name:
@@ -4612,6 +4775,7 @@ dawncatcher:
     - !loc teyvat 3400 6776
     - !loc enkanomiya -283 449
     - !loc enkanomiya -179 424
+    - !loc chasm -176 92
 divda-ray:
   code: divda-ray
   name:
@@ -4713,6 +4877,7 @@ medaka:
     - !loc teyvat 1879 5718
     - !loc teyvat 2038 8353
     - !loc teyvat 3402 6778
+    - !loc chasm -105 -171
 pufferfish:
   code: pufferfish
   name:
@@ -4728,6 +4893,7 @@ pufferfish:
     - !loc teyvat 58 271
     - !loc teyvat 2948 4879
     - !loc teyvat 3404 6780
+    - !loc chasm -176 92
 purple-shirakodai:
   code: purple-shirakodai
   name:
@@ -4799,6 +4965,7 @@ sweet-flower-medaka:
     - !loc teyvat -1163 1010
     - !loc teyvat -803 1689
     - !loc teyvat -655 3060
+    - !loc chasm -176 92
 tea-colored-shirakodai:
   code: tea-colored-shirakodai
   name:
@@ -5278,7 +5445,24 @@ berry:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -2731 2959
+    - !loc teyvat -2664 3257
+    - !loc teyvat -2654 3160
+    - !loc teyvat -2648 2866
+    - !loc teyvat -2565 2768
+    - !loc teyvat -2484 3324
+    - !loc teyvat -2482 2668
+    - !loc teyvat -2449 3209
+    - !loc teyvat -2419 2983
+    - !loc teyvat -2392 2646
+    - !loc teyvat -2371 2756
+    - !loc teyvat -2358 2946
+    - !loc teyvat -2325 3047
+    - !loc teyvat -2317 3104
+    - !loc teyvat -2304 2653
+    - !loc teyvat -2149 2822
     - !loc teyvat -2142 767
+    - !loc teyvat -2134 2650
     - !loc teyvat -2091 3246
     - !loc teyvat -2036 3149
     - !loc teyvat -2001 805
@@ -5566,6 +5750,12 @@ bird-egg:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -2642 3036
+    - !loc teyvat -2567 2998
+    - !loc teyvat -2553 3017
+    - !loc teyvat -2549 3003
+    - !loc teyvat -2547 3015
+    - !loc teyvat -2547 3018
     - !loc teyvat -2500 1362
     - !loc teyvat -2497 1366
     - !loc teyvat -2496 1363
@@ -5580,6 +5770,8 @@ bird-egg:
     - !loc teyvat -2477 1729
     - !loc teyvat -2307 1974
     - !loc teyvat -2301 1974
+    - !loc teyvat -2295 3047
+    - !loc teyvat -2163 2453
     - !loc teyvat -2159 930
     - !loc teyvat -2041 1668
     - !loc teyvat -2038 1669
@@ -6295,11 +6487,35 @@ crystal-chunk:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -2736 3108
+    - !loc teyvat -2729 3111
+    - !loc teyvat -2725 3086
+    - !loc teyvat -2657 3162
+    - !loc teyvat -2652 3172
+    - !loc teyvat -2649 2795
+    - !loc teyvat -2629 2800
+    - !loc teyvat -2626 2786
+    - !loc teyvat -2562 2905
+    - !loc teyvat -2557 2911
+    - !loc teyvat -2530 3214
+    - !loc teyvat -2528 3205
+    - !loc teyvat -2524 3222
+    - !loc teyvat -2513 3206
+    - !loc teyvat -2433 3238
+    - !loc teyvat -2424 3236
+    - !loc teyvat -2420 2901
     - !loc teyvat -2401 1230
     - !loc teyvat -2398 1225
     - !loc teyvat -2394 1214
+    - !loc teyvat -2393 3137
+    - !loc teyvat -2392 2909
+    - !loc teyvat -2386 3131
+    - !loc teyvat -2386 3141
     - !loc teyvat -2381 1954
+    - !loc teyvat -2381 3028
     - !loc teyvat -2380 1234
+    - !loc teyvat -2380 3018
+    - !loc teyvat -2376 3025
     - !loc teyvat -2371 1213
     - !loc teyvat -2366 1218
     - !loc teyvat -2363 1226
@@ -6462,6 +6678,69 @@ crystal-chunk:
     - !loc teyvat 797 -486
     - !loc teyvat 876 -588
     - !loc teyvat 1052 83
+    - !loc chasm -502 235
+    - !loc chasm -496 239
+    - !loc chasm -482 -199
+    - !loc chasm -478 -202
+    - !loc chasm -475 -195
+    - !loc chasm -474 -200
+    - !loc chasm -472 -197
+    - !loc chasm -385 -460
+    - !loc chasm -380 -463
+    - !loc chasm -274 212
+    - !loc chasm -273 207
+    - !loc chasm -267 201
+    - !loc chasm -253 371
+    - !loc chasm -252 364
+    - !loc chasm -244 364
+    - !loc chasm -242 370
+    - !loc chasm -193 88
+    - !loc chasm -191 94
+    - !loc chasm -126 160
+    - !loc chasm -123 166
+    - !loc chasm -121 -2
+    - !loc chasm -117 -9
+    - !loc chasm -117 164
+    - !loc chasm -114 -2
+    - !loc chasm -57 -114
+    - !loc chasm -56 -117
+    - !loc chasm -52 -107
+    - !loc chasm -46 -106
+    - !loc chasm -43 -111
+    - !loc chasm -41 254
+    - !loc chasm -39 -112
+    - !loc chasm -39 249
+    - !loc chasm -35 253
+    - !loc chasm 21 42
+    - !loc chasm 27 40
+    - !loc chasm 30 55
+    - !loc chasm 32 43
+    - !loc chasm 42 -183
+    - !loc chasm 42 -176
+    - !loc chasm 44 -173
+    - !loc chasm 48 -171
+    - !loc chasm 52 -173
+    - !loc chasm 119 471
+    - !loc chasm 124 476
+    - !loc chasm 163 -430
+    - !loc chasm 170 -428
+    - !loc chasm 172 -422
+    - !loc chasm 184 -96
+    - !loc chasm 188 -90
+    - !loc chasm 202 335
+    - !loc chasm 204 -323
+    - !loc chasm 209 340
+    - !loc chasm 213 -315
+    - !loc chasm 214 -321
+    - !loc chasm 257 -277
+    - !loc chasm 265 -286
+    - !loc chasm 270 -296
+    - !loc chasm 360 -198
+    - !loc chasm 365 -195
+    - !loc chasm 365 -190
+    - !loc chasm 376 -309
+    - !loc chasm 377 -301
+    - !loc chasm 384 -303
 crystal-core:
   code: crystal-core
   name:
@@ -6472,11 +6751,27 @@ crystal-core:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -2751 2986
+    - !loc teyvat -2740 2949
+    - !loc teyvat -2730 2949
+    - !loc teyvat -2656 3197
+    - !loc teyvat -2651 3203
+    - !loc teyvat -2502 2868
+    - !loc teyvat -2499 2870
+    - !loc teyvat -2484 3019
+    - !loc teyvat -2483 3020
+    - !loc teyvat -2409 3174
+    - !loc teyvat -2406 3169
+    - !loc teyvat -2401 3170
     - !loc teyvat -2309 965
     - !loc teyvat -2302 960
     - !loc teyvat -2289 1062
+    - !loc teyvat -2287 3110
     - !loc teyvat -2282 1054
+    - !loc teyvat -2282 3112
     - !loc teyvat -2258 1428
+    - !loc teyvat -2211 2978
+    - !loc teyvat -2210 2975
     - !loc teyvat -2193 1114
     - !loc teyvat -2189 1092
     - !loc teyvat -2182 1118
@@ -6696,6 +6991,30 @@ crystal-core:
     - !loc enkanomiya 47 -30
     - !loc enkanomiya 61 -3
     - !loc enkanomiya 63 -27
+    - !loc chasm -487 -58
+    - !loc chasm -475 -50
+    - !loc chasm -472 -71
+    - !loc chasm -421 -405
+    - !loc chasm -415 -95
+    - !loc chasm -412 -99
+    - !loc chasm -400 -422
+    - !loc chasm -383 -146
+    - !loc chasm -373 -149
+    - !loc chasm -364 -152
+    - !loc chasm -190 -23
+    - !loc chasm -157 -441
+    - !loc chasm -153 -440
+    - !loc chasm -18 46
+    - !loc chasm -14 49
+    - !loc chasm 182 -64
+    - !loc chasm 182 -56
+    - !loc chasm 184 -110
+    - !loc chasm 185 -116
+    - !loc chasm 188 -113
+    - !loc chasm 197 -344
+    - !loc chasm 198 294
+    - !loc chasm 200 297
+    - !loc chasm 211 -370
 dendrobium:
   code: dendrobium
   name:
@@ -7180,6 +7499,15 @@ fish:
     - !loc enkanomiya -237 491
     - !loc enkanomiya -235 491
     - !loc enkanomiya -233 491
+    - !loc chasm -118 -204
+    - !loc chasm -117 -199
+    - !loc chasm -72 -228
+    - !loc chasm -66 -185
+    - !loc chasm 110 -509
+    - !loc chasm 134 -502
+    - !loc chasm 420 -92
+    - !loc chasm 429 -87
+    - !loc chasm 461 -111
 flaming-flower-stamen:
   code: flaming-flower-stamen
   name:
@@ -7812,6 +8140,8 @@ frog:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -2701 2915
+    - !loc teyvat -2701 2946
     - !loc teyvat -2370 1226
     - !loc teyvat -2365 1188
     - !loc teyvat -2144 770
@@ -7994,6 +8324,14 @@ frog:
     - !loc enkanomiya -1328 319
     - !loc enkanomiya -467 -236
     - !loc enkanomiya 17 534
+    - !loc chasm -535 223
+    - !loc chasm -78 -145
+    - !loc chasm -68 -231
+    - !loc chasm 125 -125
+    - !loc chasm 146 -117
+    - !loc chasm 171 466
+    - !loc chasm 192 398
+    - !loc chasm 210 -506
 ham:
   code: ham
   name:
@@ -8057,6 +8395,15 @@ iron-chunk:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -2724 3093
+    - !loc teyvat -2723 3087
+    - !loc teyvat -2662 2804
+    - !loc teyvat -2652 2793
+    - !loc teyvat -2646 2813
+    - !loc teyvat -2411 2907
+    - !loc teyvat -2397 2907
+    - !loc teyvat -2381 3036
+    - !loc teyvat -2374 3032
     - !loc teyvat -2287 1060
     - !loc teyvat -2255 1076
     - !loc teyvat -2243 1096
@@ -8437,6 +8784,36 @@ iron-chunk:
     - !loc enkanomiya 521 -33
     - !loc enkanomiya 527 -32
     - !loc enkanomiya 528 -31
+    - !loc chasm -408 -425
+    - !loc chasm -398 -428
+    - !loc chasm -390 -427
+    - !loc chasm -384 -440
+    - !loc chasm -384 -431
+    - !loc chasm -378 -195
+    - !loc chasm -372 -193
+    - !loc chasm -355 -313
+    - !loc chasm -351 -321
+    - !loc chasm -347 -313
+    - !loc chasm -343 -462
+    - !loc chasm -337 -467
+    - !loc chasm -331 -459
+    - !loc chasm -103 196
+    - !loc chasm -100 202
+    - !loc chasm 29 228
+    - !loc chasm 33 227
+    - !loc chasm 33 233
+    - !loc chasm 155 -393
+    - !loc chasm 157 -387
+    - !loc chasm 157 -347
+    - !loc chasm 159 -391
+    - !loc chasm 166 -109
+    - !loc chasm 170 -106
+    - !loc chasm 184 -115
+    - !loc chasm 188 -121
+    - !loc chasm 192 -112
+    - !loc chasm 193 -138
+    - !loc chasm 194 -120
+    - !loc chasm 197 -126
 jam:
   code: jam
   name:
@@ -8568,6 +8945,7 @@ lizard-tail:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -2390 3036
     - !loc teyvat -2046 2169
     - !loc teyvat -2012 2180
     - !loc teyvat -2000 1313
@@ -8644,6 +9022,20 @@ lizard-tail:
     - !loc enkanomiya -314 426
     - !loc enkanomiya 1 434
     - !loc enkanomiya 481 -225
+    - !loc chasm -798 298
+    - !loc chasm -778 128
+    - !loc chasm -627 79
+    - !loc chasm -598 206
+    - !loc chasm -390 240
+    - !loc chasm -341 -321
+    - !loc chasm -228 -426
+    - !loc chasm -64 -108
+    - !loc chasm -58 -107
+    - !loc chasm -19 11
+    - !loc chasm 30 -21
+    - !loc chasm 127 -209
+    - !loc chasm 138 428
+    - !loc chasm 156 188
 loach-pearl:
   code: loach-pearl
   name:
@@ -8814,6 +9206,38 @@ luminescent-spine:
     - !loc teyvat 2329 6065
     - !loc teyvat 2651 5535
     - !loc teyvat 3628 5002
+    - !loc chasm -601 127
+    - !loc chasm -556 219
+    - !loc chasm -480 -71
+    - !loc chasm -391 -362
+    - !loc chasm -345 -328
+    - !loc chasm -340 -333
+    - !loc chasm -332 -330
+    - !loc chasm -319 -404
+    - !loc chasm -314 -403
+    - !loc chasm -314 -369
+    - !loc chasm -127 178
+    - !loc chasm -124 170
+    - !loc chasm -73 -126
+    - !loc chasm -68 -124
+    - !loc chasm -60 479
+    - !loc chasm -59 -323
+    - !loc chasm -59 -113
+    - !loc chasm -45 -107
+    - !loc chasm 50 -376
+    - !loc chasm 57 -497
+    - !loc chasm 68 -226
+    - !loc chasm 97 -505
+    - !loc chasm 139 -462
+    - !loc chasm 144 379
+    - !loc chasm 150 379
+    - !loc chasm 179 483
+    - !loc chasm 182 427
+    - !loc chasm 201 320
+    - !loc chasm 202 380
+    - !loc chasm 237 30
+    - !loc chasm 249 -93
+    - !loc chasm 301 -250
 magical-crystal-chunk:
   code: magical-crystal-chunk
   name:
@@ -10387,6 +10811,11 @@ mist-flower-corolla:
     - !loc enkanomiya -447 -229
     - !loc enkanomiya -195 610
     - !loc enkanomiya -189 611
+    - !loc chasm -617 111
+    - !loc chasm -127 -139
+    - !loc chasm -68 -240
+    - !loc chasm -62 -237
+    - !loc chasm -59 -194
 mushroom:
   code: mushroom
   name:
@@ -12312,6 +12741,9 @@ snapdragon:
     - !loc teyvat 747 -474
     - !loc teyvat 747 -462
     - !loc teyvat 748 546
+    - !loc chasm -232 -393
+    - !loc chasm -224 -409
+    - !loc chasm -193 -410
 starsilver:
   code: starsilver
   name:
@@ -13723,15 +14155,46 @@ white-iron-chunk:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -2733 3067
+    - !loc teyvat -2727 3061
+    - !loc teyvat -2727 3074
+    - !loc teyvat -2723 3064
+    - !loc teyvat -2722 3070
+    - !loc teyvat -2685 3136
+    - !loc teyvat -2673 3156
+    - !loc teyvat -2672 3177
+    - !loc teyvat -2666 3152
+    - !loc teyvat -2665 3173
+    - !loc teyvat -2663 2812
+    - !loc teyvat -2644 2790
+    - !loc teyvat -2562 2906
+    - !loc teyvat -2556 2890
+    - !loc teyvat -2556 2910
+    - !loc teyvat -2550 2897
+    - !loc teyvat -2524 3216
+    - !loc teyvat -2516 3205
+    - !loc teyvat -2509 3215
+    - !loc teyvat -2497 3188
+    - !loc teyvat -2489 3200
+    - !loc teyvat -2484 3189
     - !loc teyvat -2427 1793
+    - !loc teyvat -2419 3158
+    - !loc teyvat -2417 3165
     - !loc teyvat -2412 1190
+    - !loc teyvat -2412 3159
+    - !loc teyvat -2404 2906
     - !loc teyvat -2399 1215
+    - !loc teyvat -2394 3161
+    - !loc teyvat -2386 3158
     - !loc teyvat -2383 1209
     - !loc teyvat -2379 1119
     - !loc teyvat -2377 1258
     - !loc teyvat -2371 1251
+    - !loc teyvat -2371 3023
     - !loc teyvat -2368 1323
     - !loc teyvat -2367 1298
+    - !loc teyvat -2359 2935
+    - !loc teyvat -2350 2940
     - !loc teyvat -2349 1324
     - !loc teyvat -2348 1290
     - !loc teyvat -2347 1341
@@ -13971,6 +14434,42 @@ white-iron-chunk:
     - !loc enkanomiya 635 64
     - !loc enkanomiya 637 58
     - !loc enkanomiya 638 61
+    - !loc chasm -376 -197
+    - !loc chasm -371 -330
+    - !loc chasm -361 -343
+    - !loc chasm -358 -324
+    - !loc chasm -188 -82
+    - !loc chasm -186 -88
+    - !loc chasm -49 -108
+    - !loc chasm -46 -121
+    - !loc chasm -45 -112
+    - !loc chasm -9 -239
+    - !loc chasm -5 -243
+    - !loc chasm -3 -236
+    - !loc chasm 2 -239
+    - !loc chasm 90 522
+    - !loc chasm 93 517
+    - !loc chasm 97 520
+    - !loc chasm 128 161
+    - !loc chasm 130 165
+    - !loc chasm 137 164
+    - !loc chasm 139 157
+    - !loc chasm 249 -387
+    - !loc chasm 261 -132
+    - !loc chasm 263 -283
+    - !loc chasm 263 -125
+    - !loc chasm 265 -133
+    - !loc chasm 265 -129
+    - !loc chasm 265 -121
+    - !loc chasm 268 -124
+    - !loc chasm 269 -390
+    - !loc chasm 270 -292
+    - !loc chasm 273 -383
+    - !loc chasm 281 -280
+    - !loc chasm 332 -104
+    - !loc chasm 338 -100
+    - !loc chasm 340 -106
+    - !loc chasm 347 -107
 bit-of-aerosiderite:
   code: bit-of-aerosiderite
   name:

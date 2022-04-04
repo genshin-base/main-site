@@ -115,13 +115,7 @@ const fixes = {
 		statuses: {
 			// некоторые персонажи и предметы почему-то находятся в таблице нерелизнутого
 			characters: [],
-			weapons: [
-				{ actually: 'released', name: 'Predator' },
-				{ actually: 'released', name: "Mouun's Moon" },
-				{ actually: 'released', name: 'Calamity Queller' },
-				{ actually: 'released', name: "Kagura's Verity" },
-				{ actually: 'released', name: 'Oathsworn Eye' },
-			],
+			weapons: [{ actually: 'released', name: 'Calamity Queller' }],
 		},
 		travelerLangNames: {
 			anemo: {
@@ -157,13 +151,7 @@ const fixes = {
 				name: { en: 'Wolves of the Rift', ru: 'Волк Разрыва' },
 			},
 		],
-		domainMissingLocations: [
-			{ code: 'momiji-dyed-court', location: { mapCode: 'teyvat', x: 1619, y: 6098 } },
-			{ code: 'slumbering-court', location: { mapCode: 'teyvat', x: 3463, y: 6619 } },
-			{ code: 'violet-court', location: { mapCode: 'teyvat', x: 3187, y: 5529 } },
-			{ code: 'narukami-island-tenshukaku', location: { mapCode: 'teyvat', x: 3812, y: 5677 } },
-			{ code: 'court-of-flowing-sand', location: { mapCode: 'teyvat', x: 3657, y: 4725 } },
-		],
+		domainMissingLocations: [],
 		postProcess: {
 			items: (() => {
 				/**
@@ -208,52 +196,7 @@ const fixes = {
 					return true
 				},
 			],
-			domains: [
-				code2domain => {
-					const code = 'end-of-the-oneiric-euthymia'
-					if (code in code2domain) return false
-					code2domain[code] = {
-						code,
-						type: 'trounce',
-						name: {
-							en: 'End of the Oneiric Euthymia',
-							ru: 'Конец Царства Онейроса',
-						},
-						region: 'inazuma',
-						location: { mapCode: 'teyvat', x: 3656, y: 4808 },
-						drop: {
-							itemCodes: [
-								'mudra-of-the-malefic-general',
-								'tears-of-the-calamitous-god',
-								'the-meaning-of-aeons',
-								'mora',
-								'adventure-exp',
-								'companionship-exp',
-								'vajrada-amethyst-chunk',
-								'vajrada-amethyst-fragment',
-								'vajrada-amethyst-gemstone',
-								'vajrada-amethyst-sliver',
-								'dream-solvent',
-								'northlander-bow-billet',
-								'northlander-catalyst-billet',
-								'northlander-claymore-billet',
-								'northlander-polearm-billet',
-								'northlander-sword-billet',
-							],
-							artifactSetCodes: [
-								'berserker',
-								'instructor',
-								'the-exile',
-								'gladiators-finale',
-								'wanderers-troupe',
-							],
-						},
-						bossCode: null,
-						dropTimetable: {},
-					}
-					return true
-				},
-			],
+			domains: [],
 		},
 		descriptionLangFix(text, lang) {
 			if (lang === 'ru') {

@@ -21,11 +21,17 @@ slime:
     - geo-slime
     - large-geo-slime
   locations:
+    - !loc teyvat -2761 3161
+    - !loc teyvat -2738 3081
+    - !loc teyvat -2717 3120
+    - !loc teyvat -2674 3116
     - !loc teyvat -2672 1667
     - !loc teyvat -2669 1666
+    - !loc teyvat -2600 3193
     - !loc teyvat -2522 1555
     - !loc teyvat -2520 1555
     - !loc teyvat -2519 1554
+    - !loc teyvat -2519 3349
     - !loc teyvat -2465 1640
     - !loc teyvat -2462 1646
     - !loc teyvat -2461 1638
@@ -43,14 +49,22 @@ slime:
     - !loc teyvat -2405 2051
     - !loc teyvat -2383 1599
     - !loc teyvat -2383 1601
+    - !loc teyvat -2372 2704
+    - !loc teyvat -2370 3231
+    - !loc teyvat -2365 2808
     - !loc teyvat -2350 1362
     - !loc teyvat -2348 1366
     - !loc teyvat -2344 1364
     - !loc teyvat -2310 1404
     - !loc teyvat -2309 1408
+    - !loc teyvat -2300 2496
+    - !loc teyvat -2264 2849
     - !loc teyvat -2245 2027
+    - !loc teyvat -2233 2888
     - !loc teyvat -2231 2025
     - !loc teyvat -2226 1697
+    - !loc teyvat -2223 2894
+    - !loc teyvat -2204 2981
     - !loc teyvat -2190 1681
     - !loc teyvat -2190 1682
     - !loc teyvat -2165 1676
@@ -67,15 +81,18 @@ slime:
     - !loc teyvat -2119 1718
     - !loc teyvat -2118 1721
     - !loc teyvat -2116 1718
+    - !loc teyvat -2103 2538
     - !loc teyvat -2102 909
     - !loc teyvat -2101 905
     - !loc teyvat -2101 907
     - !loc teyvat -2094 3091
     - !loc teyvat -2092 3096
+    - !loc teyvat -2089 2539
     - !loc teyvat -2076 1362
     - !loc teyvat -2074 1361
     - !loc teyvat -2072 2822
     - !loc teyvat -2070 2818
+    - !loc teyvat -2061 2530
     - !loc teyvat -2057 1292
     - !loc teyvat -2056 1293
     - !loc teyvat -2044 1314
@@ -686,6 +703,25 @@ slime:
     - !loc enkanomiya 423 -264
     - !loc enkanomiya 426 -260
     - !loc enkanomiya 436 -137
+    - !loc chasm -448 224
+    - !loc chasm -422 -330
+    - !loc chasm -412 -418
+    - !loc chasm -227 -410
+    - !loc chasm -224 317
+    - !loc chasm -198 -420
+    - !loc chasm -176 497
+    - !loc chasm -139 -439
+    - !loc chasm -128 501
+    - !loc chasm -14 40
+    - !loc chasm 67 -528
+    - !loc chasm 145 -499
+    - !loc chasm 172 -52
+    - !loc chasm 176 -339
+    - !loc chasm 180 -153
+    - !loc chasm 325 -362
+    - !loc chasm 376 -223
+    - !loc chasm 407 -67
+    - !loc chasm 434 -105
 specter:
   code: specter
   name:
@@ -881,20 +917,34 @@ hilichurl:
     - ice-shield-hilichurl-guard
     - electro-hilichurl-grenadier
   locations:
+    - !loc teyvat -2768 3154
+    - !loc teyvat -2744 3089
+    - !loc teyvat -2696 3130
+    - !loc teyvat -2692 3291
+    - !loc teyvat -2658 2953
+    - !loc teyvat -2632 3296
     - !loc teyvat -2525 1636
     - !loc teyvat -2521 1632
+    - !loc teyvat -2499 2925
     - !loc teyvat -2466 1976
+    - !loc teyvat -2464 2648
     - !loc teyvat -2462 1984
+    - !loc teyvat -2356 2926
     - !loc teyvat -2326 1698
     - !loc teyvat -2265 1731
+    - !loc teyvat -2259 2875
     - !loc teyvat -2246 1802
     - !loc teyvat -2200 1876
     - !loc teyvat -2192 1872
     - !loc teyvat -2191 1874
+    - !loc teyvat -2170 2493
     - !loc teyvat -2144 1073
     - !loc teyvat -2132 2051
     - !loc teyvat -2129 2047
+    - !loc teyvat -2118 2573
+    - !loc teyvat -2117 2739
     - !loc teyvat -2062 1284
+    - !loc teyvat -2062 2582
     - !loc teyvat -2061 2097
     - !loc teyvat -2054 2103
     - !loc teyvat -2040 1696
@@ -1527,6 +1577,11 @@ hilichurl:
     - !loc enkanomiya 443 -131
     - !loc enkanomiya 444 -129
     - !loc enkanomiya 465 -49
+    - !loc chasm -191 -98
+    - !loc chasm 112 391
+    - !loc chasm 135 543
+    - !loc chasm 187 271
+    - !loc chasm 202 514
 hilichurl-shooter:
   code: hilichurl-shooter
   name:
@@ -1539,9 +1594,15 @@ hilichurl-shooter:
     - cryo-hilichurl-shooter
     - electro-hilichurl-shooter
   locations:
+    - !loc teyvat -2720 3037
+    - !loc teyvat -2687 3167
+    - !loc teyvat -2623 2858
+    - !loc teyvat -2613 3229
+    - !loc teyvat -2611 3247
     - !loc teyvat -2567 1554
     - !loc teyvat -2461 1995
     - !loc teyvat -2388 1830
+    - !loc teyvat -2367 2808
     - !loc teyvat -2330 1702
     - !loc teyvat -2298 1726
     - !loc teyvat -2292 1932
@@ -1915,11 +1976,17 @@ mitachurl:
     - crackling-axe-mitachurl
     - thunderhelm-lawachurl
   locations:
+    - !loc teyvat -2763 3153
+    - !loc teyvat -2740 3082
+    - !loc teyvat -2698 3287
+    - !loc teyvat -2632 3299
+    - !loc teyvat -2606 3240
     - !loc teyvat -2465 1991
     - !loc teyvat -2341 1692
     - !loc teyvat -2302 1724
     - !loc teyvat -2268 1743
     - !loc teyvat -2252 1799
+    - !loc teyvat -2117 2742
     - !loc teyvat -2071 1134
     - !loc teyvat -2056 3019
     - !loc teyvat -2041 3204
@@ -2094,6 +2161,9 @@ samachurl:
     - cryo-samachurl
     - electro-samachurl
   locations:
+    - !loc teyvat -2660 2956
+    - !loc teyvat -2625 3239
+    - !loc teyvat -2617 2858
     - !loc teyvat -2588 1564
     - !loc teyvat -2331 1758
     - !loc teyvat -2057 3016
@@ -2377,6 +2447,19 @@ abyss-mage:
     - !loc enkanomiya 416 -66
     - !loc enkanomiya 421 -261
     - !loc enkanomiya 578 -5
+    - !loc chasm -884 335
+    - !loc chasm -882 336
+    - !loc chasm -150 98
+    - !loc chasm -139 -140
+    - !loc chasm 1 229
+    - !loc chasm 65 246
+    - !loc chasm 111 136
+    - !loc chasm 113 136
+    - !loc chasm 113 137
+    - !loc chasm 175 -582
+    - !loc chasm 180 -582
+    - !loc chasm 201 211
+    - !loc chasm 314 -203
 wolves-of-the-rift:
   code: wolves-of-the-rift
   name:
@@ -2426,6 +2509,36 @@ wolves-of-the-rift:
     - !loc enkanomiya 537 -194
     - !loc enkanomiya 541 -198
     - !loc enkanomiya 541 -195
+    - !loc chasm -737 335
+    - !loc chasm -733 339
+    - !loc chasm -732 332
+    - !loc chasm 193 -260
+    - !loc chasm 196 -241
+shadowy-husk:
+  code: shadowy-husk
+  name:
+    en: Shadowy Husk
+    ru: Чёрный доспех
+  iconEnemyCode: black-serpent-knight-windcutter
+  enemyCodes:
+    - shadowy-husk-standard-bearer
+    - shadowy-husk-line-breaker
+    - shadowy-husk-defender
+    - black-serpent-knight-windcutter
+  locations:
+    - !loc chasm -525 223
+    - !loc chasm -416 -446
+    - !loc chasm -378 -125
+    - !loc chasm -210 9
+    - !loc chasm -190 253
+    - !loc chasm -106 -110
+    - !loc chasm -93 -202
+    - !loc chasm -86 -200
+    - !loc chasm -64 482
+    - !loc chasm -51 199
+    - !loc chasm 226 463
+    - !loc chasm 232 467
+    - !loc chasm 237 467
 fatui-skirmisher:
   code: fatui-skirmisher
   name:
@@ -2440,6 +2553,12 @@ fatui-skirmisher:
     - fatui-skirmisher-anemoboxer-vanguard
     - fatui-skirmisher-pyroslinger-bracer
   locations:
+    - !loc teyvat -2739 2916
+    - !loc teyvat -2738 2929
+    - !loc teyvat -2725 2919
+    - !loc teyvat -2476 2997
+    - !loc teyvat -2475 3016
+    - !loc teyvat -2463 3003
     - !loc teyvat -2011 2175
     - !loc teyvat -2010 2160
     - !loc teyvat -1996 2165
@@ -2549,6 +2668,12 @@ fatui-skirmisher:
     - !loc teyvat 3500 4788
     - !loc teyvat 3514 4777
     - !loc teyvat 3519 4775
+    - !loc chasm 334 -140
+    - !loc chasm 337 -274
+    - !loc chasm 339 -280
+    - !loc chasm 342 -273
+    - !loc chasm 363 -123
+    - !loc chasm 366 -126
 fatui-cicin-mage:
   code: fatui-cicin-mage
   name:
@@ -2739,6 +2864,18 @@ ruin-sentinel:
     - !loc enkanomiya 530 28
     - !loc enkanomiya 538 20
     - !loc enkanomiya 538 26
+    - !loc chasm -540 -86
+    - !loc chasm -535 -83
+    - !loc chasm -482 -209
+    - !loc chasm -482 -205
+    - !loc chasm -474 -208
+    - !loc chasm -403 -219
+    - !loc chasm -398 -227
+    - !loc chasm -394 -218
+    - !loc chasm 147 351
+    - !loc chasm 151 347
+    - !loc chasm 232 437
+    - !loc chasm 244 424
 treasure-hoarders:
   code: treasure-hoarders
   name:
@@ -2761,29 +2898,55 @@ treasure-hoarders:
     - treasure-hoarders-pugilist
     - treasure-hoarders-crusher
   locations:
+    - !loc teyvat -2736 2945
+    - !loc teyvat -2641 2969
+    - !loc teyvat -2556 2981
+    - !loc teyvat -2549 2892
     - !loc teyvat -2502 1914
     - !loc teyvat -2500 1921
+    - !loc teyvat -2499 2864
     - !loc teyvat -2491 1907
+    - !loc teyvat -2471 3001
+    - !loc teyvat -2462 2815
+    - !loc teyvat -2425 2937
+    - !loc teyvat -2423 3254
+    - !loc teyvat -2408 3144
+    - !loc teyvat -2393 2906
+    - !loc teyvat -2375 3059
+    - !loc teyvat -2368 3070
+    - !loc teyvat -2361 2904
+    - !loc teyvat -2359 2526
+    - !loc teyvat -2356 2668
+    - !loc teyvat -2331 2629
     - !loc teyvat -2307 1975
     - !loc teyvat -2307 1979
+    - !loc teyvat -2265 2686
+    - !loc teyvat -2261 2652
     - !loc teyvat -2256 1606
     - !loc teyvat -2255 1610
+    - !loc teyvat -2244 2506
+    - !loc teyvat -2238 2596
+    - !loc teyvat -2176 2577
+    - !loc teyvat -2170 2671
     - !loc teyvat -2169 2131
     - !loc teyvat -2159 2120
     - !loc teyvat -2158 2142
     - !loc teyvat -2157 2119
     - !loc teyvat -2137 1216
     - !loc teyvat -2131 1217
+    - !loc teyvat -2128 2407
     - !loc teyvat -2127 1214
     - !loc teyvat -2118 3162
     - !loc teyvat -2115 3155
     - !loc teyvat -2110 1053
     - !loc teyvat -2110 3159
     - !loc teyvat -2109 3153
+    - !loc teyvat -2103 2537
     - !loc teyvat -2102 1143
     - !loc teyvat -2101 1137
     - !loc teyvat -2077 2954
     - !loc teyvat -2073 1104
+    - !loc teyvat -2062 2587
     - !loc teyvat -2061 1108
     - !loc teyvat -2055 1204
     - !loc teyvat -2030 1505
@@ -2960,6 +3123,35 @@ treasure-hoarders:
     - !loc teyvat 3758 6584
     - !loc teyvat 3774 6996
     - !loc teyvat 3780 6995
+    - !loc chasm -404 -413
+    - !loc chasm -387 -380
+    - !loc chasm -368 -400
+    - !loc chasm -323 -385
+    - !loc chasm -314 -315
+    - !loc chasm -131 -366
+    - !loc chasm -101 -401
+    - !loc chasm -100 -319
+    - !loc chasm -53 -351
+    - !loc chasm -42 -428
+    - !loc chasm -33 -499
+    - !loc chasm -16 -531
+    - !loc chasm -12 -313
+    - !loc chasm -9 -549
+    - !loc chasm -9 -547
+    - !loc chasm -7 -450
+    - !loc chasm 6 -568
+    - !loc chasm 6 -566
+    - !loc chasm 26 -561
+    - !loc chasm 27 -559
+    - !loc chasm 27 -390
+    - !loc chasm 33 -425
+    - !loc chasm 111 -403
+    - !loc chasm 114 -500
+    - !loc chasm 118 -366
+    - !loc chasm 141 -546
+    - !loc chasm 267 -349
+    - !loc chasm 280 -397
+    - !loc chasm 330 -160
 nobushi:
   code: nobushi
   name:
@@ -3382,6 +3574,9 @@ whopperflower:
     - !loc enkanomiya -291 389
     - !loc enkanomiya -288 -243
     - !loc enkanomiya -275 403
+    - !loc chasm -17 -413
+    - !loc chasm 153 420
+    - !loc chasm 211 -590
 bathysmal-vishap:
   code: bathysmal-vishap
   name:

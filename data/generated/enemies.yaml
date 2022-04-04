@@ -517,20 +517,34 @@ hilichurl:
     en: Hilichurl
     ru: Хиличурл
   locations:
+    - !loc teyvat -2768 3154
+    - !loc teyvat -2744 3089
+    - !loc teyvat -2696 3130
+    - !loc teyvat -2692 3291
+    - !loc teyvat -2658 2953
+    - !loc teyvat -2632 3296
     - !loc teyvat -2525 1636
     - !loc teyvat -2521 1632
+    - !loc teyvat -2499 2925
     - !loc teyvat -2466 1976
+    - !loc teyvat -2464 2648
     - !loc teyvat -2462 1984
+    - !loc teyvat -2356 2926
     - !loc teyvat -2326 1698
     - !loc teyvat -2265 1731
+    - !loc teyvat -2259 2875
     - !loc teyvat -2246 1802
     - !loc teyvat -2200 1876
     - !loc teyvat -2192 1872
     - !loc teyvat -2191 1874
+    - !loc teyvat -2170 2493
     - !loc teyvat -2144 1073
     - !loc teyvat -2132 2051
     - !loc teyvat -2129 2047
+    - !loc teyvat -2118 2573
+    - !loc teyvat -2117 2739
     - !loc teyvat -2062 1284
+    - !loc teyvat -2062 2582
     - !loc teyvat -2061 2097
     - !loc teyvat -2054 2103
     - !loc teyvat -2040 1696
@@ -1163,6 +1177,11 @@ hilichurl:
     - !loc enkanomiya 443 -131
     - !loc enkanomiya 444 -129
     - !loc enkanomiya 465 -49
+    - !loc chasm -191 -98
+    - !loc chasm 112 391
+    - !loc chasm 135 543
+    - !loc chasm 187 271
+    - !loc chasm 202 514
   drop:
     itemCodes:
       - damaged-mask
@@ -1199,9 +1218,15 @@ hilichurl-shooter:
     en: Hilichurl Shooter
     ru: Хиличурл-стрелок
   locations:
+    - !loc teyvat -2720 3037
+    - !loc teyvat -2687 3167
+    - !loc teyvat -2623 2858
+    - !loc teyvat -2613 3229
+    - !loc teyvat -2611 3247
     - !loc teyvat -2567 1554
     - !loc teyvat -2461 1995
     - !loc teyvat -2388 1830
+    - !loc teyvat -2367 2808
     - !loc teyvat -2330 1702
     - !loc teyvat -2298 1726
     - !loc teyvat -2292 1932
@@ -2047,9 +2072,9 @@ rockfond-rifthound-whelp:
   locations: []
   drop:
     itemCodes:
-      - dark-statuette
-      - deathly-statuette
-      - gloomy-statuette
+      - concealed-claw
+      - concealed-talon
+      - concealed-unguis
     artifactSetCodes:
       - berserker
       - berserker
@@ -2066,9 +2091,9 @@ thundercraven-rifthound-whelp:
   locations: []
   drop:
     itemCodes:
-      - dark-statuette
-      - deathly-statuette
-      - gloomy-statuette
+      - concealed-claw
+      - concealed-talon
+      - concealed-unguis
     artifactSetCodes:
       - berserker
       - berserker
@@ -2085,9 +2110,9 @@ rockfond-rifthound:
   locations: []
   drop:
     itemCodes:
-      - dark-statuette
-      - deathly-statuette
-      - gloomy-statuette
+      - concealed-claw
+      - concealed-talon
+      - concealed-unguis
     artifactSetCodes:
       - berserker
       - berserker
@@ -2104,9 +2129,9 @@ thundercraven-rifthound:
   locations: []
   drop:
     itemCodes:
-      - dark-statuette
-      - deathly-statuette
-      - gloomy-statuette
+      - concealed-claw
+      - concealed-talon
+      - concealed-unguis
     artifactSetCodes:
       - berserker
       - berserker
@@ -2145,6 +2170,54 @@ golden-wolflord:
       - traveling-doctor
       - wanderers-troupe
       - wanderers-troupe
+shadowy-husk-standard-bearer:
+  code: shadowy-husk-standard-bearer
+  name:
+    en: "Shadowy Husk: Standard Bearer"
+    ru: "Чёрный доспех: Знаменосец"
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - deathly-statuette
+      - gloomy-statuette
+    artifactSetCodes: []
+shadowy-husk-line-breaker:
+  code: shadowy-husk-line-breaker
+  name:
+    en: "Shadowy Husk: Line Breaker"
+    ru: "Чёрный доспех: Штурмовик"
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - deathly-statuette
+      - gloomy-statuette
+    artifactSetCodes: []
+shadowy-husk-defender:
+  code: shadowy-husk-defender
+  name:
+    en: "Shadowy Husk: Defender"
+    ru: "Чёрный доспех: Гвардеец"
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - deathly-statuette
+      - gloomy-statuette
+    artifactSetCodes: []
+black-serpent-knight-windcutter:
+  code: black-serpent-knight-windcutter
+  name:
+    en: "Black Serpent Knight: Windcutter"
+    ru: "Рыцарь Чёрного Змея: Разрезающий ветер"
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - deathly-statuette
+      - gloomy-statuette
+    artifactSetCodes: []
 fatui-skirmisher-cryogunner-legionnaire:
   code: fatui-skirmisher-cryogunner-legionnaire
   name:
@@ -2302,6 +2375,7 @@ mirror-maiden:
     en: Mirror Maiden
     ru: Зеркальная дева Фатуи
   locations:
+    - !loc teyvat -2473 3009
     - !loc teyvat -246 5904
     - !loc teyvat 49 5862
     - !loc teyvat 476 6379
@@ -2326,6 +2400,8 @@ mirror-maiden:
     - !loc teyvat 3642 4965
     - !loc teyvat 3718 4681
     - !loc teyvat 4011 5561
+    - !loc chasm 6 -340
+    - !loc chasm 340 -278
   drop:
     itemCodes:
       - crystal-prism
@@ -2345,6 +2421,7 @@ ruin-guard:
     en: Ruin Guard
     ru: Страж руин
   locations:
+    - !loc teyvat -2604 3210
     - !loc teyvat -1938 2576
     - !loc teyvat -1906 2668
     - !loc teyvat -1900 1832
@@ -2400,6 +2477,8 @@ ruin-guard:
     - !loc enkanomiya 607 97
     - !loc enkanomiya 624 -239
     - !loc enkanomiya 637 -236
+    - !loc chasm -27 130
+    - !loc chasm 201 532
   drop:
     itemCodes:
       - chaos-circuit
@@ -2420,6 +2499,7 @@ ruin-hunter:
     ru: Руинный охотник
   locations:
     - !loc teyvat -2527 1505
+    - !loc teyvat -2172 2488
     - !loc teyvat -1932 2623
     - !loc teyvat -1846 1975
     - !loc teyvat -1719 2957
@@ -2447,10 +2527,14 @@ ruin-grader:
     en: Ruin Grader
     ru: Руинный молотильщик
   locations:
+    - !loc teyvat -2622 3215
     - !loc teyvat 394 1694
     - !loc teyvat 450 1784
     - !loc teyvat 3496 4614
     - !loc enkanomiya 627 -231
+    - !loc chasm -35 -57
+    - !loc chasm 153 503
+    - !loc chasm 167 549
   drop:
     itemCodes:
       - chaos-circuit
@@ -2977,6 +3061,8 @@ geovishap:
     en: Geovishap
     ru: Геовишап
   locations:
+    - !loc teyvat -2529 2875
+    - !loc teyvat -2447 3046
     - !loc teyvat -2441 2048
     - !loc teyvat -2384 1238
     - !loc teyvat -2342 1937
@@ -2985,6 +3071,10 @@ geovishap:
     - !loc teyvat -2051 2261
     - !loc teyvat -1958 1813
     - !loc teyvat -1320 2432
+    - !loc chasm -297 -450
+    - !loc chasm -276 317
+    - !loc chasm 231 -42
+    - !loc chasm 246 -516
   drop:
     itemCodes:
       - fossilized-bone-shard
@@ -3315,6 +3405,41 @@ la-signora:
       - shivada-jade-fragment
       - shivada-jade-gemstone
       - shivada-jade-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+magatsu-mitake-narukami-no-mikoto:
+  code: magatsu-mitake-narukami-no-mikoto
+  name:
+    en: Magatsu Mitake Narukami no Mikoto
+    ru: Магацу митакэ Наруками но микото
+  locations: []
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+      - mudra-of-the-malefic-general
+      - northlander-bow-billet
+      - northlander-catalyst-billet
+      - northlander-claymore-billet
+      - northlander-polearm-billet
+      - northlander-sword-billet
+      - tears-of-the-calamitous-god
+      - the-meaning-of-aeons
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
     artifactSetCodes:
       - berserker
       - berserker

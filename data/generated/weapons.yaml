@@ -802,7 +802,7 @@ everlasting-moonglow:
       на  1% от макс. ХП экипированного этим оружием персонажа. В течение 12
       сек. после использования взрыва стихии попадания обычной атакой по
       противнику восстанавливают 0,6 ед. энергии. Энергию можно восстановить не
-      чаще, чем раз в 0,1 сек.
+      чаще чем раз в 0,1 сек.
   materialCodes:
     - golden-branch-of-a-distant-sea
     - polarizing-prism
@@ -1196,6 +1196,42 @@ hamayumi:
     - weathered-arrowhead
   obtainSources:
     - forging
+haran-geppaku-futsu:
+  code: haran-geppaku-futsu
+  typeCode: sword
+  name:
+    en: Haran Geppaku Futsu
+    ru: Харан гэппаку фуцу
+  rarity: 5
+  atk:
+    base: 7
+    max: 608
+  subStat:
+    code: crit-rate
+    base: 7
+    max: 33
+  specialAbility:
+    en: "Obtain  12% All Elemental DMG Bonus. When other nearby party members use
+      Elemental Skills, the character equipping this weapon will gain 1
+      Wavespike stack. Max 2 stacks. This effect can be triggered once every
+      0.3s. When the character equipping this weapon uses an Elemental Skill,
+      all stacks of Wavespike will be consumed to gain Rippling Upheaval: each
+      stack of Wavespike consumed will increase Normal Attack DMG by  20% for
+      8s."
+    ru: Даёт  12% бонус урона всеми элементами. Когда другие члены отряда поблизости
+      активируют элементальные навыки, экипированный этим оружием персонаж
+      получает 1 уровень Волны-шипа. Эффект возникает не чаще, чем один раз в
+      0,3 сек. Всего можно получить не более 2 уровней. Когда персонаж с этим
+      оружием применяет элементальный навык, все уровни Волны-шипа тратятся, и
+      он получает Хаос волн, который повышает урон обычной атаки согласно
+      количеству уровней. Каждый уровень этого эффекта повышает урон обычной
+      атаки на  20% в течение 8 сек.
+  materialCodes:
+    - narukamis-valor
+    - deathly-statuette
+    - famed-handguard
+  obtainSources:
+    - event-wishes
 harbinger-of-dawn:
   code: harbinger-of-dawn
   typeCode: sword
@@ -1307,7 +1343,7 @@ kaguras-verity:
   specialAbility:
     en: Gains the Kagura Dance effect when using an Elemental Skill, causing the
       Elemental Skill DMG of the character wielding this weapon to increase
-      by  12% for 12s. Max 3 stacks. This character will gain  12% All Elemental
+      by  12% for 16s. Max 3 stacks. This character will gain  12% All Elemental
       DMG Bonus when they possess 3 stacks.
     ru: Использование элементального навыка наделяет экипированного этим оружием
       персонажа эффектом «Танец кагура», который увеличивает урон его
@@ -1654,7 +1690,7 @@ mistsplitter-reforged:
     - chaos-oculus
     - famed-handguard
   obtainSources:
-    - wishes
+    - event-wishes
 mitternachts-waltz:
   code: mitternachts-waltz
   typeCode: bow
@@ -1911,7 +1947,7 @@ primordial-jade-winged-spear:
       occur once every 0.3s. While in possession of the maximum possible stacks,
       DMG dealt is increased by  12%.
     ru: При попадании увеличивает силу атаки на  3,2% в течение 6 сек. Эффект может
-      складываться до 7 раз и возникает не чаще, чем раз в 0,3 сек. На 7 уровне
+      складываться до 7 раз и возникает не чаще чем раз в 0,3 сек. На 7 уровне
       складывания увеличивает урон на  12%.
   materialCodes:
     - divine-body-from-guyun
@@ -3049,7 +3085,7 @@ the-stringless:
     max: 165
   specialAbility:
     en: Increases Elemental Skill and Elemental Burst DMG by  24%.
-    ru: Увеличивает урон элементальных навыков и взрыва стихии на  24%.
+    ru: Увеличивает урон элементального навыка и взрыва стихии на  24%.
   materialCodes:
     - scattered-piece-of-decarabians-dream
     - black-crystal-horn
@@ -3201,7 +3237,7 @@ thundering-pulse:
     - polarizing-prism
     - weathered-arrowhead
   obtainSources:
-    - wishes
+    - event-wishes
 travelers-handy-sword:
   code: travelers-handy-sword
   typeCode: sword

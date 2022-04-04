@@ -283,6 +283,21 @@ ayaka:
     - shivada-jade-gemstone
     - sakura-bloom
     - famed-handguard
+kamisato-ayato:
+  code: kamisato-ayato
+  name:
+    en: Kamisato Ayato
+    ru: Аято
+  rarity: 5
+  weaponTypeCode: sword
+  releaseVersion: "2.6"
+  materialCodes:
+    - philosophies-of-elegance
+    - mudra-of-the-malefic-general
+    - dew-of-repudiation
+    - varunada-lazurite-gemstone
+    - sakura-bloom
+    - famed-handguard
 keqing:
   code: keqing
   name:
