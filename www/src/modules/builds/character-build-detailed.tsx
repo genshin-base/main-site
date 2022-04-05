@@ -154,7 +154,7 @@ export function CharacterBuildDetailed({
 				<BlockHeader classes="mt-3">{I18N_TALENTS_PRIORITY}</BlockHeader>
 				<ol className="small">
 					{role.talents.advices.map(advice => {
-						return <li>{arrOrItemToArr(advice).map(I18N_TALENT_NAME)}</li>
+						return <li>{arrOrItemToArr(advice).map(I18N_TALENT_NAME).join(', ')}</li>
 					})}
 				</ol>
 				<div className="opacity-75 small">

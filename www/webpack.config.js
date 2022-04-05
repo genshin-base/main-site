@@ -285,7 +285,12 @@ function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
 					// собраем ассеты
 					const files = { css: [], js: [] }
 					for (const entry of compilation.entrypoints.values())
-						for (const f of entry.getFiles()) files[extname(f).slice(1)].push('/' + f)
+						for (const f of entry.getFiles()) {
+							const meta = compilation.getAsset(f)?.info ?? {}
+							// пропускаем модули вебпакового хотрелоада
+							if (!meta.hotModuleReplacement && !meta.development)
+								files[extname(f).slice(1)]?.push('/' + f)
+						}
 
 					// рендерим страницы
 					const pathsToUse = onlyFront ? [paths.front] : paths
