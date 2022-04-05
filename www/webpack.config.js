@@ -15,6 +15,7 @@ import { runAndReadStdout } from '#lib/utils/os.js'
 
 const LANGS = ['en', 'ru']
 const ASSET_PATH = '/'
+const REFLANG_ORIGIN = 'https://genshin-base.com'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -290,12 +291,20 @@ function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
 					const pathsToUse = onlyFront ? [paths.front] : paths
 
 					for (const path of Object.values(pathsToUse)) {
-						for (const url of pathToStrings('', prefixedPath(lang, path))) {
+						for (const urlBase of pathToStrings('', path)) {
+							const url = prefixedStrPath(lang, urlBase)
+
 							const [content, title] = renderContent
 								? await withPageEnv(url, () => [renderContent(), document.title])
 								: ['', '']
 
-							const html = tmpl({ title, content, files })
+							// адреса страницы для других языков (для `<link hreflang`)
+							const otherLangs = LANGS.filter(x => x !== lang).map(lang => ({
+								lang,
+								href: REFLANG_ORIGIN + prefixedStrPath(lang, urlBase),
+							}))
+
+							const html = tmpl({ title, content, files, otherLangs })
 							const src = new webpack.sources.RawSource(html, false)
 							const fpath = cutLeadingSlash(url + '/index.html')
 							compilation.emitAsset(fpath, src, {})
@@ -327,7 +336,7 @@ function makeDevServerConfig(isProd) {
 						for (const lang of langsEnLast) {
 							for (const path of Object.values(paths)) {
 								if (matchPath(prefixedPath(lang, path), parsedUrl.pathname))
-									return (lang === 'en' ? '' : '/' + lang) + `/index.html`
+									return prefixedStrPath(lang, '/index.html')
 							}
 						}
 						return '/404.html'
@@ -344,6 +353,13 @@ function makeDevServerConfig(isProd) {
  */
 function prefixedPath(lang, path) {
 	return lang === 'en' ? path : ['/' + lang, ...path]
+}
+/**
+ * @param {string} lang
+ * @param {string} path
+ */
+function prefixedStrPath(lang, path) {
+	return (lang === 'en' ? '' : '/' + lang) + path
 }
 
 /** @param {string} str */
