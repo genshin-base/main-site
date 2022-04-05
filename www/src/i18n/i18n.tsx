@@ -230,6 +230,7 @@ export const I18N_PIECES_BONUS = {
 	ru: (n: number) => `Бонус ${n} частей`,
 }[LANG]
 export const I18N_BASE_ATTACK = { en: 'Base attack', ru: 'Базовая атака' }[LANG]
+export const I18N_ITEM_STORY = { en: 'Item Story', ru: 'История предмета' }[LANG]
 export const I18N_SECONDARY_STAT = { en: 'Secondary Stat', ru: 'Пассивная способность' }[LANG]
 type MapCodeName = Record<MapCode, string>
 export const I18N_MAP_CODES_NAME: MapCodeName = {
@@ -244,6 +245,8 @@ export const I18N_SELECT_CHAR_ABOVE = { en: 'Select character above', ru: 'Вы�
 export const I18N_BUILD_RECS_FOR = { en: 'build recommendations', ru: 'билд' }[LANG]
 export const I18N_RECOMMENDED_RU_ONLY = { en: '', ru: 'Рекомендуемый' }[LANG]
 export const I18N_ABOUT_SITE = { en: 'Site History', ru: 'История сайта' }[LANG]
+export const I18N_EQUIPMENT = { en: 'Equipment', ru: 'Снаряжение' }[LANG]
+export const I18N_CHAR_EQUIPMENT = { en: 'Character Equipment', ru: 'Снаряжение персонажа' }[LANG]
 export const I18N_OUR_DISCORD = { en: 'Our Discord', ru: 'Наш Дискорд' }[LANG]
 export const I18N_CREATED_BY_US = {
 	en: `Designed and coded by${NBSP}Absolute${NBSP}Evil${NBSP}Studio`,

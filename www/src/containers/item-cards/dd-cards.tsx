@@ -16,13 +16,11 @@ import {
 	I18N_ALCHEMY_CALC,
 	I18N_BASE_ATTACK,
 	I18N_ERROR,
-	I18N_FOR_NOBODY,
 	I18N_MAP_CODES_NAME,
 	I18N_OBTAINED_DURING_STORYLINE,
 	I18N_PIECE_BONUS,
 	I18N_PIECES_BONUS,
 	I18N_PINCH_TO_ZOOM,
-	I18N_RECOMMENDED_FOR,
 	I18N_SCROLL_TO_ZOOM,
 	I18N_SECONDARY_STAT,
 	I18N_SOURCE,
@@ -36,31 +34,19 @@ import {
 	ToggleWeaponPrimaryMaterialFav,
 } from '#src/modules/builds/common'
 import { getArtifactIconLargeSrc, getArtifactIconSrc } from '#src/utils/artifacts'
-import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
 import { getDomainIconSrc } from '#src/utils/domains'
 import { getEnemyIconSrc } from '#src/utils/enemies'
-import { isLoaded, useFetch, useWindowSize } from '#src/utils/hooks'
+import { isLoaded, useFetch } from '#src/utils/hooks'
 import { getItemIconSrc } from '#src/utils/items'
 import { BULLET, LEFT_POINTING, RIGHT_POINTING } from '#src/utils/typography'
 import { getWeaponIconLageSrc } from '#src/utils/weapons'
 import { AlchemyCalculator } from '../alchemy-calculator'
-import { CharacterAvatar, DdContext, ItemAvatar, LabeledItemAvatar } from './item-avatars'
+import { DdContext, ItemAvatar, LabeledItemAvatar } from './item-avatars'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
+import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
+import { RecommendedTo } from './common'
 const LazyTeyvatMap = import('#src/components/teyvat-map')
-
-function RecommendedFor({ charCodes }: { charCodes: string[] }): JSX.Element {
-	return (
-		<>
-			<BlockHeader>{I18N_RECOMMENDED_FOR}</BlockHeader>
-			{charCodes.length
-				? charCodes.map(c => (
-						<CharacterAvatar key={c} code={c} isNoBg={true} classes={`small-avatar mb-2 me-2`} />
-				  ))
-				: I18N_FOR_NOBODY}
-		</>
-	)
-}
 
 //переключалка для мобильного и десктопного вида
 export function CardDescMobileWrap({
@@ -72,13 +58,17 @@ export function CardDescMobileWrap({
 	targetEl: HTMLElement | null | undefined
 	children: JSX.Element
 }): JSX.Element {
-	const windowSize = useWindowSize()
-	return BS_isBreakpointLessThen(windowSize.breakpoint, 'xl') ? (
-		<ItemDetailDdMobilePortal onClickAway={onClickAway}>{children}</ItemDetailDdMobilePortal>
-	) : (
-		<ItemDetailDdPortal onClickAway={onClickAway} targetEl={targetEl} shouldScrollToTop={true}>
-			{children}
-		</ItemDetailDdPortal>
+	return (
+		<MobileDesktopSwitch
+			childrenDesktop={
+				<ItemDetailDdPortal onClickAway={onClickAway} targetEl={targetEl} shouldScrollToTop={true}>
+					{children}
+				</ItemDetailDdPortal>
+			}
+			childrenMobile={
+				<ItemDetailDdMobilePortal onClickAway={onClickAway}>{children}</ItemDetailDdMobilePortal>
+			}
+		/>
 	)
 }
 // основной макет карточек
@@ -303,7 +293,7 @@ function MapWrap({
 			</div>
 			{selectedSource.markers !== 'external' && isLoaded(TeyvatMap) ? (
 				<TeyvatMap
-					classes="position-relative"
+					classes="h-inherit"
 					pos="auto"
 					mapCode={selectedMapCode}
 					markers={selectedSource.markers}
@@ -387,7 +377,7 @@ export function ArtifactCard({
 							<div className="mb-3">{notesToJSX(selectedArt.sets[4])}</div>
 						</>
 					)}
-					{<RecommendedFor charCodes={selectedArt.recommendedTo} />}
+					{<RecommendedTo charCodes={selectedArt.recommendedTo} />}
 				</div>
 			}
 			mapEl={dataForMap.markerGroups.length ? <MapWrap {...dataForMap} /> : null}
@@ -491,7 +481,7 @@ export function WeaponCard({
 						<span className="opacity-75">{I18N_SECONDARY_STAT}</span>
 						<div className="">{notesToJSX(weapon.passiveStat)}</div>
 					</div>
-					<RecommendedFor charCodes={weapon.recommendedTo} />
+					<RecommendedTo charCodes={weapon.recommendedTo} />
 				</div>
 			}
 			mapEl={dataForMap.markerGroups.length ? <MapWrap isItemFavable={true} {...dataForMap} /> : null}

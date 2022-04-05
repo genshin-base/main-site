@@ -82,7 +82,7 @@ type MapMarker = {
 }
 
 export const TeyvatMap = memo(function TeyvatMap({
-	classes,
+	classes = '',
 	mapCode,
 	pos,
 	markers,
@@ -160,7 +160,7 @@ export const TeyvatMap = memo(function TeyvatMap({
 		map.updateLocation(x, y, TILE_CONTENT_WIDTH * 2 ** level)
 	}, [pos, markers, mapCode])
 
-	return <div ref={wrapRef} class={'teyvat-map ' + classes}></div>
+	return <div ref={wrapRef} class={'teyvat-map position-relative ' + classes}></div>
 })
 
 function calcAutoPosition(map: LocMap, markers: MapMarkerRaw[], mapCode: MapCode) {

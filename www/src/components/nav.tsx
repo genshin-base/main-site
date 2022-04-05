@@ -3,6 +3,7 @@ import { useCallback, useRef, useState } from 'preact/hooks'
 import {
 	I18N_ABOUT_SITE,
 	I18N_BUILDS,
+	I18N_EQUIPMENT,
 	I18N_LANG_NAME,
 	I18N_LANG_NAMES,
 	I18N_OUR_DISCORD,
@@ -36,19 +37,27 @@ export function Nav({ isNavExpanded }: Props): JSX.Element {
 				</li>
 				<li className="nav-item">
 					<A
+						className={`nav-link ${isPageActive([paths.equipment]) ? ' active' : ''}`}
+						href={paths.equipment[0]}
+					>
+						{I18N_EQUIPMENT}
+					</A>
+				</li>
+			</ul>
+			<ul className="navbar-nav mb-2 mb-md-0 float-md-end">
+				<li className="nav-item">
+					<a className="nav-link" target="_blank" href={LINK_DISCORD_INVITE}>
+						{I18N_OUR_DISCORD}
+					</a>
+				</li>
+				<li className="nav-item">
+					<A
 						className={`nav-link ${isPageActive([paths.about]) ? ' active' : ''}`}
 						href={paths.about[0]}
 					>
 						{I18N_ABOUT_SITE}
 					</A>
 				</li>
-				<li className="nav-item">
-					<a className="nav-link" target="_blank" href={LINK_DISCORD_INVITE}>
-						{I18N_OUR_DISCORD}
-					</a>
-				</li>
-			</ul>
-			<ul className="navbar-nav mb-2 mb-md-0 float-md-end">
 				<DonationDd />
 				<LangSelect />
 			</ul>
