@@ -5305,8 +5305,8 @@ characters:
   - code: raiden-shogun
     elementCode: electro
     roles:
-      - code: electro dps
-        name: electro dps
+      - code: dps
+        name: dps
         isRecommended: true
         weapons:
           advices:
@@ -7306,6 +7306,46 @@ characters:
       - a: In-depth Guide
         href: https://keqingmains.com/kokomi/
       - " from Kokomi Mains + KQM"
+  - code: ayato
+    elementCode: hydro
+    roles:
+      - code: dps (wip)
+        name: dps (wip)
+        isRecommended: false
+        weapons:
+          advices: []
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets: []
+          notes: null
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          goblet:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          sands:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        subStats:
+          advices: []
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices: []
+          notes: null
+          seeCharNotes: false
+        tips: null
+        notes: DPS (WIP)
+    credits: null
   - code: diona
     elementCode: cryo
     roles:
@@ -11268,21 +11308,22 @@ characters:
         artifacts:
           sets:
             - arts:
+                code: vermillion-hereafter
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
                 op: or
                 arts:
                   - code: viridescent-venerer
                     count: 2
-                  - code: gladiators-finale
+                  - code: 18%-atk
                     count: 2
-                  - code: shimenawas-reminiscence
+                  - code: 18%-atk
                     count: 2
               notes: null
               seeCharNotes: true
-          notes: It is worth noting that set bonuses do not increase Xiao's damage by
-            much, due to an oversaturation on DMG% bonuses and ATK% from various
-            sources. For this reason, it is better to opt out for artifact
-            pieces which have higher quality substats instead of trying to
-            maintain a set bonus.
+          notes: null
           seeCharNotes: false
         mainStats:
           circlet:
@@ -11358,14 +11399,9 @@ characters:
               - "Xiao has issues with Energy regeneration because "
               - b: he cannot generate any particles with his Elemental Skill while his Burst is
                   active,
-              - " so it is not suggested to use his Elemental Skill during
-                Elemental Burst."
-          - p: Start off a fight by casting the skill of your Anemo Battery and then casting
-              his skill twice then cast your burst immediately. You will want to
-              be half way through your burst animation before the particles
-              reach you, so this way you can start off your burst with a portion
-              of the energy gauge already filled.
-          - p:
+              - >2
+                 so it is not suggested to use his Elemental Skill during Elemental Burst.
+                Start off a fight by casting the skill of your Anemo Battery and then casting his skill twice then cast your burst immediately. You will want to be half way through your burst animation before the particles reach you, so this way you can start off your burst with a portion of the energy gauge already filled.
               - b: "You'll want to pair Xiao with another Anemo character "
               - (Venti, Sucrose, Jean or Anemo Traveler) to help him gain energy
                 while his Elemental Burst is on cooldown. Xiao's Elemental Burst
@@ -11382,8 +11418,14 @@ characters:
                 Slayers) if compared with other weapons.
           - p:
               - b: "Regarding Artifact Sets: "
-              - Prioritize Viridescent Venerer over the other 2 +18% ATK sets if
-                there are external ATK% buff sources on your team.
+              - "Prioritize Viridescent Venerer over the other 2 +18% ATK sets
+                if there are external ATK% buff sources on your team. "
+              - b: It is worth noting that set bonuses do not increase Xiao's damage by much,
+                  due to an oversaturation on DMG% bonuses and ATK% from various
+                  sources.
+              - " For this reason, it is better to opt out for artifact pieces
+                which have higher quality substats instead of trying to maintain
+                a set bonus."
           - p:
               - b: "Regarding Artifact Main Stats: "
               - Anemo DMG% goblets are recommended for Xiao. ATK% goblets serve

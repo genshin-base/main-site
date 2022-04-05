@@ -168,6 +168,16 @@ These 4 weapons will give a similar output, so it's not worth getting or buildin
 Offers slightly more damage potential than **Amenoma Kageuchi,** with the tradeoff being losing Kageuchi's energy generation. Decide for yourself which is better for your team and rotations.
 
 
+# === characters.#ayato.roles.#dps_(wip).name ===
+
+dps (wip)
+
+
+# === characters.#ayato.roles.#dps_(wip).notes ===
+
+DPS (WIP)
+
+
 # === characters.#barbara.roles.#dps.name ===
 
 dps
@@ -1563,12 +1573,12 @@ This ranking assumes **Qiqi does not get her Elemental Burst up often** and is i
 [In-depth Guide](https://keqingmains.com/raiden/) from Raiden Mains + KQM
 
 
-# === characters.#raiden-shogun.roles.#electro_dps.name ===
+# === characters.#raiden-shogun.roles.#dps.name ===
 
-electro dps
+dps
 
 
-# === characters.#raiden-shogun.roles.#electro_dps.tips ===
+# === characters.#raiden-shogun.roles.#dps.tips ===
 
 Start your rotation with Raiden's Elemental Skill to amplify your party member's Elemental Burst damage.
 
@@ -1581,7 +1591,7 @@ Burst combo:<br>
 The recommended combo provides more room for error and offers slightly better AoE while the optimal combo provides slightly higher damage.
 
 
-# === characters.#raiden-shogun.roles.#electro_dps.notes ===
+# === characters.#raiden-shogun.roles.#dps.notes ===
 
 Raiden's Elemental Burst damage depends on her **team's energy consumption prior to her Burst,** and her Burst **restores a comfortable amount of energy for her team** (which is further amplified by her passive). This is especially convenient on teams that doesn't conflict with her element and wants the energy provision. (IE Eula, Electro, National teams, etc.). Raiden has no issues with firing her ult off cooldown after reaching about 200% Energy Recharge, but it is possible to raise it higher for better energy restoration for her team.
 
@@ -2134,11 +2144,6 @@ The passive from this set can have 100% uptime through using Guoba off cooldown.
 dps
 
 
-# === characters.#xiao.roles.#dps.artifacts.notes ===
-
-It is worth noting that set bonuses do not increase Xiao's damage by much, due to an oversaturation on DMG% bonuses and ATK% from various sources. For this reason, it is better to opt out for artifact pieces which have higher quality substats instead of trying to maintain a set bonus.
-
-
 # === characters.#xiao.roles.#dps.tips ===
 
 **Regarding Xiao's Optimal Skill Rotation**<br>
@@ -2165,12 +2170,15 @@ Start off a fight by casting the skill of your Anemo Battery and then casting hi
 
 With a proper anemo battery (e.g. Sucrose), Xiao needs as little as 120-130% ER to maintain a high burst uptime. In these scenarios, unless there are no ER from substats, you should always go for a non-ER weapon as it will result in more damage.
 
-[Calamity Queller](#weapon:calamity-queller)<br>
+**[Calamity Queller](#weapon:calamity-queller)**<br>
 This weapon has a really high Base ATK, which means you benefit more from ATK% buffs (e.g. Thrilling Tales of the Dragon Slayers) if compared with other weapons.
 
 **Regarding Artifact Sets**
 
 Prioritize Viridescent Venerer over the other 2 +18% ATK sets if there are external ATK% buff sources on your team.
+
+It is worth noting that set bonuses do not increase Xiao's damage by much, due to an oversaturation on DMG% bonuses and ATK% from various sources. For this reason, it is better to opt out for artifact pieces which have higher quality substats instead of trying to maintain a set bonus.
+
 
 **Regarding Artifact Main Stats**
 
