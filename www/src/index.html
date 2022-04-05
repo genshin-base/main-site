@@ -6,6 +6,7 @@
 		<link rel="icon" type="image/png" href="/media/favicon.png" />
 		<title>{{= it.title || 'Genshin Base' }}</title>
 		<link rel="icon" href="/favicon.png" />
+		{{~it.otherLangs :x }}<link rel="alternate" hreflang="{{=x.lang}}" href="{{=x.href}}" />{{~}}
 		{{~it.files.css :path}}<link rel="stylesheet" href="{{=path}}" />{{~}}
 		{{~it.files.js :path}}<script defer src="{{=path}}"></script>{{~}}
 		<!-- Global site tag (gtag.js) - Google Analytics -->
