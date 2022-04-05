@@ -283,8 +283,8 @@ ayaka:
     - shivada-jade-gemstone
     - sakura-bloom
     - famed-handguard
-kamisato-ayato:
-  code: kamisato-ayato
+ayato:
+  code: ayato
   name:
     en: Kamisato Ayato
     ru: Аято
