@@ -2,19 +2,20 @@ import fs from 'fs'
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin'
 import ESLintPlugin from 'eslint-webpack-plugin'
 import glob from 'glob'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import { dirname } from 'path'
+import { dirname, extname } from 'path'
 import PurgeCSSPlugin from 'purgecss-webpack-plugin'
 import { fileURLToPath } from 'url'
 import webpack from 'webpack'
+import doT from 'dot'
 
-import { Deferred, mustBeDefined } from '#lib/utils/values.js'
+import { Deferred } from '#lib/utils/values.js'
 import { matchPath, paths, pathToStrings } from './src/routes/paths.js'
 import { runAndReadStdout } from '#lib/utils/os.js'
 
 const LANGS = ['en', 'ru']
 const ASSET_PATH = '/'
+const REFLANG_ORIGIN = 'https://genshin-base.com'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -31,12 +32,12 @@ export default async function (env, argv) {
 	const commitHash = (await runAndReadStdout('git', ['rev-parse', 'HEAD'])).trim()
 
 	const cfg = makeConfig.bind(null, mode, commitHash)
-	const ssrBuildReady = prerender ? new Deferred() : null
+	const ssrBuildBarrier = prerender ? new Deferred() : null
 	const configs = []
 	LANGS.forEach((lang, i) => {
-		configs.push(cfg(i === 0, { isSSR: false, lang, ssrBuildReady }))
+		configs.push(cfg(i === 0, { isSSR: false, lang, ssrBuildBarrier }))
 	})
-	if (ssrBuildReady) configs.push(cfg(false, { isSSR: true, ssrBuildReady }))
+	if (ssrBuildBarrier) configs.push(cfg(false, { isSSR: true, ssrBuildBarrier }))
 	return configs
 }
 
@@ -44,8 +45,8 @@ export default async function (env, argv) {
  * @param {'production'|'development'} mode
  * @param {string} commitHash
  * @param {boolean} isMain
- * @param {{isSSR:false, ssrBuildReady:Deferred<void>|null, lang:string}
- *   | {isSSR:true, ssrBuildReady:Deferred<void>}} type
+ * @param {{isSSR:false, ssrBuildBarrier:Deferred<void>|null, lang:string}
+ *   | {isSSR:true, ssrBuildBarrier:Deferred<void>}} type
  */
 function makeConfig(mode, commitHash, isMain, type) {
 	const isProd = mode === 'production'
@@ -165,25 +166,23 @@ function makeConfig(mode, commitHash, isMain, type) {
 				variables: true,
 			}),
 			!type.isSSR &&
-				new HtmlWebpackPlugin({
+				new GenerateIndexHtmls({
 					template: `${SRC}/index.html`,
-					minify: false,
-					filename: `${dist}/${type.lang === 'en' ? '' : type.lang + '/'}_common_index.html`,
+					lang: type.lang,
+					ssrBuildBarrier: type.ssrBuildBarrier,
+					onlyFront: !isProd,
 				}),
-			isMain &&
-				new HtmlWebpackPlugin({
+			!type.isSSR &&
+				new DotHtmlPlugin({
 					template: `${SRC}/404.html`,
-					templateParameters: { LANGS },
-					inject: false,
-					minify: false,
-					filename: `${dist}/404.html`,
+					filename: '404.html',
+					params: { LANGS },
 				}),
-			isProd && !type.isSSR && copyIndexHtmls(type.lang, type.ssrBuildReady),
 			isProd &&
 				type.isSSR && {
 					apply(compiler) {
 						compiler.hooks.done.tap('SignalBuildEnd', compilation => {
-							type.ssrBuildReady.resolve()
+							type.ssrBuildBarrier.resolve()
 						})
 					},
 				},
@@ -191,82 +190,129 @@ function makeConfig(mode, commitHash, isMain, type) {
 	}
 }
 
-let pagePrerenderSemaphore = Promise.resolve()
 /**
- * @param {string} lang
- * @param {Deferred<void>|null} ssrBuildReady
+ * @class
+ * @param {{template:string, filename:string, params:unknown}} opts
  */
-function copyIndexHtmls(lang, ssrBuildReady) {
+function DotHtmlPlugin({ template, filename, params }) {
+	/** @param {webpack.Compiler} compiler */
+	this.apply = compiler => {
+		compiler.hooks.thisCompilation.tap(DotHtmlPlugin.name, async compilation => {
+			compilation.hooks.processAssets.tapPromise(
+				{
+					name: DotHtmlPlugin.name,
+					stage: webpack.Compilation.PROCESS_ASSETS_STAGE_SUMMARIZE,
+				},
+				async assets => {
+					const text = await fs.promises.readFile(template, 'utf-8')
+					const tmpl = doT.template(text, { strip: false }, {})
+					compilation.fileDependencies.add(template)
+					compilation.emitAsset(filename, new webpack.sources.RawSource(tmpl({ LANGS })))
+				},
+			)
+		})
+	}
+}
+
+let pagePrerenderSemaphore = /**@type {Promise<unknown>}*/ (Promise.resolve())
+/**
+ * @class
+ * @param {object} opts
+ * @param {string} opts.template
+ * @param {string} opts.lang
+ * @param {Deferred<void>|null} opts.ssrBuildBarrier барьер для ожидания окончания сборки SSR-бандла
+ *   (если не задан, пререндера не будет)
+ * @param {boolean} opts.onlyFront
+ */
+function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
 	/**
+	 * Засовывает в global разные значения для эмуляции браузерной страницы.
+	 * Удаляет их после выполнения func().
 	 * @template T
 	 * @param {string} pathname
 	 * @param {() => Promise<T>|T} func
 	 * @returns {Promise<T>}
 	 */
 	async function withPageEnv(pathname, func) {
-		const items = {
-			_SSR_LANG: lang,
-			_SSR_READ_PUBLIC: path =>
-				fs.readFileSync(PUBLIC + new URL('http://a.com/' + path).pathname, { encoding: 'utf-8' }),
-			self: {},
-			navigator: { language: lang },
-			location: { pathname },
-			localStorage: { getItem: () => undefined, setItem: () => undefined },
-			document: { title: '' },
-		}
+		await pagePrerenderSemaphore
+		return await (pagePrerenderSemaphore = (async () => {
+			const _SSR_KEY = Math.random() //на всякий случай
 
-		Object.assign(global, items)
-		const res = await func()
-		for (const attr in items) delete global[attr]
+			const items = {
+				_SSR_LANG: lang,
+				_SSR_READ_PUBLIC: path =>
+					fs.readFileSync(PUBLIC + new URL('http://a.com/' + path).pathname, { encoding: 'utf-8' }),
+				_SSR_KEY,
+				self: {},
+				navigator: { language: lang },
+				location: { pathname },
+				localStorage: { getItem: () => undefined, setItem: () => undefined },
+				document: { title: '' },
+			}
 
-		return res
+			Object.assign(global, items)
+			const res = await func()
+			for (const attr in items) delete global[attr]
+
+			if (items._SSR_KEY !== _SSR_KEY) throw new Error('concurrent render, this must NOT happen')
+			return res
+		})())
 	}
 
-	return {
-		apply(compiler) {
-			compiler.hooks.compilation.tap('PrepareIndexHTMLs', compilation => {
-				HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tapPromise(
-					'PrepareIndexHTMLs',
-					async data => {
-						if (data.outputName.endsWith('_common_index.html')) {
-							await pagePrerenderSemaphore
-							await (pagePrerenderSemaphore = (async () => {
-								let renderPage = null
-								if (ssrBuildReady) {
-									await ssrBuildReady.promise
-									;({ renderPage } = await withPageEnv('/', () =>
-										// файлу нужен суффикс, чтоб он для каждого языка импортировался отдельно со своим _SSR_LANG
-										import(DIST + '/ssr/main.ssr.js?lang=' + lang),
-									))
-								}
+	/** @param {webpack.Compiler} compiler */
+	this.apply = compiler => {
+		compiler.hooks.thisCompilation.tap(GenerateIndexHtmls.name, async compilation => {
+			compilation.hooks.processAssets.tapPromise(
+				{
+					name: GenerateIndexHtmls.name,
+					stage: webpack.Compilation.PROCESS_ASSETS_STAGE_SUMMARIZE,
+				},
+				async assets => {
+					// парсим шаблон
+					const text = await fs.promises.readFile(template, 'utf-8')
+					const tmpl = doT.template(text, { strip: false }, {})
 
-								compilation.deleteAsset(data.outputName)
-								for (const path of Object.values(paths)) {
-									for (const url of pathToStrings('', prefixedPath(lang, path))) {
-										let html = mustBeDefined(data.html)
-										if (renderPage) html = await withPageEnv(url, () => renderPage(html))
+					// получаем функцию для пререндера (если он нужен)
+					let renderContent = null
+					if (ssrBuildBarrier) {
+						await ssrBuildBarrier.promise
+						;({ renderContent } = await withPageEnv('/', () =>
+							// файлу нужен суффикс, чтоб он для каждого языка импортировался отдельно со своим _SSR_LANG
+							import(DIST + '/ssr/main.ssr.js?lang=' + lang),
+						))
+					}
 
-										const src = new webpack.sources.RawSource(html, false)
-										const fpath = cutLeadingSlash(url + '/index.html')
-										compilation.emitAsset(fpath, src, {})
-									}
-								}
-							})())
+					// собраем ассеты
+					const files = { css: [], js: [] }
+					for (const entry of compilation.entrypoints.values())
+						for (const f of entry.getFiles()) files[extname(f).slice(1)].push('/' + f)
+
+					// рендерим страницы
+					const pathsToUse = onlyFront ? [paths.front] : paths
+
+					for (const path of Object.values(pathsToUse)) {
+						for (const urlBase of pathToStrings('', path)) {
+							const url = prefixedStrPath(lang, urlBase)
+
+							const [content, title] = renderContent
+								? await withPageEnv(url, () => [renderContent(), document.title])
+								: ['', '']
+
+							// адреса страницы для других языков (для `<link hreflang`)
+							const otherLangs = LANGS.filter(x => x !== lang).map(lang => ({
+								lang,
+								href: REFLANG_ORIGIN + prefixedStrPath(lang, urlBase),
+							}))
+
+							const html = tmpl({ title, content, files, otherLangs })
+							const src = new webpack.sources.RawSource(html, false)
+							const fpath = cutLeadingSlash(url + '/index.html')
+							compilation.emitAsset(fpath, src, {})
 						}
-						return data
-					},
-				)
-
-				HtmlWebpackPlugin.getHooks(compilation).afterEmit.tapPromise(
-					'PrepareIndexHTMLs',
-					async data => {
-						if (data.outputName.endsWith('_common_index.html'))
-							compilation.deleteAsset(data.outputName)
-						return data
-					},
-				)
-			})
-		},
+					}
+				},
+			)
+		})
 	}
 }
 
@@ -290,7 +336,7 @@ function makeDevServerConfig(isProd) {
 						for (const lang of langsEnLast) {
 							for (const path of Object.values(paths)) {
 								if (matchPath(prefixedPath(lang, path), parsedUrl.pathname))
-									return (lang === 'en' ? '' : '/' + lang) + `/_common_index.html`
+									return prefixedStrPath(lang, '/index.html')
 							}
 						}
 						return '/404.html'
@@ -307,6 +353,13 @@ function makeDevServerConfig(isProd) {
  */
 function prefixedPath(lang, path) {
 	return lang === 'en' ? path : ['/' + lang, ...path]
+}
+/**
+ * @param {string} lang
+ * @param {string} path
+ */
+function prefixedStrPath(lang, path) {
+	return (lang === 'en' ? '' : '/' + lang) + path
 }
 
 /** @param {string} str */

@@ -320,7 +320,7 @@ court-of-flowing-sand:
         - narukamis-valor
         - narukamis-wisdom
   region: inazuma
-  location: !loc teyvat 3657 4725
+  location: !loc teyvat 3655 4738
   bossCode: null
 domain-of-guyun:
   code: domain-of-guyun
@@ -351,35 +351,40 @@ end-of-the-oneiric-euthymia:
   type: trounce
   name:
     en: End of the Oneiric Euthymia
-    ru: Конец Царства Онейроса
-  region: inazuma
-  location: !loc teyvat 3656 4808
+    ru: Конец Царства онейроса
   drop:
     itemCodes:
-      - mudra-of-the-malefic-general
-      - tears-of-the-calamitous-god
-      - the-meaning-of-aeons
-      - mora
       - adventure-exp
       - companionship-exp
-      - vajrada-amethyst-chunk
-      - vajrada-amethyst-fragment
-      - vajrada-amethyst-gemstone
-      - vajrada-amethyst-sliver
       - dream-solvent
+      - mora
+      - mudra-of-the-malefic-general
       - northlander-bow-billet
       - northlander-catalyst-billet
       - northlander-claymore-billet
       - northlander-polearm-billet
       - northlander-sword-billet
+      - tears-of-the-calamitous-god
+      - the-meaning-of-aeons
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
     artifactSetCodes:
       - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
       - instructor
       - the-exile
-      - gladiators-finale
+      - the-exile
       - wanderers-troupe
-  bossCode: null
+      - wanderers-troupe
   dropTimetable: {}
+  region: inazuma
+  location: !loc teyvat 3654 4821
+  bossCode: magatsu-mitake-narukami-no-mikoto
 enter-the-golden-house:
   code: enter-the-golden-house
   type: trounce
@@ -683,7 +688,7 @@ momiji-dyed-court:
       - tiny-miracle
   dropTimetable: {}
   region: inazuma
-  location: !loc teyvat 1619 6098
+  location: !loc teyvat 1617 6111
   bossCode: null
 narukami-island-tenshukaku:
   code: narukami-island-tenshukaku
@@ -726,7 +731,7 @@ narukami-island-tenshukaku:
       - wanderers-troupe
   dropTimetable: {}
   region: inazuma
-  location: !loc teyvat 3812 5677
+  location: !loc teyvat 3810 5690
   bossCode: la-signora
 peak-of-vindagnyr:
   code: peak-of-vindagnyr
@@ -798,7 +803,7 @@ slumbering-court:
       - ocean-hued-clam
   dropTimetable: {}
   region: inazuma
-  location: !loc teyvat 3463 6619
+  location: !loc teyvat 3461 6632
   bossCode: null
 taishan-mansion:
   code: taishan-mansion
@@ -886,6 +891,30 @@ taishan-mansion:
         - teachings-of-prosperity
   region: liyue
   location: !loc teyvat -1919 1677
+  bossCode: null
+the-lost-valley:
+  code: the-lost-valley
+  type: artifacts
+  name:
+    en: The Lost Valley
+    ru: Затерянная долина
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+    artifactSetCodes:
+      - echoes-of-an-offering
+      - echoes-of-an-offering
+      - gambler
+      - gambler
+      - martial-artist
+      - martial-artist
+      - vermillion-hereafter
+      - vermillion-hereafter
+  dropTimetable: {}
+  region: liyue
+  location: !loc teyvat -2647 2811
   bossCode: null
 valley-of-remembrance:
   code: valley-of-remembrance
@@ -996,5 +1025,5 @@ violet-court:
         - teachings-of-light
         - teachings-of-transience
   region: inazuma
-  location: !loc teyvat 3187 5529
+  location: !loc teyvat 3185 5542
   bossCode: null
