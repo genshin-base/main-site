@@ -10,11 +10,6 @@ import { renderToString } from 'preact-render-to-string'
 
 import { App } from './App'
 
-export const renderPage = BUNDLE_ENV.IS_SSR
-	? html => {
-			const content = renderToString(<App />, null, { pretty: false })
-			return html
-				.replace(/(?<=<div class="app">)/, () => content)
-				.replace(/(?<=<title>)(.*)(?=<\/title>)/, (_, defTitle) => document.title || defTitle)
-	  }
+export const renderContent = BUNDLE_ENV.IS_SSR
+	? () => renderToString(<App />, null, { pretty: false })
 	: render(<App />, document.querySelector('body .app') as Element)

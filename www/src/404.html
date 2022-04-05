@@ -19,17 +19,17 @@
 	</head>
 	<body>
 		<h1>404</h1>
-		<%
-		for (const lang of LANGS) {
-			const mainText = lang === 'ru' ? 'страница не найдена' : 'page not found'
-			const homeText = lang === 'ru' ? 'домой' : 'go home'
-			const url = lang === 'en' ? '/' : `/${lang}/`
-		%>
-		<div class="message" data-lang="<%= lang %>" <%= lang === 'en' ? '' : 'style="display:none"' %>>
-			<%= mainText %>.
-			<a href="<%= url %>"><%= homeText %></a>
+		{{
+		for (const lang of it.LANGS) {
+			const mainText = lang === 'ru' ? 'страница не найдена' : 'page not found';
+			const homeText = lang === 'ru' ? 'домой' : 'go home';
+			const url = lang === 'en' ? '/' : `/${lang}/`;
+		}}
+		<div class="message" data-lang="{{= lang }}" {{= lang === 'en' ? '' : 'style="display:none"' }}>
+			{{= mainText }}.
+			<a href="{{= url }}">{{= homeText }}</a>
 		</div>
-		<% } %>
+		{{ } }}
 
 		<script>
 			const elems = document.querySelectorAll(`.message`)
