@@ -10,14 +10,14 @@ import {
 	WeaponFullInfo,
 } from '#lib/parsing/combine'
 import { mustBeNever } from '#src/../../lib/utils/values'
+import { getCoverArtifactForSet } from '#src/modules/builds/common'
 import { A } from '#src/routes/router'
 import { getAllArtifacts } from '#src/utils/artifacts'
+import { getCharacterAvatarSrc } from '#src/utils/characters'
+import { elements } from '#src/utils/elements'
 import { ArtifactCard, CardDescMobileWrap, WeaponCard } from './dd-cards'
 
 import './item-cards.scss'
-import { elements } from '#src/utils/elements'
-import { getCharacterAvatarSrc } from '#src/utils/characters'
-import { getCoverArtifactForSet } from '#src/modules/builds/common'
 
 export function getRarityBorder(r: GI_RarityCode): string {
 	return r === 5 ? 'border-warning' : 'border-light'
