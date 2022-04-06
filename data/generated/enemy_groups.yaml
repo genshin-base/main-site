@@ -703,25 +703,25 @@ slime:
     - !loc enkanomiya 423 -264
     - !loc enkanomiya 426 -260
     - !loc enkanomiya 436 -137
-    - !loc chasm -448 224
-    - !loc chasm -422 -330
-    - !loc chasm -412 -418
-    - !loc chasm -227 -410
-    - !loc chasm -224 317
-    - !loc chasm -198 -420
-    - !loc chasm -176 497
-    - !loc chasm -139 -439
-    - !loc chasm -128 501
-    - !loc chasm -14 40
-    - !loc chasm 67 -528
-    - !loc chasm 145 -499
-    - !loc chasm 172 -52
-    - !loc chasm 176 -339
-    - !loc chasm 180 -153
-    - !loc chasm 325 -362
-    - !loc chasm 376 -223
-    - !loc chasm 407 -67
-    - !loc chasm 434 -105
+    - !loc chasm -470 74
+    - !loc chasm -444 -480
+    - !loc chasm -434 -568
+    - !loc chasm -249 -560
+    - !loc chasm -246 167
+    - !loc chasm -220 -570
+    - !loc chasm -198 347
+    - !loc chasm -161 -589
+    - !loc chasm -150 351
+    - !loc chasm -36 -110
+    - !loc chasm 45 -678
+    - !loc chasm 123 -649
+    - !loc chasm 150 -202
+    - !loc chasm 154 -489
+    - !loc chasm 158 -303
+    - !loc chasm 303 -512
+    - !loc chasm 354 -373
+    - !loc chasm 385 -217
+    - !loc chasm 412 -255
 specter:
   code: specter
   name:
@@ -1577,11 +1577,11 @@ hilichurl:
     - !loc enkanomiya 443 -131
     - !loc enkanomiya 444 -129
     - !loc enkanomiya 465 -49
-    - !loc chasm -191 -98
-    - !loc chasm 112 391
-    - !loc chasm 135 543
-    - !loc chasm 187 271
-    - !loc chasm 202 514
+    - !loc chasm -213 -248
+    - !loc chasm 90 241
+    - !loc chasm 113 393
+    - !loc chasm 165 121
+    - !loc chasm 180 364
 hilichurl-shooter:
   code: hilichurl-shooter
   name:
@@ -2447,19 +2447,19 @@ abyss-mage:
     - !loc enkanomiya 416 -66
     - !loc enkanomiya 421 -261
     - !loc enkanomiya 578 -5
-    - !loc chasm -884 335
-    - !loc chasm -882 336
-    - !loc chasm -150 98
-    - !loc chasm -139 -140
-    - !loc chasm 1 229
-    - !loc chasm 65 246
-    - !loc chasm 111 136
-    - !loc chasm 113 136
-    - !loc chasm 113 137
-    - !loc chasm 175 -582
-    - !loc chasm 180 -582
-    - !loc chasm 201 211
-    - !loc chasm 314 -203
+    - !loc chasm -906 185
+    - !loc chasm -904 186
+    - !loc chasm -172 -52
+    - !loc chasm -161 -290
+    - !loc chasm -21 79
+    - !loc chasm 43 96
+    - !loc chasm 89 -14
+    - !loc chasm 91 -14
+    - !loc chasm 91 -13
+    - !loc chasm 153 -732
+    - !loc chasm 158 -732
+    - !loc chasm 179 61
+    - !loc chasm 292 -353
 wolves-of-the-rift:
   code: wolves-of-the-rift
   name:
@@ -2509,11 +2509,11 @@ wolves-of-the-rift:
     - !loc enkanomiya 537 -194
     - !loc enkanomiya 541 -198
     - !loc enkanomiya 541 -195
-    - !loc chasm -737 335
-    - !loc chasm -733 339
-    - !loc chasm -732 332
-    - !loc chasm 193 -260
-    - !loc chasm 196 -241
+    - !loc chasm -759 185
+    - !loc chasm -755 189
+    - !loc chasm -754 182
+    - !loc chasm 171 -410
+    - !loc chasm 174 -391
 shadowy-husk:
   code: shadowy-husk
   name:
@@ -2526,19 +2526,19 @@ shadowy-husk:
     - shadowy-husk-defender
     - black-serpent-knight-windcutter
   locations:
-    - !loc chasm -525 223
-    - !loc chasm -416 -446
-    - !loc chasm -378 -125
-    - !loc chasm -210 9
-    - !loc chasm -190 253
-    - !loc chasm -106 -110
-    - !loc chasm -93 -202
-    - !loc chasm -86 -200
-    - !loc chasm -64 482
-    - !loc chasm -51 199
-    - !loc chasm 226 463
-    - !loc chasm 232 467
-    - !loc chasm 237 467
+    - !loc chasm -547 73
+    - !loc chasm -438 -596
+    - !loc chasm -400 -275
+    - !loc chasm -232 -141
+    - !loc chasm -212 103
+    - !loc chasm -128 -260
+    - !loc chasm -115 -352
+    - !loc chasm -108 -350
+    - !loc chasm -86 332
+    - !loc chasm -73 49
+    - !loc chasm 204 313
+    - !loc chasm 210 317
+    - !loc chasm 215 317
 fatui-skirmisher:
   code: fatui-skirmisher
   name:
@@ -2668,12 +2668,12 @@ fatui-skirmisher:
     - !loc teyvat 3500 4788
     - !loc teyvat 3514 4777
     - !loc teyvat 3519 4775
-    - !loc chasm 334 -140
-    - !loc chasm 337 -274
-    - !loc chasm 339 -280
-    - !loc chasm 342 -273
-    - !loc chasm 363 -123
-    - !loc chasm 366 -126
+    - !loc chasm 312 -290
+    - !loc chasm 315 -424
+    - !loc chasm 317 -430
+    - !loc chasm 320 -423
+    - !loc chasm 341 -273
+    - !loc chasm 344 -276
 fatui-cicin-mage:
   code: fatui-cicin-mage
   name:
@@ -2864,18 +2864,18 @@ ruin-sentinel:
     - !loc enkanomiya 530 28
     - !loc enkanomiya 538 20
     - !loc enkanomiya 538 26
-    - !loc chasm -540 -86
-    - !loc chasm -535 -83
-    - !loc chasm -482 -209
-    - !loc chasm -482 -205
-    - !loc chasm -474 -208
-    - !loc chasm -403 -219
-    - !loc chasm -398 -227
-    - !loc chasm -394 -218
-    - !loc chasm 147 351
-    - !loc chasm 151 347
-    - !loc chasm 232 437
-    - !loc chasm 244 424
+    - !loc chasm -562 -236
+    - !loc chasm -557 -233
+    - !loc chasm -504 -359
+    - !loc chasm -504 -355
+    - !loc chasm -496 -358
+    - !loc chasm -425 -369
+    - !loc chasm -420 -377
+    - !loc chasm -416 -368
+    - !loc chasm 125 201
+    - !loc chasm 129 197
+    - !loc chasm 210 287
+    - !loc chasm 222 274
 treasure-hoarders:
   code: treasure-hoarders
   name:
@@ -3123,35 +3123,35 @@ treasure-hoarders:
     - !loc teyvat 3758 6584
     - !loc teyvat 3774 6996
     - !loc teyvat 3780 6995
-    - !loc chasm -404 -413
-    - !loc chasm -387 -380
-    - !loc chasm -368 -400
-    - !loc chasm -323 -385
-    - !loc chasm -314 -315
-    - !loc chasm -131 -366
-    - !loc chasm -101 -401
-    - !loc chasm -100 -319
-    - !loc chasm -53 -351
-    - !loc chasm -42 -428
-    - !loc chasm -33 -499
-    - !loc chasm -16 -531
-    - !loc chasm -12 -313
-    - !loc chasm -9 -549
-    - !loc chasm -9 -547
-    - !loc chasm -7 -450
-    - !loc chasm 6 -568
-    - !loc chasm 6 -566
-    - !loc chasm 26 -561
-    - !loc chasm 27 -559
-    - !loc chasm 27 -390
-    - !loc chasm 33 -425
-    - !loc chasm 111 -403
-    - !loc chasm 114 -500
-    - !loc chasm 118 -366
-    - !loc chasm 141 -546
-    - !loc chasm 267 -349
-    - !loc chasm 280 -397
-    - !loc chasm 330 -160
+    - !loc chasm -426 -563
+    - !loc chasm -409 -530
+    - !loc chasm -390 -550
+    - !loc chasm -345 -535
+    - !loc chasm -336 -465
+    - !loc chasm -153 -516
+    - !loc chasm -123 -551
+    - !loc chasm -122 -469
+    - !loc chasm -75 -501
+    - !loc chasm -64 -578
+    - !loc chasm -55 -649
+    - !loc chasm -38 -681
+    - !loc chasm -34 -463
+    - !loc chasm -31 -699
+    - !loc chasm -31 -697
+    - !loc chasm -29 -600
+    - !loc chasm -16 -718
+    - !loc chasm -16 -716
+    - !loc chasm 4 -711
+    - !loc chasm 5 -709
+    - !loc chasm 5 -540
+    - !loc chasm 11 -575
+    - !loc chasm 89 -553
+    - !loc chasm 92 -650
+    - !loc chasm 96 -516
+    - !loc chasm 119 -696
+    - !loc chasm 245 -499
+    - !loc chasm 258 -547
+    - !loc chasm 308 -310
 nobushi:
   code: nobushi
   name:
@@ -3574,9 +3574,9 @@ whopperflower:
     - !loc enkanomiya -291 389
     - !loc enkanomiya -288 -243
     - !loc enkanomiya -275 403
-    - !loc chasm -17 -413
-    - !loc chasm 153 420
-    - !loc chasm 211 -590
+    - !loc chasm -39 -563
+    - !loc chasm 131 270
+    - !loc chasm 189 -740
 bathysmal-vishap:
   code: bathysmal-vishap
   name:

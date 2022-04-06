@@ -1177,11 +1177,11 @@ hilichurl:
     - !loc enkanomiya 443 -131
     - !loc enkanomiya 444 -129
     - !loc enkanomiya 465 -49
-    - !loc chasm -191 -98
-    - !loc chasm 112 391
-    - !loc chasm 135 543
-    - !loc chasm 187 271
-    - !loc chasm 202 514
+    - !loc chasm -213 -248
+    - !loc chasm 90 241
+    - !loc chasm 113 393
+    - !loc chasm 165 121
+    - !loc chasm 180 364
   drop:
     itemCodes:
       - damaged-mask
@@ -2400,8 +2400,8 @@ mirror-maiden:
     - !loc teyvat 3642 4965
     - !loc teyvat 3718 4681
     - !loc teyvat 4011 5561
-    - !loc chasm 6 -340
-    - !loc chasm 340 -278
+    - !loc chasm -16 -490
+    - !loc chasm 318 -428
   drop:
     itemCodes:
       - crystal-prism
@@ -2477,8 +2477,8 @@ ruin-guard:
     - !loc enkanomiya 607 97
     - !loc enkanomiya 624 -239
     - !loc enkanomiya 637 -236
-    - !loc chasm -27 130
-    - !loc chasm 201 532
+    - !loc chasm -49 -20
+    - !loc chasm 179 382
   drop:
     itemCodes:
       - chaos-circuit
@@ -2532,9 +2532,9 @@ ruin-grader:
     - !loc teyvat 450 1784
     - !loc teyvat 3496 4614
     - !loc enkanomiya 627 -231
-    - !loc chasm -35 -57
-    - !loc chasm 153 503
-    - !loc chasm 167 549
+    - !loc chasm -57 -207
+    - !loc chasm 131 353
+    - !loc chasm 145 399
   drop:
     itemCodes:
       - chaos-circuit
@@ -3071,10 +3071,10 @@ geovishap:
     - !loc teyvat -2051 2261
     - !loc teyvat -1958 1813
     - !loc teyvat -1320 2432
-    - !loc chasm -297 -450
-    - !loc chasm -276 317
-    - !loc chasm 231 -42
-    - !loc chasm 246 -516
+    - !loc chasm -319 -600
+    - !loc chasm -298 167
+    - !loc chasm 209 -192
+    - !loc chasm 224 -666
   drop:
     itemCodes:
       - fossilized-bone-shard

@@ -925,13 +925,13 @@ cor-lapis:
     - !loc teyvat 196 2569
     - !loc teyvat 203 2595
     - !loc teyvat 220 2573
-    - !loc chasm -413 -147
-    - !loc chasm -168 -406
-    - !loc chasm -167 -410
-    - !loc chasm -51 -121
-    - !loc chasm -50 -124
-    - !loc chasm 20 -446
-    - !loc chasm 44 -371
+    - !loc chasm -435 -297
+    - !loc chasm -190 -556
+    - !loc chasm -189 -560
+    - !loc chasm -73 -271
+    - !loc chasm -72 -274
+    - !loc chasm -2 -596
+    - !loc chasm 22 -521
 crystal-marrow:
   code: crystal-marrow
   name:
@@ -1460,24 +1460,24 @@ noctilucous-jade:
     - !loc teyvat -330 1652
     - !loc teyvat 67 2778
     - !loc teyvat 76 2755
-    - !loc chasm -405 -343
-    - !loc chasm -401 -346
-    - !loc chasm -388 -406
-    - !loc chasm -331 -348
-    - !loc chasm -116 -409
-    - !loc chasm -94 -453
-    - !loc chasm -89 -453
-    - !loc chasm -56 -109
-    - !loc chasm 6 22
-    - !loc chasm 108 537
-    - !loc chasm 110 534
-    - !loc chasm 112 540
-    - !loc chasm 147 -339
-    - !loc chasm 215 -174
-    - !loc chasm 217 -179
-    - !loc chasm 221 -177
-    - !loc chasm 229 -513
-    - !loc chasm 236 -512
+    - !loc chasm -427 -493
+    - !loc chasm -423 -496
+    - !loc chasm -410 -556
+    - !loc chasm -353 -498
+    - !loc chasm -138 -559
+    - !loc chasm -116 -603
+    - !loc chasm -111 -603
+    - !loc chasm -78 -259
+    - !loc chasm -16 -128
+    - !loc chasm 86 387
+    - !loc chasm 88 384
+    - !loc chasm 90 390
+    - !loc chasm 125 -489
+    - !loc chasm 193 -324
+    - !loc chasm 195 -329
+    - !loc chasm 199 -327
+    - !loc chasm 207 -663
+    - !loc chasm 214 -662
 philanemo-mushroom:
   code: philanemo-mushroom
   name:
@@ -4503,16 +4503,16 @@ mora:
     - !loc teyvat 2680 5891
     - !loc teyvat 2687 5871
     - !loc teyvat 2689 5877
-    - !loc chasm -515 -260
-    - !loc chasm -513 -262
-    - !loc chasm -499 -287
-    - !loc chasm -495 -279
-    - !loc chasm -389 -165
-    - !loc chasm -346 -411
-    - !loc chasm -294 -145
-    - !loc chasm -290 -154
-    - !loc chasm -19 -508
-    - !loc chasm 337 -159
+    - !loc chasm -537 -410
+    - !loc chasm -535 -412
+    - !loc chasm -521 -437
+    - !loc chasm -517 -429
+    - !loc chasm -411 -315
+    - !loc chasm -368 -561
+    - !loc chasm -316 -295
+    - !loc chasm -312 -304
+    - !loc chasm -41 -658
+    - !loc chasm 315 -309
 original-essence-(invalidated):
   code: original-essence-(invalidated)
   name:
@@ -4669,8 +4669,8 @@ akai-maou:
     - !loc teyvat 2953 4875
     - !loc teyvat 3326 6752
     - !loc enkanomiya -178 422
-    - !loc chasm -176 92
-    - !loc chasm -105 -171
+    - !loc chasm -198 -58
+    - !loc chasm -127 -321
 betta:
   code: betta
   name:
@@ -4689,7 +4689,7 @@ betta:
     - !loc teyvat -1195 505
     - !loc teyvat -801 1687
     - !loc teyvat -657 3062
-    - !loc chasm -105 -171
+    - !loc chasm -127 -321
 bitter-pufferfish:
   code: bitter-pufferfish
   name:
@@ -4705,7 +4705,7 @@ bitter-pufferfish:
     - !loc teyvat 60 271
     - !loc teyvat 1877 5721
     - !loc teyvat 2953 4880
-    - !loc chasm -105 -171
+    - !loc chasm -127 -321
 brown-shirakodai:
   code: brown-shirakodai
   name:
@@ -4724,7 +4724,7 @@ brown-shirakodai:
     - !loc teyvat -1192 506
     - !loc teyvat -1163 1014
     - !loc teyvat -803 1691
-    - !loc chasm -105 -171
+    - !loc chasm -127 -321
 crystalfish:
   code: crystalfish
   name:
@@ -4748,7 +4748,7 @@ crystalfish:
     - !loc teyvat 2043 8356
     - !loc teyvat 3404 6777
     - !loc enkanomiya -1176 777
-    - !loc chasm -176 92
+    - !loc chasm -198 -58
 dawncatcher:
   code: dawncatcher
   name:
@@ -4775,7 +4775,7 @@ dawncatcher:
     - !loc teyvat 3400 6776
     - !loc enkanomiya -283 449
     - !loc enkanomiya -179 424
-    - !loc chasm -176 92
+    - !loc chasm -198 -58
 divda-ray:
   code: divda-ray
   name:
@@ -4877,7 +4877,7 @@ medaka:
     - !loc teyvat 1879 5718
     - !loc teyvat 2038 8353
     - !loc teyvat 3402 6778
-    - !loc chasm -105 -171
+    - !loc chasm -127 -321
 pufferfish:
   code: pufferfish
   name:
@@ -4893,7 +4893,7 @@ pufferfish:
     - !loc teyvat 58 271
     - !loc teyvat 2948 4879
     - !loc teyvat 3404 6780
-    - !loc chasm -176 92
+    - !loc chasm -198 -58
 purple-shirakodai:
   code: purple-shirakodai
   name:
@@ -4965,7 +4965,7 @@ sweet-flower-medaka:
     - !loc teyvat -1163 1010
     - !loc teyvat -803 1689
     - !loc teyvat -655 3060
-    - !loc chasm -176 92
+    - !loc chasm -198 -58
 tea-colored-shirakodai:
   code: tea-colored-shirakodai
   name:
@@ -6678,69 +6678,69 @@ crystal-chunk:
     - !loc teyvat 797 -486
     - !loc teyvat 876 -588
     - !loc teyvat 1052 83
-    - !loc chasm -502 235
-    - !loc chasm -496 239
-    - !loc chasm -482 -199
-    - !loc chasm -478 -202
-    - !loc chasm -475 -195
-    - !loc chasm -474 -200
-    - !loc chasm -472 -197
-    - !loc chasm -385 -460
-    - !loc chasm -380 -463
-    - !loc chasm -274 212
-    - !loc chasm -273 207
-    - !loc chasm -267 201
-    - !loc chasm -253 371
-    - !loc chasm -252 364
-    - !loc chasm -244 364
-    - !loc chasm -242 370
-    - !loc chasm -193 88
-    - !loc chasm -191 94
-    - !loc chasm -126 160
-    - !loc chasm -123 166
-    - !loc chasm -121 -2
-    - !loc chasm -117 -9
-    - !loc chasm -117 164
-    - !loc chasm -114 -2
-    - !loc chasm -57 -114
-    - !loc chasm -56 -117
-    - !loc chasm -52 -107
-    - !loc chasm -46 -106
-    - !loc chasm -43 -111
-    - !loc chasm -41 254
-    - !loc chasm -39 -112
-    - !loc chasm -39 249
-    - !loc chasm -35 253
-    - !loc chasm 21 42
-    - !loc chasm 27 40
-    - !loc chasm 30 55
-    - !loc chasm 32 43
-    - !loc chasm 42 -183
-    - !loc chasm 42 -176
-    - !loc chasm 44 -173
-    - !loc chasm 48 -171
-    - !loc chasm 52 -173
-    - !loc chasm 119 471
-    - !loc chasm 124 476
-    - !loc chasm 163 -430
-    - !loc chasm 170 -428
-    - !loc chasm 172 -422
-    - !loc chasm 184 -96
-    - !loc chasm 188 -90
-    - !loc chasm 202 335
-    - !loc chasm 204 -323
-    - !loc chasm 209 340
-    - !loc chasm 213 -315
-    - !loc chasm 214 -321
-    - !loc chasm 257 -277
-    - !loc chasm 265 -286
-    - !loc chasm 270 -296
-    - !loc chasm 360 -198
-    - !loc chasm 365 -195
-    - !loc chasm 365 -190
-    - !loc chasm 376 -309
-    - !loc chasm 377 -301
-    - !loc chasm 384 -303
+    - !loc chasm -524 85
+    - !loc chasm -518 89
+    - !loc chasm -504 -349
+    - !loc chasm -500 -352
+    - !loc chasm -497 -345
+    - !loc chasm -496 -350
+    - !loc chasm -494 -347
+    - !loc chasm -407 -610
+    - !loc chasm -402 -613
+    - !loc chasm -296 62
+    - !loc chasm -295 57
+    - !loc chasm -289 51
+    - !loc chasm -275 221
+    - !loc chasm -274 214
+    - !loc chasm -266 214
+    - !loc chasm -264 220
+    - !loc chasm -215 -62
+    - !loc chasm -213 -56
+    - !loc chasm -148 10
+    - !loc chasm -145 16
+    - !loc chasm -143 -152
+    - !loc chasm -139 -159
+    - !loc chasm -139 14
+    - !loc chasm -136 -152
+    - !loc chasm -79 -264
+    - !loc chasm -78 -267
+    - !loc chasm -74 -257
+    - !loc chasm -68 -256
+    - !loc chasm -65 -261
+    - !loc chasm -63 104
+    - !loc chasm -61 -262
+    - !loc chasm -61 99
+    - !loc chasm -57 103
+    - !loc chasm -1 -108
+    - !loc chasm 5 -110
+    - !loc chasm 8 -95
+    - !loc chasm 10 -107
+    - !loc chasm 20 -333
+    - !loc chasm 20 -326
+    - !loc chasm 22 -323
+    - !loc chasm 26 -321
+    - !loc chasm 30 -323
+    - !loc chasm 97 321
+    - !loc chasm 102 326
+    - !loc chasm 141 -580
+    - !loc chasm 148 -578
+    - !loc chasm 150 -572
+    - !loc chasm 162 -246
+    - !loc chasm 166 -240
+    - !loc chasm 180 185
+    - !loc chasm 182 -473
+    - !loc chasm 187 190
+    - !loc chasm 191 -465
+    - !loc chasm 192 -471
+    - !loc chasm 235 -427
+    - !loc chasm 243 -436
+    - !loc chasm 248 -446
+    - !loc chasm 338 -348
+    - !loc chasm 343 -345
+    - !loc chasm 343 -340
+    - !loc chasm 354 -459
+    - !loc chasm 355 -451
+    - !loc chasm 362 -453
 crystal-core:
   code: crystal-core
   name:
@@ -6991,30 +6991,30 @@ crystal-core:
     - !loc enkanomiya 47 -30
     - !loc enkanomiya 61 -3
     - !loc enkanomiya 63 -27
-    - !loc chasm -487 -58
-    - !loc chasm -475 -50
-    - !loc chasm -472 -71
-    - !loc chasm -421 -405
-    - !loc chasm -415 -95
-    - !loc chasm -412 -99
-    - !loc chasm -400 -422
-    - !loc chasm -383 -146
-    - !loc chasm -373 -149
-    - !loc chasm -364 -152
-    - !loc chasm -190 -23
-    - !loc chasm -157 -441
-    - !loc chasm -153 -440
-    - !loc chasm -18 46
-    - !loc chasm -14 49
-    - !loc chasm 182 -64
-    - !loc chasm 182 -56
-    - !loc chasm 184 -110
-    - !loc chasm 185 -116
-    - !loc chasm 188 -113
-    - !loc chasm 197 -344
-    - !loc chasm 198 294
-    - !loc chasm 200 297
-    - !loc chasm 211 -370
+    - !loc chasm -509 -208
+    - !loc chasm -497 -200
+    - !loc chasm -494 -221
+    - !loc chasm -443 -555
+    - !loc chasm -437 -245
+    - !loc chasm -434 -249
+    - !loc chasm -422 -572
+    - !loc chasm -405 -296
+    - !loc chasm -395 -299
+    - !loc chasm -386 -302
+    - !loc chasm -212 -173
+    - !loc chasm -179 -591
+    - !loc chasm -175 -590
+    - !loc chasm -40 -104
+    - !loc chasm -36 -101
+    - !loc chasm 160 -214
+    - !loc chasm 160 -206
+    - !loc chasm 162 -260
+    - !loc chasm 163 -266
+    - !loc chasm 166 -263
+    - !loc chasm 175 -494
+    - !loc chasm 176 144
+    - !loc chasm 178 147
+    - !loc chasm 189 -520
 dendrobium:
   code: dendrobium
   name:
@@ -7499,15 +7499,15 @@ fish:
     - !loc enkanomiya -237 491
     - !loc enkanomiya -235 491
     - !loc enkanomiya -233 491
-    - !loc chasm -118 -204
-    - !loc chasm -117 -199
-    - !loc chasm -72 -228
-    - !loc chasm -66 -185
-    - !loc chasm 110 -509
-    - !loc chasm 134 -502
-    - !loc chasm 420 -92
-    - !loc chasm 429 -87
-    - !loc chasm 461 -111
+    - !loc chasm -140 -354
+    - !loc chasm -139 -349
+    - !loc chasm -94 -378
+    - !loc chasm -88 -335
+    - !loc chasm 88 -659
+    - !loc chasm 112 -652
+    - !loc chasm 398 -242
+    - !loc chasm 407 -237
+    - !loc chasm 439 -261
 flaming-flower-stamen:
   code: flaming-flower-stamen
   name:
@@ -8324,14 +8324,14 @@ frog:
     - !loc enkanomiya -1328 319
     - !loc enkanomiya -467 -236
     - !loc enkanomiya 17 534
-    - !loc chasm -535 223
-    - !loc chasm -78 -145
-    - !loc chasm -68 -231
-    - !loc chasm 125 -125
-    - !loc chasm 146 -117
-    - !loc chasm 171 466
-    - !loc chasm 192 398
-    - !loc chasm 210 -506
+    - !loc chasm -557 73
+    - !loc chasm -100 -295
+    - !loc chasm -90 -381
+    - !loc chasm 103 -275
+    - !loc chasm 124 -267
+    - !loc chasm 149 316
+    - !loc chasm 170 248
+    - !loc chasm 188 -656
 ham:
   code: ham
   name:
@@ -8784,36 +8784,36 @@ iron-chunk:
     - !loc enkanomiya 521 -33
     - !loc enkanomiya 527 -32
     - !loc enkanomiya 528 -31
-    - !loc chasm -408 -425
-    - !loc chasm -398 -428
-    - !loc chasm -390 -427
-    - !loc chasm -384 -440
-    - !loc chasm -384 -431
-    - !loc chasm -378 -195
-    - !loc chasm -372 -193
-    - !loc chasm -355 -313
-    - !loc chasm -351 -321
-    - !loc chasm -347 -313
-    - !loc chasm -343 -462
-    - !loc chasm -337 -467
-    - !loc chasm -331 -459
-    - !loc chasm -103 196
-    - !loc chasm -100 202
-    - !loc chasm 29 228
-    - !loc chasm 33 227
-    - !loc chasm 33 233
-    - !loc chasm 155 -393
-    - !loc chasm 157 -387
-    - !loc chasm 157 -347
-    - !loc chasm 159 -391
-    - !loc chasm 166 -109
-    - !loc chasm 170 -106
-    - !loc chasm 184 -115
-    - !loc chasm 188 -121
-    - !loc chasm 192 -112
-    - !loc chasm 193 -138
-    - !loc chasm 194 -120
-    - !loc chasm 197 -126
+    - !loc chasm -430 -575
+    - !loc chasm -420 -578
+    - !loc chasm -412 -577
+    - !loc chasm -406 -590
+    - !loc chasm -406 -581
+    - !loc chasm -400 -345
+    - !loc chasm -394 -343
+    - !loc chasm -377 -463
+    - !loc chasm -373 -471
+    - !loc chasm -369 -463
+    - !loc chasm -365 -612
+    - !loc chasm -359 -617
+    - !loc chasm -353 -609
+    - !loc chasm -125 46
+    - !loc chasm -122 52
+    - !loc chasm 7 78
+    - !loc chasm 11 77
+    - !loc chasm 11 83
+    - !loc chasm 133 -543
+    - !loc chasm 135 -537
+    - !loc chasm 135 -497
+    - !loc chasm 137 -541
+    - !loc chasm 144 -259
+    - !loc chasm 148 -256
+    - !loc chasm 162 -265
+    - !loc chasm 166 -271
+    - !loc chasm 170 -262
+    - !loc chasm 171 -288
+    - !loc chasm 172 -270
+    - !loc chasm 175 -276
 jam:
   code: jam
   name:
@@ -9022,20 +9022,20 @@ lizard-tail:
     - !loc enkanomiya -314 426
     - !loc enkanomiya 1 434
     - !loc enkanomiya 481 -225
-    - !loc chasm -798 298
-    - !loc chasm -778 128
-    - !loc chasm -627 79
-    - !loc chasm -598 206
-    - !loc chasm -390 240
-    - !loc chasm -341 -321
-    - !loc chasm -228 -426
-    - !loc chasm -64 -108
-    - !loc chasm -58 -107
-    - !loc chasm -19 11
-    - !loc chasm 30 -21
-    - !loc chasm 127 -209
-    - !loc chasm 138 428
-    - !loc chasm 156 188
+    - !loc chasm -820 148
+    - !loc chasm -800 -22
+    - !loc chasm -649 -71
+    - !loc chasm -620 56
+    - !loc chasm -412 90
+    - !loc chasm -363 -471
+    - !loc chasm -250 -576
+    - !loc chasm -86 -258
+    - !loc chasm -80 -257
+    - !loc chasm -41 -139
+    - !loc chasm 8 -171
+    - !loc chasm 105 -359
+    - !loc chasm 116 278
+    - !loc chasm 134 38
 loach-pearl:
   code: loach-pearl
   name:
@@ -9206,38 +9206,38 @@ luminescent-spine:
     - !loc teyvat 2329 6065
     - !loc teyvat 2651 5535
     - !loc teyvat 3628 5002
-    - !loc chasm -601 127
-    - !loc chasm -556 219
-    - !loc chasm -480 -71
-    - !loc chasm -391 -362
-    - !loc chasm -345 -328
-    - !loc chasm -340 -333
-    - !loc chasm -332 -330
-    - !loc chasm -319 -404
-    - !loc chasm -314 -403
-    - !loc chasm -314 -369
-    - !loc chasm -127 178
-    - !loc chasm -124 170
-    - !loc chasm -73 -126
-    - !loc chasm -68 -124
-    - !loc chasm -60 479
-    - !loc chasm -59 -323
-    - !loc chasm -59 -113
-    - !loc chasm -45 -107
-    - !loc chasm 50 -376
-    - !loc chasm 57 -497
-    - !loc chasm 68 -226
-    - !loc chasm 97 -505
-    - !loc chasm 139 -462
-    - !loc chasm 144 379
-    - !loc chasm 150 379
-    - !loc chasm 179 483
-    - !loc chasm 182 427
-    - !loc chasm 201 320
-    - !loc chasm 202 380
-    - !loc chasm 237 30
-    - !loc chasm 249 -93
-    - !loc chasm 301 -250
+    - !loc chasm -623 -23
+    - !loc chasm -578 69
+    - !loc chasm -502 -221
+    - !loc chasm -413 -512
+    - !loc chasm -367 -478
+    - !loc chasm -362 -483
+    - !loc chasm -354 -480
+    - !loc chasm -341 -554
+    - !loc chasm -336 -553
+    - !loc chasm -336 -519
+    - !loc chasm -149 28
+    - !loc chasm -146 20
+    - !loc chasm -95 -276
+    - !loc chasm -90 -274
+    - !loc chasm -82 329
+    - !loc chasm -81 -473
+    - !loc chasm -81 -263
+    - !loc chasm -67 -257
+    - !loc chasm 28 -526
+    - !loc chasm 35 -647
+    - !loc chasm 46 -376
+    - !loc chasm 75 -655
+    - !loc chasm 117 -612
+    - !loc chasm 122 229
+    - !loc chasm 128 229
+    - !loc chasm 157 333
+    - !loc chasm 160 277
+    - !loc chasm 179 170
+    - !loc chasm 180 230
+    - !loc chasm 215 -120
+    - !loc chasm 227 -243
+    - !loc chasm 279 -400
 magical-crystal-chunk:
   code: magical-crystal-chunk
   name:
@@ -10811,11 +10811,11 @@ mist-flower-corolla:
     - !loc enkanomiya -447 -229
     - !loc enkanomiya -195 610
     - !loc enkanomiya -189 611
-    - !loc chasm -617 111
-    - !loc chasm -127 -139
-    - !loc chasm -68 -240
-    - !loc chasm -62 -237
-    - !loc chasm -59 -194
+    - !loc chasm -639 -39
+    - !loc chasm -149 -289
+    - !loc chasm -90 -390
+    - !loc chasm -84 -387
+    - !loc chasm -81 -344
 mushroom:
   code: mushroom
   name:
@@ -12741,9 +12741,9 @@ snapdragon:
     - !loc teyvat 747 -474
     - !loc teyvat 747 -462
     - !loc teyvat 748 546
-    - !loc chasm -232 -393
-    - !loc chasm -224 -409
-    - !loc chasm -193 -410
+    - !loc chasm -254 -543
+    - !loc chasm -246 -559
+    - !loc chasm -215 -560
 starsilver:
   code: starsilver
   name:
@@ -14434,42 +14434,42 @@ white-iron-chunk:
     - !loc enkanomiya 635 64
     - !loc enkanomiya 637 58
     - !loc enkanomiya 638 61
-    - !loc chasm -376 -197
-    - !loc chasm -371 -330
-    - !loc chasm -361 -343
-    - !loc chasm -358 -324
-    - !loc chasm -188 -82
-    - !loc chasm -186 -88
-    - !loc chasm -49 -108
-    - !loc chasm -46 -121
-    - !loc chasm -45 -112
-    - !loc chasm -9 -239
-    - !loc chasm -5 -243
-    - !loc chasm -3 -236
-    - !loc chasm 2 -239
-    - !loc chasm 90 522
-    - !loc chasm 93 517
-    - !loc chasm 97 520
-    - !loc chasm 128 161
-    - !loc chasm 130 165
-    - !loc chasm 137 164
-    - !loc chasm 139 157
-    - !loc chasm 249 -387
-    - !loc chasm 261 -132
-    - !loc chasm 263 -283
-    - !loc chasm 263 -125
-    - !loc chasm 265 -133
-    - !loc chasm 265 -129
-    - !loc chasm 265 -121
-    - !loc chasm 268 -124
-    - !loc chasm 269 -390
-    - !loc chasm 270 -292
-    - !loc chasm 273 -383
-    - !loc chasm 281 -280
-    - !loc chasm 332 -104
-    - !loc chasm 338 -100
-    - !loc chasm 340 -106
-    - !loc chasm 347 -107
+    - !loc chasm -398 -347
+    - !loc chasm -393 -480
+    - !loc chasm -383 -493
+    - !loc chasm -380 -474
+    - !loc chasm -210 -232
+    - !loc chasm -208 -238
+    - !loc chasm -71 -258
+    - !loc chasm -68 -271
+    - !loc chasm -67 -262
+    - !loc chasm -31 -389
+    - !loc chasm -27 -393
+    - !loc chasm -25 -386
+    - !loc chasm -20 -389
+    - !loc chasm 68 372
+    - !loc chasm 71 367
+    - !loc chasm 75 370
+    - !loc chasm 106 11
+    - !loc chasm 108 15
+    - !loc chasm 115 14
+    - !loc chasm 117 7
+    - !loc chasm 227 -537
+    - !loc chasm 239 -282
+    - !loc chasm 241 -433
+    - !loc chasm 241 -275
+    - !loc chasm 243 -283
+    - !loc chasm 243 -279
+    - !loc chasm 243 -271
+    - !loc chasm 246 -274
+    - !loc chasm 247 -540
+    - !loc chasm 248 -442
+    - !loc chasm 251 -533
+    - !loc chasm 259 -430
+    - !loc chasm 310 -254
+    - !loc chasm 316 -250
+    - !loc chasm 318 -256
+    - !loc chasm 325 -257
 bit-of-aerosiderite:
   code: bit-of-aerosiderite
   name:
