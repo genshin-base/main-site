@@ -3,6 +3,7 @@ import { BlockHeader } from '#src/components/block-header'
 import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
 import { TeyvatMap } from '#src/components/teyvat-map'
 import {
+	I18N_ASC_MATERIALS,
 	I18N_BASE_ATTACK,
 	I18N_ITEM_STORY,
 	I18N_STAT_NAME,
@@ -12,6 +13,7 @@ import {
 import { BULLET, DASH } from '#src/utils/typography'
 import { getWeaponIconLageSrc } from '#src/utils/weapons'
 import { useCallback, useMemo, useState } from 'preact/hooks'
+import { CardMap, CardMapMarkerGroup } from './card-map'
 import { RecommendedTo } from './common'
 import { ItemAvatar } from './item-avatars'
 
@@ -36,6 +38,11 @@ type WeaponRowProps = {
 	weapon: WeaponFullInfo
 	group: number
 	isExpanded?: boolean
+}
+const dummyGroup: CardMapMarkerGroup = {
+	code: 'bla',
+	title: 'bla-bla',
+	markers: [{ mapCode: 'teyvat', x: 0, y: 0, icon: '' }],
 }
 function WeaponCardLine({ weapon, onClose }): JSX.Element {
 	const expandedRowStyle = { height: '300px' }
@@ -95,9 +102,17 @@ function WeaponCardLine({ weapon, onClose }): JSX.Element {
 					aria-label="Close"
 					onClick={onClose}
 				></button>
-				<div>materials:</div>
+				<div>
+					{/* <div className="opacity-75">{I18N_ASC_MATERIALS}:</div> */}
+					<RecommendedTo
+						isInline={true}
+						navigateToCharacter={true}
+						isAvatarWithBorder={true}
+						charCodes={['amber', 'amber', 'amber']}
+					/>
+				</div>
 				<div className="flex-fill">
-					<TeyvatMap mapCode={'teyvat'} pos={'auto'} classes="h-100" />
+					<CardMap markerGroups={[dummyGroup]} classes="h-100" />
 				</div>
 			</div>
 		</div>
