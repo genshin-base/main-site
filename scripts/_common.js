@@ -162,11 +162,6 @@ export const loadBuilds = () => loadGeneratedYaml('builds')
 /** @returns {Promise<import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>>} */
 export const loadTranslationReferenceBuilds = () => loadYaml(TRANSLATED_BUILDS_REF_FPATH)
 
-/** @param {import('#lib/parsing/helperteam/types').ChangelogsTable} builds */
-export const saveBuildChangelogs = builds => saveGeneratedYaml('build_changelogs', builds)
-/** @returns {Promise<import('#lib/parsing/helperteam/types').ChangelogsTable>} */
-export const loadBuildChangelogs = () => loadGeneratedYaml('build_changelogs')
-
 /**
  * @param {import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>} refBuilds
  * @param {import('#lib/parsing/helperteam/types').BuildInfo<'multilang'>} langBuilds

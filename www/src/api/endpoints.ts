@@ -9,7 +9,6 @@ import type {
 	MaterialsTimetableWithRelated,
 	WeaponsFullInfoWithRelated,
 } from '#lib/parsing/combine'
-import type { ChangelogsTable } from '#lib/parsing/helperteam/types'
 
 const get = <T>(prefix: string, signal: AbortSignal) =>
 	apiGetJSONFile<T>(`generated/${prefix}.json?v=${GENERATED_DATA_HASH}`, signal)
@@ -49,8 +48,4 @@ export function apiMaterialsTimetable(
 	signal: AbortSignal,
 ): PromiseOrSync<MapAllByCode<MaterialsTimetableWithRelated>> {
 	return _map(getLang<MaterialsTimetableWithRelated>(`timetables/materials`, signal), mapAllByCode)
-}
-
-export function apiGetChangelogs(onlyRecent: boolean, signal: AbortSignal): PromiseOrSync<ChangelogsTable> {
-	return get(`changelogs${onlyRecent ? '-recent' : ''}`, signal)
 }

@@ -70,12 +70,6 @@ type CharacterBuildInfo<T extends LangMode> = {
 	credits: LangsIf<T, CompactTextParagraphs | null>
 }
 
-// === Changelogs ===
-
-type ChangelogsTable = {
-	rows: { date: string; changes: CompactTextParagraphs; appliedBy: string }[]
-}
-
 // === Builds ===
 
 type BuildInfo<T extends LangMode> = {

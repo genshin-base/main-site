@@ -11,7 +11,6 @@ import {
 	getAndProcessMappedImages,
 } from '#lib/parsing/honeyhunter/index.js'
 import { getCharacterArtifactCodes, getCharacterWeaponCodes } from '#lib/parsing/helperteam/characters.js'
-import { makeRecentChangelogsTable } from '#lib/parsing/helperteam/changelogs.js'
 import { trigramSearcherFromStrings } from '#lib/trigrams.js'
 import { createHash } from 'crypto'
 import { exists, parseArgs, relativeToCwd } from '#lib/utils/os.js'
@@ -46,8 +45,6 @@ import {
 	WWW_API_FILE,
 	TRANSLATED_DATA_DIR,
 	loadTranslatedBuilds,
-	loadBuildChangelogs,
-	saveBuildChangelogs,
 } from './_common.js'
 import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
 import {
@@ -272,12 +269,11 @@ async function extractAndSaveBuildsData() {
 	progress()
 
 	clearHelperteamFixesUsage(fixes.helperteam)
-	const { builds, changelogs } = await extractBuilds(spreadsheet, knownCodes, fixes.helperteam)
+	const builds = await extractBuilds(spreadsheet, knownCodes, fixes.helperteam)
 	checkHelperteamFixesUsage(fixes.helperteam)
 
 	await fs.mkdir(DATA_DIR, { recursive: true })
 	await saveBuilds(builds)
-	await saveBuildChangelogs(changelogs)
 	progress()
 }
 
@@ -479,7 +475,6 @@ async function saveWwwData() {
 			)
 		}
 	})()
-	const buildChangelogs = await loadBuildChangelogs()
 
 	excludeDomainBosses(enemies, domains)
 
@@ -522,9 +517,6 @@ async function saveWwwData() {
 
 		progress()
 	}
-
-	await writeJson(`${WWW_DYNAMIC_DIR}/changelogs.json`, buildChangelogs)
-	await writeJson(`${WWW_DYNAMIC_DIR}/changelogs-recent.json`, makeRecentChangelogsTable(buildChangelogs))
 
 	const hash = md5sum.digest('hex').slice(0, 8)
 	const charactersShortInfo = makeCharacterShortList(builds.characters, characters)
