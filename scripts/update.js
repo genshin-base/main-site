@@ -463,15 +463,18 @@ async function checkUsedItemsLocations() {
 async function saveWwwData() {
 	info('updating www JSONs', { newline: false })
 
-	const characters = await loadCharacters()
-	const enemies = await loadEnemies()
-	const artifacts = await loadArtifacts()
-	const weapons = await loadWeapons()
-	const domains = await loadDomains()
-	const items = await loadItems()
-	const enemyGroups = await loadEnemyGroups()
+	/** @type {import('#lib/parsing/combine').CommonData} */
+	const common = {
+		code2character: await loadCharacters(),
+		code2enemy: await loadEnemies(),
+		code2artifact: await loadArtifacts(),
+		code2weapon: await loadWeapons(),
+		code2domain: await loadDomains(),
+		code2item: await loadItems(),
+		enemyGroups: await loadEnemyGroups(),
+	}
 
-	const artGroupCodes = getArtifactSpecialGroupCodes(artifacts)
+	const artGroupCodes = getArtifactSpecialGroupCodes(common.code2artifact)
 
 	const builds = await (async () => {
 		if (await exists(TRANSLATED_DATA_DIR)) {
@@ -484,9 +487,9 @@ async function saveWwwData() {
 		}
 	})()
 
-	excludeDomainBosses(enemies, domains)
+	excludeDomainBosses(common.code2enemy, common.code2domain)
 
-	replaceEnemiesByGroups(enemies, enemyGroups)
+	replaceEnemiesByGroups(common.code2enemy, common.enemyGroups)
 
 	await fs.rm(WWW_DYNAMIC_DIR, { recursive: true, force: true })
 	await fs.mkdir(WWW_DYNAMIC_DIR, { recursive: true })
@@ -504,7 +507,7 @@ async function saveWwwData() {
 
 	const recomWeap2characters = /**@type {Map<string, string[]>}*/ (new Map())
 	for (const character of builds.characters)
-		for (const code of getCharacterRecommendedWeaponCodes(character, weapons))
+		for (const code of getCharacterRecommendedWeaponCodes(character, common.code2weapon))
 			mappedArrPush(recomWeap2characters, code, character.code)
 
 	const recomArt2characters = /**@type {Map<string, string[]>}*/ (new Map())
@@ -513,34 +516,32 @@ async function saveWwwData() {
 			mappedArrPush(recomArt2characters, code, character.code)
 
 	for (const lang of LANGS) {
-		const buildArtifacts = makeArtifactsRegularInfo(artifacts, characters, domains, enemies, recomArt2characters, lang) //prettier-ignore
-		const buildWeapons = makeWeaponsRegularInfo(weapons, characters, recomWeap2characters, lang) //prettier-ignore
+		const buildArtifacts = makeArtifactsRegularInfo(common, recomArt2characters, lang)
+		const buildWeapons = makeWeaponsRegularInfo(common, recomWeap2characters, lang)
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 		for (const character of builds.characters) {
-			const fullInfo = makeCharacterFullInfo(
-				character, characters, buildArtifacts, buildWeapons,
-				domains, enemies, items, artGroupCodes, lang) //prettier-ignore
+			const fullInfo = makeCharacterFullInfo(character, common, buildArtifacts, buildWeapons, artGroupCodes, lang) //prettier-ignore
 			const locsInfo = extractFullInfoLocations(fullInfo)
 			await writeJson(`${WWW_DYNAMIC_DIR}/characters/${character.code}-locs-${lang}.json`, locsInfo)
 			await writeJson(`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`, fullInfo)
 		}
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/timetables`, { recursive: true })
-		const timetable = makeMaterialsTimetable(characters, domains, weapons, enemies, items, lang)
+		const timetable = makeMaterialsTimetable(common, lang)
 		await writeJson(`${WWW_DYNAMIC_DIR}/timetables/materials-${lang}.json`, timetable)
 
 		await writeJson(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, buildArtifacts)
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/artifacts`, { recursive: true })
-		for (const artifact of Object.values(artifacts)) {
-			const artifactInfo = makeArtifactFullInfoWithRelated(artifact, characters, domains, enemies, recomWeap2characters, lang) //prettier-ignore
+		for (const artifact of Object.values(common.code2artifact)) {
+			const artifactInfo = makeArtifactFullInfoWithRelated(artifact, common, recomWeap2characters, lang) //prettier-ignore
 			await writeJson(`${WWW_DYNAMIC_DIR}/artifacts/${artifact.code}-${lang}.json`, artifactInfo)
 		}
 
 		await writeJson(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, buildWeapons)
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/weapons`, { recursive: true })
-		for (const weapon of Object.values(weapons)) {
-			const weaponInfo = makeWeaponFullInfoWithRelated(weapon, characters, domains, enemies, items, recomWeap2characters, lang) //prettier-ignore
+		for (const weapon of Object.values(common.code2weapon)) {
+			const weaponInfo = makeWeaponFullInfoWithRelated(weapon, common, recomWeap2characters, lang) //prettier-ignore
 			await writeJson(`${WWW_DYNAMIC_DIR}/weapons/${weapon.code}-${lang}.json`, weaponInfo)
 		}
 
@@ -548,7 +549,7 @@ async function saveWwwData() {
 	}
 
 	const hash = md5sum.digest('hex').slice(0, 8)
-	const charactersShortInfo = makeCharacterShortList(builds.characters, characters)
+	const charactersShortInfo = makeCharacterShortList(builds.characters, common.code2character)
 	await fs.writeFile(
 		WWW_API_FILE,
 		`
