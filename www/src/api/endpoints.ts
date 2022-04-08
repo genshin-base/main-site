@@ -1,6 +1,6 @@
 import { isPromise } from '#lib/utils/values'
 import { GENERATED_DATA_HASH } from './generated'
-import { apiGetJSONFile, mapAllByCode, MapAllByCode } from './utils'
+import { apiGetJSONFile, decodeRelatedLocations, mapAllByCode, MapAllByCode } from './utils'
 
 import type {
 	ArtifactFullInfoWithRelated,
@@ -44,7 +44,9 @@ export function apiGetArtifact(
 	code: string,
 	signal: AbortSignal,
 ): PromiseOrSync<MapAllByCode<ArtifactFullInfoWithRelated>> {
-	return _map(getLang<ArtifactFullInfoWithRelated>(`artifact/${code}`, signal), mapAllByCode)
+	return _map(getLang<ArtifactFullInfoWithRelated>(`artifact/${code}`, signal), arts =>
+		mapAllByCode(decodeRelatedLocations(arts)),
+	)
 }
 
 export function apiGetWeapons(signal: AbortSignal): PromiseOrSync<WeaponRegularInfo[]> {
@@ -54,7 +56,9 @@ export function apiGetWeapon(
 	code: string,
 	signal: AbortSignal,
 ): PromiseOrSync<MapAllByCode<WeaponFullInfoWithRelated>> {
-	return _map(getLang<WeaponFullInfoWithRelated>(`weapons/${code}`, signal), mapAllByCode)
+	return _map(getLang<WeaponFullInfoWithRelated>(`weapons/${code}`, signal), arts =>
+		mapAllByCode(decodeRelatedLocations(arts)),
+	)
 }
 
 export function apiMaterialsTimetable(
