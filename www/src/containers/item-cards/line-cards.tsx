@@ -1,42 +1,56 @@
 import { useCallback, useMemo, useState } from 'preact/hooks'
 
 import { WeaponRegularInfo } from '#lib/parsing/combine'
+import { apiGetWeapon } from '#src/api/endpoints'
+import { getAllRelated } from '#src/api/utils'
 import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
-import { I18N_BASE_ATTACK, I18N_ITEM_STORY, I18N_STAT_NAME } from '#src/i18n/i18n'
-import { BULLET, DASH } from '#src/utils/typography'
+import {
+	I18N_BASE_ATTACK,
+	I18N_ITEM_STORY,
+	I18N_STAT_NAME,
+	I18N_WEAPON_OBTAIN_SOURCE_NAME,
+} from '#src/i18n/i18n'
+import { notesToJSX } from '#src/modules/builds/common'
+import { isLoaded, useFetch } from '#src/utils/hooks'
+import { BULLET, DASH, ELLIPSIS } from '#src/utils/typography'
 import { getWeaponIconLageSrc } from '#src/utils/weapons'
-import { CardMap, CardMapMarkerGroup } from './card-map'
+import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from './card-map'
 import { RecommendedTo } from './common'
 import { ItemAvatar } from './item-avatars'
 
-const inGameDescription =
-	'Beneath its rusty exterior is a lavishly decorated thin blade. It swings as swiftly as the wind.'
-const itemStory = `
-A nimble sword with holes and delicate engravings on the blade.
-The sword once made the sound of a flute when wielded by one with the requisite skill. The pitch and tone were determined by the swinging angle.
-This sword was buried when the Wanderer's Troupe disbanded. Unearthed years later, it has long since lost its ability to sing.
-Even so, it still makes a lethal weapon.
-
-Among the members of the Wanderer's Troupe was a valiant sword-wielding dancer.
-After the Troupe's attempt to tear down the ruling class failed, she was enslaved as a gladiator.
-
-Though all her hope and all her companions were lost, still she fought bravely.
-Her sword sang with the radiance of the morn's light, and she was dubbed the "Dawnlight Swordswoman."
-
-In his youth, the Dawn Knight Ragnvindr was in the retinue of a knight.
-He went with his master to watch a gladiator match, and was moved by the Dawnlight Swordswoman's splendid finale.
-He named himself the Dawn Knight in her honor, and knew in his heart what he must do next.`
 type WeaponRowProps = {
 	weapon: WeaponRegularInfo
 	group: number
 	isExpanded?: boolean
 }
-const dummyGroup: CardMapMarkerGroup = {
-	code: 'bla',
-	title: 'bla-bla',
-	markers: [{ mapCode: 'teyvat', x: 0, y: 0, icon: '' }],
-}
-function WeaponCardLine({ weapon, onClose }): JSX.Element {
+
+const dummyMarkerGroups: CardMapMarkerGroup[] = [
+	{
+		code: '',
+		title: ELLIPSIS,
+		markers: [{ mapCode: 'teyvat', x: 0, y: 0, icon: '' }],
+	},
+]
+
+function WeaponCardLine({
+	weapon,
+	onClose,
+}: {
+	weapon: WeaponRegularInfo
+	onClose: () => unknown
+}): JSX.Element {
+	const weaponFull = useFetch(sig => apiGetWeapon(weapon.code, sig), [weapon])
+
+	const markerGroups = useMemo(() => {
+		if (!isLoaded(weaponFull)) return dummyMarkerGroups
+		const items = getAllRelated(weaponFull.maps.items, weaponFull.weapon.materialCodes)
+		const srcs = items[0].obtainSources //TODO
+		const markerGroups: CardMapMarkerGroup[] = []
+		addMarkerGroupsByDomains(markerGroups, getAllRelated(weaponFull.maps.domains, srcs.domainCodes))
+		addMarkerGroupsByEnemies(markerGroups, getAllRelated(weaponFull.maps.enemies, srcs.enemyCodes))
+		return markerGroups
+	}, [weaponFull])
+
 	const expandedRowStyle = { height: '300px' }
 	const cellClass = 'w-33 d-flex px-2 pb-3 pt-2 flex-column'
 	return (
@@ -46,11 +60,13 @@ function WeaponCardLine({ weapon, onClose }): JSX.Element {
 					<ItemAvatar
 						classes="mb-2 me-2 large-avatar float-start"
 						rarity={5}
-						src={getWeaponIconLageSrc('thundering-pulse')}
+						src={getWeaponIconLageSrc(weapon.code)}
 					/>
 					<h4 className="mb-0">{weapon.name}</h4>
 					<div className="overflow-hidden">
-						<span className="mb-2 text-muted">{BULLET} quests</span>
+						<span className="mb-2 text-muted">
+							{BULLET} {weapon.obtainSources.map(I18N_WEAPON_OBTAIN_SOURCE_NAME).join(', ')}
+						</span>
 					</div>
 				</div>
 				{/* {BULLET} {weapon.obtainSources.map(I18N_WEAPON_OBTAIN_SOURCE_NAME).join(', ')} */}
@@ -75,7 +91,7 @@ function WeaponCardLine({ weapon, onClose }): JSX.Element {
 						isInline={true}
 						navigateToCharacter={true}
 						isAvatarWithBorder={true}
-						charCodes={['amber', 'amber', 'amber']}
+						charCodes={weapon.recommendedTo}
 					/>
 				</div>
 				<div className="flex-fill overflow-auto">{weapon.passiveStat}</div>
@@ -83,9 +99,11 @@ function WeaponCardLine({ weapon, onClose }): JSX.Element {
 			<div className={cellClass}>
 				<div className="opacity-75">{I18N_ITEM_STORY}</div>
 				<div>
-					<i>{inGameDescription}</i>
+					<i>TODO:loading {isLoaded(weaponFull) && weaponFull.weapon.description}</i>
 				</div>
-				<div className="flex-fill overflow-auto">{itemStory}</div>
+				<div className="flex-fill overflow-auto">
+					TODO:loading {isLoaded(weaponFull) && notesToJSX(weaponFull.weapon.story)}
+				</div>
 			</div>
 			<div className={cellClass}>
 				<button
@@ -100,22 +118,25 @@ function WeaponCardLine({ weapon, onClose }): JSX.Element {
 						isInline={true}
 						navigateToCharacter={true}
 						isAvatarWithBorder={true}
-						charCodes={['amber', 'amber', 'amber']}
+						charCodes={weapon.recommendedTo}
 					/>
 				</div>
 				<div className="flex-fill">
-					<CardMap markerGroups={[dummyGroup]} classes="h-100" />
+					TODO:loading if markerGroups === dummyMarkerGroups
+					<CardMap markerGroups={markerGroups} classes="h-100" />
 				</div>
 			</div>
 		</div>
 	)
 }
+
 function WeaponCardTableRowDesktop({ weapon, isExpanded = false, group }: WeaponRowProps): JSX.Element {
 	const [isExpandedLocal, setIsExpanded] = useState<boolean>(isExpanded)
 	const toglleExpand = useCallback(() => {
 		setIsExpanded(!isExpandedLocal)
 	}, [isExpandedLocal, setIsExpanded])
 	const bgClass = group === 1 ? 'bg-dark' : 'bg-secondary'
+
 	const expandedRow = useMemo(() => {
 		return (
 			<>

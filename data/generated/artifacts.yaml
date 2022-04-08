@@ -17,26 +17,23 @@ adventurer:
         en: The feather of an exotic bird rarely seen on this continent.
         ru: Перо экзотической птицы, которую на этом континенте не встретить.
       story:
-        en:
-          - p: >-
-              An adventurer once traveled through a forest in search of rare
-              beasts never seen before. 
+        en: >-
+          An adventurer once traveled through a forest in search of rare beasts
+          never seen before. 
 
-              As he tore his way recklessly through the foliage, the adventurer tripped on a tree root. 
+          As he tore his way recklessly through the foliage, the adventurer tripped on a tree root. 
 
-              When he regained consciousness, he saw a girl so beautiful that he was willing to give up the adventurer's life to be with her. 
+          When he regained consciousness, he saw a girl so beautiful that he was willing to give up the adventurer's life to be with her. 
 
-              Her appearance was surreal, with a cluster of feathers adorning her hair.
-        ru:
-          - p: >-
-              Однажды искатель приключений шёл по лесу в поисках невиданной
-              птицы. 
+          Her appearance was surreal, with a cluster of feathers adorning her hair.
+        ru: >-
+          Однажды искатель приключений шёл по лесу в поисках невиданной птицы. 
 
-              Беспечно глядя вверх, он шагал среди деревьев, как вдруг запнулся о корни. 
+          Беспечно глядя вверх, он шагал среди деревьев, как вдруг запнулся о корни. 
 
-              Когда он пришёл в себя, то увидел перед собой девушку, прекрасную настолько, что он готов был бросить свою жизнь искателя приключений, лишь бы быть с ней. 
+          Когда он пришёл в себя, то увидел перед собой девушку, прекрасную настолько, что он готов был бросить свою жизнь искателя приключений, лишь бы быть с ней. 
 
-              В волосы её были вплетены фантастической красоты перья, да и сама она будто вышла из сна.
+          В волосы её были вплетены фантастической красоты перья, да и сама она будто вышла из сна.
     sands:
       description:
         en: It's easy to lose track of time when you're adventuring where the sun
@@ -45,28 +42,26 @@ adventurer:
         ru: Зачастую искатели приключений забывают о времени, спускаясь в глубины тёмной
           бездны или затерянных городов.
       story:
-        en:
-          - p: >-
-              A pocket watch that once belonged to an adventurer. It was crafted
-              by a master watchmaker with simplicity and practicality in mind,
-              aligning with the philosophy of the Adventurers' Guild. 
+        en: >-
+          A pocket watch that once belonged to an adventurer. It was crafted by
+          a master watchmaker with simplicity and practicality in mind, aligning
+          with the philosophy of the Adventurers' Guild. 
 
-              The adventurer spent most of his days in darkness. The rhythmic sound of its moving hands was the only proof he had of the passage of time. 
+          The adventurer spent most of his days in darkness. The rhythmic sound of its moving hands was the only proof he had of the passage of time. 
 
-              Long after he had grown accustomed to a normal life, having given up the adventurer lifestyle he once loved so dearly,  
+          Long after he had grown accustomed to a normal life, having given up the adventurer lifestyle he once loved so dearly,  
 
-              this forgotten pocket watch still sat quietly in the cabinet, waiting for its next adventure.
-        ru:
-          - p: >-
-              Карманные часы искателя приключений. Сделанные старым часовщиком,
-              они полностью соответствуют принципам простоты и практичности,
-              принятым в Гильдии искателей приключений. 
+          this forgotten pocket watch still sat quietly in the cabinet, waiting for its next adventure.
+        ru: >-
+          Карманные часы искателя приключений. Сделанные старым часовщиком, они
+          полностью соответствуют принципам простоты и практичности, принятым в
+          Гильдии искателей приключений. 
 
-              Когда искатель приключений, уже давно не видевший белого света, пробирается по тёмным коридорам подземелий, тиканье этих часов является для него единственным доказательством того, что понятие «время» ещё существует. 
+          Когда искатель приключений, уже давно не видевший белого света, пробирается по тёмным коридорам подземелий, тиканье этих часов является для него единственным доказательством того, что понятие «время» ещё существует. 
 
-              А когда искатель приключений вынужден отойти от любимого дела и после стольких лет вернуться в колею обычной жизни, 
+          А когда искатель приключений вынужден отойти от любимого дела и после стольких лет вернуться в колею обычной жизни, 
 
-              эти уже никому не нужные часы продолжают тикать уже в витрине, покорно ожидая следующего приключения.
+          эти уже никому не нужные часы продолжают тикать уже в витрине, покорно ожидая следующего приключения.
     goblet:
       description:
         en: The spoils of one of an adventurer's many expeditions. Though a little
@@ -74,26 +69,24 @@ adventurer:
         ru: Трофей, привезённый искателем приключений из какой-то экспедиции. Хорошая
           находка, хоть и немного повреждена.
       story:
-        en:
-          - p: >-
-              An old, golden goblet that the adventurer used to drink water. It
-              is said that he found it in an old ruin. 
+        en: >-
+          An old, golden goblet that the adventurer used to drink water. It is
+          said that he found it in an old ruin. 
 
-              The exterior is engraved with ancient symbols and inlaid with a faded gemstone. 
+          The exterior is engraved with ancient symbols and inlaid with a faded gemstone. 
 
-              Eventually, the adventurer bid farewell to the nomadic lifestyle. 
+          Eventually, the adventurer bid farewell to the nomadic lifestyle. 
 
-              This old, golden goblet was traded in for new, shiny Mora.
-        ru:
-          - p: >-
-              Старая золотая чаша, из которой пил воду искатель приключений.
-              Ходят слухи, что она была найдена где-то в древних руинах. 
+          This old, golden goblet was traded in for new, shiny Mora.
+        ru: >-
+          Старая золотая чаша, из которой пил воду искатель приключений. Ходят
+          слухи, что она была найдена где-то в древних руинах. 
 
-              На золотой поверхности чаши выгравированы непонятные древние узоры. Сама она инкрустирована невыразительным камнем. 
+          На золотой поверхности чаши выгравированы непонятные древние узоры. Сама она инкрустирована невыразительным камнем. 
 
-              Когда искатель приключений распрощался со своей прежней жизнью авантюриста, 
+          Когда искатель приключений распрощался со своей прежней жизнью авантюриста, 
 
-              эту старую чашу он обменял на новенькую, сверкающую мору.
+          эту старую чашу он обменял на новенькую, сверкающую мору.
     circlet:
       description:
         en: A cloth garment worn at the forehead. Though soaked in sweat and covered in
@@ -101,26 +94,24 @@ adventurer:
         ru: Налобная повязка. Является гордостью искателя приключений, хоть и пропитана
           потом и пылью.
       story:
-        en:
-          - p: >-
-              There is nothing special about this green bandana, save that the
-              fabric is rather robust and highly absorbent. 
+        en: >-
+          There is nothing special about this green bandana, save that the
+          fabric is rather robust and highly absorbent. 
 
-              Just like the bandana, its wearer was an unexceptional, ordinary person. 
+          Just like the bandana, its wearer was an unexceptional, ordinary person. 
 
-              But countless secrets lie hidden in the stars high up above and the abyss deep down below. 
+          But countless secrets lie hidden in the stars high up above and the abyss deep down below. 
 
-              All of these things are awaiting discovery by mere mortals.
-        ru:
-          - p: >-
-              Хотя это всего лишь обыкновенная зелёная повязка на голову, ткань
-              её крепкая и хорошо впитывает влагу. 
+          All of these things are awaiting discovery by mere mortals.
+        ru: >-
+          Хотя это всего лишь обыкновенная зелёная повязка на голову, ткань её
+          крепкая и хорошо впитывает влагу. 
 
-              И пускай её владельцем был лишь простой смертный из плоти и крови,  
+          И пускай её владельцем был лишь простой смертный из плоти и крови,  
 
-              но, как далёкие звёзды над бездонным небом и беспросветная Бездна глубоко под землёй имеют свои секреты, 
+          но, как далёкие звёзды над бездонным небом и беспросветная Бездна глубоко под землёй имеют свои секреты, 
 
-              так и этот всего лишь человек не без тайны: просто подождите, пока он выйдет на охоту.
+          так и этот всего лишь человек не без тайны: просто подождите, пока он выйдет на охоту.
 archaic-petra:
   code: archaic-petra
   name:
@@ -329,25 +320,23 @@ berserker:
           crimson red.
         ru: Перо легендарной птицы цвета индиго, частично окрашенное в алый цвет.
       story:
-        en:
-          - p: >-
-              The once-sane berserker's homeland fell victim to the raging war
-              between gods and mortals. 
+        en: >-
+          The once-sane berserker's homeland fell victim to the raging war
+          between gods and mortals. 
 
-              The rose garden burst into flames and birds of omen fed on the flesh of his countrymen. 
+          The rose garden burst into flames and birds of omen fed on the flesh of his countrymen. 
 
-              Reborn in flames, vengeance and bloodlust took over the warrior's mind, turning him into a berserker. 
+          Reborn in flames, vengeance and bloodlust took over the warrior's mind, turning him into a berserker. 
 
-              Black feathers, scattered on the battlefield, were painted red by his rage as he took his revenge.
-        ru:
-          - p: >-
-              Родина воина пала в пламени войны между Архонтами и смертными. 
+          Black feathers, scattered on the battlefield, were painted red by his rage as he took his revenge.
+        ru: >-
+          Родина воина пала в пламени войны между Архонтами и смертными. 
 
-              Сад роз сгорел во всепоглощающем огне, и черные птицы - вестники смерти - клевали трупы своих сородичей. 
+          Сад роз сгорел во всепоглощающем огне, и черные птицы - вестники смерти - клевали трупы своих сородичей. 
 
-              В том пламени возродился воин, одержимый лишь жаждой мщения и убийства. 
+          В том пламени возродился воин, одержимый лишь жаждой мщения и убийства. 
 
-              И чёрные перья, разлетевшиеся над полем битвы, окрасились алым, когда он совершил свою месть.
+          И чёрные перья, разлетевшиеся над полем битвы, окрасились алым, когда он совершил свою месть.
     sands:
       description:
         en: An instrument with an eternal flow that continues mercilessly within,
@@ -356,25 +345,23 @@ berserker:
         ru: Часы, неумолимо отсчитывающие время. Они напоминают берсерку о том, что его
           часы сражений и дни жизни в этом мире сочтены.
       story:
-        en:
-          - p: >-
-              The end inevitably comes for all, even the seemingly invincible
-              berserker. 
+        en: >-
+          The end inevitably comes for all, even the seemingly invincible
+          berserker. 
 
-              As the blood on his hands finally dried up, the berserker's footsteps began to falter. 
+          As the blood on his hands finally dried up, the berserker's footsteps began to falter. 
 
-              His life was destined to end the moment he met his last challenger on the battlefield. 
+          His life was destined to end the moment he met his last challenger on the battlefield. 
 
-              On the battlefield where blood flowed like rivers, his hourglass was painted red by the setting sun.
-        ru:
-          - p: >-
-              Ничто не вечно; даже берсерк не мог оспорить эту истину. 
+          On the battlefield where blood flowed like rivers, his hourglass was painted red by the setting sun.
+        ru: >-
+          Ничто не вечно; даже берсерк не мог оспорить эту истину. 
 
-              Когда море крови под его ногами иссохло, когда силы покинули берсерка,  
+          Когда море крови под его ногами иссохло, когда силы покинули берсерка,  
 
-              он встретил последнего соперника, определившего его судьбу. 
+          он встретил последнего соперника, определившего его судьбу. 
 
-              Когда закат опустился на залитое кровью поле, Песочные Часы берсерка вспыхнули алым в лучах клонящегося к горизонту солнца.
+          Когда закат опустился на залитое кровью поле, Песочные Часы берсерка вспыхнули алым в лучах клонящегося к горизонту солнца.
     goblet:
       description:
         en: A goblet made from the bone of an unknown beast. It was taken as a trophy
@@ -382,63 +369,59 @@ berserker:
         ru: Кубок из костей неведомого существа. Это трофей с одной из кровопролитных
           битв древности.
       story:
-        en:
-          - p: >-
-              The bloodthirsty berserker ravaged the lands, fighting humans and
-              monsters alike, and even challenged the gods. 
+        en: >-
+          The bloodthirsty berserker ravaged the lands, fighting humans and
+          monsters alike, and even challenged the gods. 
 
-              In a barren and lifeless land, he encountered a giant monster. 
+          In a barren and lifeless land, he encountered a giant monster. 
 
-              His iron mask could not conceal his rage, and so an endless fight ensued. 
+          His iron mask could not conceal his rage, and so an endless fight ensued. 
 
-              Hours, days, and years passed. The monster was finally defeated. 
+          Hours, days, and years passed. The monster was finally defeated. 
 
-              The berserker sucked out the marrow of the monster's broken horn. This was how the victor drank to his success.
-        ru:
-          - p: >-
-              Кровожадный берсерк бесчинствовал на земле, сражался и с людьми, и
-              с монстрами, а однажды бросил вызов Архонтам. 
+          The berserker sucked out the marrow of the monster's broken horn. This was how the victor drank to his success.
+        ru: >-
+          Кровожадный берсерк бесчинствовал на земле, сражался и с людьми, и с
+          монстрами, а однажды бросил вызов Архонтам. 
 
-              В безжизненных, забытых всеми землях он столкнулся с не знавшим себе равных монстром. 
+          В безжизненных, забытых всеми землях он столкнулся с не знавшим себе равных монстром. 
 
-              Стальная маска берсерка скрывала сжигающий душу гнев. Он вступил в безжалостный, кровопролитный бой с монстром. 
+          Стальная маска берсерка скрывала сжигающий душу гнев. Он вступил в безжалостный, кровопролитный бой с монстром. 
 
-              Сражение длилось часы, дни, годы, и монстр, наконец, был повержен. 
+          Сражение длилось часы, дни, годы, и монстр, наконец, был повержен. 
 
-              И берсерк высосал из сломленного рога монстра костный мозг, который заменил ему вино для победителя.
+          И берсерк высосал из сломленного рога монстра костный мозг, который заменил ему вино для победителя.
     circlet:
       description:
         en: A hideous iron mask that has been left half-shattered from vicious battles.
         ru: Устрашающая железная маска, разбитая в пылу безжалостной битвы.
       story:
-        en:
-          - p: >-
-              Bathed in the flames that devoured his homeland, the berserker's
-              face was no longer recognizable. 
+        en: >-
+          Bathed in the flames that devoured his homeland, the berserker's face
+          was no longer recognizable. 
 
-              The iron mask became joined with his flesh, permanently branding his face with a heartless countenance. 
+          The iron mask became joined with his flesh, permanently branding his face with a heartless countenance. 
 
-              Then, in a fierce battle, his horrifying mask was split into two by his opponent. 
+          Then, in a fierce battle, his horrifying mask was split into two by his opponent. 
 
-              The cracks of the mask tore apart the flesh that had long stuck to it. 
+          The cracks of the mask tore apart the flesh that had long stuck to it. 
 
-              But neither pain nor blood could stop the berserker's unfaltering footsteps. 
+          But neither pain nor blood could stop the berserker's unfaltering footsteps. 
 
-              The berserker kept roaring until the fresh blood covered the black clots hardened on his face.
-        ru:
-          - p: >-
-              Черты лица безумного воина, опаленного терзавшим его родину огнём,
-              стали неузнаваемыми. 
+          The berserker kept roaring until the fresh blood covered the black clots hardened on his face.
+        ru: >-
+          Черты лица безумного воина, опаленного терзавшим его родину огнём,
+          стали неузнаваемыми. 
 
-              Стальная маска прикипела к его плоти, и никакие чувства не способна была отразить её холодная поверхность. 
+          Стальная маска прикипела к его плоти, и никакие чувства не способна была отразить её холодная поверхность. 
 
-              Однажды, в пылу безумной схватки, противник разбил маску на две части. 
+          Однажды, в пылу безумной схватки, противник разбил маску на две части. 
 
-              Трещина прошла ото лба к подбородку и была столь глубокой, что обнажила плоть. 
+          Трещина прошла ото лба к подбородку и была столь глубокой, что обнажила плоть. 
 
-              Но ни боль, ни хлещущая кровь не могли остановить берсерка в его болезненном безумии. 
+          Но ни боль, ни хлещущая кровь не могли остановить берсерка в его болезненном безумии. 
 
-              Берсерк продолжал рычать, пока свежая алая кровь не покрыла всё его лицо поверх уже запёкшейся.
+          Берсерк продолжал рычать, пока свежая алая кровь не покрыла всё его лицо поверх уже запёкшейся.
 blizzard-strayer:
   code: blizzard-strayer
   name:
@@ -2090,48 +2073,43 @@ gambler:
           card.
         ru: Перо огромной птицы, способное прикрыть вашу козырную карту.
       story:
-        en:
-          - p: >-
-              This colorful feather served to decorate a gambler's hat. Its
-              flamboyance disgusts true aristocrats. 
+        en: >-
+          This colorful feather served to decorate a gambler's hat. Its
+          flamboyance disgusts true aristocrats. 
 
-              But what the aristocrats do not see is the delicate mechanism hidden beneath the surface. 
+          But what the aristocrats do not see is the delicate mechanism hidden beneath the surface. 
 
-              When the time comes, the gambler subtly swaps in a hidden, game-changing card. 
+          When the time comes, the gambler subtly swaps in a hidden, game-changing card. 
 
-              Upon seeing this card, the disdain and condescension on the aristocrats' faces would instantly give way to sheer shock.
-        ru:
-          - p: >-
-              Разноцветное перо, украшавшее головной убор азартного игрока.
-              Истинные аристократы с отвращением считают подобное
-              вульгарностью. 
+          Upon seeing this card, the disdain and condescension on the aristocrats' faces would instantly give way to sheer shock.
+        ru: >-
+          Разноцветное перо, украшавшее головной убор азартного игрока. Истинные
+          аристократы с отвращением считают подобное вульгарностью. 
 
-              Но самоуверенные аристократы видят только обёртку и совершенно не подозревают, что в огромном птичьем пере скрыт секрет. 
+          Но самоуверенные аристократы видят только обёртку и совершенно не подозревают, что в огромном птичьем пере скрыт секрет. 
 
-              Спокойно дождавшись ответственного момента, игрок ловким движением достаёт давно спрятанный козырь... 
+          Спокойно дождавшись ответственного момента, игрок ловким движением достаёт давно спрятанный козырь... 
 
-              И высокомерные лица да презрительные взгляды аристократов вдруг в момент каменеют.
+          И высокомерные лица да презрительные взгляды аристократов вдруг в момент каменеют.
     sands:
       description:
         en: A shattered pocket watch that once took a lethal hit for its owner.
         ru: Разбитые карманные часы, некогда принявшие на себя удар, предназначавшийся
           их владельцу.
       story:
-        en:
-          - p: >-
-              Perfect timing is necessary for the gambler's trick to work. 
+        en: >-
+          Perfect timing is necessary for the gambler's trick to work. 
 
-              That's why she always had this golden pocket watch in her breast pocket. 
+          That's why she always had this golden pocket watch in her breast pocket. 
 
-              In countless games, there was always that crucial moment when her sensitive perception of time saved her.
-        ru:
-          - p: >-
-              Любителям азартных игр необходимо уметь точно воспользоваться
-              моментом, и только тогда их трюки будут безупречными. 
+          In countless games, there was always that crucial moment when her sensitive perception of time saved her.
+        ru: >-
+          Любителям азартных игр необходимо уметь точно воспользоваться
+          моментом, и только тогда их трюки будут безупречными. 
 
-              Именно поэтому в её нагрудном кармане всегда покоились золотые часы. 
+          Именно поэтому в её нагрудном кармане всегда покоились золотые часы. 
 
-              В бесчисленных крупных играх рано или поздно наступал момент, когда её жизнь спасало превосходное чувство времени.
+          В бесчисленных крупных играх рано или поздно наступал момент, когда её жизнь спасало превосходное чувство времени.
     goblet:
       description:
         en: This vessel was specially made for a single purpose. It has absolutely no
@@ -2139,27 +2117,25 @@ gambler:
         ru: Ёмкость, созданная всего лишь для одной цели - игры в кости. В ней нет
           никаких потайных отделений. Совсем.
       story:
-        en:
-          - p: >-
-              Every gambler is superstitious to some degree. Many are very fond
-              of custom-made dice cups, for instance. 
+        en: >-
+          Every gambler is superstitious to some degree. Many are very fond of
+          custom-made dice cups, for instance. 
 
-              This was her custom-made dice cup. Despite what one might expect, there was nothing dishonest about it. It had no hidden mechanisms. 
+          This was her custom-made dice cup. Despite what one might expect, there was nothing dishonest about it. It had no hidden mechanisms. 
 
-              Fate only decides half of one's dice rolls. The other half are decided by oneself. 
+          Fate only decides half of one's dice rolls. The other half are decided by oneself. 
 
-              And yet, she never rolled the dice away from the gambling table.
-        ru:
-          - p: >-
-              Всякий любитель азартных игр в какой-то мере суеверен. Некоторые,
-              например, питают особые чувства к сделанным на заказ стаканам для
-              игры в кости. 
+          And yet, she never rolled the dice away from the gambling table.
+        ru: >-
+          Всякий любитель азартных игр в какой-то мере суеверен. Некоторые,
+          например, питают особые чувства к сделанным на заказ стаканам для игры
+          в кости. 
 
-              Это её заказной стакан. Вопреки ожиданиям, в нём нет хитроумных механизмов для шулерства. 
+          Это её заказной стакан. Вопреки ожиданиям, в нём нет хитроумных механизмов для шулерства. 
 
-              Судьба азартного игрока наполовину в руках Неба, наполовину - в его самого. 
+          Судьба азартного игрока наполовину в руках Неба, наполовину - в его самого. 
 
-              Тем не менее мир за пределами игры никогда не заслуживал её внимания.
+          Тем не менее мир за пределами игры никогда не заслуживал её внимания.
     circlet:
       description:
         en: A pair of blue earrings that, when worn, calm the mind and encourage a
@@ -2167,27 +2143,25 @@ gambler:
         ru: Пара лазурных серёжек, успокаивает ум и помогает рационально мыслить во
           время принятия важных решений.
       story:
-        en:
-          - p: >-
-              These ostentatious earrings are the perfect representation of the
-              gambler's transient wealth. 
+        en: >-
+          These ostentatious earrings are the perfect representation of the
+          gambler's transient wealth. 
 
-              The glimmer of the gem is just as soothing as the sky and the lake. 
+          The glimmer of the gem is just as soothing as the sky and the lake. 
 
-              The earrings would be coated with a mildly sedative substance to keep the gambler calm in the game. 
+          The earrings would be coated with a mildly sedative substance to keep the gambler calm in the game. 
 
-              In games where one gambles with life and death, remaining calm and composed is the key to winning.
-        ru:
-          - p: >-
-              Броские серьги, часто носимые любителями азартных игр. Это -
-              напоминание о богатстве игрока, которое приходит так же легко, как
-              и уходит. 
+          In games where one gambles with life and death, remaining calm and composed is the key to winning.
+        ru: >-
+          Броские серьги, часто носимые любителями азартных игр. Это -
+          напоминание о богатстве игрока, которое приходит так же легко, как и
+          уходит. 
 
-              Сияние лазурного камня такое же успокаивающее, как вид ясного неба или глади озера. 
+          Сияние лазурного камня такое же успокаивающее, как вид ясного неба или глади озера. 
 
-              Серьги обычно покрыты успокаивающей субстанцией, чтобы азартный игрок легко сохранял трезвость ума в игре. 
+          Серьги обычно покрыты успокаивающей субстанцией, чтобы азартный игрок легко сохранял трезвость ума в игре. 
 
-              В напряжённые моменты ясный ум приносит победу.
+          В напряжённые моменты ясный ум приносит победу.
 glacier-and-snowfield:
   code: glacier-and-snowfield
   name:
@@ -3314,57 +3288,52 @@ instructor:
         ru: Инструктор, познавший мастерство отражения атак, научился ни в коем случае
           не выпускать из рук данный аксессуар.
       story:
-        en:
-          - p: >-
-              The strict instructor once sharpened his own combat skills on the
-              merciless battlefield. 
+        en: >-
+          The strict instructor once sharpened his own combat skills on the
+          merciless battlefield. 
 
-              What he teaches the students goes beyond self-defense techniques to apply in battle. 
+          What he teaches the students goes beyond self-defense techniques to apply in battle. 
 
-              Moreso than attacking and defending, what he imparts to them is the skill of surviving on the front line even in the face of insurmountable odds. 
+          Moreso than attacking and defending, what he imparts to them is the skill of surviving on the front line even in the face of insurmountable odds. 
 
-              Every move and technique he demonstrates pays homage to the veterans of wars gone by. 
+          Every move and technique he demonstrates pays homage to the veterans of wars gone by. 
 
-              For it was their sacrifices that helped him become who he is today.
-        ru:
-          - p: >-
-              Хладнокровный инструктор некогда был участником боевых действий и
-              в ожесточённых сражениях прекрасно овладел искусством ведения
-              боя. 
+          For it was their sacrifices that helped him become who he is today.
+        ru: >-
+          Хладнокровный инструктор некогда был участником боевых действий и в
+          ожесточённых сражениях прекрасно овладел искусством ведения боя. 
 
-              Монотонными тренировками он учит курсантов не столько мастерству защиты и атаки на поле боя,  
+          Монотонными тренировками он учит курсантов не столько мастерству защиты и атаки на поле боя,  
 
-              Не столько убийству и обороне, сколько навыкам выживания, которые не позволят их солдатской карьере оборваться слишком рано. 
+          Не столько убийству и обороне, сколько навыкам выживания, которые не позволят их солдатской карьере оборваться слишком рано. 
 
-              Систематические показательные занятия, которые готовит инструктор, - дань памяти предкам, сражавшимся в войнах и оставшимся на полях боев. 
+          Систематические показательные занятия, которые готовит инструктор, - дань памяти предкам, сражавшимся в войнах и оставшимся на полях боев. 
 
-              Благодаря товарищам, не вернувшимся из боя, сегодня он стал тем, кто он есть, и приобрел этот опыт.
+          Благодаря товарищам, не вернувшимся из боя, сегодня он стал тем, кто он есть, и приобрел этот опыт.
     sands:
       description:
         en: A stopwatch used not for general timekeeping but to measure the duration of
           a training session.
         ru: Эти часы не показывают время, а отмеряют длительность занятий.
       story:
-        en:
-          - p: >-
-              A pocket watch treasured by the instructor. It is not, however,
-              military-issue gear from the instructor's school. 
+        en: >-
+          A pocket watch treasured by the instructor. It is not, however,
+          military-issue gear from the instructor's school. 
 
-              Back when the instructor was still a soldier, this pocket watch was used to coordinate charges against the enemy. 
+          Back when the instructor was still a soldier, this pocket watch was used to coordinate charges against the enemy. 
 
-              It marked victories and defeats, and counted the final hours of the soldiers. 
+          It marked victories and defeats, and counted the final hours of the soldiers. 
 
-              For the students, it represented the hardships they endured on the long path towards becoming a real soldier.
-        ru:
-          - p: >-
-              Часы, долгое время бережно хранившиеся инструктором. Они - вовсе
-              не снаряжение из военной школы. 
+          For the students, it represented the hardships they endured on the long path towards becoming a real soldier.
+        ru: >-
+          Часы, долгое время бережно хранившиеся инструктором. Они - вовсе не
+          снаряжение из военной школы. 
 
-              Когда инструктор был простым солдатом, по этим карманным часам он сверял время штурма. 
+          Когда инструктор был простым солдатом, по этим карманным часам он сверял время штурма. 
 
-              Они предсказывали ему победу или поражение, а также отсчитывали минуты солдатской жизни. 
+          Они предсказывали ему победу или поражение, а также отсчитывали минуты солдатской жизни. 
 
-              Для курсантов эти часы являются символом усердной работы на пути к становлению настоящим воином.
+          Для курсантов эти часы являются символом усердной работы на пути к становлению настоящим воином.
     goblet:
       description:
         en: It may seem like an ordinary tea cup to most. But to students, it is the
@@ -3372,26 +3341,24 @@ instructor:
         ru: Выглядит, как обычная кружка. Но для учеников это символ неоспоримого
           авторитета инструктора.
       story:
-        en:
-          - p: >-
-              Every military school student knows that the so-called "free
-              training time" could not have anything less to do with freedom. 
+        en: >-
+          Every military school student knows that the so-called "free training
+          time" could not have anything less to do with freedom. 
 
-              The instructor sits back and watches while the students train rigorously in the field. 
+          The instructor sits back and watches while the students train rigorously in the field. 
 
-              A cup of black tea with a little too much sugar in it marks a typical afternoon for the instructor. 
+          A cup of black tea with a little too much sugar in it marks a typical afternoon for the instructor. 
 
-              This peaceful time is a privilege of the instructor, and the embodiment of his authority.
-        ru:
-          - p: >-
-              Курсанты военных школ по опыту знают, что в «свободной тренировке»
-              от свободы - только слово. 
+          This peaceful time is a privilege of the instructor, and the embodiment of his authority.
+        ru: >-
+          Курсанты военных школ по опыту знают, что в «свободной тренировке» от
+          свободы - только слово. 
 
-              Курсанты усердно занимаются на учебном плацу, инструктор же, вольготно устроившись неподалёку, наблюдает за ними, словно надсмотрщик. 
+          Курсанты усердно занимаются на учебном плацу, инструктор же, вольготно устроившись неподалёку, наблюдает за ними, словно надсмотрщик. 
 
-              Время после полудня инструктор обычно проводит за чашкой крепкого, чересчур сладкого чая. 
+          Время после полудня инструктор обычно проводит за чашкой крепкого, чересчур сладкого чая. 
 
-              Такой отдых - привилегия инструктора, демонстрация его авторитета перед курсантами.
+          Такой отдых - привилегия инструктора, демонстрация его авторитета перед курсантами.
     circlet:
       description:
         en: A standard-issue honorary instructor's cap, only granted to those who turn
@@ -3399,22 +3366,19 @@ instructor:
         ru: Почётная кепка инструктора. Вручается только тем, кто отказался от
           повышения.
       story:
-        en:
-          - p: |-
-              "I don't have the talent to command an army as its general, 
-              Nor am I qualified for anything beyond being a soldier. 
-              All I can do is to be a strict instructor to these children, 
-              So that they might survive on the battlefield a bit longer."
-        ru:
-          - p: >-
-              «У меня нет такого таланта, чтобы командовать войсками, как
-              генерал, 
+        en: |-
+          "I don't have the talent to command an army as its general, 
+          Nor am I qualified for anything beyond being a soldier. 
+          All I can do is to be a strict instructor to these children, 
+          So that they might survive on the battlefield a bit longer."
+        ru: >-
+          «У меня нет такого таланта, чтобы командовать войсками, как генерал, 
 
-              Нет и такой работы, которой я был бы обучен, кроме военного дела. 
+          Нет и такой работы, которой я был бы обучен, кроме военного дела. 
 
-              Лучше уж позвольте мне обучить этих детей и подготовить их к невзгодам, 
+          Лучше уж позвольте мне обучить этих детей и подготовить их к невзгодам, 
 
-              Чтобы на фронте они смогли выстоять хоть чуточку дольше».
+          Чтобы на фронте они смогли выстоять хоть чуточку дольше».
 lavawalker:
   code: lavawalker
   name:
@@ -3646,26 +3610,24 @@ lucky-dog:
         ru: Однажды монстра, встреченного на пути, унёс охотящийся орёл... Да, это перо
           способно приносить удачу.
       story:
-        en:
-          - p: >-
-              When fortune has your back, even the most ferocious monster has to
-              yield. 
+        en: >-
+          When fortune has your back, even the most ferocious monster has to
+          yield. 
 
-              Strolling in the forest, the boy known as Lucky Dog had no idea that a monster was lurking nearby, having singled him out as its prey. 
+          Strolling in the forest, the boy known as Lucky Dog had no idea that a monster was lurking nearby, having singled him out as its prey. 
 
-              The boy became distracted by some colorful mushrooms, and the monster pounced. He leaped out and landed on the poisonous mushrooms, stomping them flat. 
+          The boy became distracted by some colorful mushrooms, and the monster pounced. He leaped out and landed on the poisonous mushrooms, stomping them flat. 
 
-              This was going to be an easy hunt, the monster thought — until a feather from the eagle circling above fell quietly onto its back.
-        ru:
-          - p: >-
-              Этому ребёнку везёт с рождения: даже самому свирепому зверю не
-              стоит преграждать ему путь. 
+          This was going to be an easy hunt, the monster thought — until a feather from the eagle circling above fell quietly onto its back.
+        ru: >-
+          Этому ребёнку везёт с рождения: даже самому свирепому зверю не стоит
+          преграждать ему путь. 
 
-              Беззаботный везунчик гулял по лесу, не зная, что из тьмы за ним хищно наблюдает монстр. 
+          Беззаботный везунчик гулял по лесу, не зная, что из тьмы за ним хищно наблюдает монстр. 
 
-              Как раз в тот момент, когда мальчик отвлёкся на разноцветные ядовитые грибы, монстр прыгнул, но приземлился ровно на них. 
+          Как раз в тот момент, когда мальчик отвлёкся на разноцветные ядовитые грибы, монстр прыгнул, но приземлился ровно на них. 
 
-              Монстр думал, что добыча сама пришла к нему в пасть, но не заметил, как на его плечах сжались орлиные когти.
+          Монстр думал, что добыча сама пришла к нему в пасть, но не заметил, как на его плечах сжались орлиные когти.
     sands:
       description:
         en: A broken hourglass from which all the sand has escaped. But it's fine,
@@ -3674,60 +3636,56 @@ lucky-dog:
         ru: Разбитые песочные часы, песок из которых давным-давно высыпался. Течение
           времени ничего не значит для тех, кому не о чем беспокоиться.
       story:
-        en:
-          - p: >-
-              Even time itself could not leave a wrinkle on the face of the
-              happy-go-lucky boy known as Lucky Dog. 
+        en: >-
+          Even time itself could not leave a wrinkle on the face of the
+          happy-go-lucky boy known as Lucky Dog. 
 
-              Lucky Dog had no family, let alone children of his own. 
+          Lucky Dog had no family, let alone children of his own. 
 
-              But in the course of his life of good fortune, he considered all he met as his friends and family. 
+          But in the course of his life of good fortune, he considered all he met as his friends and family. 
 
-              As his life was nearing its end, he saw an hourglass with sand flowing down, as if counting down his remaining time. 
+          As his life was nearing its end, he saw an hourglass with sand flowing down, as if counting down his remaining time. 
 
-              He simply chuckled, took a slingshot, and shattered the hourglass.
-        ru:
-          - p: >-
-              Этому ребёнку везёт с рождения: даже само время не может заставить
-              его постареть. 
+          He simply chuckled, took a slingshot, and shattered the hourglass.
+        ru: >-
+          Этому ребёнку везёт с рождения: даже само время не может заставить его
+          постареть. 
 
-              У везунчика не было ни семьи, ни детей. 
+          У везунчика не было ни семьи, ни детей. 
 
-              Но в его удачливой жизни все окружавшие люди были везунчику друзьями и семьёй. 
+          Но в его удачливой жизни все окружавшие люди были везунчику друзьями и семьёй. 
 
-              И даже когда в конце своей жизни он внезапно увидел, как песочные часы отсчитывают его время, 
+          И даже когда в конце своей жизни он внезапно увидел, как песочные часы отсчитывают его время, 
 
-              он лишь рассмеялся, взял рогатку и разбил их.
+          он лишь рассмеялся, взял рогатку и разбил их.
     goblet:
       description:
         en: An exquisite metallic vessel that was once used to knock out a thief.
         ru: Этим изысканным металлическим кубком однажды отбились от вора.
       story:
-        en:
-          - p: >-
-              Once there was a child favored by fortune from the day he was
-              born. Try as they might, even the most vicious bandits could not
-              lay a finger on him. He became known as Lucky Dog. 
+        en: >-
+          Once there was a child favored by fortune from the day he was born.
+          Try as they might, even the most vicious bandits could not lay a
+          finger on him. He became known as Lucky Dog. 
 
-              The child grew up, and one day in the throes of adulthood he found himself stumbling drunk along the back alley behind the tavern. 
+          The child grew up, and one day in the throes of adulthood he found himself stumbling drunk along the back alley behind the tavern. 
 
-              Under the starless sky, a vicious bandit prepared to rob Lucky Dog, taking advantage of his compromised state. 
+          Under the starless sky, a vicious bandit prepared to rob Lucky Dog, taking advantage of his compromised state. 
 
-              But just as the bandit was about to strike, a flying goblet hit him square on the forehead, knocking him out cold. 
+          But just as the bandit was about to strike, a flying goblet hit him square on the forehead, knocking him out cold. 
 
-              Naturally, this makes Lucky Dog one of very few people known to have benefited, rather than suffered, from being in the vicinity of a tavern brawl.
-        ru:
-          - p: >-
-              Этому ребёнку везёт с рождения: даже самые свирепые бандиты не
-              могут ему навредить. 
+          Naturally, this makes Lucky Dog one of very few people known to have benefited, rather than suffered, from being in the vicinity of a tavern brawl.
+        ru: >-
+          Этому ребёнку везёт с рождения: даже самые свирепые бандиты не могут
+          ему навредить. 
 
-              Следующая история случилась, когда везунчик уже вырос, и однажды в результате очередных своих похождений оказался в узком переулке за таверной. 
+          Следующая история случилась, когда везунчик уже вырос, и однажды в результате очередных своих похождений оказался в узком переулке за таверной. 
 
-              Ночь была темна: луна скрылась. Коварный разбойник собрался ограбить пьяного в стельку везунчика... 
+          Ночь была темна: луна скрылась. Коварный разбойник собрался ограбить пьяного в стельку везунчика... 
 
-              Но вдруг неизвестно кем брошенный кубок ударил того в голову, и разбойник упал без сознания. 
+          Но вдруг неизвестно кем брошенный кубок ударил того в голову, и разбойник упал без сознания. 
 
-              Возможно, это случилось благодаря тому, что на верхнем этаже завязалась драка, и везунчик оказался тем редким человеком, кому она пошла только на пользу.
+          Возможно, это случилось благодаря тому, что на верхнем этаже завязалась драка, и везунчик оказался тем редким человеком, кому она пошла только на пользу.
     circlet:
       description:
         en: Its former owner once fell into a cave and found the treasure trove of an
@@ -3735,26 +3693,24 @@ lucky-dog:
         ru: Её прежний владелец упал в пещеру, в которой наткнулся на несметные
           сокровища. Корона - всего лишь их малая часть.
       story:
-        en:
-          - p: >-
-              One who is favored by fortune can even find priceless treasures in
-              the most deadly of traps. 
+        en: >-
+          One who is favored by fortune can even find priceless treasures in the
+          most deadly of traps. 
 
-              While wandering around some ruins, the boy known as Lucky Dog accidentally fell into a deep pit. 
+          While wandering around some ruins, the boy known as Lucky Dog accidentally fell into a deep pit. 
 
-              He landed safely on a pile of dust. It turned out to be a mattress that over the years had gradually broken down, eventually turning to dust. 
+          He landed safely on a pile of dust. It turned out to be a mattress that over the years had gradually broken down, eventually turning to dust. 
 
-              Just like that, Lucky Dog discovered a treasure trove left by the old aristocrats. This circlet came to epitomize his luck.
-        ru:
-          - p: >-
-              Этому ребёнку везёт с рождения: даже в самой смертельной ловушке
-              он получает сокровища. 
+          Just like that, Lucky Dog discovered a treasure trove left by the old aristocrats. This circlet came to epitomize his luck.
+        ru: >-
+          Этому ребёнку везёт с рождения: даже в самой смертельной ловушке он
+          получает сокровища. 
 
-              Беззаботный везунчик засмотрелся на древние руины, но случайно запнулся и упал в глубокую яму. 
+          Беззаботный везунчик засмотрелся на древние руины, но случайно запнулся и упал в глубокую яму. 
 
-              Он приземлился в груду пыли и не получил ни царапинки. Оказалось, тем, на что он приземлился, был матрас, за долгие годы превратившийся в труху. 
+          Он приземлился в груду пыли и не получил ни царапинки. Оказалось, тем, на что он приземлился, был матрас, за долгие годы превратившийся в труху. 
 
-              Вот так везунчик обнаружил редкое сокровище, прежде принадлежавшее аристократам - корона, которую он надел на голову в знак своей удачи.
+          Вот так везунчик обнаружил редкое сокровище, прежде принадлежавшее аристократам - корона, которую он надел на голову в знак своей удачи.
 maiden-beloved:
   code: maiden-beloved
   name:
@@ -3946,25 +3902,23 @@ martial-artist:
         ru: Обычное перо птицы. Опытные ребята используют такие для тренировки контроля
           силы, в то время как новички делают из них веера.
       story:
-        en:
-          - p: >-
-              A feather plucked from a bird soaring in the sky by a skillful
-              martial artist. 
+        en: >-
+          A feather plucked from a bird soaring in the sky by a skillful martial
+          artist. 
 
-              The essence of martial arts is not necessarily about the power of attacks. 
+          The essence of martial arts is not necessarily about the power of attacks. 
 
-              Agility and nimbleness honed over years of training are just as prideworthy for a martial artist. 
+          Agility and nimbleness honed over years of training are just as prideworthy for a martial artist. 
 
-              The martial artist will wear the feather on his chest as proof of his unparalleled skills.
-        ru:
-          - p: >-
-              Перо, взятое искусным воином у парившей в небесах птицы. 
+          The martial artist will wear the feather on his chest as proof of his unparalleled skills.
+        ru: >-
+          Перо, взятое искусным воином у парившей в небесах птицы. 
 
-              Не всегда суть боевых искусств кроется в силе атак. 
+          Не всегда суть боевых искусств кроется в силе атак. 
 
-              Годами отточенные ловкость и гибкость тоже являются навыками, которыми воин может гордиться. 
+          Годами отточенные ловкость и гибкость тоже являются навыками, которыми воин может гордиться. 
 
-              Чтобы подчеркнуть свое феноменальное владение навыками боя, воин носит на груди перо птицы.
+          Чтобы подчеркнуть свое феноменальное владение навыками боя, воин носит на груди перо птицы.
     sands:
       description:
         en: A tool to keep track of time in endurance training. It is more accurate and
@@ -3972,54 +3926,49 @@ martial-artist:
         ru: Помогает замерять время в тренировках на выносливость. Точнее и надёжнее,
           чем обычные песочные часы.
       story:
-        en:
-          - p: >-
-              An hourglass that uses the flow of water to measure the passage of
-              time. The martial artist would have it with him at all times. 
+        en: >-
+          An hourglass that uses the flow of water to measure the passage of
+          time. The martial artist would have it with him at all times. 
 
-              When he was training under the waterfall or practicing a single leg stance on the stake, 
+          When he was training under the waterfall or practicing a single leg stance on the stake, 
 
-              he endured all the pain and suffering alone. 
+          he endured all the pain and suffering alone. 
 
-              This time piece recorded every second of it in silence.
-        ru:
-          - p: >-
-              Капля за каплей водяные часы отмеряют время, и, можно сказать, что
-              время - за поясом у воина, ведь именно там покоится его
-              клепсидра. 
+          This time piece recorded every second of it in silence.
+        ru: >-
+          Капля за каплей водяные часы отмеряют время, и, можно сказать, что
+          время - за поясом у воина, ведь именно там покоится его клепсидра. 
 
-              Моменты, когда он стоял под тугими струями водопада или балансировал на бревне, 
+          Моменты, когда он стоял под тугими струями водопада или балансировал на бревне, 
 
-              когда он молча переносил страдания, призванные закалить его, 
+          когда он молча переносил страдания, призванные закалить его, 
 
-              эти часы запомнили посекундно.
+          эти часы запомнили посекундно.
     goblet:
       description:
         en: A rather exquisite wine cup used in pre-combat rituals.
         ru: Претендующий на изысканность бокал, который воин использует в своих
           ритуалах.
       story:
-        en:
-          - p: >-
-              Before proudly stepping into the arena, a parting ritual with a
-              glass of fine wine is essential for martial artists. 
+        en: >-
+          Before proudly stepping into the arena, a parting ritual with a glass
+          of fine wine is essential for martial artists. 
 
-              Each of them faced with a worthy opponent, two martial artists will raise their glasses to one another. 
+          Each of them faced with a worthy opponent, two martial artists will raise their glasses to one another. 
 
-              They then step into the arena with a calm and collected composure to face their opponent with the utmost respect. 
+          They then step into the arena with a calm and collected composure to face their opponent with the utmost respect. 
 
-              This is the true meaning of the toast, which comes before the fight takes place. It does not serve to glorify victory or cast shame on defeat.
-        ru:
-          - p: >-
-              Бокал вина является неотъемлемой частью ритуала, который воин
-              исполняет прежде, чем вступить на арену и продемонстрировать своё
-              мастерство. 
+          This is the true meaning of the toast, which comes before the fight takes place. It does not serve to glorify victory or cast shame on defeat.
+        ru: >-
+          Бокал вина является неотъемлемой частью ритуала, который воин
+          исполняет прежде, чем вступить на арену и продемонстрировать своё
+          мастерство. 
 
-              Стоя лицом к лицу, соперники поднимают бокалы друг за друга. 
+          Стоя лицом к лицу, соперники поднимают бокалы друг за друга. 
 
-              Они поднимаются на арену, спокойные, как водная гладь, и каждый с уважением встречает своего противника. 
+          Они поднимаются на арену, спокойные, как водная гладь, и каждый с уважением встречает своего противника. 
 
-              Именно в этом суть предшествующего бою ритуала поднятия бокалов друг за друга, а не в том, чтобы отметить победу или подчеркнуть поражение.
+          Именно в этом суть предшествующего бою ритуала поднятия бокалов друг за друга, а не в том, чтобы отметить победу или подчеркнуть поражение.
     circlet:
       description:
         en: "The first lesson as an apprentice: Vigor, Strength, Will. These words are
@@ -4027,26 +3976,24 @@ martial-artist:
         ru: Бодрость, сила, воля - слова, написанные на этой повязке. Первый урок воина,
           который невозможно забыть.
       story:
-        en:
-          - p: >-
-              A bright-red bandana that belonged to a martial artist. The color
-              has now faded. 
+        en: >-
+          A bright-red bandana that belonged to a martial artist. The color has
+          now faded. 
 
-              It serves as proof that the bearer practiced martial arts at a young age. It also represents the high ambition the young martial artist once had. 
+          It serves as proof that the bearer practiced martial arts at a young age. It also represents the high ambition the young martial artist once had. 
 
-              Before the first crack of dawn, the young martial artist was already training in the forest. 
+          Before the first crack of dawn, the young martial artist was already training in the forest. 
 
-              Many years later, the martial artist is now an instructor. Though youth may be a thing of his past, he remains just as alert and diligent as when he was young.
-        ru:
-          - p: >-
-              Алая бандана, некогда принадлежавшая воину и теперь изрядно
-              выцветшая. 
+          Many years later, the martial artist is now an instructor. Though youth may be a thing of his past, he remains just as alert and diligent as when he was young.
+        ru: >-
+          Алая бандана, некогда принадлежавшая воину и теперь изрядно
+          выцветшая. 
 
-              Она - доказательство того, что воин занимается боевыми искусствами с младых ногтей. Бандана также подчеркивает целеустремлённость юного воина. 
+          Она - доказательство того, что воин занимается боевыми искусствами с младых ногтей. Бандана также подчеркивает целеустремлённость юного воина. 
 
-              Каждый раз молодой воин ещё до первых петухов уходил в лес, чтобы тренироваться, не жалея себя. 
+          Каждый раз молодой воин ещё до первых петухов уходил в лес, чтобы тренироваться, не жалея себя. 
 
-              Много лет спустя, когда уже возмужавший воин становится учителем, он остается таким же наблюдательным и усердным, как раньше.
+          Много лет спустя, когда уже возмужавший воин становится учителем, он остается таким же наблюдательным и усердным, как раньше.
 noblesse-oblige:
   code: noblesse-oblige
   name:
@@ -5633,25 +5580,22 @@ scholar:
           black.
         ru: Перо птицы, служащее для письма. Его кончик покрыт чёрными чернилами.
       story:
-        en:
-          - p: >-
-              The scholar's quill pen is made from the feather of an exotic
-              bird. 
+        en: >-
+          The scholar's quill pen is made from the feather of an exotic bird. 
 
-              After an enormous amount of writing, the feather has been stained black. 
+          After an enormous amount of writing, the feather has been stained black. 
 
-              In all her years, the scholar never thought of changing her stained quill pen for a new one. 
+          In all her years, the scholar never thought of changing her stained quill pen for a new one. 
 
-              Just as an old soldier feels most at ease with his own weapon, the scholar needed her familiar quill pen.
-        ru:
-          - p: >-
-              Писчее перо учёной, сделанное из пера заморской птицы. 
+          Just as an old soldier feels most at ease with his own weapon, the scholar needed her familiar quill pen.
+        ru: >-
+          Писчее перо учёной, сделанное из пера заморской птицы. 
 
-              Из-за непрерывного использования в него намертво въелись чернила. 
+          Из-за непрерывного использования в него намертво въелись чернила. 
 
-              Учёная пользовалась пером на протяжении многих лет и ни разу не меняла его. 
+          Учёная пользовалась пером на протяжении многих лет и ни разу не меняла его. 
 
-              Как клинок становится будто продолжением солдата, долгое время находившегося на поле боя, так и перо стало оружием, с которым она давно сроднилась.
+          Как клинок становится будто продолжением солдата, долгое время находившегося на поле боя, так и перо стало оружием, с которым она давно сроднилась.
     sands:
       description:
         en: A small desktop clock, whose former owner was a scholar sat in a windowless
@@ -5659,25 +5603,23 @@ scholar:
           the time of day.
         ru: Маленькие настольные часы. Подсказывают время закопавшимся в книги учёным.
       story:
-        en:
-          - p: >-
-              A delicate clock placed carefully on the scholar's desk. 
+        en: >-
+          A delicate clock placed carefully on the scholar's desk. 
 
-              Spending days and nights in her study, the scholar lost all sense of time. 
+          Spending days and nights in her study, the scholar lost all sense of time. 
 
-              This exquisite clock served as a beacon guiding the scholar in her relentless pursuit of knowledge. 
+          This exquisite clock served as a beacon guiding the scholar in her relentless pursuit of knowledge. 
 
-              The time the scholar spent would prove to be fruitful. Knowledge would find its way to her.
-        ru:
-          - p: >-
-              Искусно сделанные часы, стоявшие на столе у учёной ровно в том
-              месте, где их было бы труднее всего уронить. 
+          The time the scholar spent would prove to be fruitful. Knowledge would find its way to her.
+        ru: >-
+          Искусно сделанные часы, стоявшие на столе у учёной ровно в том месте,
+          где их было бы труднее всего уронить. 
 
-              В глубинах своей библиотеки учёная почти не видела белого света, и от того часто теряла ощущение времени. 
+          В глубинах своей библиотеки учёная почти не видела белого света, и от того часто теряла ощущение времени. 
 
-              Эти прекрасные часы вели её в течение всей аскетической жизни, позволяя ей планировать свои следующие шаги. 
+          Эти прекрасные часы вели её в течение всей аскетической жизни, позволяя ей планировать свои следующие шаги. 
 
-              В конечном счёте учёная не зря потратила столько времени, и мудрость, наконец, снизойдёт на неё в этой библиотеке.
+          В конечном счёте учёная не зря потратила столько времени, и мудрость, наконец, снизойдёт на неё в этой библиотеке.
     goblet:
       description:
         en: Originally designed to hold drinking water, this cup was stained black after
@@ -5685,26 +5627,24 @@ scholar:
         ru: Изначально это была ёмкость для питья, но теперь она покрыта чернилами
           изнутри.
       story:
-        en:
-          - p: >-
-              A delicate tea cup that belonged to a scholar. This treasured cup
-              is made of light porcelain and gilded with gold stripes. 
+        en: >-
+          A delicate tea cup that belonged to a scholar. This treasured cup is
+          made of light porcelain and gilded with gold stripes. 
 
-              The dainty cup was in stark contrast with the messy room in which it was found, but seemed to suggest that the scholar was from a well-to-do family. 
+          The dainty cup was in stark contrast with the messy room in which it was found, but seemed to suggest that the scholar was from a well-to-do family. 
 
-              Not caring about the beauty and purpose of the tea cup, the scholar in her ivory tower dipped her quill pen in it. 
+          Not caring about the beauty and purpose of the tea cup, the scholar in her ivory tower dipped her quill pen in it. 
 
-              She only saw it as a convenient ware to wash the tip. Now covered in ink stains, the cup has long since lost its former elegance.
-        ru:
-          - p: >-
-              Изящная чайная чашка, со стола учёной. Она изготовлена из тонкого
-              фарфора, а на кромку нанесена тонкая линия позолоты. 
+          She only saw it as a convenient ware to wash the tip. Now covered in ink stains, the cup has long since lost its former elegance.
+        ru: >-
+          Изящная чайная чашка, со стола учёной. Она изготовлена из тонкого
+          фарфора, а на кромку нанесена тонкая линия позолоты. 
 
-              Совершенно несочетающаяся с царившим в кабинете учёной бардаком, чашка выглядит так, будто её хозяйка была родом из весьма небедной семьи. 
+          Совершенно несочетающаяся с царившим в кабинете учёной бардаком, чашка выглядит так, будто её хозяйка была родом из весьма небедной семьи. 
 
-              Но, кажется, ученая не придавала этому значения и держала в чашке перья для письма. 
+          Но, кажется, ученая не придавала этому значения и держала в чашке перья для письма. 
 
-              Она использовала её лишь для промывания перьев, и чашка, покрытая чернильными разводами, давно потеряла былую красоту.
+          Она использовала её лишь для промывания перьев, и чашка, покрытая чернильными разводами, давно потеряла былую красоту.
     circlet:
       description:
         en: This corrective lens helped restore the vision of one whose eyes were
@@ -5712,30 +5652,28 @@ scholar:
         ru: Чрезмерное чтение портит зрение. Данное изобретение создано, чтобы облегчить
           страдания.
       story:
-        en:
-          - p: >-
-              The pursuit of knowledge is a risky gamble. Even after devoting
-              one's entire life to it, it may prove to have been futile. 
+        en: >-
+          The pursuit of knowledge is a risky gamble. Even after devoting one's
+          entire life to it, it may prove to have been futile. 
 
-              The scholar spent half of her lifetime in endless research, taking notes and making calculations. 
+          The scholar spent half of her lifetime in endless research, taking notes and making calculations. 
 
-              Having failed to find the answers she was looking for, she once hesitated and questioned her career choice, thus wasting further time. 
+          Having failed to find the answers she was looking for, she once hesitated and questioned her career choice, thus wasting further time. 
 
-              Her once sharp eyesight had also been damaged by intensive reading. 
+          Her once sharp eyesight had also been damaged by intensive reading. 
 
-              All this, and the answers she sought were still beyond her reach.
-        ru:
-          - p: >-
-              Наука всё равно что азартная игра. Ты можешь посвятить ей всю
-              жизнь и в итоге не получить ничего. 
+          All this, and the answers she sought were still beyond her reach.
+        ru: >-
+          Наука всё равно что азартная игра. Ты можешь посвятить ей всю жизнь и
+          в итоге не получить ничего. 
 
-              Учёная полжизни посвятила записям, бесконечным исследованиям, расчётам, толкованиям, 
+          Учёная полжизни посвятила записям, бесконечным исследованиям, расчётам, толкованиям, 
 
-              снова и снова тратила время на неудачи и затруднения. 
+          снова и снова тратила время на неудачи и затруднения. 
 
-              Некогда острое зрение сейчас, из-за непрерывного чтения, стало подводить её, 
+          Некогда острое зрение сейчас, из-за непрерывного чтения, стало подводить её, 
 
-              но до сих пор не известно, когда придёт время получить ответы на все её вопросы.
+          но до сих пор не известно, когда придёт время получить ответы на все её вопросы.
 shimenawas-reminiscence:
   code: shimenawas-reminiscence
   name:
@@ -6329,25 +6267,23 @@ the-exile:
         ru: Птичье перо, прицепившееся во время похода по диким местам. Стало
           аксессуаром случайно.
       story:
-        en:
-          - p: >-
-              Through plains and forests, the exile traveled alone in the wild. 
+        en: >-
+          Through plains and forests, the exile traveled alone in the wild. 
 
-              Through thick layers of dark clouds, an azure feather fell on his shoulder. 
+          Through thick layers of dark clouds, an azure feather fell on his shoulder. 
 
-              The feather came from a panicked bird escaping from the falcon, just like the exile. 
+          The feather came from a panicked bird escaping from the falcon, just like the exile. 
 
-              The feather represents the spirit of a nestless, free bird, just like the exile.
-        ru:
-          - p: >-
-              Изгнанник проходил через леса и равнины, странствовал в безлюдных
-              пустошах,  
+          The feather represents the spirit of a nestless, free bird, just like the exile.
+        ru: >-
+          Изгнанник проходил через леса и равнины, странствовал в безлюдных
+          пустошах,  
 
-              И однажды из мутных гряд облаков на его плечо опустилось одинокое лазурное перо. 
+          И однажды из мутных гряд облаков на его плечо опустилось одинокое лазурное перо. 
 
-              Оно принадлежало птице, скрывавшейся от хищного орла, и такая же судьба была и у изгнанника. 
+          Оно принадлежало птице, скрывавшейся от хищного орла, и такая же судьба была и у изгнанника. 
 
-              Сейчас оно - символ свободной птицы, подобно изгнаннику утратившей гнездо.
+          Сейчас оно - символ свободной птицы, подобно изгнаннику утратившей гнездо.
     sands:
       description:
         en: Even after the crystal watch face was shattered and the hands lost, its
@@ -6355,21 +6291,19 @@ the-exile:
         ru: Несмотря на треснувший кристальный циферблат и потерявшиеся стрелки, хозяин
           этих часов до самого конца не желал с ними расставаться.
       story:
-        en:
-          - p: |-
-              The aristocrat acquired this pocket watch back in his youth. 
-              This delicate timepiece recorded every moment of his childhood. 
-              But tragedy brought his carefree days to an abrupt end. 
-              The aristocrat was forced into a long and lonesome exile.
-        ru:
-          - p: >-
-              Когда-то в прошлом молодой аристократ получил эти часы. 
+        en: |-
+          The aristocrat acquired this pocket watch back in his youth. 
+          This delicate timepiece recorded every moment of his childhood. 
+          But tragedy brought his carefree days to an abrupt end. 
+          The aristocrat was forced into a long and lonesome exile.
+        ru: >-
+          Когда-то в прошлом молодой аристократ получил эти часы. 
 
-              Искусно сделанные, мерно тикающие - они помнят минуты детства аристократа, 
+          Искусно сделанные, мерно тикающие - они помнят минуты детства аристократа, 
 
-              но те беззаботные дни давно прошли. 
+          но те беззаботные дни давно прошли. 
 
-              Аристократ вынужден был пуститься в долгое изгнание.
+          Аристократ вынужден был пуститься в долгое изгнание.
     goblet:
       description:
         en: A dull goblet made of a heavy metal. It was once inlaid with gemstones, but
@@ -6377,27 +6311,24 @@ the-exile:
         ru: Грубый кубок, сделанный из тяжёлых металлов. Когда-то он был украшен
           драгоценными камнями, но их уже давно оттуда выковыряли.
       story:
-        en:
-          - p: >-
-              This silver goblet is a family heirloom of an exiled aristocrat.
-              The exterior was once inlaid with a gem engraved with his family
-              crest. 
+        en: >-
+          This silver goblet is a family heirloom of an exiled aristocrat. The
+          exterior was once inlaid with a gem engraved with his family crest. 
 
-              But after the exile had brought shame to his family, he carved out the symbol of which he was once proud. 
+          But after the exile had brought shame to his family, he carved out the symbol of which he was once proud. 
 
-              As a result, this cup is broken and can no longer hold liquid. 
+          As a result, this cup is broken and can no longer hold liquid. 
 
-              But the exile still carries it with him until the end of his journey.
-        ru:
-          - p: >-
-              Серебряный кубок - семейная реликвия сосланного аристократа. Кубок
-              был инкрустирован драгоценным камнем с фамильным гербом. 
+          But the exile still carries it with him until the end of his journey.
+        ru: >-
+          Серебряный кубок - семейная реликвия сосланного аристократа. Кубок был
+          инкрустирован драгоценным камнем с фамильным гербом. 
 
-              Но после того как изгнанник бросил тень позора на свою семью, он сам изъял этот герб, которым раньше гордился. 
+          Но после того как изгнанник бросил тень позора на свою семью, он сам изъял этот герб, которым раньше гордился. 
 
-              Сейчас кубок повреждён и не может держать жидкость. 
+          Сейчас кубок повреждён и не может держать жидкость. 
 
-              Но изгнанник по-прежнему носит его с собой, пока не вернётся.
+          Но изгнанник по-прежнему носит его с собой, пока не вернётся.
     circlet:
       description:
         en: A prestigious circlet. However, the royal insignia has been scratched out,
@@ -6406,26 +6337,24 @@ the-exile:
         ru: Древняя корона. Королевский герб на ней давно стал неразличим, и статус
           знати, который она символизировала, давно затерялся во времени.
       story:
-        en:
-          - p: >-
-              As a child, the exile lived in a noble house. His childhood was
-              carefree, and his playground was a palace built with silver. 
+        en: >-
+          As a child, the exile lived in a noble house. His childhood was
+          carefree, and his playground was a palace built with silver. 
 
-              In the times of old, the circlet of his father was a symbol of gentility and nobility. 
+          In the times of old, the circlet of his father was a symbol of gentility and nobility. 
 
-              However, years later, a family feud painted the collapsing palace blood-red. 
+          However, years later, a family feud painted the collapsing palace blood-red. 
 
-              The circlet became the evidence of the exile's crime and has been with the exile ever since.
-        ru:
-          - p: >-
-              Некогда изгнанник был членом знатной семьи. В детстве он не знал
-              забот и спокойно играл в залах, сплошь украшенных серебром. 
+          The circlet became the evidence of the exile's crime and has been with the exile ever since.
+        ru: >-
+          Некогда изгнанник был членом знатной семьи. В детстве он не знал забот
+          и спокойно играл в залах, сплошь украшенных серебром. 
 
-              В те далёкие времена венец на голове его отца был символом высокого авторитета и принадлежности к элите. 
+          В те далёкие времена венец на голове его отца был символом высокого авторитета и принадлежности к элите. 
 
-              Много лет назад, семейная вражда утопила разрушающийся дворец в крови. 
+          Много лет назад, семейная вражда утопила разрушающийся дворец в крови. 
 
-              Венец этот, с которым изгнанник никогда не расставался, стал символом позора и доказательством его преступлений.
+          Венец этот, с которым изгнанник никогда не расставался, стал символом позора и доказательством его преступлений.
 thundering-fury:
   code: thundering-fury
   name:
@@ -6870,21 +6799,19 @@ tiny-miracle:
           to detect.
         ru: Перо стремительной птицы, слишком быстрой для человеческого глаза.
       story:
-        en:
-          - p: >-
-              Plucked from a falcon that was as fast as the wind. The mere
-              existence of such a bird is a miracle. 
+        en: >-
+          Plucked from a falcon that was as fast as the wind. The mere existence
+          of such a bird is a miracle. 
 
-              It was gifted with clear vision and sharp claws. 
+          It was gifted with clear vision and sharp claws. 
 
-              With its broad wings, its gliding speed was unparalleled.
-        ru:
-          - p: >-
-              Ястреб быстр, как ветер. Его существование уже само по себе чудо. 
+          With its broad wings, its gliding speed was unparalleled.
+        ru: >-
+          Ястреб быстр, как ветер. Его существование уже само по себе чудо. 
 
-              Ему был дарован острый взор и подобные кинжалам когти, 
+          Ему был дарован острый взор и подобные кинжалам когти, 
 
-              и благодаря огромным крыльям он может скользить по небу так быстро, как никто другой.
+          и благодаря огромным крыльям он может скользить по небу так быстро, как никто другой.
     sands:
       description:
         en: Just an ordinary, everyday hourglass. Turn it upside down and sure enough,
@@ -6892,56 +6819,50 @@ tiny-miracle:
         ru: Кажется, что это обычные песочные часы, однако если их перевернуть, песок
           начинает течь вверх.
       story:
-        en:
-          - p: >-
-              It is often said that one may achieve victory by striving, but
-              receive a miracle only by waiting. 
+        en: >-
+          It is often said that one may achieve victory by striving, but receive
+          a miracle only by waiting. 
 
-              But is it not a miracle that fine sand was once a hard rock? 
+          But is it not a miracle that fine sand was once a hard rock? 
 
-              Is it not too a miracle that we met each other?
-        ru:
-          - p: >-
-              Часто говорят: чтобы победить, нужно бороться, но чудо приходит
-              лишь с ожиданием. 
+          Is it not too a miracle that we met each other?
+        ru: >-
+          Часто говорят: чтобы победить, нужно бороться, но чудо приходит лишь с
+          ожиданием. 
 
-              Но разве не чудо то, что со временем скала превратилась в мелкий песок? 
+          Но разве не чудо то, что со временем скала превратилась в мелкий песок? 
 
-              Разве наша с тобой встреча - не чудо?
+          Разве наша с тобой встреча - не чудо?
     goblet:
       description:
         en: A cup commonly used for fortune-telling. It can also hold water, of course.
         ru: Сосуд, обычно использующийся для предсказания судьбы. Также может быть
           ёмкостью для воды.
       story:
-        en:
-          - p: |-
-              A clear goblet glittering with starlight. 
-              In the past it was used to tell fortunes, 
-              For the water it held was believed to reflect the Starry Sea.
-        ru:
-          - p: |-
-              Чистейшая чайная чашка, искрящаяся светом звёзд. 
-              Некогда она использовалась прорицателем для гаданий, 
-              и, по поверьям, вода в ней отражает звёздное море.
+        en: |-
+          A clear goblet glittering with starlight. 
+          In the past it was used to tell fortunes, 
+          For the water it held was believed to reflect the Starry Sea.
+        ru: |-
+          Чистейшая чайная чашка, искрящаяся светом звёзд. 
+          Некогда она использовалась прорицателем для гаданий, 
+          и, по поверьям, вода в ней отражает звёздное море.
     circlet:
       description:
         en: A cheap accessory that is actually made from ancient meteoric ore.
         ru: Дешёвое украшение, на самом деле сделанное из минералов, принесённых на
           землю древними метеоритами.
       story:
-        en:
-          - p: >-
-              An inexpensive pair of earrings made from metal that shines like
-              the stars. 
+        en: >-
+          An inexpensive pair of earrings made from metal that shines like the
+          stars. 
 
-              What the sellers don't know is that the shine of these earrings comes from the fallen stars of ancient times.
-        ru:
-          - p: >-
-              Пара недорогих серёжек, изготовленных из металла, сияющего словно
-              звёзды. 
+          What the sellers don't know is that the shine of these earrings comes from the fallen stars of ancient times.
+        ru: >-
+          Пара недорогих серёжек, изготовленных из металла, сияющего словно
+          звёзды. 
 
-              Торговец не знал, что источник их сияния - звёзды, что в древности упали на землю.
+          Торговец не знал, что источник их сияния - звёзды, что в древности упали на землю.
 traveling-doctor:
   code: traveling-doctor
   name:
@@ -6964,47 +6885,43 @@ traveling-doctor:
         ru: Жёсткое совиное перо. Используется в качестве самомотивации, когда поздно
           ночью нужно идти лечить пациента.
       story:
-        en:
-          - p: >-
-              Even the pitch-black night could not stand between the traveling
-              doctor and her patients. 
+        en: >-
+          Even the pitch-black night could not stand between the traveling
+          doctor and her patients. 
 
-              Danger lurks in every corner at night. Those who venture out must be as vigilant as the owl. 
+          Danger lurks in every corner at night. Those who venture out must be as vigilant as the owl. 
 
-              But unlike the owl, the endless nights without rest eventually took their toll on the traveling doctor, and she fell ill.
-        ru:
-          - p: >-
-              Даже непроглядная, тёмная ночь не остановит целителя, спешащего к
-              больному. 
+          But unlike the owl, the endless nights without rest eventually took their toll on the traveling doctor, and she fell ill.
+        ru: >-
+          Даже непроглядная, тёмная ночь не остановит целителя, спешащего к
+          больному. 
 
-              Много опасностей скрыто в ночи, и путнику всегда следует быть начеку, подобно чуткой сове. 
+          Много опасностей скрыто в ночи, и путнику всегда следует быть начеку, подобно чуткой сове. 
 
-              Но проводя ночи как сова, без сна и отдыха, целитель в конце концов заболевает сам.
+          Но проводя ночи как сова, без сна и отдыха, целитель в конце концов заболевает сам.
     sands:
       description:
         en: A precise instrument used for keeping time. For a doctor, every second
           counts.
         ru: Инструмент, показывающий точное время. У доктора каждая секунда на счету.
       story:
-        en:
-          - p: >-
-              When treating a dying patient, every second counts. 
+        en: >-
+          When treating a dying patient, every second counts. 
 
-              The accuracy of this watch had helped the traveling doctor turn the tide numerous times. 
+          The accuracy of this watch had helped the traveling doctor turn the tide numerous times. 
 
-              But as she lay alone on the sickbed in her final days, all she could do was savor its sound, each tick standing for one of the precious moments of life she had left. 
+          But as she lay alone on the sickbed in her final days, all she could do was savor its sound, each tick standing for one of the precious moments of life she had left. 
 
-              What used to be a tool to save lives now sang a final elegy for its owner.
-        ru:
-          - p: >-
-              При лечении смертельно больного человека целитель не должен терять
-              ни секунды. 
+          What used to be a tool to save lives now sang a final elegy for its owner.
+        ru: >-
+          При лечении смертельно больного человека целитель не должен терять ни
+          секунды. 
 
-              Благодаря своей точности, эти карманные часы всегда помогали целительнице спасать людей. 
+          Благодаря своей точности, эти карманные часы всегда помогали целительнице спасать людей. 
 
-              Но в последние годы жизни, когда больная целительница лежала в постели, эти часы мерно тикали уже для неё самой. 
+          Но в последние годы жизни, когда больная целительница лежала в постели, эти часы мерно тикали уже для неё самой. 
 
-              Будучи в прошлом инструментом, спасавшим жизни, теперь они пели для неё прощальную песнь.
+          Будучи в прошлом инструментом, спасавшим жизни, теперь они пели для неё прощальную песнь.
     goblet:
       description:
         en: This pot used to carry concentrated and extremely potent concoctions. It is
@@ -7012,21 +6929,19 @@ traveling-doctor:
         ru: Этот чайничек когда-то использовался для заваривания разнообразных отваров.
           Сейчас в нём остался только резкий запах трав.
       story:
-        en:
-          - p: >-
-              The medicine has long dried up, but its bitter smell still lingers
-              in this pot. 
+        en: >-
+          The medicine has long dried up, but its bitter smell still lingers in
+          this pot. 
 
-              With that bitter medicine, the traveling doctor saved countless lives. 
+          With that bitter medicine, the traveling doctor saved countless lives. 
 
-              And when she fell seriously ill, no one was there for her except for the medicine pot on the furnace.
-        ru:
-          - p: >-
-              Это лекарство давно высохло, но резкий запах остался. 
+          And when she fell seriously ill, no one was there for her except for the medicine pot on the furnace.
+        ru: >-
+          Это лекарство давно высохло, но резкий запах остался. 
 
-              Некогда целительница спасла много жизней этим горьким отваром. 
+          Некогда целительница спасла много жизней этим горьким отваром. 
 
-              И когда заболела она сама, лишь это лекарство, приготовленное на печи в небольшом чайничке, смогло поднять её на ноги.
+          И когда заболела она сама, лишь это лекарство, приготовленное на печи в небольшом чайничке, смогло поднять её на ноги.
     circlet:
       description:
         en: Used to tie back the doctor's hair when treating patients. Can also be used
@@ -7035,26 +6950,24 @@ traveling-doctor:
           пациента. Также может использоваться вместо бинтов, чтобы остановить
           кровотечение или зафиксировать сломанную руку.
       story:
-        en:
-          - p: >-
-              Back when the traveling doctor roamed from place to place, her
-              days were busy and she hurried between appointments. 
+        en: >-
+          Back when the traveling doctor roamed from place to place, her days
+          were busy and she hurried between appointments. 
 
-              Come sun or rain, nothing could keep her from her work. 
+          Come sun or rain, nothing could keep her from her work. 
 
-              This handkerchief not only protected her messy hair, it also served as a bandage. 
+          This handkerchief not only protected her messy hair, it also served as a bandage. 
 
-              It saw her through all her hardships and became her most loyal partner on her journey.
-        ru:
-          - p: >-
-              В те дни, когда целительнице приходилось часто переезжать с места
-              на место, она каждый раз собиралась в спешке. 
+          It saw her through all her hardships and became her most loyal partner on her journey.
+        ru: >-
+          В те дни, когда целительнице приходилось часто переезжать с места на
+          место, она каждый раз собиралась в спешке. 
 
-              Ни солнце, ни дождь - ничто не могло остановить её. 
+          Ни солнце, ни дождь - ничто не могло остановить её. 
 
-              Не только прикрывавший её непослушные волосы, но и не раз служивший для перевязки раненых, 
+          Не только прикрывавший её непослушные волосы, но и не раз служивший для перевязки раненых, 
 
-              платок целителя прошёл с ней и огонь, и воду, и был целительнице самым верным товарищем в пути.
+          платок целителя прошёл с ней и огонь, и воду, и был целительнице самым верным товарищем в пути.
 vermillion-hereafter:
   code: vermillion-hereafter
   name:
@@ -7278,60 +7191,58 @@ vermillion-hereafter:
         ru: Согласно легенде, эту корону выковал горный народ для Яксы. Выглядит она
           просто, тем не менее сияет глянцевитым блеском.
       story:
-        en:
-          - p: >-
-              Tianqiu once played host to a Yaksha, four-armed and mighty. 
+        en: >-
+          Tianqiu once played host to a Yaksha, four-armed and mighty. 
 
-              He came to The Chasm from afar, to the praises of the tribes. 
+          He came to The Chasm from afar, to the praises of the tribes. 
 
-              A feast they put forth for him, the food in abundance. 
+          A feast they put forth for him, the food in abundance. 
 
-              Blade in hand, he entered The Chasm, a disaster to still. 
+          Blade in hand, he entered The Chasm, a disaster to still. 
 
-              Mighty as a demon, purple bale-fire shone in his eyes. 
+          Mighty as a demon, purple bale-fire shone in his eyes. 
 
-              The lightning pierced the deathly shadow, and thunder dissolved the darkness. 
+          The lightning pierced the deathly shadow, and thunder dissolved the darkness. 
 
-              The clouds hid the abyss, maw stretching to devour the firmament. 
+          The clouds hid the abyss, maw stretching to devour the firmament. 
 
-              The wild wind howled, the cinnabar sweeping the darkness. 
+          The wild wind howled, the cinnabar sweeping the darkness. 
 
-              The mountain ranges shock, and the gorges caved in. 
+          The mountain ranges shock, and the gorges caved in. 
 
-              The depths cried out as they collapsed, and then all was silent. 
+          The depths cried out as they collapsed, and then all was silent. 
 
-              The dense clouds solidified sundown-light as the perching birds sang sadly: 
+          The dense clouds solidified sundown-light as the perching birds sang sadly: 
 
-              "Do you not hear? The drums die in the north wind, the hero sinks into the vortex." 
+          "Do you not hear? The drums die in the north wind, the hero sinks into the vortex." 
 
-              "Have you not seen? The Yaksha's battle for the dawn — alas for a life so spent."
-        ru:
-          - p: >-
-              Когда-то в Тяньцю жил могучий четырёхрукий Якса. 
+          "Have you not seen? The Yaksha's battle for the dawn — alas for a life so spent."
+        ru: >-
+          Когда-то в Тяньцю жил могучий четырёхрукий Якса. 
 
-              Он пришёл в Разлом издалека, и люди воспевали его силу. 
+          Он пришёл в Разлом издалека, и люди воспевали его силу. 
 
-              В его честь устроили пир, столы ломились от яств. 
+          В его честь устроили пир, столы ломились от яств. 
 
-              С мечом в руках он вошёл в Разлом, чтобы положить конец страданиям людей. 
+          С мечом в руках он вошёл в Разлом, чтобы положить конец страданиям людей. 
 
-              Могучий, как демон, в глазах его пылал фиолетовый огонь. 
+          Могучий, как демон, в глазах его пылал фиолетовый огонь. 
 
-              Молния пронзила туман смерти, а гром рассеял тьму. 
+          Молния пронзила туман смерти, а гром рассеял тьму. 
 
-              Облака скрыли разверзшуюся в небе бездну, а затем собрались, словно желая поглотить небосвод. 
+          Облака скрыли разверзшуюся в небе бездну, а затем собрались, словно желая поглотить небосвод. 
 
-              Снова налетел яростный ветер, и тьма накрыла киноварь. 
+          Снова налетел яростный ветер, и тьма накрыла киноварь. 
 
-              Скалы отдавались эхом, горные тропы дрожали, а глубокие долины обрушивались. 
+          Скалы отдавались эхом, горные тропы дрожали, а глубокие долины обрушивались. 
 
-              Великая пропасть рушилась, земля грохотала. И вдруг наступила тишина. 
+          Великая пропасть рушилась, земля грохотала. И вдруг наступила тишина. 
 
-              Плотные облака закрыли свет заходящего солнца, а парящие птицы печально запели: 
+          Плотные облака закрыли свет заходящего солнца, а парящие птицы печально запели: 
 
-              «Больше вы не услышите пустынное звучание барабанов севера, герой исчезает в вихре. 
+          «Больше вы не услышите пустынное звучание барабанов севера, герой исчезает в вихре. 
 
-              Больше вы не увидите Якса, который сражался до самого рассвета. Увы, время потрачено напрасно».
+          Больше вы не увидите Якса, который сражался до самого рассвета. Увы, время потрачено напрасно».
 viridescent-venerer:
   code: viridescent-venerer
   name:

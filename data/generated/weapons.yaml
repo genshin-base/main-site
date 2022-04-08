@@ -450,16 +450,12 @@ apprentices-notes:
     ru: Конспекты, оставленные лучшим учеником класса, содержат много полезных
       заклинаний. Написано прекрасным почерком.
   story:
-    en:
-      - p: >-
-          With words, this book records learning, experiments, and
-          incantations. 
-
-          With the spaces between words, it records a student's striving.
-    ru:
-      - p: |-
-          Знания, результаты опытов и заклинания пишут буквами, 
-          усердность ученика пишут между букв.
+    en: |-
+      With words, this book records learning, experiments, and incantations. 
+      With the spaces between words, it records a student's striving.
+    ru: |-
+      Знания, результаты опытов и заклинания пишут буквами, 
+      усердность ученика пишут между букв.
   specialAbility:
     en: ""
     ru: ""
@@ -574,24 +570,22 @@ beginners-protector:
     ru: Обычное копьё. Прямое, как флагшток. Одним его взмахом можно разрешить
       большинство споров.
   story:
-    en:
-      - p: >-
-          In old Mondstadt, spear arts were forbidden by the nobility. 
+    en: >-
+      In old Mondstadt, spear arts were forbidden by the nobility. 
 
-          Ostensibly, they claimed that only the sword was worthy of noble stock, 
+      Ostensibly, they claimed that only the sword was worthy of noble stock, 
 
-          But they say that in reality, it was because the length of polearms could bridge the gaps in training, 
+      But they say that in reality, it was because the length of polearms could bridge the gaps in training, 
 
-          Which might grant the unarmed and unschooled commoners a weapon with which to resist.
-    ru:
-      - p: >-
-          Раньше в Мондштадте копья были запрещены аристократами. 
+      Which might grant the unarmed and unschooled commoners a weapon with which to resist.
+    ru: >-
+      Раньше в Мондштадте копья были запрещены аристократами. 
 
-          Они говорили, что достойно сражаться только мечом, 
+      Они говорили, что достойно сражаться только мечом, 
 
-          но на самом деле причина была в том, что копьё скрывает разницу в подготовке. 
+      но на самом деле причина была в том, что копьё скрывает разницу в подготовке. 
 
-          Это идеальное оружие для необученных людей без средств.
+      Это идеальное оружие для необученных людей без средств.
   specialAbility:
     en: ""
     ru: ""
@@ -622,38 +616,36 @@ black-tassel:
       solution to the issue of the easily stained white tassel.
     ru: Простое решение проблемы Белой кисти, которую чересчур легко запачкать.
   story:
-    en:
-      - p: >-
-          One night, a Millelith officer drank with a poet, and brought his
-          signature white-tasseled halberd with him. 
+    en: >-
+      One night, a Millelith officer drank with a poet, and brought his
+      signature white-tasseled halberd with him. 
 
-          The poet's ink was spilled. 
+      The poet's ink was spilled. 
 
-          And the halberd's white tassel was dyed black. 
+      And the halberd's white tassel was dyed black. 
 
-          "'Tis but a tale of polearm wielder and poet." 
+      "'Tis but a tale of polearm wielder and poet." 
 
-          "Unrelated to mine own black-tasseled polearm." 
+      "Unrelated to mine own black-tasseled polearm." 
 
-          The old smith smacked his apprentice. 
+      The old smith smacked his apprentice. 
 
-          He demanded that he dye the newly made polearm's tassel black.
-    ru:
-      - p: >-
-          Однажды ночью офицер Миллелитов, владелец алебарды с белыми лентами,
-          выпивал вместе с поэтом. 
+      He demanded that he dye the newly made polearm's tassel black.
+    ru: >-
+      Однажды ночью офицер Миллелитов, владелец алебарды с белыми лентами,
+      выпивал вместе с поэтом. 
 
-          В разгар их пира поэт нечаянно опрокинул тушечницу. 
+      В разгар их пира поэт нечаянно опрокинул тушечницу. 
 
-          Белые ленты на копье храброго воина окрасились в чёрный цвет. 
+      Белые ленты на копье храброго воина окрасились в чёрный цвет. 
 
-          «Конечно, эта история произошла только между тем воином и поэтом». 
+      «Конечно, эта история произошла только между тем воином и поэтом». 
 
-          «К моей алебарде с чёрными лентами она не имеет никакого отношения». 
+      «К моей алебарде с чёрными лентами она не имеет никакого отношения». 
 
-          Старый кузнец похлопал своего ученика по голове 
+      Старый кузнец похлопал своего ученика по голове 
 
-          и поручил ему покрасить новые белые ленты в чёрный.
+      и поручил ему покрасить новые белые ленты в чёрный.
   specialAbility:
     en: Increases DMG against slimes by  40%.
     ru: Увеличивает урон по слаймам на  40%.
@@ -1255,40 +1247,38 @@ bloodtainted-greatsword:
       невосприимчивым к повреждениям. Однако это свойство не распространяется на
       его владельца.
   story:
-    en:
-      - p: >-
-          Legend says that after slaying the venomous dragon, 
+    en: >-
+      Legend says that after slaying the venomous dragon, 
 
-          The famed hero bathed in its blood, for he desired invulnerability. 
+      The famed hero bathed in its blood, for he desired invulnerability. 
 
-          Sure enough, he became untouchable. 
+      Sure enough, he became untouchable. 
 
-          Be it swords, be it spears, or be it rain of arrows, 
+      Be it swords, be it spears, or be it rain of arrows, 
 
-          He laughed and shrugged them off. 
+      He laughed and shrugged them off. 
 
-          Eventually, his foes learned: 
+      Eventually, his foes learned: 
 
-          He had borne his prized greatsword on his back as he bathed 
+      He had borne his prized greatsword on his back as he bathed 
 
-          And now, his back bore a great weak spot, the very shape and size of that sword.
-    ru:
-      - p: >-
-          Говорят, после убийства злого дракона 
+      And now, his back bore a great weak spot, the very shape and size of that sword.
+    ru: >-
+      Говорят, после убийства злого дракона 
 
-          Великий герой искупался в его чёрной крови, чтобы стать неуязвимым. 
+      Великий герой искупался в его чёрной крови, чтобы стать неуязвимым. 
 
-          Кровь действительно имела чудесный эффект. 
+      Кровь действительно имела чудесный эффект. 
 
-          О тело героя ломались мечи и копья, 
+      О тело героя ломались мечи и копья, 
 
-          И тучи стрел лишь смешили его, когда отскакивали, не причиняя вреда. 
+      И тучи стрел лишь смешили его, когда отскакивали, не причиняя вреда. 
 
-          В конце концов враги его обнаружили: 
+      В конце концов враги его обнаружили: 
 
-          Его любимый двуручный меч, который герой носил за спиной, тоже был умыт кровью, 
+      Его любимый двуручный меч, который герой носил за спиной, тоже был умыт кровью, 
 
-          А значит, слабое место героя - спина, где этот клинок висел.
+      А значит, слабое место героя - спина, где этот клинок висел.
   specialAbility:
     en: Increases DMG dealt against opponents affected by Pyro or Electro by  12%.
     ru: Увеличивает на  12% урон против врагов, находящихся под действием Пиро или
@@ -1440,25 +1430,23 @@ cinnabar-spindle:
     ru: Материалы, из которых сделан этот меч, явно не принадлежат этому миру. Он
       выдержит даже сильнейший яд, способный разъесть могучего дракона.
   story:
-    en:
-      - p: >-
-          Separate the dust in the flames with joy, and extract the exquisite
-          from the crude. 
+    en: >-
+      Separate the dust in the flames with joy, and extract the exquisite from
+      the crude. 
 
-          For all in the universe comes from a single source, and all things may be derived from a single thought. 
+      For all in the universe comes from a single source, and all things may be derived from a single thought. 
 
-          You must pursue that which your elder brother, the one-horned white horse, could not accomplish. 
+      You must pursue that which your elder brother, the one-horned white horse, could not accomplish. 
 
-          Reach the far side of philosophy, and create a new destiny for myself and your brothers...
-    ru:
-      - p: >-
-          С радостью отдели огонь от праха и изысканность от грубости. 
+      Reach the far side of philosophy, and create a new destiny for myself and your brothers...
+    ru: >-
+      С радостью отдели огонь от праха и изысканность от грубости. 
 
-          Подобно тому, как всё во Вселенной возникло из одного источника, все рассуждения можно вывести из одной мысли. 
+      Подобно тому, как всё во Вселенной возникло из одного источника, все рассуждения можно вывести из одной мысли. 
 
-          Тебе следует стремиться к тому, чего не смог достичь твой старший брат, однорогий белый скакун. 
+      Тебе следует стремиться к тому, чего не смог достичь твой старший брат, однорогий белый скакун. 
 
-          Достигни дальних краёв философии и сотвори новую судьбу для меня и своих братьев...
+      Достигни дальних краёв философии и сотвори новую судьбу для меня и своих братьев...
   specialAbility:
     en: Elemental Skill DMG is increased by  40% of DEF. The effect will be
       triggered no more than once every 1.5s and will be cleared 0.1s after the
@@ -1594,36 +1582,34 @@ cool-steel:
     ru: Стальной меч, на который можно положиться. Служит доказательством великих
       завоеваний своего прежнего владельца.
   story:
-    en:
-      - p: >-
-          A sturdy steel sword forged by the method of folding. 
+    en: >-
+      A sturdy steel sword forged by the method of folding. 
 
-          It has a dull shine with a cold glimmer. 
+      It has a dull shine with a cold glimmer. 
 
-          It belonged to a famous adventurer who witnessed the vastness of the earth. 
+      It belonged to a famous adventurer who witnessed the vastness of the earth. 
 
-          With it, he severed the iron bones of monsters and crossed blades with bandits. 
+      With it, he severed the iron bones of monsters and crossed blades with bandits. 
 
-          But in the end, 
+      But in the end, 
 
-          He gave up the vast earth, the boundless sky, 
+      He gave up the vast earth, the boundless sky, 
 
-          His friends in the Guild, his trusty Cool Steel, and old pals, to be with the girl he loved.
-    ru:
-      - p: >-
-          Крепкий стальной меч, изготовленный методом многократной проковки. 
+      His friends in the Guild, his trusty Cool Steel, and old pals, to be with the girl he loved.
+    ru: >-
+      Крепкий стальной меч, изготовленный методом многократной проковки. 
 
-          Его тёмное лезвие сверкает холодным блеском. 
+      Его тёмное лезвие сверкает холодным блеском. 
 
-          Некогда этот меч принадлежал знаменитому искателю приключений. Он познал необъятность земных просторов, 
+      Некогда этот меч принадлежал знаменитому искателю приключений. Он познал необъятность земных просторов, 
 
-          а на своём пути сражался как с монстрами, чьи кости были подобны стали по крепости, так и с разбойниками и бандитами. 
+      а на своём пути сражался как с монстрами, чьи кости были подобны стали по крепости, так и с разбойниками и бандитами. 
 
-          Но в конце концов 
+      Но в конце концов 
 
-          нашлась девушка, которую искатель приключений полюбил и ради которой отказался от необъятных земных просторов и от бездонного неба, 
+      нашлась девушка, которую искатель приключений полюбил и ради которой отказался от необъятных земных просторов и от бездонного неба, 
 
-          От коллег по Гильдии и от своего верного друга, выкованного из холодной стали.
+      От коллег по Гильдии и от своего верного друга, выкованного из холодной стали.
   specialAbility:
     en: Increases DMG against opponents affected by Hydro or Cryo by  12%.
     ru: Увеличивает урон против врагов, находящихся под Гидро или Крио эффектом,
@@ -1758,64 +1744,62 @@ dark-iron-sword:
     en: A perfectly ordinary iron sword, just slightly darker than most.
     ru: На самом деле это просто немного тёмный железный меч.
   story:
-    en:
-      - p: >-
-          "Why is your sword lying on the ground?" 
+    en: >-
+      "Why is your sword lying on the ground?" 
 
-          "I'm sun-tanning the sword to make it darker." 
+      "I'm sun-tanning the sword to make it darker." 
 
-          "Why?" 
+      "Why?" 
 
-          "Good question, kid. What's the darkest thing you can think of?" 
+      "Good question, kid. What's the darkest thing you can think of?" 
 
-          "Crows?" 
+      "Crows?" 
 
-          "...Sure. What else?" 
+      "...Sure. What else?" 
 
-          "Hm... Cooking pots!" 
+      "Hm... Cooking pots!" 
 
-          "Good. Keep going. What's underneath the cooking pot?" 
+      "Good. Keep going. What's underneath the cooking pot?" 
 
-          "Fire!" 
+      "Fire!" 
 
-          "And where does the fire come from?" 
+      "And where does the fire come from?" 
 
-          The girl thought for a bit. 
+      The girl thought for a bit. 
 
-          "Coal! Coal is the darkest thing of all!" 
+      "Coal! Coal is the darkest thing of all!" 
 
-          "That's right! Coal, or carbon, is what makes iron stronger. But I figure I can just darken the sword by tanning it instead." 
+      "That's right! Coal, or carbon, is what makes iron stronger. But I figure I can just darken the sword by tanning it instead." 
 
-          With that, he flipped the sword to the other side.
-    ru:
-      - p: >-
-          «Почему ты положил меч на землю?» 
+      With that, he flipped the sword to the other side.
+    ru: >-
+      «Почему ты положил меч на землю?» 
 
-          «Чтобы меч потемнел на солнце». 
+      «Чтобы меч потемнел на солнце». 
 
-          «Почему он должен потемнеть?» 
+      «Почему он должен потемнеть?» 
 
-          «Слишком много вопросов, малыш. Лучше скажи, какие ты знаешь предметы чёрного цвета?» 
+      «Слишком много вопросов, малыш. Лучше скажи, какие ты знаешь предметы чёрного цвета?» 
 
-          «Вороны?» 
+      «Вороны?» 
 
-          «Неплохо! Что ещё?» 
+      «Неплохо! Что ещё?» 
 
-          «Э-э... Котелок!» 
+      «Э-э... Котелок!» 
 
-          «Отлично! А что у нас под котелком?» 
+      «Отлично! А что у нас под котелком?» 
 
-          «Огонь!» 
+      «Огонь!» 
 
-          «А что ест огонь?» 
+      «А что ест огонь?» 
 
-          Девочка на мгновение задумалась. 
+      Девочка на мгновение задумалась. 
 
-          «Уголь! Уголь чёрный!» 
+      «Уголь! Уголь чёрный!» 
 
-          «Верно! Углерод делает сталь твёрже и крепче. Вот почему я оставил меч на солнце». 
+      «Верно! Углерод делает сталь твёрже и крепче. Вот почему я оставил меч на солнце». 
 
-          Сказав это, он перевернул меч.
+      Сказав это, он перевернул меч.
   specialAbility:
     en: Upon causing an Overloaded, Superconduct, Electro-Charged, or an
       Electro-infused Swirl reaction, ATK is increased by  20% for 12s.
@@ -1963,30 +1947,28 @@ debate-club:
     ru: Удобная дубина, сделанная из качественной стали. Фундамент «рационального
       убеждения».
   story:
-    en:
-      - p: >-
-          A persuasive tool, sure to turn the tide of a heated argument in the
-          wielder's favor. Guaranteed to add weight to one's words. 
+    en: >-
+      A persuasive tool, sure to turn the tide of a heated argument in the
+      wielder's favor. Guaranteed to add weight to one's words. 
 
-          Useful in any argument, no matter who the opponent, to convince them to listen to reason. 
+      Useful in any argument, no matter who the opponent, to convince them to listen to reason. 
 
-          In short, people listen to pearls of wisdom. 
+      In short, people listen to pearls of wisdom. 
 
-          Ultimately, production was forcibly ended due to mass protests. 
+      Ultimately, production was forcibly ended due to mass protests. 
 
-          The needs of the many outweigh the needs of the one.
-    ru:
-      - p: >-
-          Это - самый весомый аргумент в любом споре, всегда добавляет веса
-          сказанному. 
+      The needs of the many outweigh the needs of the one.
+    ru: >-
+      Это - самый весомый аргумент в любом споре, всегда добавляет веса
+      сказанному. 
 
-          Неважно, насколько сильно не желает внимать вам оппонент, дубина переговоров убедит любого, даже камень. 
+      Неважно, насколько сильно не желает внимать вам оппонент, дубина переговоров убедит любого, даже камень. 
 
-          На любое ваше изречение ответят: «Золотые слова». 
+      На любое ваше изречение ответят: «Золотые слова». 
 
-          В конце концов, производство было остановлено из-за многочисленных протестов. 
+      В конце концов, производство было остановлено из-за многочисленных протестов. 
 
-          Что называется, голос толпы - страшная сила.
+      Что называется, голос толпы - страшная сила.
   specialAbility:
     en: After using an Elemental Skill, on hit, Normal and Charged Attacks deal
       additional DMG equal to  60% of ATK in a small AoE. Effect lasts 15s. DMG
@@ -2306,16 +2288,14 @@ dull-blade:
       it up with valiance.
     ru: Юношеские мечты и жажда приключений, приправленные отвагой.
   story:
-    en:
-      - p: |-
-          Travels are full of meetings and partings. 
-          Perhaps the only trusty and inseparable companions of a Traveler, 
-          Are the sword in their hand and the dream in their heart.
-    ru:
-      - p: |-
-          Полон путь встреч и прощаний, 
-          И верные спутники мои - 
-          Лишь меч и мечта.
+    en: |-
+      Travels are full of meetings and partings. 
+      Perhaps the only trusty and inseparable companions of a Traveler, 
+      Are the sword in their hand and the dream in their heart.
+    ru: |-
+      Полон путь встреч и прощаний, 
+      И верные спутники мои - 
+      Лишь меч и мечта.
   specialAbility:
     en: ""
     ru: ""
@@ -2494,22 +2474,20 @@ emerald-orb:
     ru: Катализатор, вырезанный из твёрдого нефрита, добываемого в Заоблачном
       пределе на севере Ли Юэ. Он маленький, лёгкий и прочный.
   story:
-    en:
-      - p: >-
-          A lightweight catalyst carved out of emerald-green jade. It is durable
-          and affordable, which makes it a popular item all around. 
+    en: >-
+      A lightweight catalyst carved out of emerald-green jade. It is durable and
+      affordable, which makes it a popular item all around. 
 
-          Small but exquisitely made, it is colloquially referred to by the people of Liyue as the "jade ball." 
+      Small but exquisitely made, it is colloquially referred to by the people of Liyue as the "jade ball." 
 
-          It is a highly efficient defensive Catalyst as well as a good-looking accessory.
-    ru:
-      - p: >-
-          Легкий катализатор, вырезанный из нефрита. Он прочный и финансово
-          доступный, что делает его популярным катализатором во всём мире. 
+      It is a highly efficient defensive Catalyst as well as a good-looking accessory.
+    ru: >-
+      Легкий катализатор, вырезанный из нефрита. Он прочный и финансово
+      доступный, что делает его популярным катализатором во всём мире. 
 
-          Народ Ли Юэ называет этот небольшой, но изысканно сделанный катализатор, Нефритовым шаром. 
+      Народ Ли Юэ называет этот небольшой, но изысканно сделанный катализатор, Нефритовым шаром. 
 
-          Это высокоэффективный защитный катализатор, а также красивый аксессуар.
+      Это высокоэффективный защитный катализатор, а также красивый аксессуар.
   specialAbility:
     en: Upon causing a Vaporize, Electro-Charged, Frozen, or a Hydro-infused Swirl
       reaction, increases ATK by  20% for 12s.
@@ -3388,33 +3366,30 @@ ferrous-shadow:
       почувствуйте силу легендарного героя! Внимание: много мечтать вредно для
       вашего здоровья."
   story:
-    en:
-      - p: >-
-          When the young Arundolyn swung his replica greatsword — modeled off
-          the one wielded by Ravenwood, the Knight of Boreas — imagining that he
-          was cutting the old nobles of Mondstadt down, he never envisaged that
-          he would one day become the renowned "Lion of Light." Nor did he
-          envisage that his playmate Rostam, with whom he sparred in their
-          childhood, would grow up to become his most trusted right-hand man,
-          before going on to die in the course of duty, having served the people
-          of Mondstadt for 23 years. 
+    en: >-
+      When the young Arundolyn swung his replica greatsword — modeled off the
+      one wielded by Ravenwood, the Knight of Boreas — imagining that he was
+      cutting the old nobles of Mondstadt down, he never envisaged that he would
+      one day become the renowned "Lion of Light." Nor did he envisage that his
+      playmate Rostam, with whom he sparred in their childhood, would grow up to
+      become his most trusted right-hand man, before going on to die in the
+      course of duty, having served the people of Mondstadt for 23 years. 
 
-          The replica of the Lion of Light's greatsword is now in the hands of another youngster. 
+      The replica of the Lion of Light's greatsword is now in the hands of another youngster. 
 
-          How will this mysterious fate be passed on?
-    ru:
-      - p: >-
-          Когда маленький Арундолин держал в руках копию двуручного меча,
-          оригинал которого принадлежал Равенвуду, рыцарю Ордо Бореалис, и
-          представлял себя сражающимся с поработившими Мондштадт аристократами,
-          он ещё не думал, что однажды станет всем известным «Львом Света». И уж
-          точно не знал он, что тот Рустан, с которым они соперничали в детстве,
-          станет его правой рукой и погибнет при исполнении своего долга,
-          двадцать три года прослужив людям Мондштадта верой и правдой. 
+      How will this mysterious fate be passed on?
+    ru: >-
+      Когда маленький Арундолин держал в руках копию двуручного меча, оригинал
+      которого принадлежал Равенвуду, рыцарю Ордо Бореалис, и представлял себя
+      сражающимся с поработившими Мондштадт аристократами, он ещё не думал, что
+      однажды станет всем известным «Львом Света». И уж точно не знал он, что
+      тот Рустан, с которым они соперничали в детстве, станет его правой рукой и
+      погибнет при исполнении своего долга, двадцать три года прослужив людям
+      Мондштадта верой и правдой. 
 
-          Теперь копию принадлежавшего «Льву Света» двуручного меча вновь держит в руках другой мальчик. 
+      Теперь копию принадлежавшего «Льву Света» двуручного меча вновь держит в руках другой мальчик. 
 
-          Как будет продолжено это мистическое наследование?
+      Как будет продолжено это мистическое наследование?
   specialAbility:
     en: When HP falls below  70%, increases Charged Attack DMG by  30% and Charged
       Attacks become harder to interrupt.
@@ -3522,26 +3497,24 @@ fillet-blade:
     en: A sharp filleting knife. The blade is long, thin, and incredibly sharp.
     ru: Острый филейный нож. Имеет длинное, тонкое и невероятно острое лезвие.
   story:
-    en:
-      - p: >-
-          It was said that the Ticker Fish was a favorite among the people of
-          Liyue. 
+    en: >-
+      It was said that the Ticker Fish was a favorite among the people of
+      Liyue. 
 
-          As word caught on, somehow Ticker became Tiger. 
+      As word caught on, somehow Ticker became Tiger. 
 
-          Now, the real Ticker Fish is hard to come by, 
+      Now, the real Ticker Fish is hard to come by, 
 
-          but Tiger Fish fillets have become synonymous with delicious fish for the people of Liyue.
-    ru:
-      - p: >-
-          Говорят, в Ли Юэ водилось много рыбы под названием «рыба-дракон», и
-          местные её очень любят. 
+      but Tiger Fish fillets have become synonymous with delicious fish for the people of Liyue.
+    ru: >-
+      Говорят, в Ли Юэ водилось много рыбы под названием «рыба-дракон», и
+      местные её очень любят. 
 
-          Однако по случайности и чьей-то безграмотности слово «дракон» превратилось в слово «тигр». 
+      Однако по случайности и чьей-то безграмотности слово «дракон» превратилось в слово «тигр». 
 
-          Сейчас настоящую рыбу-дракона не так просто встретить, 
+      Сейчас настоящую рыбу-дракона не так просто встретить, 
 
-          а слово «рыба-тигр» в Ли Юэ превратилось в синоним любой отменной рыбы.
+      а слово «рыба-тигр» в Ли Юэ превратилось в синоним любой отменной рыбы.
   specialAbility:
     en: On hit, has a 50% chance to deal  240% ATK DMG to a single opponent. Can
       only occur once every  15s.
@@ -4512,24 +4485,22 @@ harbinger-of-dawn:
       благословение «Хорошего Самочувствия». Отражающая поверхность меча давно
       стёрлась.
   story:
-    en:
-      - p: |-
-          This sword has an extraordinary full name: 
-          The Triumphant Harbinger of Dawn that Points Towards Victory. 
-          Only one has ever fallen by this blade on the battlefield. 
-          One night, the bearer drew the sword triumphantly. 
-          The night sky lit up as bright as day, 
-          pin-pointing his precise location. 
-          Arrows rained down upon him.
-    ru:
-      - p: |-
-          У этого меча очень звучное имя: 
-          Предрассветный победоносный меч триумфатора. 
-          Но только один человек пал от него на поле боя. 
-          Однажды ночью его владелец вскинул меч и издал боевой клич. 
-          На мгновение непроглядная тьма озарилась ярким светом. 
-          Из-за этого блеска владелец меча стал лёгкой мишенью, 
-          И в то же мгновение его нашла стрела.
+    en: |-
+      This sword has an extraordinary full name: 
+      The Triumphant Harbinger of Dawn that Points Towards Victory. 
+      Only one has ever fallen by this blade on the battlefield. 
+      One night, the bearer drew the sword triumphantly. 
+      The night sky lit up as bright as day, 
+      pin-pointing his precise location. 
+      Arrows rained down upon him.
+    ru: |-
+      У этого меча очень звучное имя: 
+      Предрассветный победоносный меч триумфатора. 
+      Но только один человек пал от него на поле боя. 
+      Однажды ночью его владелец вскинул меч и издал боевой клич. 
+      На мгновение непроглядная тьма озарилась ярким светом. 
+      Из-за этого блеска владелец меча стал лёгкой мишенью, 
+      И в то же мгновение его нашла стрела.
   specialAbility:
     en: When HP is above 90%, increases CRIT Rate by  14%.
     ru: Увеличивает шанс крит. попадания на  14% при ХП выше 90%.
@@ -4557,19 +4528,17 @@ hunters-bow:
     ru: "Музыка охотника состоит всего лишь из двух нот: натягивания тетивы и свиста
       спущенной стрелы."
   story:
-    en:
-      - p: >-
-          Legend has it that Mondstadt once played host to one who made music on
-          bowstrings— 
+    en: >-
+      Legend has it that Mondstadt once played host to one who made music on
+      bowstrings— 
 
-          Or perhaps it might be more fitting to say that this wandering musician used an instrument's strings to fire arrows. 
+      Or perhaps it might be more fitting to say that this wandering musician used an instrument's strings to fire arrows. 
 
-          But this is naught but an old folk legend.
-    ru:
-      - p: |-
-          Говорят, раньше в Мондштадте был бродячий музыкант. 
-          Он то ли играл на тетиве лука, то ли пускал стрелы своей лютней. 
-          Но это всего лишь стародавнее предание.
+      But this is naught but an old folk legend.
+    ru: |-
+      Говорят, раньше в Мондштадте был бродячий музыкант. 
+      Он то ли играл на тетиве лука, то ли пускал стрелы своей лютней. 
+      Но это всего лишь стародавнее предание.
   specialAbility:
     en: ""
     ru: ""
@@ -4598,21 +4567,19 @@ iron-point:
     ru: Прекрасно сбалансированное оружие, заострённое с одной стороны. Популярно
       среди путешественников.
   story:
-    en:
-      - p: >-
-          A simple weapon that exudes a certain austerity. 
+    en: >-
+      A simple weapon that exudes a certain austerity. 
 
-          For those who defend that which they must protect, 
+      For those who defend that which they must protect, 
 
-          Or a traveler with naught to their name but themselves, 
+      Or a traveler with naught to their name but themselves, 
 
-          Even the most mundane of weapons might be ten times as powerful as it seems.
-    ru:
-      - p: |-
-          Примитивное оружие. Выглядит не очень угрожающе. 
-          Для человека с соответствующей бронёй 
-          или для путника, у которого ничего и нет, 
-          даже более примитивное оружие и то будет выглядеть более внушительно.
+      Even the most mundane of weapons might be ten times as powerful as it seems.
+    ru: |-
+      Примитивное оружие. Выглядит не очень угрожающе. 
+      Для человека с соответствующей бронёй 
+      или для путника, у которого ничего и нет, 
+      даже более примитивное оружие и то будет выглядеть более внушительно.
   specialAbility:
     en: ""
     ru: ""
@@ -5627,30 +5594,28 @@ magic-guide:
     ru: 12-е издание. Копия 11-го издания, содержащая исправления, согласно
       последним разработкам.
   story:
-    en:
-      - p: >-
-          This version of the Magic Guide generated much controversy when
-          published. 
+    en: >-
+      This version of the Magic Guide generated much controversy when
+      published. 
 
-          In addition to the defiance of basic common sense seen in Chapter VII: Principles of the Anemo Element, 
+      In addition to the defiance of basic common sense seen in Chapter VII: Principles of the Anemo Element, 
 
-          errors can also be observed even concerning the basic principles of the Hydro and Electro elements. 
+      errors can also be observed even concerning the basic principles of the Hydro and Electro elements. 
 
-          Evidently, the book was not peer-reviewed before publishing. 
+      Evidently, the book was not peer-reviewed before publishing. 
 
-          Nevertheless, the book is still the most authoritative guide to magic in existence.
-    ru:
-      - p: >-
-          Во время своей публикации это «Руководство по магии» вызвало много
-          споров. 
+      Nevertheless, the book is still the most authoritative guide to magic in existence.
+    ru: >-
+      Во время своей публикации это «Руководство по магии» вызвало много
+      споров. 
 
-          В дополнение к отрицанию здравого смысла в главе VII: Принципы Анемо элемента, 
+      В дополнение к отрицанию здравого смысла в главе VII: Принципы Анемо элемента, 
 
-          Можно заметить множество ошибок в отношении основных принципов Гидро и Электро элементов. 
+      Можно заметить множество ошибок в отношении основных принципов Гидро и Электро элементов. 
 
-          Очевидно, что перед публикацией эта книга не прошла рецензирование. 
+      Очевидно, что перед публикацией эта книга не прошла рецензирование. 
 
-          Но никакое другое руководство по магии пока никто не написал, поэтому у вас нет выбора.
+      Но никакое другое руководство по магии пока никто не написал, поэтому у вас нет выбора.
   specialAbility:
     en: Increases DMG against opponents affected by Hydro or Electro by  12%.
     ru: Увеличивает на  12% урон против врагов, находящихся под действием Гидро или
@@ -5874,20 +5839,18 @@ messenger:
     ru: Простой деревянный лук. Говорят, что когда-то такие луки использовали для
       дистанционного общения.
   story:
-    en:
-      - p: |-
-          It was said in days gone by, 
-          The people of Liyue passed messages by bow and arrow. 
-          "Wouldn't bystanders get hurt, you ask?" 
-          "Suffice to say, there's a good reason this bow is an antique..." 
-          The antique shop owner rubbed their chin and smiled.
-    ru:
-      - p: |-
-          Давным-давно в Ли Юэ была традиция - 
-          Обмениваться сообщениями при помощи лука и стрел. 
-          «Но ведь от этого могли пострадать случайные прохожие, разве нет?» 
-          «Хм, поэтому этот лук и стал пережитком древности...» - 
-          Ответил продавец антиквариата, потерев подбородок, и улыбнулся.
+    en: |-
+      It was said in days gone by, 
+      The people of Liyue passed messages by bow and arrow. 
+      "Wouldn't bystanders get hurt, you ask?" 
+      "Suffice to say, there's a good reason this bow is an antique..." 
+      The antique shop owner rubbed their chin and smiled.
+    ru: |-
+      Давным-давно в Ли Юэ была традиция - 
+      Обмениваться сообщениями при помощи лука и стрел. 
+      «Но ведь от этого могли пострадать случайные прохожие, разве нет?» 
+      «Хм, поэтому этот лук и стал пережитком древности...» - 
+      Ответил продавец антиквариата, потерев подбородок, и улыбнулся.
   specialAbility:
     en: Charged Attack hits on weak points deal an additional  100% ATK DMG as CRIT
       DMG. Can only occur once every 10s.
@@ -6392,22 +6355,20 @@ old-mercs-pal:
     en: A battle-tested greatsword that has seen better days and worse.
     ru: Этот меч, испытанный битвой, видал лучшие дни... и худшие тоже.
   story:
-    en:
-      - p: >-
-          He would often mention the experiences that he had in his youth as an
-          adventurer. 
+    en: >-
+      He would often mention the experiences that he had in his youth as an
+      adventurer. 
 
-          They were always the same old long-winded, annoying tall tales. 
+      They were always the same old long-winded, annoying tall tales. 
 
-          But this old greatsword seems to silently say, 
+      But this old greatsword seems to silently say, 
 
-          "Well, it is a bit over the top, yes. But I was there too, you know."
-    ru:
-      - p: |-
-          Он постоянно рассказывал о приключениях своей молодости. 
-          Дурацкие старческие истории, полные вранья. 
-          Но этот старомодный меч будто говорит: 
-          «Конечно, немного приврал, но ведь и я там был».
+      "Well, it is a bit over the top, yes. But I was there too, you know."
+    ru: |-
+      Он постоянно рассказывал о приключениях своей молодости. 
+      Дурацкие старческие истории, полные вранья. 
+      Но этот старомодный меч будто говорит: 
+      «Конечно, немного приврал, но ведь и я там был».
   specialAbility:
     en: ""
     ru: ""
@@ -6439,26 +6400,24 @@ otherworldly-story:
     ru: Дешёвая фантастика. Если использовать в качестве катализатора, можно понять,
       что силы её - тоже фантастика.
   story:
-    en:
-      - p: >-
-          A mediocre work of fiction telling the tale of an ordinary fellow who
-          finds himself in another world after death. 
+    en: >-
+      A mediocre work of fiction telling the tale of an ordinary fellow who
+      finds himself in another world after death. 
 
-          The world is filled with dangers. Steel monsters as vast as galaxies lurk beneath the ground and devour people in the thousands. 
+      The world is filled with dangers. Steel monsters as vast as galaxies lurk beneath the ground and devour people in the thousands. 
 
-          But there also exists a powerful being who can make the room comfortable in any season and turn night into day with a snap of his fingers. This is a story as groundless as it is meaningless. 
+      But there also exists a powerful being who can make the room comfortable in any season and turn night into day with a snap of his fingers. This is a story as groundless as it is meaningless. 
 
-          It only shares one thing in common with the real world: all the precious metals are owned by a handful of individuals, who keep them locked up in safe boxes.
-    ru:
-      - p: >-
-          Посредственное художественное произведение, рассказывающее историю об
-          обычном юноше, который после смерти оказывается в другом мире. 
+      It only shares one thing in common with the real world: all the precious metals are owned by a handful of individuals, who keep them locked up in safe boxes.
+    ru: >-
+      Посредственное художественное произведение, рассказывающее историю об
+      обычном юноше, который после смерти оказывается в другом мире. 
 
-          Этот мир полон опасностей. Чудовища из стали, огромные, как галактика, бродят под землёй и тысячами пожирают людей. 
+      Этот мир полон опасностей. Чудовища из стали, огромные, как галактика, бродят под землёй и тысячами пожирают людей. 
 
-          Но здесь также существует некое могущественное существо, которое может сделать помещение комфортным в любое время года и одним щелчком пальцев превратить ночь в день. Эта история так же беспочвенна, как и бессмысленна. 
+      Но здесь также существует некое могущественное существо, которое может сделать помещение комфортным в любое время года и одним щелчком пальцев превратить ночь в день. Эта история так же беспочвенна, как и бессмысленна. 
 
-          Тем не менее она имеет одну общую черту с реальным миром: все драгоценные металлы принадлежат группе людей, которые хранят их в надёжных ящиках.
+      Тем не менее она имеет одну общую черту с реальным миром: все драгоценные металлы принадлежат группе людей, которые хранят их в надёжных ящиках.
   specialAbility:
     en: Picking up an Elemental Energy Orb/Particle recovers  1% HP.
     ru: Подобранные элементальные сферы и частицы восстанавливают  1% ХП.
@@ -6486,19 +6445,17 @@ pocket-grimoire:
     ru: Тетрадь с конспектами по магическим дисциплинам, написанная аккуратным
       почерком.
   story:
-    en:
-      - p: >-
-          A manual on magic that is popular amongst students, it is portable
-          enough to fit into one's pocket. 
+    en: >-
+      A manual on magic that is popular amongst students, it is portable enough
+      to fit into one's pocket. 
 
-          It has been stripped of the lengthy descriptions of principles and voluminous exercises. All that is left now is exam content. 
+      It has been stripped of the lengthy descriptions of principles and voluminous exercises. All that is left now is exam content. 
 
-          Currently obsolete due to the revisions made in the 12th edition of the Magic Guide.
-    ru:
-      - p: |-
-          Популярный самоучитель по магии в карманном формате. 
-          В нём сжато даётся только то, что спрашивается на экзамене. 
-          Сейчас устарело из-за выхода 12-го издания «Руководства по магии».
+      Currently obsolete due to the revisions made in the 12th edition of the Magic Guide.
+    ru: |-
+      Популярный самоучитель по магии в карманном формате. 
+      В нём сжато даётся только то, что спрашивается на экзамене. 
+      Сейчас устарело из-за выхода 12-го издания «Руководства по магии».
   specialAbility:
     en: ""
     ru: ""
@@ -7392,18 +7349,16 @@ raven-bow:
     ru: Как известно, вороны - проводники мёртвых. Этот лук украшен их перьями,
       предвещающими скорую смерть любой цели.
   story:
-    en:
-      - p: |-
-          Ravens are messengers of death. 
-          "Placing this feather on the limb of one's bow 
-          declares the death of one's prey." 
-          Or so claimed the weapon vendors.
-    ru:
-      - p: |-
-          Вороны - это посланники смерти. 
-          «Воронье перо, прикреплённое к рукояти лука, 
-          Предвещает скорую кончину врага». 
-          По крайней мере, так утверждают торговцы луками.
+    en: |-
+      Ravens are messengers of death. 
+      "Placing this feather on the limb of one's bow 
+      declares the death of one's prey." 
+      Or so claimed the weapon vendors.
+    ru: |-
+      Вороны - это посланники смерти. 
+      «Воронье перо, прикреплённое к рукояти лука, 
+      Предвещает скорую кончину врага». 
+      По крайней мере, так утверждают торговцы луками.
   specialAbility:
     en: Increases DMG against opponents affected by Hydro or Pyro by  12%.
     ru: Увеличивает на  12% урон против врагов, находящихся под действием Гидро или
@@ -7434,25 +7389,16 @@ recurve-bow:
     ru: Говорят, этот лук может сбить орла в полёте, но всё же многое зависит и от
       навыка самого лучника.
   story:
-    en:
-      - p: >-
-          A recurve bow exquisitely made from wood, bones, and animal tendons. 
-
-          In the hands of a masterful archer, it can shoot down eagles in flight. 
-
-          It is the pride of a hunter, and proof of mastery. 
-
-          Pity the innocent eagles.
-    ru:
-      - p: >-
-          Изящный изогнутый лук, сделанный из дерева, костей и сухожилий
-          животных. 
-
-          В руках профессионального лучника он может сбить орла в полёте. 
-
-          Это гордость охотника и доказательство его мастерства. 
-
-          Помянем ни в чём не повинных орлов.
+    en: |-
+      A recurve bow exquisitely made from wood, bones, and animal tendons. 
+      In the hands of a masterful archer, it can shoot down eagles in flight. 
+      It is the pride of a hunter, and proof of mastery. 
+      Pity the innocent eagles.
+    ru: |-
+      Изящный изогнутый лук, сделанный из дерева, костей и сухожилий животных. 
+      В руках профессионального лучника он может сбить орла в полёте. 
+      Это гордость охотника и доказательство его мастерства. 
+      Помянем ни в чём не повинных орлов.
   specialAbility:
     en: Defeating an opponent restores  8% HP.
     ru: Победа над противником восстанавливает  8% ХП.
@@ -8539,16 +8485,14 @@ seasoned-hunters-bow:
       owner. It feels almost like an extension of the archer's arm.
     ru: Ухоженный лук, полированный временем. Продолжение руки лучника.
   story:
-    en:
-      - p: >-
-          A hunter must always be downwind, and must never walk upright on a
-          mountain's ridge. 
+    en: >-
+      A hunter must always be downwind, and must never walk upright on a
+      mountain's ridge. 
 
-          It matters not if their target is beast, monster or the wicked — this method remains the same.
-    ru:
-      - p: |-
-          Охотник никогда не идёт за ветром и не ходит по вершинам холмов. 
-          И неважно охотится ли он на зверя, монстра или человека.
+      It matters not if their target is beast, monster or the wicked — this method remains the same.
+    ru: |-
+      Охотник никогда не идёт за ветром и не ходит по вершинам холмов. 
+      И неважно охотится ли он на зверя, монстра или человека.
   specialAbility:
     en: ""
     ru: ""
@@ -8700,32 +8644,30 @@ sharpshooters-oath:
     ru: Когда-то этот превосходный лук принадлежал профессиональному охотнику,
       однако его стойкий запах делает его бесполезным для охоты.
   story:
-    en:
-      - p: >-
-          A long time ago, in a place far, far away... Tragedy struck. 
+    en: >-
+      A long time ago, in a place far, far away... Tragedy struck. 
 
-          Brothers took to arms against one another. 
+      Brothers took to arms against one another. 
 
-          One among them was a great archer. After suffering a humiliating defeat, he made a vow: 
+      One among them was a great archer. After suffering a humiliating defeat, he made a vow: 
 
-          "Until I have brought down my enemies," 
+      "Until I have brought down my enemies," 
 
-          "Until I have pierced their throats and their blood has run dry, I shall not clean my feet." 
+      "Until I have pierced their throats and their blood has run dry, I shall not clean my feet." 
 
-          And so, the great archer fell prey to a foot infection.
-    ru:
-      - p: >-
-          Однажды, далеко-далеко и давным-давно случилась трагедия. 
+      And so, the great archer fell prey to a foot infection.
+    ru: >-
+      Однажды, далеко-далеко и давным-давно случилась трагедия. 
 
-          Два брата решили сразиться друг с другом и взялись за оружие. 
+      Два брата решили сразиться друг с другом и взялись за оружие. 
 
-          Одним был прославленный лучник. Потерпев тяжёлое поражение, он дал клятву: 
+      Одним был прославленный лучник. Потерпев тяжёлое поражение, он дал клятву: 
 
-          «Пока не одолею своего врага, 
+      «Пока не одолею своего врага, 
 
-          Пока не проткну его горло и его кровь не иссякнет, я не буду мыть ноги». 
+      Пока не проткну его горло и его кровь не иссякнет, я не буду мыть ноги». 
 
-          Так, великий лучник стал жертвой инфекции ног.
+      Так, великий лучник стал жертвой инфекции ног.
   specialAbility:
     en: Increases DMG against weak spots by  24%.
     ru: Увеличивает урон по слабым местам противников на  24%.
@@ -8752,16 +8694,14 @@ silver-sword:
     ru: Говорят, что этот меч может изгонять демонов, но всем известно, что он
       сделан не из настоящего серебра.
   story:
-    en:
-      - p: >-
-          Despite how the folk belief would have it, silver does not actually
-          have any special ability to exorcise. 
+    en: >-
+      Despite how the folk belief would have it, silver does not actually have
+      any special ability to exorcise. 
 
-          It is the pure heart of the wandering exorcist that is the true bane of evil.
-    ru:
-      - p: |-
-          Поверье, что злые духи боятся серебра, - чепуха. 
-          Изгонит зло лишь меч, чистое сердце и крепкая рука.
+      It is the pure heart of the wandering exorcist that is the true bane of evil.
+    ru: |-
+      Поверье, что злые духи боятся серебра, - чепуха. 
+      Изгонит зло лишь меч, чистое сердце и крепкая рука.
   specialAbility:
     en: ""
     ru: ""
@@ -8793,30 +8733,28 @@ skyrider-greatsword:
       flying sword... for the second time.
     ru: Надёжный стальной меч. Однажды некто пытался заставить его летать... снова.
   story:
-    en:
-      - p: >-
-          Feeling defeated, it dawned on the Skyrider that there are things that
-          swordsmanship cannot achieve. 
+    en: >-
+      Feeling defeated, it dawned on the Skyrider that there are things that
+      swordsmanship cannot achieve. 
 
-          So instead of believing in his swordsmanship, he turned to the sword itself. 
+      So instead of believing in his swordsmanship, he turned to the sword itself. 
 
-          "Bigger is always better, and swords are no exception," he thought. 
+      "Bigger is always better, and swords are no exception," he thought. 
 
-          In the grand Guyun Stone Forest, he embraced his grand ending. 
+      In the grand Guyun Stone Forest, he embraced his grand ending. 
 
-          His dream of flight came to an end, but his sword and story would never fade...
-    ru:
-      - p: >-
-          Потерпевший поражение Небесный Всадник понял, что не всё решается
-          фехтовальным искусством. 
+      His dream of flight came to an end, but his sword and story would never fade...
+    ru: >-
+      Потерпевший поражение Небесный Всадник понял, что не всё решается
+      фехтовальным искусством. 
 
-          Поэтому, вместо того, чтобы слепо верить в свое фехтовальное мастерство, он обратился к самому мечу. 
+      Поэтому, вместо того, чтобы слепо верить в свое фехтовальное мастерство, он обратился к самому мечу. 
 
-          «Чем больше, тем лучше. С мечами это тоже работает,» - рассуждал он. 
+      «Чем больше, тем лучше. С мечами это тоже работает,» - рассуждал он. 
 
-          В великом каменном лесу Гуюнь Небесный Всадник встретил свой великий конец. 
+      В великом каменном лесу Гуюнь Небесный Всадник встретил свой великий конец. 
 
-          Его мечта о полёте завершилась, но ни его меч, ни его история никогда не будут забыты...
+      Его мечта о полёте завершилась, но ни его меч, ни его история никогда не будут забыты...
   specialAbility:
     en: On hit, Normal or Charged Attacks increase ATK by  6% for 6s. Max 4 stacks.
       Can occur once every 0.5s.
@@ -8849,34 +8787,32 @@ skyrider-sword:
       flying sword...
     ru: Надёжный стальной меч. Однажды некто пытался заставить его летать...
   story:
-    en:
-      - p: >-
-          Leap, the master swordsman Skyrider did, from the heights of Jueyun
-          Karst. 
+    en: >-
+      Leap, the master swordsman Skyrider did, from the heights of Jueyun
+      Karst. 
 
-          He pierced the clouds as the winds hollered by his ears, 
+      He pierced the clouds as the winds hollered by his ears, 
 
-          But what followed was the sound of bones shattering. 
+      But what followed was the sound of bones shattering. 
 
-          What he had hoped for was something swordsmanship could not bring him. 
+      What he had hoped for was something swordsmanship could not bring him. 
 
-          He pawned the sword for medicine, 
+      He pawned the sword for medicine, 
 
-          But die it did not, his dream of flight.
-    ru:
-      - p: >-
-          Небесный Всадник, будучи опытным фехтовальщиком, спрыгнул с вершины
-          Заоблачного предела и, 
+      But die it did not, his dream of flight.
+    ru: >-
+      Небесный Всадник, будучи опытным фехтовальщиком, спрыгнул с вершины
+      Заоблачного предела и, 
 
-          Не обращая внимание на свистящий в ушах ветер, вспорол клинком мякоть облаков. 
+      Не обращая внимание на свистящий в ушах ветер, вспорол клинком мякоть облаков. 
 
-          Но за свистом ветра последовал лишь хруст костей. 
+      Но за свистом ветра последовал лишь хруст костей. 
 
-          И только тогда он понял, что некоторые вещи не могут быть достигнуты только за счёт фехтовального искусства. 
+      И только тогда он понял, что некоторые вещи не могут быть достигнуты только за счёт фехтовального искусства. 
 
-          Хотя он и заложил меч в ломбард, чтобы купить себе лекарства, 
+      Хотя он и заложил меч в ломбард, чтобы купить себе лекарства, 
 
-          Его мечта о полёте только окрепла.
+      Его мечта о полёте только окрепла.
   specialAbility:
     en: Using an Elemental Burst grants a  12% increase in ATK and Movement SPD for
       15s.
@@ -9509,29 +9445,27 @@ slingshot:
     ru: На самом деле это лук. Его создатель хотел сделать рогатку, но после кучи
       доработок и поправок у него получился лук.
   story:
-    en:
-      - p: >-
-          One who wished to improve the range and accuracy of slingshots
-          discovered that 
+    en: >-
+      One who wished to improve the range and accuracy of slingshots discovered
+      that 
 
-          Power increases range, but costs accuracy. 
+      Power increases range, but costs accuracy. 
 
-          So slingshot rocks were replaced with long wooden poles that sported feathers for stability. 
+      So slingshot rocks were replaced with long wooden poles that sported feathers for stability. 
 
-          The slingshot's limbs were lengthened and the ends recurved to increase pull. 
+      The slingshot's limbs were lengthened and the ends recurved to increase pull. 
 
-          It then dawned on him that he had made a bow.
-    ru:
-      - p: >-
-          Однажды кто-то понял, как усовершенствовать простую рогатку: 
+      It then dawned on him that he had made a bow.
+    ru: >-
+      Однажды кто-то понял, как усовершенствовать простую рогатку: 
 
-          Он использовал вместо камней деревянные палочки, к концам которых прикрепил перья для стабильности. 
+      Он использовал вместо камней деревянные палочки, к концам которых прикрепил перья для стабильности. 
 
-          К тому же чем больше приложить силы, тем больше увеличится дальность, но понизится точность. 
+      К тому же чем больше приложить силы, тем больше увеличится дальность, но понизится точность. 
 
-          Также он сделал концы рогатки длиннее, затем изогнул их, увеличив доступное натяжение. 
+      Также он сделал концы рогатки длиннее, затем изогнул их, увеличив доступное натяжение. 
 
-          Только после всего этого он понял, что изобрёл лук.
+      Только после всего этого он понял, что изобрёл лук.
   specialAbility:
     en: If a Normal or Charged Attack hits a target within 0.3s of being fired,
       increases DMG by  36%. Otherwise, decreases DMG by 10%.
@@ -11188,44 +11122,42 @@ thrilling-tales-of-dragon-slayers:
       Написано очень плохо, без какой-либо структуры. Суть книги в том, чтобы
       научить людей, как важно избегать ошибок.
   story:
-    en:
-      - p: >-
-          Five Heroes embarked on a journey to slay the evil dragon. 
+    en: >-
+      Five Heroes embarked on a journey to slay the evil dragon. 
 
-          For honor, the master swordsman. 
+      For honor, the master swordsman. 
 
-          For research, the knowledgeable sorceress. 
+      For research, the knowledgeable sorceress. 
 
-          For bounty, the swashbuckling mercenary. 
+      For bounty, the swashbuckling mercenary. 
 
-          For vengeance, the deadeye marksman. 
+      For vengeance, the deadeye marksman. 
 
-          For stories, the grand novelist. 
+      For stories, the grand novelist. 
 
-          A lotus proceeds from my mouth and flowers bloom on the page. My words are wise and clear and my thoughts are sharp like lightning. 
+      A lotus proceeds from my mouth and flowers bloom on the page. My words are wise and clear and my thoughts are sharp like lightning. 
 
-          I joined this party because I couldn't find a job, and anybody can be a copywriter. 
+      I joined this party because I couldn't find a job, and anybody can be a copywriter. 
 
-          But I'm no writer, just a regular fellow in his mid twenties without an honest job.
-    ru:
-      - p: >-
-          Пятеро героев отправились в путешествие, чтобы убить злого дракона. 
+      But I'm no writer, just a regular fellow in his mid twenties without an honest job.
+    ru: >-
+      Пятеро героев отправились в путешествие, чтобы убить злого дракона. 
 
-          Мастер меча - ради чести; 
+      Мастер меча - ради чести; 
 
-          Мудрая волшебница - ради науки; 
+      Мудрая волшебница - ради науки; 
 
-          Ловкий наёмник - ради награды; 
+      Ловкий наёмник - ради награды; 
 
-          Меткий стрелок - ради мести; 
+      Меткий стрелок - ради мести; 
 
-          С ними эрудированный писатель - ради истории. 
+      С ними эрудированный писатель - ради истории. 
 
-          Лотос исходит из моего рта, и на страницах распускаются цветы. Мои слова мудры и ясны, а мои мысли резки, как молния. 
+      Лотос исходит из моего рта, и на страницах распускаются цветы. Мои слова мудры и ясны, а мои мысли резки, как молния. 
 
-          Я присоединился к этому отряду, потому что не мог найти достойную работу, а с канцелярской работой может справиться любой. 
+      Я присоединился к этому отряду, потому что не мог найти достойную работу, а с канцелярской работой может справиться любой. 
 
-          Но я не писатель... Я обычный парень двадцати с лишним лет без честной работы.
+      Но я не писатель... Я обычный парень двадцати с лишним лет без честной работы.
   specialAbility:
     en: When switching characters, the new character taking the field has their ATK
       increased by  24% for 10s. This effect can only occur once every 20s.
@@ -11419,25 +11351,22 @@ travelers-handy-sword:
     ru: Удобный стальной меч, в ножнах которого также можно найти ножницы, лупу,
       трутницу и много чего ещё.
   story:
-    en:
-      - p: >-
-          A reliable and balanced sword made of fine steel. 
+    en: >-
+      A reliable and balanced sword made of fine steel. 
 
-          The one downside is that the partial-tang design renders it less durable than its full-tang counterparts. 
+      The one downside is that the partial-tang design renders it less durable than its full-tang counterparts. 
 
-          That said, the partial tang creates space in the hilt for hidden knives, scissors, tinder, and other objects. 
+      That said, the partial tang creates space in the hilt for hidden knives, scissors, tinder, and other objects. 
 
-          Hence the name, Traveler's Handy Sword. It contains all sorts of handy items for travelers.
-    ru:
-      - p: >-
-          Верный и отлично сбалансированный клинок, выкованный из хорошей
-          стали. 
+      Hence the name, Traveler's Handy Sword. It contains all sorts of handy items for travelers.
+    ru: >-
+      Верный и отлично сбалансированный клинок, выкованный из хорошей стали. 
 
-          Его самый крупный недостаток - составная конструкция, из-за которой он серьёзно уступает монолитным собратьям по износостойкости. 
+      Его самый крупный недостаток - составная конструкция, из-за которой он серьёзно уступает монолитным собратьям по износостойкости. 
 
-          Такая конструкция позволяет поместить в полую рукоять меча нож, ножницы, хворост и другие мелкие вещи. 
+      Такая конструкция позволяет поместить в полую рукоять меча нож, ножницы, хворост и другие мелкие вещи. 
 
-          Интересно, он называется «меч путешественника» потому что в него можно поместить много полезных вещей?..
+      Интересно, он называется «меч путешественника» потому что в него можно поместить много полезных вещей?..
   specialAbility:
     en: Each Elemental Orb or Particle collected restores  1% HP.
     ru: Подобранные элементальные сферы и частицы восстанавливают  1% ХП.
@@ -11466,26 +11395,24 @@ twin-nephrite:
     en: A jade pendant formed by piecing together two jade stones.
     ru: Ожерелье с замочком из двух кусочков нефрита.
   story:
-    en:
-      - p: >-
-          A jade piece which, despite its exquisite packaging, has been placed
-          in one of the least prominent positions in the store. 
+    en: >-
+      A jade piece which, despite its exquisite packaging, has been placed in
+      one of the least prominent positions in the store. 
 
-          The box comes with an official-looking certificate of premium quality, issued by an organization that no one has ever heard of. 
+      The box comes with an official-looking certificate of premium quality, issued by an organization that no one has ever heard of. 
 
-          To the untrained eye, the luxurious packaging and accessories would probably be enough to lure one in. 
+      To the untrained eye, the luxurious packaging and accessories would probably be enough to lure one in. 
 
-          However, it is still reasonable value for money when compared with genuine top-quality jade pieces.
-    ru:
-      - p: >-
-          Изделие из нефрита, которое, несмотря на свою изысканную упаковку,
-          было помещено в одно из наименее заметных мест в магазине. 
+      However, it is still reasonable value for money when compared with genuine top-quality jade pieces.
+    ru: >-
+      Изделие из нефрита, которое, несмотря на свою изысканную упаковку, было
+      помещено в одно из наименее заметных мест в магазине. 
 
-          В упаковку входит на вид официальный сертификат высшего качества, выданный организацией, о которой никто никогда не слышал. 
+      В упаковку входит на вид официальный сертификат высшего качества, выданный организацией, о которой никто никогда не слышал. 
 
-          Роскошной упаковки и аксессуаров, вероятно, будет достаточно, чтобы заманить неопытного покупателя. 
+      Роскошной упаковки и аксессуаров, вероятно, будет достаточно, чтобы заманить неопытного покупателя. 
 
-          Но всё же это достаточно разумное соотношение цены и качества по сравнению с подлинными нефритовыми изделиями высокого качества.
+      Но всё же это достаточно разумное соотношение цены и качества по сравнению с подлинными нефритовыми изделиями высокого качества.
   specialAbility:
     en: Defeating an opponent increases Movement SPD and ATK by  12% for 15s.
     ru: Победа над противником увеличивает скорость передвижения и силу атаки
@@ -11616,16 +11543,14 @@ waster-greatsword:
     ru: Человек, обладающий достаточной силой воли, сможет расколоть горы этим
       куском металла, отдалённо напоминающим меч.
   story:
-    en:
-      - p: >-
-          The one who uses this heavy, edgeless two-handed greatsword knows this
-          well: 
+    en: >-
+      The one who uses this heavy, edgeless two-handed greatsword knows this
+      well: 
 
-          It matters not what the weapon is, for it is the wielder's might that counts.
-    ru:
-      - p: |-
-          Хозяин такого тяжёлого тупого меча знает, 
-          что оружие не важно - важна сила хозяина.
+      It matters not what the weapon is, for it is the wielder's might that counts.
+    ru: |-
+      Хозяин такого тяжёлого тупого меча знает, 
+      что оружие не важно - важна сила хозяина.
   specialAbility:
     en: ""
     ru: ""
@@ -11757,29 +11682,27 @@ white-iron-greatsword:
       одновременно сильным и лёгким. Подходит даже для человека среднего
       телосложения, однако его мощь всё же растёт с силой владельца.
   story:
-    en:
-      - p: >-
-          A lightweight greatsword made of white iron with a silver sheen. 
+    en: >-
+      A lightweight greatsword made of white iron with a silver sheen. 
 
-          When swung rapidly, the flashes of light can blind the enemy. 
+      When swung rapidly, the flashes of light can blind the enemy. 
 
-          However, this sword is not usually used as a weapon. 
+      However, this sword is not usually used as a weapon. 
 
-          According to the way of warriors of old, when a comrade falls in battle, polished weapons will line the ground where they fell. 
+      According to the way of warriors of old, when a comrade falls in battle, polished weapons will line the ground where they fell. 
 
-          Though such rituals as these are no longer in fashion, some few still remember what they mean...
-    ru:
-      - p: >-
-          Двуручный меч, выкованный из лёгкого белого железа и сверкающий
-          льдистым серебром. Удобен в бою. 
+      Though such rituals as these are no longer in fashion, some few still remember what they mean...
+    ru: >-
+      Двуручный меч, выкованный из лёгкого белого железа и сверкающий льдистым
+      серебром. Удобен в бою. 
 
-          Благодаря лёгкости меча им можно быстро взмахивать, и тогда сияние белого железа легко ослепляет врагов. 
+      Благодаря лёгкости меча им можно быстро взмахивать, и тогда сияние белого железа легко ослепляет врагов. 
 
-          Но этот меч обычно не используется, как боевое оружие. 
+      Но этот меч обычно не используется, как боевое оружие. 
 
-          Согласно традициям древних воинов, если товарищ по оружию пал в битве, то в месте, где он встретил смерть, оставляют сверкающее оружие. 
+      Согласно традициям древних воинов, если товарищ по оружию пал в битве, то в месте, где он встретил смерть, оставляют сверкающее оружие. 
 
-          Хотя такая церемония не особенно распространена, некоторые ещё помнят её смысл...
+      Хотя такая церемония не особенно распространена, некоторые ещё помнят её смысл...
   specialAbility:
     en: Defeating an opponent restores  8% HP.
     ru: Победа над противником восстанавливает  8% ХП.

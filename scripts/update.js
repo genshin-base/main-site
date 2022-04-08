@@ -10,7 +10,12 @@ import {
 	extractWeaponsData,
 	getAndProcessMappedImages,
 } from '#lib/parsing/honeyhunter/index.js'
-import { getCharacterArtifactCodes, getCharacterWeaponCodes } from '#lib/parsing/helperteam/characters.js'
+import {
+	getCharacterArtifactCodes,
+	getCharacterRecommendedArtifactCodes,
+	getCharacterRecommendedWeaponCodes,
+	getCharacterWeaponCodes,
+} from '#lib/parsing/helperteam/characters.js'
 import { trigramSearcherFromStrings } from '#lib/trigrams.js'
 import { createHash } from 'crypto'
 import { exists, parseArgs, relativeToCwd } from '#lib/utils/os.js'
@@ -50,10 +55,12 @@ import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
 import {
 	excludeDomainBosses,
 	extractFullInfoLocations,
+	makeArtifactFullInfoWithRelated,
 	makeArtifactsRegularInfo,
 	makeCharacterFullInfo,
 	makeCharacterShortList,
 	makeMaterialsTimetable,
+	makeWeaponFullInfoWithRelated,
 	makeWeaponsRegularInfo,
 } from '#lib/parsing/combine.js'
 import {
@@ -74,6 +81,7 @@ import { applyCharactersReleaseVersion } from '#lib/parsing/wiki/characters.js'
 import { getEnemyCodeFromName } from '#lib/genshin.js'
 import { getArtifactSpecialGroupCodes } from '#lib/parsing/honeyhunter/artifacts.js'
 import { buildsConvertLangMode } from '#lib/parsing/helperteam/build_texts.js'
+import { mappedArrPush } from '#lib/utils/collections.js'
 
 const HELPERTEAM_DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -494,26 +502,47 @@ async function saveWwwData() {
 	// 	md5sum.update(content)
 	// }
 
+	const recomWeap2characters = /**@type {Map<string, string[]>}*/ (new Map())
+	for (const character of builds.characters)
+		for (const code of getCharacterRecommendedWeaponCodes(character, weapons))
+			mappedArrPush(recomWeap2characters, code, character.code)
+
+	const recomArt2characters = /**@type {Map<string, string[]>}*/ (new Map())
+	for (const character of builds.characters)
+		for (const code of getCharacterRecommendedArtifactCodes(character, artGroupCodes))
+			mappedArrPush(recomArt2characters, code, character.code)
+
 	for (const lang of LANGS) {
-		const buildArtifacts = makeArtifactsRegularInfo(artifacts, characters, domains, enemies, builds.characters, lang) //prettier-ignore
-		const buildWeapons = makeWeaponsRegularInfo(weapons, characters, domains, items, builds.characters, lang) //prettier-ignore
+		const buildArtifacts = makeArtifactsRegularInfo(artifacts, characters, domains, enemies, recomArt2characters, lang) //prettier-ignore
+		const buildWeapons = makeWeaponsRegularInfo(weapons, characters, recomWeap2characters, lang) //prettier-ignore
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 		for (const character of builds.characters) {
 			const fullInfo = makeCharacterFullInfo(
-				character, characters, buildArtifacts.artifacts, buildWeapons.weapons,
+				character, characters, buildArtifacts, buildWeapons,
 				domains, enemies, items, artGroupCodes, lang) //prettier-ignore
 			const locsInfo = extractFullInfoLocations(fullInfo)
 			await writeJson(`${WWW_DYNAMIC_DIR}/characters/${character.code}-locs-${lang}.json`, locsInfo)
 			await writeJson(`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`, fullInfo)
 		}
 
-		await writeJson(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, buildArtifacts)
-		await writeJson(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, buildWeapons)
-
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/timetables`, { recursive: true })
 		const timetable = makeMaterialsTimetable(characters, domains, weapons, enemies, items, lang)
 		await writeJson(`${WWW_DYNAMIC_DIR}/timetables/materials-${lang}.json`, timetable)
+
+		await writeJson(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, buildArtifacts)
+		await fs.mkdir(`${WWW_DYNAMIC_DIR}/artifacts`, { recursive: true })
+		for (const artifact of Object.values(artifacts)) {
+			const artifactInfo = makeArtifactFullInfoWithRelated(artifact, characters, domains, enemies, recomWeap2characters, lang) //prettier-ignore
+			await writeJson(`${WWW_DYNAMIC_DIR}/artifacts/${artifact.code}-${lang}.json`, artifactInfo)
+		}
+
+		await writeJson(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, buildWeapons)
+		await fs.mkdir(`${WWW_DYNAMIC_DIR}/weapons`, { recursive: true })
+		for (const weapon of Object.values(weapons)) {
+			const weaponInfo = makeWeaponFullInfoWithRelated(weapon, characters, domains, enemies, items, recomWeap2characters, lang) //prettier-ignore
+			await writeJson(`${WWW_DYNAMIC_DIR}/weapons/${weapon.code}-${lang}.json`, weaponInfo)
+		}
 
 		progress()
 	}

@@ -3,11 +3,13 @@ import { GENERATED_DATA_HASH } from './generated'
 import { apiGetJSONFile, mapAllByCode, MapAllByCode } from './utils'
 
 import type {
-	ArtifactsRegularInfoWithRelated,
+	ArtifactFullInfoWithRelated,
+	ArtifactRegularInfo,
 	CharacterFullInfoWithRelated,
 	ExtractedLocationsInfo,
 	MaterialsTimetableWithRelated,
-	WeaponsRegularInfoWithRelated,
+	WeaponFullInfoWithRelated,
+	WeaponRegularInfo,
 } from '#lib/parsing/combine'
 
 const get = <T>(prefix: string, signal: AbortSignal) =>
@@ -34,16 +36,25 @@ export function apiGetCharacterRelatedLocs(
 	return getLang(`characters/${code}-locs`, signal)
 }
 
-export function apiGetArtifacts(
-	signal: AbortSignal,
-): PromiseOrSync<MapAllByCode<ArtifactsRegularInfoWithRelated>> {
-	return _map(getLang<ArtifactsRegularInfoWithRelated>(`artifacts`, signal), mapAllByCode)
+export function apiGetArtifacts(signal: AbortSignal): PromiseOrSync<ArtifactRegularInfo[]> {
+	return getLang<ArtifactRegularInfo[]>(`artifacts`, signal)
 }
 
-export function apiGetWeapons(
+export function apiGetArtifact(
+	code: string,
 	signal: AbortSignal,
-): PromiseOrSync<MapAllByCode<WeaponsRegularInfoWithRelated>> {
-	return _map(getLang<WeaponsRegularInfoWithRelated>(`weapons`, signal), mapAllByCode)
+): PromiseOrSync<MapAllByCode<ArtifactFullInfoWithRelated>> {
+	return _map(getLang<ArtifactFullInfoWithRelated>(`artifact/${code}`, signal), mapAllByCode)
+}
+
+export function apiGetWeapons(signal: AbortSignal): PromiseOrSync<WeaponRegularInfo[]> {
+	return getLang<WeaponRegularInfo[]>(`weapons`, signal)
+}
+export function apiGetWeapon(
+	code: string,
+	signal: AbortSignal,
+): PromiseOrSync<MapAllByCode<WeaponFullInfoWithRelated>> {
+	return _map(getLang<WeaponFullInfoWithRelated>(`weapons/${code}`, signal), mapAllByCode)
 }
 
 export function apiMaterialsTimetable(
