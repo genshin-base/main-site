@@ -3,9 +3,13 @@ import { useCallback, useMemo, useState } from 'preact/hooks'
 import { WeaponRegularInfo } from '#lib/parsing/combine'
 import { apiGetWeapon } from '#src/api/endpoints'
 import { getAllRelated } from '#src/api/utils'
+import { Accordion } from '#src/components/accordion'
+import { BlockHeader } from '#src/components/block-header'
+
 import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
 import {
 	I18N_BASE_ATTACK,
+	I18N_COLLAPSE,
 	I18N_ITEM_STORY,
 	I18N_STAT_NAME,
 	I18N_WEAPON_OBTAIN_SOURCE_NAME,
@@ -17,6 +21,7 @@ import { getWeaponIconLageSrc } from '#src/utils/weapons'
 import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from './card-map'
 import { RecommendedTo } from './common'
 import { ItemAvatar } from './item-avatars'
+import './line-cards.scss'
 
 type WeaponRowProps = {
 	weapon: WeaponRegularInfo
@@ -51,11 +56,9 @@ function WeaponCardLine({
 		return markerGroups
 	}, [weaponFull])
 
-	const expandedRowStyle = { height: '300px' }
-	const cellClass = 'w-33 d-flex px-2 pb-3 pt-2 flex-column'
-	return (
-		<div className="bg-dark rounded-start border border-secondary d-flex w-100" style={expandedRowStyle}>
-			<div className={cellClass}>
+	const mainInfoColInner = useMemo(() => {
+		return (
+			<>
 				<div>
 					<ItemAvatar
 						classes="mb-2 me-2 large-avatar float-start"
@@ -95,8 +98,12 @@ function WeaponCardLine({
 					/>
 				</div>
 				<div className="flex-fill overflow-auto">{weapon.passiveStat}</div>
-			</div>
-			<div className={cellClass}>
+			</>
+		)
+	}, [weapon])
+	const loreInfoColInner = useMemo(() => {
+		return (
+			<>
 				<div className="opacity-75">{I18N_ITEM_STORY}</div>
 				<div>
 					<i>TODO:loading {isLoaded(weaponFull) && weaponFull.weapon.description}</i>
@@ -104,14 +111,12 @@ function WeaponCardLine({
 				<div className="flex-fill overflow-auto">
 					TODO:loading {isLoaded(weaponFull) && notesToJSX(weaponFull.weapon.story)}
 				</div>
-			</div>
-			<div className={cellClass}>
-				<button
-					type="button"
-					className="btn-close btn-sm ms-auto "
-					aria-label="Close"
-					onClick={onClose}
-				></button>
+			</>
+		)
+	}, [weaponFull])
+	const locationColInner = useMemo(() => {
+		return (
+			<div className="d-flex flex-fill flex-column location-col-inner">
 				<div>
 					{/* <div className="opacity-75">{I18N_ASC_MATERIALS}:</div> */}
 					<RecommendedTo
@@ -126,7 +131,51 @@ function WeaponCardLine({
 					<CardMap markerGroups={markerGroups} classes="h-100" />
 				</div>
 			</div>
-		</div>
+		)
+	}, [weapon, onClose])
+
+	const cellClass = 'w-33 d-flex px-2 pb-3 pt-2 flex-column'
+	const forAccordion = useMemo(() => {
+		return [
+			{ title: 'mainInfoColInner', code: 'mainInfoColInner', content: mainInfoColInner },
+			{ title: 'loreInfoColInner', code: 'loreInfoColInner', content: loreInfoColInner },
+			{ title: 'locationColInner', code: 'locationColInner', content: locationColInner },
+		]
+	}, [mainInfoColInner, loreInfoColInner, locationColInner])
+	return (
+		<MobileDesktopSwitch
+			childrenDesktop={
+				<div className="bg-dark rounded-start border border-secondary d-flex w-100 line-card-desktop">
+					<div className={cellClass}>{mainInfoColInner}</div>
+					<div className={cellClass}>{loreInfoColInner}</div>
+					<div className={cellClass}>
+						<button
+							type="button"
+							className="btn-close btn-sm ms-auto "
+							aria-label="Close"
+							onClick={onClose}
+						></button>
+						{locationColInner}
+					</div>
+				</div>
+			}
+			childrenMobile={
+				<>
+					<div className="text-center">
+						<button className="btn btn-link text-decoration-underline-dotted" onClick={onClose}>
+							{I18N_COLLAPSE}
+						</button>
+					</div>
+					<div className="bg-dark rounded border overflow-hidden border-secondary d-flex w-100 line-card-mobile">
+						<Accordion
+							classes="accordion-flush w-100"
+							items={forAccordion}
+							expandedItemCode={forAccordion[0].code}
+						/>
+					</div>
+				</>
+			}
+		/>
 	)
 }
 

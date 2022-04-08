@@ -8,7 +8,7 @@ import {
 } from '#lib/genshin'
 import { GI_TalentCode } from '#lib/parsing/helperteam/types'
 import { LINK_DISCORD_INVITE } from '#src/utils/links'
-import { NBSP } from '#src/utils/typography'
+import { BULLET, NBSP } from '#src/utils/typography'
 
 type Lang = 'en' | 'ru'
 export const LANG = BUNDLE_ENV.LANG as Lang
@@ -17,9 +17,9 @@ export const I18N_LANG_NAMES: Record<Lang, string> = {
 	ru: 'Русский',
 }
 export const I18N_LANG_NAME = I18N_LANG_NAMES[LANG]
-const titlePostfix = ' — Genshin Base'
-export const I18N_PAGE_TITLE_POSTFIX = { en: titlePostfix, ru: titlePostfix }[LANG]
+export const I18N_PAGE_TITLE_POSTFIX = { en: ` ${BULLET} Genshin Base`, ru: ` ${BULLET} Геншин База` }[LANG]
 export const I18N_LOADING = { en: 'Loading', ru: 'Загрузка' }[LANG]
+export const I18N_COLLAPSE = { en: 'Collapse', ru: 'Свернуть' }[LANG]
 export const I18N_DASHBOARD = { en: 'Dashboard', ru: 'Самое важное' }[LANG]
 export const I18N_REGION = { en: 'Region', ru: 'Регион' }[LANG]
 export const I18N_UNTIL_DAY_RESET = { en: 'Until Day Reset', ru: 'До нового дня' }[LANG]
@@ -327,7 +327,7 @@ const weaponObtainSourceNamesRU: WeaponObtainSourceNames = {
 	wishes: 'молитвы',
 	'event-wishes': 'молитвы события',
 	events: 'события',
-	'battle-pass': 'батл-пасс',
+	'battle-pass': 'боевой пропуск',
 	'in-game-shop': 'внутриигровой магазин',
 	forging: 'ковка',
 	fishing: 'рыболовля',
