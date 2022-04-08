@@ -50,11 +50,11 @@ import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
 import {
 	excludeDomainBosses,
 	extractFullInfoLocations,
-	makeArtifactsFullInfo,
+	makeArtifactsRegularInfo,
 	makeCharacterFullInfo,
 	makeCharacterShortList,
 	makeMaterialsTimetable,
-	makeWeaponsFullInfo,
+	makeWeaponsRegularInfo,
 } from '#lib/parsing/combine.js'
 import {
 	applyItemTypesByWeapons,
@@ -495,8 +495,8 @@ async function saveWwwData() {
 	// }
 
 	for (const lang of LANGS) {
-		const buildArtifacts = makeArtifactsFullInfo(artifacts, characters, domains, enemies, builds.characters, lang) //prettier-ignore
-		const buildWeapons = makeWeaponsFullInfo(weapons, characters, domains, items, builds.characters, lang) //prettier-ignore
+		const buildArtifacts = makeArtifactsRegularInfo(artifacts, characters, domains, enemies, builds.characters, lang) //prettier-ignore
+		const buildWeapons = makeWeaponsRegularInfo(weapons, characters, domains, items, builds.characters, lang) //prettier-ignore
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 		for (const character of builds.characters) {

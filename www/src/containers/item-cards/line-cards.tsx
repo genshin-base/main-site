@@ -1,18 +1,10 @@
-import { WeaponFullInfo } from '#src/../../lib/parsing/combine'
-import { BlockHeader } from '#src/components/block-header'
+import { useCallback, useMemo, useState } from 'preact/hooks'
+
+import { WeaponRegularInfo } from '#lib/parsing/combine'
 import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
-import { TeyvatMap } from '#src/components/teyvat-map'
-import {
-	I18N_ASC_MATERIALS,
-	I18N_BASE_ATTACK,
-	I18N_ITEM_STORY,
-	I18N_STAT_NAME,
-	I18N_WEAPON_OBTAIN_SOURCE_NAME,
-	I18N_WEAPON_TYPE_NAME,
-} from '#src/i18n/i18n'
+import { I18N_BASE_ATTACK, I18N_ITEM_STORY, I18N_STAT_NAME } from '#src/i18n/i18n'
 import { BULLET, DASH } from '#src/utils/typography'
 import { getWeaponIconLageSrc } from '#src/utils/weapons'
-import { useCallback, useMemo, useState } from 'preact/hooks'
 import { CardMap, CardMapMarkerGroup } from './card-map'
 import { RecommendedTo } from './common'
 import { ItemAvatar } from './item-avatars'
@@ -35,7 +27,7 @@ In his youth, the Dawn Knight Ragnvindr was in the retinue of a knight.
 He went with his master to watch a gladiator match, and was moved by the Dawnlight Swordswoman's splendid finale.
 He named himself the Dawn Knight in her honor, and knew in his heart what he must do next.`
 type WeaponRowProps = {
-	weapon: WeaponFullInfo
+	weapon: WeaponRegularInfo
 	group: number
 	isExpanded?: boolean
 }

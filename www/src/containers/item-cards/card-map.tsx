@@ -1,6 +1,8 @@
-import { GI_DomainTypeCode, MapCode, MapLocation } from '#src/../../lib/genshin'
-import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#src/../../lib/parsing/combine'
-import { arrGetAfter } from '#src/../../lib/utils/collections'
+import { useMemo } from 'preact/hooks'
+
+import { GI_DomainTypeCode, MapCode, MapLocation } from '#lib/genshin'
+import { ArtifactRegularInfo, ItemShortInfo, WeaponRegularInfo } from '#lib/parsing/combine'
+import { arrGetAfter } from '#lib/utils/collections'
 import { SimpleSelect } from '#src/components/select'
 import { Spinner } from '#src/components/spinners'
 import { BtnTabGroup, useSelectable } from '#src/components/tabs'
@@ -17,7 +19,6 @@ import { getDomainIconSrc } from '#src/utils/domains'
 import { getEnemyIconSrc } from '#src/utils/enemies'
 import { isLoaded, useFetch } from '#src/utils/hooks'
 import { LEFT_POINTING, RIGHT_POINTING } from '#src/utils/typography'
-import { useMemo } from 'preact/hooks'
 import { LabeledItemAvatar } from './item-avatars'
 
 const LazyTeyvatMap = import('#src/components/teyvat-map')
@@ -61,7 +62,7 @@ export function CardMap({
 }: {
 	itemData?: {
 		imgSrc: string
-		item: ItemShortInfo | ArtifactFullInfo | WeaponFullInfo
+		item: ItemShortInfo | ArtifactRegularInfo | WeaponRegularInfo
 	}
 	markerGroups: CardMapMarkerGroup[]
 	isItemFavable?: boolean

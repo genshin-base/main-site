@@ -1,8 +1,9 @@
 import { useMemo, useState } from 'preact/hooks'
 
-import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
+import { ArtifactRegularInfo, ItemShortInfo, WeaponRegularInfo } from '#lib/parsing/combine'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api/utils'
 import { BlockHeader } from '#src/components/block-header'
+import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
 import { BtnTabGroup, tabTitleFromName, useSelectable } from '#src/components/tabs'
 import {
 	ItemDetailDdMobilePortal,
@@ -29,12 +30,11 @@ import { getItemIconSrc } from '#src/utils/items'
 import { BULLET } from '#src/utils/typography'
 import { getWeaponIconLageSrc } from '#src/utils/weapons'
 import { AlchemyCalculator } from '../alchemy-calculator'
+import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from './card-map'
+import { RecommendedTo } from './common'
 import { DdContext, ItemAvatar } from './item-avatars'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
-import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
-import { RecommendedTo } from './common'
-import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from './card-map'
 
 //переключалка для мобильного и десктопного вида
 export function CardDescMobileWrap({
@@ -110,7 +110,7 @@ export function ArtifactCard({
 	title,
 }: {
 	classes?: string
-	artifacts: ArtifactFullInfo[]
+	artifacts: ArtifactRegularInfo[]
 	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
 	title: string
 }): JSX.Element {
@@ -186,7 +186,7 @@ export function WeaponCard({
 }: {
 	onCloseClick?: () => void
 	classes?: string
-	weapon: WeaponFullInfo
+	weapon: WeaponRegularInfo
 	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
 }): JSX.Element {
 	const materials = getAllRelated(related.items, weapon.materialCodes)

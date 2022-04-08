@@ -1,6 +1,7 @@
-import { WeaponFullInfo } from '#src/../../lib/parsing/combine'
+import { useState } from 'preact/hooks'
+
+import { WeaponRegularInfo } from '#lib/parsing/combine'
 import { WeaponCardTableRow } from '#src/containers/item-cards/line-cards'
-import { useCallback, useMemo, useState } from 'preact/hooks'
 
 const adds = { typeCode: 'sword', rarity: 4, obtainSources: ['quests'], materialCodes: [] }
 const weapons = [
@@ -57,7 +58,7 @@ const weapons = [
 		recommendedTo: [''],
 		...adds,
 	},
-] as WeaponFullInfo[]
+] as WeaponRegularInfo[]
 export function WeaponsList() {
 	const [selectedCatCode, setSelectedCatCode] = useState<string | null>(null)
 	console.log(weapons)

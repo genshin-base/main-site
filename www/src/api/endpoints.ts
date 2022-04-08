@@ -3,11 +3,11 @@ import { GENERATED_DATA_HASH } from './generated'
 import { apiGetJSONFile, mapAllByCode, MapAllByCode } from './utils'
 
 import type {
-	ArtifactsFullInfoWithRelated,
+	ArtifactsRegularInfoWithRelated,
 	CharacterFullInfoWithRelated,
 	ExtractedLocationsInfo,
 	MaterialsTimetableWithRelated,
-	WeaponsFullInfoWithRelated,
+	WeaponsRegularInfoWithRelated,
 } from '#lib/parsing/combine'
 
 const get = <T>(prefix: string, signal: AbortSignal) =>
@@ -36,12 +36,14 @@ export function apiGetCharacterRelatedLocs(
 
 export function apiGetArtifacts(
 	signal: AbortSignal,
-): PromiseOrSync<MapAllByCode<ArtifactsFullInfoWithRelated>> {
-	return _map(getLang<ArtifactsFullInfoWithRelated>(`artifacts`, signal), mapAllByCode)
+): PromiseOrSync<MapAllByCode<ArtifactsRegularInfoWithRelated>> {
+	return _map(getLang<ArtifactsRegularInfoWithRelated>(`artifacts`, signal), mapAllByCode)
 }
 
-export function apiGetWeapons(signal: AbortSignal): PromiseOrSync<MapAllByCode<WeaponsFullInfoWithRelated>> {
-	return _map(getLang<WeaponsFullInfoWithRelated>(`weapons`, signal), mapAllByCode)
+export function apiGetWeapons(
+	signal: AbortSignal,
+): PromiseOrSync<MapAllByCode<WeaponsRegularInfoWithRelated>> {
+	return _map(getLang<WeaponsRegularInfoWithRelated>(`weapons`, signal), mapAllByCode)
 }
 
 export function apiMaterialsTimetable(
