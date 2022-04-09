@@ -41,6 +41,7 @@ export const I18N_TOMORROW = { en: 'tomorrow', ru: 'завтра' }[LANG]
 export const I18N_DUNGEONS = { en: 'Dungeons', ru: 'Подземелья' }[LANG]
 export const I18N_TALENTS = { en: 'Talents', ru: 'Таланты' }[LANG]
 export const I18N_WEAPONS = { en: 'Weapons', ru: 'Оружие' }[LANG]
+export const I18N_MAIN_INFO = { en: 'main info', ru: 'основная информация' }[LANG]
 export const I18N_WEAPON_STACKS_COUNT = {
 	en: (stacks: number) => stacks + ' ' + pluralizeEN(stacks, 'stack', 'stacks'),
 	ru: (stacks: number) => stacks + ' ' + pluralizeRU(stacks, 'стак', 'стака', 'стаков'),

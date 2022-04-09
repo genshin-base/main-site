@@ -1,6 +1,6 @@
-import { useCallback, useMemo, useState } from 'preact/hooks'
+import { useCallback, useEffect, useMemo, useState } from 'preact/hooks'
 
-import { WeaponRegularInfo } from '#lib/parsing/combine'
+import { ItemShortInfo, WeaponRegularInfo } from '#lib/parsing/combine'
 import { apiGetWeapon } from '#src/api/endpoints'
 import { getAllRelated } from '#src/api/utils'
 import { Accordion } from '#src/components/accordion'
@@ -8,9 +8,11 @@ import { BlockHeader } from '#src/components/block-header'
 
 import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
 import {
+	I18N_ASC_MATERIALS,
 	I18N_BASE_ATTACK,
 	I18N_COLLAPSE,
 	I18N_ITEM_STORY,
+	I18N_MAIN_INFO,
 	I18N_STAT_NAME,
 	I18N_WEAPON_OBTAIN_SOURCE_NAME,
 } from '#src/i18n/i18n'
@@ -19,9 +21,11 @@ import { isLoaded, useFetch } from '#src/utils/hooks'
 import { BULLET, DASH, ELLIPSIS } from '#src/utils/typography'
 import { getWeaponIconLageSrc } from '#src/utils/weapons'
 import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from './card-map'
-import { RecommendedTo } from './common'
+import { AscMaterials, RecommendedTo } from './common'
 import { ItemAvatar } from './item-avatars'
 import './line-cards.scss'
+import { CentredSpinner, Spinner } from '#src/components/spinners'
+import { getItemIconSrc } from '#src/utils/items'
 
 type WeaponRowProps = {
 	weapon: WeaponRegularInfo
@@ -45,16 +49,24 @@ function WeaponCardLine({
 	onClose: () => unknown
 }): JSX.Element {
 	const weaponFull = useFetch(sig => apiGetWeapon(weapon.code, sig), [weapon])
-
+	const [materialOnMap, setMaterialOnMap] = useState<ItemShortInfo | undefined>()
 	const markerGroups = useMemo(() => {
-		if (!isLoaded(weaponFull)) return dummyMarkerGroups
-		const items = getAllRelated(weaponFull.maps.items, weaponFull.weapon.materialCodes)
-		const srcs = items[0].obtainSources //TODO
+		if (!isLoaded(weaponFull) || !materialOnMap) return dummyMarkerGroups
+		const srcs = materialOnMap.obtainSources //TODO
 		const markerGroups: CardMapMarkerGroup[] = []
 		addMarkerGroupsByDomains(markerGroups, getAllRelated(weaponFull.maps.domains, srcs.domainCodes))
 		addMarkerGroupsByEnemies(markerGroups, getAllRelated(weaponFull.maps.enemies, srcs.enemyCodes))
 		return markerGroups
+	}, [weaponFull, materialOnMap])
+
+	const materials = useMemo(() => {
+		if (!isLoaded(weaponFull)) return []
+		return getAllRelated(weaponFull.maps.items, weaponFull.weapon.materialCodes)
 	}, [weaponFull])
+
+	useEffect(() => {
+		setMaterialOnMap(materials[0])
+	}, [materials])
 
 	const mainInfoColInner = useMemo(() => {
 		return (
@@ -62,7 +74,7 @@ function WeaponCardLine({
 				<div>
 					<ItemAvatar
 						classes="mb-2 me-2 large-avatar float-start"
-						rarity={5}
+						rarity={weapon.rarity}
 						src={getWeaponIconLageSrc(weapon.code)}
 					/>
 					<h4 className="mb-0">{weapon.name}</h4>
@@ -72,7 +84,6 @@ function WeaponCardLine({
 						</span>
 					</div>
 				</div>
-				{/* {BULLET} {weapon.obtainSources.map(I18N_WEAPON_OBTAIN_SOURCE_NAME).join(', ')} */}
 				<div className="d-flex">
 					<div className="me-2">
 						<div className="opacity-75">{I18N_BASE_ATTACK}</div>
@@ -89,7 +100,7 @@ function WeaponCardLine({
 						</div>
 					)}
 				</div>
-				<div>
+				<div className="mt-1">
 					<RecommendedTo
 						isInline={true}
 						navigateToCharacter={true}
@@ -97,7 +108,7 @@ function WeaponCardLine({
 						charCodes={weapon.recommendedTo}
 					/>
 				</div>
-				<div className="flex-fill overflow-auto">{weapon.passiveStat}</div>
+				<div className="flex-fill overflow-auto small lh-sm">{weapon.passiveStat}</div>
 			</>
 		)
 	}, [weapon])
@@ -105,49 +116,72 @@ function WeaponCardLine({
 		return (
 			<>
 				<div className="opacity-75">{I18N_ITEM_STORY}</div>
-				<div>
-					<i>TODO:loading {isLoaded(weaponFull) && weaponFull.weapon.description}</i>
-				</div>
-				<div className="flex-fill overflow-auto">
-					TODO:loading {isLoaded(weaponFull) && notesToJSX(weaponFull.weapon.story)}
-				</div>
+				{isLoaded(weaponFull) ? (
+					<>
+						<div className="fst-italic my-1 small lh-sm opacity-75">
+							{weaponFull.weapon.description}
+						</div>
+						<div className="flex-fill my-1 overflow-auto small lh-sm text-muted">
+							{notesToJSX(weaponFull.weapon.story)}
+						</div>
+					</>
+				) : (
+					<Spinner />
+				)}
 			</>
 		)
 	}, [weaponFull])
 	const locationColInner = useMemo(() => {
 		return (
-			<div className="d-flex flex-fill flex-column location-col-inner">
-				<div>
-					{/* <div className="opacity-75">{I18N_ASC_MATERIALS}:</div> */}
-					<RecommendedTo
-						isInline={true}
-						navigateToCharacter={true}
-						isAvatarWithBorder={true}
-						charCodes={weapon.recommendedTo}
-					/>
-				</div>
-				<div className="flex-fill">
-					TODO:loading if markerGroups === dummyMarkerGroups
-					<CardMap markerGroups={markerGroups} classes="h-100" />
-				</div>
+			<div className="d-flex flex-fill flex-column location-col-inner position-relative">
+				{markerGroups === dummyMarkerGroups ? (
+					<CentredSpinner />
+				) : (
+					<>
+						<div>
+							<AscMaterials
+								materials={materials}
+								selectedMat={materialOnMap}
+								onMatSelect={setMaterialOnMap}
+							/>
+						</div>
+						<div className="flex-fill">
+							<CardMap markerGroups={markerGroups} classes="h-100" />
+						</div>
+					</>
+				)}
 			</div>
 		)
-	}, [weapon, onClose])
+	}, [markerGroups, materials, materialOnMap])
 
 	const cellClass = 'w-33 d-flex px-2 pb-3 pt-2 flex-column'
 	const forAccordion = useMemo(() => {
 		return [
-			{ title: 'mainInfoColInner', code: 'mainInfoColInner', content: mainInfoColInner },
-			{ title: 'loreInfoColInner', code: 'loreInfoColInner', content: loreInfoColInner },
-			{ title: 'locationColInner', code: 'locationColInner', content: locationColInner },
+			{
+				title: `${weapon.name} ${BULLET} ${I18N_MAIN_INFO}`,
+				code: 'mainInfoColInner',
+				content: mainInfoColInner,
+			},
+			{ title: I18N_ITEM_STORY, code: 'loreInfoColInner', content: loreInfoColInner },
+			{ title: I18N_ASC_MATERIALS, code: 'locationColInner', content: locationColInner },
 		]
-	}, [mainInfoColInner, loreInfoColInner, locationColInner])
+	}, [mainInfoColInner, loreInfoColInner, locationColInner, weapon])
 	return (
 		<MobileDesktopSwitch
 			childrenDesktop={
 				<div className="bg-dark rounded-start border border-secondary d-flex w-100 line-card-desktop">
 					<div className={cellClass}>{mainInfoColInner}</div>
-					<div className={cellClass}>{loreInfoColInner}</div>
+					<div className={cellClass}>
+						<div className="invisible pe-none">
+							{/* to make the same padding-top as on the next cell */}
+							<button
+								type="button"
+								className="btn-close btn-sm ms-auto "
+								aria-label="Close"
+							></button>
+						</div>
+						{loreInfoColInner}
+					</div>
 					<div className={cellClass}>
 						<button
 							type="button"

@@ -1,4 +1,5 @@
 import { apiGetWeapons } from '#src/api/endpoints'
+import { Spinner } from '#src/components/spinners'
 import { WeaponCardTableRow } from '#src/containers/item-cards/line-cards'
 import { isLoaded, useFetch } from '#src/utils/hooks'
 
@@ -6,6 +7,7 @@ export function WeaponsList() {
 	// const [selectedCatCode, setSelectedCatCode] = useState<string | null>(null)
 	const weapons = useFetch(apiGetWeapons, [])
 
+	if (!isLoaded(weapons)) return <Spinner />
 	return (
 		<table className="table table-sm">
 			<thead className="bg-dark">
@@ -19,7 +21,6 @@ export function WeaponsList() {
 				</tr>
 			</thead>
 			<tbody>
-				TODO:loading
 				{isLoaded(weapons) &&
 					weapons.map((w, i) => <WeaponCardTableRow weapon={w} key={w.code} group={i % 2} />)}
 			</tbody>

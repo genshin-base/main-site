@@ -162,31 +162,33 @@ export function CardMap({
 			) : (
 				<Spinner />
 			)}
-			<div className="map-header position-absolute d-flex top-0 flex-row justify-content-between px-3 py-1 w-100">
+			<div className="map-header position-absolute top-0 px-3 py-1 w-100">
 				<div className="map-header-bg position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
-				{itemData && (
-					<div className="me-2 flex-shrink-1 d-flex align-self-center">
-						{isItemWeaponPrimaryMaterial && isItemFavable ? (
-							<ToggleWeaponPrimaryMaterialFav
-								itemCode={itemData.item.code}
-								classes="align-self-center p-1 flex-fill fs-5"
+				<div className="d-flex flex-row justify-content-between" style={{ opacity: '0.9999' }}>
+					{itemData && (
+						<div className="me-2 flex-shrink-1 d-flex align-self-center">
+							{isItemWeaponPrimaryMaterial && isItemFavable ? (
+								<ToggleWeaponPrimaryMaterialFav
+									itemCode={itemData.item.code}
+									classes="align-self-center p-1 flex-fill fs-5"
+								/>
+							) : null}
+							<LabeledItemAvatar
+								isNoBg={true}
+								classes="small-avatar small"
+								avatarClasses="with-padding "
+								imgSrc={itemData.imgSrc}
+								title={itemData.item.name}
 							/>
-						) : null}
-						<LabeledItemAvatar
-							isNoBg={true}
-							classes="small-avatar small"
-							avatarClasses="with-padding "
-							imgSrc={itemData.imgSrc}
-							title={itemData.item.name}
-						/>
-					</div>
-				)}
-				{markerGroups.length ? (
-					<div className={`d-flex flex-fill justify-content-end align-self-center`}>
-						<label className="me-1 text-muted align-self-center small">{I18N_SOURCE}:</label>
-						{sourceSelectEl}
-					</div>
-				) : null}
+						</div>
+					)}
+					{markerGroups.length ? (
+						<div className={`d-flex flex-fill justify-content-end align-self-center`}>
+							<label className="me-1 text-muted align-self-center small">{I18N_SOURCE}:</label>
+							{sourceSelectEl}
+						</div>
+					) : null}
+				</div>
 			</div>
 			<div className="map-tip position-absolute px-3 pt-1 lh-1 top-100 start-0 small text-muted opacity-75 user-select-none">
 				{visibleMapCodeTabs.map(({ code }) => (
@@ -210,7 +212,13 @@ export function CardMap({
 					</div>
 				))}
 			</div>
-			<div className="map-tip position-absolute px-3 pt-1 lh-1 top-100 end-0 small text-muted opacity-75 pe-none">
+			<div
+				className={`map-tip position-absolute \
+				 px-3 pt-1 lh-1 \
+				 bottom-0 end-0 small text-muted \
+				 opacity-75 pe-none bg-dark opacity-75 \
+				 rounded-start not-rounded-bottom`}
+			>
 				<div class="d-none d-xl-block">{I18N_SCROLL_TO_ZOOM}</div>
 				<div class="d-xl-none">{I18N_PINCH_TO_ZOOM}</div>
 			</div>
