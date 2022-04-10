@@ -6,9 +6,9 @@ export function MobileDesktopSwitch({
 	childrenDesktop,
 	childrenMobile,
 }: {
-	childrenDesktop: JSX.Element
-	childrenMobile: JSX.Element
-}): JSX.Element {
+	childrenDesktop: JSX.Element | null
+	childrenMobile: JSX.Element | null
+}): JSX.Element | null {
 	const windowSize = useWindowSize()
 	return BS_isBreakpointLessThen(windowSize.breakpoint, 'xl') ? childrenMobile : childrenDesktop
 }

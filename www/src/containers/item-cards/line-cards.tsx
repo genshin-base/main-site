@@ -234,17 +234,41 @@ function WeaponCardTableRowDesktop({ weapon, isExpanded = false, group }: Weapon
 	const collapsededRow = useMemo(() => {
 		return (
 			<>
-				<tr className={bgClass}>
-					<td colSpan={1}>{weapon.name}</td>
+				<tr className={'small lh-sm ' + bgClass}>
+					<td colSpan={1}>
+						<div className="d-flex">
+							<ItemAvatar
+								classes="me-2 small-avatar align-self-center flex-shrink-0"
+								rarity={weapon.rarity}
+								src={getWeaponIconLageSrc(weapon.code)}
+								onClick={toglleExpand}
+							/>
+							<span className="align-self-center">{weapon.name}</span>
+						</div>
+					</td>
 					<td>
 						{weapon.atk.base}/{weapon.atk.max}
 					</td>
-					<td>{weapon.subStat ? `${weapon.subStat.code}` : DASH}</td>
-					<td>{weapon.subStat ? `${weapon.subStat.base}/${weapon.subStat.max}` : DASH}</td>
-					<td>{weapon.passiveStat}</td>
 					<td>
-						<div onClick={toglleExpand}>
-							Expand to see recommended characters and Ascension Materials
+						{weapon.subStat ? (
+							<>
+								{weapon.subStat.code} <br />
+								{`${weapon.subStat.base} / ${weapon.subStat.max}`}
+							</>
+						) : (
+							DASH
+						)}
+					</td>
+					<MobileDesktopSwitch
+						childrenDesktop={<td>{weapon.passiveStat ? weapon.passiveStat : DASH}</td>}
+						childrenMobile={null}
+					/>
+
+					<td>
+						<div className="c-pointer" onClick={toglleExpand}>
+							<button className="btn">
+								<span className="btn-expand-inner"></span>
+							</button>
 						</div>
 					</td>
 				</tr>
