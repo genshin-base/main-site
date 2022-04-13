@@ -12,7 +12,7 @@ import {
 } from '#lib/parsing/honeyhunter/index.js'
 import {
 	getCharacterArtifactCodes,
-	getCharacterRecommendedArtifactCodes,
+	getCharacterRecommendedArtifactCodesWithCoutns,
 	getCharacterRecommendedWeaponCodes,
 	getCharacterWeaponCodes,
 } from '#lib/parsing/helperteam/characters.js'
@@ -510,10 +510,10 @@ async function saveWwwData() {
 		for (const code of getCharacterRecommendedWeaponCodes(character, common.code2weapon))
 			mappedArrPush(recomWeap2characters, code, character.code)
 
-	const recomArt2characters = /**@type {Map<string, string[]>}*/ (new Map())
+	const recomArt2characters = /**@type {Map<string, {code:string, count:number}[]>}*/ (new Map())
 	for (const character of builds.characters)
-		for (const code of getCharacterRecommendedArtifactCodes(character, artGroupCodes))
-			mappedArrPush(recomArt2characters, code, character.code)
+		for (const art of getCharacterRecommendedArtifactCodesWithCoutns(character, artGroupCodes))
+			mappedArrPush(recomArt2characters, art.code, { code: character.code, count: art.count })
 
 	for (const lang of LANGS) {
 		const buildArtifacts = makeArtifactsRegularInfo(common, recomArt2characters, lang)
@@ -534,7 +534,7 @@ async function saveWwwData() {
 		await writeJson(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, buildArtifacts)
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/artifacts`, { recursive: true })
 		for (const artifact of Object.values(common.code2artifact)) {
-			const artifactInfo = makeArtifactFullInfoWithRelated(artifact, common, recomWeap2characters, lang) //prettier-ignore
+			const artifactInfo = makeArtifactFullInfoWithRelated(artifact, common, recomArt2characters, lang) //prettier-ignore
 			await writeJson(`${WWW_DYNAMIC_DIR}/artifacts/${artifact.code}-${lang}.json`, artifactInfo)
 		}
 

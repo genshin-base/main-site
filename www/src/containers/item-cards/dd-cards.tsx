@@ -130,6 +130,15 @@ export function ArtifactCard({
 			markerGroups,
 		}
 	}, [selectedArt, related])
+
+	const selectedRecommendedTo = useMemo(() => {
+		const recs = selectedArt.recommendedTo.slice()
+		recs.reverse() //сначала новые персонажи (по умолчанию они в конце)
+		return recs //
+			.filter(x => x.count === 4)
+			.concat(recs.filter(x => x.count !== 4))
+	}, [selectedArt])
+
 	return (
 		<Card
 			titleEl={title}
@@ -171,7 +180,7 @@ export function ArtifactCard({
 							<div className="mb-3">{notesToJSX(selectedArt.sets[4])}</div>
 						</>
 					)}
-					{<RecommendedTo charCodes={selectedArt.recommendedTo} />}
+					{<RecommendedTo charCodes={selectedRecommendedTo} />}
 				</div>
 			}
 			mapEl={dataForMap.markerGroups.length ? <CardMap {...dataForMap} /> : null}
