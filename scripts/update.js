@@ -10,12 +10,7 @@ import {
 	extractWeaponsData,
 	getAndProcessMappedImages,
 } from '#lib/parsing/honeyhunter/index.js'
-import {
-	getCharacterArtifactCodes,
-	getCharacterRecommendedArtifactCodes,
-	getCharacterRecommendedWeaponCodes,
-	getCharacterWeaponCodes,
-} from '#lib/parsing/helperteam/characters.js'
+import { getCharacterArtifactCodes, getCharacterWeaponCodes } from '#lib/parsing/helperteam/characters.js'
 import { trigramSearcherFromStrings } from '#lib/trigrams.js'
 import { createHash } from 'crypto'
 import { exists, parseArgs, relativeToCwd } from '#lib/utils/os.js'
@@ -81,7 +76,6 @@ import { applyCharactersReleaseVersion } from '#lib/parsing/wiki/characters.js'
 import { getEnemyCodeFromName } from '#lib/genshin.js'
 import { getArtifactSpecialGroupCodes } from '#lib/parsing/honeyhunter/artifacts.js'
 import { buildsConvertLangMode } from '#lib/parsing/helperteam/build_texts.js'
-import { mappedArrPush } from '#lib/utils/collections.js'
 
 const HELPERTEAM_DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -463,19 +457,6 @@ async function checkUsedItemsLocations() {
 async function saveWwwData() {
 	info('updating www JSONs', { newline: false })
 
-	/** @type {import('#lib/parsing/combine').CommonData} */
-	const common = {
-		code2character: await loadCharacters(),
-		code2enemy: await loadEnemies(),
-		code2artifact: await loadArtifacts(),
-		code2weapon: await loadWeapons(),
-		code2domain: await loadDomains(),
-		code2item: await loadItems(),
-		enemyGroups: await loadEnemyGroups(),
-	}
-
-	const artGroupCodes = getArtifactSpecialGroupCodes(common.code2artifact)
-
 	const builds = await (async () => {
 		if (await exists(TRANSLATED_DATA_DIR)) {
 			return await loadTranslatedBuilds()
@@ -486,6 +467,19 @@ async function saveWwwData() {
 			)
 		}
 	})()
+
+	/** @type {import('#lib/parsing/combine').CommonData} */
+	const common = {
+		builds,
+		code2character: await loadCharacters(),
+		code2enemy: await loadEnemies(),
+		code2artifact: await loadArtifacts(),
+		code2weapon: await loadWeapons(),
+		code2domain: await loadDomains(),
+		code2item: await loadItems(),
+		enemyGroups: await loadEnemyGroups(),
+		_cache: new Map(),
+	}
 
 	excludeDomainBosses(common.code2enemy, common.code2domain)
 
@@ -500,28 +494,14 @@ async function saveWwwData() {
 		await fs.writeFile(path, content)
 		md5sum.update(content)
 	}
-	// async function writeBuffer(path, /**@type {Buffer}*/ content) {
-	// 	await fs.writeFile(path, content)
-	// 	md5sum.update(content)
-	// }
-
-	const recomWeap2characters = /**@type {Map<string, string[]>}*/ (new Map())
-	for (const character of builds.characters)
-		for (const code of getCharacterRecommendedWeaponCodes(character, common.code2weapon))
-			mappedArrPush(recomWeap2characters, code, character.code)
-
-	const recomArt2characters = /**@type {Map<string, string[]>}*/ (new Map())
-	for (const character of builds.characters)
-		for (const code of getCharacterRecommendedArtifactCodes(character, artGroupCodes))
-			mappedArrPush(recomArt2characters, code, character.code)
 
 	for (const lang of LANGS) {
-		const buildArtifacts = makeArtifactsRegularInfo(common, recomArt2characters, lang)
-		const buildWeapons = makeWeaponsRegularInfo(common, recomWeap2characters, lang)
+		const buildArtifacts = makeArtifactsRegularInfo(common, lang)
+		const buildWeapons = makeWeaponsRegularInfo(common, lang)
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 		for (const character of builds.characters) {
-			const fullInfo = makeCharacterFullInfo(character, common, buildArtifacts, buildWeapons, artGroupCodes, lang) //prettier-ignore
+			const fullInfo = makeCharacterFullInfo(character, common, buildArtifacts, buildWeapons, lang)
 			const locsInfo = extractFullInfoLocations(fullInfo)
 			await writeJson(`${WWW_DYNAMIC_DIR}/characters/${character.code}-locs-${lang}.json`, locsInfo)
 			await writeJson(`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`, fullInfo)
@@ -534,19 +514,21 @@ async function saveWwwData() {
 		await writeJson(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, buildArtifacts)
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/artifacts`, { recursive: true })
 		for (const artifact of Object.values(common.code2artifact)) {
-			const artifactInfo = makeArtifactFullInfoWithRelated(artifact, common, recomWeap2characters, lang) //prettier-ignore
+			const artifactInfo = makeArtifactFullInfoWithRelated(artifact, common, lang)
 			await writeJson(`${WWW_DYNAMIC_DIR}/artifacts/${artifact.code}-${lang}.json`, artifactInfo)
 		}
 
 		await writeJson(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, buildWeapons)
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/weapons`, { recursive: true })
 		for (const weapon of Object.values(common.code2weapon)) {
-			const weaponInfo = makeWeaponFullInfoWithRelated(weapon, common, recomWeap2characters, lang) //prettier-ignore
+			const weaponInfo = makeWeaponFullInfoWithRelated(weapon, common, lang)
 			await writeJson(`${WWW_DYNAMIC_DIR}/weapons/${weapon.code}-${lang}.json`, weaponInfo)
 		}
 
 		progress()
 	}
+
+	const artGroupCodes = getArtifactSpecialGroupCodes(common.code2artifact)
 
 	const hash = md5sum.digest('hex').slice(0, 8)
 	const charactersShortInfo = makeCharacterShortList(builds.characters, common.code2character)

@@ -1,8 +1,9 @@
+import { useMemo } from 'preact/hooks'
+
 import { ItemShortInfo } from '#src/../../lib/parsing/combine'
 import { BlockHeader } from '#src/components/block-header'
 import { I18N_ASC_MATERIALS, I18N_FOR_NOBODY, I18N_RECOMMENDED_FOR } from '#src/i18n/i18n'
 import { getItemIconSrc } from '#src/utils/items'
-import { useMemo } from 'preact/hooks'
 import { CharacterAvatar, ItemAvatar } from './item-avatars'
 
 export function RecommendedTo({
@@ -11,7 +12,7 @@ export function RecommendedTo({
 	isAvatarWithBorder = false,
 	navigateToCharacter = false,
 }: {
-	charCodes: string[]
+	charCodes: (string | { code: string; count: number })[]
 	isInline?: boolean
 	navigateToCharacter?: boolean
 	isAvatarWithBorder?: boolean
@@ -21,7 +22,8 @@ export function RecommendedTo({
 			charCodes.map(c => (
 				<CharacterAvatar
 					key={c}
-					code={c}
+					code={typeof c === 'string' ? c : c.code}
+					badgeTopStart={typeof c === 'string' ? undefined : 'x' + c.count}
 					rarity={isAvatarWithBorder ? 4 : undefined}
 					isNoBg={!navigateToCharacter}
 					classes={`small-avatar mb-2 me-2`}
