@@ -4,7 +4,6 @@ import { ItemShortInfo, WeaponRegularInfo } from '#lib/parsing/combine'
 import { apiGetWeapon } from '#src/api/endpoints'
 import { getAllRelated } from '#src/api/utils'
 import { Accordion } from '#src/components/accordion'
-import { BlockHeader } from '#src/components/block-header'
 
 import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
 import {
@@ -25,7 +24,6 @@ import { AscMaterials, RecommendedTo } from './common'
 import { ItemAvatar } from './item-avatars'
 import './line-cards.scss'
 import { CentredSpinner, Spinner } from '#src/components/spinners'
-import { getItemIconSrc } from '#src/utils/items'
 
 type WeaponRowProps = {
 	weapon: WeaponRegularInfo
@@ -185,7 +183,7 @@ function WeaponCardLine({
 					<div className={cellClass}>
 						<button
 							type="button"
-							className="btn-close btn-sm ms-auto "
+							className="btn-close btn-sm ms-auto"
 							aria-label="Close"
 							onClick={onClose}
 						></button>
@@ -195,10 +193,16 @@ function WeaponCardLine({
 			}
 			childrenMobile={
 				<>
-					<div className="text-center">
-						<button className="btn btn-link text-decoration-underline-dotted" onClick={onClose}>
-							{I18N_COLLAPSE}
-						</button>
+					<div
+						className="ms-auto d-flex justify-content-end align-items-center mb-2 me-3"
+						onClick={onClose}
+					>
+						<label className="small text-muted c-pointer">{I18N_COLLAPSE}</label>
+						<button
+							type="button"
+							className="btn-close btn-sm d-inline-block ms-1"
+							aria-label="Close"
+						></button>
 					</div>
 					<div className="bg-dark rounded border overflow-hidden border-secondary d-flex w-100 line-card-mobile">
 						<Accordion
@@ -247,12 +251,12 @@ function WeaponCardTableRowDesktop({ weapon, isExpanded = false, group }: Weapon
 						</div>
 					</td>
 					<td>
-						{weapon.atk.base}/{weapon.atk.max}
+						{weapon.atk.base} / {weapon.atk.max}
 					</td>
 					<td>
 						{weapon.subStat ? (
 							<>
-								{weapon.subStat.code} <br />
+								{I18N_STAT_NAME(weapon.subStat.code)} <br />
 								{`${weapon.subStat.base} / ${weapon.subStat.max}`}
 							</>
 						) : (

@@ -269,6 +269,12 @@ export function useForceUpdate(): () => void {
 	const setValue = useState(0)[1]
 	return useRef(() => setValue(v => ~v)).current
 }
+export function useUniqKey(): number {
+	const key = useMemo(() => {
+		return Math.random()
+	}, [])
+	return key
+}
 export function useVisibleTicker(callback: () => void, interval: number) {
 	const isVisible = useWindowVisibility()
 
