@@ -35,7 +35,6 @@ import { RecommendedTo } from './common'
 import { DdContext, ItemAvatar } from './item-avatars'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
-
 //переключалка для мобильного и десктопного вида
 export function CardDescMobileWrap({
 	children,
@@ -131,14 +130,6 @@ export function ArtifactCard({
 		}
 	}, [selectedArt, related])
 
-	const selectedRecommendedTo = useMemo(() => {
-		const recs = selectedArt.recommendedTo.slice()
-		recs.reverse() //сначала новые персонажи (по умолчанию они в конце)
-		return recs //
-			.filter(x => x.count === 4)
-			.concat(recs.filter(x => x.count !== 4))
-	}, [selectedArt])
-
 	return (
 		<Card
 			titleEl={title}
@@ -180,7 +171,7 @@ export function ArtifactCard({
 							<div className="mb-3">{notesToJSX(selectedArt.sets[4])}</div>
 						</>
 					)}
-					{<RecommendedTo charCodes={selectedRecommendedTo} />}
+					{<RecommendedTo charCodes={selectedArt.recommendedTo} />}
 				</div>
 			}
 			mapEl={dataForMap.markerGroups.length ? <CardMap {...dataForMap} /> : null}

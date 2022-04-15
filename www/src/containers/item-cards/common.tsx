@@ -1,7 +1,7 @@
 import { useMemo } from 'preact/hooks'
 
-import { ItemShortInfo } from '#src/../../lib/parsing/combine'
-import { BlockHeader } from '#src/components/block-header'
+import { ItemShortInfo } from '#lib/parsing/combine'
+import { mappedArrPush } from '#lib/utils/collections'
 import { I18N_ASC_MATERIALS, I18N_FOR_NOBODY, I18N_RECOMMENDED_FOR } from '#src/i18n/i18n'
 import { getItemIconSrc } from '#src/utils/items'
 import { CharacterAvatar, ItemAvatar } from './item-avatars'
@@ -12,40 +12,55 @@ export function RecommendedTo({
 	isAvatarWithBorder = false,
 	navigateToCharacter = false,
 }: {
-	charCodes: (string | { code: string; count: number })[]
+	charCodes: (string | { count: number; code: string })[]
 	isInline?: boolean
 	navigateToCharacter?: boolean
 	isAvatarWithBorder?: boolean
 }): JSX.Element {
-	const charList = useMemo(() => {
-		return charCodes.length ? (
-			charCodes.map(c => (
-				<CharacterAvatar
-					key={c}
-					code={typeof c === 'string' ? c : c.code}
-					badgeTopStart={typeof c === 'string' ? undefined : 'x' + c.count}
-					rarity={isAvatarWithBorder ? 4 : undefined}
-					isNoBg={!navigateToCharacter}
-					classes={`small-avatar mb-2 me-2`}
-					href={navigateToCharacter ? '/builds/' + c : undefined}
-				/>
-			))
-		) : (
-			<span className="align-middle">{I18N_FOR_NOBODY}</span>
-		)
-	}, [charCodes, navigateToCharacter, isAvatarWithBorder])
-	return isInline ? (
-		<>
-			<label className="opacity-75 pe-2 align-middle py-1">{I18N_RECOMMENDED_FOR}:</label>
-			{charList}
-		</>
-	) : (
-		<>
-			<BlockHeader>{I18N_RECOMMENDED_FOR}</BlockHeader>
-			{charList}
-		</>
+	const charLists = useMemo(() => {
+		const groupsMap = new Map<number, string[]>()
+		for (const item of charCodes) {
+			if (typeof item === 'string') {
+				mappedArrPush(groupsMap, 0, item)
+			} else {
+				mappedArrPush(groupsMap, item.count, item.code)
+			}
+		}
+		console.log(groupsMap, charCodes)
+		const groups = Array.from(groupsMap.entries())
+		groups.sort(([countA], [countB]) => countB - countA)
+		groups.forEach(([, codes]) => codes.reverse()) //сначала новые персонажи (по умолчанию они в конце)
+
+		if (groups.every(([, codes]) => codes.length === 0))
+			return <span class={`align-middle ${isInline ? 'py-1' : ''}`}>{I18N_FOR_NOBODY}</span>
+
+		return groups.map(([count, codes]) => (
+			<div>
+				{count !== 0 && 'x' + count + ': '}
+				{codes.map(c => (
+					<CharacterAvatar
+						key={c}
+						code={c}
+						rarity={isAvatarWithBorder ? 4 : undefined}
+						isNoBg={!navigateToCharacter}
+						classes={`small-avatar mb-2 me-2`}
+						href={navigateToCharacter ? '/builds/' + c : undefined}
+					/>
+				))}
+			</div>
+		))
+	}, [charCodes, isInline, navigateToCharacter, isAvatarWithBorder])
+	return (
+		<div class={`d-flex ${isInline ? 'flex-row' : 'flex-column'}`}>
+			<label class="opacity-75 pe-2 align-middle py-1">
+				{I18N_RECOMMENDED_FOR}
+				{isInline ? ':' : ''}
+			</label>
+			{charLists}
+		</div>
 	)
 }
+
 export function AscMaterials({
 	materials,
 	selectedMat,
