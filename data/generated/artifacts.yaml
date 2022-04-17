@@ -12,6 +12,27 @@ adventurer:
       en: Opening a chest regenerates 30% Max HP over 5s.
       ru: В течение 5 сек. после открытия любого сундука восстанавливает 30% ХП.
   pieces:
+    flower:
+      description:
+        en: A resilient flower that survived the harsh environment of an ancient city.
+          It is now proudly worn like a medal.
+        ru: Цветок, переживший жёсткий климат руин древнего города. Можно носить в
+          качестве броши.
+      story:
+        en: >-
+          The ambitious adventurer came across this resilient flower in the
+          depths of a gloomy ruin. 
+
+          Moved by the sight of life sprouting in defiance of a lifeless land, he almost forgot about the treasures buried deep in the ruin. 
+
+          After pausing to ponder it for a while, the adventurer plucked the flower, wore it as a brooch, and ventured forth into the darkness.
+        ru: >-
+          Жаждущий покорить звёзды и Бездну искатель приключений среди древних
+          руин внезапно нашёл упрямо растущий цветок. 
+
+          Он, пробивающийся из земли на границе между жизнью и смертью, тронул искателя приключений, заставив на минуту забыть о том, что в эти руины он пришёл за сокровищами. 
+
+          Подумав, искатель сорвал цветок, приколол к груди и отважно шагнул в темноту подземелья.
     plume:
       description:
         en: The feather of an exotic bird rarely seen on this continent.
@@ -132,6 +153,53 @@ archaic-petra:
         течение 10 сек. Одновременно можно иметь бонус урона только одного
         элемента.
   pieces:
+    flower:
+      description:
+        en: A flower born of the minerals and rocks of cliffside cracks. The way its
+          petals blow in the wind makes it seem alive.
+        ru: Цветок, рождённый из минералов и камней в скальных трещинах. То, как его
+          лепестки танцуют на ветру, заставляет его казаться живым.
+      story:
+        en:
+          - p: |-
+              A flower that bloomed in a cliff's impregnable cleft. 
+              It is an exquisite life shaped by the essence of Geo. 
+          - p: >-
+              There is a folk saying that goes thus: 
+
+              In times of yore, someone told the Lord of Geo that there was no life to be found in barren stone. 
+
+              Thus did the Lord of Geo command flowers of purest gold to burst forth from the face of an uneven rock. 
+          - p: >-
+              Perhaps the Geo Archon did once work such a great wonder, 
+
+              Or perhaps this is but one of the many tales that shroud this ancient world. 
+
+              But the prosperous harbor that grew out of the lifeless mountains, 
+
+              And that braves the raging waves of the Sea of Clouds— 
+
+              Perhaps that was the brilliant flower, after all.
+        ru:
+          - p: |-
+              В цветок, раскрывшийся в расселине отвесной скалы, 
+              вдохнула жизнь энергия Гео. 
+          - p: >-
+              По одному народному сказанию 
+
+              в старину однажды Властелину Камня заявили, что на голых камнях жизни быть не может. 
+
+              Тогда по его велению на каменной глыбе расцвели цветы из чистого золота. 
+          - p: >-
+              Быть может, Гео Архонт и в самом деле сотворил такое чудо. 
+
+              Возможно, однако, что это просто одна из легенд, которыми полнится седая земля. 
+
+              Но процветающий порт, который вырос среди безжизненных скал 
+
+              и храбро выстоял бурные волны Моря облаков, 
+
+              быть может, тем самым драгоценным цветком и был.
     plume:
       description:
         en: A hard feather from a large seacliff hawk. The basalt tip of the feather
@@ -314,6 +382,29 @@ berserker:
       en: When HP is below 70%, CRIT Rate increases by an additional 24%.
       ru: Увеличивает шанс крит. попадания на 24% при ХП ниже 70%.
   pieces:
+    flower:
+      description:
+        en: An exquisite flower that has been dyed red. It represents the qualities of
+          the Berserker.
+        ru: Изысканный цветок, окрашенный в алый цвет. Он отражает сущность Берсерка.
+      story:
+        en: >-
+          In the days before the berserker descended into madness, he would
+          sometimes pause in the rose garden for a moment to himself. 
+
+          He had never had a family, nor had he a lover, or a friend. 
+
+          When he was not on the battlefield, he would come here to tend to the fragile flowers in the garden with all his heart, 
+
+          as if the crimson flowers buried in the thorns were the only warmth he could cling to.
+        ru: >-
+          До того, как сойти с ума, воин порой гулял в саду роз. 
+
+          У него никогда не было семьи. Не было ни возлюбленной, ни друга, с которым он мог бы поделиться своими мыслями. 
+
+          В перерывах между битвами он приходил в этот сад, чтобы со всей нежностью, на которую был способен, ухаживать за хрупкими цветами... 
+
+          Как будто кроваво-красные розы, скрытые в недрах колючих кустарников, единственные могли дать его душе почувствовать тепло.
     plume:
       description:
         en: An indigo feather from a legendary raven, part of which has been dyed
@@ -440,6 +531,56 @@ blizzard-strayer:
         20%. Если противник имеет статус Заморозка, то дополнительно увеличивает
         шанс крит. попадания на 20%.
   pieces:
+    flower:
+      description:
+        en: A long-extinct flower, covered in beads of frost, that once grew on the
+          glaciers. There was a time when even the proudest and most arrogant
+          warriors bowed before it.
+        ru: Этот покрытый бусинами инея вымерший цветок когда-то рос среди ледников. В
+          те времена даже самые горделивые и высокомерные воины преклоняли перед
+          ним колено.
+      story:
+        en:
+          - p: >-
+              This is a flower of ever-frost, plucked by a pair of gentle
+              hands. 
+
+              It must have given a certain someone the strength to see winter as a warm embrace. 
+          - p: >-
+              "This fourth fresco is prepared for you. Your likeness will
+              forever remain on this wall." 
+
+              "For the sake of that fresco, and for everyone's sake, I will wait for you, and pray for your return..." 
+          - p: >-
+              The maiden stood before a blank wall, and smiling, she pinned a
+              small flower to the hero's breast. 
+
+              That was an elegant and unruffled fellow, who would never bat an eyelid, not even in the face of death itself. 
+          - p: >-
+              The heroism of the Icebreaker was forgotten, buried in the storms
+              of the North. 
+
+              Since then, the snow has melted — but this flower has not withered.
+        ru:
+          - p: >-
+              Цветок, навечно скованный льдом и некогда сорванный нежными
+              руками. 
+
+              Он был вручён некоему человеку, чтобы подарить тому тёплые объятия в разгар зимней стужи. 
+          - p: >-
+              «Эту четвёртую фреску я подготовила для тебя. Твой образ будет
+              навсегда запечатлён здесь. 
+
+              Ради этой фрески, ради всех нас я буду ждать тебя здесь и молиться о том, чтобы ты вернулся...» 
+          - p: >-
+              Девушка стояла перед пустой стеной. С улыбкой на устах она
+              прикрепила к груди героя цветок. 
+
+              То была изящная и свободная натура, которую не изменили бы ни отчаяние, ни смерть. 
+          - p: >-
+              Подвиг героя был забыт и смешан с северными штормовыми ветрами. 
+
+              С тех пор снега растаяли и исчезли, но цветок по-прежнему не завял.
     plume:
       description:
         en: A feather that exudes a chilly aura. One can almost feel the turbulent winds
@@ -681,6 +822,45 @@ bloodstained-chivalry:
       ru: После победы над противником увеличивает урон заряженной атаки на 50% и
         обнуляет стоимость выносливости заряженной атаки на 10 сек.
   pieces:
+    flower:
+      description:
+        en: A dried flower stained black with blood and now as hard as steel. Probably
+          some sort of a memento for its former master.
+        ru: Цветок, который, благодаря засохшей крови, стал жёстким как сталь. Должно
+          быть, он очень дорог бывшему владельцу как память.
+      story:
+        en:
+          - p: |-
+              A common white flower given to the knight by a rescued damsel. 
+              It is dried and hardened by the blood from all his bloodshed. 
+          - p: |-
+              Thanking him for his valor, the damsel offered a reward. 
+              He turned down all she gave, save for a pure white flower. 
+          - p: |-
+              "For a knight, chivalry is its own reward." 
+              "This flower shall be my medal. That is all I need." 
+          - p: |-
+              He wore the flower upon his heart. 
+              Like his armor, it was stained as black as a winter's night. 
+              Like his heart, it was hardened like a tempered blade.
+        ru:
+          - p: >-
+              Простой белый цветок, который девушка подарила своему спасителю. 
+
+              Его столько раз окропляла кровь и высушивал ветер, что он почернел и стал твёрдым. 
+          - p: >-
+              Рыцарь спас девушку, сразив чудовище первый раз в своей жизни. 
+
+              Она желала отблагодарить его за храбрость, но он отверг всё, кроме белого цветка. 
+          - p: |-
+              «Возможность посвятить себя рыцарскому пути - уже награда. 
+              «Пусть этот цветок будет моей медалью. Это всё, что мне нужно». 
+          - p: >-
+              Он всегда носил этот цветок у сердца. 
+
+              Его лепестки, как и доспехи, засохшая кровь сделала чернее зимней ночи, 
+
+              а сердце рыцаря стало твёрже кованного железа.
     plume:
       description:
         en: A raven feather pinned to a knight's cape. Countless bloodstains have dyed
@@ -864,6 +1044,43 @@ brave-heart:
       en: Increases DMG by 30% against opponents with more than 50% HP.
       ru: Увеличивает на 30% урон против врагов с ХП выше 50%.
   pieces:
+    flower:
+      description:
+        en: A simple flower brooch that is a keepsake from someone's first adventure.
+        ru: Простенькая брошь из цветка. Память об одном из первых приключений.
+      story:
+        en:
+          - p: >-
+              The little hero slipped out of doors by night, and with his friend
+              rushed headlong into the wolves' forest. 
+
+              With his slingshot he chased boars, and with sturdy branches he would battle imaginary monsters. 
+
+              Following the shining Seelie deep into the woods, he discovered a treasure that had laid buried for a thousand years. 
+          - p: "That treasure was a small yellow flower. "
+          - p: >-
+              When the tired hero returned to his childhood bedroom, and flipped
+              through the proof of his first adventures, 
+
+              He discovered to his surprise that the long-hidden flower had yet to wilt. 
+
+              Yet in this it was alone, for everything else had changed with the passing of years.
+        ru:
+          - p: >-
+              Маленький герой выскользнул ночью из дому, и вместе с другом они
+              стремглав помчались в лес волков. 
+
+              Рогаткой он обращал в бегство кабанов, и крепкой веткой дубасил воображаемых демонов. 
+
+              Он последовал за светящейся феей вглубь леса и нашёл сокровище, которое лежало в земле тысячи лет. 
+          - p: "Им оказался крохотный жёлтый цветок. "
+          - p: >-
+              Маленький усталый храбрец вернулся в свою детскую спаленку и
+              принялся осматривать добытый трофей. 
+
+              Он очень удивился, когда обнаружил, что цветочек нисколько не высох, 
+
+              тогда как всё остальное вокруг него под напором времени менялось.
     plume:
       description:
         en: A shimmering feather from a songbird that brings a nudge of courage to its
@@ -1038,6 +1255,46 @@ crimson-witch-of-flames:
         набора из двух вещей на 50% в течение 10 сек. Может складываться до 3
         раз.
   pieces:
+    flower:
+      description:
+        en: A flower touched by the witch who once dreamt of burning away all the demons
+          in the world. The anonymous flames affectionately caress the hands of
+          those who touch it.
+        ru: Цветок, которого коснулась ведьма, мечтающая сжечь всех демонов мира. Языки
+          пламени тепло ласкают притронувшиеся к нему руки.
+      story:
+        en:
+          - p: |-
+              A common species of flower. 
+              It is curiously capable of resisting the Crimson Witch's flames. 
+          - p: >-
+              A crisis centuries ago dashed all hope of the maiden seeing the
+              future promised to her. 
+
+              Those dear to her, her past days, and her bright future. All gone. 
+          - p: >-
+              From the ashes, the Crimson Witch of Flame was born, and she
+              burned away her pain with fire. 
+
+              Yet this flower stayed resilient, soft, and moist. 
+
+              Perhaps both painful and beautiful memories were two sides of the same coin.
+        ru:
+          - p: |-
+              Самый обычный, ничем не примечательный цветок, который, однако, 
+              смог выстоять перед огнём Горящей алой ведьмы. 
+          - p: >-
+              Грянувшие века назад бедствия порушили всё, что девушке сулила
+              жизнь. 
+
+              Друзья и родные, былые дни, блестящее будущее - всё было уничтожено. 
+          - p: >-
+              Так, из дыма и пепла родилась Горящая алая ведьма, и предала она
+              свою боль со скорбью пламени. 
+
+              Но этому цветку огонь навредить не смог - стебелёк оставался строен, а лепестки по-прежнему благоухали. 
+
+              И мучительные, и прекрасные воспоминания были, пожалуй, двумя сторонами одного целого.
     plume:
       description:
         en: A bird feather touched by the witch who once dreamt of burning away all the
@@ -1215,6 +1472,29 @@ defenders-will:
       ru: За каждого члена вашего отряда с неповторяющимся элементом повышает
         сопротивление к соответствующему элементу на 30%.
   pieces:
+    flower:
+      description:
+        en: An iris that was cherished by the guardian. Unfortunately, the chance never
+          came for it to be given to whom the guardian loved.
+        ru: Цветок ириса, заботливо оберегаемый защитником. К сожалению, ему так и не
+          выпал шанс подарить этот цветок своей возлюбленной.
+      story:
+        en:
+          - p: |-
+              Only that maiden's clear voice, 
+              Could cause the guardian's brow to come unbound. 
+          - p: |-
+              Their time together was short. 
+              At last, the knight's blood would run dry, 
+              As would her tears and her songs.
+        ru:
+          - p: |-
+              Только от звонкого голоса той девы 
+              настороженность его сменялась умиротворением. 
+          - p: |-
+              Вместе они пробыли совсем немного. 
+              В итоге кровь рыцаря иссякла, 
+              как и её слёзы и песни.
     plume:
       description:
         en: A feather-shaped brooch that symbolizes someone’s yearning to defend others
@@ -1395,6 +1675,77 @@ echoes-of-an-offering:
         попаданием возрастает на 20%. Шанс активации возникает не чаще одного
         раза в 0,2 сек."
   pieces:
+    flower:
+      description:
+        en: A jade carved into the shape of a flower. A phantom scent, here one instant
+          and gone the next, swirls around it.
+        ru: Резное украшение из нефрита в форме цветка. Призрачный аромат, что кружит у
+          цветка, то покидает его, то возвращается вновь.
+      story:
+        en:
+          - p: >-
+              Each year, when the Spiritscent Flowers bloom, Qiaoying Village
+              will prepare for its tea-serving ceremonies. 
+
+              Once the flowers wither, flower tea infused with nine layers of scents are presented in the village hall. 
+
+              The Spiritscent Flower is a fleeting thing, much like the sudden coming and going of a certain adeptus. 
+
+              This one left behind the ambiguous name of "Herblord," as well as many foggy and fragmented legends. 
+          - p: >-
+              In one such tale, the Herblord's adeptal form would turn into the
+              branches of an ancient tea tree. 
+
+              In another, the adeptus flew up to the adeptal mountain on a subdued evil beast. 
+
+              There is even a story that goes like this— 
+          - p: >-
+              The young lady grasped at the hooded hat on the ground as she
+              struggled ashore, placing it on her head haphazardly. 
+
+              For if she did not cover her face, then she might feel embarrassed and find herself at a loss for words. 
+
+              Just then, the orchestrator of her suffering poked their head out of the water. 
+
+              The rainbow-scales on their body glimmered, as if to revel in this victory. 
+          - p: '"*cough* Alright! So you can swim! Very impressive! ...You know what? May
+              you drown someday!" '
+          - p: >-
+              She spoke these words in anger, but also in jest. 
+
+              And yet that glittering streak would eventually sink into the depths, never to come back to the surface.
+        ru:
+          - p: >-
+              Каждый год, когда распускаются цветы призрачного аромата, в
+              деревне Цяоин готовятся к церемонии чаепития. 
+
+              Когда цветы увядают, храмы наполняются ароматом девяти чаёв. 
+
+              Цветок призрачного аромата так же мимолётен, как и визит некоего Адепта. 
+
+              Всё, что осталось от Адепта медицины, - это расплывчатое имя и множество бессвязных легенд. 
+          - p: >-
+              В одной из таких историй Адепт медицины превращался в ветви
+              древнего чайного дерева. 
+
+              Согласно другой истории, приручённый злой зверь унёс его в горные обители Адептов. 
+
+              Есть даже такая история: 
+          - p: >-
+              Однажды девушка вышла на берег, подняла с земли шляпу с вуалью и
+              небрежно надела её. 
+
+              Без вуали, скрывавшей её лицо, молодая женщина чувствовала себя неловко и не решалась заговорить. 
+
+              Вдруг существо, из-за которого она оказалась в этой неловкой ситуации, высунуло голову из воды. 
+
+              Радужные чешуйки на его теле мерцали, словно радуясь этой победе. 
+          - p: "«Значит, ты умеешь плавать! Очень впечатляет! Знаешь что? Надеюсь, однажды
+              ты утонешь!» "
+          - p: >-
+              Хотя она была возмущена, но сказала это в шутку. 
+
+              Однако это мерцающее сияние погрузилось на глубину и больше не появлялось.
     plume:
       description:
         en: A jade ornament shaped like a leaf. It seems to have once had deep meaning
@@ -1728,6 +2079,106 @@ emblem-of-severed-fate:
       ru: Увеличивает урон взрыва стихий на величину, равную 25% от значения
         восстановления энергии. Эффект можно увеличить максимум до 75%.
   pieces:
+    flower:
+      description:
+        en: Legends hold that this ornate hand guard was once fitted upon a sword gifted
+          to the oni who betrayed the Shogun.
+        ru: Согласно легендам эта изысканная гарда когда-то была частью меча, который
+          получил в подарок они, предавший сёгуна.
+      story:
+        en:
+          - p: >-
+              Mother had bared her fangs against the Shogun, who had been kind
+              to her and who had given her a treasured sword. 
+
+              In the end, the only thing that was sent back to the Mikoshi Clan was the tsuba of that blade which she had loved so dearly. 
+          - p: >-
+              Mother's long-cherished wish was to overcome the destiny of life
+              and death with her boiling passion. 
+
+              She would make such contributions as to make an eternal name for the ever-thinning blood of the war-oni. 
+
+              If she was engulfed by the pitch-black tiger-beast of sin itself, then she would tear it apart from the inside. 
+          - p: >-
+              She would've proven her valor resoundingly under the Electro
+              Mitsudomoe banner, 
+
+              And she thought she could wash her bloodstained juunihitoe battle-garb clean. 
+
+              But it was stained black in the end, together with her fiercely beating heart... 
+          - p: >-
+              From then on, her eldest son, who should have inherited the family
+              fortune, lived in seclusion in a village outside the city, 
+
+              With naught but the mountain and wood as his friends — that is, until he met that girl... 
+          - p: >-
+              "What a pain. Well, if you wish to abandon your past, allow me to
+              give you a new name." 
+
+              After hearing about his past, the girl who possessed jet black wings sneered disdainfully. 
+
+              "Well, you shall be called Iwakura. 'The seat of rock.' A name that human words cannot harm." 
+
+              "Come on, mortal in whose veins runs the blood of the oni, be glad. Smile a little!" 
+
+              "You should know that names given by us Yougou Tengu are blessed with divine powers." 
+
+              "Besides, the name 'rock' suits you — it certainly suits your mind and your muscles, that's for sure." 
+          - p: >-
+              "Well then, when the cherry blossoms fall next year, let's have a
+              duel here, 'Iwakura.'" 
+
+              "Child of the oni, hone your swordsmanship and become a foe whom the Yougou Tengu would not be ashamed to cross swords with." 
+
+              "Ah, yes! If you manage to touch me, you'll get to call your secret blade 'Tengu Victor'!" 
+
+              "After all, if you get to that point, you'll have a sword that'll let you 'triumph over the tengu.'"
+        ru:
+          - p: >-
+              Мать показала свой клык сёгуну, который был добр к ней и дал ей
+              хороший меч. 
+
+              В итоге единственное, что было отправлено обратно клану Микоси, - это её любимый меч. 
+          - p: >-
+              Мать стремилась с помощью своей кипящей страсти преодолеть судьбу
+              жизни и смерти. 
+
+              Во имя призраков войны, чтобы внести бессмертный вклад в свой увядающий клан. 
+
+              Если её поглотит сам грешный зверь, то она разорвёт его изнутри. 
+          - p: >-
+              Она могла бы добиться большего под знаменем Электро мицудомоэ... 
+
+              Она думала, что сможет очистить залитый кровью боевой костюм - мантию Дзюнихито. 
+
+              Но в конце концов он окрасился в черный цвет вместе с её бешено бьющимся сердцем... 
+          - p: >-
+              С тех пор старший сын, который должен был стать наследником семьи,
+              жил в уединении в деревне за городом. 
+
+              Он дружил с лесом горы Ёго, пока не встретил эту девушку... 
+          - p: >-
+              «Какая боль. Если хочешь отказаться от прошлого, давай я дам тебе
+              новое имя». 
+
+              Услышав о его прошлом, девушка с черными как смоль крыльями презрительно усмехнулась. 
+
+              «Пусть будет Ивакура. Основание горы. То, что не пострадает от чужих слов». 
+
+              «В твоих жилах течёт демоническая кровь. Ты должен быть счастлив, улыбнись». 
+
+              «Знаешь, имена, данные тэнгу Ёго, наделены божественными силами». 
+
+              «Кроме того, имя "скала" тебе подходит - оно говорит и о твоём разуме, и о твоих мышцах». 
+          - p: >-
+              «Что ж, Ивакура, когда в следующем году упадёт цвет сакуры, давай
+              устроим здесь поединок». 
+
+              «Сын демона, тренируйся сражаться с мечом и стань противником, достойным сразиться с тэнгу Ёго». 
+
+              «Да, если тебе удастся прикоснуться ко мне, то ты сможешь назвать свой секретный стиль боя с мечом Грозой Тэнгу!» 
+
+              «Ибо с тех пор ты будешь владеть мечом, способным победить тэнгу».
     plume:
       description:
         en: This was once the black feather of a certain tengu warrior, and was the
@@ -2067,6 +2518,33 @@ gambler:
       ru: Победа над противником со 100% шансом восстанавливает время отката
         элементального навыка. Может возникнуть раз в 15 сек.
   pieces:
+    flower:
+      description:
+        en: A big, luxurious flower that can hide loaded dice.
+        ru: Роскошный большой цветок, способный спрятать в себе шулерские кости.
+      story:
+        en: >-
+          Gamblers like to flaunt their wealth, although their money can
+          disappear overnight. 
+
+          She would wear this huge, exotic flower ornament on her ears. It certainly catches the eye. 
+
+          But what they would not see is the trick dice carefully hidden within the flower. 
+
+          The gambler would only sneak this dice out of the brooch in an urgent situation. 
+
+          Swapping in this dice under the vigilant eyes of the guests was how she turned the table around.
+        ru: >-
+          Азартные игроки любят сверкающие драгоценности, хотя и знают, что
+          богатство быстро приходит и легко уходит. 
+
+          Она носила эти крупные и пышные заморские цветы в ушах, и их искрящееся сияние притягивало взгляды. 
+
+          Но никто не знал, что среди лепестков искусно спрятаны шулерские игральные кости. 
+
+          Подготовленные для экстренных ситуаций, в нужный момент кости почти магическим жестом ловких рук появляются в игре, 
+
+          заменяя собой прежние кости прямо перед носами игроков и создавая для неё выгодный расклад.
     plume:
       description:
         en: The tail feather of a large bird. Perfect for discretely concealing a trump
@@ -2178,6 +2656,52 @@ glacier-and-snowfield:
       ru: Увеличивает урон статуса Сверхпроводник на 100%, а урон статуса Таяние - на
         15%. Взрыв стихии увеличивает Крио урон на 30% в течение 10 сек.
   pieces:
+    flower:
+      description:
+        en: A flower that has been frozen in time from the moment it was picked. The
+          knight kept it as a memento forever after.
+        ru: Немой ледяной цветок, превратившийся в лёд после того, как был сорван
+          рыцарем, ступающим в ногу с Северным Ветром.
+      story:
+        en:
+          - p: >-
+              This flower once bloomed in a foreign land, but its colors faded
+              after it became encased in ice. 
+
+              It was frozen when picked, serving as an eternal memento for the Knight of Boreas. 
+          - p: >-
+              The Knight of Boreas had a heart of firm iron and a body hardened
+              like the glaciers of the North. 
+
+              Wolves befriended him and the North Wind accompanied him. 
+          - p: >-
+              Yet few knew he belonged not to the heartless snowscape of the
+              North. 
+
+              His true home was filled with never-withering flowers and never-frozen rivers. 
+
+              But he left his homeland. For he had a ranger's boundless spirit, which conflicted with the sages' narrow idealism. 
+
+              The flower he picked became his loyal companion through countless winters.
+        ru:
+          - p: >-
+              Заточённые в седом льду яркие лепестки этого цветка из дальних
+              краёв со временем побледнели. 
+
+              Чтобы сохранить память о весне, Рыцарь северного ветра сорвал его и немедля заморозил. 
+          - p: >-
+              Плоть Рыцаря северного ветра приняла подобие ледника, в котором
+              билось стальное сердце. 
+
+              Серые волки стали его свитой, и ледяной ветер сопровождал его неизменно. 
+          - p: >-
+              Мало кто знал, что родина рыцаря была от снежного севера далеко. 
+
+              Родные края его цвели круглый год, а голубые реки никогда не замерзали. 
+
+              Жаждущий странствий дух не примирился с наставлениями осторожных мудрецов седовласых, и рыцарь покинул свой дом. 
+
+              Перед тем как ступить в вечный хлад, сорвал и взял с собой он цветок.
     plume:
       description:
         en: A bird feather that was picked up by the knight who walked with the North
@@ -2371,6 +2895,57 @@ gladiators-finale:
       ru: Увеличивает урон обычной атаки на 35%, если персонаж использует одноручное,
         двуручное или древковое оружие.
   pieces:
+    flower:
+      description:
+        en: No one knows why the legendary gladiator wore this flower on his chest. It
+          was the brutal warrior's only weakness.
+        ru: Никто не знает, зачем легендарный гладиатор носил этот цветок у себя на
+          груди. Это была его единственная слабость.
+      story:
+        en:
+          - p: >-
+              An ordinary flower picked gently by the gladiator's master. 
+
+              He made a brooch with it and pinned it on the gladiator's chest. It came to symbolize his gentler side. 
+          - p: >-
+              Before the gladiator became a living legend, he once strolled with
+              his young master in the garden. 
+
+              The master picked a flower and gave it to the silent slave. 
+
+              "Not all gifts are given out of benevolence. Sometimes they are nothing more than acts of whimsy." 
+
+              One day in the far-off future, the gladiator's sly master would say these words to him. 
+          - p: >-
+              The invincible gladiator finally fell at the foreign girl's feet. 
+
+              At that moment, he recalled a dream he had had many years ago. 
+
+              "Such beautiful flowers. I wonder when I'll be able to begin my own journey to see them." 
+
+              "I'd like to see how beautiful the wild flowers are."
+        ru:
+          - p: >-
+              Обычный цветок, сорванный заботливым хозяином гладиатора. 
+
+              Он приколол цветок к груди гладиатора как символ мягкости натуры последнего. 
+          - p: >-
+              До того, как он стал легендой, гладиатор однажды прогуливался со
+              своим юным хозяином по саду. 
+
+              Хозяин сорвал цветок и подарил своему молчаливому рабу. 
+
+              «Не всякий подарок - это вознаграждение. Некоторые всего лишь сиюминутная прихоть». 
+
+              Так через много лет со смехом скажет гладиатору его хитрый хозяин. 
+          - p: >-
+              Непобедимый гладиатор наконец упал у ног юной чужестранки, и 
+
+              перед глазами его предстала позабытая много лет назад мечта. 
+
+              «Эти цветы прекрасны. Интересно, 
+
+              когда я отправлюсь в путь, будут ли дикие цветы, что повстречаются мне, столь же красивы?»
     plume:
       description:
         en: A feather of dreams that soars free like an eagle. At the end of the
@@ -2587,6 +3162,64 @@ heart-of-depth:
       ru: Увеличивает урон обычной и заряженной атаки на 30% в течение 15 сек. после
         использования элементального навыка.
   pieces:
+    flower:
+      description:
+        en: A mantle brooch that has lost its luster. The gold plating that once adorned
+          it was ground away by the wind and the waves long ago.
+        ru: Потускневшая брошь для скрепления кончиков плаща. Морской ветер давным-давно
+          стёр с неё сверкающую позолоту.
+      story:
+        en:
+          - p: >-
+              A corsage whose coloration has been blistered away by the sea-salt
+              wind. 
+
+              Even a man who wanders the ocean waves, 
+
+              Has items and memories that he prizes. 
+          - p: >-
+              The great warship raised its anchor and headed out to sea, and the
+              Chief Mate once more left harbor with the Skipper. 
+
+              For the Skipper's absurd pursuit, and for his own faded memories, 
+
+              The Chief Mate hummed a crappy shanty of his own composing, forming a chorus with the whales and the waves. 
+          - p: >-
+              "The scoundrel who gave up his family name and the witch who
+              hunted him (never) reached the sea!" 
+
+              "The wise step-brother who could not be an heir became head at last (or did he?)" 
+          - p: >-
+              "Words that cannot be sung... Have I also forsaken the truth for
+              illusions?" 
+
+              "Having lost it all, and given it all up, and then sinking beneath the waves..." 
+
+              "...Maybe this isn't the worst of endings, after all. Hahahahaha!"
+        ru:
+          - p: |-
+              Бутоньерка, выцветшая на морском ветру. 
+              Даже у того, кто ходит по волнам, 
+              есть ценные для него предметы и воспоминания. 
+          - p: >-
+              Боевой корабль снова поднимает якорь и выходит в море, и старпом
+              снова следует за своим капитаном. 
+
+              Во славу безрассудной погони, во славу памяти о мрачной родине 
+
+              тихо напевал старпом нескладные хмельные песни, которые придумал сам, и голос его сливался с голосами китов и отзвуками волн. 
+          - p: >-
+              «Отбросивший имя клана разбойник и ведьма, что вела на него охоту,
+              (не) добрались до морской глади! 
+
+              Мудрый брат, что не мог обрести имя клана, наконец-то стал его главой (или нет?)» 
+          - p: >-
+              «Слова, что нельзя спеть... Неужели и я променял правду на
+              иллюзии? 
+
+              Отбросил всё и утратил всё, погрузился в волны, способные объять что угодно... 
+
+              ...А может, это не такой уж и плохой финал. Ха-ха-ха-ха!»
     plume:
       description:
         en: A feather carried over by whimpering sea winds and crimson waves. The
@@ -2842,6 +3475,71 @@ husk-of-opulent-dreams:
         получает Любопытство в течение 6 сек., то он теряет 1 накопленный
         уровень Любопытства."
   pieces:
+    flower:
+      description:
+        en: A small golden ornament with six petals that shall never wilt. It symbolizes
+          the transience of mortal glories.
+        ru: Маленькое золотое украшение в форме цветка с шестью лепестками, который
+          никогда не увянет. Символизирует быстротечность земной славы.
+      story:
+        en:
+          - p: >-
+              What he saw in his dream was a phantom dancing to the music under
+              the moonlight, 
+
+              Just like the young man in the distant past, who was akin to a blank sheet of paper, 
+
+              And like a pure yet fragile persona, 
+
+              Emerging once the resentment and suffering had dissipated. 
+          - p: >-
+              The wanderer did not know that he had any faculties for dreaming, 
+
+              Thinking that this must have been the researchers' little trick, 
+
+              Or perhaps it was the infinitesimal resistance of that bygone heart. 
+          - p: >-
+              "You once acquired the 'heart' that you always dreamed of," 
+
+              "But it was but a mere prop for lies and deception." 
+
+              "Now, you will finally obtain what belongs to you," 
+
+              "And this false construct of a body can at last aspire to power over this world." 
+          - p: >-
+              "Yet, this is all but a fleeting dream of glory." 
+
+              "And it will all one day drift away amidst the sighs of a suffering earth..." 
+
+              Was it a "him" from the past who said this? Or "him" from the future? 
+
+              The vagrant cared not, for when he awakened, 
+
+              It was not he, but that ethereal future that dissipated.
+        ru:
+          - p: >-
+              В его сне призрак танцевал под музыку при свете луны. 
+
+              Он напоминал самого юношу в далёком прошлом, когда он был чист, словно лист бумаги. 
+
+              А может быть, его же, но изжившего ненависть и горести 
+
+              и обнажившего после этого свою чистую и хрупкую сущность. 
+          - p: |-
+              Странник не знал, что способен видеть сны. 
+              Он решил, что это может быть очередным трюком учёных 
+              или ничтожным сопротивлением прежнего сердца. 
+          - p: |-
+              «Однажды ты получил "сердце", о котором всегда мечтал. 
+              Но это была всего лишь фальшивка. 
+              Теперь же ты наконец обретёшь то, что тебе принадлежит. 
+              И это сконструированное тело сможет захватить власть над миром. 
+          - p: |-
+              Но всё это лишь мимолетные мечты о славе, 
+              которые однажды развеются среди вздохов страдающей земли». 
+              Говорил ли это «он» из прошлого? Или «он» из будущего? 
+              Страннику было всё равно, и, когда он проснулся, 
+              рассеялся не он, а то бесплотное видение будущего.
     plume:
       description:
         en: A feather-shaped token that was brought forth from a secluded hall. The
@@ -3281,6 +3979,38 @@ instructor:
       ru: Вызов элементальной реакции увеличивает мастерство стихий всех членов отряда
         на 120 ед. в течение 8 сек.
   pieces:
+    flower:
+      description:
+        en: Whenever the instructor wore this brooch, it meant there would be no
+          training sessions that day.
+        ru: Надетая брошь означает, что сегодня занятий не будет.
+      story:
+        en: >-
+          Every student in the school knew that the strict instructor was a
+          serious soldier. 
+
+          But every week, there would always be a day or two when the instructor would wear this yellow flower brooch on his chest. 
+
+          The smile on the instructor's face would always bring the students a sense of relief. 
+
+          For when the instructor wore the yellow flower brooch, it meant that they could take a day off and go home. 
+
+          Once his boisterous students had finally gone, the instructor would visit a silent graveyard. 
+
+          There, after a moment of silence, he would pay his respects to the familiar names carved on the tombstones.
+        ru: >-
+          Каждый курсант военной школы понимает, что их суровый инструктор
+          всегда серьёзен. 
+
+          Но каждую неделю случаются один - два дня, когда инструктор пребывает в хорошем настроении, и в такие моменты на груди он носит маленький жёлтый цветок. 
+
+          Заметив, что инструктор едва улыбается краешком губ, курсанты с облегчением вздыхают. 
+
+          Жёлтый цветок на груди инструктора означает, что сегодня выходной и можно заглянуть домой. 
+
+          Когда его непослушные курсанты, наконец, расходятся кто куда, инструктор приходит на безмолвное кладбище. 
+
+          И там, в полной тишине, он молча приносит дань уважения тем, чьи имена высечены на знакомых надгробиях.
     plume:
       description:
         en: Any instructor who has mastered the art of de-escalation knows to keep this
@@ -3393,6 +4123,51 @@ lavawalker:
       en: Increases DMG against opponents affected by Pyro by 35%.
       ru: Увеличивает урон против врагов, находящихся под действием Пиро, на 35%.
   pieces:
+    flower:
+      description:
+        en: A flower that blooms amidst burning flames. It is said that long ago, a sage
+          once wore it as he walked into a sea of fire.
+        ru: Цветок, распускающийся в бушующем пламени. Существует легенда о мудром
+          человеке, перешедшем горящее море с этим цветком.
+      story:
+        en:
+          - p: |-
+              A flower that only blooms in the burning flames. 
+              The searing pain it causes will make the wearer stronger. 
+          - p: |-
+              The fiery-red flower shines like shimmering agate. 
+              This flaming flower was once a brooch worn by the Lavawalker. 
+          - p: >-
+              In the Lavawalker's final days, he said to his people: 
+
+              "This is the flower that blooms in flames. Until the day that the fires turn me into ashes, 
+
+              You shall see the glowing embers of this flower shining through the dark smoke." 
+          - p: >-
+              The people followed the flower's flickering light to the edge of
+              the Mare Jivari. 
+
+              There they found the blooming flowers — but the Lavawalker was nowhere to be seen.
+        ru:
+          - p: >-
+              Цветок, распускающийся лишь в бушующем огне. 
+
+              Жгучая боль, которую он вызывает, делает носящего его ещё более стойким. 
+          - p: >-
+              Огненно-красный цветок сверкает, как агат. 
+
+              Ступающий по лаве некогда носил этот опаленный пламенем цветок на груди. 
+          - p: >-
+              Перед самой смертью Ступающий по лаве сказал людям: 
+
+              «Это цветок, распускающийся только в бушующем пламени. Пока огонь не обратит меня в пепел, 
+
+              Вы будете видеть сияние этого цветка сквозь дым и марево». 
+          - p: >-
+              Впоследствии люди, которые шли за мерцанием цветка, вышли на берег
+              Пепельного моря. 
+
+              Однако следов Ступающего по лаве они не обнаружили. Только цветок распускался среди пепла...
     plume:
       description:
         en: The feather of a proud phoenix. You can almost hear the sound of its wings
@@ -3602,6 +4377,34 @@ lucky-dog:
       en: Picking up Mora restores 300 HP.
       ru: Поднятие монет восстанавливает 300 ХП.
   pieces:
+    flower:
+      description:
+        en: A four-leaf clover that grows in the wild. It was picked because it is said
+          to bring good luck.
+        ru: Четырёхлистный цветок, растущий в дикой местности. Его сорвали, потому что
+          считали, что он приносит удачу.
+      story:
+        en: >-
+          One who is favored by fortune tends to experience at least their fair
+          share of miracles. 
+
+          The legendary four-leaf clover, for instance, is a precious find that brings luck to its bearer. 
+
+          Once, while playing in the field, the carefree young boy known as Lucky Dog happened across just such a clover. 
+
+          Delighted, he plucked it from the ground and put it in his pocket. 
+
+          No one knows whether it was the clover which brought him his good fortune, or the other way around.
+        ru: >-
+          Этому ребёнку везёт с рождения: его всегда сопровождают чудеса. 
+
+          Это четырёхлистный клевер из легенд, который приносит удачу тому, кому достался. 
+
+          Беззаботный везунчик случайно обнаружил его, когда играл в поле. 
+
+          Он, будучи озорным ребёнком, сорвал клевер и положил в карман. 
+
+          Кто знает, клевер ли приносит ему удачу, или удача принесла везунчику клевер?..
     plume:
       description:
         en: A monster once cornered an adventurer, but was then picked off by a hunting
@@ -3727,6 +4530,46 @@ maiden-beloved:
       ru: Увеличивает получаемое лечение всех членов отряда на 20% в течение 10 сек.
         после использования элементального навыка или взрыва стихии.
   pieces:
+    flower:
+      description:
+        en: A fragrant flower that will bloom for all eternity and never wither.
+        ru: Бесконечно ароматный цветок, который никогда не завянет.
+      story:
+        en:
+          - p: >-
+              The maiden's flower. Fresh and elegant just like its original
+              owner. 
+
+              The books say that this species of flower has long been extinct. 
+          - p: >-
+              Just like that passage the maiden had read countless times in
+              books: 
+
+              "The damsel in distress was saved by the white knight in shining armor." 
+
+              "And they exchanged flowers as blessings to one another." 
+          - p: >-
+              Though a maiden's heart is said to change with the seasons, just
+              like a flower, 
+
+              This flower remained constant. 
+
+              For her heart had stopped in that moment long ago: 
+
+              The moment that she met the knight.
+        ru:
+          - p: |-
+              Розовый цветок девушки, такой же скромный и нежный, как она. 
+              В книгах пишут, что таких цветов уже давно не существует. 
+          - p: |-
+              Девушка много раз читала в книгах такие истории: 
+              «И девушка была спасена прекрасным рыцарем на белом коне, 
+              И они обменялись цветами, благословляя друг друга». 
+          - p: |-
+              Обычно девичьи сердца непостоянны, как цветы. 
+              Но этот цветок по-прежнему жив. 
+              Ведь сердце девушки навсегда застыло в том моменте прошлого, 
+              когда она впервые встретила рыцаря.
     plume:
       description:
         en: A feathered accessory that carries the longing for a certain someone, like a
@@ -3895,6 +4738,31 @@ martial-artist:
       ru: Увеличивает урон обычной и заряженной атаки на 25% в течение 8 сек. после
         использования элементального навыка.
   pieces:
+    flower:
+      description:
+        en: This particular kind of red flower was the only thing that could alleviate
+          the Martial Artist's pain.
+        ru: Только этот сорт цветка способен облегчить страдания воина.
+      story:
+        en: >-
+          Ever since being recognized by the master, the martial artist had been
+          practicing every day for years. 
+
+          The path of pursuing martial arts is long and harsh, and injuries are inevitable. 
+
+          As instructed, he plucked a small crimson flower in the forest. 
+
+          Although his proud battle scars will never fully heal, at least the pain can be alleviated.
+        ru: >-
+          С тех пор, как учитель позволил ему заниматься боевыми искусствами,
+          воин не прекращал занятий, каждый день отдавая себя практике в течение
+          многих лет. 
+
+          На трудном пути обучения боевым искусствам невозможно избежать поражений и тяжёлых травм. 
+
+          По наставлению учителя, воин отправился в горный лес, чтобы найти там маленький алый цветок. 
+
+          Хотя цветок не способен излечить шрамы, он приносит облегчение страданий.
     plume:
       description:
         en: A common bird feather. Experts use it to practice strength control, while
@@ -4010,6 +4878,49 @@ noblesse-oblige:
       ru: Активация взрыва стихии увеличивает силу атаки всех членов отряда на 20% в
         течение 12 сек. Эффект не складывается.
   pieces:
+    flower:
+      description:
+        en: A satin flower with a glossy finish, fit for an elegant gathering. It still
+          looks as distinguished as it did on the day it was cast aside.
+        ru: Стеклянный цветок, идеально подходящий для светских вечеров. Удивительно, но
+          он сохранил свою свежесть спустя столько веков.
+      story:
+        en:
+          - p: |-
+              A blue lily made of silky satin 
+              that once served as a noblewoman's headdress. 
+          - p: |-
+              A noble who once ruled over Mondstadt left it behind. 
+              In that legendary age, the nobles were examples for the people. 
+              They guided their subjects with their conduct and wisdom. 
+              They were the true representation of the people of Mondstadt. 
+              They were noble not only in lineage, 
+              but also in their commitment to virtues and principles. 
+          - p: >-
+              The longevity of the nobles was cut short by their endless
+              self-indulgence. 
+
+              Ostentation gave way to devolution.
+        ru:
+          - p: |-
+              Когда-то эта синяя лилия, сшитая из нежного шёлка, 
+              украшала причёску аристократки. 
+          - p: >-
+              Этот ароматный цветок оставил кто-то из аристократов, в древности
+              правящих Мондштадтом. 
+
+              В тот легендарный век все аристократы знали, что они для своих подданных пример. 
+
+              Вверивший им бразды правления народ Мондштадта видел в них не только людей мудрых и деятельных, 
+
+              но и своих истинных представителей. 
+
+              Благородство родословной они доказывали 
+
+              преданным служением добродетели. 
+          - p: |-
+              Потворство плотским утехам укоротило дворянам жизнь, 
+              а хвастовство и тщеславие привело к вырождению.
     plume:
       description:
         en: A feathered hat accessory worn by the old aristocrats of Mondstadt on hunts.
@@ -4235,6 +5146,57 @@ ocean-hued-clam:
         красок одновременно. Этот эффект действует, даже если персонаж,
         экипированный набором артефактов, не находится на поле боя.
   pieces:
+    flower:
+      description:
+        en: A soft flower that has taken on the many shades of the capricious ocean. It
+          shines with wondrous colors under the moon's silver light.
+        ru: Нежный цветок, вобравший в себя множество оттенков капризного океана. Он
+          переливается дивными красками под серебряным светом луны.
+      story:
+        en:
+          - p: >-
+              A tender flower from the ocean. Its core is adorned with pure
+              pearls. 
+
+              The songs of Watatsumi Island say that these flowers bloom in the pearl-lit depths. 
+
+              Steeped in the lovesickness of the diving sea-daughters and the gentle moonlight, they would give off a pearly gleam. 
+          - p: >-
+              When all conflicts have ceased, the sea beasts shall no longer
+              weep for their lonesome companions, 
+
+              And when the moonlight rises over Touzan, the lovely deity shall rise and sing. 
+
+              "Come, sea-daughters, come and see, O people of my heart, for the moon is out tonight." 
+
+              "Though Touzan might fall this night, the lightning and the storm can never hide the moon's pearly glory..." 
+          - p: >-
+              The lonesome maiden will sing and dance upon the moon-silver
+              waves. 
+
+              The divers shall forget the pain of loss, and even the tender flowers will regain their vibrance.
+        ru:
+          - p: >-
+              Нежный цветок из глубин океана. Его сердцевина украшена чистым
+              жемчугом. 
+
+              В песнях острова Ватацуми говорится, что эти цветы растут в морской бездне, озарённой светом жемчужин. 
+
+              Они сияют, вобрав в себя любовную тоску дочерей морского народа и нежность лунного света. 
+          - p: >-
+              Когда закончатся все войны и раздоры, а морские звери перестанут
+              оплакивать своих осиротевших товарищей, 
+
+              над Тодзаном воссияет луна и зазвучит песнь прекрасного божества: 
+
+              «Явитесь, дочери морского народа, явитесь и поглядите, ибо сегодня взошла луна. 
+
+              Пусть Тодзан и может пасть этой ночью, молниям и грому никогда не скрыть жемчужный блеск луны...» 
+          - p: >-
+              Одинокая жрица будет петь и танцевать на посеребрённых луной
+              волнах. 
+
+              Девы забудут боль утраты, и даже нежные цветы вновь обретут былые краски.
     plume:
       description:
         en: A down feather with the same hue as coral, said to come from a shrine
@@ -4471,6 +5433,75 @@ pale-flame:
         раза за 0,3 сек. На 2 уровне складывания эффект набора из 2 вещей
         увеличивается на 100%.
   pieces:
+    flower:
+      description:
+        en: A hard, blue artificial flower. Its petals shall never wither, nor shall its
+          colors fade.
+        ru: Жёсткий синий искусственный цветок. Он никогда не поблёкнет, а его лепестки
+          никогда не завянут.
+      story:
+        en:
+          - p: >-
+              "You astound me. You have but a human body, and yet you carry such
+              a power within you." 
+
+              "You claim that you have no tears left to cry, no blood left to shed, but surely this is because you have filled yourself with fire..." 
+
+              "Though your body has long been covered in scars, fierce flames are all that now may flow, like molten iron, from your eyes and your wounds." 
+
+              "But we appear to have gotten off-topic. I followed the trail of smoke and tracked you down because I wish to strike a deal with you..." 
+
+              "Let the flames that now devour you be extinguished by the grace of Her Majesty. What say you?" 
+          - p: >-
+              The first Fatuus gave power to a young woman in whom the flame of
+              life had all but died, 
+
+              And in her wild imagination, she saw the line that lay between the corrupt past and a stainless future... 
+          - p: >-
+              "I understand. Then, let glacial ice take the place of my erased
+              past and extinguish these undying flames." 
+
+              "Let the darkness of corruption, the pain of the world, and the humans, beasts, and the sin they carry all be purified by silent ice." 
+          - p: "But despite this, a pure white flame continued to burn within her heart... "
+          - p: >-
+              "We share the same goal, you, your Tsaritsa, and I." 
+
+              "Cleanse the sources of distortion in this world: short-sighted, ignorant gods and the darkness and corruption of the Abyss." 
+
+              "Good. I will do whatever it takes to become an effective instrument in the advancement of our common cause." 
+
+              "For even if I dress in pure white from head to toe, the ashes of the dead that have long left their stain on every inch of my being can never be cleansed."
+        ru:
+          - p: >-
+              «Ты в самом деле не представляешь себе, как человеческое тело
+              может выдержать такую мощь». 
+
+              «Хотя ты и говоришь, что иссякли слёзы твои и кровь, ты можешь наполнить тело своё огнём...» 
+
+              «Даже если давно не осталось на теле твоём живого места, лишь жаркий огонь, подобный жидкому металлу, может вытечь из ран да уголков глаз твоих». 
+
+              «Кажется, мы отклонились от темы. Я следовал за огнём, и теперь я здесь, чтобы предложить сделку...» 
+
+              «Пусть милость Её Величества погасит терзающий тебя огонь. Ты спросишь, как?» 
+          - p: >-
+              Первый Фатуи передал «силу» девушке, чей жизненный огонь почти
+              иссяк, 
+
+              и среди безудержных фантазий она увидела границу между грязным, испорченным прошлым и непорочным будущим... 
+          - p: >-
+              Я понимаю. Заменив своё прошлое толстым слоем льда, я могу
+              погасить пылающий внутри огонь. 
+
+              Молчаливые льды очистят чёрную грязь, мировую скорбь да грешных людей и зверей. 
+          - p: "Тем не менее бледное чистое пламя продолжало бушевать в её сердце... "
+          - p: >-
+              «Мы с тобой есть единое целое с целями твоей Царицы». 
+
+              «Очистим же лживые истоки этого мира: близоруких и невежественных Архонтов, чернеющую пороками Бездну». 
+
+              «Хорошо. Не важно, что мы будем делать, дай лишь мне стать орудием для достижения нашей цели». 
+
+              «Потому что даже если я надену белые одежды, тело моё, с давних пор целиком пропитанное кровью и пеплом, отмыть от них невозможно».
     plume:
       description:
         en: An ominous pinion with edges of unsurpassed keenness. Perhaps it represents
@@ -5083,6 +6114,55 @@ resolution-of-sojourner:
       en: Increases Charged Attack CRIT Rate by 30%.
       ru: Увеличивает шанс крит. попадания заряженной атаки на 30%.
   pieces:
+    flower:
+      description:
+        en: A small cerulean flower with somebody's ribbon pinned to the stem.
+        ru: Маленький цветок с сапфировыми лепестками и привязанной к стеблю лентой.
+      story:
+        en:
+          - p: "The traveler from a distant land pinned this flower close to his chest. "
+          - p: >-
+              The traveler left a life of great privilege to pursue a wandering,
+              unburdened life. 
+
+              In a foreign land, by a clear lake of sweet waters, he met a frowning maiden. 
+          - p: >-
+              "A traveler from afar? ...Huh. Not like it matters." 
+
+              "You're a musician? Well then, pray do not insult me with empty praises or song." 
+
+              "Just remember me as I am." 
+
+              "As one about to be offered up as a sacrifice for the 'festival.'" 
+          - p: >-
+              The traveler who had abandoned his homeland pinned this flower
+              close to his chest. 
+
+              He wished to remind himself to love no one, and become attached to nothing. 
+
+              Yet he would remember that maiden as he had promised, and walk into the fire for her sake...
+        ru:
+          - p: "Путник из далёких земель прикрепил этот цветок на своей груди. "
+          - p: >-
+              Ради свободы и странствий он отвергнул жизнь в роскоши на своей
+              родине. 
+
+              В чужих краях у кристальной глади озера путешественник увидел девушку в печали. 
+          - p: >-
+              «Вы странник из далёких краёв? Впрочем, неважно... 
+
+              Вы музыкант? Тогда умоляю, не оскорбляйте меня пустопорожней лестью и музыкой. 
+
+              Просто запомните меня такой, какой видите сейчас. 
+
+              Меня скоро принесут в жертву на "празднике"...» 
+          - p: >-
+              Путник, что покинул родные места, прикрепил этот цветок на своей
+              груди. 
+
+              Он хотел помнить ни в кого не влюбляться и ни к чему не привязываться. 
+
+              Но он сохранил память о той девушке, как и пообещал, и пошёл бы ради неё на любую жертву...
     plume:
       description:
         en: A blue arrow fletching imbued with the sentiment of travelers that had once
@@ -5298,6 +6378,57 @@ retracing-bolide:
         Attack DMG.
       ru: Под защитой щита увеличивает урон обычной и заряженной атаки на 40%.
   pieces:
+    flower:
+      description:
+        en: A man-made flower in eternal bloom. Who knows if there truly is life in
+          there?
+        ru: Искусственный цветок в вечном цвету. Кто знает, действительно ли в нём есть
+          жизнь.
+      story:
+        en:
+          - p: >-
+              A summer festival flower that blooms forever, 
+
+              That will not wilt even if buried deep below the snow.That will not wilt even if buried deep below the snow. 
+          - p: |-
+              Some may label it an imitation, an false life, 
+              For life lies in change, pain and growth, 
+              In meetings, and also in partings. 
+          - p: >-
+              But the memories of meeting her, 
+
+              Of watching the fireworks bloom in the sky like fresh flowers together, 
+
+              The memories of that foxy-eyed woman who eventually disappeared without a trace... 
+
+              That unwithering flower is the final thing to remember her by. 
+          - p: |-
+              In the end, the difference comes down to the fact that for some, 
+              Life is as eternal as this undying summer bloom, 
+              But for most, it is as transient as smoke.
+        ru:
+          - p: |-
+              Цветок с праздника равноденствия, который цветёт вечно 
+              и не завянет даже под снегом. 
+          - p: |-
+              Кто-то скажет, что это жалкая имитация жизни, 
+              ведь жизнь заключается в переменах, боли и росте, 
+              во встречах и расставаниях. 
+          - p: >-
+              Но боюсь я только того, что единственным воспоминанием о встрече
+              на том летнем празднике, 
+
+              о том, как высоко в небе, подобно огненным цветам, распускались фейерверки, 
+
+              о женщине с глазами лисицы, которая так внезапно исчезла, 
+
+              останется только этот неувядающий цветок. 
+          - p: >-
+              В конечном счёте дело в том, что для некоторых жизнь вечна и 
+
+              неизменна, как этот цветок равноденствия, 
+
+              тогда как для большинства она вспыхивает и гаснет, подобно фейерверку.
     plume:
       description:
         en: A well-crafted wooden dart. It will only stop once it has reached its
@@ -5574,6 +6705,30 @@ scholar:
         отряда, экипированным стрелковым оружием или катализатором. Может
         возникнуть раз в 3 сек.
   pieces:
+    flower:
+      description:
+        en: A dried flower used as a bookmark. It has absorbed the scent from the pages.
+        ru: Высушенный лист, используемый в качестве закладки. Он впитал в себя запах
+          страниц.
+      story:
+        en: >-
+          Flowers were a rare sight for the scholar who lived in her ivory
+          tower, buried under piles of books. 
+
+          A young man, who admired the scholar, once gave her this exotic flower in the hope of bringing some life to the dull and lonely days she spent in her study. 
+
+          The scholar accepted the gift gratefully and made a flower bookmark with it. 
+
+          Ever since then, there has always been a splash of vivid color hidden somewhere in the pages of the dull piles of books.
+        ru: >-
+          Учёной, живущей в удалённом от мира уголке среди одних лишь книг редко
+          удавалось увидеть живые цветы. 
+
+          Однажды восхищённый учёной юноша, чтобы скрасить её одиночество, принёс ей экзотический цветок. 
+
+          Учёная трепетно хранила этот подарок: она засушила цветок и поместила его меж страниц огромного фолианта. 
+
+          С тех пор этот цветок был разноцветным огоньком среди гор серых, скучных книг и свитков.
     plume:
       description:
         en: A bird's feather that serves as a quill pen. The tip has long been stained
@@ -5693,6 +6848,75 @@ shimenawas-reminiscence:
         заряженной атаки и атаки в падении увеличивается на 50% в течение 10
         сек. Эффект нельзя активировать повторно в течение этого времени.
   pieces:
+    flower:
+      description:
+        en: A lovely amulet made from twisted paper cord. It is said to hold the power
+          to make wishes come true.
+        ru: Замечательный омамори из скрученного бумажного шнура. Говорят, он обладает
+          способностью исполнять желания.
+      story:
+        en:
+          - p: >-
+              An omamori crafted using an art known as Mizuhiki. 
+
+              It is said to have the power to bind wishes and the reasons for those wishes within itself. 
+          - p: >-
+              Once, I learned how to manage the affairs of the shrine under the
+              tutelage of a mighty kitsune. 
+
+              Back then, I was just a young shrine maiden who had just arrived on Narukami from a small fishing village. 
+
+              I was duller than a teapot and had yet to lose the obstinate impulsiveness and curiosity of a child, 
+
+              I was always naively skeptical of the elegant but incomprehensible words of Lady Saiguu. 
+          - p: >-
+              "Everything in the world is entangled. Hence, illusory visions
+              were born out of concrete reality." 
+
+              "The so-called omamori cannot make one's wishes come true at all, but they can make them eternal through this entanglement." 
+          - p: >-
+              The Lady Kitsune couldn't help but break out into laughter upon
+              seeing my clueless expression. 
+
+              She cheerfully knocked my head with her pipe and sneakily changed the subject. 
+          - p: "\"I suppose you've met your fated one as well, Hibiki?\" "
+          - p: "\"What sort of 'fate' could there be with a rude and reckless brute like
+              that!\" "
+          - p: '"Oh, is that so?" '
+          - p: |-
+              But darkness engulfed everything in the end. 
+              That "fate," too, was no more.
+        ru:
+          - p: >-
+              Омамори, изготовленный с помощью техники, известной как
+              мидзухики. 
+
+              Он мог бы соединить молитву со счастьем в любви. 
+          - p: >-
+              Когда-то я училась управлять храмом у могущественной Кицунэ. 
+
+              В то время я была всего лишь молодой жрицей, которая пришла в храм из маленькой рыбацкой деревушки. 
+
+              Я была глупее чайника, и мне всё ещё предстояло избавиться от своевольной импульсивности и детского любопытства. 
+
+              Я всегда была наивно скептична относительно изысканных, но непонятных слов госпожи Сайгу. 
+          - p: >-
+              «Всё в этом мире переплетено. А иллюзорные видения родились из
+              осязаемой реальности. 
+
+              Так называемый омамори не может исполнить молитвы, но может сделать их вечными через сплетение». 
+          - p: >-
+              Увидев моё ошарашенное выражение лица, госпожа Кицунэ не смогла
+              сдержать смеха. 
+
+              Она весело стукнула меня по голове своей трубкой и ловко перевела тему. 
+          - p: "«Хибики, ты ведь уже встретила своего суженого?» "
+          - p: "«Ну что за счастье в любви может выйти с таким грубым и безрассудным
+              человеком!» "
+          - p: "«А, вот как?» "
+          - p: |-
+              Но в конце всё поглощает тьма. 
+              И так называемое счастье в любви ушло.
     plume:
       description:
         en: A demon-slaying arrow of a rather ancient make. It seems to have been
@@ -6018,6 +7242,61 @@ tenacity-of-the-millelith:
         в 0,5 сек. Этот эффект может быть активирован, даже если персонаж,
         экипированный этим набором артефактов, не находится на поле боя.
   pieces:
+    flower:
+      description:
+        en: A flower made from gold leaf. It represents the glories and honors attained
+          by its wearer.
+        ru: Цветок тонкой работы, сделанный из золотого листа. Он символизирует славу и
+          подвиги своего хозяина.
+      story:
+        en:
+          - p: >-
+              In an age when solemn songs were sung from the clifftops, a
+              meteorite once fell into the Chasm. 
+
+              Out of the depths of the boundless night sky above, the iron meteorite plummeted to the ground, turning the earth to Glazed Sand Crystal on impact. 
+          - p: >-
+              Though human life is fleeting, Rex Lapis personally ordered the
+              Millelith to rush to the defense of the mines. 
+
+              As the Abyss flooded forth, the Millelith escorted countless civilians to safety. 
+
+              Miners tell tales of a small number of troops from the rearguard, who remained in the Chasm. 
+
+              Together with the nameless yaksha, they fought courageously until they, too, made the ultimate sacrifice among the jagged rocks. 
+          - p: >-
+              In time, the names of both mortals and adepti alike were
+              forgotten. In time, even the mountains and rivers change form. 
+
+              Yet there will never come a time when their honorable deeds shall be forgotten. Like this gold-leafed flower, they will shine on forever. 
+
+              500 years on, the harbor city remains as steadfastly peaceful today as the day the disaster was quelled. 
+
+              And still, the troops wear this golden flower with pride, in honor of the sacrifice made by their forebears.
+        ru:
+          - p: >-
+              Там, где когда-то пели крутые утёсы, в Разлом однажды упал
+              метеорит. 
+
+              Когда звёздный металл рухнул с усыпанного звёздами ночного неба, песок и пыль, на которые он упал, превратились в глазурный песок. 
+          - p: >-
+              Жизнь смертных - это одно лишь мгновение, но Властелин Камня всё
+              же вверил Миллелитам охрану рудных жил. 
+
+              Бездна фонтаном хлынула в этот мир, и Миллелитам пришлось эвакуировать местных жителей. 
+
+              По рассказам шахтёров, небольшая часть солдат, что осталась у Разлома прикрывать отступление, 
+
+              сражалась плечом к плечу с безымянным Якса, чтобы в конце концов отдать свои жизни под этими крутыми скалами. 
+          - p: >-
+              Хотя пейзажи и изменились за столь долгое время, а имена смертных
+              и Адепта были преданы забвению, 
+
+              их подвиг навсегда остался в памяти людей, и именно по этому сверкают так ярко крепкие лепестки этого золотого цветка. 
+
+              Прошло пятьсот лет с тех пор, как случилась та катастрофа, а гавань спокойна и стены её прочны, как и раньше. 
+
+              Солдаты гордо носят золотые цветы в знак уважения высшей жертве их предков.
     plume:
       description:
         en: A falcon feather worn on ceremonial occasions. It displays the dignity and
@@ -6260,6 +7539,31 @@ the-exile:
         отряда (но не выбранному персонажу) каждые 2 сек. в течение 6 сек.
         Эффект не может складываться.
   pieces:
+    flower:
+      description:
+        en: A withered flower worn on the shirt. Its former owner insisted on wearing it
+          even in exile, so it must mean something.
+        ru: Тёмный цветок. Должно быть, имеет какое-то значение, раз изгнанник не хотел
+          с ним расставаться.
+      story:
+        en: >-
+          It all happened before the exiled aristocrat was involved in the
+          family feud. 
+
+          This flower bloomed before the first blood was shed. 
+
+          Having witnessed the cruelty of humanity, the exile left his kindness and gentleness in the past. 
+
+          But this faded flower and the innocent smile he once had will always be his treasure.
+        ru: >-
+          Это было время, когда изгнанные аристократы ещё не были втянуты в
+          водоворот событий. 
+
+          Тогда, до того, как плотный туман из заговоров и интриг навис над членами семьи, расцвёл этот цветок. 
+
+          Потрёпанный жизнью, видевший немало зверств изгнанник давно уже забыл о том, что такое нежность и душевное тепло. 
+
+          Но этот потерявший краски цветок и память о том, как искренне изгнанник улыбался, будучи ещё ребёнком, - две вещи, которые он до сих пор хранит в сердце.
     plume:
       description:
         en: Not an actual accessory per se. Just a random bird feather that was found
@@ -6373,6 +7677,45 @@ thundering-fury:
         Наложение этих статусов уменьшает время отката элементального навыка на
         1 сек. Может возникнуть раз в 0,8 сек.
   pieces:
+    flower:
+      description:
+        en: A lightning-infused flower, somehow spared the fate of being trodden
+          underfoot or reduced to ash by the furious purple fire, making it the
+          sole survivor on the day of disaster.
+        ru: Цветок, никак не пострадавший от лилового огня. В тот день катастрофы
+          удалось уцелеть только ему.
+      story:
+        en:
+          - p: |-
+              A purple wild flower that survived in the volcanic ash. 
+              It witnessed the total decimation of the ancient tribe. 
+          - p: >-
+              With an innocent's blood, the shaman summoned the Thunderbird. 
+
+              They made their offerings, waiting for the Thunderbird to reveal and the oracles. 
+
+              However, what descended with the Thunderbird, was the lightning of destruction. 
+          - p: >-
+              For the transgression against the young lad who sang to it, the
+              sentence was total obliteration. 
+
+              The Thunderbird showed its true nature, wiping the tribe from the face of the earth.
+        ru:
+          - p: |-
+              Чудом уцелевший в лесном пожаре пурпурный цветок. 
+              Он стал свидетелем катастрофы, которая случилась с племенем. 
+          - p: >-
+              Приближалось празднество нового года, и шаман попытался кровью
+              невинного призвать чудесную птицу грома. 
+
+              Как и в прежние годы, племя подготовило подношения и продолжало распевать молитвы, рассчитывая на её благосклонность. 
+
+              Но теперь вместе с птицей на землю обрушились сумасшедшие раскаты грома и испепеляющие вспышки молний. 
+          - p: >-
+              За преступление против юноши жестокое возмездие ожидало его
+              соплеменников. 
+
+              Дав волю своему ужасному естеству, чудесная птица грома полностью истребила крошечное племя.
     plume:
       description:
         en: A lightning-charged feather that still flickers with the wrath of the
@@ -6602,6 +7945,49 @@ thundersoother:
       en: Increases DMG against opponents affected by Electro by 35%.
       ru: Увеличивает урон против врагов, находящихся под действием Электро, на 35%.
   pieces:
+    flower:
+      description:
+        en: A flower that blooms even amidst ferocious thunder and lightning. To this
+          day, it still grants courage to travelers in thunderstorms.
+        ru: Цветок, растущий даже среди нескончаемых бурь. Он по сей день придаёт
+          смелости путешественникам, попавшим в сильную грозу.
+      story:
+        en:
+          - p: |-
+              A purple flower plucked in a thunderstorm. 
+              Whoever wears it will no longer fear the thunder and lightning. 
+          - p: >-
+              This flower blossoms only in thunderstorms, and never withers
+              despite the constant rain. 
+
+              This is the Flower of Thunder. Kneeling before it, the Thundersoother plucked it with reverence. 
+          - p: >-
+              The Thundersoother wore this flower on his chest at all times as
+              he fearlessly faced the thunder and lightning. 
+
+              Even when fighting the fierce Beast of Thunder, his resolve never wavered. 
+
+              To the Thundersoother, wearing this purple flower may have been merely an act of whimsy, 
+
+              but to travelers, the flower was the source of the unfaltering resolve that conquered the thunder.
+        ru:
+          - p: |-
+              Маленький фиолетовый цветок, сорванный во время грозы. 
+              Тот, кто носит его, может не бояться молний. 
+          - p: >-
+              Этот цветок цветёт только во время грозы, и сильные ливни не
+              способны убить его. 
+
+              Это Громовой Цветок. Срывая его, Усмиряющий Гром почтительно опустился на колени. 
+          - p: >-
+              Усмиряющий Гром всегда носил этот цветок на груди и с ним
+              бесстрашно встречал бури и грозы. 
+
+              Он не колебался ни секунды даже перед кровавой битвой с Громовым Монстром. 
+
+              Возможно, ношение цветка на груди для Усмиряющего Гром было всего лишь прихотью, 
+
+              Но для путешественников цветок был символом решимости в битве со штормом.
     plume:
       description:
         en: The feather of a predatory bird that soars through lightning storms. It was
@@ -6793,6 +8179,22 @@ tiny-miracle:
       ru: Получаемый элементальный урон повышает сопротивление к соответствующему
         элементу на 30% в течение 10 сек. Может возникнуть раз в 10 сек.
   pieces:
+    flower:
+      description:
+        en: A flower that grew from a rock, breaking through the stone as it strove to
+          reach the light.
+        ru: Цветок, выросший на скалистом утёсе. У него получилось пробиться сквозь
+          камень, чтобы увидеть свет.
+      story:
+        en: >-
+          A little blue flower that sprouted between the cracks of an old
+          tombstone. 
+
+          The carvings on the tombstone are a legacy of death, yet what sprouted from its cracks was the miracle of life.
+        ru: >-
+          Маленький синий цветок, растущий в трещинах старого могильного камня. 
+
+          Колонны несут в себе историю смерти, и живые цветы, пробивающиеся из трещин, подобны чуду.
     plume:
       description:
         en: A feather from a bird of prey that flies almost too fast for the human eye
@@ -6877,6 +8279,27 @@ traveling-doctor:
       en: Using Elemental Burst restores 20% HP.
       ru: Использование взрыва стихии восстанавливает 20% ХП.
   pieces:
+    flower:
+      description:
+        en: A precious medicinal ingredient that has lost all medicinal value after
+          years in storage.
+        ru: Драгоценный лекарственный ингредиент, который за долгие годы растерял все
+          свои полезные свойства.
+      story:
+        en: >-
+          The doctor traveled across the land in search of rare herbs, with the
+          zeal of an adventurer. 
+
+          On a steep cliff between slippery rocks, she found this silver lotus. 
+
+          The lotus was never made into medicine, but its scent gave her the strength to go on from that day forward.
+        ru: >-
+          Целительница прошла по всему миру, и, благодаря своей страсти к
+          приключениям, отыскала множество редких целебных трав. 
+
+          На крутом обрыве, среди скользких камней она обнаружила серебряный лотос. 
+
+          Она так и не приготовила из него лекарство, но его аромат всегда придавал ей сил.
     plume:
       description:
         en: The durable feather of an owl. Emblematic of nocturnal supremacy, it gave
@@ -6993,6 +8416,78 @@ vermillion-hereafter:
         покидает поле боя. При повторной активации взрыва стихии существующее
         Скрытое сияние снимается.
   pieces:
+    flower:
+      description:
+        en: An ancient memento. It still looks as alive as the being that preserved it
+          several centuries ago.
+        ru: Древняя реликвия. Она выглядит столь же живой, как и охранявшее её несколько
+          столетий тому назад существо.
+      story:
+        en:
+          - p: >-
+              Even the ancient cinnabar cliffs were once home to lovely blooming
+              flowers. 
+
+              Even in the era when blackened blood flowed freely, they were not stained by even the smallest smidge of mud. 
+          - p: >-
+              While the Millelith stands guard, evil shall never prevail. Even
+              should the enemy be dark demons, this would not change. 
+
+              The silent mountain people and the steel moon constructed their peaceful camp. 
+          - p: >-
+              "Oh daughters of the cliffs of Glazed Sand Crystal, weep not for
+              me." 
+
+              "I was born in the shade of Tianheng, and I fight to repay Rex Lapis' mercy." 
+
+              "I entrust my life to the four-armed Yaksha, and we shall go into the glowing depths." 
+
+              "The shadowed road of the darkest pits we shall tread, we shall brave the stony crystal halls." 
+
+              "We will face the defilement arising from the depths, the twisted beasts that dwell there." 
+
+              "These horrors and their strangeness shall not put me to flight or fear." 
+          - p: >-
+              The night wind interrupted the Millelith soldier's words, causing
+              him to be unable to finish what he had to say. 
+
+              He simply left this small flower for that young daughter of the mountain tribe as a memento, a ward against forgetting. 
+          - p: >-
+              "The only thing I truly fear is to be lost and forgotten." 
+
+              "Should ill fate dictate that I am to be buried in some nameless place, do not forget me."
+        ru:
+          - p: >-
+              На древних камнях цвета киновари когда-то расцвёл прекрасный
+              цветок. 
+
+              В то время, когда мир был залит тёмной порочной кровью, ни одно пятнышко грязи не запятнало его. 
+          - p: >-
+              Пока Миллелиты на страже города, у зла нет шансов! Даже под
+              угрозой злобных чудовищ тьмы. 
+
+              Молчаливые жители гор и яркая луна цвета создали для него безмолвный лагерь. 
+          - p: >-
+              «Дочь крутых гор и кристаллов глазурного песка, прошу, не лей по
+              мне слёзы. 
+
+              Я родился под сенью горы Тяньхэн, чтобы сражаться по велению Властелина Камня. 
+
+              Я вверяю свою жизнь четырёхрукому Якса и устремлюсь в светящуюся бездну. 
+
+              Тенистый путь глубоких тёмных пещер и кристаллы нависающих изрезанных скал дворца. 
+
+              Порочные потоки бездны, зловещие демоны в недрах горы. 
+
+              Все эти невероятные ужасы не пугают меня». 
+          - p: >-
+              Ночной ветер прервал Миллелита и не дал ему закончить свою речь. 
+
+              Он оставил этот маленький цветок дочери горного народа как воспоминание, средство от забвения. 
+          - p: >-
+              «Быть потерянным и забытым - единственное чего я боюсь. 
+
+              Если мне суждено быть погребённым в безымянном месте, не забывай меня».
     plume:
       description:
         en: A dimly lustrous pinion steeped in strong memories.
@@ -7260,6 +8755,53 @@ viridescent-venerer:
         элементом, также понижает сопротивление противника к соответствующему
         элементу на 40% в течение 10 сек.
   pieces:
+    flower:
+      description:
+        en: A wild flower that was once a ubiquitous sight in its homeland. It was
+          picked by a hunter who wore it on their chest.
+        ru: Растущий повсюду дикий цветок. Был сорван и надет изумрудным охотником.
+      story:
+        en:
+          - p: >-
+              A white wild flower that used to cover the earth. 
+
+              It has not withered one bit, and still gives off an exquisite fragrance. 
+          - p: >-
+              In the days when wildlife still roamed the earth and monsters had
+              not yet appeared, 
+
+              the Viridescent Venerer would use this flower to conceal her human scent. 
+
+              Thus it was said that to seek the silent and gentle Viridescent Venerer, 
+
+              one simply need to close one's eyes and walk barefoot through the forest, following the subtle fragrance of wild flowers. 
+
+              Only those who could tread as softly as a hunter could avoid making the leaves crackle underfoot, alerting the queen of hunters to their presence. 
+          - p: >-
+              It was also said that the one who eventually found the hunter was
+              a boy. 
+
+              At that time, disaster had just befallen the ancient kingdom and misery was spreading across the land.
+        ru:
+          - p: |-
+              Когда-то этот белый цветок рос по всем полям и лугам. 
+              Он нисколько не высох и до сих пор источает свежий аромат. 
+          - p: >-
+              Когда чудовища ещё не заполонили земли, и звери бродили повсюду
+              без опаски, 
+
+              охотница использовала этот безымянный дикий цветок, чтобы они её не учуяли. 
+
+              Согласно старинным легендам молчаливую охотницу с добрым сердцем мог выследить тот, кто 
+
+              закроет глаза и по лесам да по равнинам босиком проследует за тонким ароматом полевых цветов. 
+
+              Но ступать нужно очень мягко. Малейший шорох - и она вас услышит. 
+          - p: >-
+              В других легендах говорится, что в конце концов охотницу смог
+              найти один маленький мальчик. 
+
+              В то время век бедствий наступил в древнем царстве, и всё наводнила погибель.
     plume:
       description:
         en: The fletching of an arrow that once pierced right through its prey, but
@@ -7465,6 +9007,50 @@ wanderers-troupe:
       ru: Увеличивает урон заряженной атаки на 35%, если персонаж использует
         катализатор или стрелковое оружие.
   pieces:
+    flower:
+      description:
+        en: A small flower-shaped insignia. If you listen carefully, you can almost hear
+          a flute playing and voices singing.
+        ru: Эмблема в форме маленького цветка. Прислушавшись, можно расслышать звуки
+          пения и флейты.
+      story:
+        en:
+          - p: "A small flower-shaped insignia. There seems to be music coming from it. "
+          - p: |-
+              Among the members of the troupe was a charismatic swordswoman. 
+              Beautiful as the light on water, elegant as the chirping lark. 
+              Her every slash hummed a tune of the wind. 
+          - p: >-
+              The end of each song and dance was like the sun after the rain. 
+
+              Dust has since settled, and both the stage and life itself feel emptier for the absence of her music. 
+          - p: >-
+              Both her music and her sword were as lethal as they were
+              beautiful. 
+
+              This was in keeping with the troupe's performances, which were intended for two very different audiences. 
+
+              For the audience of foes, the music drifted far beyond the stage.
+        ru:
+          - p: "Крохотный значок в форме цветка. Кажется, будто из него играет музыка. "
+          - p: >-
+              Жила-была в бродячем ансамбле доблестная мечница, 
+
+              прекрасная, как заря на морских волнах, и изящная, как возвещающий рассвет жаворонок. 
+
+              Взмахи её острого меча становились уносимой ветром песней. 
+          - p: >-
+              Когда она пела и танцевала, то словно уходили хмурые тучи и солнце
+              согревало землю. 
+
+              Но пришёл конец, без её музыки опустела сцена, и потеряла краски жизнь. 
+          - p: >-
+              Музыкой и мечом она могла легко очаровать слушателя, равно как и
+              отнять его жизнь. 
+
+              Такая манера исполненья была ансамблю под стать, ведь публика попадалась разная. 
+
+              И если в зале собирались злодеи, музыка выходила далеко за пределы сцены.
     plume:
       description:
         en: An azure arrow fletching that has neither faded nor splintered with the
