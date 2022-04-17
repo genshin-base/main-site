@@ -44,7 +44,7 @@ export function apiGetArtifact(
 	code: string,
 	signal: AbortSignal,
 ): PromiseOrSync<MapAllByCode<ArtifactFullInfoWithRelated>> {
-	return _map(getLang<ArtifactFullInfoWithRelated>(`artifact/${code}`, signal), arts =>
+	return _map(getLang<ArtifactFullInfoWithRelated>(`artifacts/${code}`, signal), arts =>
 		mapAllByCode(decodeRelatedLocations(arts)),
 	)
 }

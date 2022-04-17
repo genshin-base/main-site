@@ -19,11 +19,11 @@ import { notesToJSX } from '#src/modules/builds/common'
 import { isLoaded, useFetch } from '#src/utils/hooks'
 import { BULLET, DASH, ELLIPSIS } from '#src/utils/typography'
 import { getWeaponIconLageSrc } from '#src/utils/weapons'
-import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from './card-map'
-import { AscMaterials, RecommendedTo } from './common'
-import { ItemAvatar } from './item-avatars'
 import './line-cards.scss'
 import { CentredSpinner, Spinner } from '#src/components/spinners'
+import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from '../card-map'
+import { ItemAvatar } from '../item-avatars'
+import { AscMaterials, RecommendedTo } from '../common'
 
 type WeaponRowProps = {
 	weapon: WeaponRegularInfo
@@ -50,7 +50,7 @@ function WeaponCardLine({
 	const [materialOnMap, setMaterialOnMap] = useState<ItemShortInfo | undefined>()
 	const markerGroups = useMemo(() => {
 		if (!isLoaded(weaponFull) || !materialOnMap) return dummyMarkerGroups
-		const srcs = materialOnMap.obtainSources //TODO
+		const srcs = materialOnMap.obtainSources
 		const markerGroups: CardMapMarkerGroup[] = []
 		addMarkerGroupsByDomains(markerGroups, getAllRelated(weaponFull.maps.domains, srcs.domainCodes))
 		addMarkerGroupsByEnemies(markerGroups, getAllRelated(weaponFull.maps.enemies, srcs.enemyCodes))
@@ -217,7 +217,7 @@ function WeaponCardLine({
 	)
 }
 
-function WeaponCardTableRowDesktop({ weapon, isExpanded = false, group }: WeaponRowProps): JSX.Element {
+export function WeaponCardTableRow({ weapon, isExpanded = false, group }: WeaponRowProps): JSX.Element {
 	const [isExpandedLocal, setIsExpanded] = useState<boolean>(isExpanded)
 	const toglleExpand = useCallback(() => {
 		setIsExpanded(!isExpandedLocal)
@@ -280,12 +280,4 @@ function WeaponCardTableRowDesktop({ weapon, isExpanded = false, group }: Weapon
 		)
 	}, [weapon, toglleExpand, bgClass])
 	return isExpandedLocal ? expandedRow : collapsededRow
-}
-export function WeaponCardTableRow(props: WeaponRowProps): JSX.Element {
-	return (
-		<MobileDesktopSwitch
-			childrenDesktop={<WeaponCardTableRowDesktop {...props} />}
-			childrenMobile={<WeaponCardTableRowDesktop {...props} />}
-		/>
-	)
 }

@@ -274,12 +274,12 @@ export const I18N_ORDER_SITE_FROM_US = {
 	ru: 'Закажите у нас сайт',
 }[LANG]
 export const I18N_NOT_AFFILIATED_WITH_MIHOYO = {
-	en: 'We are not affiliated with MiHoYo',
-	ru: 'Мы не связаны с Михуё',
+	en: 'We are not affiliated with HoYoverse',
+	ru: 'Мы не связаны с Хоёверс',
 }[LANG]
 export const I18N_C_MIHOYO = {
-	en: 'Genshin Impact, items and characters illustrations are trademarks and copyrights of MiHoYo.',
-	ru: 'Геншин Импакт, иллюстрации персонажей и предметов принадлежат Михуё',
+	en: 'Genshin Impact, items and characters illustrations are trademarks and copyrights of HoYoverse.',
+	ru: 'Геншин Импакт, иллюстрации персонажей и предметов принадлежат Хоёверсу',
 }[LANG]
 export const I18N_HELPER_TEAM_TABLE = {
 	en: 'Helper Team',
@@ -313,6 +313,10 @@ export const I18N_UNSUPPORTED_LOCATION_WARNING = {
 	en: "Looks like you've opened a cached/saved page. It won't work correctly that way :(",
 	ru: 'Похоже, вы открыли сохранённую страницу. В таком виде она нормально работать не будет :(',
 }[LANG]
+export const I18N_NOTHING_TO_SHOW = {
+	en: 'nothing to show',
+	ru: 'нет результатов',
+}[LANG]
 
 type WeaponTypeNames = Record<GI_WeaponTypeCode, string>
 const weaponTypeNamesRU: WeaponTypeNames = {
@@ -327,7 +331,7 @@ export const I18N_WEAPON_TYPE_NAME = {
 	ru: (code: GI_WeaponTypeCode) => weaponTypeNamesRU[code],
 }[LANG]
 
-type WeaponObtainSourceNames = Record<GI_WeaponObtainSource, string>
+type WeaponObtainSourceNames = Record<GI_WeaponObtainSource | 'other', string>
 const weaponObtainSourceNamesRU: WeaponObtainSourceNames = {
 	wishes: 'молитвы',
 	'event-wishes': 'молитвы события',
@@ -343,10 +347,11 @@ const weaponObtainSourceNamesRU: WeaponObtainSourceNames = {
 	investigation: 'исследование мира',
 	'adventure-rank-10': '10 ранг приключений',
 	playstation: 'плейстейшн',
+	other: 'другое',
 }
 export const I18N_WEAPON_OBTAIN_SOURCE_NAME = {
-	en: (code: GI_WeaponObtainSource) => code.replace(/-/g, ' ').replace(/\bnpc\b/, 'NPC'),
-	ru: (code: GI_WeaponObtainSource) => weaponObtainSourceNamesRU[code],
+	en: (code: GI_WeaponObtainSource | 'other') => code.replace(/-/g, ' ').replace(/\bnpc\b/, 'NPC'),
+	ru: (code: GI_WeaponObtainSource | 'other') => weaponObtainSourceNamesRU[code],
 }[LANG]
 export const I18N_OBTAINED_DURING_STORYLINE = {
 	en: 'Obtained during storyline quests',
@@ -355,6 +360,48 @@ export const I18N_OBTAINED_DURING_STORYLINE = {
 export const I18N_ART_GROUP_NAME: Record<GI_ArtifactGroupCode, string> = {
 	en: { '18%-atk': 'ATK +18%', '20%-er': 'Energy Recharge +20%' },
 	ru: { '18%-atk': 'Сила атаки +18%', '20%-er': 'Восстановление энергии +20%' },
+}[LANG]
+export const I18N_OBTAIN_SOURCES = {
+	en: 'Obtain sources',
+	ru: 'Способы получения',
+}[LANG]
+export const I18N_SORT_BY = {
+	en: 'Sort by',
+	ru: 'Сортировать по',
+}[LANG]
+export const I18N_WEAPON_TYPE = {
+	en: 'Weapon type',
+	ru: 'Тип оружия',
+}[LANG]
+export const I18N_NAME = {
+	en: 'Name',
+	ru: 'Название',
+}[LANG]
+export const I18N_SUBSTAT = {
+	en: 'Substat',
+	ru: 'Допстат',
+}[LANG]
+export const I18N_RARITY = {
+	en: 'Rarity',
+	ru: 'Редкость',
+}[LANG]
+export const I18N_WEAPON_TYPE_FILTER_TIP: Record<GI_WeaponTypeCode | 'everything', string> = {
+	en: {
+		everything: 'every type of weapon selected',
+		sword: 'showing only swords',
+		catalyst: 'showing only catalists',
+		claymore: 'showing only claymores',
+		polearm: 'showing only polearms',
+		bow: 'showing only bows',
+	},
+	ru: {
+		everything: 'выбраны все виды оружия',
+		sword: 'выбраны только мечи',
+		catalyst: 'выбраны только катализаторы',
+		claymore: 'выбраны только двуручные мечи',
+		polearm: 'выбраны только копья',
+		bow: 'выбраны только луки',
+	},
 }[LANG]
 
 const pluralizeHours = {

@@ -5,11 +5,26 @@ import { apiGetWeapons } from '#src/api/endpoints'
 import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
 import { Spinner } from '#src/components/spinners'
 import { WeaponTypeFilter } from '#src/components/weapon-type-filter'
-import { WeaponCardTableRow } from '#src/containers/item-cards/line-cards'
+import { WeaponCardTableRow } from '#src/containers/item-cards/line-cards/weapon-card'
+
+import {
+	I18N_NOTHING_TO_SHOW,
+	I18N_OBTAIN_SOURCES,
+	I18N_RARITY,
+	I18N_SECONDARY_STAT,
+	I18N_SORT_BY,
+	I18N_STAT_NAME,
+	I18N_SUBSTAT,
+	I18N_NAME,
+	I18N_WEAPON_OBTAIN_SOURCE_NAME,
+	I18N_WEAPON_TYPE,
+	I18N_WEAPON_TYPE_FILTER_TIP,
+} from '#src/i18n/i18n'
 import { isLoaded, useFetch, useUniqKey } from '#src/utils/hooks'
 import { useMemo, useState } from 'preact/hooks'
 
 const WEAPON_SORT_CODES = ['rarity', 'atk', 'subStat']
+const WEAPON_SORT_NAMES = { rarity: I18N_RARITY, atk: I18N_STAT_NAME('atk'), subStat: I18N_SUBSTAT }
 const WEAPON_SORT_FUNCS = {
 	rarity: (a: WeaponRegularInfo, b: WeaponRegularInfo) => {
 		return b.rarity - a.rarity
@@ -35,7 +50,7 @@ function WeaponSort({
 		<div className={classes}>
 			{WEAPON_SORT_CODES.map(c => (
 				<div
-					class="form-check form-check-inline c-pointer"
+					className="form-check form-check-inline c-pointer  pe-1"
 					key={c}
 					onClick={() => onSortCodeSelect(c)}
 				>
@@ -46,8 +61,8 @@ function WeaponSort({
 						id={`radio-${c}-${key}`}
 						checked={selectedSortCode === c}
 					/>
-					<label className="form-check-label c-pointer" for={`radio-${c}-${key}`}>
-						{c}
+					<label className="form-check-label c-pointer text-lowercase" for={`radio-${c}-${key}`}>
+						{WEAPON_SORT_NAMES[c]}
 					</label>
 				</div>
 			))}
@@ -82,16 +97,16 @@ function WeaponFilter<T>({
 	return (
 		<div className={classes}>
 			{filterVariants.map(v => (
-				<div class="form-check form-switch form-check-inline" key={v.code}>
+				<div className="form-check form-switch form-check-inline pe-1" key={v.code}>
 					<input
-						class="form-check-input c-pointer"
+						className="form-check-input c-pointer"
 						type="checkbox"
 						role="switch"
 						id={`flexSwitch-${v.code}-${key}`}
 						checked={selectedSortCodes.includes(v.code)}
 						onChange={() => onFilterCodeSelect(toggleInArr([...selectedSortCodes], v.code))}
 					/>
-					<label class="form-check-label c-pointer" for={`flexSwitch-${v.code}-${key}`}>
+					<label className="form-check-label c-pointer" for={`flexSwitch-${v.code}-${key}`}>
 						{v.title}
 					</label>
 				</div>
@@ -138,39 +153,47 @@ export function WeaponsList() {
 	if (!isLoaded(weapons)) return <Spinner />
 	return (
 		<>
-			<div>
-				<label class="opacity-75 pe-2 align-middle py-1">Способы получения:</label>
+			<div className="mb-2">
+				<label className="opacity-75 pe-2 align-middle py-1">{I18N_OBTAIN_SOURCES}:</label>
 				<WeaponFilter
+					classes="ms-1"
 					selectedSortCodes={selectedObtainSourceCodes}
 					onFilterCodeSelect={setSelectedObtainSourceCodes}
 					filterVariants={WEAPON_FILTER_OBTAIN_SOURCE.map(s => {
-						return { code: s, title: s }
+						return { code: s, title: I18N_WEAPON_OBTAIN_SOURCE_NAME(s) }
 					})}
 				/>
 			</div>
-			<div>
-				<label class="opacity-75 pe-2 align-middle py-1">Сортировать по:</label>
-				<WeaponSort selectedSortCode={selectedSortCode} onSortCodeSelect={setSelectedSortCode} />
+			<div className="mb-2">
+				<label className="opacity-75 pe-2 align-middle py-1">{I18N_SORT_BY}:</label>
+				<WeaponSort
+					classes="ms-1"
+					selectedSortCode={selectedSortCode}
+					onSortCodeSelect={setSelectedSortCode}
+				/>
 			</div>
-			<div>
-				<label class="opacity-75 pe-2 align-middle py-1">Тип оружия:</label>
-				<div>
+			<div className="mb-2">
+				<label className="opacity-75 pe-2 align-middle py-1">{I18N_WEAPON_TYPE}:</label>
+				<div className="d-flex align-items-center">
 					<WeaponTypeFilter
 						selectedWeaponTypeCode={selectedWeaponTypeCode}
 						onTypeCodeSelect={selectWeaponTypeCode}
-						classes={'d-inline'}
 					/>
+					<label className="text-muted">{`${
+						selectedWeaponTypeCode
+							? I18N_WEAPON_TYPE_FILTER_TIP[selectedWeaponTypeCode]
+							: I18N_WEAPON_TYPE_FILTER_TIP.everything
+					} (${weaponsFilteredSorted.length})`}</label>
 				</div>
 			</div>
-
 			<table className="table table-sm">
 				<thead className="bg-dark">
 					<tr>
-						<th scope="col">name</th>
-						<th scope="col">atk</th>
-						<th scope="col">substat</th>
+						<th scope="col">{I18N_NAME}</th>
+						<th scope="col">{I18N_STAT_NAME('atk')}</th>
+						<th scope="col">{I18N_SUBSTAT}</th>
 						<MobileDesktopSwitch
-							childrenDesktop={<th scope="col">passive</th>}
+							childrenDesktop={<th scope="col">{I18N_SECONDARY_STAT}</th>}
 							childrenMobile={null}
 						/>
 						<th scope="col"></th>
@@ -185,7 +208,7 @@ export function WeaponsList() {
 				</tbody>
 			</table>
 			{isLoaded(weapons) && !weaponsFilteredSorted.length && (
-				<div className="text-center">'nothing to show'</div>
+				<div className="text-center text-muted fst-italic">{I18N_NOTHING_TO_SHOW}</div>
 			)}
 		</>
 	)

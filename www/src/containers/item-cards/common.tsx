@@ -26,7 +26,6 @@ export function RecommendedTo({
 				mappedArrPush(groupsMap, item.count, item.code)
 			}
 		}
-		console.log(groupsMap, charCodes)
 		const groups = Array.from(groupsMap.entries())
 		groups.sort(([countA], [countB]) => countB - countA)
 		groups.forEach(([, codes]) => codes.reverse()) //сначала новые персонажи (по умолчанию они в конце)
