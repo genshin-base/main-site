@@ -93,9 +93,9 @@ interface WindowSize {
 }
 export function useWindowSize(): WindowSize {
 	const [windowSize, setWindowSize] = useState<WindowSize>({
-		width: window?.innerWidth,
-		height: window?.innerHeight,
-		breakpoint: BS_getCurrBreakpoint(window?.innerWidth || 0),
+		width: window.innerWidth,
+		height: window.innerHeight,
+		breakpoint: BS_getCurrBreakpoint(window.innerWidth),
 	})
 	useEffect(() => {
 		function handleResize() {

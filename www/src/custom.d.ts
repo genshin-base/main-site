@@ -32,4 +32,5 @@ declare const BUNDLE_ENV: {
 	LANG: string
 	IS_SSR: boolean
 	COMMIT_HASH: string
+	EXPECTED_HOSTNAME: string | null
 }

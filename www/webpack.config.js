@@ -15,6 +15,7 @@ import { runAndReadStdout } from '#lib/utils/os.js'
 
 const LANGS = ['en', 'ru']
 const ASSET_PATH = '/'
+const PROD_HOSTNAME = 'genshin-base.com'
 const REFLANG_ORIGIN = 'https://genshin-base.com'
 
 const __filename = fileURLToPath(import.meta.url)
@@ -152,6 +153,7 @@ function makeConfig(mode, commitHash, isMain, type) {
 				'BUNDLE_ENV.LANG': type.isSSR ? 'global._SSR_LANG' : JSON.stringify(type.lang),
 				'BUNDLE_ENV.IS_SSR': JSON.stringify(type.isSSR),
 				'BUNDLE_ENV.COMMIT_HASH': JSON.stringify(commitHash),
+				'BUNDLE_ENV.EXPECTED_HOSTNAME': JSON.stringify(isProd ? PROD_HOSTNAME : null),
 			}),
 			new ESLintPlugin({
 				context: SRC,
@@ -178,14 +180,13 @@ function makeConfig(mode, commitHash, isMain, type) {
 					filename: '404.html',
 					params: { LANGS },
 				}),
-			isProd &&
-				type.isSSR && {
-					apply(compiler) {
-						compiler.hooks.done.tap('SignalBuildEnd', compilation => {
-							type.ssrBuildBarrier.resolve()
-						})
-					},
+			type.isSSR && {
+				apply(compiler) {
+					compiler.hooks.done.tap('SignalBuildEnd', compilation => {
+						type.ssrBuildBarrier.resolve()
+					})
 				},
+			},
 		].filter(Boolean),
 	}
 }
@@ -248,7 +249,11 @@ function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
 				location: { pathname },
 				localStorage: { getItem: () => undefined, setItem: () => undefined },
 				document: { title: '' },
+				innerWidth: 1280,
+				innerHeight: 680,
+				window: {},
 			}
+			items.window = items
 
 			Object.assign(global, items)
 			const res = await func()

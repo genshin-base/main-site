@@ -309,6 +309,10 @@ export const I18N_SEE_NOTES = {
 	en: 'see notes',
 	ru: 'см. заметки',
 }[LANG]
+export const I18N_UNSUPPORTED_LOCATION_WARNING = {
+	en: "Looks like you've opened a cached/saved page. It won't work correctly that way :(",
+	ru: 'Похоже, вы открыли сохранённую страницу. В таком виде она нормально работать не будет :(',
+}[LANG]
 
 type WeaponTypeNames = Record<GI_WeaponTypeCode, string>
 const weaponTypeNamesRU: WeaponTypeNames = {
