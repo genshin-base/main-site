@@ -196,6 +196,28 @@ const fixes = {
 				},
 			],
 			domains: [],
+			weapons: (() => {
+				function removeSlashNs(attrFunc) {
+					return code2weapon => {
+						let used = false
+						const attr = attrFunc(code2weapon)
+						for (const [lang, text] of Object.entries(attr)) {
+							const newText = text.replace('\\n', ' ')
+							if (newText !== text) used = true
+							attr[lang] = newText
+						}
+						return used
+					}
+				}
+				return [
+					// у некоторых оружий в описании стречаются "\n" (двумя символами)
+					// https://genshin.honeyhunterworld.com/db/weapon/w_5312/?lang=EN
+					// https://genshin.honeyhunterworld.com/db/weapon/w_4314/?lang=EN
+					removeSlashNs(code2weapon => code2weapon['dodoco-tales'].description),
+					removeSlashNs(code2weapon => code2weapon['predator'].specialAbility),
+					removeSlashNs(code2weapon => code2weapon['sword-of-descension'].specialAbility),
+				]
+			})(),
 		},
 		descriptionLangFix(text, lang) {
 			if (lang === 'ru') {

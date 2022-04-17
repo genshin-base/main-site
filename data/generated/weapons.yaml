@@ -1998,12 +1998,12 @@ dodoco-tales:
     max: 55
   description:
     en: A children's book filled with childish short stories at which one cannot
-      help but laugh.\nEven those readers who have long reached adulthood cannot
+      help but laugh. Even those readers who have long reached adulthood cannot
       help but be absorbed by the innocent, naive little adventures portrayed
       within.
     ru: Книга, состоящая из увлекательных детских историй, которые невольно вызывают
-      улыбку на лице.\nДаже взрослые читатели не могут не погрузиться с головой
-      в рассказанные здесь невинные и наивные маленькие приключения.
+      улыбку на лице. Даже взрослые читатели не могут не погрузиться с головой в
+      рассказанные здесь невинные и наивные маленькие приключения.
   story:
     en:
       - p: >-
@@ -6617,15 +6617,15 @@ predator:
 
           «Просто с помощью этого лука можно поохотиться и добыть мясо. Как раз сейчас я отправляюсь за лесным кабаном».
   specialAbility:
-    en: "Effective only on the following platform: \\n \"PlayStation
+    en: "Effective only on the following platform:   \"PlayStation
       Network\"\\nDealing Cryo DMG to opponents increases this character's
       Normal and Charged Attack DMG by 10% for 6s. This effect can have a
       maximum of 2 stacks. Additionally, when Aloy equips Predator, ATK is
       increased by 66."
-    ru: Действует только для игроков\n "PlayStation Network".\nНанесённый
-      противникам Крио урон повышает урон обычной и заряженной атаки персонажа
-      на 10% в течение 6 сек. Эффект может складываться до 2 раз. Кроме этого,
-      когда Хищником экипирована Элой, сила атаки повышается на 66 ед.
+    ru: Действует только для игроков  "PlayStation Network".\nНанесённый противникам
+      Крио урон повышает урон обычной и заряженной атаки персонажа на 10% в
+      течение 6 сек. Эффект может складываться до 2 раз. Кроме этого, когда
+      Хищником экипирована Элой, сила атаки повышается на 66 ед.
   materialCodes:
     - narukamis-valor
     - polarizing-prism
@@ -10157,12 +10157,12 @@ sword-of-descension:
       - p: чтобы острым лезвием раскрывать тайны и справляться с трудностями, которые
           уготовил вам этот мир.
   specialAbility:
-    en: 'Effective only on the following platform: \n "PlayStation Network"\nHitting
+    en: 'Effective only on the following platform:   "PlayStation Network"\nHitting
       opponents with Normal and Charged Attacks grants a  50% chance to
       deal  200% ATK as DMG in a small AoE. This effect can only occur once
       every 10s. Additionally, if the Traveler equips the Sword of Descension,
       their ATK is increased by  66.'
-    ru: Действует только для игроков\n "PlayStation Network".\nАтакуя противников
+    ru: Действует только для игроков  "PlayStation Network".\nАтакуя противников
       обычными и заряженными атаками, вы получаете  50% шанс нанести урон,
       равный  200% силы атаки в небольшом радиусе. Эффект может возникнуть 1 раз
       в 10 сек. Кроме того, если Путешественник экипирован Мечом нисхождения,
