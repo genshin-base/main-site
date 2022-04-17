@@ -10,7 +10,6 @@ import {
 	extractWeaponsData,
 	getAndProcessMappedImages,
 } from '#lib/parsing/honeyhunter/index.js'
-import { getCharacterArtifactCodes, getCharacterWeaponCodes } from '#lib/parsing/helperteam/characters.js'
 import { trigramSearcherFromStrings } from '#lib/trigrams.js'
 import { createHash } from 'crypto'
 import { exists, parseArgs, relativeToCwd } from '#lib/utils/os.js'
@@ -130,10 +129,13 @@ const fixes = {
 				ru: 'Электро Путешественница',
 			},
 		},
-		skipEnemies: [
-			/^Millelith/i, //
-			/^Treasure Hoarders - Boss$/,
-		],
+		skip: {
+			enemies: [
+				/^Millelith/i, //
+				/^Treasure Hoarders - Boss$/,
+			],
+			artifacts: [/^Prayers to the Firmament$/i],
+		},
 		manualEnemyGroups: [
 			{ origNames: /^Ruin Guard$/ },
 			{ origNames: /^Ruin Hunter$/ },
@@ -347,11 +349,8 @@ async function extractAndSaveAllItemsData() {
 
 /** @param {boolean} overwriteExisting */
 async function extractAndSaveItemImages(overwriteExisting) {
-	const builds = await loadBuilds()
-
 	info('extracting data', { newline: false })
 	const { items, artifacts, weapons, enemies, characters, enemyGroups } = await extractAllItemsData()
-	const artGroupCodes = getArtifactSpecialGroupCodes(artifacts.code2item)
 
 	replaceEnemiesByGroups(enemies.code2item, enemyGroups.code2item)
 	for (const group of Object.values(enemyGroups.code2item)) {
@@ -360,16 +359,11 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		else warn(`group '${group.code}': no icon image '${group.iconEnemyCode}'`)
 	}
 
-	const usedArtCodes = new Set(
-		builds.characters.map(x => [...getCharacterArtifactCodes(x, artGroupCodes)]).flat(),
-	)
-	const usedWeaponCodes = new Set(builds.characters.map(x => [...getCharacterWeaponCodes(x)]).flat())
-
 	const usedItemCodes = new Set()
 	for (const character of Object.values(characters.code2item))
 		for (const code of character.materialCodes) usedItemCodes.add(code)
 	for (const weapon of Object.values(weapons.code2item))
-		if (usedWeaponCodes.has(weapon.code)) for (const code of weapon.materialCodes) usedItemCodes.add(code)
+		for (const code of weapon.materialCodes) usedItemCodes.add(code)
 	for (const item of Object.values(items.code2item))
 		if (usedItemCodes.has(item.code))
 			for (const code of getItemAncestryCodes(item, items.code2item)) usedItemCodes.add(code)
@@ -377,7 +371,7 @@ async function extractAndSaveItemImages(overwriteExisting) {
 	const usedEmenyCodes = new Set()
 	for (const enemy of Object.values(enemies.code2item))
 		if (
-			enemy.drop.artifactSetCodes.some(x => usedArtCodes.has(x)) ||
+			enemy.drop.artifactSetCodes.some(x => x in artifacts.code2item) ||
 			enemy.drop.itemCodes.some(x => usedItemCodes.has(x))
 		) {
 			usedEmenyCodes.add(enemy.code)
@@ -413,8 +407,6 @@ async function extractAndSaveItemImages(overwriteExisting) {
 
 	await processGroup('artifacts', async () => {
 		const { code2img } = artifacts
-		for (const code of code2img.keys()) if (!usedArtCodes.has(code)) code2img.delete(code)
-
 		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'artifacts', async function* (code) {
 			yield* processIfShould(`artifacts/${code}.png`, processNormal)
 			yield* processIfShould(`artifacts/${code}.large.png`, processLarge)
@@ -423,8 +415,6 @@ async function extractAndSaveItemImages(overwriteExisting) {
 
 	await processGroup('weapons', async () => {
 		const { code2img } = weapons
-		for (const code of code2img.keys()) if (!usedWeaponCodes.has(code)) code2img.delete(code)
-
 		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'weapons', async function* (code) {
 			yield* processIfShould(`weapons/${code}.png`, processNormal)
 			yield* processIfShould(`weapons/${code}.large.png`, processLarge)
