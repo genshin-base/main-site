@@ -5,6 +5,9 @@ import { mappedArrPush } from '#lib/utils/collections'
 import { I18N_ASC_MATERIALS, I18N_FOR_NOBODY, I18N_RECOMMENDED_FOR } from '#src/i18n/i18n'
 import { getItemIconSrc } from '#src/utils/items'
 import { CharacterAvatar, ItemAvatar } from './item-avatars'
+import { HEART } from '#src/utils/typography'
+import { useVersionedStorage } from '#src/utils/hooks'
+import { SV_FAV_CHAR_CODES } from '#src/utils/local-storage-keys'
 
 export function RecommendedTo({
 	charCodes,
@@ -17,6 +20,8 @@ export function RecommendedTo({
 	navigateToCharacter?: boolean
 	isAvatarWithBorder?: boolean
 }): JSX.Element {
+	const [favCharCodes] = useVersionedStorage(SV_FAV_CHAR_CODES)
+
 	const charLists = useMemo(() => {
 		const groupsMap = new Map<number, string[]>()
 		for (const item of charCodes) {
@@ -44,11 +49,14 @@ export function RecommendedTo({
 						isNoBg={!navigateToCharacter}
 						classes={`small-avatar mb-2 me-2`}
 						href={navigateToCharacter ? '/builds/' + c : undefined}
+						badgeTopStart={
+							~favCharCodes.indexOf(c) ? <span className="text-danger">{HEART}</span> : null
+						}
 					/>
 				))}
 			</div>
 		))
-	}, [charCodes, isInline, navigateToCharacter, isAvatarWithBorder])
+	}, [charCodes, isInline, navigateToCharacter, isAvatarWithBorder, favCharCodes])
 	return (
 		<div class={`d-flex ${isInline ? 'flex-row' : 'flex-column'}`}>
 			<label class="opacity-75 pe-2 align-middle py-1">

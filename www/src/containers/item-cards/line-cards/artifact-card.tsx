@@ -14,7 +14,7 @@ import { CentredSpinner, Spinner } from '#src/components/spinners'
 import { ItemAvatar } from '../item-avatars'
 import { RecommendedTo } from '../common'
 import { apiGetArtifact } from '#src/api/endpoints'
-import { getArtifactIconLargeSrc } from '#src/utils/artifacts'
+import { getArtifactIconLargeSrc, getArtifactIconSrc } from '#src/utils/artifacts'
 import {
 	I18N_ART_TYPE,
 	I18N_COLLAPSE,
@@ -68,14 +68,20 @@ function ArtifactCardLine({
 		setSelectedArtTypeTab(artTypeTabsFiltered[0])
 	}, [artTypeTabsFiltered])
 
-	const markerGroups = useMemo(() => {
-		if (!isLoaded(artifactFull)) return dummyMarkerGroups
+	const dataForMap = useMemo(() => {
+		if (!isLoaded(artifactFull)) return { markerGroups: dummyMarkerGroups }
 		const srcs = artifact.obtainSources
 		const markerGroups: CardMapMarkerGroup[] = []
 		addMarkerGroupsByDomains(markerGroups, getAllRelated(artifactFull.maps.domains, srcs.domainCodes))
 		addMarkerGroupsByEnemies(markerGroups, getAllRelated(artifactFull.maps.enemies, srcs.enemyCodes))
-		return markerGroups
-	}, [artifactFull])
+		return {
+			itemData: {
+				item: artifact,
+				imgSrc: getArtifactIconSrc(artifact.code),
+			},
+			markerGroups,
+		}
+	}, [artifactFull, artifact])
 	const mainInfoColInner = useMemo(() => {
 		return (
 			<>
@@ -92,14 +98,14 @@ function ArtifactCardLine({
 						</span>
 					</div>
 				</div>
-				<div className="mt-1">
+				<div className="mt-1 mb-2">
 					<RecommendedTo
 						navigateToCharacter={true}
 						isAvatarWithBorder={true}
 						charCodes={artifact.recommendedTo}
 					/>
 				</div>
-				<div className="flex-fill overflow-auto small lh-sm">
+				<div className="flex-fill overflow-auto small lh-sm mt-1">
 					{artifact.sets[1] && (
 						<>
 							<BlockHeader>{I18N_PIECE_BONUS(1)}</BlockHeader>
@@ -152,18 +158,18 @@ function ArtifactCardLine({
 	const locationColInner = useMemo(() => {
 		return (
 			<div className="d-flex flex-fill flex-column location-col-inner position-relative">
-				{markerGroups === dummyMarkerGroups ? (
+				{dataForMap.markerGroups === dummyMarkerGroups ? (
 					<CentredSpinner />
 				) : (
 					<>
 						<div className="flex-fill mt-2">
-							<CardMap markerGroups={markerGroups} classes="h-100" />
+							<CardMap {...dataForMap} classes="h-100" />
 						</div>
 					</>
 				)}
 			</div>
 		)
-	}, [artifactFull])
+	}, [dataForMap])
 
 	const cellClass = 'w-33 d-flex px-2 pb-3 pt-2 flex-column'
 	const forAccordion = useMemo(() => {

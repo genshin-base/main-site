@@ -24,6 +24,7 @@ import { CentredSpinner, Spinner } from '#src/components/spinners'
 import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from '../card-map'
 import { ItemAvatar } from '../item-avatars'
 import { AscMaterials, RecommendedTo } from '../common'
+import { getItemIconSrc } from '#src/utils/items'
 
 type WeaponRowProps = {
 	weapon: WeaponRegularInfo
@@ -48,13 +49,19 @@ function WeaponCardLine({
 }): JSX.Element {
 	const weaponFull = useFetch(sig => apiGetWeapon(weapon.code, sig), [weapon])
 	const [materialOnMap, setMaterialOnMap] = useState<ItemShortInfo | undefined>()
-	const markerGroups = useMemo(() => {
-		if (!isLoaded(weaponFull) || !materialOnMap) return dummyMarkerGroups
+	const dataForMap = useMemo(() => {
+		if (!isLoaded(weaponFull) || !materialOnMap) return { markerGroups: dummyMarkerGroups }
 		const srcs = materialOnMap.obtainSources
 		const markerGroups: CardMapMarkerGroup[] = []
 		addMarkerGroupsByDomains(markerGroups, getAllRelated(weaponFull.maps.domains, srcs.domainCodes))
 		addMarkerGroupsByEnemies(markerGroups, getAllRelated(weaponFull.maps.enemies, srcs.enemyCodes))
-		return markerGroups
+		return {
+			itemData: {
+				item: materialOnMap,
+				imgSrc: getItemIconSrc(materialOnMap.code),
+			},
+			markerGroups,
+		}
 	}, [weaponFull, materialOnMap])
 
 	const materials = useMemo(() => {
@@ -132,7 +139,7 @@ function WeaponCardLine({
 	const locationColInner = useMemo(() => {
 		return (
 			<div className="d-flex flex-fill flex-column location-col-inner position-relative">
-				{markerGroups === dummyMarkerGroups ? (
+				{dataForMap.markerGroups === dummyMarkerGroups ? (
 					<CentredSpinner />
 				) : (
 					<>
@@ -144,13 +151,13 @@ function WeaponCardLine({
 							/>
 						</div>
 						<div className="flex-fill">
-							<CardMap markerGroups={markerGroups} classes="h-100" />
+							<CardMap isItemFavable={true} {...dataForMap} classes="h-100" />
 						</div>
 					</>
 				)}
 			</div>
 		)
-	}, [markerGroups, materials, materialOnMap])
+	}, [dataForMap, materials, materialOnMap])
 
 	const cellClass = 'w-33 d-flex px-2 pb-3 pt-2 flex-column'
 	const forAccordion = useMemo(() => {
