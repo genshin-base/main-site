@@ -163,7 +163,7 @@ function ArtifactCardLine({
 				) : (
 					<>
 						<div className="flex-fill mt-2">
-							<CardMap {...dataForMap} classes="h-100" />
+							<CardMap isFatHead={true} {...dataForMap} classes="h-100" />
 						</div>
 					</>
 				)}

@@ -58,6 +58,7 @@ export function CardMap({
 	itemData,
 	markerGroups,
 	isItemFavable,
+	isFatHead,
 	classes = '',
 }: {
 	itemData?: {
@@ -66,6 +67,7 @@ export function CardMap({
 	}
 	markerGroups: CardMapMarkerGroup[]
 	isItemFavable?: boolean
+	isFatHead?: boolean
 	classes?: string
 }): JSX.Element {
 	const TeyvatMap = useFetch(() => LazyTeyvatMap.then(x => x.TeyvatMap), [])
@@ -164,9 +166,16 @@ export function CardMap({
 			)}
 			<div className="map-header position-absolute top-0 px-3 py-1 w-100">
 				<div className="map-header-bg position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
-				<div className="d-flex flex-row justify-content-between" style={{ opacity: '0.9999' }}>
+				<div
+					className={`d-flex ${isFatHead ? 'flex-column' : 'flex-row'} justify-content-between`}
+					style={{ opacity: '0.9999' }}
+				>
 					{itemData && (
-						<div className="me-2 flex-shrink-1 d-flex align-self-center">
+						<div
+							className={`me-2 flex-shrink-1 d-flex ${
+								isFatHead ? 'mb-1' : 'align-self-center'
+							}`}
+						>
 							{isItemWeaponPrimaryMaterial && isItemFavable ? (
 								<ToggleWeaponPrimaryMaterialFav
 									itemCode={itemData.item.code}
@@ -183,7 +192,11 @@ export function CardMap({
 						</div>
 					)}
 					{markerGroups.length ? (
-						<div className={`d-flex flex-fill justify-content-end align-self-center`}>
+						<div
+							className={`d-flex flex-fill ${
+								isFatHead ? '' : 'justify-content-end align-self-center'
+							}`}
+						>
 							<label className="me-1 text-muted align-self-center small">{I18N_SOURCE}:</label>
 							{sourceSelectEl}
 						</div>

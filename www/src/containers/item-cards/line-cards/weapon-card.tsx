@@ -151,7 +151,7 @@ function WeaponCardLine({
 							/>
 						</div>
 						<div className="flex-fill">
-							<CardMap isItemFavable={true} {...dataForMap} classes="h-100" />
+							<CardMap isFatHead={true} isItemFavable={true} {...dataForMap} classes="h-100" />
 						</div>
 					</>
 				)}
