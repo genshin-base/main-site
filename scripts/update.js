@@ -54,6 +54,7 @@ import {
 	makeCharacterFullInfo,
 	makeCharacterShortList,
 	makeMaterialsTimetable,
+	makeSearchData,
 	makeWeaponFullInfoWithRelated,
 	makeWeaponsRegularInfo,
 } from '#lib/parsing/combine.js'
@@ -536,6 +537,8 @@ async function saveWwwData() {
 			const weaponInfo = makeWeaponFullInfoWithRelated(weapon, common, lang)
 			await writeJson(`${WWW_DYNAMIC_DIR}/weapons/${weapon.code}-${lang}.json`, weaponInfo)
 		}
+
+		await writeJson(`${WWW_DYNAMIC_DIR}/search-${lang}.json`, makeSearchData(common, lang))
 
 		progress()
 	}

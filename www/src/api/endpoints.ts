@@ -8,6 +8,7 @@ import type {
 	CharacterFullInfoWithRelated,
 	ExtractedLocationsInfo,
 	MaterialsTimetableWithRelated,
+	SearchItem,
 	WeaponFullInfoWithRelated,
 	WeaponRegularInfo,
 } from '#lib/parsing/combine'
@@ -65,4 +66,8 @@ export function apiMaterialsTimetable(
 	signal: AbortSignal,
 ): PromiseOrSync<MapAllByCode<MaterialsTimetableWithRelated>> {
 	return _map(getLang<MaterialsTimetableWithRelated>(`timetables/materials`, signal), mapAllByCode)
+}
+
+export function apiGetSearchData(signal: AbortSignal) {
+	return getLang<SearchItem[]>(`search`, signal)
 }
