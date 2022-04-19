@@ -1,7 +1,7 @@
 import { useEffect } from 'preact/hooks'
 
 import { useBuildWithDelayedLocs } from '#src/api'
-import { Spinner } from '#src/components/spinners'
+import { Spinner } from '#src/components/placeholders'
 import { CharacterPicker } from '#src/containers/character-picker/character-picker'
 import { FavoriteCharacters } from '#src/containers/character-picker/favorite-characters'
 import {

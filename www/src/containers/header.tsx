@@ -8,7 +8,7 @@ export function Header() {
 	// TODO клик мимо компонента
 	return (
 		<header>
-			<div className="navbar navbar-expand-md navbar-dark bg-primary">
+			<div className="navbar navbar-expand-lg navbar-dark bg-primary">
 				<div className="container">
 					<A className="navbar-brand" href="/">
 						Genshin Base

@@ -3,7 +3,7 @@ import { WeaponRegularInfo } from '#src/../../lib/parsing/combine'
 import { arrSimpleUniq, toggleInArr } from '#src/../../lib/utils/collections'
 import { apiGetWeapons } from '#src/api/endpoints'
 import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
-import { Spinner } from '#src/components/spinners'
+import { Spinner } from '#src/components/placeholders'
 import { WeaponTypeFilter } from '#src/components/weapon-type-filter'
 import { WeaponCardTableRow } from '#src/containers/item-cards/line-cards/weapon-card'
 

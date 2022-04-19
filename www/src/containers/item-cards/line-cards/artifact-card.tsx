@@ -10,7 +10,7 @@ import { isLoaded, useFetch } from '#src/utils/hooks'
 import { BULLET, DASH, ELLIPSIS } from '#src/utils/typography'
 
 import './line-cards.scss'
-import { CentredSpinner, Spinner } from '#src/components/spinners'
+import { CentredSpinner, Spinner } from '#src/components/placeholders'
 import { ItemAvatar } from '../item-avatars'
 import { RecommendedTo } from '../common'
 import { apiGetArtifact } from '#src/api/endpoints'

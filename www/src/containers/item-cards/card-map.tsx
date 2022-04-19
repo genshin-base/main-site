@@ -4,12 +4,13 @@ import { GI_DomainTypeCode, MapCode, MapLocation } from '#lib/genshin'
 import { ArtifactRegularInfo, ItemShortInfo, WeaponRegularInfo } from '#lib/parsing/combine'
 import { arrGetAfter } from '#lib/utils/collections'
 import { SimpleSelect } from '#src/components/select'
-import { Spinner } from '#src/components/spinners'
+import { CentredLabel, Spinner } from '#src/components/placeholders'
 import { BtnTabGroup, useSelectable } from '#src/components/tabs'
 import { MapMarkerRaw } from '#src/components/teyvat-map'
 import {
 	I18N_ERROR,
 	I18N_MAP_CODES_NAME,
+	I18N_NOTHING_TO_SHOW,
 	I18N_PINCH_TO_ZOOM,
 	I18N_SCROLL_TO_ZOOM,
 	I18N_SOURCE,
@@ -18,7 +19,7 @@ import { ToggleWeaponPrimaryMaterialFav } from '#src/modules/builds/common'
 import { getDomainIconSrc } from '#src/utils/domains'
 import { getEnemyIconSrc } from '#src/utils/enemies'
 import { isLoaded, useFetch } from '#src/utils/hooks'
-import { LEFT_POINTING, RIGHT_POINTING } from '#src/utils/typography'
+import { ELLIPSIS, LEFT_POINTING, RIGHT_POINTING } from '#src/utils/typography'
 import { LabeledItemAvatar } from './item-avatars'
 
 const LazyTeyvatMap = import('#src/components/teyvat-map')
@@ -29,6 +30,13 @@ export type CardMapMarkerGroup = {
 	markers: 'external' | MapMarkerRaw[]
 }
 
+const dummyMarkerGroups: CardMapMarkerGroup[] = [
+	{
+		code: '',
+		title: ELLIPSIS,
+		markers: [{ mapCode: 'teyvat', x: 0, y: 0, icon: '' }],
+	},
+]
 export function addMarkerGroupsByDomains(
 	markerGroups: CardMapMarkerGroup[],
 	domains: { code: string; name: string; type: GI_DomainTypeCode; location: MapLocation }[],
@@ -71,8 +79,12 @@ export function CardMap({
 	classes?: string
 }): JSX.Element {
 	const TeyvatMap = useFetch(() => LazyTeyvatMap.then(x => x.TeyvatMap), [])
-
-	const [selectedSource, setSelectedSource] = useSelectable(markerGroups)
+	const markerGroupsLocal = useMemo(
+		() => (markerGroups.length ? markerGroups : dummyMarkerGroups),
+		[markerGroups],
+	)
+	const isMapEmpty: boolean = useMemo(() => markerGroupsLocal === dummyMarkerGroups, [markerGroupsLocal])
+	const [selectedSource, setSelectedSource] = useSelectable(markerGroupsLocal)
 
 	const visibleMapCodeTabs = useMemo(() => {
 		if (selectedSource.markers === 'external') return []
@@ -93,21 +105,21 @@ export function CardMap({
 		setSelectedSource(selectedSource)
 	}
 	const goToPrevGroup = () => {
-		setSourceAndFixMapCode(arrGetAfter(markerGroups, selectedSource, -1))
+		setSourceAndFixMapCode(arrGetAfter(markerGroupsLocal, selectedSource, -1))
 	}
 	const goToNextGroup = () => {
-		setSourceAndFixMapCode(arrGetAfter(markerGroups, selectedSource))
+		setSourceAndFixMapCode(arrGetAfter(markerGroupsLocal, selectedSource))
 	}
 
 	let sourceSelectEl
-	if (!markerGroups.length) {
+	if (!markerGroupsLocal.length) {
 		sourceSelectEl = null
-	} else if (markerGroups.length === 1) {
-		sourceSelectEl = <span className="align-self-center lh-1 small">{markerGroups[0].title}</span>
-	} else if (markerGroups.length < 3) {
+	} else if (markerGroupsLocal.length === 1) {
+		sourceSelectEl = <span className="align-self-center lh-1 small">{markerGroupsLocal[0].title}</span>
+	} else if (markerGroupsLocal.length < 3) {
 		sourceSelectEl = (
 			<BtnTabGroup
-				tabs={markerGroups}
+				tabs={markerGroupsLocal}
 				selectedTab={selectedSource}
 				onTabSelect={setSourceAndFixMapCode}
 				classes="w-100 btn-group-sm"
@@ -124,7 +136,7 @@ export function CardMap({
 					{LEFT_POINTING}
 				</button>
 				<SimpleSelect
-					options={markerGroups}
+					options={markerGroupsLocal}
 					selectedOption={selectedSource}
 					onOptionSelect={setSourceAndFixMapCode}
 					classes="w-100 rounded-0"
@@ -171,11 +183,7 @@ export function CardMap({
 					style={{ opacity: '0.9999' }}
 				>
 					{itemData && (
-						<div
-							className={`me-2 flex-shrink-1 d-flex ${
-								isFatHead ? 'mb-1' : 'align-self-center'
-							}`}
-						>
+						<div className={`me-2 flex-shrink-1 d-flex ${isFatHead ? '' : 'align-self-center'}`}>
 							{isItemWeaponPrimaryMaterial && isItemFavable ? (
 								<ToggleWeaponPrimaryMaterialFav
 									itemCode={itemData.item.code}
@@ -191,10 +199,10 @@ export function CardMap({
 							/>
 						</div>
 					)}
-					{markerGroups.length ? (
+					{!isMapEmpty ? (
 						<div
 							className={`d-flex flex-fill ${
-								isFatHead ? '' : 'justify-content-end align-self-center'
+								isFatHead ? 'mt-1' : 'justify-content-end align-self-center'
 							}`}
 						>
 							<label className="me-1 text-muted align-self-center small">{I18N_SOURCE}:</label>
@@ -204,37 +212,40 @@ export function CardMap({
 				</div>
 			</div>
 			<div className="map-tip position-absolute px-3 pt-1 lh-1 top-100 start-0 small text-muted opacity-75 user-select-none">
-				{visibleMapCodeTabs.map(({ code }) => (
-					<div className="d-inline me-2" key={code} onClick={() => setMapCodeTab({ code })}>
-						{visibleMapCodeTabs.length > 1 ? (
-							<input
-								className="lh-1 align-middle c-pointer me-1"
-								type="radio"
-								id={code}
-								checked={code === selectedMapCode}
-							/>
-						) : null}
-						<label
-							className={`lh-1 align-middle text-capitalize ${
-								visibleMapCodeTabs.length > 1 ? 'c-pointer' : ''
-							}`}
-							for={code}
-						>
-							{I18N_MAP_CODES_NAME[code]}
-						</label>
-					</div>
-				))}
+				{!isMapEmpty &&
+					visibleMapCodeTabs.map(({ code }) => (
+						<div className="d-inline me-2" key={code} onClick={() => setMapCodeTab({ code })}>
+							{visibleMapCodeTabs.length > 1 ? (
+								<input
+									className="lh-1 align-middle c-pointer me-1"
+									type="radio"
+									id={code}
+									checked={code === selectedMapCode}
+								/>
+							) : null}
+							<label
+								className={`lh-1 align-middle text-capitalize ${
+									visibleMapCodeTabs.length > 1 ? 'c-pointer' : ''
+								}`}
+								for={code}
+							>
+								{I18N_MAP_CODES_NAME[code]}
+							</label>
+						</div>
+					))}
 			</div>
 			<div
 				className={`map-tip position-absolute \
 				 px-3 pt-1 lh-1 \
 				 bottom-0 end-0 small text-muted \
 				 opacity-75 pe-none bg-dark opacity-75 \
-				 rounded-start not-rounded-bottom`}
+				 rounded-start not-rounded-bottom \
+				 ${isMapEmpty ? 'd-none' : ''}`}
 			>
 				<div class="d-none d-xl-block">{I18N_SCROLL_TO_ZOOM}</div>
 				<div class="d-xl-none">{I18N_PINCH_TO_ZOOM}</div>
 			</div>
+			{isMapEmpty ? <CentredLabel label={I18N_NOTHING_TO_SHOW} /> : null}
 		</div>
 	)
 }

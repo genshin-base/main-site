@@ -120,7 +120,10 @@ $colors: primary, secondary, warning, dark;
 .hide-if-empty:empty {
 	display: none;
 }
-
+.placeholder-backdrop{
+	background-color: #000;
+	opacity: 0.5;
+}
 .letter-spacing-1 {
 	letter-spacing: 0.1rem;
 }
