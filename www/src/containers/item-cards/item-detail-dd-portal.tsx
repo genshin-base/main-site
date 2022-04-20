@@ -3,8 +3,7 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'preac
 import { calcPosForDd } from '#src/utils/calc-pos-for-dd'
 import { useClickAway, useWindowSize } from '#src/utils/hooks'
 import { createPortal } from '#src/utils/preact-compat'
-
-let modalsEl: Element | null = null
+import { MODALS_EL } from '#src/utils/dom'
 
 export const ItemDetailDdPortal = ({
 	onClickAway,
@@ -21,7 +20,6 @@ export const ItemDetailDdPortal = ({
 	contentKey?: string | null | undefined
 	shouldScrollToTop?: boolean
 }): JSX.Element => {
-	modalsEl ??= document.querySelector('.modals') as Element
 	const wrapRef: preact.RefObject<HTMLDivElement> | null = useRef(null)
 	const defClassName = `popover item-detail-popover ${classes}`
 	const [arrowStyle, setArrowStyle] = useState('')
@@ -58,7 +56,7 @@ export const ItemDetailDdPortal = ({
 			{children}
 			<div class="popover-arrow" style={arrowStyle}></div>
 		</div>,
-		modalsEl,
+		MODALS_EL,
 	)
 }
 export const ItemDetailDdMobilePortal = ({
@@ -72,7 +70,6 @@ export const ItemDetailDdMobilePortal = ({
 	classes?: string
 	contentKey?: string | null | undefined
 }): JSX.Element => {
-	modalsEl ??= document.querySelector('.modals') as Element
 	const wrapRef: preact.RefObject<HTMLDivElement> | null = useRef(null)
 	const defClassName = `fixed-bottom ${classes}`
 
@@ -82,6 +79,6 @@ export const ItemDetailDdMobilePortal = ({
 		<div class={defClassName} ref={wrapRef}>
 			{children}
 		</div>,
-		modalsEl,
+		MODALS_EL,
 	)
 }

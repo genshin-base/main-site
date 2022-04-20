@@ -208,7 +208,7 @@ export function WeaponsList() {
 				</tbody>
 			</table>
 			{isLoaded(weapons) && !weaponsFilteredSorted.length && (
-				<div className="text-center text-muted fst-italic">{I18N_NOTHING_TO_SHOW}</div>
+				<div className="text-center text-muted fst-italic small">{I18N_NOTHING_TO_SHOW}</div>
 			)}
 		</>
 	)

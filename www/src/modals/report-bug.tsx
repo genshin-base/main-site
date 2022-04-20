@@ -8,11 +8,10 @@ import {
 	I18N_SUBMIT_BUG_SUCCESS,
 	I18N_YOUR_MESSAGE_HERE,
 } from '#src/i18n/i18n'
+import { MODALS_EL } from '#src/utils/dom'
 import { useClickAway } from '#src/utils/hooks'
 import { createPortal } from '#src/utils/preact-compat'
 import { useCallback, useRef, useState } from 'preact/hooks'
-
-let modalsEl: Element | null = null
 
 export const ReportBugModal = ({ onClickAway }: { onClickAway(): void }): JSX.Element => {
 	const [message, setMessage] = useState<string>('')
@@ -24,7 +23,6 @@ export const ReportBugModal = ({ onClickAway }: { onClickAway(): void }): JSX.El
 		},
 		[setMessage, isInvalid, setIsInvalid],
 	)
-	modalsEl ??= document.querySelector('.modals') as Element
 	const modalRef: preact.RefObject<HTMLDivElement> | null = useRef(null)
 	useClickAway(modalRef, onClickAway)
 	const tryToSendMessage = useCallback(() => {
@@ -91,6 +89,6 @@ export const ReportBugModal = ({ onClickAway }: { onClickAway(): void }): JSX.El
 				</div>
 			</div>
 		</>,
-		modalsEl,
+		MODALS_EL,
 	)
 }
