@@ -362,6 +362,8 @@ function setHashValue(key: string, val: string | null) {
 	} else {
 		params.set(key, val)
 	}
-	const str = params.toString()
-	location.hash = str === '' ? '' : '#' + str
+	let hash = params.toString()
+	if (hash !== '') hash = '#' + hash
+	const { origin, pathname, search } = location
+	history.replaceState(history.state, '', origin + pathname + search + hash)
 }
