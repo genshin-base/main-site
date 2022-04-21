@@ -269,12 +269,23 @@ export function useForceUpdate(): () => void {
 	const setValue = useState(0)[1]
 	return useRef(() => setValue(v => ~v)).current
 }
+
+export function useOnce(args: unknown[]): boolean {
+	const ref = useRef(true)
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	useMemo(() => (ref.current = true), args)
+	const flag = ref.current
+	ref.current = false
+	return flag
+}
+
 export function useUniqKey(): number {
 	const key = useMemo(() => {
 		return Math.random()
 	}, [])
 	return key
 }
+
 export function useVisibleTicker(callback: () => void, interval: number) {
 	const isVisible = useWindowVisibility()
 
@@ -291,6 +302,7 @@ export function useVisibleTicker(callback: () => void, interval: number) {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [interval, isVisible])
 }
+
 export function useDocumentTitle(title: string, shouldRestoreOnUnmount = false) {
 	const defaultTitle = useRef(document.title).current
 
@@ -306,4 +318,50 @@ export function useDocumentTitle(title: string, shouldRestoreOnUnmount = false) 
 			}
 		}
 	}, [shouldRestoreOnUnmount, defaultTitle])
+}
+
+export function useHashValue<T extends string | null>(
+	key: string,
+	defaultValue: T,
+): [string | T, (key: string) => void] {
+	const [val, setVal] = useState(getHashValue(key) ?? defaultValue)
+
+	// нужно один раз проставить зачание для ключа
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	useMemo(() => setHashValue(key, val), [key])
+
+	// нужно подчистить за собой значение
+	useEffect(() => {
+		return () => setHashValue(key, null)
+	}, [key])
+
+	useEffect(() => {
+		function onHashChange() {
+			setVal(getHashValue(key) ?? defaultValue)
+		}
+		addEventListener('hashchange', onHashChange)
+		return () => removeEventListener('hashchange', onHashChange)
+	}, [key, defaultValue])
+
+	const setValAndHash = useCallback(
+		(val: string) => {
+			setVal(val)
+			setHashValue(key, val)
+		},
+		[key],
+	)
+	return [val, setValAndHash]
+}
+function getHashValue(key: string) {
+	return new URLSearchParams(location.hash.slice(1)).get(key)
+}
+function setHashValue(key: string, val: string | null) {
+	const params = new URLSearchParams(location.hash.slice(1))
+	if (val === null) {
+		params.delete(key)
+	} else {
+		params.set(key, val)
+	}
+	const str = params.toString()
+	location.hash = str === '' ? '' : '#' + str
 }

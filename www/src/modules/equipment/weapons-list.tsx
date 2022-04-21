@@ -1,3 +1,5 @@
+import { useMemo, useState } from 'preact/hooks'
+
 import { GI_WeaponObtainSource, GI_WeaponTypeCode } from '#src/../../lib/genshin'
 import { WeaponRegularInfo } from '#src/../../lib/parsing/combine'
 import { arrSimpleUniq, toggleInArr } from '#src/../../lib/utils/collections'
@@ -6,8 +8,8 @@ import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
 import { Spinner } from '#src/components/placeholders'
 import { WeaponTypeFilter } from '#src/components/weapon-type-filter'
 import { WeaponCardTableRow } from '#src/containers/item-cards/line-cards/weapon-card'
-
 import {
+	I18N_NAME,
 	I18N_NOTHING_TO_SHOW,
 	I18N_OBTAIN_SOURCES,
 	I18N_RARITY,
@@ -15,13 +17,11 @@ import {
 	I18N_SORT_BY,
 	I18N_STAT_NAME,
 	I18N_SUBSTAT,
-	I18N_NAME,
 	I18N_WEAPON_OBTAIN_SOURCE_NAME,
 	I18N_WEAPON_TYPE,
 	I18N_WEAPON_TYPE_FILTER_TIP,
 } from '#src/i18n/i18n'
-import { isLoaded, useFetch, useUniqKey } from '#src/utils/hooks'
-import { useMemo, useState } from 'preact/hooks'
+import { isLoaded, useFetch, useHashValue, useUniqKey } from '#src/utils/hooks'
 
 const WEAPON_SORT_CODES = ['rarity', 'atk', 'subStat']
 const WEAPON_SORT_NAMES = { rarity: I18N_RARITY, atk: I18N_STAT_NAME('atk'), subStat: I18N_SUBSTAT }
@@ -120,7 +120,7 @@ export function WeaponsList() {
 	const selectWeaponTypeCode = code =>
 		setSelectedWeaponTypeCode(selectedWeaponTypeCode === code ? null : code)
 
-	const [selectedSortCode, setSelectedSortCode] = useState<string>(WEAPON_SORT_CODES[0])
+	const [selectedSortCode, setSelectedSortCode] = useHashValue('c', WEAPON_SORT_CODES[0])
 
 	const [selectedObtainSourceCodes, setSelectedObtainSourceCodes] =
 		useState<ObtainSourceForFilter[]>(WEAPON_FILTER_OBTAIN_SOURCE)
