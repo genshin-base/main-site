@@ -27,6 +27,12 @@ function searchInItem(item: SearchItem, searchStr: string): boolean {
 		(item.nameEn ? item.nameEn.toLowerCase().includes(searchStr) : false)
 	)
 }
+function sortInItem(item: SearchItem, searchStr: string): number {
+	return Math.min(
+		item.name.toLowerCase().indexOf(searchStr) ||
+			(item.nameEn ? item.nameEn.toLowerCase().indexOf(searchStr) : 999),
+	)
+}
 export function MegaSearch({ classes = '' }: { classes?: string }): JSX.Element {
 	const [searchStr, setSearchStr] = useState<string>('')
 	const searchData = useFetch(apiGetSearchData, [])
@@ -45,8 +51,10 @@ export function MegaSearch({ classes = '' }: { classes?: string }): JSX.Element 
 		ddEl.style.top = `${Math.max(0, pos.top)}px`
 	}, [ddRef, targetRef])
 	const results = useMemo<SearchItem[]>(() => {
-		if (!isLoaded(searchData)) return []
-		return searchStr ? searchData.filter(it => searchInItem(it, searchStr)) : []
+		if (!isLoaded(searchData) || !searchStr) return []
+		const searchDataLocal = searchStr ? searchData.filter(it => searchInItem(it, searchStr)) : []
+		searchDataLocal.sort((a, b) => sortInItem(a, searchStr) - sortInItem(b, searchStr))
+		return searchDataLocal
 	}, [searchStr, searchData])
 	useEffect(() => onResize(), [results, onResize])
 	const onSearchValueChange = useCallback(e => setSearchStr(e.target.value), [setSearchStr])
