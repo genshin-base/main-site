@@ -115,6 +115,7 @@ export function useWindowSize(): WindowSize {
 declare global {
 	interface WindowEventMap {
 		'x-local-tab-storage': CustomEvent & { detail: { key: string } }
+		'x-local-hashchange': CustomEvent
 	}
 }
 
@@ -323,7 +324,7 @@ export function useDocumentTitle(title: string, shouldRestoreOnUnmount = false) 
 export function useHashValue<T extends string | null>(
 	key: string,
 	defaultValue: T,
-): [string | T, (key: string) => void] {
+): [string | T, (key: T) => void] {
 	const [val, setVal] = useState(getHashValue(key) ?? defaultValue)
 
 	// нужно один раз проставить зачание для ключа
@@ -340,13 +341,18 @@ export function useHashValue<T extends string | null>(
 			setVal(getHashValue(key) ?? defaultValue)
 		}
 		addEventListener('hashchange', onHashChange)
-		return () => removeEventListener('hashchange', onHashChange)
+		addEventListener('x-local-hashchange', onHashChange)
+		return () => {
+			removeEventListener('hashchange', onHashChange)
+			removeEventListener('x-local-hashchange', onHashChange)
+		}
 	}, [key, defaultValue])
 
 	const setValAndHash = useCallback(
-		(val: string) => {
+		(val: T) => {
 			setVal(val)
 			setHashValue(key, val)
+			dispatchEvent(new CustomEvent('x-local-hashchange'))
 		},
 		[key],
 	)
@@ -357,13 +363,16 @@ function getHashValue(key: string) {
 }
 function setHashValue(key: string, val: string | null) {
 	const params = new URLSearchParams(location.hash.slice(1))
-	if (val === null) {
-		params.delete(key)
-	} else {
-		params.set(key, val)
+	if (params.get(key) !== val) {
+		if (val === null) {
+			params.delete(key)
+		} else {
+			params.set(key, val)
+		}
+		let hash = params.toString()
+		if (hash !== '') hash = '#' + hash
+		const { origin, pathname, search } = location
+		console.log('history', hash, location.hash)
+		history.replaceState(history.state, '', origin + pathname + search + hash)
 	}
-	let hash = params.toString()
-	if (hash !== '') hash = '#' + hash
-	const { origin, pathname, search } = location
-	history.replaceState(history.state, '', origin + pathname + search + hash)
 }

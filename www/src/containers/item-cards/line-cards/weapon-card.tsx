@@ -4,8 +4,8 @@ import { ItemShortInfo, WeaponRegularInfo } from '#lib/parsing/combine'
 import { apiGetWeapon } from '#src/api/endpoints'
 import { getAllRelated } from '#src/api/utils'
 import { Accordion } from '#src/components/accordion'
-
 import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
+import { CentredSpinner, Spinner } from '#src/components/placeholders'
 import {
 	I18N_ASC_MATERIALS,
 	I18N_BASE_ATTACK,
@@ -17,14 +17,14 @@ import {
 } from '#src/i18n/i18n'
 import { notesToJSX } from '#src/modules/builds/common'
 import { isLoaded, useFetch, useHashValue } from '#src/utils/hooks'
+import { getItemIconSrc } from '#src/utils/items'
 import { BULLET, DASH, ELLIPSIS } from '#src/utils/typography'
 import { getWeaponIconLageSrc } from '#src/utils/weapons'
-import './line-cards.scss'
-import { CentredSpinner, Spinner } from '#src/components/placeholders'
 import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from '../card-map'
-import { ItemAvatar } from '../item-avatars'
 import { AscMaterials, RecommendedTo } from '../common'
-import { getItemIconSrc } from '#src/utils/items'
+import { ItemAvatar } from '../item-avatars'
+
+import './line-cards.scss'
 
 type WeaponRowProps = {
 	weapon: WeaponRegularInfo
@@ -225,10 +225,12 @@ function WeaponCardLine({
 }
 export const WEAPON_ROW_CARD_HASH_VALUE = 'w'
 export function WeaponCardTableRow({ weapon, isExpanded, group }: WeaponRowProps): JSX.Element {
-	const [selectedWeaponCode, setSelectedWeaponCode] = useHashValue(WEAPON_ROW_CARD_HASH_VALUE, null)
+	const [, setSelectedWeaponCode] = useHashValue<string | null>(WEAPON_ROW_CARD_HASH_VALUE, null)
+
 	const toglleExpand = useCallback(() => {
-		isExpanded ? setSelectedWeaponCode('') : setSelectedWeaponCode(weapon.code)
+		isExpanded ? setSelectedWeaponCode(null) : setSelectedWeaponCode(weapon.code)
 	}, [isExpanded, setSelectedWeaponCode, weapon.code])
+
 	const bgClass = group === 1 ? 'bg-dark' : 'bg-secondary'
 
 	const expandedRow = useMemo(() => {
