@@ -1,4 +1,4 @@
-import { useMemo } from 'preact/hooks'
+import { useCallback, useMemo } from 'preact/hooks'
 
 import { arrOrItemToArr } from '#lib/utils/collections'
 import { CharacterFullInfoWithRelated } from '#src/../../lib/parsing/combine'
@@ -62,7 +62,9 @@ export function CharacterBuildDetailed({
 	const roleTabs: BuildRoleOrDummy[] = build.character.roles
 	const characterCode = build.character.code
 	const [selectedRoleTab, setSelectedRoleTab] = useSelectable(roleTabs, [characterCode])
-
+	const goBack = useCallback(() => {
+		history.back()
+	}, [])
 	const weaponListBlock = useMemo(() => {
 		const role = getRoleData(build, selectedRoleTab.code)
 		if (!role) return []
@@ -192,9 +194,9 @@ export function CharacterBuildDetailed({
 			<div className="container">
 				<div className="row">
 					<div className="col col-3 p-0">
-						<A className="btn btn-secondary align-self-center" type="submit" href="/builds">
+						<button className="btn btn-secondary align-self-center" onClick={goBack}>
 							<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
-						</A>
+						</button>
 					</div>
 					<div className="col col-9">
 						<Tabs
