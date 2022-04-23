@@ -98,13 +98,18 @@ export function makeLocationHrefForLang(lang: string): string {
 }
 
 export function A(
-	props: JSX.HTMLAttributes<HTMLAnchorElement> & { ref?: Ref<typeof A>; innerRef?: Ref<HTMLAnchorElement> },
+	props: JSX.HTMLAttributes<HTMLAnchorElement> & {
+		ref?: Ref<typeof A>
+		innerRef?: Ref<HTMLAnchorElement>
+		isExternal?: boolean
+	},
 ): JSX.Element {
 	props = Object.assign({}, props)
 	// @ts-ignore
 	props.ref = props.innerRef
 	delete props.innerRef
-	if (props.href) props.href = URL_LANG_PREFIX + props.href
+	if (props.href && !props.isExternal) props.href = URL_LANG_PREFIX + props.href
+	if (props.isExternal) props.target = '_blank'
 	// тайпскриптовый JSX-трансформер какой-то туповатый:
 	// он для <a {...props}/> генерит лишний Object.assign({}, props)
 	return h('a', props as Parameters<typeof h>[1])

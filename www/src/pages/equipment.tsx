@@ -1,5 +1,8 @@
 import { Equipment } from '#src/modules/equipment/equipment'
 
-export function EquipmentPage() {
-	return <Equipment />
+export function WeaponsPage() {
+	return <Equipment code={'weapons'} />
+}
+export function ArtifactsPage() {
+	return <Equipment code={'artifacts'} />
 }

@@ -4,7 +4,8 @@ export const paths = /** @type {const} */ ({
 	front: [''],
 	builds: ['/builds'],
 	buildCharacters: ['/builds/', ['code', charactersShortList.map(x => x.code)]],
-	equipment: ['/equipment'],
+	weapons: ['/weapons'],
+	artifacts: ['/artifacts'],
 	about: ['/about'],
 })
 
