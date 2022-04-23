@@ -111,11 +111,11 @@ function HeadDd({ title, ddLinks }: { title: string | JSX.Element; ddLinks: DdLi
 
 	// TODO клик мимо компонента
 	useClickAway(ddRef, closeDd)
-
+	const isActive = ddLinks.some(l => l.isActive)
 	return (
 		<li className="nav-item dropdown">
 			<a
-				className={`nav-link dropdown-toggle ${isExpanded ? 'show' : ''}`}
+				className={`nav-link dropdown-toggle ${isActive ? 'active' : ''} ${isExpanded ? 'show' : ''}`}
 				id="navbarDropdown"
 				role="button"
 				onClick={openDd}
