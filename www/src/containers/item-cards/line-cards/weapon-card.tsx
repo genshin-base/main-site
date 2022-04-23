@@ -16,7 +16,7 @@ import {
 	I18N_WEAPON_OBTAIN_SOURCE_NAME,
 } from '#src/i18n/i18n'
 import { notesToJSX } from '#src/modules/builds/common'
-import { isLoaded, useFetch } from '#src/utils/hooks'
+import { isLoaded, useFetch, useHashValue } from '#src/utils/hooks'
 import { BULLET, DASH, ELLIPSIS } from '#src/utils/typography'
 import { getWeaponIconLageSrc } from '#src/utils/weapons'
 import './line-cards.scss'
@@ -223,12 +223,12 @@ function WeaponCardLine({
 		/>
 	)
 }
-
-export function WeaponCardTableRow({ weapon, isExpanded = false, group }: WeaponRowProps): JSX.Element {
-	const [isExpandedLocal, setIsExpanded] = useState<boolean>(isExpanded)
+export const WEAPON_ROW_CARD_HASH_VALUE = 'w'
+export function WeaponCardTableRow({ weapon, isExpanded, group }: WeaponRowProps): JSX.Element {
+	const [selectedWeaponCode, setSelectedWeaponCode] = useHashValue(WEAPON_ROW_CARD_HASH_VALUE, null)
 	const toglleExpand = useCallback(() => {
-		setIsExpanded(!isExpandedLocal)
-	}, [isExpandedLocal, setIsExpanded])
+		isExpanded ? setSelectedWeaponCode('') : setSelectedWeaponCode(weapon.code)
+	}, [isExpanded, setSelectedWeaponCode, weapon.code])
 	const bgClass = group === 1 ? 'bg-dark' : 'bg-secondary'
 
 	const expandedRow = useMemo(() => {
@@ -286,5 +286,5 @@ export function WeaponCardTableRow({ weapon, isExpanded = false, group }: Weapon
 			</>
 		)
 	}, [weapon, toglleExpand, bgClass])
-	return isExpandedLocal ? expandedRow : collapsededRow
+	return isExpanded ? expandedRow : collapsededRow
 }

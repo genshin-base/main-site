@@ -7,7 +7,10 @@ import { apiGetWeapons } from '#src/api/endpoints'
 import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
 import { Spinner } from '#src/components/placeholders'
 import { WeaponTypeFilter } from '#src/components/weapon-type-filter'
-import { WeaponCardTableRow } from '#src/containers/item-cards/line-cards/weapon-card'
+import {
+	WeaponCardTableRow,
+	WEAPON_ROW_CARD_HASH_VALUE,
+} from '#src/containers/item-cards/line-cards/weapon-card'
 import {
 	I18N_NAME,
 	I18N_NOTHING_TO_SHOW,
@@ -120,8 +123,9 @@ export function WeaponsList() {
 	const selectWeaponTypeCode = code =>
 		setSelectedWeaponTypeCode(selectedWeaponTypeCode === code ? null : code)
 
-	const [selectedSortCode, setSelectedSortCode] = useHashValue('c', WEAPON_SORT_CODES[0])
-
+	const [selectedSortCode, setSelectedSortCode] = useState<string>(WEAPON_SORT_CODES[0])
+	const [selectedWeaponCode] = useHashValue(WEAPON_ROW_CARD_HASH_VALUE, null)
+	console.log(selectedWeaponCode)
 	const [selectedObtainSourceCodes, setSelectedObtainSourceCodes] =
 		useState<ObtainSourceForFilter[]>(WEAPON_FILTER_OBTAIN_SOURCE)
 
@@ -202,7 +206,12 @@ export function WeaponsList() {
 				<tbody>
 					{isLoaded(weapons)
 						? weaponsFilteredSorted.map((w, i) => (
-								<WeaponCardTableRow weapon={w} key={w.code} group={i % 2} />
+								<WeaponCardTableRow
+									weapon={w}
+									key={w.code}
+									group={i % 2}
+									isExpanded={w.code === selectedWeaponCode}
+								/>
 						  ))
 						: null}
 				</tbody>
