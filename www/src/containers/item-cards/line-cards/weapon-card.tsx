@@ -16,7 +16,7 @@ import {
 	I18N_WEAPON_OBTAIN_SOURCE_NAME,
 } from '#src/i18n/i18n'
 import { notesToJSX } from '#src/modules/builds/common'
-import { isLoaded, useFetch, useHashValue } from '#src/utils/hooks'
+import { isLoaded, useFetch, useHashValue, useScrollTo } from '#src/utils/hooks'
 import { getItemIconSrc } from '#src/utils/items'
 import { BULLET, DASH, ELLIPSIS } from '#src/utils/typography'
 import { getWeaponIconLageSrc } from '#src/utils/weapons'
@@ -25,11 +25,12 @@ import { AscMaterials, RecommendedTo } from '../common'
 import { ItemAvatar } from '../item-avatars'
 
 import './line-cards.scss'
+import { stopPropagation } from '#src/utils/dom'
 
 type WeaponRowProps = {
 	weapon: WeaponRegularInfo
 	group: number
-	isExpanded?: boolean
+	isExpanded: boolean
 }
 
 const dummyMarkerGroups: CardMapMarkerGroup[] = [
@@ -123,10 +124,10 @@ function WeaponCardLine({
 				<div className="opacity-75">{I18N_ITEM_STORY}</div>
 				{isLoaded(weaponFull) ? (
 					<>
-						<div className="fst-italic my-1 small lh-sm opacity-75">
+						<div className="fst-italic my-1 small lh-sm text-muted">
 							{weaponFull.weapon.description}
 						</div>
-						<div className="flex-fill my-1 overflow-auto small lh-sm text-muted">
+						<div className="flex-fill my-1 overflow-auto small lh-sm opacity-75">
 							{notesToJSX(weaponFull.weapon.story)}
 						</div>
 					</>
@@ -223,40 +224,49 @@ function WeaponCardLine({
 		/>
 	)
 }
-export const WEAPON_ROW_CARD_HASH_VALUE = 'w'
+export const WEAPON_ROW_CARD_HASH_KEY = 'w'
 export function WeaponCardTableRow({ weapon, isExpanded, group }: WeaponRowProps): JSX.Element {
-	const [, setSelectedWeaponCode] = useHashValue<string | null>(WEAPON_ROW_CARD_HASH_VALUE, null)
+	const [, setSelectedWeaponCode] = useHashValue<string | null>(WEAPON_ROW_CARD_HASH_KEY, null)
 
-	const toglleExpand = useCallback(() => {
+	const toggleExpand = useCallback(() => {
 		isExpanded ? setSelectedWeaponCode(null) : setSelectedWeaponCode(weapon.code)
 	}, [isExpanded, setSelectedWeaponCode, weapon.code])
 
+	const [cardRef, setShouldScrollTo] = useScrollTo<HTMLTableCellElement>()
+	useEffect(() => {
+		setShouldScrollTo(isExpanded)
+	}, [isExpanded, setShouldScrollTo])
 	const bgClass = group === 1 ? 'bg-dark' : 'bg-secondary'
 
 	const expandedRow = useMemo(() => {
 		return (
 			<>
 				<tr>
-					<td colSpan={6} className="p-2">
-						<WeaponCardLine weapon={weapon} onClose={toglleExpand} />
+					<td colSpan={6} className="p-2" ref={cardRef}>
+						<WeaponCardLine weapon={weapon} onClose={toggleExpand} />
 					</td>
 				</tr>
 			</>
 		)
-	}, [weapon, toglleExpand])
+	}, [weapon, toggleExpand, cardRef])
 	const collapsededRow = useMemo(() => {
 		return (
 			<>
 				<tr className={'small lh-sm ' + bgClass}>
 					<td colSpan={1}>
-						<div className="d-flex">
+						<div className="d-flex c-pointer" onClick={toggleExpand}>
 							<ItemAvatar
 								classes="me-2 small-avatar align-self-center flex-shrink-0"
 								rarity={weapon.rarity}
 								src={getWeaponIconLageSrc(weapon.code)}
-								onClick={toglleExpand}
 							/>
-							<span className="align-self-center">{weapon.name}</span>
+							<a
+								href={`#${WEAPON_ROW_CARD_HASH_KEY}=${weapon.code}`}
+								className="align-self-center"
+								onClick={stopPropagation}
+							>
+								{weapon.name}
+							</a>
 						</div>
 					</td>
 					<td>
@@ -273,12 +283,13 @@ export function WeaponCardTableRow({ weapon, isExpanded, group }: WeaponRowProps
 						)}
 					</td>
 					<MobileDesktopSwitch
-						childrenDesktop={<td>{weapon.passiveStat ? weapon.passiveStat : DASH}</td>}
+						childrenDesktop={
+							<td className="opacity-75">{weapon.passiveStat ? weapon.passiveStat : DASH}</td>
+						}
 						childrenMobile={null}
 					/>
-
 					<td>
-						<div className="c-pointer" onClick={toglleExpand}>
+						<div className="c-pointer" onClick={toggleExpand}>
 							<button className="btn">
 								<span className="btn-expand-inner"></span>
 							</button>
@@ -287,6 +298,6 @@ export function WeaponCardTableRow({ weapon, isExpanded, group }: WeaponRowProps
 				</tr>
 			</>
 		)
-	}, [weapon, toglleExpand, bgClass])
+	}, [weapon, toggleExpand, bgClass])
 	return isExpanded ? expandedRow : collapsededRow
 }

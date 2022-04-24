@@ -9,7 +9,7 @@ import { Spinner } from '#src/components/placeholders'
 import { WeaponTypeFilter } from '#src/components/weapon-type-filter'
 import {
 	WeaponCardTableRow,
-	WEAPON_ROW_CARD_HASH_VALUE,
+	WEAPON_ROW_CARD_HASH_KEY,
 } from '#src/containers/item-cards/line-cards/weapon-card'
 import {
 	I18N_NAME,
@@ -124,8 +124,7 @@ export function WeaponsList() {
 		setSelectedWeaponTypeCode(selectedWeaponTypeCode === code ? null : code)
 
 	const [selectedSortCode, setSelectedSortCode] = useState<string>(WEAPON_SORT_CODES[0])
-	const [selectedWeaponCode] = useHashValue(WEAPON_ROW_CARD_HASH_VALUE, null)
-	console.log(selectedWeaponCode)
+	const [selectedWeaponCode] = useHashValue(WEAPON_ROW_CARD_HASH_KEY, null)
 	const [selectedObtainSourceCodes, setSelectedObtainSourceCodes] =
 		useState<ObtainSourceForFilter[]>(WEAPON_FILTER_OBTAIN_SOURCE)
 

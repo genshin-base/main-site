@@ -6,7 +6,7 @@ import { Accordion } from '#src/components/accordion'
 
 import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
 
-import { isLoaded, useFetch } from '#src/utils/hooks'
+import { isLoaded, useFetch, useHashValue, useScrollTo } from '#src/utils/hooks'
 import { BULLET, DASH, ELLIPSIS } from '#src/utils/typography'
 
 import './line-cards.scss'
@@ -29,6 +29,7 @@ import { GI_ArtifactTypeCode, GI_ARTIFACT_TYPE_CODES } from '#src/../../lib/gens
 import { BtnTabGroup } from '#src/components/tabs'
 import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from '../card-map'
 import { getAllRelated } from '#src/api/utils'
+import { stopPropagation } from '#src/utils/dom'
 
 const dummyMarkerGroups: CardMapMarkerGroup[] = [
 	{
@@ -41,7 +42,7 @@ const dummyMarkerGroups: CardMapMarkerGroup[] = [
 type ArtifactRowProps = {
 	artifact: ArtifactRegularInfo
 	group: number
-	isExpanded?: boolean
+	isExpanded: boolean
 }
 type ArtTypeTab = { code: GI_ArtifactTypeCode; title: string }
 const artTypeTabs: ArtTypeTab[] = GI_ARTIFACT_TYPE_CODES.map(at => {
@@ -140,12 +141,12 @@ function ArtifactCardLine({
 							selectedTab={selectedArtTypeTab}
 							classes="w-100 my-1 btn-group-sm"
 						/>
-						<div className="fst-italic my-1 small lh-sm opacity-75">
+						<div className="fst-italic my-1 small lh-sm text-muted">
 							{notesToJSX(
 								artifactFull.artifact.pieces[selectedArtTypeTab.code]?.description || null,
 							)}
 						</div>
-						<div className="flex-fill my-1 overflow-auto small lh-sm text-muted">
+						<div className="flex-fill my-1 overflow-auto small lh-sm opacity-75">
 							{notesToJSX(artifactFull.artifact.pieces[selectedArtTypeTab.code]?.story || null)}
 						</div>
 					</>
@@ -235,52 +236,67 @@ function ArtifactCardLine({
 		/>
 	)
 }
+export const ARTIFACT_ROW_CARD_HASH_KEY = 'a'
+export function ArtifactCardTableRow({ artifact, isExpanded, group }: ArtifactRowProps): JSX.Element {
+	const [, setSelectedArtifactCode] = useHashValue<string | null>(ARTIFACT_ROW_CARD_HASH_KEY, null)
 
-export function ArtifactCardTableRow({ artifact, isExpanded = false, group }: ArtifactRowProps): JSX.Element {
-	const [isExpandedLocal, setIsExpanded] = useState<boolean>(isExpanded)
-	const toglleExpand = useCallback(() => {
-		setIsExpanded(!isExpandedLocal)
-	}, [isExpandedLocal, setIsExpanded])
+	const toggleExpand = useCallback(() => {
+		isExpanded ? setSelectedArtifactCode(null) : setSelectedArtifactCode(artifact.code)
+	}, [isExpanded, setSelectedArtifactCode, artifact.code])
 	const bgClass = group === 1 ? 'bg-dark' : 'bg-secondary'
+
+	const [cardRef, setShouldScrollTo] = useScrollTo<HTMLTableCellElement>()
+	useEffect(() => {
+		setShouldScrollTo(isExpanded)
+	}, [isExpanded, setShouldScrollTo])
 
 	const expandedRow = useMemo(() => {
 		return (
 			<>
 				<tr>
-					<td colSpan={5} className="p-2">
-						<ArtifactCardLine artifact={artifact} onClose={toglleExpand} />
+					<td colSpan={5} className="p-2" ref={cardRef}>
+						<ArtifactCardLine artifact={artifact} onClose={toggleExpand} />
 					</td>
 				</tr>
 			</>
 		)
-	}, [artifact, toglleExpand])
+	}, [artifact, toggleExpand, cardRef])
 	const collapsededRow = useMemo(() => {
 		return (
 			<>
 				<tr className={'small lh-sm ' + bgClass}>
 					<td colSpan={1}>
-						<div className="d-flex">
+						<div className="d-flex c-pointer" onClick={toggleExpand}>
 							<ItemAvatar
 								classes="me-2 small-avatar align-self-center flex-shrink-0"
 								rarity={artifact.rarity}
 								src={getArtifactIconLargeSrc(artifact.code)}
-								onClick={toglleExpand}
 							/>
-							<span className="align-self-center">{artifact.name}</span>
+							<a
+								href={`/artifacts#${ARTIFACT_ROW_CARD_HASH_KEY}=${artifact.code}`}
+								className="align-self-center"
+								onClick={stopPropagation}
+							>
+								{artifact.name}
+							</a>
 						</div>
 					</td>
-					<td>{artifact.sets[4] ? notesToJSX(artifact.sets[4]) : DASH}</td>
+					<td className="opacity-75">{artifact.sets[4] ? notesToJSX(artifact.sets[4]) : DASH}</td>
 					<MobileDesktopSwitch
 						childrenDesktop={
 							<>
-								<td>{artifact.sets[2] ? notesToJSX(artifact.sets[2]) : DASH}</td>
-								<td>{artifact.sets[1] ? notesToJSX(artifact.sets[1]) : DASH}</td>
+								<td className="opacity-75">
+									{artifact.sets[2] ? notesToJSX(artifact.sets[2]) : DASH}
+								</td>
+								<td className="opacity-75">
+									{artifact.sets[1] ? notesToJSX(artifact.sets[1]) : DASH}
+								</td>
 							</>
 						}
 						childrenMobile={null}
 					/>
 					<td>
-						<div className="c-pointer" onClick={toglleExpand}>
+						<div className="c-pointer" onClick={toggleExpand}>
 							<button className="btn">
 								<span className="btn-expand-inner"></span>
 							</button>
@@ -289,6 +305,6 @@ export function ArtifactCardTableRow({ artifact, isExpanded = false, group }: Ar
 				</tr>
 			</>
 		)
-	}, [artifact, toglleExpand, bgClass])
-	return isExpandedLocal ? expandedRow : collapsededRow
+	}, [artifact, toggleExpand, bgClass])
+	return isExpanded ? expandedRow : collapsededRow
 }

@@ -1,4 +1,4 @@
-import { RefObject } from 'preact'
+import { Ref, RefObject } from 'preact'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'preact/hooks'
 
 import { arrShallowEqual } from '#lib/utils/collections'
@@ -375,4 +375,15 @@ function setHashValue(key: string, val: string | null) {
 		console.log('history', hash, location.hash)
 		history.replaceState(history.state, '', origin + pathname + search + hash)
 	}
+}
+export function useScrollTo<T extends Element>(): [Ref<T>, (flag: boolean) => void] {
+	const ref = useRef<T>(null)
+	const [shouldScrollTo, setShouldScrollTo] = useState(false)
+	useEffect(() => {
+		if (ref.current && shouldScrollTo) {
+			ref.current.scrollIntoView({ behavior: 'smooth' })
+			setShouldScrollTo(false)
+		}
+	}, [shouldScrollTo])
+	return [ref, setShouldScrollTo]
 }

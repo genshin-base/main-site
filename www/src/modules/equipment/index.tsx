@@ -1,4 +1,4 @@
-import { BtnTabGroup, LightBtnTabGroup, Tabs } from '#src/components/tabs'
+import { LightBtnTabGroup, Tabs } from '#src/components/tabs'
 import { MegaSearch } from '#src/containers/mega-search'
 import { I18N_ARTIFACTS, I18N_CHAR_EQUIPMENT, I18N_PAGE_TITLE_POSTFIX, I18N_WEAPONS } from '#src/i18n/i18n'
 import { useDocumentTitle } from '#src/utils/hooks'

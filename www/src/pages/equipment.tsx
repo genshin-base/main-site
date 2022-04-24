@@ -1,4 +1,4 @@
-import { Equipment } from '#src/modules/equipment/equipment'
+import { Equipment } from '#src/modules/equipment'
 
 export function WeaponsPage() {
 	return <Equipment code={'weapons'} />
