@@ -1,3 +1,5 @@
+import { useCallback, useRef, useState } from 'preact/hooks'
+
 import { sendMessage } from '#src/errors/rollbar'
 import {
 	I18N_CANCEL,
@@ -8,10 +10,9 @@ import {
 	I18N_SUBMIT_BUG_SUCCESS,
 	I18N_YOUR_MESSAGE_HERE,
 } from '#src/i18n/i18n'
-import { MODALS_EL } from '#src/utils/dom'
+import { GET_MODALS_EL } from '#src/utils/dom'
 import { useClickAway } from '#src/utils/hooks'
 import { createPortal } from '#src/utils/preact-compat'
-import { useCallback, useRef, useState } from 'preact/hooks'
 
 export const ReportBugModal = ({ onClickAway }: { onClickAway(): void }): JSX.Element => {
 	const [message, setMessage] = useState<string>('')
@@ -89,6 +90,6 @@ export const ReportBugModal = ({ onClickAway }: { onClickAway(): void }): JSX.El
 				</div>
 			</div>
 		</>,
-		MODALS_EL,
+		GET_MODALS_EL(),
 	)
 }

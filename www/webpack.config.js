@@ -17,6 +17,7 @@ const LANGS = ['en', 'ru']
 const ASSET_PATH = '/'
 const PROD_HOSTNAME = 'genshin-base.com'
 const REFLANG_ORIGIN = 'https://genshin-base.com'
+const SUPPORTED_DOMAINS = [PROD_HOSTNAME, 'translate.goog']
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -153,7 +154,7 @@ function makeConfig(mode, commitHash, isMain, type) {
 				'BUNDLE_ENV.LANG': type.isSSR ? 'global._SSR_LANG' : JSON.stringify(type.lang),
 				'BUNDLE_ENV.IS_SSR': JSON.stringify(type.isSSR),
 				'BUNDLE_ENV.COMMIT_HASH': JSON.stringify(commitHash),
-				'BUNDLE_ENV.EXPECTED_HOSTNAME': JSON.stringify(isProd ? PROD_HOSTNAME : null),
+				'BUNDLE_ENV.SUPPORTED_DOMAINS': JSON.stringify(isProd ? SUPPORTED_DOMAINS : null),
 			}),
 			new ESLintPlugin({
 				context: SRC,
@@ -246,7 +247,7 @@ function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
 				_SSR_KEY,
 				self: {},
 				navigator: { language: lang },
-				location: { pathname },
+				location: { origin: PROD_HOSTNAME, pathname, search: '', hash: '' },
 				localStorage: { getItem: () => undefined, setItem: () => undefined },
 				document: { title: '' },
 				innerWidth: 1280,

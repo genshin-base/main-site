@@ -18,8 +18,8 @@ export const renderContent = BUNDLE_ENV.IS_SSR
 	: insertUnsupportedLocationWarning()
 
 function isOnExpectedDomain() {
-	if (BUNDLE_ENV.EXPECTED_HOSTNAME === null) return true
-	return location.hostname === BUNDLE_ENV.EXPECTED_HOSTNAME
+	if (BUNDLE_ENV.SUPPORTED_DOMAINS === null) return true
+	return BUNDLE_ENV.SUPPORTED_DOMAINS.some(x => location.hostname.endsWith(x))
 }
 
 function insertUnsupportedLocationWarning() {

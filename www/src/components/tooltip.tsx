@@ -1,8 +1,9 @@
+import { useCallback, useLayoutEffect, useRef, useState } from 'preact/hooks'
+
 import { calcPosForDd } from '#src/utils/calc-pos-for-dd'
-import { MODALS_EL } from '#src/utils/dom'
+import { GET_MODALS_EL } from '#src/utils/dom'
 import { useWindowSize } from '#src/utils/hooks'
 import { createPortal } from '#src/utils/preact-compat'
-import { useCallback, useLayoutEffect, useRef, useState } from 'preact/hooks'
 
 export function Tooltip({
 	children,
@@ -40,6 +41,6 @@ export function Tooltip({
 			<div className="tooltip-arrow" style={arrowStyle}></div>
 			<div className="tooltip-inner">{children}</div>
 		</div>,
-		MODALS_EL,
+		GET_MODALS_EL(),
 	)
 }

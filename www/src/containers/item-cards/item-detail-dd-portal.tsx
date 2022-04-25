@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'preact/hooks'
 
 import { calcPosForDd } from '#src/utils/calc-pos-for-dd'
+import { GET_MODALS_EL } from '#src/utils/dom'
 import { useClickAway, useWindowSize } from '#src/utils/hooks'
 import { createPortal } from '#src/utils/preact-compat'
-import { MODALS_EL } from '#src/utils/dom'
 
 export const ItemDetailDdPortal = ({
 	onClickAway,
@@ -56,7 +56,7 @@ export const ItemDetailDdPortal = ({
 			{children}
 			<div class="popover-arrow" style={arrowStyle}></div>
 		</div>,
-		MODALS_EL,
+		GET_MODALS_EL(),
 	)
 }
 export const ItemDetailDdMobilePortal = ({
@@ -79,6 +79,6 @@ export const ItemDetailDdMobilePortal = ({
 		<div class={defClassName} ref={wrapRef}>
 			{children}
 		</div>,
-		MODALS_EL,
+		GET_MODALS_EL(),
 	)
 }

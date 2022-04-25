@@ -1,3 +1,5 @@
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'preact/hooks'
+
 import { SearchItem } from '#src/../../lib/parsing/combine'
 import { apiGetSearchData } from '#src/api/endpoints'
 import { CentredSpinner } from '#src/components/placeholders'
@@ -6,12 +8,12 @@ import { A } from '#src/routes/router'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
 import { calcPosForDd } from '#src/utils/calc-pos-for-dd'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
-import { MODALS_EL } from '#src/utils/dom'
+import { GET_MODALS_EL } from '#src/utils/dom'
 import { isLoaded, useFetch, useWindowSize } from '#src/utils/hooks'
 import { createPortal } from '#src/utils/preact-compat'
 import { getWeaponIconSrc } from '#src/utils/weapons'
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'preact/hooks'
 import { ItemAvatar } from './item-cards/item-avatars'
+
 import './mega-search.scss'
 
 function getIconForItem({ code, type }) {
@@ -85,7 +87,7 @@ export function MegaSearch({ classes = '' }: { classes?: string }): JSX.Element 
 							)}
 						</div>
 					</div>,
-					MODALS_EL,
+					GET_MODALS_EL(),
 				)}
 		</div>
 	)
