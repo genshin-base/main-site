@@ -13,6 +13,9 @@ adventurer:
       ru: В течение 5 сек. после открытия любого сундука восстанавливает 30% ХП.
   pieces:
     flower:
+      name:
+        en: Adventurer's Flower
+        ru: Цветок искателя приключений
       description:
         en: A resilient flower that survived the harsh environment of an ancient city.
           It is now proudly worn like a medal.
@@ -34,6 +37,9 @@ adventurer:
 
           Подумав, искатель сорвал цветок, приколол к груди и отважно шагнул в темноту подземелья.
     plume:
+      name:
+        en: Adventurer's Tail Feather
+        ru: Перо искателя приключений
       description:
         en: The feather of an exotic bird rarely seen on this continent.
         ru: Перо экзотической птицы, которую на этом континенте не встретить.
@@ -56,6 +62,9 @@ adventurer:
 
           В волосы её были вплетены фантастической красоты перья, да и сама она будто вышла из сна.
     sands:
+      name:
+        en: Adventurer's Pocket Watch
+        ru: Часы искателя приключений
       description:
         en: It's easy to lose track of time when you're adventuring where the sun
           doesn't shine, whether that's the depths of the abyss or the ruins of
@@ -84,6 +93,9 @@ adventurer:
 
           эти уже никому не нужные часы продолжают тикать уже в витрине, покорно ожидая следующего приключения.
     goblet:
+      name:
+        en: Adventurer's Golden Goblet
+        ru: Кубок искателя приключений
       description:
         en: The spoils of one of an adventurer's many expeditions. Though a little
           damaged, it is still an excellent find.
@@ -109,6 +121,9 @@ adventurer:
 
           эту старую чашу он обменял на новенькую, сверкающую мору.
     circlet:
+      name:
+        en: Adventurer's Bandana
+        ru: Повязка искателя приключений
       description:
         en: A cloth garment worn at the forehead. Though soaked in sweat and covered in
           dust, it still beams with an adventurer's pride.
@@ -154,6 +169,9 @@ archaic-petra:
         элемента.
   pieces:
     flower:
+      name:
+        en: Flower of Creviced Cliff
+        ru: Цветок скальных трещин
       description:
         en: A flower born of the minerals and rocks of cliffside cracks. The way its
           petals blow in the wind makes it seem alive.
@@ -201,6 +219,9 @@ archaic-petra:
 
               быть может, тем самым драгоценным цветком и был.
     plume:
+      name:
+        en: Feather of Jagged Peaks
+        ru: Перо зубчатых пиков
       description:
         en: A hard feather from a large seacliff hawk. The basalt tip of the feather
           sometimes glistens with a cool dew.
@@ -253,6 +274,9 @@ archaic-petra:
           - p: Ещё говорят, что возвышающиеся над океаном скалы привлекают птиц и по сей
               день.
     sands:
+      name:
+        en: Sundial of Enduring Jade
+        ru: Часы из прочного нефрита
       description:
         en: A sundial carved from a single, large piece of jade. Its lined with a
           pattern that silently records the passage of time.
@@ -297,6 +321,9 @@ archaic-petra:
 
               Поэтому я решил оставить науку, найти мастера, обучиться новому ремеслу и бросить вызов создателю этого божественного инструмента».
     goblet:
+      name:
+        en: Goblet of Chiseled Crag
+        ru: Кубок из резного камня
       description:
         en: A resplendent yet dignified wine goblet, once filled to the brim in an era
           long gone.
@@ -332,6 +359,9 @@ archaic-petra:
               и вырезал себе винный сосуд из нефрита и резного камня. 
           - p: Некоторые историки утверждают, что всего таких бокалов было семь.
     circlet:
+      name:
+        en: Mask of Solitude Basalt
+        ru: Маска из одинокого базальта
       description:
         en: A solemn mask exquisitely carved from basalt. Its hollow eyes stare ahead
           expressionless and cold.
@@ -383,6 +413,9 @@ berserker:
       ru: Увеличивает шанс крит. попадания на 24% при ХП ниже 70%.
   pieces:
     flower:
+      name:
+        en: Berserker's Rose
+        ru: Роза берсерка
       description:
         en: An exquisite flower that has been dyed red. It represents the qualities of
           the Berserker.
@@ -406,6 +439,9 @@ berserker:
 
           Как будто кроваво-красные розы, скрытые в недрах колючих кустарников, единственные могли дать его душе почувствовать тепло.
     plume:
+      name:
+        en: Berserker's Indigo Feather
+        ru: Перо берсерка
       description:
         en: An indigo feather from a legendary raven, part of which has been dyed
           crimson red.
@@ -429,6 +465,9 @@ berserker:
 
           И чёрные перья, разлетевшиеся над полем битвы, окрасились алым, когда он совершил свою месть.
     sands:
+      name:
+        en: Berserker's Timepiece
+        ru: Часы берсерка
       description:
         en: An instrument with an eternal flow that continues mercilessly within,
           reminding the Berserker of the limited time he has left — both on the
@@ -454,6 +493,9 @@ berserker:
 
           Когда закат опустился на залитое кровью поле, Песочные Часы берсерка вспыхнули алым в лучах клонящегося к горизонту солнца.
     goblet:
+      name:
+        en: Berserker's Bone Goblet
+        ru: Костяной кубок берсерка
       description:
         en: A goblet made from the bone of an unknown beast. It was taken as a trophy
           after some deadly encounter.
@@ -483,6 +525,9 @@ berserker:
 
           И берсерк высосал из сломленного рога монстра костный мозг, который заменил ему вино для победителя.
     circlet:
+      name:
+        en: Berserker's Battle Mask
+        ru: Боевая маска берсерка
       description:
         en: A hideous iron mask that has been left half-shattered from vicious battles.
         ru: Устрашающая железная маска, разбитая в пылу безжалостной битвы.
@@ -532,6 +577,9 @@ blizzard-strayer:
         шанс крит. попадания на 20%.
   pieces:
     flower:
+      name:
+        en: Snowswept Memory
+        ru: Занесённая снегом память
       description:
         en: A long-extinct flower, covered in beads of frost, that once grew on the
           glaciers. There was a time when even the proudest and most arrogant
@@ -582,6 +630,9 @@ blizzard-strayer:
 
               С тех пор снега растаяли и исчезли, но цветок по-прежнему не завял.
     plume:
+      name:
+        en: Icebreaker's Resolve
+        ru: Решимость крушителя льда
       description:
         en: A feather that exudes a chilly aura. One can almost feel the turbulent winds
           that brought it here, wailing over snow-covered plains and between
@@ -642,6 +693,9 @@ blizzard-strayer:
 
               С каждым его шагом скованное льдом перо тускнело, как и бремя воина.
     sands:
+      name:
+        en: Frozen Homeland's Demise
+        ru: Гибель замёрзшей родины
       description:
         en: A timepiece from a nation of old that waited for their warriors' return.
           What flows inside is not sand, but bits of ice that never melt.
@@ -687,6 +741,9 @@ blizzard-strayer:
               Даже будучи веками погребённой под снегами, 
               память о великом герое однажды исчезнет.
     goblet:
+      name:
+        en: Frost-Weaved Dignity
+        ru: Морозная гордость
       description:
         en: A cup carved out of ice that is as chilly and biting as winter. Its former
           master would drink an unfreezable liquor from it.
@@ -746,6 +803,9 @@ blizzard-strayer:
 
               Он ступил на путь бесконечной погони, что вёл в сокровенные земли снегов.
     circlet:
+      name:
+        en: Broken Rime's Echo
+        ru: Эхо осколков инея
       description:
         en: The crown of an ancient hero who dreamt of conquering the cold. It is proof
           of its former master's bravery in facing the bone-chilling cold of
@@ -823,6 +883,9 @@ bloodstained-chivalry:
         обнуляет стоимость выносливости заряженной атаки на 10 сек.
   pieces:
     flower:
+      name:
+        en: Bloodstained Flower of Iron
+        ru: Железное сердце рыцаря крови
       description:
         en: A dried flower stained black with blood and now as hard as steel. Probably
           some sort of a memento for its former master.
@@ -862,6 +925,9 @@ bloodstained-chivalry:
 
               а сердце рыцаря стало твёрже кованного железа.
     plume:
+      name:
+        en: Bloodstained Black Plume
+        ru: Перо рыцаря крови
       description:
         en: A raven feather pinned to a knight's cape. Countless bloodstains have dyed
           it pitch black.
@@ -903,6 +969,9 @@ bloodstained-chivalry:
 
               По неизменному кровавому следу за ним летело одно вороньё.
     sands:
+      name:
+        en: Bloodstained Final Hour
+        ru: Час долга рыцаря крови
       description:
         en: A timepiece once used by a knight. The liquid inside has dried up, rendering
           it useless.
@@ -950,6 +1019,9 @@ bloodstained-chivalry:
 
               Ежели Бездна - имя твоё, на верность тебе я присягаю».
     goblet:
+      name:
+        en: Bloodstained Chevalier's Goblet
+        ru: Кубок рыцаря крови
       description:
         en: The dark metallic vessel owned by the Bloodstained Knight. Its exterior has
           been stained as black as the night by smoke and coagulated blood.
@@ -987,6 +1059,9 @@ bloodstained-chivalry:
 
               и поклялся истреблять зло, заступаться за слабых и помогать бедным до самой своей смерти.
     circlet:
+      name:
+        en: Bloodstained Iron Mask
+        ru: Железная маска рыцаря крови
       description:
         en: The iron mask the knight used to conceal their identity. Many have
           speculated about the face behind the mask.
@@ -1045,6 +1120,9 @@ brave-heart:
       ru: Увеличивает на 30% урон против врагов с ХП выше 50%.
   pieces:
     flower:
+      name:
+        en: Medal of the Brave
+        ru: Брошь храбреца
       description:
         en: A simple flower brooch that is a keepsake from someone's first adventure.
         ru: Простенькая брошь из цветка. Память об одном из первых приключений.
@@ -1082,6 +1160,9 @@ brave-heart:
 
               тогда как всё остальное вокруг него под напором времени менялось.
     plume:
+      name:
+        en: Prospect of the Brave
+        ru: Надежды храбреца
       description:
         en: A shimmering feather from a songbird that brings a nudge of courage to its
           wearer.
@@ -1127,6 +1208,9 @@ brave-heart:
 
               Безмерное их число было утеряно во время бедствия...
     sands:
+      name:
+        en: Fortitude of the Brave
+        ru: Стойкость храбреца
       description:
         en: A dated miniature hourglass that serves no practical purpose. It seems as
           elusive as time itself.
@@ -1159,6 +1243,9 @@ brave-heart:
               Герой наконец вернулся домой, но уже без старого друга. 
               Переменилось всё, кроме его подарка - песочных часов.
     goblet:
+      name:
+        en: Outset of the Brave
+        ru: Проводы храбреца
       description:
         en: A crude wooden vessel filled only with memories.
         ru: Грубая деревянная кружка, наполненная лишь воспоминаниями.
@@ -1191,6 +1278,9 @@ brave-heart:
               «Если не вернёшься ты, я тебя оплакивать не буду. 
               Но подниму я в твою честь бокал, как пьём мы с тобой сегодня».
     circlet:
+      name:
+        en: Crown of the Brave
+        ru: Венок храбреца
       description:
         en: A rough-and-ready laurel wreath that seems as precious as a king's golden
           crown.
@@ -1256,6 +1346,9 @@ crimson-witch-of-flames:
         раз.
   pieces:
     flower:
+      name:
+        en: Witch's Flower of Blaze
+        ru: Ведьмин огненный цветок
       description:
         en: A flower touched by the witch who once dreamt of burning away all the demons
           in the world. The anonymous flames affectionately caress the hands of
@@ -1296,6 +1389,9 @@ crimson-witch-of-flames:
 
               И мучительные, и прекрасные воспоминания были, пожалуй, двумя сторонами одного целого.
     plume:
+      name:
+        en: Witch's Ever-Burning Plume
+        ru: Пылающее ведьмино перо
       description:
         en: A bird feather touched by the witch who once dreamt of burning away all the
           demons in the world. Its eternal flame burns hot.
@@ -1338,6 +1434,9 @@ crimson-witch-of-flames:
 
               Только птицы, которые оставались рядом с Горящей алой ведьмой, понимали её немое одиночество.
     sands:
+      name:
+        en: Witch's End Time
+        ru: Ведьмин последний час
       description:
         en: A timepiece worn by the witch who dreamt of burning away all the demons in
           the world. The years the witch dedicated to the flames flow within.
@@ -1379,6 +1478,9 @@ crimson-witch-of-flames:
 
               Часы стали немым свидетелем того, как все чудовища и страдания, ими причиняемые, сгинули в огне.
     goblet:
+      name:
+        en: Witch's Heart Flames
+        ru: Пламя ведьминого сердца
       description:
         en: A flame-spitting urn left behind by the Crimson Witch of Flames, who once
           dreamt of burning away all the demons in the world. The fire in the
@@ -1416,6 +1518,9 @@ crimson-witch-of-flames:
 
               Так свету явилась ведьма, память о которой историки предпочли бы стереть.
     circlet:
+      name:
+        en: Witch's Scorching Hat
+        ru: Тлеющая ведьмина шляпа
       description:
         en: A hat once worn by the witch who dreamt of burning away all of the demons in
           the world. The large brim blocked her sight.
@@ -1473,6 +1578,9 @@ defenders-will:
         сопротивление к соответствующему элементу на 30%.
   pieces:
     flower:
+      name:
+        en: Guardian's Flower
+        ru: Цветок защитника
       description:
         en: An iris that was cherished by the guardian. Unfortunately, the chance never
           came for it to be given to whom the guardian loved.
@@ -1496,6 +1604,9 @@ defenders-will:
               В итоге кровь рыцаря иссякла, 
               как и её слёзы и песни.
     plume:
+      name:
+        en: Guardian's Sigil
+        ru: Брошь защитника
       description:
         en: A feather-shaped brooch that symbolizes someone’s yearning to defend others
           like a shield.
@@ -1531,6 +1642,9 @@ defenders-will:
 
               но безупречному рыцарю неподобающие.
     sands:
+      name:
+        en: Guardian's Clock
+        ru: Часы защитника
       description:
         en: A small timekeeping gadget. On moonless nights, it was the only way its
           former owner could know the time.
@@ -1583,6 +1697,9 @@ defenders-will:
               у него возникали мысли, на которые обычно времени не было. 
           - p: Только тогда он задумывался о собственном будущем...
     goblet:
+      name:
+        en: Guardian's Vessel
+        ru: Фляжка защитника
       description:
         en: A metal vessel that can be filled with a drink to dispel the loneliness of
           the long watch.
@@ -1613,6 +1730,9 @@ defenders-will:
               «Перестань хмуриться и хвати как следует! 
               Иначе как нам без страха смотреть в день грядущий?»
     circlet:
+      name:
+        en: Guardian's Band
+        ru: Повязка защитника
       description:
         en: A fabric band dyed indigo by the darkness of night. Can also double as a
           bandage in the event of an emergency.
@@ -1676,6 +1796,9 @@ echoes-of-an-offering:
         раза в 0,2 сек."
   pieces:
     flower:
+      name:
+        en: ""
+        ru: ""
       description:
         en: A jade carved into the shape of a flower. A phantom scent, here one instant
           and gone the next, swirls around it.
@@ -1747,6 +1870,9 @@ echoes-of-an-offering:
 
               Однако это мерцающее сияние погрузилось на глубину и больше не появлялось.
     plume:
+      name:
+        en: ""
+        ru: ""
       description:
         en: A jade ornament shaped like a leaf. It seems to have once had deep meaning
           between specific friends.
@@ -1825,6 +1951,9 @@ echoes-of-an-offering:
 
               Это происходит потому, что оно помнит обещание, данное старыми друзьями в давние времена возле саженца чайного дерева.
     sands:
+      name:
+        en: ""
+        ru: ""
       description:
         en: A circular jade ornament. Legend has it that it was once used somewhere as a
           symbol for rituals to begin.
@@ -1922,6 +2051,9 @@ echoes-of-an-offering:
 
               пытаясь услышать мягкий стук дождя, падающего на камни.
     goblet:
+      name:
+        en: ""
+        ru: ""
       description:
         en: This teacup forever overflows with fresh water. Perhaps it was a gift from
           an adeptus, one of their relics, or just something they left behind.
@@ -2009,6 +2141,9 @@ echoes-of-an-offering:
 
               И так на каждом столе появилась луна, и каждый мог подержать её в ладонях.
     circlet:
+      name:
+        en: ""
+        ru: ""
       description:
         en: A pair of earrings made from a single piece of jade. It has a most gentle
           texture.
@@ -2080,6 +2215,9 @@ emblem-of-severed-fate:
         восстановления энергии. Эффект можно увеличить максимум до 75%.
   pieces:
     flower:
+      name:
+        en: Magnificent Tsuba
+        ru: Великолепная цуба
       description:
         en: Legends hold that this ornate hand guard was once fitted upon a sword gifted
           to the oni who betrayed the Shogun.
@@ -2180,6 +2318,9 @@ emblem-of-severed-fate:
 
               «Ибо с тех пор ты будешь владеть мечом, способным победить тэнгу».
     plume:
+      name:
+        en: Sundered Feather
+        ru: Обрезанное перо
       description:
         en: This was once the black feather of a certain tengu warrior, and was the
           treasured souvenir of an ancient swordsman.
@@ -2266,6 +2407,9 @@ emblem-of-severed-fate:
 
               во имя крови Ивакуры открой путь, доступный одному только Ивакуре».
     sands:
+      name:
+        en: Storm Cage
+        ru: Клетка грозовых облаков
       description:
         en: An exquisite seal cage patterned with pansies painted upon a black backdrop,
           decorated with shining inlaid seashells and intricate gold-work.
@@ -2390,6 +2534,9 @@ emblem-of-severed-fate:
 
               В надежде вернуть воспоминания, ты собрал силу грома и молнии.
     goblet:
+      name:
+        en: Scarlet Vessel
+        ru: Алый сосуд
       description:
         en: An intricately-designed wine vessel that a world-famous martial artist once
           drank from.
@@ -2449,6 +2596,9 @@ emblem-of-severed-fate:
               Смех ясный, как эхо родниковой воды между горами. 
               Но этим двоим никогда более не суждено ступить на пустынный двор.
     circlet:
+      name:
+        en: Ornate Kabuto
+        ru: Украшенный кабуто
       description:
         en: A sturdy and hard helmet worn as armor by a noble samurai.
         ru: Прочный и надёжный шлем, который носил благородный самурай.
@@ -2519,6 +2669,9 @@ gambler:
         элементального навыка. Может возникнуть раз в 15 сек.
   pieces:
     flower:
+      name:
+        en: Gambler's Brooch
+        ru: Брошь азартного игрока
       description:
         en: A big, luxurious flower that can hide loaded dice.
         ru: Роскошный большой цветок, способный спрятать в себе шулерские кости.
@@ -2546,6 +2699,9 @@ gambler:
 
           заменяя собой прежние кости прямо перед носами игроков и создавая для неё выгодный расклад.
     plume:
+      name:
+        en: Gambler's Feather Accessory
+        ru: Перо азартного игрока
       description:
         en: The tail feather of a large bird. Perfect for discretely concealing a trump
           card.
@@ -2570,6 +2726,9 @@ gambler:
 
           И высокомерные лица да презрительные взгляды аристократов вдруг в момент каменеют.
     sands:
+      name:
+        en: Gambler's Pocket Watch
+        ru: Карманные часы азартного игрока
       description:
         en: A shattered pocket watch that once took a lethal hit for its owner.
         ru: Разбитые карманные часы, некогда принявшие на себя удар, предназначавшийся
@@ -2589,6 +2748,9 @@ gambler:
 
           В бесчисленных крупных играх рано или поздно наступал момент, когда её жизнь спасало превосходное чувство времени.
     goblet:
+      name:
+        en: Gambler's Dice Cup
+        ru: Стакан для костей азартного игрока
       description:
         en: This vessel was specially made for a single purpose. It has absolutely no
           secret compartments built into it.
@@ -2615,6 +2777,9 @@ gambler:
 
           Тем не менее мир за пределами игры никогда не заслуживал её внимания.
     circlet:
+      name:
+        en: Gambler's Earrings
+        ru: Серёжки азартного игрока
       description:
         en: A pair of blue earrings that, when worn, calm the mind and encourage a
           rational assessment of risks.
@@ -2657,6 +2822,9 @@ glacier-and-snowfield:
         15%. Взрыв стихии увеличивает Крио урон на 30% в течение 10 сек.
   pieces:
     flower:
+      name:
+        en: Heart of Frost
+        ru: Сердце зимнего леса
       description:
         en: A flower that has been frozen in time from the moment it was picked. The
           knight kept it as a memento forever after.
@@ -2703,6 +2871,9 @@ glacier-and-snowfield:
 
               Перед тем как ступить в вечный хлад, сорвал и взял с собой он цветок.
     plume:
+      name:
+        en: Plume of Snow
+        ru: Перо снежных равнин
       description:
         en: A bird feather that was picked up by the knight who walked with the North
           Wind in the snow. It still awaits the day when it will thaw.
@@ -2760,6 +2931,9 @@ glacier-and-snowfield:
 
               Вид замёрзшего пера вызывал у него горькую усмешку, ведь он, как и эта несчастная перелётная птица, остался без родного гнезда и сбился с пути.
     sands:
+      name:
+        en: Glacial Sand
+        ru: Часы песчаных льдов
       description:
         en: A timepiece once used by the knight who walked with the North Wind. A
           never-ending snowstorm rages within.
@@ -2802,6 +2976,9 @@ glacier-and-snowfield:
 
               Казалось, что беспрестанный ледяной ветер заморозил само время.
     goblet:
+      name:
+        en: Goblet of Aquilo
+        ru: Кубок северных ветров
       description:
         en: A goblet of eonothem left behind by the knight who walked with the North
           Wind. The chill of the bitter winter frost still lingers within.
@@ -2839,6 +3016,9 @@ glacier-and-snowfield:
 
               Вот так рыцарь и ветер, испив из кубка до дна, стали друзьями.
     circlet:
+      name:
+        en: Crown of Glacier
+        ru: Корона мёрзлых рек
       description:
         en: The crown worn by the knight who walked with the North Wind. It was forged
           using winter ice and silver.
@@ -2896,6 +3076,9 @@ gladiators-finale:
         двуручное или древковое оружие.
   pieces:
     flower:
+      name:
+        en: Gladiator's Nostalgia
+        ru: Ностальгия гладиатора
       description:
         en: No one knows why the legendary gladiator wore this flower on his chest. It
           was the brutal warrior's only weakness.
@@ -2947,6 +3130,9 @@ gladiators-finale:
 
               когда я отправлюсь в путь, будут ли дикие цветы, что повстречаются мне, столь же красивы?»
     plume:
+      name:
+        en: Gladiator's Destiny
+        ru: Судьба гладиатора
       description:
         en: A feather of dreams that soars free like an eagle. At the end of the
           gladiator's legendary life, this parting gift was left upon his chest
@@ -2998,6 +3184,9 @@ gladiators-finale:
               Он, наконец-то свободный, как птица, вступил на путь, 
               который привел его в край свободно живущих цветов и птиц.
     sands:
+      name:
+        en: Gladiator's Longing
+        ru: Стремление гладиатора
       description:
         en: A timepiece that recorded the gladiator's days in the bloodstained
           Colosseum. To him, it counted down the days on his long road to
@@ -3049,6 +3238,9 @@ gladiators-finale:
 
               Его сердце пронзила холодная сталь, а песок в часах беззвучно остановился.
     goblet:
+      name:
+        en: Gladiator's Intoxication
+        ru: Пьянство гладиатора
       description:
         en: The golden cup a champion gladiator drank from in ancient times. It brimmed
           with his glory for years until the fateful day of his fall.
@@ -3096,6 +3288,9 @@ gladiators-finale:
 
               Наслаждаясь вином и победами, гладиатор упустил свой шанс выкупить свободу.
     circlet:
+      name:
+        en: Gladiator's Triumphus
+        ru: Триумф гладиатора
       description:
         en: The helmet of a legendary gladiator from ancient times, who would proudly
           stretch out his bloodied arms to welcome the thunderous applause of
@@ -3163,6 +3358,9 @@ heart-of-depth:
         использования элементального навыка.
   pieces:
     flower:
+      name:
+        en: Gilded Corsage
+        ru: Позолоченная брошь
       description:
         en: A mantle brooch that has lost its luster. The gold plating that once adorned
           it was ground away by the wind and the waves long ago.
@@ -3221,6 +3419,9 @@ heart-of-depth:
 
               ...А может, это не такой уж и плохой финал. Ха-ха-ха-ха!»
     plume:
+      name:
+        en: Gust of Nostalgia
+        ru: Порыв ностальгии
       description:
         en: A feather carried over by whimpering sea winds and crimson waves. The
           passage of time has changed its shape and color.
@@ -3276,6 +3477,9 @@ heart-of-depth:
               он ясно вспомнил те дни, что скрывала пелена алкоголя. 
               Будто волны смыли гальку и песок, обнажив бесценное сокровище...
     sands:
+      name:
+        en: Copper Compass
+        ru: Медный компас
       description:
         en: An ancient bronze compass. Its needle points towards some ever-distant
           shore, to a non-existent harbor.
@@ -3334,6 +3538,9 @@ heart-of-depth:
               Не забыл, и ладно. Потому что пришло время выполнить условия договора». 
           - p: «Ах, пришло - значит пришло. Какая разница...»
     goblet:
+      name:
+        en: Goblet of Thundering Deep
+        ru: Кубок оглушающих глубин
       description:
         en: A faded wine cup that was unintentionally dredged up from the sea. Its dull
           exterior tells of the days it has spent beneath the waves.
@@ -3395,6 +3602,9 @@ heart-of-depth:
               «Прошлое не имеет никакого значения! 
               Всё что умерло - мертво, и нет искупления грехам в прошлом».
     circlet:
+      name:
+        en: Wine-Stained Tricorne
+        ru: Треуголка в пятнах вина
       description:
         en: An ancient, wine-stained sea hat that still reeks of alcohol even now.
         ru: Старинная капитанская шляпа, насквозь пропитанная вином. От неё разит
@@ -3476,6 +3686,9 @@ husk-of-opulent-dreams:
         уровень Любопытства."
   pieces:
     flower:
+      name:
+        en: Bloom Times
+        ru: Пора расцвета
       description:
         en: A small golden ornament with six petals that shall never wilt. It symbolizes
           the transience of mortal glories.
@@ -3541,6 +3754,9 @@ husk-of-opulent-dreams:
               Страннику было всё равно, и, когда он проснулся, 
               рассеялся не он, а то бесплотное видение будущего.
     plume:
+      name:
+        en: Plume of Luxury
+        ru: Перо чертога
       description:
         en: A feather-shaped token that was brought forth from a secluded hall. The
           compassion of its creator led to it being left within that mansion
@@ -3637,6 +3853,9 @@ husk-of-opulent-dreams:
               ...Но всё прошло, золотое оперение покрылось пылью, 
               а все сказания сгорели в искупительном пламени дотла.
     sands:
+      name:
+        en: Song of Life
+        ru: Песнь жизни
       description:
         en: As far as Inazuma is concerned, this is some small object from overseas. The
           heart of this mechanism has been removed, and its hands no longer
@@ -3727,6 +3946,9 @@ husk-of-opulent-dreams:
 
               то больше не мог бы испытывать никаких чувств.
     goblet:
+      name:
+        en: Calabash of Awakening
+        ru: Тыква пробуждения
       description:
         en: A gourd that has been adorned with powdered gold and black paint. Its
           original color can no longer be discerned, but its main use seems to
@@ -3829,6 +4051,9 @@ husk-of-opulent-dreams:
 
               Но пока три акта его пьесы всё ещё длятся.
     circlet:
+      name:
+        en: Skeletal Hat
+        ru: Шляпа телесности
       description:
         en: A hat that once shielded a wanderer from sun and rain. It eventually became
           a convenient tool with which faces might be hidden and expressions
@@ -3980,6 +4205,9 @@ instructor:
         на 120 ед. в течение 8 сек.
   pieces:
     flower:
+      name:
+        en: Instructor's Brooch
+        ru: Брошь инструктора
       description:
         en: Whenever the instructor wore this brooch, it meant there would be no
           training sessions that day.
@@ -4012,6 +4240,9 @@ instructor:
 
           И там, в полной тишине, он молча приносит дань уважения тем, чьи имена высечены на знакомых надгробиях.
     plume:
+      name:
+        en: Instructor's Feather Accessory
+        ru: Перо инструктора
       description:
         en: Any instructor who has mastered the art of de-escalation knows to keep this
           accessory firmly in their grasp at all times.
@@ -4041,6 +4272,9 @@ instructor:
 
           Благодаря товарищам, не вернувшимся из боя, сегодня он стал тем, кто он есть, и приобрел этот опыт.
     sands:
+      name:
+        en: Instructor's Pocket Watch
+        ru: Карманные часы инструктора
       description:
         en: A stopwatch used not for general timekeeping but to measure the duration of
           a training session.
@@ -4065,6 +4299,9 @@ instructor:
 
           Для курсантов эти часы являются символом усердной работы на пути к становлению настоящим воином.
     goblet:
+      name:
+        en: Instructor's Tea Cup
+        ru: Чайная кружка инструктора
       description:
         en: It may seem like an ordinary tea cup to most. But to students, it is the
           symbol of the instructor's authority.
@@ -4090,6 +4327,9 @@ instructor:
 
           Такой отдых - привилегия инструктора, демонстрация его авторитета перед курсантами.
     circlet:
+      name:
+        en: Instructor's Cap
+        ru: Кепка инструктора
       description:
         en: A standard-issue honorary instructor's cap, only granted to those who turn
           down a promotion.
@@ -4124,6 +4364,9 @@ lavawalker:
       ru: Увеличивает урон против врагов, находящихся под действием Пиро, на 35%.
   pieces:
     flower:
+      name:
+        en: Lavawalker's Resolution
+        ru: Решительность ступающего по лаве
       description:
         en: A flower that blooms amidst burning flames. It is said that long ago, a sage
           once wore it as he walked into a sea of fire.
@@ -4169,6 +4412,9 @@ lavawalker:
 
               Однако следов Ступающего по лаве они не обнаружили. Только цветок распускался среди пепла...
     plume:
+      name:
+        en: Lavawalker's Salvation
+        ru: Спасение ступающего по лаве
       description:
         en: The feather of a proud phoenix. You can almost hear the sound of its wings
           flapping in the scorching flames.
@@ -4209,6 +4455,9 @@ lavawalker:
               С тех пор со стороны Пепельного моря доносятся голоса. 
               Пение птиц это, или стенания мудреца, не знает никто.
     sands:
+      name:
+        en: Lavawalker's Torment
+        ru: Муки ступающего по лаве
       description:
         en: Burning sand flows within this hourglass. Despite the intense heat, the sand
           leave no mark upon the vessel that houses it.
@@ -4263,6 +4512,9 @@ lavawalker:
 
               После того как Ступающий по лаве лишился всех, кто был ему дорог, душу его вечно терзал холодный огонь лишений, и не было силы, которая могла бы сопротивляться ему.
     goblet:
+      name:
+        en: Lavawalker's Epiphany
+        ru: Просветление ступающего по лаве
       description:
         en: A legendary goblet that can withstand extremely high temperatures. It still
           retains a degree of warmth even though it is now empty.
@@ -4313,6 +4565,9 @@ lavawalker:
 
               Перед последним путешествием ступающего по лаве кубок наполнился высокомерием.
     circlet:
+      name:
+        en: Lavawalker's Wisdom
+        ru: Мудрость ступающего по лаве
       description:
         en: The circlet of a sage who traversed a sea of fire. It once shone brightly
           from their ancient silhouette as they stood strong amidst the flames.
@@ -4378,6 +4633,9 @@ lucky-dog:
       ru: Поднятие монет восстанавливает 300 ХП.
   pieces:
     flower:
+      name:
+        en: Lucky Dog's Clover
+        ru: Клевер везунчика
       description:
         en: A four-leaf clover that grows in the wild. It was picked because it is said
           to bring good luck.
@@ -4406,6 +4664,9 @@ lucky-dog:
 
           Кто знает, клевер ли приносит ему удачу, или удача принесла везунчику клевер?..
     plume:
+      name:
+        en: Lucky Dog's Eagle Feather
+        ru: Орлиное перо везунчика
       description:
         en: A monster once cornered an adventurer, but was then picked off by a hunting
           eagle... That eagle dropped this feather, which now carries some of
@@ -4432,6 +4693,9 @@ lucky-dog:
 
           Монстр думал, что добыча сама пришла к нему в пасть, но не заметил, как на его плечах сжались орлиные когти.
     sands:
+      name:
+        en: Lucky Dog's Hourglass
+        ru: Песочные часы везунчика
       description:
         en: A broken hourglass from which all the sand has escaped. But it's fine,
           because the passage of time means nothing to someone without a single
@@ -4462,6 +4726,9 @@ lucky-dog:
 
           он лишь рассмеялся, взял рогатку и разбил их.
     goblet:
+      name:
+        en: Lucky Dog's Goblet
+        ru: Кубок везунчика
       description:
         en: An exquisite metallic vessel that was once used to knock out a thief.
         ru: Этим изысканным металлическим кубком однажды отбились от вора.
@@ -4490,6 +4757,9 @@ lucky-dog:
 
           Возможно, это случилось благодаря тому, что на верхнем этаже завязалась драка, и везунчик оказался тем редким человеком, кому она пошла только на пользу.
     circlet:
+      name:
+        en: Lucky Dog's Silver Circlet
+        ru: Серебряная корона везунчика
       description:
         en: Its former owner once fell into a cave and found the treasure trove of an
           exiled royal. This is a souvenir from that incident.
@@ -4531,6 +4801,9 @@ maiden-beloved:
         после использования элементального навыка или взрыва стихии.
   pieces:
     flower:
+      name:
+        en: Maiden's Distant Love
+        ru: Далёкая душа юной девы
       description:
         en: A fragrant flower that will bloom for all eternity and never wither.
         ru: Бесконечно ароматный цветок, который никогда не завянет.
@@ -4571,6 +4844,9 @@ maiden-beloved:
               Ведь сердце девушки навсегда застыло в том моменте прошлого, 
               когда она впервые встретила рыцаря.
     plume:
+      name:
+        en: Maiden's Heart-Stricken Infatuation
+        ru: Тоска юной девы
       description:
         en: A feathered accessory that carries the longing for a certain someone, like a
           migratory bird on the wind.
@@ -4614,6 +4890,9 @@ maiden-beloved:
 
               Чтобы прийти к нему во сне?
     sands:
+      name:
+        en: Maiden's Passing Youth
+        ru: Уходящая молодость юной девы
       description:
         en: The hands of time will never come to an end, but the same cannot not be said
           for those cherished years of the young maiden's life when she was
@@ -4653,6 +4932,9 @@ maiden-beloved:
               Через много лет она всё ещё помнила,  
               Как встретилась с доблестным рыцарем, которого так ждала.
     goblet:
+      name:
+        en: Maiden's Fleeting Leisure
+        ru: Досуг юной девы
       description:
         en: A vessel made with sweet black tea in mind rather than bitter liquor.
         ru: Ёмкость для чёрного чая, а вовсе не для алкоголя. Создано для сладости, а
@@ -4687,6 +4969,9 @@ maiden-beloved:
               Недоговорить эту фразу было не только её привилегией, 
               Но и долгом ввиду соблюдения этикета.
     circlet:
+      name:
+        en: Maiden's Fading Beauty
+        ru: Увядающая красота юной девы
       description:
         en: A meticulously well-maintained woman's hat that keeps wrinkles safely out of
           sight.
@@ -4739,6 +5024,9 @@ martial-artist:
         использования элементального навыка.
   pieces:
     flower:
+      name:
+        en: Martial Artist's Red Flower
+        ru: Алый цветок воина
       description:
         en: This particular kind of red flower was the only thing that could alleviate
           the Martial Artist's pain.
@@ -4764,6 +5052,9 @@ martial-artist:
 
           Хотя цветок не способен излечить шрамы, он приносит облегчение страданий.
     plume:
+      name:
+        en: Martial Artist's Feather Accessory
+        ru: Перо воина
       description:
         en: A common bird feather. Experts use it to practice strength control, while
           rookies use it to make fans.
@@ -4788,6 +5079,9 @@ martial-artist:
 
           Чтобы подчеркнуть свое феноменальное владение навыками боя, воин носит на груди перо птицы.
     sands:
+      name:
+        en: Martial Artist's Water Hourglass
+        ru: Водяные часы воина
       description:
         en: A tool to keep track of time in endurance training. It is more accurate and
           reliable than a regular hourglass.
@@ -4813,6 +5107,9 @@ martial-artist:
 
           эти часы запомнили посекундно.
     goblet:
+      name:
+        en: Martial Artist's Wine Cup
+        ru: Винный бокал воина
       description:
         en: A rather exquisite wine cup used in pre-combat rituals.
         ru: Претендующий на изысканность бокал, который воин использует в своих
@@ -4838,6 +5135,9 @@ martial-artist:
 
           Именно в этом суть предшествующего бою ритуала поднятия бокалов друг за друга, а не в том, чтобы отметить победу или подчеркнуть поражение.
     circlet:
+      name:
+        en: Martial Artist's Bandana
+        ru: Повязка воина
       description:
         en: "The first lesson as an apprentice: Vigor, Strength, Will. These words are
           written on the bandana so you'll never forget them."
@@ -4879,6 +5179,9 @@ noblesse-oblige:
         течение 12 сек. Эффект не складывается.
   pieces:
     flower:
+      name:
+        en: Royal Flora
+        ru: Королевский цветок
       description:
         en: A satin flower with a glossy finish, fit for an elegant gathering. It still
           looks as distinguished as it did on the day it was cast aside.
@@ -4922,6 +5225,9 @@ noblesse-oblige:
               Потворство плотским утехам укоротило дворянам жизнь, 
               а хвастовство и тщеславие привело к вырождению.
     plume:
+      name:
+        en: Royal Plume
+        ru: Королевское перо
       description:
         en: A feathered hat accessory worn by the old aristocrats of Mondstadt on hunts.
           It still stands proudly as if no time has passed.
@@ -4970,6 +5276,9 @@ noblesse-oblige:
 
               Шляпу украшал всё тот же горделивый плюмаж, но в глазах людей свой цвет он утратил.
     sands:
+      name:
+        en: Royal Pocket Watch
+        ru: Королевские карманные часы
       description:
         en: A pocket watch that once belonged to the old aristocrats of Mondstadt.
           Passed down from generation to generation, it has witnessed many years
@@ -5018,6 +5327,9 @@ noblesse-oblige:
 
               Часы их становились всё богаче и вычурнее, но добродетельный смысл был потерян.
     goblet:
+      name:
+        en: Royal Silver Urn
+        ru: Королевская серебряная фляжка
       description:
         en: An ornamental urn that once belonged to the old aristocrats of Mondstadt.
           Mournful winds seem to echo within its empty interior.
@@ -5064,6 +5376,9 @@ noblesse-oblige:
 
               Украшения превратились в золотые оковы тщеславия.
     circlet:
+      name:
+        en: Royal Masque
+        ru: Королевская маска
       description:
         en: A masquerade mask worn by the old aristocrats of Mondstadt. Its hollow eyes
           are fixated on the golden days of the past.
@@ -5147,6 +5462,9 @@ ocean-hued-clam:
         экипированный набором артефактов, не находится на поле боя.
   pieces:
     flower:
+      name:
+        en: Sea-Dyed Blossom
+        ru: Цветок морских красок
       description:
         en: A soft flower that has taken on the many shades of the capricious ocean. It
           shines with wondrous colors under the moon's silver light.
@@ -5198,6 +5516,9 @@ ocean-hued-clam:
 
               Девы забудут боль утраты, и даже нежные цветы вновь обретут былые краски.
     plume:
+      name:
+        en: Deep Palace's Plume
+        ru: Перо глубинного дворца
       description:
         en: A down feather with the same hue as coral, said to come from a shrine
           maiden's ceremonial garment.
@@ -5255,6 +5576,9 @@ ocean-hued-clam:
 
               церемониальное одеяние Божественной Жрицы не было утрачено. Оно сохранилось в памяти народа до наших дней.
     sands:
+      name:
+        en: Cowry of Parting
+        ru: Раковина разлуки
       description:
         en: A clean, flawless seashell that comes from the bottomless ocean.
         ru: Простая и безупречная ракушка из глубин бездонного океана.
@@ -5304,6 +5628,9 @@ ocean-hued-clam:
 
               Эти морские раковины олицетворяют прощание с жизнью в пучине и начало новой жизни под солнцем.
     goblet:
+      name:
+        en: Pearl Cage
+        ru: Жемчужная клетка
       description:
         en: The shining pearls that the shrine maidens of Watatsumi Island offer up
           shine eternally and never dim.
@@ -5359,6 +5686,9 @@ ocean-hued-clam:
 
               Только эта яркая жемчужина затерялась в волнах и вернулась в безмолвное одиночество морских глубин.
     circlet:
+      name:
+        en: Crown of Watatsumi
+        ru: Корона Ватацуми
       description:
         en: An ancient, intricate crown that was once used by a forgotten clergy member.
           Today, this relic has been enshrined with great ceremony by the people
@@ -5434,6 +5764,9 @@ pale-flame:
         увеличивается на 100%.
   pieces:
     flower:
+      name:
+        en: Stainless Bloom
+        ru: Незапятнанный цветок
       description:
         en: A hard, blue artificial flower. Its petals shall never wither, nor shall its
           colors fade.
@@ -5503,6 +5836,9 @@ pale-flame:
 
               «Потому что даже если я надену белые одежды, тело моё, с давних пор целиком пропитанное кровью и пеплом, отмыть от них невозможно».
     plume:
+      name:
+        en: Wise Doctor's Pinion
+        ru: Перо мудрого лекаря
       description:
         en: An ominous pinion with edges of unsurpassed keenness. Perhaps it represents
           an unnaturally uninhibited nature.
@@ -5595,6 +5931,9 @@ pale-flame:
 
               От удивления и от того, что данное ему имя было чересчур ироничным, молодой человек не удержался от смеха.
     sands:
+      name:
+        en: Moment of Cessation
+        ru: Замершее мгновение
       description:
         en: A pocket watch with a cover that cannot be opened. Yet it ticks and tocks
           away, following the inexorable flow of time.
@@ -5655,6 +5994,9 @@ pale-flame:
 
               «А потом, в нужный момент, это сердце остановится по нашей воле».
     goblet:
+      name:
+        en: Surpassing Cup
+        ru: Превосходящая чаша
       description:
         en: An intricately-made cup. Its appearance betrays nothing of its age to an
           observer.
@@ -5712,6 +6054,9 @@ pale-flame:
 
               Так будем же мы отныне птицами одного полёта.
     circlet:
+      name:
+        en: Mocking Mask
+        ru: Смеющаяся маска
       description:
         en: A mask that covers the face, hiding one's expression from others.
         ru: Эта маска закрывает лицо владельца, не позволяя окружающим видеть его
@@ -5764,6 +6109,9 @@ prayers-for-destiny:
       ru: Уменьшает длительность полученного Гидро эффекта на 40%.
   pieces:
     circlet:
+      name:
+        en: Tiara of Torrents
+        ru: Тиара воды
       description:
         en: A tiara worn by those tasked with offering sacrifices in ancient times.
           Because it was submerged in water year in and year out, it possesses
@@ -5831,6 +6179,9 @@ prayers-for-illumination:
       ru: Уменьшает длительность полученного Пиро эффекта на 40%.
   pieces:
     circlet:
+      name:
+        en: Tiara of Flame
+        ru: Тиара огня
       description:
         en: A tiara worn by those tasked with offering sacrifices in ancient times.
           After being subjected to the dancing sacrificial flames year in and
@@ -5894,6 +6245,9 @@ prayers-for-wisdom:
       ru: Уменьшает длительность полученного Электро эффекта на 40%.
   pieces:
     circlet:
+      name:
+        en: Tiara of Thunder
+        ru: Тиара грома
       description:
         en: A tiara worn by those tasked with offering sacrifices in ancient times.
           Because it harkened to the call of thunder year in and year out, it
@@ -5965,6 +6319,9 @@ prayers-to-springtime:
       ru: Уменьшает длительность полученного Крио эффекта на 40%.
   pieces:
     circlet:
+      name:
+        en: Tiara of Frost
+        ru: Тиара холода
       description:
         en: A tiara worn by those tasked with offering sacrifices in ancient times.
           Because it once weathered years of the icy cold, it possesses
@@ -6042,6 +6399,9 @@ resolution-of-sojourner:
       ru: Увеличивает шанс крит. попадания заряженной атаки на 30%.
   pieces:
     flower:
+      name:
+        en: Heart of Comradeship
+        ru: Сердце товарищества
       description:
         en: A small cerulean flower with somebody's ribbon pinned to the stem.
         ru: Маленький цветок с сапфировыми лепестками и привязанной к стеблю лентой.
@@ -6091,6 +6451,9 @@ resolution-of-sojourner:
 
               Но он сохранил память о той девушке, как и пообещал, и пошёл бы ради неё на любую жертву...
     plume:
+      name:
+        en: Feather of Homecoming
+        ru: Перо возвращения домой
       description:
         en: A blue arrow fletching imbued with the sentiment of travelers that had once
           faded into the horizon.
@@ -6144,6 +6507,9 @@ resolution-of-sojourner:
 
               Здесь оно было таким же, как и дома...
     sands:
+      name:
+        en: Sundial of the Sojourner
+        ru: Солнечные часы временщика
       description:
         en: A sundial that has survived the ages, always silently recording the cycles
           of the sun and moon as they pass through the sky.
@@ -6200,6 +6566,9 @@ resolution-of-sojourner:
 
               Улыбнёшься ли ты мне, вопрошаю я, родная, когда на площади падёт та башня ледяная?»
     goblet:
+      name:
+        en: Goblet of the Sojourner
+        ru: Кубок временщика
       description:
         en: A plain porcelain goblet that was once brimming with joyous brews.
         ru: Простой фарфоровый кубок, в котором когда-то пенились роскошные напитки.
@@ -6244,6 +6613,9 @@ resolution-of-sojourner:
 
               Может быть, пройти путь до конца вместе с ними было бы совсем неплохо.
     circlet:
+      name:
+        en: Crown of Parting
+        ru: Венок расставания
       description:
         en: A reed coronet that emanates the spring breeze.
         ru: Ивовый венок, от которого веет весенним бризом.
@@ -6306,6 +6678,9 @@ retracing-bolide:
       ru: Под защитой щита увеличивает урон обычной и заряженной атаки на 40%.
   pieces:
     flower:
+      name:
+        en: Summer Night's Bloom
+        ru: Цветок равноденствия
       description:
         en: A man-made flower in eternal bloom. Who knows if there truly is life in
           there?
@@ -6357,6 +6732,9 @@ retracing-bolide:
 
               тогда как для большинства она вспыхивает и гаснет, подобно фейерверку.
     plume:
+      name:
+        en: Summer Night's Finale
+        ru: Конец равноденствия
       description:
         en: A well-crafted wooden dart. It will only stop once it has reached its
           destination.
@@ -6440,6 +6818,9 @@ retracing-bolide:
 
               На камне ничего не осталось кроме старого деревянного дротика.
     sands:
+      name:
+        en: Summer Night's Moment
+        ru: Час равноденствия
       description:
         en: A pocketwatch that has stopped at a certain point in time.
         ru: Карманные часы, которые когда-то остановились.
@@ -6504,6 +6885,9 @@ retracing-bolide:
               «Ты так вырос. Думаю, ты уже великоват, чтобы ловить шарики. 
               Но я принесла вина. Посмотрим вместе фейерверки, что скажешь?»
     goblet:
+      name:
+        en: Summer Night's Waterballoon
+        ru: Шар равноденствия
       description:
         en: Water balloons can be seen everywhere during the summer festival, but none
           are as finely-wrought as this one.
@@ -6558,6 +6942,9 @@ retracing-bolide:
 
               Ну что? Пойдём посмотрим на фейерверки, побросаем дротики и половим вместе шарики?»
     circlet:
+      name:
+        en: Summer Night's Mask
+        ru: Маска равноденствия
       description:
         en: A popular mask cast in the image of a deity, as described in the legends.
         ru: Популярная маска, вырезанная по подобию божества, о котором рассказывают
@@ -6633,6 +7020,9 @@ scholar:
         возникнуть раз в 3 сек.
   pieces:
     flower:
+      name:
+        en: Scholar's Bookmark
+        ru: Закладка учёного
       description:
         en: A dried flower used as a bookmark. It has absorbed the scent from the pages.
         ru: Высушенный лист, используемый в качестве закладки. Он впитал в себя запах
@@ -6657,6 +7047,9 @@ scholar:
 
           С тех пор этот цветок был разноцветным огоньком среди гор серых, скучных книг и свитков.
     plume:
+      name:
+        en: Scholar's Quill Pen
+        ru: Перо учёного
       description:
         en: A bird's feather that serves as a quill pen. The tip has long been stained
           black.
@@ -6679,6 +7072,9 @@ scholar:
 
           Как клинок становится будто продолжением солдата, долгое время находившегося на поле боя, так и перо стало оружием, с которым она давно сроднилась.
     sands:
+      name:
+        en: Scholar's Clock
+        ru: Часы учёного
       description:
         en: A small desktop clock, whose former owner was a scholar sat in a windowless
           room buried in books. This was probably the only reference they had to
@@ -6703,6 +7099,9 @@ scholar:
 
           В конечном счёте учёная не зря потратила столько времени, и мудрость, наконец, снизойдёт на неё в этой библиотеке.
     goblet:
+      name:
+        en: Scholar's Ink Cup
+        ru: Чернильница учёного
       description:
         en: Originally designed to hold drinking water, this cup was stained black after
           a scholar used it to wash their paint brushes.
@@ -6728,6 +7127,9 @@ scholar:
 
           Она использовала её лишь для промывания перьев, и чашка, покрытая чернильными разводами, давно потеряла былую красоту.
     circlet:
+      name:
+        en: Scholar's Lens
+        ru: Очки учёного
       description:
         en: This corrective lens helped restore the vision of one whose eyes were
           damaged from intensive studying.
@@ -6776,6 +7178,9 @@ shimenawas-reminiscence:
         сек. Эффект нельзя активировать повторно в течение этого времени.
   pieces:
     flower:
+      name:
+        en: Entangling Bloom
+        ru: Опутывающий цветок
       description:
         en: A lovely amulet made from twisted paper cord. It is said to hold the power
           to make wishes come true.
@@ -6845,6 +7250,9 @@ shimenawas-reminiscence:
               Но в конце всё поглощает тьма. 
               И так называемое счастье в любви ушло.
     plume:
+      name:
+        en: Shaft of Remembrance
+        ru: Стрела воспоминаний
       description:
         en: A demon-slaying arrow of a rather ancient make. It seems to have been
           preserved with great care by someone, even until the present day.
@@ -6931,6 +7339,9 @@ shimenawas-reminiscence:
               Но кто же выиграл последнюю игру... 
               Она тронула лук, размышляя о каких-то малозначимых вещах.
     sands:
+      name:
+        en: Morning Dew's Moment
+        ru: Мгновение росы
       description:
         en: A bronze pocket watch adorned with twisted paper cord and a bell. Its hands
           are forever frozen at the dawn of a certain autumn day.
@@ -7001,6 +7412,9 @@ shimenawas-reminiscence:
               «Хибики, солнце вот-вот взойдёт. 
               Нам пора возвращаться».
     goblet:
+      name:
+        en: Hopeful Heart
+        ru: Полное надежд сердце
       description:
         en: A special fortune-telling cylindrical object. The mechanism at the bottom
           allows one to easily remove all unwanted wish sticks.
@@ -7086,6 +7500,9 @@ shimenawas-reminiscence:
               Даже если люди, которые тебе дороги, ушли, пока ты ещё живёшь, 
               проведённое с ними время никуда не исчезнет...
     circlet:
+      name:
+        en: Capricious Visage
+        ru: Непостоянный лик
       description:
         en: A well-preserved ceremonial fox mask. A small, enigmatic smile ever graces
           its lips.
@@ -7170,6 +7587,9 @@ tenacity-of-the-millelith:
         экипированный этим набором артефактов, не находится на поле боя.
   pieces:
     flower:
+      name:
+        en: Flower of Accolades
+        ru: Цветок почестей
       description:
         en: A flower made from gold leaf. It represents the glories and honors attained
           by its wearer.
@@ -7225,6 +7645,9 @@ tenacity-of-the-millelith:
 
               Солдаты гордо носят золотые цветы в знак уважения высшей жертве их предков.
     plume:
+      name:
+        en: Ceremonial War-Plume
+        ru: Боевое перо командира
       description:
         en: A falcon feather worn on ceremonial occasions. It displays the dignity and
           resolve of Liyue Harbor to the outside world.
@@ -7281,6 +7704,9 @@ tenacity-of-the-millelith:
 
               Воины, уснувшие в омуте Бездны, тоже всегда будут существовать в изменчивых мифах.
     sands:
+      name:
+        en: Orichalceous Time-Dial
+        ru: Золотые часы
       description:
         en: A simple device for telling time. This was once standard-issue for the
           Millelith during times of war.
@@ -7337,6 +7763,9 @@ tenacity-of-the-millelith:
 
               Возможно, цель этих людей - добиться того, чтобы бесконечное время наконец дало разумные ответы на все их вопросы.
     goblet:
+      name:
+        en: Noble's Pledging Vessel
+        ru: Золотой кубок клятвы
       description:
         en: A golden cup used by the Millelith to take their oaths. Still bears the
           lovely scent of wine.
@@ -7396,6 +7825,9 @@ tenacity-of-the-millelith:
 
               Не забыли они и про этот кубок. Кровь, скрепившая союз, будто по-прежнему чиста и не тронута пылью.
     circlet:
+      name:
+        en: General's Ancient Helm
+        ru: Древний шлем генерала
       description:
         en: A splendorous helmet from ages past. Clean the dust away and it will look
           brand-new once more.
@@ -7467,6 +7899,9 @@ the-exile:
         Эффект не может складываться.
   pieces:
     flower:
+      name:
+        en: Exile's Flower
+        ru: Цветок изгнанника
       description:
         en: A withered flower worn on the shirt. Its former owner insisted on wearing it
           even in exile, so it must mean something.
@@ -7492,6 +7927,9 @@ the-exile:
 
           Но этот потерявший краски цветок и память о том, как искренне изгнанник улыбался, будучи ещё ребёнком, - две вещи, которые он до сих пор хранит в сердце.
     plume:
+      name:
+        en: Exile's Feather
+        ru: Перо изгнанника
       description:
         en: Not an actual accessory per se. Just a random bird feather that was found
           somewhere in the wilderness by the exile.
@@ -7516,6 +7954,9 @@ the-exile:
 
           Сейчас оно - символ свободной птицы, подобно изгнаннику утратившей гнездо.
     sands:
+      name:
+        en: Exile's Pocket Watch
+        ru: Карманные часы изгнанника
       description:
         en: Even after the crystal watch face was shattered and the hands lost, its
           former owner kept it until the end.
@@ -7536,6 +7977,9 @@ the-exile:
 
           Аристократ вынужден был пуститься в долгое изгнание.
     goblet:
+      name:
+        en: Exile's Goblet
+        ru: Кубок изгнанника
       description:
         en: A dull goblet made of a heavy metal. It was once inlaid with gemstones, but
           they have since been stripped off.
@@ -7561,6 +8005,9 @@ the-exile:
 
           Но изгнанник по-прежнему носит его с собой, пока не вернётся.
     circlet:
+      name:
+        en: Exile's Circlet
+        ru: Корона изгнанника
       description:
         en: A prestigious circlet. However, the royal insignia has been scratched out,
           and it is no longer the symbol of distinguished status that it once
@@ -7605,6 +8052,9 @@ thundering-fury:
         1 сек. Может возникнуть раз в 0,8 сек.
   pieces:
     flower:
+      name:
+        en: Thunderbird's Mercy
+        ru: Милосердие Громовой птицы
       description:
         en: A lightning-infused flower, somehow spared the fate of being trodden
           underfoot or reduced to ash by the furious purple fire, making it the
@@ -7644,6 +8094,9 @@ thundering-fury:
 
               Дав волю своему ужасному естеству, чудесная птица грома полностью истребила крошечное племя.
     plume:
+      name:
+        en: Survivor of Catastrophe
+        ru: Переживший катастрофу
       description:
         en: A lightning-charged feather that still flickers with the wrath of the
           Thunderbird's cruel retribution.
@@ -7702,6 +8155,9 @@ thundering-fury:
 
               История Громовой птицы и юноши ушла в небытие вместе с племенем.
     sands:
+      name:
+        en: Hourglass of Thunder
+        ru: Песочные часы грома
       description:
         en: The hourglass used to foretell the coming of the Thunderbird by the tribe
           that worshiped it. It has fallen into eternal silence now that the
@@ -7754,6 +8210,9 @@ thundering-fury:
               Но только не ведала она, что ради блага своего племени 
               в жертву юноша принёс себя добровольно.
     goblet:
+      name:
+        en: Omen of Thunderstorm
+        ru: Предвестник бури
       description:
         en: A ceremonial cup that holds the blood of the innocent. It is brimming with
           the thundering fury of the prayers that echo within.
@@ -7804,6 +8263,9 @@ thundering-fury:
 
               Там, где некогда пел юноша, увидела она высокий алтарь, на котором кубок до краёв был наполнен его кровью.
     circlet:
+      name:
+        en: Thunder Summoner's Crown
+        ru: Корона призывателя грома
       description:
         en: A crown once worn by an ancient shaman who worshiped the Thunderbird. The
           capricious beast remained unmoved by the shaman's devotion.
@@ -7873,6 +8335,9 @@ thundersoother:
       ru: Увеличивает урон против врагов, находящихся под действием Электро, на 35%.
   pieces:
     flower:
+      name:
+        en: Thundersoother's Heart
+        ru: Сердце усмиряющего гром
       description:
         en: A flower that blooms even amidst ferocious thunder and lightning. To this
           day, it still grants courage to travelers in thunderstorms.
@@ -7916,6 +8381,9 @@ thundersoother:
 
               Но для путешественников цветок был символом решимости в битве со штормом.
     plume:
+      name:
+        en: Thundersoother's Plume
+        ru: Перо усмиряющего гром
       description:
         en: The feather of a predatory bird that soars through lightning storms. It was
           said to have been adopted as an insignia by the legendary hero who
@@ -7964,6 +8432,9 @@ thundersoother:
 
               В конце концов обезглавил Громового монстра.
     sands:
+      name:
+        en: Hour of Soothing Thunder
+        ru: Время усмиряющего гром
       description:
         en: A timepiece kept by the hero who conquered thunder and lightning. The tiny
           shards of Electro crystal within flow back and forth with the passing
@@ -8012,6 +8483,9 @@ thundersoother:
 
               Следя за ходом времени в этих часах, Усмиряющий Гром осознал суть жизненного цикла, и это помогло ему повергнуть монстра.
     goblet:
+      name:
+        en: Thundersoother's Goblet
+        ru: Бокал усмиряющего гром
       description:
         en: The wine goblet from which the Thundersoother, who defeated the Beast of
           Thunder, once drank violet lightning.
@@ -8055,6 +8529,9 @@ thundersoother:
 
               Во все времена кубок был с ним до последнего часа, скрашивая его одиночество.
     circlet:
+      name:
+        en: Thundersoother's Diadem
+        ru: Корона усмиряющего гром
       description:
         en: The crown given to the Thundersoother for defeating the Beast of Thunder
           that had been wreaking havoc upon the land.
@@ -8107,6 +8584,9 @@ tiny-miracle:
         элементу на 30% в течение 10 сек. Может возникнуть раз в 10 сек.
   pieces:
     flower:
+      name:
+        en: Tiny Miracle's Flower
+        ru: Цветок маленького чуда
       description:
         en: A flower that grew from a rock, breaking through the stone as it strove to
           reach the light.
@@ -8123,6 +8603,9 @@ tiny-miracle:
 
           Колонны несут в себе историю смерти, и живые цветы, пробивающиеся из трещин, подобны чуду.
     plume:
+      name:
+        en: Tiny Miracle's Feather
+        ru: Перо маленького чуда
       description:
         en: A feather from a bird of prey that flies almost too fast for the human eye
           to detect.
@@ -8142,6 +8625,9 @@ tiny-miracle:
 
           и благодаря огромным крыльям он может скользить по небу так быстро, как никто другой.
     sands:
+      name:
+        en: Tiny Miracle's Hourglass
+        ru: Песочные часы маленького чуда
       description:
         en: Just an ordinary, everyday hourglass. Turn it upside down and sure enough,
           the dry sand starts trickling down like water.
@@ -8163,6 +8649,9 @@ tiny-miracle:
 
           Разве наша с тобой встреча - не чудо?
     goblet:
+      name:
+        en: Tiny Miracle's Goblet
+        ru: Чашка маленького чуда
       description:
         en: A cup commonly used for fortune-telling. It can also hold water, of course.
         ru: Сосуд, обычно использующийся для предсказания судьбы. Также может быть
@@ -8177,6 +8666,9 @@ tiny-miracle:
           Некогда она использовалась прорицателем для гаданий, 
           и, по поверьям, вода в ней отражает звёздное море.
     circlet:
+      name:
+        en: Tiny Miracle's Earrings
+        ru: Серёжки маленького чуда
       description:
         en: A cheap accessory that is actually made from ancient meteoric ore.
         ru: Дешёвое украшение, на самом деле сделанное из минералов, принесённых на
@@ -8207,6 +8699,9 @@ traveling-doctor:
       ru: Использование взрыва стихии восстанавливает 20% ХП.
   pieces:
     flower:
+      name:
+        en: Traveling Doctor's Silver Lotus
+        ru: Серебряный лотос целителя
       description:
         en: A precious medicinal ingredient that has lost all medicinal value after
           years in storage.
@@ -8228,6 +8723,9 @@ traveling-doctor:
 
           Она так и не приготовила из него лекарство, но его аромат всегда придавал ей сил.
     plume:
+      name:
+        en: Traveling Doctor's Owl Feather
+        ru: Совиное перо целителя
       description:
         en: The durable feather of an owl. Emblematic of nocturnal supremacy, it gave
           some encouragement to the Traveling Doctor when venturing out to visit
@@ -8250,6 +8748,9 @@ traveling-doctor:
 
           Но проводя ночи как сова, без сна и отдыха, целитель в конце концов заболевает сам.
     sands:
+      name:
+        en: Traveling Doctor's Pocket Watch
+        ru: Карманные часы целителя
       description:
         en: A precise instrument used for keeping time. For a doctor, every second
           counts.
@@ -8273,6 +8774,9 @@ traveling-doctor:
 
           Будучи в прошлом инструментом, спасавшим жизни, теперь они пели для неё прощальную песнь.
     goblet:
+      name:
+        en: Traveling Doctor's Medicine Pot
+        ru: Чайничек целителя
       description:
         en: This pot used to carry concentrated and extremely potent concoctions. It is
           now empty, but still gives off a strong smell of medicine.
@@ -8293,6 +8797,9 @@ traveling-doctor:
 
           И когда заболела она сама, лишь это лекарство, приготовленное на печи в небольшом чайничке, смогло поднять её на ноги.
     circlet:
+      name:
+        en: Traveling Doctor's Handkerchief
+        ru: Платок целителя
       description:
         en: Used to tie back the doctor's hair when treating patients. Can also be used
           as a sling for sprains and broken arms in emergencies.
@@ -8344,6 +8851,9 @@ vermillion-hereafter:
         Скрытое сияние снимается.
   pieces:
     flower:
+      name:
+        en: ""
+        ru: ""
       description:
         en: An ancient memento. It still looks as alive as the being that preserved it
           several centuries ago.
@@ -8416,6 +8926,9 @@ vermillion-hereafter:
 
               Если мне суждено быть погребённым в безымянном месте, не забывай меня».
     plume:
+      name:
+        en: ""
+        ru: ""
       description:
         en: A dimly lustrous pinion steeped in strong memories.
         ru: Тускло светящееся перо, в котором собрано множество воспоминаний.
@@ -8472,6 +8985,9 @@ vermillion-hereafter:
 
               Хотя жизнь людей коротка, земля всегда будет помнить их деяния.
     sands:
+      name:
+        en: ""
+        ru: ""
       description:
         en: An ancient timepiece with a mighty solid look. Its luster is produced by
           sand crystal.
@@ -8542,6 +9058,9 @@ vermillion-hereafter:
 
               Часы в свою очередь показывали время, проведённое в бездне, и свидетельствовали о героизме потомков, что пришли на смену предкам.
     goblet:
+      name:
+        en: ""
+        ru: ""
       description:
         en: An old cup made of sand crystal. Its luster is somehow undimmed by age.
         ru: Древняя чаша из кристаллизованного песка, которая вопреки векам не поблёкла.
@@ -8607,6 +9126,9 @@ vermillion-hereafter:
           - p: Единственным свидетельством договора стала простая чаша из кристаллического
               песка, из которой странник когда-то пил вино с жителями деревни.
     circlet:
+      name:
+        en: ""
+        ru: ""
       description:
         en: This crown is said to have been made by the mountain people for a Yaksha. It
           is of simple make, but its surface still shines brightly nonetheless.
@@ -8683,6 +9205,9 @@ viridescent-venerer:
         элементу на 40% в течение 10 сек.
   pieces:
     flower:
+      name:
+        en: In Remembrance of Viridescent Fields
+        ru: Воспоминания об изумрудных лугах
       description:
         en: A wild flower that was once a ubiquitous sight in its homeland. It was
           picked by a hunter who wore it on their chest.
@@ -8730,6 +9255,9 @@ viridescent-venerer:
 
               В то время век бедствий наступил в древнем царстве, и всё наводнила погибель.
     plume:
+      name:
+        en: Viridescent Arrow Feather
+        ru: Оперение стрелы изумрудного охотника
       description:
         en: The fletching of an arrow that once pierced right through its prey, but
           somehow still remains spotless.
@@ -8784,6 +9312,9 @@ viridescent-venerer:
 
               и в те бескрайние угодья ей уже было не попасть.
     sands:
+      name:
+        en: Viridescent Venerer's Determination
+        ru: Решимость изумрудного охотника
       description:
         en: A wondrous instrument that a hunter once wore. It forever points towards
           their prey.
@@ -8826,6 +9357,9 @@ viridescent-venerer:
 
               Её стрелы начали поражать чудовищ, приносящих страдания всему сущему.
     goblet:
+      name:
+        en: Viridescent Venerer's Vessel
+        ru: Сосуд изумрудного охотника
       description:
         en: A water pouch used by the Viridescent Venerer. Its capacity is much greater
           than one would expect.
@@ -8877,6 +9411,9 @@ viridescent-venerer:
 
               Из года в год, когда ей бывало одиноко, она открывала сосуд и слушала доносившиеся из него голоса.
     circlet:
+      name:
+        en: Viridescent Venerer's Diadem
+        ru: Венок изумрудного охотника
       description:
         en: A proud crown that once belonged to the Viridescent Venerer. It is as lush
           and green as the breezes of the wild.
@@ -8935,6 +9472,9 @@ wanderers-troupe:
         катализатор или стрелковое оружие.
   pieces:
     flower:
+      name:
+        en: Troupe's Dawnlight
+        ru: Рассвет ансамбля
       description:
         en: A small flower-shaped insignia. If you listen carefully, you can almost hear
           a flute playing and voices singing.
@@ -8979,6 +9519,9 @@ wanderers-troupe:
 
               И если в зале собирались злодеи, музыка выходила далеко за пределы сцены.
     plume:
+      name:
+        en: Bard's Arrow Feather
+        ru: Оперение стрелы барда
       description:
         en: An azure arrow fletching that has neither faded nor splintered with the
           passage of time. The sound of running water seems to linger around it.
@@ -9019,6 +9562,9 @@ wanderers-troupe:
               Перья его несчастных жертв украшали стрелы, 
               а звонкая мелодия лиры превращалась в скорбную песнь.
     sands:
+      name:
+        en: Concert's Final Hour
+        ru: Окончание концерта
       description:
         en: An hourglass used to keep time during a band performance. It once made a
           crisp sound, but their performance has since ended.
@@ -9059,6 +9605,9 @@ wanderers-troupe:
 
               Последними звуками сего славного ансамбля стал шорох текущего в часах песка, и когда последние песчинки упали, лира умолкла навсегда.
     goblet:
+      name:
+        en: Wanderer's String-Kettle
+        ru: Фляжка странника
       description:
         en: An ancient, strangely-shaped canteen. The interior is fitted with harp
           strings, which play a wondrous tune as the water flows out.
@@ -9102,6 +9651,9 @@ wanderers-troupe:
               «С бескрайней мелодией мы идём в унисон. 
               Там, где звучит музыка, будем и мы».
     circlet:
+      name:
+        en: Conductor's Top Hat
+        ru: Цилиндр дирижёра
       description:
         en: A top hat that has managed to retain its radiance despite braving the
           elements for time untold. An ancient tune still resonates within.
