@@ -321,6 +321,26 @@ export function useDocumentTitle(title: string, shouldRestoreOnUnmount = false) 
 	}, [shouldRestoreOnUnmount, defaultTitle])
 }
 
+export function usePageDescription(func: () => string | null) {
+	if (BUNDLE_ENV.IS_SSR) {
+		SSR_ENV.outPageDescription = func()
+	} else if (process.env.NODE_ENV === 'development') {
+		const description = func()
+		// eslint-disable-next-line react-hooks/rules-of-hooks
+		useEffect(() => {
+			for (const meta of document.querySelectorAll('meta[name="description"]')) {
+				meta.remove()
+			}
+			if (description !== null) {
+				const meta = document.createElement('meta')
+				meta.name = 'description'
+				meta.content = description
+				document.head.appendChild(meta)
+			}
+		}, [description])
+	}
+}
+
 export function useHashValue<T extends string | null>(
 	key: string,
 	defaultValue: T,

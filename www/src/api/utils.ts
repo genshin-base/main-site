@@ -3,7 +3,7 @@ import { DomainShortInfo, EnemyShortInfo, ItemShortInfo } from '#lib/parsing/com
 
 export function apiGetJSONFile<T>(path: string, signal?: AbortSignal | null): Promise<T> | T {
 	if (BUNDLE_ENV.IS_SSR) {
-		return JSON.parse(global._SSR_READ_PUBLIC(path))
+		return JSON.parse(SSR_ENV.readPublic(path))
 	} else {
 		return fetch(BUNDLE_ENV.ASSET_PATH + path, { method: 'GET', signal }).then(x => x.json())
 	}

@@ -8,7 +8,7 @@ import {
 } from '#lib/genshin'
 import { GI_TalentCode } from '#lib/parsing/helperteam/types'
 import { LINK_DISCORD_INVITE } from '#src/utils/links'
-import { BULLET, NBSP } from '#src/utils/typography'
+import { BULLET, DASH, ELLIPSIS, NBSP } from '#src/utils/typography'
 
 type Lang = 'en' | 'ru'
 export const LANG = BUNDLE_ENV.LANG as Lang
@@ -317,6 +317,33 @@ export const I18N_NOTHING_TO_SHOW = {
 	en: 'nothing to show',
 	ru: 'нет результатов',
 }[LANG]
+
+export function I18N_PAGE_DESCRIPTION(
+	characterName: string,
+	roleName: string,
+	weaponR5Name: string | null | undefined,
+	weaponR4Name: string | null | undefined,
+	artifactName: string | null | undefined,
+	tipsText: string,
+	notesText: string,
+) {
+	const weaponLabel = { en: 'Recommended weapon', ru: 'Рекомендуемое оружие' }[LANG]
+	const artifactLabel = { en: 'Recommended artifact', ru: 'Рекомендуемые артефакты' }[LANG]
+
+	// заметки не всегда заканчиваются точкой
+	if (tipsText && !tipsText.trim().endsWith('.')) tipsText += '.'
+	let extraText = tipsText + ' ' + notesText
+	// ограничиваем длину по очередному пробелу
+	if (extraText.length > 250) extraText = extraText.slice(0, extraText.lastIndexOf(' ', 230)) + ELLIPSIS
+
+	return (
+		`${characterName} ${DASH} ${roleName}.` +
+		` ${weaponLabel}: ${[weaponR5Name, weaponR4Name].filter(x => x).join(', ')}.` +
+		` ${artifactLabel}: ${artifactName ?? ''}.` +
+		' ' +
+		extraText
+	)
+}
 
 type WeaponTypeNames = Record<GI_WeaponTypeCode, string>
 const weaponTypeNamesRU: WeaponTypeNames = {

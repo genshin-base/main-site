@@ -151,7 +151,7 @@ function makeConfig(mode, commitHash, isMain, type) {
 				'process.env.NODE_ENV': JSON.stringify(mode),
 				'BUNDLE_ENV.ASSET_PATH': JSON.stringify(ASSET_PATH),
 				'BUNDLE_ENV.LANGS': JSON.stringify(LANGS),
-				'BUNDLE_ENV.LANG': type.isSSR ? 'global._SSR_LANG' : JSON.stringify(type.lang),
+				'BUNDLE_ENV.LANG': type.isSSR ? 'SSR_ENV.lang' : JSON.stringify(type.lang),
 				'BUNDLE_ENV.IS_SSR': JSON.stringify(type.isSSR),
 				'BUNDLE_ENV.COMMIT_HASH': JSON.stringify(commitHash),
 				'BUNDLE_ENV.SUPPORTED_DOMAINS': JSON.stringify(isProd ? SUPPORTED_DOMAINS : null),
@@ -238,13 +238,17 @@ function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
 	async function withPageEnv(pathname, func) {
 		await pagePrerenderSemaphore
 		return await (pagePrerenderSemaphore = (async () => {
-			const _SSR_KEY = Math.random() //на всякий случай
+			const key = Math.random() //на всякий случай
 
 			const items = {
-				_SSR_LANG: lang,
-				_SSR_READ_PUBLIC: path =>
-					fs.readFileSync(PUBLIC + new URL('http://a.com/' + path).pathname, { encoding: 'utf-8' }),
-				_SSR_KEY,
+				/** @type {typeof SSR_ENV} */
+				SSR_ENV: {
+					key,
+					lang,
+					readPublic: path =>
+						fs.readFileSync(PUBLIC + new URL('http://a/' + path).pathname, { encoding: 'utf-8' }),
+					outPageDescription: null,
+				},
 				self: {},
 				navigator: { language: lang },
 				location: { origin: PROD_HOSTNAME, pathname, search: '', hash: '' },
@@ -260,7 +264,7 @@ function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
 			const res = await func()
 			for (const attr in items) delete global[attr]
 
-			if (items._SSR_KEY !== _SSR_KEY) throw new Error('concurrent render, this must NOT happen')
+			if (items.SSR_ENV.key !== key) throw new Error('concurrent render, this must NOT happen')
 			return res
 		})())
 	}
@@ -276,14 +280,14 @@ function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
 				async assets => {
 					// парсим шаблон
 					const text = await fs.promises.readFile(template, 'utf-8')
-					const tmpl = doT.template(text, { strip: false }, {})
+					const tmpl = doT.template(text, { strip: false, encoders: { attr: escapeHtmlAttr } }, {})
 
 					// получаем функцию для пререндера (если он нужен)
 					let renderContent = null
 					if (ssrBuildBarrier) {
 						await ssrBuildBarrier.promise
 						;({ renderContent } = await withPageEnv('/', () =>
-							// файлу нужен суффикс, чтоб он для каждого языка импортировался отдельно со своим _SSR_LANG
+							// файлу нужен суффикс, чтоб он для каждого языка импортировался отдельно со своим SSR_ENV.lang
 							import(DIST + '/ssr/main.ssr.js?lang=' + lang),
 						))
 					}
@@ -305,8 +309,12 @@ function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
 						for (const urlBase of pathToStrings('', path)) {
 							const url = prefixedStrPath(lang, urlBase)
 
-							const [content, title] = renderContent
-								? await withPageEnv(url, () => [renderContent(), document.title])
+							const [content, title, description] = renderContent
+								? await withPageEnv(url, () => [
+										renderContent(),
+										document.title,
+										SSR_ENV.outPageDescription,
+								  ])
 								: ['', '']
 
 							// адреса страницы для других языков (для `<link hreflang`)
@@ -315,7 +323,7 @@ function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
 								href: REFLANG_ORIGIN + prefixedStrPath(lang, urlBase),
 							}))
 
-							const html = tmpl({ title, content, files, otherLangs })
+							const html = tmpl({ title, content, description, files, otherLangs })
 							const src = new webpack.sources.RawSource(html, false)
 							const fpath = cutLeadingSlash(url + '/index.html')
 							compilation.emitAsset(fpath, src, {})
@@ -376,4 +384,9 @@ function prefixedStrPath(lang, path) {
 /** @param {string} str */
 function cutLeadingSlash(str) {
 	return str.startsWith('/') ? str.slice(1) : str
+}
+
+/** @param {string} str */
+function escapeHtmlAttr(str) {
+	return str.replaceAll('&', '&amp;').replaceAll('"', '&quot;')
 }
