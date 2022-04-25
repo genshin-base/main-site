@@ -9,9 +9,7 @@
 
 ## Переводы
 
-Можно сначала скопировать/переименовать папку `cache` на случай, если какой-то из сайтов с данными временно приляжет.
-
-`./scripts/update.js data --ignore-cache`
+`./scripts/update.js builds --ignore-cache`
 
 `./scripts/builds_translation.js changes --langs en,ru`
 
@@ -26,9 +24,13 @@
 
 Качает и генерит бОльшую часть данных. Всё скачанное кешируется, `--ignore-cache` заставляет игнорировать этот кеш.
 
+`./scripts/update.js builds`
+
+Качает и парсит данные билдов.
+
 `./scripts/update.js data`
 
-Качает и парсит данные.
+Качает и парсит данные предметов.
 
 `./scripts/update.js www`
 

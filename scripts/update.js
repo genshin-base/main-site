@@ -44,6 +44,7 @@ import {
 	WWW_API_FILE,
 	TRANSLATED_DATA_DIR,
 	loadTranslatedBuilds,
+	BUILDS_CACHE_DIR,
 } from './_common.js'
 import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
 import {
@@ -251,14 +252,18 @@ if (args['--help'] || args['-h']) {
 }
 
 ;(async () => {
+	const updBuilds = [undefined, 'builds'].includes(args['cmd'])
 	const updData = [undefined, 'data'].includes(args['cmd'])
 	const updImgs = [undefined, 'images'].includes(args['cmd'])
 	const updWww = [undefined, 'www'].includes(args['cmd'])
 
+	if (updBuilds) {
+		await prepareCacheDir(BUILDS_CACHE_DIR, !!args['--ignore-cache'])
+		await extractAndSaveBuildsData()
+	}
 	if (updData) {
 		await prepareCacheDir(DATA_CACHE_DIR, !!args['--ignore-cache'])
 		await extractAndSaveAllItemsData()
-		await extractAndSaveBuildsData()
 		// await checkUsedItemsLocations()
 	}
 	if (updImgs) {
@@ -431,41 +436,6 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		})
 	})
 }
-
-/*
-async function checkUsedItemsLocations() {
-	const builds = await loadBuilds()
-	const characters = await loadCharacters()
-	const enemies = await loadEnemies()
-	const artifacts = await loadArtifacts()
-	const weapons = await loadWeapons()
-	const domains = await loadDomains()
-	const items = await loadItems()
-	const enemyGroups = await loadEnemyGroups()
-
-	excludeDomainBosses(enemies, domains)
-
-	for (const group of Object.values(enemyGroups))
-		if (group.locations.length === 0) warn(`enemy group '${group.code}' has no locations`)
-
-	const enemiesInGroups = new Set()
-	for (const group of Object.values(enemyGroups))
-		for (const code of group.enemyCodes) enemiesInGroups.add(code)
-	for (const enemy of Object.values(enemies))
-		if (!enemiesInGroups.has(enemy.code) && enemy.locations.length === 0)
-			warn(`enemy '${enemy.code}' has no locations`)
-
-	const dropCodes = new Set()
-	for (const enemy of Object.values(enemies)) for (const code of enemy.drop.itemCodes) dropCodes.add(code)
-	for (const domain of Object.values(domains)) for (const code of domain.drop.itemCodes) dropCodes.add(code)
-	for (const item of Object.values(items)) {
-		if (dropCodes.has(item.code)) continue
-		if (!item.types.some(x => x !== 'currency' && x !== 'ingredient')) continue
-		if (item.locations.length > 0) continue
-		warn(`item '${item.code}' has no locations`)
-	}
-}
-*/
 
 async function saveWwwData() {
 	info('updating www JSONs', { newline: false })

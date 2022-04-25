@@ -358,9 +358,10 @@ export const I18N_OBTAINED_DURING_STORYLINE = {
 	ru: 'Выдаётся во время прохождения сюжетных заданий',
 }[LANG]
 export const I18N_ART_GROUP_NAME: Record<GI_ArtifactGroupCode, string> = {
-	en: { '18%-atk': 'ATK +18%', '20%-er': 'Energy Recharge +20%' },
-	ru: { '18%-atk': 'Сила атаки +18%', '20%-er': 'Восстановление энергии +20%' },
-}[LANG]
+	'18%-atk': { en: 'ATK +18%', ru: 'Сила атаки +18%' }[LANG],
+	'20%-er': { en: 'Energy Recharge +20%', ru: 'Восстановление энергии +20%' }[LANG],
+	'25%-ph-atk': { en: 'Physical DMG +25%', ru: 'Физ. урон +25%' }[LANG],
+}
 export const I18N_OBTAIN_SOURCES = {
 	en: 'Obtain sources',
 	ru: 'Способы получения',

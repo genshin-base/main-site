@@ -11,6 +11,7 @@ import { buildsConvertLangMode, getBuildsFormattedBlocks } from '#lib/parsing/he
 const __filename = fileURLToPath(import.meta.url)
 export const BASE_DIR = dirname(__filename) + '/..'
 export const CACHE_DIR = `${BASE_DIR}/cache`
+export const BUILDS_CACHE_DIR = `${CACHE_DIR}/builds`
 export const DATA_CACHE_DIR = `${CACHE_DIR}/data`
 export const IMGS_CACHE_DIR = `${CACHE_DIR}/imgs`
 export const DATA_DIR = `${BASE_DIR}/data`
