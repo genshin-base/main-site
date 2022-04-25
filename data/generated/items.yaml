@@ -2145,6 +2145,7 @@ starconch:
     - !loc teyvat -615 2316
     - !loc teyvat -594 1978
     - !loc teyvat -593 1824
+    - !loc teyvat -590 1962
     - !loc teyvat -590 2414
     - !loc teyvat -559 1782
     - !loc teyvat -559 2359
@@ -4010,6 +4011,7 @@ geo-sigil:
     - !loc teyvat -2461 1406
     - !loc teyvat -2379 1554
     - !loc teyvat -2331 1379
+    - !loc teyvat -2327 1373
     - !loc teyvat -2271 1387
     - !loc teyvat -2240 2038
     - !loc teyvat -2184 825
@@ -4020,6 +4022,7 @@ geo-sigil:
     - !loc teyvat -2047 3064
     - !loc teyvat -2040 3218
     - !loc teyvat -1994 2538
+    - !loc teyvat -1990 1597
     - !loc teyvat -1975 2147
     - !loc teyvat -1974 1120
     - !loc teyvat -1957 2711
@@ -4100,6 +4103,7 @@ geo-sigil:
     - !loc teyvat -635 1743
     - !loc teyvat -627 1762
     - !loc teyvat -624 1423
+    - !loc teyvat -614 1447
     - !loc teyvat -580 1869
     - !loc teyvat -553 1947
     - !loc teyvat -523 1735
@@ -4108,6 +4112,7 @@ geo-sigil:
     - !loc teyvat -503 1336
     - !loc teyvat -495 1679
     - !loc teyvat -472 1700
+    - !loc teyvat -455 2058
     - !loc teyvat -422 1709
     - !loc teyvat -422 1744
     - !loc teyvat -390 1573
@@ -4453,6 +4458,7 @@ mora:
   rarity: 3
   craftedFrom: []
   locations:
+    - !loc teyvat -2355 3067
     - !loc teyvat -2244 3059
     - !loc teyvat -1871 1811
     - !loc teyvat -1871 2209
@@ -4507,11 +4513,13 @@ mora:
     - !loc chasm -535 -412
     - !loc chasm -521 -437
     - !loc chasm -517 -429
+    - !loc chasm -436 -473
     - !loc chasm -411 -315
     - !loc chasm -368 -561
     - !loc chasm -316 -295
     - !loc chasm -312 -304
     - !loc chasm -41 -658
+    - !loc chasm 183 -220
     - !loc chasm 315 -309
 original-essence-(invalidated):
   code: original-essence-(invalidated)
@@ -5090,7 +5098,6 @@ amethyst-lump:
     - !loc teyvat 1774 8389
     - !loc teyvat 1777 8110
     - !loc teyvat 1779 8391
-    - !loc teyvat 1784 8262
     - !loc teyvat 1784 8262
     - !loc teyvat 1790 8798
     - !loc teyvat 1792 8796
@@ -9180,19 +9187,34 @@ luminescent-spine:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -2160 1328
     - !loc teyvat -2157 1094
+    - !loc teyvat -2116 1133
+    - !loc teyvat -2078 1363
+    - !loc teyvat -1976 1474
+    - !loc teyvat -1973 962
+    - !loc teyvat -1959 1073
     - !loc teyvat -1953 1067
     - !loc teyvat -1947 949
+    - !loc teyvat -1926 3158
+    - !loc teyvat -1919 3151
+    - !loc teyvat -1913 3159
+    - !loc teyvat -1864 2071
+    - !loc teyvat -1849 2048
+    - !loc teyvat -1825 2029
+    - !loc teyvat -1789 1989
     - !loc teyvat -1603 562
     - !loc teyvat -1602 715
-    - !loc teyvat -1600 574
     - !loc teyvat -1596 716
     - !loc teyvat -1593 607
-    - !loc teyvat -261 621
+    - !loc teyvat -1592 695
+    - !loc teyvat -1487 3002
     - !loc teyvat -257 613
     - !loc teyvat -252 618
     - !loc teyvat -232 397
     - !loc teyvat -229 418
+    - !loc teyvat 196 2610
+    - !loc teyvat 211 2618
     - !loc teyvat 279 522
     - !loc teyvat 283 525
     - !loc teyvat 636 -46
@@ -9223,14 +9245,17 @@ luminescent-spine:
     - !loc chasm -82 329
     - !loc chasm -81 -473
     - !loc chasm -81 -263
+    - !loc chasm -72 -267
     - !loc chasm -67 -257
     - !loc chasm 28 -526
     - !loc chasm 35 -647
-    - !loc chasm 46 -376
-    - !loc chasm 75 -655
+    - !loc chasm 60 -379
+    - !loc chasm 64 -383
+    - !loc chasm 69 -378
     - !loc chasm 117 -612
     - !loc chasm 122 229
     - !loc chasm 128 229
+    - !loc chasm 128 307
     - !loc chasm 157 333
     - !loc chasm 160 277
     - !loc chasm 179 170

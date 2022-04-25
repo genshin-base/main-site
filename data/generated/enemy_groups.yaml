@@ -534,6 +534,7 @@ slime:
     - !loc teyvat 315 1033
     - !loc teyvat 317 1034
     - !loc teyvat 323 6321
+    - !loc teyvat 337 18
     - !loc teyvat 341 -61
     - !loc teyvat 342 -271
     - !loc teyvat 347 -56
@@ -3420,6 +3421,7 @@ whopperflower:
     - electro-whopperflower
   locations:
     - !loc teyvat -2552 1603
+    - !loc teyvat -2469 3200
     - !loc teyvat -2442 1359
     - !loc teyvat -2353 1451
     - !loc teyvat -2328 1650
@@ -3574,7 +3576,9 @@ whopperflower:
     - !loc enkanomiya -291 389
     - !loc enkanomiya -288 -243
     - !loc enkanomiya -275 403
+    - !loc chasm -243 166
     - !loc chasm -39 -563
+    - !loc chasm 32 -39
     - !loc chasm 131 270
     - !loc chasm 189 -740
 bathysmal-vishap:
