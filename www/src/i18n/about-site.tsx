@@ -6,7 +6,7 @@ export const I18N_ABOUT_SITE_EPIGRAPH = {
 	ru: { quote: 'Сайт, достойный созерцания!', footer: 'Верховная жрица', cite: 'Великого храма' },
 }[LANG]
 export const I18N_ABOUT_SITE_CONTENT = {
-	en: (
+	en: () => (
 		<>
 			<p>
 				The Genshin Base is a site that contains only the necessary information about Genshin Impact.
@@ -72,7 +72,7 @@ export const I18N_ABOUT_SITE_CONTENT = {
 			</p>
 		</>
 	),
-	ru: (
+	ru: () => (
 		<>
 			<p>
 				База Геншина — сайт, на котором собрана только нужная информация по Геншин Импакту. Сайтом
@@ -138,4 +138,4 @@ export const I18N_ABOUT_SITE_CONTENT = {
 			</p>
 		</>
 	),
-}[LANG]
+}[LANG]()

@@ -183,7 +183,7 @@ export const I18N_SUBMIT_BUG_ERROR = {
 }[LANG]
 export const I18N_YOUR_MESSAGE_HERE = { en: 'Your message here', ru: 'Текст сообщения' }[LANG]
 export const I18N_REPORT_BUG_GUIDE = {
-	en: (
+	en: () => (
 		<>
 			<p>
 				Please describe your problem here. You can upload images on{' '}
@@ -201,7 +201,7 @@ export const I18N_REPORT_BUG_GUIDE = {
 			</p>
 		</>
 	),
-	ru: (
+	ru: () => (
 		<>
 			<p>
 				Пожалуйста, опишите проблему в поле ниже. Если требуется, вы можете загрузить скриншоты на
@@ -220,7 +220,7 @@ export const I18N_REPORT_BUG_GUIDE = {
 			</p>
 		</>
 	),
-}[LANG]
+}[LANG]()
 export const I18N_ERROR = { en: 'Error, reload page', ru: 'Ошибка, перезагрузите страницу' }[LANG]
 export const I18N_PIECE_BONUS = {
 	en: (n: number) => `${n} piece bonus`,
