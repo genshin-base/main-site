@@ -6,13 +6,17 @@ if (process.env.NODE_ENV === 'development') {
 import '#src/errors/catch'
 
 import { render } from 'preact'
-import { renderToString } from 'preact-render-to-string'
 
 import { App } from './App'
 import { I18N_UNSUPPORTED_LOCATION_WARNING } from './i18n/i18n'
 
-export const renderContent = BUNDLE_ENV.IS_SSR
-	? () => renderToString(<App />, null, { pretty: false })
+export type SSRRenderFunc = () => Promise<string>
+
+export const renderContent: void | SSRRenderFunc = BUNDLE_ENV.IS_SSR
+	? // Импортировать preact-render-to-string в начале нельзя,
+	  // т.к. Терсер видит где-то там побочные эффекты и не выкидывает код из продакшн-бандла.
+	  // А от require(...) что-то падает в недрах преактовых хуков.
+	  () => import('preact-render-to-string').then(x => x.renderToString(<App />, null, { pretty: false }))
 	: isOnExpectedDomain()
 	? render(<App />, document.querySelector('body .app') as Element)
 	: insertUnsupportedLocationWarning()

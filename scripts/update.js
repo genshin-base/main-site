@@ -2,7 +2,7 @@
 import { promises as fs } from 'fs'
 import { extractBuilds } from '#lib/parsing/helperteam/index.js'
 import { loadSpreadsheetCached } from '#lib/google.js'
-import { json_getText } from '#lib/parsing/helperteam/json.js'
+import { json_getText } from '#lib/parsing/helperteam/text-json.js'
 import {
 	extractArtifactsData,
 	extractCharactersData,

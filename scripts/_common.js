@@ -5,7 +5,7 @@ import { dirname } from 'path'
 import { stringifyString, YAMLError } from 'yaml/util'
 import { GI_MAP_CODES } from '#lib/genshin.js'
 import { error, warn } from '#lib/utils/logs.js'
-import { textNodesFromMarkdown, textNodesToMarkdown } from '#lib/parsing/helperteam/text.js'
+import { textNodesFromMarkdown, textNodesToMarkdown } from '#lib/parsing/helperteam/text-markdown.js'
 import { buildsConvertLangMode, getBuildsFormattedBlocks } from '#lib/parsing/helperteam/build_texts.js'
 
 const __filename = fileURLToPath(import.meta.url)

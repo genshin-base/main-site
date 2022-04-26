@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url'
 import webpack from 'webpack'
 import doT from 'dot'
 
-import { Deferred } from '#lib/utils/values.js'
+import { Deferred, mustBeNotNull } from '#lib/utils/values.js'
 import { matchPath, paths, pathToStrings } from './src/routes/paths.js'
 import { runAndReadStdout } from '#lib/utils/os.js'
 
@@ -283,7 +283,7 @@ function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
 					const tmpl = doT.template(text, { strip: false, encoders: { attr: escapeHtmlAttr } }, {})
 
 					// получаем функцию для пререндера (если он нужен)
-					let renderContent = null
+					let renderContent = /**@type {import('#src/index').SSRRenderFunc|null}*/ (null)
 					if (ssrBuildBarrier) {
 						await ssrBuildBarrier.promise
 						;({ renderContent } = await withPageEnv('/', () =>
@@ -310,8 +310,8 @@ function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
 							const url = prefixedStrPath(lang, urlBase)
 
 							const [content, title, description] = renderContent
-								? await withPageEnv(url, () => [
-										renderContent(),
+								? await withPageEnv(url, async () => [
+										await mustBeNotNull(renderContent)(),
 										document.title,
 										SSR_ENV.outPageDescription,
 								  ])
