@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'preact/hooks'
 
-import { SearchItem } from '#src/../../lib/parsing/combine'
+import { SearchItem, SearchItemType } from '#src/../../lib/parsing/combine'
 import { apiGetSearchData } from '#src/api/endpoints'
 import { CentredLabel, CentredSpinner } from '#src/components/placeholders'
 import {
@@ -14,7 +14,7 @@ import { A } from '#src/routes/router'
 import { getArtifactIconSrc } from '#src/utils/artifacts'
 import { calcPosForDd } from '#src/utils/calc-pos-for-dd'
 import { getCharacterAvatarSrc } from '#src/utils/characters'
-import { GET_MODALS_EL, stopPropagation } from '#src/utils/dom'
+import { GET_MODALS_EL } from '#src/utils/dom'
 import { isLoaded, useClickAway, useFetch, useWindowSize } from '#src/utils/hooks'
 import { createPortal } from '#src/utils/preact-compat'
 import { getWeaponIconSrc } from '#src/utils/weapons'
@@ -32,7 +32,7 @@ type SearchResults = {
 	character: MegaSearch_SearchItem[]
 	artifact: MegaSearch_SearchItem[]
 } | null
-function getIconForItem({ code, type }) {
+function getIconForItem({ code, type }: { code: string; type: SearchItemType }): string {
 	return {
 		character: getCharacterAvatarSrc,
 		weapon: getWeaponIconSrc,
@@ -53,7 +53,7 @@ function sortInItem(item: MegaSearch_SearchItem, searchStr: string): number {
 		item.nameEnLC ? item.nameEnLC.indexOf(searchStrLocal) : 999,
 	)
 }
-const itemTypes = ['character', 'weapon', 'artifact']
+const itemTypes: SearchItemType[] = ['character', 'weapon', 'artifact']
 export function MegaSearch({ classes = '' }: { classes?: string }): JSX.Element {
 	const [searchStr, setSearchStr] = useState<string>('')
 	const searchData = useFetch(apiGetSearchData, [])
@@ -65,7 +65,7 @@ export function MegaSearch({ classes = '' }: { classes?: string }): JSX.Element 
 			const searchDataLocal: SearchResults = { weapon: [], character: [], artifact: [] }
 			searchData.forEach((si: SearchItem) => {
 				return itemTypes.forEach(
-					k =>
+					(k: SearchItemType) =>
 						si.type === k &&
 						searchDataLocal[k].push({
 							...si,
@@ -102,8 +102,8 @@ export function MegaSearch({ classes = '' }: { classes?: string }): JSX.Element 
 
 	const searchResults = useMemo<SearchResults>(() => {
 		if (!isLoaded(searchData) || !searchStr) return null
-		const searchResultsLocal = { character: [], weapon: [], artifact: [] }
-		itemTypes.forEach(t => {
+		const searchResultsLocal: SearchResults = { character: [], weapon: [], artifact: [] }
+		itemTypes.forEach((t: SearchItemType) => {
 			searchResultsLocal[t] = searchStr
 				? searchDataGrouped[t].filter((it: MegaSearch_SearchItem) => searchInItem(it, searchStr))
 				: []
@@ -135,7 +135,11 @@ export function MegaSearch({ classes = '' }: { classes?: string }): JSX.Element 
 					<div className="card search-results-dd position-absolute mx-2 my-1" ref={ddRef}>
 						<div className="card-body p-2">
 							{searchResults && (
-								<SearchResultsWrap searchResults={searchResults} searchStr={searchStr} />
+								<SearchResultsWrap
+									searchResults={searchResults}
+									searchStr={searchStr}
+									clearSearch={clearSearch}
+								/>
 							)}
 						</div>
 					</div>,
@@ -147,9 +151,11 @@ export function MegaSearch({ classes = '' }: { classes?: string }): JSX.Element 
 function SearchResultsWrap({
 	searchResults,
 	searchStr,
+	clearSearch,
 }: {
 	searchResults: SearchResults
 	searchStr: string
+	clearSearch: () => unknown
 }): JSX.Element {
 	return (
 		<div className="search-results-wrap d-flex align-items-stretch">
@@ -158,7 +164,12 @@ function SearchResultsWrap({
 				<div className="overflow-auto flex-fill position-relative pe-1">
 					{searchResults?.character.length ? (
 						searchResults?.character.map(item => (
-							<SearchItemCard key={item.code} item={item} searchStr={searchStr} />
+							<SearchItemCard
+								key={item.code}
+								item={item}
+								searchStr={searchStr}
+								clearSearch={clearSearch}
+							/>
 						))
 					) : (
 						<CentredLabel label={I18N_NOTHING_TO_SHOW} />
@@ -170,7 +181,12 @@ function SearchResultsWrap({
 				<div className="overflow-auto flex-fill position-relative pe-1">
 					{searchResults?.weapon.length ? (
 						searchResults?.weapon.map(item => (
-							<SearchItemCard key={item.code} item={item} searchStr={searchStr} />
+							<SearchItemCard
+								key={item.code}
+								item={item}
+								searchStr={searchStr}
+								clearSearch={clearSearch}
+							/>
 						))
 					) : (
 						<CentredLabel label={I18N_NOTHING_TO_SHOW} />
@@ -182,7 +198,12 @@ function SearchResultsWrap({
 				<div className="overflow-auto flex-fill position-relative pe-1">
 					{searchResults?.artifact.length ? (
 						searchResults?.artifact.map(item => (
-							<SearchItemCard key={item.code} item={item} searchStr={searchStr} />
+							<SearchItemCard
+								key={item.code}
+								item={item}
+								searchStr={searchStr}
+								clearSearch={clearSearch}
+							/>
 						))
 					) : (
 						<CentredLabel label={I18N_NOTHING_TO_SHOW} />
@@ -205,15 +226,34 @@ function highlightPartOfText(regexp: RegExp, text: string | undefined) {
 		)
 	})
 }
-const SearchItemCard = ({ item, searchStr }: { item: SearchItem; searchStr: string }): JSX.Element => {
+const mainItemHrefMap: Record<SearchItemType, (code: string) => string> = {
+	weapon: c => `/weapons${genEquipmentHash('weapon', c)}`,
+	artifact: c => `/artifacts${genEquipmentHash('artifact', c)}`,
+	character: c => `/builds/${c}`,
+}
+const SearchItemCard = ({
+	item,
+	searchStr,
+	clearSearch,
+}: {
+	item: SearchItem
+	searchStr: string
+	clearSearch: () => unknown
+}): JSX.Element => {
 	const regexp = new RegExp(`(${searchStr})`, 'gi')
 
 	const nameWithHighlight = searchStr ? highlightPartOfText(regexp, item.name) : item.name
 	const nameEnWithHighlight = searchStr ? highlightPartOfText(regexp, item.nameEn) : item.nameEn
+	const mainItemHref = mainItemHrefMap[item.type](item.code)
 	return (
 		<div className="lh-sm d-flex mt-1 mb-2 py-1">
-			<div className="me-1 d-none d-md-block">
-				<ItemAvatar src={getIconForItem(item)} />
+			<div className="me-1 d-none d-md-block ">
+				<ItemAvatar
+					src={getIconForItem(item)}
+					href={mainItemHref}
+					classes="bg-dark-on-dark"
+					onClick={clearSearch}
+				/>
 			</div>
 			<div>
 				<h6 className="mb-0 text-break">
@@ -223,23 +263,17 @@ const SearchItemCard = ({ item, searchStr }: { item: SearchItem; searchStr: stri
 				<div className="text-muted small text-break">{nameEnWithHighlight}</div>
 				<div className="small">
 					{item.type === 'weapon' && (
-						<A
-							href={`/weapons${genEquipmentHash('weapon', item.code)}`}
-							onClick={stopPropagation}
-						>
+						<A href={mainItemHref} onClick={clearSearch}>
 							item detail
 						</A>
 					)}
 					{item.type === 'artifact' && (
-						<A
-							href={`/artifacts${genEquipmentHash('artifact', item.code)}`}
-							onClick={stopPropagation}
-						>
+						<A href={mainItemHref} onClick={clearSearch}>
 							item detail
 						</A>
 					)}
 					{item.type === 'character' && (
-						<A href={`/builds/${item.code}`} onClick={stopPropagation}>
+						<A href={mainItemHref} onClick={clearSearch}>
 							recomended builds
 						</A>
 					)}

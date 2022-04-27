@@ -25,7 +25,6 @@ import { AscMaterials, RecommendedTo } from '../common'
 import { ItemAvatar } from '../item-avatars'
 
 import './line-cards.scss'
-import { stopPropagation } from '#src/utils/dom'
 import { genEquipmentHash, WEAPON_ROW_CARD_HASH_KEY } from '#src/modules/equipment/common'
 
 type WeaponRowProps = {
@@ -260,11 +259,7 @@ export function WeaponCardTableRow({ weapon, isExpanded, group }: WeaponRowProps
 								rarity={weapon.rarity}
 								src={getWeaponIconLageSrc(weapon.code)}
 							/>
-							<a
-								href={genEquipmentHash('weapon', weapon.code)}
-								className="align-self-center"
-								onClick={stopPropagation}
-							>
+							<a href={genEquipmentHash('weapon', weapon.code)} className="align-self-center">
 								{weapon.name}
 							</a>
 						</div>

@@ -28,10 +28,10 @@ body,
 	background: linear-gradient(-180deg, #81a18a 0%, #c8c1b1 100%);
 }
 .bg-dark-on-dark {
-	background-color: var(--bs-body-bg) !important;
+	background-color: #403e3e !important;
 }
-.navbar-darker-bg{
-	background: #414162!important;
+.navbar-darker-bg {
+	background: #414162 !important;
 }
 .w-33 {
 	width: 33.33%;
@@ -85,8 +85,8 @@ $expand-arrow-light: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2
 			transform: rotate(-180deg);
 		}
 	}
-	&.arrow-dark{
-		&::after{
+	&.arrow-dark {
+		&::after {
 			background-image: $expand-arrow-dark;
 		}
 	}
@@ -123,7 +123,7 @@ $colors: primary, secondary, warning, dark;
 .hide-if-empty:empty {
 	display: none;
 }
-.placeholder-backdrop{
+.placeholder-backdrop {
 	background-color: #000;
 	opacity: 0.5;
 }

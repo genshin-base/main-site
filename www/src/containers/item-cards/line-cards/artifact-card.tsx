@@ -29,7 +29,6 @@ import { GI_ArtifactTypeCode, GI_ARTIFACT_TYPE_CODES } from '#src/../../lib/gens
 import { BtnTabGroup } from '#src/components/tabs'
 import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from '../card-map'
 import { getAllRelated } from '#src/api/utils'
-import { stopPropagation } from '#src/utils/dom'
 import { ARTIFACT_ROW_CARD_HASH_KEY, genEquipmentHash } from '#src/modules/equipment/common'
 
 const dummyMarkerGroups: CardMapMarkerGroup[] = [
@@ -276,7 +275,6 @@ export function ArtifactCardTableRow({ artifact, isExpanded, group }: ArtifactRo
 							<a
 								href={genEquipmentHash('artifact', artifact.code)}
 								className="align-self-center"
-								onClick={stopPropagation}
 							>
 								{artifact.name}
 							</a>

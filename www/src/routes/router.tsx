@@ -41,8 +41,11 @@ function handleAnchorClick(e: MouseEvent, routes: Routes) {
 		const url = new URL(a.href)
 		if (url.origin === location.origin) {
 			if (findRoutedComponent(routes, url.pathname)) {
-				if (pathSearchHash(location) !== pathSearchHash(url))
+				if (pathSearchHash(location) !== pathSearchHash(url)) {
+					const hashChanged = url.hash !== location.hash
 					history.pushState(null, '', pathSearchHash(url))
+					if (hashChanged) dispatchEvent(new CustomEvent('x-local-hashchange'))
+				}
 				e.preventDefault()
 				return true
 			}
