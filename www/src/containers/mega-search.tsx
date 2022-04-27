@@ -40,10 +40,18 @@ function getIconForItem({ code, type }) {
 	}[type](code)
 }
 function searchInItem(item: MegaSearch_SearchItem, searchStr: string): boolean {
-	return item.nameLC.includes(searchStr) || (item.nameEnLC ? item.nameEnLC.includes(searchStr) : false)
+	const searchStrLocal = searchStr.toLowerCase()
+	return (
+		item.nameLC.includes(searchStrLocal) ||
+		(item.nameEnLC ? item.nameEnLC.includes(searchStrLocal) : false)
+	)
 }
 function sortInItem(item: MegaSearch_SearchItem, searchStr: string): number {
-	return Math.min(item.nameLC.indexOf(searchStr), item.nameEnLC ? item.nameEnLC.indexOf(searchStr) : 999)
+	const searchStrLocal = searchStr.toLowerCase()
+	return Math.min(
+		item.nameLC.indexOf(searchStrLocal),
+		item.nameEnLC ? item.nameEnLC.indexOf(searchStrLocal) : 999,
+	)
 }
 const itemTypes = ['character', 'weapon', 'artifact']
 export function MegaSearch({ classes = '' }: { classes?: string }): JSX.Element {
@@ -208,7 +216,10 @@ const SearchItemCard = ({ item, searchStr }: { item: SearchItem; searchStr: stri
 				<ItemAvatar src={getIconForItem(item)} />
 			</div>
 			<div>
-				<h6 className="mb-0 text-break">{nameWithHighlight}</h6>
+				<h6 className="mb-0 text-break">
+					<ItemAvatar src={getIconForItem(item)} classes="emoji-avatar me-1 d-md-none" />
+					<span className="align-middle">{nameWithHighlight}</span>
+				</h6>
 				<div className="text-muted small text-break">{nameEnWithHighlight}</div>
 				<div className="small">
 					{item.type === 'weapon' && (

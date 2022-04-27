@@ -11,6 +11,10 @@
 			}
 		}
 	}
+	&.emoji-avatar {
+		width: 1rem;
+		height: 1rem;
+	}
 	&.large-avatar {
 		width: var(--thumb-height-l);
 		height: var(--thumb-height-l);
