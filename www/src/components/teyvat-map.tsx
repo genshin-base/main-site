@@ -374,7 +374,7 @@ class MovementClampLayer {
 		const dx = map.lon2x(dLon)
 		const dy = map.lat2y(dLat)
 
-		if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
+		if (Math.abs(dx) > 0.5 || Math.abs(dy) > 0.5) {
 			map.move(dx, dy)
 		}
 	}
