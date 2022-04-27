@@ -1,13 +1,11 @@
 import { apiGetArtifacts } from '#src/api/endpoints'
 import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
 import { Spinner } from '#src/components/placeholders'
-import {
-	ArtifactCardTableRow,
-	ARTIFACT_ROW_CARD_HASH_KEY,
-} from '#src/containers/item-cards/line-cards/artifact-card'
+import { ArtifactCardTableRow } from '#src/containers/item-cards/line-cards/artifact-card'
 import { I18N_NAME, I18N_PIECES_BONUS, I18N_PIECE_BONUS } from '#src/i18n/i18n'
 import { isLoaded, useFetch, useHashValue } from '#src/utils/hooks'
 import { useMemo } from 'preact/hooks'
+import { ARTIFACT_ROW_CARD_HASH_KEY } from './common'
 
 export function ArtifactsList(): JSX.Element {
 	const artifacts = useFetch(apiGetArtifacts, [])

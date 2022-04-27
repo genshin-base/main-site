@@ -2,6 +2,7 @@ import { A } from '#src/routes/router'
 import { useState } from 'preact/hooks'
 
 import { Nav } from '../components/nav'
+import { MegaSearch } from './mega-search'
 
 export function Header() {
 	const [isNavExpanded, setIsNavExpanded] = useState(false)
@@ -21,6 +22,11 @@ export function Header() {
 						<span className="navbar-toggler-icon"></span>
 					</button>
 					<Nav isNavExpanded={isNavExpanded} />
+				</div>
+			</div>
+			<div className="navbar py-2 navbar-darker-bg">
+				<div className="container">
+					<MegaSearch />
 				</div>
 			</div>
 		</header>

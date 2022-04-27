@@ -30,6 +30,7 @@ import { BtnTabGroup } from '#src/components/tabs'
 import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from '../card-map'
 import { getAllRelated } from '#src/api/utils'
 import { stopPropagation } from '#src/utils/dom'
+import { ARTIFACT_ROW_CARD_HASH_KEY, genEquipmentHash } from '#src/modules/equipment/common'
 
 const dummyMarkerGroups: CardMapMarkerGroup[] = [
 	{
@@ -236,7 +237,7 @@ function ArtifactCardLine({
 		/>
 	)
 }
-export const ARTIFACT_ROW_CARD_HASH_KEY = 'a'
+
 export function ArtifactCardTableRow({ artifact, isExpanded, group }: ArtifactRowProps): JSX.Element {
 	const [, setSelectedArtifactCode] = useHashValue<string | null>(ARTIFACT_ROW_CARD_HASH_KEY, null)
 
@@ -273,7 +274,7 @@ export function ArtifactCardTableRow({ artifact, isExpanded, group }: ArtifactRo
 								src={getArtifactIconLargeSrc(artifact.code)}
 							/>
 							<a
-								href={`/artifacts#${ARTIFACT_ROW_CARD_HASH_KEY}=${artifact.code}`}
+								href={genEquipmentHash('artifact', artifact.code)}
 								className="align-self-center"
 								onClick={stopPropagation}
 							>

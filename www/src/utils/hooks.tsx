@@ -68,11 +68,16 @@ export const useToggle = (initial: boolean): [boolean, () => void] => {
 	return [flagState, useCallback(() => setFlagState(status => !status), [])]
 }
 
-export const useClickAway = (ref: preact.RefObject<HTMLElement>, callback?: () => void): void => {
+export const useClickAway = (
+	refs: preact.RefObject<HTMLElement> | preact.RefObject<HTMLElement>[],
+	callback?: () => void,
+): void => {
 	const handleClick = (e: MouseEvent | TouchEvent) => {
-		if (ref.current && e.target instanceof HTMLElement && !ref.current.contains(e.target)) {
-			callback && callback()
-		}
+		const refsLocal = Array.isArray(refs) ? refs : [refs]
+		const isClickAwayEveryone = refsLocal.every(
+			ref => ref.current && e.target instanceof HTMLElement && !ref.current.contains(e.target),
+		)
+		if (isClickAwayEveryone) callback && callback()
 	}
 	useEffect(() => {
 		document.addEventListener('mousedown', handleClick)

@@ -7,10 +7,7 @@ import { apiGetWeapons } from '#src/api/endpoints'
 import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
 import { Spinner } from '#src/components/placeholders'
 import { WeaponTypeFilter } from '#src/components/weapon-type-filter'
-import {
-	WeaponCardTableRow,
-	WEAPON_ROW_CARD_HASH_KEY,
-} from '#src/containers/item-cards/line-cards/weapon-card'
+import { WeaponCardTableRow } from '#src/containers/item-cards/line-cards/weapon-card'
 import {
 	I18N_NAME,
 	I18N_NOTHING_TO_SHOW,
@@ -25,6 +22,7 @@ import {
 	I18N_WEAPON_TYPE_FILTER_TIP,
 } from '#src/i18n/i18n'
 import { isLoaded, useFetch, useHashValue, useUniqKey } from '#src/utils/hooks'
+import { WEAPON_ROW_CARD_HASH_KEY } from './common'
 
 const WEAPON_SORT_CODES = ['rarity', 'atk', 'subStat']
 const WEAPON_SORT_NAMES = { rarity: I18N_RARITY, atk: I18N_STAT_NAME('atk'), subStat: I18N_SUBSTAT }

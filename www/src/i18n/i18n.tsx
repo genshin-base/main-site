@@ -87,6 +87,7 @@ export const I18N_CHOOSE_FROM_FAV = {
 	ru: 'Выберите из избранных',
 }[LANG]
 export const I18N_ARTIFACTS = { en: 'Artifacts', ru: 'Артефакты' }[LANG]
+export const I18N_CHARACTERS = { en: 'Characters', ru: 'Персонажи' }[LANG]
 export const I18N_ART_STATS_PRIORITY = { en: 'Artifact stats priority', ru: 'Приоритетные главстаты' }[LANG]
 export const I18N_SUBSTATS_PRIORITY = { en: 'Substats priority', ru: 'Приоритетные допстаты' }[LANG]
 export const I18N_TALENTS_PRIORITY = { en: 'Talents Priority', ru: 'Приоритетные таланты' }[LANG]
@@ -316,6 +317,10 @@ export const I18N_UNSUPPORTED_LOCATION_WARNING = {
 export const I18N_NOTHING_TO_SHOW = {
 	en: 'nothing to show',
 	ru: 'нет результатов',
+}[LANG]
+export const I18N_MEGA_SEARCH_PLACEHOLDER = {
+	en: 'Search for characters, weapons, artifacts',
+	ru: 'Искать персонажей, артефакты, оружие',
 }[LANG]
 
 export function I18N_PAGE_DESCRIPTION(

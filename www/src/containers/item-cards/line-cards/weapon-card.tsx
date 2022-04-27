@@ -26,6 +26,7 @@ import { ItemAvatar } from '../item-avatars'
 
 import './line-cards.scss'
 import { stopPropagation } from '#src/utils/dom'
+import { genEquipmentHash, WEAPON_ROW_CARD_HASH_KEY } from '#src/modules/equipment/common'
 
 type WeaponRowProps = {
 	weapon: WeaponRegularInfo
@@ -224,7 +225,6 @@ function WeaponCardLine({
 		/>
 	)
 }
-export const WEAPON_ROW_CARD_HASH_KEY = 'w'
 export function WeaponCardTableRow({ weapon, isExpanded, group }: WeaponRowProps): JSX.Element {
 	const [, setSelectedWeaponCode] = useHashValue<string | null>(WEAPON_ROW_CARD_HASH_KEY, null)
 
@@ -261,7 +261,7 @@ export function WeaponCardTableRow({ weapon, isExpanded, group }: WeaponRowProps
 								src={getWeaponIconLageSrc(weapon.code)}
 							/>
 							<a
-								href={`#${WEAPON_ROW_CARD_HASH_KEY}=${weapon.code}`}
+								href={genEquipmentHash('weapon', weapon.code)}
 								className="align-self-center"
 								onClick={stopPropagation}
 							>
