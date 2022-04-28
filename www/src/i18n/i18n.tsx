@@ -243,7 +243,7 @@ export const I18N_CHAR_BUILD_RECS = {
 	en: 'Character builds recommendations',
 	ru: 'Рекомендуемые сборки персонажей',
 }[LANG]
-export const I18N_SELECT_CHAR_ABOVE = { en: 'Select character above', ru: 'Выберите персонажа' }[LANG]
+export const I18N_SELECT_CHAR_BELOW = { en: 'Select character below', ru: 'Выберите персонажа' }[LANG]
 export const I18N_BUILD_RECS_FOR = { en: 'build recommendations', ru: 'билд' }[LANG]
 export const I18N_RECOMMENDED_RU_ONLY = { en: '', ru: 'Рекомендуемый' }[LANG]
 export const I18N_ABOUT_SITE = { en: 'Site History', ru: 'История сайта' }[LANG]

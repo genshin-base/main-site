@@ -16,7 +16,7 @@ import {
 	I18N_PAGE_DESCRIPTION,
 	I18N_PAGE_TITLE_POSTFIX,
 	I18N_RECOMMENDED_RU_ONLY,
-	I18N_SELECT_CHAR_ABOVE,
+	I18N_SELECT_CHAR_BELOW,
 } from '#src/i18n/i18n'
 import { CharacterBuildDetailed } from '#src/modules/builds/character-build-detailed'
 import { isLoaded, useDocumentTitle, usePageDescription } from '#src/utils/hooks'
@@ -26,7 +26,7 @@ export function BuildsPage_CharSelect(): JSX.Element {
 	return (
 		<div className="builds container">
 			<h1 className="my-1 letter-spacing-1">{I18N_CHAR_BUILD_RECS}</h1>
-			<h5 className="mt-2 mb-3 opacity-75">{I18N_SELECT_CHAR_ABOVE}</h5>
+			<h5 className="mt-2 mb-3 opacity-75">{I18N_SELECT_CHAR_BELOW}</h5>
 			<FavoriteCharacters navigateToCharacter={true} classes="mb-2" />
 			<CharacterPicker />
 		</div>
