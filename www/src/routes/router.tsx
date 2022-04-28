@@ -64,10 +64,12 @@ export function useRouter(routes: Routes) {
 		function onPopState(e: PopStateEvent) {
 			forceUpdate(x => x + 1)
 		}
-		addEventListener('click', onClick)
+		// тут обязателен useCapture=true, иначе гуглометрика увидит этот евент первой
+		// и пропишет `location.href = a.href` (т.е. сломает переходы без перезагрузки)
+		addEventListener('click', onClick, true)
 		addEventListener('popstate', onPopState)
 		return () => {
-			removeEventListener('click', onClick)
+			removeEventListener('click', onClick, true)
 			removeEventListener('popstate', onPopState)
 		}
 	}, [routes])
