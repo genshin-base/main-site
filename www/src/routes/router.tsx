@@ -64,10 +64,18 @@ export function useRouter(routes: Routes) {
 		function onPopState(e: PopStateEvent) {
 			forceUpdate(x => x + 1)
 		}
-		addEventListener('click', onClick)
+		// Тут обязательно слушать клик на боди, т.к. на window висит кривая гуглометрика,
+		// которая при виде клика по <a> делает `location.href = a.href`, чем ломает
+		// все роутерные переходы-без-перезагрузки.
+		// Использовать onCapture тоже нельзя: в этом случае onlick какого-нибудь элмента
+		// сработает после пеерключения страницы (т.е. когда элмента на странице уже нет),
+		// это неторт (и предупреждение от preact/debug'а).
+		// Сейчас же слушатель с боди срабатывает до метрики, проставляет `defaultPrevented`,
+		// метрика о чём-то догадывается и не трогает location.
+		document.body.addEventListener('click', onClick)
 		addEventListener('popstate', onPopState)
 		return () => {
-			removeEventListener('click', onClick)
+			document.body.removeEventListener('click', onClick)
 			removeEventListener('popstate', onPopState)
 		}
 	}, [routes])
