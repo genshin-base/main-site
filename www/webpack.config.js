@@ -209,7 +209,7 @@ function DotHtmlPlugin({ template, filename, params }) {
 					const text = await fs.promises.readFile(template, 'utf-8')
 					const tmpl = doT.template(text, { strip: false }, {})
 					compilation.fileDependencies.add(template)
-					compilation.emitAsset(filename, new webpack.sources.RawSource(tmpl({ LANGS })))
+					compilation.emitAsset(filename, new webpack.sources.RawSource(tmpl(params)))
 				},
 			)
 		})
@@ -305,6 +305,7 @@ function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
 					// рендерим страницы
 					const pathsToUse = onlyFront ? [paths.front] : paths
 
+					compilation.fileDependencies.add(template)
 					for (const path of Object.values(pathsToUse)) {
 						for (const urlBase of pathToStrings('', path)) {
 							const url = prefixedStrPath(lang, urlBase)
