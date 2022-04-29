@@ -119,8 +119,8 @@ export function useWindowSize(): WindowSize {
 
 declare global {
 	interface WindowEventMap {
-		'x-local-tab-storage': CustomEvent & { detail: { key: string } }
-		'x-local-hashchange': CustomEvent
+		'x-local-tab-storage': CustomEvent<{ key: string }>
+		'x-local-hashchange': CustomEvent<null>
 	}
 }
 
@@ -149,7 +149,7 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, (val: T) =
 	)
 
 	useEffect(() => {
-		function onStorage(e: StorageEvent | { detail: { key: string } }) {
+		function onStorage(e: StorageEvent | CustomEvent<{ key: string }>) {
 			const affectedKey = 'detail' in e ? e.detail.key : e.key
 			if (affectedKey === key) {
 				try {
@@ -401,14 +401,20 @@ function setHashValue(key: string, val: string | null) {
 		history.replaceState(history.state, '', origin + pathname + search + hash)
 	}
 }
-export function useScrollTo<T extends Element>(): [Ref<T>, (flag: boolean) => void] {
+export function useScrollTo<T extends Element>(
+	shouldScrollToArg: boolean,
+	scrollParams?: ScrollIntoViewOptions,
+): [Ref<T>, (flag: boolean) => void] {
 	const ref = useRef<T>(null)
 	const [shouldScrollTo, setShouldScrollTo] = useState(false)
 	useEffect(() => {
-		if (ref.current && shouldScrollTo) {
-			ref.current.scrollIntoView({ behavior: 'smooth' })
+		if (ref.current && (shouldScrollTo || shouldScrollToArg)) {
+			let params: ScrollIntoViewOptions = { behavior: 'smooth' }
+			if (scrollParams) params = { ...params, ...scrollParams }
+			ref.current.scrollIntoView(params)
 			setShouldScrollTo(false)
 		}
-	}, [shouldScrollTo])
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [shouldScrollTo, shouldScrollToArg])
 	return [ref, setShouldScrollTo]
 }

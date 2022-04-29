@@ -19,6 +19,12 @@ type PathProps<T extends RoutePath> = {
 	[K in keyof T as T[K] extends EmptySubRoute ? T[K][0] : never]?: undefined
 }
 
+declare global {
+	interface WindowEventMap {
+		'x-route-to': CustomEvent<{ path: string }>
+	}
+}
+
 const URL_LANG_PREFIX = makeUrlLangPrefix(BUNDLE_ENV.LANG)
 
 function findRoutedComponent(routes: Routes, url: string): [ComponentType, Record<string, string>] | null {
@@ -33,24 +39,31 @@ function pathSearchHash(url: { pathname: string; search: string; hash: string })
 	return url.pathname + url.search + url.hash
 }
 
+function tryRouteToPage(routes: Routes, url: URL) {
+	if (url.origin === location.origin) {
+		if (findRoutedComponent(routes, url.pathname)) {
+			if (pathSearchHash(location) !== pathSearchHash(url)) {
+				const hashChanged = url.hash !== location.hash
+				history.pushState(null, '', pathSearchHash(url))
+				if (hashChanged) dispatchEvent(new CustomEvent('x-local-hashchange'))
+			}
+			return true
+		}
+	}
+	return false
+}
+
 function handleAnchorClick(e: MouseEvent, routes: Routes) {
 	if (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || e.button !== 0) return
 
 	const a = e.target instanceof Element && e.target.closest('a')
 	if (a && a.href && (!a.target || a.target === '_self')) {
-		const url = new URL(a.href)
-		if (url.origin === location.origin) {
-			if (findRoutedComponent(routes, url.pathname)) {
-				if (pathSearchHash(location) !== pathSearchHash(url)) {
-					const hashChanged = url.hash !== location.hash
-					history.pushState(null, '', pathSearchHash(url))
-					if (hashChanged) dispatchEvent(new CustomEvent('x-local-hashchange'))
-				}
-				e.preventDefault()
-				return true
-			}
+		if (tryRouteToPage(routes, new URL(a.href))) {
+			e.preventDefault()
+			return true
 		}
 	}
+	return false
 }
 
 export function useRouter(routes: Routes) {
@@ -60,6 +73,14 @@ export function useRouter(routes: Routes) {
 		function onClick(e: MouseEvent) {
 			const handled = handleAnchorClick(e, routes)
 			if (handled) forceUpdate(x => x + 1)
+		}
+		function onRouteTo(e: WindowEventMap['x-route-to']) {
+			const url = new URL(e.detail.path, location.href)
+			if (tryRouteToPage(routes, url)) {
+				forceUpdate(x => x + 1)
+			} else {
+				location.href = url.toString()
+			}
 		}
 		function onPopState(e: PopStateEvent) {
 			forceUpdate(x => x + 1)
@@ -73,9 +94,11 @@ export function useRouter(routes: Routes) {
 		// Сейчас же слушатель с боди срабатывает до метрики, проставляет `defaultPrevented`,
 		// метрика о чём-то догадывается и не трогает location.
 		document.body.addEventListener('click', onClick)
+		addEventListener('x-route-to', onRouteTo)
 		addEventListener('popstate', onPopState)
 		return () => {
 			document.body.removeEventListener('click', onClick)
+			removeEventListener('x-route-to', onRouteTo)
 			removeEventListener('popstate', onPopState)
 		}
 	}, [routes])
@@ -83,7 +106,22 @@ export function useRouter(routes: Routes) {
 	const res = findRoutedComponent(routes, location.pathname)
 	if (!res) return '404'
 	const [Comp, props] = res
+	console.log(Comp)
 	return <Comp {...props} />
+}
+
+/**
+ * Создаёт евент, который можно кинуть роутеру, чтоб тот перешёл на другую страницу.
+ * Например:
+ *   dispatchRouteTo('/path/to/page')
+ * Тут бы логичнее выглядел какой-нибудь
+ *   const goToPage = useRouterGoTo()
+ *   goToPage('/path/to/page')
+ * Но для этого всё внутри <App> надо оборачивать в провайдер, делать хуки с консьюмерами...
+ * А тут кинул евент - и всё.
+ */
+export function dispatchRouteTo(path: string) {
+	dispatchEvent(new CustomEvent('x-route-to', { detail: { path } }))
 }
 
 export const route = <TPath extends RoutePath>(

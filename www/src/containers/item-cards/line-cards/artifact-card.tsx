@@ -1,35 +1,32 @@
-import { useCallback, useMemo, useState, useEffect } from 'preact/hooks'
+import { useCallback, useEffect, useMemo, useState } from 'preact/hooks'
 
 import { ArtifactRegularInfo } from '#lib/parsing/combine'
-
-import { Accordion } from '#src/components/accordion'
-
-import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
-
-import { isLoaded, useFetch, useHashValue, useScrollTo } from '#src/utils/hooks'
-import { BULLET, DASH, ELLIPSIS } from '#src/utils/typography'
-
-import './line-cards.scss'
-import { CentredSpinner, Spinner } from '#src/components/placeholders'
-import { ItemAvatar } from '../item-avatars'
-import { RecommendedTo } from '../common'
+import { GI_ARTIFACT_TYPE_CODES, GI_ArtifactTypeCode } from '#src/../../lib/genshin'
 import { apiGetArtifact } from '#src/api/endpoints'
-import { getArtifactIconLargeSrc, getArtifactIconSrc } from '#src/utils/artifacts'
+import { getAllRelated } from '#src/api/utils'
+import { Accordion } from '#src/components/accordion'
+import { BlockHeader } from '#src/components/block-header'
+import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
+import { CentredSpinner, Spinner } from '#src/components/placeholders'
+import { BtnTabGroup } from '#src/components/tabs'
 import {
 	I18N_ART_TYPE,
 	I18N_COLLAPSE,
 	I18N_ITEM_STORY,
 	I18N_MAIN_INFO,
-	I18N_PIECES_BONUS,
 	I18N_PIECE_BONUS,
+	I18N_PIECES_BONUS,
 } from '#src/i18n/i18n'
 import { notesToJSX } from '#src/modules/builds/common'
-import { BlockHeader } from '#src/components/block-header'
-import { GI_ArtifactTypeCode, GI_ARTIFACT_TYPE_CODES } from '#src/../../lib/genshin'
-import { BtnTabGroup } from '#src/components/tabs'
-import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from '../card-map'
-import { getAllRelated } from '#src/api/utils'
 import { ARTIFACT_ROW_CARD_HASH_KEY, genEquipmentHash } from '#src/modules/equipment/common'
+import { getArtifactIconLargeSrc, getArtifactIconSrc } from '#src/utils/artifacts'
+import { isLoaded, useFetch, useHashValue, useScrollTo } from '#src/utils/hooks'
+import { BULLET, DASH, ELLIPSIS } from '#src/utils/typography'
+import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from '../card-map'
+import { RecommendedTo } from '../common'
+import { ItemAvatar } from '../item-avatars'
+
+import './line-cards.scss'
 
 const dummyMarkerGroups: CardMapMarkerGroup[] = [
 	{
@@ -245,10 +242,7 @@ export function ArtifactCardTableRow({ artifact, isExpanded, group }: ArtifactRo
 	}, [isExpanded, setSelectedArtifactCode, artifact.code])
 	const bgClass = group === 1 ? 'bg-dark' : 'bg-secondary'
 
-	const [cardRef, setShouldScrollTo] = useScrollTo<HTMLTableCellElement>()
-	useEffect(() => {
-		setShouldScrollTo(isExpanded)
-	}, [isExpanded, setShouldScrollTo])
+	const [cardRef] = useScrollTo<HTMLTableCellElement>(isExpanded)
 
 	const expandedRow = useMemo(() => {
 		return (

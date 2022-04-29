@@ -16,6 +16,7 @@ import {
 	I18N_WEAPON_OBTAIN_SOURCE_NAME,
 } from '#src/i18n/i18n'
 import { notesToJSX } from '#src/modules/builds/common'
+import { genEquipmentHash, WEAPON_ROW_CARD_HASH_KEY } from '#src/modules/equipment/common'
 import { isLoaded, useFetch, useHashValue, useScrollTo } from '#src/utils/hooks'
 import { getItemIconSrc } from '#src/utils/items'
 import { BULLET, DASH, ELLIPSIS } from '#src/utils/typography'
@@ -25,7 +26,6 @@ import { AscMaterials, RecommendedTo } from '../common'
 import { ItemAvatar } from '../item-avatars'
 
 import './line-cards.scss'
-import { genEquipmentHash, WEAPON_ROW_CARD_HASH_KEY } from '#src/modules/equipment/common'
 
 type WeaponRowProps = {
 	weapon: WeaponRegularInfo
@@ -231,10 +231,7 @@ export function WeaponCardTableRow({ weapon, isExpanded, group }: WeaponRowProps
 		isExpanded ? setSelectedWeaponCode(null) : setSelectedWeaponCode(weapon.code)
 	}, [isExpanded, setSelectedWeaponCode, weapon.code])
 
-	const [cardRef, setShouldScrollTo] = useScrollTo<HTMLTableCellElement>()
-	useEffect(() => {
-		setShouldScrollTo(isExpanded)
-	}, [isExpanded, setShouldScrollTo])
+	const [cardRef] = useScrollTo<HTMLTableCellElement>(isExpanded)
 	const bgClass = group === 1 ? 'bg-dark' : 'bg-secondary'
 
 	const expandedRow = useMemo(() => {
