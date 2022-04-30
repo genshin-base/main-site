@@ -121,7 +121,7 @@ export function useRouter(routes: Routes) {
  * А тут кинул евент - и всё.
  */
 export function dispatchRouteTo(path: string) {
-	dispatchEvent(new CustomEvent('x-route-to', { detail: { path } }))
+	dispatchEvent(new CustomEvent('x-route-to', { detail: { path: URL_LANG_PREFIX + path } }))
 }
 
 export const route = <TPath extends RoutePath>(
