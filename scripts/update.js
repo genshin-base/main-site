@@ -289,7 +289,7 @@ async function extractAndSaveBuildsData() {
 	const spreadsheet = await loadSpreadsheetCached(
 		`${BASE_DIR}/google.private_key.json`,
 		`${CACHE_DIR}/google.access_token.json`,
-		`${DATA_CACHE_DIR}/spreadsheet.json`,
+		`${BUILDS_CACHE_DIR}/spreadsheet.json`,
 		HELPERTEAM_DOC_ID,
 		[
 			'sheets.properties',

@@ -394,6 +394,18 @@ export const I18N_ART_GROUP_NAME: Record<GI_ArtifactGroupCode, string> = {
 	'20%-er': { en: 'Energy Recharge +20%', ru: 'Восстановление энергии +20%' }[LANG],
 	'25%-ph-atk': { en: 'Physical DMG +25%', ru: 'Физ. урон +25%' }[LANG],
 }
+export const I18N_ITEM_DETAIL = {
+	en: 'item detail',
+	ru: 'страница предмета',
+}[LANG]
+export const I18N_ARROWS_TO_SELECT = {
+	en: 'you can use Arrow keys and Enter to select option',
+	ru: 'нужный результат можно быстро выбрать кнопками-стрелочками и Интером',
+}[LANG]
+export const I18N_RECOMMENDED_BUILDS = {
+	en: 'recomended builds',
+	ru: 'билды персонажа',
+}[LANG]
 export const I18N_OBTAIN_SOURCES = {
 	en: 'Obtain sources',
 	ru: 'Способы получения',

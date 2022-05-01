@@ -5,10 +5,13 @@ import { apiGetSearchData } from '#src/api/endpoints'
 import { BlockHeader } from '#src/components/block-header'
 import { CentredLabel, CentredSpinner } from '#src/components/placeholders'
 import {
+	I18N_ARROWS_TO_SELECT,
 	I18N_ARTIFACTS,
 	I18N_CHARACTERS,
+	I18N_ITEM_DETAIL,
 	I18N_MEGA_SEARCH_PLACEHOLDER,
 	I18N_NOTHING_TO_SHOW,
+	I18N_RECOMMENDED_BUILDS,
 	I18N_WEAPONS,
 } from '#src/i18n/i18n'
 import { genEquipmentHash } from '#src/modules/equipment/common'
@@ -70,12 +73,16 @@ export function MegaSearch({ classes = '' }: { classes?: string }): JSX.Element 
 		return searchDataLocal
 	}, [searchData])
 
-	const clearSearch = useCallback(() => {
-		setSearchStr('')
-	}, [])
-
 	const ddRef = useRef<HTMLDivElement>(null)
 	const targetRef = useRef<HTMLInputElement>(null)
+
+	const clearSearch = useCallback(
+		(shouldBlur?: boolean) => {
+			if (shouldBlur && targetRef.current) targetRef.current.blur()
+			setSearchStr('')
+		},
+		[targetRef],
+	)
 
 	useClickAway([targetRef, ddRef], clearSearch)
 
@@ -104,13 +111,15 @@ export function MegaSearch({ classes = '' }: { classes?: string }): JSX.Element 
 	}, [searchStr, searchDataGrouped, searchData])
 
 	useEffect(() => {
+		const clearSearchAndBlurLocal = () => clearSearch(true)
+
 		function onKeyPress(e: KeyboardEvent) {
-			if (e.key === 'Escape') clearSearch()
+			if (e.key === 'Escape') clearSearch(true)
 		}
-		addEventListener('popstate', clearSearch)
+		addEventListener('popstate', clearSearchAndBlurLocal)
 		addEventListener('keydown', onKeyPress)
 		return () => {
-			removeEventListener('popstate', clearSearch)
+			removeEventListener('popstate', clearSearchAndBlurLocal)
 			removeEventListener('keydown', onKeyPress)
 		}
 	}, [clearSearch])
@@ -138,7 +147,7 @@ export function MegaSearch({ classes = '' }: { classes?: string }): JSX.Element 
 				searchResults &&
 				createPortal(
 					<div className="card search-results-dd position-absolute mx-2 my-1" ref={ddRef}>
-						<div className="card-body p-2">
+						<div className="card-body p-2 pb-4 position-relative">
 							{searchResults && (
 								<SearchResultsWrap
 									searchResults={searchResults}
@@ -146,6 +155,14 @@ export function MegaSearch({ classes = '' }: { classes?: string }): JSX.Element 
 									clearSearch={clearSearch}
 								/>
 							)}
+							<div
+								className={`position-absolute w-100\
+				 										px-2 py-2 lh-1 text-center\
+														bottom-0 start-0 small text-muted \
+														opacity-75 pe-none`}
+							>
+								<div class="d-none d-md-block">{I18N_ARROWS_TO_SELECT}</div>
+							</div>
 						</div>
 					</div>,
 					GET_MODALS_EL(),
@@ -189,15 +206,15 @@ function SearchResultsWrap({
 }: {
 	searchResults: SearchResults
 	searchStr: string
-	clearSearch: () => unknown
+	clearSearch: (shouldBlur?: boolean) => unknown
 }): JSX.Element {
 	const forceUpdate = useForceUpdate()
-	const selected = useRef({ type: 'character' as SearchItemType, index: 0 }).current
+	const selected = useRef({ type: 'character' as SearchItemType, index: -1 }).current
 
 	useMemo(() => {
-		// после изменения поисковой строки выбираем первый элемент
+		// после изменения поисковой строки снимаем выделение с элементов
 		// и по возможности сохраняем текущую группу
-		selected.index = 0
+		selected.index = -1
 		switchSearchType(searchResults, selected, 0, 1)
 	}, [searchResults, selected])
 
@@ -222,7 +239,7 @@ function SearchResultsWrap({
 				const item = results[selected.index]
 				if (item) {
 					const path = mainItemHrefMap[item.type](item.code)
-					clearSearch()
+					clearSearch(true)
 					dispatchRouteTo(path)
 					e.preventDefault()
 				}
@@ -285,26 +302,27 @@ const SearchItemCard = ({
 	item: SearchItem
 	searchStr: string
 	isSelected: boolean
-	clearSearch: () => unknown
+	clearSearch: (shouldBlur?: boolean) => unknown
 }): JSX.Element => {
 	const [wrapRef] = useScrollTo<HTMLDivElement>(isSelected, { block: 'nearest' })
-
+	const clearSearchAndBlurLocal = useCallback(() => clearSearch(true), [clearSearch])
 	const regexp = new RegExp(`(${searchStr})`, 'gi')
 	const nameWithHighlight = searchStr ? highlightPartOfText(regexp, item.name) : item.name
 	const nameEnWithHighlight = searchStr ? highlightPartOfText(regexp, item.nameEn) : item.nameEn
 	const mainItemHref = mainItemHrefMap[item.type](item.code)
 	return (
 		<div
-			className="lh-sm d-flex mt-1 mb-2 py-1"
+			className={`lh-sm d-flex mt-1 mb-2 py-1 search-item-card rounded ${
+				isSelected ? 'ps-1 highlighted bg-secondary' : ''
+			}`}
 			ref={wrapRef}
-			style={{ background: isSelected ? 'red' : null }}
 		>
 			<div className="me-1 d-none d-md-block ">
 				<ItemAvatar
 					src={getIconForItem(item)}
 					href={mainItemHref}
 					classes="bg-dark-on-dark"
-					onClick={clearSearch}
+					onClick={clearSearchAndBlurLocal}
 				/>
 			</div>
 			<div>
@@ -315,18 +333,18 @@ const SearchItemCard = ({
 				<div className="text-muted small text-break">{nameEnWithHighlight}</div>
 				<div className="small">
 					{item.type === 'weapon' && (
-						<A href={mainItemHref} onClick={clearSearch}>
-							item detail
+						<A href={mainItemHref} onClick={clearSearchAndBlurLocal}>
+							{I18N_ITEM_DETAIL}
 						</A>
 					)}
 					{item.type === 'artifact' && (
-						<A href={mainItemHref} onClick={clearSearch}>
-							item detail
+						<A href={mainItemHref} onClick={clearSearchAndBlurLocal}>
+							{I18N_ITEM_DETAIL}
 						</A>
 					)}
 					{item.type === 'character' && (
-						<A href={mainItemHref} onClick={clearSearch}>
-							recomended builds
+						<A href={mainItemHref} onClick={clearSearchAndBlurLocal}>
+							{I18N_RECOMMENDED_BUILDS}
 						</A>
 					)}
 				</div>

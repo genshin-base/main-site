@@ -1,7 +1,15 @@
 .search-results-dd {
   width: 100%;
   max-width: 800px;
+
 }
-.search-results-wrap{
+.search-results-wrap {
   height: 300px;
+  max-height: 55vh;
+}
+.search-item-card{
+  transition: transform .1s;
+  &.highlighted {
+    transform: scale(0.97, 0.97);
+  }
 }
