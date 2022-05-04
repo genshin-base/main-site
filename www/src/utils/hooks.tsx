@@ -239,11 +239,11 @@ export const useWindowVisibility = () => {
 		const onPageShow = () => setIsVisible(true)
 		document.addEventListener('visibilitychange', onVisibilityChange)
 		window.addEventListener('pagehide', onPageHide)
-		window.addEventListener('pageshow ', onPageShow)
+		window.addEventListener('pageshow', onPageShow)
 		return () => {
 			document.removeEventListener('visibilitychange', onVisibilityChange)
 			window.removeEventListener('pagehide', onPageHide)
-			window.removeEventListener('pageshow ', onPageShow)
+			window.removeEventListener('pageshow', onPageShow)
 		}
 	}, [])
 	return isVisible
