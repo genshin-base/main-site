@@ -106,7 +106,6 @@ export function useRouter(routes: Routes) {
 	const res = findRoutedComponent(routes, location.pathname)
 	if (!res) return '404'
 	const [Comp, props] = res
-	console.log(Comp)
 	return <Comp {...props} />
 }
 

@@ -323,7 +323,24 @@ export const I18N_MEGA_SEARCH_PLACEHOLDER = {
 	ru: 'Искать персонажей, артефакты, оружие',
 }[LANG]
 
-export function I18N_PAGE_DESCRIPTION(
+export const I18N_FRONT_PAGE_DESCRIPTION = {
+	en: 'Up-to-date character builds recommendations, list of all weapons and artifacts in the game, dungeons schedule and other useful information about Genshin Impact',
+	ru: 'Актуальные билды персонажей, список всего оружия и артефактов, что есть в игре, расписание подземелий и другая полезная информация о Геншин Импакте',
+}[LANG]
+export const I18N_BUILDS_PAGE_DESCRIPTION = {
+	en: 'Genshin Impact builds recommendations for every character',
+	ru: 'Рекомендуемые билды для персонажей Геншин Импакта',
+}[LANG]
+export const I18N_EQUIPMENT_PAGE_DESCRIPTION = {
+	en: (code: 'weapons' | 'artifacts') => {
+		return `List of ${code} with full information and recommended characters`
+	},
+	ru: (code: 'weapons' | 'artifacts') => {
+		const name = { artifacts: 'артефактов', weapons: 'оружия' }[code] ?? code
+		return `Список ${name} с полной информацией и рекомендуемыми персонажами`
+	},
+}[LANG]
+export function I18N_CHARACTER_PAGE_DESCRIPTION(
 	characterName: string,
 	roleName: string,
 	weaponR5Name: string | null | undefined,

@@ -11,9 +11,10 @@ import { CharacterPicker } from '#src/containers/character-picker/character-pick
 import { FavoriteCharacters } from '#src/containers/character-picker/favorite-characters'
 import {
 	I18N_BUILD_RECS_FOR,
+	I18N_BUILDS_PAGE_DESCRIPTION,
 	I18N_CHAR_BUILD_RECS,
+	I18N_CHARACTER_PAGE_DESCRIPTION,
 	I18N_LOADING,
-	I18N_PAGE_DESCRIPTION,
 	I18N_PAGE_TITLE_POSTFIX,
 	I18N_RECOMMENDED_RU_ONLY,
 	I18N_SELECT_CHAR_BELOW,
@@ -23,6 +24,9 @@ import { isLoaded, useDocumentTitle, usePageDescription } from '#src/utils/hooks
 
 export function BuildsPage_CharSelect(): JSX.Element {
 	useDocumentTitle(I18N_CHAR_BUILD_RECS + I18N_PAGE_TITLE_POSTFIX)
+
+	usePageDescription(() => I18N_BUILDS_PAGE_DESCRIPTION)
+
 	return (
 		<div className="builds container">
 			<h1 className="my-1 letter-spacing-1">{I18N_CHAR_BUILD_RECS}</h1>
@@ -52,7 +56,7 @@ export function BuildsPage_BuildDetail({ code }: { code: string }): JSX.Element 
 		const weaponR5 = findWeaponWithRarity(build, role, 5)
 		const weaponR4 = findWeaponWithRarity(build, role, 4)
 		const art = findFirtArtifact(build, role)
-		return I18N_PAGE_DESCRIPTION(
+		return I18N_CHARACTER_PAGE_DESCRIPTION(
 			build.character.name,
 			paragraphsToInline(role.name),
 			weaponR5?.name,
