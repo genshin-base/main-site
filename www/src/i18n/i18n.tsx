@@ -333,11 +333,11 @@ export const I18N_BUILDS_PAGE_DESCRIPTION = {
 }[LANG]
 export const I18N_EQUIPMENT_PAGE_DESCRIPTION = {
 	en: (code: 'weapons' | 'artifacts') => {
-		return `List of ${code} with full information and recommended characters`
+		return `List of Genshin Impact ${code} with full information and recommended characters`
 	},
 	ru: (code: 'weapons' | 'artifacts') => {
 		const name = { artifacts: 'артефактов', weapons: 'оружия' }[code] ?? code
-		return `Список ${name} с полной информацией и рекомендуемыми персонажами`
+		return `Список ${name} Геншин Импакта с полной информацией и рекомендуемыми персонажами`
 	},
 }[LANG]
 export function I18N_CHARACTER_PAGE_DESCRIPTION(
