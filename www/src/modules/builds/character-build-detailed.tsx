@@ -169,8 +169,8 @@ export function CharacterBuildDetailed({
 		const role = getRoleData(build, selectedRoleTab.code)
 		return (
 			<>
-				<div>{notesToJSX(role.tips)}</div>
-				<div>{notesToJSX(role.notes)}</div>
+				<div className="mb-2">{notesToJSX(role.tips)}</div>
+				<div className="mb-2">{notesToJSX(role.notes)}</div>
 				<div>{notesToJSX(build.character.credits)}</div>
 			</>
 		)
