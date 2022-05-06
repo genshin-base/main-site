@@ -356,7 +356,10 @@ export function I18N_CHARACTER_PAGE_DESCRIPTION(
 	if (tipsText && !tipsText.trim().endsWith('.')) tipsText += '.'
 	let extraText = tipsText + ' ' + notesText
 	// ограничиваем длину по очередному пробелу
-	if (extraText.length > 250) extraText = extraText.slice(0, extraText.lastIndexOf(' ', 230)) + ELLIPSIS
+	if (extraText.length > 250) {
+		const cutIndex = Math.min(...[' ', '.'].map(x => extraText.lastIndexOf(x, 230)))
+		extraText = extraText.slice(0, cutIndex) + ELLIPSIS
+	}
 
 	return (
 		`${characterName} ${DASH} ${roleName}.` +

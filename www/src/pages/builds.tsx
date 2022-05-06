@@ -115,6 +115,6 @@ function paragraphsToInline(node: CompactTextParagraphs | null): string {
 		if ('p' in node) return paragraphsToInline(node.p)
 	}
 	let text = getInlineText(node)
-	text = text.replaceAll('\n', ': ') //двоеточие после подзаголовков
-	return text.trim()
+	text = text.trim().replaceAll('\n', ': ') //двоеточие после подзаголовков
+	return text
 }
