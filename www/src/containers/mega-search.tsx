@@ -241,13 +241,12 @@ function SearchResultsWrap({
 			}
 
 			if (['Enter', ' '].includes(e.key)) {
-				const singleResultsTypes = itemTypes.filter(x => searchResults[x].length === 1)
+				const gotSingleResult = itemTypes.every(
+					x => searchResults[x].length === (x === selected.type ? 1 : 0),
+				)
 				// если нашлась только одна непустая группа, и в ней только один результат,
 				// сразу переходим на его, даже если он явно не выбран (не в selected)
-				const item =
-					singleResultsTypes.length === 1
-						? searchResults[singleResultsTypes[0]][0]
-						: results[selected.index]
+				const item = results[gotSingleResult ? 0 : selected.index]
 				if (item) {
 					const path = mainItemHrefMap[item.type](item.code)
 					clearSearch(true)
