@@ -50,8 +50,13 @@ function getIconForItem({ code, type }: { code: string; type: SearchItemType }):
 function searchInItem(item: MegaSearch_SearchItem, searchStr: string): boolean {
 	return item.nameLC.includes(searchStr) || (item.nameEnLC ? item.nameEnLC.includes(searchStr) : false)
 }
+function strIndexOrInf(str: string | undefined, searchStr: string) {
+	if (!str) return Infinity
+	const index = str.indexOf(searchStr)
+	return index === -1 ? Infinity : index
+}
 function sortInItem(item: MegaSearch_SearchItem, searchStr: string): number {
-	return Math.min(item.nameLC.indexOf(searchStr), item.nameEnLC ? item.nameEnLC.indexOf(searchStr) : 999)
+	return Math.min(strIndexOrInf(item.nameLC, searchStr), strIndexOrInf(item.nameEnLC, searchStr))
 }
 const itemTypes: SearchItemType[] = ['character', 'weapon', 'artifact']
 
@@ -105,7 +110,7 @@ export function MegaSearch({ classes = '' }: { classes?: string }): JSX.Element 
 		itemTypes.forEach(t => {
 			searchResultsLocal[t] = searchDataGrouped[t]
 				.filter(it => searchInItem(it, searchStr))
-				.sort((a, b) => sortInItem(b, searchStr) - sortInItem(a, searchStr))
+				.sort((a, b) => sortInItem(a, searchStr) - sortInItem(b, searchStr))
 		})
 		return searchResultsLocal
 	}, [searchStr, searchDataGrouped, searchData])
@@ -236,7 +241,13 @@ function SearchResultsWrap({
 			}
 
 			if (['Enter', ' '].includes(e.key)) {
-				const item = results[selected.index]
+				const singleResultsTypes = itemTypes.filter(x => searchResults[x].length === 1)
+				// если нашлась только одна непустая группа, и в ней только один результат,
+				// сразу переходим на его, даже если он явно не выбран (не в selected)
+				const item =
+					singleResultsTypes.length === 1
+						? searchResults[singleResultsTypes[0]][0]
+						: results[selected.index]
 				if (item) {
 					const path = mainItemHrefMap[item.type](item.code)
 					clearSearch(true)
