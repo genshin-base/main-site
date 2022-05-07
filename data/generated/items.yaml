@@ -2124,44 +2124,44 @@ starconch:
   rarity: 1
   craftedFrom: []
   locations:
-    - !loc teyvat -731 1909
+    - !loc teyvat -738 1904
+    - !loc teyvat -724 1914
     - !loc teyvat -707 2145
     - !loc teyvat -705 1830
-    - !loc teyvat -704 1916
     - !loc teyvat -704 2211
-    - !loc teyvat -697 1717
+    - !loc teyvat -701 1730
     - !loc teyvat -686 2265
     - !loc teyvat -683 2123
     - !loc teyvat -683 2263
     - !loc teyvat -680 2273
     - !loc teyvat -669 2045
     - !loc teyvat -656 2098
+    - !loc teyvat -654 1831
     - !loc teyvat -650 2274
     - !loc teyvat -646 2109
-    - !loc teyvat -642 1834
     - !loc teyvat -642 1956
     - !loc teyvat -642 2315
     - !loc teyvat -621 1935
     - !loc teyvat -615 2316
-    - !loc teyvat -594 1978
     - !loc teyvat -593 1824
-    - !loc teyvat -590 1962
+    - !loc teyvat -591 1990
+    - !loc teyvat -590 1957
     - !loc teyvat -590 2414
     - !loc teyvat -559 1782
     - !loc teyvat -559 2359
     - !loc teyvat -543 1934
     - !loc teyvat -542 2394
     - !loc teyvat -537 2475
-    - !loc teyvat -521 1929
+    - !loc teyvat -527 1931
     - !loc teyvat -517 2384
     - !loc teyvat -516 2496
     - !loc teyvat -505 2432
-    - !loc teyvat -498 1931
+    - !loc teyvat -494 1935
     - !loc teyvat -493 2454
     - !loc teyvat -460 1789
+    - !loc teyvat -452 1881
     - !loc teyvat -450 2056
-    - !loc teyvat -448 1880
-    - !loc teyvat -415 1918
+    - !loc teyvat -412 1939
     - !loc teyvat -327 1921
     - !loc teyvat -318 2480
     - !loc teyvat -298 1774
@@ -2170,7 +2170,7 @@ starconch:
     - !loc teyvat -276 1875
     - !loc teyvat -266 1878
     - !loc teyvat -240 1749
-    - !loc teyvat -232 1793
+    - !loc teyvat -239 1791
     - !loc teyvat -197 1749
     - !loc teyvat -194 1762
     - !loc teyvat -191 2454

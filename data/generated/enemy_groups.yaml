@@ -708,7 +708,7 @@ slime:
     - !loc chasm -444 -480
     - !loc chasm -434 -568
     - !loc chasm -249 -560
-    - !loc chasm -246 167
+    - !loc chasm -239 169
     - !loc chasm -220 -570
     - !loc chasm -198 347
     - !loc chasm -161 -589
@@ -3576,10 +3576,10 @@ whopperflower:
     - !loc enkanomiya -291 389
     - !loc enkanomiya -288 -243
     - !loc enkanomiya -275 403
-    - !loc chasm -243 166
+    - !loc chasm -243 171
     - !loc chasm -39 -563
     - !loc chasm 32 -39
-    - !loc chasm 131 270
+    - !loc chasm 126 273
     - !loc chasm 189 -740
 bathysmal-vishap:
   code: bathysmal-vishap

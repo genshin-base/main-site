@@ -243,7 +243,7 @@ const args = parseArgs()
 
 function printUsage() {
 	console.log(`Usage:
-  node ${relativeToCwd(process.argv[1])} [data|www|images] [-h|--help] [--force] [--ignore-cache]`)
+  node ${relativeToCwd(process.argv[1])} [data|builds|www|images] [-h|--help] [--force] [--ignore-cache]`)
 }
 
 if (args['--help'] || args['-h']) {
