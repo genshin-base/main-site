@@ -154,25 +154,25 @@ Circlet main stat will be dependant on your overall stats, depending on your ove
 
 **Regarding Weapon Choices**
 
-**[Primordial Jade Cutter](#weapon:primordial-jade-cutter)**
+**[Primordial Jade Cutter](#weapon:primordial-jade-cutter)**<br>
 With Blizzard Strayer (4) and Cryo Resonance, this weapon overcrits, so avoid getting Crit Rate substats.
 
-**[Aquila Favonia](#weapon:aquila-favonia)**
+**[Aquila Favonia](#weapon:aquila-favonia)**<br>
 While Aquila has Physical Damage% as a main stat, which is basically useless on Ayaka, it is still a good statstick as it has a high base ATK and ATK% buff from the passive, however, it's not a huge upgrade over the other 4 star options and there might be a character which can utilize this weapon better (such as Bennett).
 
-**[Skyward Blade](#weapon:skyward-blade)**
+**[Skyward Blade](#weapon:skyward-blade)**<br>
 The Energy Recharge main stat provided from this sword makes Ayaka comfortable in terms of having a good burst uptime, try to avoid getting Energy Recharge substats since the weapon already provides you with enough Energy Recharge.
 
-**[Amenoma Kageuchi](#weapon:amenoma-kageuchi)**
+**[Amenoma Kageuchi](#weapon:amenoma-kageuchi)**<br>
 Lowers Ayaka's Energy Recharge requirement which allows her to allocate some of her Energy Recharge substats to other offensive substats. This weapon is also free and craftable while being competitive with other 4 star and even some 5 star weapons as well on the list.
 
-**[Blackcliff Longsword](#weapon:blackcliff-longsword)**
+**[Blackcliff Longsword](#weapon:blackcliff-longsword)**<br>
 Due to Ayaka's burst snapshotting, her burst is unable to benefit from the ATK buff from this weapon's passive on the first rotation (since you cast it immediately before defeating an opponent).
 
-**[Harbinger of Dawn](#weapon:harbinger-of-dawn)**
+**[Harbinger of Dawn](#weapon:harbinger-of-dawn)**<br>
 A good Crit statstick if you can keep the requirements up (having >90% HP).
 
-**[The Flute](#weapon:the-flute)**
+**[The Flute](#weapon:the-flute)**<br>
 Offers slightly more damage potential than **Amenoma Kageuchi,** with the tradeoff being losing Kageuchi's energy generation. Decide for yourself which is better for your team and rotations.
 
 
@@ -199,24 +199,24 @@ DPS Ayato focuses on doing large amounts of on-field damage with his Elemental S
 
 **Regarding Weapon Choices**
 
-**[Skyward Blade](#weapon:skyward-blade)**
+**[Skyward Blade](#weapon:skyward-blade)**<br>
 If you have a lot of ER% from substats, this weapon performs equal to/below [Amenoma Kageuchi](#weapon:amenoma-kageuchi).
 
-**[Summit Shaper](#weapon:summit-shaper)**
+**[Summit Shaper](#weapon:summit-shaper)**<br>
 In teams where ATK buffs are scarce, this weapon has the potential to rival Skyward Blade.
 
-**[Lion's Roar](#weapon:lions-roar)**
+**[Lion's Roar](#weapon:lions-roar)**<br>
 In Electro-Charged teams, this weapon performs better than [The Black Sword](#weapon:the-black-sword).
 
 **Regarding Artifact Sets**
 
-**[Echoes of an Offering (4)](#artifact:echoes-of-an-offering)**
+**[Echoes of an Offering (4)](#artifact:echoes-of-an-offering)**<br>
 The performance of this artifact set is inconsistent, and is based on user ping and other factors.
 
-**[Blizzard Strayer (4)](#artifact:blizzard-strayer) when run in a Freeze Team**
+**[Blizzard Strayer (4)](#artifact:blizzard-strayer) when run in a Freeze Team**<br>
 this is Ayato's best set. Note that it is not recommended to farm specifically for this set.
 
-**[Thundering Fury (4)](#artifact:thundering-fury) when run in an Electro-Charged team**
+**[Thundering Fury (4)](#artifact:thundering-fury) when run in an Electro-Charged team**<br>
 this is Ayato's best set due to the Cooldown Reduction on Elemental Skill allowing for shorter rotations. Note that it is not recommended to farm specifically for this set.
 
 
@@ -242,12 +242,12 @@ Always activate your skill first, as it reduces stamina consumption and if you h
 
 **Regarding Weapon Choices**
 
-**[Memory of Dust](#weapon:memory-of-dust)**
+**[Memory of Dust](#weapon:memory-of-dust)**<br>
 This weapon requires stacks to be utilized, and in Vaporize DPS comps, you usually don't want to give up the first few Vaporize hits to stack up Memory of Dust's perk.
 
 **Regarding Artifact sets**
 
-**[Ocean-Hued Clam (4)](#artifact:ocean-hued-clam)**
+**[Ocean-Hued Clam (4)](#artifact:ocean-hued-clam)**<br>
 This is the best set to run in an Electro-Charged focused team, and in this scenario her mainstat choices should be optimised for healing instead of personal damage (HP%/HP%/Healing Bonus).
 
 
@@ -268,15 +268,15 @@ Use Elemental Skill and/or Elemental Burst and immediately switch. Building ER i
 
 **Regarding Weapon Choices**
 
-**[Everlasting Moonglow](#weapon:everlasting-moonglow)**
+**[Everlasting Moonglow](#weapon:everlasting-moonglow)**<br>
 For Electro-Charged teams, this weapon will provide the highest personal damage for Barbara. However, Thrilling Tales of Dragon Slayers will still provide the highest team damage due to its 48 ATK% buff.
 
 **Regarding Artifact sets**
 
-**[Maiden Beloved (4)](#artifact:maiden-beloved)**
+**[Maiden Beloved (4)](#artifact:maiden-beloved)**<br>
 This is a very resin inefficient set and should not be intentionally farmed for.
 
-**[Instructor (4)](#artifact:instructor)**
+**[Instructor (4)](#artifact:instructor)**<br>
 The hydro application from Elemental Skill can be used to trigger an elemental reaction and provide a teamwide Elemental Mastery buff.
 
 # === characters.#beidou.credits ===
@@ -317,7 +317,7 @@ Akuoumaru outperforms **Skyward Pride** on a **low ER requirement Beidou** (wher
 **[Emblem of Severed Fate (4)](#artifact:emblem-of-severed-fate)**<br>
 Even after considering the 4-piece set effect, you should refrain from investing into **Energy Recharge** beyond what is needed to burst off cooldown as it will result in a **damage loss** as compared to prioritising offensive stats such as **ATK/Crit.** In team comps where Beidou has **low ER requirements** (i.e. when paired with electro batteries), a **Noblesse Oblige (2) / Thundering Fury (2) / +18% ATK set (2) \[Choose Two\]** will outperform **Emblem of Severed Fate (4).**
 
-**[Thundersoother (4)](#artifact:thundersoother)**
+**[Thundersoother (4)](#artifact:thundersoother)**<br>
 This set works best in an Electro-Charged or mono Electro comps.
 
 **[Noblesse Oblige (4)](#artifact:noblesse-oblige)**<br>
@@ -699,7 +699,7 @@ This weapon will be ranked above Windblume Ode at \[R5\].
 **[Thundersoothers (4)](#artifact:thundersoother)**<br>
 This artifact set will outperform Gladiator's Finale(2) Thundering Fury(2) if used in a team comp where an electro aura is always present (e.g. Electro/Electro-charged comps) therefore it is **highly recommended within this niche.**
 
-**[Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith)**
+**[Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith)**<br>
 This set trades off a portion of Fischl's damage in return for a party wide 20% ATK buff. If you have good pieces as a result of farming Pale Flame (for Eula or otherwise) this can be a good option for her in specific teams. Fischl can benefit from the 20% ATK buff herself if she summons Oz within 3 seconds of his previous attack. Not recommended to specifically farm this set for Fischl.
 
 
@@ -1864,7 +1864,7 @@ Sucrose's Ascension 4 Talent boosts the entire team's EM by 20% of Sucrose's tot
 
 **Regarding Weapon Choices**
 
-[Thrilling Tales of Dragon Slayers](#weapon:thrilling-tales-of-dragon-slayers)
+[Thrilling Tales of Dragon Slayers](#weapon:thrilling-tales-of-dragon-slayers)<br>
 This weapon does not provide any EM, however it overtakes the other weapons on the list when it comes to buffing your team. It offers 48% ATK boost to the character you swap to which is equivalent to 1 main stat. This buffs your DPS more compared to [Sacrificial Fragments](#weapon:sacrificial-fragments) which gives \~44EM, equivalent to only 2 substats.
 
 [Hakushin Ring](#weapon:hakushin-ring)<br>
@@ -2101,7 +2101,7 @@ This build focuses on damage over ER because of his ER ascension stat. This weap
 
 **Regarding Weapon Choices**
 
-[Favonius Warbow](#weapon:favonius-warbow)
+[Favonius Warbow](#weapon:favonius-warbow)<br>
 While terrible for personal damage, this weapon allows Venti to provide more energy for his teammates, while also covering his ER needs. Finding Crit Rate in substats is recommended for consistent passive procs.
 
 [Skyward Harp](#weapon:skyward-harp)<br>
@@ -2467,10 +2467,10 @@ Yanfei can have trouble trying to set up for her reaction DPS. Vaporize is gener
 [Lost Prayer to the Sacred Winds](#weapon:lost-prayer-to-the-sacred-winds)<br>
 Bennett buff/ Thrilling Tales of Dragon Slayer's buff + Noblesse Oblige (4) will push Lost Prayer ahead of Skyward Atlas and Memory of Dust
 
-[Kagura's Verity](#weapon:kaguras-verity)
+[Kagura's Verity](#weapon:kaguras-verity)<br>
 Do note that with Bennett's Buff / Thrilling Tales of Dragon Slayer's buff + Noblesse Oblige (4), Kagura's Verity will push ahead of Skyward Atlas and Memory of Dust.
 
-[The Widsith](#weapon:the-widsith)
+[The Widsith](#weapon:the-widsith)<br>
 Note that with strong attack buffs like Bennett's Burst, an \[R5\] Widsith can outperform most \[R1\] 5-star weapons, with the exception of Lost Prayer to the Sacred Winds.
 
 [Dodoco Tales](#weapon:dodoco-tales)<br>
