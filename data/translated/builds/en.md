@@ -219,6 +219,9 @@ this is Ayato's best set. Note that it is not recommended to farm specifically f
 **[Thundering Fury (4)](#artifact:thundering-fury) when run in an Electro-Charged team**
 this is Ayato's best set due to the Cooldown Reduction on Elemental Skill allowing for shorter rotations. Note that it is not recommended to farm specifically for this set.
 
+# === characters.#barbara.credits ===
+
+[In-depth Guide](https://keqingmains.com/barbara/) from KQM
 
 # === characters.#barbara.roles.#dps.name ===
 

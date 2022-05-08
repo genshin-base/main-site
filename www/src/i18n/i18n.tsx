@@ -118,7 +118,7 @@ const statNamesRu: Record<GI_KnownStatBonusCode, string> = {
 	'def%': '% защиты',
 	dmg: 'урон',
 	'dmg%': '% урона',
-	atk: 'атака',
+	atk: 'сила атаки',
 	'atk%': '% атаки',
 	hp: 'ХП',
 	'hp%': '% ХП',

@@ -98,6 +98,15 @@ characters:
                     count: 2
               notes: null
               seeCharNotes: false
+            - arts:
+                op: or
+                arts:
+                  - code: 18%-atk
+                    count: 2
+                  - code: 18%-atk
+                    count: 2
+              notes: null
+              seeCharNotes: false
           notes: null
           seeCharNotes: false
         mainStats:
@@ -1022,6 +1031,12 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
+                - code: blackcliff-longsword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
                 - code: prototype-rancour
                   refine: null
                   stacks: null
@@ -1161,6 +1176,12 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: skyward-blade
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: blackcliff-longsword
                   refine: null
                   stacks: null
                   notes: null
@@ -1393,7 +1414,7 @@ characters:
             - arts:
                 op: and
                 arts:
-                  - code: bloodstained-chivalry
+                  - code: 25%-ph-atk
                     count: 2
                   - code: 18%-atk
                     count: 2
@@ -1876,11 +1897,17 @@ characters:
                   notes: null
                   seeCharNotes: true
             - similar:
-                - code: the-widsith
-                  refine: "5"
+                - code: kaguras-verity
+                  refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: false
+                  seeCharNotes: true
+            - similar:
+                - code: the-widsith
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: dodoco-tales
                   refine: "5"
@@ -1889,12 +1916,6 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: solar-pearl
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: the-widsith
                   refine: null
                   stacks: null
                   notes: null
@@ -2017,9 +2038,22 @@ characters:
               - b: |-
                   Regarding Weapon Choices:
                   Lost Prayer to the Sacred Winds: 
-              - Bennett buff/ Thrilling Tales of Dragon Slayer's buff + Noblesse
+              - >
+                Bennett buff/ Thrilling Tales of Dragon Slayer's buff + Noblesse
                 Oblige (4) will push Lost Prayer ahead of Skyward Atlas and
-                Memory of Dust
+                Memory of Dust.
+              - b: "Kagura's Verity: "
+              - >
+                Do note that with Bennett's Buff / Thrilling Tales of Dragon
+                Slayer's buff + Noblesse Oblige (4), Kagura's Verity will push
+                ahead of Skyward Atlas and Memory of Dust. 
+              - b: "The Widsith: "
+              - "Note that with strong attack buffs like Bennett's Burst, an "
+              - b: "[R5] "
+              - "Widsith can outperform most "
+              - b: "[R1] "
+              - 5-star weapons, with the exception of Lost Prayer to the Sacred
+                Winds.
               - b: |-
                   
                   Dodoco Tales: 
@@ -2515,7 +2549,7 @@ characters:
                 mostly."
           - p:
               - b: |
-                  Regarding Main Stats Choice:
+                  Regarding Main Stats Priority:
               - If Diluc is run alongside Xingqiu where he can trigger vaporize
                 very often, you can run EM sands as an alternative to ATK sands.
                 EM boosts Diluc's reaction damage by a lot after all. Note that
@@ -3621,11 +3655,13 @@ characters:
               - b: highly recommended within this niche.
               - "\n"
               - b: "Tenacity of the Millelith (4): "
-              - "Works as a low/no investment Fischl build. This set trades off
-                Fischl's damage in return for a party wide 20 ATK% buff. "
-              - b: Not recommended to specifically farm this set for Fischl.
-              - " Only use this set if you have pieces while farming for the
-                Pale Flame set for your Physical DPSes."
+              - "This set trades off a portion of Fischl's damage in return for
+                a party wide 20% ATK buff. If you have good pieces as a result
+                of farming Pale Flame (for Eula or otherwise) this can be a good
+                option for her in specific teams. Fischl can benefit from the
+                20% ATK buff herself if she summons Oz within 3 seconds of his
+                previous attack. "
+              - b: "Not recommended to specifically farm this set for Fischl. "
     credits: null
   - code: beidou
     elementCode: electro
@@ -3848,16 +3884,14 @@ characters:
               - b: " Emblem of Severed Fate (4)."
               - "\n"
               - b: "Thundersoother (4):"
-              - >2
-                 This set seeks to maximise your Burst damage in an Electro-Charged or mono Electro comps, take note that the set could be rendered useless when against enemies with non-Electro elements imbued.
+              - " This set works best in an "
+              - b: Electro-Charged or mono Electro comps.
+              - "\n"
               - b: "Noblesse Oblige (4): "
-              - >
-                This set could be considered if your Beidou can get her
-                Elemental Burst off cooldown and the team doesn't have a
-                Noblesse Oblige (4) user yet, do note that sometimes Beidou
-                doesn't benefit from the ATK buff from the 4 piece set if she's
-                the set holder, so Beidou as a Noblesse Oblige (4) holder isn't
-                really recommended.
+              - This set could be considered
+              - b: " if the team doesn't have a Noblesse Oblige (4) user,"
+              - >2
+                 do note that sometimes Beidou doesn't benefit from the ATK buff from the 4 piece set if she's the set holder, so Beidou as a Noblesse Oblige (4) holder isn't really recommended.
               - b: "Scholar (2) The Exile (2): "
               - This set acts as a cheap beginner's option to provide Beidou
                 with 40% Energy Recharge to help maintain her Elemental Burst
@@ -3969,11 +4003,11 @@ characters:
               notes: null
               seeCharNotes: false
             - arts:
-                op: and
+                op: or
                 arts:
-                  - code: gladiators-finale
+                  - code: 18%-atk
                     count: 2
-                  - code: shimenawas-reminiscence
+                  - code: 18%-atk
                     count: 2
               notes: null
               seeCharNotes: false
@@ -4430,27 +4464,33 @@ characters:
               notes: null
               seeCharNotes: false
             - arts:
-                op: or
-                arts:
-                  - op: and
-                    arts:
-                      - code: pale-flame
-                        count: 2
-                      - code: bloodstained-chivalry
-                        count: 2
-                  - code: gladiators-finale
-                    count: 4
+                code: gladiators-finale
+                count: 4
               notes: null
               seeCharNotes: false
             - arts:
                 op: and
                 arts:
-                  - op: or
-                    arts:
-                      - code: bloodstained-chivalry
-                        count: 2
-                      - code: pale-flame
-                        count: 2
+                  - code: pale-flame
+                    count: 2
+                  - code: bloodstained-chivalry
+                    count: 2
+              notes: null
+              seeCharNotes: false
+            - arts:
+                op: or
+                arts:
+                  - code: 25%-ph-atk
+                    count: 2
+                  - code: 18%-atk
+                    count: 2
+              notes: null
+              seeCharNotes: false
+            - arts:
+                op: or
+                arts:
+                  - code: 18%-atk
+                    count: 2
                   - code: 18%-atk
                     count: 2
               notes: null
@@ -5170,7 +5210,7 @@ characters:
                   notes: null
                   seeCharNotes: false
           notes: null
-          seeCharNotes: true
+          seeCharNotes: false
         artifacts:
           sets:
             - arts:
@@ -5513,10 +5553,12 @@ characters:
                 uptime and procs very easily. Do note that if your Raiden is
                 equipping this set, then she will sacrifice her personal damage.
           - p:
-              - b: "Regarding Main Stats: Raiden's main stat priority for Sands and Goblet
-                  entirely depends on the substats, whether she has external
-                  buffs, and which weapon she is running. "
-              - "You can find a more detailed list of suggestions "
+              - b: |
+                  Regarding Main Stats Priority: 
+              - "Raiden's main stat priority for Sands and Goblet entirely
+                depends on the substats, whether she has external buffs, and
+                which weapon she is running. You can find a more detailed list
+                of suggestions "
               - a: from ZΛNTO#4984's mastersheet
                 href: https://docs.google.com/spreadsheets/d/1VdRUAKFUoKkceIghV5tCfr3kfoiH59mcFOMorI9jYrw/edit#gid=1372936118
               - " here or run it on a calculator/optimizer."
@@ -5714,11 +5756,11 @@ characters:
                 this is Yae's BiS set. This set works best for Yae in
                 Electro-charged teams.
               - b: "Tenacity of the Milelith (4): "
-              - "This set trades Yae's personal damage for a team wide 20% ATK
-                buff. It is "
-              - b: not recommended to specifically farm this set for Yae.
-              - " Only use this if you already have good pieces from farming
-                Pale Flame for your Physical DPSes."
+              - This set trades off a portion of Yae's damage in return for a
+                party wide 20 ATK% buff. If you have good pieces as a result of
+                farming Pale Flame (for Eula or otherwise) this can be a good
+                option for her.
+              - b: " Not recommended to specifically farm this set for Yae."
           - p:
               - b: "Regarding Talent Priority: "
               - " Do note that Yae's Elemental Burst does more damage than her
@@ -5750,8 +5792,13 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: true
-            - similar:
                 - code: mistsplitter-reforged
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: haran-geppaku-futsu
                   refine: null
                   stacks: null
                   notes: null
@@ -5774,15 +5821,14 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: true
-            - similar:
-                - code: festering-desire
-                  refine: "5"
+                - code: amenoma-kageuchi
+                  refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: amenoma-kageuchi
-                  refine: null
+                - code: festering-desire
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -5936,7 +5982,7 @@ characters:
               - b: "[R3+]"
               - " if you are using Elemental Skill off cooldown. "
               - b: |-
-                  At lower refines, this weapon would rank below Skyward Blade.
+                  At lower refines, this weapon would rank below Summit Shaper.
                   Favonius Sword: 
               - "Although this weapon has lower damage potential on Xingqiu, the
                 "
@@ -5951,10 +5997,10 @@ characters:
               - b: "Regarding Weapon Order on [C6]:"
               - " When Xingqiu is "
               - b: "[C6],"
-              - " Mistsplitter and Jade Cutter has the best damage potential
-                given enough ER (170-190%), Skyward Blade has the second best
-                damage potential (same ER requirement as Jade), and Sacrificial
-                Sword has the third best damage potential."
+              - " Jade Cutter, Mistsplitter, Haran, Skyward Blade, Summit
+                Shaper, and Amenoma Kageuchi (in this order) each have higher
+                damage potential than Sacirifical Sword "
+              - b: "[R3+]."
           - p:
               - "Big thanks to Quincy#6965 for helping us with "
               - a: the weapons calculations.
@@ -6011,17 +6057,23 @@ characters:
         weapons:
           advices:
             - similar:
+                - code: skyward-atlas
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
                 - code: lost-prayer-to-the-sacred-winds
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: skyward-atlas
+                - code: memory-of-dust
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: false
+                  seeCharNotes: true
             - similar:
                 - code: the-widsith
                   refine: null
@@ -6035,25 +6087,13 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: memory-of-dust
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: solar-pearl
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
                 - code: blackcliff-agate
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: mappa-mare
+                - code: solar-pearl
                   refine: null
                   stacks: null
                   notes: null
@@ -6064,23 +6104,17 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-            - similar:
-                - code: magic-guide
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
           notes: null
           seeCharNotes: false
         artifacts:
           sets:
             - arts:
-                code: heart-of-depth
+                code: wanderers-troupe
                 count: 4
               notes: null
               seeCharNotes: false
             - arts:
-                code: wanderers-troupe
+                code: heart-of-depth
                 count: 4
               notes: null
               seeCharNotes: false
@@ -6095,6 +6129,11 @@ characters:
                     count: 2
               notes: null
               seeCharNotes: false
+            - arts:
+                code: ocean-hued-clam
+                count: 4
+              notes: null
+              seeCharNotes: true
           notes: null
           seeCharNotes: false
         mainStats:
@@ -6145,17 +6184,25 @@ characters:
           notes: null
           seeCharNotes: false
         tips:
-          - p: Barbara's skill gives you a pulse of healing every 5 seconds, every pulse
-              will imbue you with a Hydro status, that means it can be used for
-              status-cleansing (Pyro in specific, while other elements may take
-              more pulses).
-          - p: Take note that Hydro reacting with Cryo status will freeze you in place, her
-              skill should be used in consideration of the environment
+          - p:
+              - "Due to her high stamina cost on charged attacks, her
+                recommended attack strings for Vaporize playstyle is a "
+              - b: mix of Charged attack spam and N2CJ
+              - " (2 normal attacks followed by a charged attack cancelled with
+                a jump animation)."
+          - p: In Electro-Charged teams, Barbara is expected to weave in attacks in between
+              character swaps.
         notes:
           - p:
+              - "This section is dedicated to the playstyle where Barbara is
+                triggering the vaporize reaction with her charged attack, "
+              - b: >
+                  for an Electro-Charged focused team, follow the weapon choices
+                  in the Support section instead. 
               - >-
-                Use Charged Attacks if you're going to be doing Vaporize DPS,
-                Normal Attacks are for Electro-Charge DPS.
+                For this playstyle, Barbara is heavily recommended to be run
+                with Xiangling, as she is the only character that can keep up
+                with Barbara's hydro application.
 
                 Always activate your skill first, as it reduces stamina consumption and if you have 
               - b: "[C2],"
@@ -6164,9 +6211,16 @@ characters:
               - b: "Regarding Weapon Choices:"
               - "\n"
               - b: "Memory of Dust: "
-              - This weapon requires stacks to be utilized, and in Vaporize DPS
-                comps, you usually don't want to give up the first few Vaporize
-                hits to stack up Memory of Dust's perk.
+              - >
+                This weapon performs poorly due to the need for stacks to be
+                accrued over time.
+              - b: |-
+                  Regarding Artifact sets:
+                  Ocean-Hued Clam (4): 
+              - "This is the best set to run in an Electro-Charged focused team,
+                and in this scenario her mainstat choices should be optimised
+                for healing instead of personal damage "
+              - b: (HP%/HP%/Healing Bonus).
       - code: support
         name: support
         isRecommended: true
@@ -6178,6 +6232,12 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+            - similar:
+                - code: everlasting-moonglow
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: prototype-amber
                   refine: null
@@ -6201,38 +6261,26 @@ characters:
         artifacts:
           sets:
             - arts:
-                code: ocean-hued-clam
-                count: 4
-              notes: null
-              seeCharNotes: false
-            - arts:
                 code: maiden-beloved
                 count: 4
               notes: null
-              seeCharNotes: false
+              seeCharNotes: true
             - arts:
-                op: and
+                op: or
                 arts:
                   - code: maiden-beloved
                     count: 2
                   - code: tenacity-of-the-millelith
                     count: 2
-              notes: null
-              seeCharNotes: true
-            - arts:
-                code: noblesse-oblige
-                count: 4
-              notes: null
-              seeCharNotes: true
-            - arts:
-                op: and
-                arts:
-                  - code: maiden-beloved
-                    count: 2
-                  - code: emblem-of-severed-fate
+                  - code: ocean-hued-clam
                     count: 2
               notes: null
               seeCharNotes: false
+            - arts:
+                code: instructor
+                count: 4
+              notes: null
+              seeCharNotes: true
           notes: null
           seeCharNotes: false
         mainStats:
@@ -6248,7 +6296,6 @@ characters:
             seeCharNotes: false
           sands:
             codes:
-              - er
               - hp%
             notes: null
             seeCharNotes: false
@@ -6258,10 +6305,6 @@ characters:
           advices:
             - codes:
                 - hp%
-              notes: null
-              seeCharNotes: false
-            - codes:
-                - er
               notes: null
               seeCharNotes: false
             - codes:
@@ -6276,20 +6319,47 @@ characters:
             - burst
           notes: null
           seeCharNotes: false
-        tips: null
+        tips:
+          - p: "Barbara's skill gives you a pulse of healing every 5 seconds, every pulse
+              will imbue you with a Hydro status, that means it can be used for
+              status-cleansing (Pyro in specific, while other elements may take
+              more pulses).\r"
+          - p: Take note that Hydro reacting with Cryo status will freeze you in place, her
+              skill should be used in consideration of the environment
         notes:
-          - p: Use Elemental Skill and/or Elemental Burst and immediately switch. Generally,
-              run ER if you want more consistent heals from Elemental Burst.
           - p:
+              - "Use Elemental Skill and/or Elemental Burst and immediately
+                switch. Building ER is "
+              - b: not recommended
+              - " on Support Barbara as her burst should be used as a last
+                resort and should not be expected to be cast every rotation.
+                This is further compounded by the fact that Barbara has no
+                particle generation. For this reason, Ocean-Hued Clam is also "
+              - b: not recommended
+              - " for Support Barbara."
+          - p:
+              - b: |-
+                  Regarding Weapon Choices: 
+                  Everlasting Moonglow:
+              - " For Electro-Charged teams, this weapon will provide the
+                highest personal damage for Barbara. However, "
+              - b: Thrilling Tales of Dragon Slayers
+              - >2
+                 will still provide the highest team damage due to its 48 ATK% buff. 
               - b: "Regarding Artifact Sets:"
               - "\n"
-              - b: "Maiden Beloved (2) Tenacity of the Millelith (2):"
-              - >2
-                 Acts as a place holder set for Maiden Beloved if you want pure healing and have not been able to gather Maiden Beloved (4) yet.
-              - b: "Noblesse Oblige (4): "
-              - Usable option if you want Barbara to have more utility, but do
-                note that Barbara might have bad uptime on this set.
-    credits: null
+              - b: "Maiden Beloved (4): "
+              - >
+                This is a very resin inefficient set and should not be
+                intentionally farmed for.
+              - b: "Instructor (4): "
+              - The hydro application from Elemental Skill can be used to
+                trigger an elemental reaction and provide a teamwide Elemental
+                Mastery buff.
+    credits:
+      - a: In-depth Guide
+        href: https://keqingmains.com/barbara/
+      - " from KQM"
   - code: tartaglia
     elementCode: hydro
     roles:
@@ -7128,7 +7198,7 @@ characters:
                 for her Elemental Skill due to not casting Burst in time."
           - p:
               - b: |-
-                  Regarding Artifact Choices:
+                  Regarding Artifact Sets:
                   Tenacity of the Millelith (4): 
               - "With proper extension of Kokomi's Elemental Skill, she can
                 maintain near "
@@ -7298,7 +7368,7 @@ characters:
                 those situations."
           - p:
               - b: |-
-                  Regarding Artifact Choices:
+                  Regarding Artifact Sets:
                   Tenacity of the Millelith (4): 
               - Although this set offers the lowest personal dmg for Kokomi, the
                 20% ATK team buff can sometimes be better for overall team DPS.
@@ -7309,42 +7379,201 @@ characters:
   - code: ayato
     elementCode: hydro
     roles:
-      - code: dps (wip)
-        name: dps (wip)
+      - code: dps
+        name: dps
         isRecommended: false
         weapons:
-          advices: []
+          advices:
+            - similar:
+                - code: haran-geppaku-futsu
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: primordial-jade-cutter
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: mistsplitter-reforged
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: skyward-blade
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: the-black-sword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: amenoma-kageuchi
+                  refine: 3+
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: summit-shaper
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: blackcliff-longsword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: the-flute
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: lions-roar
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
           notes: null
           seeCharNotes: false
         artifacts:
-          sets: []
-          notes: null
+          sets:
+            - arts:
+                code: heart-of-depth
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                op: and
+                arts:
+                  - code: heart-of-depth
+                    count: 2
+                  - code: 18%-atk
+                    count: 2
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: blizzard-strayer
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: thundering-fury
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: echoes-of-an-offering
+                count: 4
+              notes: null
+              seeCharNotes: true
+          notes: ~= Gladiators Finale (4)
           seeCharNotes: false
         mainStats:
           circlet:
-            codes: []
+            codes:
+              - crit-rate
+              - crit-dmg
             notes: null
             seeCharNotes: false
           goblet:
-            codes: []
+            codes:
+              - hydro-dmg
             notes: null
             seeCharNotes: false
           sands:
-            codes: []
+            codes:
+              - atk
             notes: null
             seeCharNotes: false
           notes: null
           seeCharNotes: false
         subStats:
-          advices: []
+          advices:
+            - codes:
+                - crit-rate
+                - crit-dmg
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk%
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - hp%
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - em
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk
+              notes: null
+              seeCharNotes: false
           notes: null
           seeCharNotes: false
         talents:
-          advices: []
+          advices:
+            - skill
+            - burst
           notes: null
           seeCharNotes: false
-        tips: null
-        notes: DPS (WIP)
+        tips:
+          - p: "Always try to activate Ayato's Elemental Burst before using his skill to
+              maximize his Normal Attack DMG. Getting enough Energy Recharge for
+              this is important, and varies based on team. "
+          - p: The amount of slashes Ayato can do during an Elemental Skill window is
+              sometimes influenced by the player's set FPS.
+        notes:
+          - p: DPS Ayato focuses on doing large amounts of on-field damage with his
+              Elemental Skill, and Elemental Burst.
+          - p:
+              - b: "Regarding Weapon Choices:"
+              - "\n"
+              - b: "Skyward Blade:"
+              - " If you have "
+              - b: a lot of ER% from substats,
+              - " this weapon "
+              - b: performs equal to/below Amenoma Kageuchi.
+              - "\n"
+              - b: "Summit Shaper: "
+              - "In teams where "
+              - b: ATK buffs are scarce,
+              - " this weapon has the "
+              - b: potential to rival Skyward Blade.
+              - "\n"
+              - b: "Lions Roar: "
+              - "In "
+              - b: Electro-Charged teams,
+              - " this weapon "
+              - b: performs better than The Black Sword.
+          - p:
+              - b: "Regarding Artifact Sets:"
+              - "\n"
+              - b: "Echoes of an Offering (4): "
+              - "The performance of this artifact set is "
+              - b: inconsistent,
+              - |2
+                 and is based on user ping and other factors.
+              - b: "Blizzard Strayer (4): When run in a Freeze Team,"
+              - >2
+                 this is Ayato's best set. Note that it is not recommended to farm specifically for this set.
+              - b: "Thundering Fury (4): When run in an Electro-Charged team,"
+              - " this is Ayato's best set due to the Cooldown Reduction on
+                Elemental Skill allowing for shorter rotations. "
+              - b: Note that it is not recommended to farm specifically for this set.
     credits: null
   - code: diona
     elementCode: cryo
@@ -7514,7 +7743,7 @@ characters:
               - Provides both ER and HP which are both valuable for a support
                 diona, increasing ult uptime and healing strength respectively.
           - p:
-              - b: "Regarding Main Stat Choices:"
+              - b: "Regarding Main Stats Priority:"
               - >-2
                  
                 Full Stack HP% is recommended if you want stronger shields but a weaker heal. You can use Healing Bonus Circlet if you want a nice balance between the two.
@@ -8674,7 +8903,7 @@ characters:
                 arts:
                   - code: maiden-beloved
                     count: 2
-                  - code: gladiators-finale
+                  - code: 18%-atk
                     count: 2
               notes: null
               seeCharNotes: false
@@ -9382,11 +9611,11 @@ characters:
               notes: null
               seeCharNotes: false
             - arts:
-                op: and
+                op: or
                 arts:
-                  - code: gladiators-finale
+                  - code: 18%-atk
                     count: 2
-                  - code: shimenawas-reminiscence
+                  - code: 18%-atk
                     count: 2
               notes: null
               seeCharNotes: false
@@ -9524,25 +9753,34 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: summit-shaper
-                  refine: null
-                  stacks: 5
-                  notes: null
-                  seeCharNotes: false
-            - similar:
                 - code: primordial-jade-cutter
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: true
+                - code: summit-shaper
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: aquila-favonia
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: true
-            - similar:
                 - code: skyward-blade
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: amenoma-kageuchi
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: the-black-sword
                   refine: null
                   stacks: null
                   notes: null
@@ -9552,21 +9790,6 @@ characters:
                   stacks: 1
                   notes: null
                   seeCharNotes: false
-                - code: the-black-sword
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: amenoma-kageuchi
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-                - code: the-flute
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: harbinger-of-dawn
                   refine: "5"
@@ -9594,9 +9817,9 @@ characters:
             - arts:
                 op: and
                 arts:
-                  - code: gladiators-finale
+                  - code: 18%-atk
                     count: 2
-                  - code: shimenawas-reminiscence
+                  - code: 18%-atk
                     count: 2
               notes: null
               seeCharNotes: false
@@ -9628,8 +9851,7 @@ characters:
               - atk%
             notes: null
             seeCharNotes: false
-          notes: Circlet main stat will be dependant on your overall stats, depending on
-            your stats, one can be better than the other
+          notes: null
           seeCharNotes: false
         subStats:
           advices:
@@ -9648,14 +9870,14 @@ characters:
             - codes:
                 - crit-rate
               notes: null
-              seeCharNotes: false
+              seeCharNotes: true
             - codes:
                 - atk
               notes: null
               seeCharNotes: false
           notes: Crit Rate loses value here assuming you're running Blizzard Strayer (4),
             if you're not using that artifact set, then it has the same priority
-            as Crit DMG
+            as Crit DMG (You still want to aim for 1:2 ratio in the end)
           seeCharNotes: false
         talents:
           advices:
@@ -9665,8 +9887,8 @@ characters:
           notes: null
           seeCharNotes: false
         tips:
-          - p: Ayaka's Charged Attack, Elemental Skill and Elemental Burst hits enemies
-              inside Venti's Elemental Burst.
+          - p: Ayaka's Charged Attack, Elemental Skill and Elemental Burst is able to hit
+              enemies inside sucked inside Venti's Elemental Burst.
           - p: Her Elemental Burst also stays in place on frozen enemies and slightly knocks
               enemies away when they're not frozen.
         notes:
@@ -9683,47 +9905,46 @@ characters:
                 on her Normal Attacks. Ensure you always have this bonus active
                 to maximise your rotation damage."
           - p:
-              - "She can be played on a "
-              - b: permafreeze team
-              - " (paired with a Hydro enabler such as Mona, Xingqiu, or even
-                Barbara) where she could gain huge benefits from the "
-              - b: Blizzard Strayer (4) artifact set.
-              - " Blizzard Strayer (4) piece gives a huge amount of stats on a
-                Freeze team, so try to get this artifact set as fast as you can.
-                Her Elemental Burst also sticks on frozen enemies, but it also
-                has a small hitbox so you need to position it well so that it
-                can hit multiple bigger enemies."
+              - b: |
+                  Regarding Main Stats Priority:
+              - Circlet main stat will be dependant on your overall stats,
+                depending on your overall stats, one can be better than the
+                other. Since Ayaka is able to get a lot of Crit Value from
+                Blizzard Strayer (4) set, ascension passive, and also possibly
+                weapons, ATK circlets can be competitive to Crit ones, it also
+                has a better drop rate, so don't throw away your good ATK
+                circlets.
           - p:
               - b: "Regarding Weapon Choices:"
               - "\n"
-              - b: "Aquila Favonia:"
-              - >2
-                 While Aquila has Physical Damage% as a main stat, which is basically useless on Ayaka, it is still a good statstick as it has a high base ATK and ATK% buff from the passive.
               - b: "Primordial Jade Cutter:"
               - >2
-                 With Blizzard Strayer (4) and Cryo Resonance, this weapon overcrits, so avoid getting Crit Rate substats.
-              - b: "Skyward Blade, Blackcliff Longsword, The Black Sword, Amenoma Kageuchi:"
-              - " These 4 weapons will give a similar output, so it's not worth
-                getting or building another when you already have one. Depends
-                on how much Energy Recharge you're running, how much stacks your
-                Blackcliff has, how much time you're gonna spend doing Normal
-                Attacks, and how much you value the passive on Amenoma since it
-                gives you leeway in building Energy Recharge, one can be better
-                than the other. If you're running "
-              - b: Skyward Blade
-              - " or "
-              - b: Amenoma Kageuchi
-              - " (especially with higher refines), avoid getting Energy
-                Recharge substats as their stats / passives assist in elemental
-                burst generation significantly."
-              - b: |-
-                  
-                  The Flute:
-              - " Offers slightly more damage potential than"
-              - b: " Amenoma Kageuchi,"
-              - " with the tradeoff being losing Kageuchi's energy generation.
-                Decide for yourself which is better for your team and
-                rotations."
+                 With Blizzard Strayer (4) and Cryo Resonance, this weapon overcrits, so try to avoid getting Crit Rate substats.
+              - b: "Aquila Favonia:"
+              - >2
+                 While Aquila has Physical Damage% as a main stat, which is basically useless on Ayaka, it is still a good statstick as it has a high base ATK and ATK% buff from the passive, however, it's not a huge upgrade over the other 4 star options and there might be a character which can utilize this weapon better (such as Bennett).
+              - b: "Skyward Blade: "
+              - >
+                The Energy Recharge main stat provided from this sword makes
+                Ayaka comfortable in terms of having a good burst uptime, try to
+                avoid getting Energy Recharge substats since the weapon already
+                provides you with enough Energy Recharge.
+              - b: "Amenoma Kageuchi: "
+              - >
+                Lowers Ayaka's Energy Recharge requirement which allows her to
+                allocate some of her Energy Recharge substats to other offensive
+                substats. This weapon is also free and craftable while being
+                competitive with other 4 star and even some 5 star weapons as
+                well on the list.
+              - b: "Blackcliff Longsword: "
+              - >
+                Due to Ayaka's burst snapshotting, her burst is unable to
+                benefit from the ATK buff from this weapon's passive on the
+                first rotation (since you cast it immediately before defeating
+                an opponent).
+              - b: "Harbinger of Dawn: "
+              - A good Crit statstick if you can keep the requirements up
+                (having >90% HP).
     credits: null
   - code: aloy
     elementCode: cryo
@@ -10033,9 +10254,9 @@ characters:
             - arts:
                 op: or
                 arts:
-                  - code: gladiators-finale
+                  - code: 18%-atk
                     count: 2
-                  - code: shimenawas-reminiscence
+                  - code: 18%-atk
                     count: 2
                   - code: emblem-of-severed-fate
                     count: 2
@@ -10163,12 +10384,6 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: the-widsith
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
                 - code: favonius-codex
                   refine: null
                   stacks: null
@@ -10224,6 +10439,10 @@ characters:
               notes: null
               seeCharNotes: false
             - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+            - codes:
                 - atk%
               notes: null
               seeCharNotes: false
@@ -10232,10 +10451,6 @@ characters:
                 - crit-dmg
               notes: null
               seeCharNotes: false
-            - codes:
-                - er
-              notes: null
-              seeCharNotes: true
           notes: null
           seeCharNotes: false
         talents:
@@ -10250,57 +10465,37 @@ characters:
           - " you need to be on-field when the swirl reaction happens for you to
             trigger the 4-set effect."
         notes:
-          - p: People often compare Sucrose with Venti for Crowd-Control capabilities, but
-              that's not what you'll be looking for. Sucrose is a character that
-              can give Elemental Mastery to her teammates through swirling the
-              correct elements (Ascension 1 Talent), which improves reaction
-              damage for the Characters benefitting from the EM boost. Her
-              Ascension 4 Talent also boosts the entire team's EM by 20% of
-              Sucrose's total EM, this is why you want to stack as much
-              elemental mastery as possible in her artifacts. As a support, most
-              of Sucrose's value lies on her Ascension 1 and 4 talents, hence
-              leveling her other talents (Normal Attack, Skill, and Burst) is
-              not required.
+          - p: Sucrose's Ascension 4 Talent boosts the entire team's EM by 20% of Sucrose's
+              total EM, this is why you want to stack as much Elemental Mastery
+              as possible in her artifacts. As a support, most of Sucrose's
+              value lies on her Ascension 1 and 4 talents, hence leveling her
+              other talents (Normal Attack, Skill, Burst) is not required.
           - p:
-              - b: |
-                  Regarding Weapon Choices: 
-              - >
-                It's important to note that these weapons were ranked based on
-                how much EM they offered you. However, this doesn't take into
-                account how much each catalyst benefits your entire team's DPS.
+              - b: "Regarding Weapon Choices: "
+              - "\n"
               - b: "Thrilling Tales of Dragon Slayers: "
               - This weapon does not provide any EM, however it overtakes the
-                other weapons on the list when it comes to enabling your team.
-              - b: " It offers 48% ATK boost to the character you swap to which is equivalent to
-                  1 main stat. "
-              - This enables your DPS more if compared to Sacrificial Fragments
-                which only gives ~44EM, equivalent to only 2 substats.
+                other weapons on the list when it comes to buffing your team.
+              - b: " It offers 48% ATK boost to the character you swap to "
+              - which is equivalent to 1 main stat. This buffs your DPS more
+                compared to Sacrificial Fragments which gives ~44EM, equivalent
+                to only 2 substats.
               - b: |-
                   
                   Hakushin Ring: 
               - "Hakushin Ring is a good option for teams where Sucrose can "
               - b: swirl Electro
-              - " to trigger its damage-boosting passive. In Electro - Charged
-                teams, she can buff Hydro DMG% as well."
-              - b: |-
-                  
-                  Widsith:
-              - " This weapon is only useful if you get the EM passive from it.
-                As such, it is "
-              - b: not recommended for general gameplay
-              - |2
-                 but only if you want the highest possible EM buff.
+              - >2
+                 to trigger its damage-boosting passive. In Electro-Charged teams, she can buff Hydro DMG% as well.
               - b: "Favonius Codex:"
               - " This weapon can be useful if you"
-              - b: " need Sucrose's Elemental Burst up as often as possible for grouping."
-              - >-2
-                 You may need to get a few crit rate substats to trigger the passive reliably.
-                There are some team compositions in which Sucrose's Elemental Mastery is not a priority, such as Freeze teams or an Anemo battery for Xiao. In such situations it's better for Sucrose to use to Thrilling Tales of the Dragon Slayers.
-          - p:
-              - b: "Regarding Energy Recharge Priority:"
-              - >-2
-                 
-                Ranking is based on the assumption that Sucrose has Sacrificial Fragments and is not valued for her Burst in teams that may not want Sucrose's Burst interfering with elemental auras. Energy Recharge could be prioritized higher when Sucrose is utilized in teams that don't really mind which element is being applied first and last (e.g. Electro-charged).
+              - b: " value the extra energy generation from the passive."
+              - " You may need to get a few crit rate substats to trigger the
+                passive reliably."
+          - p: There are some team compositions in which Sucrose's Elemental Mastery is not
+              a priority, such as Freeze teams or an Anemo battery for Xiao. In
+              such situations it's better for Sucrose to use Thrilling Tales of
+              the Dragon Slayers.
     credits: null
   - code: sayu
     elementCode: anemo
@@ -10317,7 +10512,7 @@ characters:
                   notes: null
                   seeCharNotes: true
             - similar:
-                - code: sacrificial-greatsword
+                - code: favonius-greatsword
                   refine: null
                   stacks: null
                   notes: null
@@ -10329,7 +10524,7 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: favonius-greatsword
+                - code: sacrificial-greatsword
                   refine: null
                   stacks: null
                   notes: null
@@ -11041,7 +11236,7 @@ characters:
                 prioritize utility options such as Noblesse Oblige or
                 Viridescent Venerer over this set.
           - p:
-              - b: "Regarding Mainstat Choices:"
+              - b: "Regarding Main Stats Priority:"
               - |-
                 
                 Elemental Mastery should only be used 
@@ -11093,6 +11288,12 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+            - similar:
+                - code: favonius-warbow
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: raven-bow
                   refine: "5"
@@ -11202,8 +11403,14 @@ characters:
               damage potential is limited to either extremely high investment or
               single target situations.
           - p:
-              - b: "Regarding Weapon Choices:"
-              - "\n"
+              - b: |-
+                  Regarding Weapon Choices:
+                  Favonius Warbow: 
+              - >
+                While terrible for personal damage, this weapon allows Venti to
+                provide more energy for his teammates, while also covering his
+                ER needs. Finding Crit Rate in substats is recommended for
+                consistent passive procs.
               - b: "Skyward Harp:"
               - >2
                  Due to EM build assumptions, the stats offered aren't very valuable. Consider reading the In-depth Guide from KQM if you're interested in a Crit-focused build.
@@ -12387,8 +12594,12 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: true
-            - similar:
                 - code: prototype-starglitter
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: the-catch
                   refine: null
                   stacks: null
                   notes: null
@@ -12491,9 +12702,8 @@ characters:
               - Note that
               - b: " she must cast Elemental Burst first before Skill, as the passive drains 3
                   energy initially when Skill is cast. "
-              - If you only care about the Energy Recharge, this weapon can be
-                left at level 1 while still getting full effect from the
-                passive.
+              - This weapon can be left at level 1 while still getting full
+                effect from the passive.
           - p:
               - b: "Regarding Artifact Main Stats and Substats Priority:"
               - >-
@@ -12756,12 +12966,8 @@ characters:
             - arts:
                 op: and
                 arts:
-                  - op: or
-                    arts:
-                      - code: pale-flame
-                        count: 2
-                      - code: bloodstained-chivalry
-                        count: 2
+                  - code: 25%-ph-atk
+                    count: 2
                   - code: 18%-atk
                     count: 2
               notes: null
@@ -12951,7 +13157,7 @@ characters:
             - arts:
                 op: and
                 arts:
-                  - code: bloodstained-chivalry
+                  - code: 25%-ph-atk
                     count: 2
                   - code: 18%-atk
                     count: 2
