@@ -54,38 +54,43 @@ async function changes() {
 	const textsDir = `${CACHE_DIR}/translation`
 	await fs.rm(textsDir, { recursive: true, force: true })
 	await fs.mkdir(textsDir, { recursive: true })
-	const curBuildsTextFPath = `${textsDir}/builds_current.md`
-	const refBuildsTextFPath = `${textsDir}/builds_used_for_translation.md`
+	const newBuildsTextFPath = `${textsDir}/builds_new.md`
+	const refBuildsTextFPath = `${textsDir}/builds_old.md`
 
 	info('loading builds...')
-	const curBuilds = await loadBuilds()
+	const newBuilds = await loadBuilds()
 	const refBuilds = await loadTranslationReferenceBuilds()
 
-	curBuilds.characters.sort((a, b) => a.code.localeCompare(b.code))
+	newBuilds.characters.sort((a, b) => a.code.localeCompare(b.code))
 	refBuilds.characters.sort((a, b) => a.code.localeCompare(b.code))
 
 	info('saving texts...')
-	await fs.writeFile(curBuildsTextFPath, textBlocksToMarkdown([...getBuildsFormattedBlocks(curBuilds)]))
+	await fs.writeFile(newBuildsTextFPath, textBlocksToMarkdown([...getBuildsFormattedBlocks(newBuilds)]))
 	await fs.writeFile(refBuildsTextFPath, textBlocksToMarkdown([...getBuildsFormattedBlocks(refBuilds)]))
 
 	info('done.')
 	info('')
-	info('now get diff between:')
+	info('now:')
+	info('1) GET DIFF BETWEEN')
 	info('  ' + relativeToCwd(refBuildsTextFPath))
-	info('  ' + relativeToCwd(curBuildsTextFPath))
-	info('apply changes to:')
-	for (const lang of langs) info('  ' + relativeToCwd(TRANSLATED_BUILDS_LANG_FPATH(lang)))
-	info('verify the result:')
-	info(`  ${thisScript} verify --ref=generated`)
-	info(
-		`and copy ${relativeToCwd(`${GENERATED_DATA_DIR}/builds.yaml`)}` +
-			` to ${relativeToCwd(TRANSLATED_BUILDS_REF_FPATH)}`,
-	)
+	info('  ' + relativeToCwd(newBuildsTextFPath))
 	info('')
-	info('for VSCode:')
-	info(`  code --diff ${relativeToCwd(refBuildsTextFPath)} ${relativeToCwd(curBuildsTextFPath)}`)
-	info('  code ' + langs.map(lang => relativeToCwd(TRANSLATED_BUILDS_LANG_FPATH(lang))).join(' '))
-	info('  split window with Ctrl+\\')
+	info('  for VSCode:')
+	info(`    code --diff ${relativeToCwd(refBuildsTextFPath)} ${relativeToCwd(newBuildsTextFPath)}`)
+	info('')
+	info('2) APPLY CHANGES TO')
+	for (const lang of langs) info('  ' + relativeToCwd(TRANSLATED_BUILDS_LANG_FPATH(lang)))
+	info('')
+	info('  for VSCode:')
+	info('    code ' + langs.map(lang => relativeToCwd(TRANSLATED_BUILDS_LANG_FPATH(lang))).join(' '))
+	info('    split window with Ctrl+\\')
+	info('')
+	info('3) VERIFY THE RESULT')
+	info(`  ${thisScript} verify --ref=generated`)
+	info('')
+	info('4) UPDATE BUILDS DATA FILE')
+	info(`  copy ${relativeToCwd(`${GENERATED_DATA_DIR}/builds.yaml`)}`)
+	info(`    to ${relativeToCwd(TRANSLATED_BUILDS_REF_FPATH)}`)
 }
 
 async function addNewBlocks() {
