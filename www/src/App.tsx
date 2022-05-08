@@ -1,3 +1,4 @@
+import { GoUpBtn } from './components/go-up-btn'
 import { PageWrap } from './components/page-wrap'
 import { Footer } from './containers/footer'
 import { Header } from './containers/header'
@@ -29,6 +30,7 @@ export function App(): JSX.Element {
 				<PageWrap>{page}</PageWrap>
 			</main>
 			<Footer />
+			<GoUpBtn />
 		</div>
 	)
 }

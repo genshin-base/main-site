@@ -418,3 +418,17 @@ export function useScrollTo<T extends Element>(
 	}, [shouldScrollTo, shouldScrollToArg])
 	return [ref, setShouldScrollTo]
 }
+export function useScrollPosition(): number {
+	const [scrollPosition, setScrollPosition] = useState<number>(0)
+
+	useEffect(() => {
+		const setScrollPositionLocal = () => {
+			setScrollPosition(window.pageYOffset)
+		}
+		window.addEventListener('scroll', setScrollPositionLocal)
+		setScrollPositionLocal()
+		return () => window.removeEventListener('scroll', setScrollPositionLocal)
+	}, [])
+
+	return scrollPosition
+}
