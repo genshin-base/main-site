@@ -17,7 +17,8 @@ import {
 	TRANSLATED_BUILDS_LANG_FPATH,
 	TRANSLATED_BUILDS_REF_FPATH,
 } from './_common.js'
-import { textNodesToMarkdown, walkTextNodes } from '#lib/parsing/helperteam/text.js'
+import { walkTextNodes } from '#lib/parsing/helperteam/text.js'
+import { textNodesToMarkdown } from '#lib/parsing/helperteam/text-markdown.js'
 import { trigramMustGetWithThresh, TrigramSearcher } from '#lib/trigrams.js'
 import { GI_ARTIFACT_GROUP_CODES } from '#lib/genshin.js'
 
