@@ -5369,7 +5369,7 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: vortex-vanquisher
+                - code: calamity-queller
                   refine: null
                   stacks: null
                   notes: null
@@ -5380,16 +5380,15 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-            - similar:
                 - code: skyward-spine
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: lithic-spear
+                - code: vortex-vanquisher
                   refine: null
-                  stacks: 2
+                  stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
@@ -5400,6 +5399,12 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: wavebreakers-fin
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: lithic-spear
                   refine: null
                   stacks: null
                   notes: null
@@ -5532,24 +5537,29 @@ characters:
               - b: restores a comfortable amount of energy for her team
               - " (which is further amplified by her passive). This is
                 especially convenient on teams that doesn't conflict with her
-                element and wants the energy provision. (IE Eula, Electro,
+                element and wants the energy provision. (i.e. Eula, Electro,
                 National teams, etc.). Raiden has no issues with firing her ult
                 off cooldown after reaching about 200% Energy Recharge, but it
                 is possible to raise it higher for better energy restoration for
                 her team."
           - p:
-              - b: "Regarding Weapon Choices: This list assumes that Raiden is not ran with an
-                  external buffer."
-              - "\n"
-              - b: "Wavebreaker's Fin: [R5]"
-              - " Wavebreaker's Fin is relatively equal Staff of Homa, depending
-                on your total team burst cost."
+              - b: >-
+                  Regarding Weapon Choices: This list assumes the average across
+                  a variety of buffs. 
+
+                  Skyward Spine: 
+              - >
+                Assumes that you are utilizing the ATK SPD buff to access higher
+                damage combos. 
+              - b: "Wavebreaker's Fin: [R5] "
+              - Wavebreaker's Fin is relatively equal, to Staff of Homa,
+                depending on your total team burst cost.
           - p:
               - b: |-
                   Regarding Artifact Sets:
-                  Tenacity of the Millelith (4): 
-              - This set acts as a low investment support oriented set. Raiden
-                is an excellent ToTM holder since her Elemental Skill has 100%
+                  Tenacity of the Millelith (4): T
+              - his set acts as a low investment support oriented set. Raiden is
+                an excellent ToTM holder since her Elemental Skill has 100%
                 uptime and procs very easily. Do note that if your Raiden is
                 equipping this set, then she will sacrifice her personal damage.
           - p:
@@ -5558,10 +5568,10 @@ characters:
               - "Raiden's main stat priority for Sands and Goblet entirely
                 depends on the substats, whether she has external buffs, and
                 which weapon she is running. You can find a more detailed list
-                of suggestions "
-              - a: from ZΛNTO#4984's mastersheet
+                of suggestions from "
+              - a: ZΛNTO#4984's mastersheet here
                 href: https://docs.google.com/spreadsheets/d/1VdRUAKFUoKkceIghV5tCfr3kfoiH59mcFOMorI9jYrw/edit#gid=1372936118
-              - " here or run it on a calculator/optimizer."
+              - " or run it on a calculator/optimizer."
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/raiden/
@@ -7381,7 +7391,7 @@ characters:
     roles:
       - code: dps
         name: dps
-        isRecommended: false
+        isRecommended: true
         weapons:
           advices:
             - similar:
