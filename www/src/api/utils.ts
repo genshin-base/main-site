@@ -1,8 +1,9 @@
+import { decodeObjLocations } from '#lib/genshin'
 import { DomainShortInfo, EnemyShortInfo, ItemShortInfo } from '#lib/parsing/combine'
 
 export function apiGetJSONFile<T>(path: string, signal?: AbortSignal | null): Promise<T> | T {
 	if (BUNDLE_ENV.IS_SSR) {
-		return JSON.parse(global._SSR_READ_PUBLIC(path))
+		return JSON.parse(SSR_ENV.readPublic(path))
 	} else {
 		return fetch(BUNDLE_ENV.ASSET_PATH + path, { method: 'GET', signal }).then(x => x.json())
 	}
@@ -31,6 +32,14 @@ export function mapAllByCode<T>(obj: T): MapAllByCode<T> {
 		}
 	}
 	return Object.assign({}, obj, { maps })
+}
+
+export function decodeRelatedLocations<T extends { items?: ItemShortInfo[]; enemies?: EnemyShortInfo[] }>(
+	rel: T,
+): T {
+	if (rel.items) for (const item of rel.items) decodeObjLocations(item)
+	if (rel.enemies) for (const enemy of rel.enemies) decodeObjLocations(enemy)
+	return rel
 }
 
 export type RelItemsShort = { items: Map<string, ItemShortInfo> }

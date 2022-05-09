@@ -1,15 +1,17 @@
 import { isPromise } from '#lib/utils/values'
 import { GENERATED_DATA_HASH } from './generated'
-import { apiGetJSONFile, mapAllByCode, MapAllByCode } from './utils'
+import { apiGetJSONFile, decodeRelatedLocations, mapAllByCode, MapAllByCode } from './utils'
 
 import type {
-	ArtifactsFullInfoWithRelated,
+	ArtifactFullInfoWithRelated,
+	ArtifactRegularInfo,
 	CharacterFullInfoWithRelated,
 	ExtractedLocationsInfo,
 	MaterialsTimetableWithRelated,
-	WeaponsFullInfoWithRelated,
+	SearchItem,
+	WeaponFullInfoWithRelated,
+	WeaponRegularInfo,
 } from '#lib/parsing/combine'
-import type { ChangelogsTable } from '#lib/parsing/helperteam/types'
 
 const get = <T>(prefix: string, signal: AbortSignal) =>
 	apiGetJSONFile<T>(`generated/${prefix}.json?v=${GENERATED_DATA_HASH}`, signal)
@@ -35,14 +37,29 @@ export function apiGetCharacterRelatedLocs(
 	return getLang(`characters/${code}-locs`, signal)
 }
 
-export function apiGetArtifacts(
-	signal: AbortSignal,
-): PromiseOrSync<MapAllByCode<ArtifactsFullInfoWithRelated>> {
-	return _map(getLang<ArtifactsFullInfoWithRelated>(`artifacts`, signal), mapAllByCode)
+export function apiGetArtifacts(signal: AbortSignal): PromiseOrSync<ArtifactRegularInfo[]> {
+	return getLang<ArtifactRegularInfo[]>(`artifacts`, signal)
 }
 
-export function apiGetWeapons(signal: AbortSignal): PromiseOrSync<MapAllByCode<WeaponsFullInfoWithRelated>> {
-	return _map(getLang<WeaponsFullInfoWithRelated>(`weapons`, signal), mapAllByCode)
+export function apiGetArtifact(
+	code: string,
+	signal: AbortSignal,
+): PromiseOrSync<MapAllByCode<ArtifactFullInfoWithRelated>> {
+	return _map(getLang<ArtifactFullInfoWithRelated>(`artifacts/${code}`, signal), arts =>
+		mapAllByCode(decodeRelatedLocations(arts)),
+	)
+}
+
+export function apiGetWeapons(signal: AbortSignal): PromiseOrSync<WeaponRegularInfo[]> {
+	return getLang<WeaponRegularInfo[]>(`weapons`, signal)
+}
+export function apiGetWeapon(
+	code: string,
+	signal: AbortSignal,
+): PromiseOrSync<MapAllByCode<WeaponFullInfoWithRelated>> {
+	return _map(getLang<WeaponFullInfoWithRelated>(`weapons/${code}`, signal), arts =>
+		mapAllByCode(decodeRelatedLocations(arts)),
+	)
 }
 
 export function apiMaterialsTimetable(
@@ -51,6 +68,6 @@ export function apiMaterialsTimetable(
 	return _map(getLang<MaterialsTimetableWithRelated>(`timetables/materials`, signal), mapAllByCode)
 }
 
-export function apiGetChangelogs(onlyRecent: boolean, signal: AbortSignal): PromiseOrSync<ChangelogsTable> {
-	return get(`changelogs${onlyRecent ? '-recent' : ''}`, signal)
+export function apiGetSearchData(signal: AbortSignal) {
+	return getLang<SearchItem[]>(`search`, signal)
 }

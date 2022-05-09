@@ -3,11 +3,11 @@ import { useCallback, useContext, useRef, useState } from 'preact/hooks'
 
 import { GI_RarityCode } from '#lib/genshin'
 import {
-	ArtifactFullInfo,
+	ArtifactRegularInfo,
 	DomainShortInfo,
 	EnemyShortInfo,
 	ItemShortInfo,
-	WeaponFullInfo,
+	WeaponRegularInfo,
 } from '#lib/parsing/combine'
 import { mustBeNever } from '#src/../../lib/utils/values'
 import { getCoverArtifactForSet } from '#src/modules/builds/common'
@@ -166,8 +166,8 @@ function ItemDd({
 }
 
 export const ItemsDataContext = createContext({
-	weapons: new Map<string, WeaponFullInfo>(),
-	artifacts: new Map<string, ArtifactFullInfo>(),
+	weapons: new Map<string, WeaponRegularInfo>(),
+	artifacts: new Map<string, ArtifactRegularInfo>(),
 	domains: new Map<string, DomainShortInfo>(),
 	enemies: new Map<string, EnemyShortInfo>(),
 	items: new Map<string, ItemShortInfo>(),

@@ -517,20 +517,34 @@ hilichurl:
     en: Hilichurl
     ru: Хиличурл
   locations:
+    - !loc teyvat -2768 3154
+    - !loc teyvat -2744 3089
+    - !loc teyvat -2696 3130
+    - !loc teyvat -2692 3291
+    - !loc teyvat -2658 2953
+    - !loc teyvat -2632 3296
     - !loc teyvat -2525 1636
     - !loc teyvat -2521 1632
+    - !loc teyvat -2499 2925
     - !loc teyvat -2466 1976
+    - !loc teyvat -2464 2648
     - !loc teyvat -2462 1984
+    - !loc teyvat -2356 2926
     - !loc teyvat -2326 1698
     - !loc teyvat -2265 1731
+    - !loc teyvat -2259 2875
     - !loc teyvat -2246 1802
     - !loc teyvat -2200 1876
     - !loc teyvat -2192 1872
     - !loc teyvat -2191 1874
+    - !loc teyvat -2170 2493
     - !loc teyvat -2144 1073
     - !loc teyvat -2132 2051
     - !loc teyvat -2129 2047
+    - !loc teyvat -2118 2573
+    - !loc teyvat -2117 2739
     - !loc teyvat -2062 1284
+    - !loc teyvat -2062 2582
     - !loc teyvat -2061 2097
     - !loc teyvat -2054 2103
     - !loc teyvat -2040 1696
@@ -648,42 +662,25 @@ hilichurl:
     - !loc teyvat -790 -294
     - !loc teyvat -787 -301
     - !loc teyvat -787 2102
-    - !loc enkanomiya -758 -86
-    - !loc enkanomiya -757 -89
-    - !loc enkanomiya -754 -86
     - !loc teyvat -746 1348
     - !loc teyvat -741 636
     - !loc teyvat -737 -315
     - !loc teyvat -734 -306
-    - !loc enkanomiya -732 -311
     - !loc teyvat -730 725
     - !loc teyvat -730 2551
-    - !loc enkanomiya -724 -217
     - !loc teyvat -724 1083
-    - !loc enkanomiya -723 -92
-    - !loc enkanomiya -719 -219
     - !loc teyvat -718 1891
     - !loc teyvat -715 1253
-    - !loc enkanomiya -714 -226
     - !loc teyvat -707 106
     - !loc teyvat -701 784
-    - !loc enkanomiya -699 -32
     - !loc teyvat -699 1845
     - !loc teyvat -698 1459
-    - !loc enkanomiya -694 -33
-    - !loc enkanomiya -694 -31
     - !loc teyvat -693 -564
-    - !loc enkanomiya -688 -256
-    - !loc enkanomiya -686 -254
     - !loc teyvat -686 181
     - !loc teyvat -685 184
-    - !loc enkanomiya -684 -36
-    - !loc enkanomiya -683 -207
-    - !loc enkanomiya -682 -255
     - !loc teyvat -682 -156
     - !loc teyvat -682 -25
     - !loc teyvat -682 285
-    - !loc enkanomiya -680 -203
     - !loc teyvat -680 -151
     - !loc teyvat -679 737
     - !loc teyvat -678 14
@@ -695,15 +692,10 @@ hilichurl:
     - !loc teyvat -632 1636
     - !loc teyvat -628 1747
     - !loc teyvat -621 1411
-    - !loc enkanomiya -617 -272
-    - !loc enkanomiya -616 -274
-    - !loc enkanomiya -614 -273
     - !loc teyvat -610 989
     - !loc teyvat -600 1644
     - !loc teyvat -594 1057
     - !loc teyvat -593 1338
-    - !loc enkanomiya -590 -248
-    - !loc enkanomiya -590 -246
     - !loc teyvat -582 1646
     - !loc teyvat -559 815
     - !loc teyvat -547 826
@@ -712,8 +704,6 @@ hilichurl:
     - !loc teyvat -535 1090
     - !loc teyvat -533 22
     - !loc teyvat -533 1523
-    - !loc enkanomiya -531 -328
-    - !loc enkanomiya -526 -328
     - !loc teyvat -520 1625
     - !loc teyvat -492 1339
     - !loc teyvat -483 63
@@ -724,42 +714,18 @@ hilichurl:
     - !loc teyvat -446 1190
     - !loc teyvat -443 -119
     - !loc teyvat -440 1505
-    - !loc enkanomiya -435 -391
-    - !loc enkanomiya -431 -392
-    - !loc enkanomiya -421 -386
     - !loc teyvat -417 -56
     - !loc teyvat -413 -57
     - !loc teyvat -413 1475
     - !loc teyvat -412 -57
-    - !loc enkanomiya -394 -232
-    - !loc enkanomiya -392 -229
-    - !loc enkanomiya -389 -235
-    - !loc enkanomiya -386 -237
     - !loc teyvat -385 1243
     - !loc teyvat -371 1369
-    - !loc enkanomiya -364 -494
-    - !loc enkanomiya -362 -496
-    - !loc enkanomiya -362 -334
-    - !loc enkanomiya -362 -308
-    - !loc enkanomiya -357 -336
-    - !loc enkanomiya -353 -339
     - !loc teyvat -353 1201
-    - !loc enkanomiya -352 833
     - !loc teyvat -352 1373
-    - !loc enkanomiya -349 833
-    - !loc enkanomiya -348 830
     - !loc teyvat -348 1198
     - !loc teyvat -343 1729
     - !loc teyvat -342 -123
-    - !loc enkanomiya -339 -258
-    - !loc enkanomiya -339 -257
     - !loc teyvat -338 -105
-    - !loc enkanomiya -338 749
-    - !loc enkanomiya -337 749
-    - !loc enkanomiya -326 -394
-    - !loc enkanomiya -325 -317
-    - !loc enkanomiya -322 -393
-    - !loc enkanomiya -315 -348
     - !loc teyvat -314 1506
     - !loc teyvat -314 6192
     - !loc teyvat -314 6197
@@ -771,7 +737,6 @@ hilichurl:
     - !loc teyvat -299 150
     - !loc teyvat -299 152
     - !loc teyvat -299 197
-    - !loc enkanomiya -299 521
     - !loc teyvat -295 1686
     - !loc teyvat -292 193
     - !loc teyvat -288 191
@@ -789,92 +754,43 @@ hilichurl:
     - !loc teyvat -239 -342
     - !loc teyvat -238 113
     - !loc teyvat -232 -345
-    - !loc enkanomiya -212 569
-    - !loc enkanomiya -207 114
-    - !loc enkanomiya -206 569
-    - !loc enkanomiya -205 111
-    - !loc enkanomiya -199 111
-    - !loc enkanomiya -195 536
     - !loc teyvat -178 1710
-    - !loc enkanomiya -175 516
     - !loc teyvat -174 244
     - !loc teyvat -174 375
     - !loc teyvat -173 249
     - !loc teyvat -169 346
     - !loc teyvat -169 357
-    - !loc enkanomiya -168 -87
-    - !loc enkanomiya -167 132
     - !loc teyvat -167 341
-    - !loc enkanomiya -162 466
     - !loc teyvat -160 2698
-    - !loc enkanomiya -159 468
-    - !loc enkanomiya -158 -88
-    - !loc enkanomiya -155 -87
     - !loc teyvat -153 239
-    - !loc enkanomiya -152 -93
     - !loc teyvat -145 237
-    - !loc enkanomiya -134 516
-    - !loc enkanomiya -133 514
-    - !loc enkanomiya -128 403
     - !loc teyvat -126 1772
-    - !loc enkanomiya -116 -155
-    - !loc enkanomiya -116 416
-    - !loc enkanomiya -115 -159
-    - !loc enkanomiya -115 418
-    - !loc enkanomiya -113 415
-    - !loc enkanomiya -110 169
-    - !loc enkanomiya -109 163
-    - !loc enkanomiya -106 168
-    - !loc enkanomiya -103 166
     - !loc teyvat -101 428
     - !loc teyvat -95 1383
     - !loc teyvat -95 1394
     - !loc teyvat -89 1385
     - !loc teyvat -87 1387
-    - !loc enkanomiya -83 -132
-    - !loc enkanomiya -75 -344
-    - !loc enkanomiya -75 -135
     - !loc teyvat -75 1381
     - !loc teyvat -75 1384
-    - !loc enkanomiya -74 -340
-    - !loc enkanomiya -69 -344
-    - !loc enkanomiya -69 -103
-    - !loc enkanomiya -66 -55
-    - !loc enkanomiya -63 -52
-    - !loc enkanomiya -44 -208
-    - !loc enkanomiya -40 -189
-    - !loc enkanomiya -39 -185
     - !loc teyvat -30 1159
     - !loc teyvat -29 1164
     - !loc teyvat -28 1195
-    - !loc enkanomiya -23 147
     - !loc teyvat -20 1194
-    - !loc enkanomiya -17 147
-    - !loc enkanomiya -14 140
-    - !loc enkanomiya 18 366
     - !loc teyvat 18 681
     - !loc teyvat 20 673
     - !loc teyvat 31 693
-    - !loc enkanomiya 34 374
     - !loc teyvat 34 600
     - !loc teyvat 35 696
-    - !loc enkanomiya 36 -90
-    - !loc enkanomiya 40 -89
     - !loc teyvat 42 611
     - !loc teyvat 43 2415
     - !loc teyvat 54 669
     - !loc teyvat 83 1383
-    - !loc enkanomiya 88 -68
-    - !loc enkanomiya 89 -72
     - !loc teyvat 109 2450
     - !loc teyvat 123 1365
     - !loc teyvat 141 1066
     - !loc teyvat 143 1378
-    - !loc enkanomiya 144 -104
     - !loc teyvat 145 1067
     - !loc teyvat 145 2477
-    - !loc enkanomiya 147 -99
-    - !loc enkanomiya 148 -92
     - !loc teyvat 151 1068
     - !loc teyvat 190 2471
     - !loc teyvat 222 918
@@ -901,8 +817,6 @@ hilichurl:
     - !loc teyvat 383 -207
     - !loc teyvat 385 -193
     - !loc teyvat 394 -374
-    - !loc enkanomiya 396 7
-    - !loc enkanomiya 399 7
     - !loc teyvat 402 -383
     - !loc teyvat 407 1115
     - !loc teyvat 412 599
@@ -916,8 +830,6 @@ hilichurl:
     - !loc teyvat 428 1207
     - !loc teyvat 430 -417
     - !loc teyvat 440 6194
-    - !loc enkanomiya 443 -131
-    - !loc enkanomiya 444 -129
     - !loc teyvat 444 103
     - !loc teyvat 446 6195
     - !loc teyvat 447 97
@@ -931,7 +843,6 @@ hilichurl:
     - !loc teyvat 458 -216
     - !loc teyvat 460 817
     - !loc teyvat 462 1054
-    - !loc enkanomiya 465 -49
     - !loc teyvat 466 19
     - !loc teyvat 467 13
     - !loc teyvat 476 1039
@@ -1163,6 +1074,114 @@ hilichurl:
     - !loc teyvat 3972 7223
     - !loc teyvat 4008 7182
     - !loc teyvat 4048 7176
+    - !loc enkanomiya -758 -86
+    - !loc enkanomiya -757 -89
+    - !loc enkanomiya -754 -86
+    - !loc enkanomiya -732 -311
+    - !loc enkanomiya -724 -217
+    - !loc enkanomiya -723 -92
+    - !loc enkanomiya -719 -219
+    - !loc enkanomiya -714 -226
+    - !loc enkanomiya -699 -32
+    - !loc enkanomiya -694 -33
+    - !loc enkanomiya -694 -31
+    - !loc enkanomiya -688 -256
+    - !loc enkanomiya -686 -254
+    - !loc enkanomiya -684 -36
+    - !loc enkanomiya -683 -207
+    - !loc enkanomiya -682 -255
+    - !loc enkanomiya -680 -203
+    - !loc enkanomiya -617 -272
+    - !loc enkanomiya -616 -274
+    - !loc enkanomiya -614 -273
+    - !loc enkanomiya -590 -248
+    - !loc enkanomiya -590 -246
+    - !loc enkanomiya -531 -328
+    - !loc enkanomiya -526 -328
+    - !loc enkanomiya -435 -391
+    - !loc enkanomiya -431 -392
+    - !loc enkanomiya -421 -386
+    - !loc enkanomiya -394 -232
+    - !loc enkanomiya -392 -229
+    - !loc enkanomiya -389 -235
+    - !loc enkanomiya -386 -237
+    - !loc enkanomiya -364 -494
+    - !loc enkanomiya -362 -496
+    - !loc enkanomiya -362 -334
+    - !loc enkanomiya -362 -308
+    - !loc enkanomiya -357 -336
+    - !loc enkanomiya -353 -339
+    - !loc enkanomiya -352 833
+    - !loc enkanomiya -349 833
+    - !loc enkanomiya -348 830
+    - !loc enkanomiya -339 -258
+    - !loc enkanomiya -339 -257
+    - !loc enkanomiya -338 749
+    - !loc enkanomiya -337 749
+    - !loc enkanomiya -326 -394
+    - !loc enkanomiya -325 -317
+    - !loc enkanomiya -322 -393
+    - !loc enkanomiya -315 -348
+    - !loc enkanomiya -299 521
+    - !loc enkanomiya -212 569
+    - !loc enkanomiya -207 114
+    - !loc enkanomiya -206 569
+    - !loc enkanomiya -205 111
+    - !loc enkanomiya -199 111
+    - !loc enkanomiya -195 536
+    - !loc enkanomiya -175 516
+    - !loc enkanomiya -168 -87
+    - !loc enkanomiya -167 132
+    - !loc enkanomiya -162 466
+    - !loc enkanomiya -159 468
+    - !loc enkanomiya -158 -88
+    - !loc enkanomiya -155 -87
+    - !loc enkanomiya -152 -93
+    - !loc enkanomiya -134 516
+    - !loc enkanomiya -133 514
+    - !loc enkanomiya -128 403
+    - !loc enkanomiya -116 -155
+    - !loc enkanomiya -116 416
+    - !loc enkanomiya -115 -159
+    - !loc enkanomiya -115 418
+    - !loc enkanomiya -113 415
+    - !loc enkanomiya -110 169
+    - !loc enkanomiya -109 163
+    - !loc enkanomiya -106 168
+    - !loc enkanomiya -103 166
+    - !loc enkanomiya -83 -132
+    - !loc enkanomiya -75 -344
+    - !loc enkanomiya -75 -135
+    - !loc enkanomiya -74 -340
+    - !loc enkanomiya -69 -344
+    - !loc enkanomiya -69 -103
+    - !loc enkanomiya -66 -55
+    - !loc enkanomiya -63 -52
+    - !loc enkanomiya -44 -208
+    - !loc enkanomiya -40 -189
+    - !loc enkanomiya -39 -185
+    - !loc enkanomiya -23 147
+    - !loc enkanomiya -17 147
+    - !loc enkanomiya -14 140
+    - !loc enkanomiya 18 366
+    - !loc enkanomiya 34 374
+    - !loc enkanomiya 36 -90
+    - !loc enkanomiya 40 -89
+    - !loc enkanomiya 88 -68
+    - !loc enkanomiya 89 -72
+    - !loc enkanomiya 144 -104
+    - !loc enkanomiya 147 -99
+    - !loc enkanomiya 148 -92
+    - !loc enkanomiya 396 7
+    - !loc enkanomiya 399 7
+    - !loc enkanomiya 443 -131
+    - !loc enkanomiya 444 -129
+    - !loc enkanomiya 465 -49
+    - !loc chasm -213 -248
+    - !loc chasm 90 241
+    - !loc chasm 113 393
+    - !loc chasm 165 121
+    - !loc chasm 180 364
   drop:
     itemCodes:
       - damaged-mask
@@ -1199,9 +1218,15 @@ hilichurl-shooter:
     en: Hilichurl Shooter
     ru: Хиличурл-стрелок
   locations:
+    - !loc teyvat -2720 3037
+    - !loc teyvat -2687 3167
+    - !loc teyvat -2623 2858
+    - !loc teyvat -2613 3229
+    - !loc teyvat -2611 3247
     - !loc teyvat -2567 1554
     - !loc teyvat -2461 1995
     - !loc teyvat -2388 1830
+    - !loc teyvat -2367 2808
     - !loc teyvat -2330 1702
     - !loc teyvat -2298 1726
     - !loc teyvat -2292 1932
@@ -1359,23 +1384,14 @@ hilichurl-shooter:
     - !loc teyvat -764 737
     - !loc teyvat -750 1346
     - !loc teyvat -747 637
-    - !loc enkanomiya -732 -309
-    - !loc enkanomiya -731 -96
     - !loc teyvat -727 1084
     - !loc teyvat -725 -532
-    - !loc enkanomiya -724 -6
     - !loc teyvat -724 727
     - !loc teyvat -722 1893
     - !loc teyvat -720 1903
-    - !loc enkanomiya -716 -18
-    - !loc enkanomiya -715 -172
     - !loc teyvat -711 -141
-    - !loc enkanomiya -711 -90
-    - !loc enkanomiya -711 -5
-    - !loc enkanomiya -710 -161
     - !loc teyvat -708 103
     - !loc teyvat -705 785
-    - !loc enkanomiya -704 -166
     - !loc teyvat -697 1460
     - !loc teyvat -695 -158
     - !loc teyvat -691 275
@@ -1388,8 +1404,6 @@ hilichurl-shooter:
     - !loc teyvat -606 991
     - !loc teyvat -600 -444
     - !loc teyvat -591 -436
-    - !loc enkanomiya -591 -249
-    - !loc enkanomiya -585 -249
     - !loc teyvat -581 1348
     - !loc teyvat -580 1648
     - !loc teyvat -567 736
@@ -1397,7 +1411,6 @@ hilichurl-shooter:
     - !loc teyvat -557 1834
     - !loc teyvat -532 1525
     - !loc teyvat -529 1093
-    - !loc enkanomiya -526 -321
     - !loc teyvat -483 89
     - !loc teyvat -472 43
     - !loc teyvat -470 -40
@@ -1405,12 +1418,9 @@ hilichurl-shooter:
     - !loc teyvat -413 1478
     - !loc teyvat -390 1238
     - !loc teyvat -383 1239
-    - !loc enkanomiya -358 -340
     - !loc teyvat -353 1335
     - !loc teyvat -352 1746
     - !loc teyvat -341 1730
-    - !loc enkanomiya -332 -394
-    - !loc enkanomiya -331 -243
     - !loc teyvat -329 2445
     - !loc teyvat -309 1891
     - !loc teyvat -306 -374
@@ -1418,40 +1428,23 @@ hilichurl-shooter:
     - !loc teyvat -291 1688
     - !loc teyvat -286 182
     - !loc teyvat -279 1625
-    - !loc enkanomiya -274 -266
-    - !loc enkanomiya -271 -267
     - !loc teyvat -258 1817
     - !loc teyvat -252 -305
     - !loc teyvat -251 -318
     - !loc teyvat -240 -312
     - !loc teyvat -233 121
-    - !loc enkanomiya -174 134
-    - !loc enkanomiya -165 132
-    - !loc enkanomiya -164 127
     - !loc teyvat -161 674
     - !loc teyvat -154 670
     - !loc teyvat -122 1773
     - !loc teyvat -111 422
-    - !loc enkanomiya -110 113
-    - !loc enkanomiya -110 129
-    - !loc enkanomiya -104 123
     - !loc teyvat -89 6054
-    - !loc enkanomiya -73 -345
-    - !loc enkanomiya -70 -341
-    - !loc enkanomiya -66 -102
     - !loc teyvat 11 662
-    - !loc enkanomiya 16 -84
-    - !loc enkanomiya 20 -83
-    - !loc enkanomiya 38 15
     - !loc teyvat 48 2413
-    - !loc enkanomiya 49 31
     - !loc teyvat 98 6252
     - !loc teyvat 99 6257
     - !loc teyvat 112 6255
     - !loc teyvat 117 2449
-    - !loc enkanomiya 140 -96
     - !loc teyvat 146 2408
-    - !loc enkanomiya 149 -98
     - !loc teyvat 151 2479
     - !loc teyvat 205 2486
     - !loc teyvat 245 1472
@@ -1460,8 +1453,6 @@ hilichurl-shooter:
     - !loc teyvat 296 1566
     - !loc teyvat 332 1027
     - !loc teyvat 358 1543
-    - !loc enkanomiya 387 -24
-    - !loc enkanomiya 400 -27
     - !loc teyvat 408 361
     - !loc teyvat 422 379
     - !loc teyvat 422 1045
@@ -1469,7 +1460,6 @@ hilichurl-shooter:
     - !loc teyvat 431 -408
     - !loc teyvat 435 1048
     - !loc teyvat 441 1222
-    - !loc enkanomiya 447 -119
     - !loc teyvat 474 1026
     - !loc teyvat 508 -470
     - !loc teyvat 510 514
@@ -1478,9 +1468,6 @@ hilichurl-shooter:
     - !loc teyvat 562 221
     - !loc teyvat 603 302
     - !loc teyvat 622 307
-    - !loc enkanomiya 635 15
-    - !loc enkanomiya 648 13
-    - !loc enkanomiya 652 22
     - !loc teyvat 703 -512
     - !loc teyvat 723 1034
     - !loc teyvat 782 249
@@ -1559,6 +1546,44 @@ hilichurl-shooter:
     - !loc teyvat 4029 7183
     - !loc teyvat 4049 7180
     - !loc teyvat 4075 7154
+    - !loc enkanomiya -732 -309
+    - !loc enkanomiya -731 -96
+    - !loc enkanomiya -724 -6
+    - !loc enkanomiya -716 -18
+    - !loc enkanomiya -715 -172
+    - !loc enkanomiya -711 -90
+    - !loc enkanomiya -711 -5
+    - !loc enkanomiya -710 -161
+    - !loc enkanomiya -704 -166
+    - !loc enkanomiya -591 -249
+    - !loc enkanomiya -585 -249
+    - !loc enkanomiya -526 -321
+    - !loc enkanomiya -358 -340
+    - !loc enkanomiya -332 -394
+    - !loc enkanomiya -331 -243
+    - !loc enkanomiya -274 -266
+    - !loc enkanomiya -271 -267
+    - !loc enkanomiya -174 134
+    - !loc enkanomiya -165 132
+    - !loc enkanomiya -164 127
+    - !loc enkanomiya -110 113
+    - !loc enkanomiya -110 129
+    - !loc enkanomiya -104 123
+    - !loc enkanomiya -73 -345
+    - !loc enkanomiya -70 -341
+    - !loc enkanomiya -66 -102
+    - !loc enkanomiya 16 -84
+    - !loc enkanomiya 20 -83
+    - !loc enkanomiya 38 15
+    - !loc enkanomiya 49 31
+    - !loc enkanomiya 140 -96
+    - !loc enkanomiya 149 -98
+    - !loc enkanomiya 387 -24
+    - !loc enkanomiya 400 -27
+    - !loc enkanomiya 447 -119
+    - !loc enkanomiya 635 15
+    - !loc enkanomiya 648 13
+    - !loc enkanomiya 652 22
   drop:
     itemCodes:
       - damaged-mask
@@ -2047,9 +2072,9 @@ rockfond-rifthound-whelp:
   locations: []
   drop:
     itemCodes:
-      - dark-statuette
-      - deathly-statuette
-      - gloomy-statuette
+      - concealed-claw
+      - concealed-talon
+      - concealed-unguis
     artifactSetCodes:
       - berserker
       - berserker
@@ -2066,9 +2091,9 @@ thundercraven-rifthound-whelp:
   locations: []
   drop:
     itemCodes:
-      - dark-statuette
-      - deathly-statuette
-      - gloomy-statuette
+      - concealed-claw
+      - concealed-talon
+      - concealed-unguis
     artifactSetCodes:
       - berserker
       - berserker
@@ -2085,9 +2110,9 @@ rockfond-rifthound:
   locations: []
   drop:
     itemCodes:
-      - dark-statuette
-      - deathly-statuette
-      - gloomy-statuette
+      - concealed-claw
+      - concealed-talon
+      - concealed-unguis
     artifactSetCodes:
       - berserker
       - berserker
@@ -2104,9 +2129,9 @@ thundercraven-rifthound:
   locations: []
   drop:
     itemCodes:
-      - dark-statuette
-      - deathly-statuette
-      - gloomy-statuette
+      - concealed-claw
+      - concealed-talon
+      - concealed-unguis
     artifactSetCodes:
       - berserker
       - berserker
@@ -2145,6 +2170,54 @@ golden-wolflord:
       - traveling-doctor
       - wanderers-troupe
       - wanderers-troupe
+shadowy-husk-standard-bearer:
+  code: shadowy-husk-standard-bearer
+  name:
+    en: "Shadowy Husk: Standard Bearer"
+    ru: "Чёрный доспех: Знаменосец"
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - deathly-statuette
+      - gloomy-statuette
+    artifactSetCodes: []
+shadowy-husk-line-breaker:
+  code: shadowy-husk-line-breaker
+  name:
+    en: "Shadowy Husk: Line Breaker"
+    ru: "Чёрный доспех: Штурмовик"
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - deathly-statuette
+      - gloomy-statuette
+    artifactSetCodes: []
+shadowy-husk-defender:
+  code: shadowy-husk-defender
+  name:
+    en: "Shadowy Husk: Defender"
+    ru: "Чёрный доспех: Гвардеец"
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - deathly-statuette
+      - gloomy-statuette
+    artifactSetCodes: []
+black-serpent-knight-windcutter:
+  code: black-serpent-knight-windcutter
+  name:
+    en: "Black Serpent Knight: Windcutter"
+    ru: "Рыцарь Чёрного Змея: Разрезающий ветер"
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - deathly-statuette
+      - gloomy-statuette
+    artifactSetCodes: []
 fatui-skirmisher-cryogunner-legionnaire:
   code: fatui-skirmisher-cryogunner-legionnaire
   name:
@@ -2302,6 +2375,7 @@ mirror-maiden:
     en: Mirror Maiden
     ru: Зеркальная дева Фатуи
   locations:
+    - !loc teyvat -2473 3009
     - !loc teyvat -246 5904
     - !loc teyvat 49 5862
     - !loc teyvat 476 6379
@@ -2326,6 +2400,8 @@ mirror-maiden:
     - !loc teyvat 3642 4965
     - !loc teyvat 3718 4681
     - !loc teyvat 4011 5561
+    - !loc chasm -16 -490
+    - !loc chasm 318 -428
   drop:
     itemCodes:
       - crystal-prism
@@ -2345,6 +2421,7 @@ ruin-guard:
     en: Ruin Guard
     ru: Страж руин
   locations:
+    - !loc teyvat -2604 3210
     - !loc teyvat -1938 2576
     - !loc teyvat -1906 2668
     - !loc teyvat -1900 1832
@@ -2354,42 +2431,19 @@ ruin-guard:
     - !loc teyvat -1719 1566
     - !loc teyvat -1707 1540
     - !loc teyvat -1648 2499
-    - !loc enkanomiya -1415 665
     - !loc teyvat -1287 2949
     - !loc teyvat -1237 2065
-    - !loc enkanomiya -1229 323
     - !loc teyvat -961 1993
     - !loc teyvat -929 -366
     - !loc teyvat -841 2389
     - !loc teyvat -748 -200
-    - !loc enkanomiya -656 -16
-    - !loc enkanomiya -647 -24
-    - !loc enkanomiya -646 -15
-    - !loc enkanomiya -638 -293
-    - !loc enkanomiya -492 -243
     - !loc teyvat -491 1420
     - !loc teyvat -444 -372
-    - !loc enkanomiya -327 832
-    - !loc enkanomiya -225 778
-    - !loc enkanomiya -194 -25
-    - !loc enkanomiya -186 -32
     - !loc teyvat -186 1736
-    - !loc enkanomiya -184 -22
-    - !loc enkanomiya -94 524
-    - !loc enkanomiya -93 -16
-    - !loc enkanomiya -91 -7
     - !loc teyvat -52 2698
     - !loc teyvat -51 2687
     - !loc teyvat -31 2668
     - !loc teyvat -28 2686
-    - !loc enkanomiya 90 506
-    - !loc enkanomiya 471 123
-    - !loc enkanomiya 484 149
-    - !loc enkanomiya 500 139
-    - !loc enkanomiya 600 103
-    - !loc enkanomiya 607 97
-    - !loc enkanomiya 624 -239
-    - !loc enkanomiya 637 -236
     - !loc teyvat 985 -532
     - !loc teyvat 989 -38
     - !loc teyvat 1498 -361
@@ -2400,6 +2454,31 @@ ruin-guard:
     - !loc teyvat 1935 8797
     - !loc teyvat 2003 8418
     - !loc teyvat 3542 4759
+    - !loc enkanomiya -1415 665
+    - !loc enkanomiya -1229 323
+    - !loc enkanomiya -656 -16
+    - !loc enkanomiya -647 -24
+    - !loc enkanomiya -646 -15
+    - !loc enkanomiya -638 -293
+    - !loc enkanomiya -492 -243
+    - !loc enkanomiya -327 832
+    - !loc enkanomiya -225 778
+    - !loc enkanomiya -194 -25
+    - !loc enkanomiya -186 -32
+    - !loc enkanomiya -184 -22
+    - !loc enkanomiya -94 524
+    - !loc enkanomiya -93 -16
+    - !loc enkanomiya -91 -7
+    - !loc enkanomiya 90 506
+    - !loc enkanomiya 471 123
+    - !loc enkanomiya 484 149
+    - !loc enkanomiya 500 139
+    - !loc enkanomiya 600 103
+    - !loc enkanomiya 607 97
+    - !loc enkanomiya 624 -239
+    - !loc enkanomiya 637 -236
+    - !loc chasm -49 -20
+    - !loc chasm 179 382
   drop:
     itemCodes:
       - chaos-circuit
@@ -2420,14 +2499,15 @@ ruin-hunter:
     ru: Руинный охотник
   locations:
     - !loc teyvat -2527 1505
+    - !loc teyvat -2172 2488
     - !loc teyvat -1932 2623
     - !loc teyvat -1846 1975
     - !loc teyvat -1719 2957
     - !loc teyvat -1350 2809
     - !loc teyvat -575 1982
     - !loc teyvat -120 2641
-    - !loc enkanomiya 144 328
     - !loc teyvat 3440 4651
+    - !loc enkanomiya 144 328
   drop:
     itemCodes:
       - chaos-circuit
@@ -2447,10 +2527,14 @@ ruin-grader:
     en: Ruin Grader
     ru: Руинный молотильщик
   locations:
+    - !loc teyvat -2622 3215
     - !loc teyvat 394 1694
     - !loc teyvat 450 1784
-    - !loc enkanomiya 627 -231
     - !loc teyvat 3496 4614
+    - !loc enkanomiya 627 -231
+    - !loc chasm -57 -207
+    - !loc chasm 131 353
+    - !loc chasm 145 399
   drop:
     itemCodes:
       - chaos-circuit
@@ -2977,6 +3061,8 @@ geovishap:
     en: Geovishap
     ru: Геовишап
   locations:
+    - !loc teyvat -2529 2875
+    - !loc teyvat -2447 3046
     - !loc teyvat -2441 2048
     - !loc teyvat -2384 1238
     - !loc teyvat -2342 1937
@@ -2985,6 +3071,10 @@ geovishap:
     - !loc teyvat -2051 2261
     - !loc teyvat -1958 1813
     - !loc teyvat -1320 2432
+    - !loc chasm -319 -600
+    - !loc chasm -298 167
+    - !loc chasm 209 -192
+    - !loc chasm 224 -666
   drop:
     itemCodes:
       - fossilized-bone-shard
@@ -3315,6 +3405,41 @@ la-signora:
       - shivada-jade-fragment
       - shivada-jade-gemstone
       - shivada-jade-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+magatsu-mitake-narukami-no-mikoto:
+  code: magatsu-mitake-narukami-no-mikoto
+  name:
+    en: Magatsu Mitake Narukami no Mikoto
+    ru: Магацу митакэ Наруками но микото
+  locations: []
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+      - mudra-of-the-malefic-general
+      - northlander-bow-billet
+      - northlander-catalyst-billet
+      - northlander-claymore-billet
+      - northlander-polearm-billet
+      - northlander-sword-billet
+      - tears-of-the-calamitous-god
+      - the-meaning-of-aeons
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
     artifactSetCodes:
       - berserker
       - berserker

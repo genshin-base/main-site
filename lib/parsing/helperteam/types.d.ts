@@ -50,7 +50,7 @@ type WeaponAdvices<T extends LangMode> = { advices: SimilarWeaponAdvice<T>[] } &
 export type GI_TalentCode = 'attack' | 'skill' | 'burst'
 type TalentAdvices<T extends LangMode> = { advices: (GI_TalentCode | GI_TalentCode[])[] } & BottomNotes<T>
 
-type CharacterBuildInfoRole<T extends LangMode> = {
+export type CharacterBuildInfoRole<T extends LangMode> = {
 	code: string
 	name: LangsIf<T, CompactTextParagraphs | null>
 	isRecommended: boolean
@@ -68,12 +68,6 @@ type CharacterBuildInfo<T extends LangMode> = {
 	elementCode: GI_ElementCode
 	roles: CharacterBuildInfoRole<T>[]
 	credits: LangsIf<T, CompactTextParagraphs | null>
-}
-
-// === Changelogs ===
-
-type ChangelogsTable = {
-	rows: { date: string; changes: CompactTextParagraphs; appliedBy: string }[]
 }
 
 // === Builds ===

@@ -32,4 +32,12 @@ declare const BUNDLE_ENV: {
 	LANG: string
 	IS_SSR: boolean
 	COMMIT_HASH: string
+	SUPPORTED_DOMAINS: string[] | null
+}
+
+declare const SSR_ENV: {
+	key: number
+	lang: string
+	readPublic: (path: string) => string
+	outPageDescription: string | null
 }

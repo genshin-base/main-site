@@ -1,8 +1,9 @@
 import { useCallback, useMemo, useState } from 'preact/hooks'
 
 import { arrShallowEqual } from '#lib/utils/collections'
+import { A } from '#src/routes/router'
 
-export type Tab = { code: string; title?: string | JSX.Element }
+export type Tab = { code: string; title?: string | JSX.Element; href?: string }
 
 export function tabTitleFromName(obj: { name: string }): string {
 	return obj.name
@@ -18,23 +19,24 @@ export function Tabs<T extends Tab>({
 	tabs: T[]
 	titleFunc?: (tab: T) => string | JSX.Element
 	selectedTab: T
-	onTabSelect: (tab: T) => unknown
+	onTabSelect?: (tab: T) => unknown
 	classes?: string
 }): JSX.Element {
 	return (
 		<ul className={`nav nav-tabs ${classes}`}>
 			{tabs.map(t => (
 				<li className="nav-item" key={t.code}>
-					<a
-						className={`nav-link ${t.code === selectedTab.code ? 'active' : ''}`}
-						href="#"
+					<A
+						className={`nav-link c-pointer ${t.code === selectedTab.code ? 'active' : ''}`}
+						href={t.href}
 						onClick={e => {
+							if (t.href) return
 							e.preventDefault()
-							onTabSelect(t)
+							onTabSelect && onTabSelect(t)
 						}}
 					>
 						{titleFunc ? titleFunc(t) : 'title' in t ? t.title : t.code}
-					</a>
+					</A>
 				</li>
 			))}
 		</ul>
@@ -103,6 +105,47 @@ export function BtnTabGroup<T extends Tab>({
 				</div>
 			) : null}
 		</div>
+	)
+}
+export function LightBtnTabGroup<T extends Tab>({
+	tabs,
+	titleFunc,
+	selectedTab,
+	onTabSelect,
+	classes = '',
+}: {
+	tabs: T[]
+	titleFunc?: (tab: T) => string | JSX.Element
+	selectedTab: T
+	onTabSelect?: (tab: T) => void
+	classes?: string
+}): JSX.Element {
+	const btnClass = 'flex-sm-fill small lh-sm text-sm-center nav-link c-pointer'
+	const btnClassActive = btnClass + ' active'
+	const btnClassDisabled = btnClass + ' disabled'
+	return (
+		<nav className={`nav nav-pills flex-column flex-sm-row ${classes}`}>
+			{tabs.map(t => (
+				<A
+					className={
+						tabs.length === 1
+							? btnClassDisabled
+							: t.code === selectedTab.code
+							? btnClassActive
+							: btnClass
+					}
+					key={t.code}
+					href={t.href}
+					onClick={e => {
+						if (t.href) return
+						e.preventDefault()
+						onTabSelect && onTabSelect(t)
+					}}
+				>
+					{titleFunc ? titleFunc(t) : 'title' in t ? t.title : t.code}
+				</A>
+			))}
+		</nav>
 	)
 }
 

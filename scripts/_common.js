@@ -5,12 +5,13 @@ import { dirname } from 'path'
 import { stringifyString, YAMLError } from 'yaml/util'
 import { GI_MAP_CODES } from '#lib/genshin.js'
 import { error, warn } from '#lib/utils/logs.js'
-import { textNodesFromMarkdown, textNodesToMarkdown } from '#lib/parsing/helperteam/text.js'
+import { textNodesFromMarkdown, textNodesToMarkdown } from '#lib/parsing/helperteam/text-markdown.js'
 import { buildsConvertLangMode, getBuildsFormattedBlocks } from '#lib/parsing/helperteam/build_texts.js'
 
 const __filename = fileURLToPath(import.meta.url)
 export const BASE_DIR = dirname(__filename) + '/..'
 export const CACHE_DIR = `${BASE_DIR}/cache`
+export const BUILDS_CACHE_DIR = `${CACHE_DIR}/builds`
 export const DATA_CACHE_DIR = `${CACHE_DIR}/data`
 export const IMGS_CACHE_DIR = `${CACHE_DIR}/imgs`
 export const DATA_DIR = `${BASE_DIR}/data`
@@ -161,11 +162,6 @@ export const loadBuilds = () => loadGeneratedYaml('builds')
 
 /** @returns {Promise<import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>>} */
 export const loadTranslationReferenceBuilds = () => loadYaml(TRANSLATED_BUILDS_REF_FPATH)
-
-/** @param {import('#lib/parsing/helperteam/types').ChangelogsTable} builds */
-export const saveBuildChangelogs = builds => saveGeneratedYaml('build_changelogs', builds)
-/** @returns {Promise<import('#lib/parsing/helperteam/types').ChangelogsTable>} */
-export const loadBuildChangelogs = () => loadGeneratedYaml('build_changelogs')
 
 /**
  * @param {import('#lib/parsing/helperteam/types').BuildInfo<'monolang'>} refBuilds

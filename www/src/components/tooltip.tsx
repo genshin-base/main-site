@@ -1,9 +1,9 @@
-import { calcPosForDd } from '#src/utils/calc-pos-for-dd'
-import { useWindowSize } from '#src/utils/hooks'
-import { createPortal } from '#src/utils/preact-compat'
 import { useCallback, useLayoutEffect, useRef, useState } from 'preact/hooks'
 
-let modalsEl: Element | null = null
+import { calcPosForDd } from '#src/utils/calc-pos-for-dd'
+import { GET_MODALS_EL } from '#src/utils/dom'
+import { useWindowSize } from '#src/utils/hooks'
+import { createPortal } from '#src/utils/preact-compat'
 
 export function Tooltip({
 	children,
@@ -14,7 +14,6 @@ export function Tooltip({
 	classes?: string
 	targetEl: HTMLElement | null | undefined
 }): JSX.Element {
-	modalsEl ??= document.querySelector('.modals') as Element
 	const wrapRef: preact.RefObject<HTMLDivElement> | null = useRef(null)
 	const defClassName = `tooltip fade show ${classes}`
 	const [arrowStyle, setArrowStyle] = useState<string>('')
@@ -42,6 +41,6 @@ export function Tooltip({
 			<div className="tooltip-arrow" style={arrowStyle}></div>
 			<div className="tooltip-inner">{children}</div>
 		</div>,
-		modalsEl,
+		GET_MODALS_EL(),
 	)
 }

@@ -8,7 +8,7 @@ import {
 } from '#lib/genshin'
 import { GI_TalentCode } from '#lib/parsing/helperteam/types'
 import { LINK_DISCORD_INVITE } from '#src/utils/links'
-import { NBSP } from '#src/utils/typography'
+import { BULLET, DASH, ELLIPSIS, NBSP } from '#src/utils/typography'
 
 type Lang = 'en' | 'ru'
 export const LANG = BUNDLE_ENV.LANG as Lang
@@ -17,9 +17,9 @@ export const I18N_LANG_NAMES: Record<Lang, string> = {
 	ru: 'Русский',
 }
 export const I18N_LANG_NAME = I18N_LANG_NAMES[LANG]
-const titlePostfix = ' — Genshin Base'
-export const I18N_PAGE_TITLE_POSTFIX = { en: titlePostfix, ru: titlePostfix }[LANG]
+export const I18N_PAGE_TITLE_POSTFIX = { en: ` ${BULLET} Genshin Base`, ru: ` ${BULLET} Геншин База` }[LANG]
 export const I18N_LOADING = { en: 'Loading', ru: 'Загрузка' }[LANG]
+export const I18N_COLLAPSE = { en: 'Collapse', ru: 'Свернуть' }[LANG]
 export const I18N_DASHBOARD = { en: 'Dashboard', ru: 'Самое важное' }[LANG]
 export const I18N_REGION = { en: 'Region', ru: 'Регион' }[LANG]
 export const I18N_UNTIL_DAY_RESET = { en: 'Until Day Reset', ru: 'До нового дня' }[LANG]
@@ -41,6 +41,7 @@ export const I18N_TOMORROW = { en: 'tomorrow', ru: 'завтра' }[LANG]
 export const I18N_DUNGEONS = { en: 'Dungeons', ru: 'Подземелья' }[LANG]
 export const I18N_TALENTS = { en: 'Talents', ru: 'Таланты' }[LANG]
 export const I18N_WEAPONS = { en: 'Weapons', ru: 'Оружие' }[LANG]
+export const I18N_MAIN_INFO = { en: 'main info', ru: 'основная информация' }[LANG]
 export const I18N_WEAPON_STACKS_COUNT = {
 	en: (stacks: number) => stacks + ' ' + pluralizeEN(stacks, 'stack', 'stacks'),
 	ru: (stacks: number) => stacks + ' ' + pluralizeRU(stacks, 'стак', 'стака', 'стаков'),
@@ -86,6 +87,7 @@ export const I18N_CHOOSE_FROM_FAV = {
 	ru: 'Выберите из избранных',
 }[LANG]
 export const I18N_ARTIFACTS = { en: 'Artifacts', ru: 'Артефакты' }[LANG]
+export const I18N_CHARACTERS = { en: 'Characters', ru: 'Персонажи' }[LANG]
 export const I18N_ART_STATS_PRIORITY = { en: 'Artifact stats priority', ru: 'Приоритетные главстаты' }[LANG]
 export const I18N_SUBSTATS_PRIORITY = { en: 'Substats priority', ru: 'Приоритетные допстаты' }[LANG]
 export const I18N_TALENTS_PRIORITY = { en: 'Talents Priority', ru: 'Приоритетные таланты' }[LANG]
@@ -116,7 +118,7 @@ const statNamesRu: Record<GI_KnownStatBonusCode, string> = {
 	'def%': '% защиты',
 	dmg: 'урон',
 	'dmg%': '% урона',
-	atk: 'атака',
+	atk: 'сила атаки',
 	'atk%': '% атаки',
 	hp: 'ХП',
 	'hp%': '% ХП',
@@ -182,7 +184,7 @@ export const I18N_SUBMIT_BUG_ERROR = {
 }[LANG]
 export const I18N_YOUR_MESSAGE_HERE = { en: 'Your message here', ru: 'Текст сообщения' }[LANG]
 export const I18N_REPORT_BUG_GUIDE = {
-	en: (
+	en: () => (
 		<>
 			<p>
 				Please describe your problem here. You can upload images on{' '}
@@ -200,7 +202,7 @@ export const I18N_REPORT_BUG_GUIDE = {
 			</p>
 		</>
 	),
-	ru: (
+	ru: () => (
 		<>
 			<p>
 				Пожалуйста, опишите проблему в поле ниже. Если требуется, вы можете загрузить скриншоты на
@@ -219,7 +221,7 @@ export const I18N_REPORT_BUG_GUIDE = {
 			</p>
 		</>
 	),
-}[LANG]
+}[LANG]()
 export const I18N_ERROR = { en: 'Error, reload page', ru: 'Ошибка, перезагрузите страницу' }[LANG]
 export const I18N_PIECE_BONUS = {
 	en: (n: number) => `${n} piece bonus`,
@@ -230,20 +232,23 @@ export const I18N_PIECES_BONUS = {
 	ru: (n: number) => `Бонус ${n} частей`,
 }[LANG]
 export const I18N_BASE_ATTACK = { en: 'Base attack', ru: 'Базовая атака' }[LANG]
+export const I18N_ITEM_STORY = { en: 'Item Story', ru: 'История предмета' }[LANG]
 export const I18N_SECONDARY_STAT = { en: 'Secondary Stat', ru: 'Пассивная способность' }[LANG]
 type MapCodeName = Record<MapCode, string>
 export const I18N_MAP_CODES_NAME: MapCodeName = {
-	en: { teyvat: 'Teyvat', enkanomiya: 'Enkanomiya' },
-	ru: { teyvat: 'Тейват', enkanomiya: 'Энканомия' },
+	en: { teyvat: 'Teyvat', enkanomiya: 'Enkanomiya', chasm: 'The Chasm' },
+	ru: { teyvat: 'Тейват', enkanomiya: 'Энканомия', chasm: 'Разлом' },
 }[LANG]
 export const I18N_CHAR_BUILD_RECS = {
 	en: 'Character builds recommendations',
 	ru: 'Рекомендуемые сборки персонажей',
 }[LANG]
-export const I18N_SELECT_CHAR_ABOVE = { en: 'Select character above', ru: 'Выберите персонажа' }[LANG]
+export const I18N_SELECT_CHAR_BELOW = { en: 'Select character below', ru: 'Выберите персонажа' }[LANG]
 export const I18N_BUILD_RECS_FOR = { en: 'build recommendations', ru: 'билд' }[LANG]
 export const I18N_RECOMMENDED_RU_ONLY = { en: '', ru: 'Рекомендуемый' }[LANG]
 export const I18N_ABOUT_SITE = { en: 'Site History', ru: 'История сайта' }[LANG]
+export const I18N_EQUIPMENT = { en: 'Equipment', ru: 'Снаряжение' }[LANG]
+export const I18N_CHAR_EQUIPMENT = { en: 'Character Equipment', ru: 'Снаряжение персонажа' }[LANG]
 export const I18N_OUR_DISCORD = { en: 'Our Discord', ru: 'Наш Дискорд' }[LANG]
 export const I18N_CREATED_BY_US = {
 	en: `Designed and coded by${NBSP}Absolute${NBSP}Evil${NBSP}Studio`,
@@ -270,12 +275,12 @@ export const I18N_ORDER_SITE_FROM_US = {
 	ru: 'Закажите у нас сайт',
 }[LANG]
 export const I18N_NOT_AFFILIATED_WITH_MIHOYO = {
-	en: 'We are not affiliated with MiHoYo',
-	ru: 'Мы не связаны с Михуё',
+	en: 'We are not affiliated with HoYoverse',
+	ru: 'Мы не связаны с Хоёверс',
 }[LANG]
 export const I18N_C_MIHOYO = {
-	en: 'Genshin Impact, items and characters illustrations are trademarks and copyrights of MiHoYo.',
-	ru: 'Геншин Импакт, иллюстрации персонажей и предметов принадлежат Михуё',
+	en: 'Genshin Impact, items and characters illustrations are trademarks and copyrights of HoYoverse.',
+	ru: 'Геншин Импакт, иллюстрации персонажей и предметов принадлежат Хоёверсу',
 }[LANG]
 export const I18N_HELPER_TEAM_TABLE = {
 	en: 'Helper Team',
@@ -305,6 +310,65 @@ export const I18N_SEE_NOTES = {
 	en: 'see notes',
 	ru: 'см. заметки',
 }[LANG]
+export const I18N_UNSUPPORTED_LOCATION_WARNING = {
+	en: "Looks like you've opened a cached/saved page. It won't work correctly that way :(",
+	ru: 'Похоже, вы открыли сохранённую страницу. В таком виде она нормально работать не будет :(',
+}[LANG]
+export const I18N_NOTHING_TO_SHOW = {
+	en: 'nothing to show',
+	ru: 'нет результатов',
+}[LANG]
+export const I18N_MEGA_SEARCH_PLACEHOLDER = {
+	en: 'Search for characters, weapons, artifacts',
+	ru: 'Искать персонажей, артефакты, оружие',
+}[LANG]
+
+export const I18N_FRONT_PAGE_DESCRIPTION = {
+	en: 'Up-to-date character builds recommendations, list of all weapons and artifacts in the game, dungeons schedule and other useful information about Genshin Impact',
+	ru: 'Актуальные билды персонажей, список всего оружия и артефактов, что есть в игре, расписание подземелий и другая полезная информация о Геншин Импакте',
+}[LANG]
+export const I18N_BUILDS_PAGE_DESCRIPTION = {
+	en: 'Genshin Impact builds recommendations for every character',
+	ru: 'Рекомендуемые билды для персонажей Геншин Импакта',
+}[LANG]
+export const I18N_EQUIPMENT_PAGE_DESCRIPTION = {
+	en: (code: 'weapons' | 'artifacts') => {
+		return `List of Genshin Impact ${code} with full information and recommended characters`
+	},
+	ru: (code: 'weapons' | 'artifacts') => {
+		const name = { artifacts: 'артефактов', weapons: 'оружия' }[code] ?? code
+		return `Список ${name} Геншин Импакта с полной информацией и рекомендуемыми персонажами`
+	},
+}[LANG]
+export function I18N_CHARACTER_PAGE_DESCRIPTION(
+	characterName: string,
+	roleName: string,
+	weaponR5Name: string | null | undefined,
+	weaponR4Name: string | null | undefined,
+	artifactName: string | null | undefined,
+	tipsText: string,
+	notesText: string,
+) {
+	const weaponLabel = { en: 'Recommended weapon', ru: 'Рекомендуемое оружие' }[LANG]
+	const artifactLabel = { en: 'Recommended artifact', ru: 'Рекомендуемые артефакты' }[LANG]
+
+	// заметки не всегда заканчиваются точкой
+	if (tipsText && !tipsText.trim().endsWith('.')) tipsText += '.'
+	let extraText = tipsText + ' ' + notesText
+	// ограничиваем длину по очередному пробелу
+	if (extraText.length > 250) {
+		const cutIndex = Math.min(...[' ', '.'].map(x => extraText.lastIndexOf(x, 230)))
+		extraText = extraText.slice(0, cutIndex) + ELLIPSIS
+	}
+
+	return (
+		`${characterName} ${DASH} ${roleName}.` +
+		` ${weaponLabel}: ${[weaponR5Name, weaponR4Name].filter(x => x).join(', ')}.` +
+		` ${artifactLabel}: ${artifactName ?? ''}.` +
+		' ' +
+		extraText
+	)
+}
 
 type WeaponTypeNames = Record<GI_WeaponTypeCode, string>
 const weaponTypeNamesRU: WeaponTypeNames = {
@@ -319,12 +383,12 @@ export const I18N_WEAPON_TYPE_NAME = {
 	ru: (code: GI_WeaponTypeCode) => weaponTypeNamesRU[code],
 }[LANG]
 
-type WeaponObtainSourceNames = Record<GI_WeaponObtainSource, string>
+type WeaponObtainSourceNames = Record<GI_WeaponObtainSource | 'other', string>
 const weaponObtainSourceNamesRU: WeaponObtainSourceNames = {
 	wishes: 'молитвы',
 	'event-wishes': 'молитвы события',
 	events: 'события',
-	'battle-pass': 'батл-пасс',
+	'battle-pass': 'боевой пропуск',
 	'in-game-shop': 'внутриигровой магазин',
 	forging: 'ковка',
 	fishing: 'рыболовля',
@@ -335,18 +399,74 @@ const weaponObtainSourceNamesRU: WeaponObtainSourceNames = {
 	investigation: 'исследование мира',
 	'adventure-rank-10': '10 ранг приключений',
 	playstation: 'плейстейшн',
+	other: 'другое',
 }
 export const I18N_WEAPON_OBTAIN_SOURCE_NAME = {
-	en: (code: GI_WeaponObtainSource) => code.replace(/-/g, ' ').replace(/\bnpc\b/, 'NPC'),
-	ru: (code: GI_WeaponObtainSource) => weaponObtainSourceNamesRU[code],
+	en: (code: GI_WeaponObtainSource | 'other') => code.replace(/-/g, ' ').replace(/\bnpc\b/, 'NPC'),
+	ru: (code: GI_WeaponObtainSource | 'other') => weaponObtainSourceNamesRU[code],
 }[LANG]
 export const I18N_OBTAINED_DURING_STORYLINE = {
 	en: 'Obtained during storyline quests',
 	ru: 'Выдаётся во время прохождения сюжетных заданий',
 }[LANG]
 export const I18N_ART_GROUP_NAME: Record<GI_ArtifactGroupCode, string> = {
-	en: { '18%-atk': 'ATK +18%', '20%-er': 'Energy Recharge +20%' },
-	ru: { '18%-atk': 'Сила атаки +18%', '20%-er': 'Восстановление энергии +20%' },
+	'18%-atk': { en: 'ATK +18%', ru: 'Сила атаки +18%' }[LANG],
+	'20%-er': { en: 'Energy Recharge +20%', ru: 'Восстановление энергии +20%' }[LANG],
+	'25%-ph-atk': { en: 'Physical DMG +25%', ru: 'Физ. урон +25%' }[LANG],
+}
+export const I18N_ITEM_DETAIL = {
+	en: 'item detail',
+	ru: 'страница предмета',
+}[LANG]
+export const I18N_ARROWS_TO_SELECT = {
+	en: 'you can use Arrow keys and Enter to select option',
+	ru: 'нужный результат можно быстро выбрать кнопками-стрелочками и Интером',
+}[LANG]
+export const I18N_RECOMMENDED_BUILDS = {
+	en: 'recomended builds',
+	ru: 'билды персонажа',
+}[LANG]
+export const I18N_OBTAIN_SOURCES = {
+	en: 'Obtain sources',
+	ru: 'Способы получения',
+}[LANG]
+export const I18N_SORT_BY = {
+	en: 'Sort by',
+	ru: 'Сортировать по',
+}[LANG]
+export const I18N_WEAPON_TYPE = {
+	en: 'Weapon type',
+	ru: 'Тип оружия',
+}[LANG]
+export const I18N_NAME = {
+	en: 'Name',
+	ru: 'Название',
+}[LANG]
+export const I18N_SUBSTAT = {
+	en: 'Substat',
+	ru: 'Допстат',
+}[LANG]
+export const I18N_RARITY = {
+	en: 'Rarity',
+	ru: 'Редкость',
+}[LANG]
+export const I18N_WEAPON_TYPE_FILTER_TIP: Record<GI_WeaponTypeCode | 'everything', string> = {
+	en: {
+		everything: 'every type of weapon selected',
+		sword: 'showing only swords',
+		catalyst: 'showing only catalists',
+		claymore: 'showing only claymores',
+		polearm: 'showing only polearms',
+		bow: 'showing only bows',
+	},
+	ru: {
+		everything: 'выбраны все виды оружия',
+		sword: 'выбраны только мечи',
+		catalyst: 'выбраны только катализаторы',
+		claymore: 'выбраны только двуручные мечи',
+		polearm: 'выбраны только копья',
+		bow: 'выбраны только луки',
+	},
 }[LANG]
 
 const pluralizeHours = {

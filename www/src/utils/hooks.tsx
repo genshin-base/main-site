@@ -1,4 +1,4 @@
-import { RefObject } from 'preact'
+import { Ref, RefObject } from 'preact'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'preact/hooks'
 
 import { arrShallowEqual } from '#lib/utils/collections'
@@ -68,11 +68,16 @@ export const useToggle = (initial: boolean): [boolean, () => void] => {
 	return [flagState, useCallback(() => setFlagState(status => !status), [])]
 }
 
-export const useClickAway = (ref: preact.RefObject<HTMLElement>, callback?: () => void): void => {
+export const useClickAway = (
+	refs: preact.RefObject<HTMLElement> | preact.RefObject<HTMLElement>[],
+	callback?: () => void,
+): void => {
 	const handleClick = (e: MouseEvent | TouchEvent) => {
-		if (ref.current && e.target instanceof HTMLElement && !ref.current.contains(e.target)) {
-			callback && callback()
-		}
+		const refsLocal = Array.isArray(refs) ? refs : [refs]
+		const isClickAwayEveryone = refsLocal.every(
+			ref => ref.current && e.target instanceof HTMLElement && !ref.current.contains(e.target),
+		)
+		if (isClickAwayEveryone) callback && callback()
 	}
 	useEffect(() => {
 		document.addEventListener('mousedown', handleClick)
@@ -93,9 +98,9 @@ interface WindowSize {
 }
 export function useWindowSize(): WindowSize {
 	const [windowSize, setWindowSize] = useState<WindowSize>({
-		width: window?.innerWidth,
-		height: window?.innerHeight,
-		breakpoint: BS_getCurrBreakpoint(window?.innerWidth || 0),
+		width: window.innerWidth,
+		height: window.innerHeight,
+		breakpoint: BS_getCurrBreakpoint(window.innerWidth),
 	})
 	useEffect(() => {
 		function handleResize() {
@@ -114,7 +119,8 @@ export function useWindowSize(): WindowSize {
 
 declare global {
 	interface WindowEventMap {
-		'x-local-tab-storage': CustomEvent & { detail: { key: string } }
+		'x-local-tab-storage': CustomEvent<{ key: string }>
+		'x-local-hashchange': CustomEvent<null>
 	}
 }
 
@@ -143,7 +149,7 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, (val: T) =
 	)
 
 	useEffect(() => {
-		function onStorage(e: StorageEvent | { detail: { key: string } }) {
+		function onStorage(e: StorageEvent | CustomEvent<{ key: string }>) {
 			const affectedKey = 'detail' in e ? e.detail.key : e.key
 			if (affectedKey === key) {
 				try {
@@ -233,11 +239,11 @@ export const useWindowVisibility = () => {
 		const onPageShow = () => setIsVisible(true)
 		document.addEventListener('visibilitychange', onVisibilityChange)
 		window.addEventListener('pagehide', onPageHide)
-		window.addEventListener('pageshow ', onPageShow)
+		window.addEventListener('pageshow', onPageShow)
 		return () => {
 			document.removeEventListener('visibilitychange', onVisibilityChange)
 			window.removeEventListener('pagehide', onPageHide)
-			window.removeEventListener('pageshow ', onPageShow)
+			window.removeEventListener('pageshow', onPageShow)
 		}
 	}, [])
 	return isVisible
@@ -269,6 +275,23 @@ export function useForceUpdate(): () => void {
 	const setValue = useState(0)[1]
 	return useRef(() => setValue(v => ~v)).current
 }
+
+export function useOnce(args: unknown[]): boolean {
+	const ref = useRef(true)
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	useMemo(() => (ref.current = true), args)
+	const flag = ref.current
+	ref.current = false
+	return flag
+}
+
+export function useUniqKey(): number {
+	const key = useMemo(() => {
+		return Math.random()
+	}, [])
+	return key
+}
+
 export function useVisibleTicker(callback: () => void, interval: number) {
 	const isVisible = useWindowVisibility()
 
@@ -285,6 +308,7 @@ export function useVisibleTicker(callback: () => void, interval: number) {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [interval, isVisible])
 }
+
 export function useDocumentTitle(title: string, shouldRestoreOnUnmount = false) {
 	const defaultTitle = useRef(document.title).current
 
@@ -300,4 +324,111 @@ export function useDocumentTitle(title: string, shouldRestoreOnUnmount = false) 
 			}
 		}
 	}, [shouldRestoreOnUnmount, defaultTitle])
+}
+
+export function usePageDescription(func: () => string | null) {
+	if (BUNDLE_ENV.IS_SSR) {
+		SSR_ENV.outPageDescription = func()
+	} else if (process.env.NODE_ENV === 'development') {
+		const description = func()
+		// eslint-disable-next-line react-hooks/rules-of-hooks
+		useEffect(() => {
+			for (const meta of document.querySelectorAll('meta[name="description"]')) {
+				meta.remove()
+			}
+			if (description !== null) {
+				const meta = document.createElement('meta')
+				meta.name = 'description'
+				meta.content = description
+				document.head.appendChild(meta)
+			}
+		}, [description])
+	}
+}
+
+export function useHashValue<T extends string | null>(
+	key: string,
+	defaultValue: T,
+): [string | T, (key: T) => void] {
+	const [val, setVal] = useState(getHashValue(key) ?? defaultValue)
+
+	// нужно один раз проставить зачание для ключа
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	useMemo(() => setHashValue(key, val), [key])
+
+	// нужно подчистить за собой значение
+	useEffect(() => {
+		return () => setHashValue(key, null)
+	}, [key])
+
+	useEffect(() => {
+		function onHashChange() {
+			setVal(getHashValue(key) ?? defaultValue)
+		}
+		addEventListener('hashchange', onHashChange)
+		addEventListener('x-local-hashchange', onHashChange)
+		return () => {
+			removeEventListener('hashchange', onHashChange)
+			removeEventListener('x-local-hashchange', onHashChange)
+		}
+	}, [key, defaultValue])
+
+	const setValAndHash = useCallback(
+		(val: T) => {
+			setVal(val)
+			setHashValue(key, val)
+			dispatchEvent(new CustomEvent('x-local-hashchange'))
+		},
+		[key],
+	)
+	return [val, setValAndHash]
+}
+function getHashValue(key: string) {
+	return new URLSearchParams(location.hash.slice(1)).get(key)
+}
+function setHashValue(key: string, val: string | null) {
+	const params = new URLSearchParams(location.hash.slice(1))
+	if (params.get(key) !== val) {
+		if (val === null) {
+			params.delete(key)
+		} else {
+			params.set(key, val)
+		}
+		let hash = params.toString()
+		if (hash !== '') hash = '#' + hash
+		const { origin, pathname, search } = location
+		console.log('history', hash, location.hash)
+		history.replaceState(history.state, '', origin + pathname + search + hash)
+	}
+}
+export function useScrollTo<T extends Element>(
+	shouldScrollToArg: boolean,
+	scrollParams?: ScrollIntoViewOptions,
+): [Ref<T>, (flag: boolean) => void] {
+	const ref = useRef<T>(null)
+	const [shouldScrollTo, setShouldScrollTo] = useState(false)
+	useEffect(() => {
+		if (ref.current && (shouldScrollTo || shouldScrollToArg)) {
+			let params: ScrollIntoViewOptions = { behavior: 'smooth' }
+			if (scrollParams) params = { ...params, ...scrollParams }
+			ref.current.scrollIntoView(params)
+			setShouldScrollTo(false)
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [shouldScrollTo, shouldScrollToArg])
+	return [ref, setShouldScrollTo]
+}
+export function useScrollPosition(): number {
+	const [scrollPosition, setScrollPosition] = useState<number>(0)
+
+	useEffect(() => {
+		const setScrollPositionLocal = () => {
+			setScrollPosition(window.pageYOffset)
+		}
+		window.addEventListener('scroll', setScrollPositionLocal)
+		setScrollPositionLocal()
+		return () => window.removeEventListener('scroll', setScrollPositionLocal)
+	}, [])
+
+	return scrollPosition
 }

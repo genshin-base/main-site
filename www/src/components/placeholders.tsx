@@ -14,3 +14,12 @@ export function CentredSpinner(): JSX.Element {
 		</div>
 	)
 }
+export function CentredLabel({ label }: { label: string }): JSX.Element {
+	return (
+		<div className="position-absolute top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center placeholder-backdrop">
+			<div class="d-flex justify-content-center">
+				<div>{label}</div>
+			</div>
+		</div>
+	)
+}

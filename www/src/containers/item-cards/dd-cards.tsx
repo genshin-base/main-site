@@ -1,12 +1,9 @@
 import { useMemo, useState } from 'preact/hooks'
 
-import { GI_DomainTypeCode, MapCode, MapLocation } from '#lib/genshin'
-import { ArtifactFullInfo, ItemShortInfo, WeaponFullInfo } from '#lib/parsing/combine'
-import { arrGetAfter } from '#lib/utils/collections'
+import { ArtifactRegularInfo, ItemShortInfo, WeaponRegularInfo } from '#lib/parsing/combine'
 import { getAllRelated, RelDomainsShort, RelEnemiesShort, RelItemsShort } from '#src/api/utils'
 import { BlockHeader } from '#src/components/block-header'
-import { SimpleSelect } from '#src/components/select'
-import { Spinner } from '#src/components/spinners'
+import { MobileDesktopSwitch } from '#src/components/mobile-desc-switch'
 import { BtnTabGroup, tabTitleFromName, useSelectable } from '#src/components/tabs'
 import {
 	ItemDetailDdMobilePortal,
@@ -15,17 +12,10 @@ import {
 import {
 	I18N_ALCHEMY_CALC,
 	I18N_BASE_ATTACK,
-	I18N_ERROR,
-	I18N_FOR_NOBODY,
-	I18N_MAP_CODES_NAME,
 	I18N_OBTAINED_DURING_STORYLINE,
 	I18N_PIECE_BONUS,
 	I18N_PIECES_BONUS,
-	I18N_PINCH_TO_ZOOM,
-	I18N_RECOMMENDED_FOR,
-	I18N_SCROLL_TO_ZOOM,
 	I18N_SECONDARY_STAT,
-	I18N_SOURCE,
 	I18N_STAT_NAME,
 	I18N_WEAPON_OBTAIN_SOURCE_NAME,
 	I18N_WEAPON_TYPE_NAME,
@@ -36,32 +26,15 @@ import {
 	ToggleWeaponPrimaryMaterialFav,
 } from '#src/modules/builds/common'
 import { getArtifactIconLargeSrc, getArtifactIconSrc } from '#src/utils/artifacts'
-import { BS_isBreakpointLessThen } from '#src/utils/bootstrap'
-import { getDomainIconSrc } from '#src/utils/domains'
-import { getEnemyIconSrc } from '#src/utils/enemies'
-import { isLoaded, useFetch, useWindowSize } from '#src/utils/hooks'
 import { getItemIconSrc } from '#src/utils/items'
-import { BULLET, LEFT_POINTING, RIGHT_POINTING } from '#src/utils/typography'
+import { BULLET } from '#src/utils/typography'
 import { getWeaponIconLageSrc } from '#src/utils/weapons'
 import { AlchemyCalculator } from '../alchemy-calculator'
-import { CharacterAvatar, DdContext, ItemAvatar, LabeledItemAvatar } from './item-avatars'
+import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from './card-map'
+import { RecommendedTo } from './common'
+import { DdContext, ItemAvatar } from './item-avatars'
 
 import type { MapMarkerRaw } from '#src/components/teyvat-map'
-const LazyTeyvatMap = import('#src/components/teyvat-map')
-
-function RecommendedFor({ charCodes }: { charCodes: string[] }): JSX.Element {
-	return (
-		<>
-			<BlockHeader>{I18N_RECOMMENDED_FOR}</BlockHeader>
-			{charCodes.length
-				? charCodes.map(c => (
-						<CharacterAvatar key={c} code={c} isNoBg={true} classes={`small-avatar mb-2 me-2`} />
-				  ))
-				: I18N_FOR_NOBODY}
-		</>
-	)
-}
-
 //переключалка для мобильного и десктопного вида
 export function CardDescMobileWrap({
 	children,
@@ -72,13 +45,17 @@ export function CardDescMobileWrap({
 	targetEl: HTMLElement | null | undefined
 	children: JSX.Element
 }): JSX.Element {
-	const windowSize = useWindowSize()
-	return BS_isBreakpointLessThen(windowSize.breakpoint, 'xl') ? (
-		<ItemDetailDdMobilePortal onClickAway={onClickAway}>{children}</ItemDetailDdMobilePortal>
-	) : (
-		<ItemDetailDdPortal onClickAway={onClickAway} targetEl={targetEl} shouldScrollToTop={true}>
-			{children}
-		</ItemDetailDdPortal>
+	return (
+		<MobileDesktopSwitch
+			childrenDesktop={
+				<ItemDetailDdPortal onClickAway={onClickAway} targetEl={targetEl} shouldScrollToTop={true}>
+					{children}
+				</ItemDetailDdPortal>
+			}
+			childrenMobile={
+				<ItemDetailDdMobilePortal onClickAway={onClickAway}>{children}</ItemDetailDdMobilePortal>
+			}
+		/>
 	)
 }
 // основной макет карточек
@@ -125,200 +102,6 @@ function Card({
 	)
 }
 
-type MapWrapMarkerGroup = {
-	code: string
-	title: string
-	markers: 'external' | MapMarkerRaw[]
-}
-
-function addMarkerGroupsByDomains(
-	markerGroups: MapWrapMarkerGroup[],
-	domains: { code: string; name: string; type: GI_DomainTypeCode; location: MapLocation }[],
-) {
-	for (const domain of domains) {
-		const loc = domain.location
-		const icon = getDomainIconSrc(domain.type)
-		markerGroups.push({ code: domain.code, title: domain.name, markers: [{ ...loc, icon }] })
-	}
-}
-function addMarkerGroupsByEnemies(
-	markerGroups: MapWrapMarkerGroup[],
-	enemies: { code: string; name: string; locations: 'external' | MapLocation[] }[],
-) {
-	for (const enemy of enemies) {
-		const markers =
-			enemy.locations === 'external'
-				? 'external'
-				: enemy.locations.map((loc): MapMarkerRaw => {
-						const icon = getEnemyIconSrc(enemy.code)
-						return { ...loc, icon, style: 'circle' }
-				  })
-		markerGroups.push({ code: enemy.code, title: enemy.name, markers })
-	}
-}
-
-function MapWrap({
-	itemData,
-	markerGroups,
-	isItemFavable,
-}: {
-	itemData?: {
-		imgSrc: string
-		item: ItemShortInfo | ArtifactFullInfo | WeaponFullInfo
-	}
-	markerGroups: MapWrapMarkerGroup[]
-	isItemFavable?: boolean
-}): JSX.Element {
-	const TeyvatMap = useFetch(() => LazyTeyvatMap.then(x => x.TeyvatMap), [])
-
-	const [selectedSource, setSelectedSource] = useSelectable(markerGroups)
-
-	const visibleMapCodeTabs = useMemo(() => {
-		if (selectedSource.markers === 'external') return []
-		const mapCodes = new Set<MapCode>()
-		for (const marker of selectedSource.markers) mapCodes.add(marker.mapCode)
-		return Array.from(mapCodes, code => ({ code }))
-	}, [selectedSource])
-
-	const [selectedMapCodeTab, setMapCodeTab] = useSelectable(visibleMapCodeTabs)
-	const selectedMapCode = selectedMapCodeTab.code
-
-	const setSourceAndFixMapCode = (selectedSource: MapWrapMarkerGroup) => {
-		if (
-			selectedSource.markers !== 'external' &&
-			!selectedSource.markers.find(m => m.mapCode === selectedMapCode)
-		)
-			setMapCodeTab({ code: selectedSource.markers[0].mapCode })
-		setSelectedSource(selectedSource)
-	}
-	const goToPrevGroup = () => {
-		setSourceAndFixMapCode(arrGetAfter(markerGroups, selectedSource, -1))
-	}
-	const goToNextGroup = () => {
-		setSourceAndFixMapCode(arrGetAfter(markerGroups, selectedSource))
-	}
-
-	let sourceSelectEl
-	if (!markerGroups.length) {
-		sourceSelectEl = null
-	} else if (markerGroups.length === 1) {
-		sourceSelectEl = <span className="align-self-center lh-1 small">{markerGroups[0].title}</span>
-	} else if (markerGroups.length < 3) {
-		sourceSelectEl = (
-			<BtnTabGroup
-				tabs={markerGroups}
-				selectedTab={selectedSource}
-				onTabSelect={setSourceAndFixMapCode}
-				classes="w-100 btn-group-sm"
-			/>
-		)
-	} else {
-		sourceSelectEl = (
-			<div className="btn-group w-100">
-				<button
-					type="button"
-					class="btn btn-secondary border-dark border-end-0 text-muted fs-4 lh-1"
-					onClick={goToPrevGroup}
-				>
-					{LEFT_POINTING}
-				</button>
-				<SimpleSelect
-					options={markerGroups}
-					selectedOption={selectedSource}
-					onOptionSelect={setSourceAndFixMapCode}
-					classes="w-100 rounded-0"
-				/>
-				<button
-					type="button"
-					class="btn btn-secondary border-dark border-start-0 text-muted fs-4 lh-1"
-					onClick={goToNextGroup}
-				>
-					{RIGHT_POINTING}
-				</button>
-			</div>
-		)
-	}
-
-	const isItemWeaponPrimaryMaterial = useMemo(
-		() =>
-			itemData?.item &&
-			'types' in itemData.item &&
-			~itemData?.item.types?.indexOf('weapon-material-primary'),
-		[itemData?.item],
-	)
-
-	return (
-		<div className={`map-wrap position-relative mb-3`}>
-			<div className="map-header position-absolute d-flex flex-row justify-content-between px-3 py-1 w-100">
-				<div className="map-header-bg position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
-				{itemData && (
-					<div className="me-2 flex-shrink-1 d-flex align-self-center">
-						{isItemWeaponPrimaryMaterial && isItemFavable ? (
-							<ToggleWeaponPrimaryMaterialFav
-								itemCode={itemData.item.code}
-								classes="align-self-center p-1 flex-fill fs-5"
-							/>
-						) : null}
-						<LabeledItemAvatar
-							isNoBg={true}
-							classes="small-avatar small"
-							avatarClasses="with-padding "
-							imgSrc={itemData.imgSrc}
-							title={itemData.item.name}
-						/>
-					</div>
-				)}
-				{markerGroups.length ? (
-					<div className={`d-flex flex-fill justify-content-end align-self-center`}>
-						<label className="me-1 text-muted align-self-center small">{I18N_SOURCE}:</label>
-						{sourceSelectEl}
-					</div>
-				) : null}
-			</div>
-			<div className="map-tip position-absolute px-3 pt-1 lh-1 top-100 start-0 small text-muted opacity-75 user-select-none">
-				{visibleMapCodeTabs.map(({ code }) => (
-					<div className="d-inline me-2" key={code} onClick={() => setMapCodeTab({ code })}>
-						{visibleMapCodeTabs.length > 1 ? (
-							<input
-								className="lh-1 align-middle c-pointer me-1"
-								type="radio"
-								id={code}
-								checked={code === selectedMapCode}
-							/>
-						) : null}
-						<label
-							className={`lh-1 align-middle text-capitalize ${
-								visibleMapCodeTabs.length > 1 ? 'c-pointer' : ''
-							}`}
-							for={code}
-						>
-							{I18N_MAP_CODES_NAME[code]}
-						</label>
-					</div>
-				))}
-			</div>
-			<div className="map-tip position-absolute px-3 pt-1 lh-1 top-100 end-0 small text-muted opacity-75 pe-none">
-				<div class="d-none d-xl-block">{I18N_SCROLL_TO_ZOOM}</div>
-				<div class="d-xl-none">{I18N_PINCH_TO_ZOOM}</div>
-			</div>
-			{selectedSource.markers !== 'external' && isLoaded(TeyvatMap) ? (
-				<TeyvatMap
-					classes="position-relative"
-					pos="auto"
-					mapCode={selectedMapCode}
-					markers={selectedSource.markers}
-				/>
-			) : TeyvatMap instanceof Error ? (
-				<div className="text-muted position-absolute top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
-					{I18N_ERROR}
-				</div>
-			) : (
-				<Spinner />
-			)}
-		</div>
-	)
-}
-
 export function ArtifactCard({
 	classes,
 	artifacts,
@@ -326,7 +109,7 @@ export function ArtifactCard({
 	title,
 }: {
 	classes?: string
-	artifacts: ArtifactFullInfo[]
+	artifacts: ArtifactRegularInfo[]
 	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
 	title: string
 }): JSX.Element {
@@ -346,6 +129,7 @@ export function ArtifactCard({
 			markerGroups,
 		}
 	}, [selectedArt, related])
+
 	return (
 		<Card
 			titleEl={title}
@@ -387,10 +171,10 @@ export function ArtifactCard({
 							<div className="mb-3">{notesToJSX(selectedArt.sets[4])}</div>
 						</>
 					)}
-					{<RecommendedFor charCodes={selectedArt.recommendedTo} />}
+					{<RecommendedTo charCodes={selectedArt.recommendedTo} />}
 				</div>
 			}
-			mapEl={dataForMap.markerGroups.length ? <MapWrap {...dataForMap} /> : null}
+			mapEl={dataForMap.markerGroups.length ? <CardMap {...dataForMap} /> : null}
 		></Card>
 	)
 }
@@ -402,7 +186,7 @@ export function WeaponCard({
 }: {
 	onCloseClick?: () => void
 	classes?: string
-	weapon: WeaponFullInfo
+	weapon: WeaponRegularInfo
 	related: RelItemsShort & RelDomainsShort & RelEnemiesShort
 }): JSX.Element {
 	const materials = getAllRelated(related.items, weapon.materialCodes)
@@ -491,10 +275,10 @@ export function WeaponCard({
 						<span className="opacity-75">{I18N_SECONDARY_STAT}</span>
 						<div className="">{notesToJSX(weapon.passiveStat)}</div>
 					</div>
-					<RecommendedFor charCodes={weapon.recommendedTo} />
+					<RecommendedTo charCodes={weapon.recommendedTo} />
 				</div>
 			}
-			mapEl={dataForMap.markerGroups.length ? <MapWrap isItemFavable={true} {...dataForMap} /> : null}
+			mapEl={dataForMap.markerGroups.length ? <CardMap isItemFavable={true} {...dataForMap} /> : null}
 		></Card>
 	)
 }
@@ -512,7 +296,7 @@ export function OtherItemCard({
 	const materials = getAllRelated(related.items, [item.code])
 	const materialOnMap = materials[0]
 	const dataForMap = useMemo(() => {
-		const markerGroups: MapWrapMarkerGroup[] = []
+		const markerGroups: CardMapMarkerGroup[] = []
 		const srcs = materialOnMap.obtainSources
 		addMarkerGroupsByDomains(markerGroups, getAllRelated(related.domains, srcs.domainCodes))
 		addMarkerGroupsByEnemies(markerGroups, getAllRelated(related.enemies, srcs.enemyCodes))
@@ -569,7 +353,7 @@ export function OtherItemCard({
 					</div>
 				) : null
 			}
-			mapEl={dataForMap.markerGroups.length ? <MapWrap {...dataForMap} /> : null}
+			mapEl={dataForMap.markerGroups.length ? <CardMap {...dataForMap} /> : null}
 		></Card>
 	)
 }

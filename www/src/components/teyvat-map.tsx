@@ -24,7 +24,7 @@ const TILE_CONTENT_WIDTH = 256 //tile width in game pixels on layer 0
 const MIN_LEVEL = -5.5
 const MAX_LEVEL = 1
 const DEFAULT_LEVEL = -1.2
-const MARKERS_AUTO_REGION_DOWNSCALE = 1.1
+const MARKERS_AUTO_REGION_DOWNSCALE = 1.25
 const MARKER_ICON_SIZE_PX = 40
 
 type TileExt = 'jpg' | 'avif'
@@ -32,7 +32,7 @@ type TileExt = 'jpg' | 'avif'
 let tileExt: TileExt = 'jpg'
 if (!BUNDLE_ENV.IS_SSR) checkAvifSupport().then(ok => ok && (tileExt = 'avif'))
 
-const TILES_ROOT = `https://genshin-base.github.io/teyvat-map/v2.4/tiles`
+const TILES_ROOT = `https://genshin-base.github.io/teyvat-map/v2.6/tiles`
 
 function tilePathFinc(x: number, y: number, z: number, mapCode: MapCode) {
 	return `${TILES_ROOT}/${mapCode}/${tileExt}/${z}/${x}/${y}.${tileExt}`
@@ -82,7 +82,7 @@ type MapMarker = {
 }
 
 export const TeyvatMap = memo(function TeyvatMap({
-	classes,
+	classes = '',
 	mapCode,
 	pos,
 	markers,
@@ -160,7 +160,13 @@ export const TeyvatMap = memo(function TeyvatMap({
 		map.updateLocation(x, y, TILE_CONTENT_WIDTH * 2 ** level)
 	}, [pos, markers, mapCode])
 
-	return <div ref={wrapRef} class={'teyvat-map ' + classes}></div>
+	return (
+		<div
+			ref={wrapRef}
+			class={'teyvat-map position-relative ' + classes}
+			style={{ backgroundColor: 'black' }}
+		></div>
+	)
 })
 
 function calcAutoPosition(map: LocMap, markers: MapMarkerRaw[], mapCode: MapCode) {
@@ -368,7 +374,7 @@ class MovementClampLayer {
 		const dx = map.lon2x(dLon)
 		const dy = map.lat2y(dLat)
 
-		if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
+		if (Math.abs(dx) > 0.5 || Math.abs(dy) > 0.5) {
 			map.move(dx, dy)
 		}
 	}
