@@ -1,0 +1,84 @@
+name: Update Character Images
+
+# Controls when the action will run.
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      character:
+        description: 'Код персонажа'
+        default: amber
+        required: true
+        type: string
+
+      avatar_url:
+        description: 'Адрес аватарки типа https://genshin.honeyhunterworld.com/img/char/amber_face.png, только квадратная и центрированная'
+        required: true
+        type: string
+
+      portrait_url:
+        description: 'Адрес портрета типа https://genshin-impact.fandom.com/wiki/Amber?file=Character+Amber+Portrait.png (но нужно проверить качество, а то они любят заливать пнг с 256 цветами)'
+        required: true
+        type: string
+
+      branch:
+        description: 'Залить в ветку'
+        default: master
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.11.1
+
+      - run: wget "${{ github.event.inputs.avatar_url }}" -O /tmp/avatar.png
+
+      - run: wget "${{ github.event.inputs.portrait_url }}" -O /tmp/portrait.png
+
+      - name: Preparing ImageMagick
+        run: |
+          # TODO
+          # wget https://github.com/genshin-base/main-site/files/8035498/magick.0.gz
+          # wget https://github.com/genshin-base/main-site/files/8035503/magick.1.gz
+          # cat magick.0.gz magick.1.gz | gzip -d > magick
+          wget https://download.imagemagick.org/ImageMagick/download/binaries/magick
+          chmod +x magick
+          pwd >> $GITHUB_PATH
+        working-directory: /tmp
+
+      - run: sudo apt-get install -y pngquant optipng potrace
+
+      - run: npm install
+        working-directory: ${{ env.GITHUB_WORKSPACE }}
+
+      - run: ./scripts/prepare.js avatar --code ${{ github.event.inputs.character }} --src /tmp/avatar.png
+        working-directory: ${{ env.GITHUB_WORKSPACE }}
+
+      - run: ./scripts/prepare.js portrait --code ${{ github.event.inputs.character }} --src /tmp/portrait.png
+        working-directory: ${{ env.GITHUB_WORKSPACE }}
+
+      - name: Git user info
+        run: |
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --global user.name "${GITHUB_ACTOR}"
+
+      - name: Pushing build
+        working-directory: ${{ env.GITHUB_WORKSPACE }}
+        run: |
+          git checkout ${{ github.event.inputs.branch }}
+          git add www/public/media -f
+          character=${{ github.event.inputs.character }}
+          git commit -m "New ${character^} images"
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git ${{ github.event.inputs.branch }}

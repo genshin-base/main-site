@@ -13,10 +13,11 @@ module.exports = {
 	},
 	extends: ['prettier', 'plugin:@typescript-eslint/recommended'],
 	rules: {
-		'no-unused-vars': ['warn', { vars: 'all', args: 'none' }],
+		'no-unused-vars': ['warn', { vars: 'all', args: 'none', varsIgnorePattern: '^_' }],
 		'no-constant-condition': ['error', { checkLoops: false }],
+		'prefer-const': ['warn'],
 		eqeqeq: ['warn', 'always'],
-		'@typescript-eslint/no-unused-vars': ['warn', { vars: 'all', args: 'none' }],
+		'@typescript-eslint/no-unused-vars': ['warn', { vars: 'all', args: 'none', varsIgnorePattern: '^_' }],
 		'@typescript-eslint/no-extra-semi': 'off', //conflicts with prettier
 		'@typescript-eslint/ban-ts-comment': 'off',
 	},

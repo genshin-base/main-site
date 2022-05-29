@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { promises as fs } from 'fs'
 import { magick, mediaChain, optipng, pngquant, resize, runCmd } from '#lib/media.js'
-import { info, warn } from '#lib/utils/logs.js'
+import { fatal, info, warn } from '#lib/utils/logs.js'
 import { parseArgs, relativeToCwd } from '#lib/utils/os.js'
 import { BASE_DIR, loadCharacters, WWW_MEDIA_DIR } from './_common.js'
 
@@ -20,14 +20,21 @@ const commands = {
 		checkCharacterCode(code)
 		await fs.mkdir(`${WWW_MEDIA_DIR}/characters/avatars`, { recursive: true })
 		const dest = `${WWW_MEDIA_DIR}/characters/avatars/${code}.png`
+		const destLarge = `${WWW_MEDIA_DIR}/characters/avatars/${code}.large.png`
+
 		// prettier-ignore
-		const circleResize = (i, o) => magick(i, o, [
+		const makeCircleResize = (size) => (i, o) => magick(i, o, [
 			'\(', '+clone', '-alpha', 'transparent', '-fill', 'white', '-draw', 'circle %[fx:w/2],%[fx:h/2] %[fx:w],%[fx:h/2]', '\)',
 			'-define', 'compose:sync=false', '-compose', 'multiply', '-composite',
-			'-resize', '72x72'
+			'-resize', size
 		])
-		await mediaChain(src, dest, circleResize, pngquant, optipng)
+		const circleResizeNormal = makeCircleResize('72x72')
+		const circleResizeLarge = makeCircleResize('120x120')
+
+		await mediaChain(src, dest, circleResizeNormal, pngquant, optipng)
 		info(`saved to ${relativeToCwd(dest)}`)
+		await mediaChain(src, destLarge, circleResizeLarge, pngquant, optipng)
+		info(`saved to ${relativeToCwd(destLarge)}`)
 	},
 	async portrait() {
 		const { code, src } = needItemImageArgs('character')
@@ -54,7 +61,7 @@ const commands = {
 		printUsage()
 		process.exit(needHelp ? 2 : 1)
 	}
-})().catch(console.error)
+})().catch(fatal)
 
 /** @param {string} itemType */
 function needItemImageArgs(itemType) {
@@ -73,6 +80,7 @@ function needItemImageArgs(itemType) {
 
 /** @param {string} code */
 async function checkCharacterCode(code) {
+	if (code === 'traveler') return
 	const names = await loadCharacters()
 	if (!(code in names)) warn(`character '${code}' is unknown`)
 }

@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.11.1
+
+      - run: npm install --release
+        working-directory: ${{ env.GITHUB_WORKSPACE }}
+
+      - run: ./scripts/builds_translation.js verify
+        working-directory: ${{ env.GITHUB_WORKSPACE }}
+
+      - run: ./scripts/update.js www
+        working-directory: ${{ env.GITHUB_WORKSPACE }}
+
+      # should run after `update www` (tests require www/src/api/generated.js)
+      - run: npm run test
+        working-directory: ${{ env.GITHUB_WORKSPACE }}
+
+      - run: npm run build
+        working-directory: ${{ env.GITHUB_WORKSPACE }}
+
+      - name: Git user info
+        run: |
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --global user.name "${GITHUB_ACTOR}"
+
+      - name: Preparing files
+        working-directory: ${{ env.GITHUB_WORKSPACE }}
+        run: |
+          mkdir ./_new_content
+          mv ./www/dist/browser/* ./_new_content
+          mv ./www/public/* ./_new_content
+          git checkout --force gh-pages || git checkout --orphan gh-pages
+          find . -not -regex '\./\(\.git\|_new_content\)\(/.*\)?' -delete
+          mv ./_new_content/* .
+          rmdir ./_new_content
+
+      - name: Pushing build
+        working-directory: ${{ env.GITHUB_WORKSPACE }}
+        run: |
+          git add --all
+          git diff-index --quiet --cached HEAD -- && echo "no changes" && exit 0
+          git commit -m "Update on $(date +'%Y-%m-%d %H:%M:%S')"
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git gh-pages

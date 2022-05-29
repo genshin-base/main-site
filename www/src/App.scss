@@ -1,31 +1,37 @@
-@import './bootstrap.scss';
+@import "./bootstrap.scss";
 
 html,
 body,
 .app-container {
 	min-height: 100vh;
 }
-
+// h: 16 *2, *3, *5
 :root {
-	--thumb-height: 3rem;
-	--thumb-height-sm: 2rem;
-	--thumb-height-l: 5rem;
+	--thumb-height-sm: 32px;
+	--thumb-height: 48px;
+	--thumb-height-l: 80px;
 }
 .bg-5 {
 	background-color: rgb(149, 107, 69);
-	background-color: linear-gradient(180deg, rgba(149, 107, 69, 1) 0%, rgba(218, 147, 84, 1) 100%);
+	background: linear-gradient(-180deg, #c69b78 0%, #d1c0ae 100%);
 }
 .bg-4 {
 	background-color: rgb(108, 101, 142);
-	background-color: linear-gradient(180deg, rgba(108, 101, 142, 1) 0%, rgba(152, 119, 195, 1) 100%);
+	background: linear-gradient(-180deg, #ac86af 0%, #cdbcb4 100%);
 }
 .bg-3 {
 	background-color: rgb(106, 119, 151);
-	background-color: linear-gradient(180deg, rgba(106, 119, 151, 1) 0%, rgba(111, 169, 205, 1) 100%);
+	background: linear-gradient(-180deg, #8c96b9 0%, #cac0b7 100%);
 }
 .bg-2 {
 	background-color: rgb(114, 115, 119);
-	background-color: linear-gradient(180deg, rgba(114, 115, 119, 1) 0%, rgba(162, 161, 159, 1) 100%);
+	background: linear-gradient(-180deg, #81a18a 0%, #c8c1b1 100%);
+}
+.bg-dark-on-dark {
+	background-color: #403e3e !important;
+}
+.navbar-darker-bg {
+	background: #414162 !important;
 }
 .w-33 {
 	width: 33.33%;
@@ -36,8 +42,14 @@ body,
 .max-height-75vh {
 	max-height: 75vh;
 }
+.h-inherit {
+	height: inherit;
+}
 .c-pointer {
 	cursor: pointer;
+}
+.c-inherit {
+	cursor: inherit;
 }
 .text-normal {
 	color: var(--bs-body-color) !important;
@@ -45,7 +57,39 @@ body,
 .text-decoration-underline-dotted {
 	text-decoration: dotted;
 	text-decoration-line: underline;
-	text-decoration-color: $light;
+}
+.btn-reset {
+	background: none;
+	border: none;
+	padding: 0;
+	text-align: unset;
+	color: unset;
+}
+$expand-arrow-dark: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%235e5e9b%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e");
+$expand-arrow-light: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fff%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e");
+.btn-expand-inner {
+	&::after {
+		display: inline-block;
+		background-image: $expand-arrow-light;
+		flex-shrink: 0;
+		width: 1.25rem;
+		height: 1.25rem;
+		margin-left: auto;
+		content: "";
+		background-repeat: no-repeat;
+		background-size: 1.25rem;
+		transition: transform 0.2s ease-in-out;
+	}
+	&.expanded {
+		&::after {
+			transform: rotate(-180deg);
+		}
+	}
+	&.arrow-dark {
+		&::after {
+			background-image: $expand-arrow-dark;
+		}
+	}
 }
 
 $colors: primary, secondary, warning, dark;
@@ -58,9 +102,50 @@ $colors: primary, secondary, warning, dark;
 }
 
 .form-select.bg-dark {
-	background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23adb5bd%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27M2 5l6 6 6-6%27/%3e%3c/svg%3e');
+	background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23adb5bd%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27M2 5l6 6 6-6%27/%3e%3c/svg%3e");
 }
 
-.not-rounded-top-end{
-	border-top-right-radius: 0!important;
+.not-rounded-top-end {
+	border-top-right-radius: 0 !important;
+}
+.not-rounded-end {
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+.not-rounded-start {
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+}
+.not-rounded-bottom {
+	border-bottom-left-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+.hide-if-empty:empty {
+	display: none;
+}
+.placeholder-backdrop {
+	background-color: #000;
+	opacity: 0.5;
+}
+.letter-spacing-1 {
+	letter-spacing: 0.1rem;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }

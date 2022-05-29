@@ -1,8 +1,4 @@
 .character-picker {
-	img {
-		width: var(--thumb-height);
-		height: var(--thumb-height);
-	}
 	.big-table {
 		.col:nth-child(even) {
 			--bs-bg-opacity: 0.5;
@@ -18,5 +14,8 @@
 			--bs-bg-opacity: 0.5;
 			background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
 		}
+	}
+	.muted-icon{
+		filter:brightness(0.3)
 	}
 }

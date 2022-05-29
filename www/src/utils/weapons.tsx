@@ -16,5 +16,9 @@ export const weaponTypes: GI_WeaponType[] = [
 ]
 
 export function getWeaponIconSrc(weaponCode: string): string {
-	return process.env.ASSET_PATH + `media/weapons/${weaponCode}.png`
+	return BUNDLE_ENV.ASSET_PATH + `media/weapons/${weaponCode}.png`
+}
+
+export function getWeaponIconLageSrc(weaponCode: string): string {
+	return BUNDLE_ENV.ASSET_PATH + `media/weapons/${weaponCode}.large.png`
 }

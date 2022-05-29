@@ -1,8 +1,7 @@
 /node_modules/
 /cache/
 /www/dist/
-/www/src/generated/
+/www/src/api/generated.js
 /www/public/generated/
 /www/public/media/
 /google.private_key.json
-data/бестолковые переводы.txt

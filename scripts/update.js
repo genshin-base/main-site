@@ -2,7 +2,7 @@
 import { promises as fs } from 'fs'
 import { extractBuilds } from '#lib/parsing/helperteam/index.js'
 import { loadSpreadsheetCached } from '#lib/google.js'
-import { json_getText } from '#lib/parsing/helperteam/json.js'
+import { json_getText } from '#lib/parsing/helperteam/text-json.js'
 import {
 	extractArtifactsData,
 	extractCharactersData,
@@ -10,12 +10,10 @@ import {
 	extractWeaponsData,
 	getAndProcessMappedImages,
 } from '#lib/parsing/honeyhunter/index.js'
-import { getCharacterArtifactCodes, getCharacterWeaponCodes } from '#lib/parsing/helperteam/characters.js'
-import { makeRecentChangelogsTable } from '#lib/parsing/helperteam/changelogs.js'
 import { trigramSearcherFromStrings } from '#lib/trigrams.js'
 import { createHash } from 'crypto'
 import { exists, parseArgs, relativeToCwd } from '#lib/utils/os.js'
-import { error, info, progress } from '#lib/utils/logs.js'
+import { fatal, info, progress, warn } from '#lib/utils/logs.js'
 import { checkHelperteamFixesUsage, clearHelperteamFixesUsage } from '#lib/parsing/helperteam/fixes.js'
 import { checkHoneyhunterFixesUsage, clearHoneyhunterFixesUsage } from '#lib/parsing/honeyhunter/fixes.js'
 import {
@@ -29,6 +27,7 @@ import {
 	loadCharacters,
 	loadDomains,
 	loadEnemies,
+	loadEnemyGroups,
 	loadItems,
 	loadWeapons,
 	prepareCacheDir,
@@ -37,56 +36,57 @@ import {
 	saveCharacters,
 	saveDomains,
 	saveEnemies,
+	saveEnemyGroups,
 	saveItems,
 	saveWeapons,
 	WWW_DYNAMIC_DIR,
 	WWW_MEDIA_DIR,
-	WWW_STATIC_DIR,
+	WWW_API_FILE,
+	TRANSLATED_DATA_DIR,
+	loadTranslatedBuilds,
+	BUILDS_CACHE_DIR,
 } from './_common.js'
 import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
 import {
 	excludeDomainBosses,
-	makeArtifactsFullInfo,
+	extractFullInfoLocations,
+	makeArtifactFullInfoWithRelated,
+	makeArtifactsRegularInfo,
 	makeCharacterFullInfo,
 	makeCharacterShortList,
-	makeWeaponsFullInfo,
-	mergeSimilarEnemies,
+	makeMaterialsTimetable,
+	makeSearchData,
+	makeWeaponFullInfoWithRelated,
+	makeWeaponsRegularInfo,
 } from '#lib/parsing/combine.js'
-import { extractItemsData } from '#lib/parsing/honeyhunter/items.js'
-import { extractEnemiesData } from '#lib/parsing/honeyhunter/enemies.js'
+import {
+	applyItemTypesByWeapons,
+	extractItemsData,
+	getItemAncestryCodes,
+} from '#lib/parsing/honeyhunter/items.js'
+import {
+	extractEnemiesData,
+	makeEnemyGroups,
+	replaceEnemiesByGroups,
+} from '#lib/parsing/honeyhunter/enemies.js'
 import { applyWeaponsObtainData } from '#lib/parsing/wiki/weapons.js'
-import { applyEnemiesLocations } from '#lib/parsing/mihoyo/map.js'
+import { applyItemsLocations } from '#lib/parsing/mihoyo/map.js'
+import { checkMihoyoFixesUsage, clearMihoyoFixesUsage } from '#lib/parsing/mihoyo/fixes.js'
+import { applyDomainsRegion } from '#lib/parsing/wiki/domains.js'
+import { applyCharactersReleaseVersion } from '#lib/parsing/wiki/characters.js'
+import { getEnemyCodeFromName } from '#lib/genshin.js'
+import { getArtifactSpecialGroupCodes } from '#lib/parsing/honeyhunter/artifacts.js'
+import { buildsConvertLangMode } from '#lib/parsing/helperteam/build_texts.js'
 
-const DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
+const HELPERTEAM_DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
 const LANGS = ['en', 'ru']
 
 const fixes = {
 	/** @type {import('#lib/parsing/helperteam/fixes').HelperteamFixes} */
 	helperteam: {
-		roleNotes: [
-			{ character: 'kaeya', role: 'cryo dps', searchAs: 'dps' },
-			{ character: 'kaeya', role: 'physical dps', searchAs: 'dps' },
-		],
+		roleNotes: [{ character: 'kaeya', role: 'cryo dps', searchAs: 'dps' }],
 		sheets: [
-			{
-				// у Барбары у столбца роли нет заголовка
-				title: /^hydro$/i,
-				fixFunc(sheet) {
-					for (const { values: cells = [] } of sheet.data[0].rowData) {
-						for (let i = 0; i < cells.length; i++) {
-							const cell = cells[i]
-							if (json_getText(cell).trim().toLocaleLowerCase() === 'barbara') {
-								if (cells.length > i + 1 && json_getText(cells[i + 1]).trim() === '') {
-									cells[i + 1].userEnteredValue = { stringValue: 'role' }
-									return true
-								}
-							}
-						}
-					}
-					return false
-				},
-			},
 			{
 				// у Эмбер один набор артефактов прописан в странном формате
 				title: /^pyro$/i,
@@ -113,46 +113,31 @@ const fixes = {
 	/** @type {import('#lib/parsing/honeyhunter/fixes').HoneyhunterFixes} */
 	honeyhunter: {
 		statuses: {
-			// некоторые предметы почему-то находятся в таблице нерелизнутого
-			weapons: [
-				{ actually: 'released', name: 'Predator' },
-				{ actually: 'released', name: "Mouun's Moon" },
-				{ actually: 'released', name: 'Calamity Queller' },
-			],
+			// некоторые персонажи и предметы почему-то находятся в таблице нерелизнутого
+			characters: [],
+			weapons: [{ actually: 'released', name: 'Calamity Queller' }],
 		},
-		items: (() => {
-			function addType(type) {
-				return (/**@type {import('#lib/parsing').ItemData}*/ item) => {
-					if (item.types.includes(type)) return false
-					item.types.push(type)
-					return true
-				}
-			}
-			return [
-				// некоторые предметы используются для прокачки, но почему-то отсутствуют на
-				// https://genshin.honeyhunterworld.com/db/item/character-ascension-material-local-material/
-				{ code: 'spectral-nucleus', fixFunc: addType('character-material-local') },
-				{ code: 'dendrobium', fixFunc: addType('character-material-local') },
-				{ code: 'onikabuto', fixFunc: addType('character-material-local') },
-			]
-		})(),
 		travelerLangNames: {
 			anemo: {
 				en: 'Anemo Traveler',
-				ru: 'Анемо Путешественник',
+				ru: 'Анемо Путешественница',
 			},
 			geo: {
 				en: 'Geo Traveler',
-				ru: 'Гео Путешественник',
+				ru: 'Гео Путешественница',
 			},
 			electro: {
 				en: 'Electro Traveler',
-				ru: 'Электро Путешественник',
+				ru: 'Электро Путешественница',
 			},
 		},
-	},
-	/** @type {import('#lib/parsing/combine').CombineFixes} */
-	combine: {
+		skip: {
+			enemies: [
+				/^Millelith/i, //
+				/^Treasure Hoarders - Boss$/,
+			],
+			artifacts: [/^Prayers to the Firmament$/i],
+		},
 		manualEnemyGroups: [
 			{ origNames: /^Ruin Guard$/ },
 			{ origNames: /^Ruin Hunter$/ },
@@ -169,6 +154,88 @@ const fixes = {
 				name: { en: 'Wolves of the Rift', ru: 'Волк Разрыва' },
 			},
 		],
+		domainMissingLocations: [],
+		postProcess: {
+			items: (() => {
+				/**
+				 * @param {string} code
+				 * @param {import('#lib/parsing').ItemType} type
+				 */
+				function addItemType(code, type) {
+					return (/**@type {import('#lib/parsing').Code2ItemData}*/ code2item) => {
+						if (!code2item[code] || code2item[code].types.includes(type)) return false
+						code2item[code].types.push(type)
+						return true
+					}
+				}
+				return [
+					// некоторые предметы используются для прокачки, но почему-то отсутствуют на
+					// https://genshin.honeyhunterworld.com/db/item/character-ascension-material-local-material/
+					addItemType('spectral-nucleus', 'character-material-secondary'),
+					addItemType('spectral-heart', 'character-material-secondary'),
+					addItemType('spectral-husk', 'character-material-secondary'),
+					addItemType('dendrobium', 'character-material-local'),
+					addItemType('onikabuto', 'character-material-local'),
+				]
+			})(),
+			enemies: [
+				// Стаи вишапов нет ни в списке врагов, ни в списке данжей
+				(code2enemy, code2img) => {
+					// https://genshin.honeyhunterworld.com/db/item/i_216/?lang=EN
+					const name = {
+						en: 'Bathysmal Vishap Herd',
+						ru: 'Стая вишапов глубин',
+					}
+					// https://genshin-impact.fandom.com/wiki/Coral_Defenders
+					const code = getEnemyCodeFromName(name.en)
+					const artifactSetCodes = ['lucky-dog', 'the-exile', 'berserker', 'prayers-to-springtime', 'gladiators-finale', 'wanderers-troupe'] //prettier-ignore
+					const itemCodes = ['dragonheirs-false-fin', 'shivada-jade-gemstone', 'vajrada-amethyst-gemstone'] //prettier-ignore
+					const img =
+						'https://uploadstatic.mihoyo.com/ys-obc/2021/12/06/75379475/0d7fe8f319459a12e082eb96ab06060e_5630470111967973966.png'
+
+					if (code in code2enemy) return false
+					code2enemy[code] = { code, name, drop: { artifactSetCodes, itemCodes }, locations: [] }
+					code2img.set(code, img)
+					return true
+				},
+			],
+			domains: [],
+			weapons: (() => {
+				function removeSlashNs(attrFunc) {
+					return code2weapon => {
+						let used = false
+						const attr = attrFunc(code2weapon)
+						for (const [lang, text] of Object.entries(attr)) {
+							const newText = text.replace('\\n', ' ')
+							if (newText !== text) used = true
+							attr[lang] = newText
+						}
+						return used
+					}
+				}
+				return [
+					// у некоторых оружий в описании стречаются "\n" (двумя символами)
+					// https://genshin.honeyhunterworld.com/db/weapon/w_5312/?lang=EN
+					// https://genshin.honeyhunterworld.com/db/weapon/w_4314/?lang=EN
+					removeSlashNs(code2weapon => code2weapon['dodoco-tales'].description),
+					removeSlashNs(code2weapon => code2weapon['predator'].specialAbility),
+					removeSlashNs(code2weapon => code2weapon['sword-of-descension'].specialAbility),
+				]
+			})(),
+		},
+		descriptionLangFix(text, lang) {
+			if (lang === 'ru') {
+				text = text.replace(/\bHP\b/g, 'ХП')
+			}
+			return text
+		},
+	},
+	/** @type {import('#lib/parsing/mihoyo/fixes').MihoyoFixes} */
+	mihoyo: {
+		enemiesOnMap: [
+			{ nameOnMap: 'Fatui Agent', useCode: 'fatui-pyro-agent' },
+			{ nameOnMap: 'Fatui Mirror Maiden', useCode: 'mirror-maiden' },
+		],
 	},
 }
 
@@ -176,7 +243,7 @@ const args = parseArgs()
 
 function printUsage() {
 	console.log(`Usage:
-  node ${relativeToCwd(process.argv[1])} [data|www|images] [-h|--help] [--force] [--ignore-cache]`)
+  node ${relativeToCwd(process.argv[1])} [data|builds|www|images] [-h|--help] [--force] [--ignore-cache]`)
 }
 
 if (args['--help'] || args['-h']) {
@@ -185,14 +252,19 @@ if (args['--help'] || args['-h']) {
 }
 
 ;(async () => {
+	const updBuilds = [undefined, 'builds'].includes(args['cmd'])
 	const updData = [undefined, 'data'].includes(args['cmd'])
 	const updImgs = [undefined, 'images'].includes(args['cmd'])
 	const updWww = [undefined, 'www'].includes(args['cmd'])
 
+	if (updBuilds) {
+		await prepareCacheDir(BUILDS_CACHE_DIR, !!args['--ignore-cache'])
+		await extractAndSaveBuildsData()
+	}
 	if (updData) {
 		await prepareCacheDir(DATA_CACHE_DIR, !!args['--ignore-cache'])
 		await extractAndSaveAllItemsData()
-		await extractAndSaveBuildsData()
+		// await checkUsedItemsLocations()
 	}
 	if (updImgs) {
 		await prepareCacheDir(IMGS_CACHE_DIR, !!args['--ignore-cache'])
@@ -202,7 +274,7 @@ if (args['--help'] || args['-h']) {
 
 	info('done.')
 	// setTimeout(() => {}, 1000000)
-})().catch(error)
+})().catch(fatal)
 
 async function extractAndSaveBuildsData() {
 	info('updating builds', { newline: false })
@@ -217,8 +289,8 @@ async function extractAndSaveBuildsData() {
 	const spreadsheet = await loadSpreadsheetCached(
 		`${BASE_DIR}/google.private_key.json`,
 		`${CACHE_DIR}/google.access_token.json`,
-		`${DATA_CACHE_DIR}/spreadsheet.json`,
-		DOC_ID,
+		`${BUILDS_CACHE_DIR}/spreadsheet.json`,
+		HELPERTEAM_DOC_ID,
 		[
 			'sheets.properties',
 			'sheets.data.rowData.values.userEnteredValue',
@@ -229,39 +301,46 @@ async function extractAndSaveBuildsData() {
 	progress()
 
 	clearHelperteamFixesUsage(fixes.helperteam)
-	const build = await extractBuilds(spreadsheet, knownCodes, fixes.helperteam)
+	const builds = await extractBuilds(spreadsheet, knownCodes, fixes.helperteam)
 	checkHelperteamFixesUsage(fixes.helperteam)
 
 	await fs.mkdir(DATA_DIR, { recursive: true })
-	await saveBuilds(build)
+	await saveBuilds(builds)
 	progress()
 }
 
 async function extractAllItemsData() {
 	const cd = DATA_CACHE_DIR
-	const fx = fixes.honeyhunter
-	clearHoneyhunterFixesUsage(fx)
+	const hhfx = fixes.honeyhunter
+	clearHoneyhunterFixesUsage(hhfx)
+	clearMihoyoFixesUsage(fixes.mihoyo)
 
-	const items = await extractItemsData(cd, LANGS, fx)
-	const artifacts = await extractArtifactsData(cd, LANGS, fx)
-	const weapons = await extractWeaponsData(cd, LANGS, items.id2item, fx)
-	const enemies = await extractEnemiesData(cd, LANGS, items.id2item, artifacts.id2item, fx)
-	const domains = await extractDomainsData(cd, LANGS, items.id2item, artifacts.id2item, enemies.id2item, fx)
-	const characters = await extractCharactersData(cd, LANGS, items.id2item, fx)
+	const items = await extractItemsData(cd, LANGS, hhfx)
+	const artifacts = await extractArtifactsData(cd, LANGS, hhfx)
+	const weapons = await extractWeaponsData(cd, LANGS, items.id2item, hhfx)
+	const enemies = await extractEnemiesData(cd, LANGS, items.id2item, artifacts.id2item, hhfx)
+	const domains = await extractDomainsData(cd, LANGS, items.id2item, artifacts.id2item, enemies.id2item, hhfx) //prettier-ignore
+	const characters = await extractCharactersData(cd, LANGS, items.id2item, hhfx)
+	const enemyGroups = makeEnemyGroups(enemies.code2item, fixes.honeyhunter)
 
+	await applyCharactersReleaseVersion(cd, characters.code2item)
 	await applyWeaponsObtainData(cd, weapons.code2item)
-	await applyEnemiesLocations(cd, enemies.code2item)
+	await applyItemsLocations(cd, enemies.code2item, enemyGroups.code2item, items.code2item, fixes.mihoyo)
+	await applyItemTypesByWeapons(items.code2item, weapons.code2item)
+	await applyDomainsRegion(cd, domains.code2item)
 
-	checkHoneyhunterFixesUsage(fx)
+	checkHoneyhunterFixesUsage(hhfx)
+	checkMihoyoFixesUsage(fixes.mihoyo)
 	progress()
 
-	return { items, artifacts, weapons, enemies, domains, characters }
+	return { items, artifacts, weapons, enemies, domains, characters, enemyGroups }
 }
 async function extractAndSaveAllItemsData() {
 	info('updating items', { newline: false })
 	await fs.mkdir(DATA_DIR, { recursive: true })
 
-	const { items, artifacts, weapons, enemies, domains, characters } = await extractAllItemsData()
+	const { items, artifacts, weapons, enemies, domains, characters, enemyGroups } =
+		await extractAllItemsData()
 
 	await saveItems(items.code2item)
 	await saveArtifacts(artifacts.code2item)
@@ -269,34 +348,40 @@ async function extractAndSaveAllItemsData() {
 	await saveCharacters(characters.code2item)
 	await saveDomains(domains.code2item)
 	await saveEnemies(enemies.code2item)
+	await saveEnemyGroups(enemyGroups.code2item)
 
 	progress()
 }
 
 /** @param {boolean} overwriteExisting */
 async function extractAndSaveItemImages(overwriteExisting) {
-	const builds = await loadBuilds()
-	const { items, artifacts, weapons, enemies, characters } = await extractAllItemsData()
-	const enemyImgCode2groupCode = mergeSimilarEnemies(enemies.code2item, fixes.combine)
+	info('extracting data', { newline: false })
+	const { items, artifacts, weapons, enemies, characters, enemyGroups } = await extractAllItemsData()
 
-	const usedArtCodes = new Set(builds.characters.map(x => Array.from(getCharacterArtifactCodes(x))).flat())
-	const usedWeaponCodes = new Set(builds.characters.map(x => Array.from(getCharacterWeaponCodes(x))).flat())
+	replaceEnemiesByGroups(enemies.code2item, enemyGroups.code2item)
+	for (const group of Object.values(enemyGroups.code2item)) {
+		const url = enemies.code2img.get(group.iconEnemyCode)
+		if (url) enemies.code2img.set(group.code, url)
+		else warn(`group '${group.code}': no icon image '${group.iconEnemyCode}'`)
+	}
 
 	const usedItemCodes = new Set()
-	for (const weapon of Object.values(weapons.code2item))
-		if (usedWeaponCodes.has(weapon.code)) for (const code of weapon.materialCodes) usedItemCodes.add(code)
 	for (const character of Object.values(characters.code2item))
 		for (const code of character.materialCodes) usedItemCodes.add(code)
+	for (const weapon of Object.values(weapons.code2item))
+		for (const code of weapon.materialCodes) usedItemCodes.add(code)
+	for (const item of Object.values(items.code2item))
+		if (usedItemCodes.has(item.code))
+			for (const code of getItemAncestryCodes(item, items.code2item)) usedItemCodes.add(code)
 
 	const usedEmenyCodes = new Set()
 	for (const enemy of Object.values(enemies.code2item))
 		if (
-			enemy.drop.artifactSetCodes.some(x => usedArtCodes.has(x)) ||
+			enemy.drop.artifactSetCodes.some(x => x in artifacts.code2item) ||
 			enemy.drop.itemCodes.some(x => usedItemCodes.has(x))
 		) {
 			usedEmenyCodes.add(enemy.code)
 		}
-	for (const code of enemyImgCode2groupCode.keys()) usedEmenyCodes.add(code)
 
 	/**
 	 * @param {string} title
@@ -309,35 +394,36 @@ async function extractAndSaveItemImages(overwriteExisting) {
 	}
 
 	const shouldProcess = async dest => overwriteExisting || !(await exists(dest))
-	const resize64 = (i, o) => resize(i, o, '64x64')
+	const processNormal = (i, o) => mediaChain(i, o, (i, o) => resize(i, o, '64x64'), pngquant, optipng)
+	const processLarge = (i, o) => mediaChain(i, o, (i, o) => resize(i, o, '120x120'), pngquant, optipng)
+	async function* processIfShould(mediaFPath, mediaFunc) {
+		const dest = `${WWW_MEDIA_DIR}/${mediaFPath}`
+		if (await shouldProcess(dest)) yield src => mediaFunc(src, dest)
+	}
 
 	await processGroup('items', async () => {
 		const { code2img } = items
 		for (const code of code2img.keys()) if (!usedItemCodes.has(code)) code2img.delete(code)
 
-		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'items', async code => {
-			const dest = `${WWW_MEDIA_DIR}/items/${code}.png`
-			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
+		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'items', async function* (code) {
+			yield* processIfShould(`items/${code}.png`, processNormal)
+			yield* processIfShould(`items/${code}.large.png`, processLarge)
 		})
 	})
 
 	await processGroup('artifacts', async () => {
 		const { code2img } = artifacts
-		for (const code of code2img.keys()) if (!usedArtCodes.has(code)) code2img.delete(code)
-
-		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'artifacts', async code => {
-			const dest = `${WWW_MEDIA_DIR}/artifacts/${code}.png`
-			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
+		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'artifacts', async function* (code) {
+			yield* processIfShould(`artifacts/${code}.png`, processNormal)
+			yield* processIfShould(`artifacts/${code}.large.png`, processLarge)
 		})
 	})
 
 	await processGroup('weapons', async () => {
 		const { code2img } = weapons
-		for (const code of code2img.keys()) if (!usedWeaponCodes.has(code)) code2img.delete(code)
-
-		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'weapons', async code => {
-			const dest = `${WWW_MEDIA_DIR}/weapons/${code}.png`
-			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
+		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'weapons', async function* (code) {
+			yield* processIfShould(`weapons/${code}.png`, processNormal)
+			yield* processIfShould(`weapons/${code}.large.png`, processLarge)
 		})
 	})
 
@@ -345,10 +431,8 @@ async function extractAndSaveItemImages(overwriteExisting) {
 		const { code2img } = enemies
 		for (const code of code2img.keys()) if (!usedEmenyCodes.has(code)) code2img.delete(code)
 
-		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'weapons', async code => {
-			code = enemyImgCode2groupCode.get(code) ?? code
-			const dest = `${WWW_MEDIA_DIR}/enemies/${code}.png`
-			if (await shouldProcess(dest)) return src => mediaChain(src, dest, resize64, pngquant, optipng)
+		return await getAndProcessMappedImages(code2img, IMGS_CACHE_DIR, 'enemies', async function* (code) {
+			yield* processIfShould(`enemies/${code}.png`, processNormal)
 		})
 	})
 }
@@ -356,118 +440,94 @@ async function extractAndSaveItemImages(overwriteExisting) {
 async function saveWwwData() {
 	info('updating www JSONs', { newline: false })
 
-	const builds = await loadBuilds()
-	const characters = await loadCharacters()
-	const enemies = await loadEnemies()
-	const artifacts = await loadArtifacts()
-	const weapons = await loadWeapons()
-	const domains = await loadDomains()
-	const items = await loadItems()
+	const builds = await (async () => {
+		if (await exists(TRANSLATED_DATA_DIR)) {
+			return await loadTranslatedBuilds()
+		} else {
+			warn('data/translations not exists, using parsed english version')
+			return buildsConvertLangMode(await loadBuilds(), 'multilang', en =>
+				en === null ? {} : Object.fromEntries(LANGS.map(lang => [lang, en])),
+			)
+		}
+	})()
 
-	excludeDomainBosses(enemies, domains)
-	mergeSimilarEnemies(enemies, fixes.combine)
-
-	for (const dir of [WWW_STATIC_DIR, WWW_DYNAMIC_DIR]) {
-		await fs.rm(dir, { recursive: true, force: true })
-		await fs.mkdir(dir, { recursive: true })
+	/** @type {import('#lib/parsing/combine').CommonData} */
+	const common = {
+		builds,
+		code2character: await loadCharacters(),
+		code2enemy: await loadEnemies(),
+		code2artifact: await loadArtifacts(),
+		code2weapon: await loadWeapons(),
+		code2domain: await loadDomains(),
+		code2item: await loadItems(),
+		enemyGroups: await loadEnemyGroups(),
+		_cache: new Map(),
 	}
 
+	excludeDomainBosses(common.code2enemy, common.code2domain)
+
+	replaceEnemiesByGroups(common.code2enemy, common.enemyGroups)
+
+	await fs.rm(WWW_DYNAMIC_DIR, { recursive: true, force: true })
+	await fs.mkdir(WWW_DYNAMIC_DIR, { recursive: true })
+
 	const md5sum = createHash('md5')
-	async function writeJsonAndHash(path, data) {
+	async function writeJson(path, data) {
 		const content = JSON.stringify(data)
 		await fs.writeFile(path, content)
 		md5sum.update(content)
 	}
 
 	for (const lang of LANGS) {
-		const buildArtifacts = makeArtifactsFullInfo(
-			builds.artifacts,
-			artifacts,
-			domains,
-			enemies,
-			builds.characters,
-			lang,
-		)
-		const buildWeapons = makeWeaponsFullInfo(builds.weapons, weapons, domains, items, lang)
+		const buildArtifacts = makeArtifactsRegularInfo(common, lang)
+		const buildWeapons = makeWeaponsRegularInfo(common, lang)
 
 		await fs.mkdir(`${WWW_DYNAMIC_DIR}/characters`, { recursive: true })
 		for (const character of builds.characters) {
-			await writeJsonAndHash(
-				`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`,
-				makeCharacterFullInfo(
-					character,
-					characters,
-					buildArtifacts.artifacts,
-					buildWeapons.weapons,
-					domains,
-					enemies,
-					items,
-					lang,
-				),
-			)
+			const fullInfo = makeCharacterFullInfo(character, common, buildArtifacts, buildWeapons, lang)
+			const locsInfo = extractFullInfoLocations(fullInfo)
+			await writeJson(`${WWW_DYNAMIC_DIR}/characters/${character.code}-locs-${lang}.json`, locsInfo)
+			await writeJson(`${WWW_DYNAMIC_DIR}/characters/${character.code}-${lang}.json`, fullInfo)
 		}
 
-		await writeJsonAndHash(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, buildArtifacts)
-		await writeJsonAndHash(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, buildWeapons)
+		await fs.mkdir(`${WWW_DYNAMIC_DIR}/timetables`, { recursive: true })
+		const timetable = makeMaterialsTimetable(common, lang)
+		await writeJson(`${WWW_DYNAMIC_DIR}/timetables/materials-${lang}.json`, timetable)
+
+		await writeJson(`${WWW_DYNAMIC_DIR}/artifacts-${lang}.json`, buildArtifacts)
+		await fs.mkdir(`${WWW_DYNAMIC_DIR}/artifacts`, { recursive: true })
+		for (const artifact of Object.values(common.code2artifact)) {
+			const artifactInfo = makeArtifactFullInfoWithRelated(artifact, common, lang)
+			await writeJson(`${WWW_DYNAMIC_DIR}/artifacts/${artifact.code}-${lang}.json`, artifactInfo)
+		}
+
+		await writeJson(`${WWW_DYNAMIC_DIR}/weapons-${lang}.json`, buildWeapons)
+		await fs.mkdir(`${WWW_DYNAMIC_DIR}/weapons`, { recursive: true })
+		for (const weapon of Object.values(common.code2weapon)) {
+			const weaponInfo = makeWeaponFullInfoWithRelated(weapon, common, lang)
+			await writeJson(`${WWW_DYNAMIC_DIR}/weapons/${weapon.code}-${lang}.json`, weaponInfo)
+		}
+
+		await writeJson(`${WWW_DYNAMIC_DIR}/search-${lang}.json`, makeSearchData(common, lang))
 
 		progress()
 	}
 
-	await writeJsonAndHash(`${WWW_DYNAMIC_DIR}/changelogs.json`, builds.changelogsTable)
-	await writeJsonAndHash(
-		`${WWW_DYNAMIC_DIR}/changelogs-recent.json`,
-		makeRecentChangelogsTable(builds.changelogsTable),
-	)
-
-	/*
-	await writeJsonAndHash(
-		`${WWW_DYNAMIC_DIR}/locations.json`,
-		Object.values(domains)
-			.map(x => ({ type: 'domain', code: x.code, locations: [x.location] }))
-			.concat(
-				Object.values(enemies).map(x => ({ type: 'enemy', code: x.code, locations: x.locations })),
-			),
-	)
-	*/
+	const artGroupCodes = getArtifactSpecialGroupCodes(common.code2artifact)
 
 	const hash = md5sum.digest('hex').slice(0, 8)
+	const charactersShortInfo = makeCharacterShortList(builds.characters, common.code2character)
 	await fs.writeFile(
-		`${WWW_STATIC_DIR}/index.ts`,
+		WWW_API_FILE,
 		`
-import { apiGetJSONFile, mapAllByCode, MapAllByCode } from '#src/api'
+export const GENERATED_DATA_HASH = ${JSON.stringify(hash)}
 
-const LANG = 'en'
+/** @type {import('#lib/parsing/combine').CharacterShortInfo[]} */
+export const charactersShortList = ${JSON.stringify(charactersShortInfo, null, '\t')}
 
-const get = <T>(prefix:string, signal:AbortSignal) =>
-	apiGetJSONFile(\`generated/\${prefix}-\${LANG}.json?v=${hash}\`, signal) as Promise<T>
-
-import type { CharacterShortInfo } from '#lib/parsing/combine'
-export const charactersShortList: CharacterShortInfo[] =
-	${JSON.stringify(makeCharacterShortList(builds.characters, characters))}
-
-import type { CharacterFullInfoWithRelated } from '#lib/parsing/combine'
-export { CharacterFullInfoWithRelated }
-export function apiGetCharacter(code:string, signal:AbortSignal): Promise<MapAllByCode<CharacterFullInfoWithRelated>> {
-	return (get(\`characters/\${code}\`, signal) as Promise<CharacterFullInfoWithRelated>).then(mapAllByCode)
-}
-
-import type { ArtifactsFullInfoWithRelated } from '#lib/parsing/combine'
-export { ArtifactsFullInfoWithRelated }
-export function apiGetArtifacts(signal:AbortSignal): Promise<MapAllByCode<ArtifactsFullInfoWithRelated>> {
-	return (get(\`artifacts\`, signal) as Promise<ArtifactsFullInfoWithRelated>).then(mapAllByCode)
-}
-
-import type { WeaponsFullInfoWithRelated } from '#lib/parsing/combine'
-export { WeaponsFullInfoWithRelated }
-export function apiGetWeapons(signal:AbortSignal): Promise<MapAllByCode<WeaponsFullInfoWithRelated>> {
-	return (get(\`weapons\`, signal) as Promise<WeaponsFullInfoWithRelated>).then(mapAllByCode)
-}
-
-import type { ChangelogsTable } from '#lib/parsing/helperteam/changelogs'
-export { ChangelogsTable }
-export function apiGetChangelogs(onlyRecent:boolean, signal:AbortSignal): Promise<ChangelogsTable> {
-	return get(\`changelogs\${onlyRecent ? '-recent' : ''}\`, signal)
-}`,
+/** @type {import('#lib/parsing').ArtifcatSetGroupsCodes} */
+export const ART_GROUP_CODES = ${JSON.stringify(artGroupCodes, null, '\t')}
+`,
 	)
 	progress()
 }

@@ -1,33 +1,47 @@
 .item-avatar {
 	width: var(--thumb-height);
 	height: var(--thumb-height);
+	box-sizing: content-box;
 	&.small-avatar {
 		width: var(--thumb-height-sm);
 		height: var(--thumb-height-sm);
-		&.with-padding{
-			padding: calc(var(--thumb-height-sm) / 9)
+		&.with-padding {
+			img {
+				padding: calc(var(--thumb-height-sm) / 9);
+			}
 		}
+	}
+	&.emoji-avatar {
+		width: 1rem;
+		height: 1rem;
 	}
 	&.large-avatar {
 		width: var(--thumb-height-l);
 		height: var(--thumb-height-l);
 	}
-	.image{
+	&.input-group-avatar {
+		height: 38px; //todo может более ловкий размер понадобится
+	}
+	.image {
 		// object-fit: cover;
-		object-fit: scale-down;
+		object-fit: contain;
 		height: 100%;
 		width: 100%;
+		border-radius: inherit;
+	}
+	.badge-element-icon{
+		height: 12px;
 	}
 }
 
 .item-detail-popover {
 	//desktop wrap of a card
-	max-width: 576px !important;
-	min-width: 450px !important;
-	max-height: 600px;
+	max-width: 500px;
+	min-width: 500px;
+	max-height: 500px;
 }
 .item-detail-popover-card {
-	.card-body{
+	.card-body {
 		max-height: 180px;
 	}
 	.map-header,
@@ -37,7 +51,8 @@
 	.map-header-bg {
 		z-index: -1;
 	}
-	.dungeon-location {
+	.map-wrap{
 		height: 230px;
+		background-color: black;
 	}
 }

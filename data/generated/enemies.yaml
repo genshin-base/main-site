@@ -1,0 +1,3473 @@
+dendro-slime:
+  code: dendro-slime
+  name:
+    en: Dendro Slime
+    ru: Дендро слайм
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+large-dendro-slime:
+  code: large-dendro-slime
+  name:
+    en: Large Dendro Slime
+    ru: Большой Дендро слайм
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+anemo-slime:
+  code: anemo-slime
+  name:
+    en: Anemo Slime
+    ru: Анемо слайм
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+large-anemo-slime:
+  code: large-anemo-slime
+  name:
+    en: Large Anemo Slime
+    ru: Большой Анемо слайм
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+electro-slime:
+  code: electro-slime
+  name:
+    en: Electro Slime
+    ru: Электро слайм
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+large-electro-slime:
+  code: large-electro-slime
+  name:
+    en: Large Electro Slime
+    ru: Большой Электро слайм
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+mutant-electro-slime:
+  code: mutant-electro-slime
+  name:
+    en: Mutant Electro Slime
+    ru: Электро слайм-мутант
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+cryo-slime:
+  code: cryo-slime
+  name:
+    en: Cryo Slime
+    ru: Крио слайм
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+large-cryo-slime:
+  code: large-cryo-slime
+  name:
+    en: Large Cryo Slime
+    ru: Большой Крио слайм
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+hydro-slime:
+  code: hydro-slime
+  name:
+    en: Hydro Slime
+    ru: Гидро слайм
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+large-hydro-slime:
+  code: large-hydro-slime
+  name:
+    en: Large Hydro Slime
+    ru: Большой Гидро слайм
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+pyro-slime:
+  code: pyro-slime
+  name:
+    en: Pyro Slime
+    ru: Пиро слайм
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+large-pyro-slime:
+  code: large-pyro-slime
+  name:
+    en: Large Pyro Slime
+    ru: Большой Пиро слайм
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+geo-slime:
+  code: geo-slime
+  name:
+    en: Geo Slime
+    ru: Гео слайм
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+large-geo-slime:
+  code: large-geo-slime
+  name:
+    en: Large Geo Slime
+    ru: Большой Гео слайм
+  locations: []
+  drop:
+    itemCodes:
+      - slime-concentrate
+      - slime-condensate
+      - slime-secretions
+    artifactSetCodes: []
+eye-of-the-storm:
+  code: eye-of-the-storm
+  name:
+    en: Eye of the Storm
+    ru: Глаз бури
+  locations:
+    - !loc teyvat -2380 1116
+    - !loc teyvat -2371 1123
+    - !loc teyvat -2198 1359
+    - !loc teyvat -2153 1393
+    - !loc teyvat -1110 -127
+  drop:
+    itemCodes: []
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+electro-hypostasis:
+  code: electro-hypostasis
+  name:
+    en: Electro Hypostasis
+    ru: Электро гипостазис
+  locations:
+    - !loc teyvat 1194 1013
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - lightning-prism
+      - mora
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - prayers-for-wisdom
+      - prayers-for-wisdom
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+anemo-hypostasis:
+  code: anemo-hypostasis
+  name:
+    en: Anemo Hypostasis
+    ru: Анемо гипостазис
+  locations:
+    - !loc teyvat 554 -585
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - hurricane-seed
+      - mora
+      - vayuda-turquoise-chunk
+      - vayuda-turquoise-fragment
+      - vayuda-turquoise-gemstone
+      - vayuda-turquoise-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+geo-hypostasis:
+  code: geo-hypostasis
+  name:
+    en: Geo Hypostasis
+    ru: Гео гипостазис
+  locations:
+    - !loc teyvat 106 2276
+  drop:
+    itemCodes:
+      - adventure-exp
+      - basalt-pillar
+      - companionship-exp
+      - mora
+      - prithiva-topaz-chunk
+      - prithiva-topaz-fragment
+      - prithiva-topaz-gemstone
+      - prithiva-topaz-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+hydro-hypostasis:
+  code: hydro-hypostasis
+  name:
+    en: Hydro Hypostasis
+    ru: Гидро гипостазис
+  locations:
+    - !loc teyvat 217 5880
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - dew-of-repudiation
+      - mora
+      - varunada-lazurite-chunk
+      - varunada-lazurite-fragment
+      - varunada-lazurite-gemstone
+      - varunada-lazurite-sliver
+    artifactSetCodes:
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - prayers-for-wisdom
+      - prayers-for-wisdom
+      - the-exile
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+cryo-hypostasis:
+  code: cryo-hypostasis
+  name:
+    en: Cryo Hypostasis
+    ru: Крио гипостазис
+  locations:
+    - !loc teyvat -199 1149
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - crystalline-bloom
+      - mora
+      - shivada-jade-chunk
+      - shivada-jade-fragment
+      - shivada-jade-gemstone
+      - shivada-jade-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - lucky-dog
+      - lucky-dog
+      - prayers-to-springtime
+      - prayers-to-springtime
+      - the-exile
+      - the-exile
+      - wanderers-troupe
+      - wanderers-troupe
+pyro-hypostasis:
+  code: pyro-hypostasis
+  name:
+    en: Pyro Hypostasis
+    ru: Пиро гипостазис
+  locations:
+    - !loc teyvat 2430 5363
+  drop:
+    itemCodes:
+      - adventure-exp
+      - agnidus-agate-chunk
+      - agnidus-agate-fragment
+      - agnidus-agate-gemstone
+      - agnidus-agate-sliver
+      - companionship-exp
+      - mora
+      - smoldering-pearl
+    artifactSetCodes:
+      - adventurer
+      - adventurer
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - prayers-for-illumination
+      - prayers-for-illumination
+      - wanderers-troupe
+      - wanderers-troupe
+oceanid:
+  code: oceanid
+  name:
+    en: Oceanid
+    ru: Океанид
+  locations:
+    - !loc teyvat -1024 539
+  drop:
+    itemCodes:
+      - adventure-exp
+      - cleansing-heart
+      - companionship-exp
+      - mora
+      - varunada-lazurite-chunk
+      - varunada-lazurite-fragment
+      - varunada-lazurite-gemstone
+      - varunada-lazurite-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - prayers-for-destiny
+      - prayers-for-destiny
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+hydro-specter:
+  code: hydro-specter
+  name:
+    en: Hydro Specter
+    ru: Гидро призрак
+  locations: []
+  drop:
+    itemCodes:
+      - spectral-heart
+      - spectral-husk
+      - spectral-nucleus
+    artifactSetCodes: []
+geo-specter:
+  code: geo-specter
+  name:
+    en: Geo Specter
+    ru: Гео призрак
+  locations: []
+  drop:
+    itemCodes:
+      - spectral-heart
+      - spectral-husk
+      - spectral-nucleus
+    artifactSetCodes: []
+anemo-specter:
+  code: anemo-specter
+  name:
+    en: Anemo Specter
+    ru: Анемо призрак
+  locations: []
+  drop:
+    itemCodes:
+      - spectral-heart
+      - spectral-husk
+      - spectral-nucleus
+    artifactSetCodes: []
+cryo-specter:
+  code: cryo-specter
+  name:
+    en: Cryo Specter
+    ru: Крио призрак
+  locations: []
+  drop:
+    itemCodes:
+      - spectral-heart
+      - spectral-husk
+      - spectral-nucleus
+    artifactSetCodes: []
+electro-specter:
+  code: electro-specter
+  name:
+    en: Electro Specter
+    ru: Электро призрак
+  locations: []
+  drop:
+    itemCodes:
+      - spectral-heart
+      - spectral-husk
+      - spectral-nucleus
+    artifactSetCodes: []
+pyro-specter:
+  code: pyro-specter
+  name:
+    en: Pyro Specter
+    ru: Пиро призрак
+  locations: []
+  drop:
+    itemCodes:
+      - spectral-heart
+      - spectral-husk
+      - spectral-nucleus
+    artifactSetCodes: []
+thunder-manifestation:
+  code: thunder-manifestation
+  name:
+    en: Thunder Manifestation
+    ru: Манифестация грома
+  locations:
+    - !loc teyvat 3511 7031
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+      - storm-beads
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
+    artifactSetCodes:
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - prayers-for-wisdom
+      - prayers-for-wisdom
+      - the-exile
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+hilichurl:
+  code: hilichurl
+  name:
+    en: Hilichurl
+    ru: Хиличурл
+  locations:
+    - !loc teyvat -2768 3154
+    - !loc teyvat -2744 3089
+    - !loc teyvat -2696 3130
+    - !loc teyvat -2692 3291
+    - !loc teyvat -2658 2953
+    - !loc teyvat -2632 3296
+    - !loc teyvat -2525 1636
+    - !loc teyvat -2521 1632
+    - !loc teyvat -2499 2925
+    - !loc teyvat -2466 1976
+    - !loc teyvat -2464 2648
+    - !loc teyvat -2462 1984
+    - !loc teyvat -2356 2926
+    - !loc teyvat -2326 1698
+    - !loc teyvat -2265 1731
+    - !loc teyvat -2259 2875
+    - !loc teyvat -2246 1802
+    - !loc teyvat -2200 1876
+    - !loc teyvat -2192 1872
+    - !loc teyvat -2191 1874
+    - !loc teyvat -2170 2493
+    - !loc teyvat -2144 1073
+    - !loc teyvat -2132 2051
+    - !loc teyvat -2129 2047
+    - !loc teyvat -2118 2573
+    - !loc teyvat -2117 2739
+    - !loc teyvat -2062 1284
+    - !loc teyvat -2062 2582
+    - !loc teyvat -2061 2097
+    - !loc teyvat -2054 2103
+    - !loc teyvat -2040 1696
+    - !loc teyvat -2011 1394
+    - !loc teyvat -2007 999
+    - !loc teyvat -2006 996
+    - !loc teyvat -2004 2262
+    - !loc teyvat -2002 2263
+    - !loc teyvat -1997 2096
+    - !loc teyvat -1995 2086
+    - !loc teyvat -1978 891
+    - !loc teyvat -1977 896
+    - !loc teyvat -1966 1484
+    - !loc teyvat -1939 1826
+    - !loc teyvat -1930 1826
+    - !loc teyvat -1924 1427
+    - !loc teyvat -1825 2020
+    - !loc teyvat -1822 3150
+    - !loc teyvat -1817 1961
+    - !loc teyvat -1813 1133
+    - !loc teyvat -1804 1868
+    - !loc teyvat -1803 2639
+    - !loc teyvat -1800 1742
+    - !loc teyvat -1799 2012
+    - !loc teyvat -1798 1749
+    - !loc teyvat -1796 1784
+    - !loc teyvat -1795 2016
+    - !loc teyvat -1793 1864
+    - !loc teyvat -1788 1202
+    - !loc teyvat -1771 1160
+    - !loc teyvat -1685 2041
+    - !loc teyvat -1683 3175
+    - !loc teyvat -1680 1204
+    - !loc teyvat -1673 1205
+    - !loc teyvat -1663 3144
+    - !loc teyvat -1656 1340
+    - !loc teyvat -1639 2211
+    - !loc teyvat -1638 2853
+    - !loc teyvat -1629 2015
+    - !loc teyvat -1629 2835
+    - !loc teyvat -1619 1622
+    - !loc teyvat -1608 2830
+    - !loc teyvat -1605 664
+    - !loc teyvat -1605 1110
+    - !loc teyvat -1584 1777
+    - !loc teyvat -1567 1550
+    - !loc teyvat -1542 1637
+    - !loc teyvat -1533 1626
+    - !loc teyvat -1504 920
+    - !loc teyvat -1495 1498
+    - !loc teyvat -1492 1492
+    - !loc teyvat -1469 1652
+    - !loc teyvat -1467 962
+    - !loc teyvat -1467 1661
+    - !loc teyvat -1454 1463
+    - !loc teyvat -1445 1466
+    - !loc teyvat -1437 1478
+    - !loc teyvat -1408 1623
+    - !loc teyvat -1405 1613
+    - !loc teyvat -1383 934
+    - !loc teyvat -1334 1565
+    - !loc teyvat -1330 1559
+    - !loc teyvat -1324 1567
+    - !loc teyvat -1272 1143
+    - !loc teyvat -1265 795
+    - !loc teyvat -1263 997
+    - !loc teyvat -1257 967
+    - !loc teyvat -1253 1841
+    - !loc teyvat -1230 1668
+    - !loc teyvat -1219 1836
+    - !loc teyvat -1214 1893
+    - !loc teyvat -1208 843
+    - !loc teyvat -1205 2093
+    - !loc teyvat -1188 1698
+    - !loc teyvat -1173 921
+    - !loc teyvat -1132 1969
+    - !loc teyvat -1127 693
+    - !loc teyvat -1113 -176
+    - !loc teyvat -1096 1675
+    - !loc teyvat -1093 1093
+    - !loc teyvat -1088 1136
+    - !loc teyvat -1076 2066
+    - !loc teyvat -1048 1821
+    - !loc teyvat -1035 2057
+    - !loc teyvat -1018 667
+    - !loc teyvat -985 -437
+    - !loc teyvat -980 -435
+    - !loc teyvat -976 1599
+    - !loc teyvat -972 1731
+    - !loc teyvat -961 -126
+    - !loc teyvat -957 -125
+    - !loc teyvat -951 1257
+    - !loc teyvat -938 1666
+    - !loc teyvat -935 -433
+    - !loc teyvat -926 1477
+    - !loc teyvat -917 -411
+    - !loc teyvat -914 -414
+    - !loc teyvat -909 1362
+    - !loc teyvat -904 860
+    - !loc teyvat -904 2447
+    - !loc teyvat -901 678
+    - !loc teyvat -886 1554
+    - !loc teyvat -866 -207
+    - !loc teyvat -856 -201
+    - !loc teyvat -853 2128
+    - !loc teyvat -840 -365
+    - !loc teyvat -839 -363
+    - !loc teyvat -834 899
+    - !loc teyvat -831 -436
+    - !loc teyvat -821 1663
+    - !loc teyvat -820 1286
+    - !loc teyvat -817 1660
+    - !loc teyvat -809 591
+    - !loc teyvat -799 1296
+    - !loc teyvat -790 -294
+    - !loc teyvat -787 -301
+    - !loc teyvat -787 2102
+    - !loc teyvat -746 1348
+    - !loc teyvat -741 636
+    - !loc teyvat -737 -315
+    - !loc teyvat -734 -306
+    - !loc teyvat -730 725
+    - !loc teyvat -730 2551
+    - !loc teyvat -724 1083
+    - !loc teyvat -718 1891
+    - !loc teyvat -715 1253
+    - !loc teyvat -707 106
+    - !loc teyvat -701 784
+    - !loc teyvat -699 1845
+    - !loc teyvat -698 1459
+    - !loc teyvat -693 -564
+    - !loc teyvat -686 181
+    - !loc teyvat -685 184
+    - !loc teyvat -682 -156
+    - !loc teyvat -682 -25
+    - !loc teyvat -682 285
+    - !loc teyvat -680 -151
+    - !loc teyvat -679 737
+    - !loc teyvat -678 14
+    - !loc teyvat -670 1927
+    - !loc teyvat -666 1893
+    - !loc teyvat -662 320
+    - !loc teyvat -660 312
+    - !loc teyvat -649 1958
+    - !loc teyvat -632 1636
+    - !loc teyvat -628 1747
+    - !loc teyvat -621 1411
+    - !loc teyvat -610 989
+    - !loc teyvat -600 1644
+    - !loc teyvat -594 1057
+    - !loc teyvat -593 1338
+    - !loc teyvat -582 1646
+    - !loc teyvat -559 815
+    - !loc teyvat -547 826
+    - !loc teyvat -547 829
+    - !loc teyvat -542 24
+    - !loc teyvat -535 1090
+    - !loc teyvat -533 22
+    - !loc teyvat -533 1523
+    - !loc teyvat -520 1625
+    - !loc teyvat -492 1339
+    - !loc teyvat -483 63
+    - !loc teyvat -477 88
+    - !loc teyvat -455 1327
+    - !loc teyvat -452 -122
+    - !loc teyvat -452 1194
+    - !loc teyvat -446 1190
+    - !loc teyvat -443 -119
+    - !loc teyvat -440 1505
+    - !loc teyvat -417 -56
+    - !loc teyvat -413 -57
+    - !loc teyvat -413 1475
+    - !loc teyvat -412 -57
+    - !loc teyvat -385 1243
+    - !loc teyvat -371 1369
+    - !loc teyvat -353 1201
+    - !loc teyvat -352 1373
+    - !loc teyvat -348 1198
+    - !loc teyvat -343 1729
+    - !loc teyvat -342 -123
+    - !loc teyvat -338 -105
+    - !loc teyvat -314 1506
+    - !loc teyvat -314 6192
+    - !loc teyvat -314 6197
+    - !loc teyvat -310 -299
+    - !loc teyvat -310 1510
+    - !loc teyvat -308 1388
+    - !loc teyvat -304 1395
+    - !loc teyvat -303 1392
+    - !loc teyvat -299 150
+    - !loc teyvat -299 152
+    - !loc teyvat -299 197
+    - !loc teyvat -295 1686
+    - !loc teyvat -292 193
+    - !loc teyvat -288 191
+    - !loc teyvat -285 -312
+    - !loc teyvat -285 1624
+    - !loc teyvat -276 -307
+    - !loc teyvat -260 1813
+    - !loc teyvat -258 -329
+    - !loc teyvat -251 1487
+    - !loc teyvat -250 -301
+    - !loc teyvat -250 101
+    - !loc teyvat -248 -294
+    - !loc teyvat -244 -346
+    - !loc teyvat -241 -301
+    - !loc teyvat -239 -342
+    - !loc teyvat -238 113
+    - !loc teyvat -232 -345
+    - !loc teyvat -178 1710
+    - !loc teyvat -174 244
+    - !loc teyvat -174 375
+    - !loc teyvat -173 249
+    - !loc teyvat -169 346
+    - !loc teyvat -169 357
+    - !loc teyvat -167 341
+    - !loc teyvat -160 2698
+    - !loc teyvat -153 239
+    - !loc teyvat -145 237
+    - !loc teyvat -126 1772
+    - !loc teyvat -101 428
+    - !loc teyvat -95 1383
+    - !loc teyvat -95 1394
+    - !loc teyvat -89 1385
+    - !loc teyvat -87 1387
+    - !loc teyvat -75 1381
+    - !loc teyvat -75 1384
+    - !loc teyvat -30 1159
+    - !loc teyvat -29 1164
+    - !loc teyvat -28 1195
+    - !loc teyvat -20 1194
+    - !loc teyvat 18 681
+    - !loc teyvat 20 673
+    - !loc teyvat 31 693
+    - !loc teyvat 34 600
+    - !loc teyvat 35 696
+    - !loc teyvat 42 611
+    - !loc teyvat 43 2415
+    - !loc teyvat 54 669
+    - !loc teyvat 83 1383
+    - !loc teyvat 109 2450
+    - !loc teyvat 123 1365
+    - !loc teyvat 141 1066
+    - !loc teyvat 143 1378
+    - !loc teyvat 145 1067
+    - !loc teyvat 145 2477
+    - !loc teyvat 151 1068
+    - !loc teyvat 190 2471
+    - !loc teyvat 222 918
+    - !loc teyvat 228 918
+    - !loc teyvat 242 6340
+    - !loc teyvat 245 2431
+    - !loc teyvat 247 1475
+    - !loc teyvat 247 6340
+    - !loc teyvat 267 1102
+    - !loc teyvat 279 546
+    - !loc teyvat 287 1171
+    - !loc teyvat 288 544
+    - !loc teyvat 291 542
+    - !loc teyvat 293 1115
+    - !loc teyvat 294 1162
+    - !loc teyvat 297 1173
+    - !loc teyvat 331 1028
+    - !loc teyvat 361 15
+    - !loc teyvat 365 9
+    - !loc teyvat 368 979
+    - !loc teyvat 371 975
+    - !loc teyvat 377 1206
+    - !loc teyvat 380 1210
+    - !loc teyvat 383 -207
+    - !loc teyvat 385 -193
+    - !loc teyvat 394 -374
+    - !loc teyvat 402 -383
+    - !loc teyvat 407 1115
+    - !loc teyvat 412 599
+    - !loc teyvat 413 384
+    - !loc teyvat 415 381
+    - !loc teyvat 418 607
+    - !loc teyvat 421 898
+    - !loc teyvat 422 893
+    - !loc teyvat 424 1043
+    - !loc teyvat 427 -419
+    - !loc teyvat 428 1207
+    - !loc teyvat 430 -417
+    - !loc teyvat 440 6194
+    - !loc teyvat 444 103
+    - !loc teyvat 446 6195
+    - !loc teyvat 447 97
+    - !loc teyvat 450 106
+    - !loc teyvat 451 1230
+    - !loc teyvat 454 -459
+    - !loc teyvat 454 957
+    - !loc teyvat 457 -222
+    - !loc teyvat 457 15
+    - !loc teyvat 457 953
+    - !loc teyvat 458 -216
+    - !loc teyvat 460 817
+    - !loc teyvat 462 1054
+    - !loc teyvat 466 19
+    - !loc teyvat 467 13
+    - !loc teyvat 476 1039
+    - !loc teyvat 488 1367
+    - !loc teyvat 489 -431
+    - !loc teyvat 491 -146
+    - !loc teyvat 492 -436
+    - !loc teyvat 494 -138
+    - !loc teyvat 496 -143
+    - !loc teyvat 498 -434
+    - !loc teyvat 513 -374
+    - !loc teyvat 522 512
+    - !loc teyvat 522 1344
+    - !loc teyvat 523 -99
+    - !loc teyvat 525 -96
+    - !loc teyvat 529 6151
+    - !loc teyvat 530 -105
+    - !loc teyvat 531 -354
+    - !loc teyvat 532 512
+    - !loc teyvat 532 1342
+    - !loc teyvat 533 -454
+    - !loc teyvat 544 -310
+    - !loc teyvat 549 -370
+    - !loc teyvat 549 -310
+    - !loc teyvat 553 124
+    - !loc teyvat 556 140
+    - !loc teyvat 569 223
+    - !loc teyvat 608 324
+    - !loc teyvat 618 333
+    - !loc teyvat 634 -407
+    - !loc teyvat 634 568
+    - !loc teyvat 638 -406
+    - !loc teyvat 638 576
+    - !loc teyvat 639 -408
+    - !loc teyvat 648 575
+    - !loc teyvat 663 -393
+    - !loc teyvat 670 -396
+    - !loc teyvat 671 -137
+    - !loc teyvat 672 -146
+    - !loc teyvat 672 6368
+    - !loc teyvat 705 -439
+    - !loc teyvat 707 -445
+    - !loc teyvat 710 -511
+    - !loc teyvat 731 131
+    - !loc teyvat 738 -477
+    - !loc teyvat 740 -474
+    - !loc teyvat 740 -422
+    - !loc teyvat 740 127
+    - !loc teyvat 741 226
+    - !loc teyvat 742 -477
+    - !loc teyvat 746 233
+    - !loc teyvat 749 58
+    - !loc teyvat 765 -127
+    - !loc teyvat 771 -132
+    - !loc teyvat 772 100
+    - !loc teyvat 772 1002
+    - !loc teyvat 773 108
+    - !loc teyvat 785 1060
+    - !loc teyvat 786 247
+    - !loc teyvat 798 1018
+    - !loc teyvat 798 1019
+    - !loc teyvat 804 1099
+    - !loc teyvat 805 183
+    - !loc teyvat 812 448
+    - !loc teyvat 814 179
+    - !loc teyvat 816 124
+    - !loc teyvat 817 769
+    - !loc teyvat 821 120
+    - !loc teyvat 826 119
+    - !loc teyvat 827 784
+    - !loc teyvat 828 780
+    - !loc teyvat 838 833
+    - !loc teyvat 838 888
+    - !loc teyvat 840 714
+    - !loc teyvat 842 708
+    - !loc teyvat 847 824
+    - !loc teyvat 854 710
+    - !loc teyvat 856 716
+    - !loc teyvat 857 891
+    - !loc teyvat 863 974
+    - !loc teyvat 875 801
+    - !loc teyvat 882 -264
+    - !loc teyvat 886 129
+    - !loc teyvat 886 715
+    - !loc teyvat 889 -268
+    - !loc teyvat 889 -99
+    - !loc teyvat 890 711
+    - !loc teyvat 892 -265
+    - !loc teyvat 893 123
+    - !loc teyvat 895 715
+    - !loc teyvat 904 1069
+    - !loc teyvat 912 1079
+    - !loc teyvat 920 52
+    - !loc teyvat 973 1063
+    - !loc teyvat 987 909
+    - !loc teyvat 990 150
+    - !loc teyvat 995 905
+    - !loc teyvat 1035 -623
+    - !loc teyvat 1043 -620
+    - !loc teyvat 1044 -620
+    - !loc teyvat 1058 5913
+    - !loc teyvat 1063 -584
+    - !loc teyvat 1218 899
+    - !loc teyvat 1221 903
+    - !loc teyvat 1279 5862
+    - !loc teyvat 1344 5812
+    - !loc teyvat 1350 5799
+    - !loc teyvat 1362 5837
+    - !loc teyvat 1381 5978
+    - !loc teyvat 1547 5922
+    - !loc teyvat 1635 8712
+    - !loc teyvat 1727 8492
+    - !loc teyvat 1728 8547
+    - !loc teyvat 1729 8542
+    - !loc teyvat 1730 8587
+    - !loc teyvat 1758 8147
+    - !loc teyvat 1758 8548
+    - !loc teyvat 1763 8144
+    - !loc teyvat 1764 8551
+    - !loc teyvat 1765 8090
+    - !loc teyvat 1782 8603
+    - !loc teyvat 1782 8609
+    - !loc teyvat 1793 7267
+    - !loc teyvat 1798 7269
+    - !loc teyvat 1804 7115
+    - !loc teyvat 1810 8745
+    - !loc teyvat 1814 8750
+    - !loc teyvat 1818 8747
+    - !loc teyvat 1822 8990
+    - !loc teyvat 1823 8389
+    - !loc teyvat 1823 8523
+    - !loc teyvat 1826 8992
+    - !loc teyvat 1828 8523
+    - !loc teyvat 1828 8578
+    - !loc teyvat 1829 8389
+    - !loc teyvat 1832 8576
+    - !loc teyvat 1835 8388
+    - !loc teyvat 1841 8687
+    - !loc teyvat 1851 9079
+    - !loc teyvat 1856 8978
+    - !loc teyvat 1857 8981
+    - !loc teyvat 1938 8802
+    - !loc teyvat 1940 8810
+    - !loc teyvat 1964 8529
+    - !loc teyvat 1965 7295
+    - !loc teyvat 1969 7295
+    - !loc teyvat 2020 5776
+    - !loc teyvat 2024 8788
+    - !loc teyvat 2053 8787
+    - !loc teyvat 2055 8731
+    - !loc teyvat 2061 8730
+    - !loc teyvat 2064 8727
+    - !loc teyvat 2070 8530
+    - !loc teyvat 2076 8486
+    - !loc teyvat 2076 8513
+    - !loc teyvat 2078 8525
+    - !loc teyvat 2082 8486
+    - !loc teyvat 2086 8485
+    - !loc teyvat 2132 6057
+    - !loc teyvat 2141 8373
+    - !loc teyvat 2145 8372
+    - !loc teyvat 2147 8370
+    - !loc teyvat 2164 6006
+    - !loc teyvat 2201 6165
+    - !loc teyvat 2201 8406
+    - !loc teyvat 2204 8408
+    - !loc teyvat 2207 8671
+    - !loc teyvat 2212 6270
+    - !loc teyvat 2214 8662
+    - !loc teyvat 2217 8663
+    - !loc teyvat 2294 5850
+    - !loc teyvat 2450 5833
+    - !loc teyvat 2460 8356
+    - !loc teyvat 2465 8346
+    - !loc teyvat 2465 8351
+    - !loc teyvat 2472 8545
+    - !loc teyvat 2475 8554
+    - !loc teyvat 2721 5454
+    - !loc teyvat 2787 5476
+    - !loc teyvat 2865 5545
+    - !loc teyvat 2865 5593
+    - !loc teyvat 2916 6716
+    - !loc teyvat 2916 6769
+    - !loc teyvat 2927 6734
+    - !loc teyvat 2932 6716
+    - !loc teyvat 2975 5678
+    - !loc teyvat 3164 6843
+    - !loc teyvat 3175 6832
+    - !loc teyvat 3179 5288
+    - !loc teyvat 3184 5294
+    - !loc teyvat 3184 6831
+    - !loc teyvat 3191 5292
+    - !loc teyvat 3194 5294
+    - !loc teyvat 3213 5042
+    - !loc teyvat 3256 4924
+    - !loc teyvat 3262 5024
+    - !loc teyvat 3289 5349
+    - !loc teyvat 3379 5280
+    - !loc teyvat 3392 4946
+    - !loc teyvat 3451 5211
+    - !loc teyvat 3457 4602
+    - !loc teyvat 3466 7311
+    - !loc teyvat 3468 7308
+    - !loc teyvat 3475 7317
+    - !loc teyvat 3486 7223
+    - !loc teyvat 3494 6548
+    - !loc teyvat 3501 6552
+    - !loc teyvat 3509 7305
+    - !loc teyvat 3515 7310
+    - !loc teyvat 3526 5037
+    - !loc teyvat 3526 5185
+    - !loc teyvat 3566 7215
+    - !loc teyvat 3640 5134
+    - !loc teyvat 3698 7138
+    - !loc teyvat 3841 7329
+    - !loc teyvat 3842 5057
+    - !loc teyvat 3849 7111
+    - !loc teyvat 3856 7173
+    - !loc teyvat 3861 7172
+    - !loc teyvat 3870 5029
+    - !loc teyvat 3886 5022
+    - !loc teyvat 3889 7044
+    - !loc teyvat 3890 7040
+    - !loc teyvat 3893 7293
+    - !loc teyvat 3894 7045
+    - !loc teyvat 3897 7040
+    - !loc teyvat 3965 7228
+    - !loc teyvat 3972 7115
+    - !loc teyvat 3972 7223
+    - !loc teyvat 4008 7182
+    - !loc teyvat 4048 7176
+    - !loc enkanomiya -758 -86
+    - !loc enkanomiya -757 -89
+    - !loc enkanomiya -754 -86
+    - !loc enkanomiya -732 -311
+    - !loc enkanomiya -724 -217
+    - !loc enkanomiya -723 -92
+    - !loc enkanomiya -719 -219
+    - !loc enkanomiya -714 -226
+    - !loc enkanomiya -699 -32
+    - !loc enkanomiya -694 -33
+    - !loc enkanomiya -694 -31
+    - !loc enkanomiya -688 -256
+    - !loc enkanomiya -686 -254
+    - !loc enkanomiya -684 -36
+    - !loc enkanomiya -683 -207
+    - !loc enkanomiya -682 -255
+    - !loc enkanomiya -680 -203
+    - !loc enkanomiya -617 -272
+    - !loc enkanomiya -616 -274
+    - !loc enkanomiya -614 -273
+    - !loc enkanomiya -590 -248
+    - !loc enkanomiya -590 -246
+    - !loc enkanomiya -531 -328
+    - !loc enkanomiya -526 -328
+    - !loc enkanomiya -435 -391
+    - !loc enkanomiya -431 -392
+    - !loc enkanomiya -421 -386
+    - !loc enkanomiya -394 -232
+    - !loc enkanomiya -392 -229
+    - !loc enkanomiya -389 -235
+    - !loc enkanomiya -386 -237
+    - !loc enkanomiya -364 -494
+    - !loc enkanomiya -362 -496
+    - !loc enkanomiya -362 -334
+    - !loc enkanomiya -362 -308
+    - !loc enkanomiya -357 -336
+    - !loc enkanomiya -353 -339
+    - !loc enkanomiya -352 833
+    - !loc enkanomiya -349 833
+    - !loc enkanomiya -348 830
+    - !loc enkanomiya -339 -258
+    - !loc enkanomiya -339 -257
+    - !loc enkanomiya -338 749
+    - !loc enkanomiya -337 749
+    - !loc enkanomiya -326 -394
+    - !loc enkanomiya -325 -317
+    - !loc enkanomiya -322 -393
+    - !loc enkanomiya -315 -348
+    - !loc enkanomiya -299 521
+    - !loc enkanomiya -212 569
+    - !loc enkanomiya -207 114
+    - !loc enkanomiya -206 569
+    - !loc enkanomiya -205 111
+    - !loc enkanomiya -199 111
+    - !loc enkanomiya -195 536
+    - !loc enkanomiya -175 516
+    - !loc enkanomiya -168 -87
+    - !loc enkanomiya -167 132
+    - !loc enkanomiya -162 466
+    - !loc enkanomiya -159 468
+    - !loc enkanomiya -158 -88
+    - !loc enkanomiya -155 -87
+    - !loc enkanomiya -152 -93
+    - !loc enkanomiya -134 516
+    - !loc enkanomiya -133 514
+    - !loc enkanomiya -128 403
+    - !loc enkanomiya -116 -155
+    - !loc enkanomiya -116 416
+    - !loc enkanomiya -115 -159
+    - !loc enkanomiya -115 418
+    - !loc enkanomiya -113 415
+    - !loc enkanomiya -110 169
+    - !loc enkanomiya -109 163
+    - !loc enkanomiya -106 168
+    - !loc enkanomiya -103 166
+    - !loc enkanomiya -83 -132
+    - !loc enkanomiya -75 -344
+    - !loc enkanomiya -75 -135
+    - !loc enkanomiya -74 -340
+    - !loc enkanomiya -69 -344
+    - !loc enkanomiya -69 -103
+    - !loc enkanomiya -66 -55
+    - !loc enkanomiya -63 -52
+    - !loc enkanomiya -44 -208
+    - !loc enkanomiya -40 -189
+    - !loc enkanomiya -39 -185
+    - !loc enkanomiya -23 147
+    - !loc enkanomiya -17 147
+    - !loc enkanomiya -14 140
+    - !loc enkanomiya 18 366
+    - !loc enkanomiya 34 374
+    - !loc enkanomiya 36 -90
+    - !loc enkanomiya 40 -89
+    - !loc enkanomiya 88 -68
+    - !loc enkanomiya 89 -72
+    - !loc enkanomiya 144 -104
+    - !loc enkanomiya 147 -99
+    - !loc enkanomiya 148 -92
+    - !loc enkanomiya 396 7
+    - !loc enkanomiya 399 7
+    - !loc enkanomiya 443 -131
+    - !loc enkanomiya 444 -129
+    - !loc enkanomiya 465 -49
+    - !loc chasm -213 -248
+    - !loc chasm 90 241
+    - !loc chasm 113 393
+    - !loc chasm 165 121
+    - !loc chasm 180 364
+  drop:
+    itemCodes:
+      - damaged-mask
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes: []
+hilichurl-fighter:
+  code: hilichurl-fighter
+  name:
+    en: Hilichurl Fighter
+    ru: Хиличурл-боец
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes: []
+wooden-shield-hilichurl-guard:
+  code: wooden-shield-hilichurl-guard
+  name:
+    en: Wooden Shield Hilichurl Guard
+    ru: Хиличурл с деревянным щитом
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes: []
+hilichurl-shooter:
+  code: hilichurl-shooter
+  name:
+    en: Hilichurl Shooter
+    ru: Хиличурл-стрелок
+  locations:
+    - !loc teyvat -2720 3037
+    - !loc teyvat -2687 3167
+    - !loc teyvat -2623 2858
+    - !loc teyvat -2613 3229
+    - !loc teyvat -2611 3247
+    - !loc teyvat -2567 1554
+    - !loc teyvat -2461 1995
+    - !loc teyvat -2388 1830
+    - !loc teyvat -2367 2808
+    - !loc teyvat -2330 1702
+    - !loc teyvat -2298 1726
+    - !loc teyvat -2292 1932
+    - !loc teyvat -2268 1739
+    - !loc teyvat -2221 1992
+    - !loc teyvat -2212 1968
+    - !loc teyvat -2187 1868
+    - !loc teyvat -2186 1514
+    - !loc teyvat -2060 3225
+    - !loc teyvat -2041 1000
+    - !loc teyvat -2041 3190
+    - !loc teyvat -2039 3134
+    - !loc teyvat -2037 1689
+    - !loc teyvat -2034 2282
+    - !loc teyvat -2033 2080
+    - !loc teyvat -2033 2969
+    - !loc teyvat -2030 3199
+    - !loc teyvat -2001 1954
+    - !loc teyvat -1999 2260
+    - !loc teyvat -1983 1348
+    - !loc teyvat -1979 1754
+    - !loc teyvat -1951 1797
+    - !loc teyvat -1935 1859
+    - !loc teyvat -1925 1428
+    - !loc teyvat -1890 737
+    - !loc teyvat -1851 1879
+    - !loc teyvat -1828 2784
+    - !loc teyvat -1823 1124
+    - !loc teyvat -1818 2799
+    - !loc teyvat -1817 3140
+    - !loc teyvat -1812 1514
+    - !loc teyvat -1807 2646
+    - !loc teyvat -1805 2007
+    - !loc teyvat -1801 1194
+    - !loc teyvat -1796 2629
+    - !loc teyvat -1795 2648
+    - !loc teyvat -1793 1151
+    - !loc teyvat -1787 1127
+    - !loc teyvat -1787 2088
+    - !loc teyvat -1720 2841
+    - !loc teyvat -1695 1053
+    - !loc teyvat -1685 1352
+    - !loc teyvat -1685 1931
+    - !loc teyvat -1685 3162
+    - !loc teyvat -1683 1864
+    - !loc teyvat -1683 2821
+    - !loc teyvat -1680 2038
+    - !loc teyvat -1668 2810
+    - !loc teyvat -1652 3140
+    - !loc teyvat -1644 3201
+    - !loc teyvat -1642 2208
+    - !loc teyvat -1639 2004
+    - !loc teyvat -1638 1884
+    - !loc teyvat -1635 1630
+    - !loc teyvat -1632 3209
+    - !loc teyvat -1627 2177
+    - !loc teyvat -1626 2501
+    - !loc teyvat -1620 2480
+    - !loc teyvat -1616 2834
+    - !loc teyvat -1611 2008
+    - !loc teyvat -1607 2822
+    - !loc teyvat -1551 1662
+    - !loc teyvat -1526 1821
+    - !loc teyvat -1520 1743
+    - !loc teyvat -1518 1628
+    - !loc teyvat -1501 1856
+    - !loc teyvat -1498 1837
+    - !loc teyvat -1472 888
+    - !loc teyvat -1467 965
+    - !loc teyvat -1463 1499
+    - !loc teyvat -1461 1927
+    - !loc teyvat -1457 1932
+    - !loc teyvat -1438 1462
+    - !loc teyvat -1438 1681
+    - !loc teyvat -1415 2330
+    - !loc teyvat -1386 1924
+    - !loc teyvat -1382 936
+    - !loc teyvat -1377 2487
+    - !loc teyvat -1375 2875
+    - !loc teyvat -1369 2890
+    - !loc teyvat -1362 1950
+    - !loc teyvat -1359 2887
+    - !loc teyvat -1334 2688
+    - !loc teyvat -1321 2696
+    - !loc teyvat -1309 1916
+    - !loc teyvat -1306 716
+    - !loc teyvat -1263 998
+    - !loc teyvat -1214 1837
+    - !loc teyvat -1205 2095
+    - !loc teyvat -1200 1686
+    - !loc teyvat -1199 -270
+    - !loc teyvat -1192 1695
+    - !loc teyvat -1188 -270
+    - !loc teyvat -1172 923
+    - !loc teyvat -1161 2205
+    - !loc teyvat -1136 890
+    - !loc teyvat -1131 -76
+    - !loc teyvat -1127 691
+    - !loc teyvat -1122 903
+    - !loc teyvat -1109 -174
+    - !loc teyvat -1102 1091
+    - !loc teyvat -1097 829
+    - !loc teyvat -1088 1122
+    - !loc teyvat -1087 -390
+    - !loc teyvat -1073 2067
+    - !loc teyvat -1071 1283
+    - !loc teyvat -1050 734
+    - !loc teyvat -1049 1856
+    - !loc teyvat -1036 2060
+    - !loc teyvat -1031 1861
+    - !loc teyvat -1029 -625
+    - !loc teyvat -1019 669
+    - !loc teyvat -1017 1917
+    - !loc teyvat -1014 827
+    - !loc teyvat -1010 917
+    - !loc teyvat -991 -428
+    - !loc teyvat -983 1597
+    - !loc teyvat -968 -406
+    - !loc teyvat -964 1732
+    - !loc teyvat -960 -401
+    - !loc teyvat -952 -127
+    - !loc teyvat -951 1262
+    - !loc teyvat -947 1840
+    - !loc teyvat -938 1259
+    - !loc teyvat -934 1669
+    - !loc teyvat -931 -444
+    - !loc teyvat -930 2287
+    - !loc teyvat -924 1480
+    - !loc teyvat -921 2280
+    - !loc teyvat -904 -418
+    - !loc teyvat -904 2230
+    - !loc teyvat -903 864
+    - !loc teyvat -899 673
+    - !loc teyvat -896 1097
+    - !loc teyvat -896 1555
+    - !loc teyvat -893 2236
+    - !loc teyvat -883 1555
+    - !loc teyvat -852 -411
+    - !loc teyvat -852 2129
+    - !loc teyvat -840 2270
+    - !loc teyvat -834 2253
+    - !loc teyvat -833 553
+    - !loc teyvat -817 1287
+    - !loc teyvat -813 1314
+    - !loc teyvat -811 589
+    - !loc teyvat -809 1766
+    - !loc teyvat -809 1985
+    - !loc teyvat -807 -653
+    - !loc teyvat -803 1772
+    - !loc teyvat -784 2104
+    - !loc teyvat -777 794
+    - !loc teyvat -770 776
+    - !loc teyvat -770 2260
+    - !loc teyvat -767 877
+    - !loc teyvat -764 737
+    - !loc teyvat -750 1346
+    - !loc teyvat -747 637
+    - !loc teyvat -727 1084
+    - !loc teyvat -725 -532
+    - !loc teyvat -724 727
+    - !loc teyvat -722 1893
+    - !loc teyvat -720 1903
+    - !loc teyvat -711 -141
+    - !loc teyvat -708 103
+    - !loc teyvat -705 785
+    - !loc teyvat -697 1460
+    - !loc teyvat -695 -158
+    - !loc teyvat -691 275
+    - !loc teyvat -684 738
+    - !loc teyvat -681 278
+    - !loc teyvat -667 1928
+    - !loc teyvat -666 1893
+    - !loc teyvat -649 825
+    - !loc teyvat -622 1413
+    - !loc teyvat -606 991
+    - !loc teyvat -600 -444
+    - !loc teyvat -591 -436
+    - !loc teyvat -581 1348
+    - !loc teyvat -580 1648
+    - !loc teyvat -567 736
+    - !loc teyvat -559 820
+    - !loc teyvat -557 1834
+    - !loc teyvat -532 1525
+    - !loc teyvat -529 1093
+    - !loc teyvat -483 89
+    - !loc teyvat -472 43
+    - !loc teyvat -470 -40
+    - !loc teyvat -441 1508
+    - !loc teyvat -413 1478
+    - !loc teyvat -390 1238
+    - !loc teyvat -383 1239
+    - !loc teyvat -353 1335
+    - !loc teyvat -352 1746
+    - !loc teyvat -341 1730
+    - !loc teyvat -329 2445
+    - !loc teyvat -309 1891
+    - !loc teyvat -306 -374
+    - !loc teyvat -302 240
+    - !loc teyvat -291 1688
+    - !loc teyvat -286 182
+    - !loc teyvat -279 1625
+    - !loc teyvat -258 1817
+    - !loc teyvat -252 -305
+    - !loc teyvat -251 -318
+    - !loc teyvat -240 -312
+    - !loc teyvat -233 121
+    - !loc teyvat -161 674
+    - !loc teyvat -154 670
+    - !loc teyvat -122 1773
+    - !loc teyvat -111 422
+    - !loc teyvat -89 6054
+    - !loc teyvat 11 662
+    - !loc teyvat 48 2413
+    - !loc teyvat 98 6252
+    - !loc teyvat 99 6257
+    - !loc teyvat 112 6255
+    - !loc teyvat 117 2449
+    - !loc teyvat 146 2408
+    - !loc teyvat 151 2479
+    - !loc teyvat 205 2486
+    - !loc teyvat 245 1472
+    - !loc teyvat 245 2520
+    - !loc teyvat 270 1091
+    - !loc teyvat 296 1566
+    - !loc teyvat 332 1027
+    - !loc teyvat 358 1543
+    - !loc teyvat 408 361
+    - !loc teyvat 422 379
+    - !loc teyvat 422 1045
+    - !loc teyvat 425 -412
+    - !loc teyvat 431 -408
+    - !loc teyvat 435 1048
+    - !loc teyvat 441 1222
+    - !loc teyvat 474 1026
+    - !loc teyvat 508 -470
+    - !loc teyvat 510 514
+    - !loc teyvat 516 517
+    - !loc teyvat 537 -454
+    - !loc teyvat 562 221
+    - !loc teyvat 603 302
+    - !loc teyvat 622 307
+    - !loc teyvat 703 -512
+    - !loc teyvat 723 1034
+    - !loc teyvat 782 249
+    - !loc teyvat 796 1058
+    - !loc teyvat 804 450
+    - !loc teyvat 815 452
+    - !loc teyvat 838 718
+    - !loc teyvat 905 1070
+    - !loc teyvat 913 1031
+    - !loc teyvat 926 -508
+    - !loc teyvat 926 1106
+    - !loc teyvat 928 962
+    - !loc teyvat 943 100
+    - !loc teyvat 961 76
+    - !loc teyvat 974 1063
+    - !loc teyvat 993 152
+    - !loc teyvat 998 141
+    - !loc teyvat 1044 5908
+    - !loc teyvat 1270 5870
+    - !loc teyvat 1554 6129
+    - !loc teyvat 1716 8589
+    - !loc teyvat 1723 8551
+    - !loc teyvat 1724 8493
+    - !loc teyvat 1726 8496
+    - !loc teyvat 1727 8489
+    - !loc teyvat 1738 8546
+    - !loc teyvat 1750 8555
+    - !loc teyvat 1773 8140
+    - !loc teyvat 1778 8550
+    - !loc teyvat 1800 7113
+    - !loc teyvat 1833 8578
+    - !loc teyvat 1833 8989
+    - !loc teyvat 1851 9081
+    - !loc teyvat 1947 8517
+    - !loc teyvat 1960 8530
+    - !loc teyvat 1972 7388
+    - !loc teyvat 1976 7308
+    - !loc teyvat 1983 8551
+    - !loc teyvat 1984 7381
+    - !loc teyvat 1985 7316
+    - !loc teyvat 1988 7368
+    - !loc teyvat 2021 5776
+    - !loc teyvat 2036 8805
+    - !loc teyvat 2163 6012
+    - !loc teyvat 2170 6009
+    - !loc teyvat 2211 8604
+    - !loc teyvat 2213 8405
+    - !loc teyvat 2215 8595
+    - !loc teyvat 2223 8600
+    - !loc teyvat 2227 8592
+    - !loc teyvat 2471 8549
+    - !loc teyvat 2478 8559
+    - !loc teyvat 2490 5289
+    - !loc teyvat 2647 5475
+    - !loc teyvat 2902 6715
+    - !loc teyvat 2907 6720
+    - !loc teyvat 3131 6542
+    - !loc teyvat 3145 6542
+    - !loc teyvat 3198 6819
+    - !loc teyvat 3366 4795
+    - !loc teyvat 3462 6690
+    - !loc teyvat 3466 7332
+    - !loc teyvat 3477 7326
+    - !loc teyvat 3478 7306
+    - !loc teyvat 3495 7232
+    - !loc teyvat 3528 5194
+    - !loc teyvat 3560 7216
+    - !loc teyvat 3711 7134
+    - !loc teyvat 3727 5012
+    - !loc teyvat 3842 7332
+    - !loc teyvat 3844 5051
+    - !loc teyvat 3878 7221
+    - !loc teyvat 3879 5017
+    - !loc teyvat 3891 7224
+    - !loc teyvat 4021 7138
+    - !loc teyvat 4029 7183
+    - !loc teyvat 4049 7180
+    - !loc teyvat 4075 7154
+    - !loc enkanomiya -732 -309
+    - !loc enkanomiya -731 -96
+    - !loc enkanomiya -724 -6
+    - !loc enkanomiya -716 -18
+    - !loc enkanomiya -715 -172
+    - !loc enkanomiya -711 -90
+    - !loc enkanomiya -711 -5
+    - !loc enkanomiya -710 -161
+    - !loc enkanomiya -704 -166
+    - !loc enkanomiya -591 -249
+    - !loc enkanomiya -585 -249
+    - !loc enkanomiya -526 -321
+    - !loc enkanomiya -358 -340
+    - !loc enkanomiya -332 -394
+    - !loc enkanomiya -331 -243
+    - !loc enkanomiya -274 -266
+    - !loc enkanomiya -271 -267
+    - !loc enkanomiya -174 134
+    - !loc enkanomiya -165 132
+    - !loc enkanomiya -164 127
+    - !loc enkanomiya -110 113
+    - !loc enkanomiya -110 129
+    - !loc enkanomiya -104 123
+    - !loc enkanomiya -73 -345
+    - !loc enkanomiya -70 -341
+    - !loc enkanomiya -66 -102
+    - !loc enkanomiya 16 -84
+    - !loc enkanomiya 20 -83
+    - !loc enkanomiya 38 15
+    - !loc enkanomiya 49 31
+    - !loc enkanomiya 140 -96
+    - !loc enkanomiya 149 -98
+    - !loc enkanomiya 387 -24
+    - !loc enkanomiya 400 -27
+    - !loc enkanomiya 447 -119
+    - !loc enkanomiya 635 15
+    - !loc enkanomiya 648 13
+    - !loc enkanomiya 652 22
+  drop:
+    itemCodes:
+      - damaged-mask
+      - firm-arrowhead
+      - ominous-mask
+      - sharp-arrowhead
+      - stained-mask
+      - weathered-arrowhead
+    artifactSetCodes: []
+pyro-hilichurl-shooter:
+  code: pyro-hilichurl-shooter
+  name:
+    en: Pyro Hilichurl Shooter
+    ru: Пиро хиличурл-стрелок
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - firm-arrowhead
+      - ominous-mask
+      - sharp-arrowhead
+      - stained-mask
+      - weathered-arrowhead
+    artifactSetCodes: []
+hilichurl-grenadier:
+  code: hilichurl-grenadier
+  name:
+    en: Hilichurl Grenadier
+    ru: Хиличурл-гренадёр
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes: []
+hilichurl-berserker:
+  code: hilichurl-berserker
+  name:
+    en: Hilichurl Berserker
+    ru: Хиличурл-берсерк
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes: []
+cryo-hilichurl-shooter:
+  code: cryo-hilichurl-shooter
+  name:
+    en: Cryo Hilichurl Shooter
+    ru: Крио хиличурл-стрелок
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - firm-arrowhead
+      - ominous-mask
+      - sharp-arrowhead
+      - stained-mask
+      - weathered-arrowhead
+    artifactSetCodes: []
+electro-hilichurl-shooter:
+  code: electro-hilichurl-shooter
+  name:
+    en: Electro Hilichurl Shooter
+    ru: Электро хиличурл-стрелок
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - firm-arrowhead
+      - ominous-mask
+      - sharp-arrowhead
+      - stained-mask
+      - weathered-arrowhead
+    artifactSetCodes: []
+rock-shield-hilichurl-guard:
+  code: rock-shield-hilichurl-guard
+  name:
+    en: Rock Shield Hilichurl Guard
+    ru: Хиличурл с каменным щитом
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes: []
+cryo-hilichurl-grenadier:
+  code: cryo-hilichurl-grenadier
+  name:
+    en: Cryo Hilichurl Grenadier
+    ru: Крио хиличурл-гренадёр
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes: []
+ice-shield-hilichurl-guard:
+  code: ice-shield-hilichurl-guard
+  name:
+    en: Ice Shield Hilichurl Guard
+    ru: Хиличурл с ледяным щитом
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes: []
+electro-hilichurl-grenadier:
+  code: electro-hilichurl-grenadier
+  name:
+    en: Electro Hilichurl Grenadier
+    ru: Электро хиличурл-гренадёр
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes: []
+wooden-shieldwall-mitachurl:
+  code: wooden-shieldwall-mitachurl
+  name:
+    en: Wooden Shieldwall Mitachurl
+    ru: Митачурл с деревянным щитом
+  locations: []
+  drop:
+    itemCodes:
+      - black-bronze-horn
+      - black-crystal-horn
+      - damaged-mask
+      - heavy-horn
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+blazing-axe-mitachurl:
+  code: blazing-axe-mitachurl
+  name:
+    en: Blazing Axe Mitachurl
+    ru: Митачурл с огненным топором
+  locations: []
+  drop:
+    itemCodes:
+      - black-bronze-horn
+      - black-crystal-horn
+      - damaged-mask
+      - heavy-horn
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+rock-shieldwall-mitachurl:
+  code: rock-shieldwall-mitachurl
+  name:
+    en: Rock Shieldwall Mitachurl
+    ru: Митачурл с каменным щитом
+  locations: []
+  drop:
+    itemCodes:
+      - black-bronze-horn
+      - black-crystal-horn
+      - damaged-mask
+      - heavy-horn
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+frostarm-lawachurl:
+  code: frostarm-lawachurl
+  name:
+    en: Frostarm Lawachurl
+    ru: Лавачурл с инеевым панцирем
+  locations: []
+  drop:
+    itemCodes:
+      - black-bronze-horn
+      - black-crystal-horn
+      - damaged-mask
+      - heavy-horn
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+stonehide-lawachurl:
+  code: stonehide-lawachurl
+  name:
+    en: Stonehide Lawachurl
+    ru: Лавачурл с каменным панцирем
+  locations: []
+  drop:
+    itemCodes:
+      - black-bronze-horn
+      - black-crystal-horn
+      - damaged-mask
+      - heavy-horn
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+ice-shieldwall-mitachurl:
+  code: ice-shieldwall-mitachurl
+  name:
+    en: Ice Shieldwall Mitachurl
+    ru: Митачурл с ледяным щитом
+  locations: []
+  drop:
+    itemCodes:
+      - black-bronze-horn
+      - black-crystal-horn
+      - damaged-mask
+      - heavy-horn
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+crackling-axe-mitachurl:
+  code: crackling-axe-mitachurl
+  name:
+    en: Crackling Axe Mitachurl
+    ru: Митачурл с электрическим топором
+  locations: []
+  drop:
+    itemCodes:
+      - black-bronze-horn
+      - black-crystal-horn
+      - damaged-mask
+      - heavy-horn
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+thunderhelm-lawachurl:
+  code: thunderhelm-lawachurl
+  name:
+    en: Thunderhelm Lawachurl
+    ru: Лавачурл с громовым шлемом
+  locations: []
+  drop:
+    itemCodes:
+      - black-bronze-horn
+      - black-crystal-horn
+      - damaged-mask
+      - heavy-horn
+      - ominous-mask
+      - stained-mask
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+hydro-samachurl:
+  code: hydro-samachurl
+  name:
+    en: Hydro Samachurl
+    ru: Гидро шамачурл
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - divining-scroll
+      - forbidden-curse-scroll
+      - ominous-mask
+      - sealed-scroll
+      - stained-mask
+    artifactSetCodes: []
+dendro-samachurl:
+  code: dendro-samachurl
+  name:
+    en: Dendro Samachurl
+    ru: Дендро шамачурл
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - divining-scroll
+      - forbidden-curse-scroll
+      - ominous-mask
+      - sealed-scroll
+      - stained-mask
+    artifactSetCodes: []
+anemo-samachurl:
+  code: anemo-samachurl
+  name:
+    en: Anemo Samachurl
+    ru: Анемо шамачурл
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - divining-scroll
+      - forbidden-curse-scroll
+      - ominous-mask
+      - sealed-scroll
+      - stained-mask
+    artifactSetCodes: []
+geo-samachurl:
+  code: geo-samachurl
+  name:
+    en: Geo Samachurl
+    ru: Гео шамачурл
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - divining-scroll
+      - forbidden-curse-scroll
+      - ominous-mask
+      - sealed-scroll
+      - stained-mask
+    artifactSetCodes: []
+cryo-samachurl:
+  code: cryo-samachurl
+  name:
+    en: Cryo Samachurl
+    ru: Крио шамачурл
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - divining-scroll
+      - forbidden-curse-scroll
+      - ominous-mask
+      - sealed-scroll
+      - stained-mask
+    artifactSetCodes: []
+electro-samachurl:
+  code: electro-samachurl
+  name:
+    en: Electro Samachurl
+    ru: Электро шамачурл
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-mask
+      - divining-scroll
+      - forbidden-curse-scroll
+      - ominous-mask
+      - sealed-scroll
+      - stained-mask
+    artifactSetCodes: []
+pyro-abyss-mage:
+  code: pyro-abyss-mage
+  name:
+    en: Pyro Abyss Mage
+    ru: Пиро маг Бездны
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - dead-ley-line-branch
+      - dead-ley-line-leaves
+      - deathly-statuette
+      - gloomy-statuette
+      - ley-line-sprout
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+cryo-abyss-mage:
+  code: cryo-abyss-mage
+  name:
+    en: Cryo Abyss Mage
+    ru: Крио маг Бездны
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - dead-ley-line-branch
+      - dead-ley-line-leaves
+      - deathly-statuette
+      - gloomy-statuette
+      - ley-line-sprout
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+hydro-abyss-mage:
+  code: hydro-abyss-mage
+  name:
+    en: Hydro Abyss Mage
+    ru: Гидро маг Бездны
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - dead-ley-line-branch
+      - dead-ley-line-leaves
+      - deathly-statuette
+      - gloomy-statuette
+      - ley-line-sprout
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+electro-abyss-mage:
+  code: electro-abyss-mage
+  name:
+    en: Electro Abyss Mage
+    ru: Электро маг Бездны
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - dead-ley-line-branch
+      - dead-ley-line-leaves
+      - deathly-statuette
+      - gloomy-statuette
+      - ley-line-sprout
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+rockfond-rifthound-whelp:
+  code: rockfond-rifthound-whelp
+  name:
+    en: Rockfond Rifthound Whelp
+    ru: "Щенок Разрыва: Камнегрыз"
+  locations: []
+  drop:
+    itemCodes:
+      - concealed-claw
+      - concealed-talon
+      - concealed-unguis
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+thundercraven-rifthound-whelp:
+  code: thundercraven-rifthound-whelp
+  name:
+    en: Thundercraven Rifthound Whelp
+    ru: "Щенок Разрыва: Громоед"
+  locations: []
+  drop:
+    itemCodes:
+      - concealed-claw
+      - concealed-talon
+      - concealed-unguis
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+rockfond-rifthound:
+  code: rockfond-rifthound
+  name:
+    en: Rockfond Rifthound
+    ru: "Гончая Разрыва: Камнегрыз"
+  locations: []
+  drop:
+    itemCodes:
+      - concealed-claw
+      - concealed-talon
+      - concealed-unguis
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+thundercraven-rifthound:
+  code: thundercraven-rifthound
+  name:
+    en: Thundercraven Rifthound
+    ru: "Гончая Разрыва: Громоед"
+  locations: []
+  drop:
+    itemCodes:
+      - concealed-claw
+      - concealed-talon
+      - concealed-unguis
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+golden-wolflord:
+  code: golden-wolflord
+  name:
+    en: Golden Wolflord
+    ru: Золотой волчий вожак
+  locations:
+    - !loc teyvat 1915 8978
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+      - prithiva-topaz-chunk
+      - prithiva-topaz-fragment
+      - prithiva-topaz-gemstone
+      - prithiva-topaz-sliver
+      - riftborn-regalia
+    artifactSetCodes:
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - prayers-for-wisdom
+      - prayers-for-wisdom
+      - the-exile
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+shadowy-husk-standard-bearer:
+  code: shadowy-husk-standard-bearer
+  name:
+    en: "Shadowy Husk: Standard Bearer"
+    ru: "Чёрный доспех: Знаменосец"
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - deathly-statuette
+      - gloomy-statuette
+    artifactSetCodes: []
+shadowy-husk-line-breaker:
+  code: shadowy-husk-line-breaker
+  name:
+    en: "Shadowy Husk: Line Breaker"
+    ru: "Чёрный доспех: Штурмовик"
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - deathly-statuette
+      - gloomy-statuette
+    artifactSetCodes: []
+shadowy-husk-defender:
+  code: shadowy-husk-defender
+  name:
+    en: "Shadowy Husk: Defender"
+    ru: "Чёрный доспех: Гвардеец"
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - deathly-statuette
+      - gloomy-statuette
+    artifactSetCodes: []
+black-serpent-knight-windcutter:
+  code: black-serpent-knight-windcutter
+  name:
+    en: "Black Serpent Knight: Windcutter"
+    ru: "Рыцарь Чёрного Змея: Разрезающий ветер"
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - deathly-statuette
+      - gloomy-statuette
+    artifactSetCodes: []
+fatui-skirmisher-cryogunner-legionnaire:
+  code: fatui-skirmisher-cryogunner-legionnaire
+  name:
+    en: Fatui Skirmisher - Cryogunner Legionnaire
+    ru: "Застрельщик Фатуи: Крио бомбардир"
+  locations: []
+  drop:
+    itemCodes:
+      - lieutenants-insignia
+      - recruits-insignia
+      - sergeants-insignia
+    artifactSetCodes: []
+fatui-skirmisher-hydrogunner-legionnaire:
+  code: fatui-skirmisher-hydrogunner-legionnaire
+  name:
+    en: Fatui Skirmisher - Hydrogunner Legionnaire
+    ru: "Застрельщик Фатуи: Гидро бомбардир"
+  locations: []
+  drop:
+    itemCodes:
+      - lieutenants-insignia
+      - recruits-insignia
+      - sergeants-insignia
+    artifactSetCodes: []
+fatui-skirmisher-electrohammer-vanguard:
+  code: fatui-skirmisher-electrohammer-vanguard
+  name:
+    en: Fatui Skirmisher - Electrohammer Vanguard
+    ru: "Застрельщик Фатуи: Электро молотобоец"
+  locations: []
+  drop:
+    itemCodes:
+      - lieutenants-insignia
+      - recruits-insignia
+      - sergeants-insignia
+    artifactSetCodes: []
+fatui-skirmisher-geochanter-bracer:
+  code: fatui-skirmisher-geochanter-bracer
+  name:
+    en: Fatui Skirmisher - Geochanter Bracer
+    ru: "Застрельщик Фатуи: Гео заклинатель"
+  locations: []
+  drop:
+    itemCodes:
+      - lieutenants-insignia
+      - recruits-insignia
+      - sergeants-insignia
+    artifactSetCodes: []
+fatui-skirmisher-anemoboxer-vanguard:
+  code: fatui-skirmisher-anemoboxer-vanguard
+  name:
+    en: Fatui Skirmisher - Anemoboxer Vanguard
+    ru: "Застрельщик Фатуи: Анемо борец"
+  locations: []
+  drop:
+    itemCodes:
+      - lieutenants-insignia
+      - recruits-insignia
+      - sergeants-insignia
+    artifactSetCodes: []
+fatui-skirmisher-pyroslinger-bracer:
+  code: fatui-skirmisher-pyroslinger-bracer
+  name:
+    en: Fatui Skirmisher - Pyroslinger Bracer
+    ru: "Застрельщик Фатуи: Пиро мушкетёр"
+  locations: []
+  drop:
+    itemCodes:
+      - lieutenants-insignia
+      - recruits-insignia
+      - sergeants-insignia
+    artifactSetCodes: []
+fatui-pyro-agent:
+  code: fatui-pyro-agent
+  name:
+    en: Fatui Pyro Agent
+    ru: "Фатуи: Пиро агент"
+  locations:
+    - !loc teyvat -1986 2482
+    - !loc teyvat -1793 2785
+    - !loc teyvat -1760 3201
+    - !loc teyvat -1681 2441
+    - !loc teyvat -1260 2122
+    - !loc teyvat -505 1359
+    - !loc teyvat -424 1850
+    - !loc teyvat -280 2480
+    - !loc teyvat 218 675
+    - !loc teyvat 2359 6211
+    - !loc teyvat 2383 6168
+    - !loc teyvat 2500 6026
+    - !loc teyvat 3722 4684
+  drop:
+    itemCodes:
+      - agents-sacrificial-knife
+      - hunters-sacrificial-knife
+      - inspectors-sacrificial-knife
+      - lieutenants-insignia
+      - recruits-insignia
+      - sergeants-insignia
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+fatui-electro-cicin-mage:
+  code: fatui-electro-cicin-mage
+  name:
+    en: Fatui Electro Cicin Mage
+    ru: "Фатуи: Маг Электро цицинов"
+  locations: []
+  drop:
+    itemCodes:
+      - lieutenants-insignia
+      - mist-grass
+      - mist-grass-pollen
+      - mist-grass-wick
+      - recruits-insignia
+      - sergeants-insignia
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+fatui-cryo-cicin-mage:
+  code: fatui-cryo-cicin-mage
+  name:
+    en: Fatui Cryo Cicin Mage
+    ru: "Фатуи: Маг Крио цицинов"
+  locations: []
+  drop:
+    itemCodes:
+      - lieutenants-insignia
+      - mist-grass
+      - mist-grass-pollen
+      - mist-grass-wick
+      - recruits-insignia
+      - sergeants-insignia
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+mirror-maiden:
+  code: mirror-maiden
+  name:
+    en: Mirror Maiden
+    ru: Зеркальная дева Фатуи
+  locations:
+    - !loc teyvat -2473 3009
+    - !loc teyvat -246 5904
+    - !loc teyvat 49 5862
+    - !loc teyvat 476 6379
+    - !loc teyvat 528 6333
+    - !loc teyvat 588 6104
+    - !loc teyvat 1272 5993
+    - !loc teyvat 1481 6152
+    - !loc teyvat 1893 6160
+    - !loc teyvat 2147 5953
+    - !loc teyvat 2324 5984
+    - !loc teyvat 2432 6114
+    - !loc teyvat 2441 5994
+    - !loc teyvat 3015 6803
+    - !loc teyvat 3097 6794
+    - !loc teyvat 3150 6655
+    - !loc teyvat 3191 6603
+    - !loc teyvat 3313 6640
+    - !loc teyvat 3355 7076
+    - !loc teyvat 3395 6736
+    - !loc teyvat 3529 4827
+    - !loc teyvat 3537 4863
+    - !loc teyvat 3642 4965
+    - !loc teyvat 3718 4681
+    - !loc teyvat 4011 5561
+    - !loc chasm -16 -490
+    - !loc chasm 318 -428
+  drop:
+    itemCodes:
+      - crystal-prism
+      - dismal-prism
+      - polarizing-prism
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+ruin-guard:
+  code: ruin-guard
+  name:
+    en: Ruin Guard
+    ru: Страж руин
+  locations:
+    - !loc teyvat -2604 3210
+    - !loc teyvat -1938 2576
+    - !loc teyvat -1906 2668
+    - !loc teyvat -1900 1832
+    - !loc teyvat -1872 1415
+    - !loc teyvat -1858 1299
+    - !loc teyvat -1852 2638
+    - !loc teyvat -1719 1566
+    - !loc teyvat -1707 1540
+    - !loc teyvat -1648 2499
+    - !loc teyvat -1287 2949
+    - !loc teyvat -1237 2065
+    - !loc teyvat -961 1993
+    - !loc teyvat -929 -366
+    - !loc teyvat -841 2389
+    - !loc teyvat -748 -200
+    - !loc teyvat -491 1420
+    - !loc teyvat -444 -372
+    - !loc teyvat -186 1736
+    - !loc teyvat -52 2698
+    - !loc teyvat -51 2687
+    - !loc teyvat -31 2668
+    - !loc teyvat -28 2686
+    - !loc teyvat 985 -532
+    - !loc teyvat 989 -38
+    - !loc teyvat 1498 -361
+    - !loc teyvat 1523 -246
+    - !loc teyvat 1891 8338
+    - !loc teyvat 1916 8819
+    - !loc teyvat 1924 8817
+    - !loc teyvat 1935 8797
+    - !loc teyvat 2003 8418
+    - !loc teyvat 3542 4759
+    - !loc enkanomiya -1415 665
+    - !loc enkanomiya -1229 323
+    - !loc enkanomiya -656 -16
+    - !loc enkanomiya -647 -24
+    - !loc enkanomiya -646 -15
+    - !loc enkanomiya -638 -293
+    - !loc enkanomiya -492 -243
+    - !loc enkanomiya -327 832
+    - !loc enkanomiya -225 778
+    - !loc enkanomiya -194 -25
+    - !loc enkanomiya -186 -32
+    - !loc enkanomiya -184 -22
+    - !loc enkanomiya -94 524
+    - !loc enkanomiya -93 -16
+    - !loc enkanomiya -91 -7
+    - !loc enkanomiya 90 506
+    - !loc enkanomiya 471 123
+    - !loc enkanomiya 484 149
+    - !loc enkanomiya 500 139
+    - !loc enkanomiya 600 103
+    - !loc enkanomiya 607 97
+    - !loc enkanomiya 624 -239
+    - !loc enkanomiya 637 -236
+    - !loc chasm -49 -20
+    - !loc chasm 179 382
+  drop:
+    itemCodes:
+      - chaos-circuit
+      - chaos-core
+      - chaos-device
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+ruin-hunter:
+  code: ruin-hunter
+  name:
+    en: Ruin Hunter
+    ru: Руинный охотник
+  locations:
+    - !loc teyvat -2527 1505
+    - !loc teyvat -2172 2488
+    - !loc teyvat -1932 2623
+    - !loc teyvat -1846 1975
+    - !loc teyvat -1719 2957
+    - !loc teyvat -1350 2809
+    - !loc teyvat -575 1982
+    - !loc teyvat -120 2641
+    - !loc teyvat 3440 4651
+    - !loc enkanomiya 144 328
+  drop:
+    itemCodes:
+      - chaos-circuit
+      - chaos-core
+      - chaos-device
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+ruin-grader:
+  code: ruin-grader
+  name:
+    en: Ruin Grader
+    ru: Руинный молотильщик
+  locations:
+    - !loc teyvat -2622 3215
+    - !loc teyvat 394 1694
+    - !loc teyvat 450 1784
+    - !loc teyvat 3496 4614
+    - !loc enkanomiya 627 -231
+    - !loc chasm -57 -207
+    - !loc chasm 131 353
+    - !loc chasm 145 399
+  drop:
+    itemCodes:
+      - chaos-circuit
+      - chaos-core
+      - chaos-device
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+ruin-cruiser:
+  code: ruin-cruiser
+  name:
+    en: Ruin Cruiser
+    ru: Руинный патрульный
+  locations: []
+  drop:
+    itemCodes:
+      - chaos-axis
+      - chaos-gear
+      - chaos-oculus
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+ruin-destroyer:
+  code: ruin-destroyer
+  name:
+    en: Ruin Destroyer
+    ru: Руинный крушитель
+  locations: []
+  drop:
+    itemCodes:
+      - chaos-axis
+      - chaos-gear
+      - chaos-oculus
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+ruin-defender:
+  code: ruin-defender
+  name:
+    en: Ruin Defender
+    ru: Руинный защитник
+  locations: []
+  drop:
+    itemCodes:
+      - chaos-axis
+      - chaos-gear
+      - chaos-oculus
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+ruin-scout:
+  code: ruin-scout
+  name:
+    en: Ruin Scout
+    ru: Руинный шпион
+  locations: []
+  drop:
+    itemCodes:
+      - chaos-axis
+      - chaos-gear
+      - chaos-oculus
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+perpetual-mechanical-array:
+  code: perpetual-mechanical-array
+  name:
+    en: Perpetual Mechanical Array
+    ru: Бесконечный механический массив
+  locations:
+    - !loc teyvat 3722 4446
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+      - perpetual-heart
+      - prithiva-topaz-chunk
+      - prithiva-topaz-fragment
+      - prithiva-topaz-gemstone
+      - prithiva-topaz-sliver
+      - shivada-jade-chunk
+      - shivada-jade-fragment
+      - shivada-jade-gemstone
+      - shivada-jade-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - lucky-dog
+      - prayers-to-springtime
+      - prayers-to-springtime
+      - the-exile
+      - the-exile
+      - wanderers-troupe
+      - wanderers-troupe
+treasure-hoarders-liuliu:
+  code: treasure-hoarders-liuliu
+  name:
+    en: Treasure Hoarders - Liuliu
+    ru: "Похитители сокровищ: Лю Лю"
+  locations: []
+  drop:
+    itemCodes:
+      - golden-raven-insignia
+      - silver-raven-insignia
+      - treasure-hoarder-insignia
+    artifactSetCodes: []
+treasure-hoarders-scout:
+  code: treasure-hoarders-scout
+  name:
+    en: Treasure Hoarders - Scout
+    ru: "Похитители сокровищ: Разведчик"
+  locations: []
+  drop:
+    itemCodes:
+      - golden-raven-insignia
+      - silver-raven-insignia
+      - treasure-hoarder-insignia
+    artifactSetCodes: []
+treasure-hoarders-pyro-potioneer:
+  code: treasure-hoarders-pyro-potioneer
+  name:
+    en: "Treasure Hoarders: Pyro Potioneer"
+    ru: "Похитители сокровищ: Пиро химик"
+  locations: []
+  drop:
+    itemCodes:
+      - golden-raven-insignia
+      - silver-raven-insignia
+      - treasure-hoarder-insignia
+    artifactSetCodes: []
+treasure-hoarders-hydro-potioneer:
+  code: treasure-hoarders-hydro-potioneer
+  name:
+    en: "Treasure Hoarders: Hydro Potioneer"
+    ru: "Похитители сокровищ: Гидро химик"
+  locations: []
+  drop:
+    itemCodes:
+      - golden-raven-insignia
+      - silver-raven-insignia
+      - treasure-hoarder-insignia
+    artifactSetCodes: []
+treasure-hoarders-electro-potioneer:
+  code: treasure-hoarders-electro-potioneer
+  name:
+    en: "Treasure Hoarders: Electro Potioneer"
+    ru: "Похитители сокровищ: Электро химик"
+  locations: []
+  drop:
+    itemCodes:
+      - golden-raven-insignia
+      - silver-raven-insignia
+      - treasure-hoarder-insignia
+    artifactSetCodes: []
+treasure-hoarders-cryo-potioneer:
+  code: treasure-hoarders-cryo-potioneer
+  name:
+    en: "Treasure Hoarders: Cryo Potioneer"
+    ru: "Похитители сокровищ: Крио химик"
+  locations: []
+  drop:
+    itemCodes:
+      - golden-raven-insignia
+      - silver-raven-insignia
+      - treasure-hoarder-insignia
+    artifactSetCodes: []
+treasure-hoarders-handyman:
+  code: treasure-hoarders-handyman
+  name:
+    en: "Treasure Hoarders: Handyman"
+    ru: "Похитители сокровищ: Разнорабочий"
+  locations: []
+  drop:
+    itemCodes:
+      - golden-raven-insignia
+      - silver-raven-insignia
+      - treasure-hoarder-insignia
+    artifactSetCodes: []
+treasure-hoarders-raptor:
+  code: treasure-hoarders-raptor
+  name:
+    en: Treasure Hoarders - Raptor
+    ru: "Похитители сокровищ: Птеродактиль"
+  locations: []
+  drop:
+    itemCodes:
+      - golden-raven-insignia
+      - silver-raven-insignia
+      - treasure-hoarder-insignia
+    artifactSetCodes: []
+treasure-hoarders-marksman:
+  code: treasure-hoarders-marksman
+  name:
+    en: Treasure Hoarders - Marksman
+    ru: "Похитители сокровищ: Стрелок"
+  locations: []
+  drop:
+    itemCodes:
+      - golden-raven-insignia
+      - silver-raven-insignia
+      - treasure-hoarder-insignia
+    artifactSetCodes: []
+treasure-hoarders-carmen:
+  code: treasure-hoarders-carmen
+  name:
+    en: Treasure Hoarders - Carmen
+    ru: "Похитители сокровищ: Кармен"
+  locations: []
+  drop:
+    itemCodes:
+      - golden-raven-insignia
+      - silver-raven-insignia
+      - treasure-hoarder-insignia
+    artifactSetCodes: []
+treasure-hoarders-gravedigger:
+  code: treasure-hoarders-gravedigger
+  name:
+    en: "Treasure Hoarders: Gravedigger"
+    ru: "Похитители сокровищ: Могильщик"
+  locations: []
+  drop:
+    itemCodes:
+      - golden-raven-insignia
+      - silver-raven-insignia
+      - treasure-hoarder-insignia
+    artifactSetCodes: []
+treasure-hoarders-seaman:
+  code: treasure-hoarders-seaman
+  name:
+    en: Treasure Hoarders - Seaman
+    ru: "Похитители сокровищ: Морячок"
+  locations: []
+  drop:
+    itemCodes:
+      - golden-raven-insignia
+      - silver-raven-insignia
+      - treasure-hoarder-insignia
+    artifactSetCodes: []
+treasure-hoarders-pugilist:
+  code: treasure-hoarders-pugilist
+  name:
+    en: Treasure Hoarders - Pugilist
+    ru: "Похитители сокровищ: Боксёр"
+  locations: []
+  drop:
+    itemCodes:
+      - golden-raven-insignia
+      - silver-raven-insignia
+      - treasure-hoarder-insignia
+    artifactSetCodes: []
+treasure-hoarders-crusher:
+  code: treasure-hoarders-crusher
+  name:
+    en: Treasure Hoarders - Crusher
+    ru: "Похитители сокровищ: Сокрушитель"
+  locations: []
+  drop:
+    itemCodes:
+      - golden-raven-insignia
+      - silver-raven-insignia
+      - treasure-hoarder-insignia
+    artifactSetCodes: []
+nobushi-jintouban:
+  code: nobushi-jintouban
+  name:
+    en: "Nobushi: Jintouban"
+    ru: "Нобуси: Дзинтобан"
+  locations: []
+  drop:
+    itemCodes:
+      - famed-handguard
+      - kageuchi-handguard
+      - old-handguard
+    artifactSetCodes: []
+nobushi-hitsukeban:
+  code: nobushi-hitsukeban
+  name:
+    en: "Nobushi: Hitsukeban"
+    ru: "Нобуси: Хицукэбан"
+  locations: []
+  drop:
+    itemCodes:
+      - famed-handguard
+      - kageuchi-handguard
+      - old-handguard
+    artifactSetCodes: []
+nobushi-kikouban:
+  code: nobushi-kikouban
+  name:
+    en: "Nobushi: Kikouban"
+    ru: "Нобуси: Кикобан"
+  locations: []
+  drop:
+    itemCodes:
+      - famed-handguard
+      - kageuchi-handguard
+      - old-handguard
+    artifactSetCodes: []
+maguu-kenki:
+  code: maguu-kenki
+  name:
+    en: Maguu Kenki
+    ru: Магу кэнки
+  locations:
+    - !loc teyvat 1590 6271
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - marionette-core
+      - mora
+      - shivada-jade-chunk
+      - shivada-jade-fragment
+      - shivada-jade-gemstone
+      - shivada-jade-sliver
+      - vayuda-turquoise-chunk
+      - vayuda-turquoise-fragment
+      - vayuda-turquoise-gemstone
+      - vayuda-turquoise-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - lucky-dog
+      - wanderers-troupe
+      - wanderers-troupe
+kairagi-dancing-thunder:
+  code: kairagi-dancing-thunder
+  name:
+    en: "Kairagi: Dancing Thunder"
+    ru: "Кайраги: Громовое вознесение"
+  locations: []
+  drop:
+    itemCodes:
+      - famed-handguard
+      - kageuchi-handguard
+      - old-handguard
+    artifactSetCodes: []
+kairagi-fiery-might:
+  code: kairagi-fiery-might
+  name:
+    en: "Kairagi: Fiery Might"
+    ru: "Кайраги: Огненная мощь"
+  locations: []
+  drop:
+    itemCodes:
+      - famed-handguard
+      - kageuchi-handguard
+      - old-handguard
+    artifactSetCodes: []
+cryo-whopperflower:
+  code: cryo-whopperflower
+  name:
+    en: Cryo Whopperflower
+    ru: Крио попрыгунья
+  locations: []
+  drop:
+    itemCodes:
+      - energy-nectar
+      - shimmering-nectar
+      - whopperflower-nectar
+    artifactSetCodes: []
+pyro-whopperflower:
+  code: pyro-whopperflower
+  name:
+    en: Pyro Whopperflower
+    ru: Пиро попрыгунья
+  locations: []
+  drop:
+    itemCodes:
+      - energy-nectar
+      - shimmering-nectar
+      - whopperflower-nectar
+    artifactSetCodes: []
+electro-whopperflower:
+  code: electro-whopperflower
+  name:
+    en: Electro Whopperflower
+    ru: Электро попрыгунья
+  locations: []
+  drop:
+    itemCodes:
+      - energy-nectar
+      - shimmering-nectar
+      - whopperflower-nectar
+    artifactSetCodes: []
+cryo-regisvine:
+  code: cryo-regisvine
+  name:
+    en: Cryo Regisvine
+    ru: Крио папоротник
+  locations:
+    - !loc teyvat 928 227
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - hoarfrost-core
+      - mora
+      - shivada-jade-chunk
+      - shivada-jade-fragment
+      - shivada-jade-gemstone
+      - shivada-jade-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - prayers-to-springtime
+      - prayers-to-springtime
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+pyro-regisvine:
+  code: pyro-regisvine
+  name:
+    en: Pyro Regisvine
+    ru: Пиро орхидея
+  locations:
+    - !loc teyvat -1701 2172
+  drop:
+    itemCodes:
+      - adventure-exp
+      - agnidus-agate-chunk
+      - agnidus-agate-fragment
+      - agnidus-agate-gemstone
+      - agnidus-agate-sliver
+      - companionship-exp
+      - everflame-seed
+      - mora
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - prayers-for-illumination
+      - prayers-for-illumination
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+geovishap-hatchling:
+  code: geovishap-hatchling
+  name:
+    en: Geovishap Hatchling
+    ru: Детёныш геовишапа
+  locations:
+    - !loc teyvat -2565 1442
+    - !loc teyvat -2383 1241
+    - !loc teyvat -2357 1926
+    - !loc teyvat -2331 1051
+    - !loc teyvat -2298 1060
+    - !loc teyvat -2041 2339
+    - !loc teyvat -1879 2189
+    - !loc teyvat -1877 2182
+    - !loc teyvat -1850 2341
+    - !loc teyvat -1848 2367
+    - !loc teyvat -1842 2354
+    - !loc teyvat -1819 786
+    - !loc teyvat -1520 1238
+    - !loc teyvat -1495 2629
+    - !loc teyvat -1396 2445
+    - !loc teyvat -1176 1188
+    - !loc teyvat -1098 831
+    - !loc teyvat -427 939
+    - !loc teyvat -400 1365
+    - !loc teyvat -353 1473
+    - !loc teyvat -315 1531
+    - !loc teyvat 81 2784
+  drop:
+    itemCodes:
+      - fossilized-bone-shard
+      - fragile-bone-shard
+      - sturdy-bone-shard
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+geovishap:
+  code: geovishap
+  name:
+    en: Geovishap
+    ru: Геовишап
+  locations:
+    - !loc teyvat -2529 2875
+    - !loc teyvat -2447 3046
+    - !loc teyvat -2441 2048
+    - !loc teyvat -2384 1238
+    - !loc teyvat -2342 1937
+    - !loc teyvat -2317 1035
+    - !loc teyvat -2193 1165
+    - !loc teyvat -2051 2261
+    - !loc teyvat -1958 1813
+    - !loc teyvat -1320 2432
+    - !loc chasm -319 -600
+    - !loc chasm -298 167
+    - !loc chasm 209 -192
+    - !loc chasm 224 -666
+  drop:
+    itemCodes:
+      - fossilized-bone-shard
+      - fragile-bone-shard
+      - sturdy-bone-shard
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+primo-geovishap:
+  code: primo-geovishap
+  name:
+    en: Primo Geovishap
+    ru: Древний геовишап
+  locations:
+    - !loc teyvat -2233 2123
+  drop:
+    itemCodes:
+      - adventure-exp
+      - agnidus-agate-chunk
+      - agnidus-agate-fragment
+      - agnidus-agate-gemstone
+      - agnidus-agate-sliver
+      - companionship-exp
+      - juvenile-jade
+      - mora
+      - prithiva-topaz-chunk
+      - prithiva-topaz-fragment
+      - prithiva-topaz-gemstone
+      - prithiva-topaz-sliver
+      - shivada-jade-chunk
+      - shivada-jade-fragment
+      - shivada-jade-gemstone
+      - shivada-jade-sliver
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
+      - varunada-lazurite-chunk
+      - varunada-lazurite-fragment
+      - varunada-lazurite-gemstone
+      - varunada-lazurite-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - prayers-for-destiny
+      - prayers-for-destiny
+      - prayers-for-illumination
+      - prayers-for-illumination
+      - prayers-for-wisdom
+      - prayers-for-wisdom
+      - prayers-to-springtime
+      - prayers-to-springtime
+      - the-exile
+      - the-exile
+      - wanderers-troupe
+      - wanderers-troupe
+primordial-bathysmal-vishap:
+  code: primordial-bathysmal-vishap
+  name:
+    en: Primordial Bathysmal Vishap
+    ru: "Вишап глубин: Исток"
+  locations: []
+  drop:
+    itemCodes:
+      - fossilized-bone-shard
+      - fragile-bone-shard
+      - sturdy-bone-shard
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+rimebiter-bathysmal-vishap:
+  code: rimebiter-bathysmal-vishap
+  name:
+    en: Rimebiter Bathysmal Vishap
+    ru: "Вишап глубин: Ледогрыз"
+  locations: []
+  drop:
+    itemCodes:
+      - fossilized-bone-shard
+      - fragile-bone-shard
+      - sturdy-bone-shard
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+bolteater-bathysmal-vishap:
+  code: bolteater-bathysmal-vishap
+  name:
+    en: Bolteater Bathysmal Vishap
+    ru: "Вишап глубин: Громоглот"
+  locations: []
+  drop:
+    itemCodes:
+      - fossilized-bone-shard
+      - fragile-bone-shard
+      - sturdy-bone-shard
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+stormterror:
+  code: stormterror
+  name:
+    en: Stormterror
+    ru: Ужас Бури
+  locations: []
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - dvalins-claw
+      - dvalins-plume
+      - dvalins-sigh
+      - mora
+      - northlander-bow-billet
+      - northlander-catalyst-billet
+      - northlander-claymore-billet
+      - northlander-polearm-billet
+      - northlander-sword-billet
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
+      - varunada-lazurite-chunk
+      - varunada-lazurite-fragment
+      - varunada-lazurite-gemstone
+      - varunada-lazurite-sliver
+      - vayuda-turquoise-chunk
+      - vayuda-turquoise-fragment
+      - vayuda-turquoise-gemstone
+      - vayuda-turquoise-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+lupus-boreas-dominator-of-wolves:
+  code: lupus-boreas-dominator-of-wolves
+  name:
+    en: Lupus Boreas, Dominator of Wolves
+    ru: Лупус Бореалис, Волчий лорд
+  locations:
+    - !loc teyvat -483 333
+  drop:
+    itemCodes:
+      - adventure-exp
+      - agnidus-agate-chunk
+      - agnidus-agate-fragment
+      - agnidus-agate-gemstone
+      - agnidus-agate-sliver
+      - companionship-exp
+      - mora
+      - northlander-bow-billet
+      - northlander-catalyst-billet
+      - northlander-claymore-billet
+      - northlander-polearm-billet
+      - northlander-sword-billet
+      - prithiva-topaz-chunk
+      - prithiva-topaz-fragment
+      - prithiva-topaz-gemstone
+      - prithiva-topaz-sliver
+      - ring-of-boreas
+      - shivada-jade-chunk
+      - shivada-jade-fragment
+      - shivada-jade-gemstone
+      - shivada-jade-sliver
+      - spirit-locket-of-boreas
+      - tail-of-boreas
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+childe:
+  code: childe
+  name:
+    en: Childe
+    ru: Чайльд
+  locations: []
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+      - northlander-bow-billet
+      - northlander-catalyst-billet
+      - northlander-claymore-billet
+      - northlander-polearm-billet
+      - northlander-sword-billet
+      - shadow-of-the-warrior
+      - shard-of-a-foul-legacy
+      - shivada-jade-chunk
+      - shivada-jade-fragment
+      - shivada-jade-gemstone
+      - shivada-jade-sliver
+      - tusk-of-monoceros-caeli
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
+      - varunada-lazurite-chunk
+      - varunada-lazurite-fragment
+      - varunada-lazurite-gemstone
+      - varunada-lazurite-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+azhdaha:
+  code: azhdaha
+  name:
+    en: Azhdaha
+    ru: Аждаха
+  locations: []
+  drop:
+    itemCodes:
+      - adventure-exp
+      - agnidus-agate-chunk
+      - agnidus-agate-fragment
+      - agnidus-agate-gemstone
+      - agnidus-agate-sliver
+      - bloodjade-branch
+      - companionship-exp
+      - dragon-lords-crown
+      - gilded-scale
+      - mora
+      - northlander-bow-billet
+      - northlander-catalyst-billet
+      - northlander-claymore-billet
+      - northlander-polearm-billet
+      - northlander-sword-billet
+      - prithiva-topaz-chunk
+      - prithiva-topaz-fragment
+      - prithiva-topaz-gemstone
+      - prithiva-topaz-sliver
+      - shivada-jade-chunk
+      - shivada-jade-fragment
+      - shivada-jade-gemstone
+      - shivada-jade-sliver
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
+      - varunada-lazurite-chunk
+      - varunada-lazurite-fragment
+      - varunada-lazurite-gemstone
+      - varunada-lazurite-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+la-signora:
+  code: la-signora
+  name:
+    en: La Signora
+    ru: Синьора
+  locations: []
+  drop:
+    itemCodes:
+      - adventure-exp
+      - agnidus-agate-chunk
+      - agnidus-agate-fragment
+      - agnidus-agate-gemstone
+      - agnidus-agate-sliver
+      - ashen-heart
+      - companionship-exp
+      - hellfire-butterfly
+      - molten-moment
+      - mora
+      - northlander-bow-billet
+      - northlander-catalyst-billet
+      - northlander-claymore-billet
+      - northlander-polearm-billet
+      - northlander-sword-billet
+      - shivada-jade-chunk
+      - shivada-jade-fragment
+      - shivada-jade-gemstone
+      - shivada-jade-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+magatsu-mitake-narukami-no-mikoto:
+  code: magatsu-mitake-narukami-no-mikoto
+  name:
+    en: Magatsu Mitake Narukami no Mikoto
+    ru: Магацу митакэ Наруками но микото
+  locations: []
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+      - mudra-of-the-malefic-general
+      - northlander-bow-billet
+      - northlander-catalyst-billet
+      - northlander-claymore-billet
+      - northlander-polearm-billet
+      - northlander-sword-billet
+      - tears-of-the-calamitous-god
+      - the-meaning-of-aeons
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
+    artifactSetCodes:
+      - berserker
+      - berserker
+      - gladiators-finale
+      - gladiators-finale
+      - instructor
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - traveling-doctor
+      - wanderers-troupe
+      - wanderers-troupe
+bathysmal-vishap-herd:
+  code: bathysmal-vishap-herd
+  name:
+    en: Bathysmal Vishap Herd
+    ru: Стая вишапов глубин
+  drop:
+    artifactSetCodes:
+      - berserker
+      - gladiators-finale
+      - lucky-dog
+      - prayers-to-springtime
+      - the-exile
+      - wanderers-troupe
+    itemCodes:
+      - dragonheirs-false-fin
+      - shivada-jade-gemstone
+      - vajrada-amethyst-gemstone
+  locations:
+    - !loc enkanomiya -46 -17

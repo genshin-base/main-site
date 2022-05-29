@@ -1,12 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Genshin Base</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/png" href="/media/favicon.png" />
+		<title>{{= it.title || 'Genshin Base' }}</title>
+		<link rel="icon" href="/favicon.png" />
+		{{?it.description}}<meta name="description" content="{{attr! it.description}}" />{{?}}
+		{{~it.otherLangs :x }}<link rel="alternate" hreflang="{{=x.lang}}" href="{{=x.href}}" />{{~}}
+		{{~it.files.css :path}}<link rel="stylesheet" href="{{=path}}" />{{~}}
+		{{~it.files.js :path}}<script defer src="{{=path}}"></script>{{~}}
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-FDTQB09C8B"></script>
+		<script>
+			window.dataLayer = window.dataLayer || []
+			function gtag() {
+				dataLayer.push(arguments)
+			}
+			gtag('js', new Date())
+			gtag('config', 'G-FDTQB09C8B')
+		</script>
 	</head>
 	<body>
-		<div class="app"></div>
+		<div class="app">{{= it.content }}</div>
 		<div class="modals"></div>
 	</body>
 </html>

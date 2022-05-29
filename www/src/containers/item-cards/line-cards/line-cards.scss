@@ -1,0 +1,12 @@
+.line-card-desktop {
+  height: 400px;
+}
+.line-card-mobile {
+  .location-col-inner {
+    height: 300px;
+  }
+  .accordion-body {
+    max-height: 75vh;
+    overflow: auto;
+  }
+}

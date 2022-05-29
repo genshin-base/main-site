@@ -2,7 +2,7 @@
 export function calcPosForDd(
 	parentRect: DOMRect,
 	ddRect: DOMRect,
-	{ isAbsolute = false, isCentered = false } = {},
+	{ isAbsolute = false, isCentered = false, shouldFitInScreen = false } = {},
 ): { top: number; left: number; layoutPosition: { x: 'end' | 'start'; y: 'top' | 'bottom' } } {
 	const tWidth = window.innerWidth
 	const tHeight = window.innerHeight
@@ -29,6 +29,10 @@ export function calcPosForDd(
 		// to left
 		left = parentRect.left + parentRect.width - ddRect.width - centredFix
 		layoutPositionX = 'start'
+	}
+	if (shouldFitInScreen) {
+		left = Math.min(Math.max(0, left), tWidth - ddRect.width)
+		top = Math.max(top, 0)
 	}
 	return { top, left, layoutPosition: { y: layoutPositionY, x: layoutPositionX } }
 }

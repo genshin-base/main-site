@@ -1,224 +1,117 @@
-import { useEffect, useMemo, useState } from 'preact/hooks'
+import { useCallback, useMemo } from 'preact/hooks'
 
-import { ArtifactRef, ArtifactRefNode } from '#lib/parsing/helperteam/artifacts'
-import { CharacterBuildInfoRole } from '#lib/parsing/helperteam/characters'
-import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
-import { mustBeDefined } from '#lib/utils/values'
-import {
-	ART_GROUP_18_ATK_CODE,
-	ART_GROUP_18_ATK_DETAIL,
-	ART_GROUP_18_ATK_INSIDE_CODES,
-	ART_GROUP_20_ER_CODE,
-	ART_GROUP_20_ER_DETAIL,
-	ART_GROUP_20_ER_INSIDE_CODES,
-} from '#src/../../lib/genshin'
-import { STAR } from '#src/utils/typography'
-import { getAllRelated, MapAllByCode } from '#src/api'
-import { isLoaded, useFetch } from '#src/api/hooks'
+import { arrOrItemToArr } from '#lib/utils/collections'
+import { CharacterFullInfoWithRelated } from '#src/../../lib/parsing/combine'
+import { getAllRelated, MapAllByCode } from '#src/api/utils'
+import { BlockHeader } from '#src/components/block-header'
 import { CharacterPortrait } from '#src/components/characters'
-import Spinner from '#src/components/spinners'
-import { ArtifactDetailDd, OtherItemCardDetailDd, WeaponDetailDd } from '#src/containers/item-cards/dd-cards'
-import { BtnTabGroup, Tab, Tabs } from '#src/components/tabs'
-import { ItemAvatar, LabeledItemAvatar } from '#src/containers/item-cards/item-cards'
-import { apiGetCharacter, CharacterFullInfoWithRelated } from '#src/generated'
-import { makeCharacterBuildDeselectHash } from '#src/hashstore'
-import { getArtifactIconSrc, getArtifactTypeIconSrc } from '#src/utils/artifacts'
-import { getCharacterPortraitSrc, getCharacterSilhouetteSrc } from '#src/utils/characters'
+import { CentredSpinner } from '#src/components/placeholders'
+import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
+import { OtherItemCard, WeaponCard } from '#src/containers/item-cards/dd-cards'
+import { ItemAvatar, ItemsDataContext, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
+import {
+	I18N_ART_STATS_PRIORITY,
+	I18N_ART_TYPE,
+	I18N_ARTIFACTS,
+	I18N_ASC_MATERIALS,
+	I18N_BACK,
+	I18N_CONJUCTIONS,
+	I18N_NOTES,
+	I18N_STAT_NAME,
+	I18N_SUBSTATS_PRIORITY,
+	I18N_TALENT_NAME,
+	I18N_TALENTS_PRIORITY,
+	I18N_WEAPON_REFINE,
+	I18N_WEAPON_STACKS_COUNT,
+	I18N_WEAPONS,
+} from '#src/i18n/i18n'
+import { A } from '#src/routes/router'
+import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
+import {
+	getCharacterAvatarLargeSrc,
+	getCharacterPortraitSrc,
+	getCharacterSilhouetteSrc,
+} from '#src/utils/characters'
 import { getItemIconSrc } from '#src/utils/items'
-import { pluralizeEN } from '#src/utils/strings'
 import { getWeaponIconSrc } from '#src/utils/weapons'
+import {
+	BuildRoleOrDummy,
+	CIRCLET_GOBLET_SANDS,
+	genArtifactAdvice,
+	genArtMainStatDetail,
+	genNotes,
+	genSeeCharNotes,
+	genSimpleList,
+	getRoleData,
+	ItemsJoinerWrap,
+	ItemsListGroupWrap,
+	makeRoleTitle,
+	notesToJSX,
+	ToggleCharFav,
+} from './common'
+
 import './character-build-detailed.scss'
 
-const DUMMY_ROLE: { code: string; title: string } & Partial<CharacterBuildInfoRole> = {
-	title: '…',
-	code: '',
-}
-const DUMMY_ROLES = [DUMMY_ROLE]
-
-type BuildRoleOrDummy = CharacterBuildInfoRole | typeof DUMMY_ROLE
-
-function makeRoleTitle(r: BuildRoleOrDummy) {
-	return (
-		<span key={r.code}>
-			{r.isRecommended ? (
-				<span className="fs-4 lh-1 opacity-75 text-warning align-bottom">{STAR}</span>
-			) : null}
-			{r.code}
-		</span>
-	)
-}
-function getRoleData(build: CharacterFullInfoWithRelated, selectedCode: string) {
-	return mustBeDefined(build.character.roles.find(x => x.code === selectedCode))
-}
-function genSimpleList(arr: string[]) {
-	return arr.join(', ')
-}
-function notesWrap(str) {
-	return <div className="text-muted small">{str}</div>
-}
-function genNotes(item: { notes: CompactTextParagraphs | null }) {
-	return item.notes === null ? '' : notesWrap(JSON.stringify(item.notes))
-}
-function genSeeCharNotes(item: { seeCharNotes: boolean }) {
-	return '' //TODO
-	return item.seeCharNotes ? notesWrap(' (see notes)') : ''
-}
-function genArtMainStatDetail(role: CharacterBuildInfoRole, itemCode: 'circlet' | 'goblet' | 'sands') {
-	return (
-		<span className="">
-			{genSimpleList(role.mainStats[itemCode].codes) +
-				' ' +
-				genNotes(role.mainStats[itemCode]) +
-				genSeeCharNotes(role.mainStats[itemCode])}
-		</span>
-	)
-}
-
-//todo более адекватное место
-export function notesToJSX(tips: CompactTextParagraphs | null) {
-	function processString(str: string) {
-		return str
-			.split('\n')
-			.map((sub, i, arr) => [sub, i < arr.length - 1 ? <br /> : ''])
-			.flat()
-			.filter(a => a)
-	}
-	function processObj(tip: TextNode) {
-		if (typeof tip === 'string') return processString(tip)
-		if ('p' in tip) return <p>{notesToJSX(tip.p)}</p>
-		if ('b' in tip) return <b className="opacity-75 text-normal">{notesToJSX(tip.b)}</b>
-		if ('i' in tip) return <i>{notesToJSX(tip.i)}</i>
-		if ('u' in tip) return <u>{notesToJSX(tip.u)}</u>
-		if ('s' in tip) return <s>{notesToJSX(tip.s)}</s>
-		if ('a' in tip) return <a href={tip.href}>{notesToJSX(tip.a)}</a>
-		console.warn('unknown element type in notes: ', tip)
-		return <span>{JSON.stringify(tip)}</span>
-	}
-	if (!tips) return null
-	if (Array.isArray(tips)) return tips.map(processObj)
-	return processObj(tips)
-}
-
-const CIRCLET_GOBLET_SANDS = ['sands', 'goblet', 'circlet'] as const
-function genArtofactAdvice(
-	set: ArtifactRef | ArtifactRefNode,
-	build: MapAllByCode<CharacterFullInfoWithRelated>,
-	isLast = true,
-) {
-	// todo notes
-	if ('code' in set) {
-		//ArtifactRef
-		let artifactsForDd, artifactForList
-		switch (set.code) {
-			case ART_GROUP_18_ATK_CODE:
-				artifactsForDd = ART_GROUP_18_ATK_INSIDE_CODES.map(code => build.maps.artifacts.get(code))
-				artifactForList = ART_GROUP_18_ATK_DETAIL
-				break
-			case ART_GROUP_20_ER_CODE:
-				artifactsForDd = ART_GROUP_20_ER_INSIDE_CODES.map(code => build.maps.artifacts.get(code))
-				artifactForList = ART_GROUP_20_ER_DETAIL
-				break
-			default:
-				artifactForList = build.maps.artifacts.get(set.code)
-				artifactsForDd = [artifactForList]
-		}
-		if (!artifactsForDd.length) return null
-		return (
-			<LabeledItemAvatar
-				imgSrc={getArtifactIconSrc(set.code)}
-				rarity={artifactForList.rarity}
-				title={artifactForList.name}
-				key={set.code}
-				avatarBadge={'x' + set.count}
-				avatarClasses="with-padding"
-				classes={`small ${isLast ? 'mb-1' : ''}`}
-				ddProps={{
-					DdComponent: ArtifactDetailDd,
-					ddItems: artifactsForDd,
-					related: build.maps,
-				}}
-			/>
-		)
-	} else {
-		//ArtifactRefNode
-		return set.arts.map((art, i) => {
-			const isLastInList = i >= set.arts.length - 1
-			return (
-				<>
-					{genArtofactAdvice(art, build, isLastInList)}
-					{!isLastInList && <div className="text-center text-muted small ">{set.op}</div>}
-				</>
-			)
-		})
-	}
-}
-export function CharacterBuildDetailed({ characterCode }: { characterCode: string }) {
-	const build = useFetch(sig => apiGetCharacter(characterCode, sig), [characterCode])
-	// на случай серверного рендера: билд тут будет загружен сразу
-	const roleTabs: BuildRoleOrDummy[] = isLoaded(build) ? build.character.roles : DUMMY_ROLES
-
-	const [selectedRoleTabRaw, setSelectedRoleTab] = useState<BuildRoleOrDummy>(DUMMY_ROLE)
-	// на случай, если массив вкладок уже реактивно изменился, а выбранная вкладка ещё старая
-	const selectedRoleTab = roleTabs.includes(selectedRoleTabRaw)
-		? selectedRoleTabRaw
-		: roleTabs[0] ?? DUMMY_ROLE
-
-	useEffect(() => {
-		window.scrollTo(0, 0)
+export function CharacterBuildDetailed({
+	build,
+	isUpdating,
+}: {
+	build: MapAllByCode<CharacterFullInfoWithRelated>
+	isUpdating: boolean
+}): JSX.Element {
+	const roleTabs: BuildRoleOrDummy[] = build.character.roles
+	const characterCode = build.character.code
+	const [selectedRoleTab, setSelectedRoleTab] = useSelectable(roleTabs, [characterCode])
+	const goBack = useCallback(() => {
+		history.back()
 	}, [])
-
 	const weaponListBlock = useMemo(() => {
-		if (!isLoaded(build)) return []
 		const role = getRoleData(build, selectedRoleTab.code)
 		if (!role) return []
-		return role.weapons.advices.map((advice, i) => (
-			<li key={i} className="pt-1">
-				{advice.similar.map((item, i) => {
-					const weapon = build.weapons.find(x => x.code === item.code)
-					if (!weapon) return null
-					const isInList = advice.similar.length > 1
-					const isLastInList = i >= advice.similar.length - 1
-					return (
-						<>
-							<LabeledItemAvatar
-								imgSrc={getWeaponIconSrc(weapon.code)}
-								title={
-									weapon.name +
-									(item.refine === null ? '' : ` [${item.refine}]`) +
-									(item.stacks === null
-										? ''
-										: ` (${item.stacks} ${pluralizeEN(item.stacks, 'stack', 'stacks')})`)
-								}
-								rarity={weapon.rarity}
-								avatarClasses="with-padding"
-								classes={`small ${!isInList || isLastInList ? 'mb-1' : ''}`}
-								ddProps={{
-									DdComponent: WeaponDetailDd,
-									ddItems: [weapon],
-									related: build.maps,
-								}}
-							/>
-							{genNotes(item)}
-							{genSeeCharNotes(item)}
-							{isInList && !isLastInList && (
-								<div className="text-center text-muted small ">or</div>
-							)}
-						</>
-					)
-				})}
-			</li>
-		))
+		return role.weapons.advices.map((advice, i) => {
+			const isInList = advice.similar.length > 1
+			const map = advice.similar.map((item, i) => {
+				const weapon = build.weapons.find(x => x.code === item.code)
+				if (!weapon) return null
+				const isLastInList = i >= advice.similar.length - 1
+				return (
+					<>
+						<LabeledItemAvatar
+							imgSrc={getWeaponIconSrc(weapon.code)}
+							title={
+								weapon.name +
+								(item.refine === null ? '' : ` [${I18N_WEAPON_REFINE(item.refine)}]`) +
+								(item.stacks === null ? '' : ` (${I18N_WEAPON_STACKS_COUNT(item.stacks)})`)
+							}
+							rarity={weapon.rarity}
+							avatarClasses="with-padding"
+							classes={`small ${!isInList || isLastInList ? 'mb-1' : ''}`}
+							ddComponent={<WeaponCard weapon={weapon} related={build.maps} />}
+						/>
+						{genNotes(item)}
+						{genSeeCharNotes(item)}
+						{isInList && !isLastInList && (
+							<ItemsJoinerWrap>{I18N_CONJUCTIONS.or}</ItemsJoinerWrap>
+						)}
+					</>
+				)
+			})
+			return (
+				<li key={i} className="pt-1">
+					{isInList ? <ItemsListGroupWrap>{map}</ItemsListGroupWrap> : map}
+				</li>
+			)
+		})
 	}, [build, selectedRoleTab])
 
 	const artifactsListBlock = useMemo(() => {
-		if (!isLoaded(build)) return []
 		const role = getRoleData(build, selectedRoleTab.code)
 		if (!role) return []
 
 		return role.artifacts.sets.map((set, i) => {
 			return (
 				<li key={i} className="pt-1">
-					{genArtofactAdvice(set.arts, build)}
+					{genArtifactAdvice(set.arts, build)}
 					{genNotes(set)}
 					{genSeeCharNotes(set)}
 				</li>
@@ -226,19 +119,19 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		})
 	}, [build, selectedRoleTab])
 	const artifactStatsAndSkillsBlock = useMemo(() => {
-		if (!isLoaded(build)) return null
 		const role = getRoleData(build, selectedRoleTab.code)
 		return (
 			<>
-				<h6 className="text-uppercase opacity-75">Main artifact stats</h6>
-				<ul className="mb-1 list-unstyled ms-1">
+				<BlockHeader>{I18N_ART_STATS_PRIORITY}</BlockHeader>
+				<ul className="mb-1 list-unstyled ms-1 small">
 					{CIRCLET_GOBLET_SANDS.map(ac => (
-						<li className="mb-1">
+						<li className="my-1 ms-1">
 							<ItemAvatar
 								src={getArtifactTypeIconSrc(ac)}
-								classes="small-avatar small mb-1 me-1 mb-xxl-2 me-xxl-2 p-1 bg-dark with-padding align-middle"
+								isNoBg={true}
+								classes="small-avatar small with-padding align-middle"
 							/>
-							<b className="text-muted">{ac} — </b>
+							<b className="text-muted">{I18N_ART_TYPE(ac)} — </b>
 							{genArtMainStatDetail(role, ac)}
 						</li>
 					))}
@@ -246,13 +139,13 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 				<div className="opacity-75 small">
 					{notesToJSX(role.mainStats.notes)} {genSeeCharNotes(role.mainStats)}
 				</div>
-				<h6 className="text-uppercase opacity-75 mt-3">Sub artifact stats</h6>
-				<ol className="mb-1">
+				<BlockHeader classes="mt-3">{I18N_SUBSTATS_PRIORITY}</BlockHeader>
+				<ol className="mb-1 small">
 					{role.subStats.advices.map(advice => {
 						return (
 							<li>
-								{genSimpleList(advice.codes)}
-								{' ' + genNotes(advice) + genSeeCharNotes(advice)}
+								{genSimpleList(advice.codes.map(I18N_STAT_NAME))} {genNotes(advice)}
+								{genSeeCharNotes(advice)}
 							</li>
 						)
 					})}
@@ -260,10 +153,10 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 				<div className="opacity-75 small">
 					{notesToJSX(role.subStats.notes)} {genSeeCharNotes(role.subStats)}
 				</div>
-				<h6 className="text-uppercase opacity-75 mt-3">Talent Priority</h6>
-				<ol>
+				<BlockHeader classes="mt-3">{I18N_TALENTS_PRIORITY}</BlockHeader>
+				<ol className="small">
 					{role.talents.advices.map(advice => {
-						return <li>{advice}</li>
+						return <li>{arrOrItemToArr(advice).map(I18N_TALENT_NAME).join(', ')}</li>
 					})}
 				</ol>
 				<div className="opacity-75 small">
@@ -273,41 +166,38 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		)
 	}, [build, selectedRoleTab])
 	const notesBlock = useMemo(() => {
-		if (!isLoaded(build)) return null
 		const role = getRoleData(build, selectedRoleTab.code)
 		return (
 			<>
-				<div>{notesToJSX(role.tips)}</div>
-				<div>{notesToJSX(role.notes)}</div>
+				<div className="mb-2">{notesToJSX(role.tips)}</div>
+				<div className="mb-2">{notesToJSX(role.notes)}</div>
 				<div>{notesToJSX(build.character.credits)}</div>
 			</>
 		)
 	}, [build, selectedRoleTab])
 	const materialsBlock = useMemo(() => {
-		if (!isLoaded(build)) return null
 		const materials = getAllRelated(build.maps.items, build.character.materialCodes)
 		return (
-			<div className="w-100 d-flex justify-content-between">
+			<div className="w-100 d-flex flex-wrap justify-content-between">
 				{materials.map(m => (
 					<ItemAvatar
 						classes="mb-2 mx-1 small-avatar with-padding"
 						src={getItemIconSrc(m.code)}
-						ddProps={{
-							DdComponent: OtherItemCardDetailDd,
-							ddItems: [m],
-							related: build.maps,
-						}}
+						ddComponent={<OtherItemCard item={m} related={build.maps} />}
 					/>
 				))}
 			</div>
 		)
 	}, [build])
-	if (!isLoaded(build)) return <Spinner />
 	const CharacterDetailDesktop = (
 		<div className="d-none d-xl-block">
-			<div className="container float-end">
+			<div className="container">
 				<div className="row">
-					<div className="col col-3"></div>
+					<div className="col col-3 p-0">
+						<button className="btn btn-secondary align-self-center" onClick={goBack}>
+							<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
+						</button>
+					</div>
 					<div className="col col-9">
 						<Tabs
 							tabs={roleTabs}
@@ -318,31 +208,34 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 					</div>
 				</div>
 				<div className="row">
-					<div className="col col-3">
-						<CharacterPortrait src={getCharacterPortraitSrc(characterCode)} classes="w-100" />
-						<div className="mt-3">{materialsBlock}</div>
+					<div className="col col-3 pt-3">
+						<div className="position-relative">
+							<CharacterPortrait src={getCharacterPortraitSrc(characterCode)} classes="w-100" />
+							<div className="mt-3">{materialsBlock}</div>
+							<ToggleCharFav
+								classes="fs-3 position-absolute top-0 end-0"
+								characterCode={characterCode}
+							/>
+						</div>
 					</div>
 					<div className="col col-9">
 						<div className="d-flex">
 							<div className="flex-fill w-33 p-3">
-								<h6 className="text-uppercase opacity-75">Weapon</h6>
+								<BlockHeader>{I18N_WEAPONS}</BlockHeader>
 								<ol className="items-list">{weaponListBlock}</ol>
 							</div>
 							<div className="flex-fill w-33 p-3">
-								<h6 className="text-uppercase opacity-75">Artifacts</h6>
+								<BlockHeader>{I18N_ARTIFACTS}</BlockHeader>
 								<ol className="items-list">{artifactsListBlock}</ol>
 								<div></div>
 							</div>
 							<div className="flex-fill w-33 p-3">{artifactStatsAndSkillsBlock}</div>
 						</div>
-					</div>
-				</div>
-				<div className="row">
-					<div className="col col-3"></div>
-					<div className="col col-9">
-						<div className="p-3">
-							<h6 className="text-uppercase opacity-75">Notes</h6>
-							<div className="text-muted">{notesBlock}</div>
+						<div className="w-100">
+							<div className="p-3">
+								<BlockHeader>{I18N_NOTES}</BlockHeader>
+								<div className="text-muted">{notesBlock}</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -350,54 +243,63 @@ export function CharacterBuildDetailed({ characterCode }: { characterCode: strin
 		</div>
 	)
 	const CharacterDetailMobile = (
-		<div class="d-xl-none">
+		<div className="d-xl-none">
 			<CharacterPortrait
 				src={getCharacterSilhouetteSrc(characterCode)}
 				classes="w-75 character-portrait-mobile"
 			/>
 			<BtnTabGroup
 				tabs={roleTabs}
+				titleFunc={makeRoleTitle}
 				selectedTab={selectedRoleTab}
 				onTabSelect={setSelectedRoleTab}
-				classes="w-100 mt-3 mb-0"
+				classes="w-100 btn-group-sm mt-3 mb-0"
 			/>
 			<div className="">
 				<div className="my-3">
-					<h6 className="text-uppercase opacity-75">Ascension materials</h6>
+					<BlockHeader>{I18N_ASC_MATERIALS}</BlockHeader>
 					{materialsBlock}
 				</div>
 				<div className="my-3">
-					<h6 className="text-uppercase opacity-75">Artifacts</h6>
+					<BlockHeader>{I18N_ARTIFACTS}</BlockHeader>
 					<ol className="items-list">{artifactsListBlock}</ol>
 				</div>
 				<div className="my-3">{artifactStatsAndSkillsBlock}</div>
 				<div className="my-3">
-					<h6 className="text-uppercase opacity-75">Weapon</h6>
+					<BlockHeader>{I18N_WEAPONS}</BlockHeader>
 					<ol className="items-list">{weaponListBlock}</ol>
 				</div>
 			</div>
 			<div>
-				<h6 className="text-uppercase opacity-75">Notes</h6>
+				<BlockHeader>{I18N_NOTES}</BlockHeader>
 				<div className="opacity-75">{notesBlock}</div>
 			</div>
 		</div>
 	)
 	return (
-		<div className="character-build-detailed mt-2 mb-3">
-			<div>
-				<a
-					className="btn btn-secondary align-baseline"
-					type="submit"
-					href={makeCharacterBuildDeselectHash()}
-				>
-					<span className="fs-4 lh-1 opacity-75">‹ </span> Back
-				</a>
-				<h5 className="px-3 d-inline align-baseline">
-					{isLoaded(build) ? build.character.name : ''}
-				</h5>
+		<ItemsDataContext.Provider value={build.maps}>
+			<div className="character-build-detailed mt-2 mb-3 position-relative">
+				<div className="d-flex d-xl-none mt-3">
+					<A className="btn btn-secondary align-self-center" type="submit" href="/builds">
+						<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
+					</A>
+					<h5 className="ps-3 pe-1 m-0 align-self-center w-50 d-inline-block overflow-hidden text-truncate text-wrap">
+						{build.character.name}
+					</h5>
+					<div className="align-self-end ms-auto d-flex">
+						<ToggleCharFav classes="fs-3" characterCode={characterCode} />
+						<ItemAvatar
+							src={getCharacterAvatarLargeSrc(characterCode)}
+							classes="large-avatar mt-n5 align-self-end"
+						/>
+					</div>
+				</div>
+				{isUpdating ? <CentredSpinner /> : null}
+				<div className={isUpdating ? 'opacity-50 pe-none' : ''}>
+					{CharacterDetailDesktop}
+					{CharacterDetailMobile}
+				</div>
 			</div>
-			{CharacterDetailDesktop}
-			{CharacterDetailMobile}
-		</div>
+		</ItemsDataContext.Provider>
 	)
 }

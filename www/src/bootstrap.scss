@@ -11,6 +11,8 @@ $spacers: (
 	4: $spacer * 1.5,
 	5: $spacer * 3,
 );
+$enable-negative-margins: true;
+
 @import "dark-theme.scss";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
@@ -23,7 +25,7 @@ $spacers: (
 // @import "node_modules/bootstrap/scss/images";
 @import "node_modules/bootstrap/scss/containers";
 @import "node_modules/bootstrap/scss/grid";
-// @import "node_modules/bootstrap/scss/tables";
+@import "node_modules/bootstrap/scss/tables";
 @import "node_modules/bootstrap/scss/forms";
 @import "node_modules/bootstrap/scss/buttons";
 @import "node_modules/bootstrap/scss/transitions";
@@ -32,21 +34,21 @@ $spacers: (
 @import "node_modules/bootstrap/scss/nav";
 @import "node_modules/bootstrap/scss/navbar";
 @import "node_modules/bootstrap/scss/card";
-// @import "node_modules/bootstrap/scss/accordion";
+@import "node_modules/bootstrap/scss/accordion";
 // @import "node_modules/bootstrap/scss/breadcrumb";
 // @import "node_modules/bootstrap/scss/pagination";
 @import "node_modules/bootstrap/scss/badge";
 // @import "node_modules/bootstrap/scss/alert";
 // @import "node_modules/bootstrap/scss/progress";
 // @import "node_modules/bootstrap/scss/list-group";
-// @import "node_modules/bootstrap/scss/close";
+@import "node_modules/bootstrap/scss/close";
 // @import "node_modules/bootstrap/scss/toasts";
-// @import "node_modules/bootstrap/scss/modal";
-// @import "node_modules/bootstrap/scss/tooltip";
+@import "node_modules/bootstrap/scss/modal";
+@import "node_modules/bootstrap/scss/tooltip";
 @import "node_modules/bootstrap/scss/popover";
 // @import "node_modules/bootstrap/scss/carousel";
 @import "node_modules/bootstrap/scss/spinners";
-// @import "node_modules/bootstrap/scss/offcanvas";
+@import "node_modules/bootstrap/scss/offcanvas";
 // @import "node_modules/bootstrap/scss/placeholders";
 
 // Helpers
