@@ -233,6 +233,7 @@ export const I18N_PIECES_BONUS = {
 }[LANG]
 export const I18N_BASE_ATTACK = { en: 'Base attack', ru: 'Базовая атака' }[LANG]
 export const I18N_ITEM_STORY = { en: 'Item Story', ru: 'История предмета' }[LANG]
+export const I18N_ON_MAP = { en: 'On map', ru: 'На карте' }[LANG]
 export const I18N_SECONDARY_STAT = { en: 'Secondary Stat', ru: 'Пассивная способность' }[LANG]
 type MapCodeName = Record<MapCode, string>
 export const I18N_MAP_CODES_NAME: MapCodeName = {
@@ -420,7 +421,7 @@ export const I18N_ITEM_DETAIL = {
 }[LANG]
 export const I18N_ARROWS_TO_SELECT = {
 	en: 'you can use Arrow keys and Enter to select option',
-	ru: 'нужный результат можно быстро выбрать кнопками-стрелочками и Интером',
+	ru: 'нужный результат можно быстро выбрать кнопками-стрелочками и Энтером',
 }[LANG]
 export const I18N_RECOMMENDED_BUILDS = {
 	en: 'recomended builds',
