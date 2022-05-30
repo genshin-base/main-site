@@ -14,6 +14,7 @@ import {
 	I18N_COLLAPSE,
 	I18N_ITEM_STORY,
 	I18N_MAIN_INFO,
+	I18N_ON_MAP,
 	I18N_PIECE_BONUS,
 	I18N_PIECES_BONUS,
 } from '#src/i18n/i18n'
@@ -178,7 +179,7 @@ function ArtifactCardLine({
 				content: mainInfoColInner,
 			},
 			{ title: I18N_ITEM_STORY, code: 'loreInfoColInner', content: loreInfoColInner },
-			{ title: 'todo', code: 'locationColInner', content: locationColInner },
+			{ title: I18N_ON_MAP, code: 'locationColInner', content: locationColInner },
 		]
 	}, [mainInfoColInner, loreInfoColInner, locationColInner, artifact])
 	return (

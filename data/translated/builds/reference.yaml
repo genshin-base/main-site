@@ -4965,31 +4965,19 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: prototype-rancour
-                  refine: 3+
+                - code: haran-geppaku-futsu
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: mistsplitter-reforged
+                  refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: the-black-sword
-                  refine: 2+
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: prototype-rancour
-                  refine: 1-2
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: the-black-sword
-                  refine: "1"
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: skyward-blade
                   refine: null
                   stacks: null
                   notes: null
@@ -5001,13 +4989,7 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: lions-roar
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: blackcliff-longsword
+                - code: prototype-rancour
                   refine: null
                   stacks: null
                   notes: null
@@ -5015,6 +4997,12 @@ characters:
             - similar:
                 - code: harbinger-of-dawn
                   refine: "5"
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: blackcliff-longsword
+                  refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -5111,6 +5099,14 @@ characters:
               (white numbers). For this reason, you should be charged attacking
               after casting Stellar Restoration (E) instead of recasting it.
           - p:
+              - b: |-
+                  Regarding Weapon Choices:
+                  Harbinger of Dawn:
+              - " The performance of this weapon is heavily reliant on being
+                able to maintain its passive. It is "
+              - b: not recommended
+              - " otherwise."
+          - p:
               - b: "Regarding Artifact Sets:"
               - "\n"
               - b: "Pale Flame (4): "
@@ -5151,11 +5147,17 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
+                - code: haran-geppaku-futsu
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
                 - code: summit-shaper
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: true
+                  seeCharNotes: false
             - similar:
                 - code: aquila-favonia
                   refine: null
@@ -5163,17 +5165,17 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: the-black-sword
+                - code: lions-roar
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: true
             - similar:
-                - code: lions-roar
+                - code: the-black-sword
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: false
+                  seeCharNotes: true
             - similar:
                 - code: blackcliff-longsword
                   refine: null
@@ -5192,13 +5194,14 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-                - code: amenoma-kageuchi
+            - similar:
+                - code: skyward-blade
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: skyward-blade
+                - code: amenoma-kageuchi
                   refine: null
                   stacks: null
                   notes: null
@@ -5223,6 +5226,15 @@ characters:
               notes: null
               seeCharNotes: false
             - arts:
+                op: or
+                arts:
+                  - code: 18%-atk
+                    count: 2
+                  - code: 18%-atk
+                    count: 2
+              notes: null
+              seeCharNotes: true
+            - arts:
                 code: thundersoother
                 count: 4
               notes: null
@@ -5237,7 +5249,7 @@ characters:
               notes: null
               seeCharNotes: false
           notes:
-            - p: 4-pcs. Thundering Fury is Not Recommended for Electro DPS Keqing.
+            - p: Thundering Fury (4) is Not Recommended for Electro DPS Keqing.
             - p: "Note: Artifact recommendations are not ranked in order of recommendation,
                 read the notes for more info."
           seeCharNotes: false
@@ -5308,12 +5320,12 @@ characters:
           - p:
               - b: |-
                   Regarding Weapon Choices: 
-                  Summit Shaper: 
-              - "This weapon can only beat Jade Cutter "
-              - b: "[R1] "
-              - "when it's shielded at "
-              - b: "[R2]."
-              - "\n"
+                  Lion's Roar: 
+              - "This weapon is only recommended on Pure Electro/Electro-charged
+                teams. In teams where the Electro Aura can be easily removed OR
+                when facing enemies with innate elements, this weapon "
+              - b: will severely underperform.
+              - "\ \n"
               - b: "The Black Sword:"
               - " On a quickswap Keqing, this weapon will be shifted below
                 Harbinger of Dawn "
@@ -5327,6 +5339,11 @@ characters:
                 generally anywhere, whether it be Co-op or Abyss, or other
                 singleplayer content. This has a lot of consistency due to its
                 independence from electro aura, and it is more viable in abyss.
+              - b: "+18% ATK set (2) / +18% ATK set (2): "
+              - >
+                While it is slightly behind Thundering Fury (2) +18% ATK set
+                (2), this set is preferred to farm for due to the resin
+                efficiency of Shimenawa's Reminiscence's Domain.
               - b: "Thundersoother (4): "
               - >
                 This set should be used with Electro-charged team compositions
@@ -7028,7 +7045,6 @@ characters:
         talents:
           advices:
             - burst
-            - skill
           notes: null
           seeCharNotes: false
         tips:
@@ -8174,20 +8190,11 @@ characters:
         tips:
           - b: "[C1]"
           - " against Cryo affected enemies"
-        notes:
-          - p: Kaeya Cryo DPS is mostly used in a team with Chongyun and Xingqiu/Barbara
-              while having Blizzard Strayer (4) equipped. In this team, Kaeya
-              has 55% crit rate against Frozen enemies without any additional
-              Crit stats, which means Crit Rate substats are generally
-              prioritized less than ATK% or Crit DMG.
-          - p:
-              - b: |-
-                  Regarding Artifact Sets:
-                  Pale Flame (4):
-              - " This set is difficult to fully utilise due to Kaeya's skill
-                cooldown being 6 seconds. The full set effect requires 2 stacks
-                to be active at any given time, so maintaining stacks can be
-                difficult when considering rotations between characters."
+        notes: Kaeya Cryo DPS is mostly used in a team with Chongyun and Xingqiu/Barbara
+          while having Blizzard Strayer (4) equipped. In this team, Kaeya has
+          55% crit rate against Frozen enemies without any additional Crit
+          stats, which means Crit Rate substats are generally prioritized less
+          than ATK% or Crit DMG.
       - code: burst support
         name: burst support
         isRecommended: true

@@ -1001,11 +1001,6 @@ If not paired with Chongyun, Skill takes priority over Normal Attacks
 
 Kaeya Cryo DPS is mostly used in a team with Chongyun and Xingqiu/Barbara while having Blizzard Strayer (4) equipped. In this team, Kaeya has 55% crit rate against Frozen enemies without any additional Crit stats, which means Crit Rate substats are generally prioritized less than ATK% or Crit DMG.
 
-**Regarding Artifact Sets**
-
-[Pale Flame (4)](#artifact:pale-flame)<br>
-This set is difficult to fully utilise due to Kaeya's skill cooldown being 6 seconds. The full set effect requires 2 stacks to be active at any given time, so maintaining stacks can be difficult when considering rotations between characters.
-
 
 # === characters.#kaeya.roles.#burst_support.name ===
 
@@ -1089,6 +1084,11 @@ Refer to Notes below
 
 This section is dedicated to a playstyle where Keqing does not infuse her attacks with electro, and instead focuses on physical damage (white numbers). For this reason, you should be charged attacking after casting Stellar Restoration (E) instead of recasting it.
 
+**Regarding Weapon Choices**
+
+**[Harbinger of Dawn](#weapon:harbinger-of-dawn)**<br>
+The performance of this weapon is heavily reliant on being able to maintain its passive. It is not recommended otherwise.
+
 **Regarding Artifact Sets**
 
 **[Pale Flame (4)](#artifact:pale-flame)**<br>
@@ -1114,7 +1114,7 @@ electro dps
 
 # === characters.#keqing.roles.#electro_dps.artifacts.notes ===
 
-4-pcs. Thundering Fury is Not Recommended for Electro DPS Keqing.
+[Thundering Fury (4)](#artifact:thundering-fury) is not recommended for Electro DPS Keqing.
 
 Note: Artifact recommendations are not ranked in order of recommendation, read the notes for more info.
 
@@ -1139,8 +1139,8 @@ Both physical and electro keqing are good and viable. You'd usually want to deci
 
 **Regarding Weapon Choices**
 
-**[Summit Shaper](#weapon:summit-shaper)**<br>
-This weapon can only beat Jade Cutter **\[R1\]** when it's shielded at **\[R2\].**
+**[Lion's Roar](#weapon:lions-roar)**<br>
+This weapon is only recommended on Pure Electro/Electro-charged teams. In teams where the Electro Aura can be easily removed OR when facing enemies with innate elements, this weapon will severely underperform.
 
 **[The Black Sword](#weapon:the-black-sword)**<br>
 On a quickswap Keqing, this weapon will be shifted below Harbinger of Dawn **\[R5\].**
@@ -1149,6 +1149,9 @@ On a quickswap Keqing, this weapon will be shifted below Harbinger of Dawn **\[R
 
 **[Thundering Fury (2) ](#artifact:thundering-fury)+ [18% ATK set (2)](#artifact:18%-atk)**<br>
 This set is a generalist set, which means it can be used generally anywhere, whether it be Co-op or Abyss, or other singleplayer content. This has a lot of consistency due to its independence from electro aura, and it is more viable in abyss.
+
+**[18% ATK set (2)](#artifact:18%-atk) + [18% ATK set (2)](#artifact:18%-atk)**<br>
+While it is slightly behind Thundering Fury (2) +18% ATK set (2), this set is preferred to farm for due to the resin efficiency of Shimenawa's Reminiscence's Domain.
 
 **[Thundersoother (4)](#artifact:thundersoother)**<br>
 This set should be used with Electro-charged team compositions (Keqing + Xingqiu) or mono-electro team comp (Not Suggested). This set has a 35% Dmg modifier which increases all damage from all sources, although that modifier is a bit unstable due to its dependency to the sustainability of Electro aura on enemies.
