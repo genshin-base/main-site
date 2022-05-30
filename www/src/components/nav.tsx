@@ -16,9 +16,9 @@ import {
 import { paths } from '#src/routes/paths'
 import { A, isOnRoute, makeLocationHrefForLang } from '#src/routes/router'
 import { useClickAway } from '#src/utils/hooks'
+import { LINK_DISCORD_INVITE, LINK_DONATION_ALERTS, LINK_KO_FI } from '#src/utils/links'
 import { VARIATION_SELECTOR } from '#src/utils/typography'
 import { GlobeIcon } from './globe-icon'
-import { LINK_DISCORD_INVITE, LINK_DONATION_ALERTS, LINK_KO_FI } from '#src/utils/links'
 
 type Props = { isNavExpanded: boolean }
 const isPageActive = routs => routs.some(r => isOnRoute(r))
@@ -106,26 +106,27 @@ function EquipmentDd(): JSX.Element {
 function HeadDd({ title, ddLinks }: { title: string | JSX.Element; ddLinks: DdLink[] }): JSX.Element {
 	const [isExpanded, setIsExpanded] = useState(false)
 	const ddRef = useRef(null)
+	const targetRef = useRef(null)
 	const closeDd = useCallback(() => isExpanded && setIsExpanded(false), [setIsExpanded, isExpanded])
-	const openDd = useCallback(() => !isExpanded && setIsExpanded(true), [setIsExpanded, isExpanded])
+	const toggleDd = useCallback(() => setIsExpanded(!isExpanded), [setIsExpanded, isExpanded])
 
-	// TODO клик мимо компонента
-	useClickAway(ddRef, closeDd)
+	useClickAway([ddRef, targetRef], closeDd)
 	const isActive = ddLinks.some(l => l.isActive)
 	return (
 		<li className="nav-item dropdown">
 			<a
+				ref={targetRef}
 				className={`nav-link dropdown-toggle ${isActive ? 'active' : ''} ${isExpanded ? 'show' : ''}`}
 				id="navbarDropdown"
 				role="button"
-				onClick={openDd}
+				onClick={toggleDd}
 			>
 				{title}
 			</a>
 			<ul className={`dropdown-menu ${isExpanded ? 'show' : ''}`} style={'right: 0'} ref={ddRef}>
 				{isExpanded
 					? ddLinks.map(l => (
-							<li key={l.href}>
+							<li key={l.href} onClick={closeDd}>
 								<A
 									className={`dropdown-item ${l.isActive ? 'active' : ''}`}
 									href={l.href}
@@ -150,19 +151,20 @@ function HeadDd({ title, ddLinks }: { title: string | JSX.Element; ddLinks: DdLi
 function LangSelect(): JSX.Element {
 	const [isExpanded, setIsExpanded] = useState(false)
 	const ddRef = useRef(null)
+	const targetRef = useRef(null)
 	const closeDd = useCallback(() => isExpanded && setIsExpanded(false), [setIsExpanded, isExpanded])
-	const openDd = useCallback(() => !isExpanded && setIsExpanded(true), [setIsExpanded, isExpanded])
+	const toggleDd = useCallback(() => setIsExpanded(!isExpanded), [setIsExpanded, isExpanded])
 
-	// TODO клик мимо компонента
-	useClickAway(ddRef, closeDd)
+	useClickAway([ddRef, targetRef], closeDd)
 
 	return (
 		<li className="nav-item dropdown">
 			<a
+				ref={targetRef}
 				className={`nav-link dropdown-toggle ${isExpanded ? 'show' : ''}`}
 				id="navbarDropdown"
 				role="button"
-				onClick={openDd}
+				onClick={toggleDd}
 			>
 				<GlobeIcon />
 				{VARIATION_SELECTOR} {I18N_LANG_NAME}
