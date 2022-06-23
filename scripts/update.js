@@ -108,6 +108,22 @@ const fixes = {
 					return false
 				},
 			},
+			{
+				// у Е Лани опечатка в слове ABILIT(I)Y
+				title: /^hydro$/i,
+				fixFunc(sheet) {
+					for (const { values: cells = [] } of sheet.data[0].rowData) {
+						for (const cell of cells) {
+							if (json_getText(cell) === 'ABILITIY TIPS') {
+								delete cell.textFormatRuns
+								cell.userEnteredValue = { stringValue: 'ABILITY TIPS' }
+								return true
+							}
+						}
+					}
+					return false
+				},
+			},
 		],
 	},
 	/** @type {import('#lib/parsing/honeyhunter/fixes').HoneyhunterFixes} */
