@@ -343,6 +343,21 @@ kujou-sara:
     - vajrada-amethyst-gemstone
     - dendrobium
     - ominous-mask
+kuki-shinobu:
+  code: kuki-shinobu
+  name:
+    en: Kuki Shinobu
+    ru: Куки Синобу
+  rarity: 4
+  weaponTypeCode: sword
+  releaseVersion: "2.7"
+  materialCodes:
+    - philosophies-of-elegance
+    - runic-fang
+    - tears-of-the-calamitous-god
+    - vajrada-amethyst-gemstone
+    - naku-weed
+    - spectral-nucleus
 lisa:
   code: lisa
   name:
@@ -714,6 +729,21 @@ yanfei:
     - agnidus-agate-gemstone
     - noctilucous-jade
     - golden-raven-insignia
+yelan:
+  code: yelan
+  name:
+    en: Yelan
+    ru: Е Лань
+  rarity: 5
+  weaponTypeCode: bow
+  releaseVersion: "2.7"
+  materialCodes:
+    - philosophies-of-prosperity
+    - gilded-scale
+    - runic-fang
+    - varunada-lazurite-gemstone
+    - starconch
+    - lieutenants-insignia
 yoimiya:
   code: yoimiya
   name:

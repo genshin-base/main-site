@@ -115,7 +115,10 @@ const fixes = {
 		statuses: {
 			// некоторые персонажи и предметы почему-то находятся в таблице нерелизнутого
 			characters: [],
-			weapons: [{ actually: 'released', name: 'Calamity Queller' }],
+			weapons: [
+				{ actually: 'unreleased', name: 'Amber Bead' },
+				{ actually: 'unreleased', name: 'Ebony Bow' },
+			],
 		},
 		travelerLangNames: {
 			anemo: {
@@ -154,7 +157,31 @@ const fixes = {
 				name: { en: 'Wolves of the Rift', ru: 'Волк Разрыва' },
 			},
 		],
-		domainMissingLocations: [],
+		domainMissingLocations: [
+			// найденные вручную (точные)
+			{ code: 'momiji-dyed-court', location: { mapCode: 'teyvat', x: 1619, y: 6098 } },
+			{ code: 'slumbering-court', location: { mapCode: 'teyvat', x: 3463, y: 6619 } },
+			{ code: 'violet-court', location: { mapCode: 'teyvat', x: 3187, y: 5529 } },
+			{ code: 'narukami-island-tenshukaku', location: { mapCode: 'teyvat', x: 3812, y: 5677 } },
+			{ code: 'court-of-flowing-sand', location: { mapCode: 'teyvat', x: 3657, y: 4725 } },
+			{ code: 'beneath-the-dragon-queller', location: { mapCode: 'teyvat', x: -2504, y: 1722 } },
+			// от хонихантеров (не очень точные)
+			{ code: 'cecilia-garden', location: { mapCode: 'teyvat', x: -513, y: 79 } },
+			{ code: 'clear-pool-and-mountain-cavern', location: { mapCode: 'teyvat', x: -2181, y: 1045 } },
+			{ code: 'confront-stormterror', location: { mapCode: 'teyvat', x: -883, y: -316 } },
+			{ code: 'domain-of-guyun', location: { mapCode: 'teyvat', x: 215, y: 2630 } },
+			{ code: 'end-of-the-oneiric-euthymia', location: { mapCode: 'teyvat', x: 3654, y: 4821 } },
+			{ code: 'enter-the-golden-house', location: { mapCode: 'teyvat', x: -1002, y: 3243 } },
+			{ code: 'forsaken-rift', location: { mapCode: 'teyvat', x: 143, y: 657 } },
+			{ code: 'hidden-palace-of-lianshan-formula', location: { mapCode: 'teyvat', x: -334, y: 1600 } },
+			{ code: 'hidden-palace-of-zhou-formula', location: { mapCode: 'teyvat', x: -1145, y: 643 } },
+			{ code: 'midsummer-courtyard', location: { mapCode: 'teyvat', x: 809, y: -153 } },
+			{ code: 'peak-of-vindagnyr', location: { mapCode: 'teyvat', x: 75, y: 1297 } },
+			{ code: 'ridge-watch', location: { mapCode: 'teyvat', x: -430, y: 868 } },
+			{ code: 'taishan-mansion', location: { mapCode: 'teyvat', x: -1919, y: 1677 } },
+			{ code: 'the-lost-valley', location: { mapCode: 'teyvat', x: -2647, y: 2811 } },
+			{ code: 'valley-of-remembrance', location: { mapCode: 'teyvat', x: -89, y: 637 } },
+		],
 		postProcess: {
 			items: (() => {
 				/**
@@ -214,7 +241,7 @@ const fixes = {
 					}
 				}
 				return [
-					// у некоторых оружий в описании стречаются "\n" (двумя символами)
+					// у некоторых оружий в описании встречаются "\n" (двумя символами)
 					// https://genshin.honeyhunterworld.com/db/weapon/w_5312/?lang=EN
 					// https://genshin.honeyhunterworld.com/db/weapon/w_4314/?lang=EN
 					removeSlashNs(code2weapon => code2weapon['dodoco-tales'].description),

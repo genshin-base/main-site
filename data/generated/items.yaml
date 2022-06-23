@@ -1548,10 +1548,10 @@ qingxin:
   rarity: 1
   craftedFrom: []
   locations:
-    - !loc teyvat -2820 3122
     - !loc teyvat -2809 3107
     - !loc teyvat -2808 3014
     - !loc teyvat -2807 2963
+    - !loc teyvat -2807 3108
     - !loc teyvat -2806 2988
     - !loc teyvat -2779 3132
     - !loc teyvat -2757 2895
@@ -1578,24 +1578,26 @@ qingxin:
     - !loc teyvat -2501 2750
     - !loc teyvat -2491 1365
     - !loc teyvat -2490 3236
-    - !loc teyvat -2477 2810
     - !loc teyvat -2466 2692
     - !loc teyvat -2451 2688
     - !loc teyvat -2446 2670
     - !loc teyvat -2442 2706
     - !loc teyvat -2440 1606
     - !loc teyvat -2434 3304
-    - !loc teyvat -2425 3358
+    - !loc teyvat -2425 3356
     - !loc teyvat -2415 1446
     - !loc teyvat -2413 1444
+    - !loc teyvat -2413 2811
     - !loc teyvat -2411 1446
     - !loc teyvat -2401 3025
     - !loc teyvat -2399 3348
     - !loc teyvat -2392 1542
     - !loc teyvat -2388 1541
     - !loc teyvat -2342 3033
+    - !loc teyvat -2325 2863
     - !loc teyvat -2321 1384
     - !loc teyvat -2317 1276
+    - !loc teyvat -2303 2955
     - !loc teyvat -2293 3049
     - !loc teyvat -2289 3076
     - !loc teyvat -2249 3129
@@ -2615,6 +2617,18 @@ chaos-oculus:
     - code: chaos-axis
       count: 3
   locations: []
+crystalline-cyst-dust:
+  code: crystalline-cyst-dust
+  name:
+    en: Crystalline Cyst Dust
+    ru: Пыль кристаллоцистов
+  types:
+    - character-material-secondary
+  rarity: 3
+  craftedFrom:
+    - code: luminescent-pollen
+      count: 3
+  locations: []
 damaged-mask:
   code: damaged-mask
   name:
@@ -2709,6 +2723,16 @@ forbidden-curse-scroll:
     - code: sealed-scroll
       count: 3
   locations: []
+fungal-spores:
+  code: fungal-spores
+  name:
+    en: Fungal Spores
+    ru: Споры плесенника
+  types:
+    - character-material-secondary
+  rarity: 1
+  craftedFrom: []
+  locations: []
 gloomy-statuette:
   code: gloomy-statuette
   name:
@@ -2755,6 +2779,18 @@ lieutenants-insignia:
   rarity: 3
   craftedFrom:
     - code: sergeants-insignia
+      count: 3
+  locations: []
+luminescent-pollen:
+  code: luminescent-pollen
+  name:
+    en: Luminescent Pollen
+    ru: Светящаяся пыльца
+  types:
+    - character-material-secondary
+  rarity: 2
+  craftedFrom:
+    - code: fungal-spores
       count: 3
   locations: []
 old-handguard:
@@ -4028,6 +4064,7 @@ geo-sigil:
     - !loc teyvat -1957 2711
     - !loc teyvat -1949 1174
     - !loc teyvat -1930 3222
+    - !loc teyvat -1921 2887
     - !loc teyvat -1891 2416
     - !loc teyvat -1820 2869
     - !loc teyvat -1805 2652
@@ -5837,6 +5874,7 @@ bird-egg:
     - !loc teyvat -1152 1654
     - !loc teyvat -1099 2196
     - !loc teyvat -1084 2206
+    - !loc teyvat -1065 779
     - !loc teyvat -1056 1579
     - !loc teyvat -1052 1580
     - !loc teyvat -1023 1052
@@ -5846,6 +5884,7 @@ bird-egg:
     - !loc teyvat -946 1945
     - !loc teyvat -931 2481
     - !loc teyvat -910 2029
+    - !loc teyvat -857 708
     - !loc teyvat -773 2158
     - !loc teyvat -745 1393
     - !loc teyvat -741 1390
@@ -5934,6 +5973,7 @@ bird-egg:
     - !loc teyvat 3365 5100
     - !loc teyvat 3372 5054
     - !loc teyvat 3402 5083
+    - !loc teyvat 3645 4806
 butter:
   code: butter
   name:
@@ -6150,6 +6190,7 @@ carrot:
     - !loc teyvat -335 -146
     - !loc teyvat -249 182
     - !loc teyvat -240 599
+    - !loc teyvat 77 6334
     - !loc teyvat 136 443
     - !loc teyvat 192 417
     - !loc teyvat 208 388
@@ -6685,7 +6726,14 @@ crystal-chunk:
     - !loc teyvat 797 -486
     - !loc teyvat 876 -588
     - !loc teyvat 1052 83
+    - !loc chasm -602 67
+    - !loc chasm -598 67
+    - !loc chasm -570 107
+    - !loc chasm -530 -248
+    - !loc chasm -530 -244
+    - !loc chasm -525 -243
     - !loc chasm -524 85
+    - !loc chasm -522 -244
     - !loc chasm -518 89
     - !loc chasm -504 -349
     - !loc chasm -500 -352
@@ -6703,6 +6751,8 @@ crystal-chunk:
     - !loc chasm -264 220
     - !loc chasm -215 -62
     - !loc chasm -213 -56
+    - !loc chasm -160 375
+    - !loc chasm -157 376
     - !loc chasm -148 10
     - !loc chasm -145 16
     - !loc chasm -143 -152
@@ -6718,6 +6768,10 @@ crystal-chunk:
     - !loc chasm -61 -262
     - !loc chasm -61 99
     - !loc chasm -57 103
+    - !loc chasm -42 -683
+    - !loc chasm -39 -679
+    - !loc chasm -36 -683
+    - !loc chasm -3 -528
     - !loc chasm -1 -108
     - !loc chasm 5 -110
     - !loc chasm 8 -95
@@ -6727,6 +6781,8 @@ crystal-chunk:
     - !loc chasm 22 -323
     - !loc chasm 26 -321
     - !loc chasm 30 -323
+    - !loc chasm 54 -556
+    - !loc chasm 54 -553
     - !loc chasm 97 321
     - !loc chasm 102 326
     - !loc chasm 141 -580
@@ -6734,6 +6790,8 @@ crystal-chunk:
     - !loc chasm 150 -572
     - !loc chasm 162 -246
     - !loc chasm 166 -240
+    - !loc chasm 170 262
+    - !loc chasm 170 264
     - !loc chasm 180 185
     - !loc chasm 182 -473
     - !loc chasm 187 190
@@ -6825,6 +6883,7 @@ crystal-core:
     - !loc teyvat -366 1342
     - !loc teyvat -365 1332
     - !loc teyvat -365 1634
+    - !loc teyvat -360 626
     - !loc teyvat -359 1636
     - !loc teyvat -358 1320
     - !loc teyvat -352 1636
@@ -6988,13 +7047,20 @@ crystal-core:
     - !loc teyvat 3703 4746
     - !loc teyvat 3704 6597
     - !loc teyvat 3704 6600
+    - !loc enkanomiya -1286 716
+    - !loc enkanomiya -1285 716
+    - !loc enkanomiya -1244 334
     - !loc enkanomiya -1243 335
     - !loc enkanomiya -478 -399
     - !loc enkanomiya -474 -405
     - !loc enkanomiya -473 -399
+    - !loc enkanomiya -458 -402
     - !loc enkanomiya -182 584
     - !loc enkanomiya -167 579
     - !loc enkanomiya -151 595
+    - !loc enkanomiya -51 -160
+    - !loc enkanomiya -45 -160
+    - !loc enkanomiya 41 -2
     - !loc enkanomiya 47 -30
     - !loc enkanomiya 61 -3
     - !loc enkanomiya 63 -27
@@ -7119,6 +7185,7 @@ electro-crystal:
     - !loc teyvat -1860 1476
     - !loc teyvat -1582 2105
     - !loc teyvat -1559 1971
+    - !loc teyvat -1557 516
     - !loc teyvat -1540 1938
     - !loc teyvat -1538 1930
     - !loc teyvat -1473 1959
@@ -7152,11 +7219,15 @@ electro-crystal:
     - !loc teyvat -912 2125
     - !loc teyvat -905 2126
     - !loc teyvat -898 -111
+    - !loc teyvat -872 536
+    - !loc teyvat -869 535
     - !loc teyvat -836 -558
     - !loc teyvat -831 -416
     - !loc teyvat -689 251
     - !loc teyvat -650 -616
+    - !loc teyvat -648 1783
     - !loc teyvat -646 5
+    - !loc teyvat -645 1778
     - !loc teyvat -561 -433
     - !loc teyvat -533 1331
     - !loc teyvat -528 1333
@@ -7278,6 +7349,9 @@ electro-crystal:
     - !loc teyvat 3653 5066
     - !loc teyvat 3698 4749
     - !loc teyvat 3866 7157
+    - !loc teyvat 3922 7059
+    - !loc teyvat 3925 7059
+    - !loc teyvat 3980 7097
     - !loc enkanomiya -1434 602
     - !loc enkanomiya -1424 608
     - !loc enkanomiya -1423 606
@@ -7651,6 +7725,8 @@ flaming-flower-stamen:
     - !loc teyvat -32 265
     - !loc teyvat 125 2611
     - !loc teyvat 137 2420
+    - !loc teyvat 248 2611
+    - !loc teyvat 263 2609
     - !loc teyvat 349 -357
     - !loc teyvat 389 6411
     - !loc teyvat 472 795
@@ -8314,7 +8390,6 @@ frog:
     - !loc teyvat 410 -15
     - !loc teyvat 410 -15
     - !loc teyvat 719 25
-    - !loc teyvat 719 25
     - !loc teyvat 722 31
     - !loc teyvat 728 913
     - !loc teyvat 731 905
@@ -8926,12 +9001,15 @@ lavender-melon:
     - !loc teyvat 3445 4621
     - !loc teyvat 3445 5131
     - !loc teyvat 3471 4817
+    - !loc teyvat 3473 4208
     - !loc teyvat 3513 5665
     - !loc teyvat 3540 5117
     - !loc teyvat 3544 5113
     - !loc teyvat 3548 5116
+    - !loc teyvat 3579 4721
     - !loc teyvat 3628 4748
     - !loc teyvat 3641 4756
+    - !loc teyvat 3667 4736
     - !loc teyvat 3675 4725
     - !loc teyvat 3715 5498
     - !loc teyvat 3746 4788
@@ -9026,7 +9104,15 @@ lizard-tail:
     - !loc teyvat 3334 4872
     - !loc teyvat 3347 4865
     - !loc teyvat 3478 4647
+    - !loc enkanomiya -1292 727
+    - !loc enkanomiya -1292 734
+    - !loc enkanomiya -619 -308
+    - !loc enkanomiya -575 -237
+    - !loc enkanomiya -390 -412
     - !loc enkanomiya -314 426
+    - !loc enkanomiya -211 614
+    - !loc enkanomiya -156 747
+    - !loc enkanomiya -139 571
     - !loc enkanomiya 1 434
     - !loc enkanomiya 481 -225
     - !loc chasm -820 148
@@ -10106,6 +10192,7 @@ mint:
     - !loc teyvat 489 -498
     - !loc teyvat 492 1234
     - !loc teyvat 504 907
+    - !loc teyvat 507 398
     - !loc teyvat 509 -458
     - !loc teyvat 514 969
     - !loc teyvat 516 896
@@ -10114,12 +10201,14 @@ mint:
     - !loc teyvat 521 6318
     - !loc teyvat 523 -406
     - !loc teyvat 526 6151
+    - !loc teyvat 530 404
     - !loc teyvat 531 -52
     - !loc teyvat 532 -341
     - !loc teyvat 549 908
     - !loc teyvat 551 227
     - !loc teyvat 552 1537
     - !loc teyvat 554 -435
+    - !loc teyvat 561 408
     - !loc teyvat 565 -525
     - !loc teyvat 565 1057
     - !loc teyvat 569 944
@@ -10784,6 +10873,7 @@ mist-flower-corolla:
     - !loc teyvat -582 461
     - !loc teyvat -576 1758
     - !loc teyvat -571 467
+    - !loc teyvat -560 1106
     - !loc teyvat -472 1302
     - !loc teyvat -467 1305
     - !loc teyvat -466 -175
@@ -10807,6 +10897,7 @@ mist-flower-corolla:
     - !loc teyvat -29 5958
     - !loc teyvat -20 2620
     - !loc teyvat -15 5944
+    - !loc teyvat -13 6398
     - !loc teyvat 388 -356
     - !loc teyvat 405 340
     - !loc teyvat 497 -68
@@ -10827,6 +10918,7 @@ mist-flower-corolla:
     - !loc teyvat 1656 6128
     - !loc teyvat 1662 6132
     - !loc teyvat 1663 6131
+    - !loc teyvat 2400 6430
     - !loc teyvat 2503 5297
     - !loc teyvat 2519 5302
     - !loc teyvat 3218 5252
@@ -11936,6 +12028,7 @@ radish:
     - !loc teyvat -283 617
     - !loc teyvat -280 621
     - !loc teyvat -278 613
+    - !loc teyvat 83 6338
     - !loc teyvat 127 400
     - !loc teyvat 130 391
     - !loc teyvat 137 403
@@ -11944,6 +12037,7 @@ radish:
     - !loc teyvat 144 439
     - !loc teyvat 186 359
     - !loc teyvat 1414 6062
+    - !loc teyvat 3251 6715
 raw-meat:
   code: raw-meat
   name:
@@ -12295,6 +12389,9 @@ seagrass:
     - !loc teyvat 85 6443
     - !loc teyvat 125 5817
     - !loc teyvat 131 5820
+    - !loc teyvat 200 6279
+    - !loc teyvat 203 6286
+    - !loc teyvat 213 6286
     - !loc teyvat 237 5973
     - !loc teyvat 240 5964
     - !loc teyvat 242 5960
@@ -12392,10 +12489,14 @@ seagrass:
     - !loc teyvat 2036 6117
     - !loc teyvat 2036 8827
     - !loc teyvat 2042 8828
+    - !loc teyvat 2227 6320
     - !loc teyvat 2232 5890
+    - !loc teyvat 2242 6326
     - !loc teyvat 2245 5890
     - !loc teyvat 2303 8636
     - !loc teyvat 2309 8632
+    - !loc teyvat 2313 6289
+    - !loc teyvat 2314 6290
     - !loc teyvat 2338 6334
     - !loc teyvat 2348 6343
     - !loc teyvat 2356 6351
@@ -12511,8 +12612,10 @@ seagrass:
     - !loc teyvat 3428 5339
     - !loc teyvat 3449 6791
     - !loc teyvat 3456 5366
+    - !loc teyvat 3462 4660
     - !loc teyvat 3462 7242
     - !loc teyvat 3466 5381
+    - !loc teyvat 3467 4666
     - !loc teyvat 3473 4265
     - !loc teyvat 3478 4263
     - !loc teyvat 3490 7239
@@ -12521,6 +12624,8 @@ seagrass:
     - !loc teyvat 3512 7231
     - !loc teyvat 3514 6724
     - !loc teyvat 3515 6693
+    - !loc teyvat 3516 4655
+    - !loc teyvat 3527 4668
     - !loc teyvat 3527 5280
     - !loc teyvat 3527 5286
     - !loc teyvat 3529 5285
@@ -12545,13 +12650,13 @@ seagrass:
     - !loc teyvat 3745 7132
     - !loc teyvat 3768 6936
     - !loc teyvat 3779 5189
-    - !loc teyvat 3785 4711
-    - !loc teyvat 3789 4701
-    - !loc teyvat 3790 4697
+    - !loc teyvat 3786 4714
+    - !loc teyvat 3789 4708
     - !loc teyvat 3793 5201
     - !loc teyvat 3793 7064
     - !loc teyvat 3795 5200
     - !loc teyvat 3795 6996
+    - !loc teyvat 3797 4704
     - !loc teyvat 3797 6772
     - !loc teyvat 3797 6895
     - !loc teyvat 3801 7003
@@ -12677,7 +12782,8 @@ snapdragon:
     - !loc teyvat -2093 1340
     - !loc teyvat -2093 1513
     - !loc teyvat -2080 1518
-    - !loc teyvat -2074 1561
+    - !loc teyvat -2079 1565
+    - !loc teyvat -2074 1571
     - !loc teyvat -2070 1511
     - !loc teyvat -2055 1547
     - !loc teyvat -1951 1736
@@ -12906,6 +13012,7 @@ sunsettia:
     - !loc teyvat -1565 1353
     - !loc teyvat -1559 574
     - !loc teyvat -1557 619
+    - !loc teyvat -1530 2602
     - !loc teyvat -1511 2924
     - !loc teyvat -1508 2313
     - !loc teyvat -1486 810
@@ -12930,6 +13037,7 @@ sunsettia:
     - !loc teyvat -1008 765
     - !loc teyvat -1007 2216
     - !loc teyvat -968 1069
+    - !loc teyvat -950 2559
     - !loc teyvat -919 1772
     - !loc teyvat -868 2007
     - !loc teyvat -865 848
@@ -12944,6 +13052,7 @@ sunsettia:
     - !loc teyvat -723 807
     - !loc teyvat -681 1940
     - !loc teyvat -647 711
+    - !loc teyvat -645 1060
     - !loc teyvat -640 628
     - !loc teyvat -632 1621
     - !loc teyvat -619 819
@@ -14132,6 +14241,9 @@ unagi-meat:
     - !loc teyvat 3236 5543
     - !loc teyvat 3515 4505
     - !loc teyvat 3520 4500
+    - !loc teyvat 3709 5153
+    - !loc teyvat 4004 4667
+    - !loc teyvat 4010 4664
     - !loc enkanomiya -1432 340
     - !loc enkanomiya -1428 341
     - !loc enkanomiya -632 -1073

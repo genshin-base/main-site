@@ -408,7 +408,7 @@ amos-bow:
           Это была эпоха, когда тиран северных ветров воевал с повелителем
           башни. 
 
-          Охотница считала себя любимой рабовладельцем. 
+          Охотница думала, что рабовладелец в ней души не чает. 
 
           В последние дни войны, когда подул ветер сопротивления, 
 
@@ -467,6 +467,122 @@ apprentices-notes:
     - chests
     - investigation
     - npc-shop
+aqua-simulacra:
+  code: aqua-simulacra
+  typeCode: bow
+  name:
+    en: Aqua Simulacra
+    ru: Аква симулякрум
+  rarity: 5
+  atk:
+    base: 19
+    max: 542
+  subStat:
+    code: crit-dmg
+    base: 19
+    max: 88
+  description:
+    en: This longbow's color is unpredictable. Under the light, it takes on a
+      lustrous, watery blue.
+    ru: Лук, цвет которого непредсказуем. На свету отливает нежной синевой воды.
+  story:
+    en:
+      - p: >-
+          It is said that water has no fixed color or form, and can either serve
+          brilliantly as blade or bow. 
+
+          Out of all the substances in the world, water alone is the gentlest, and also the keenest. 
+
+          Among the many curious weapons of the world, this fine bow has the inscrutable ability to summon water. 
+      - p: >-
+          "It can envelop all that is impure, wash away all filth, while
+          maintaining its own purity." 
+
+          "It can change into any form, imitate any life, capricious, yet never losing its true self." 
+
+          "Divided, it is as streams uncounted, close yet untangled. United, it is as a giant wave, inexorable and unstoppable." 
+
+          "Many secrets that no light may penetrate hide beneath the azure translucence." 
+
+          "This is the mystery of water, that even a thousand brilliant minds may fail to grasp its myriad shifts." 
+      - p: >-
+          Before she began working for the noble mistress of the Jade Chamber,
+          she once heard an elderly senior expound on this teaching. 
+
+          Hidden reefs and storms ever stalk the world of mercantile schemes and plays for power, and the skeletons of ships dot the seabed. 
+
+          Those whose hearts brim with great ambition and sit on vast hoards of resources can often sail skillfully through in safety, 
+
+          Avoiding the ever-ubiquitous competition and malice, soaring through the turbulent currents. 
+      - p: >-
+          "That's what they say, but I lack the spirit that these big shots
+          have, nor have I the patience for the necessary tedium." 
+
+          "I'd much prefer enjoying the ambiance and aroma of a roomful of tea, and remain fascinated by the infinite possibilities that stem from the throw of six-sided dice." 
+
+          "I have infiltrated many a crook's hiding place by night, and broke the schemes of enemies from faraway lands upon my knee." 
+
+          "But I did not do these things to help the powerful and mighty get rid of dissident forces, but because water, too, has its source." 
+      - p: >-
+          It is in defense of the purity of the source that water's gentleness
+          can also become as blade and bow. 
+
+          Conspiracy and coded language are interwoven with ease under the pale blue full moon — this is the wisdom of water's shape.
+    ru:
+      - p: >-
+          Говорят, что вода не имеет цвета или формы и может стать как клинком,
+          так и луком. 
+
+          Из всех веществ в мире только вода является самой мягкой и одновременно самой острой. 
+
+          Среди других диковинных видов оружия этот прекрасный лук выделяется непостижимой властью вызывать воду. 
+      - p: >-
+          «Она может вместить всё нечистое, омыть любую грязь, сохраняя при этом
+          собственную чистоту. 
+
+          Она может принять любую форму, создать подобие любой жизни. Непредсказуемая, но неизменная по своей природе. 
+
+          Она может делиться на бесчисленные необузданные потоки и соединяться в гигантскую безудержную волну. 
+
+          Под лазурной поверхностью скрывается множество тайн, в глубину которых не может проникнуть свет. 
+
+          Такова тайна воды, которую не в состоянии постичь даже тысячи блестящих умов». 
+      - p: >-
+          До того как она начала работать у благородной хозяйки Нефритового
+          дворца, она услышала, как опытный наставник излагал это учение. 
+
+          Мир власти и интриг изрезан рифами и штормами, усеян потерпевшими крушение кораблями. 
+
+          Амбициозные люди, обладающие большими ресурсами, 
+
+          часто могут плыть по течению, избегая вездесущей конкуренции и злобы. 
+      - p: >-
+          «Но у меня нет духа, который присущ этим господам, и у меня нет
+          терпения для рутинной работы. 
+
+          Я предпочитаю наслаждаться ароматом чая и позволяю себе очаровываться бесконечными возможностями, которые даёт бросок шестигранного кубика. 
+
+          Мне довелось проникать в логова мошенников и срывать планы могущественных врагов из далёких стран. 
+
+          Но всё это было не для того, чтобы служить сильным мира сего, а потому, что даже вода имеет свой источник». 
+      - p: >-
+          Чтобы защитить чистоту источника, мягкая вода может превратиться как в
+          клинок, так и в лук. 
+
+          Паутина заговоров и секретных кодов легко сплетается под бледно-голубой полной луной. Такова мудрость воды.
+  specialAbility:
+    en: HP is increased by  16%. When there are opponents nearby, the DMG dealt by
+      the wielder of this weapon is increased by  20%. This will take effect
+      whether the character is on-field or not.
+    ru: Увеличивает ХП на  16%. Когда рядом есть враги, урон, наносимый персонажем,
+      экипированным этим оружием, увеличивается на  20%. Эффект срабатывает,
+      даже когда персонаж не на поле боя.
+  materialCodes:
+    - divine-body-from-guyun
+    - deathly-statuette
+    - spectral-nucleus
+  obtainSources:
+    - event-wishes
 aquila-favonia:
   code: aquila-favonia
   typeCode: sword
@@ -2852,6 +2968,130 @@ eye-of-perception:
     - ominous-mask
   obtainSources:
     - wishes
+fading-twilight:
+  code: fading-twilight
+  typeCode: bow
+  name:
+    en: Fading Twilight
+    ru: Гаснущие сумерки
+  rarity: 4
+  atk:
+    base: 6
+    max: 565
+  subStat:
+    code: er
+    base: 6
+    max: 30
+  description:
+    en: A precious bow made of platinum, inlaid with an orb that shimmers with the
+      light of eventide.
+    ru: Драгоценный лук из платины, инкрустированный мерцающей сферой цвета зари.
+  story:
+    en:
+      - p: >-
+          A jade-colored longbow that is said to be able to shoot down even the
+          twilit clouds over the horizon. Upon it is inlaid a precious bead. 
+
+          Buried in the depths, it has long been drenched in darkness, yet its luster endures, ever shining and glowing. 
+      - p: >-
+          In times long past, when a dark calamity befell the vermillion valley,
+          countless Millelith soldiers sallied forth, heroism in their hearts. 
+
+          Among all these valiant figures was a young archer who came from the mountains, and who would eventually remain in the depths, never to leave. 
+      - p: >-
+          "I am the daughter of the cliffs of Glazed Sand Crystal. My blood
+          knows no fear." 
+
+          "With so many Millelith willingly heading towards their doom in battle, it would be shameful for us mountain people to just stand by and watch." 
+
+          "It may be natural that a cataclysm that we have not yet seen with our own eyes remains a foreign and abstract concept to us." 
+
+          "Yet now that it stands before us, how could we do anything other than hold the line and do our duty..." 
+      - p: >-
+          The stubborn young woman stole the bow that belonged to her father,
+          the tribal chief, by night, before following the Millelith as they
+          sallied out. 
+
+          As she steeled herself to never again see the light of day, the gem on the bow gleamed. 
+      - p: >-
+          "The dark bats she felled with every shot, the giant tortoise of the
+          dark ooze, she nailed to the ground." 
+
+          "The magnificent bow danced like the clouds themselves, its arrows' cold gleam tearing through blighted beast-flesh." 
+
+          "No deluge of filth from the abyss, nor twisted demon from the warped depths..." 
+
+          "No incomprehensible terror could make her heart quail, or force her to retreat." 
+      - p: >-
+          The people of the mountains would sing songs in praise of their
+          daughter, though she of whom the songs spoke would never again return
+          to them. 
+
+          These tunes would change and shift with the passage of time like dawn's glow even to this day, yet she who owned the bow would never come back. 
+      - p: >-
+          "The only thing I truly fear is to be lost and forgotten." 
+
+          "Should ill fate dictate that I am to be buried in some nameless place, do not forget me."
+    ru:
+      - p: >-
+          Белоснежный лук, который, согласно легенде, может сбивать сумеречные
+          облака. Он инкрустирован драгоценной жемчужиной. 
+
+          Погребённый глубоко во тьме, он не утратил своё вечное сияние. 
+      - p: >-
+          В давно минувшие времена, когда чёрное бедствие обрушилось на
+          киноварные долины, бесчисленное войско Миллелитов сражалось плечом к
+          плечу, защищая свою землю. 
+
+          Среди отважных воинов была молодая лучница, родившаяся среди горных вершин, она навсегда осталась в бездонных глубинах. 
+      - p: >-
+          «Я - дочь крутых гор и кристаллов глазурного песка. Я не знаю страха. 
+
+          Мы, горцы, не можем остаться в стороне, когда столько Миллелитов добровольно идут на смерть. 
+
+          Ранее это невиданное бедствие было для нас чуждым, 
+
+          но теперь пришло время, когда мы не можем отказаться от своего долга защищать нашу страну...» 
+      - p: >-
+          Ночью упрямая девушка украла лук, принадлежавший её отцу, вождю
+          племени, а затем последовала за Миллелитами в поход. 
+
+          В то время как она готовилась больше никогда не увидеть белый свет, драгоценный жемчуг на луке излучал сияние. 
+      - p: >-
+          «Её стрелы разили чёрных крылатых созданий и пригвоздили к земле
+          гигантскую черепаху из чёрной грязи. 
+
+          Великолепный лук танцевал подобно облакам, холодный блеск его стрел разрывал плоть чудовищ. 
+
+          Ни поток грязи из Бездны, ни демоны из глубин... 
+
+          Ни один из этих непостижимых ужасов не мог заставить её дрогнуть и отступить». 
+      - p: >-
+          Жители гор восхваляли дочь вершин в своих песнях, хотя та, о ком
+          говорилось в песнях, больше не могла к ним вернуться. 
+
+          Мелодии менялись, как отблески рассвета, но та, кому принадлежал лук, не нашла свой путь назад. 
+      - p: >-
+          «Быть потерянной и забытой - единственное, чего я боюсь. 
+
+          Если мне суждено быть погребённой в безымянном месте, не забывайте меня».
+  specialAbility:
+    en: Has three states, Evengleam, Afterglow, and Dawnblaze, which increase DMG
+      dealt by  6%/10%/14% respectively. When attacks hit opponents, this weapon
+      will switch to the next state. This weapon can change states once every
+      7s. The character equipping this weapon can still trigger the state switch
+      while not on the field.
+    ru: "Оружие обладает 3 состояниями: Закат, Туман и Заря, каждое из которых
+      увеличивает наносимый урон на  6%/10%/14% соответственно. После попадания
+      по противнику состояние меняется на следующее, не чаще одного раза в 7
+      сек. Эффект смены состояния срабатывает, даже когда персонаж не на поле
+      боя."
+  materialCodes:
+    - chunk-of-aerosiderite
+    - inspectors-sacrificial-knife
+    - forbidden-curse-scroll
+  obtainSources:
+    - events
 favonius-codex:
   code: favonius-codex
   typeCode: catalyst
@@ -8192,7 +8432,7 @@ sacrificial-bow:
           На утёсе, обращённом на восток, в сторону моря, предки приносили
           жертвы хозяевам Ветра и Времени. 
 
-          Время и Ветер неразрывно связаны, так как «Ветер приносит семена историй, а Время их взращивает». 
+          Время и Ветер неразрывно связаны, так как «Ветер приносит семена историй, а время их взращивает». 
 
           Этот лук рассказывает историю основателей и трудностей, через которые они прошли. 
 
@@ -8359,7 +8599,7 @@ sacrificial-greatsword:
           На утёсе, обращённом на восток, в сторону моря, предки приносили
           жертвы хозяевам Ветра и Времени. 
 
-          Время и Ветер неразрывно связаны, так как «Ветер приносит семена историй, а Время их взращивает». 
+          Время и Ветер неразрывно связаны, так как «Ветер приносит семена историй, а время их взращивает». 
 
           Этот меч рассказывает историю о войне, и он использовался в военных спектаклях. 
 
@@ -8444,7 +8684,7 @@ sacrificial-sword:
           На утёсе, обращённом на восток, в сторону моря, предки приносили
           жертвы хозяевам Ветра и Времени. 
 
-          Время и Ветер неразрывно связаны, так как «Ветер приносит семена историй, а Время их взращивает». 
+          Время и Ветер неразрывно связаны, так как «Ветер приносит семена историй, а время их взращивает». 
 
           Этот меч рассказывает историю о защите и о храбрости, которая для этого требуется. 
 
@@ -10603,7 +10843,7 @@ the-catch:
     - chaos-oculus
     - spectral-nucleus
   obtainSources:
-    - fishing
+    - npc-shop
 the-flute:
   code: the-flute
   typeCode: sword
@@ -10999,7 +11239,7 @@ the-viridescent-hunt:
 
           «Хотя бы позволь этому луку остаться чистым, и пусть он принесёт им мои мысли и сожаления».
   specialAbility:
-    en: Upon hit, Normal and Aimed Shot Attacks have a 50% chance to generate a
+    en: Upon hit, Normal and Charged Attacks have a 50% chance to generate a
       Cyclone, which will continuously attract surrounding opponents,
       dealing  40% of ATK as DMG to these opponents every 0.5s for 4s. This
       effect can only occur once every  14s.

@@ -320,7 +320,7 @@ court-of-flowing-sand:
         - narukamis-valor
         - narukamis-wisdom
   region: inazuma
-  location: !loc teyvat 3655 4738
+  location: !loc teyvat 3657 4725
   bossCode: null
 domain-of-guyun:
   code: domain-of-guyun
@@ -688,7 +688,7 @@ momiji-dyed-court:
       - tiny-miracle
   dropTimetable: {}
   region: inazuma
-  location: !loc teyvat 1617 6111
+  location: !loc teyvat 1619 6098
   bossCode: null
 narukami-island-tenshukaku:
   code: narukami-island-tenshukaku
@@ -731,7 +731,7 @@ narukami-island-tenshukaku:
       - wanderers-troupe
   dropTimetable: {}
   region: inazuma
-  location: !loc teyvat 3810 5690
+  location: !loc teyvat 3812 5677
   bossCode: la-signora
 peak-of-vindagnyr:
   code: peak-of-vindagnyr
@@ -803,7 +803,7 @@ slumbering-court:
       - ocean-hued-clam
   dropTimetable: {}
   region: inazuma
-  location: !loc teyvat 3461 6632
+  location: !loc teyvat 3463 6619
   bossCode: null
 taishan-mansion:
   code: taishan-mansion
@@ -1025,5 +1025,5 @@ violet-court:
         - teachings-of-light
         - teachings-of-transience
   region: inazuma
-  location: !loc teyvat 3185 5542
+  location: !loc teyvat 3187 5529
   bossCode: null
