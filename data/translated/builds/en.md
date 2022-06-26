@@ -183,7 +183,7 @@ dps
 
 # === characters.#ayato.roles.#dps.artifacts.notes ===
 
-\~= Gladiators Finale (4)
+\~= Gladiator's Finale (4)
 
 
 # === characters.#ayato.roles.#dps.tips ===
@@ -616,7 +616,7 @@ Eula's Elemental Burst does not snapshot. This means that any buffs Eula has upo
 **Regarding Weapon Choice**
 
 [Redhorn Stonethresher](#weapon:redhorn-stonethresher)<br>
-Depending on the amount of ATK% buffs you're getting this weapon can overtake Wolf's Gravestone in personal damage.
+This weapon can overtake Wolf's Gravestone in terms of Eula's own damage if team provides enough ATK% buffs, but Wolf's Gravestone can make up the damage difference by buffing team damage.
 
 [Skyward Pride](#weapon:skyward-pride)<br>
 This weapon is more forgiving towards ER substats. If there is a Cryo battery unit in your team (Diona with Sacrificial Bow or Kaeya with Favonius Sword) or if your team generates enough particles on their own, Skyward Pride loses effectiveness compared to the above options.
@@ -759,6 +759,9 @@ Freeze Ganyu gives a lot of i-frames since you would be spamming Elemental Burst
 
 **[Polar Star](#weapon:polar-star)**<br>
 This weapon is much harder to optimize with, due to having a very high Crit Rate stat resulting in your Crit Rate going well above 100%. However, if optimised properly **(i.e. very little Crit Rate substats),** it pulls quite far ahead of all the other options.
+
+**[Aqua Simulacra](#weapon:aqua-simulacra)**<br> 
+Due to the sheer amount of Crit stats you can get from Blizzard Strayer (4), Ganyu's ascension passive and this weapon itself, you can consider running an ATK% circlet, especially if it has better substats than your Crit DMG one.
 
 **[Amos' Bow](#weapon:amos-bow)**<br>
 In quickswap heavy rotations (Ganyu Mona Venti Diona) where you usually don't do a lot of Charged Shots, this weapon performs worse than the other 5 star options listed.
@@ -1573,7 +1576,7 @@ Noelle DPS is best optimized at **\[C6\]** where she converts an additional 50% 
 When using Husk of Opulent Dreams, Serpent Spine stacks are prioritized over Husk of the Opulent Dreams stacks, due to their conflicting nature in gaining stacks (Off-field and on-field)
 
 [Skyward Pride](#weapon:skyward-pride)<br>
-Useful if you are unable to get ER from your substats. Does really well while its passive is active, but falls off in sustained fights. Comfort option that has quite a big power gap if compared with Serpent Spine or Whiteblind.
+Useful if you are unable to get ER from your substats. Does really well while its passive is active, but falls off in sustained fights. Comfort option that can lose to a high refined Whiteblind with stacks.
 
 [Favonius Greatsword](#weapon:favonius-greatsword)<br>
 Only recommended with high refines, as its usefulness scales with its particle generation capabilities. R5 allows her to self-battery assuming some additional particles from enemies, but a second Geo is always recommended regardless for resonance.
@@ -2252,68 +2255,63 @@ Anemo DMG% goblets are recommended for Xiao. ATK% goblets serve as a good altern
 [In-depth Guide](https://docs.google.com/document/d/1RQI5IjLZKqsVhQzRDr7FTYgQX66jKB28PnwoZVlQ4_k/edit) by Quincy#6965
 
 
-# === characters.#xingqiu.roles.#off-field_dps.name ===
+# === characters.#xingqiu.roles.#off-field_dps_(c6).name ===
 
-off-field dps
+off-field dps (c6)
 
 
-# === characters.#xingqiu.roles.#off-field_dps.subStats.notes ===
+# === characters.#xingqiu.roles.#off-field_dps_(c6).subStats.notes ===
 
 Prioritize Energy Recharge first if you can't burst off cooldown
 
 
-# === characters.#xingqiu.roles.#off-field_dps.tips ===
+# === characters.#xingqiu.roles.#off-field_dps_(c6).tips ===
 
 Activating XQ's Elemental Skill or Elemental Burst applies Hydro to the on-field character with his shield. (Pyro in specific)
 
 Cleansing Electro may take an additional switch for your character with the rain swords active, while Cryo would freeze you in place.
 
+# === characters.#xingqiu.roles.#off-field_dps_(c6).notes ===
 
-# === characters.#xingqiu.roles.#off-field_dps.notes ===
+C6 stands for "Constellation 6" and C0-C5 refers to a Xingqiu that is not yet C6.
 
 **Regarding Weapon Choices**
 
-The weapon rankings assume you are running enough Energy Recharge to get Xingqiu's burst up off cooldown. This is usually 180-200% ER for Sacrificial Sword before \[C6\] and 150-170% ER after \[C6\], while \~240% ER for other weapons before \[C6\] and \~190% ER after \[C6\].
+The weapon rankings assume you are running enough Energy Recharge to get Xingqiu's burst up off cooldown. This is usually 150-170% ER for Sacrificial Sword, while \~190% ER for other weapons. ER needs can be found in the [Xingqiu Mastersheet.](https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit?usp=sharing)
 
-**[Primordial Jade Cutter](#weapon:primordial-jade-cutter)**<br>
-This is Xingqiu's best in slot weapon if ran with sufficient ER (240% ER before **\[C6\]** and 190% ER after **\[C6\]**).
+**[Favonius Sword](#weapon:favonius-sword)**
+This weapon is better than Sacrifical Sword \[R3+\] if you intend on using Xingqiu in teams where there is not a second hydro unit.<br>
 
-**[Sacrifical Sword](#weapon:sacrificial-sword)**<br>
-This ranking assumes you can trigger the passive on every Elemental Skill. This is only possible at **\[R3+\]** if you are using Elemental Skill off cooldown. **At lower refines, this weapon would rank below [Summit Shaper](#weapon:summit-shaper).
-
-**[Favonius Sword](#weapon:favonius-sword)**<br>
-Although this weapon has lower damage potential on Xingqiu, the extra team energy generated by the passive may be more useful than his personal damage in some teams.
-
-**[Harbinger of Dawn](#weapon:harbinger-of-dawn)**<br>
-This is a great weapon for Xingqiu, assuming he's either **\[C6\]** or teamed with another Hydro character for energy generation.
-
-**Regarding Weapon Order on \[C6\]**
-
-When Xingqiu is \[C6\], Jade Cutter, Mistsplitter, Haran, Skyward Blade, Summit Shaper, and Amenoma Kageuchi (in this order) each have higher damage potential than Sacirifical Sword \[R3+\].
+**[Sacificial Sword \[R3+\]](#weapon:sacrificial-sword)**
+This weapon is better than Favonius Sword when running Xingqiu in a team with more than one hydro unit.
 
 Big thanks to Quincy#6965 for helping us [with the weapons calculations](https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit#gid=0).
 
 **Regarding Artifact Set**
 
 **[Emblem of Severed Fate (4)](#artifact:emblem-of-severed-fate)**<br>
-If you already have an invested **\[C6\]** Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set.
+If you already have an invested \[C6\] Xingqiu with Sacrificial Sword \[R3+\] then you don't need to farm for this set.
 
 **[Noblesse Oblige (4)](#artifact:noblesse-oblige)**<br>
-Offers party-wide ATK boost, you can use this set on Xingqiu if nobody else on the party is equipping it.
-
-**[Thundersoothers (4)](#artifact:thundersoother)**<br>
-This set is only recommended if you're running an electrocharged team. It's essentially the same as Noblesse Oblige (2) Heart of Depth (2) in terms of damage boost, but it also increases Elemental Skill damage, it comes with a condition though; the enemy needs to be affected by Electro aura. **Not recommended to specifically farm for this set.**
+Offers party-wide ATK boost, you can use this set on Xingqiu if nobody else on the party is able to use it better.
 
 **[Blizzard Strayer (4)](#artifact:blizzard-strayer)**<br>
-This set is only recommended on a freeze team to optimize Xingqiu's stats since he can just disregard Crit Rate and build Crit Damage instead for more damage output. Despite it outperforming **Emblem of Severed Fate (4)** within this niche, **it is generally not recommended to specifically farm for this set.**
+This set is only recommended on a freeze team to optimize Xingqiu's stats since he can mildly disregard Crit Rate and build Crit Damage instead for more damage output. Despite it outperforming Emblem of Severed Fate (4) within this niche, it is generally not recommended to specifically farm for this set.
 
-**[The Exile (2) Scholar (2)](#artifact:the-exile)**<br>
-This set is a cheap beginner option to maintain burst uptime well since it gives 40% Energy Recharge. Note that it is **not recommended to stay on this set as Xingqiu contributes alot of damage in his teams.**
+**[The Exile (2) / Scholar (2) / Emblem of Severed Fate (2) \[Choose Two\]](#artifact:20%-er)**<br>
+This set is a cheap beginner option to maintain burst uptime well since it gives 40% Energy Recharge. Note that it is not recommended to stay on this set as Xingqiu contributes alot of damage in his teams.
 
 **Regarding Main Stats Priority**
 
-Ideally you would be running ATK% Sands when your ER needs are fulfilled. (\~180-200% if Sacrificial Sword, \~240% for others).
+Ideally you would be running ATK% Sands when your ER needs are fulfilled.
 
+# === characters.#xingqiu.roles.#off-field_dps_(c0-c5).name ===
+
+off-field dps (c0-c5)
+
+# === characters.#xingqiu.roles.#off-field_dps_(c0-c5).notes ===
+
+`replace-from:characters.#xingqiu.roles.#off-field_dps_(c6).notes`
 
 # === characters.#xinyan.roles.#dps.name ===
 
@@ -2517,6 +2515,40 @@ Thrilling Tales of Dragon Slayers: 250+ ER
 # === characters.#yanfei.roles.#shield_support__[c4+_required].notes ===
 
 This section is dedicated to a playstyle where Yanfei is utilised as a primary shielder through her 4th Constellation. Due to the requirement of having to burst off cooldown, this build has **high energy requirements.**
+
+# === characters.#yelan.credits ===
+
+[In-depth Guide](https://docs.google.com/document/d/e/2PACX-1vRBLmEhOkceqNStOsTk_IfnSDeg6HmOV4hRjyB1Yb5SZY3YMYvtFdqK09o2vte21SZ6a_e39cZ6qu4s/pub)  from  Yelan Mains
+
+
+# === characters.#yelan.roles.#off-field_dps.name ===
+
+off-field dps
+
+
+# === characters.#yelan.roles.#off-field_dps.notes ===
+
+Yelan is an off-field DPS who is able to apply Hydro off-field via her Elemental Burst, this part of her kit acts similarly like Xingqiu's Elemental Burst. Yelan mainly scales off HP%, so don't build her with ATK%. Yelan also wants a lot of Energy Recharge to be able to maintain her Elemental Burst uptime (up to \~250 ER), this can decrease depending on the number of Hydro units or energy providers in the team.
+
+**Regarding Weapon Choices**
+
+**[Elegy for the End](#weapon:elegy-for-the-end)**<br>
+This weapon is to be used only in reaction based comps such as Vape Hu Tao, Yelan's personal damage is lower than other options on this list, but is more beneficial for the team's damage per rotation.
+
+**[Mouun's Moon](#weapon:mouuns-moon)**<br>
+This weapon works best at \[R3\]+ and makes HP% Goblet potentially a stronger option instead of Hydro Bonus especially in comps with strong DMG% buffs.
+
+**Regarding Artifact Main Stats**
+
+**Goblet**
+HP% Goblet is to be used only if Hydro DMG% option is very bad and HP% option is very good,** or if Yelan has strong DMG% buffs such as [Emblem of Severed Fate (4)](#artifact:emblem-of-severed-fate) + Mouun's Moon (especially with refinements) or Raiden + Kazuha and so on.
+
+**Regarding Talent Priority**
+
+**Normal Attacks**
+Level this up only if you want to constantly use her Breakthrough Barbs.
+
+Big thanks to Vladone ツ#9281 and jstern25#1399 from Yelan Mains for helping us with the [calculations](https://docs.google.com/spreadsheets/d/1ULEvZVo1Er1N-1_f729qiheMZusEC6qpJ5Yn8vyrqr8/edit?usp=sharing).
 
 
 # === characters.#yoimiya.credits ===

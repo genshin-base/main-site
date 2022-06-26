@@ -20,6 +20,12 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
+                - code: aqua-simulacra
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
                 - code: skyward-harp
                   refine: null
                   stacks: null
@@ -5802,8 +5808,8 @@ characters:
   - code: xingqiu
     elementCode: hydro
     roles:
-      - code: off-field dps
-        name: off-field dps
+      - code: off-field dps (c6)
+        name: off-field dps (c6)
         isRecommended: true
         weapons:
           advices:
@@ -5812,20 +5818,9 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: sacrificial-sword
-                  refine: 3+
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-                - code: mistsplitter-reforged
-                  refine: null
-                  stacks: null
-                  notes: null
                   seeCharNotes: false
             - similar:
-                - code: haran-geppaku-futsu
+                - code: mistsplitter-reforged
                   refine: null
                   stacks: null
                   notes: null
@@ -5837,6 +5832,11 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
+                - code: haran-geppaku-futsu
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
                 - code: summit-shaper
                   refine: null
                   stacks: null
@@ -5848,26 +5848,30 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: true
+                - code: sacrificial-sword
+                  refine: 3+
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: festering-desire
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
                 - code: amenoma-kageuchi
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
-            - similar:
-                - code: festering-desire
-                  refine: "5"
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: skyrider-sword
+                - code: royal-longsword
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: harbinger-of-dawn
-                  refine: "5"
+                - code: sacrificial-sword
+                  refine: 1-2
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -5918,11 +5922,13 @@ characters:
               notes: null
               seeCharNotes: true
             - arts:
-                op: and
+                op: or
                 arts:
                   - code: the-exile
                     count: 2
                   - code: scholar
+                    count: 2
+                  - code: emblem-of-severed-fate
                     count: 2
               notes: null
               seeCharNotes: true
@@ -5985,92 +5991,195 @@ characters:
           - p: "Cleansing Electro may take an additional switch for your character with the
               rain swords active, while Cryo would freeze you in place. "
         notes:
+          - p: C6 stands for "Constellation 6" and C0-C5  refers to a Xingqiu that is not
+              yet C6.
           - p:
-              - b: |
+              - b: >-
                   Regarding Weapon Choices:
-              - "The weapon rankings assume you are running enough Energy
-                Recharge to get Xingqiu's burst up off cooldown. This is usually
-                "
-              - b: 180-200% ER for Sacrificial Sword before [C6] and 150-170% ER after [C6],
-              - " while "
-              - b: ~240% ER for other weapons before [C6] and ~190% ER after [C6].
+
+                  The weapon rankings assume you are running enough Energy Recharge to get Xingqiu's burst up off cooldown. 
               - "\n"
-              - b: "Primordial Jade Cutter: "
-              - "This is Xingqiu's best in slot weapon if ran with sufficient ER
-                (240% ER before "
-              - b: "[C6]"
-              - " and 190% ER after "
-              - b: "[C6]"
-              - |
-                ).
-              - b: "Sacrifical Sword:"
-              - " This ranking assumes you can trigger the passive on every
-                Elemental Skill. This is only possible at "
-              - b: "[R3+]"
-              - " if you are using Elemental Skill off cooldown. "
-              - b: |-
-                  At lower refines, this weapon would rank below Summit Shaper.
-                  Favonius Sword: 
-              - "Although this weapon has lower damage potential on Xingqiu, the
-                "
-              - b: extra team energy generated by the passive may be more useful than his
-                  personal damage in some teams.
-              - "\n"
-              - b: "Harbinger of Dawn:"
-              - " This is a great weapon for Xingqiu, assuming he's either "
-              - b: "[C6]"
-              - " or teamed with another Hydro character for energy generation."
-          - p:
-              - b: "Regarding Weapon Order on [C6]:"
-              - " When Xingqiu is "
-              - b: "[C6],"
-              - " Jade Cutter, Mistsplitter, Haran, Skyward Blade, Summit
-                Shaper, and Amenoma Kageuchi (in this order) each have higher
-                damage potential than Sacirifical Sword "
-              - b: "[R3+]."
-          - p:
-              - "Big thanks to Quincy#6965 for helping us with "
-              - a: the weapons calculations.
-                href: https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit#gid=0
-          - p:
-              - b: "Regarding Artifact Set:"
-              - "\n"
-              - b: "Emblem of Severed Fate (4):"
-              - " If you already have an invested "
-              - b: "[C6]"
-              - >2
-                 Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set. 
-              - b: "Noblesse Oblige (4): "
+              - b: "Favonius Sword: "
               - >
-                Offers party-wide ATK boost, you can use this set on Xingqiu if
-                nobody else on the party is equipping it.
-              - b: "Thundersoothers (4): "
-              - "This set is only recommended if you're running an
-                electrocharged team. It's essentially the same as Noblesse
-                Oblige (2) Heart of Depth (2) in terms of damage boost, but it
-                also increases Elemental Skill damage, it comes with a condition
-                though; the enemy needs to be affected by Electro aura. "
-              - b: Not recommended to specifically farm for this set.
+                This weapon is better than Sacrifical Sword [R3+] if you intend
+                on using Xingqiu in teams where there is not a second hydro
+                unit.
+              - b: "Sacificial Sword [R3+]: "
+              - This weapon is better than Favonius Sword when running Xingqiu
+                in a team with more than one hydro unit.
+          - p:
+              - "Big thanks to Quincy#6965 for helping us with the "
+              - a: weapon calculations.
+                href: https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit?usp=sharing
+          - p:
+              - b: |-
+                  Regarding Artifact Set:
+                  Emblem of Severed Fate (4):
+              - >2
+                 If you already have an invested [C6] Xingqiu with Sacrificial Sword [R3+]  then you don't need to farm for this set.
+              - b: "Noblesse Oblige (4): "
+              - Offers party-wide ATK boost, you can use this set on Xingqiu
+              - b: " if nobody else on the party is able to use it better."
               - "\n"
               - b: "Blizzard Strayer (4): "
-              - This set is only recommended on a freeze team to optimize
-                Xingqiu's stats since he can just disregard Crit Rate and build
-                Crit Damage instead for more damage output. Despite it
-                outperforming
-              - b: " Emblem of Severed Fate (4)"
-              - " within this niche, "
-              - b: it is generally not recommended to specifically farm for this set.
+              - "This set is "
+              - b: only recommended on a freeze team
+              - " to optimize Xingqiu's stats since he can mildly disregard Crit
+                Rate and build Crit Damage instead for more damage output.
+                Despite it outperforming Emblem of Severed Fate (4) within this
+                niche,"
+              - b: " it is generally not recommended to specifically farm for this set."
               - "\n"
-              - b: "The Exile (2) Scholar (2): "
+              - b: "The Exile (2) / Scholar (2) / Emblem of Severed Fate (2) [Choose Two]*: "
               - "This set is a cheap beginner option to maintain burst uptime
-                well since it gives 40% Energy Recharge. Note that it is "
-              - b: not recommended to stay on this set as Xingqiu contributes alot of damage in
-                  his teams.
+                well since it gives 40% Energy Recharge. Note that "
+              - b: it is not recommended to stay on this set
+              - " as Xingqiu contributes alot of damage in his teams."
           - p:
               - b: "Regarding Main Stats Priority:"
               - >-
                 
-                Ideally you would be running ATK% Sands when your ER needs are fulfilled. (~180-200% if Sacrificial Sword, ~240% for others).
+                Ideally you would be running ATK% Sands when your ER needs are fulfilled. ER needs can be found in the 
+              - a: Xingqiu Mastersheet.
+                href: https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit?usp=sharing
+      - code: off-field dps (c0-c5)
+        name: off-field dps (c0-c5)
+        isRecommended: true
+        weapons:
+          advices:
+            - similar:
+                - code: primordial-jade-cutter
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: favonius-sword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+                - code: sacrificial-sword
+                  refine: 3+
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: mistsplitter-reforged
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: skyward-blade
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: haran-geppaku-futsu
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: summit-shaper
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: amenoma-kageuchi
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: sacrificial-sword
+                  refine: 1-2
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets: []
+          notes: null
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          goblet:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          sands:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        subStats:
+          advices: []
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices: []
+          notes: null
+          seeCharNotes: false
+        tips: null
+        notes:
+          - p: C6 stands for "Constellation 6" and C0-C5  refers to a Xingqiu that is not
+              yet C6.
+          - p:
+              - b: >-
+                  Regarding Weapon Choices:
+
+                  The weapon rankings assume you are running enough Energy Recharge to get Xingqiu's burst up off cooldown. 
+              - "\n"
+              - b: "Favonius Sword: "
+              - >
+                This weapon is better than Sacrifical Sword [R3+] if you intend
+                on using Xingqiu in teams where there is not a second hydro
+                unit.
+              - b: "Sacificial Sword [R3+]: "
+              - This weapon is better than Favonius Sword when running Xingqiu
+                in a team with more than one hydro unit.
+          - p:
+              - "Big thanks to Quincy#6965 for helping us with the "
+              - a: weapon calculations.
+                href: https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit?usp=sharing
+          - p:
+              - b: |-
+                  Regarding Artifact Set:
+                  Emblem of Severed Fate (4):
+              - >2
+                 If you already have an invested [C6] Xingqiu with Sacrificial Sword [R3+]  then you don't need to farm for this set.
+              - b: "Noblesse Oblige (4): "
+              - Offers party-wide ATK boost, you can use this set on Xingqiu
+              - b: " if nobody else on the party is able to use it better."
+              - "\n"
+              - b: "Blizzard Strayer (4): "
+              - "This set is "
+              - b: only recommended on a freeze team
+              - " to optimize Xingqiu's stats since he can mildly disregard Crit
+                Rate and build Crit Damage instead for more damage output.
+                Despite it outperforming Emblem of Severed Fate (4) within this
+                niche,"
+              - b: " it is generally not recommended to specifically farm for this set."
+              - "\n"
+              - b: "The Exile (2) / Scholar (2) / Emblem of Severed Fate (2) [Choose Two]*: "
+              - "This set is a cheap beginner option to maintain burst uptime
+                well since it gives 40% Energy Recharge. Note that "
+              - b: it is not recommended to stay on this set
+              - " as Xingqiu contributes alot of damage in his teams."
+          - p:
+              - b: "Regarding Main Stats Priority:"
+              - >-
+                
+                Ideally you would be running ATK% Sands when your ER needs are fulfilled. ER needs can be found in the 
+              - a: Xingqiu Mastersheet.
+                href: https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit?usp=sharing
     credits:
       - a: In-depth Guide
         href: https://docs.google.com/document/d/1RQI5IjLZKqsVhQzRDr7FTYgQX66jKB28PnwoZVlQ4_k/edit
@@ -7440,7 +7549,7 @@ characters:
                   notes: null
                   seeCharNotes: false
                 - code: amenoma-kageuchi
-                  refine: 3+
+                  refine: "3"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -7500,7 +7609,7 @@ characters:
                 count: 4
               notes: null
               seeCharNotes: true
-          notes: ~= Gladiators Finale (4)
+          notes: ~= Gladiator's Finale (4)
           seeCharNotes: false
         mainStats:
           circlet:
@@ -7601,6 +7710,193 @@ characters:
                 Elemental Skill allowing for shorter rotations. "
               - b: Note that it is not recommended to farm specifically for this set.
     credits: null
+  - code: yelan
+    elementCode: hydro
+    roles:
+      - code: off-field dps
+        name: off-field dps
+        isRecommended: true
+        weapons:
+          advices:
+            - similar:
+                - code: aqua-simulacra
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: elegy-for-the-end
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: favonius-warbow
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: polar-star
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: mouuns-moon
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+                - code: the-stringless
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: sacrificial-bow
+                  refine: "3"
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: slingshot
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: fading-twilight
+                  refine: "5"
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: recurve-bow
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets:
+            - arts:
+                code: emblem-of-severed-fate
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                op: or
+                arts:
+                  - code: emblem-of-severed-fate
+                    count: 2
+                  - code: tenacity-of-the-millelith
+                    count: 2
+                  - code: heart-of-depth
+                    count: 2
+                  - code: noblesse-oblige
+                    count: 2
+              notes: null
+              seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes:
+              - crit-rate
+              - crit-dmg
+              - hp%
+            notes: null
+            seeCharNotes: false
+          goblet:
+            codes:
+              - hydro-dmg
+              - hp%
+            notes: null
+            seeCharNotes: true
+          sands:
+            codes:
+              - er
+              - hp%
+            notes: null
+            seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        subStats:
+          advices:
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - hp
+                - crit-rate
+                - crit-dmg
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - hp
+              notes: null
+              seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices:
+            - burst
+            - skill
+            - attack
+          notes: null
+          seeCharNotes: true
+        tips: null
+        notes:
+          - p:
+              - "Yelan is an off-field DPS who is able to "
+              - b: apply Hydro off-field via her Elemental Burst,
+              - " this part of her kit acts similarly like Xingqiu's Elemental
+                Burst. "
+              - b: Yelan mainly scales off HP%,
+              - " so don't build her with ATK%. "
+              - b: Yelan also wants a lot of Energy Recharge to be able to maintain her
+                  Elemental Burst uptime (up to ~250 ER),
+              - " this can decrease depending on the number of Hydro units or
+                energy providers in the team."
+          - p:
+              - b: "Regarding Weapon Choices:"
+              - "\n"
+              - b: "Elegy for the End: "
+              - "This weapon is to be used "
+              - b: only in reaction based comps such as Vape Hu Tao,
+              - >2
+                 Yelan's personal damage is lower than other options on this list, but is more beneficial for the team's damage per rotation.
+              - b: "Mouun's Moon: "
+              - "This weapon "
+              - b: "works best at [R3]+ "
+              - "and "
+              - b: makes HP% Goblet potentially a stronger option instead of Hydro Bonus
+                  especially in comps with strong DMG% buffs.
+          - p:
+              - b: "Regarding Artifact Main Stats:"
+              - "\n"
+              - b: "Goblet: "
+              - "HP% Goblet is to be used "
+              - b: only if Hydro DMG% option is very bad and HP% option is very good,
+              - " or "
+              - b: if Yelan has strong DMG% buffs
+              - " such as Emblem of Severed Fate (4) + Mouun's Moon (especially
+                with refinements) or Raiden + Kazuha and so on."
+          - p:
+              - b: |-
+                  Regarding Talent Priority:
+                  Normal Attacks: 
+              - Level this up only if you want to constantly use her
+                Breakthrough Barbs.
+          - p:
+              - "Big thanks to Vladone ツ#9281 and jstern25#1399 from Yelan Mains
+                for helping us with the "
+              - a: calculations.
+                href: https://docs.google.com/spreadsheets/d/1ULEvZVo1Er1N-1_f729qiheMZusEC6qpJ5Yn8vyrqr8/edit?usp=sharing
+    credits:
+      - a: In-depth Guide
+        href: https://docs.google.com/document/d/e/2PACX-1vRBLmEhOkceqNStOsTk_IfnSDeg6HmOV4hRjyB1Yb5SZY3YMYvtFdqK09o2vte21SZ6a_e39cZ6qu4s/pub
+      - "  from  Yelan Mains"
   - code: diona
     elementCode: cryo
     roles:
@@ -9033,6 +9329,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: true
+                - code: aqua-simulacra
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: polar-star
                   refine: null
@@ -9184,6 +9485,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: true
+                - code: aqua-simulacra
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: thundering-pulse
                   refine: null
@@ -9304,7 +9610,13 @@ characters:
               - " it pulls quite far ahead of all the other options."
               - b: |-
                   
-                  Amos' Bow:
+                  Aqua Simulacra: 
+              - >
+                Due to the sheer amount of Crit stats you can get from Blizzard
+                Strayer (4), Ganyu's ascension passive and this weapon itself,
+                you can consider running an ATK% circlet, especially if it has
+                better substats than your Crit DMG one.
+              - b: "Amos' Bow:"
               - >2
                  In quickswap heavy rotations (Ganyu Mona Venti Diona) where you usually don't do a lot of Charged Shots, this weapon performs worse than the other 5 star options listed.
               - b: "Prototype Crescent: "
@@ -9529,6 +9841,7 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+            - similar:
                 - code: redhorn-stonethresher
                   refine: null
                   stacks: null
@@ -9715,8 +10028,10 @@ characters:
               - b: |-
                   Regarding Weapon Choice:
                   Redhorn Stonethresher: 
-              - Depending on the amount of ATK% buffs you're getting this weapon
-                can overtake Wolf's Gravestone in personal damage.
+              - This weapon can overtake Wolf's Gravestone in terms of Eula's
+                own damage if team provides enough ATK% buffs, but Wolf's
+                Gravestone can make up the damage difference by buffing team
+                damage.
               - b: |-
                   
                   Skyward Pride: 
@@ -12170,17 +12485,17 @@ characters:
                   notes: null
                   seeCharNotes: true
             - similar:
-                - code: whiteblind
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
                 - code: skyward-pride
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: true
+            - similar:
+                - code: whiteblind
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: favonius-greatsword
                   refine: null
@@ -12291,8 +12606,8 @@ characters:
               - >
                 Useful if you are unable to get ER from your substats. Does
                 really well while its passive is active, but falls off in
-                sustained fights. Comfort option that has quite a big power gap
-                if compared with Serpent Spine or Whiteblind.
+                sustained fights. Comfort option that can lose to a high refined
+                Whiteblind with stacks.
               - b: "Favonius Greatsword: "
               - Only recommended with high refines, as its usefulness scales
                 with its particle generation capabilities. R5 allows her to
