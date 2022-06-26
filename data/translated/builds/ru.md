@@ -2312,6 +2312,16 @@ _**Рекомендуемый порог Восстановления энерг
 
 Карманный ДД (до С6)
 
+# === characters.#xingqiu.roles.#off-field_dps_(c0-c5).tips ===
+
+`replace-from:characters.#xingqiu.roles.#off-field_dps_(c6).tips`
+
+
+# === characters.#xingqiu.roles.#off-field_dps_(c0-c5).subStats.notes ===
+
+`replace-from:characters.#xingqiu.roles.#off-field_dps_(c6).subStats.notes`
+
+
 # === characters.#xingqiu.roles.#off-field_dps_(c0-c5).notes ===
 
 `replace-from:characters.#xingqiu.roles.#off-field_dps_(c6).notes`

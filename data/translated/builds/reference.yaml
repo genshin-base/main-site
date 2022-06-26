@@ -6101,33 +6101,118 @@ characters:
           notes: null
           seeCharNotes: false
         artifacts:
-          sets: []
+          sets:
+            - arts:
+                code: emblem-of-severed-fate
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                op: and
+                arts:
+                  - code: noblesse-oblige
+                    count: 2
+                  - code: heart-of-depth
+                    count: 2
+              notes: null
+              seeCharNotes: false
+            - arts:
+                op: or
+                arts:
+                  - code: noblesse-oblige
+                    count: 2
+                  - code: heart-of-depth
+                    count: 2
+                  - code: 18%-atk
+                    count: 2
+                  - code: emblem-of-severed-fate
+                    count: 2
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: noblesse-oblige
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: thundersoother
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: blizzard-strayer
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                op: or
+                arts:
+                  - code: the-exile
+                    count: 2
+                  - code: scholar
+                    count: 2
+                  - code: emblem-of-severed-fate
+                    count: 2
+              notes: null
+              seeCharNotes: true
           notes: null
           seeCharNotes: false
         mainStats:
           circlet:
-            codes: []
+            codes:
+              - crit-rate
+              - crit-dmg
             notes: null
             seeCharNotes: false
           goblet:
-            codes: []
+            codes:
+              - hydro-dmg
             notes: null
             seeCharNotes: false
           sands:
-            codes: []
+            codes:
+              - er
+              - atk%
             notes: null
-            seeCharNotes: false
+            seeCharNotes: true
           notes: null
           seeCharNotes: false
         subStats:
-          advices: []
-          notes: null
+          advices:
+            - codes:
+                - crit-rate
+                - crit-dmg
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk%
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - em
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk
+              notes: null
+              seeCharNotes: false
+          notes: Prioritize Energy Recharge first if you can't burst off cooldown
           seeCharNotes: false
         talents:
-          advices: []
+          advices:
+            - burst
+            - skill
           notes: null
           seeCharNotes: false
-        tips: null
+        tips:
+          - p: Activating XQ's Elemental Skill or Elemental Burst applies Hydro to the
+              on-field character with his shield. (Pyro in specific)
+          - p: "Cleansing Electro may take an additional switch for your character with the
+              rain swords active, while Cryo would freeze you in place. "
         notes:
           - p: C6 stands for "Constellation 6" and C0-C5  refers to a Xingqiu that is not
               yet C6.
