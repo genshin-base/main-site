@@ -124,6 +124,31 @@ const fixes = {
 					return false
 				},
 			},
+			{
+				// У Син Цю почти все советы для роли "С0-5" совпадают с ролью "С6", и повторно не прописаны.
+				// Здесь всё из строки "С6" копируется на пустые места в "С0-5".
+				title: /^hydro$/i,
+				fixFunc(sheet) {
+					let c6Cells, c5Cells
+					for (const { values: cells = [] } of sheet.data[0].rowData) {
+						for (const cell of cells) {
+							const text = json_getText(cell).trim().toLocaleLowerCase()
+							if (text.startsWith('off-field dps (c6)')) c6Cells = cells
+							if (text.startsWith('off-field dps (c0-c5)')) c5Cells = cells
+							if (c6Cells && c5Cells) break
+						}
+					}
+					if (!c6Cells || !c5Cells) return false
+					let copiedSmth = false
+					for (let i = 0; i < c6Cells.length; i++) {
+						if (!c5Cells.at(i) || json_getText(c5Cells[i]).trim() === '') {
+							c5Cells[i] = c6Cells[i]
+							copiedSmth = true
+						}
+					}
+					return copiedSmth
+				},
+			},
 		],
 	},
 	/** @type {import('#lib/parsing/honeyhunter/fixes').HoneyhunterFixes} */
