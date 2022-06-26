@@ -2288,7 +2288,7 @@ _**Рекомендуемый порог Восстановления энерг
 **[Церемониальный меч \[Р3+\]](#weapon:sacrificial-sword)**
 Этот меч лучше, чем Фавоний, в отрядах, где есть другие Гидро персонажи, кроме Син Цю.
 
-Благодарям Quincy#6965 за помощь [с рассчётами урона оружия (англ.)](https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit#gid=0).
+Благодарям Quincy#6965 за помощь [с расчётами урона оружия (англ.)](https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit#gid=0).
 
 **О наборе Артефактов**
 
@@ -2560,7 +2560,7 @@ _**Рекомендуемый порог Восстановления энерг
 **Обычная атака**
 Стоит прокачивать только если хотите постоянно использовать Прорывную стрелу — её особенную заряженную атаку.
 
-Благодарим Vladone ツ#9281 и jstern25#1399 за помощь с [рассчетами (англ.)](https://docs.google.com/spreadsheets/d/1ULEvZVo1Er1N-1_f729qiheMZusEC6qpJ5Yn8vyrqr8/edit?usp=sharing).
+Благодарим Vladone ツ#9281 и jstern25#1399 за помощь с [расчётами (англ.)](https://docs.google.com/spreadsheets/d/1ULEvZVo1Er1N-1_f729qiheMZusEC6qpJ5Yn8vyrqr8/edit?usp=sharing).
 
 # === characters.#yoimiya.credits ===
 
