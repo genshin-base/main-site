@@ -269,7 +269,7 @@ export function ArtifactCardTableRow({ artifact, isExpanded, group }: ArtifactRo
 							/>
 							<a
 								href={genEquipmentHash('artifact', artifact.code)}
-								className="align-self-center"
+								className="align-self-center text-decoration-underline-dotted"
 							>
 								{artifact.name}
 							</a>

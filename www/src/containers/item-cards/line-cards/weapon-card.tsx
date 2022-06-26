@@ -256,7 +256,10 @@ export function WeaponCardTableRow({ weapon, isExpanded, group }: WeaponRowProps
 								rarity={weapon.rarity}
 								src={getWeaponIconLageSrc(weapon.code)}
 							/>
-							<a href={genEquipmentHash('weapon', weapon.code)} className="align-self-center">
+							<a
+								href={genEquipmentHash('weapon', weapon.code)}
+								className="align-self-center text-decoration-underline-dotted"
+							>
 								{weapon.name}
 							</a>
 						</div>
