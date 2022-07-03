@@ -34,7 +34,7 @@ export function makeRoleTitle(r: BuildRoleOrDummy) {
 	return (
 		<span key={r.code}>
 			{r.isRecommended && (
-				<span className="fs-4 lh-1 opacity-75 text-warning align-bottom">{STAR}</span>
+				<span className="fs-4 lh-1 opacity-75 text-rarity-5 align-bottom">{STAR}</span>
 			)}
 			{r.name}
 		</span>
@@ -81,7 +81,7 @@ export function notesToJSX(tips: CompactTextParagraphs | null): JSX.Nodes {
 	function processObj(tip: TextNode) {
 		if (typeof tip === 'string') return processString(tip)
 		if ('p' in tip) return <p>{notesToJSX(tip.p)}</p>
-		if ('b' in tip) return <b class="opacity-75 text-normal">{notesToJSX(tip.b)}</b>
+		if ('b' in tip) return <b class="text-normal">{notesToJSX(tip.b)}</b>
 		if ('i' in tip) return <i>{notesToJSX(tip.i)}</i>
 		if ('s' in tip) return <s>{notesToJSX(tip.s)}</s>
 		if ('a' in tip)

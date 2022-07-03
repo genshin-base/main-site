@@ -6,18 +6,19 @@ import { getAllRelated } from '#src/api/utils'
 import { CentredSpinner, Spinner } from '#src/components/placeholders'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
 import { FavoriteCharacters } from '#src/containers/character-picker/favorite-characters'
+import { OtherItemCard } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar } from '#src/containers/item-cards/item-avatars'
 import {
 	I18N_ART_STATS_PRIORITY,
 	I18N_ARTIFACTS,
 	I18N_ASC_MATERIALS,
+	I18N_CHOOSE_FROM_FAV,
 	I18N_FULL_BUILD_INFO,
 	I18N_MORE_ON_BUILDS_PAGE,
 	I18N_STAT_NAME,
 	I18N_SUBSTATS_PRIORITY,
 	I18N_TALENT_NAME,
 	I18N_TALENTS_PRIORITY,
-	I18N_CHOOSE_FROM_FAV,
 } from '#src/i18n/i18n'
 import { A } from '#src/routes/router'
 import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
@@ -35,7 +36,6 @@ import {
 } from './common'
 
 import './character-build-preview.scss'
-import { OtherItemCard } from '#src/containers/item-cards/dd-cards'
 
 function CharacterBuildPreview({ characterCode }: { characterCode: string }): JSX.Element {
 	const [build, isUpdating] = useBuildWithDelayedLocs(characterCode)
@@ -167,23 +167,23 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 				</div>
 				<div className="row small gy-2">
 					<div className="col-lg-4 col-12">
-						<h6 className="opacity-75">{I18N_ARTIFACTS}</h6>
+						<h6>{I18N_ARTIFACTS}</h6>
 						<div>{artifactsListBlock}</div>
 					</div>
 					<div className="col-lg-4 col-6">
-						<h6 className="opacity-75">{I18N_ART_STATS_PRIORITY}</h6>
-						<div>{artifactMainStatsBlock}</div>
+						<h6>{I18N_ART_STATS_PRIORITY}</h6>
+						<div className="opacity-75">{artifactMainStatsBlock}</div>
 					</div>
 					<div className="col-lg-4 col-6">
-						<h6 className="opacity-75">{I18N_SUBSTATS_PRIORITY}</h6>
-						<div>{artifactSubStatsBlock}</div>
+						<h6>{I18N_SUBSTATS_PRIORITY}</h6>
+						<div className="opacity-75">{artifactSubStatsBlock}</div>
 					</div>
 					<div className="col-lg-4 col-6">
-						<h6 className="opacity-75">{I18N_TALENTS_PRIORITY}</h6>
-						<div>{talentsBlock}</div>
+						<h6>{I18N_TALENTS_PRIORITY}</h6>
+						<div className="opacity-75">{talentsBlock}</div>
 					</div>
 					<div className="col-lg-8 col-6">
-						<h6 className="opacity-75">{I18N_ASC_MATERIALS}</h6>
+						<h6>{I18N_ASC_MATERIALS}</h6>
 						<div>{materialsBlock}</div>
 					</div>
 					<div className="col-12">

@@ -122,10 +122,10 @@ function ItemLabel({
 }): JSX.Element {
 	const rarityClass =
 		rarity === 5 //
-			? 'text-warning'
+			? 'text-rarity-5'
 			: rarity === 4
-			? 'text-primary'
-			: ''
+			? 'text-rarity-4'
+			: 'text-rarity-3'
 	//todo c-pointer text-decoration-underline-dotted для интерактивных
 	return <label class={`${classes} ${rarityClass}`}>{children}</label>
 }

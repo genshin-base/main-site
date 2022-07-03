@@ -11,7 +11,7 @@ export function GoUpBtn({ classes = '' }: { classes?: string }): JSX.Element | n
 	if (scrollPos < 10) return null
 	return (
 		<button
-			className={`btn rounded-circle lh-1 navbar-darker-bg bottom-0 left-0 p-1 text-center m-1 ${classes} d-none d-md-block`}
+			className={`btn rounded-circle lh-1 header-main-bg bottom-0 left-0 p-1 text-center m-1 ${classes} d-none d-md-block`}
 			style={{ position: 'fixed' }}
 			onClick={onClick}
 		>

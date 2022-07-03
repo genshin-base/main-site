@@ -144,8 +144,10 @@ export function CharacterBuildDetailed({
 					{role.subStats.advices.map(advice => {
 						return (
 							<li>
-								{genSimpleList(advice.codes.map(I18N_STAT_NAME))} {genNotes(advice)}
-								{genSeeCharNotes(advice)}
+								<div className="opacity-75">
+									{genSimpleList(advice.codes.map(I18N_STAT_NAME))} {genNotes(advice)}
+									{genSeeCharNotes(advice)}
+								</div>
 							</li>
 						)
 					})}
@@ -156,7 +158,13 @@ export function CharacterBuildDetailed({
 				<BlockHeader classes="mt-3">{I18N_TALENTS_PRIORITY}</BlockHeader>
 				<ol className="small">
 					{role.talents.advices.map(advice => {
-						return <li>{arrOrItemToArr(advice).map(I18N_TALENT_NAME).join(', ')}</li>
+						return (
+							<li>
+								<div className="opacity-75">
+									{arrOrItemToArr(advice).map(I18N_TALENT_NAME).join(', ')}
+								</div>
+							</li>
+						)
 					})}
 				</ol>
 				<div className="opacity-75 small">
@@ -272,7 +280,7 @@ export function CharacterBuildDetailed({
 			</div>
 			<div>
 				<BlockHeader>{I18N_NOTES}</BlockHeader>
-				<div className="opacity-75">{notesBlock}</div>
+				<div className="text-muted">{notesBlock}</div>
 			</div>
 		</div>
 	)

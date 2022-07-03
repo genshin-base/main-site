@@ -1,7 +1,9 @@
+import { useCallback, useState } from 'preact/hooks'
+
 import {
+	I18N_C_MIHOYO,
 	I18N_COPYRIGHTS,
 	I18N_CREATED_BY_US,
-	I18N_C_MIHOYO,
 	I18N_GI_MAP,
 	I18N_GI_WIKI,
 	I18N_HELPER_TEAM_TABLE,
@@ -19,7 +21,6 @@ import {
 	LINK_HELPER_TEAM_TABLE,
 	LINK_HONEY_IMPACT,
 } from '#src/utils/links'
-import { useCallback, useState } from 'preact/hooks'
 
 export function Footer() {
 	const [isReportBugModalVisible, setIsReportBugModalVisible] = useState<boolean>(false)
@@ -31,10 +32,10 @@ export function Footer() {
 	}, [setIsReportBugModalVisible])
 	return (
 		<footer className="mt-auto bg-dark">
-			<div className="container my-3 opacity-75">
+			<div className="container my-3">
 				<div className="row pt-3 gy-3">
 					<div className="col-12 col-md-3">
-						<h5>Genshin Base</h5>
+						<h5 className="opacity-75">Genshin Base</h5>
 						<p className="small">
 							<a
 								role="button"
@@ -45,7 +46,7 @@ export function Footer() {
 							</a>
 							{isReportBugModalVisible && <ReportBugModal onClickAway={closeRepBugModal} />}
 						</p>
-						<p className="small">{I18N_CREATED_BY_US}</p>
+						<p className="small  opacity-75">{I18N_CREATED_BY_US}</p>
 						<p className="small">
 							<a href={LINK_GOOGLE_FORM_ORDER_SITE} target="_blank">
 								{I18N_ORDER_SITE_FROM_US}
@@ -54,7 +55,7 @@ export function Footer() {
 					</div>
 					<div className="col-12 col-md-4">
 						<div className="ps-md-3">
-							<h5>{I18N_WE_USE_DATA_FROM}</h5>
+							<h5 className="opacity-75">{I18N_WE_USE_DATA_FROM}</h5>
 							<p>
 								<a target="_blank" href={LINK_HELPER_TEAM_TABLE} className="text-muted small">
 									{I18N_HELPER_TEAM_TABLE}
@@ -78,10 +79,10 @@ export function Footer() {
 						</div>
 					</div>
 					<div className="col-12 col-md-4">
-						<div className="ps-md-3">
-							<h5>{I18N_COPYRIGHTS}</h5>
-							<p className="small">{I18N_C_MIHOYO}</p>
-							<p className="small">{I18N_NOT_AFFILIATED_WITH_MIHOYO}</p>
+						<div className="ps-md-3 ">
+							<h5 className="opacity-75">{I18N_COPYRIGHTS}</h5>
+							<p className="small opacity-75">{I18N_C_MIHOYO}</p>
+							<p className="small opacity-75">{I18N_NOT_AFFILIATED_WITH_MIHOYO}</p>
 						</div>
 					</div>
 				</div>

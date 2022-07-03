@@ -108,19 +108,19 @@ function ArtifactCardLine({
 					{artifact.sets[1] && (
 						<>
 							<BlockHeader>{I18N_PIECE_BONUS(1)}</BlockHeader>
-							<div className="mb-3">{notesToJSX(artifact.sets[1])}</div>
+							<div className="mb-3 opacity-75">{notesToJSX(artifact.sets[1])}</div>
 						</>
 					)}
 					{artifact.sets[2] && (
 						<>
 							<BlockHeader>{I18N_PIECES_BONUS(2)}</BlockHeader>
-							<div className="mb-3">{notesToJSX(artifact.sets[2])}</div>
+							<div className="mb-3 opacity-75">{notesToJSX(artifact.sets[2])}</div>
 						</>
 					)}
 					{artifact.sets[4] && (
 						<>
 							<BlockHeader>{I18N_PIECES_BONUS(4)}</BlockHeader>
-							<div className="mb-3">{notesToJSX(artifact.sets[4])}</div>
+							<div className="mb-3 opacity-75">{notesToJSX(artifact.sets[4])}</div>
 						</>
 					)}
 				</div>
@@ -185,7 +185,7 @@ function ArtifactCardLine({
 	return (
 		<MobileDesktopSwitch
 			childrenDesktop={
-				<div className="bg-dark rounded-start border border-secondary d-flex w-100 line-card-desktop">
+				<div className="bg-dark-darker rounded-start border border-secondary d-flex w-100 line-card-desktop">
 					<div className={cellClass}>{mainInfoColInner}</div>
 					<div className={cellClass}>
 						<div className="invisible pe-none">
@@ -241,7 +241,7 @@ export function ArtifactCardTableRow({ artifact, isExpanded, group }: ArtifactRo
 	const toggleExpand = useCallback(() => {
 		isExpanded ? setSelectedArtifactCode(null) : setSelectedArtifactCode(artifact.code)
 	}, [isExpanded, setSelectedArtifactCode, artifact.code])
-	const bgClass = group === 1 ? 'bg-dark' : 'bg-secondary'
+	const bgClass = group === 1 ? 'bg-dark' : 'bg-dark-darker'
 
 	const [cardRef] = useScrollTo<HTMLTableCellElement>(isExpanded)
 
