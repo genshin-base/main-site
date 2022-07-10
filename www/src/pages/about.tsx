@@ -1,5 +1,6 @@
 import { I18N_ABOUT_SITE_CONTENT, I18N_ABOUT_SITE_EPIGRAPH } from '#src/i18n/about-site'
 import { I18N_ABOUT_SITE, I18N_PAGE_TITLE_POSTFIX } from '#src/i18n/i18n'
+import miko_fox_src from '#src/media/Miko_fox.png'
 import { useDocumentTitle } from '#src/utils/hooks'
 
 export function AboutPage(): JSX.Element {
@@ -12,6 +13,7 @@ export function AboutPage(): JSX.Element {
 			<div className="row">
 				{/* todo ссылки на страницы, перевод */}
 				<figure className="text-end">
+					<img style={{ width: '100px' }} src={miko_fox_src} />
 					<blockquote className="blockquote">
 						<p>{I18N_ABOUT_SITE_EPIGRAPH.quote}</p>
 					</blockquote>
