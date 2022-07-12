@@ -35,7 +35,9 @@ export function Tabs<T extends Tab>({
 							onTabSelect && onTabSelect(t)
 						}}
 					>
-						{titleFunc ? titleFunc(t) : 'title' in t ? t.title : t.code}
+						<span className={`${t.code === selectedTab.code ? 'opacity-75' : ''}`}>
+							{titleFunc ? titleFunc(t) : 'title' in t ? t.title : t.code}
+						</span>
 					</A>
 				</li>
 			))}

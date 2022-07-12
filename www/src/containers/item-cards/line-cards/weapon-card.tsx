@@ -175,7 +175,7 @@ function WeaponCardLine({
 	return (
 		<MobileDesktopSwitch
 			childrenDesktop={
-				<div className="bg-dark rounded-start border border-secondary d-flex w-100 line-card-desktop">
+				<div className="bg-dark-darker rounded-start border border-secondary d-flex w-100 line-card-desktop">
 					<div className={cellClass}>{mainInfoColInner}</div>
 					<div className={cellClass}>
 						<div className="invisible pe-none">
@@ -232,7 +232,7 @@ export function WeaponCardTableRow({ weapon, isExpanded, group }: WeaponRowProps
 	}, [isExpanded, setSelectedWeaponCode, weapon.code])
 
 	const [cardRef] = useScrollTo<HTMLTableCellElement>(isExpanded)
-	const bgClass = group === 1 ? 'bg-dark' : 'bg-secondary'
+	const bgClass = group === 1 ? 'bg-dark' : 'bg-dark-darker'
 
 	const expandedRow = useMemo(() => {
 		return (

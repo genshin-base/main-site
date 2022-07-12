@@ -18,7 +18,7 @@ import { useDocumentTitle, usePageDescription } from '#src/utils/hooks'
 function Fieldset({ children, legend, classes = '' }) {
 	return (
 		<fieldset className={`my-2 ${classes}`}>
-			<legend className="opacity-75 mb-2">{legend}</legend>
+			<legend className="mb-2">{legend}</legend>
 			{children}
 		</fieldset>
 	)
@@ -36,7 +36,7 @@ export function FrontPage(): JSX.Element {
 					<RegionSwitch />
 				</Fieldset>
 				<Fieldset legend={I18N_UNTIL_DAY_RESET} classes="col-lg-3 col-12">
-					<TimeUntilDayReset classes="fs-4" />
+					<TimeUntilDayReset classes="fs-4 opacity-75" />
 				</Fieldset>
 				<Fieldset legend={I18N_ALCHEMY_CALC} classes="col-lg-6 col-12 ">
 					<AlchemyCalculator />

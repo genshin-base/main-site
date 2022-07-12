@@ -252,8 +252,8 @@ export const I18N_EQUIPMENT = { en: 'Equipment', ru: 'Снаряжение' }[LA
 export const I18N_CHAR_EQUIPMENT = { en: 'Character Equipment', ru: 'Снаряжение персонажа' }[LANG]
 export const I18N_OUR_DISCORD = { en: 'Our Discord', ru: 'Наш Дискорд' }[LANG]
 export const I18N_CREATED_BY_US = {
-	en: `Designed and coded by${NBSP}Absolute${NBSP}Evil${NBSP}Studio`,
-	ru: `Задизайнено и запрограммировано в${NBSP}Абсолют${NBSP}Ивел${NBSP}студии`,
+	en: `Designed and coded by${NBSP}Yurtaikin${NBSP}Studio`,
+	ru: `Задизайнено и запрограммировано студией${NBSP}Павла${NBSP}Юртайкина${NBSP}`,
 }[LANG]
 export const I18N_REPORT_BUG = {
 	en: 'Report a bug',
