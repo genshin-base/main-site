@@ -157,8 +157,11 @@ const fixes = {
 			// некоторые персонажи и предметы почему-то находятся в таблице нерелизнутого
 			characters: [],
 			weapons: [
-				{ actually: 'unreleased', name: 'Amber Bead' },
-				{ actually: 'unreleased', name: 'Ebony Bow' },
+				{ actually: 'released', name: 'Aqua Simulacra' },
+				{ actually: 'released', name: 'Calamity Queller' },
+				{ actually: 'released', name: 'Fading Twilight' },
+				// это оружие из квеста, получаемое после квеста оружие называется "Kagotsurube Isshin"
+				{ actually: 'unreleased', name: 'Prized Isshin Blade' },
 			],
 		},
 		travelerLangNames: {
@@ -180,7 +183,17 @@ const fixes = {
 				/^Millelith/i, //
 				/^Treasure Hoarders - Boss$/,
 			],
-			artifacts: [/^Prayers to the Firmament$/i],
+			artifacts: [
+				/^Prayers to the Firmament$/i, //
+				/^(Deepwood Memories|Gilded Dreams)$/i, //3.0
+			],
+			items: [
+				/^(Majestic Hooked Beak|Thunderclap Fruitcore|Kalpalata|Lunar Lotus|Rukkhashava Mushrooms)$/, //3.0
+				/^(Chaos Bolt|Chaos Module|Chaos Storage)$/, //3.0
+				/^(Rich Red Brocade|Faded Red Satin|Trimmed Red Silk)$/, //3.0
+				/ Fungal Nucleus$/, //3.0
+				/^(Padisarah|Sumeru Rose|Zaytun Peach)$/, //3.0
+			],
 		},
 		manualEnemyGroups: [
 			{ origNames: /^Ruin Guard$/ },
@@ -266,6 +279,24 @@ const fixes = {
 					code2img.set(code, img)
 					return true
 				},
+				// У Змея руин нету дропа, и он пропускается
+				(code2enemy, code2img) => {
+					// https://genshin.honeyhunterworld.com/db/monster/m_24010401/?lang=EN
+					const name = {
+						en: 'Ruin Serpent',
+						ru: 'Змей руин',
+					}
+					// https://genshin-impact.fandom.com/wiki/Ruin_Serpent
+					const code = getEnemyCodeFromName(name.en)
+					const artifactSetCodes = ['traveling-doctor', 'instructor', 'the-exile', 'gladiators-finale', 'wanderers-troupe'] //prettier-ignore
+					const itemCodes = ['runic-fang'] //prettier-ignore
+					const img = 'https://genshin.honeyhunterworld.com/img/enemy/m_24010401.png'
+
+					if (code in code2enemy) return false
+					code2enemy[code] = { code, name, drop: { artifactSetCodes, itemCodes }, locations: [] }
+					code2img.set(code, img)
+					return true
+				},
 			],
 			domains: [],
 			weapons: (() => {
@@ -303,6 +334,7 @@ const fixes = {
 		enemiesOnMap: [
 			{ nameOnMap: 'Fatui Agent', useCode: 'fatui-pyro-agent' },
 			{ nameOnMap: 'Fatui Mirror Maiden', useCode: 'mirror-maiden' },
+			{ nameOnMap: 'The Black Serpents', useCode: 'shadowy-husk' },
 		],
 	},
 }

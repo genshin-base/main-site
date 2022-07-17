@@ -138,6 +138,16 @@ riftborn-regalia:
   rarity: 4
   craftedFrom: []
   locations: []
+runic-fang:
+  code: runic-fang
+  name:
+    en: Runic Fang
+    ru: Рунический клык
+  types:
+    - character-material-elemental-stone
+  rarity: 4
+  craftedFrom: []
+  locations: []
 smoldering-pearl:
   code: smoldering-pearl
   name:
@@ -256,7 +266,9 @@ nagadus-emerald-chunk:
   types:
     - character-material-jewel
   rarity: 4
-  craftedFrom: []
+  craftedFrom:
+    - code: nagadus-emerald-fragment
+      count: 3
   locations: []
 nagadus-emerald-fragment:
   code: nagadus-emerald-fragment
@@ -266,7 +278,9 @@ nagadus-emerald-fragment:
   types:
     - character-material-jewel
   rarity: 3
-  craftedFrom: []
+  craftedFrom:
+    - code: nagadus-emerald-sliver
+      count: 3
   locations: []
 nagadus-emerald-gemstone:
   code: nagadus-emerald-gemstone
@@ -276,7 +290,9 @@ nagadus-emerald-gemstone:
   types:
     - character-material-jewel
   rarity: 5
-  craftedFrom: []
+  craftedFrom:
+    - code: nagadus-emerald-chunk
+      count: 3
   locations: []
 nagadus-emerald-sliver:
   code: nagadus-emerald-sliver
@@ -286,7 +302,11 @@ nagadus-emerald-sliver:
   types:
     - character-material-jewel
   rarity: 2
-  craftedFrom: []
+  craftedFrom:
+    - code: agnidus-agate-sliver
+      count: 1
+    - code: dust-of-azoth
+      count: 1
   locations: []
 prithiva-topaz-chunk:
   code: prithiva-topaz-chunk
@@ -1312,6 +1332,7 @@ naku-weed:
     - !loc teyvat 3036 6689
     - !loc teyvat 3039 6731
     - !loc teyvat 3046 6774
+    - !loc teyvat 3049 6790
     - !loc teyvat 3062 6715
     - !loc teyvat 3073 6757
     - !loc teyvat 3076 6700
@@ -1323,19 +1344,18 @@ naku-weed:
     - !loc teyvat 3169 6622
     - !loc teyvat 3221 6833
     - !loc teyvat 3226 7018
-    - !loc teyvat 3231 6818
     - !loc teyvat 3233 6835
-    - !loc teyvat 3240 6826
-    - !loc teyvat 3243 6814
+    - !loc teyvat 3235 6825
+    - !loc teyvat 3239 6816
     - !loc teyvat 3247 6837
     - !loc teyvat 3249 6825
     - !loc teyvat 3252 6738
     - !loc teyvat 3260 6674
     - !loc teyvat 3263 6751
+    - !loc teyvat 3267 6740
     - !loc teyvat 3268 6941
-    - !loc teyvat 3275 6731
-    - !loc teyvat 3275 6758
     - !loc teyvat 3277 6659
+    - !loc teyvat 3279 6759
     - !loc teyvat 3284 6756
     - !loc teyvat 3347 5151
     - !loc teyvat 3347 6985
@@ -3346,16 +3366,6 @@ ring-of-boreas:
     - code: dream-solvent
       count: 1
   locations: []
-runic-fang:
-  code: runic-fang
-  name:
-    en: Runic Fang
-    ru: Рунический клык
-  types:
-    - character-material-talent
-  rarity: 4
-  craftedFrom: []
-  locations: []
 shadow-of-the-warrior:
   code: shadow-of-the-warrior
   name:
@@ -4595,7 +4605,7 @@ primogem:
     ru: Камень Истока
   types:
     - currency
-  rarity: 4
+  rarity: 5
   craftedFrom: []
   locations: []
 pyro-sigil:
@@ -4878,6 +4888,26 @@ golden-koi:
     - !loc teyvat -806 1690
     - !loc teyvat 585 -430
     - !loc teyvat 3321 6755
+halcyon-jade-axe-marlin:
+  code: halcyon-jade-axe-marlin
+  name:
+    en: Halcyon Jade Axe Marlin
+    ru: Нефритовая рыба-алебарда
+  types:
+    - fish
+  rarity: 3
+  craftedFrom: []
+  locations: []
+lazurite-axe-marlin:
+  code: lazurite-axe-marlin
+  name:
+    en: Lazurite Axe Marlin
+    ru: Лазурная рыба-алебарда
+  types:
+    - fish
+  rarity: 3
+  craftedFrom: []
+  locations: []
 lunged-stickleback:
   code: lunged-stickleback
   name:
@@ -4923,6 +4953,16 @@ medaka:
     - !loc teyvat 2038 8353
     - !loc teyvat 3402 6778
     - !loc chasm -127 -321
+peach-of-the-deep-waves:
+  code: peach-of-the-deep-waves
+  name:
+    en: Peach of the Deep Waves
+    ru: Водяной персик
+  types:
+    - fish
+  rarity: 3
+  craftedFrom: []
+  locations: []
 pufferfish:
   code: pufferfish
   name:
@@ -4981,6 +5021,16 @@ rusty-koi:
     - !loc teyvat -801 1690
     - !loc teyvat 314 43
     - !loc teyvat 3326 6756
+sandstorm-angler:
+  code: sandstorm-angler
+  name:
+    en: Sandstorm Angler
+    ru: Песчаный иглобрюх
+  types:
+    - fish
+  rarity: 3
+  craftedFrom: []
+  locations: []
 snowstrider:
   code: snowstrider
   name:
@@ -4992,6 +5042,16 @@ snowstrider:
   craftedFrom: []
   locations:
     - !loc teyvat -137 1339
+sunset-cloud-angler:
+  code: sunset-cloud-angler
+  name:
+    en: Sunset Cloud Angler
+    ru: Вечерний иглобрюх
+  types:
+    - fish
+  rarity: 3
+  craftedFrom: []
+  locations: []
 sweet-flower-medaka:
   code: sweet-flower-medaka
   name:
@@ -5028,6 +5088,16 @@ tea-colored-shirakodai:
     - !loc teyvat 316 43
     - !loc teyvat 524 475
     - !loc teyvat 587 -429
+true-fruit-angler:
+  code: true-fruit-angler
+  name:
+    en: True Fruit Angler
+    ru: Плодовый иглобрюх
+  types:
+    - fish
+  rarity: 3
+  craftedFrom: []
+  locations: []
 venomspine-fish:
   code: venomspine-fish
   name:
@@ -5420,6 +5490,7 @@ apple:
     - !loc teyvat -304 3
     - !loc teyvat -304 98
     - !loc teyvat -271 -331
+    - !loc teyvat -206 199
     - !loc teyvat -200 508
     - !loc teyvat 97 507
     - !loc teyvat 216 -58
@@ -5514,6 +5585,7 @@ berry:
     - !loc teyvat -1965 2796
     - !loc teyvat -1963 2888
     - !loc teyvat -1947 2724
+    - !loc teyvat -1942 2150
     - !loc teyvat -1901 3069
     - !loc teyvat -1889 3055
     - !loc teyvat -1885 716
@@ -7298,10 +7370,8 @@ electro-crystal:
     - !loc teyvat 2210 6463
     - !loc teyvat 2214 6457
     - !loc teyvat 2223 6463
-    - !loc teyvat 2305 5746
     - !loc teyvat 2321 5758
     - !loc teyvat 2330 5750
-    - !loc teyvat 2351 5757
     - !loc teyvat 2412 6168
     - !loc teyvat 2456 6145
     - !loc teyvat 2480 5488
@@ -8414,6 +8484,16 @@ frog:
     - !loc chasm 149 316
     - !loc chasm 170 248
     - !loc chasm 188 -656
+glabrous-beans:
+  code: glabrous-beans
+  name:
+    en: Glabrous Beans
+    ru: Голые бобы
+  types:
+    - ingredient
+  rarity: 1
+  craftedFrom: []
+  locations: []
 ham:
   code: ham
   name:
@@ -8427,6 +8507,16 @@ ham:
       count: 2
     - code: salt
       count: 1
+  locations: []
+harra-fruit:
+  code: harra-fruit
+  name:
+    en: Harra Fruit
+    ru: Фрукт харра
+  types:
+    - ingredient
+  rarity: 1
+  craftedFrom: []
   locations: []
 horsetail:
   code: horsetail
@@ -9639,6 +9729,76 @@ matsutake:
     - !loc teyvat 1254 787
     - !loc teyvat 2688 5902
     - !loc teyvat 3117 4885
+midlander-bow-billet:
+  code: midlander-bow-billet
+  name:
+    en: Midlander Bow Billet
+    ru: Заготовка лука мидлендера
+  types:
+    - ingredient
+  rarity: 4
+  craftedFrom:
+    - code: northlander-bow-billet
+      count: 1
+    - code: dream-solvent
+      count: 2
+  locations: []
+midlander-catalyst-billet:
+  code: midlander-catalyst-billet
+  name:
+    en: Midlander Catalyst Billet
+    ru: Заготовка катализатора мидлендера
+  types:
+    - ingredient
+  rarity: 4
+  craftedFrom:
+    - code: northlander-catalyst-billet
+      count: 1
+    - code: dream-solvent
+      count: 2
+  locations: []
+midlander-claymore-billet:
+  code: midlander-claymore-billet
+  name:
+    en: Midlander Claymore Billet
+    ru: Заготовка двуручного меча мидлендера
+  types:
+    - ingredient
+  rarity: 4
+  craftedFrom:
+    - code: northlander-claymore-billet
+      count: 1
+    - code: dream-solvent
+      count: 2
+  locations: []
+midlander-polearm-billet:
+  code: midlander-polearm-billet
+  name:
+    en: Midlander Polearm Billet
+    ru: Заготовка копья мидлендера
+  types:
+    - ingredient
+  rarity: 4
+  craftedFrom:
+    - code: northlander-polearm-billet
+      count: 1
+    - code: dream-solvent
+      count: 2
+  locations: []
+midlander-sword-billet:
+  code: midlander-sword-billet
+  name:
+    en: Midlander Sword Billet
+    ru: Заготовка одноручного меча мидлендера
+  types:
+    - ingredient
+  rarity: 4
+  craftedFrom:
+    - code: northlander-sword-billet
+      count: 1
+    - code: dream-solvent
+      count: 2
+  locations: []
 milk:
   code: milk
   name:
@@ -11521,7 +11681,11 @@ northlander-bow-billet:
   types:
     - ingredient
   rarity: 4
-  craftedFrom: []
+  craftedFrom:
+    - code: midlander-bow-billet
+      count: 1
+    - code: dream-solvent
+      count: 2
   locations: []
 northlander-catalyst-billet:
   code: northlander-catalyst-billet
@@ -11531,7 +11695,11 @@ northlander-catalyst-billet:
   types:
     - ingredient
   rarity: 4
-  craftedFrom: []
+  craftedFrom:
+    - code: midlander-catalyst-billet
+      count: 1
+    - code: dream-solvent
+      count: 2
   locations: []
 northlander-claymore-billet:
   code: northlander-claymore-billet
@@ -11541,7 +11709,11 @@ northlander-claymore-billet:
   types:
     - ingredient
   rarity: 4
-  craftedFrom: []
+  craftedFrom:
+    - code: midlander-claymore-billet
+      count: 1
+    - code: dream-solvent
+      count: 2
   locations: []
 northlander-polearm-billet:
   code: northlander-polearm-billet
@@ -11551,7 +11723,11 @@ northlander-polearm-billet:
   types:
     - ingredient
   rarity: 4
-  craftedFrom: []
+  craftedFrom:
+    - code: midlander-polearm-billet
+      count: 1
+    - code: dream-solvent
+      count: 2
   locations: []
 northlander-sword-billet:
   code: northlander-sword-billet
@@ -11561,7 +11737,11 @@ northlander-sword-billet:
   types:
     - ingredient
   rarity: 4
-  craftedFrom: []
+  craftedFrom:
+    - code: midlander-sword-billet
+      count: 1
+    - code: dream-solvent
+      count: 2
   locations: []
 onikabuto:
   code: onikabuto
@@ -12875,6 +13055,96 @@ snapdragon:
     - !loc chasm -254 -543
     - !loc chasm -246 -559
     - !loc chasm -215 -560
+spice:
+  code: spice
+  name:
+    en: Spice
+    ru: Пряность харра
+  types:
+    - ingredient
+  rarity: 1
+  craftedFrom:
+    - code: harra-fruit
+      count: 2
+  locations: []
+starshroom:
+  code: starshroom
+  name:
+    en: Starshroom
+    ru: Гриб-звезда
+  types:
+    - ingredient
+  rarity: 1
+  craftedFrom: []
+  locations:
+    - !loc chasm -364 91
+    - !loc chasm -326 101
+    - !loc chasm -301 166
+    - !loc chasm -286 106
+    - !loc chasm -263 274
+    - !loc chasm -261 67
+    - !loc chasm -259 201
+    - !loc chasm -248 54
+    - !loc chasm -220 190
+    - !loc chasm -214 184
+    - !loc chasm -213 50
+    - !loc chasm -210 176
+    - !loc chasm -205 257
+    - !loc chasm -203 261
+    - !loc chasm -192 375
+    - !loc chasm -187 16
+    - !loc chasm -185 19
+    - !loc chasm -180 216
+    - !loc chasm -177 253
+    - !loc chasm -174 327
+    - !loc chasm -133 -237
+    - !loc chasm -132 370
+    - !loc chasm -130 -252
+    - !loc chasm -121 319
+    - !loc chasm -115 325
+    - !loc chasm -110 -237
+    - !loc chasm -101 -264
+    - !loc chasm -77 -234
+    - !loc chasm -74 -266
+    - !loc chasm -72 -266
+    - !loc chasm -57 -394
+    - !loc chasm -39 -176
+    - !loc chasm -38 -403
+    - !loc chasm -16 -418
+    - !loc chasm 0 304
+    - !loc chasm 4 301
+    - !loc chasm 5 -329
+    - !loc chasm 6 301
+    - !loc chasm 7 304
+    - !loc chasm 10 -414
+    - !loc chasm 11 304
+    - !loc chasm 33 -370
+    - !loc chasm 37 -373
+    - !loc chasm 38 -312
+    - !loc chasm 62 -410
+    - !loc chasm 78 -289
+    - !loc chasm 88 -322
+    - !loc chasm 91 -400
+    - !loc chasm 91 -330
+    - !loc chasm 91 322
+    - !loc chasm 95 -295
+    - !loc chasm 97 -340
+    - !loc chasm 101 -338
+    - !loc chasm 111 289
+    - !loc chasm 113 310
+    - !loc chasm 131 263
+    - !loc chasm 133 266
+    - !loc chasm 136 312
+    - !loc chasm 153 326
+    - !loc chasm 161 -655
+    - !loc chasm 167 254
+    - !loc chasm 179 220
+    - !loc chasm 207 335
+    - !loc chasm 221 -609
+    - !loc chasm 224 -698
+    - !loc chasm 226 -656
+    - !loc chasm 230 -572
+    - !loc chasm 232 -586
 starsilver:
   code: starsilver
   name:

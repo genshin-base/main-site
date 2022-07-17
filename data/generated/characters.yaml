@@ -353,8 +353,8 @@ kuki-shinobu:
   releaseVersion: "2.7"
   materialCodes:
     - philosophies-of-elegance
-    - runic-fang
     - tears-of-the-calamitous-god
+    - runic-fang
     - vajrada-amethyst-gemstone
     - naku-weed
     - spectral-nucleus
@@ -523,6 +523,21 @@ shenhe:
     - shivada-jade-gemstone
     - qingxin
     - energy-nectar
+heizou:
+  code: heizou
+  name:
+    en: Shikanoin Heizou
+    ru: Хэйдзо
+  rarity: 4
+  weaponTypeCode: catalyst
+  releaseVersion: "2.8"
+  materialCodes:
+    - philosophies-of-transience
+    - the-meaning-of-aeons
+    - runic-fang
+    - vayuda-turquoise-gemstone
+    - onikabuto
+    - golden-raven-insignia
 sucrose:
   code: sucrose
   name:

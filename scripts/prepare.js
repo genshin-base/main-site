@@ -26,7 +26,7 @@ const commands = {
 		const makeCircleResize = (size) => (i, o) => magick(i, o, [
 			'\(', '+clone', '-alpha', 'transparent', '-fill', 'white', '-draw', 'circle %[fx:w/2],%[fx:h/2] %[fx:w],%[fx:h/2]', '\)',
 			'-define', 'compose:sync=false', '-compose', 'multiply', '-composite',
-			'-resize', size
+			'-filter', 'Catrom', '-resize', size
 		])
 		const circleResizeNormal = makeCircleResize('72x72')
 		const circleResizeLarge = makeCircleResize('120x120')

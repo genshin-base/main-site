@@ -363,7 +363,6 @@ slime:
     - !loc teyvat -726 1594
     - !loc teyvat -723 646
     - !loc teyvat -723 646
-    - !loc teyvat -723 646
     - !loc teyvat -721 1599
     - !loc teyvat -710 1169
     - !loc teyvat -707 1173
@@ -3426,9 +3425,13 @@ whopperflower:
     - !loc teyvat -2552 1603
     - !loc teyvat -2469 3200
     - !loc teyvat -2442 1359
+    - !loc teyvat -2382 3152
     - !loc teyvat -2353 1451
     - !loc teyvat -2328 1650
+    - !loc teyvat -2307 3169
+    - !loc teyvat -2305 3162
     - !loc teyvat -2304 940
+    - !loc teyvat -2300 3167
     - !loc teyvat -2274 1768
     - !loc teyvat -2243 1334
     - !loc teyvat -2168 1698
