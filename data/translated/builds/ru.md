@@ -1891,12 +1891,12 @@ cаппорт
 
 При экипировании оружия с Силой атаки, лучшим выбором станут часы на Восстановление энергии и наоборот.
 
-# === characters.#shikanoin-heizou.roles.#anemo_dps.name ===
+# === characters.#heizou.roles.#anemo_dps.name ===
 
 Анемо ДД
 
 
-# === characters.#shikanoin-heizou.roles.#anemo_dps.notes ===
+# === characters.#heizou.roles.#anemo_dps.notes ===
 
 Анемо ДД билд Шинканоина Хейдзо построен грубо говоря так же как и его ЭМ билд. Этот билд не подходит для игру через Заряжен.
 
@@ -1913,12 +1913,12 @@ cаппорт
 Лучший выбор для Хэйздо и в роли ДД, и в роли саппорта.
 
 
-# === characters.#shikanoin-heizou.roles.#em_dps.name ===
+# === characters.#heizou.roles.#em_dps.name ===
 
 ЭМ ДД
 
 
-# === characters.#shikanoin-heizou.roles.#em_dps.notes ===
+# === characters.#heizou.roles.#em_dps.notes ===
 
 Шинканоин Хэйдзо не получает таких же преимуществ от ЭМ билда как другие Анемо персонажи. Но ЭМ билд подходит для игры через Заряжен лучше, чем билд Анемо ДД.
 
@@ -1928,12 +1928,12 @@ cаппорт
 Следует использовать только если в отряде уже есть кто-то с комплектом [Изумрудная тень (4)](#artifact:viridescent-venerer)
 
 
-# === characters.#shikanoin-heizou.roles.#support.name ===
+# === characters.#heizou.roles.#support.name ===
 
 Саппорт
 
 
-# === characters.#shikanoin-heizou.roles.#support.notes ===
+# === characters.#heizou.roles.#support.notes ===
 
 Билд, в котором Хэйдзо жертвует своим уроном и выполняет в отряде роль саппорта. В этом билде можно носить любые артефакты. Вне зависимости от того, что он носит, он всегда будет давать 80 Мастерства стихий отряду благодаря своему пассивному таланту.
 

@@ -1890,12 +1890,12 @@ With this weapon, it is better to have some Crit Rate on Shenhe for the weapon p
 
 If you're equipping an ATK% weapon, try to aim for an Energy Recharge sands and vice versa.
 
-# === characters.#shikanoin-heizou.roles.#anemo_dps.name ===
+# === characters.#heizou.roles.#anemo_dps.name ===
 
 anemo dps
 
 
-# === characters.#shikanoin-heizou.roles.#anemo_dps.notes ===
+# === characters.#heizou.roles.#anemo_dps.notes ===
 
 Shikanoin Heizou's Anemo DPS build is roughly equal to his EM build assuming he isn't being used in an electro-charged team. He has very low energy recharge needs, ranging from 110% to 130%. At constellation four he can run 100% energy recharge.
 
@@ -1909,12 +1909,12 @@ In teams where Shikanoin Heizou and Bennett are used in the same team, this weap
 Viridescent is both Shikanoin Heizou's best personal damage set, but also his best set for supporting the team.
 
 
-# === characters.#shikanoin-heizou.roles.#em_dps.name ===
+# === characters.#heizou.roles.#em_dps.name ===
 
 em dps
 
 
-# === characters.#shikanoin-heizou.roles.#em_dps.notes ===
+# === characters.#heizou.roles.#em_dps.notes ===
 
 Shikanoin Heizou does not get the same benefits from an EM build as other anemo users do. He still has to level his talents, and allocate substats into offensive substats such as attack and crit to equal Anemo DPS. However it is notiably better than Anemo DPS build if used in Electro-Charged teams.
 
@@ -1923,12 +1923,12 @@ Shikanoin Heizou does not get the same benefits from an EM build as other anemo 
 Only use this set if you already have a [Viridescent Venerer (4)](#artifact:viridescent-venerer) user on your team.
 
 
-# === characters.#shikanoin-heizou.roles.#support.name ===
+# === characters.#heizou.roles.#support.name ===
 
 support
 
 
-# === characters.#shikanoin-heizou.roles.#support.notes ===
+# === characters.#heizou.roles.#support.notes ===
 
 Support Shikanoin Heizou forgoes his personal damage for support capabilites. However, none of Heizou's support abilities are dependant on his stats and instead comes in the form of a flat 80 elemental mastery to all party members. He can run any artifacts to help his DPS.
 

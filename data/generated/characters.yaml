@@ -523,6 +523,21 @@ shenhe:
     - shivada-jade-gemstone
     - qingxin
     - energy-nectar
+heizou:
+  code: heizou
+  name:
+    en: Shikanoin Heizou
+    ru: Хэйдзо
+  rarity: 4
+  weaponTypeCode: catalyst
+  releaseVersion: "2.8"
+  materialCodes:
+    - philosophies-of-transience
+    - runic-fang
+    - the-meaning-of-aeons
+    - vayuda-turquoise-gemstone
+    - onikabuto
+    - golden-raven-insignia
 sucrose:
   code: sucrose
   name:

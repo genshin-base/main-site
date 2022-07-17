@@ -11242,7 +11242,7 @@ characters:
                 provides the ability to shred the enemy's elemental resistance
                 while also buffing Sayu's swirl damage output."
     credits: null
-  - code: shikanoin-heizou
+  - code: heizou
     elementCode: anemo
     roles:
       - code: anemo dps
