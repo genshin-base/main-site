@@ -353,8 +353,8 @@ kuki-shinobu:
   releaseVersion: "2.7"
   materialCodes:
     - philosophies-of-elegance
-    - runic-fang
     - tears-of-the-calamitous-god
+    - runic-fang
     - vajrada-amethyst-gemstone
     - naku-weed
     - spectral-nucleus
@@ -533,8 +533,8 @@ heizou:
   releaseVersion: "2.8"
   materialCodes:
     - philosophies-of-transience
-    - runic-fang
     - the-meaning-of-aeons
+    - runic-fang
     - vayuda-turquoise-gemstone
     - onikabuto
     - golden-raven-insignia

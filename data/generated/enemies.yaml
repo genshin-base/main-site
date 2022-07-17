@@ -3471,3 +3471,19 @@ bathysmal-vishap-herd:
       - vajrada-amethyst-gemstone
   locations:
     - !loc enkanomiya -46 -17
+ruin-serpent:
+  code: ruin-serpent
+  name:
+    en: Ruin Serpent
+    ru: Змей руин
+  drop:
+    artifactSetCodes:
+      - gladiators-finale
+      - instructor
+      - the-exile
+      - traveling-doctor
+      - wanderers-troupe
+    itemCodes:
+      - runic-fang
+  locations:
+    - !loc chasm -479 -270
