@@ -2356,29 +2356,40 @@ characters:
         weapons:
           advices:
             - similar:
-                - code: wolfs-gravestone
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
                 - code: redhorn-stonethresher
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: true
             - similar:
-                - code: the-unforged
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
                 - code: serpent-spine
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: true
+            - similar:
+                - code: wolfs-gravestone
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: the-unforged
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: rainslasher
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: skyward-pride
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: song-of-broken-pines
                   refine: null
@@ -2391,25 +2402,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-            - similar:
-                - code: skyward-pride
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: rainslasher
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: lithic-blade
-                  refine: null
-                  stacks: 1
-                  notes: null
-                  seeCharNotes: false
-            - similar:
                 - code: luxurious-sea-lord
                   refine: null
                   stacks: null
@@ -2421,14 +2413,9 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-            - similar:
-                - code: debate-club
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-          notes: null
-          seeCharNotes: true
+          notes: Assumptions are important for this ranking. Please check notes for
+            relevant weapons.
+          seeCharNotes: false
         artifacts:
           sets:
             - arts:
@@ -2504,42 +2491,59 @@ characters:
             damage, so talent prioritization can vary from player to player
           seeCharNotes: false
         tips:
-          - p: You can interweave Normal Attacks while using his Elemental Skill.
-          - p: ie. ES -> NA -> NA -> ES -> NA -> NA -> ES -> NA -> NA
+          - p:
+              - |
+                Diluc has a number of combos he can do during his uptime. 
+              - b: "N = Normal Attack, E = Elemental Skill, Q = Elemental Burst "
+              - |-
+                (N2 would equal 2 Normal Attacks)
+                His most common combo is 
+              - b: Q N2 E N2 E N2 E.
+              - " This fits perfectly into the buff window of his teams."
+          - p:
+              - "For high upfront damage, use "
+              - b: Q E N1 E N1 E N1.
+              - " This falls off significantly if the enemy isn't killed within
+                this window."
+          - p:
+              - "A full rotation combo can look similar to "
+              - b: Q N2 E N2 E N2 E N4 N3 E N1 E E.
+              - " An example video can be found "
+              - a: here.
+                href: https://youtu.be/wDzOoHiMpbs
         notes:
           - p:
-              - b: |-
+              - b: >-
                   Regarding Weapon Choices:
+
+                  These placements assume strong ATK buffs such as Bennett, as Diluc is commonly played with them present in his party.
+
                   Redhorn Stonethresher: 
               - >
-                Depending on the amount of ATK% buffs you're getting, this
-                weapon can overtake Wolf's Gravestone in personal damage.
+                This weapon falls off considerably when strong ATK buffs are not
+                present, still being a top tier option but similar in power to
+                the weapons ranked directly below.
               - b: "Serpent Spine: "
-              - "Because Diluc's "
-              - b: "[C2] "
-              - "requires you to get hit to gain the ATK buff, it can
-                potentially lead to a damage loss due to losing Serpent Spine
-                stacks. However, when paired with "
-              - b: "Zhongli, "
-              - "the shield allows you to gain the "
-              - b: "[C2] "
-              - "buff while not losing any stacks - running Zhongli with "
-              - b: "[C2] "
-              - "Diluc is "
-              - b: highly recommended.
+              - "This placement assumes you can "
+              - b: maintain high stacks of the weapon effect.
+              - " If you find yourself being hit often, a low-stacked "
+              - b: Serpent Spine
+              - >2
+                 will find itself falling significantly in potential. This weapon scales well with refinements, having the potential to be Diluc's best weapon.
+              - b: "The Unforged: "
+              - "This weapon matches "
+              - b: "Wolf's Gravestone "
+              - "while shielded. While unshielded, it loses some potency but is
+                still a strong weapon tied with a low refined "
+              - b: Rainslasher.
               - "\n"
-              - b: "Blackcliff Slasher: "
-              - >
-                This weapon has excellent DPS potential when facing against
-                crowds, but at the same time it's potential will not be utilized
-                at single target situations.
               - b: "Rainslasher: "
-              - "For obvious reasons, this weapon is only recommended when Diluc
-                is in a team comp where he can consistently proc vaporize (i.e.
-                when paired with Xingqiu). Rainslasher will also outperform "
-              - b: Skyward Pride
-              - " at "
-              - b: "[R3+]. Due to its EM mainstat, it is recommended to go ATK% sands instead."
+              - "This weapon should only be used in teams where Diluc is
+                consistently Vaporising his attacks. This weapon scales well
+                with refinements, potentially surpassing "
+              - b: "Wolf's Gravestone "
+              - "at "
+              - b: "[R5]."
           - p:
               - b: |-
                   Regarding Artifact Sets:
@@ -2550,18 +2554,18 @@ characters:
                 Normal/Charged Attacks with Pyro.
               - b: "Gladiator's Finale (4): "
               - " For those who are still reluctant on farming for Crimson Witch
-                of Flames (Pre-AR 45), this will still provide it a fairly
-                decent increase in DPS as he still relies on his Normal Attacks
-                mostly."
+                of Flames (Pre-AR 45), this will still provide a fairly decent
+                increase in DPS as a large portion of his damage is tied into
+                his Normal Attack talent."
           - p:
               - b: |
                   Regarding Main Stats Priority:
               - If Diluc is run alongside Xingqiu where he can trigger vaporize
-                very often, you can run EM sands as an alternative to ATK sands.
-                EM boosts Diluc's reaction damage by a lot after all. Note that
-                when Diluc's Pyro imbued basic attack is active, he can trigger
-                Vaporize every 2 basic attacks due to internal cooldown.
-    credits: null
+                very often, he can run EM sands as an alternative to ATK sands
+                as EM boosts Diluc's reaction damage significantly.
+    credits:
+      a: "In-depth Guide\r from KQM"
+      href: https://keqingmains.com/diluc/
   - code: klee
     elementCode: pyro
     roles:
@@ -2572,7 +2576,7 @@ characters:
           advices:
             - similar:
                 - code: the-widsith
-                  refine: null
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
@@ -2725,13 +2729,20 @@ characters:
             - skill
           notes: null
           seeCharNotes: false
-        tips: Klee's Attacks have a 50% chance of spawning a floating star. Floating
-          star removes the stamina cost for the next Charged Attack and
-          increases 50% of its damage.
+        tips:
+          - p: "Klee has access to a number of animation cancels that allow her to deal
+              damage with her talents faster than normal. "
+          - p: Her N1 can be canceled through holding a directional key while clicking
+              attack. This can be chained over and over again to produce a
+              "machine gun" effect.
+          - p: Her optimal combos include N1C and N2C. N1C is higher DPS but eats stamina
+              faster, while N2C has more consistency in keeping enemies stunned
+              and gives a higher chance of obtaining her A1 passive onto the
+              following CA.
         notes:
           - p: Being extremely squishy and prone to interruptions, Klee requires great
-              positioning. Check out the in-depth guide to learn about animation
-              cancelling which may help with this issue.
+              positioning. Check out the in-depth guide to learn in-depth about
+              animation cancelling which may help with this issue.
           - p:
               - b: |-
                   Regarding Weapon Choice:
@@ -2766,7 +2777,7 @@ characters:
               - Wanderer's Troupe increases the Charged Attack by another 35%
                 Damage Bonus. It can serve as a decent DPS choice but due to how
                 clunky Klee's attack animations are, it's hard to put this in
-                actual practise as it requires you to dodge more and consume
+                actual practice as it requires you to dodge more and consume
                 more stamina, not to mention how the DPS gets caught up by the
                 other builds mentioned above.
     credits:
@@ -3013,25 +3024,34 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
+                - code: rust
+                  refine: "5"
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: aqua-simulacra
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
                 - code: polar-star
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: aqua-simulacra
-                  refine: null
+                - code: slingshot
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: true
             - similar:
-                - code: skyward-harp
+                - code: amos-bow
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: amos-bow
+                  seeCharNotes: true
+                - code: skyward-harp
                   refine: null
                   stacks: null
                   notes: null
@@ -3041,41 +3061,16 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: hamayumi
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: prototype-crescent
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: slingshot
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: the-viridescent-hunt
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: blackcliff-warbow
-                  refine: null
-                  stacks: null
-                  notes: null
                   seeCharNotes: false
           notes: null
           seeCharNotes: false
         artifacts:
           sets:
+            - arts:
+                code: shimenawas-reminiscence
+                count: 4
+              notes: null
+              seeCharNotes: true
             - arts:
                 op: and
                 arts:
@@ -3086,17 +3081,12 @@ characters:
               notes: null
               seeCharNotes: true
             - arts:
-                code: shimenawas-reminiscence
-                count: 4
-              notes: null
-              seeCharNotes: false
-            - arts:
                 code: crimson-witch-of-flames
                 count: 4
               notes: null
               seeCharNotes: true
             - arts:
-                code: lavawalker
+                code: echoes-of-an-offering
                 count: 4
               notes: null
               seeCharNotes: true
@@ -3150,8 +3140,8 @@ characters:
         talents:
           advices:
             - attack
-            - burst
-            - skill
+            - - skill
+              - burst
           notes: null
           seeCharNotes: true
         tips: null
@@ -3162,53 +3152,51 @@ characters:
                   Aqua Simulacra: 
               - "This weapon requires Yoimiya to be very close to enemies "
               - b: (~8m).
-              - " As such, this weapon is recommended only with a good shielder.
-                "
-              - b: |-
-                  
-                  Rust: 
-              - At higher refinements
-              - b: ", "
-              - "this weapon can "
-              - b: "outperform a low refined Amos' Bow and Skyward Harp. "
-              - "\n"
-              - b: "Hamayumi: "
-              - "If you're using Shimenawa's Reminiscence (4), "
-              - b: "this weapon doesn't synergize well with that artifact set due to its
-                  passive. "
-              - "\n"
-              - b: "Prototype Crescent: "
-              - "Note that you want to proc the weapon passive by doing a "
-              - b: quick charged shot on the enemy's weakspot
               - |2
-                 for this weapon to be good.
-              - b: "Slingshot: "
-              - "With a large amount of external ATK buffs, this weapon is "
-              - b: competitive to R1 Rust.
-              - " Note that you have to be in range for Slingshot's passive and
-                have good uptime on the ATK buffs."
+                 As such, this weapon is recommended only with a good shielder. 
+              - b: "Slingshot [R5]: "
+              - "This ranking is assuming you're using either Yunjin or Bennett
+                in your team. While using both Yunjin "
+              - b: and
+              - " Bennett, this weapon can potentially beat "
+              - b: Rust [R5].
+              - "\n"
+              - b: "Amos' Bow:"
+              - " This weapon's ranking is assuming low stacks of its passive
+                due to you ideally being close to enemies to consistently hit
+                all attacks in your combo. When at 3 stacks, this weapon can be
+                close to "
+              - b: Slingshot [R5].
+              - " Use it if it's already built for another character and you
+                don't want to invest in "
+              - b: Slingshot
+              - " just for Yoimiya."
           - p:
               - b: |-
                   Regarding Artifacts:  
-                  Crimson Witch of Flames (2) +18% ATK set (2): 
-              - "The best "
-              - b: generalist set
+                  Shimenawa's Reminiscence (4): 
+              - >
+                This set is her Best in Slot in the vast majority of situations
+                even when considering inconsistent Burst usage (once every 3-4
+                rotations).
+              - b: "Crimson Witch of Flames (2) +18% ATK set (2):"
               - >2
-                 on Yoimiya as it is competitive with the other options for personal damage and works in every situation. 
-              - b: "Shimenawa's Reminiscence (4): Offers more personal damage on Yoimiya but it
-                  sacrifices her Elemental Burst uptime which translates to
-                  lower overall team DPS"
-              - >2
-                 due to not being able to fully benefit from her Ascension 4 passive.
+                 While lacking in power compared to the other options, you will likely have good substats on the 2 piece combinations compared to a full 4 piece set which can compensate.
               - b: "Crimson Witch of Flames (4): "
-              - The go-to artifact set for Vaporize focused Pyro carries,
-              - b: " excels over the other options especially on a reaction focused team comp."
-              - "\n"
-              - b: "Lavawalker (4): "
-              - "Good option on a "
-              - b: mono Pyro team
-              - " comp where Yoimiya can have 100% uptime on the artifact
-                passive."
+              - "Usable in Vaporise teams and can be her Best in Slot for teams
+                where she procs "
+              - b: Vaporise and Overload
+              - >2
+                 (such as teams with a Fischl flex or Fischl + Beidou taser core)
+              - b: "Echoes of an Offering (4): "
+              - This set has a lot of caveats that generally warrant it being a
+                subpar choice. Its effects proccing is tied to your connection
+                to the servers, so
+              - b: " if your ping is above 100 and/or you have an unstable connection"
+              - " (fluctuations), you should avoid this set. Additionally, the
+                RNG nature of its procs makes it unreliable in Vaporise teams as
+                you can't guarantee it working on N1, N3 and N5 (her vaporised
+                hits)."
           - p:
               - b: |-
                   Regarding Mainstats:
@@ -3221,11 +3209,13 @@ characters:
           - p:
               - b: |
                   Regarding Talent Priorities: 
-              - Elemental Skill scales very poorly which is why it is the least
-                priority. If you do not care about her Elemental Burst damage
-                output, you can prioritize Elemental Skill over Elemental Burst,
-                but Normal Attack talent still has the most priority since it's
-                the main source of Yoimiya's damage.
+              - "Her Skill has poor scaling which results in individual upgrades
+                not affecting your damage much. Her Burst is also low priority
+                due to it being used once every few rotations in some scenarios
+                (such as when using "
+              - b: Shimenawa's Reminiscence (4)
+              - " without an abundance of off field energy) which can reduce its
+                effectiveness."
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/yoimiya/
@@ -3419,11 +3409,6 @@ characters:
           seeCharNotes: false
         tips:
           - p:
-              - "See "
-              - a: here
-                href: https://bit.ly/3xOMZyh
-              - " for more specifics regarding the weapon rankings."
-          - p:
               - "Courtesy of "
               - i: paraszcazk#0148
           - p: "Due to how Polar Star works, your optimal rotation would be different from
@@ -3457,19 +3442,23 @@ characters:
               - "Due to the aforementioned Electro/Phys split at "
               - b: "[C6], Polar Star"
               - " will surpass "
+              - b: Skyward Harp.
               - b: |-
-                  Skyward Harp.
+                  
                   Viridescent Hunt: 
-              - Viridescent Hunt is a really good investment that even surpasses
-                Amos in a situation where there are crowds of enemies, although
-                it's not as efficient towards massive single targets or really
-                agile targets. It offers crowd DPS that is severely lacking due
-                to Fischl's single target attacks.
+              - This weapon is a really good investment that even surpasses Amos
+                in a situation where there are crowds of enemies, although it's
+                not as efficient towards massive single targets or really agile
+                targets. It offers crowd DPS that is severely lacking due to
+                Fischl's single target attacks.
               - b: |-
                   
                   Mitternachts Waltz:
-              - >2
-                 Mitternachts Waltz would be prioritized over Amos if you manage to get refinement 5 for pure Physical build Fischl.
+              - " This weapon would be prioritized over Amos if you manage to
+                get "
+              - b: "[R5]"
+              - |2
+                 for pure Physical build Fischl.
               - b: "Prototype Crescent:"
               - " If you manage to weave in a Charged Shot on enemy weak spots
                 once every 9-10 seconds, Prototype Crescent could potentially
@@ -3487,12 +3476,18 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: thundering-pulse
+                - code: aqua-simulacra
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
+            - similar:
                 - code: skyward-harp
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: thundering-pulse
                   refine: null
                   stacks: null
                   notes: null
@@ -3508,6 +3503,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: true
+                - code: the-viridescent-hunt
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: elegy-for-the-end
                   refine: null
@@ -3520,26 +3520,13 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: true
-            - similar:
                 - code: prototype-crescent
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: windblume-ode
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: the-viridescent-hunt
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: mitternachts-waltz
+                - code: windblume-ode
                   refine: null
                   stacks: null
                   notes: null
@@ -3642,37 +3629,38 @@ characters:
               Oz summoning is over, you'll have gained enough energy to repeat
               the loop.
           - p:
-              - b: |-
+              - b: |
                   Regarding Weapon Choices: 
-                  The Stringless and Alley Hunter:
-              - " At "
-              - b: "[R5],"
-              - " both these weapons are roughly equivalent to "
-              - b: Thundering Pulse
+              - "In general, Fischl's rankings depend significantly on the
+                refinements of her weapons. For more detailed numbers, see the
+                Google Sheet "
+              - a: here.
+                href: https://docs.google.com/spreadsheets/d/1YONq2v20Gn7immi87akhcJyAT74aUo96941zWTwSup0/edit#gid=41671389
+              - b: |-
+                  
+                  Alley Hunter:
+              - " At"
+              - b: " [R5]"
+              - " this weapon can be similar in performance to"
+              - b: " Skyward Harp"
               - " and "
-              - b: Skyward Harp.
+              - b: Thundering Pulse.
               - "\n"
-              - b: "Prototype Crescent: "
-              - >
-                Ranking assumes hitting enemy's weak spot with Charged Shot
-                everytime before summoning Oz.
-              - b: "Windblume Ode: "
-              - "Ode only performs this well if Fischl ends up being the trigger
-                for some reactions. If Fischl is used in a team comp where by
-                there are "
-              - b: NO ELEMENTAL REACTIONS,
-              - " this weapon will be ranked below "
-              - b: Mitternachts Waltz.
-              - "\n"
-              - b: "Mitternachts Waltz:"
-              - " This weapon will be ranked above "
-              - b: Windblume Ode
-              - " at "
-              - b: "[R5]."
+              - b: "The Stringless:"
+              - " At "
+              - b: "[R5]"
+              - " this weapon can be stronger than "
+              - b: Amos Bow
+              - " / "
+              - b: Alley Hunter [R1]
+              - " / "
+              - b: The Viridescent Hunt.
+              - " This difference is enlarged in teams where Fischl can find
+                herself triggering reactions."
           - p:
               - b: "Regarding Artifact Sets:"
               - "\n"
-              - b: "Thundersoothers (4):"
+              - b: "Thundersoother (4):"
               - " This artifact set will outperform "
               - b: Gladiator's Finale(2) Thundering Fury(2)
               - " if used in a team comp where an electro aura is always present
@@ -6187,7 +6175,7 @@ characters:
                 href: https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit?usp=sharing
           - p:
               - b: |-
-                  Regarding Artifact Set:
+                  Regarding Artifact Sets:
                   Emblem of Severed Fate (4):
               - >2
                  If you already have an invested [C6] Xingqiu with Sacrificial Sword [R3+]  then you don't need to farm for this set.
@@ -6424,7 +6412,7 @@ characters:
                 href: https://docs.google.com/spreadsheets/d/1wv1WXpkFkTX8SLCWLoQXlyxwnB2ZXZqQ6c9tSSVCAvQ/edit?usp=sharing
           - p:
               - b: |-
-                  Regarding Artifact Set:
+                  Regarding Artifact Sets:
                   Emblem of Severed Fate (4):
               - >2
                  If you already have an invested [C6] Xingqiu with Sacrificial Sword [R3+]  then you don't need to farm for this set.
@@ -6620,9 +6608,9 @@ characters:
               - b: "Regarding Weapon Choices:"
               - "\n"
               - b: "Memory of Dust: "
-              - >
-                This weapon performs poorly due to the need for stacks to be
+              - This weapon performs poorly due to the need for stacks to be
                 accrued over time.
+          - p:
               - b: |-
                   Regarding Artifact sets:
                   Ocean-Hued Clam (4): 
@@ -6753,8 +6741,9 @@ characters:
               - " For Electro-Charged teams, this weapon will provide the
                 highest personal damage for Barbara. However, "
               - b: Thrilling Tales of Dragon Slayers
-              - >2
-                 will still provide the highest team damage due to its 48 ATK% buff. 
+              - " will still provide the highest team damage due to its 48 ATK%
+                buff."
+          - p:
               - b: "Regarding Artifact Sets:"
               - "\n"
               - b: "Maiden Beloved (4): "
@@ -6969,10 +6958,9 @@ characters:
                 Recommended combo provides slightly less damage but is more
                 stamina efficient. "
         notes:
-          - p:
-              b: The Weapon Rankings here are under the assumption that Childe is used with
-                Bennett and Vaporises his Burst, aswell as using the optimal
-                attack combos listed in the Ability Tips section
+          - p: The Weapon Rankings here are under the assumption that Childe is used with
+              Bennett and Vaporises his Burst, aswell as using the optimal
+              attack combos listed in the Ability Tips section.
           - p:
               - b: "Regarding Weapon Choices:"
               - "\n"
@@ -7183,7 +7171,7 @@ characters:
           - b: "[C2], "
           - "but can work without it. Do note that several 4 stars will out-dps
             Mona, as "
-          - b: Mona is better off as a Sub-DPS/ Support.
+          - b: Mona is better off as a Sub-DPS/Support.
       - code: nuke
         name: nuke
         isRecommended: true
@@ -8531,7 +8519,8 @@ characters:
           shatter.
         notes:
           - p:
-              - "Chongyun is much preferred as a Sub DPS/ Nuke over Main DPS as "
+              - "It is preferred to use Chongyun as a Sub DPS/ Nuke over Main
+                DPS as "
               - b: his Normal Attack scalings are very low,
               - " even when including Constellation 1. His "
               - b: "Elemental Burst on the other hand hits extremely hard "
@@ -11385,7 +11374,7 @@ characters:
               - b: "Lost Prayer to the Sacred Winds:"
               - " In teams where Shikanoin Heizou and "
               - b: Bennett are used in the same team,
-              - " this weapon is equal to "
+              - " this weapon is better than "
               - b: Skyward Atlas.
           - p:
               - b: |-
@@ -12655,7 +12644,7 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: false
+                  seeCharNotes: true
                 - code: sacrificial-sword
                   refine: null
                   stacks: null
@@ -12732,7 +12721,7 @@ characters:
               - em
               - er
             notes: null
-            seeCharNotes: false
+            seeCharNotes: true
           notes: null
           seeCharNotes: false
         subStats:
@@ -12744,7 +12733,7 @@ characters:
             - codes:
                 - er
               notes: null
-              seeCharNotes: false
+              seeCharNotes: true
             - codes:
                 - atk%
               notes: null
@@ -12754,7 +12743,7 @@ characters:
                 - crit-dmg
               notes: null
               seeCharNotes: false
-          notes: null
+          notes: Prioritize Energy Recharge if his Energy Requirements are not met yet.
           seeCharNotes: false
         talents:
           advices:
@@ -12767,12 +12756,24 @@ characters:
                 attacks.
           seeCharNotes: false
         tips:
-          - "The element which is absorbed by Kazuha's elemental burst follows
-            the priority of Pyro > Hydro > Electro > Cryo, and can be absorbed
-            from both the active character and enemies. "
-          - b: (i.e. Standing in Bennett 's Elemental Burst will result in Kazuha's
-              Elemental Burst infusing Pyro as Bennett's Elemental Burst applies
-              Pyro to the active character)
+          - p:
+              - "The element which is absorbed by Kazuha's elemental burst
+                follows the priority of Pyro > Hydro > Electro > Cryo, and can
+                be absorbed from both the active character and enemies. "
+              - b: (i.e. Standing in Bennett 's Elemental Burst will result in Kazuha's
+                  Elemental Burst infusing Pyro as Bennett's Elemental Burst
+                  applies Pyro to the active character)
+          - p:
+              - b: |-
+                  Recommended ER Thresholds: 
+                  With Raiden:
+              - |2
+                 ~160 ER%
+              - b: "General Teams:"
+              - |2
+                 ~180 ER%
+              - b: "Melt Ganyu:"
+              - " ~200 ER%"
         notes:
           - p: Kazuha's 4th Ascension Passive encourages players to maximise Elemental
               Mastery in order to maximise his utility.
@@ -12787,10 +12788,13 @@ characters:
               - b: |
                   Regarding Weapon Choices: 
               - The ultimate goal is to try
-              - b: " stack as much EM while getting enough ER (160-180%) for a consistent Burst
-                  uptime."
+              - b: " stack as much EM while getting enough ER for a consistent Burst uptime."
               - >2
                  Having Sacrificial Sword or a second Anemo character in the team will also help reduce the needs for ER and prioritize EM substats more.
+              - b: "Favonius Sword: "
+              - >
+                With this weapon, try to aim for some Crit Rate stats to trigger
+                the weapon passive reliably.
               - b: "Iron Sting: "
               - Iron Sting will yield the highest upfront EM and teamwide buff
                 if compared to the other 4 star options,
@@ -13282,8 +13286,8 @@ characters:
                   Serpent Spine: 
               - >
                 When using Husk of Opulent Dreams, Serpent Spine stacks are
-                prioritized over Husk of the Opulent Dreams stacks, due to their
-                conflicting nature in gaining stacks (Off-field and on-field)
+                prioritized over Husk of the Opulent Dreams stacks due to their
+                conflicting nature in gaining stacks (Off-field and on-field).
               - b: "Skyward Pride: "
               - >
                 Useful if you are unable to get ER from your substats. Does
@@ -13739,13 +13743,12 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: haran-geppaku-futsu
+                - code: mistsplitter-reforged
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
-            - similar:
-                - code: mistsplitter-reforged
+                - code: haran-geppaku-futsu
                   refine: null
                   stacks: null
                   notes: null
@@ -13769,6 +13772,12 @@ characters:
                   notes: null
                   seeCharNotes: true
             - similar:
+                - code: skyward-blade
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
                 - code: festering-desire
                   refine: "5"
                   stacks: null
@@ -13779,18 +13788,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-            - similar:
-                - code: skyward-blade
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: harbinger-of-dawn
-                  refine: "5"
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
             - similar:
                 - code: amenoma-kageuchi
                   refine: null
@@ -13803,12 +13800,6 @@ characters:
                   notes: null
                   seeCharNotes: false
                 - code: the-alley-flash
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: sword-of-descension
                   refine: null
                   stacks: null
                   notes: null
@@ -13850,7 +13841,7 @@ characters:
                 code: emblem-of-severed-fate
                 count: 4
               notes: null
-              seeCharNotes: false
+              seeCharNotes: true
             - arts:
                 op: and
                 arts:
@@ -13936,46 +13927,37 @@ characters:
           seeCharNotes: false
         talents:
           advices:
-            - skill
-            - burst
+            - - skill
+              - burst
           notes: null
           seeCharNotes: false
-        tips: |
-          Skill and Burst have generally equal priorities.
+        tips: null
         notes:
-          - p: This section is dedicated to utilising the Geo Traveler's Geo Burst damage
-              capabilities. As his Elemental Skill and Burst have high
-              multipliers, short cooldowns, and require very little field time,
-              the Traveler is recommended to be played as a quickswap style
-              Sub-DPS.
           - p:
+              - >
+                This section is dedicated to utilising the Geo Traveler's Geo
+                Burst damage capabilities. As their Elemental Skill and Burst
+                have high multipliers, short cooldowns, and require very little
+                field time, the Traveler is recommended to be played as a
+                quickswap style Sub-DPS.
+
+                The weapon ranking is considering KQM standard with Geo resonance and Noblesse (4) buff. Read the In-depth Guide for more insight on different scenarios.
               - b: "Regarding Weapon Choices:"
               - "\ \n"
               - b: "Summit Shaper: "
               - "As this weapon gives so much attack, it suffers greatly from
-                diminishing returns when many "
+                opportunity cost when many "
               - b: "ATK buffs "
-              - "are present (i.e. Bennett). This weapon would perform better if
-                the Traveler is "
-              - b: not
-              - |2
-                 paired with Bennett. 
+              - |
+                are present (i.e. Bennett).
               - b: "Lion's Roar: "
-              - "It's placement on this list assume a "
+              - "Its placement on this list assume a "
               - b: 100% passive uptime.
-              - " This weapon is only recommended if run with teammates that can
-                maintain a pyro/electro aura consistently. "
-              - b: (i.e. Xiangling, Raiden, Fischl)
-              - "\n"
+              - >2
+                 This weapon is only recommended if run with teammates that can maintain a pyro/electro aura consistently (i.e. Xiangling, Raiden, Fischl).
               - b: "Festering Desire, Skyward Blade:"
               - >2
                  These weapons help in bursting off cooldown, but if you're not having issues with energy, then these weapons falls behind in terms of damage.
-              - b: "Harbinger of Dawn: "
-              - It's placement on this list assumes a
-              - b: " 100% passive uptime. "
-              - "This weapon is only recommended if run with a shielder. "
-              - b: (i.e. Zhongli)
-              - "\n"
               - b: "Favonius/Sacrificial Sword: "
               - "While this weapon is subpar in terms of damage, it can be a
                 good choice for the Traveler to provide more energy to the team.
@@ -13988,6 +13970,12 @@ characters:
           - p:
               - b: |-
                   Regarding Artifact Sets:
+                  Emblem of Severed Fate (4): 
+              - While this set slightly falls behind the first two in terms of
+                personal damage, it is still recommended to run this set due to
+                how Resin efficient the domain is.
+              - b: |-
+                  
                   Thundersoother (4)/Lavawalker (4): 
               - These sets will provide the highest personal damage
               - b: " only if their 4 piece set effects can be kept active consistently"
