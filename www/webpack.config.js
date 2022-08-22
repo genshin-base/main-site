@@ -32,8 +32,11 @@ export default async function (env, argv) {
 	const prerender = !env['no-prerender'] && mode === 'production'
 
 	const commitHash = (await runAndReadStdout('git', ['rev-parse', 'HEAD'])).trim()
+	const lastTag = (await runAndReadStdout('git', ['describe', '--tags', '--abbrev=0'])).trim()
+	const commitDate = (await runAndReadStdout('git', ['log', '-1', '--format=%cs'])).trim()
+	const version = { commitHash, lastTag, commitDate }
 
-	const cfg = makeConfig.bind(null, mode, commitHash)
+	const cfg = makeConfig.bind(null, mode, version)
 	const ssrBuildBarrier = prerender ? new Deferred() : null
 	const configs = []
 	LANGS.forEach((lang, i) => {
@@ -45,12 +48,12 @@ export default async function (env, argv) {
 
 /**
  * @param {'production'|'development'} mode
- * @param {string} commitHash
+ * @param {{commitHash:string, lastTag:string, commitDate:string}} version
  * @param {boolean} isMain
  * @param {{isSSR:false, ssrBuildBarrier:Deferred<void>|null, lang:string}
  *   | {isSSR:true, ssrBuildBarrier:Deferred<void>}} type
  */
-function makeConfig(mode, commitHash, isMain, type) {
+function makeConfig(mode, version, isMain, type) {
 	const isProd = mode === 'production'
 	const suffix = type.isSSR ? 'ssr' : type.lang
 	const dist = DIST + '/' + (type.isSSR ? 'ssr' : 'browser')
@@ -153,7 +156,7 @@ function makeConfig(mode, commitHash, isMain, type) {
 				'BUNDLE_ENV.LANGS': JSON.stringify(LANGS),
 				'BUNDLE_ENV.LANG': type.isSSR ? 'SSR_ENV.lang' : JSON.stringify(type.lang),
 				'BUNDLE_ENV.IS_SSR': JSON.stringify(type.isSSR),
-				'BUNDLE_ENV.COMMIT_HASH': JSON.stringify(commitHash),
+				'BUNDLE_ENV.VERSION': JSON.stringify(version),
 				'BUNDLE_ENV.SUPPORTED_DOMAINS': JSON.stringify(isProd ? SUPPORTED_DOMAINS : null),
 			}),
 			new ESLintPlugin({

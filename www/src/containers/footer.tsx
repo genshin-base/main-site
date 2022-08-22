@@ -87,6 +87,10 @@ export function Footer() {
 					</div>
 				</div>
 			</div>
+			<div style={{ 'text-align': 'right', 'font-size': '80%', opacity: '0.5' }}>
+				{BUNDLE_ENV.VERSION.lastTag}{' '}
+				<span style={{ opacity: '0.5' }}>{BUNDLE_ENV.VERSION.commitDate}</span>
+			</div>
 		</footer>
 	)
 }

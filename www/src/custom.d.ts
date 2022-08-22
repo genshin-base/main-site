@@ -31,7 +31,7 @@ declare const BUNDLE_ENV: {
 	LANGS: string[]
 	LANG: string
 	IS_SSR: boolean
-	COMMIT_HASH: string
+	VERSION: { commitHash: string; commitDate: string; lastTag: string }
 	SUPPORTED_DOMAINS: string[] | null
 }
 
