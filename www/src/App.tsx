@@ -3,6 +3,7 @@ import { PageWrap } from './components/page-wrap'
 import { Footer } from './containers/footer'
 import { Header } from './containers/header'
 import { AboutPage } from './pages/about'
+import { AbyssPage } from './pages/abyss'
 import { BuildsPage_BuildDetail, BuildsPage_CharSelect } from './pages/builds'
 import { ArtifactsPage, WeaponsPage } from './pages/equipment'
 import { FrontPage } from './pages/front-page'
@@ -18,6 +19,7 @@ const routes = [
 	route(paths.buildCharacters, BuildsPage_BuildDetail),
 	route(paths.weapons, WeaponsPage),
 	route(paths.artifacts, ArtifactsPage),
+	route(paths.abyss, AbyssPage),
 	route(paths.about, AboutPage),
 ]
 
