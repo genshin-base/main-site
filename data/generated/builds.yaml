@@ -4973,6 +4973,46 @@ characters:
                 from Tenacity of the Millelith (4) or Noblesse Oblige (4) is not
                 as useful."
     credits: null
+  - code: dori
+    elementCode: electro
+    roles:
+      - code: wip
+        name: wip
+        isRecommended: true
+        weapons:
+          advices: []
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets: []
+          notes: null
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          goblet:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          sands:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        subStats:
+          advices: []
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices: []
+          notes: null
+          seeCharNotes: false
+        tips: null
+        notes: []
+    credits: null
   - code: traveler-electro
     elementCode: electro
     roles:
@@ -5954,6 +5994,46 @@ characters:
               - a: the weapon/artifact rankings.
                 href: https://docs.google.com/spreadsheets/d/1kDgkF3ZCa6MiQJLFzSXVBqbLrhe-0fNk/edit#gid=606412994
     credits: null
+  - code: cyno
+    elementCode: electro
+    roles:
+      - code: wip
+        name: wip
+        isRecommended: true
+        weapons:
+          advices: []
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets: []
+          notes: null
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          goblet:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          sands:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        subStats:
+          advices: []
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices: []
+          notes: null
+          seeCharNotes: false
+        tips: null
+        notes: []
+    credits: null
   - code: xingqiu
     elementCode: hydro
     roles:
@@ -6159,7 +6239,7 @@ characters:
                 This weapon is better than Sacrifical Sword [R3+] if you intend
                 on using Xingqiu in teams where there is not a second hydro
                 unit.
-              - b: "Sacificial Sword [R3+]: "
+              - b: "Sacrificial Sword [R3+]: "
               - >
                 This weapon is better than Favonius Sword when running Xingqiu
                 in a team with more than one hydro unit. 
@@ -6396,7 +6476,7 @@ characters:
                 This weapon is better than Sacrifical Sword [R3+] if you intend
                 on using Xingqiu in teams where there is not a second hydro
                 unit.
-              - b: "Sacificial Sword [R3+]: "
+              - b: "Sacrificial Sword [R3+]: "
               - >
                 This weapon is better than Favonius Sword when running Xingqiu
                 in a team with more than one hydro unit. 
@@ -6548,6 +6628,7 @@ characters:
           sands:
             codes:
               - atk%
+              - em
             notes: null
             seeCharNotes: false
           notes: null
@@ -6758,6 +6839,46 @@ characters:
       - a: In-depth Guide
         href: https://keqingmains.com/barbara/
       - " from KQM"
+  - code: candace
+    elementCode: hydro
+    roles:
+      - code: wip
+        name: wip
+        isRecommended: true
+        weapons:
+          advices: []
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets: []
+          notes: null
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          goblet:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          sands:
+            codes: []
+            notes: null
+            seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        subStats:
+          advices: []
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices: []
+          notes: null
+          seeCharNotes: false
+        tips: null
+        notes: []
+    credits: null
   - code: tartaglia
     elementCode: hydro
     roles:
@@ -7787,16 +7908,16 @@ characters:
         weapons:
           advices:
             - similar:
-                - code: haran-geppaku-futsu
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
                 - code: primordial-jade-cutter
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: false
+                  seeCharNotes: true
+                - code: haran-geppaku-futsu
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
                 - code: mistsplitter-reforged
                   refine: null
@@ -7819,7 +7940,7 @@ characters:
                   refine: "3"
                   stacks: null
                   notes: null
-                  seeCharNotes: false
+                  seeCharNotes: true
             - similar:
                 - code: summit-shaper
                   refine: null
@@ -7933,23 +8054,31 @@ characters:
           notes: null
           seeCharNotes: false
         tips:
-          - p: "Always try to activate Ayato's Elemental Burst before using his skill to
+          - p: Always try to activate Ayato's Elemental Burst before using his skill to
               maximize his Normal Attack DMG. Getting enough Energy Recharge for
-              this is important, and varies based on team. "
+              this is important, and varies based on team. Since the casting
+              time is so long, it may not be worth snapshotting into buffs.
           - p: The amount of slashes Ayato can do during an Elemental Skill window is
               sometimes influenced by the player's set FPS.
         notes:
           - p: DPS Ayato focuses on doing large amounts of on-field damage with his
               Elemental Skill, and Elemental Burst.
           - p:
-              - b: "Regarding Weapon Choices:"
-              - "\n"
-              - b: "Skyward Blade:"
+              - b: >-
+                  Regarding Weapon Choices:
+
+                  Haran Geppaku Futsu and Primoridal Jade Cutter: If you cannot run Echoes of an Offering (4)
+              - " on Ayato, Primodial Jade Cutter is better then Haran Geppaku
+                Futsu."
+              - b: " If you can run Echoes of an Offering and have less than 100 ping,"
+              - |2
+                 Haran Geppaku Futsu is better than Primoridal Jade Cutter.
+              - b: "Skyward Blade and Amenoma Kageuchi:"
               - " If you have "
-              - b: a lot of ER% from substats,
-              - " this weapon "
-              - b: performs equal to/below Amenoma Kageuchi.
-              - "\n"
+              - b: a lot of ER% from substats, or you are running Ayato in teams where he needs
+                  less than 140% ER to burst,
+              - |2
+                 these weapons are not as valuable.
               - b: "Summit Shaper: "
               - "In teams where "
               - b: ATK buffs are scarce,
@@ -7967,8 +8096,14 @@ characters:
               - b: "Echoes of an Offering (4): "
               - "The performance of this artifact set is "
               - b: inconsistent,
-              - |2
-                 and is based on user ping and other factors.
+              - " and is based on user ping and other factors. "
+              - b: It is not recommended to run this set unless your ping is consistently below
+                  100.
+              - " If you can achieve this, Echoes is only preferred on weapons
+                with "
+              - b: "high amounts of damage% "
+              - >2
+                 such as Mistsplitters Reforged, and Haran Geppaku Futsu. Otherwise, Heart of Depth (4) is preferred.
               - b: "Blizzard Strayer (4): When run in a Freeze Team,"
               - >2
                  this is Ayato's best set. Note that it is not recommended to farm specifically for this set.
@@ -8173,13 +8308,18 @@ characters:
         weapons:
           advices:
             - similar:
-                - code: sacrificial-bow
+                - code: favonius-warbow
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: sacrificial-bow
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
             - similar:
-                - code: favonius-warbow
+                - code: sacrificial-bow
                   refine: null
                   stacks: null
                   notes: null
@@ -8311,15 +8451,17 @@ characters:
               - "\n"
               - b: "Sacrificial Bow: "
               - >
-                Prefered over Favonious especially at higher refinements due to
-                having better Shield uptime.
+                Prefered over Favonius at higher refinements for consistency and
+                when batterying another cryo unit.
               - b: "Favonius Warbow:"
+              - " It is "
+              - b: recommended to
               - >2
-                 You will look to build some Crit Rate coverage to have a higher chance of triggering bow passive for energy.
+                 build some Crit Rate coverage to have a higher chance of triggering bow passive for energy.
               - b: "Recurve Bow: "
               - This bow will be your best choice for stronger shields, but it
-                reduces Diona's burst uptime significantly due to no Energy
-                Recharge on her weapon.
+                reduces Diona's burst uptime significantly due to having no
+                Energy Recharge on her weapon.
           - p:
               - b: "Regarding Artifact Sets:"
               - "\n"
@@ -9592,6 +9734,12 @@ characters:
         weapons:
           advices:
             - similar:
+                - code: hunters-bow
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
                 - code: amos-bow
                   refine: null
                   stacks: null
@@ -9645,11 +9793,6 @@ characters:
               notes: null
               seeCharNotes: false
             - arts:
-                code: wanderers-troupe
-                count: 4
-              notes: null
-              seeCharNotes: false
-            - arts:
                 op: or
                 arts:
                   - code: blizzard-strayer
@@ -9660,7 +9803,7 @@ characters:
                     count: 2
               notes: null
               seeCharNotes: false
-          notes: null
+          notes: ~= Wanderer's Troupe (4)*
           seeCharNotes: false
         mainStats:
           circlet:
@@ -9728,14 +9871,30 @@ characters:
                 Shot Bloom extends arrow flight duration and you can get 3
                 stacks of Amos' passive even on point blank range.
               - b: "Hamayumi: "
-              - >
-                This weapon doesn't synergize well with Shimenawa's Reminiscence
-                (4) due to its passive.
+              - "Due to its passive, this weapon prefers "
+              - b: Wanderer's Troupe (4)
+              - |2
+                 instead.
               - b: "Prototype Crescent: "
               - At higher refinement levels with good uptime on its passive, it
                 can potentially be on par with Skyward Harp. However, do bear in
                 mind that not all enemies have weak spots that you can headshot,
                 which does affect its performance significantly.
+          - p:
+              - b: |-
+                  Regarding Artifact Sets:
+                  Shimenawa's Reminiscence (4)
+              - " and "
+              - b: "Wanderer's Troupe (4):"
+              - " Shimenawa's only pulls ahead if you are able to squeeze 5
+                Charged Attacks during the 10 second buff duration. Due to it
+                being very difficult to do, "
+              - b: Wanderer's Troupe (4)
+              - " will usually end up dealing more damage for most players. Note
+                that unless you intend to "
+              - b: artifact strongbox
+              - " Wanderer's Troupe pieces, Shimenawa's Riminiscence remains the
+                better set to farm as the domain is greatly resin efficient."
           - p:
               - b: |
                   Regarding Talent Priority:

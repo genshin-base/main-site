@@ -185,7 +185,7 @@ dps
 
 # === characters.#ayato.roles.#dps.tips ===
 
-Always try to activate Ayato's Elemental Burst before using his skill to maximize his Normal Attack DMG. Getting enough Energy Recharge for this is important, and varies based on team.
+Always try to activate Ayato's Elemental Burst before using his skill to maximize his Normal Attack DMG. Getting enough Energy Recharge for this is important, and varies based on team. Since the casting time is so long, it may not be worth snapshotting into buffs.
 
 The amount of slashes Ayato can do during an Elemental Skill window is sometimes influenced by the player's set FPS.
 
@@ -196,8 +196,11 @@ DPS Ayato focuses on doing large amounts of on-field damage with his Elemental S
 
 **Regarding Weapon Choices**
 
-**[Skyward Blade](#weapon:skyward-blade)**<br>
-If you have a lot of ER% from substats, this weapon performs equal to/below [Amenoma Kageuchi](#weapon:amenoma-kageuchi).
+**[Haran Geppaku Futsu](#weapon:haran-geppaku-futsu) and [Primoridal Jade Cutter](#weapon:primordial-jade-cutter)**<br>
+If you cannot run [Echoes of an Offering (4)](#artifact:echoes-of-an-offering) on Ayato, Primodial Jade Cutter is better then Haran Geppaku Futsu. If you can run Echoes of an Offering and have less than 100 ping, Haran Geppaku Futsu is better than Primoridal Jade Cutter.
+
+**[Skyward Blade](#weapon:skyward-blade) and [Amenoma Kageuchi](#weapon:amenoma-kageuchi)**<br>
+If you have a lot of ER% from substats, or you are running Ayato in teams where he needs less than 140% ER to burst, these weapons are not as valuable.
 
 **[Summit Shaper](#weapon:summit-shaper)**<br>
 In teams where ATK buffs are scarce, this weapon has the potential to rival Skyward Blade.
@@ -208,7 +211,7 @@ In Electro-Charged teams, this weapon performs better than [The Black Sword](#we
 **Regarding Artifact Sets**
 
 **[Echoes of an Offering (4)](#artifact:echoes-of-an-offering)**<br>
-The performance of this artifact set is inconsistent, and is based on user ping and other factors.
+The performance of this artifact set is inconsistent, and is based on user ping and other factors. It is not recommended to run this set unless your ping is consistently below 100. If you can achieve this, Echoes is only preferred on weapons with high amounts of damage% such as Mistsplitters Reforged, and Haran Geppaku Futsu. Otherwise, Heart of Depth (4) is preferred.
 
 **[Blizzard Strayer (4)](#artifact:blizzard-strayer) when run in a Freeze Team**<br>
 this is Ayato's best set. Note that it is not recommended to farm specifically for this set.
@@ -446,6 +449,10 @@ This weapon currently has the highest Base ATK for a 4 star weapon (even more Ba
 [Prototype Rancour](#weapon:prototype-rancour)<br>
 This weapon has one of the highest Base ATK for a 4 Star weapon (and this is also a weapon you could craft from the Blacksmith)
 
+# === characters.#candace.roles.#wip.name ===
+
+wip
+
 
 # === characters.#chongyun.roles.#burst_support.name ===
 
@@ -488,6 +495,12 @@ Chongyun is one of the best Noblesse holders since he has low energy requirement
 
 Prioritize Elemental Burst on a Melt team as it scales better than his Elemental Skill.<br>
 Prioritize Elemental Skill on a Freeze team to furthermore extend the duration of the Cryo infusion.
+
+
+# === characters.#cyno.roles.#wip.name ===
+
+wip
+
 
 # === characters.#diluc.credits ===
 
@@ -573,13 +586,13 @@ As a support, Diona's typically used for three things; Shielding, Healing, and C
 **Regarding Weapon Choices**
 
 **[Sacrificial Bow](#weapon:sacrificial-bow)**<br>
-Prefered over Favonious especially at higher refinements due to having better Shield uptime.
+Prefered over Favonius at higher refinements for consistency and when batterying another cryo unit.
 
 **[Favonius Warbow](#weapon:favonius-warbow)**<br>
-You will look to build some Crit Rate coverage to have a higher chance of triggering bow passive for energy.
+It is recommended to build some Crit Rate  coverage to have a higher chance of triggering bow passive for energy.
 
 **[Recurve Bow](#weapon:recurve-bow)**<br>
-This bow will be your best choice for stronger shields, but it reduces Diona's burst uptime significantly due to no Energy Recharge on her weapon.
+This bow will be your best choice for stronger shields, but it reduces Diona's burst uptime significantly due to having no Energy Recharge on her weapon.
 
 **Regarding Artifact Sets**
 
@@ -719,6 +732,9 @@ This set trades off a portion of Fischl's damage in return for a party wide 20% 
 
 melt dps
 
+# === characters.#ganyu.roles.#melt_dps.artifacts.notes ===
+
+≈ Wanderer's Troupe (4)\*
 
 # === characters.#ganyu.roles.#melt_dps.tips ===
 
@@ -735,10 +751,15 @@ Ganyu's Level 2 Charged Shot applies two instances Cryo as they do not share the
 Amos is an excellent weapon for Ganyu since her Level 2 Charge Shot Bloom extends arrow flight duration and you can get 3 stacks of Amos' passive even on point blank range.
 
 [Hamayumi](#weapon:hamayumi)<br>
-This weapon doesn't synergize well with Shimenawa's Reminiscence (4) due to its passive.
+Due to its passive, this weapon prefers [Wanderer's Troupe (4)](#artifact:wanderers-troupe)
 
 [Prototype Crescent](#weapon:prototype-crescent)<br>
 At higher refinement levels with good uptime on its passive, it can potentially be on par with [Skyward Harp](#weapon:skyward-harp). However, do bear in mind that not all enemies have weak spots that you can headshot, which does affect its performance significantly.
+
+**Regarding Artifact Sets**<br>
+
+**[Shimenawa's Reminiscence (4)](#artifact:shimenawas-reminiscence) and [Wanderer's Troupe (4)](#artifact:wanderers-troupe)**<br>
+Shimenawa's only pulls ahead if you are able to squeeze 5 Charged Attacks during the 10 second buff duration. Due to it being very difficult to do, Wanderer's Troupe (4) will usually end up dealing more damage for most players. Note that unless you intend to artifact strongbox Wanderer's Troupe pieces, Shimenawa's Riminiscence remains the better set to farm as the domain is greatly resin efficient.
 
 **Regarding Talent Priority**
 
@@ -2397,7 +2418,7 @@ The weapon rankings assume you are running enough Energy Recharge to get Xingqiu
 **[Favonius Sword](#weapon:favonius-sword)**
 This weapon is better than Sacrifical Sword \[R3+\] if you intend on using Xingqiu in teams where there is not a second hydro unit.<br>
 
-**[Sacificial Sword \[R3+\]](#weapon:sacrificial-sword)**
+**[Sacrificial Sword \[R3+\]](#weapon:sacrificial-sword)**
 This weapon is better than Favonius Sword when running Xingqiu in a team with more than one hydro unit.
 
 **[Harbinger of Dawn \[R5\]](#weapon:harbinger-of-dawn)**<br>
@@ -2800,3 +2821,15 @@ This set provides Zhongli more utility when casting his Elemental Burst, you can
 
 **[Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith)**<br>
 Just like Noblesse Oblige (4), this set provides Zhongli with more utility if his Elemental Skill hits an enemy. This set also provides Zhongli with stronger shields.
+
+# === characters.#dori.roles.#wip.name ===
+wip
+
+# === characters.#dori.roles.#wip.notes ===
+wip
+
+# === characters.#cyno.roles.#wip.notes ===
+wip
+
+# === characters.#candace.roles.#wip.notes ===
+wip
