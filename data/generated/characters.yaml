@@ -1,33 +1,3 @@
-albedo:
-  code: albedo
-  name:
-    en: Albedo
-    ru: Альбедо
-  rarity: 5
-  weaponTypeCode: sword
-  releaseVersion: "1.2"
-  materialCodes:
-    - philosophies-of-ballad
-    - tusk-of-monoceros-caeli
-    - basalt-pillar
-    - prithiva-topaz-gemstone
-    - cecilia
-    - forbidden-curse-scroll
-aloy:
-  code: aloy
-  name:
-    en: Aloy
-    ru: Элой
-  rarity: 5
-  weaponTypeCode: bow
-  releaseVersion: "2.1"
-  materialCodes:
-    - philosophies-of-freedom
-    - molten-moment
-    - crystalline-bloom
-    - shivada-jade-gemstone
-    - crystal-marrow
-    - spectral-nucleus
 amber:
   code: amber
   name:
@@ -43,21 +13,6 @@ amber:
     - agnidus-agate-gemstone
     - small-lamp-grass
     - weathered-arrowhead
-itto:
-  code: itto
-  name:
-    en: Arataki Itto
-    ru: Итто
-  rarity: 5
-  weaponTypeCode: claymore
-  releaseVersion: "2.3"
-  materialCodes:
-    - philosophies-of-elegance
-    - ashen-heart
-    - riftborn-regalia
-    - prithiva-topaz-gemstone
-    - onikabuto
-    - slime-concentrate
 barbara:
   code: barbara
   name:
@@ -133,36 +88,6 @@ diluc:
     - agnidus-agate-gemstone
     - small-lamp-grass
     - lieutenants-insignia
-diona:
-  code: diona
-  name:
-    en: Diona
-    ru: Диона
-  rarity: 4
-  weaponTypeCode: bow
-  releaseVersion: "1.1"
-  materialCodes:
-    - philosophies-of-freedom
-    - shard-of-a-foul-legacy
-    - hoarfrost-core
-    - shivada-jade-gemstone
-    - calla-lily
-    - weathered-arrowhead
-eula:
-  code: eula
-  name:
-    en: Eula
-    ru: Эола
-  rarity: 5
-  weaponTypeCode: claymore
-  releaseVersion: "1.5"
-  materialCodes:
-    - philosophies-of-resistance
-    - dragon-lords-crown
-    - crystalline-bloom
-    - shivada-jade-gemstone
-    - dandelion-seed
-    - ominous-mask
 fischl:
   code: fischl
   name:
@@ -178,51 +103,6 @@ fischl:
     - vajrada-amethyst-gemstone
     - small-lamp-grass
     - weathered-arrowhead
-ganyu:
-  code: ganyu
-  name:
-    en: Ganyu
-    ru: Гань Юй
-  rarity: 5
-  weaponTypeCode: bow
-  releaseVersion: "1.2"
-  materialCodes:
-    - philosophies-of-diligence
-    - shadow-of-the-warrior
-    - hoarfrost-core
-    - shivada-jade-gemstone
-    - qingxin
-    - energy-nectar
-gorou:
-  code: gorou
-  name:
-    en: Gorou
-    ru: Горо
-  rarity: 4
-  weaponTypeCode: bow
-  releaseVersion: "2.3"
-  materialCodes:
-    - philosophies-of-light
-    - molten-moment
-    - perpetual-heart
-    - prithiva-topaz-gemstone
-    - sango-pearl
-    - spectral-nucleus
-hu-tao:
-  code: hu-tao
-  name:
-    en: Hu Tao
-    ru: Ху Тао
-  rarity: 5
-  weaponTypeCode: polearm
-  releaseVersion: "1.3"
-  materialCodes:
-    - philosophies-of-diligence
-    - shard-of-a-foul-legacy
-    - juvenile-jade
-    - agnidus-agate-gemstone
-    - silk-flower
-    - energy-nectar
 jean:
   code: jean
   name:
@@ -238,21 +118,6 @@ jean:
     - vayuda-turquoise-gemstone
     - dandelion-seed
     - ominous-mask
-kazuha:
-  code: kazuha
-  name:
-    en: Kaedehara Kazuha
-    ru: Кадзуха
-  rarity: 5
-  weaponTypeCode: sword
-  releaseVersion: "1.6"
-  materialCodes:
-    - philosophies-of-diligence
-    - gilded-scale
-    - marionette-core
-    - vayuda-turquoise-gemstone
-    - sea-ganoderma
-    - golden-raven-insignia
 kaeya:
   code: kaeya
   name:
@@ -268,36 +133,6 @@ kaeya:
     - shivada-jade-gemstone
     - calla-lily
     - golden-raven-insignia
-ayaka:
-  code: ayaka
-  name:
-    en: Kamisato Ayaka
-    ru: Аяка
-  rarity: 5
-  weaponTypeCode: sword
-  releaseVersion: "2.0"
-  materialCodes:
-    - philosophies-of-elegance
-    - bloodjade-branch
-    - perpetual-heart
-    - shivada-jade-gemstone
-    - sakura-bloom
-    - famed-handguard
-ayato:
-  code: ayato
-  name:
-    en: Kamisato Ayato
-    ru: Аято
-  rarity: 5
-  weaponTypeCode: sword
-  releaseVersion: "2.6"
-  materialCodes:
-    - philosophies-of-elegance
-    - mudra-of-the-malefic-general
-    - dew-of-repudiation
-    - varunada-lazurite-gemstone
-    - sakura-bloom
-    - famed-handguard
 keqing:
   code: keqing
   name:
@@ -328,36 +163,6 @@ klee:
     - agnidus-agate-gemstone
     - philanemo-mushroom
     - forbidden-curse-scroll
-kujou-sara:
-  code: kujou-sara
-  name:
-    en: Kujou Sara
-    ru: Сара
-  rarity: 4
-  weaponTypeCode: bow
-  releaseVersion: "2.1"
-  materialCodes:
-    - philosophies-of-elegance
-    - ashen-heart
-    - storm-beads
-    - vajrada-amethyst-gemstone
-    - dendrobium
-    - ominous-mask
-kuki-shinobu:
-  code: kuki-shinobu
-  name:
-    en: Kuki Shinobu
-    ru: Куки Синобу
-  rarity: 4
-  weaponTypeCode: sword
-  releaseVersion: "2.7"
-  materialCodes:
-    - philosophies-of-elegance
-    - tears-of-the-calamitous-god
-    - runic-fang
-    - vajrada-amethyst-gemstone
-    - naku-weed
-    - spectral-nucleus
 lisa:
   code: lisa
   name:
@@ -433,21 +238,6 @@ qiqi:
     - shivada-jade-gemstone
     - violetgrass
     - forbidden-curse-scroll
-raiden-shogun:
-  code: raiden-shogun
-  name:
-    en: Raiden Shogun
-    ru: Райдэн
-  rarity: 5
-  weaponTypeCode: polearm
-  releaseVersion: "2.1"
-  materialCodes:
-    - philosophies-of-light
-    - molten-moment
-    - storm-beads
-    - vajrada-amethyst-gemstone
-    - amakumo-fruit
-    - famed-handguard
 razor:
   code: razor
   name:
@@ -463,81 +253,6 @@ razor:
     - vajrada-amethyst-gemstone
     - wolfhook
     - ominous-mask
-rosaria:
-  code: rosaria
-  name:
-    en: Rosaria
-    ru: Розария
-  rarity: 4
-  weaponTypeCode: polearm
-  releaseVersion: "1.4"
-  materialCodes:
-    - philosophies-of-ballad
-    - shadow-of-the-warrior
-    - hoarfrost-core
-    - shivada-jade-gemstone
-    - valberry
-    - lieutenants-insignia
-kokomi:
-  code: kokomi
-  name:
-    en: Sangonomiya Kokomi
-    ru: Кокоми
-  rarity: 5
-  weaponTypeCode: catalyst
-  releaseVersion: "2.1"
-  materialCodes:
-    - philosophies-of-transience
-    - hellfire-butterfly
-    - dew-of-repudiation
-    - varunada-lazurite-gemstone
-    - sango-pearl
-    - spectral-nucleus
-sayu:
-  code: sayu
-  name:
-    en: Sayu
-    ru: Саю
-  rarity: 4
-  weaponTypeCode: claymore
-  releaseVersion: "2.0"
-  materialCodes:
-    - philosophies-of-light
-    - gilded-scale
-    - marionette-core
-    - vayuda-turquoise-gemstone
-    - crystal-marrow
-    - energy-nectar
-shenhe:
-  code: shenhe
-  name:
-    en: Shenhe
-    ru: Шэнь Хэ
-  rarity: 5
-  weaponTypeCode: polearm
-  releaseVersion: "2.4"
-  materialCodes:
-    - philosophies-of-prosperity
-    - hellfire-butterfly
-    - dragonheirs-false-fin
-    - shivada-jade-gemstone
-    - qingxin
-    - energy-nectar
-heizou:
-  code: heizou
-  name:
-    en: Shikanoin Heizou
-    ru: Хэйдзо
-  rarity: 4
-  weaponTypeCode: catalyst
-  releaseVersion: "2.8"
-  materialCodes:
-    - philosophies-of-transience
-    - the-meaning-of-aeons
-    - runic-fang
-    - vayuda-turquoise-gemstone
-    - onikabuto
-    - golden-raven-insignia
 sucrose:
   code: sucrose
   name:
@@ -553,36 +268,6 @@ sucrose:
     - vayuda-turquoise-gemstone
     - windwheel-aster
     - energy-nectar
-tartaglia:
-  code: tartaglia
-  name:
-    en: Tartaglia
-    ru: Тарталья
-  rarity: 5
-  weaponTypeCode: bow
-  releaseVersion: "1.1"
-  materialCodes:
-    - philosophies-of-freedom
-    - shard-of-a-foul-legacy
-    - cleansing-heart
-    - varunada-lazurite-gemstone
-    - starconch
-    - lieutenants-insignia
-thoma:
-  code: thoma
-  name:
-    en: Thoma
-    ru: Тома
-  rarity: 4
-  weaponTypeCode: polearm
-  releaseVersion: "2.2"
-  materialCodes:
-    - philosophies-of-transience
-    - hellfire-butterfly
-    - smoldering-pearl
-    - agnidus-agate-gemstone
-    - fluorescent-fungus
-    - golden-raven-insignia
 traveler-anemo:
   code: traveler-anemo
   name:
@@ -599,6 +284,40 @@ traveler-anemo:
     - brilliant-diamond-gemstone
     - windwheel-aster
     - forbidden-curse-scroll
+    - ominous-mask
+traveler-dendro:
+  code: traveler-dendro
+  name:
+    en: Dendro Traveler
+    ru: Дендро Путешественница
+  rarity: 5
+  weaponTypeCode: sword
+  releaseVersion: "1.0"
+  materialCodes:
+    - philosophies-of-admonition
+    - philosophies-of-ingenuity
+    - philosophies-of-praxis
+    - mudra-of-the-malefic-general
+    - brilliant-diamond-gemstone
+    - windwheel-aster
+    - ominous-mask
+    - crystalline-cyst-dust
+traveler-electro:
+  code: traveler-electro
+  name:
+    en: Electro Traveler
+    ru: Электро Путешественница
+  rarity: 5
+  weaponTypeCode: sword
+  releaseVersion: "1.0"
+  materialCodes:
+    - philosophies-of-elegance
+    - philosophies-of-light
+    - philosophies-of-transience
+    - dragon-lords-crown
+    - brilliant-diamond-gemstone
+    - windwheel-aster
+    - famed-handguard
     - ominous-mask
 traveler-geo:
   code: traveler-geo
@@ -622,23 +341,6 @@ traveler-geo:
     - forbidden-curse-scroll
     - ominous-mask
     - weathered-arrowhead
-traveler-electro:
-  code: traveler-electro
-  name:
-    en: Electro Traveler
-    ru: Электро Путешественница
-  rarity: 5
-  weaponTypeCode: sword
-  releaseVersion: "1.0"
-  materialCodes:
-    - philosophies-of-elegance
-    - philosophies-of-light
-    - philosophies-of-transience
-    - dragon-lords-crown
-    - brilliant-diamond-gemstone
-    - windwheel-aster
-    - famed-handguard
-    - ominous-mask
 venti:
   code: venti
   name:
@@ -669,21 +371,6 @@ xiangling:
     - agnidus-agate-gemstone
     - jueyun-chili
     - slime-concentrate
-xiao:
-  code: xiao
-  name:
-    en: Xiao
-    ru: Сяо
-  rarity: 5
-  weaponTypeCode: polearm
-  releaseVersion: "1.3"
-  materialCodes:
-    - philosophies-of-prosperity
-    - shadow-of-the-warrior
-    - juvenile-jade
-    - vayuda-turquoise-gemstone
-    - qingxin
-    - slime-concentrate
 xingqiu:
   code: xingqiu
   name:
@@ -699,6 +386,36 @@ xingqiu:
     - varunada-lazurite-gemstone
     - silk-flower
     - ominous-mask
+diona:
+  code: diona
+  name:
+    en: Diona
+    ru: Диона
+  rarity: 4
+  weaponTypeCode: bow
+  releaseVersion: "1.1"
+  materialCodes:
+    - philosophies-of-freedom
+    - shard-of-a-foul-legacy
+    - hoarfrost-core
+    - shivada-jade-gemstone
+    - calla-lily
+    - weathered-arrowhead
+tartaglia:
+  code: tartaglia
+  name:
+    en: Tartaglia
+    ru: Тарталья
+  rarity: 5
+  weaponTypeCode: bow
+  releaseVersion: "1.1"
+  materialCodes:
+    - philosophies-of-freedom
+    - shard-of-a-foul-legacy
+    - cleansing-heart
+    - varunada-lazurite-gemstone
+    - starconch
+    - lieutenants-insignia
 xinyan:
   code: xinyan
   name:
@@ -714,81 +431,6 @@ xinyan:
     - agnidus-agate-gemstone
     - violetgrass
     - golden-raven-insignia
-yae-miko:
-  code: yae-miko
-  name:
-    en: Yae Miko
-    ru: Яэ Мико
-  rarity: 5
-  weaponTypeCode: catalyst
-  releaseVersion: "2.5"
-  materialCodes:
-    - philosophies-of-light
-    - the-meaning-of-aeons
-    - dragonheirs-false-fin
-    - vajrada-amethyst-gemstone
-    - sea-ganoderma
-    - famed-handguard
-yanfei:
-  code: yanfei
-  name:
-    en: Yanfei
-    ru: Янь Фэй
-  rarity: 4
-  weaponTypeCode: catalyst
-  releaseVersion: "1.5"
-  materialCodes:
-    - philosophies-of-gold
-    - bloodjade-branch
-    - juvenile-jade
-    - agnidus-agate-gemstone
-    - noctilucous-jade
-    - golden-raven-insignia
-yelan:
-  code: yelan
-  name:
-    en: Yelan
-    ru: Е Лань
-  rarity: 5
-  weaponTypeCode: bow
-  releaseVersion: "2.7"
-  materialCodes:
-    - philosophies-of-prosperity
-    - gilded-scale
-    - runic-fang
-    - varunada-lazurite-gemstone
-    - starconch
-    - lieutenants-insignia
-yoimiya:
-  code: yoimiya
-  name:
-    en: Yoimiya
-    ru: Ёимия
-  rarity: 5
-  weaponTypeCode: bow
-  releaseVersion: "2.0"
-  materialCodes:
-    - philosophies-of-transience
-    - dragon-lords-crown
-    - smoldering-pearl
-    - agnidus-agate-gemstone
-    - naku-weed
-    - forbidden-curse-scroll
-yun-jin:
-  code: yun-jin
-  name:
-    en: Yun Jin
-    ru: Юнь Цзинь
-  rarity: 4
-  weaponTypeCode: polearm
-  releaseVersion: "2.4"
-  materialCodes:
-    - philosophies-of-diligence
-    - ashen-heart
-    - riftborn-regalia
-    - prithiva-topaz-gemstone
-    - glaze-lily
-    - ominous-mask
 zhongli:
   code: zhongli
   name:
@@ -804,3 +446,468 @@ zhongli:
     - prithiva-topaz-gemstone
     - cor-lapis
     - slime-concentrate
+albedo:
+  code: albedo
+  name:
+    en: Albedo
+    ru: Альбедо
+  rarity: 5
+  weaponTypeCode: sword
+  releaseVersion: "1.2"
+  materialCodes:
+    - philosophies-of-ballad
+    - tusk-of-monoceros-caeli
+    - basalt-pillar
+    - prithiva-topaz-gemstone
+    - cecilia
+    - forbidden-curse-scroll
+ganyu:
+  code: ganyu
+  name:
+    en: Ganyu
+    ru: Гань Юй
+  rarity: 5
+  weaponTypeCode: bow
+  releaseVersion: "1.2"
+  materialCodes:
+    - philosophies-of-diligence
+    - shadow-of-the-warrior
+    - hoarfrost-core
+    - shivada-jade-gemstone
+    - qingxin
+    - energy-nectar
+hu-tao:
+  code: hu-tao
+  name:
+    en: Hu Tao
+    ru: Ху Тао
+  rarity: 5
+  weaponTypeCode: polearm
+  releaseVersion: "1.3"
+  materialCodes:
+    - philosophies-of-diligence
+    - shard-of-a-foul-legacy
+    - juvenile-jade
+    - agnidus-agate-gemstone
+    - silk-flower
+    - energy-nectar
+xiao:
+  code: xiao
+  name:
+    en: Xiao
+    ru: Сяо
+  rarity: 5
+  weaponTypeCode: polearm
+  releaseVersion: "1.3"
+  materialCodes:
+    - philosophies-of-prosperity
+    - shadow-of-the-warrior
+    - juvenile-jade
+    - vayuda-turquoise-gemstone
+    - qingxin
+    - slime-concentrate
+rosaria:
+  code: rosaria
+  name:
+    en: Rosaria
+    ru: Розария
+  rarity: 4
+  weaponTypeCode: polearm
+  releaseVersion: "1.4"
+  materialCodes:
+    - philosophies-of-ballad
+    - shadow-of-the-warrior
+    - hoarfrost-core
+    - shivada-jade-gemstone
+    - valberry
+    - lieutenants-insignia
+eula:
+  code: eula
+  name:
+    en: Eula
+    ru: Эола
+  rarity: 5
+  weaponTypeCode: claymore
+  releaseVersion: "1.5"
+  materialCodes:
+    - philosophies-of-resistance
+    - dragon-lords-crown
+    - crystalline-bloom
+    - shivada-jade-gemstone
+    - dandelion-seed
+    - ominous-mask
+yanfei:
+  code: yanfei
+  name:
+    en: Yanfei
+    ru: Янь Фэй
+  rarity: 4
+  weaponTypeCode: catalyst
+  releaseVersion: "1.5"
+  materialCodes:
+    - philosophies-of-gold
+    - bloodjade-branch
+    - juvenile-jade
+    - agnidus-agate-gemstone
+    - noctilucous-jade
+    - golden-raven-insignia
+kazuha:
+  code: kazuha
+  name:
+    en: Kaedehara Kazuha
+    ru: Кадзуха
+  rarity: 5
+  weaponTypeCode: sword
+  releaseVersion: "1.6"
+  materialCodes:
+    - philosophies-of-diligence
+    - gilded-scale
+    - marionette-core
+    - vayuda-turquoise-gemstone
+    - sea-ganoderma
+    - golden-raven-insignia
+ayaka:
+  code: ayaka
+  name:
+    en: Kamisato Ayaka
+    ru: Аяка
+  rarity: 5
+  weaponTypeCode: sword
+  releaseVersion: "2.0"
+  materialCodes:
+    - philosophies-of-elegance
+    - bloodjade-branch
+    - perpetual-heart
+    - shivada-jade-gemstone
+    - sakura-bloom
+    - famed-handguard
+sayu:
+  code: sayu
+  name:
+    en: Sayu
+    ru: Саю
+  rarity: 4
+  weaponTypeCode: claymore
+  releaseVersion: "2.0"
+  materialCodes:
+    - philosophies-of-light
+    - gilded-scale
+    - marionette-core
+    - vayuda-turquoise-gemstone
+    - crystal-marrow
+    - energy-nectar
+yoimiya:
+  code: yoimiya
+  name:
+    en: Yoimiya
+    ru: Ёимия
+  rarity: 5
+  weaponTypeCode: bow
+  releaseVersion: "2.0"
+  materialCodes:
+    - philosophies-of-transience
+    - dragon-lords-crown
+    - smoldering-pearl
+    - agnidus-agate-gemstone
+    - naku-weed
+    - forbidden-curse-scroll
+aloy:
+  code: aloy
+  name:
+    en: Aloy
+    ru: Элой
+  rarity: 5
+  weaponTypeCode: bow
+  releaseVersion: "2.1"
+  materialCodes:
+    - philosophies-of-freedom
+    - molten-moment
+    - crystalline-bloom
+    - shivada-jade-gemstone
+    - crystal-marrow
+    - spectral-nucleus
+kokomi:
+  code: kokomi
+  name:
+    en: Sangonomiya Kokomi
+    ru: Кокоми
+  rarity: 5
+  weaponTypeCode: catalyst
+  releaseVersion: "2.1"
+  materialCodes:
+    - philosophies-of-transience
+    - hellfire-butterfly
+    - dew-of-repudiation
+    - varunada-lazurite-gemstone
+    - sango-pearl
+    - spectral-nucleus
+kujou-sara:
+  code: kujou-sara
+  name:
+    en: Kujou Sara
+    ru: Сара
+  rarity: 4
+  weaponTypeCode: bow
+  releaseVersion: "2.1"
+  materialCodes:
+    - philosophies-of-elegance
+    - ashen-heart
+    - storm-beads
+    - vajrada-amethyst-gemstone
+    - dendrobium
+    - ominous-mask
+raiden-shogun:
+  code: raiden-shogun
+  name:
+    en: Raiden Shogun
+    ru: Райдэн
+  rarity: 5
+  weaponTypeCode: polearm
+  releaseVersion: "2.1"
+  materialCodes:
+    - philosophies-of-light
+    - molten-moment
+    - storm-beads
+    - vajrada-amethyst-gemstone
+    - amakumo-fruit
+    - famed-handguard
+thoma:
+  code: thoma
+  name:
+    en: Thoma
+    ru: Тома
+  rarity: 4
+  weaponTypeCode: polearm
+  releaseVersion: "2.2"
+  materialCodes:
+    - philosophies-of-transience
+    - hellfire-butterfly
+    - smoldering-pearl
+    - agnidus-agate-gemstone
+    - fluorescent-fungus
+    - golden-raven-insignia
+gorou:
+  code: gorou
+  name:
+    en: Gorou
+    ru: Горо
+  rarity: 4
+  weaponTypeCode: bow
+  releaseVersion: "2.3"
+  materialCodes:
+    - philosophies-of-light
+    - molten-moment
+    - perpetual-heart
+    - prithiva-topaz-gemstone
+    - sango-pearl
+    - spectral-nucleus
+itto:
+  code: itto
+  name:
+    en: Arataki Itto
+    ru: Итто
+  rarity: 5
+  weaponTypeCode: claymore
+  releaseVersion: "2.3"
+  materialCodes:
+    - philosophies-of-elegance
+    - ashen-heart
+    - riftborn-regalia
+    - prithiva-topaz-gemstone
+    - onikabuto
+    - slime-concentrate
+shenhe:
+  code: shenhe
+  name:
+    en: Shenhe
+    ru: Шэнь Хэ
+  rarity: 5
+  weaponTypeCode: polearm
+  releaseVersion: "2.4"
+  materialCodes:
+    - philosophies-of-prosperity
+    - hellfire-butterfly
+    - dragonheirs-false-fin
+    - shivada-jade-gemstone
+    - qingxin
+    - energy-nectar
+yun-jin:
+  code: yun-jin
+  name:
+    en: Yun Jin
+    ru: Юнь Цзинь
+  rarity: 4
+  weaponTypeCode: polearm
+  releaseVersion: "2.4"
+  materialCodes:
+    - philosophies-of-diligence
+    - ashen-heart
+    - riftborn-regalia
+    - prithiva-topaz-gemstone
+    - glaze-lily
+    - ominous-mask
+yae-miko:
+  code: yae-miko
+  name:
+    en: Yae Miko
+    ru: Яэ Мико
+  rarity: 5
+  weaponTypeCode: catalyst
+  releaseVersion: "2.5"
+  materialCodes:
+    - philosophies-of-light
+    - the-meaning-of-aeons
+    - dragonheirs-false-fin
+    - vajrada-amethyst-gemstone
+    - sea-ganoderma
+    - famed-handguard
+ayato:
+  code: ayato
+  name:
+    en: Kamisato Ayato
+    ru: Аято
+  rarity: 5
+  weaponTypeCode: sword
+  releaseVersion: "2.6"
+  materialCodes:
+    - philosophies-of-elegance
+    - mudra-of-the-malefic-general
+    - dew-of-repudiation
+    - varunada-lazurite-gemstone
+    - sakura-bloom
+    - famed-handguard
+kuki-shinobu:
+  code: kuki-shinobu
+  name:
+    en: Kuki Shinobu
+    ru: Синобу
+  rarity: 4
+  weaponTypeCode: sword
+  releaseVersion: "2.7"
+  materialCodes:
+    - philosophies-of-elegance
+    - tears-of-the-calamitous-god
+    - runic-fang
+    - vajrada-amethyst-gemstone
+    - naku-weed
+    - spectral-nucleus
+yelan:
+  code: yelan
+  name:
+    en: Yelan
+    ru: Е Лань
+  rarity: 5
+  weaponTypeCode: bow
+  releaseVersion: "2.7"
+  materialCodes:
+    - philosophies-of-prosperity
+    - gilded-scale
+    - runic-fang
+    - varunada-lazurite-gemstone
+    - starconch
+    - lieutenants-insignia
+heizou:
+  code: heizou
+  name:
+    en: Shikanoin Heizou
+    ru: Хэйдзо
+  rarity: 4
+  weaponTypeCode: catalyst
+  releaseVersion: "2.8"
+  materialCodes:
+    - philosophies-of-transience
+    - the-meaning-of-aeons
+    - runic-fang
+    - vayuda-turquoise-gemstone
+    - onikabuto
+    - golden-raven-insignia
+collei:
+  code: collei
+  name:
+    en: Collei
+    ru: Коллеи
+  rarity: 4
+  weaponTypeCode: bow
+  releaseVersion: "3.0"
+  materialCodes:
+    - philosophies-of-praxis
+    - tears-of-the-calamitous-god
+    - majestic-hooked-beak
+    - nagadus-emerald-gemstone
+    - rukkhashava-mushrooms
+    - weathered-arrowhead
+dori:
+  code: dori
+  name:
+    en: Dori
+    ru: Дори
+  rarity: 4
+  weaponTypeCode: claymore
+  releaseVersion: "3.0"
+  materialCodes:
+    - philosophies-of-ingenuity
+    - bloodjade-branch
+    - thunderclap-fruitcore
+    - vajrada-amethyst-gemstone
+    - kalpalata-lotus
+    - rich-red-brocade
+tighnari:
+  code: tighnari
+  name:
+    en: Tighnari
+    ru: Тигнари
+  rarity: 5
+  weaponTypeCode: bow
+  releaseVersion: "3.0"
+  materialCodes:
+    - philosophies-of-admonition
+    - the-meaning-of-aeons
+    - majestic-hooked-beak
+    - nagadus-emerald-gemstone
+    - nilotpala-lotus
+    - crystalline-cyst-dust
+candace:
+  code: candace
+  name:
+    en: Candace
+    ru: Кандакия
+  rarity: 4
+  weaponTypeCode: polearm
+  releaseVersion: "3.1"
+  materialCodes:
+    - philosophies-of-admonition
+    - tears-of-the-calamitous-god
+    - light-guiding-tetrahedron
+    - varunada-lazurite-gemstone
+    - redcrest
+    - rich-red-brocade
+cyno:
+  code: cyno
+  name:
+    en: Cyno
+    ru: Сайно
+  rarity: 5
+  weaponTypeCode: polearm
+  releaseVersion: "3.1"
+  materialCodes:
+    - philosophies-of-admonition
+    - mudra-of-the-malefic-general
+    - thunderclap-fruitcore
+    - vajrada-amethyst-gemstone
+    - scarab
+    - forbidden-curse-scroll
+nilou:
+  code: nilou
+  name:
+    en: Nilou
+    ru: Нилу
+  rarity: 5
+  weaponTypeCode: sword
+  releaseVersion: "3.1"
+  materialCodes:
+    - philosophies-of-praxis
+    - tears-of-the-calamitous-god
+    - perpetual-caliber
+    - varunada-lazurite-gemstone
+    - padisarah
+    - crystalline-cyst-dust

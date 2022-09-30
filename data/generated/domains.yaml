@@ -40,14 +40,9 @@ beneath-the-dragon-queller:
       - varunada-lazurite-sliver
     artifactSetCodes:
       - berserker
-      - berserker
-      - gladiators-finale
       - gladiators-finale
       - instructor
-      - instructor
       - the-exile
-      - the-exile
-      - wanderers-troupe
       - wanderers-troupe
   dropTimetable: {}
   region: liyue
@@ -165,12 +160,8 @@ clear-pool-and-mountain-cavern:
       - mora
     artifactSetCodes:
       - bloodstained-chivalry
-      - bloodstained-chivalry
-      - gambler
       - gambler
       - noblesse-oblige
-      - noblesse-oblige
-      - scholar
       - scholar
   dropTimetable: {}
   region: liyue
@@ -181,7 +172,7 @@ confront-stormterror:
   type: trounce
   name:
     en: Confront Stormterror
-    ru: Пройдите дальше в логово Ужаса Бури
+    ru: Логово Ужаса Бури
   drop:
     itemCodes:
       - adventure-exp
@@ -210,14 +201,9 @@ confront-stormterror:
       - vayuda-turquoise-sliver
     artifactSetCodes:
       - berserker
-      - berserker
-      - gladiators-finale
       - gladiators-finale
       - instructor
-      - instructor
       - the-exile
-      - the-exile
-      - wanderers-troupe
       - wanderers-troupe
   dropTimetable: {}
   region: mondstadt
@@ -335,12 +321,8 @@ domain-of-guyun:
       - mora
     artifactSetCodes:
       - archaic-petra
-      - archaic-petra
-      - brave-heart
       - brave-heart
       - lucky-dog
-      - lucky-dog
-      - retracing-bolide
       - retracing-bolide
   dropTimetable: {}
   region: liyue
@@ -372,14 +354,9 @@ end-of-the-oneiric-euthymia:
       - vajrada-amethyst-sliver
     artifactSetCodes:
       - berserker
-      - berserker
-      - gladiators-finale
       - gladiators-finale
       - instructor
-      - instructor
       - the-exile
-      - the-exile
-      - wanderers-troupe
       - wanderers-troupe
   dropTimetable: {}
   region: inazuma
@@ -419,14 +396,9 @@ enter-the-golden-house:
       - varunada-lazurite-sliver
     artifactSetCodes:
       - berserker
-      - berserker
-      - gladiators-finale
       - gladiators-finale
       - instructor
-      - instructor
       - the-exile
-      - the-exile
-      - wanderers-troupe
       - wanderers-troupe
   dropTimetable: {}
   region: liyue
@@ -631,12 +603,8 @@ hidden-palace-of-zhou-formula:
       - mora
     artifactSetCodes:
       - crimson-witch-of-flames
-      - crimson-witch-of-flames
-      - defenders-will
       - defenders-will
       - lavawalker
-      - lavawalker
-      - martial-artist
       - martial-artist
   dropTimetable: {}
   region: liyue
@@ -655,12 +623,8 @@ midsummer-courtyard:
       - mora
     artifactSetCodes:
       - adventurer
-      - adventurer
-      - resolution-of-sojourner
       - resolution-of-sojourner
       - thundering-fury
-      - thundering-fury
-      - thundersoother
       - thundersoother
   dropTimetable: {}
   region: mondstadt
@@ -679,12 +643,8 @@ momiji-dyed-court:
       - mora
     artifactSetCodes:
       - emblem-of-severed-fate
-      - emblem-of-severed-fate
-      - resolution-of-sojourner
       - resolution-of-sojourner
       - shimenawas-reminiscence
-      - shimenawas-reminiscence
-      - tiny-miracle
       - tiny-miracle
   dropTimetable: {}
   region: inazuma
@@ -720,14 +680,9 @@ narukami-island-tenshukaku:
       - shivada-jade-sliver
     artifactSetCodes:
       - berserker
-      - berserker
-      - gladiators-finale
       - gladiators-finale
       - instructor
-      - instructor
       - the-exile
-      - the-exile
-      - wanderers-troupe
       - wanderers-troupe
   dropTimetable: {}
   region: inazuma
@@ -746,12 +701,8 @@ peak-of-vindagnyr:
       - mora
     artifactSetCodes:
       - blizzard-strayer
-      - blizzard-strayer
-      - defenders-will
       - defenders-will
       - gambler
-      - gambler
-      - heart-of-depth
       - heart-of-depth
   dropTimetable: {}
   region: mondstadt
@@ -770,15 +721,11 @@ ridge-watch:
       - mora
     artifactSetCodes:
       - brave-heart
-      - brave-heart
-      - martial-artist
       - martial-artist
       - pale-flame
-      - pale-flame
-      - tenacity-of-the-millelith
       - tenacity-of-the-millelith
   dropTimetable: {}
-  region: liyue
+  region: mondstadt
   location: !loc teyvat -430 868
   bossCode: null
 slumbering-court:
@@ -794,16 +741,119 @@ slumbering-court:
       - mora
     artifactSetCodes:
       - brave-heart
-      - brave-heart
-      - defenders-will
       - defenders-will
       - husk-of-opulent-dreams
-      - husk-of-opulent-dreams
-      - ocean-hued-clam
       - ocean-hued-clam
   dropTimetable: {}
   region: inazuma
   location: !loc teyvat 3463 6619
+  bossCode: null
+spire-of-solitary-enlightenment:
+  code: spire-of-solitary-enlightenment
+  type: artifacts
+  name:
+    en: Spire of Solitary Enlightenment
+    ru: Шпиль одинокого просветления
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+    artifactSetCodes:
+      - deepwood-memories
+      - gambler
+      - gilded-dreams
+      - tiny-miracle
+  dropTimetable: {}
+  region: sumeru
+  location: !loc teyvat -2960 2886
+  bossCode: null
+steeple-of-ignorance:
+  code: steeple-of-ignorance
+  type: talents
+  name:
+    en: Steeple of Ignorance
+    ru: Башня невежества
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - guide-to-admonition
+      - guide-to-ingenuity
+      - guide-to-praxis
+      - mora
+      - philosophies-of-admonition
+      - philosophies-of-ingenuity
+      - philosophies-of-praxis
+      - teachings-of-admonition
+      - teachings-of-ingenuity
+      - teachings-of-praxis
+    artifactSetCodes: []
+  dropTimetable:
+    mon:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-admonition
+        - mora
+        - philosophies-of-admonition
+        - teachings-of-admonition
+    tue:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-ingenuity
+        - mora
+        - philosophies-of-ingenuity
+        - teachings-of-ingenuity
+    wed:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-praxis
+        - mora
+        - philosophies-of-praxis
+        - teachings-of-praxis
+    thu:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-admonition
+        - mora
+        - philosophies-of-admonition
+        - teachings-of-admonition
+    fri:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-ingenuity
+        - mora
+        - philosophies-of-ingenuity
+        - teachings-of-ingenuity
+    sat:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-praxis
+        - mora
+        - philosophies-of-praxis
+        - teachings-of-praxis
+    sun:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - guide-to-admonition
+        - guide-to-ingenuity
+        - guide-to-praxis
+        - mora
+        - philosophies-of-admonition
+        - philosophies-of-ingenuity
+        - philosophies-of-praxis
+        - teachings-of-admonition
+        - teachings-of-ingenuity
+        - teachings-of-praxis
+  region: sumeru
+  location: !loc teyvat -3763 2415
   bossCode: null
 taishan-mansion:
   code: taishan-mansion
@@ -905,16 +955,111 @@ the-lost-valley:
       - mora
     artifactSetCodes:
       - echoes-of-an-offering
-      - echoes-of-an-offering
-      - gambler
       - gambler
       - martial-artist
-      - martial-artist
-      - vermillion-hereafter
       - vermillion-hereafter
   dropTimetable: {}
   region: liyue
   location: !loc teyvat -2647 2811
+  bossCode: null
+tower-of-abject-pride:
+  code: tower-of-abject-pride
+  type: weapons
+  name:
+    en: Tower of Abject Pride
+    ru: Башня презренной гордости
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - copper-talisman-of-the-forest-dew
+      - dream-of-scorching-might
+      - echo-of-scorching-might
+      - golden-talisman-of-the-forest-dew
+      - iron-talisman-of-the-forest-dew
+      - mora
+      - oasis-gardens-kindness
+      - oasis-gardens-mourning
+      - oasis-gardens-reminiscence
+      - oasis-gardens-truth
+      - olden-days-of-scorching-might
+      - remnant-glow-of-scorching-might
+      - silver-talisman-of-the-forest-dew
+    artifactSetCodes: []
+  dropTimetable:
+    mon:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - copper-talisman-of-the-forest-dew
+        - golden-talisman-of-the-forest-dew
+        - iron-talisman-of-the-forest-dew
+        - mora
+        - silver-talisman-of-the-forest-dew
+    tue:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - mora
+        - oasis-gardens-kindness
+        - oasis-gardens-mourning
+        - oasis-gardens-reminiscence
+        - oasis-gardens-truth
+    wed:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - dream-of-scorching-might
+        - echo-of-scorching-might
+        - mora
+        - olden-days-of-scorching-might
+        - remnant-glow-of-scorching-might
+    thu:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - copper-talisman-of-the-forest-dew
+        - golden-talisman-of-the-forest-dew
+        - iron-talisman-of-the-forest-dew
+        - mora
+        - silver-talisman-of-the-forest-dew
+    fri:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - mora
+        - oasis-gardens-kindness
+        - oasis-gardens-mourning
+        - oasis-gardens-reminiscence
+        - oasis-gardens-truth
+    sat:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - dream-of-scorching-might
+        - echo-of-scorching-might
+        - mora
+        - olden-days-of-scorching-might
+        - remnant-glow-of-scorching-might
+    sun:
+      itemCodes:
+        - adventure-exp
+        - companionship-exp
+        - copper-talisman-of-the-forest-dew
+        - dream-of-scorching-might
+        - echo-of-scorching-might
+        - golden-talisman-of-the-forest-dew
+        - iron-talisman-of-the-forest-dew
+        - mora
+        - oasis-gardens-kindness
+        - oasis-gardens-mourning
+        - oasis-gardens-reminiscence
+        - oasis-gardens-truth
+        - olden-days-of-scorching-might
+        - remnant-glow-of-scorching-might
+        - silver-talisman-of-the-forest-dew
+  region: sumeru
+  location: !loc teyvat -4222 4072
   bossCode: null
 valley-of-remembrance:
   code: valley-of-remembrance
@@ -929,12 +1074,8 @@ valley-of-remembrance:
       - mora
     artifactSetCodes:
       - maiden-beloved
-      - maiden-beloved
-      - tiny-miracle
       - tiny-miracle
       - traveling-doctor
-      - traveling-doctor
-      - viridescent-venerer
       - viridescent-venerer
   dropTimetable: {}
   region: mondstadt
