@@ -86,7 +86,10 @@ const LANGS = ['en', 'ru']
 const fixes = {
 	/** @type {import('#lib/parsing/helperteam/fixes').HelperteamFixes} */
 	helperteam: {
-		roleNotes: [{ character: 'kaeya', role: 'cryo dps', searchAs: 'dps' }],
+		roleNotes: [
+			{ character: 'kaeya', role: 'cryo dps', searchAs: 'dps' },
+			{ character: 'tighnari', role: 'quick swap dps', searchAs: 'quickswap dps' },
+		],
 		sheets: [
 			{
 				// у Эмбер один набор артефактов прописан в странном формате
@@ -102,22 +105,6 @@ const fixes = {
 								cell.userEnteredValue = {
 									stringValue: text.replace(substr, replaceWith),
 								}
-								return true
-							}
-						}
-					}
-					return false
-				},
-			},
-			{
-				// у Е Лани опечатка в слове ABILIT(I)Y
-				title: /^hydro$/i,
-				fixFunc(sheet) {
-					for (const { values: cells = [] } of sheet.data[0].rowData) {
-						for (const cell of cells) {
-							if (json_getText(cell) === 'ABILITIY TIPS') {
-								delete cell.textFormatRuns
-								cell.userEnteredValue = { stringValue: 'ABILITY TIPS' }
 								return true
 							}
 						}
