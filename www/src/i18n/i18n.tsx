@@ -138,6 +138,7 @@ const statNamesRu: Record<GI_KnownStatBonusCode, string> = {
 	'hydro-dmg': 'Гидро урон',
 	'electro-dmg': 'Электро урон',
 	'pyro-dmg': 'Пиро урон',
+	'dendro-dmg': 'Дендро урон',
 	'phys-dmg%': '% физ. урона',
 	'cryo-dmg%': '% Крио урона',
 	'geo-dmg%': '% Гео урона',
@@ -145,6 +146,7 @@ const statNamesRu: Record<GI_KnownStatBonusCode, string> = {
 	'hydro-dmg%': '% Гидро урона',
 	'electro-dmg%': '% Электро урона',
 	'pyro-dmg%': '% Пиро урона',
+	'dendro-dmg%': '% Дендро урона',
 }
 export const I18N_STAT_NAME = {
 	en: (code: string) => code.replace(/-/g, ' '),
@@ -414,6 +416,7 @@ export const I18N_ART_GROUP_NAME: Record<GI_ArtifactGroupCode, string> = {
 	'18%-atk': { en: 'ATK +18%', ru: 'Сила атаки +18%' }[LANG],
 	'20%-er': { en: 'Energy Recharge +20%', ru: 'Восстановление энергии +20%' }[LANG],
 	'25%-ph-atk': { en: 'Physical DMG +25%', ru: 'Физ. урон +25%' }[LANG],
+	'80-em': { en: 'Elemental Mastery +80', ru: 'Мастерство Стихий +80' }[LANG],
 }
 export const I18N_ITEM_DETAIL = {
 	en: 'item detail',
