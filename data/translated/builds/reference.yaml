@@ -5412,12 +5412,22 @@ characters:
         artifacts:
           sets:
             - arts:
+                code: thundering-fury
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
                 op: and
                 arts:
                   - code: thundering-fury
                     count: 2
                   - code: 18%-atk
                     count: 2
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: thundersoother
+                count: 4
               notes: null
               seeCharNotes: false
             - arts:
@@ -5429,24 +5439,8 @@ characters:
                     count: 2
               notes: null
               seeCharNotes: true
-            - arts:
-                code: thundersoother
-                count: 4
-              notes: null
-              seeCharNotes: false
-            - arts:
-                op: and
-                arts:
-                  - code: thundering-fury
-                    count: 2
-                  - code: noblesse-oblige
-                    count: 2
-              notes: null
-              seeCharNotes: false
-          notes:
-            - p: Thundering Fury (4) is Not Recommended for Electro DPS Keqing.
-            - p: "Note: Artifact recommendations are not ranked in order of recommendation,
-                read the notes for more info."
+          notes: "Note: Artifact recommendations are not ranked in order of
+            recommendation, read the notes for more info."
           seeCharNotes: false
         mainStats:
           circlet:
@@ -5516,9 +5510,10 @@ characters:
               - b: |-
                   Regarding Weapon Choices: 
                   Lion's Roar: 
-              - "This weapon is only recommended on Pure Electro/Electro-charged
-                teams. In teams where the Electro Aura can be easily removed OR
-                when facing enemies with innate elements, this weapon "
+              - "This weapon is only recommended on Aggravate / Pure Electro /
+                Electro-charged teams. In teams where the Electro Aura can be
+                easily removed OR when facing enemies with innate elements, this
+                weapon "
               - b: will severely underperform.
               - "\ \n"
               - b: "The Black Sword:"
@@ -5528,6 +5523,13 @@ characters:
           - p:
               - b: |-
                   Regarding Artifact Sets: 
+                  Thundering Fury (4): 
+              - "This set provides the highest damage output if you are running
+                Keqing in an "
+              - b: Aggravate
+              - "-based team composition. "
+              - b: |-
+                  
                   Thundering Fury (2) +18% ATK set (2): 
               - >
                 This set is a generalist set, which means it can be used
@@ -5540,16 +5542,15 @@ characters:
                 (2), this set is preferred to farm for due to the resin
                 efficiency of Shimenawa's Reminiscence's Domain.
               - b: "Thundersoother (4): "
-              - >
-                This set should be used with Electro-charged team compositions
-                (Keqing + Xingqiu) or mono-electro team comp (Not Suggested).
-                This set has a 35% Dmg modifier which increases all damage from
-                all sources, although that modifier is a bit unstable due to its
-                dependency to the sustainability of Electro aura on enemies.
-              - b: "Thundering Fury (2) Noblesse Oblige (2): "
-              - This set is used for Burst/Quickswap AoE Keqing. With this set,
-                you'd want to be using Starward Sword (Q) all the time, which is
-                your main source of DPS with this set.
+              - "This set should be used with "
+              - b: Electro-charged
+              - " team compositions (Keqing + Xingqiu), and can also be a good
+                alternative for Keqing in "
+              - b: Aggravate
+              - " team compositions if you don't have Thundering Fury (4). This
+                set has a 35% Dmg modifier which increases all damage from all
+                sources, although that modifier is a bit unstable due to its
+                dependency to the sustainability of Electro aura on enemies."
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/keqing/
@@ -5847,6 +5848,11 @@ characters:
           seeCharNotes: false
         artifacts:
           sets:
+            - arts:
+                code: gilded-dreams
+                count: 4
+              notes: null
+              seeCharNotes: false
             - arts:
                 code: emblem-of-severed-fate
                 count: 4
@@ -8299,6 +8305,492 @@ characters:
       - a: In-depth Guide
         href: https://docs.google.com/document/d/e/2PACX-1vRBLmEhOkceqNStOsTk_IfnSDeg6HmOV4hRjyB1Yb5SZY3YMYvtFdqK09o2vte21SZ6a_e39cZ6qu4s/pub
       - "  from  Yelan Mains"
+  - code: collei
+    elementCode: dendro
+    roles:
+      - code: support
+        name: support
+        isRecommended: true
+        weapons:
+          advices:
+            - similar:
+                - code: elegy-for-the-end
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: polar-star
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: sacrificial-bow
+                  refine: 4+
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: favonius-warbow
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets:
+            - arts:
+                code: deepwood-memories
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: noblesse-oblige
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: tenacity-of-the-millelith
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: instructor
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: gilded-dreams
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: the-exile
+                count: 4
+              notes: null
+              seeCharNotes: true
+          notes: null
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes:
+              - crit-rate
+              - crit-dmg
+              - em
+            notes: null
+            seeCharNotes: true
+          goblet:
+            codes:
+              - dendro-dmg
+              - em
+            notes: null
+            seeCharNotes: true
+          sands:
+            codes:
+              - er
+              - atk
+              - em
+            notes: null
+            seeCharNotes: false
+          notes: Prioritize Energy Recharge if her Energy Requirements are not met.
+          seeCharNotes: false
+        subStats:
+          advices:
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - crit-rate
+                - crit-dmg
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk%
+                - em
+              notes: null
+              seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices:
+            - burst
+            - skill
+            - attack
+          notes: null
+          seeCharNotes: false
+        tips:
+          - p:
+              - b: |
+                  Typical Collei Rotation: 
+              - |
+                Skill > Burst > Swap
+              - b: |
+                  Rotation with Polar Star:
+              - N1 > tap Charged Attack > Skill > Burst > Swap
+          - p:
+              - b: |
+                  Energy Recharge Guidelines: 
+              - 200% - 160% (Depending on Team and weapon)
+        notes:
+          - p: Collei is a Bow User who provides off-field support in Dendro application and
+              damage.
+          - p:
+              - b: "Regarding Weapon Choices:"
+              - "\n"
+              - b: "Polar Star: "
+              - >
+                While this weapon provides the highest personal damage, it is
+                generally not recommended as team buffs provide more teamwide
+                damage over a small increase in personal damage. 
+              - b: "Sacrificial Bow:"
+              - " Not recommended below R4 due to it delaying rotation, possibly
+                resulting in damage loss."
+          - p:
+              - b: |-
+                  Regarding Artifact Sets: 
+                  Tenacity of the Millelith (4): 
+              - Collei's Sprout damage counts as Skill damage, which allows her
+                to be able to keep Tenacity of the Millelith up during important
+                damage windows. Generally an alternative to Noblesse or Deepwood
+                (or if you are already running both in a team).
+              - b: |-
+                  
+                  Gilded Dreams (4):
+              - " This set is only used in a team where Collei is used to "
+              - b: trigger
+              - " reactions (i.e. Bloom/Burning teams), and does not benefit
+                Collei if she is used as an "
+              - b: aura.
+              - " \r\n"
+              - b: "The Exile (4):"
+              - " An alternative option if they are placed in the same team as
+                Cyno to help his Energy Recharge needs."
+          - p:
+              i: Shout out to Emiliabyss#1641 for providing an in-depth reference.
+    credits: null
+  - code: traveler-dendro
+    elementCode: dendro
+    roles:
+      - code: support
+        name: support
+        isRecommended: true
+        weapons:
+          advices:
+            - similar:
+                - code: freedom-sworn
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: favonius-sword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: sacrificial-sword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: sapwood-blade
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets:
+            - arts:
+                code: deepwood-memories
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: noblesse-oblige
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: instructor
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: gilded-dreams
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: the-exile
+                count: 4
+              notes: null
+              seeCharNotes: true
+          notes: null
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes:
+              - crit-rate
+              - crit-dmg
+              - em
+            notes: null
+            seeCharNotes: true
+          goblet:
+            codes:
+              - dendro-dmg
+              - em
+            notes: null
+            seeCharNotes: true
+          sands:
+            codes:
+              - er
+              - atk%
+              - em
+            notes: null
+            seeCharNotes: false
+          notes: Prioritize Energy Recharge if their Energy Requirements are not met yet.
+          seeCharNotes: false
+        subStats:
+          advices:
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - crit-rate
+                - crit-dmg
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk%
+                - em
+              notes: null
+              seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices:
+            - burst
+            - skill
+          notes: Not priority investment
+          seeCharNotes: false
+        tips: null
+        notes:
+          - p:
+              - >
+                *Current Dendro Traveler section is filled with placeholder
+                content, it is not a finalized section.*
+              - b: |
+                  Regarding Main Stats:
+              - Prioritize maintaining their burst uptime, the ER needs for
+                Dendro Traveler would be a lot greater if they are the only
+                Dendro unit in the team.
+          - p:
+              - b: |-
+                  Regarding Artifacts:
+                  The Exile (4): 
+              - An alternative option if they are placed in the same team as
+                Cyno to help his Energy Recharge needs.
+          - p:
+              - b: |-
+                  Regarding Weapons:
+                  Sacrificial Sword:
+              - " Prioritized due to Dendro Traveler's exceedingly high Energy
+                Recharge requirements for burst uptime consistency."
+    credits: null
+  - code: tighnari
+    elementCode: dendro
+    roles:
+      - code: quick swap dps
+        name: quick swap dps
+        isRecommended: true
+        weapons:
+          advices:
+            - similar:
+                - code: hunters-path
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: elegy-for-the-end
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: aqua-simulacra
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: polar-star
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: skyward-harp
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: thundering-pulse
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: amos-bow
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: slingshot
+                  refine: "5"
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+                - code: the-viridescent-hunt
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: windblume-ode
+                  refine: "5"
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: prototype-crescent
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+                - code: the-stringless
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets:
+            - arts:
+                code: wanderers-troupe
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                op: or
+                arts:
+                  - code: deepwood-memories
+                    count: 2
+                  - code: 80-em
+                    count: 2
+                  - code: 18%-atk
+                    count: 2
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: deepwood-memories
+                count: 4
+              notes: null
+              seeCharNotes: true
+          notes: ~= Gilded Dreams (4)
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes:
+              - crit-rate
+              - crit-dmg
+            notes: null
+            seeCharNotes: false
+          goblet:
+            codes:
+              - dendro-dmg
+            notes: null
+            seeCharNotes: false
+          sands:
+            codes:
+              - atk%
+              - em
+            notes: null
+            seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        subStats:
+          advices:
+            - codes:
+                - crit-rate
+                - crit-dmg
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - em
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk%
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices:
+            - attack
+            - burst
+            - skill
+          notes: null
+          seeCharNotes: false
+        tips: Tighnari should only do a rotation consisting E 3CA Q or an alternative
+          variation while on field, as it is impractical to do charged shots
+          that are not boosted by his E
+        notes:
+          - p: Tighnari's standard build revolves around him doing his Elemental Skill,
+              Three Clusterbloom Arrows, an Elemental Burst, and promptly
+              swapping out to another character.
+          - p:
+              - b: |-
+                  Regarding Weapon Choices:
+                  Elegy for the End: 
+              - >
+                This weapon is better than Hunter's Path if Tighnari needs more
+                than 160 Energy  Recharge to cast his burst. However, it falls
+                off significantly if another character in the team holds Elegy
+                for the End
+              - b: "Amos Bow: "
+              - >
+                This option ranks lower due to Tighnari not needing as much
+                ATK%, as well as not stacking the passive well
+              - b: "Slingshot: "
+              - |
+                Significantly worse when fighting from a long range
+              - b: "Prototype Crescent: "
+              - |
+                At refinement 5, this weapon is better than Slingshot
+              - b: "Stringless: "
+              - At refinement 5, this weapon is equal to Slingshot
+          - p:
+              - b: |-
+                  Regarding Artifact Sets:
+                  Deepwood Memories (4): 
+              - This is by far Tighnari's best set if no one else on the team is
+                using it
+    credits: null
   - code: diona
     elementCode: cryo
     roles:
@@ -8314,7 +8806,7 @@ characters:
                   notes: null
                   seeCharNotes: false
                 - code: sacrificial-bow
-                  refine: null
+                  refine: 3+
                   stacks: null
                   notes: null
                   seeCharNotes: true
@@ -9734,7 +10226,7 @@ characters:
         weapons:
           advices:
             - similar:
-                - code: hunters-bow
+                - code: hunters-path
                   refine: null
                   stacks: null
                   notes: null

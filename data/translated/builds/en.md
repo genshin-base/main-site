@@ -497,7 +497,59 @@ Prioritize Elemental Burst on a Melt team as it scales better than his Elemental
 Prioritize Elemental Skill on a Freeze team to furthermore extend the duration of the Cryo infusion.
 
 
+# === characters.#collei.roles.#support.name ===
+
+support
+
+
+# === characters.#collei.roles.#support.mainStats.notes ===
+
+Prioritize Energy Recharge if her Energy Requirements are not met.
+
+
+# === characters.#collei.roles.#support.tips ===
+
+**Typical Collei Rotation** <br>
+Skill > Burst > Swap<br>
+
+**Rotation with [Polar Star](#weapon:polar-star)**<br>
+N1 > tap Charged Attack > Skill > Burst > Swap
+
+**Energy Recharge Guidelines** <br>
+160–200% (Depending on Team and weapon)
+
+
+# === characters.#collei.roles.#support.notes ===
+
+Collei is a Bow User who provides off-field support in Dendro application and damage.
+
+**Regarding Weapon Choices**<br>
+
+**[Polar Star](#weapon:polar-star)**<br>
+While this weapon provides the highest personal damage, it is generally not recommended as team buffs provide more teamwide damage over a small increase in personal damage. 
+
+**[Sacrificial Bow](#weapon:sacrificial-bow)**<br>
+Not recommended below R4 due to it delaying rotation, possibly resulting in damage loss.
+
+**Regarding Artifact Sets**<br>
+
+**[Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith)**<br>
+Collei's Sprout damage counts as Skill damage, which allows her to be able to keep Tenacity of the Millelith up during important damage windows. Generally an alternative to [Noblesse](#artifact:noblesse-oblige) or [Deepwood](#artifact:deepwood-memories) (or if you are already running both in a team).<br>
+
+**[Gilded Dreams (4)](#artifact:gilded-dreams)**<br>
+This set is only used in a team where Collei is used to trigger reactions (i.e. Bloom/Burning teams), and does not benefit Collei if she is used as an aura.
+
+**[The Exile (4)](#artifact:the-exile)**<br>
+An alternative option if they are placed in the same team as Cyno to help his Energy Recharge needs.
+
+_Shout out to Emiliabyss#1641 for providing an in-depth reference._
+
+
 # === characters.#cyno.roles.#wip.name ===
+
+wip
+
+# === characters.#cyno.roles.#wip.notes ===
 
 wip
 
@@ -1161,8 +1213,6 @@ electro dps
 
 # === characters.#keqing.roles.#electro_dps.artifacts.notes ===
 
-[Thundering Fury (4)](#artifact:thundering-fury) is not recommended for Electro DPS Keqing.
-
 Note: Artifact recommendations are not ranked in order of recommendation, read the notes for more info.
 
 
@@ -1187,24 +1237,24 @@ Both physical and electro keqing are good and viable. You'd usually want to deci
 **Regarding Weapon Choices**
 
 **[Lion's Roar](#weapon:lions-roar)**<br>
-This weapon is only recommended on Pure Electro/Electro-charged teams. In teams where the Electro Aura can be easily removed OR when facing enemies with innate elements, this weapon will severely underperform.
+This weapon is only recommended on Aggravate, Pure Electro or Electro-charged teams. In teams where the Electro Aura can be easily removed OR when facing enemies with innate elements, this weapon will severely underperform.
 
 **[The Black Sword](#weapon:the-black-sword)**<br>
 On a quickswap Keqing, this weapon will be shifted below Harbinger of Dawn **\[R5\].**
 
 **Regarding Artifact Sets**
 
-**[Thundering Fury (2) ](#artifact:thundering-fury)+ [18% ATK set (2)](#artifact:18%-atk)**<br>
+**[Thundering Fury (4)](#artifact:thundering-fury)**<br>
+This set provides the highest damage output if you are running Keqing in an Aggravate-based team composition. 
+
+**[Thundering Fury (2)](#artifact:thundering-fury) + [18% ATK set (2)](#artifact:18%-atk)**<br>
 This set is a generalist set, which means it can be used generally anywhere, whether it be Co-op or Abyss, or other singleplayer content. This has a lot of consistency due to its independence from electro aura, and it is more viable in abyss.
 
 **[18% ATK set (2)](#artifact:18%-atk) + [18% ATK set (2)](#artifact:18%-atk)**<br>
 While it is slightly behind Thundering Fury (2) +18% ATK set (2), this set is preferred to farm for due to the resin efficiency of Shimenawa's Reminiscence's Domain.
 
 **[Thundersoother (4)](#artifact:thundersoother)**<br>
-This set should be used with Electro-charged team compositions (Keqing + Xingqiu) or mono-electro team comp (Not Suggested). This set has a 35% Dmg modifier which increases all damage from all sources, although that modifier is a bit unstable due to its dependency to the sustainability of Electro aura on enemies.
-
-**[Thundering Fury (2) ](#artifact:thundering-fury)+ [Noblesse Oblige (2)](#artifact:noblesse-oblige)**<br>
-This set is used for Burst/Quickswap AoE Keqing. With this set, you'd want to be using Starward Sword (Q) all the time, which is your main source of DPS with this set.
+This set should be used with Electro-charged team compositions (Keqing + Xingqiu), and can also be a good alternative for Keqing in Aggravate team compositions if you don't have [Thundering Fury (4)](#artifact:thundering-fury). This set has a 35% Dmg modifier which increases all damage from all sources, although that modifier is a bit unstable due to its dependency to the sustainability of Electro aura on enemies.
 
 
 # === characters.#klee.credits ===
@@ -2107,6 +2157,48 @@ Thoma ideally wants to focus on shield over damage, and his burst uptime is requ
 At \[C4\], Thoma gains 15 energy when he fires his Elemental Burst. This effectively reduces his energy cost to 65 and makes it possible to use Black Tassel with ER sands instead of ER weapon with ER sands to furthermore strengthen his shield.
 
 
+# === characters.#tighnari.roles.#quick_swap_dps.name ===
+
+quick swap dps
+
+
+# === characters.#tighnari.roles.#quick_swap_dps.artifacts.notes ===
+
+≈ Gilded Dreams (4)
+
+
+# === characters.#tighnari.roles.#quick_swap_dps.tips ===
+
+Tighnari should only do a rotation consisting E 3CA Q or an alternative variation while on field, as it is impractical to do charged shots that are not boosted by his E
+
+
+# === characters.#tighnari.roles.#quick_swap_dps.notes ===
+
+Tighnari's standard build revolves around him doing his Elemental Skill, Three Clusterbloom Arrows, an Elemental Burst, and promptly swapping out to another character.
+
+**Regarding Weapon Choices**<br>
+
+**[Elegy for the End](#weapon:elegy-for-the-end)**
+This weapon is better than [Hunter's Path](#weapon:hunters-path) if Tighnari needs more than 160 Energy Recharge to cast his burst. However, it falls off significantly if another character in the team holds Elegy for the End.
+
+**[Amos' Bow](#weapon:amos-bow)**<br>
+This option ranks lower due to Tighnari not needing as much ATK%, as well as not stacking the passive well.
+
+**[Slingshot](#weapon:slingshot)**
+Significantly worse when fighting from a long range.
+
+**[Prototype Crescent](#weapon:prototype-crescent)**<br>
+At refinement 5, this weapon is better than Slingshot.
+
+**[The Stringless](#weapon:the-stringless)**<br>
+At refinement 5, this weapon is equal to Slingshot.
+
+**Regarding Artifact Sets**<br>
+
+**[Deepwood Memories (4)](#artifact:deepwood-memories)**
+This is by far Tighnari's best set if no one else on the team is using it.
+
+
 # === characters.#traveler-anemo.roles.#anemo_dps.name ===
 
 anemo dps
@@ -2154,6 +2246,42 @@ physical dps
 
 [Pale Flame (4)](#artifact:pale-flame)<br>
 When running this set, make sure you do Press Cast and not Hold Cast, as the Hold Cast Skill Cooldown would be too long for you to refresh your stacks.
+
+
+# === characters.#traveler-dendro.roles.#support.name ===
+
+support
+
+
+# === characters.#traveler-dendro.roles.#support.mainStats.notes ===
+
+Prioritize Energy Recharge if their Energy Requirements are not met yet.
+
+
+# === characters.#traveler-dendro.roles.#support.talents.notes ===
+
+Not priority investment
+
+
+# === characters.#traveler-dendro.roles.#support.notes ===
+
+\*Current Dendro Traveler section is filled with placeholder content, it is not a finalized section.\*
+
+**Regarding Main Stats Priority**
+
+Prioritize maintaining their burst uptime, the ER needs for Dendro Traveler would be a lot greater if they are the only Dendro unit in the team.
+
+**Regarding Weapon Choices**
+
+**[Sacrificial Sword](#weapon:sacrificial-sword)**<br>
+Prioritized due to Dendro Traveler's exceedingly high Energy Recharge requirements for burst uptime consistency.
+
+**Regarding Artifact Sets**
+
+**[The Exile (4)](#artifact:the-exile)**<br>
+An alternative option if they are placed in the same team as Cyno to help his Energy Recharge needs.
+
+
 
 
 # === characters.#traveler-electro.roles.#support.name ===
@@ -2826,9 +2954,6 @@ Just like Noblesse Oblige (4), this set provides Zhongli with more utility if hi
 wip
 
 # === characters.#dori.roles.#wip.notes ===
-wip
-
-# === characters.#cyno.roles.#wip.notes ===
 wip
 
 # === characters.#candace.roles.#wip.notes ===
