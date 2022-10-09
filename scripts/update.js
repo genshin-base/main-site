@@ -175,8 +175,7 @@ const fixes = {
 		},
 		skip: {
 			enemies: [
-				/^Eremite/i, //
-				/Dendro Hypostasis/,
+				/Dendro Hypostasis/, //ещё не релизнут
 			],
 			artifacts: [],
 			items: [
@@ -204,6 +203,10 @@ const fixes = {
 			{
 				origNames: /^Ruin Drake/,
 				name: { en: 'Ruin Drake', ru: 'Дракон руин' },
+			},
+			{
+				origNames: /^Eremite/,
+				name: { en: 'Eremite', ru: 'Пустынник' },
 			},
 		],
 		domainMissingLocations: [
@@ -257,6 +260,14 @@ const fixes = {
 					if (code in code2enemy) return false
 					code2enemy[code] = { code, name, drop: { artifactSetCodes, itemCodes }, locations: [] }
 					code2img.set(code, img)
+					return true
+				},
+				// у floating-hydro-fungus кривоватый дроп
+				(code2enemy, code2img) => {
+					const itemCodes = code2enemy['floating-hydro-fungus'].drop.itemCodes
+					if (!itemCodes.includes('cabbage')) return false
+					itemCodes.length = 0
+					itemCodes.push(...code2enemy['floating-dendro-fungus'].drop.itemCodes)
 					return true
 				},
 			],
@@ -368,6 +379,8 @@ const fixes = {
 			{ nameOnMap: 'Red-Finned Unagi', useCode: 'unagi' },
 			{ nameOnMap: 'Adorned Unagi', useCode: 'unagi' },
 			{ nameOnMap: 'Fungi', useCode: 'fungus' },
+			{ nameOnMap: 'Bathysmal Vishap', useCode: 'bathysmal-vishap-hatchling' },
+			{ nameOnMap: 'The Eremites', useCode: 'eremite' },
 		],
 	},
 }
@@ -467,7 +480,7 @@ async function extractAllItemsData() {
 
 	await applyCharactersReleaseVersion(cd, characters.code2item)
 	await applyWeaponsObtainData(cd, weapons.code2item)
-	await applyItemsLocations(cd, enemies.code2item, enemyGroups.code2item, items.code2item, fixes.mihoyo)
+	await applyItemsLocations(cd, enemies.code2item, enemyGroups.code2item, items.code2item, domains.code2item, fixes.mihoyo) //prettier-ignore
 	await applyItemTypesByWeapons(items.code2item, weapons.code2item)
 
 	checkHoneyhunterFixesUsage(hhfx)

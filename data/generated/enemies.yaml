@@ -3341,6 +3341,110 @@ kairagi-fiery-might:
       - mora
       - old-handguard
     artifactSetCodes: []
+eremite-axe-vanguard:
+  code: eremite-axe-vanguard
+  name:
+    en: Eremite Axe Vanguard
+    ru: Топорник Пустынников
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
+eremite-crossbow:
+  code: eremite-crossbow
+  name:
+    en: Eremite Crossbow
+    ru: Арбалетчик Пустынников
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
+eremite-ravenbeak-halberdier:
+  code: eremite-ravenbeak-halberdier
+  name:
+    en: Eremite Ravenbeak Halberdier
+    ru: Алебардщик Пустынников
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
+eremite-linebreaker:
+  code: eremite-linebreaker
+  name:
+    en: Eremite Linebreaker
+    ru: Штурмовик Пустынников
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
+eremite-sword-dancer:
+  code: eremite-sword-dancer
+  name:
+    en: Eremite Sword-Dancer
+    ru: Мечник Пустынников
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
+eremite-desert-clearwater:
+  code: eremite-desert-clearwater
+  name:
+    en: Eremite Desert Clearwater
+    ru: "Пустынник: Родник в песках"
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
+eremite-sunfrost:
+  code: eremite-sunfrost
+  name:
+    en: Eremite Sunfrost
+    ru: "Пустынник: Пылающий лёд"
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
+eremite-daythunder:
+  code: eremite-daythunder
+  name:
+    en: Eremite Daythunder
+    ru: "Пустынник: Полуденный гром"
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
 cryo-whopperflower:
   code: cryo-whopperflower
   name:
@@ -3646,12 +3750,13 @@ floating-hydro-fungus:
   locations: []
   drop:
     itemCodes:
-      - adventure-exp
-      - cabbage
       - crystalline-cyst-dust
+      - dormant-fungal-nucleus
       - fungal-spores
+      - inactivated-fungal-nucleus
       - luminescent-pollen
       - mora
+      - robust-fungal-nucleus
     artifactSetCodes: []
 floating-dendro-fungus:
   code: floating-dendro-fungus

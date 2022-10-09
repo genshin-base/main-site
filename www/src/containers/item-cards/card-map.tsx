@@ -3,8 +3,8 @@ import { useMemo } from 'preact/hooks'
 import { GI_DomainTypeCode, MapCode, MapLocation } from '#lib/genshin'
 import { ArtifactRegularInfo, ItemShortInfo, WeaponRegularInfo } from '#lib/parsing/combine'
 import { arrGetAfter } from '#lib/utils/collections'
-import { SimpleSelect } from '#src/components/select'
 import { CentredLabel, Spinner } from '#src/components/placeholders'
+import { SimpleSelect } from '#src/components/select'
 import { BtnTabGroup, useSelectable } from '#src/components/tabs'
 import { MapMarkerRaw } from '#src/components/teyvat-map'
 import {
@@ -80,14 +80,14 @@ export function CardMap({
 }): JSX.Element {
 	const TeyvatMap = useFetch(() => LazyTeyvatMap.then(x => x.TeyvatMap), [])
 	const markerGroupsLocal = useMemo(
-		() => (markerGroups.length ? markerGroups : dummyMarkerGroups),
+		() => (markerGroups.length > 0 ? markerGroups : dummyMarkerGroups),
 		[markerGroups],
 	)
 	const isMapEmpty: boolean = useMemo(() => markerGroupsLocal === dummyMarkerGroups, [markerGroupsLocal])
 	const [selectedSource, setSelectedSource] = useSelectable(markerGroupsLocal)
 
 	const visibleMapCodeTabs = useMemo(() => {
-		if (selectedSource.markers === 'external') return []
+		if (selectedSource.markers === 'external') return [{ code: 'teyvat' as MapCode }]
 		const mapCodes = new Set<MapCode>()
 		for (const marker of selectedSource.markers) mapCodes.add(marker.mapCode)
 		return Array.from(mapCodes, code => ({ code }))
