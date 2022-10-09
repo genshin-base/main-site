@@ -142,12 +142,15 @@ const fixes = {
 	/** @type {import('#lib/parsing/honeyhunter/fixes').HoneyhunterFixes} */
 	honeyhunter: {
 		statuses: {
-			// некоторые персонажи и предметы почему-то находятся в таблице нерелизнутого
-			characters: [],
+			characters: [
+				{ actually: 'unreleased', name: 'Nahida' },
+				{ actually: 'unreleased', name: 'Layla' },
+			],
 			weapons: [
 				{ actually: 'unreleased', name: 'Ebony Bow' },
 				{ actually: 'unreleased', name: 'Quartz' },
 				{ actually: 'unreleased', name: 'Amber Bead' },
+				{ actually: 'unreleased', name: 'A Thousand Floating Dreams' },
 				// это оружие из квеста, получаемое после квеста оружие называется "Kagotsurube Isshin"
 				{ actually: 'unreleased', name: 'Prized Isshin Blade' },
 			],
@@ -173,6 +176,7 @@ const fixes = {
 		skip: {
 			enemies: [
 				/^Eremite/i, //
+				/Dendro Hypostasis/,
 			],
 			artifacts: [],
 			items: [
@@ -256,7 +260,17 @@ const fixes = {
 					return true
 				},
 			],
-			domains: [],
+			domains: (() => {
+				return [
+					code2domain => {
+						if (code2domain['cecilia-garden'].region !== 'mondstadt') {
+							code2domain['cecilia-garden'].region = 'mondstadt'
+							return true
+						}
+						return false
+					},
+				]
+			})(),
 			weapons: (() => {
 				function removeSlashNs(attrFunc) {
 					return code2weapon => {

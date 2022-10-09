@@ -825,6 +825,9 @@ specter:
     - pyro-specter
     - dendro-specter
   locations:
+    - !loc teyvat -5994 4939
+    - !loc teyvat -5993 4930
+    - !loc teyvat -5989 4921
     - !loc teyvat -4387 2701
     - !loc teyvat -341 6295
     - !loc teyvat -340 6288
@@ -4084,8 +4087,12 @@ whopperflower:
     - !loc teyvat -4085 2552
     - !loc teyvat -4019 2544
     - !loc teyvat -3770 2590
+    - !loc teyvat -3672 3020
+    - !loc teyvat -3671 3023
     - !loc teyvat -3649 2183
+    - !loc teyvat -3641 3179
     - !loc teyvat -3487 3301
+    - !loc teyvat -3477 2966
     - !loc teyvat -3471 2524
     - !loc teyvat -3454 2583
     - !loc teyvat -3392 3234
