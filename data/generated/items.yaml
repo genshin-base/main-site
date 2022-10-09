@@ -2200,7 +2200,80 @@ rukkhashava-mushrooms:
     - character-material-local
   rarity: 1
   craftedFrom: []
-  locations: []
+  locations:
+    - !loc teyvat -4699 2601
+    - !loc teyvat -4698 2607
+    - !loc teyvat -4682 2759
+    - !loc teyvat -4675 2755
+    - !loc teyvat -4632 2428
+    - !loc teyvat -4346 2956
+    - !loc teyvat -4342 2928
+    - !loc teyvat -4330 2927
+    - !loc teyvat -4245 4115
+    - !loc teyvat -4240 4127
+    - !loc teyvat -4201 3775
+    - !loc teyvat -4196 4127
+    - !loc teyvat -4193 3760
+    - !loc teyvat -4190 3756
+    - !loc teyvat -4189 3744
+    - !loc teyvat -4186 4131
+    - !loc teyvat -4182 3788
+    - !loc teyvat -4182 4132
+    - !loc teyvat -4178 3770
+    - !loc teyvat -4178 3779
+    - !loc teyvat -4176 3775
+    - !loc teyvat -4175 3762
+    - !loc teyvat -4173 2700
+    - !loc teyvat -4158 3092
+    - !loc teyvat -4106 3852
+    - !loc teyvat -4100 3850
+    - !loc teyvat -4095 3168
+    - !loc teyvat -4070 3161
+    - !loc teyvat -4064 3128
+    - !loc teyvat -3935 3188
+    - !loc teyvat -3925 3192
+    - !loc teyvat -3903 2683
+    - !loc teyvat -3896 2683
+    - !loc teyvat -3896 4023
+    - !loc teyvat -3887 3176
+    - !loc teyvat -3884 4019
+    - !loc teyvat -3876 4049
+    - !loc teyvat -3843 3987
+    - !loc teyvat -3842 3967
+    - !loc teyvat -3835 3970
+    - !loc teyvat -3830 3978
+    - !loc teyvat -3830 3995
+    - !loc teyvat -3823 3973
+    - !loc teyvat -3239 2034
+    - !loc teyvat -3228 2075
+    - !loc teyvat -3156 2153
+    - !loc teyvat -3134 2179
+    - !loc teyvat -3118 1940
+    - !loc teyvat -3116 1993
+    - !loc teyvat -3110 1963
+    - !loc teyvat -3096 2004
+    - !loc teyvat -3062 1966
+    - !loc teyvat -3058 1979
+    - !loc teyvat -3052 2270
+    - !loc teyvat -3041 1864
+    - !loc teyvat -3036 2266
+    - !loc teyvat -3032 2154
+    - !loc teyvat -3021 2891
+    - !loc teyvat -3020 2271
+    - !loc teyvat -3018 2035
+    - !loc teyvat -3002 2260
+    - !loc teyvat -2998 2207
+    - !loc teyvat -2990 2289
+    - !loc teyvat -2981 2009
+    - !loc teyvat -2977 1976
+    - !loc teyvat -2969 3892
+    - !loc teyvat -2963 2053
+    - !loc teyvat -2955 1989
+    - !loc teyvat -2898 4056
+    - !loc teyvat -2894 3878
+    - !loc teyvat -2872 3982
+    - !loc teyvat -2852 3947
+    - !loc teyvat -2847 3990
 sakura-bloom:
   code: sakura-bloom
   name:
