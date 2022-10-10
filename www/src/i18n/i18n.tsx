@@ -438,18 +438,6 @@ export const I18N_SORT_BY = {
 	en: 'Sort by',
 	ru: 'Сортировать по',
 }[LANG]
-export const I18N_USAGE = {
-	en: 'Usage',
-	ru: 'Востребованность',
-}[LANG]
-export const I18N_USED_IN_ABYSS = {
-	en: (n: number) => `Used in Abyss by ${n.toFixed(2)}${NBSP}% owners`,
-	ru: (n: number) => `${n.toFixed(2)}${NBSP}% владельцев используют персонажа в Бездне`,
-}[LANG]
-export const I18N_FILTER = {
-	en: 'Filter',
-	ru: 'Фильтр',
-}[LANG]
 export const I18N_WEAPON_TYPE = {
 	en: 'Weapon type',
 	ru: 'Тип оружия',
