@@ -30,7 +30,7 @@ function sendNewItem(level, fingerprint, rollbarBody) {
 			environment: process.env.NODE_ENV,
 			body: rollbarBody,
 			level,
-			code_version: BUNDLE_ENV.COMMIT_HASH,
+			code_version: BUNDLE_ENV.VERSION.commitHash,
 			platform: 'browser',
 			context: location.href,
 			client: {

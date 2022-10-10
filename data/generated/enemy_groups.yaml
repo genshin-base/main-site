@@ -21,6 +21,90 @@ slime:
     - geo-slime
     - large-geo-slime
   locations:
+    - !loc teyvat -5661 4959
+    - !loc teyvat -5655 4950
+    - !loc teyvat -5651 4958
+    - !loc teyvat -5495 5416
+    - !loc teyvat -5488 5411
+    - !loc teyvat -5484 5417
+    - !loc teyvat -5368 5234
+    - !loc teyvat -5363 5240
+    - !loc teyvat -5360 5234
+    - !loc teyvat -4655 2922
+    - !loc teyvat -4651 2925
+    - !loc teyvat -4649 2927
+    - !loc teyvat -4645 2927
+    - !loc teyvat -4638 2693
+    - !loc teyvat -4633 2690
+    - !loc teyvat -4541 2966
+    - !loc teyvat -4535 2965
+    - !loc teyvat -4530 2970
+    - !loc teyvat -4522 2961
+    - !loc teyvat -4505 2966
+    - !loc teyvat -4423 3633
+    - !loc teyvat -4409 3626
+    - !loc teyvat -4401 3619
+    - !loc teyvat -4398 3627
+    - !loc teyvat -4045 2799
+    - !loc teyvat -4045 2813
+    - !loc teyvat -4038 2803
+    - !loc teyvat -4038 2810
+    - !loc teyvat -3884 3118
+    - !loc teyvat -3879 3121
+    - !loc teyvat -3877 3111
+    - !loc teyvat -3792 3503
+    - !loc teyvat -3740 3244
+    - !loc teyvat -3739 3237
+    - !loc teyvat -3734 3239
+    - !loc teyvat -3698 2540
+    - !loc teyvat -3683 2511
+    - !loc teyvat -3664 2538
+    - !loc teyvat -3332 3775
+    - !loc teyvat -3331 3787
+    - !loc teyvat -3330 3808
+    - !loc teyvat -3322 3807
+    - !loc teyvat -3304 3783
+    - !loc teyvat -3295 3788
+    - !loc teyvat -3250 2383
+    - !loc teyvat -3249 2386
+    - !loc teyvat -3245 2383
+    - !loc teyvat -3127 2008
+    - !loc teyvat -3123 2003
+    - !loc teyvat -3120 1854
+    - !loc teyvat -3109 2007
+    - !loc teyvat -3108 2011
+    - !loc teyvat -3049 2186
+    - !loc teyvat -3046 2182
+    - !loc teyvat -3040 2183
+    - !loc teyvat -3022 2045
+    - !loc teyvat -3022 2048
+    - !loc teyvat -3019 1977
+    - !loc teyvat -3019 2047
+    - !loc teyvat -3018 2255
+    - !loc teyvat -3016 2046
+    - !loc teyvat -3015 1976
+    - !loc teyvat -3015 1979
+    - !loc teyvat -3015 2244
+    - !loc teyvat -3012 2248
+    - !loc teyvat -2961 3851
+    - !loc teyvat -2958 3853
+    - !loc teyvat -2953 3853
+    - !loc teyvat -2951 3848
+    - !loc teyvat -2944 3927
+    - !loc teyvat -2939 3930
+    - !loc teyvat -2937 3934
+    - !loc teyvat -2935 2115
+    - !loc teyvat -2932 2110
+    - !loc teyvat -2927 2117
+    - !loc teyvat -2885 2670
+    - !loc teyvat -2878 2667
+    - !loc teyvat -2877 2671
+    - !loc teyvat -2864 2101
+    - !loc teyvat -2860 2092
+    - !loc teyvat -2858 2100
+    - !loc teyvat -2830 3441
+    - !loc teyvat -2821 3447
+    - !loc teyvat -2812 3438
     - !loc teyvat -2761 3161
     - !loc teyvat -2738 3081
     - !loc teyvat -2717 3120
@@ -47,8 +131,12 @@ slime:
     - !loc teyvat -2420 1919
     - !loc teyvat -2419 1918
     - !loc teyvat -2405 2051
+    - !loc teyvat -2398 2115
+    - !loc teyvat -2385 2113
+    - !loc teyvat -2384 2120
     - !loc teyvat -2383 1599
     - !loc teyvat -2383 1601
+    - !loc teyvat -2374 2121
     - !loc teyvat -2372 2704
     - !loc teyvat -2370 3231
     - !loc teyvat -2365 2808
@@ -735,7 +823,12 @@ specter:
     - cryo-specter
     - electro-specter
     - pyro-specter
+    - dendro-specter
   locations:
+    - !loc teyvat -5994 4939
+    - !loc teyvat -5993 4930
+    - !loc teyvat -5989 4921
+    - !loc teyvat -4387 2701
     - !loc teyvat -341 6295
     - !loc teyvat -340 6288
     - !loc teyvat -335 6292
@@ -917,15 +1010,200 @@ hilichurl:
     - ice-shield-hilichurl-guard
     - electro-hilichurl-grenadier
   locations:
+    - !loc teyvat -6742 4843
+    - !loc teyvat -6736 4840
+    - !loc teyvat -6735 4844
+    - !loc teyvat -6712 4819
+    - !loc teyvat -6703 4812
+    - !loc teyvat -6685 4920
+    - !loc teyvat -6682 4902
+    - !loc teyvat -6679 4915
+    - !loc teyvat -6464 5090
+    - !loc teyvat -6188 4415
+    - !loc teyvat -6185 4415
+    - !loc teyvat -6140 4487
+    - !loc teyvat -6139 4495
+    - !loc teyvat -6134 4493
+    - !loc teyvat -6080 4476
+    - !loc teyvat -6079 4512
+    - !loc teyvat -5946 4331
+    - !loc teyvat -5944 4323
+    - !loc teyvat -5936 4264
+    - !loc teyvat -5934 4260
+    - !loc teyvat -5911 4333
+    - !loc teyvat -5903 4330
+    - !loc teyvat -5828 4228
+    - !loc teyvat -5808 4173
+    - !loc teyvat -5740 4161
+    - !loc teyvat -5687 4014
+    - !loc teyvat -5684 4030
+    - !loc teyvat -5682 4067
+    - !loc teyvat -5675 4058
+    - !loc teyvat -5595 4098
+    - !loc teyvat -5531 3958
+    - !loc teyvat -5510 3942
+    - !loc teyvat -5432 4035
+    - !loc teyvat -5427 4038
+    - !loc teyvat -5415 4655
+    - !loc teyvat -5409 4662
+    - !loc teyvat -5407 5330
+    - !loc teyvat -5399 5328
+    - !loc teyvat -5298 5260
+    - !loc teyvat -5288 5277
+    - !loc teyvat -5275 5263
+    - !loc teyvat -4972 4445
+    - !loc teyvat -4951 4551
+    - !loc teyvat -4940 4550
+    - !loc teyvat -4900 4547
+    - !loc teyvat -4883 4493
+    - !loc teyvat -4878 4488
+    - !loc teyvat -4799 3024
+    - !loc teyvat -4793 3026
+    - !loc teyvat -4788 3024
+    - !loc teyvat -4696 3228
+    - !loc teyvat -4681 3232
+    - !loc teyvat -4676 3258
+    - !loc teyvat -4664 3238
+    - !loc teyvat -4650 3311
+    - !loc teyvat -4646 3309
+    - !loc teyvat -4620 3233
+    - !loc teyvat -4618 3327
+    - !loc teyvat -4616 3217
+    - !loc teyvat -4614 3327
+    - !loc teyvat -4602 2948
+    - !loc teyvat -4592 3337
+    - !loc teyvat -4592 3341
+    - !loc teyvat -4586 2941
+    - !loc teyvat -4574 2956
+    - !loc teyvat -4561 2923
+    - !loc teyvat -4559 2923
+    - !loc teyvat -4556 2914
+    - !loc teyvat -4486 3687
+    - !loc teyvat -4485 3681
+    - !loc teyvat -4484 3685
+    - !loc teyvat -4458 3366
+    - !loc teyvat -4449 3363
+    - !loc teyvat -4427 4153
+    - !loc teyvat -4424 4153
+    - !loc teyvat -4414 3870
+    - !loc teyvat -4413 2895
+    - !loc teyvat -4410 2890
+    - !loc teyvat -4405 2894
+    - !loc teyvat -4401 3908
+    - !loc teyvat -4397 3867
+    - !loc teyvat -4393 4147
+    - !loc teyvat -4391 4150
+    - !loc teyvat -4388 3905
+    - !loc teyvat -4369 3886
+    - !loc teyvat -4343 3339
+    - !loc teyvat -4338 3948
+    - !loc teyvat -4337 2919
+    - !loc teyvat -4335 3947
+    - !loc teyvat -4333 3947
+    - !loc teyvat -4332 2917
+    - !loc teyvat -4254 2945
+    - !loc teyvat -4253 2723
+    - !loc teyvat -4253 2943
+    - !loc teyvat -4252 2720
+    - !loc teyvat -4249 2722
+    - !loc teyvat -4157 4008
+    - !loc teyvat -4153 4009
+    - !loc teyvat -4126 2495
+    - !loc teyvat -4114 2632
+    - !loc teyvat -4107 2495
+    - !loc teyvat -4104 2496
+    - !loc teyvat -4103 2495
+    - !loc teyvat -4099 3840
+    - !loc teyvat -4098 3842
+    - !loc teyvat -4073 2488
+    - !loc teyvat -4070 2497
+    - !loc teyvat -4067 3845
+    - !loc teyvat -4058 2515
+    - !loc teyvat -4055 2723
+    - !loc teyvat -4050 2724
+    - !loc teyvat -4014 2734
+    - !loc teyvat -3989 2729
+    - !loc teyvat -3910 2808
+    - !loc teyvat -3806 3446
+    - !loc teyvat -3804 3445
+    - !loc teyvat -3802 3443
+    - !loc teyvat -3678 3405
+    - !loc teyvat -3635 3411
+    - !loc teyvat -3631 3426
+    - !loc teyvat -3561 2196
+    - !loc teyvat -3560 2187
+    - !loc teyvat -3517 2354
+    - !loc teyvat -3512 4072
+    - !loc teyvat -3509 4058
+    - !loc teyvat -3508 2352
+    - !loc teyvat -3506 3577
+    - !loc teyvat -3502 2357
+    - !loc teyvat -3453 3187
+    - !loc teyvat -3449 3192
+    - !loc teyvat -3444 3542
+    - !loc teyvat -3444 3548
+    - !loc teyvat -3443 3188
+    - !loc teyvat -3381 3064
+    - !loc teyvat -3377 3066
+    - !loc teyvat -3363 3115
+    - !loc teyvat -3356 3114
+    - !loc teyvat -3315 2894
+    - !loc teyvat -3313 2897
+    - !loc teyvat -3241 3724
+    - !loc teyvat -3218 3723
+    - !loc teyvat -3199 3788
+    - !loc teyvat -3193 3692
+    - !loc teyvat -3186 3746
+    - !loc teyvat -3180 3633
+    - !loc teyvat -3176 3631
+    - !loc teyvat -3132 2563
+    - !loc teyvat -3125 2564
+    - !loc teyvat -3113 4116
+    - !loc teyvat -3107 4113
+    - !loc teyvat -3103 4096
+    - !loc teyvat -3102 4117
+    - !loc teyvat -3082 1854
+    - !loc teyvat -3080 1895
+    - !loc teyvat -3079 1898
+    - !loc teyvat -3078 1852
+    - !loc teyvat -3066 1859
+    - !loc teyvat -3063 2625
+    - !loc teyvat -3063 4139
+    - !loc teyvat -3061 2621
+    - !loc teyvat -3048 1865
+    - !loc teyvat -3048 4167
+    - !loc teyvat -3045 1870
+    - !loc teyvat -3006 2172
+    - !loc teyvat -3005 2161
+    - !loc teyvat -3005 2163
+    - !loc teyvat -2983 2326
+    - !loc teyvat -2975 2331
+    - !loc teyvat -2974 2324
+    - !loc teyvat -2881 2792
+    - !loc teyvat -2875 2791
     - !loc teyvat -2768 3154
+    - !loc teyvat -2745 2191
     - !loc teyvat -2744 3089
+    - !loc teyvat -2741 2187
+    - !loc teyvat -2737 2191
     - !loc teyvat -2696 3130
     - !loc teyvat -2692 3291
     - !loc teyvat -2658 2953
+    - !loc teyvat -2632 2440
     - !loc teyvat -2632 3296
+    - !loc teyvat -2630 2438
+    - !loc teyvat -2627 2437
+    - !loc teyvat -2585 2433
+    - !loc teyvat -2575 2429
+    - !loc teyvat -2557 2465
+    - !loc teyvat -2556 2473
+    - !loc teyvat -2552 2465
+    - !loc teyvat -2548 2467
+    - !loc teyvat -2546 2473
     - !loc teyvat -2525 1636
     - !loc teyvat -2521 1632
     - !loc teyvat -2499 2925
+    - !loc teyvat -2470 2478
     - !loc teyvat -2466 1976
     - !loc teyvat -2464 2648
     - !loc teyvat -2462 1984
@@ -1594,11 +1872,74 @@ hilichurl-shooter:
     - cryo-hilichurl-shooter
     - electro-hilichurl-shooter
   locations:
+    - !loc teyvat -6679 4923
+    - !loc teyvat -6458 5092
+    - !loc teyvat -5958 4312
+    - !loc teyvat -5958 4320
+    - !loc teyvat -5957 4324
+    - !loc teyvat -5942 4264
+    - !loc teyvat -5907 4334
+    - !loc teyvat -5833 4230
+    - !loc teyvat -5804 4223
+    - !loc teyvat -5801 4261
+    - !loc teyvat -5741 4238
+    - !loc teyvat -5736 4161
+    - !loc teyvat -5736 4244
+    - !loc teyvat -5734 4241
+    - !loc teyvat -5664 4177
+    - !loc teyvat -5659 4181
+    - !loc teyvat -5593 4091
+    - !loc teyvat -5591 4102
+    - !loc teyvat -5539 3951
+    - !loc teyvat -5427 4034
+    - !loc teyvat -5394 5325
+    - !loc teyvat -4984 4466
+    - !loc teyvat -4945 4550
+    - !loc teyvat -4904 4516
+    - !loc teyvat -4886 4497
+    - !loc teyvat -4633 3334
+    - !loc teyvat -4608 3319
+    - !loc teyvat -4563 3329
+    - !loc teyvat -4482 3689
+    - !loc teyvat -4385 4232
+    - !loc teyvat -4379 4214
+    - !loc teyvat -4372 4244
+    - !loc teyvat -4366 2942
+    - !loc teyvat -4361 4255
+    - !loc teyvat -4312 2928
+    - !loc teyvat -4284 3333
+    - !loc teyvat -4277 3311
+    - !loc teyvat -4225 2902
+    - !loc teyvat -4221 2898
+    - !loc teyvat -4214 2899
+    - !loc teyvat -4111 2632
+    - !loc teyvat -4070 2737
+    - !loc teyvat -4038 2489
+    - !loc teyvat -4036 2737
+    - !loc teyvat -4003 2729
+    - !loc teyvat -3994 2735
+    - !loc teyvat -3976 2735
+    - !loc teyvat -3954 2718
+    - !loc teyvat -3936 2824
+    - !loc teyvat -3923 2815
+    - !loc teyvat -3794 3437
+    - !loc teyvat -3658 3444
+    - !loc teyvat -3637 3438
+    - !loc teyvat -3633 3436
+    - !loc teyvat -3522 2361
+    - !loc teyvat -3514 2360
+    - !loc teyvat -3428 3550
+    - !loc teyvat -3114 2332
+    - !loc teyvat -3111 2329
+    - !loc teyvat -3108 2333
+    - !loc teyvat -3080 1846
     - !loc teyvat -2720 3037
     - !loc teyvat -2687 3167
     - !loc teyvat -2623 2858
     - !loc teyvat -2613 3229
     - !loc teyvat -2611 3247
+    - !loc teyvat -2595 2450
+    - !loc teyvat -2569 2410
     - !loc teyvat -2567 1554
     - !loc teyvat -2461 1995
     - !loc teyvat -2388 1830
@@ -1976,11 +2317,33 @@ mitachurl:
     - crackling-axe-mitachurl
     - thunderhelm-lawachurl
   locations:
+    - !loc teyvat -6462 5092
+    - !loc teyvat -6130 4486
+    - !loc teyvat -5682 4053
+    - !loc teyvat -5527 3953
+    - !loc teyvat -5402 5332
+    - !loc teyvat -4877 4495
+    - !loc teyvat -4792 3022
+    - !loc teyvat -4688 3238
+    - !loc teyvat -4578 3326
+    - !loc teyvat -4386 4222
+    - !loc teyvat -4338 4241
+    - !loc teyvat -4336 4230
+    - !loc teyvat -4334 3949
+    - !loc teyvat -4331 2928
+    - !loc teyvat -4124 2495
+    - !loc teyvat -4099 3835
+    - !loc teyvat -4052 2722
+    - !loc teyvat -3786 3419
+    - !loc teyvat -3647 3437
+    - !loc teyvat -3229 3714
+    - !loc teyvat -3178 3635
     - !loc teyvat -2763 3153
     - !loc teyvat -2740 3082
     - !loc teyvat -2698 3287
     - !loc teyvat -2632 3299
     - !loc teyvat -2606 3240
+    - !loc teyvat -2605 2463
     - !loc teyvat -2465 1991
     - !loc teyvat -2341 1692
     - !loc teyvat -2302 1724
@@ -2161,9 +2524,38 @@ samachurl:
     - cryo-samachurl
     - electro-samachurl
   locations:
+    - !loc teyvat -5908 4321
+    - !loc teyvat -5741 4243
+    - !loc teyvat -5674 4065
+    - !loc teyvat -5588 4098
+    - !loc teyvat -5408 5329
+    - !loc teyvat -5407 4656
+    - !loc teyvat -4977 4446
+    - !loc teyvat -4968 4445
+    - !loc teyvat -4678 3225
+    - !loc teyvat -4589 3339
+    - !loc teyvat -4480 3687
+    - !loc teyvat -4394 4220
+    - !loc teyvat -4346 4231
+    - !loc teyvat -4345 4348
+    - !loc teyvat -4341 4346
+    - !loc teyvat -4254 2725
+    - !loc teyvat -4051 2710
+    - !loc teyvat -3553 2189
+    - !loc teyvat -3368 3968
+    - !loc teyvat -3364 3966
+    - !loc teyvat -3359 3110
+    - !loc teyvat -3227 3711
+    - !loc teyvat -3227 3941
+    - !loc teyvat -3221 3721
+    - !loc teyvat -3073 1864
+    - !loc teyvat -3065 2620
     - !loc teyvat -2660 2956
+    - !loc teyvat -2634 2442
     - !loc teyvat -2625 3239
     - !loc teyvat -2617 2858
+    - !loc teyvat -2602 2458
+    - !loc teyvat -2600 2465
     - !loc teyvat -2588 1564
     - !loc teyvat -2331 1758
     - !loc teyvat -2057 3016
@@ -2347,6 +2739,13 @@ abyss-mage:
     - hydro-abyss-mage
     - electro-abyss-mage
   locations:
+    - !loc teyvat -4827 3011
+    - !loc teyvat -4801 2911
+    - !loc teyvat -4792 3082
+    - !loc teyvat -4684 2978
+    - !loc teyvat -4586 2878
+    - !loc teyvat -4514 2939
+    - !loc teyvat -4503 3011
     - !loc teyvat -2600 1734
     - !loc teyvat -2519 1629
     - !loc teyvat -2379 1833
@@ -2460,6 +2859,24 @@ abyss-mage:
     - !loc chasm 158 -732
     - !loc chasm 179 61
     - !loc chasm 292 -353
+abyss-herald:
+  code: abyss-herald
+  name:
+    en: Abyss Herald
+    ru: Вестник Бездны
+  iconEnemyCode: abyss-herald-wicked-torrents
+  enemyCodes:
+    - abyss-herald-wicked-torrents
+    - abyss-lector-violet-lightning
+    - abyss-lector-fathomless-flames
+  locations:
+    - !loc enkanomiya -302 415
+    - !loc enkanomiya -181 758
+    - !loc enkanomiya -148 -20
+    - !loc enkanomiya 48 498
+    - !loc chasm -836 188
+    - !loc chasm -1 2
+    - !loc chasm 1 6
 wolves-of-the-rift:
   code: wolves-of-the-rift
   name:
@@ -2472,6 +2889,8 @@ wolves-of-the-rift:
     - rockfond-rifthound
     - thundercraven-rifthound
   locations:
+    - !loc teyvat -4507 2752
+    - !loc teyvat -4483 2735
     - !loc teyvat -549 228
     - !loc teyvat -543 218
     - !loc teyvat -534 221
@@ -2553,6 +2972,35 @@ fatui-skirmisher:
     - fatui-skirmisher-anemoboxer-vanguard
     - fatui-skirmisher-pyroslinger-bracer
   locations:
+    - !loc teyvat -6701 4500
+    - !loc teyvat -6674 4383
+    - !loc teyvat -6669 4519
+    - !loc teyvat -6629 4429
+    - !loc teyvat -6621 4253
+    - !loc teyvat -6619 4534
+    - !loc teyvat -6618 4439
+    - !loc teyvat -6614 4432
+    - !loc teyvat -6612 4509
+    - !loc teyvat -6540 4493
+    - !loc teyvat -6525 4448
+    - !loc teyvat -6514 4391
+    - !loc teyvat -6415 4295
+    - !loc teyvat -6356 4336
+    - !loc teyvat -6355 4329
+    - !loc teyvat -6314 4413
+    - !loc teyvat -6308 4409
+    - !loc teyvat -6281 4469
+    - !loc teyvat -6076 4573
+    - !loc teyvat -5558 5338
+    - !loc teyvat -5553 5332
+    - !loc teyvat -5540 5432
+    - !loc teyvat -5538 5436
+    - !loc teyvat -5398 5042
+    - !loc teyvat -5395 5036
+    - !loc teyvat -5392 5042
+    - !loc teyvat -4884 4941
+    - !loc teyvat -4754 4994
+    - !loc teyvat -4751 4981
     - !loc teyvat -2739 2916
     - !loc teyvat -2738 2929
     - !loc teyvat -2725 2919
@@ -2684,6 +3132,13 @@ fatui-cicin-mage:
     - fatui-electro-cicin-mage
     - fatui-cryo-cicin-mage
   locations:
+    - !loc teyvat -6285 4495
+    - !loc teyvat -4676 3430
+    - !loc teyvat -3882 3517
+    - !loc teyvat -3802 3291
+    - !loc teyvat -3483 2383
+    - !loc teyvat -3082 2093
+    - !loc teyvat -2930 2481
     - !loc teyvat -1996 2526
     - !loc teyvat -1827 2185
     - !loc teyvat -1216 748
@@ -2725,6 +3180,25 @@ ruin-sentinel:
     - ruin-defender
     - ruin-scout
   locations:
+    - !loc teyvat -4694 2614
+    - !loc teyvat -4690 2603
+    - !loc teyvat -4679 2616
+    - !loc teyvat -4678 4790
+    - !loc teyvat -4441 4132
+    - !loc teyvat -4412 4001
+    - !loc teyvat -4409 4053
+    - !loc teyvat -4223 3955
+    - !loc teyvat -4221 3964
+    - !loc teyvat -4212 4162
+    - !loc teyvat -4203 4168
+    - !loc teyvat -3642 2143
+    - !loc teyvat -3596 2190
+    - !loc teyvat -3584 2187
+    - !loc teyvat -3582 2116
+    - !loc teyvat -3564 2114
+    - !loc teyvat -2950 3375
+    - !loc teyvat -2936 3375
+    - !loc teyvat -2934 3732
     - !loc teyvat -414 6041
     - !loc teyvat -408 6041
     - !loc teyvat -283 6129
@@ -2876,28 +3350,205 @@ ruin-sentinel:
     - !loc chasm 129 197
     - !loc chasm 210 287
     - !loc chasm 222 274
+ruin-drake:
+  code: ruin-drake
+  name:
+    en: Ruin Drake
+    ru: Дракон руин
+  iconEnemyCode: ruin-drake-earthguard
+  enemyCodes:
+    - ruin-drake-skywatch
+    - ruin-drake-earthguard
+  locations:
+    - !loc teyvat -6729 4657
+    - !loc teyvat -6725 5067
+    - !loc teyvat -6614 4841
+    - !loc teyvat -6607 4849
+    - !loc teyvat -5968 4107
+    - !loc teyvat -5643 3894
+    - !loc teyvat -5501 5567
+    - !loc teyvat -5420 4279
+    - !loc teyvat -5415 4281
+    - !loc teyvat -5361 5740
+    - !loc teyvat -5350 5710
+    - !loc teyvat -5300 4015
+    - !loc teyvat -5150 5135
+    - !loc teyvat -5032 4106
+    - !loc teyvat -4919 5076
+    - !loc teyvat -4743 2801
+    - !loc teyvat -4657 2569
+    - !loc teyvat -4306 4098
+    - !loc teyvat -4304 4135
+    - !loc teyvat -4302 3987
+    - !loc teyvat -4301 4127
+    - !loc teyvat -4206 4164
+    - !loc teyvat -4089 2999
+    - !loc teyvat -3989 2847
+    - !loc teyvat -3953 3130
+    - !loc teyvat -3591 2233
+    - !loc teyvat -3503 3658
+    - !loc teyvat -3163 3797
+    - !loc teyvat -3063 3925
+    - !loc teyvat -3040 3805
+    - !loc teyvat -2929 2817
+    - !loc teyvat -2867 3658
+    - !loc teyvat -2856 3659
+primal-construct:
+  code: primal-construct
+  name:
+    en: Primal Construct
+    ru: Первозданная конструкция
+  iconEnemyCode: primal-construct-prospector
+  enemyCodes:
+    - primal-construct-repulsor
+    - primal-construct-reshaper
+    - primal-construct-prospector
+  locations:
+    - !loc teyvat -6739 4588
+    - !loc teyvat -6582 4747
+    - !loc teyvat -6565 4993
+    - !loc teyvat -6560 4995
+    - !loc teyvat -6517 4381
+    - !loc teyvat -6514 4479
+    - !loc teyvat -6512 4483
+    - !loc teyvat -6469 4653
+    - !loc teyvat -6466 4776
+    - !loc teyvat -6464 4962
+    - !loc teyvat -6458 4960
+    - !loc teyvat -6458 5227
+    - !loc teyvat -6455 4941
+    - !loc teyvat -6425 4994
+    - !loc teyvat -6411 4943
+    - !loc teyvat -6391 4342
+    - !loc teyvat -6361 4946
+    - !loc teyvat -6355 4407
+    - !loc teyvat -6350 4474
+    - !loc teyvat -6346 4591
+    - !loc teyvat -6327 4553
+    - !loc teyvat -6326 4500
+    - !loc teyvat -6315 4599
+    - !loc teyvat -6313 4546
+    - !loc teyvat -6290 4675
+    - !loc teyvat -6286 4676
+    - !loc teyvat -6282 4591
+    - !loc teyvat -6262 4373
+    - !loc teyvat -6258 4719
+    - !loc teyvat -6233 4899
+    - !loc teyvat -6190 4671
+    - !loc teyvat -6190 4675
+    - !loc teyvat -6189 4987
+    - !loc teyvat -6141 4882
+    - !loc teyvat -6127 4797
+    - !loc teyvat -6124 4689
+    - !loc teyvat -6123 4683
+    - !loc teyvat -6121 4616
+    - !loc teyvat -6074 4729
+    - !loc teyvat -6052 4609
+    - !loc teyvat -6000 4607
+    - !loc teyvat -5990 4638
+    - !loc teyvat -5989 4556
+    - !loc teyvat -5984 4632
+    - !loc teyvat -5976 4718
+    - !loc teyvat -5922 5038
+    - !loc teyvat -5860 5112
+    - !loc teyvat -5825 4702
+    - !loc teyvat -5805 5181
+    - !loc teyvat -5804 4666
+    - !loc teyvat -5799 4730
+    - !loc teyvat -5797 4618
+    - !loc teyvat -5787 4683
+    - !loc teyvat -5713 4812
+    - !loc teyvat -5572 3752
+    - !loc teyvat -5565 4630
+    - !loc teyvat -5562 4629
+    - !loc teyvat -5559 3754
+    - !loc teyvat -5446 5187
+    - !loc teyvat -5355 3805
+    - !loc teyvat -5349 3676
+    - !loc teyvat -5306 3881
+    - !loc teyvat -5298 3882
+    - !loc teyvat -5296 3776
+    - !loc teyvat -5269 3685
+    - !loc teyvat -5257 3843
+    - !loc teyvat -5232 4577
+    - !loc teyvat -5229 4580
+    - !loc teyvat -5207 4611
+    - !loc teyvat -5018 4640
+    - !loc teyvat -5017 4643
+    - !loc teyvat -5016 4528
+    - !loc teyvat -4988 4674
 treasure-hoarders:
   code: treasure-hoarders
   name:
     en: Treasure Hoarders
     ru: Похитители сокровищ
-  iconEnemyCode: treasure-hoarders-carmen
+  iconEnemyCode: treasure-hoarders-crusher
   enemyCodes:
-    - treasure-hoarders-liuliu
     - treasure-hoarders-scout
     - treasure-hoarders-pyro-potioneer
     - treasure-hoarders-hydro-potioneer
     - treasure-hoarders-electro-potioneer
     - treasure-hoarders-cryo-potioneer
     - treasure-hoarders-handyman
-    - treasure-hoarders-raptor
     - treasure-hoarders-marksman
-    - treasure-hoarders-carmen
     - treasure-hoarders-gravedigger
     - treasure-hoarders-seaman
     - treasure-hoarders-pugilist
     - treasure-hoarders-crusher
   locations:
+    - !loc teyvat -6237 4181
+    - !loc teyvat -6235 4178
+    - !loc teyvat -6233 4182
+    - !loc teyvat -5972 4768
+    - !loc teyvat -5969 4767
+    - !loc teyvat -5966 4767
+    - !loc teyvat -5803 5100
+    - !loc teyvat -5799 5098
+    - !loc teyvat -5799 5101
+    - !loc teyvat -5796 5100
+    - !loc teyvat -5603 3993
+    - !loc teyvat -5601 3998
+    - !loc teyvat -5264 5089
+    - !loc teyvat -5244 5083
+    - !loc teyvat -5241 5083
+    - !loc teyvat -5198 4724
+    - !loc teyvat -5160 5141
+    - !loc teyvat -5157 5138
+    - !loc teyvat -5155 5140
+    - !loc teyvat -5108 4239
+    - !loc teyvat -5105 4241
+    - !loc teyvat -4953 4064
+    - !loc teyvat -4951 4069
+    - !loc teyvat -4930 5246
+    - !loc teyvat -4890 5258
+    - !loc teyvat -4881 5228
+    - !loc teyvat -4880 5225
+    - !loc teyvat -4878 5227
+    - !loc teyvat -4859 5268
+    - !loc teyvat -4765 4497
+    - !loc teyvat -4763 4500
+    - !loc teyvat -4761 4496
+    - !loc teyvat -4760 4216
+    - !loc teyvat -4755 4215
+    - !loc teyvat -4737 3612
+    - !loc teyvat -4735 3614
+    - !loc teyvat -4734 3611
+    - !loc teyvat -4733 3566
+    - !loc teyvat -4730 3566
+    - !loc teyvat -4727 3567
+    - !loc teyvat -4723 3563
+    - !loc teyvat -4723 4138
+    - !loc teyvat -4720 3563
+    - !loc teyvat -4720 4141
+    - !loc teyvat -4718 4136
+    - !loc teyvat -4716 4139
+    - !loc teyvat -4715 4137
+    - !loc teyvat -4689 3630
+    - !loc teyvat -4686 3655
+    - !loc teyvat -4200 3073
+    - !loc teyvat -4042 3125
+    - !loc teyvat -3350 3789
+    - !loc teyvat -2890 2592
     - !loc teyvat -2736 2945
     - !loc teyvat -2641 2969
     - !loc teyvat -2556 2981
@@ -3411,6 +4062,461 @@ nobushi:
     - !loc teyvat 3936 4794
     - !loc teyvat 3940 4794
     - !loc teyvat 3944 4793
+eremite:
+  code: eremite
+  name:
+    en: Eremite
+    ru: Пустынник
+  iconEnemyCode: eremite-axe-vanguard
+  enemyCodes:
+    - eremite-axe-vanguard
+    - eremite-crossbow
+    - eremite-ravenbeak-halberdier
+    - eremite-linebreaker
+    - eremite-sword-dancer
+    - eremite-desert-clearwater
+    - eremite-sunfrost
+    - eremite-daythunder
+  locations:
+    - !loc teyvat -6735 5174
+    - !loc teyvat -6730 5174
+    - !loc teyvat -6695 5153
+    - !loc teyvat -6693 5152
+    - !loc teyvat -6692 5153
+    - !loc teyvat -6681 5253
+    - !loc teyvat -6673 5260
+    - !loc teyvat -6671 5142
+    - !loc teyvat -6670 5258
+    - !loc teyvat -6644 5118
+    - !loc teyvat -6632 4250
+    - !loc teyvat -6628 4251
+    - !loc teyvat -6616 4438
+    - !loc teyvat -6588 4280
+    - !loc teyvat -6588 4287
+    - !loc teyvat -6580 4286
+    - !loc teyvat -6579 4279
+    - !loc teyvat -6574 4477
+    - !loc teyvat -6533 4384
+    - !loc teyvat -6463 4902
+    - !loc teyvat -6461 4890
+    - !loc teyvat -6450 4899
+    - !loc teyvat -6448 4886
+    - !loc teyvat -6428 5283
+    - !loc teyvat -6427 5295
+    - !loc teyvat -6412 5294
+    - !loc teyvat -6365 4335
+    - !loc teyvat -6299 4258
+    - !loc teyvat -6293 4250
+    - !loc teyvat -6280 4462
+    - !loc teyvat -6280 4501
+    - !loc teyvat -6222 4186
+    - !loc teyvat -6216 4260
+    - !loc teyvat -6210 4253
+    - !loc teyvat -6210 4265
+    - !loc teyvat -6201 4256
+    - !loc teyvat -6169 5302
+    - !loc teyvat -6168 5278
+    - !loc teyvat -6166 5332
+    - !loc teyvat -6158 5290
+    - !loc teyvat -6147 5290
+    - !loc teyvat -6053 5292
+    - !loc teyvat -6051 5282
+    - !loc teyvat -5915 5260
+    - !loc teyvat -5899 5263
+    - !loc teyvat -5889 5283
+    - !loc teyvat -5862 4470
+    - !loc teyvat -5861 4471
+    - !loc teyvat -5848 4343
+    - !loc teyvat -5840 4466
+    - !loc teyvat -5752 5284
+    - !loc teyvat -5738 4067
+    - !loc teyvat -5736 4071
+    - !loc teyvat -5731 4446
+    - !loc teyvat -5730 4067
+    - !loc teyvat -5726 4445
+    - !loc teyvat -5724 4439
+    - !loc teyvat -5723 4447
+    - !loc teyvat -5722 5279
+    - !loc teyvat -5721 4444
+    - !loc teyvat -5691 4957
+    - !loc teyvat -5689 4965
+    - !loc teyvat -5689 5205
+    - !loc teyvat -5683 4957
+    - !loc teyvat -5671 4925
+    - !loc teyvat -5657 5182
+    - !loc teyvat -5657 5227
+    - !loc teyvat -5655 5182
+    - !loc teyvat -5646 4823
+    - !loc teyvat -5646 4829
+    - !loc teyvat -5643 4210
+    - !loc teyvat -5641 4822
+    - !loc teyvat -5641 5172
+    - !loc teyvat -5637 4213
+    - !loc teyvat -5636 4823
+    - !loc teyvat -5634 4164
+    - !loc teyvat -5634 5432
+    - !loc teyvat -5633 4207
+    - !loc teyvat -5632 5344
+    - !loc teyvat -5632 5448
+    - !loc teyvat -5631 4212
+    - !loc teyvat -5628 5126
+    - !loc teyvat -5628 5141
+    - !loc teyvat -5628 5440
+    - !loc teyvat -5628 5447
+    - !loc teyvat -5627 4163
+    - !loc teyvat -5627 5223
+    - !loc teyvat -5625 5348
+    - !loc teyvat -5624 5225
+    - !loc teyvat -5622 5222
+    - !loc teyvat -5620 5071
+    - !loc teyvat -5616 5341
+    - !loc teyvat -5614 5073
+    - !loc teyvat -5613 5330
+    - !loc teyvat -5609 4605
+    - !loc teyvat -5609 5158
+    - !loc teyvat -5608 3994
+    - !loc teyvat -5607 5445
+    - !loc teyvat -5606 5373
+    - !loc teyvat -5604 4001
+    - !loc teyvat -5604 5346
+    - !loc teyvat -5602 5235
+    - !loc teyvat -5598 5246
+    - !loc teyvat -5593 5160
+    - !loc teyvat -5590 4687
+    - !loc teyvat -5588 5438
+    - !loc teyvat -5583 4678
+    - !loc teyvat -5579 4680
+    - !loc teyvat -5575 4686
+    - !loc teyvat -5575 5500
+    - !loc teyvat -5554 5531
+    - !loc teyvat -5552 5148
+    - !loc teyvat -5547 4950
+    - !loc teyvat -5546 5522
+    - !loc teyvat -5527 5494
+    - !loc teyvat -5525 4304
+    - !loc teyvat -5520 5346
+    - !loc teyvat -5516 5348
+    - !loc teyvat -5514 4316
+    - !loc teyvat -5511 5536
+    - !loc teyvat -5506 4916
+    - !loc teyvat -5503 5530
+    - !loc teyvat -5502 5494
+    - !loc teyvat -5492 5272
+    - !loc teyvat -5490 3764
+    - !loc teyvat -5476 5323
+    - !loc teyvat -5475 5324
+    - !loc teyvat -5474 5422
+    - !loc teyvat -5473 5324
+    - !loc teyvat -5471 5272
+    - !loc teyvat -5470 5417
+    - !loc teyvat -5470 5424
+    - !loc teyvat -5469 3746
+    - !loc teyvat -5469 5269
+    - !loc teyvat -5468 5357
+    - !loc teyvat -5467 3741
+    - !loc teyvat -5465 4755
+    - !loc teyvat -5465 5274
+    - !loc teyvat -5463 5473
+    - !loc teyvat -5462 4702
+    - !loc teyvat -5462 4766
+    - !loc teyvat -5456 4162
+    - !loc teyvat -5455 3799
+    - !loc teyvat -5453 4160
+    - !loc teyvat -5453 4761
+    - !loc teyvat -5451 4765
+    - !loc teyvat -5450 4209
+    - !loc teyvat -5449 3811
+    - !loc teyvat -5448 4146
+    - !loc teyvat -5448 4589
+    - !loc teyvat -5447 4208
+    - !loc teyvat -5445 4577
+    - !loc teyvat -5444 4144
+    - !loc teyvat -5434 4591
+    - !loc teyvat -5432 3777
+    - !loc teyvat -5423 3788
+    - !loc teyvat -5422 4672
+    - !loc teyvat -5410 4509
+    - !loc teyvat -5405 5246
+    - !loc teyvat -5398 4504
+    - !loc teyvat -5393 5414
+    - !loc teyvat -5393 5424
+    - !loc teyvat -5392 5219
+    - !loc teyvat -5381 5249
+    - !loc teyvat -5379 5305
+    - !loc teyvat -5379 5309
+    - !loc teyvat -5367 4408
+    - !loc teyvat -5367 5076
+    - !loc teyvat -5366 4416
+    - !loc teyvat -5366 4819
+    - !loc teyvat -5365 4971
+    - !loc teyvat -5364 4811
+    - !loc teyvat -5364 4960
+    - !loc teyvat -5362 5323
+    - !loc teyvat -5360 4410
+    - !loc teyvat -5360 4413
+    - !loc teyvat -5358 5079
+    - !loc teyvat -5357 5308
+    - !loc teyvat -5354 4825
+    - !loc teyvat -5354 5074
+    - !loc teyvat -5353 4973
+    - !loc teyvat -5349 4482
+    - !loc teyvat -5343 4505
+    - !loc teyvat -5334 4498
+    - !loc teyvat -5326 5166
+    - !loc teyvat -5321 4333
+    - !loc teyvat -5321 4560
+    - !loc teyvat -5320 4328
+    - !loc teyvat -5316 4330
+    - !loc teyvat -5315 4559
+    - !loc teyvat -5314 5174
+    - !loc teyvat -5312 4562
+    - !loc teyvat -5311 4572
+    - !loc teyvat -5302 4857
+    - !loc teyvat -5301 4821
+    - !loc teyvat -5299 5185
+    - !loc teyvat -5289 4671
+    - !loc teyvat -5285 4964
+    - !loc teyvat -5279 4961
+    - !loc teyvat -5273 4675
+    - !loc teyvat -5273 4826
+    - !loc teyvat -5267 4972
+    - !loc teyvat -5258 5156
+    - !loc teyvat -5254 5159
+    - !loc teyvat -5253 5165
+    - !loc teyvat -5247 5165
+    - !loc teyvat -5246 5169
+    - !loc teyvat -5241 5148
+    - !loc teyvat -5240 5150
+    - !loc teyvat -5232 4215
+    - !loc teyvat -5231 4224
+    - !loc teyvat -5228 5145
+    - !loc teyvat -5227 4227
+    - !loc teyvat -5227 5022
+    - !loc teyvat -5227 5148
+    - !loc teyvat -5224 4214
+    - !loc teyvat -5219 4388
+    - !loc teyvat -5213 5023
+    - !loc teyvat -5203 5179
+    - !loc teyvat -5200 4400
+    - !loc teyvat -5195 4723
+    - !loc teyvat -5181 4886
+    - !loc teyvat -5176 4403
+    - !loc teyvat -5170 4307
+    - !loc teyvat -5170 5036
+    - !loc teyvat -5165 4598
+    - !loc teyvat -5163 4603
+    - !loc teyvat -5160 4312
+    - !loc teyvat -5156 4303
+    - !loc teyvat -5151 4583
+    - !loc teyvat -5123 5131
+    - !loc teyvat -5117 4685
+    - !loc teyvat -5117 5137
+    - !loc teyvat -5115 4229
+    - !loc teyvat -5109 5124
+    - !loc teyvat -5099 4677
+    - !loc teyvat -5094 4668
+    - !loc teyvat -5090 4938
+    - !loc teyvat -5089 4923
+    - !loc teyvat -5086 4934
+    - !loc teyvat -5081 4934
+    - !loc teyvat -5014 5144
+    - !loc teyvat -5004 5127
+    - !loc teyvat -5001 3820
+    - !loc teyvat -4995 3836
+    - !loc teyvat -4993 3824
+    - !loc teyvat -4993 4446
+    - !loc teyvat -4991 4533
+    - !loc teyvat -4986 3815
+    - !loc teyvat -4986 4966
+    - !loc teyvat -4986 4972
+    - !loc teyvat -4984 4525
+    - !loc teyvat -4982 4973
+    - !loc teyvat -4980 4532
+    - !loc teyvat -4964 5006
+    - !loc teyvat -4914 4047
+    - !loc teyvat -4897 5161
+    - !loc teyvat -4896 5143
+    - !loc teyvat -4890 5160
+    - !loc teyvat -4888 4059
+    - !loc teyvat -4872 5042
+    - !loc teyvat -4868 5063
+    - !loc teyvat -4867 5050
+    - !loc teyvat -4856 5054
+    - !loc teyvat -4847 4710
+    - !loc teyvat -4833 3932
+    - !loc teyvat -4830 3933
+    - !loc teyvat -4825 3925
+    - !loc teyvat -4822 3926
+    - !loc teyvat -4792 4072
+    - !loc teyvat -4790 4073
+    - !loc teyvat -4783 3915
+    - !loc teyvat -4781 4084
+    - !loc teyvat -4770 4581
+    - !loc teyvat -4761 4571
+    - !loc teyvat -4758 4362
+    - !loc teyvat -4754 4663
+    - !loc teyvat -4746 4351
+    - !loc teyvat -4741 4660
+    - !loc teyvat -4737 4545
+    - !loc teyvat -4732 4616
+    - !loc teyvat -4729 4614
+    - !loc teyvat -4712 4595
+    - !loc teyvat -4706 4563
+    - !loc teyvat -4703 4562
+    - !loc teyvat -4670 4331
+    - !loc teyvat -4670 4335
+    - !loc teyvat -4664 4330
+    - !loc teyvat -4661 4335
+    - !loc teyvat -4578 2635
+    - !loc teyvat -4576 2623
+    - !loc teyvat -4571 3773
+    - !loc teyvat -4566 3770
+    - !loc teyvat -4560 2597
+    - !loc teyvat -4558 2601
+    - !loc teyvat -4552 2608
+    - !loc teyvat -4549 3132
+    - !loc teyvat -4549 3138
+    - !loc teyvat -4549 3768
+    - !loc teyvat -4547 3128
+    - !loc teyvat -4544 3153
+    - !loc teyvat -4542 3793
+    - !loc teyvat -4539 3786
+    - !loc teyvat -4536 3789
+    - !loc teyvat -4533 3493
+    - !loc teyvat -4528 3489
+    - !loc teyvat -4526 3492
+    - !loc teyvat -4522 3178
+    - !loc teyvat -4519 3540
+    - !loc teyvat -4517 3535
+    - !loc teyvat -4511 3164
+    - !loc teyvat -4503 3511
+    - !loc teyvat -4501 2675
+    - !loc teyvat -4497 3578
+    - !loc teyvat -4497 3591
+    - !loc teyvat -4495 3521
+    - !loc teyvat -4494 2679
+    - !loc teyvat -4492 2671
+    - !loc teyvat -4489 2675
+    - !loc teyvat -4483 3578
+    - !loc teyvat -4483 3723
+    - !loc teyvat -4479 3565
+    - !loc teyvat -4479 3590
+    - !loc teyvat -4468 2841
+    - !loc teyvat -4468 3778
+    - !loc teyvat -4466 3770
+    - !loc teyvat -4462 3777
+    - !loc teyvat -4453 3783
+    - !loc teyvat -4446 3782
+    - !loc teyvat -4433 2703
+    - !loc teyvat -4397 3087
+    - !loc teyvat -4395 3101
+    - !loc teyvat -4388 3085
+    - !loc teyvat -4376 2701
+    - !loc teyvat -4375 3090
+    - !loc teyvat -4310 3770
+    - !loc teyvat -4307 3163
+    - !loc teyvat -4307 3775
+    - !loc teyvat -4306 3167
+    - !loc teyvat -4303 3767
+    - !loc teyvat -4303 3776
+    - !loc teyvat -4299 3177
+    - !loc teyvat -4299 3772
+    - !loc teyvat -4298 3171
+    - !loc teyvat -4297 3174
+    - !loc teyvat -4261 3426
+    - !loc teyvat -4256 3414
+    - !loc teyvat -4252 3426
+    - !loc teyvat -4252 3432
+    - !loc teyvat -4249 3421
+    - !loc teyvat -4181 4129
+    - !loc teyvat -4177 2824
+    - !loc teyvat -4173 4126
+    - !loc teyvat -4137 4323
+    - !loc teyvat -4132 4327
+    - !loc teyvat -4124 4320
+    - !loc teyvat -4120 4314
+    - !loc teyvat -4112 4235
+    - !loc teyvat -4112 4315
+    - !loc teyvat -4107 4231
+    - !loc teyvat -4104 4234
+    - !loc teyvat -4024 3021
+    - !loc teyvat -4020 3032
+    - !loc teyvat -4015 3019
+    - !loc teyvat -4014 3001
+    - !loc teyvat -4009 3004
+    - !loc teyvat -4008 3023
+    - !loc teyvat -3998 3175
+    - !loc teyvat -3996 2997
+    - !loc teyvat -3995 2990
+    - !loc teyvat -3922 2992
+    - !loc teyvat -3915 2988
+    - !loc teyvat -3909 2708
+    - !loc teyvat -3909 2716
+    - !loc teyvat -3893 2546
+    - !loc teyvat -3893 2710
+    - !loc teyvat -3893 2720
+    - !loc teyvat -3890 2539
+    - !loc teyvat -3885 2550
+    - !loc teyvat -3874 2791
+    - !loc teyvat -3871 2795
+    - !loc teyvat -3868 2800
+    - !loc teyvat -3831 2819
+    - !loc teyvat -3775 2677
+    - !loc teyvat -3773 2666
+    - !loc teyvat -3768 2671
+    - !loc teyvat -3762 2680
+    - !loc teyvat -3761 2669
+    - !loc teyvat -3734 3965
+    - !loc teyvat -3727 3962
+    - !loc teyvat -3726 3958
+    - !loc teyvat -3720 3962
+    - !loc teyvat -3698 2867
+    - !loc teyvat -3690 2865
+    - !loc teyvat -3675 2863
+    - !loc teyvat -3675 2883
+    - !loc teyvat -3635 3136
+    - !loc teyvat -3627 3127
+    - !loc teyvat -3625 3134
+    - !loc teyvat -3621 3947
+    - !loc teyvat -3611 3912
+    - !loc teyvat -3607 3905
+    - !loc teyvat -3606 3908
+    - !loc teyvat -3601 3906
+    - !loc teyvat -3569 3880
+    - !loc teyvat -3483 3226
+    - !loc teyvat -3477 3226
+    - !loc teyvat -3477 3233
+    - !loc teyvat -3466 3222
+    - !loc teyvat -3375 2550
+    - !loc teyvat -3373 2543
+    - !loc teyvat -3364 2563
+    - !loc teyvat -3343 2553
+    - !loc teyvat -3228 2347
+    - !loc teyvat -3212 2352
+    - !loc teyvat -3200 2358
+    - !loc teyvat -3198 2355
+    - !loc teyvat -3174 1868
+    - !loc teyvat -3171 1884
+    - !loc teyvat -3098 2220
+    - !loc teyvat -3095 2453
+    - !loc teyvat -3092 2220
+    - !loc teyvat -3091 2454
+    - !loc teyvat -3090 2216
+    - !loc teyvat -3090 2225
+    - !loc teyvat -3060 2469
+    - !loc teyvat -3022 3641
+    - !loc teyvat -3017 3645
+    - !loc teyvat -2987 2791
+    - !loc teyvat -2983 2788
+    - !loc teyvat -2982 2794
+    - !loc teyvat -2922 3492
+    - !loc teyvat -2917 3476
+    - !loc teyvat -2913 3502
+    - !loc teyvat -2912 3509
+    - !loc teyvat -2908 3473
+    - !loc teyvat -2787 3523
+    - !loc teyvat -2785 3534
+    - !loc teyvat -2780 3534
 whopperflower:
   code: whopperflower
   name:
@@ -3422,6 +4528,36 @@ whopperflower:
     - pyro-whopperflower
     - electro-whopperflower
   locations:
+    - !loc teyvat -4388 3015
+    - !loc teyvat -4343 3331
+    - !loc teyvat -4301 2490
+    - !loc teyvat -4300 2496
+    - !loc teyvat -4278 4096
+    - !loc teyvat -4238 4289
+    - !loc teyvat -4236 2550
+    - !loc teyvat -4233 2551
+    - !loc teyvat -4210 3052
+    - !loc teyvat -4196 2517
+    - !loc teyvat -4097 3104
+    - !loc teyvat -4085 2552
+    - !loc teyvat -4019 2544
+    - !loc teyvat -3770 2590
+    - !loc teyvat -3672 3020
+    - !loc teyvat -3671 3023
+    - !loc teyvat -3649 2183
+    - !loc teyvat -3641 3179
+    - !loc teyvat -3487 3301
+    - !loc teyvat -3477 2966
+    - !loc teyvat -3471 2524
+    - !loc teyvat -3454 2583
+    - !loc teyvat -3392 3234
+    - !loc teyvat -3391 3239
+    - !loc teyvat -3256 2127
+    - !loc teyvat -3252 2122
+    - !loc teyvat -3239 2247
+    - !loc teyvat -2931 3921
+    - !loc teyvat -2914 2642
+    - !loc teyvat -2885 3889
     - !loc teyvat -2552 1603
     - !loc teyvat -2469 3200
     - !loc teyvat -2442 1359
@@ -3436,6 +4572,7 @@ whopperflower:
     - !loc teyvat -2243 1334
     - !loc teyvat -2168 1698
     - !loc teyvat -2152 1277
+    - !loc teyvat -2111 1543
     - !loc teyvat -2043 2108
     - !loc teyvat -2042 2872
     - !loc teyvat -2016 760
@@ -3587,16 +4724,17 @@ whopperflower:
     - !loc chasm 32 -39
     - !loc chasm 126 273
     - !loc chasm 189 -740
-bathysmal-vishap:
-  code: bathysmal-vishap
+bathysmal-vishap-hatchling:
+  code: bathysmal-vishap-hatchling
   name:
-    en: Bathysmal Vishap
-    ru: Вишап глубин
-  iconEnemyCode: bolteater-bathysmal-vishap
+    en: Bathysmal Vishap Hatchling
+    ru: Молодой вишап глубин
+  iconEnemyCode: bolteater-bathysmal-vishap-hatchling
   enemyCodes:
     - primordial-bathysmal-vishap
-    - rimebiter-bathysmal-vishap
-    - bolteater-bathysmal-vishap
+    - primordial-bathysmal-vishap-hatchling
+    - rimebiter-bathysmal-vishap-hatchling
+    - bolteater-bathysmal-vishap-hatchling
   locations:
     - !loc enkanomiya -1383 541
     - !loc enkanomiya -1368 540
@@ -3621,3 +4759,697 @@ bathysmal-vishap:
     - !loc enkanomiya 484 -238
     - !loc enkanomiya 489 -236
     - !loc enkanomiya 500 -235
+bathysmal-vishap:
+  code: bathysmal-vishap
+  name:
+    en: Bathysmal Vishap
+    ru: Вишап глубин
+  iconEnemyCode: bolteater-bathysmal-vishap
+  enemyCodes:
+    - rimebiter-bathysmal-vishap
+    - bolteater-bathysmal-vishap
+  locations: []
+fungus:
+  code: fungus
+  name:
+    en: Fungus
+    ru: Плесенник
+  iconEnemyCode: floating-dendro-fungus
+  enemyCodes:
+    - floating-hydro-fungus
+    - floating-dendro-fungus
+    - whirling-electro-fungus
+    - whirling-cryo-fungus
+    - stretchy-pyro-fungus
+    - stretchy-anemo-fungus
+    - stretchy-geo-fungus
+    - winged-dendroshroom
+    - winged-cryoshroom
+    - grounded-hydroshroom
+  locations:
+    - !loc teyvat -6740 4700
+    - !loc teyvat -6687 4723
+    - !loc teyvat -6683 4718
+    - !loc teyvat -6670 4922
+    - !loc teyvat -6666 4921
+    - !loc teyvat -6657 4951
+    - !loc teyvat -6654 4739
+    - !loc teyvat -6652 4734
+    - !loc teyvat -6650 4249
+    - !loc teyvat -6647 4684
+    - !loc teyvat -6646 4633
+    - !loc teyvat -6645 4219
+    - !loc teyvat -6631 4231
+    - !loc teyvat -6624 4248
+    - !loc teyvat -6624 4945
+    - !loc teyvat -6620 4948
+    - !loc teyvat -6618 4235
+    - !loc teyvat -6617 4945
+    - !loc teyvat -6601 4988
+    - !loc teyvat -6599 5093
+    - !loc teyvat -6597 5094
+    - !loc teyvat -6596 5091
+    - !loc teyvat -6592 4544
+    - !loc teyvat -6589 4999
+    - !loc teyvat -6586 5067
+    - !loc teyvat -6583 5068
+    - !loc teyvat -6564 5155
+    - !loc teyvat -6561 5165
+    - !loc teyvat -6560 5171
+    - !loc teyvat -6553 5162
+    - !loc teyvat -6552 5164
+    - !loc teyvat -6550 4735
+    - !loc teyvat -6548 4741
+    - !loc teyvat -6547 5168
+    - !loc teyvat -6510 4484
+    - !loc teyvat -6504 4493
+    - !loc teyvat -6496 4486
+    - !loc teyvat -6468 4284
+    - !loc teyvat -6465 4274
+    - !loc teyvat -6460 4279
+    - !loc teyvat -6448 4673
+    - !loc teyvat -6445 4667
+    - !loc teyvat -6429 4569
+    - !loc teyvat -6423 4141
+    - !loc teyvat -6421 4139
+    - !loc teyvat -6419 4142
+    - !loc teyvat -6404 4306
+    - !loc teyvat -6171 4222
+    - !loc teyvat -6170 4226
+    - !loc teyvat -6168 4223
+    - !loc teyvat -6118 4227
+    - !loc teyvat -6118 4231
+    - !loc teyvat -6114 4231
+    - !loc teyvat -6055 4237
+    - !loc teyvat -6052 4239
+    - !loc teyvat -6047 4958
+    - !loc teyvat -6039 4225
+    - !loc teyvat -6039 4232
+    - !loc teyvat -6033 4230
+    - !loc teyvat -5789 5326
+    - !loc teyvat -5784 5317
+    - !loc teyvat -5781 5332
+    - !loc teyvat -5776 5326
+    - !loc teyvat -5751 4194
+    - !loc teyvat -5707 4493
+    - !loc teyvat -5706 4496
+    - !loc teyvat -5706 5060
+    - !loc teyvat -5704 5057
+    - !loc teyvat -5703 4495
+    - !loc teyvat -5700 5055
+    - !loc teyvat -5697 5056
+    - !loc teyvat -5663 4988
+    - !loc teyvat -5658 4982
+    - !loc teyvat -5622 4417
+    - !loc teyvat -5617 4414
+    - !loc teyvat -5617 4420
+    - !loc teyvat -5600 4898
+    - !loc teyvat -5598 4902
+    - !loc teyvat -5594 4897
+    - !loc teyvat -5592 4901
+    - !loc teyvat -5570 5571
+    - !loc teyvat -5565 5579
+    - !loc teyvat -5562 5567
+    - !loc teyvat -5557 5573
+    - !loc teyvat -5552 4427
+    - !loc teyvat -5547 4424
+    - !loc teyvat -5517 3741
+    - !loc teyvat -5515 3741
+    - !loc teyvat -5507 4591
+    - !loc teyvat -5484 4982
+    - !loc teyvat -5484 4987
+    - !loc teyvat -5478 4981
+    - !loc teyvat -5477 4987
+    - !loc teyvat -5474 5277
+    - !loc teyvat -5468 5273
+    - !loc teyvat -5467 5268
+    - !loc teyvat -5467 5281
+    - !loc teyvat -5445 3695
+    - !loc teyvat -5442 3691
+    - !loc teyvat -5431 3989
+    - !loc teyvat -5420 3978
+    - !loc teyvat -5413 3989
+    - !loc teyvat -5413 5428
+    - !loc teyvat -5411 5419
+    - !loc teyvat -5411 5423
+    - !loc teyvat -5397 3719
+    - !loc teyvat -5395 3724
+    - !loc teyvat -5389 3720
+    - !loc teyvat -5381 5614
+    - !loc teyvat -5380 4147
+    - !loc teyvat -5378 4154
+    - !loc teyvat -5378 5612
+    - !loc teyvat -5370 4151
+    - !loc teyvat -5370 4904
+    - !loc teyvat -5369 4894
+    - !loc teyvat -5364 5632
+    - !loc teyvat -5359 4901
+    - !loc teyvat -5343 5613
+    - !loc teyvat -5330 5596
+    - !loc teyvat -5329 5205
+    - !loc teyvat -5329 5256
+    - !loc teyvat -5327 5200
+    - !loc teyvat -5327 5254
+    - !loc teyvat -5325 5254
+    - !loc teyvat -5323 5207
+    - !loc teyvat -5322 5658
+    - !loc teyvat -5319 5657
+    - !loc teyvat -5318 4190
+    - !loc teyvat -5318 5203
+    - !loc teyvat -5316 4616
+    - !loc teyvat -5315 4193
+    - !loc teyvat -5315 5070
+    - !loc teyvat -5313 4188
+    - !loc teyvat -5312 4618
+    - !loc teyvat -5312 4735
+    - !loc teyvat -5312 5061
+    - !loc teyvat -5310 5069
+    - !loc teyvat -5309 5080
+    - !loc teyvat -5307 4742
+    - !loc teyvat -5307 4769
+    - !loc teyvat -5304 5067
+    - !loc teyvat -5301 4741
+    - !loc teyvat -5301 4750
+    - !loc teyvat -5300 4744
+    - !loc teyvat -5296 5623
+    - !loc teyvat -5295 4745
+    - !loc teyvat -5294 5620
+    - !loc teyvat -5293 5625
+    - !loc teyvat -5292 5618
+    - !loc teyvat -5291 4755
+    - !loc teyvat -5290 5616
+    - !loc teyvat -5290 5619
+    - !loc teyvat -5290 5623
+    - !loc teyvat -5276 4785
+    - !loc teyvat -5269 4780
+    - !loc teyvat -5258 3629
+    - !loc teyvat -5253 3635
+    - !loc teyvat -5246 3980
+    - !loc teyvat -5246 4569
+    - !loc teyvat -5243 3983
+    - !loc teyvat -5241 4563
+    - !loc teyvat -5237 3990
+    - !loc teyvat -5237 3994
+    - !loc teyvat -5237 4568
+    - !loc teyvat -5232 3991
+    - !loc teyvat -5232 4455
+    - !loc teyvat -5225 4455
+    - !loc teyvat -5220 4189
+    - !loc teyvat -5211 4116
+    - !loc teyvat -5209 4118
+    - !loc teyvat -5206 4114
+    - !loc teyvat -5204 4268
+    - !loc teyvat -5202 4274
+    - !loc teyvat -5196 4271
+    - !loc teyvat -5193 4841
+    - !loc teyvat -5192 4846
+    - !loc teyvat -5191 4886
+    - !loc teyvat -5188 4878
+    - !loc teyvat -5188 4892
+    - !loc teyvat -5186 4845
+    - !loc teyvat -5169 4022
+    - !loc teyvat -5166 5565
+    - !loc teyvat -5161 4027
+    - !loc teyvat -5160 4773
+    - !loc teyvat -5155 4062
+    - !loc teyvat -5155 5553
+    - !loc teyvat -5154 4057
+    - !loc teyvat -5153 4771
+    - !loc teyvat -5152 5560
+    - !loc teyvat -5151 4024
+    - !loc teyvat -5151 4766
+    - !loc teyvat -5150 4060
+    - !loc teyvat -5122 4782
+    - !loc teyvat -5118 4792
+    - !loc teyvat -5111 4782
+    - !loc teyvat -5087 4398
+    - !loc teyvat -5081 4374
+    - !loc teyvat -5080 4400
+    - !loc teyvat -5079 4382
+    - !loc teyvat -5076 4379
+    - !loc teyvat -5076 4403
+    - !loc teyvat -5071 4384
+    - !loc teyvat -5064 4213
+    - !loc teyvat -5055 4733
+    - !loc teyvat -5054 4152
+    - !loc teyvat -5053 4731
+    - !loc teyvat -5051 4734
+    - !loc teyvat -5038 4393
+    - !loc teyvat -5037 4395
+    - !loc teyvat -5037 4950
+    - !loc teyvat -5030 5347
+    - !loc teyvat -5026 5350
+    - !loc teyvat -5020 5337
+    - !loc teyvat -5016 5321
+    - !loc teyvat -5008 5324
+    - !loc teyvat -4998 4139
+    - !loc teyvat -4996 4825
+    - !loc teyvat -4992 4134
+    - !loc teyvat -4992 4142
+    - !loc teyvat -4982 4680
+    - !loc teyvat -4979 4669
+    - !loc teyvat -4976 4686
+    - !loc teyvat -4975 4597
+    - !loc teyvat -4973 4677
+    - !loc teyvat -4968 5086
+    - !loc teyvat -4967 4160
+    - !loc teyvat -4966 5083
+    - !loc teyvat -4964 5086
+    - !loc teyvat -4963 4161
+    - !loc teyvat -4962 4155
+    - !loc teyvat -4940 4173
+    - !loc teyvat -4940 4184
+    - !loc teyvat -4938 4170
+    - !loc teyvat -4937 4180
+    - !loc teyvat -4936 4183
+    - !loc teyvat -4935 4173
+    - !loc teyvat -4934 4879
+    - !loc teyvat -4930 4887
+    - !loc teyvat -4926 4454
+    - !loc teyvat -4922 4886
+    - !loc teyvat -4915 4827
+    - !loc teyvat -4915 4882
+    - !loc teyvat -4912 4821
+    - !loc teyvat -4908 4826
+    - !loc teyvat -4877 4944
+    - !loc teyvat -4826 3872
+    - !loc teyvat -4822 3696
+    - !loc teyvat -4819 4406
+    - !loc teyvat -4818 3706
+    - !loc teyvat -4815 3862
+    - !loc teyvat -4814 3714
+    - !loc teyvat -4814 4427
+    - !loc teyvat -4813 3871
+    - !loc teyvat -4806 4407
+    - !loc teyvat -4799 4176
+    - !loc teyvat -4795 4854
+    - !loc teyvat -4793 4170
+    - !loc teyvat -4790 4175
+    - !loc teyvat -4787 4851
+    - !loc teyvat -4786 4858
+    - !loc teyvat -4780 4129
+    - !loc teyvat -4777 4134
+    - !loc teyvat -4775 4131
+    - !loc teyvat -4765 4910
+    - !loc teyvat -4762 4917
+    - !loc teyvat -4758 4913
+    - !loc teyvat -4757 4077
+    - !loc teyvat -4752 2805
+    - !loc teyvat -4750 4074
+    - !loc teyvat -4739 2813
+    - !loc teyvat -4735 2792
+    - !loc teyvat -4728 2638
+    - !loc teyvat -4727 2631
+    - !loc teyvat -4727 2640
+    - !loc teyvat -4726 2799
+    - !loc teyvat -4722 4436
+    - !loc teyvat -4721 2810
+    - !loc teyvat -4720 2658
+    - !loc teyvat -4719 4439
+    - !loc teyvat -4717 2655
+    - !loc teyvat -4714 2656
+    - !loc teyvat -4713 4165
+    - !loc teyvat -4711 3982
+    - !loc teyvat -4708 3991
+    - !loc teyvat -4707 4408
+    - !loc teyvat -4703 4779
+    - !loc teyvat -4697 4767
+    - !loc teyvat -4690 4783
+    - !loc teyvat -4688 3721
+    - !loc teyvat -4681 2431
+    - !loc teyvat -4679 2427
+    - !loc teyvat -4676 2506
+    - !loc teyvat -4674 2431
+    - !loc teyvat -4671 3723
+    - !loc teyvat -4668 3532
+    - !loc teyvat -4665 3523
+    - !loc teyvat -4660 3529
+    - !loc teyvat -4655 2446
+    - !loc teyvat -4654 2425
+    - !loc teyvat -4653 2421
+    - !loc teyvat -4651 2541
+    - !loc teyvat -4651 3725
+    - !loc teyvat -4646 2451
+    - !loc teyvat -4639 2449
+    - !loc teyvat -4638 2401
+    - !loc teyvat -4637 2426
+    - !loc teyvat -4637 2894
+    - !loc teyvat -4635 2401
+    - !loc teyvat -4635 2898
+    - !loc teyvat -4633 2427
+    - !loc teyvat -4632 2396
+    - !loc teyvat -4632 2451
+    - !loc teyvat -4632 2896
+    - !loc teyvat -4612 2474
+    - !loc teyvat -4609 2405
+    - !loc teyvat -4608 2411
+    - !loc teyvat -4608 2471
+    - !loc teyvat -4607 3643
+    - !loc teyvat -4605 3654
+    - !loc teyvat -4604 2475
+    - !loc teyvat -4601 2441
+    - !loc teyvat -4601 2447
+    - !loc teyvat -4599 3642
+    - !loc teyvat -4599 3662
+    - !loc teyvat -4592 3719
+    - !loc teyvat -4591 3656
+    - !loc teyvat -4589 3484
+    - !loc teyvat -4584 3739
+    - !loc teyvat -4581 3488
+    - !loc teyvat -4572 3492
+    - !loc teyvat -4558 3731
+    - !loc teyvat -4530 3666
+    - !loc teyvat -4525 3304
+    - !loc teyvat -4524 3669
+    - !loc teyvat -4521 3299
+    - !loc teyvat -4519 3464
+    - !loc teyvat -4519 3674
+    - !loc teyvat -4517 3667
+    - !loc teyvat -4513 3303
+    - !loc teyvat -4512 3460
+    - !loc teyvat -4510 3466
+    - !loc teyvat -4506 3463
+    - !loc teyvat -4503 2720
+    - !loc teyvat -4500 2504
+    - !loc teyvat -4495 2719
+    - !loc teyvat -4493 2504
+    - !loc teyvat -4492 2715
+    - !loc teyvat -4492 2724
+    - !loc teyvat -4484 2502
+    - !loc teyvat -4477 2503
+    - !loc teyvat -4473 2497
+    - !loc teyvat -4451 4070
+    - !loc teyvat -4448 4067
+    - !loc teyvat -4444 3243
+    - !loc teyvat -4442 3238
+    - !loc teyvat -4442 4062
+    - !loc teyvat -4440 4065
+    - !loc teyvat -4437 3570
+    - !loc teyvat -4436 3245
+    - !loc teyvat -4434 3237
+    - !loc teyvat -4428 3561
+    - !loc teyvat -4418 3544
+    - !loc teyvat -4392 3013
+    - !loc teyvat -4390 3006
+    - !loc teyvat -4389 3044
+    - !loc teyvat -4389 3367
+    - !loc teyvat -4383 3351
+    - !loc teyvat -4382 3357
+    - !loc teyvat -4379 3013
+    - !loc teyvat -4375 3364
+    - !loc teyvat -4374 3035
+    - !loc teyvat -4371 3041
+    - !loc teyvat -4352 3445
+    - !loc teyvat -4349 3463
+    - !loc teyvat -4345 3469
+    - !loc teyvat -4344 3410
+    - !loc teyvat -4343 3461
+    - !loc teyvat -4340 3464
+    - !loc teyvat -4339 3460
+    - !loc teyvat -4339 3467
+    - !loc teyvat -4337 3409
+    - !loc teyvat -4337 3417
+    - !loc teyvat -4330 3410
+    - !loc teyvat -4328 2656
+    - !loc teyvat -4327 2676
+    - !loc teyvat -4318 4152
+    - !loc teyvat -4317 4172
+    - !loc teyvat -4315 2653
+    - !loc teyvat -4309 4131
+    - !loc teyvat -4306 2649
+    - !loc teyvat -4303 4071
+    - !loc teyvat -4300 4071
+    - !loc teyvat -4292 4097
+    - !loc teyvat -4282 4172
+    - !loc teyvat -4221 3326
+    - !loc teyvat -4219 4269
+    - !loc teyvat -4216 3312
+    - !loc teyvat -4215 4261
+    - !loc teyvat -4209 4267
+    - !loc teyvat -4207 3326
+    - !loc teyvat -4197 4151
+    - !loc teyvat -4194 4145
+    - !loc teyvat -4190 4153
+    - !loc teyvat -4189 4143
+    - !loc teyvat -4187 4148
+    - !loc teyvat -4177 4030
+    - !loc teyvat -4171 4020
+    - !loc teyvat -4167 4030
+    - !loc teyvat -4097 3003
+    - !loc teyvat -4096 4192
+    - !loc teyvat -4093 3411
+    - !loc teyvat -4091 4184
+    - !loc teyvat -4088 2993
+    - !loc teyvat -4087 4190
+    - !loc teyvat -4081 3001
+    - !loc teyvat -4081 3415
+    - !loc teyvat -4071 3424
+    - !loc teyvat -4067 3429
+    - !loc teyvat -4062 3421
+    - !loc teyvat -4039 3207
+    - !loc teyvat -4014 4272
+    - !loc teyvat -4004 4279
+    - !loc teyvat -4003 4269
+    - !loc teyvat -3999 4147
+    - !loc teyvat -3989 4143
+    - !loc teyvat -3978 4224
+    - !loc teyvat -3977 4223
+    - !loc teyvat -3973 4226
+    - !loc teyvat -3952 3165
+    - !loc teyvat -3950 2489
+    - !loc teyvat -3942 4213
+    - !loc teyvat -3938 4209
+    - !loc teyvat -3937 3124
+    - !loc teyvat -3935 4214
+    - !loc teyvat -3934 2489
+    - !loc teyvat -3933 2478
+    - !loc teyvat -3929 3126
+    - !loc teyvat -3928 2497
+    - !loc teyvat -3927 3123
+    - !loc teyvat -3925 3992
+    - !loc teyvat -3923 3985
+    - !loc teyvat -3922 2493
+    - !loc teyvat -3917 3991
+    - !loc teyvat -3914 2531
+    - !loc teyvat -3908 2525
+    - !loc teyvat -3905 2534
+    - !loc teyvat -3886 3824
+    - !loc teyvat -3881 3813
+    - !loc teyvat -3876 3817
+    - !loc teyvat -3842 3364
+    - !loc teyvat -3840 3415
+    - !loc teyvat -3836 3430
+    - !loc teyvat -3826 3370
+    - !loc teyvat -3825 3393
+    - !loc teyvat -3813 3632
+    - !loc teyvat -3812 3640
+    - !loc teyvat -3810 2227
+    - !loc teyvat -3809 2224
+    - !loc teyvat -3805 3636
+    - !loc teyvat -3797 2228
+    - !loc teyvat -3796 2233
+    - !loc teyvat -3791 2214
+    - !loc teyvat -3785 2195
+    - !loc teyvat -3782 2199
+    - !loc teyvat -3780 2191
+    - !loc teyvat -3779 2195
+    - !loc teyvat -3771 2099
+    - !loc teyvat -3771 3497
+    - !loc teyvat -3769 2097
+    - !loc teyvat -3768 2122
+    - !loc teyvat -3768 2125
+    - !loc teyvat -3766 3495
+    - !loc teyvat -3755 2102
+    - !loc teyvat -3753 2099
+    - !loc teyvat -3751 2235
+    - !loc teyvat -3750 2233
+    - !loc teyvat -3748 2239
+    - !loc teyvat -3745 2236
+    - !loc teyvat -3744 2070
+    - !loc teyvat -3744 2233
+    - !loc teyvat -3741 2074
+    - !loc teyvat -3740 2068
+    - !loc teyvat -3724 2286
+    - !loc teyvat -3722 2281
+    - !loc teyvat -3718 2093
+    - !loc teyvat -3717 2089
+    - !loc teyvat -3717 2278
+    - !loc teyvat -3713 2275
+    - !loc teyvat -3713 2283
+    - !loc teyvat -3712 3137
+    - !loc teyvat -3706 3135
+    - !loc teyvat -3699 2673
+    - !loc teyvat -3690 2666
+    - !loc teyvat -3689 2680
+    - !loc teyvat -3688 2087
+    - !loc teyvat -3688 2091
+    - !loc teyvat -3685 2713
+    - !loc teyvat -3682 2432
+    - !loc teyvat -3682 3034
+    - !loc teyvat -3681 3028
+    - !loc teyvat -3678 2430
+    - !loc teyvat -3677 2716
+    - !loc teyvat -3676 2432
+    - !loc teyvat -3676 3032
+    - !loc teyvat -3659 3354
+    - !loc teyvat -3658 2241
+    - !loc teyvat -3658 3342
+    - !loc teyvat -3655 2245
+    - !loc teyvat -3653 2241
+    - !loc teyvat -3652 3349
+    - !loc teyvat -3651 2236
+    - !loc teyvat -3626 2334
+    - !loc teyvat -3623 2342
+    - !loc teyvat -3618 2332
+    - !loc teyvat -3616 3811
+    - !loc teyvat -3612 3828
+    - !loc teyvat -3598 3813
+    - !loc teyvat -3596 3827
+    - !loc teyvat -3512 3957
+    - !loc teyvat -3509 3945
+    - !loc teyvat -3505 3957
+    - !loc teyvat -3498 3939
+    - !loc teyvat -3496 3859
+    - !loc teyvat -3491 3849
+    - !loc teyvat -3490 3855
+    - !loc teyvat -3489 3853
+    - !loc teyvat -3469 3944
+    - !loc teyvat -3462 3940
+    - !loc teyvat -3459 3943
+    - !loc teyvat -3439 3202
+    - !loc teyvat -3435 3195
+    - !loc teyvat -3412 2517
+    - !loc teyvat -3410 2980
+    - !loc teyvat -3407 3544
+    - !loc teyvat -3405 2988
+    - !loc teyvat -3400 2982
+    - !loc teyvat -3400 3541
+    - !loc teyvat -3397 2516
+    - !loc teyvat -3396 3549
+    - !loc teyvat -3395 2984
+    - !loc teyvat -3394 3244
+    - !loc teyvat -3391 3232
+    - !loc teyvat -3386 3239
+    - !loc teyvat -3375 2936
+    - !loc teyvat -3364 2939
+    - !loc teyvat -3363 2933
+    - !loc teyvat -3347 3054
+    - !loc teyvat -3327 3058
+    - !loc teyvat -3319 3036
+    - !loc teyvat -3308 3091
+    - !loc teyvat -3304 3070
+    - !loc teyvat -3246 1878
+    - !loc teyvat -3242 1874
+    - !loc teyvat -3200 1946
+    - !loc teyvat -3195 1940
+    - !loc teyvat -3129 2205
+    - !loc teyvat -3128 2208
+    - !loc teyvat -3128 2846
+    - !loc teyvat -3125 2849
+    - !loc teyvat -3121 2204
+    - !loc teyvat -3118 2212
+    - !loc teyvat -3115 1926
+    - !loc teyvat -3112 1915
+    - !loc teyvat -3109 1907
+    - !loc teyvat -3102 1901
+    - !loc teyvat -3096 1893
+    - !loc teyvat -3088 2882
+    - !loc teyvat -3084 2908
+    - !loc teyvat -3083 2903
+    - !loc teyvat -3081 2876
+    - !loc teyvat -3080 2883
+    - !loc teyvat -3079 2907
+    - !loc teyvat -3073 2748
+    - !loc teyvat -3071 2925
+    - !loc teyvat -3069 2746
+    - !loc teyvat -3068 2923
+    - !loc teyvat -3067 2743
+    - !loc teyvat -3067 2927
+    - !loc teyvat -3055 3171
+    - !loc teyvat -3050 3176
+    - !loc teyvat -3049 3173
+    - !loc teyvat -3012 2825
+    - !loc teyvat -3010 2571
+    - !loc teyvat -3009 2568
+    - !loc teyvat -3008 2731
+    - !loc teyvat -3005 2570
+    - !loc teyvat -3004 2727
+    - !loc teyvat -3003 2732
+    - !loc teyvat -2985 1953
+    - !loc teyvat -2985 2932
+    - !loc teyvat -2984 2731
+    - !loc teyvat -2983 2727
+    - !loc teyvat -2983 2933
+    - !loc teyvat -2980 2870
+    - !loc teyvat -2979 2728
+    - !loc teyvat -2979 2931
+    - !loc teyvat -2978 2867
+    - !loc teyvat -2977 2934
+    - !loc teyvat -2975 2868
+    - !loc teyvat -2971 1967
+    - !loc teyvat -2969 1871
+    - !loc teyvat -2969 2739
+    - !loc teyvat -2967 1943
+    - !loc teyvat -2967 3792
+    - !loc teyvat -2966 1859
+    - !loc teyvat -2966 2737
+    - !loc teyvat -2964 3788
+    - !loc teyvat -2963 2737
+    - !loc teyvat -2960 2595
+    - !loc teyvat -2958 2593
+    - !loc teyvat -2957 1868
+    - !loc teyvat -2955 2593
+    - !loc teyvat -2914 2436
+    - !loc teyvat -2909 2432
+    - !loc teyvat -2908 2436
+    - !loc teyvat -2892 2422
+    - !loc teyvat -2887 2419
+    - !loc teyvat -2872 2451
+    - !loc teyvat -2867 2451
+    - !loc teyvat -2856 3905
+    - !loc teyvat -2853 2145
+    - !loc teyvat -2849 3908
+    - !loc teyvat -2849 3923
+    - !loc teyvat -2844 3908
+    - !loc teyvat -2841 2133
+    - !loc teyvat -2838 2409
+    - !loc teyvat -2833 2409
+    - !loc teyvat -2818 3463
+    - !loc teyvat -2817 2416
+    - !loc teyvat -2815 3428
+    - !loc teyvat -2813 2418
+    - !loc teyvat -2811 2384
+    - !loc teyvat -2807 3459
+    - !loc teyvat -2805 2385
+    - !loc teyvat -2804 2382
+    - !loc teyvat -2801 2389
+    - !loc teyvat -2799 2386
+    - !loc teyvat -2799 2386
+    - !loc teyvat -2702 3677
+    - !loc teyvat -2675 3693
+    - !loc teyvat -2672 3688
+    - !loc chasm -246 162
+    - !loc chasm -246 268
+    - !loc chasm -245 165
+    - !loc chasm -245 262
+    - !loc chasm -241 175
+    - !loc chasm -240 270
+    - !loc chasm -239 265
+    - !loc chasm -237 169
+    - !loc chasm -234 168
+    - !loc chasm -144 353
+    - !loc chasm -141 355
+    - !loc chasm 60 -293
+    - !loc chasm 62 -296
+    - !loc chasm 65 -294
+    - !loc chasm 70 -318
+    - !loc chasm 73 -322
+    - !loc chasm 75 -319
+    - !loc chasm 79 -297
+    - !loc chasm 84 -338
+    - !loc chasm 125 279
+    - !loc chasm 129 268
+    - !loc chasm 130 282
+    - !loc chasm 131 271
+    - !loc chasm 135 268
+    - !loc chasm 136 282

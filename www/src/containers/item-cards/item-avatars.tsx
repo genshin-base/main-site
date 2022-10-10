@@ -149,7 +149,7 @@ function ItemDd({
 	return (
 		<DdContext.Provider value={{ onClickAway: closeDd }}>
 			<button
-				className={`btn-reset ${pointerClass} ${classes}`}
+				className={`btn-reset user-select-text ${pointerClass} ${classes}`}
 				ref={elRef}
 				onClick={openDd}
 				disabled={!ddComponent}

@@ -185,7 +185,7 @@ dps
 
 # === characters.#ayato.roles.#dps.tips ===
 
-Always try to activate Ayato's Elemental Burst before using his skill to maximize his Normal Attack DMG. Getting enough Energy Recharge for this is important, and varies based on team.
+Always try to activate Ayato's Elemental Burst before using his skill to maximize his Normal Attack DMG. Getting enough Energy Recharge for this is important, and varies based on team. Since the casting time is so long, it may not be worth snapshotting into buffs.
 
 The amount of slashes Ayato can do during an Elemental Skill window is sometimes influenced by the player's set FPS.
 
@@ -196,8 +196,11 @@ DPS Ayato focuses on doing large amounts of on-field damage with his Elemental S
 
 **Regarding Weapon Choices**
 
-**[Skyward Blade](#weapon:skyward-blade)**<br>
-If you have a lot of ER% from substats, this weapon performs equal to/below [Amenoma Kageuchi](#weapon:amenoma-kageuchi).
+**[Haran Geppaku Futsu](#weapon:haran-geppaku-futsu) and [Primoridal Jade Cutter](#weapon:primordial-jade-cutter)**<br>
+If you cannot run [Echoes of an Offering (4)](#artifact:echoes-of-an-offering) on Ayato, Primodial Jade Cutter is better then Haran Geppaku Futsu. If you can run Echoes of an Offering and have less than 100 ping, Haran Geppaku Futsu is better than Primoridal Jade Cutter.
+
+**[Skyward Blade](#weapon:skyward-blade) and [Amenoma Kageuchi](#weapon:amenoma-kageuchi)**<br>
+If you have a lot of ER% from substats, or you are running Ayato in teams where he needs less than 140% ER to burst, these weapons are not as valuable.
 
 **[Summit Shaper](#weapon:summit-shaper)**<br>
 In teams where ATK buffs are scarce, this weapon has the potential to rival Skyward Blade.
@@ -208,7 +211,7 @@ In Electro-Charged teams, this weapon performs better than [The Black Sword](#we
 **Regarding Artifact Sets**
 
 **[Echoes of an Offering (4)](#artifact:echoes-of-an-offering)**<br>
-The performance of this artifact set is inconsistent, and is based on user ping and other factors.
+The performance of this artifact set is inconsistent, and is based on user ping and other factors. It is not recommended to run this set unless your ping is consistently below 100. If you can achieve this, Echoes is only preferred on weapons with high amounts of damage% such as Mistsplitters Reforged, and Haran Geppaku Futsu. Otherwise, Heart of Depth (4) is preferred.
 
 **[Blizzard Strayer (4)](#artifact:blizzard-strayer) when run in a Freeze Team**<br>
 this is Ayato's best set. Note that it is not recommended to farm specifically for this set.
@@ -446,6 +449,10 @@ This weapon currently has the highest Base ATK for a 4 star weapon (even more Ba
 [Prototype Rancour](#weapon:prototype-rancour)<br>
 This weapon has one of the highest Base ATK for a 4 Star weapon (and this is also a weapon you could craft from the Blacksmith)
 
+# === characters.#candace.roles.#wip.name ===
+
+wip
+
 
 # === characters.#chongyun.roles.#burst_support.name ===
 
@@ -488,6 +495,64 @@ Chongyun is one of the best Noblesse holders since he has low energy requirement
 
 Prioritize Elemental Burst on a Melt team as it scales better than his Elemental Skill.<br>
 Prioritize Elemental Skill on a Freeze team to furthermore extend the duration of the Cryo infusion.
+
+
+# === characters.#collei.roles.#support.name ===
+
+support
+
+
+# === characters.#collei.roles.#support.mainStats.notes ===
+
+Prioritize Energy Recharge if her Energy Requirements are not met.
+
+
+# === characters.#collei.roles.#support.tips ===
+
+**Typical Collei Rotation** <br>
+Skill > Burst > Swap<br>
+
+**Rotation with [Polar Star](#weapon:polar-star)**<br>
+N1 > tap Charged Attack > Skill > Burst > Swap
+
+**Energy Recharge Guidelines** <br>
+160–200% (Depending on Team and weapon)
+
+
+# === characters.#collei.roles.#support.notes ===
+
+Collei is a Bow User who provides off-field support in Dendro application and damage.
+
+**Regarding Weapon Choices**<br>
+
+**[Polar Star](#weapon:polar-star)**<br>
+While this weapon provides the highest personal damage, it is generally not recommended as team buffs provide more teamwide damage over a small increase in personal damage. 
+
+**[Sacrificial Bow](#weapon:sacrificial-bow)**<br>
+Not recommended below R4 due to it delaying rotation, possibly resulting in damage loss.
+
+**Regarding Artifact Sets**<br>
+
+**[Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith)**<br>
+Collei's Sprout damage counts as Skill damage, which allows her to be able to keep Tenacity of the Millelith up during important damage windows. Generally an alternative to [Noblesse](#artifact:noblesse-oblige) or [Deepwood](#artifact:deepwood-memories) (or if you are already running both in a team).<br>
+
+**[Gilded Dreams (4)](#artifact:gilded-dreams)**<br>
+This set is only used in a team where Collei is used to trigger reactions (i.e. Bloom/Burning teams), and does not benefit Collei if she is used as an aura.
+
+**[The Exile (4)](#artifact:the-exile)**<br>
+An alternative option if they are placed in the same team as Cyno to help his Energy Recharge needs.
+
+_Shout out to Emiliabyss#1641 for providing an in-depth reference._
+
+
+# === characters.#cyno.roles.#wip.name ===
+
+wip
+
+# === characters.#cyno.roles.#wip.notes ===
+
+wip
+
 
 # === characters.#diluc.credits ===
 
@@ -573,13 +638,13 @@ As a support, Diona's typically used for three things; Shielding, Healing, and C
 **Regarding Weapon Choices**
 
 **[Sacrificial Bow](#weapon:sacrificial-bow)**<br>
-Prefered over Favonious especially at higher refinements due to having better Shield uptime.
+Prefered over Favonius at higher refinements for consistency and when batterying another cryo unit.
 
 **[Favonius Warbow](#weapon:favonius-warbow)**<br>
-You will look to build some Crit Rate coverage to have a higher chance of triggering bow passive for energy.
+It is recommended to build some Crit Rate  coverage to have a higher chance of triggering bow passive for energy.
 
 **[Recurve Bow](#weapon:recurve-bow)**<br>
-This bow will be your best choice for stronger shields, but it reduces Diona's burst uptime significantly due to no Energy Recharge on her weapon.
+This bow will be your best choice for stronger shields, but it reduces Diona's burst uptime significantly due to having no Energy Recharge on her weapon.
 
 **Regarding Artifact Sets**
 
@@ -719,6 +784,9 @@ This set trades off a portion of Fischl's damage in return for a party wide 20% 
 
 melt dps
 
+# === characters.#ganyu.roles.#melt_dps.artifacts.notes ===
+
+≈ Wanderer's Troupe (4)\*
 
 # === characters.#ganyu.roles.#melt_dps.tips ===
 
@@ -735,10 +803,15 @@ Ganyu's Level 2 Charged Shot applies two instances Cryo as they do not share the
 Amos is an excellent weapon for Ganyu since her Level 2 Charge Shot Bloom extends arrow flight duration and you can get 3 stacks of Amos' passive even on point blank range.
 
 [Hamayumi](#weapon:hamayumi)<br>
-This weapon doesn't synergize well with Shimenawa's Reminiscence (4) due to its passive.
+Due to its passive, this weapon prefers [Wanderer's Troupe (4)](#artifact:wanderers-troupe)
 
 [Prototype Crescent](#weapon:prototype-crescent)<br>
 At higher refinement levels with good uptime on its passive, it can potentially be on par with [Skyward Harp](#weapon:skyward-harp). However, do bear in mind that not all enemies have weak spots that you can headshot, which does affect its performance significantly.
+
+**Regarding Artifact Sets**<br>
+
+**[Shimenawa's Reminiscence (4)](#artifact:shimenawas-reminiscence) and [Wanderer's Troupe (4)](#artifact:wanderers-troupe)**<br>
+Shimenawa's only pulls ahead if you are able to squeeze 5 Charged Attacks during the 10 second buff duration. Due to it being very difficult to do, Wanderer's Troupe (4) will usually end up dealing more damage for most players. Note that unless you intend to artifact strongbox Wanderer's Troupe pieces, Shimenawa's Riminiscence remains the better set to farm as the domain is greatly resin efficient.
 
 **Regarding Talent Priority**
 
@@ -1140,8 +1213,6 @@ electro dps
 
 # === characters.#keqing.roles.#electro_dps.artifacts.notes ===
 
-[Thundering Fury (4)](#artifact:thundering-fury) is not recommended for Electro DPS Keqing.
-
 Note: Artifact recommendations are not ranked in order of recommendation, read the notes for more info.
 
 
@@ -1166,24 +1237,24 @@ Both physical and electro keqing are good and viable. You'd usually want to deci
 **Regarding Weapon Choices**
 
 **[Lion's Roar](#weapon:lions-roar)**<br>
-This weapon is only recommended on Pure Electro/Electro-charged teams. In teams where the Electro Aura can be easily removed OR when facing enemies with innate elements, this weapon will severely underperform.
+This weapon is only recommended on Aggravate, Pure Electro or Electro-charged teams. In teams where the Electro Aura can be easily removed OR when facing enemies with innate elements, this weapon will severely underperform.
 
 **[The Black Sword](#weapon:the-black-sword)**<br>
 On a quickswap Keqing, this weapon will be shifted below Harbinger of Dawn **\[R5\].**
 
 **Regarding Artifact Sets**
 
-**[Thundering Fury (2) ](#artifact:thundering-fury)+ [18% ATK set (2)](#artifact:18%-atk)**<br>
+**[Thundering Fury (4)](#artifact:thundering-fury)**<br>
+This set provides the highest damage output if you are running Keqing in an Aggravate-based team composition. 
+
+**[Thundering Fury (2)](#artifact:thundering-fury) + [18% ATK set (2)](#artifact:18%-atk)**<br>
 This set is a generalist set, which means it can be used generally anywhere, whether it be Co-op or Abyss, or other singleplayer content. This has a lot of consistency due to its independence from electro aura, and it is more viable in abyss.
 
 **[18% ATK set (2)](#artifact:18%-atk) + [18% ATK set (2)](#artifact:18%-atk)**<br>
 While it is slightly behind Thundering Fury (2) +18% ATK set (2), this set is preferred to farm for due to the resin efficiency of Shimenawa's Reminiscence's Domain.
 
 **[Thundersoother (4)](#artifact:thundersoother)**<br>
-This set should be used with Electro-charged team compositions (Keqing + Xingqiu) or mono-electro team comp (Not Suggested). This set has a 35% Dmg modifier which increases all damage from all sources, although that modifier is a bit unstable due to its dependency to the sustainability of Electro aura on enemies.
-
-**[Thundering Fury (2) ](#artifact:thundering-fury)+ [Noblesse Oblige (2)](#artifact:noblesse-oblige)**<br>
-This set is used for Burst/Quickswap AoE Keqing. With this set, you'd want to be using Starward Sword (Q) all the time, which is your main source of DPS with this set.
+This set should be used with Electro-charged team compositions (Keqing + Xingqiu), and can also be a good alternative for Keqing in Aggravate team compositions if you don't have [Thundering Fury (4)](#artifact:thundering-fury). This set has a 35% Dmg modifier which increases all damage from all sources, although that modifier is a bit unstable due to its dependency to the sustainability of Electro aura on enemies.
 
 
 # === characters.#klee.credits ===
@@ -2086,6 +2157,48 @@ Thoma ideally wants to focus on shield over damage, and his burst uptime is requ
 At \[C4\], Thoma gains 15 energy when he fires his Elemental Burst. This effectively reduces his energy cost to 65 and makes it possible to use Black Tassel with ER sands instead of ER weapon with ER sands to furthermore strengthen his shield.
 
 
+# === characters.#tighnari.roles.#quick_swap_dps.name ===
+
+quick swap dps
+
+
+# === characters.#tighnari.roles.#quick_swap_dps.artifacts.notes ===
+
+≈ Gilded Dreams (4)
+
+
+# === characters.#tighnari.roles.#quick_swap_dps.tips ===
+
+Tighnari should only do a rotation consisting E 3CA Q or an alternative variation while on field, as it is impractical to do charged shots that are not boosted by his E
+
+
+# === characters.#tighnari.roles.#quick_swap_dps.notes ===
+
+Tighnari's standard build revolves around him doing his Elemental Skill, Three Clusterbloom Arrows, an Elemental Burst, and promptly swapping out to another character.
+
+**Regarding Weapon Choices**<br>
+
+**[Elegy for the End](#weapon:elegy-for-the-end)**
+This weapon is better than [Hunter's Path](#weapon:hunters-path) if Tighnari needs more than 160 Energy Recharge to cast his burst. However, it falls off significantly if another character in the team holds Elegy for the End.
+
+**[Amos' Bow](#weapon:amos-bow)**<br>
+This option ranks lower due to Tighnari not needing as much ATK%, as well as not stacking the passive well.
+
+**[Slingshot](#weapon:slingshot)**
+Significantly worse when fighting from a long range.
+
+**[Prototype Crescent](#weapon:prototype-crescent)**<br>
+At refinement 5, this weapon is better than Slingshot.
+
+**[The Stringless](#weapon:the-stringless)**<br>
+At refinement 5, this weapon is equal to Slingshot.
+
+**Regarding Artifact Sets**<br>
+
+**[Deepwood Memories (4)](#artifact:deepwood-memories)**
+This is by far Tighnari's best set if no one else on the team is using it.
+
+
 # === characters.#traveler-anemo.roles.#anemo_dps.name ===
 
 anemo dps
@@ -2133,6 +2246,42 @@ physical dps
 
 [Pale Flame (4)](#artifact:pale-flame)<br>
 When running this set, make sure you do Press Cast and not Hold Cast, as the Hold Cast Skill Cooldown would be too long for you to refresh your stacks.
+
+
+# === characters.#traveler-dendro.roles.#support.name ===
+
+support
+
+
+# === characters.#traveler-dendro.roles.#support.mainStats.notes ===
+
+Prioritize Energy Recharge if their Energy Requirements are not met yet.
+
+
+# === characters.#traveler-dendro.roles.#support.talents.notes ===
+
+Not priority investment
+
+
+# === characters.#traveler-dendro.roles.#support.notes ===
+
+\*Current Dendro Traveler section is filled with placeholder content, it is not a finalized section.\*
+
+**Regarding Main Stats Priority**
+
+Prioritize maintaining their burst uptime, the ER needs for Dendro Traveler would be a lot greater if they are the only Dendro unit in the team.
+
+**Regarding Weapon Choices**
+
+**[Sacrificial Sword](#weapon:sacrificial-sword)**<br>
+Prioritized due to Dendro Traveler's exceedingly high Energy Recharge requirements for burst uptime consistency.
+
+**Regarding Artifact Sets**
+
+**[The Exile (4)](#artifact:the-exile)**<br>
+An alternative option if they are placed in the same team as Cyno to help his Energy Recharge needs.
+
+
 
 
 # === characters.#traveler-electro.roles.#support.name ===
@@ -2397,7 +2546,7 @@ The weapon rankings assume you are running enough Energy Recharge to get Xingqiu
 **[Favonius Sword](#weapon:favonius-sword)**
 This weapon is better than Sacrifical Sword \[R3+\] if you intend on using Xingqiu in teams where there is not a second hydro unit.<br>
 
-**[Sacificial Sword \[R3+\]](#weapon:sacrificial-sword)**
+**[Sacrificial Sword \[R3+\]](#weapon:sacrificial-sword)**
 This weapon is better than Favonius Sword when running Xingqiu in a team with more than one hydro unit.
 
 **[Harbinger of Dawn \[R5\]](#weapon:harbinger-of-dawn)**<br>
@@ -2800,3 +2949,12 @@ This set provides Zhongli more utility when casting his Elemental Burst, you can
 
 **[Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith)**<br>
 Just like Noblesse Oblige (4), this set provides Zhongli with more utility if his Elemental Skill hits an enemy. This set also provides Zhongli with stronger shields.
+
+# === characters.#dori.roles.#wip.name ===
+wip
+
+# === characters.#dori.roles.#wip.notes ===
+wip
+
+# === characters.#candace.roles.#wip.notes ===
+wip

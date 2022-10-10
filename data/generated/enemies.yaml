@@ -6,6 +6,7 @@ dendro-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
@@ -18,6 +19,7 @@ large-dendro-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
@@ -30,6 +32,7 @@ anemo-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
@@ -42,6 +45,7 @@ large-anemo-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
@@ -54,6 +58,7 @@ electro-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
@@ -66,6 +71,7 @@ large-electro-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
@@ -78,6 +84,7 @@ mutant-electro-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
@@ -90,6 +97,7 @@ cryo-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
@@ -102,6 +110,7 @@ large-cryo-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
@@ -114,6 +123,7 @@ hydro-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
@@ -126,6 +136,7 @@ large-hydro-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
@@ -138,6 +149,7 @@ pyro-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
@@ -150,6 +162,7 @@ large-pyro-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
@@ -162,6 +175,7 @@ geo-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
@@ -174,31 +188,11 @@ large-geo-slime:
   locations: []
   drop:
     itemCodes:
+      - mora
       - slime-concentrate
       - slime-condensate
       - slime-secretions
     artifactSetCodes: []
-eye-of-the-storm:
-  code: eye-of-the-storm
-  name:
-    en: Eye of the Storm
-    ru: Глаз бури
-  locations:
-    - !loc teyvat -2380 1116
-    - !loc teyvat -2371 1123
-    - !loc teyvat -2198 1359
-    - !loc teyvat -2153 1393
-    - !loc teyvat -1110 -127
-  drop:
-    itemCodes: []
-    artifactSetCodes:
-      - berserker
-      - berserker
-      - instructor
-      - instructor
-      - the-exile
-      - traveling-doctor
-      - traveling-doctor
 electro-hypostasis:
   code: electro-hypostasis
   name:
@@ -217,18 +211,11 @@ electro-hypostasis:
       - vajrada-amethyst-gemstone
       - vajrada-amethyst-sliver
     artifactSetCodes:
-      - berserker
-      - berserker
-      - gladiators-finale
       - gladiators-finale
       - instructor
-      - instructor
-      - prayers-for-wisdom
       - prayers-for-wisdom
       - the-exile
       - traveling-doctor
-      - traveling-doctor
-      - wanderers-troupe
       - wanderers-troupe
 anemo-hypostasis:
   code: anemo-hypostasis
@@ -249,15 +236,9 @@ anemo-hypostasis:
       - vayuda-turquoise-sliver
     artifactSetCodes:
       - berserker
-      - berserker
-      - gladiators-finale
       - gladiators-finale
       - instructor
-      - instructor
-      - the-exile
-      - traveling-doctor
-      - traveling-doctor
-      - wanderers-troupe
+      - lucky-dog
       - wanderers-troupe
 geo-hypostasis:
   code: geo-hypostasis
@@ -277,16 +258,10 @@ geo-hypostasis:
       - prithiva-topaz-gemstone
       - prithiva-topaz-sliver
     artifactSetCodes:
-      - berserker
-      - berserker
       - gladiators-finale
-      - gladiators-finale
-      - instructor
       - instructor
       - the-exile
       - traveling-doctor
-      - traveling-doctor
-      - wanderers-troupe
       - wanderers-troupe
 hydro-hypostasis:
   code: hydro-hypostasis
@@ -306,17 +281,11 @@ hydro-hypostasis:
       - varunada-lazurite-gemstone
       - varunada-lazurite-sliver
     artifactSetCodes:
+      - adventurer
+      - berserker
       - gladiators-finale
-      - gladiators-finale
-      - instructor
-      - instructor
-      - prayers-for-wisdom
-      - prayers-for-wisdom
+      - prayers-for-destiny
       - the-exile
-      - the-exile
-      - traveling-doctor
-      - traveling-doctor
-      - wanderers-troupe
       - wanderers-troupe
 cryo-hypostasis:
   code: cryo-hypostasis
@@ -337,16 +306,10 @@ cryo-hypostasis:
       - shivada-jade-sliver
     artifactSetCodes:
       - berserker
-      - berserker
-      - gladiators-finale
       - gladiators-finale
       - lucky-dog
-      - lucky-dog
-      - prayers-to-springtime
       - prayers-to-springtime
       - the-exile
-      - the-exile
-      - wanderers-troupe
       - wanderers-troupe
 pyro-hypostasis:
   code: pyro-hypostasis
@@ -367,16 +330,10 @@ pyro-hypostasis:
       - smoldering-pearl
     artifactSetCodes:
       - adventurer
-      - adventurer
-      - berserker
       - berserker
       - gladiators-finale
-      - gladiators-finale
-      - instructor
       - instructor
       - prayers-for-illumination
-      - prayers-for-illumination
-      - wanderers-troupe
       - wanderers-troupe
 oceanid:
   code: oceanid
@@ -396,18 +353,11 @@ oceanid:
       - varunada-lazurite-gemstone
       - varunada-lazurite-sliver
     artifactSetCodes:
-      - berserker
+      - adventurer
       - berserker
       - gladiators-finale
-      - gladiators-finale
-      - instructor
-      - instructor
-      - prayers-for-destiny
       - prayers-for-destiny
       - the-exile
-      - traveling-doctor
-      - traveling-doctor
-      - wanderers-troupe
       - wanderers-troupe
 hydro-specter:
   code: hydro-specter
@@ -417,6 +367,7 @@ hydro-specter:
   locations: []
   drop:
     itemCodes:
+      - mora
       - spectral-heart
       - spectral-husk
       - spectral-nucleus
@@ -429,6 +380,7 @@ geo-specter:
   locations: []
   drop:
     itemCodes:
+      - mora
       - spectral-heart
       - spectral-husk
       - spectral-nucleus
@@ -441,6 +393,7 @@ anemo-specter:
   locations: []
   drop:
     itemCodes:
+      - mora
       - spectral-heart
       - spectral-husk
       - spectral-nucleus
@@ -453,6 +406,7 @@ cryo-specter:
   locations: []
   drop:
     itemCodes:
+      - mora
       - spectral-heart
       - spectral-husk
       - spectral-nucleus
@@ -465,6 +419,7 @@ electro-specter:
   locations: []
   drop:
     itemCodes:
+      - mora
       - spectral-heart
       - spectral-husk
       - spectral-nucleus
@@ -477,6 +432,20 @@ pyro-specter:
   locations: []
   drop:
     itemCodes:
+      - mora
+      - spectral-heart
+      - spectral-husk
+      - spectral-nucleus
+    artifactSetCodes: []
+dendro-specter:
+  code: dendro-specter
+  name:
+    en: Dendro Specter
+    ru: Дендро призрак
+  locations: []
+  drop:
+    itemCodes:
+      - mora
       - spectral-heart
       - spectral-husk
       - spectral-nucleus
@@ -500,16 +469,10 @@ thunder-manifestation:
       - vajrada-amethyst-sliver
     artifactSetCodes:
       - gladiators-finale
-      - gladiators-finale
-      - instructor
       - instructor
       - prayers-for-wisdom
-      - prayers-for-wisdom
-      - the-exile
       - the-exile
       - traveling-doctor
-      - traveling-doctor
-      - wanderers-troupe
       - wanderers-troupe
 hilichurl:
   code: hilichurl
@@ -517,15 +480,200 @@ hilichurl:
     en: Hilichurl
     ru: Хиличурл
   locations:
+    - !loc teyvat -6742 4843
+    - !loc teyvat -6736 4840
+    - !loc teyvat -6735 4844
+    - !loc teyvat -6712 4819
+    - !loc teyvat -6703 4812
+    - !loc teyvat -6685 4920
+    - !loc teyvat -6682 4902
+    - !loc teyvat -6679 4915
+    - !loc teyvat -6464 5090
+    - !loc teyvat -6188 4415
+    - !loc teyvat -6185 4415
+    - !loc teyvat -6140 4487
+    - !loc teyvat -6139 4495
+    - !loc teyvat -6134 4493
+    - !loc teyvat -6080 4476
+    - !loc teyvat -6079 4512
+    - !loc teyvat -5946 4331
+    - !loc teyvat -5944 4323
+    - !loc teyvat -5936 4264
+    - !loc teyvat -5934 4260
+    - !loc teyvat -5911 4333
+    - !loc teyvat -5903 4330
+    - !loc teyvat -5828 4228
+    - !loc teyvat -5808 4173
+    - !loc teyvat -5740 4161
+    - !loc teyvat -5687 4014
+    - !loc teyvat -5684 4030
+    - !loc teyvat -5682 4067
+    - !loc teyvat -5675 4058
+    - !loc teyvat -5595 4098
+    - !loc teyvat -5531 3958
+    - !loc teyvat -5510 3942
+    - !loc teyvat -5432 4035
+    - !loc teyvat -5427 4038
+    - !loc teyvat -5415 4655
+    - !loc teyvat -5409 4662
+    - !loc teyvat -5407 5330
+    - !loc teyvat -5399 5328
+    - !loc teyvat -5298 5260
+    - !loc teyvat -5288 5277
+    - !loc teyvat -5275 5263
+    - !loc teyvat -4972 4445
+    - !loc teyvat -4951 4551
+    - !loc teyvat -4940 4550
+    - !loc teyvat -4900 4547
+    - !loc teyvat -4883 4493
+    - !loc teyvat -4878 4488
+    - !loc teyvat -4799 3024
+    - !loc teyvat -4793 3026
+    - !loc teyvat -4788 3024
+    - !loc teyvat -4696 3228
+    - !loc teyvat -4681 3232
+    - !loc teyvat -4676 3258
+    - !loc teyvat -4664 3238
+    - !loc teyvat -4650 3311
+    - !loc teyvat -4646 3309
+    - !loc teyvat -4620 3233
+    - !loc teyvat -4618 3327
+    - !loc teyvat -4616 3217
+    - !loc teyvat -4614 3327
+    - !loc teyvat -4602 2948
+    - !loc teyvat -4592 3337
+    - !loc teyvat -4592 3341
+    - !loc teyvat -4586 2941
+    - !loc teyvat -4574 2956
+    - !loc teyvat -4561 2923
+    - !loc teyvat -4559 2923
+    - !loc teyvat -4556 2914
+    - !loc teyvat -4486 3687
+    - !loc teyvat -4485 3681
+    - !loc teyvat -4484 3685
+    - !loc teyvat -4458 3366
+    - !loc teyvat -4449 3363
+    - !loc teyvat -4427 4153
+    - !loc teyvat -4424 4153
+    - !loc teyvat -4414 3870
+    - !loc teyvat -4413 2895
+    - !loc teyvat -4410 2890
+    - !loc teyvat -4405 2894
+    - !loc teyvat -4401 3908
+    - !loc teyvat -4397 3867
+    - !loc teyvat -4393 4147
+    - !loc teyvat -4391 4150
+    - !loc teyvat -4388 3905
+    - !loc teyvat -4369 3886
+    - !loc teyvat -4343 3339
+    - !loc teyvat -4338 3948
+    - !loc teyvat -4337 2919
+    - !loc teyvat -4335 3947
+    - !loc teyvat -4333 3947
+    - !loc teyvat -4332 2917
+    - !loc teyvat -4254 2945
+    - !loc teyvat -4253 2723
+    - !loc teyvat -4253 2943
+    - !loc teyvat -4252 2720
+    - !loc teyvat -4249 2722
+    - !loc teyvat -4157 4008
+    - !loc teyvat -4153 4009
+    - !loc teyvat -4126 2495
+    - !loc teyvat -4114 2632
+    - !loc teyvat -4107 2495
+    - !loc teyvat -4104 2496
+    - !loc teyvat -4103 2495
+    - !loc teyvat -4099 3840
+    - !loc teyvat -4098 3842
+    - !loc teyvat -4073 2488
+    - !loc teyvat -4070 2497
+    - !loc teyvat -4067 3845
+    - !loc teyvat -4058 2515
+    - !loc teyvat -4055 2723
+    - !loc teyvat -4050 2724
+    - !loc teyvat -4014 2734
+    - !loc teyvat -3989 2729
+    - !loc teyvat -3910 2808
+    - !loc teyvat -3806 3446
+    - !loc teyvat -3804 3445
+    - !loc teyvat -3802 3443
+    - !loc teyvat -3678 3405
+    - !loc teyvat -3635 3411
+    - !loc teyvat -3631 3426
+    - !loc teyvat -3561 2196
+    - !loc teyvat -3560 2187
+    - !loc teyvat -3517 2354
+    - !loc teyvat -3512 4072
+    - !loc teyvat -3509 4058
+    - !loc teyvat -3508 2352
+    - !loc teyvat -3506 3577
+    - !loc teyvat -3502 2357
+    - !loc teyvat -3453 3187
+    - !loc teyvat -3449 3192
+    - !loc teyvat -3444 3542
+    - !loc teyvat -3444 3548
+    - !loc teyvat -3443 3188
+    - !loc teyvat -3381 3064
+    - !loc teyvat -3377 3066
+    - !loc teyvat -3363 3115
+    - !loc teyvat -3356 3114
+    - !loc teyvat -3315 2894
+    - !loc teyvat -3313 2897
+    - !loc teyvat -3241 3724
+    - !loc teyvat -3218 3723
+    - !loc teyvat -3199 3788
+    - !loc teyvat -3193 3692
+    - !loc teyvat -3186 3746
+    - !loc teyvat -3180 3633
+    - !loc teyvat -3176 3631
+    - !loc teyvat -3132 2563
+    - !loc teyvat -3125 2564
+    - !loc teyvat -3113 4116
+    - !loc teyvat -3107 4113
+    - !loc teyvat -3103 4096
+    - !loc teyvat -3102 4117
+    - !loc teyvat -3082 1854
+    - !loc teyvat -3080 1895
+    - !loc teyvat -3079 1898
+    - !loc teyvat -3078 1852
+    - !loc teyvat -3066 1859
+    - !loc teyvat -3063 2625
+    - !loc teyvat -3063 4139
+    - !loc teyvat -3061 2621
+    - !loc teyvat -3048 1865
+    - !loc teyvat -3048 4167
+    - !loc teyvat -3045 1870
+    - !loc teyvat -3006 2172
+    - !loc teyvat -3005 2161
+    - !loc teyvat -3005 2163
+    - !loc teyvat -2983 2326
+    - !loc teyvat -2975 2331
+    - !loc teyvat -2974 2324
+    - !loc teyvat -2881 2792
+    - !loc teyvat -2875 2791
     - !loc teyvat -2768 3154
+    - !loc teyvat -2745 2191
     - !loc teyvat -2744 3089
+    - !loc teyvat -2741 2187
+    - !loc teyvat -2737 2191
     - !loc teyvat -2696 3130
     - !loc teyvat -2692 3291
     - !loc teyvat -2658 2953
+    - !loc teyvat -2632 2440
     - !loc teyvat -2632 3296
+    - !loc teyvat -2630 2438
+    - !loc teyvat -2627 2437
+    - !loc teyvat -2585 2433
+    - !loc teyvat -2575 2429
+    - !loc teyvat -2557 2465
+    - !loc teyvat -2556 2473
+    - !loc teyvat -2552 2465
+    - !loc teyvat -2548 2467
+    - !loc teyvat -2546 2473
     - !loc teyvat -2525 1636
     - !loc teyvat -2521 1632
     - !loc teyvat -2499 2925
+    - !loc teyvat -2470 2478
     - !loc teyvat -2466 1976
     - !loc teyvat -2464 2648
     - !loc teyvat -2462 1984
@@ -1185,6 +1333,7 @@ hilichurl:
   drop:
     itemCodes:
       - damaged-mask
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes: []
@@ -1197,6 +1346,7 @@ hilichurl-fighter:
   drop:
     itemCodes:
       - damaged-mask
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes: []
@@ -1209,6 +1359,7 @@ wooden-shield-hilichurl-guard:
   drop:
     itemCodes:
       - damaged-mask
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes: []
@@ -1218,11 +1369,74 @@ hilichurl-shooter:
     en: Hilichurl Shooter
     ru: Хиличурл-стрелок
   locations:
+    - !loc teyvat -6679 4923
+    - !loc teyvat -6458 5092
+    - !loc teyvat -5958 4312
+    - !loc teyvat -5958 4320
+    - !loc teyvat -5957 4324
+    - !loc teyvat -5942 4264
+    - !loc teyvat -5907 4334
+    - !loc teyvat -5833 4230
+    - !loc teyvat -5804 4223
+    - !loc teyvat -5801 4261
+    - !loc teyvat -5741 4238
+    - !loc teyvat -5736 4161
+    - !loc teyvat -5736 4244
+    - !loc teyvat -5734 4241
+    - !loc teyvat -5664 4177
+    - !loc teyvat -5659 4181
+    - !loc teyvat -5593 4091
+    - !loc teyvat -5591 4102
+    - !loc teyvat -5539 3951
+    - !loc teyvat -5427 4034
+    - !loc teyvat -5394 5325
+    - !loc teyvat -4984 4466
+    - !loc teyvat -4945 4550
+    - !loc teyvat -4904 4516
+    - !loc teyvat -4886 4497
+    - !loc teyvat -4633 3334
+    - !loc teyvat -4608 3319
+    - !loc teyvat -4563 3329
+    - !loc teyvat -4482 3689
+    - !loc teyvat -4385 4232
+    - !loc teyvat -4379 4214
+    - !loc teyvat -4372 4244
+    - !loc teyvat -4366 2942
+    - !loc teyvat -4361 4255
+    - !loc teyvat -4312 2928
+    - !loc teyvat -4284 3333
+    - !loc teyvat -4277 3311
+    - !loc teyvat -4225 2902
+    - !loc teyvat -4221 2898
+    - !loc teyvat -4214 2899
+    - !loc teyvat -4111 2632
+    - !loc teyvat -4070 2737
+    - !loc teyvat -4038 2489
+    - !loc teyvat -4036 2737
+    - !loc teyvat -4003 2729
+    - !loc teyvat -3994 2735
+    - !loc teyvat -3976 2735
+    - !loc teyvat -3954 2718
+    - !loc teyvat -3936 2824
+    - !loc teyvat -3923 2815
+    - !loc teyvat -3794 3437
+    - !loc teyvat -3658 3444
+    - !loc teyvat -3637 3438
+    - !loc teyvat -3633 3436
+    - !loc teyvat -3522 2361
+    - !loc teyvat -3514 2360
+    - !loc teyvat -3428 3550
+    - !loc teyvat -3114 2332
+    - !loc teyvat -3111 2329
+    - !loc teyvat -3108 2333
+    - !loc teyvat -3080 1846
     - !loc teyvat -2720 3037
     - !loc teyvat -2687 3167
     - !loc teyvat -2623 2858
     - !loc teyvat -2613 3229
     - !loc teyvat -2611 3247
+    - !loc teyvat -2595 2450
+    - !loc teyvat -2569 2410
     - !loc teyvat -2567 1554
     - !loc teyvat -2461 1995
     - !loc teyvat -2388 1830
@@ -1588,6 +1802,7 @@ hilichurl-shooter:
     itemCodes:
       - damaged-mask
       - firm-arrowhead
+      - mora
       - ominous-mask
       - sharp-arrowhead
       - stained-mask
@@ -1603,6 +1818,7 @@ pyro-hilichurl-shooter:
     itemCodes:
       - damaged-mask
       - firm-arrowhead
+      - mora
       - ominous-mask
       - sharp-arrowhead
       - stained-mask
@@ -1617,6 +1833,7 @@ hilichurl-grenadier:
   drop:
     itemCodes:
       - damaged-mask
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes: []
@@ -1629,6 +1846,7 @@ hilichurl-berserker:
   drop:
     itemCodes:
       - damaged-mask
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes: []
@@ -1642,6 +1860,7 @@ cryo-hilichurl-shooter:
     itemCodes:
       - damaged-mask
       - firm-arrowhead
+      - mora
       - ominous-mask
       - sharp-arrowhead
       - stained-mask
@@ -1657,6 +1876,7 @@ electro-hilichurl-shooter:
     itemCodes:
       - damaged-mask
       - firm-arrowhead
+      - mora
       - ominous-mask
       - sharp-arrowhead
       - stained-mask
@@ -1671,6 +1891,7 @@ rock-shield-hilichurl-guard:
   drop:
     itemCodes:
       - damaged-mask
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes: []
@@ -1683,6 +1904,7 @@ cryo-hilichurl-grenadier:
   drop:
     itemCodes:
       - damaged-mask
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes: []
@@ -1695,8 +1917,35 @@ ice-shield-hilichurl-guard:
   drop:
     itemCodes:
       - damaged-mask
+      - mora
       - ominous-mask
       - stained-mask
+    artifactSetCodes: []
+unusual-hilichurl:
+  code: unusual-hilichurl
+  name:
+    en: Unusual Hilichurl
+    ru: Странный хиличурл
+  locations:
+    - !loc teyvat -2208 1477
+    - !loc teyvat -2077 2166
+    - !loc teyvat -1809 2948
+    - !loc teyvat -1609 1916
+    - !loc teyvat -1366 417
+    - !loc teyvat -942 -264
+    - !loc teyvat -935 736
+    - !loc teyvat -875 2497
+    - !loc teyvat -442 296
+    - !loc teyvat -363 1660
+    - !loc teyvat 437 -549
+    - !loc teyvat 523 441
+    - !loc teyvat 790 862
+    - !loc teyvat 1374 688
+  drop:
+    itemCodes:
+      - adventure-exp
+      - cabbage
+      - mora
     artifactSetCodes: []
 electro-hilichurl-grenadier:
   code: electro-hilichurl-grenadier
@@ -1707,6 +1956,7 @@ electro-hilichurl-grenadier:
   drop:
     itemCodes:
       - damaged-mask
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes: []
@@ -1722,15 +1972,13 @@ wooden-shieldwall-mitachurl:
       - black-crystal-horn
       - damaged-mask
       - heavy-horn
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 blazing-axe-mitachurl:
   code: blazing-axe-mitachurl
@@ -1744,15 +1992,13 @@ blazing-axe-mitachurl:
       - black-crystal-horn
       - damaged-mask
       - heavy-horn
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 rock-shieldwall-mitachurl:
   code: rock-shieldwall-mitachurl
@@ -1766,15 +2012,13 @@ rock-shieldwall-mitachurl:
       - black-crystal-horn
       - damaged-mask
       - heavy-horn
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 frostarm-lawachurl:
   code: frostarm-lawachurl
@@ -1788,15 +2032,13 @@ frostarm-lawachurl:
       - black-crystal-horn
       - damaged-mask
       - heavy-horn
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 stonehide-lawachurl:
   code: stonehide-lawachurl
@@ -1810,15 +2052,13 @@ stonehide-lawachurl:
       - black-crystal-horn
       - damaged-mask
       - heavy-horn
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 ice-shieldwall-mitachurl:
   code: ice-shieldwall-mitachurl
@@ -1832,15 +2072,13 @@ ice-shieldwall-mitachurl:
       - black-crystal-horn
       - damaged-mask
       - heavy-horn
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 crackling-axe-mitachurl:
   code: crackling-axe-mitachurl
@@ -1854,15 +2092,13 @@ crackling-axe-mitachurl:
       - black-crystal-horn
       - damaged-mask
       - heavy-horn
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 thunderhelm-lawachurl:
   code: thunderhelm-lawachurl
@@ -1876,15 +2112,13 @@ thunderhelm-lawachurl:
       - black-crystal-horn
       - damaged-mask
       - heavy-horn
+      - mora
       - ominous-mask
       - stained-mask
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 hydro-samachurl:
   code: hydro-samachurl
@@ -1897,6 +2131,7 @@ hydro-samachurl:
       - damaged-mask
       - divining-scroll
       - forbidden-curse-scroll
+      - mora
       - ominous-mask
       - sealed-scroll
       - stained-mask
@@ -1912,6 +2147,7 @@ dendro-samachurl:
       - damaged-mask
       - divining-scroll
       - forbidden-curse-scroll
+      - mora
       - ominous-mask
       - sealed-scroll
       - stained-mask
@@ -1927,6 +2163,7 @@ anemo-samachurl:
       - damaged-mask
       - divining-scroll
       - forbidden-curse-scroll
+      - mora
       - ominous-mask
       - sealed-scroll
       - stained-mask
@@ -1942,6 +2179,7 @@ geo-samachurl:
       - damaged-mask
       - divining-scroll
       - forbidden-curse-scroll
+      - mora
       - ominous-mask
       - sealed-scroll
       - stained-mask
@@ -1957,6 +2195,7 @@ cryo-samachurl:
       - damaged-mask
       - divining-scroll
       - forbidden-curse-scroll
+      - mora
       - ominous-mask
       - sealed-scroll
       - stained-mask
@@ -1972,6 +2211,7 @@ electro-samachurl:
       - damaged-mask
       - divining-scroll
       - forbidden-curse-scroll
+      - mora
       - ominous-mask
       - sealed-scroll
       - stained-mask
@@ -1984,19 +2224,14 @@ pyro-abyss-mage:
   locations: []
   drop:
     itemCodes:
-      - dark-statuette
       - dead-ley-line-branch
       - dead-ley-line-leaves
-      - deathly-statuette
-      - gloomy-statuette
       - ley-line-sprout
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 cryo-abyss-mage:
   code: cryo-abyss-mage
@@ -2006,19 +2241,14 @@ cryo-abyss-mage:
   locations: []
   drop:
     itemCodes:
-      - dark-statuette
       - dead-ley-line-branch
       - dead-ley-line-leaves
-      - deathly-statuette
-      - gloomy-statuette
       - ley-line-sprout
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 hydro-abyss-mage:
   code: hydro-abyss-mage
@@ -2028,19 +2258,14 @@ hydro-abyss-mage:
   locations: []
   drop:
     itemCodes:
-      - dark-statuette
       - dead-ley-line-branch
       - dead-ley-line-leaves
-      - deathly-statuette
-      - gloomy-statuette
       - ley-line-sprout
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 electro-abyss-mage:
   code: electro-abyss-mage
@@ -2050,19 +2275,74 @@ electro-abyss-mage:
   locations: []
   drop:
     itemCodes:
+      - dead-ley-line-branch
+      - dead-ley-line-leaves
+      - ley-line-sprout
+      - mora
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
+abyss-herald-wicked-torrents:
+  code: abyss-herald-wicked-torrents
+  name:
+    en: "Abyss Herald: Wicked Torrents"
+    ru: "Вестник Бездны: Злые течения"
+  locations: []
+  drop:
+    itemCodes:
       - dark-statuette
       - dead-ley-line-branch
       - dead-ley-line-leaves
       - deathly-statuette
       - gloomy-statuette
       - ley-line-sprout
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
       - traveling-doctor
+abyss-lector-violet-lightning:
+  code: abyss-lector-violet-lightning
+  name:
+    en: "Abyss Lector: Violet Lightning"
+    ru: "Чтец Бездны: Пурпурная молния"
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - dead-ley-line-branch
+      - dead-ley-line-leaves
+      - deathly-statuette
+      - gloomy-statuette
+      - ley-line-sprout
+      - mora
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
+abyss-lector-fathomless-flames:
+  code: abyss-lector-fathomless-flames
+  name:
+    en: "Abyss Lector: Fathomless Flames"
+    ru: "Чтец Бездны: Пламя бездны"
+  locations: []
+  drop:
+    itemCodes:
+      - dark-statuette
+      - dead-ley-line-branch
+      - dead-ley-line-leaves
+      - deathly-statuette
+      - gloomy-statuette
+      - ley-line-sprout
+      - mora
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
       - traveling-doctor
 rockfond-rifthound-whelp:
   code: rockfond-rifthound-whelp
@@ -2075,13 +2355,11 @@ rockfond-rifthound-whelp:
       - concealed-claw
       - concealed-talon
       - concealed-unguis
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 thundercraven-rifthound-whelp:
   code: thundercraven-rifthound-whelp
@@ -2094,13 +2372,11 @@ thundercraven-rifthound-whelp:
       - concealed-claw
       - concealed-talon
       - concealed-unguis
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 rockfond-rifthound:
   code: rockfond-rifthound
@@ -2113,13 +2389,11 @@ rockfond-rifthound:
       - concealed-claw
       - concealed-talon
       - concealed-unguis
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 thundercraven-rifthound:
   code: thundercraven-rifthound
@@ -2132,13 +2406,11 @@ thundercraven-rifthound:
       - concealed-claw
       - concealed-talon
       - concealed-unguis
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 golden-wolflord:
   code: golden-wolflord
@@ -2159,16 +2431,9 @@ golden-wolflord:
       - riftborn-regalia
     artifactSetCodes:
       - gladiators-finale
-      - gladiators-finale
       - instructor
-      - instructor
-      - prayers-for-wisdom
-      - prayers-for-wisdom
-      - the-exile
       - the-exile
       - traveling-doctor
-      - traveling-doctor
-      - wanderers-troupe
       - wanderers-troupe
 shadowy-husk-standard-bearer:
   code: shadowy-husk-standard-bearer
@@ -2181,7 +2446,12 @@ shadowy-husk-standard-bearer:
       - dark-statuette
       - deathly-statuette
       - gloomy-statuette
-    artifactSetCodes: []
+      - mora
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
 shadowy-husk-line-breaker:
   code: shadowy-husk-line-breaker
   name:
@@ -2193,7 +2463,12 @@ shadowy-husk-line-breaker:
       - dark-statuette
       - deathly-statuette
       - gloomy-statuette
-    artifactSetCodes: []
+      - mora
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
 shadowy-husk-defender:
   code: shadowy-husk-defender
   name:
@@ -2205,7 +2480,12 @@ shadowy-husk-defender:
       - dark-statuette
       - deathly-statuette
       - gloomy-statuette
-    artifactSetCodes: []
+      - mora
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
 black-serpent-knight-windcutter:
   code: black-serpent-knight-windcutter
   name:
@@ -2217,7 +2497,12 @@ black-serpent-knight-windcutter:
       - dark-statuette
       - deathly-statuette
       - gloomy-statuette
-    artifactSetCodes: []
+      - mora
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
 fatui-skirmisher-cryogunner-legionnaire:
   code: fatui-skirmisher-cryogunner-legionnaire
   name:
@@ -2227,6 +2512,7 @@ fatui-skirmisher-cryogunner-legionnaire:
   drop:
     itemCodes:
       - lieutenants-insignia
+      - mora
       - recruits-insignia
       - sergeants-insignia
     artifactSetCodes: []
@@ -2239,6 +2525,7 @@ fatui-skirmisher-hydrogunner-legionnaire:
   drop:
     itemCodes:
       - lieutenants-insignia
+      - mora
       - recruits-insignia
       - sergeants-insignia
     artifactSetCodes: []
@@ -2251,6 +2538,7 @@ fatui-skirmisher-electrohammer-vanguard:
   drop:
     itemCodes:
       - lieutenants-insignia
+      - mora
       - recruits-insignia
       - sergeants-insignia
     artifactSetCodes: []
@@ -2263,6 +2551,7 @@ fatui-skirmisher-geochanter-bracer:
   drop:
     itemCodes:
       - lieutenants-insignia
+      - mora
       - recruits-insignia
       - sergeants-insignia
     artifactSetCodes: []
@@ -2275,6 +2564,7 @@ fatui-skirmisher-anemoboxer-vanguard:
   drop:
     itemCodes:
       - lieutenants-insignia
+      - mora
       - recruits-insignia
       - sergeants-insignia
     artifactSetCodes: []
@@ -2287,6 +2577,7 @@ fatui-skirmisher-pyroslinger-bracer:
   drop:
     itemCodes:
       - lieutenants-insignia
+      - mora
       - recruits-insignia
       - sergeants-insignia
     artifactSetCodes: []
@@ -2296,6 +2587,11 @@ fatui-pyro-agent:
     en: Fatui Pyro Agent
     ru: "Фатуи: Пиро агент"
   locations:
+    - !loc teyvat -6758 4397
+    - !loc teyvat -6671 4381
+    - !loc teyvat -4756 4989
+    - !loc teyvat -3824 3537
+    - !loc teyvat -3152 2206
     - !loc teyvat -1986 2482
     - !loc teyvat -1793 2785
     - !loc teyvat -1760 3201
@@ -2315,15 +2611,13 @@ fatui-pyro-agent:
       - hunters-sacrificial-knife
       - inspectors-sacrificial-knife
       - lieutenants-insignia
+      - mora
       - recruits-insignia
       - sergeants-insignia
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 fatui-electro-cicin-mage:
   code: fatui-electro-cicin-mage
@@ -2337,15 +2631,13 @@ fatui-electro-cicin-mage:
       - mist-grass
       - mist-grass-pollen
       - mist-grass-wick
+      - mora
       - recruits-insignia
       - sergeants-insignia
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 fatui-cryo-cicin-mage:
   code: fatui-cryo-cicin-mage
@@ -2359,15 +2651,13 @@ fatui-cryo-cicin-mage:
       - mist-grass
       - mist-grass-pollen
       - mist-grass-wick
+      - mora
       - recruits-insignia
       - sergeants-insignia
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 mirror-maiden:
   code: mirror-maiden
@@ -2375,6 +2665,10 @@ mirror-maiden:
     en: Mirror Maiden
     ru: Зеркальная дева Фатуи
   locations:
+    - !loc teyvat -6687 4483
+    - !loc teyvat -4689 2612
+    - !loc teyvat -3509 2413
+    - !loc teyvat -3087 2074
     - !loc teyvat -2473 3009
     - !loc teyvat -246 5904
     - !loc teyvat 49 5862
@@ -2406,14 +2700,12 @@ mirror-maiden:
     itemCodes:
       - crystal-prism
       - dismal-prism
+      - mora
       - polarizing-prism
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 ruin-guard:
   code: ruin-guard
@@ -2421,6 +2713,11 @@ ruin-guard:
     en: Ruin Guard
     ru: Страж руин
   locations:
+    - !loc teyvat -5405 5512
+    - !loc teyvat -5371 5605
+    - !loc teyvat -5303 4020
+    - !loc teyvat -4410 4005
+    - !loc teyvat -3866 3829
     - !loc teyvat -2604 3210
     - !loc teyvat -1938 2576
     - !loc teyvat -1906 2668
@@ -2484,13 +2781,11 @@ ruin-guard:
       - chaos-circuit
       - chaos-core
       - chaos-device
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 ruin-hunter:
   code: ruin-hunter
@@ -2498,6 +2793,9 @@ ruin-hunter:
     en: Ruin Hunter
     ru: Руинный охотник
   locations:
+    - !loc teyvat -4510 4036
+    - !loc teyvat -4449 4134
+    - !loc teyvat -4406 4105
     - !loc teyvat -2527 1505
     - !loc teyvat -2172 2488
     - !loc teyvat -1932 2623
@@ -2513,13 +2811,11 @@ ruin-hunter:
       - chaos-circuit
       - chaos-core
       - chaos-device
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 ruin-grader:
   code: ruin-grader
@@ -2527,6 +2823,10 @@ ruin-grader:
     en: Ruin Grader
     ru: Руинный молотильщик
   locations:
+    - !loc teyvat -4723 2571
+    - !loc teyvat -4274 4057
+    - !loc teyvat -3586 2195
+    - !loc teyvat -3366 3725
     - !loc teyvat -2622 3215
     - !loc teyvat 394 1694
     - !loc teyvat 450 1784
@@ -2540,14 +2840,35 @@ ruin-grader:
       - chaos-circuit
       - chaos-core
       - chaos-device
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
       - traveling-doctor
+ruin-serpent:
+  code: ruin-serpent
+  name:
+    en: Ruin Serpent
+    ru: Змей руин
+  locations:
+    - !loc chasm -479 -270
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+      - prithiva-topaz-chunk
+      - prithiva-topaz-fragment
+      - prithiva-topaz-gemstone
+      - prithiva-topaz-sliver
+      - runic-fang
+    artifactSetCodes:
+      - gladiators-finale
+      - instructor
+      - the-exile
       - traveling-doctor
+      - wanderers-troupe
 ruin-cruiser:
   code: ruin-cruiser
   name:
@@ -2559,13 +2880,11 @@ ruin-cruiser:
       - chaos-axis
       - chaos-gear
       - chaos-oculus
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 ruin-destroyer:
   code: ruin-destroyer
@@ -2578,13 +2897,11 @@ ruin-destroyer:
       - chaos-axis
       - chaos-gear
       - chaos-oculus
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 ruin-defender:
   code: ruin-defender
@@ -2597,13 +2914,11 @@ ruin-defender:
       - chaos-axis
       - chaos-gear
       - chaos-oculus
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 ruin-scout:
   code: ruin-scout
@@ -2616,13 +2931,11 @@ ruin-scout:
       - chaos-axis
       - chaos-gear
       - chaos-oculus
+      - mora
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 perpetual-mechanical-array:
   code: perpetual-mechanical-array
@@ -2647,37 +2960,162 @@ perpetual-mechanical-array:
       - shivada-jade-sliver
     artifactSetCodes:
       - berserker
-      - berserker
-      - gladiators-finale
       - gladiators-finale
       - lucky-dog
       - prayers-to-springtime
-      - prayers-to-springtime
-      - the-exile
       - the-exile
       - wanderers-troupe
-      - wanderers-troupe
-treasure-hoarders-liuliu:
-  code: treasure-hoarders-liuliu
+ruin-drake-skywatch:
+  code: ruin-drake-skywatch
   name:
-    en: Treasure Hoarders - Liuliu
-    ru: "Похитители сокровищ: Лю Лю"
+    en: "Ruin Drake: Skywatch"
+    ru: "Дракон руин: Страж небес"
   locations: []
   drop:
     itemCodes:
-      - golden-raven-insignia
-      - silver-raven-insignia
-      - treasure-hoarder-insignia
-    artifactSetCodes: []
+      - chaos-bolt
+      - chaos-module
+      - chaos-storage
+      - mora
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
+ruin-drake-earthguard:
+  code: ruin-drake-earthguard
+  name:
+    en: "Ruin Drake: Earthguard"
+    ru: "Дракон руин: Страж земли"
+  locations: []
+  drop:
+    itemCodes:
+      - chaos-bolt
+      - chaos-module
+      - chaos-storage
+      - mora
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
+aeonblight-drake:
+  code: aeonblight-drake
+  name:
+    en: Aeonblight Drake
+    ru: Дракон вечных бедствий
+  locations:
+    - !loc teyvat -2851 3666
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+      - perpetual-caliber
+      - shivada-jade-chunk
+      - shivada-jade-fragment
+      - shivada-jade-gemstone
+      - shivada-jade-sliver
+      - varunada-lazurite-chunk
+      - varunada-lazurite-fragment
+      - varunada-lazurite-gemstone
+      - varunada-lazurite-sliver
+    artifactSetCodes:
+      - berserker
+      - gladiators-finale
+      - lucky-dog
+      - prayers-to-springtime
+      - the-exile
+      - wanderers-troupe
+primal-construct-repulsor:
+  code: primal-construct-repulsor
+  name:
+    en: "Primal Construct: Repulsor"
+    ru: "Первозданная конструкция: Репульсор"
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-prism
+      - mora
+      - radiant-prism
+      - turbid-prism
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
+primal-construct-reshaper:
+  code: primal-construct-reshaper
+  name:
+    en: "Primal Construct: Reshaper"
+    ru: "Первозданная конструкция: Формирователь"
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-prism
+      - mora
+      - radiant-prism
+      - turbid-prism
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
+primal-construct-prospector:
+  code: primal-construct-prospector
+  name:
+    en: "Primal Construct: Prospector"
+    ru: "Первозданная конструкция: Разведчик"
+  locations: []
+  drop:
+    itemCodes:
+      - damaged-prism
+      - mora
+      - radiant-prism
+      - turbid-prism
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
+algorithm-of-semi-intransient-matrix-of-overseer-network:
+  code: algorithm-of-semi-intransient-matrix-of-overseer-network
+  name:
+    en: Algorithm of Semi-Intransient Matrix of Overseer Network
+    ru: Алгоритм полуизвечной матрицы оператора наблюдения
+  locations:
+    - !loc teyvat -6024 5111
+  drop:
+    itemCodes:
+      - adventure-exp
+      - agnidus-agate-chunk
+      - agnidus-agate-fragment
+      - agnidus-agate-gemstone
+      - agnidus-agate-sliver
+      - companionship-exp
+      - light-guiding-tetrahedron
+      - mora
+      - vayuda-turquoise-chunk
+      - vayuda-turquoise-fragment
+      - vayuda-turquoise-gemstone
+      - vayuda-turquoise-sliver
+    artifactSetCodes:
+      - adventurer
+      - berserker
+      - gladiators-finale
+      - instructor
+      - prayers-for-illumination
+      - wanderers-troupe
 treasure-hoarders-scout:
   code: treasure-hoarders-scout
   name:
-    en: Treasure Hoarders - Scout
+    en: "Treasure Hoarders: Scout"
     ru: "Похитители сокровищ: Разведчик"
   locations: []
   drop:
     itemCodes:
       - golden-raven-insignia
+      - mora
       - silver-raven-insignia
       - treasure-hoarder-insignia
     artifactSetCodes: []
@@ -2690,6 +3128,7 @@ treasure-hoarders-pyro-potioneer:
   drop:
     itemCodes:
       - golden-raven-insignia
+      - mora
       - silver-raven-insignia
       - treasure-hoarder-insignia
     artifactSetCodes: []
@@ -2702,6 +3141,7 @@ treasure-hoarders-hydro-potioneer:
   drop:
     itemCodes:
       - golden-raven-insignia
+      - mora
       - silver-raven-insignia
       - treasure-hoarder-insignia
     artifactSetCodes: []
@@ -2714,6 +3154,7 @@ treasure-hoarders-electro-potioneer:
   drop:
     itemCodes:
       - golden-raven-insignia
+      - mora
       - silver-raven-insignia
       - treasure-hoarder-insignia
     artifactSetCodes: []
@@ -2726,6 +3167,7 @@ treasure-hoarders-cryo-potioneer:
   drop:
     itemCodes:
       - golden-raven-insignia
+      - mora
       - silver-raven-insignia
       - treasure-hoarder-insignia
     artifactSetCodes: []
@@ -2738,42 +3180,20 @@ treasure-hoarders-handyman:
   drop:
     itemCodes:
       - golden-raven-insignia
-      - silver-raven-insignia
-      - treasure-hoarder-insignia
-    artifactSetCodes: []
-treasure-hoarders-raptor:
-  code: treasure-hoarders-raptor
-  name:
-    en: Treasure Hoarders - Raptor
-    ru: "Похитители сокровищ: Птеродактиль"
-  locations: []
-  drop:
-    itemCodes:
-      - golden-raven-insignia
+      - mora
       - silver-raven-insignia
       - treasure-hoarder-insignia
     artifactSetCodes: []
 treasure-hoarders-marksman:
   code: treasure-hoarders-marksman
   name:
-    en: Treasure Hoarders - Marksman
+    en: "Treasure Hoarders: Marksman"
     ru: "Похитители сокровищ: Стрелок"
   locations: []
   drop:
     itemCodes:
       - golden-raven-insignia
-      - silver-raven-insignia
-      - treasure-hoarder-insignia
-    artifactSetCodes: []
-treasure-hoarders-carmen:
-  code: treasure-hoarders-carmen
-  name:
-    en: Treasure Hoarders - Carmen
-    ru: "Похитители сокровищ: Кармен"
-  locations: []
-  drop:
-    itemCodes:
-      - golden-raven-insignia
+      - mora
       - silver-raven-insignia
       - treasure-hoarder-insignia
     artifactSetCodes: []
@@ -2786,42 +3206,46 @@ treasure-hoarders-gravedigger:
   drop:
     itemCodes:
       - golden-raven-insignia
+      - mora
       - silver-raven-insignia
       - treasure-hoarder-insignia
     artifactSetCodes: []
 treasure-hoarders-seaman:
   code: treasure-hoarders-seaman
   name:
-    en: Treasure Hoarders - Seaman
+    en: "Treasure Hoarders: Seaman"
     ru: "Похитители сокровищ: Морячок"
   locations: []
   drop:
     itemCodes:
       - golden-raven-insignia
+      - mora
       - silver-raven-insignia
       - treasure-hoarder-insignia
     artifactSetCodes: []
 treasure-hoarders-pugilist:
   code: treasure-hoarders-pugilist
   name:
-    en: Treasure Hoarders - Pugilist
+    en: "Treasure Hoarders: Pugilist"
     ru: "Похитители сокровищ: Боксёр"
   locations: []
   drop:
     itemCodes:
       - golden-raven-insignia
+      - mora
       - silver-raven-insignia
       - treasure-hoarder-insignia
     artifactSetCodes: []
 treasure-hoarders-crusher:
   code: treasure-hoarders-crusher
   name:
-    en: Treasure Hoarders - Crusher
+    en: "Treasure Hoarders: Crusher"
     ru: "Похитители сокровищ: Сокрушитель"
   locations: []
   drop:
     itemCodes:
       - golden-raven-insignia
+      - mora
       - silver-raven-insignia
       - treasure-hoarder-insignia
     artifactSetCodes: []
@@ -2835,6 +3259,7 @@ nobushi-jintouban:
     itemCodes:
       - famed-handguard
       - kageuchi-handguard
+      - mora
       - old-handguard
     artifactSetCodes: []
 nobushi-hitsukeban:
@@ -2847,6 +3272,7 @@ nobushi-hitsukeban:
     itemCodes:
       - famed-handguard
       - kageuchi-handguard
+      - mora
       - old-handguard
     artifactSetCodes: []
 nobushi-kikouban:
@@ -2859,6 +3285,7 @@ nobushi-kikouban:
     itemCodes:
       - famed-handguard
       - kageuchi-handguard
+      - mora
       - old-handguard
     artifactSetCodes: []
 maguu-kenki:
@@ -2884,13 +3311,9 @@ maguu-kenki:
       - vayuda-turquoise-sliver
     artifactSetCodes:
       - berserker
-      - berserker
       - gladiators-finale
-      - gladiators-finale
-      - instructor
       - instructor
       - lucky-dog
-      - wanderers-troupe
       - wanderers-troupe
 kairagi-dancing-thunder:
   code: kairagi-dancing-thunder
@@ -2902,6 +3325,7 @@ kairagi-dancing-thunder:
     itemCodes:
       - famed-handguard
       - kageuchi-handguard
+      - mora
       - old-handguard
     artifactSetCodes: []
 kairagi-fiery-might:
@@ -2914,7 +3338,112 @@ kairagi-fiery-might:
     itemCodes:
       - famed-handguard
       - kageuchi-handguard
+      - mora
       - old-handguard
+    artifactSetCodes: []
+eremite-axe-vanguard:
+  code: eremite-axe-vanguard
+  name:
+    en: Eremite Axe Vanguard
+    ru: Топорник Пустынников
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
+eremite-crossbow:
+  code: eremite-crossbow
+  name:
+    en: Eremite Crossbow
+    ru: Арбалетчик Пустынников
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
+eremite-ravenbeak-halberdier:
+  code: eremite-ravenbeak-halberdier
+  name:
+    en: Eremite Ravenbeak Halberdier
+    ru: Алебардщик Пустынников
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
+eremite-linebreaker:
+  code: eremite-linebreaker
+  name:
+    en: Eremite Linebreaker
+    ru: Штурмовик Пустынников
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
+eremite-sword-dancer:
+  code: eremite-sword-dancer
+  name:
+    en: Eremite Sword-Dancer
+    ru: Мечник Пустынников
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
+eremite-desert-clearwater:
+  code: eremite-desert-clearwater
+  name:
+    en: Eremite Desert Clearwater
+    ru: "Пустынник: Родник в песках"
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
+eremite-sunfrost:
+  code: eremite-sunfrost
+  name:
+    en: Eremite Sunfrost
+    ru: "Пустынник: Пылающий лёд"
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
+    artifactSetCodes: []
+eremite-daythunder:
+  code: eremite-daythunder
+  name:
+    en: Eremite Daythunder
+    ru: "Пустынник: Полуденный гром"
+  locations: []
+  drop:
+    itemCodes:
+      - faded-red-satin
+      - mora
+      - rich-red-brocade
+      - trimmed-red-silk
     artifactSetCodes: []
 cryo-whopperflower:
   code: cryo-whopperflower
@@ -2925,6 +3454,7 @@ cryo-whopperflower:
   drop:
     itemCodes:
       - energy-nectar
+      - mora
       - shimmering-nectar
       - whopperflower-nectar
     artifactSetCodes: []
@@ -2937,6 +3467,7 @@ pyro-whopperflower:
   drop:
     itemCodes:
       - energy-nectar
+      - mora
       - shimmering-nectar
       - whopperflower-nectar
     artifactSetCodes: []
@@ -2949,6 +3480,7 @@ electro-whopperflower:
   drop:
     itemCodes:
       - energy-nectar
+      - mora
       - shimmering-nectar
       - whopperflower-nectar
     artifactSetCodes: []
@@ -2971,17 +3503,10 @@ cryo-regisvine:
       - shivada-jade-sliver
     artifactSetCodes:
       - berserker
-      - berserker
       - gladiators-finale
-      - gladiators-finale
-      - instructor
-      - instructor
-      - prayers-to-springtime
+      - lucky-dog
       - prayers-to-springtime
       - the-exile
-      - traveling-doctor
-      - traveling-doctor
-      - wanderers-troupe
       - wanderers-troupe
 pyro-regisvine:
   code: pyro-regisvine
@@ -3001,18 +3526,35 @@ pyro-regisvine:
       - everflame-seed
       - mora
     artifactSetCodes:
-      - berserker
+      - adventurer
       - berserker
       - gladiators-finale
+      - instructor
+      - prayers-for-illumination
+      - wanderers-troupe
+electro-regisvine:
+  code: electro-regisvine
+  name:
+    en: Electro Regisvine
+    ru: Электро папоротник
+  locations:
+    - !loc teyvat -2876 2275
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+      - thunderclap-fruitcore
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
+    artifactSetCodes:
       - gladiators-finale
       - instructor
-      - instructor
-      - prayers-for-illumination
-      - prayers-for-illumination
+      - prayers-for-wisdom
       - the-exile
       - traveling-doctor
-      - traveling-doctor
-      - wanderers-troupe
       - wanderers-troupe
 geovishap-hatchling:
   code: geovishap-hatchling
@@ -3021,6 +3563,8 @@ geovishap-hatchling:
     ru: Детёныш геовишапа
   locations:
     - !loc teyvat -2565 1442
+    - !loc teyvat -2440 2420
+    - !loc teyvat -2436 2420
     - !loc teyvat -2383 1241
     - !loc teyvat -2357 1926
     - !loc teyvat -2331 1051
@@ -3046,14 +3590,12 @@ geovishap-hatchling:
     itemCodes:
       - fossilized-bone-shard
       - fragile-bone-shard
+      - mora
       - sturdy-bone-shard
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 geovishap:
   code: geovishap
@@ -3079,14 +3621,12 @@ geovishap:
     itemCodes:
       - fossilized-bone-shard
       - fragile-bone-shard
+      - mora
       - sturdy-bone-shard
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 primo-geovishap:
   code: primo-geovishap
@@ -3123,22 +3663,13 @@ primo-geovishap:
       - varunada-lazurite-sliver
     artifactSetCodes:
       - berserker
-      - berserker
-      - gladiators-finale
       - gladiators-finale
       - instructor
-      - instructor
-      - prayers-for-destiny
       - prayers-for-destiny
       - prayers-for-illumination
-      - prayers-for-illumination
-      - prayers-for-wisdom
       - prayers-for-wisdom
       - prayers-to-springtime
-      - prayers-to-springtime
       - the-exile
-      - the-exile
-      - wanderers-troupe
       - wanderers-troupe
 primordial-bathysmal-vishap:
   code: primordial-bathysmal-vishap
@@ -3150,14 +3681,12 @@ primordial-bathysmal-vishap:
     itemCodes:
       - fossilized-bone-shard
       - fragile-bone-shard
+      - mora
       - sturdy-bone-shard
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
       - traveling-doctor
 rimebiter-bathysmal-vishap:
   code: rimebiter-bathysmal-vishap
@@ -3167,17 +3696,25 @@ rimebiter-bathysmal-vishap:
   locations: []
   drop:
     itemCodes:
-      - fossilized-bone-shard
-      - fragile-bone-shard
-      - sturdy-bone-shard
+      - adventure-exp
+      - companionship-exp
+      - dragonheirs-false-fin
+      - mora
+      - shivada-jade-chunk
+      - shivada-jade-fragment
+      - shivada-jade-gemstone
+      - shivada-jade-sliver
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
-      - instructor
+      - gladiators-finale
+      - lucky-dog
+      - prayers-to-springtime
       - the-exile
-      - traveling-doctor
-      - traveling-doctor
+      - wanderers-troupe
 bolteater-bathysmal-vishap:
   code: bolteater-bathysmal-vishap
   name:
@@ -3186,17 +3723,208 @@ bolteater-bathysmal-vishap:
   locations: []
   drop:
     itemCodes:
-      - fossilized-bone-shard
-      - fragile-bone-shard
-      - sturdy-bone-shard
+      - adventure-exp
+      - companionship-exp
+      - dragonheirs-false-fin
+      - mora
+      - shivada-jade-chunk
+      - shivada-jade-fragment
+      - shivada-jade-gemstone
+      - shivada-jade-sliver
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
     artifactSetCodes:
       - berserker
-      - berserker
-      - instructor
-      - instructor
+      - gladiators-finale
+      - lucky-dog
+      - prayers-to-springtime
       - the-exile
-      - traveling-doctor
-      - traveling-doctor
+      - wanderers-troupe
+floating-hydro-fungus:
+  code: floating-hydro-fungus
+  name:
+    en: Floating Hydro Fungus
+    ru: Парящий Гидро плесенник
+  locations: []
+  drop:
+    itemCodes:
+      - crystalline-cyst-dust
+      - dormant-fungal-nucleus
+      - fungal-spores
+      - inactivated-fungal-nucleus
+      - luminescent-pollen
+      - mora
+      - robust-fungal-nucleus
+    artifactSetCodes: []
+floating-dendro-fungus:
+  code: floating-dendro-fungus
+  name:
+    en: Floating Dendro Fungus
+    ru: Парящий Дендро плесенник
+  locations: []
+  drop:
+    itemCodes:
+      - crystalline-cyst-dust
+      - dormant-fungal-nucleus
+      - fungal-spores
+      - inactivated-fungal-nucleus
+      - luminescent-pollen
+      - mora
+      - robust-fungal-nucleus
+    artifactSetCodes: []
+whirling-electro-fungus:
+  code: whirling-electro-fungus
+  name:
+    en: Whirling Electro Fungus
+    ru: Кружащий Электро плесенник
+  locations: []
+  drop:
+    itemCodes:
+      - crystalline-cyst-dust
+      - dormant-fungal-nucleus
+      - fungal-spores
+      - inactivated-fungal-nucleus
+      - luminescent-pollen
+      - mora
+      - robust-fungal-nucleus
+    artifactSetCodes: []
+whirling-cryo-fungus:
+  code: whirling-cryo-fungus
+  name:
+    en: Whirling Cryo Fungus
+    ru: Кружащий Крио плесенник
+  locations: []
+  drop:
+    itemCodes:
+      - crystalline-cyst-dust
+      - dormant-fungal-nucleus
+      - fungal-spores
+      - inactivated-fungal-nucleus
+      - luminescent-pollen
+      - mora
+      - robust-fungal-nucleus
+    artifactSetCodes: []
+stretchy-pyro-fungus:
+  code: stretchy-pyro-fungus
+  name:
+    en: Stretchy Pyro Fungus
+    ru: Растягивающийся Пиро плесенник
+  locations: []
+  drop:
+    itemCodes:
+      - crystalline-cyst-dust
+      - dormant-fungal-nucleus
+      - fungal-spores
+      - inactivated-fungal-nucleus
+      - luminescent-pollen
+      - mora
+      - robust-fungal-nucleus
+    artifactSetCodes: []
+stretchy-anemo-fungus:
+  code: stretchy-anemo-fungus
+  name:
+    en: Stretchy Anemo Fungus
+    ru: Растягивающийся Анемо плесенник
+  locations: []
+  drop:
+    itemCodes:
+      - crystalline-cyst-dust
+      - dormant-fungal-nucleus
+      - fungal-spores
+      - inactivated-fungal-nucleus
+      - luminescent-pollen
+      - mora
+      - robust-fungal-nucleus
+    artifactSetCodes: []
+stretchy-geo-fungus:
+  code: stretchy-geo-fungus
+  name:
+    en: Stretchy Geo Fungus
+    ru: Растягивающийся Гео плесенник
+  locations: []
+  drop:
+    itemCodes:
+      - crystalline-cyst-dust
+      - dormant-fungal-nucleus
+      - fungal-spores
+      - inactivated-fungal-nucleus
+      - luminescent-pollen
+      - mora
+      - robust-fungal-nucleus
+    artifactSetCodes: []
+jadeplume-terrorshroom:
+  code: jadeplume-terrorshroom
+  name:
+    en: Jadeplume Terrorshroom
+    ru: Пернатый плесенник
+  locations:
+    - !loc teyvat -4628 2435
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - majestic-hooked-beak
+      - mora
+      - nagadus-emerald-chunk
+      - nagadus-emerald-fragment
+      - nagadus-emerald-gemstone
+      - nagadus-emerald-sliver
+    artifactSetCodes:
+      - adventurer
+      - berserker
+      - gladiators-finale
+      - instructor
+      - wanderers-troupe
+winged-dendroshroom:
+  code: winged-dendroshroom
+  name:
+    en: Winged Dendroshroom
+    ru: Крылатый Дендро моровик
+  locations: []
+  drop:
+    itemCodes:
+      - crystalline-cyst-dust
+      - dormant-fungal-nucleus
+      - fungal-spores
+      - inactivated-fungal-nucleus
+      - luminescent-pollen
+      - mora
+      - robust-fungal-nucleus
+    artifactSetCodes: []
+winged-cryoshroom:
+  code: winged-cryoshroom
+  name:
+    en: Winged Cryoshroom
+    ru: Крылатый Крио моровик
+  locations: []
+  drop:
+    itemCodes:
+      - crystalline-cyst-dust
+      - dormant-fungal-nucleus
+      - fungal-spores
+      - inactivated-fungal-nucleus
+      - luminescent-pollen
+      - mora
+      - robust-fungal-nucleus
+    artifactSetCodes: []
+grounded-hydroshroom:
+  code: grounded-hydroshroom
+  name:
+    en: Grounded Hydroshroom
+    ru: Земляной Гидро моровик
+  locations: []
+  drop:
+    itemCodes:
+      - crystalline-cyst-dust
+      - dormant-fungal-nucleus
+      - fungal-spores
+      - inactivated-fungal-nucleus
+      - luminescent-pollen
+      - mora
+      - robust-fungal-nucleus
+    artifactSetCodes: []
 stormterror:
   code: stormterror
   name:
@@ -3207,6 +3935,7 @@ stormterror:
     itemCodes:
       - adventure-exp
       - companionship-exp
+      - dream-solvent
       - dvalins-claw
       - dvalins-plume
       - dvalins-sigh
@@ -3230,15 +3959,9 @@ stormterror:
       - vayuda-turquoise-sliver
     artifactSetCodes:
       - berserker
-      - berserker
       - gladiators-finale
-      - gladiators-finale
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
-      - traveling-doctor
-      - wanderers-troupe
       - wanderers-troupe
 lupus-boreas-dominator-of-wolves:
   code: lupus-boreas-dominator-of-wolves
@@ -3255,6 +3978,7 @@ lupus-boreas-dominator-of-wolves:
       - agnidus-agate-gemstone
       - agnidus-agate-sliver
       - companionship-exp
+      - dream-solvent
       - mora
       - northlander-bow-billet
       - northlander-catalyst-billet
@@ -3274,15 +3998,9 @@ lupus-boreas-dominator-of-wolves:
       - tail-of-boreas
     artifactSetCodes:
       - berserker
-      - berserker
       - gladiators-finale
-      - gladiators-finale
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
-      - traveling-doctor
-      - wanderers-troupe
       - wanderers-troupe
 childe:
   code: childe
@@ -3294,6 +4012,7 @@ childe:
     itemCodes:
       - adventure-exp
       - companionship-exp
+      - dream-solvent
       - mora
       - northlander-bow-billet
       - northlander-catalyst-billet
@@ -3317,15 +4036,9 @@ childe:
       - varunada-lazurite-sliver
     artifactSetCodes:
       - berserker
-      - berserker
       - gladiators-finale
-      - gladiators-finale
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
-      - traveling-doctor
-      - wanderers-troupe
       - wanderers-troupe
 azhdaha:
   code: azhdaha
@@ -3343,6 +4056,7 @@ azhdaha:
       - bloodjade-branch
       - companionship-exp
       - dragon-lords-crown
+      - dream-solvent
       - gilded-scale
       - mora
       - northlander-bow-billet
@@ -3368,15 +4082,9 @@ azhdaha:
       - varunada-lazurite-sliver
     artifactSetCodes:
       - berserker
-      - berserker
       - gladiators-finale
-      - gladiators-finale
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
-      - traveling-doctor
-      - wanderers-troupe
       - wanderers-troupe
 la-signora:
   code: la-signora
@@ -3393,6 +4101,7 @@ la-signora:
       - agnidus-agate-sliver
       - ashen-heart
       - companionship-exp
+      - dream-solvent
       - hellfire-butterfly
       - molten-moment
       - mora
@@ -3407,15 +4116,9 @@ la-signora:
       - shivada-jade-sliver
     artifactSetCodes:
       - berserker
-      - berserker
       - gladiators-finale
-      - gladiators-finale
-      - instructor
       - instructor
       - the-exile
-      - traveling-doctor
-      - traveling-doctor
-      - wanderers-troupe
       - wanderers-troupe
 magatsu-mitake-narukami-no-mikoto:
   code: magatsu-mitake-narukami-no-mikoto
@@ -3427,6 +4130,7 @@ magatsu-mitake-narukami-no-mikoto:
     itemCodes:
       - adventure-exp
       - companionship-exp
+      - dream-solvent
       - mora
       - mudra-of-the-malefic-general
       - northlander-bow-billet
@@ -3442,16 +4146,61 @@ magatsu-mitake-narukami-no-mikoto:
       - vajrada-amethyst-sliver
     artifactSetCodes:
       - berserker
-      - berserker
-      - gladiators-finale
       - gladiators-finale
       - instructor
+      - the-exile
+      - wanderers-troupe
+primordial-bathysmal-vishap-hatchling:
+  code: primordial-bathysmal-vishap-hatchling
+  name:
+    en: Primordial Bathysmal Vishap Hatchling
+    ru: "Молодой вишап глубин: Исток"
+  locations: []
+  drop:
+    itemCodes:
+      - fossilized-bone-shard
+      - fragile-bone-shard
+      - mora
+      - sturdy-bone-shard
+    artifactSetCodes:
+      - berserker
       - instructor
       - the-exile
       - traveling-doctor
+rimebiter-bathysmal-vishap-hatchling:
+  code: rimebiter-bathysmal-vishap-hatchling
+  name:
+    en: Rimebiter Bathysmal Vishap Hatchling
+    ru: "Молодой вишап глубин: Ледогрыз"
+  locations: []
+  drop:
+    itemCodes:
+      - fossilized-bone-shard
+      - fragile-bone-shard
+      - mora
+      - sturdy-bone-shard
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
       - traveling-doctor
-      - wanderers-troupe
-      - wanderers-troupe
+bolteater-bathysmal-vishap-hatchling:
+  code: bolteater-bathysmal-vishap-hatchling
+  name:
+    en: Bolteater Bathysmal Vishap Hatchling
+    ru: "Молодой вишап глубин: Громоглот"
+  locations: []
+  drop:
+    itemCodes:
+      - fossilized-bone-shard
+      - fragile-bone-shard
+      - mora
+      - sturdy-bone-shard
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
 bathysmal-vishap-herd:
   code: bathysmal-vishap-herd
   name:
@@ -3471,19 +4220,3 @@ bathysmal-vishap-herd:
       - vajrada-amethyst-gemstone
   locations:
     - !loc enkanomiya -46 -17
-ruin-serpent:
-  code: ruin-serpent
-  name:
-    en: Ruin Serpent
-    ru: Змей руин
-  drop:
-    artifactSetCodes:
-      - gladiators-finale
-      - instructor
-      - the-exile
-      - traveling-doctor
-      - wanderers-troupe
-    itemCodes:
-      - runic-fang
-  locations:
-    - !loc chasm -479 -270

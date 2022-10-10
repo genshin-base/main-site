@@ -32,7 +32,7 @@ type TileExt = 'jpg' | 'avif'
 let tileExt: TileExt = 'jpg'
 if (!BUNDLE_ENV.IS_SSR) checkAvifSupport().then(ok => ok && (tileExt = 'avif'))
 
-const TILES_ROOT = `https://genshin-base.github.io/teyvat-map/v2.6/tiles`
+const TILES_ROOT = `https://genshin-base.github.io/teyvat-map/v3.1/tiles`
 
 function tilePathFinc(x: number, y: number, z: number, mapCode: MapCode) {
 	return `${TILES_ROOT}/${mapCode}/${tileExt}/${z}/${x}/${y}.${tileExt}`

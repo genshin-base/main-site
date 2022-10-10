@@ -4,7 +4,6 @@ import { extractBuilds } from '#lib/parsing/helperteam/index.js'
 import { loadSpreadsheetCached } from '#lib/google.js'
 import { json_getText } from '#lib/parsing/helperteam/text-json.js'
 import {
-	extractArtifactsData,
 	extractCharactersData,
 	extractDomainsData,
 	extractWeaponsData,
@@ -45,6 +44,8 @@ import {
 	TRANSLATED_DATA_DIR,
 	loadTranslatedBuilds,
 	BUILDS_CACHE_DIR,
+	saveAbyssStats,
+	loadAbyssStats,
 } from './_common.js'
 import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
 import {
@@ -72,11 +73,11 @@ import {
 import { applyWeaponsObtainData } from '#lib/parsing/wiki/weapons.js'
 import { applyItemsLocations } from '#lib/parsing/mihoyo/map.js'
 import { checkMihoyoFixesUsage, clearMihoyoFixesUsage } from '#lib/parsing/mihoyo/fixes.js'
-import { applyDomainsRegion } from '#lib/parsing/wiki/domains.js'
 import { applyCharactersReleaseVersion } from '#lib/parsing/wiki/characters.js'
 import { getEnemyCodeFromName } from '#lib/genshin.js'
-import { getArtifactSpecialGroupCodes } from '#lib/parsing/honeyhunter/artifacts.js'
+import { extractArtifactsData, getArtifactSpecialGroupCodes } from '#lib/parsing/honeyhunter/artifacts.js'
 import { buildsConvertLangMode } from '#lib/parsing/helperteam/build_texts.js'
+import { extractAbyssStats } from '#lib/parsing/spiralabyss/index.js'
 
 const HELPERTEAM_DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -85,7 +86,10 @@ const LANGS = ['en', 'ru']
 const fixes = {
 	/** @type {import('#lib/parsing/helperteam/fixes').HelperteamFixes} */
 	helperteam: {
-		roleNotes: [{ character: 'kaeya', role: 'cryo dps', searchAs: 'dps' }],
+		roleNotes: [
+			{ character: 'kaeya', role: 'cryo dps', searchAs: 'dps' },
+			{ character: 'tighnari', role: 'quick swap dps', searchAs: 'quickswap dps' },
+		],
 		sheets: [
 			{
 				// у Эмбер один набор артефактов прописан в странном формате
@@ -101,22 +105,6 @@ const fixes = {
 								cell.userEnteredValue = {
 									stringValue: text.replace(substr, replaceWith),
 								}
-								return true
-							}
-						}
-					}
-					return false
-				},
-			},
-			{
-				// у Е Лани опечатка в слове ABILIT(I)Y
-				title: /^hydro$/i,
-				fixFunc(sheet) {
-					for (const { values: cells = [] } of sheet.data[0].rowData) {
-						for (const cell of cells) {
-							if (json_getText(cell) === 'ABILITIY TIPS') {
-								delete cell.textFormatRuns
-								cell.userEnteredValue = { stringValue: 'ABILITY TIPS' }
 								return true
 							}
 						}
@@ -154,12 +142,15 @@ const fixes = {
 	/** @type {import('#lib/parsing/honeyhunter/fixes').HoneyhunterFixes} */
 	honeyhunter: {
 		statuses: {
-			// некоторые персонажи и предметы почему-то находятся в таблице нерелизнутого
-			characters: [],
+			characters: [
+				{ actually: 'unreleased', name: 'Nahida' },
+				{ actually: 'unreleased', name: 'Layla' },
+			],
 			weapons: [
-				{ actually: 'released', name: 'Aqua Simulacra' },
-				{ actually: 'released', name: 'Calamity Queller' },
-				{ actually: 'released', name: 'Fading Twilight' },
+				{ actually: 'unreleased', name: 'Ebony Bow' },
+				{ actually: 'unreleased', name: 'Quartz' },
+				{ actually: 'unreleased', name: 'Amber Bead' },
+				{ actually: 'unreleased', name: 'A Thousand Floating Dreams' },
 				// это оружие из квеста, получаемое после квеста оружие называется "Kagotsurube Isshin"
 				{ actually: 'unreleased', name: 'Prized Isshin Blade' },
 			],
@@ -177,29 +168,24 @@ const fixes = {
 				en: 'Electro Traveler',
 				ru: 'Электро Путешественница',
 			},
+			dendro: {
+				en: 'Dendro Traveler',
+				ru: 'Дендро Путешественница',
+			},
 		},
 		skip: {
 			enemies: [
-				/^Millelith/i, //
-				/^Treasure Hoarders - Boss$/,
+				/Dendro Hypostasis/, //ещё не релизнут
 			],
-			artifacts: [
-				/^Prayers to the Firmament$/i, //
-				/^(Deepwood Memories|Gilded Dreams)$/i, //3.0
-			],
+			artifacts: [],
 			items: [
-				/^(Majestic Hooked Beak|Thunderclap Fruitcore|Kalpalata|Lunar Lotus|Rukkhashava Mushrooms)$/, //3.0
-				/^(Chaos Bolt|Chaos Module|Chaos Storage)$/, //3.0
-				/^(Rich Red Brocade|Faded Red Satin|Trimmed Red Silk)$/, //3.0
-				/ Fungal Nucleus$/, //3.0
-				/^(Padisarah|Sumeru Rose|Zaytun Peach)$/, //3.0
+				/^Festive Fever$/, //два предмета с одинаковым названием (и поэтому одинаковым кодом), пока всё равно не нужны
 			],
 		},
 		manualEnemyGroups: [
 			{ origNames: /^Ruin Guard$/ },
 			{ origNames: /^Ruin Hunter$/ },
 			{ origNames: /^Ruin Grader$/ },
-			{ origNames: /Bathysmal Vishap$/ },
 			{ origNames: /^Geovishap Hatchling$/ },
 			{ origNames: /^Geovishap$/ },
 			{
@@ -210,6 +196,18 @@ const fixes = {
 				origNames: /^(Rockfond|Thundercraven) Rifthound( Whelp)?$/,
 				name: { en: 'Wolves of the Rift', ru: 'Волк Разрыва' },
 			},
+			{
+				origNames: /^Abyss (Herald|Lector)/,
+				name: { en: 'Abyss Herald', ru: 'Вестник Бездны' },
+			},
+			{
+				origNames: /^Ruin Drake/,
+				name: { en: 'Ruin Drake', ru: 'Дракон руин' },
+			},
+			{
+				origNames: /^Eremite/,
+				name: { en: 'Eremite', ru: 'Пустынник' },
+			},
 		],
 		domainMissingLocations: [
 			// найденные вручную (точные)
@@ -219,6 +217,10 @@ const fixes = {
 			{ code: 'narukami-island-tenshukaku', location: { mapCode: 'teyvat', x: 3812, y: 5677 } },
 			{ code: 'court-of-flowing-sand', location: { mapCode: 'teyvat', x: 3657, y: 4725 } },
 			{ code: 'beneath-the-dragon-queller', location: { mapCode: 'teyvat', x: -2504, y: 1722 } },
+			// найденные вручную (не очень точные)
+			{ code: 'spire-of-solitary-enlightenment', location: { mapCode: 'teyvat', x: -2960, y: 2886 } },
+			{ code: 'steeple-of-ignorance', location: { mapCode: 'teyvat', x: -3763, y: 2415 } },
+			{ code: 'tower-of-abject-pride', location: { mapCode: 'teyvat', x: -4222, y: 4072 } },
 			// от хонихантеров (не очень точные)
 			{ code: 'cecilia-garden', location: { mapCode: 'teyvat', x: -513, y: 79 } },
 			{ code: 'clear-pool-and-mountain-cavern', location: { mapCode: 'teyvat', x: -2181, y: 1045 } },
@@ -238,26 +240,7 @@ const fixes = {
 		],
 		postProcess: {
 			items: (() => {
-				/**
-				 * @param {string} code
-				 * @param {import('#lib/parsing').ItemType} type
-				 */
-				function addItemType(code, type) {
-					return (/**@type {import('#lib/parsing').Code2ItemData}*/ code2item) => {
-						if (!code2item[code] || code2item[code].types.includes(type)) return false
-						code2item[code].types.push(type)
-						return true
-					}
-				}
-				return [
-					// некоторые предметы используются для прокачки, но почему-то отсутствуют на
-					// https://genshin.honeyhunterworld.com/db/item/character-ascension-material-local-material/
-					addItemType('spectral-nucleus', 'character-material-secondary'),
-					addItemType('spectral-heart', 'character-material-secondary'),
-					addItemType('spectral-husk', 'character-material-secondary'),
-					addItemType('dendrobium', 'character-material-local'),
-					addItemType('onikabuto', 'character-material-local'),
-				]
+				return []
 			})(),
 			enemies: [
 				// Стаи вишапов нет ни в списке врагов, ни в списке данжей
@@ -279,26 +262,26 @@ const fixes = {
 					code2img.set(code, img)
 					return true
 				},
-				// У Змея руин нету дропа, и он пропускается
+				// у floating-hydro-fungus кривоватый дроп
 				(code2enemy, code2img) => {
-					// https://genshin.honeyhunterworld.com/db/monster/m_24010401/?lang=EN
-					const name = {
-						en: 'Ruin Serpent',
-						ru: 'Змей руин',
-					}
-					// https://genshin-impact.fandom.com/wiki/Ruin_Serpent
-					const code = getEnemyCodeFromName(name.en)
-					const artifactSetCodes = ['traveling-doctor', 'instructor', 'the-exile', 'gladiators-finale', 'wanderers-troupe'] //prettier-ignore
-					const itemCodes = ['runic-fang'] //prettier-ignore
-					const img = 'https://genshin.honeyhunterworld.com/img/enemy/m_24010401.png'
-
-					if (code in code2enemy) return false
-					code2enemy[code] = { code, name, drop: { artifactSetCodes, itemCodes }, locations: [] }
-					code2img.set(code, img)
+					const itemCodes = code2enemy['floating-hydro-fungus'].drop.itemCodes
+					if (!itemCodes.includes('cabbage')) return false
+					itemCodes.length = 0
+					itemCodes.push(...code2enemy['floating-dendro-fungus'].drop.itemCodes)
 					return true
 				},
 			],
-			domains: [],
+			domains: (() => {
+				return [
+					code2domain => {
+						if (code2domain['cecilia-garden'].region !== 'mondstadt') {
+							code2domain['cecilia-garden'].region = 'mondstadt'
+							return true
+						}
+						return false
+					},
+				]
+			})(),
 			weapons: (() => {
 				function removeSlashNs(attrFunc) {
 					return code2weapon => {
@@ -314,11 +297,69 @@ const fixes = {
 				}
 				return [
 					// у некоторых оружий в описании встречаются "\n" (двумя символами)
-					// https://genshin.honeyhunterworld.com/db/weapon/w_5312/?lang=EN
-					// https://genshin.honeyhunterworld.com/db/weapon/w_4314/?lang=EN
-					removeSlashNs(code2weapon => code2weapon['dodoco-tales'].description),
 					removeSlashNs(code2weapon => code2weapon['predator'].specialAbility),
 					removeSlashNs(code2weapon => code2weapon['sword-of-descension'].specialAbility),
+				]
+			})(),
+			characters: (() => {
+				function setMaterialCodes(characterCode, materialCodes) {
+					return code2character => {
+						if (code2character[characterCode].materialCodes.length > 0) return false
+						code2character[characterCode].materialCodes = materialCodes
+						return true
+					}
+				}
+				return [
+					code2character => {
+						if (code2character['aloy'].rarity === 5) return false
+						code2character['aloy'].rarity = 5
+						return true
+					},
+					setMaterialCodes('traveler-anemo', [
+						'philosophies-of-ballad',
+						'philosophies-of-freedom',
+						'philosophies-of-resistance',
+						'dvalins-sigh',
+						'brilliant-diamond-gemstone',
+						'windwheel-aster',
+						'forbidden-curse-scroll',
+						'ominous-mask',
+					]),
+					setMaterialCodes('traveler-geo', [
+						'philosophies-of-ballad',
+						'philosophies-of-diligence',
+						'philosophies-of-freedom',
+						'philosophies-of-gold',
+						'philosophies-of-prosperity',
+						'philosophies-of-resistance',
+						'dvalins-sigh',
+						'tail-of-boreas',
+						'brilliant-diamond-gemstone',
+						'windwheel-aster',
+						'forbidden-curse-scroll',
+						'ominous-mask',
+						'weathered-arrowhead',
+					]),
+					setMaterialCodes('traveler-electro', [
+						'philosophies-of-elegance',
+						'philosophies-of-light',
+						'philosophies-of-transience',
+						'dragon-lords-crown',
+						'brilliant-diamond-gemstone',
+						'windwheel-aster',
+						'famed-handguard',
+						'ominous-mask',
+					]),
+					setMaterialCodes('traveler-dendro', [
+						'philosophies-of-admonition',
+						'philosophies-of-ingenuity',
+						'philosophies-of-praxis',
+						'mudra-of-the-malefic-general',
+						'brilliant-diamond-gemstone',
+						'windwheel-aster',
+						'ominous-mask',
+						'crystalline-cyst-dust',
+					]),
 				]
 			})(),
 		},
@@ -335,6 +376,11 @@ const fixes = {
 			{ nameOnMap: 'Fatui Agent', useCode: 'fatui-pyro-agent' },
 			{ nameOnMap: 'Fatui Mirror Maiden', useCode: 'mirror-maiden' },
 			{ nameOnMap: 'The Black Serpents', useCode: 'shadowy-husk' },
+			{ nameOnMap: 'Red-Finned Unagi', useCode: 'unagi' },
+			{ nameOnMap: 'Adorned Unagi', useCode: 'unagi' },
+			{ nameOnMap: 'Fungi', useCode: 'fungus' },
+			{ nameOnMap: 'Bathysmal Vishap', useCode: 'bathysmal-vishap-hatchling' },
+			{ nameOnMap: 'The Eremites', useCode: 'eremite' },
 		],
 	},
 }
@@ -354,6 +400,7 @@ if (args['--help'] || args['-h']) {
 ;(async () => {
 	const updBuilds = [undefined, 'builds'].includes(args['cmd'])
 	const updData = [undefined, 'data'].includes(args['cmd'])
+	const updAbyssData = [undefined, 'data', 'abyss-data'].includes(args['cmd'])
 	const updImgs = [undefined, 'images'].includes(args['cmd'])
 	const updWww = [undefined, 'www'].includes(args['cmd'])
 
@@ -365,6 +412,14 @@ if (args['--help'] || args['-h']) {
 		await prepareCacheDir(DATA_CACHE_DIR, !!args['--ignore-cache'])
 		await extractAndSaveAllItemsData()
 		// await checkUsedItemsLocations()
+	}
+	if (updAbyssData) {
+		info('updating abyss stats', { newline: false })
+		await fs.mkdir(DATA_DIR, { recursive: true })
+		const code2character = await loadCharacters()
+		const abyssStats = await extractAbyssStats(DATA_CACHE_DIR, code2character)
+		await saveAbyssStats(abyssStats)
+		progress()
 	}
 	if (updImgs) {
 		await prepareCacheDir(IMGS_CACHE_DIR, !!args['--ignore-cache'])
@@ -425,9 +480,8 @@ async function extractAllItemsData() {
 
 	await applyCharactersReleaseVersion(cd, characters.code2item)
 	await applyWeaponsObtainData(cd, weapons.code2item)
-	await applyItemsLocations(cd, enemies.code2item, enemyGroups.code2item, items.code2item, fixes.mihoyo)
+	await applyItemsLocations(cd, enemies.code2item, enemyGroups.code2item, items.code2item, domains.code2item, fixes.mihoyo) //prettier-ignore
 	await applyItemTypesByWeapons(items.code2item, weapons.code2item)
-	await applyDomainsRegion(cd, domains.code2item)
 
 	checkHoneyhunterFixesUsage(hhfx)
 	checkMihoyoFixesUsage(fixes.mihoyo)
@@ -612,6 +666,14 @@ async function saveWwwData() {
 
 		progress()
 	}
+
+	const abyssStats = await loadAbyssStats()
+	/** @type {import('#lib/parsing/combine').AbyssStatsInfo} */
+	const abyssStatsInfo = {
+		mostUsedCharacters: abyssStats.mostUsedCharacters,
+		mostUsedTeams: abyssStats.mostUsedTeams,
+	}
+	await writeJson(`${WWW_DYNAMIC_DIR}/abyss_stats.json`, abyssStatsInfo)
 
 	const artGroupCodes = getArtifactSpecialGroupCodes(common.code2artifact)
 

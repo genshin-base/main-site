@@ -55,6 +55,9 @@ body,
 .text-normal {
 	color: var(--bs-body-color) !important;
 }
+.user-select-text {
+	user-select: text;
+}
 .text-decoration-underline-dotted {
 	text-decoration: dotted;
 	text-decoration-line: underline;

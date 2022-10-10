@@ -7,7 +7,6 @@ import { useVersionedStorage } from '#src/utils/hooks'
 import { SV_FAV_CHAR_CODES } from '#src/utils/local-storage-keys'
 import { CharacterAvatar } from '../item-cards/item-avatars'
 
-const shortListReversed = charactersShortList.reverse()
 export function FavoriteCharacters({
 	classes = '',
 	onCharacterSelect,
@@ -26,7 +25,11 @@ export function FavoriteCharacters({
 	const [favCharCodes] = useVersionedStorage(SV_FAV_CHAR_CODES)
 	//todo sort characters by release date
 	const charactersShortListCodes = useMemo(
-		() => shortListReversed.map(c => c.code).filter(c => (~favCharCodes.indexOf(c) ? false : c)),
+		() =>
+			charactersShortList
+				.map(c => c.code)
+				.reverse()
+				.filter(c => !favCharCodes.includes(c)),
 		[favCharCodes],
 	)
 	const characterCodes =
