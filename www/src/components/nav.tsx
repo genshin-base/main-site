@@ -2,7 +2,6 @@ import { useCallback, useRef, useState } from 'preact/hooks'
 
 import {
 	I18N_ABOUT_SITE,
-	I18N_ABYSS,
 	I18N_ARTIFACTS,
 	I18N_BUILDS,
 	I18N_EQUIPMENT,
@@ -38,14 +37,6 @@ export function Nav({ isNavExpanded }: Props): JSX.Element {
 					</A>
 				</li>
 				<EquipmentDd />
-				<li className="nav-item">
-					<A
-						className={`nav-link ${isPageActive([paths.abyss]) ? ' active' : ''}`}
-						href={paths.abyss[0]}
-					>
-						{I18N_ABYSS}
-					</A>
-				</li>
 			</ul>
 			<ul className="navbar-nav mb-2 mb-md-0 float-md-end">
 				<li className="nav-item">

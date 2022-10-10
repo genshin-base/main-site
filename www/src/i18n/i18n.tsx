@@ -442,10 +442,6 @@ export const I18N_USAGE = {
 	en: 'Usage',
 	ru: 'Востребованность',
 }[LANG]
-export const I18N_ABYSS = {
-	en: 'Abyss',
-	ru: 'Бездна',
-}[LANG]
 export const I18N_USED_IN_ABYSS = {
 	en: (n: number) => `Used in Abyss by ${n.toFixed(2)}${NBSP}% owners`,
 	ru: (n: number) => `${n.toFixed(2)}${NBSP}% владельцев используют персонажа в Бездне`,
