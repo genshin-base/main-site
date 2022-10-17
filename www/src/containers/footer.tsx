@@ -36,6 +36,10 @@ export function Footer() {
 				<div className="row pt-3 gy-3">
 					<div className="col-12 col-md-3">
 						<h5 className="opacity-75">Genshin Base</h5>
+						<div class="small muted opacity-75 mb-2 mt-n2">
+							{BUNDLE_ENV.VERSION.lastTag}{' '}
+							<span class="opacity-75">{BUNDLE_ENV.VERSION.commitDate}</span>
+						</div>
 						<p className="small">
 							<a
 								role="button"
@@ -86,10 +90,6 @@ export function Footer() {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div style={{ 'text-align': 'right', 'font-size': '80%', opacity: '0.5' }}>
-				{BUNDLE_ENV.VERSION.lastTag}{' '}
-				<span style={{ opacity: '0.5' }}>{BUNDLE_ENV.VERSION.commitDate}</span>
 			</div>
 		</footer>
 	)
