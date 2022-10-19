@@ -180,7 +180,7 @@ dps
 
 # === characters.#ayato.roles.#dps.artifacts.notes ===
 
-\~= Gladiator's Finale (4)
+≈ Gladiator's Finale (4)
 
 
 # === characters.#ayato.roles.#dps.tips ===
@@ -449,9 +449,20 @@ This weapon currently has the highest Base ATK for a 4 star weapon (even more Ba
 [Prototype Rancour](#weapon:prototype-rancour)<br>
 This weapon has one of the highest Base ATK for a 4 Star weapon (and this is also a weapon you could craft from the Blacksmith)
 
-# === characters.#candace.roles.#wip.name ===
 
-wip
+# === characters.#candace.roles.#support.name ===
+
+support
+
+
+# === characters.#candace.roles.#support.subStats.notes ===
+
+Crit Rate only if running Favonius Lance
+
+
+# === characters.#candace.roles.#support.notes ===
+
+Candace has generally poor personal damage, and as such performs best as a low investment support.
 
 
 # === characters.#chongyun.roles.#burst_support.name ===
@@ -543,15 +554,43 @@ This set is only used in a team where Collei is used to trigger reactions (i.e. 
 An alternative option if they are placed in the same team as Cyno to help his Energy Recharge needs.
 
 _Shout out to Emiliabyss#1641 for providing an in-depth reference._
+# === characters.#cyno.roles.#dps.name ===
+
+dps
 
 
-# === characters.#cyno.roles.#wip.name ===
+# === characters.#cyno.roles.#dps.subStats.advices.2.notes ===
 
-wip
+≈ Elemental Mastery
 
-# === characters.#cyno.roles.#wip.notes ===
 
-wip
+# === characters.#cyno.roles.#dps.notes ===
+
+Cyno is a DPS character that uses his burst to change stance and deal electro damage. The damage dealt during this stance is normal attack damage so burst damage buffs will not affect him. On most teams with an electro battery, he will want 120–150% energy recharge.
+
+**Regarding Weapon Choices**
+
+**[Kitain Cross Spear](#weapon:kitain-cross-spear)**
+This weapon is especailly competitive with the options higher on the list if Cyno is not being run with an electro battery.
+
+**Regarding Artifact Sets**
+
+**[Thundering Fury (4)](#artifact:thundering-fury)**
+This set is an especially competitive option when Cyno is the only Electro character in the team, as the extra Elemental Skill casts help alleviate his energy issues. Do note that casting his skill off cooldown with this set might lead to missing Endseer stance windows.
+
+**[Gilded Dreams (4)](#artifact:gilded-dreams)**
+This artifact set is better than Gladiator's Finale on [Staff of the Scarlet Sands](#weapon:staff-of-the-scarlet-sands) and [White Tassel](#weapon:white-tassel).
+
+**[Thundersoother (4)](#artifact:thundersoother)**
+If you can guarantee 100% uptime on this set, it performs better than [Gladiator's Finale (4)](#artifact:gladiators-finale).
+
+**Regarding Main Stat Choices**
+
+**Sands**
+Elemental Mastery versus Attack is heavily dependant on the weapon and team Cyno is in. It is recommended to test each and/or consult an optimizer.<br>
+
+**Circlet**
+With [Staff of the Scarlet Sands](#weapon:staff-of-the-scarlet-sands), Elemental Mastery may be used as the circlet mainstat.
 
 
 # === characters.#diluc.credits ===
@@ -661,6 +700,41 @@ Full Stack HP% is recommended if you want stronger shields but a weaker heal. Yo
 **Regarding Talent Priority**
 
 Prioritise whichever your Diona is geared for (shielder or healer), if built for a balance between the two, level both equally.
+
+# === characters.#dori.roles.#support.name ===
+
+support
+
+
+# === characters.#dori.roles.#support.mainStats.notes ===
+
+A Crit Rate Circlet can be considered if running [Favonius Greatsword](#weapon:favonius-greatsword)
+
+
+# === characters.#dori.roles.#support.subStats.notes ===
+
+Crit Rate is useful only when using [Favonius Greatsword](#weapon:favonius-greatsword)
+
+
+# === characters.#dori.roles.#support.tips ===
+
+It is generally advised to use 2 elemental skills per burst rotation, as this helps to alleviate her otherwise extreme Energy requirements. 
+
+
+# === characters.#dori.roles.#support.notes ===
+
+Dori is mainly a support character that provides Healing and Energy to a teammate through her burst.
+
+**Regarding Weapon Choices**
+
+**[Sacrificial Greatsword](#weapon:sacrificial-greatsword)**
+This weapon's passive allows Dori to cast her elemental skill twice while only swapping to her once per rotation.
+
+**Regarding Artifact Sets**
+
+**[Deepwood Memories (4)](#artifact:deepwood-memories)**
+This set should only be used when Dori is in a dendro based team composition.
+
 
 
 # === characters.#eula.roles.#dps.name ===
@@ -1925,7 +1999,7 @@ Although this weapon's damage is lower for Rosaria, the extra energy generated f
 Only viable on Rosaria if she's triggering Reverse Melt, pulls ahead of Noblesse Oblige (2) Blizzard Strayer (2) assuming you can trigger Reverse Melt on all of her kits.
 
 [Noblesse Oblige (4)](#artifact:noblesse-oblige)<br>
- Offers party-wide ATK boost, you can equip this set on Rosaria if nobody else on the team is equipping it.
+Offers party-wide ATK boost, you can equip this set on Rosaria if nobody else on the team is equipping it.
 
 **Regarding Substats Priority**<br>
 Elemental Mastery is only recommended if Rosaria is to be utilized as a Reverse Melt trigger, as shown in the Ability Tips section.
@@ -2277,6 +2351,9 @@ Prioritize maintaining their burst uptime, the ER needs for Dendro Traveler woul
 Prioritized due to Dendro Traveler's exceedingly high Energy Recharge requirements for burst uptime consistency.
 
 **Regarding Artifact Sets**
+
+**[Noblesse Oblige (4)](#artifact:noblesse-oblige)**
+This option would generally be better than [Deepwood Memories (4)](#artifact:deepwood-memories) if Dendro Traveler is used in an Aggravate focused team.
 
 **[The Exile (4)](#artifact:the-exile)**<br>
 An alternative option if they are placed in the same team as Cyno to help his Energy Recharge needs.
@@ -2683,7 +2760,7 @@ off-field dps
 
 # === characters.#yae-miko.roles.#off-field_dps.artifacts.notes ===
 
-\~= [+18% ATK set (2)](#artifact:18%-atk) / [Thundering Fury (2)](#artifact:thundering-fury) / [Emblem of Severed Fate (2)](#artifact:emblem-of-severed-fate)\* \[Choose Two\]
+≈ [+18% ATK set (2)](#artifact:18%-atk) / [Thundering Fury (2)](#artifact:thundering-fury) / [Emblem of Severed Fate (2)](#artifact:emblem-of-severed-fate)\* \[Choose Two\]
 
 
 # === characters.#yae-miko.roles.#off-field_dps.tips ===
@@ -2704,15 +2781,15 @@ Take note that none of Yae Miko's abilities snapshot.
 This weapon benefits a lot from refines and attack buffs like Bennett. \[R5\] Solar Pearl without buffs, or a low refine Solar Pearl with Bennett buff can perform similar to [Skyward Atlas](#weapon:skyward-atlas). Note that you should do a Normal Attack when you swap in and before you swap out of Yae Miko to keep good uptime on the passive.
 
 **[The Widsith](#weapon:the-widsith)**<br>
-Despite Yae's A4 bonus, the EM buff is bad. **Over many rotations Widsith will be worse than equal refinement [Solar Pearl](#weapon:solar-pearl) regardless of buff, and can be worse than [Oathsworn](#weapon:oathsworn-eye) if you only get the EM buff.** If you are trying for one rotation speedruns and are willing to reset till you get the DMG% or ATK buff, **this weapon ranks much higher** and can outperform the 5 stars. Otherwise, it is recommended to use the other options above Widsith for more consistent damage.
+In Aggravate teams specifically, this weapon ranks much higher and can outperform the 5 stars. Otherwise, it is recommended to use the other options above Widsith for more consistent damage.
 
 **[Hakushin Ring](#weapon:hakushin-ring)**<br>
-This weapon's passive can buff your other team members, which **may be more beneficial than Yae Miko's personal damage** depending on the team and rotation used. Note that the passive cannot be triggered when off-field.
+This weapon's passive can buff your other team members, which may be more beneficial than Yae Miko's personal damage depending on the team and rotation used. Note that the passive cannot be triggered when off-field.
 
 **Regarding Artifact Sets**
 
 **[Emblem of Severed Fate (4)](#artifact:emblem-of-severed-fate)**<br>
-This set works best for Yae in **multi-target scenarios** where her Elemental Burst hits multiple enemies. This set also provides more value if she's used WITHOUT Raiden (due to the higher ER requirements).
+This set works best for Yae in multi-target scenarios where her Elemental Burst hits multiple enemies. This set also provides more value if she's used WITHOUT Raiden (due to the higher ER requirements).
 
 **[+18% ATK set (2)](#artifact:18%-atk) / [Thundering Fury (2)](#artifact:thundering-fury) / [Emblem of Severed Fate (2)](#artifact:emblem-of-severed-fate)**<br>
 Using a combination of these artifact sets works best for Yae in **single-target scenarios.** These also **provide more value** if she's paired WITH Raiden (due to lower ER requirements).
@@ -2949,12 +3026,3 @@ This set provides Zhongli more utility when casting his Elemental Burst, you can
 
 **[Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith)**<br>
 Just like Noblesse Oblige (4), this set provides Zhongli with more utility if his Elemental Skill hits an enemy. This set also provides Zhongli with stronger shields.
-
-# === characters.#dori.roles.#wip.name ===
-wip
-
-# === characters.#dori.roles.#wip.notes ===
-wip
-
-# === characters.#candace.roles.#wip.notes ===
-wip

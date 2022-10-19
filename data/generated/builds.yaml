@@ -1037,6 +1037,12 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
+                - code: sapwood-blade
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
                 - code: blackcliff-longsword
                   refine: null
                   stacks: null
@@ -4976,42 +4982,127 @@ characters:
   - code: dori
     elementCode: electro
     roles:
-      - code: wip
-        name: wip
+      - code: support
+        name: support
         isRecommended: true
         weapons:
-          advices: []
+          advices:
+            - similar:
+                - code: favonius-greatsword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: sacrificial-greatsword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: katsuragikiri-nagamasa
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: forest-regalia
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
           notes: null
           seeCharNotes: false
         artifacts:
-          sets: []
+          sets:
+            - arts:
+                code: noblesse-oblige
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: deepwood-memories
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: instructor
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: the-exile
+                count: 4
+              notes: null
+              seeCharNotes: false
           notes: null
           seeCharNotes: false
         mainStats:
           circlet:
-            codes: []
+            codes:
+              - healing
+              - hp%
+              - em
             notes: null
-            seeCharNotes: false
+            seeCharNotes: true
           goblet:
-            codes: []
+            codes:
+              - hp%
+              - em
             notes: null
             seeCharNotes: false
           sands:
-            codes: []
+            codes:
+              - er
+              - hp%
+              - em
             notes: null
             seeCharNotes: false
-          notes: null
+          notes: A Crit Rate Circlet can be considered if running Favonius Greatsword
           seeCharNotes: false
         subStats:
-          advices: []
-          notes: null
+          advices:
+            - codes:
+                - crit-rate
+              notes: null
+              seeCharNotes: true
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - hp%
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - em
+              notes: null
+              seeCharNotes: false
+          notes: Crit Rate is useful only when using Favonius Greatsword
           seeCharNotes: false
         talents:
-          advices: []
+          advices:
+            - burst
+            - skill
           notes: null
           seeCharNotes: false
-        tips: null
-        notes: []
+        tips: "It is generally advised to use 2 elemental skills per burst rotation, as
+          this helps to alleviate her otherwise extreme Energy requirements. "
+        notes:
+          - p: Dori is mainly a support character that provides Healing and Energy to a
+              teammate through her burst.
+          - p:
+              - b: |-
+                  Regarding Weapon Choices: 
+                  Sacrificial Greatsword:
+              - " This weapon's passive allows Dori to cast her elemental skill
+                twice while only swapping to her once per rotation."
+          - p:
+              - b: |-
+                  Regarding Artifact Choices: 
+                  Deepwood Memories (4):
+              - " This set should only be used when Dori is in a dendro based
+                team composition."
     credits: null
   - code: traveler-electro
     elementCode: electro
@@ -5849,17 +5940,17 @@ characters:
         artifacts:
           sets:
             - arts:
-                code: gilded-dreams
-                count: 4
-              notes: null
-              seeCharNotes: false
-            - arts:
                 code: emblem-of-severed-fate
                 count: 4
               notes: null
               seeCharNotes: true
             - arts:
                 code: thundersoother
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: gilded-dreams
                 count: 4
               notes: null
               seeCharNotes: true
@@ -5943,23 +6034,17 @@ characters:
               - b: " low refine Solar Pearl with Bennett buff"
               - >2
                  can perform similar to Skyward Atlas. Note that you should do a Normal Attack when you swap in and before you swap out of Yae Miko to keep good uptime on the passive.
-              - b: "The Widsith:"
-              - " Despite Yae's A4 bonus, the EM buff is bad. "
-              - b: Over many rotations Widsith will be worse than equal refinement Solar Pearl
-                  regardless of buff, and can be worse than Oathsworn if you
-                  only get the EM buff.
-              - " If you are trying for one rotation speedruns and are willing
-                to reset till you get the DMG% or ATK buff, "
-              - b: this weapon ranks much higher
+              - b: "The Widsith: In Aggravate teams specifically, this weapon ranks much higher"
               - >2
                  and can outperform the 5 stars. Otherwise, it is recommended to use the other options above Widsith for more consistent damage.
               - b: "Hakushin Ring: "
               - "This weapon's passive can buff your other team members, which "
               - b: may be more beneficial than Yae Miko's personal damage
               - " depending on the team and rotation used. Note that the passive
-                cannot be triggered when off-field."
-          - p:
-              - b: "Regarding Artifact Choices:"
+                cannot be triggered when off-field. "
+              - b: |-
+                  
+                  Regarding Artifact Choices:
               - "\n"
               - b: "Emblem of Severed Fate (4): "
               - "This set works best for Yae in "
@@ -5967,8 +6052,13 @@ characters:
               - " This set also"
               - b: " provides more value"
               - " if she's used WITHOUT Raiden"
-              - b: " (due to the higher ER requirements)."
-              - "\n"
+              - b: |-2
+                   (due to the higher ER requirements).
+                  Gilded Dreams (4):
+              - " If Yae is used in an "
+              - b: aggravate/quicken focused team,
+              - |2
+                 this set will outperform Emblem of Severed Fate (4).
               - b: "+18% ATK set (2) / Thundering Fury (2) / Emblem of Severed Fate (2): "
               - "Using a combination of these artifact sets works best for Yae
                 in "
@@ -6003,42 +6093,194 @@ characters:
   - code: cyno
     elementCode: electro
     roles:
-      - code: wip
-        name: wip
+      - code: dps
+        name: dps
         isRecommended: true
         weapons:
-          advices: []
+          advices:
+            - similar:
+                - code: staff-of-the-scarlet-sands
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: primordial-jade-winged-spear
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: calamity-queller
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: staff-of-homa
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: deathmatch
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: white-tassel
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: kitain-cross-spear
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: missive-windspear
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: prototype-starglitter
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
           notes: null
           seeCharNotes: false
         artifacts:
-          sets: []
+          sets:
+            - arts:
+                code: gladiators-finale
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: thundering-fury
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: gilded-dreams
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: thundersoother
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                op: or
+                arts:
+                  - code: 18%-atk
+                    count: 2
+                  - code: thundering-fury
+                    count: 2
+                  - code: emblem-of-severed-fate
+                    count: 2
+                  - code: 80-em
+                    count: 2
+              notes: null
+              seeCharNotes: true
           notes: null
           seeCharNotes: false
         mainStats:
           circlet:
-            codes: []
+            codes:
+              - crit-rate
+              - crit-dmg
             notes: null
             seeCharNotes: false
           goblet:
-            codes: []
+            codes:
+              - electro-dmg
             notes: null
             seeCharNotes: false
           sands:
-            codes: []
+            codes:
+              - em
+              - atk%
             notes: null
-            seeCharNotes: false
+            seeCharNotes: true
           notes: null
           seeCharNotes: false
         subStats:
-          advices: []
+          advices:
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - crit-rate
+                - crit-dmg
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk%
+              notes: ~= Elemental Mastery
+              seeCharNotes: false
           notes: null
           seeCharNotes: false
         talents:
-          advices: []
+          advices:
+            - burst
+            - skill
           notes: null
           seeCharNotes: false
         tips: null
-        notes: []
+        notes:
+          - p:
+              - "Cyno is a DPS character that uses his burst to change stance
+                and deal electro damage. The damage dealt during this stance is
+                "
+              - b: "normal attack damage "
+              - "so burst damage buffs will not affect him. On most teams with
+                an electro battery, he will want "
+              - b: "120-150% "
+              - energy recharge.
+          - p:
+              - b: |-
+                  Regarding Weapon Choices:
+                  Kitain Cross Spear: 
+              - "This weapon is especailly competitive with the options higher
+                on the list if Cyno is "
+              - b: not
+              - " being run with an electro battery."
+          - p:
+              - b: |-
+                  Regarding Artifact Sets:
+                  Thundering Fury (4): 
+              - "This set is an especially competitive option when Cyno is the
+                only Electro character in the team, as the extra Elemental Skill
+                casts help alleviate his energy issues. Do note that casting his
+                skill off cooldown with this set might lead to "
+              - b: |-
+                  missing Endseer stance windows.
+                  Gilded Dreams (4): 
+              - "This artifact set is better than Gladiator's Finale on "
+              - b: Staff of the Scarlet Sands and White Tassel.
+              - "\n"
+              - b: "Thundersoother (4): "
+              - "If you can "
+              - b: guarantee 100% uptime on this set,
+              - " it performs better than Gladiator's Finale."
+          - p:
+              - b: |-
+                  Regarding Main Stat Choices:
+                  Sands: 
+              - >
+                Elemental Mastery versus Attack is heavily dependant on the
+                weapon and team Cyno is in. It is recommended to test each
+                and/or consult an optimizer.
+              - b: "Circlet: "
+              - "with "
+              - b: Staff of the Scarlet Sands,
+              - " Elemental Mastery may be used as the circlet mainstat"
     credits: null
   - code: xingqiu
     elementCode: hydro
@@ -6848,42 +7090,90 @@ characters:
   - code: candace
     elementCode: hydro
     roles:
-      - code: wip
-        name: wip
+      - code: support
+        name: support
         isRecommended: true
         weapons:
-          advices: []
+          advices:
+            - similar:
+                - code: favonius-lance
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: black-tassel
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
           notes: null
           seeCharNotes: false
         artifacts:
-          sets: []
+          sets:
+            - arts:
+                code: noblesse-oblige
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: emblem-of-severed-fate
+                count: 4
+              notes: null
+              seeCharNotes: false
           notes: null
           seeCharNotes: false
         mainStats:
           circlet:
-            codes: []
+            codes:
+              - hp%
+              - crit-rate
+              - crit-dmg
             notes: null
             seeCharNotes: false
           goblet:
-            codes: []
+            codes:
+              - hp%
+              - hydro-dmg
             notes: null
             seeCharNotes: false
           sands:
-            codes: []
+            codes:
+              - er
+              - hp%
             notes: null
             seeCharNotes: false
           notes: null
           seeCharNotes: false
         subStats:
-          advices: []
-          notes: null
+          advices:
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - crit-rate
+              notes: null
+              seeCharNotes: true
+            - codes:
+                - hp%
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - hp
+              notes: null
+              seeCharNotes: false
+          notes: Crit Rate only if running Favonius Lance
           seeCharNotes: false
         talents:
-          advices: []
+          advices:
+            - burst
+            - skill
           notes: null
           seeCharNotes: false
         tips: null
-        notes: []
+        notes: Candace has generally poor personal damage, and as such performs best as
+          a low investment support.
     credits: null
   - code: tartaglia
     elementCode: hydro
@@ -8516,7 +8806,7 @@ characters:
                 code: noblesse-oblige
                 count: 4
               notes: null
-              seeCharNotes: false
+              seeCharNotes: true
             - arts:
                 code: instructor
                 count: 4
@@ -8595,6 +8885,13 @@ characters:
           - p:
               - b: |-
                   Regarding Artifacts:
+                  Noblesse Oblige (4): 
+              - "This option would generally be better than Deepwood Memories
+                (4) if Dendro Traveler is used in an "
+              - b: Aggravate
+              - " focused team."
+              - b: |-
+                  
                   The Exile (4): 
               - An alternative option if they are placed in the same team as
                 Cyno to help his Energy Recharge needs.
