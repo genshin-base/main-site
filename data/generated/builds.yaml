@@ -6129,24 +6129,24 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: white-tassel
-                  refine: null
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
             - similar:
                 - code: kitain-cross-spear
-                  refine: null
+                  refine: "5"
                   stacks: null
                   notes: null
-                  seeCharNotes: false
+                  seeCharNotes: true
             - similar:
                 - code: missive-windspear
-                  refine: null
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
                 - code: prototype-starglitter
-                  refine: null
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
