@@ -47,7 +47,7 @@ import {
 	saveAbyssStats,
 	loadAbyssStats,
 } from './_common.js'
-import { mediaChain, optipng, pngquant, resize } from '#lib/media.js'
+import { makeResizeFitChecked, mediaChain, optipng, pngquant } from '#lib/media.js'
 import {
 	excludeDomainBosses,
 	extractFullInfoLocations,
@@ -548,8 +548,8 @@ async function extractAndSaveItemImages(overwriteExisting) {
 	}
 
 	const shouldProcess = async dest => overwriteExisting || !(await exists(dest))
-	const processNormal = (i, o) => mediaChain(i, o, (i, o) => resize(i, o, '64x64'), pngquant, optipng)
-	const processLarge = (i, o) => mediaChain(i, o, (i, o) => resize(i, o, '120x120'), pngquant, optipng)
+	const processNormal = (i, o) => mediaChain(i, o, makeResizeFitChecked(64, 64), pngquant, optipng)
+	const processLarge = (i, o) => mediaChain(i, o, makeResizeFitChecked(120, 120), pngquant, optipng)
 	async function* processIfShould(mediaFPath, mediaFunc) {
 		const dest = `${WWW_MEDIA_DIR}/${mediaFPath}`
 		if (await shouldProcess(dest)) yield src => mediaFunc(src, dest)
