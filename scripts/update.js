@@ -143,14 +143,19 @@ const fixes = {
 	honeyhunter: {
 		statuses: {
 			characters: [
-				{ actually: 'unreleased', name: 'Nahida' },
+				// CHECK
 				{ actually: 'unreleased', name: 'Layla' },
+				{ actually: 'unreleased', name: 'The Wanderer' },
+				{ actually: 'unreleased', name: 'Faruzan' },
 			],
 			weapons: [
+				// CHECK
 				{ actually: 'unreleased', name: 'Ebony Bow' },
 				{ actually: 'unreleased', name: 'Quartz' },
 				{ actually: 'unreleased', name: 'Amber Bead' },
 				{ actually: 'unreleased', name: 'A Thousand Floating Dreams' },
+				{ actually: 'unreleased', name: 'Floral Rainfall' },
+				{ actually: 'unreleased', name: "Tullaytullah's Remembrance" },
 				// это оружие из квеста, получаемое после квеста оружие называется "Kagotsurube Isshin"
 				{ actually: 'unreleased', name: 'Prized Isshin Blade' },
 			],
@@ -175,11 +180,14 @@ const fixes = {
 		},
 		skip: {
 			enemies: [
-				/Dendro Hypostasis/, //ещё не релизнут
+				/Dendro Hypostasis/, //CHECK: ещё не релизнут
 			],
-			artifacts: [],
+			artifacts: [
+				/Desert Pavilion Chronicle/, //CHECK: ещё не релизнут
+				/Flower of Paradise Lost/, //CHECK: ещё не релизнут
+			],
 			items: [
-				/^Festive Fever$/, //два предмета с одинаковым названием (и поэтому одинаковым кодом), пока всё равно не нужны
+				/^Festive Fever$/, //CHECK: два предмета с одинаковым названием (и поэтому одинаковым кодом), пока всё равно не нужны
 			],
 		},
 		manualEnemyGroups: [
@@ -221,6 +229,7 @@ const fixes = {
 			{ code: 'spire-of-solitary-enlightenment', location: { mapCode: 'teyvat', x: -2960, y: 2886 } },
 			{ code: 'steeple-of-ignorance', location: { mapCode: 'teyvat', x: -3763, y: 2415 } },
 			{ code: 'tower-of-abject-pride', location: { mapCode: 'teyvat', x: -4222, y: 4072 } },
+			{ code: 'joururi-workshop', location: { mapCode: 'teyvat', x: -3294, y: 2844 } },
 			// от хонихантеров (не очень точные)
 			{ code: 'cecilia-garden', location: { mapCode: 'teyvat', x: -513, y: 79 } },
 			{ code: 'clear-pool-and-mountain-cavern', location: { mapCode: 'teyvat', x: -2181, y: 1045 } },
