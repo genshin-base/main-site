@@ -3715,16 +3715,6 @@ crown-of-insight:
   rarity: 5
   craftedFrom: []
   locations: []
-dakas-bell:
-  code: dakas-bell
-  name:
-    en: Daka's Bell
-    ru: Пустой колокольчик
-  types:
-    - character-material-talent
-  rarity: 5
-  craftedFrom: []
-  locations: []
 dragon-lords-crown:
   code: dragon-lords-crown
   name:
@@ -4553,16 +4543,6 @@ iron-coin:
   rarity: 3
   craftedFrom: []
   locations: []
-kimodameshi-ticket:
-  code: kimodameshi-ticket
-  name:
-    en: Kimodameshi Ticket
-    ru: Билет Кимодамэси
-  types:
-    - currency
-  rarity: 3
-  craftedFrom: []
-  locations: []
 liyue-reputation-exp:
   code: liyue-reputation-exp
   name:
@@ -4788,16 +4768,6 @@ peculiar-collab-coupon:
   name:
     en: Peculiar Collab Coupon
     ru: Купон дружбы
-  types:
-    - currency
-  rarity: 3
-  craftedFrom: []
-  locations: []
-player-exp:
-  code: player-exp
-  name:
-    en: Player EXP
-    ru: Опыт игрока
   types:
     - currency
   rarity: 3
@@ -9805,6 +9775,16 @@ cuihua-wood:
     - !loc teyvat 3803 4838
     - !loc teyvat 3819 4969
     - !loc teyvat 4002 5539
+dakas-bell:
+  code: dakas-bell
+  name:
+    en: Daka's Bell
+    ru: Пустой колокольчик
+  types:
+    - ingredient
+  rarity: 5
+  craftedFrom: []
+  locations: []
 dream-solvent:
   code: dream-solvent
   name:

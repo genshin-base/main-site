@@ -78,6 +78,7 @@ import { getEnemyCodeFromName } from '#lib/genshin.js'
 import { extractArtifactsData, getArtifactSpecialGroupCodes } from '#lib/parsing/honeyhunter/artifacts.js'
 import { buildsConvertLangMode } from '#lib/parsing/helperteam/build_texts.js'
 import { extractAbyssStats } from '#lib/parsing/spiralabyss/index.js'
+import { mustBeDefined } from '#lib/utils/values.js'
 
 const HELPERTEAM_DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -145,8 +146,6 @@ const fixes = {
 			characters: [
 				// CHECK
 				{ actually: 'unreleased', name: 'Layla' },
-				{ actually: 'unreleased', name: 'The Wanderer' },
-				{ actually: 'unreleased', name: 'Faruzan' },
 			],
 			weapons: [
 				// CHECK
@@ -154,8 +153,6 @@ const fixes = {
 				{ actually: 'unreleased', name: 'Quartz' },
 				{ actually: 'unreleased', name: 'Amber Bead' },
 				{ actually: 'unreleased', name: 'A Thousand Floating Dreams' },
-				{ actually: 'unreleased', name: 'Floral Rainfall' },
-				{ actually: 'unreleased', name: "Tullaytullah's Remembrance" },
 				// это оружие из квеста, получаемое после квеста оружие называется "Kagotsurube Isshin"
 				{ actually: 'unreleased', name: 'Prized Isshin Blade' },
 			],
@@ -182,10 +179,7 @@ const fixes = {
 			enemies: [
 				/Dendro Hypostasis/, //CHECK: ещё не релизнут
 			],
-			artifacts: [
-				/Desert Pavilion Chronicle/, //CHECK: ещё не релизнут
-				/Flower of Paradise Lost/, //CHECK: ещё не релизнут
-			],
+			artifacts: [],
 			items: [
 				/^Festive Fever$/, //CHECK: два предмета с одинаковым названием (и поэтому одинаковым кодом), пока всё равно не нужны
 			],
@@ -249,7 +243,20 @@ const fixes = {
 		],
 		postProcess: {
 			items: (() => {
-				return []
+				return [
+					// henna-berry был переименован, и на картах ищется по "redcrest"
+					(code2item, code2img) => {
+						const item = code2item['henna-berry']
+						if (!item) return false
+						item.code = 'redcrest'
+						item.name.en = 'Redcrest'
+						code2item[item.code] = item
+						code2img.set(item.code, mustBeDefined(code2img.get('henna-berry')))
+						delete code2item['henna-berry']
+						code2img.delete('henna-berry')
+						return true
+					},
+				]
 			})(),
 			enemies: [
 				// Стаи вишапов нет ни в списке врагов, ни в списке данжей
