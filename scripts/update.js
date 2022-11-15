@@ -78,6 +78,7 @@ import { getEnemyCodeFromName } from '#lib/genshin.js'
 import { extractArtifactsData, getArtifactSpecialGroupCodes } from '#lib/parsing/honeyhunter/artifacts.js'
 import { buildsConvertLangMode } from '#lib/parsing/helperteam/build_texts.js'
 import { extractAbyssStats } from '#lib/parsing/spiralabyss/index.js'
+import { mustBeDefined } from '#lib/utils/values.js'
 
 const HELPERTEAM_DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -143,10 +144,11 @@ const fixes = {
 	honeyhunter: {
 		statuses: {
 			characters: [
-				{ actually: 'unreleased', name: 'Nahida' },
+				// CHECK
 				{ actually: 'unreleased', name: 'Layla' },
 			],
 			weapons: [
+				// CHECK
 				{ actually: 'unreleased', name: 'Ebony Bow' },
 				{ actually: 'unreleased', name: 'Quartz' },
 				{ actually: 'unreleased', name: 'Amber Bead' },
@@ -175,11 +177,11 @@ const fixes = {
 		},
 		skip: {
 			enemies: [
-				/Dendro Hypostasis/, //ещё не релизнут
+				/Dendro Hypostasis/, //CHECK: ещё не релизнут
 			],
 			artifacts: [],
 			items: [
-				/^Festive Fever$/, //два предмета с одинаковым названием (и поэтому одинаковым кодом), пока всё равно не нужны
+				/^Festive Fever$/, //CHECK: два предмета с одинаковым названием (и поэтому одинаковым кодом), пока всё равно не нужны
 			],
 		},
 		manualEnemyGroups: [
@@ -221,6 +223,7 @@ const fixes = {
 			{ code: 'spire-of-solitary-enlightenment', location: { mapCode: 'teyvat', x: -2960, y: 2886 } },
 			{ code: 'steeple-of-ignorance', location: { mapCode: 'teyvat', x: -3763, y: 2415 } },
 			{ code: 'tower-of-abject-pride', location: { mapCode: 'teyvat', x: -4222, y: 4072 } },
+			{ code: 'joururi-workshop', location: { mapCode: 'teyvat', x: -3294, y: 2844 } },
 			// от хонихантеров (не очень точные)
 			{ code: 'cecilia-garden', location: { mapCode: 'teyvat', x: -513, y: 79 } },
 			{ code: 'clear-pool-and-mountain-cavern', location: { mapCode: 'teyvat', x: -2181, y: 1045 } },
@@ -240,7 +243,20 @@ const fixes = {
 		],
 		postProcess: {
 			items: (() => {
-				return []
+				return [
+					// henna-berry был переименован, и на картах ищется по "redcrest"
+					(code2item, code2img) => {
+						const item = code2item['henna-berry']
+						if (!item) return false
+						item.code = 'redcrest'
+						item.name.en = 'Redcrest'
+						code2item[item.code] = item
+						code2img.set(item.code, mustBeDefined(code2img.get('henna-berry')))
+						delete code2item['henna-berry']
+						code2img.delete('henna-berry')
+						return true
+					},
+				]
 			})(),
 			enemies: [
 				// Стаи вишапов нет ни в списке врагов, ни в списке данжей

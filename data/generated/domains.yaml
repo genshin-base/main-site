@@ -610,6 +610,48 @@ hidden-palace-of-zhou-formula:
   region: liyue
   location: !loc teyvat -1145 643
   bossCode: null
+joururi-workshop:
+  code: joururi-workshop
+  type: trounce
+  name:
+    en: Joururi Workshop
+    ru: Мастерская Дзёрури
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - dakas-bell
+      - dream-solvent
+      - midlander-bow-billet
+      - midlander-catalyst-billet
+      - midlander-claymore-billet
+      - midlander-polearm-billet
+      - midlander-sword-billet
+      - mirror-of-mushin
+      - mora
+      - puppet-strings
+      - vajrada-amethyst-chunk
+      - vajrada-amethyst-fragment
+      - vajrada-amethyst-gemstone
+      - vajrada-amethyst-sliver
+      - varunada-lazurite-chunk
+      - varunada-lazurite-fragment
+      - varunada-lazurite-gemstone
+      - varunada-lazurite-sliver
+      - vayuda-turquoise-chunk
+      - vayuda-turquoise-fragment
+      - vayuda-turquoise-gemstone
+      - vayuda-turquoise-sliver
+    artifactSetCodes:
+      - berserker
+      - gladiators-finale
+      - instructor
+      - the-exile
+      - wanderers-troupe
+  dropTimetable: {}
+  region: sumeru
+  location: !loc teyvat -3294 2844
+  bossCode: shouki-no-kami-the-prodigal
 midsummer-courtyard:
   code: midsummer-courtyard
   type: artifacts

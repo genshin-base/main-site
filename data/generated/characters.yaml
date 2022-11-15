@@ -911,3 +911,18 @@ nilou:
     - varunada-lazurite-gemstone
     - padisarah
     - crystalline-cyst-dust
+nahida:
+  code: nahida
+  name:
+    en: Nahida
+    ru: Нахида
+  rarity: 5
+  weaponTypeCode: catalyst
+  releaseVersion: "3.2"
+  materialCodes:
+    - philosophies-of-ingenuity
+    - puppet-strings
+    - quelled-creeper
+    - nagadus-emerald-gemstone
+    - kalpalata-lotus
+    - crystalline-cyst-dust
