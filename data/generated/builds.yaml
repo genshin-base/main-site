@@ -14360,7 +14360,7 @@ characters:
                   notes: null
                   seeCharNotes: true
                 - code: amenoma-kageuchi
-                  refine: null
+                  refine: "5"
                   stacks: null
                   notes: null
                   seeCharNotes: false
