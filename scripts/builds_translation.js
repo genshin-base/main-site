@@ -287,22 +287,20 @@ async function verify() {
 	for (const [lang, blocks] of Object.entries(lang2blocks)) {
 		for (const { block, path } of blocks) {
 			for (const node of walkTextNodes(block)) {
-				if (typeof node !== 'string' && 'a' in node) {
-					if (node.href.trim().startsWith('#')) {
-						const linkStr = `[${node.a}](${node.href})`
-						let m
-						if ((m = node.href.match(/#weapon:(.*)/))) {
-							if (!(m[1] in weapons))
-								err(`${lang}: block '${path}': wrong weapon code: ${linkStr}`)
-						} else if ((m = node.href.match(/#artifact:(.*)/))) {
-							if (!(m[1] in artifacts))
-								err(`${lang}: block '${path}': wrong artifact code: ${linkStr}`)
-						} else if ((m = node.href.match(/#item:(.*)/))) {
-							if (!(m[1] in items)) err(`${lang}: block '${path}': wrong item code: ${linkStr}`)
-						} else {
-							err(`${lang}: block '${path}': wrong special link: ${linkStr}`)
-						}
-					}
+				if (typeof node !== 'string') {
+					const errMsg = (/**@type {string}*/ type, /**@type {string}*/ suffix) =>
+						err(`${lang}: block '${path}': wrong ${type} code: ${suffix}`)
+					if ('weapon' in node)
+						if (!(node.code in weapons))
+							errMsg('weapon', `[${node.weapon}](#weapon:${node.code})`)
+					if ('artifact' in node)
+						if (
+							!(node.code in artifacts) &&
+							!GI_ARTIFACT_GROUP_CODES.includes(/**@type {*}*/ (node.code))
+						)
+							errMsg('artifact', `[${node.artifact}](#artifact:${node.code})`)
+					if ('item' in node)
+						if (!(node.code in items)) errMsg('item', `[${node.item}](#item:${node.code})`)
 				}
 			}
 		}
