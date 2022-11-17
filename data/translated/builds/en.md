@@ -2208,7 +2208,7 @@ Sayu does more damage with EM builds and heals more with ATK hybrid builds, Heal
 Wolf's Gravestone is a universal claymore that is capable of buffing your teammates along with providing more healing in Sayu's case. It is best used once you achieve your ER threshold.
 
 **[Forest Regalia](#weapon:forest-regalia)**
-When used in its niche with aggravate teams it can outpeform [Katsuragikiri](#weapon:#katsuragikiri-nagamasa). Outside of that its just a energy% stat stick.
+When used in its niche with aggravate teams it can outpeform [Katsuragikiri](#weapon:katsuragikiri-nagamasa). Outside of that its just a energy% stat stick.
 
 **Regarding Artifact Sets**
 
