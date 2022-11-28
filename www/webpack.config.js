@@ -13,7 +13,7 @@ import { Deferred, mustBeNotNull } from '#lib/utils/values.js'
 import { matchPath, paths, pathToStrings } from './src/routes/paths.js'
 import { runAndReadStdout } from '#lib/utils/os.js'
 
-const LANGS = ['en', 'ru']
+const LANGS = ['en', 'ru', 'ua']
 const ASSET_PATH = '/'
 const PROD_HOSTNAME = 'genshin-base.com'
 const REFLANG_ORIGIN = 'https://genshin-base.com'
