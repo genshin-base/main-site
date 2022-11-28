@@ -2898,6 +2898,11 @@ wolves-of-the-rift:
     - rockfond-rifthound
     - thundercraven-rifthound
   locations:
+    - !loc teyvat -6364 4887
+    - !loc teyvat -6359 4888
+    - !loc teyvat -6264 4797
+    - !loc teyvat -6262 4804
+    - !loc teyvat -6258 4798
     - !loc teyvat -4686 2708
     - !loc teyvat -4683 2704
     - !loc teyvat -4507 2752
@@ -3484,8 +3489,6 @@ primal-construct:
     - !loc teyvat -5446 5187
     - !loc teyvat -5355 3805
     - !loc teyvat -5349 3676
-    - !loc teyvat -5306 3881
-    - !loc teyvat -5298 3882
     - !loc teyvat -5296 3776
     - !loc teyvat -5269 3685
     - !loc teyvat -5257 3843
@@ -5022,16 +5025,12 @@ fungus:
     - !loc teyvat -5359 4901
     - !loc teyvat -5343 5613
     - !loc teyvat -5330 5596
-    - !loc teyvat -5329 5205
     - !loc teyvat -5329 5256
-    - !loc teyvat -5327 5200
     - !loc teyvat -5327 5254
     - !loc teyvat -5325 5254
-    - !loc teyvat -5323 5207
     - !loc teyvat -5322 5658
     - !loc teyvat -5319 5657
     - !loc teyvat -5318 4190
-    - !loc teyvat -5318 5203
     - !loc teyvat -5316 4616
     - !loc teyvat -5315 4193
     - !loc teyvat -5315 5070
@@ -5226,15 +5225,10 @@ fungus:
     - !loc teyvat -4609 2405
     - !loc teyvat -4608 2411
     - !loc teyvat -4608 2471
-    - !loc teyvat -4607 3643
-    - !loc teyvat -4605 3654
     - !loc teyvat -4604 2475
     - !loc teyvat -4601 2441
     - !loc teyvat -4601 2447
-    - !loc teyvat -4599 3642
-    - !loc teyvat -4599 3662
     - !loc teyvat -4592 3719
-    - !loc teyvat -4591 3656
     - !loc teyvat -4589 3484
     - !loc teyvat -4584 3739
     - !loc teyvat -4581 3488
@@ -5251,12 +5245,8 @@ fungus:
     - !loc teyvat -4512 3460
     - !loc teyvat -4510 3466
     - !loc teyvat -4506 3463
-    - !loc teyvat -4503 2720
     - !loc teyvat -4500 2504
-    - !loc teyvat -4495 2719
     - !loc teyvat -4493 2504
-    - !loc teyvat -4492 2715
-    - !loc teyvat -4492 2724
     - !loc teyvat -4484 2502
     - !loc teyvat -4477 2503
     - !loc teyvat -4473 2497
@@ -5334,9 +5324,6 @@ fungus:
     - !loc teyvat -4003 4269
     - !loc teyvat -3999 4147
     - !loc teyvat -3989 4143
-    - !loc teyvat -3978 4224
-    - !loc teyvat -3977 4223
-    - !loc teyvat -3973 4226
     - !loc teyvat -3952 3165
     - !loc teyvat -3950 2489
     - !loc teyvat -3942 4213

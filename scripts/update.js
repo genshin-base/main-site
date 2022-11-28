@@ -216,20 +216,7 @@ const fixes = {
 		],
 		postProcess: {
 			items: (() => {
-				return [
-					// henna-berry был переименован, и на картах ищется по "redcrest"
-					(code2item, code2img) => {
-						const item = code2item['henna-berry']
-						if (!item) return false
-						item.code = 'redcrest'
-						item.name.en = 'Redcrest'
-						code2item[item.code] = item
-						code2img.set(item.code, mustBeDefined(code2img.get('henna-berry')))
-						delete code2item['henna-berry']
-						code2img.delete('henna-berry')
-						return true
-					},
-				]
+				return []
 			})(),
 			enemies: [
 				// Стаи вишапов нет ни в списке врагов, ни в списке данжей
