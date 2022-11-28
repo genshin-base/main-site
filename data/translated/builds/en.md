@@ -58,13 +58,13 @@ Aloy is very niche as she only performs well in certain comps and even then, she
 **Regarding Weapon Choices**
 
 [Polar Star](#weapon:polar-star)<br>
-Forcing to get Polar stacks isn't worth due to consuming extra time to get those stacks.
+Forcing to get Polar Star stacks isn't worth due to consuming extra time to get those stacks.
 
 [The Stringless](#weapon:the-stringless)<br>
 Placement was considering Aloy is used on a Reverse Melt team. On Reverse Melt Aloy, Stringless especially at higher refinement levels can pull ahead of Thundering Pulse.
 
 [Prototype Crescent](#weapon:prototype-crescent)<br>
-Assumes the passive is active by proccing a weak point shot. This weapon especially at higher refinement levels can be as good as a Skyward Harp.
+Assumes the passive is active by proccing a weak point shot. This weapon especially at higher refinement levels can be as good as Skyward Harp.
 
 [Sacrificial Bow](#weapon:sacrificial-bow)<br>
 A pretty decent option to make Aloy a Cryo battery as her Elemental Skill provides 5 Cryo particles.
@@ -155,7 +155,7 @@ Circlet main stat will be dependant on your overall stats, depending on your ove
 With Blizzard Strayer (4) and Cryo Resonance, this weapon overcrits, so avoid getting Crit Rate substats.
 
 **[Aquila Favonia](#weapon:aquila-favonia)**<br>
-While Aquila has Physical Damage% as a main stat, which is basically useless on Ayaka, it is still a good statstick as it has a high base ATK and ATK% buff from the passive, however, it's not a huge upgrade over the other 4 star options and there might be a character which can utilize this weapon better (such as Bennett).
+While Aquila Favonia has Physical Damage% as a main stat, which is basically useless on Ayaka, it is still a good statstick as it has a high base ATK and ATK% buff from the passive, however, it's not a huge upgrade over the other 4 star options and there might be a character which can utilize this weapon better (such as Bennett).
 
 **[Skyward Blade](#weapon:skyward-blade)**<br>
 The Energy Recharge main stat provided from this sword makes Ayaka comfortable in terms of having a good burst uptime, try to avoid getting Energy Recharge substats since the weapon already provides you with enough Energy Recharge.
@@ -314,8 +314,8 @@ Serpent Spine is a fine choice for sub-DPS Beidou and can outperform Wolf's Grav
 **[Redhorn Stonethresher](#weapon:redhorn-stonethresher)**<br>
 Depending on the amount of ATK% buffs you're getting, this weapon can overtake Wolf's Gravestone in personal damage.
 
-**[Akuoumaru ](#weapon:akuoumaru)(260 team energy assumed)**<br>
-Akuoumaru outperforms **Skyward Pride** on a **low ER requirement Beidou** (where she is paired with other Electro characters to battery her energy needs). At **\[R3+\],** it becomes exponentially better and comes very close to **Serpent Spine** and **Wolf's Gravestone.**
+**[Akuoumaru](#weapon:akuoumaru)**<br>
+Assuming 260 team energy, Akuoumaru outperforms **Skyward Pride** on a **low ER requirement Beidou** (where she is paired with other Electro characters to battery her energy needs). At **\[R3+\],** it becomes exponentially better and comes very close to **Serpent Spine** and **Wolf's Gravestone.**
 
 **Regarding Artifact Sets**
 
@@ -376,21 +376,31 @@ The Alley Flash has the potential to beat Iron Sting \[R5\]**,** but this requir
 **Regarding Artifact Sets**
 
 [Crimson Witch of Flames (4)](#artifact:crimson-witch-of-flames)<br>
-This set works best with Chongyun on the same team for consistent Melt.<br>
-Assuming a **Melt/Vaporize** team, **Crimson Witch (4) is your best set for damage.**<br>
-Pyro Damage Bonus will always be the best for cup. The combo for the highest Melt/Vaporize damage is The Black Sword and EM sand. \[R1\] Iron Sting and EM sand turns out to have diminishing returns and isn't as good, but \[R2+\] Iron Sting is a different question because better buffs. (Assuming you don't have a whale build's CR/CD stats, in which case Aquila Favonia with EM sands is just flat out better.)
+Assuming a Melt/Vaporize team, this set is your best set for damage and works best with Chongyun on the same team for consistent Melt.
 
 [Thundering Fury (4)](#artifact:thundering-fury)<br>
-This set **works best if paired with Electro supports such as Beidou and Fischl/Lisa,** as it allows Bennett to accomplish 2 things: <br>
-1) Rapidly spam E for raw pyro damage + overload<br>
-2) Generate tons of energy for the entire team.<br>
-**Thundering Fury (4) also allows Bennett to quickly break the shields of the Abyss Lectors** in the Spiral Abyss. This comp is generally only recommended for those with Beidou on C2/C6.
+This set works best if paired with Electro supports such as Beidou and Fischl/Lisa, as it allows Bennett to:
+1) Rapidly spam E for raw pyro damage and application, allowing frequent Overload reaction triggers and breaking Electro shields rapidly.<br>
+2) Generate tons of energy for the entire team. <br>
+The setup is generally only recommended for those with Beidou \[C2/C6\].<br>
+The main-stat artifacts you want to farm for Thundering Fury (4) Bennett varies from the main-stat artifacts you'd normally go for the other builds. Instead of ATK%/EM, Pyro and Crit, you'd instead want to go for EM, Pyro and EM on a Thundering Fury (4) Bennett. As such, this also means weapons that have EM substats such as Iron Sting take priority over other swords.
 
-**It's worth noting that the main-stat artifacts you want to farm for 4-TF Bennett varies from the main-stat artifacts you'd normally go for in other builds. Instead of ATK/EM, Pyro, and Crit, you'd instead want to go for EM/Pyro/EM on a 4-TF Bennett.** As such, this also means weapons that have EM substats such as Iron Sting take priority over other swords.
+Recommended amount of ER%: 130-150%. <br>
+With Thundering Fury (4), you have a lot more leeway when it comes to ER.
 
-It is also worth noting that with 4 TF, Primordial Jade Cutter is able to overtake MIstsplitter Reforged due to its massive Crit Rate% substat, which allows you to vape consistently despite the lack of Crit Dmg/Crit Rate subs in your artifacts. This assumes that your EM mainstat pieces (sands, goblet, and circlet) lack Crit Rate substats. However, in the rare occasion that your EM pieces manage to roll plenty of Crit subs, Mistsplitter easily overtakes Jade Cutter.
+**Regarding Weapon Choices**
 
-Recommended amount of ER%: 130-150%. Worth noting that **with Thundering Fury (4), you have a lot more leeway when it comes to ER.**
+**[The Black Sword](#weapon:the-black-sword)**
+With the EM sand, this combo has the highest Melt/Vaporize damage. <br>
+
+**[Iron Sting](#weapon:iron-sting)**
+This weapon at \[R1\] with EM sand turns out to have diminishing returns and isn't as good, but \[R2+\] Iron Sting is a different question because better buffs.<br>
+
+**[Aquila Favonia](#weapon:aquila-favonia)**
+Assuming you have a whale build's CR/CD stats, this weapon with EM sands will be better than the two above.<br>
+
+**[Primordial Jade Cutter](#weapon:primordial-jade-cutter)**
+With [Thundering Fury (4)](#artifact:thundering-fury), this weapon is able to out-perform [Mistsplitter Reforged](#weapon:mistsplitter-reforged) due to massive Crit Rate% substat, which allows consistent vaporize damage despite the lack of Crit Rate/DMG substats, assuming that your EM Sands/Circlet lacks crit rate substats. However, in the rare occasion that your EM pieces manage to roll plenty of Crit subs, Mistsplitter easily overtakes the Jade Cutter.
 
 
 # === characters.#bennett.roles.#burst_support.name ===
@@ -1106,7 +1116,7 @@ White Tassel requires your combos to be more focused on Normal Attacks (N2C over
 [Shimenawa's Reminiscence (4)](#artifact:shimenawas-reminiscence)<br>
 Provides higher AA damage than 4CW but lowers your Elemental Burst damage which hurts your AoE damage, also if you're unable to burst, it might cause survivability issues if you're not running a healer.
 
-[Retracing Bolide (4)](#artifact:retracing-bolide) **and** [Wanderer's Troupe ](#artifact:wanderers-troupe)**/**[ Tenacity of the Millelith (2) ](#artifact:tenacity-of-the-millelith)**+**[ Crimson's Witch of Flame (2)](#artifact:crimson-witch-of-flames): All these options are almost on equal footing because both of the sets have an equal overall damage output assuming you have 100% shield uptime when using Bolide (4). The difference is, you want to use 2/2 WT/CW when focusing on Nuking and better consistency, while 4 Bolide is for overall higher AA damage at the expense of lower burst damage, although inconsistent if you cannot keep your shield permanently.
+[Retracing Bolide (4)](#artifact:retracing-bolide) **and** [Wanderer's Troupe ](#artifact:wanderers-troupe)**/**[ Tenacity of the Millelith (2) ](#artifact:tenacity-of-the-millelith)**+**[ Crimson's Witch of Flame (2)](#artifact:crimson-witch-of-flames): All these options are almost on equal footing because both of the sets have an equal overall damage output assuming you have 100% shield uptime when using Bolide (4). The difference is, you want to use Wanderer's Troupe / Tenacity of the Millelith (2) + Crimson's Witch of Flame (2) when focusing on Nuking and better consistency, while 4 Bolide is for overall higher AA damage at the expense of lower burst damage, although inconsistent if you cannot keep your shield permanently.
 
 **Regarding Artifact Substats Priority**
 
@@ -1304,7 +1314,7 @@ Only really viable at high refinement in specific dendro teams where you can tri
 **Regarding Artifact Sets**
 
 [Thundering Fury (4)](#artifact:thundering-fury)<br>
-This is a niche build that excels only in AOE situations and with specific teams. This teams includes an off-field Hydro and Electro support to allow Kazuha to constantly trigger the 4p effect and spam his Elemental Skill, aswell as another Anemo support to hold the 4p Viridiscent Venerer set. Such teams can be Kazuha + Kokomi + Fischl + Venti, with Barbara and Sucrose being weaker replacements for Kokomi and Venti. This team triggers multiple fall damage instances against enemies that can be Crowd Controlled by Kazuha. Fischl can use The Viridiscent Hunt bow to allow for more fall damage instances. NOTE: This team performs very poorly in pure single target situations.
+This is a niche build that excels only in AOE situations and with specific teams. This teams includes an off-field Hydro and Electro support to allow Kazuha to constantly trigger the 4p effect and spam his Elemental Skill, aswell as another Anemo support to hold the Viridiscent Venerer (4) set. Such teams can be Kazuha + Kokomi + Fischl + Venti, with Barbara and Sucrose being weaker replacements for Kokomi and Venti. This team triggers multiple fall damage instances against enemies that can be Crowd Controlled by Kazuha. Fischl can use The Viridiscent Hunt bow to allow for more fall damage instances. NOTE: This team performs very poorly in pure single target situations.
 
 
 # === characters.#keqing.credits ===
@@ -1336,10 +1346,10 @@ The performance of this weapon is heavily reliant on being able to maintain its 
 **[Pale Flame (4)](#artifact:pale-flame)**<br>
 This set is the best by far as Keqing can proc its 4 piece set bonus instantly by charge attacking after casting E.
 
-**[Pale Flame (2) ](#artifact:pale-flame)+ [Bloodstained Chivalry (2)](#artifact:bloodstained-chivalry)**<br>
-This set should only be used until getting 4PF.
+**[+25% Physical DMG set ](#25%-ph-atk)+ [Bloodstained Chivalry (2)](#artifact:bloodstained-chivalry)**<br>
+This set should only be used until getting Pale Flame (4).
 
-**[Bloodstained Chivalry (2) ](#artifact:bloodstained-chivalry)+ [18% ATK set (2)](#artifact:18%-atk)**<br>
+**[+25% Physical DMG set ](#25%-ph-atk)+ [18% ATK set (2)](#artifact:18%-atk)**<br>
 The generalist Physical DPS set.
 
 **[Retracing Bolide (4)](#artifact:retracing-bolide)**<br>
@@ -1515,7 +1525,7 @@ DPS Kokomi aims to maximise her onfield damage during her Elemental Burst's dura
 **Regarding Weapon Choices**
 
 **[Thrilling Tales of Dragon Slayers](#weapon:thrilling-tales-of-dragon-slayers)**<br>
-Although this weapon doesn't provide as much personal damage for Kokomi, the 48% ATK buff is usually more worth in most cases. **This can be her best weapon in for overall team DPS if you don't already have another TTDS user in your team.**
+Although this weapon doesn't provide as much personal damage for Kokomi, the 48% ATK buff is usually more worth in most cases. This can be her best weapon in for overall team DPS if you don't already have another Thrilling Tales of Dragon Slayers user in your team.
 
 **[Hakushin Ring](#weapon:hakushin-ring)**<br>
 This weapon can provide Elemental DMG% for the team in Electro-charged teams, and will usually be the best choice in those situations.
@@ -1576,7 +1586,7 @@ Elemental Mastery is essentially your only priority
 
 # === characters.#kuki-shinobu.roles.#hyperbloom.tips ===
 
-Aim for around 750-850 Elemental Mastery. Depending on whether you use a Elemental Mastery weapon or not.
+Aim for around 850-950+ Elemental Mastery. Depending on whether you use a Elemental Mastery weapon or not.
 
 
 # === characters.#kuki-shinobu.roles.#hyperbloom.notes ===
@@ -1819,6 +1829,65 @@ Run this set if there's already another character with [Noblesse Oblige (4)](#ar
 [Thrilling Tales of Dragon Slayers](#weapon:thrilling-tales-of-dragon-slayers)<br>
 Generally the best option on Freeze Support Mona because she can furthermore buff the ATK of your Main DPS. This however comes with an assumption that with TTDS, you still have 100% Elemental Burst uptime. If you do not, pick the other Energy Recharge weapon options for more Elemental Burst uptime.
 
+# === characters.#nahida.roles.#on-field_dps.name ===
+
+on-field dps
+
+
+# === characters.#nahida.roles.#on-field_dps.subStats.advices.0.notes ===
+
+Until Requirement
+
+
+# === characters.#nahida.roles.#on-field_dps.talents.notes ===
+
+≥ Normal Attack
+
+
+# === characters.#nahida.roles.#on-field_dps.notes ===
+
+**Regarding Weapon Choices**
+
+**[Magic Guide](#weapon:magic-guide)**
+With 100% uptime on the passive, this weapon can perform better than [Wandering Evenstar](#weapon:wandering-evenstar).<br>
+
+**[Mappa Mare](#weapon:mappa-mare)**
+This weapon will perform better if you cannot maintain high uptime on Magic Guide's passive.<br>
+
+**[Favonius Codex](#weapon:favonius-codex) and [Hakushin Ring](#weapon:hakushin-ring)**
+These weapons are not as strong as other options for Nahida's personal damage, but the support value they provide can be better for overall team damage.
+
+**Regarding Artifact Sets**
+
+**[Deepwood Memories (4)](#artifact:deepwood-memories)**
+This is her best set if no one else is wearing this set.
+
+
+# === characters.#nahida.roles.#off-field_dps.name ===
+
+off-field dps
+
+
+# === characters.#nahida.roles.#off-field_dps.subStats.advices.0.notes ===
+
+Until Requirement
+
+
+# === characters.#nahida.roles.#off-field_dps.notes ===
+
+**Regarding Weapon Choices**
+
+**[Mappa Mare](#weapon:mappa-mare)**
+This weapon will perform better if you cannot maintain high uptime on Magic Guide's passive.<br>
+
+**[Favonius Codex](#weapon:favonius-codex), [Hakushin Ring](#weapon:hakushin-ring) and [Thrilling Tales of Dragon Slayers](#weapon:thrilling-tales-of-dragon-slayers)**
+These weapons are not as strong as other options for Nahida's personal damage, but the support value they provide can be better for overall team damage.
+
+**Regarding Artifact Sets**
+
+**[Deepwood Memories (4)](#artifact:deepwood-memories)**
+This is her best set if no one else is wearing this set.
+
 
 # === characters.#nilou.credits ===
 
@@ -2029,6 +2098,33 @@ This ranking assumes **Qiqi does not get her Elemental Burst up often** and is i
 
 [In-depth Guide](https://keqingmains.com/raiden/) from Raiden Mains + KQM
 
+# === characters.#raiden-shogun.roles.#hyperbloom.name ===
+
+hyperbloom
+
+
+# === characters.#raiden-shogun.roles.#hyperbloom.subStats.notes ===
+
+EM is essentially your only priority
+
+
+# === characters.#raiden-shogun.roles.#hyperbloom.tips ===
+
+You are aiming for between 850-1000+ Elemental mastery depending on weapon/artifact choice.
+
+
+# === characters.#raiden-shogun.roles.#hyperbloom.notes ===
+
+In this build Raiden is used as a Hyperbloom trigger unit in a dendro team. She is one of the best units in the game for this role. Bringing greater energy particle generation, a faster rate of seed triggering and a team ult buff in exchange for reduced team flexibility compared to another top hyperbloom triggering unit like Kuki.
+
+**Regarding Artifact Sets**<br>
+
+[Gilded Dreams (2)](#artifact:gilded-dreams) / [Wanderer's Troupe (2)](#artifact:wanderers-troupe)
+In a team with one other electro unit it's only 1 substat roll behind Gilded Dreams (4) (3-4 substat rolls behind in a team with no other electro units) therefore you can usually just use the set with the most Elemental Mastery substat rolls on it.<br>
+
+[Thundering Fury (4)](#artifact:thundering-fury)
+Only really a consideration if you have a completed set of it already, with a higher number of Elemental Mastery substat rolls, or as a placeholder set while you farm other sets.
+
 
 # === characters.#raiden-shogun.roles.#dps.name ===
 
@@ -2110,82 +2206,96 @@ Skyward Pride is viable with a Physical DMG goblet, as the damage dealt through 
 This set is better if your ATK% is covered by your substats, otherwise you would be better off running Gladiator's Finale (4). **This is only recommended to those who have no immediate access to a decent Pale Flame (4) set, otherwise you would be better off investing on Pale Flame pieces, regardless of weapon choice.**
 
 
-# === characters.#rosaria.roles.#cryo_dps.name ===
+# === characters.#rosaria.credits ===
 
-cryo dps
+[In-depth Guide](https://keqingmains.com/rosaria/) from KQM
 
 
-# === characters.#rosaria.roles.#cryo_dps.notes ===
+# === characters.#rosaria.roles.#reverse_melt.name ===
 
-**Regarding Substats**
+reverse melt
 
-Rosaria does not need much Energy Recharge if paired with Kaeya. If paired with another Cryo unit such as Chongyun or Ayaka, she will need \~130-150% Energy Recharge.
+
+# === characters.#rosaria.roles.#reverse_melt.notes ===
+
+This build capitalizes on the fact Rosaria's skill and burst dont have an ICD, allowing her to melt all skill and burst procs. Which in combination with snapshotting buffs onto her burst makes it one of her highest personal damage builds.
+
+**Regarding Weapon Choices**<br>
+
+**[Vortex Vanquisher](#weapon:vortex-vanquisher)**
+The ranking assumes you are unshielded, If you do use a shield it can surpass Calamity Queller.<br>
+
+**[Dragon's Bane](#weapon:dragons-bane)**
+At High refinement \[R4-R5\] this performs a tad better than [Primordial Jade Winged-Spear](#weapon:primordial-jade-winged-spear).<br>
+
+**[Wavebreaker's Fin](#weapon:wavebreakers-fin)**
+At High refinement \[R4-R5\] with a 260 energy cost team this performs just below Staff of Homa.
+
+**Regarding Artifact Sets**<br>
+
+**[Emblem of Severed Fate (4)](#artifact:emblem-of-severed-fate)**
+in teams where her energy requirements are higher (130%+) it can surpass Lavawalker (4).
+
+
+# === characters.#rosaria.roles.#freeze.name ===
+
+freeze
+
+
+# === characters.#rosaria.roles.#freeze.tips ===
+
+If Rosaria is being used with Chongyun to infuse her normal attacks with Cryo, her Normal Attack talent will have higher priority than Skill.
+
+
+# === characters.#rosaria.roles.#freeze.notes ===
+
+This build can be used on both a quickswap/sub-dps and perma-freeze dps Rosaria. If played as a perma-freeze dps, Rosaria has the same team comp as Freeze Kaeya. Check Kaeya's ability tips section for teamcomp setup.
+
+**Regarding Substats**<br>
+
+Rosaria does not need much Energy Recharge if paired with Kaeya. If paired with another Cryo unit such as Chongyun or Ayaka, she will need \~130-150% Energy Recharge<br>
 
 Compared to Kaeya, Rosaria has even less desire for Crit Rate, as her Ascension 1 Talent includes an extra 12% Crit Rate once skill hits the back of an enemy.
 
-**Regarding Weapon Choices**
+**Regarding Weapon Choices**<br>
 
-[Wavebreaker's Fin](#weapon:wavebreakers-fin)<br>
-At **\[R5\],** this weapon can perform similar to **Staff of Homa.**
+**[Wavebreaker's Fin](#weapon:wavebreakers-fin)**
+At high refinement \[R5\], this weapon can perform similarly to Staff of Homa, and even outperform it with a high energy cost team (260 ER).<br>
 
-[Deathmatch](#weapon:deathmatch)<br>
-Rosaria gets a lot of Crit rate from **Blizzard Strayer (4) and Cryo Resonance.** As a result, this weapon falls off in value as you will tend to **overcap above 100% Crit rate.** If Rosaria is being used without the Blizzard Strayer (4) set, then this weapon can perform better compared to other options.
+**[Deathmatch](#weapon:deathmatch)**
+Rosaria gets a lot of Crit Rate from Blizzard Strayer (4) and Cryo Resonance. As a result, this weapon falls off in value as you will tend to overcap above 100% Crit rate. If Rosaria is being used without the Blizzard Strayer (4) set, then this weapon can perform better compared to other options.
 
-**Regarding Talent Priority**
+**Regarding Artifact Sets**
 
-**Normal Attack**<br>
-If Rosaria is being used with **Chongyun to infuse her normal attacks with Cryo,** her Normal Attack talent will have **higher priority than Skill.**
-
-
-# === characters.#rosaria.roles.#burst_support.name ===
-
-burst support
+**[Noblesse Oblige (4)](#artifact:noblesse-oblige)**
+This set is only used in her sub-dps/quickswap roles not her perma-freeze dps role. Also it should only be considered when you have no decent Blizzard Strayer (4) pieces and no one else on the team is holding Noblesse Oblige (4).
 
 
-# === characters.#rosaria.roles.#burst_support.tips ===
+# === characters.#rosaria.roles.#support.name ===
+
+support
+
+
+# === characters.#rosaria.roles.#support.tips ===
 
 Be sure to cast skill before burst as Crit Rate granted by the Ascension 1 Talent will be included with Ascension 4 Talent Bonus as well.
 
 Rosaria's Elemental Skill and Elemental Burst can be Reverse Melted (1.5x) with another Pyro applier for some quick and powerful damage.
 
 
-# === characters.#rosaria.roles.#burst_support.notes ===
+# === characters.#rosaria.roles.#support.notes ===
 
-This section is tailored around giving Rosaria as much damage as possible. Crit Rate stacking is not as necessary, if 50% Crit Rate is guaranteed at the very least, you will still be giving crit rate buffs of 9.7% with the Ascension 1 Talent Bonus.
+This Build focuses on her Buffing/Energy generation/Cryo application capabilities. Though it does not mean that you dont invest in her personal damage, only that it's a lower priority overall.
 
-**Regarding Weapon Choices**
+**Regarding Weapon Choices**<br>
 
-This section was calculated with **160% ER requirement,** which is why ER substats weapons are valued highly here, with lower ER reqs, those weapons may fall off if compared with weapons with more offensive substats. Rosaria's **\[C4\]** can reduce this ER requirement down to 140% or lower.
+**[Favonius Lance](#weapon:favonius-lance)**
+Her best option in situations where you havent met your teams energy requirements and need the extra particles, outside of that though you would be better of using a Crit Rate weapon that improves her A4 buff if you dont need the extra particles.
 
-**[Vortex Vanquisher](#weapon:vortex-vanquisher)**<br>
-This ranking is assumed without a shield. **With a large amount of attack buffs such as Bennett, this weapon can fall off compared to the other options due to overstacking ATK%.**
+**Regarding Artifact Sets**<br>
 
-**[Dragon's Bane](#weapon:dragons-bane) / [Kitain Cross Spear](#weapon:kitain-cross-spear) / [Missive Windspear](#weapon:missive-windspear)**<br>
-These weapons are only used if Rosaria is played in a team comp in which she constantly triggers Reverse Melt. \[R5\] Dragon's Bane can outperform ["The Catch"](#weapon:the-catch), and \[R5\] Kitain Cross Spear is on par with Deathmatch.
-
-
-**[Wavebreaker's Fin](#weapon:wavebreakers-fin)**<br>
-At **\[R5\],** this weapon can perform **similar to Staff of Homa.**
-
-**[Lithic Spear](#weapon:lithic-spear)**<br>
-At **\[R5\],** this weapon can perform similar to [Vortex Vanquisher](#weapon:vortex-vanquisher).
-
-**[Favonius Lance](#weapon:favonius-lance)**<br>
-Although this weapon's damage is lower for Rosaria, the extra energy generated from the passive can be very valuable in a lot of teams that need a Cryo battery (Eula, Ayaka, etc).
-
-**Regarding Artifact Sets**
-
-[Lavawalker's Epiphany (4)](#artifact:lavawalker)<br>
-Only viable on Rosaria if she's triggering Reverse Melt, pulls ahead of Noblesse Oblige (2) Blizzard Strayer (2) assuming you can trigger Reverse Melt on all of her kits.
-
-[Noblesse Oblige (4)](#artifact:noblesse-oblige)<br>
-Offers party-wide ATK boost, you can equip this set on Rosaria if nobody else on the team is equipping it.
-
-**Regarding Substats Priority**<br>
-Elemental Mastery is only recommended if Rosaria is to be utilized as a Reverse Melt trigger, as shown in the Ability Tips section.
-
-**The following is only recommended to those who have not obtained a desirable set for Rosaria, with Crit Rate building as her placeholder set.**<br>
-If you don't wish to hyperinvest onto Rosaria, she could still be used as a Crit Rate provider, you can build up to 88% Crit Rate and use skill to cap out 100% Crit Rate, then cast Elemental Burst for the Crit Rate buff. This can be easily achievable if you have an existing Crit Rate substat polearm, otherwise just put on whatever Crit Rate Circlet, Substats and Berserker artifacts you may have to stack Crit Rate.
+**[Instructor (4)](#artifact:instructor)**
+Can be the better option in teams that prefer the Elemental Mastery buff over ATK, such as Hu Tao VapeMelt.
 
 
 # === characters.#sayu.roles.#support.name ===
@@ -2208,7 +2318,7 @@ Sayu does more damage with EM builds and heals more with ATK hybrid builds, Heal
 Wolf's Gravestone is a universal claymore that is capable of buffing your teammates along with providing more healing in Sayu's case. It is best used once you achieve your ER threshold.
 
 **[Forest Regalia](#weapon:forest-regalia)**
-When used in its niche with aggravate teams it can outpeform [Katsuragikiri](#weapon:katsuragikiri-nagamasa). Outside of that its just a energy% stat stick.
+When used in its niche with aggravate teams it can outpeform [Katsuragikiri Nagamasa](#weapon:katsuragikiri-nagamasa). Outside of that its just a energy% stat stick.
 
 **Regarding Artifact Sets**
 
@@ -2223,7 +2333,7 @@ support
 
 # === characters.#shenhe.roles.#support.notes ===
 
-Shenhe is a Support for Cryo characters, capable of providing damage buffs from her Elemental Skill and dealing damage while providing Cryo and Physical resistance shred from her Elemental Burst. Her **Elemental Skill gives a few stacks of additional flat damage bonus to all nearby party members (5 stacks on Tap and 7 stacks on Hold).** This additional flat damage bonus **only works on Cryo attacks,** so characters who doesn't deal Cryo attacks doesn't benefit from Shenhe's Elemental Skill, do note that **Cryo infusion from Anemo characters does act as a Cryo attack, so it benefits from Shenhe's Elemental Skill.** Another thing to note is that **the additional flat damage bonus Shenhe provides uses Shenhe's current ATK, so it doesn't snapshot.**
+Shenhe is a Support for Cryo characters, capable of providing damage buffs from her Elemental Skill and dealing damage while providing Cryo and Physical resistance shred from her Elemental Burst. Her Elemental Skill gives a few stacks of additional flat damage bonus to all nearby party members (5 stacks on Tap and 7 stacks on Hold). This additional flat damage bonus only works on Cryo attacks, so characters who don't use Cryo attacks don't benefit from Shenhe's Elemental Skill, do note that Cryo infusion from Anemo characters does act as a Cryo attack, so it benefits from Shenhe's Elemental Skill. Another thing to note is that the additional flat damage bonus Shenhe provides uses Shenhe's current ATK, so it doesn't snapshot.
 
 **Regarding Weapon Choices**
 
@@ -2393,6 +2503,33 @@ This set is only about 1-2 substats behind Heart of Depth (4), you can opt out f
 **[Shimenawa's Reminiscence (4)](#artifact:shimenawas-reminiscence)**<br>
 Due to this set requiring Childe to have around 140% Energy Recharge to reliably burst every rotation, it falls behind the other options. However, it outperforms Heart of Depth (4) if used in a single rotation setting (ignoring ER).
 
+
+# === characters.#thoma.credits ===
+
+[Quick Guide](https://keqingmains.com/q/thoma-quickguide/) from KQM
+
+
+# === characters.#thoma.roles.#burgeon.name ===
+
+burgeon
+
+
+# === characters.#thoma.roles.#burgeon.talents.notes ===
+
+For an EM-focused build, upgrading Thoma's talent levels isn't a necessity
+
+
+# === characters.#thoma.roles.#burgeon.notes ===
+
+This build focuses on using Thoma as a trigger unit for Burgeon reactions. A role he excels at because of his slow pyro application reducing the likelihood of creating Burning reactions and his shield reducing the self-damage from the aforementioned burgeon reactions.
+
+**Regarding Weapon Choices**
+
+**[Kitain Cross Spear](#weapon:kitain-cross-spear)** 
+High refinement is recommended to further reduce Thoma's Energy Recharge requirements<br>
+
+**[Dragon's Bane](#weapon:dragons-bane)** 
+Becomes a more reasonable option when you have Thoma's C4.
 
 # === characters.#thoma.roles.#support.name ===
 
@@ -2610,22 +2747,22 @@ This set focuses more on providing an ATK buff to the team than the Traveler's p
 [In-depth Guide](https://keqingmains.com/venti/) from KQM
 
 
-# === characters.#venti.roles.#em_build.name ===
+# === characters.#venti.roles.#off-field_dps.name ===
 
-em build
+off-field dps
 
 
-# === characters.#venti.roles.#em_build.subStats.notes ===
+# === characters.#venti.roles.#off-field_dps.subStats.notes ===
 
 Crit Rate / DMG isn't as important in a triple EM build, which is what is assumed here.
 
 
-# === characters.#venti.roles.#em_build.talents.notes ===
+# === characters.#venti.roles.#off-field_dps.talents.notes ===
 
 For an EM-focused build, upgrading Venti's talent levels isn't a necessity.
 
 
-# === characters.#venti.roles.#em_build.tips ===
+# === characters.#venti.roles.#off-field_dps.tips ===
 
 Make sure you don't immediately swap away after casting Burst, you need to be on-field for VV 4-set perk to proc on swirl first.(E > Q to avoid this issue)
 
@@ -2634,7 +2771,7 @@ You can infuse elements onto Venti's Burst if you walk up with an element status
 Check out [this link](http://tinyurl.com/ventiburstinfo) to see which characters can hit the enemies sucked and ragdolled in Venti's burst.
 
 
-# === characters.#venti.roles.#em_build.notes ===
+# === characters.#venti.roles.#off-field_dps.notes ===
 
 This build focuses on damage over ER because of his ER ascension stat. This weapon order is in the assumption of EM Venti, as Crit Venti's damage potential is limited to either extremely high investment or single target situations. Consider reading the In-depth Guide from KQM if you're interested in a Crit-focused build.
 
@@ -2702,7 +2839,7 @@ In team comps where you can trigger both Vaporize and Overload at the same time 
 
 **Regarding Artifact Sets**
 
-**[Crimson Witch (4)](#artifact:crimson-witch-of-flames)**<br>
+**[Crimson Witch of Flames (4)](#artifact:crimson-witch-of-flames)**<br>
 This set pulls ahead over Emblem of Severed Fate (4) on team comps where Xiangling triggers Overloads in addition to Vaporize (i.e. Raiden National).
 
 **[The Exile (2) Scholar (2)](#artifact:the-exile)**<br>
@@ -2832,7 +2969,7 @@ Offers party-wide ATK boost, you can use this set on Xingqiu if nobody else on t
 **[Blizzard Strayer (4)](#artifact:blizzard-strayer)**<br>
 This set is only recommended on a freeze team to optimize Xingqiu's stats since he can mildly disregard Crit Rate and build Crit Damage instead for more damage output. Despite it outperforming Emblem of Severed Fate (4) within this niche, it is generally not recommended to specifically farm for this set.
 
-**[The Exile (2) / Scholar (2) / Emblem of Severed Fate (2) \[Choose Two\]](#artifact:20%-er)**<br>
+**[20% Energy Recharge (2)](#artifact:20%-er) and [20% Energy Recharge (2)](#artifact:20%-er)**<br>
 This set is a cheap beginner option to maintain burst uptime well since it gives 40% Energy Recharge. Note that it is not recommended to stay on this set as Xingqiu contributes a lot of damage in his teams.
 
 **Regarding Main Stats Priority**
@@ -2858,89 +2995,91 @@ off-field dps (c0-c5)
 `replace-from:characters.#xingqiu.roles.#off-field_dps_(c6).notes`
 
 
-# === characters.#xinyan.roles.#dps.name ===
+# === characters.#xinyan.roles.#physical_dps.name ===
 
-dps
-
-
-# === characters.#xinyan.roles.#dps.tips ===
-
-Xinyan's ES grants you a pyro status upon contact with shield. No matter how many times you switch your characters, it'll still apply pyro every instant you switch with shield. This allows you to cleanse every single elemental status that has been applied to you.
-
-If the status doesn't get cleansed, switch on that character one more time with the shield. Pyro doesn't cleanse Hydro very efficiently, take Cecilia Garden for example, you'll have to apply pyro on your character 4 times before actually cleansing the hydro status.
+physical dps
 
 
-# === characters.#xinyan.roles.#dps.notes ===
+# === characters.#xinyan.roles.#physical_dps.talents.notes ===
+
+≥ Burst
+≥ Skill
+
+
+# === characters.#xinyan.roles.#physical_dps.notes ===
+
+This build focuses primarily on her Physical Damage as an On-Field DPS. At \[C2\], she can build a 1:3 Crit Rate:Crit DMG ratio, instead of the usual 1:2 Crit Rate:Crit DMG ratio.
 
 **Regarding Weapon Choices**
 
-[Serpent Spine](#weapon:serpent-spine)<br>
-It is worth noting that an **\[R5\] Serpent Spine** can outperform all 5 star weapons at **\[R1\]** with proper stack management
+**[Serpent Spine](#weapon:serpent-spine)**<br>
+At \[R5\], this weapon performs better than [Skyward Pride](#weapon:skyward-pride).<br>
+
+[The Unforged](#weapon:the-unforged)
+This ranking is based on unshielded performance, while shielded this weapon performs better than low refinement Serpent Spine.<br>
+
+[Prototype Archaic](#weapon:prototype-archaic)
+At \[R5\], this weapon performs better than [Snow-Tombed Starsilver](#weapon:snow-tombed-starsilver) \[R5\].
+
+
+# === characters.#xinyan.roles.#pyro_dps.name ===
+
+pyro dps
+
+
+# === characters.#xinyan.roles.#pyro_dps.artifacts.notes ===
+
+≈ [Retracing Bolide (4)](#artifact:retracing-bolide)
+
+
+# === characters.#xinyan.roles.#pyro_dps.talents.notes ===
+
+≥ Skill
+≥ Burst
+
+
+# === characters.#xinyan.roles.#pyro_dps.notes ===
+
+It is required to run this build with \[C6\] Bennett. However, it is not recommended to \[C6\] Bennett solely for Xinyan.
+
+**Regarding Weapon Choices**
+
+**[Serpent Spine](#weapon:serpent-spine)**<br>
+It is worth noting that an \[R5\] Serpent Spine can outperform [Redhorn Stonethresher](#weapon:redhorn-stonethresher) \[R1\] with good Serpent Spine stack management.<br>
+
+**[Lithic Blade](#weapon:lithic-blade)**
+This ranking assumes 2 stacks.
 
 **Regarding Artifact Sets**
 
-[Bloodstained Chivalry (4)](#artifact:bloodstained-chivalry)<br>
-Despite how dependant Xinyan's playstyle can get with Charged Attacks, Bloodstained Chivalry Full Set is still not recommended due to it only coming in effect after a kill.
+[Lavawalker (4)](#artifact:lavawalker)<br>
+Xinyan can maintain a high pyro aura uptime on an enemy, making this her best set.
 
 
-# === characters.#xinyan.roles.#shield_support.name ===
+# === characters.#xinyan.roles.#support.name ===
 
-shield support
-
-
-# === characters.#xinyan.roles.#shield_support.subStats.advices.1.notes ===
-
-Crit DMG if C2
+support
 
 
-# === characters.#xinyan.roles.#shield_support.subStats.notes ===
+# === characters.#xinyan.roles.#support.tips ===
 
-**ER:** takes priority over ATK% for shield support
+Xinyan's skill grants you a pyro status upon contact with shield. No matter how many times you switch your characters, it'll still apply pyro every instance you switch with shield. This allows you to cleanse most elemental statuses that has been applied to you.
+
+If the status doesn't get cleansed, switch on that character one more time with the shield. Some elements, such as Hydro, are not cleansed very efficiently.
 
 
-# === characters.#xinyan.roles.#shield_support.notes ===
+# === characters.#xinyan.roles.#support.notes ===
+
+This section is dedicated to using Xinyan as a shielder for her team.
 
 **Regarding Artifact Sets**
 
-[Noblesse Oblige (4)](#artifact:noblesse-oblige)<br>
-This set can be used on Xinyan if nobody else on the team is using this set for the partywide ATK buff.
+**[Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith)**<br>
+If you can maximize the uptime of Xinyan's Level 3 shield, she can provide a constant 30% Shield Strength and 20% Atk boost to the team (as long as the pulses hit an enemy). This means that [Sacrificial Greatsword](#weapon:sacrificial-greatsword) and Xinyan's \[C2\] are crucial to making this set shine on her. This set isn't as recommended for her if you have neither of the two.
 
-**[Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith) and [Sacrificial Greatsword](#weapon:sacrificial-greatsword)**<br>
-Xinyan support is mostly used for her Shield and/or Elemental Burst damage. If you want to use her as a Physical Support, she needs both her Ascension 4 Talent and \[C4\] to maximize her support capabilities, making her a somewhat expensive choice to be considered for Physical Support role. However, the Tenacity of the Millelith set gives her a new role with a lower Constellation level prerequisite.
+Shield uptime is also crucial to maximizing her Physical/Shield Support capabilities. If you have neither Sacrificial Greatsword nor at least \[C2\] (but ideally \[C4\]) on Xinyan, you may want to build her as a DPS instead of Physical/Shield Support.
 
-**[Tenacity of the Millelith](#artifact:tenacity-of-the-millelith)**<br>
-This set gives Xinyan a unique role among the shielders. Currently, Xinyan is one of the few shielders in the game who can make full use of the Tenacity set's effects. If you can maximize the uptime of Xinyan's Level 3 shield, she can provide a constant 30% Shield Strength and 20% Atk boost to the team (as long as the pulses hit an enemy). This means that **Sacrificial Greatsword** and Xinyan's \[C2\] are crucial to making this set shine on her. This set isn't as recommended for her if you have neither of the two.
-
-Shield uptime is also crucial to maximizing her Physical/Shield Support capabilities. If you have neither Sacrificial Greatsword nor at least \[C2\] (but ideally \[C4\]) on Xinyan, you may want to build her as a Burst Support instead of Physical/Shield Support.
-
-At \[C2\], her burst "Riff Revolution" has a 100% Crit Rate, which means you can build solely Crit Dmg (instead of trying to get a 1:2 Crit Rate:Crit DMG ratio) if you're building her as a Physical Burst support.
-
-**Generally not recommended for Pyro Applications, as the pulses only happen at Shield Level 3, and are not very efficient at breaking Cryo shields.**
-
-
-# === characters.#xinyan.roles.#sub-dps.name ===
-
-shield support
-
-
-# === characters.#xinyan.roles.#sub-dps.artifacts.notes ===
-
-Run DPS stats if the sets above is what you're using.
-
-
-# === characters.#xinyan.roles.#sub-dps.subStats.advices.1.notes ===
-
-Crit DMG if C2
-
-
-# === characters.#xinyan.roles.#sub-dps.subStats.notes ===
-
-**ER:** takes priority over ATK% for shield support
-
-
-# === characters.#xinyan.roles.#sub-dps.notes ===
-
-`replace-from:characters.#xinyan.roles.#shield_support.notes`
+Generally not recommended for Pyro Applications, as the pulses only happen at Shield Level 3, and are not very efficient at breaking Cryo shields.
 
 
 # === characters.#yae-miko.roles.#off-field_dps.name ===
@@ -3030,8 +3169,11 @@ On equal refinements, Widsith is better than Dodoco Tales, but assuming it's \[R
 [Shimenawa's Reminiscence (4)](#artifact:shimenawas-reminiscence)<br>
 Yanfei will rarely have her burst up due to the 15 energy cost on the 4-piece effect, however she can instead **maintain the 4-piece DMG buff over a longer duration, making this set a good alternative to the other options.** Note that this set loses out on some value at higher constellations, as she can't get her **\[C4\]** effects without casting Burst.
 
+**[Gilded Dreams (4)](#artifact:gilded-dreams)**<br>
+Actually her BIS if used in a full Elemental Mastery build with a overload team.<br>
+
 [Retracing Bolide (4)](#artifact:retracing-bolide)<br>
-Running Yanfei with a shield character also allows you to make use of a full Retracing Bolide 4-set as a placeholder until you're able to find a good Crimson Witch 4-set.
+Running Yanfei with a shield character also allows you to make use of a full Retracing Bolide (4) as a placeholder until you're able to find a good Crimson Witch of Flames (4).
 
 **Regarding Artifact Substats Priority**
 
@@ -3114,7 +3256,7 @@ dps
 This weapon requires Yoimiya to be very close to enemies (\~8m). As such, this weapon is recommended only with a good shielder.
 
 **[Slingshot \[R5\]](#weapon:slingshot)**
-This ranking is assuming you're using either Yunjin or Bennett in your team. While using both Yunjin and Bennett, this weapon can potentially beat [Rust \[R5\]](#weapon:rust).
+This ranking is assuming you're using either Yun Jin or Bennett in your team. While using both Yun Jin and Bennett, this weapon can potentially beat [Rust \[R5\]](#weapon:rust).
 
 **[Amos' Bow](#weapon:amos-bow)**
 This weapon's ranking is assuming low stacks of its passive due to you ideally being close to enemies to consistently hit all attacks in your combo. When at 3 stacks, this weapon can be close to Slingshot \[R5\]. Use it if it's already built for another character and you don't want to invest in Slingshot just for Yoimiya.

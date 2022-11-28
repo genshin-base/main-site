@@ -1298,6 +1298,96 @@ glaze-lily:
     - !loc teyvat -1029 2981
     - !loc teyvat -1028 2989
     - !loc teyvat -1027 2988
+henna-berry:
+  code: henna-berry
+  name:
+    en: Henna Berry
+    ru: Красноплодник
+  types:
+    - character-material-local
+  rarity: 1
+  craftedFrom: []
+  locations:
+    - !loc teyvat -6682 4895
+    - !loc teyvat -6674 4923
+    - !loc teyvat -6673 4921
+    - !loc teyvat -6455 5101
+    - !loc teyvat -6410 5103
+    - !loc teyvat -6395 4132
+    - !loc teyvat -6394 4130
+    - !loc teyvat -6390 4168
+    - !loc teyvat -6389 4166
+    - !loc teyvat -6210 4261
+    - !loc teyvat -6209 4259
+    - !loc teyvat -6200 5040
+    - !loc teyvat -6198 5041
+    - !loc teyvat -6194 5041
+    - !loc teyvat -6114 4920
+    - !loc teyvat -6092 4954
+    - !loc teyvat -6038 5267
+    - !loc teyvat -6012 4937
+    - !loc teyvat -6001 4931
+    - !loc teyvat -5983 5263
+    - !loc teyvat -5949 4339
+    - !loc teyvat -5947 4327
+    - !loc teyvat -5907 5257
+    - !loc teyvat -5905 5259
+    - !loc teyvat -5836 4440
+    - !loc teyvat -5740 4380
+    - !loc teyvat -5739 4382
+    - !loc teyvat -5718 4205
+    - !loc teyvat -5713 5041
+    - !loc teyvat -5702 5048
+    - !loc teyvat -5700 5046
+    - !loc teyvat -5677 4135
+    - !loc teyvat -5665 4263
+    - !loc teyvat -5660 4257
+    - !loc teyvat -5659 5380
+    - !loc teyvat -5658 5386
+    - !loc teyvat -5629 4018
+    - !loc teyvat -5628 4134
+    - !loc teyvat -5626 4134
+    - !loc teyvat -5622 4019
+    - !loc teyvat -5607 4452
+    - !loc teyvat -5603 4453
+    - !loc teyvat -5514 4787
+    - !loc teyvat -5499 5178
+    - !loc teyvat -5496 5178
+    - !loc teyvat -5494 4964
+    - !loc teyvat -5491 4964
+    - !loc teyvat -5485 4977
+    - !loc teyvat -5446 4658
+    - !loc teyvat -5445 4659
+    - !loc teyvat -5417 4314
+    - !loc teyvat -5415 4303
+    - !loc teyvat -5349 5116
+    - !loc teyvat -5346 5118
+    - !loc teyvat -5274 4546
+    - !loc teyvat -5224 4556
+    - !loc teyvat -5220 4816
+    - !loc teyvat -5218 4816
+    - !loc teyvat -5179 4841
+    - !loc teyvat -5157 4786
+    - !loc teyvat -5154 4785
+    - !loc teyvat -5130 4018
+    - !loc teyvat -5083 4001
+    - !loc teyvat -5009 4444
+    - !loc teyvat -4986 4588
+    - !loc teyvat -4965 4558
+    - !loc teyvat -4933 4453
+    - !loc teyvat -4919 4474
+    - !loc teyvat -4911 4602
+    - !loc teyvat -4910 4553
+    - !loc teyvat -4860 4597
+    - !loc teyvat -4817 4929
+    - !loc teyvat -4786 4851
+    - !loc teyvat -4775 4303
+    - !loc teyvat -4773 4298
+    - !loc teyvat -4771 4300
+    - !loc teyvat -4735 4675
+    - !loc teyvat -4723 4418
+    - !loc teyvat -4682 4352
+    - !loc teyvat -4669 4827
 jueyun-chili:
   code: jueyun-chili
   name:
@@ -1412,7 +1502,6 @@ kalpalata-lotus:
     - !loc teyvat -3432 3609
     - !loc teyvat -3430 3607
     - !loc teyvat -3187 2061
-    - !loc teyvat -3080 3041
     - !loc teyvat -3062 3167
     - !loc teyvat -3059 3180
     - !loc teyvat -3057 3166
@@ -2114,96 +2203,6 @@ qingxin:
     - !loc teyvat 60 2302
     - !loc teyvat 167 2321
     - !loc teyvat 257 2540
-redcrest:
-  code: redcrest
-  name:
-    en: Redcrest
-    ru: Красноплодник
-  types:
-    - character-material-local
-  rarity: 1
-  craftedFrom: []
-  locations:
-    - !loc teyvat -6682 4895
-    - !loc teyvat -6674 4923
-    - !loc teyvat -6673 4921
-    - !loc teyvat -6455 5101
-    - !loc teyvat -6410 5103
-    - !loc teyvat -6395 4132
-    - !loc teyvat -6394 4130
-    - !loc teyvat -6390 4168
-    - !loc teyvat -6389 4166
-    - !loc teyvat -6210 4261
-    - !loc teyvat -6209 4259
-    - !loc teyvat -6200 5040
-    - !loc teyvat -6198 5041
-    - !loc teyvat -6194 5041
-    - !loc teyvat -6114 4920
-    - !loc teyvat -6092 4954
-    - !loc teyvat -6038 5267
-    - !loc teyvat -6012 4937
-    - !loc teyvat -6001 4931
-    - !loc teyvat -5983 5263
-    - !loc teyvat -5949 4339
-    - !loc teyvat -5947 4327
-    - !loc teyvat -5907 5257
-    - !loc teyvat -5905 5259
-    - !loc teyvat -5836 4440
-    - !loc teyvat -5740 4380
-    - !loc teyvat -5739 4382
-    - !loc teyvat -5718 4205
-    - !loc teyvat -5713 5041
-    - !loc teyvat -5702 5048
-    - !loc teyvat -5700 5046
-    - !loc teyvat -5677 4135
-    - !loc teyvat -5665 4263
-    - !loc teyvat -5660 4257
-    - !loc teyvat -5659 5380
-    - !loc teyvat -5658 5386
-    - !loc teyvat -5629 4018
-    - !loc teyvat -5628 4134
-    - !loc teyvat -5626 4134
-    - !loc teyvat -5622 4019
-    - !loc teyvat -5607 4452
-    - !loc teyvat -5603 4453
-    - !loc teyvat -5514 4787
-    - !loc teyvat -5499 5178
-    - !loc teyvat -5496 5178
-    - !loc teyvat -5494 4964
-    - !loc teyvat -5491 4964
-    - !loc teyvat -5485 4977
-    - !loc teyvat -5446 4658
-    - !loc teyvat -5445 4659
-    - !loc teyvat -5417 4314
-    - !loc teyvat -5415 4303
-    - !loc teyvat -5349 5116
-    - !loc teyvat -5346 5118
-    - !loc teyvat -5274 4546
-    - !loc teyvat -5224 4556
-    - !loc teyvat -5220 4816
-    - !loc teyvat -5218 4816
-    - !loc teyvat -5179 4841
-    - !loc teyvat -5157 4786
-    - !loc teyvat -5154 4785
-    - !loc teyvat -5130 4018
-    - !loc teyvat -5083 4001
-    - !loc teyvat -5009 4444
-    - !loc teyvat -4986 4588
-    - !loc teyvat -4965 4558
-    - !loc teyvat -4933 4453
-    - !loc teyvat -4919 4474
-    - !loc teyvat -4911 4602
-    - !loc teyvat -4910 4553
-    - !loc teyvat -4860 4597
-    - !loc teyvat -4817 4929
-    - !loc teyvat -4786 4851
-    - !loc teyvat -4775 4303
-    - !loc teyvat -4773 4298
-    - !loc teyvat -4771 4300
-    - !loc teyvat -4735 4675
-    - !loc teyvat -4723 4418
-    - !loc teyvat -4682 4352
-    - !loc teyvat -4669 4827
 rukkhashava-mushrooms:
   code: rukkhashava-mushrooms
   name:
@@ -2480,8 +2479,10 @@ scarab:
     - !loc teyvat -6279 5318
     - !loc teyvat -6278 4531
     - !loc teyvat -6274 4526
+    - !loc teyvat -6269 4528
     - !loc teyvat -6152 4486
     - !loc teyvat -6150 4486
+    - !loc teyvat -6150 4487
     - !loc teyvat -6081 4553
     - !loc teyvat -6061 4805
     - !loc teyvat -6054 4238
@@ -8964,8 +8965,12 @@ crystal-chunk:
     - !loc teyvat -2677 2549
     - !loc teyvat -2670 2547
     - !loc teyvat -2657 3162
+    - !loc teyvat -2655 3068
+    - !loc teyvat -2652 3072
     - !loc teyvat -2652 3172
+    - !loc teyvat -2651 3065
     - !loc teyvat -2649 2795
+    - !loc teyvat -2649 3069
     - !loc teyvat -2629 2800
     - !loc teyvat -2626 2786
     - !loc teyvat -2562 2905
@@ -9179,12 +9184,18 @@ crystal-chunk:
     - !loc chasm -274 214
     - !loc chasm -266 214
     - !loc chasm -264 220
+    - !loc chasm -221 -397
+    - !loc chasm -218 -399
     - !loc chasm -215 -62
     - !loc chasm -213 -56
+    - !loc chasm -212 -399
+    - !loc chasm -211 -402
     - !loc chasm -160 375
     - !loc chasm -157 376
+    - !loc chasm -153 -512
     - !loc chasm -148 10
     - !loc chasm -145 16
+    - !loc chasm -144 -527
     - !loc chasm -143 -152
     - !loc chasm -139 -159
     - !loc chasm -139 14
@@ -18243,26 +18254,31 @@ sandbearer-wood:
     - !loc teyvat -1988 1861
     - !loc teyvat -1984 875
     - !loc teyvat -1982 843
+    - !loc teyvat -1981 2082
     - !loc teyvat -1978 715
     - !loc teyvat -1977 725
     - !loc teyvat -1975 819
     - !loc teyvat -1975 976
     - !loc teyvat -1975 1416
     - !loc teyvat -1974 1181
+    - !loc teyvat -1974 2105
     - !loc teyvat -1972 705
     - !loc teyvat -1972 2212
     - !loc teyvat -1971 914
+    - !loc teyvat -1971 2093
     - !loc teyvat -1970 1410
     - !loc teyvat -1970 1528
     - !loc teyvat -1969 1068
     - !loc teyvat -1968 1924
     - !loc teyvat -1967 1898
     - !loc teyvat -1966 1015
+    - !loc teyvat -1966 2112
     - !loc teyvat -1964 913
     - !loc teyvat -1963 972
     - !loc teyvat -1961 1428
     - !loc teyvat -1961 1451
     - !loc teyvat -1957 1485
+    - !loc teyvat -1957 2082
     - !loc teyvat -1956 650
     - !loc teyvat -1954 1917
     - !loc teyvat -1953 1123
@@ -18290,6 +18306,7 @@ sandbearer-wood:
     - !loc teyvat -1895 984
     - !loc teyvat -1895 1407
     - !loc teyvat -1889 1091
+    - !loc teyvat -1889 2073
     - !loc teyvat -1886 751
     - !loc teyvat -1884 897
     - !loc teyvat -1883 1156
@@ -18305,13 +18322,16 @@ sandbearer-wood:
     - !loc teyvat -1837 3051
     - !loc teyvat -1832 1064
     - !loc teyvat -1826 1072
+    - !loc teyvat -1826 2139
     - !loc teyvat -1824 3169
     - !loc teyvat -1819 1186
     - !loc teyvat -1817 3244
     - !loc teyvat -1805 3115
     - !loc teyvat -1798 3141
+    - !loc teyvat -1797 2004
     - !loc teyvat -1795 1150
     - !loc teyvat -1794 1011
+    - !loc teyvat -1791 2095
     - !loc teyvat -1782 3142
     - !loc teyvat -1782 3250
     - !loc teyvat -1782 3299
@@ -18325,11 +18345,15 @@ sandbearer-wood:
     - !loc teyvat -1748 3086
     - !loc teyvat -1747 678
     - !loc teyvat -1736 3266
+    - !loc teyvat -1717 2071
+    - !loc teyvat -1711 2008
+    - !loc teyvat -1700 1960
     - !loc teyvat -1698 3097
     - !loc teyvat -1677 3247
     - !loc teyvat -1673 3057
     - !loc teyvat -1662 3024
     - !loc teyvat -1615 3074
+    - !loc teyvat -1599 1939
     - !loc teyvat -1566 3095
     - !loc teyvat -1532 3083
     - !loc teyvat -1529 3298
@@ -20522,6 +20546,7 @@ sunsettia:
     - !loc teyvat -3110 3313
     - !loc teyvat -3047 3399
     - !loc teyvat -2957 3202
+    - !loc teyvat -2922 2726
     - !loc teyvat -2808 2331
     - !loc teyvat -2283 2496
     - !loc teyvat -2087 1623
@@ -22800,6 +22825,8 @@ white-iron-chunk:
     - !loc teyvat -2666 3152
     - !loc teyvat -2665 3173
     - !loc teyvat -2663 2812
+    - !loc teyvat -2652 3069
+    - !loc teyvat -2651 3075
     - !loc teyvat -2644 2790
     - !loc teyvat -2615 2212
     - !loc teyvat -2613 2216

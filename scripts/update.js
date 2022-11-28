@@ -93,27 +93,6 @@ const fixes = {
 		],
 		sheets: [
 			{
-				// у Эмбер один набор артефактов прописан в странном формате
-				title: /^pyro$/i,
-				fixFunc(sheet) {
-					const substr = '2x +20% Energy Recharge%'
-					const replaceWith = '20% ER set (2) 20% ER set (2)'
-					for (const { values: cells = [] } of sheet.data[0].rowData) {
-						for (const cell of cells) {
-							const text = json_getText(cell)
-							if (text.includes(substr)) {
-								delete cell.textFormatRuns
-								cell.userEnteredValue = {
-									stringValue: text.replace(substr, replaceWith),
-								}
-								return true
-							}
-						}
-					}
-					return false
-				},
-			},
-			{
 				// У Син Цю почти все советы для роли "С0-5" совпадают с ролью "С6", и повторно не прописаны.
 				// Здесь всё из строки "С6" копируется на пустые места в "С0-5".
 				title: /^hydro$/i,
@@ -143,16 +122,12 @@ const fixes = {
 	/** @type {import('#lib/parsing/honeyhunter/fixes').HoneyhunterFixes} */
 	honeyhunter: {
 		statuses: {
-			characters: [
-				// CHECK
-				{ actually: 'unreleased', name: 'Layla' },
-			],
+			characters: [],
 			weapons: [
 				// CHECK
 				{ actually: 'unreleased', name: 'Ebony Bow' },
 				{ actually: 'unreleased', name: 'Quartz' },
 				{ actually: 'unreleased', name: 'Amber Bead' },
-				{ actually: 'unreleased', name: 'A Thousand Floating Dreams' },
 				// это оружие из квеста, получаемое после квеста оружие называется "Kagotsurube Isshin"
 				{ actually: 'unreleased', name: 'Prized Isshin Blade' },
 			],
@@ -176,9 +151,7 @@ const fixes = {
 			},
 		},
 		skip: {
-			enemies: [
-				/Dendro Hypostasis/, //CHECK: ещё не релизнут
-			],
+			enemies: [],
 			artifacts: [],
 			items: [
 				/^Festive Fever$/, //CHECK: два предмета с одинаковым названием (и поэтому одинаковым кодом), пока всё равно не нужны
@@ -243,20 +216,7 @@ const fixes = {
 		],
 		postProcess: {
 			items: (() => {
-				return [
-					// henna-berry был переименован, и на картах ищется по "redcrest"
-					(code2item, code2img) => {
-						const item = code2item['henna-berry']
-						if (!item) return false
-						item.code = 'redcrest'
-						item.name.en = 'Redcrest'
-						code2item[item.code] = item
-						code2img.set(item.code, mustBeDefined(code2img.get('henna-berry')))
-						delete code2item['henna-berry']
-						code2img.delete('henna-berry')
-						return true
-					},
-				]
+				return []
 			})(),
 			enemies: [
 				// Стаи вишапов нет ни в списке врагов, ни в списке данжей

@@ -335,6 +335,29 @@ pyro-hypostasis:
       - instructor
       - prayers-for-illumination
       - wanderers-troupe
+dendro-hypostasis:
+  code: dendro-hypostasis
+  name:
+    en: Dendro Hypostasis
+    ru: Дендро гипостазис
+  locations:
+    - !loc teyvat -4647 4759
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+      - nagadus-emerald-chunk
+      - nagadus-emerald-fragment
+      - nagadus-emerald-gemstone
+      - nagadus-emerald-sliver
+      - quelled-creeper
+    artifactSetCodes:
+      - adventurer
+      - berserker
+      - gladiators-finale
+      - instructor
+      - wanderers-troupe
 oceanid:
   code: oceanid
   name:
@@ -2728,7 +2751,6 @@ ruin-guard:
     - !loc teyvat -1719 1566
     - !loc teyvat -1707 1540
     - !loc teyvat -1648 2499
-    - !loc teyvat -1287 2949
     - !loc teyvat -1237 2065
     - !loc teyvat -961 1993
     - !loc teyvat -929 -366

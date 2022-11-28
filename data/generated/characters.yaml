@@ -879,7 +879,7 @@ candace:
     - tears-of-the-calamitous-god
     - light-guiding-tetrahedron
     - varunada-lazurite-gemstone
-    - redcrest
+    - henna-berry
     - rich-red-brocade
 cyno:
   code: cyno
@@ -911,6 +911,21 @@ nilou:
     - varunada-lazurite-gemstone
     - padisarah
     - crystalline-cyst-dust
+layla:
+  code: layla
+  name:
+    en: Layla
+    ru: Лайла
+  rarity: 4
+  weaponTypeCode: sword
+  releaseVersion: "3.2"
+  materialCodes:
+    - philosophies-of-ingenuity
+    - mirror-of-mushin
+    - perpetual-caliber
+    - shivada-jade-gemstone
+    - nilotpala-lotus
+    - forbidden-curse-scroll
 nahida:
   code: nahida
   name:

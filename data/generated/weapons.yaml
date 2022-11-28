@@ -1,3 +1,141 @@
+a-thousand-floating-dreams:
+  code: a-thousand-floating-dreams
+  typeCode: catalyst
+  name:
+    en: A Thousand Floating Dreams
+    ru: Сновидения тысячи ночей
+  rarity: 5
+  atk:
+    base: 44
+    max: 541
+  subStat:
+    code: em
+    base: 57
+    max: 264
+  description:
+    en: This lamp illuminates the dreams that float up over a thousand nights, and
+      in its emerald-green light flows a song of ancient days.
+    ru: Эта лампа освещает сновидения тысячи ночей, а в её изумрудном сиянии льётся
+      песнь древности.
+  story:
+    en:
+      - p: >-
+          “There is an appointed time for all things to live and die, just like
+          the ceaseless cycles of night and dawn.”
+
+          “May the stories within this lamp grant you dreams worth looking forward to.”
+      - p: >-
+          At the moment the palace crumbled, the girl who had never known
+          “light” heard her whisper inside a dream.
+
+          Through a mist of tears, the child who had long decided to depart in dreams caught sight of her gentle benevolence.
+      - p: >-
+          In the reflection of the serene moonlight, the verdant lamp told of
+          the silhouette of the stars and an everlasting melody—
+
+          A dancer with emerald eyes planting light kisses onto silk dripping with nectar, brightly colored fish pirouetting in pearly clear waters,
+
+          A moonlight musician guiding the Jinn’s torches, singing songs of the gilded fortress in a sea of sand and pomegranate-colored strings,
+
+          An astute sailor setting off on a grand voyage, seeking nothing else but the singing voice from a dream and the blooming gardens on the far shore.
+      - p: >-
+          The fallen palace illuminated by silent light, encircled by
+          breathtaking dreamscapes from a thousand worlds,
+
+          The soft forest breeze clearing away the dust gathered on the homeward path, guiding lost children away from the palace, no longer tranquil as it had been.
+
+          As the dawning light filtered through fragmented spaces between leaves, that verdant lamp which had told stories of a thousand nights’ dreams began to fade:
+
+          It was only when she looked back, standing between dreams and reality, that the blind girl realized that there was no return, for dawn had broken.
+      - p: >-
+          Thereafter, the lamp inside the dream never flickered again, and the
+          flow of time swallowed up the dreams of bygone nights,
+
+          But the birds still sang as they embraced the break of dawn. They sang of the stories that blossomed brilliantly like a field of flowers,
+
+          Bringing courage, hope, and happiness to the children who had never had the chance to witness a dream,
+
+          Weaving a never-ending song of a thousand nights, lighting up the moments before the long-awaited daybreak.
+      - p: >-
+          After traversing a thousand dreams, until the nightingale no longer
+          sang, until the fading sun fell beneath the horizon once again,
+
+          The traveler saw at journey’s end that verdant lamp, that faraway homeland of old,
+
+          Where the dew-covered rose still swayed softly in the moonlit breeze, waiting for her to tell a new story:
+
+          “Though the memories of past nights have all but faded, we shall continue to sing songs of praise for the sweet dreams that have yet to unfold.”
+    ru:
+      - p: >-
+          «У всего сущего есть время рождения и время смерти, подобно тому, как
+          есть утро и ночь.
+
+          Послушай историю этой лампы и погрузись в прекрасный сон».
+      - p: >-
+          Когда пал дворец, девушка, никогда не видевшая свет, услышала во сне
+          шёпот лампы.
+
+          Сквозь пелену слёз ребёнок, давно решивший погрузиться в сны, увидел её нежность и доброту.
+      - p: >-
+          В безмятежном лунном свете зелёная лампа рассказывала о силуэтах звёзд
+          и о вечной мелодии.
+
+          Танцовщица, чьи глаза бирюзового цвета, оставила лёгкий поцелуй на шёлке, будто покрытом мёдом. Белые, красные, синие и жёлтые рыбы плавали в чистой как жемчуг воде.
+
+          В ночи музыканты с факелами для усмирения духов шли и пели о золотых городах среди песков и струнах цвета граната.
+
+          Опытный моряк отправился в славное плавание в поисках песни из сна и пышных садов на дальнем берегу.
+      - p: >-
+          Разрушенный дворец, озарённый безмолвным светом, окружили
+          захватывающие дух пейзажи мечты из тысячи миров.
+
+          Лёгкий лесной ветерок пронёсся по пыльной дороге, уводя заблудившегося ребёнка из дворца, утратившего прежнее спокойствие.
+
+          Когда первые лучи рассвета пробились сквозь листья, зелёная лампа, рассказывавшая истории сновидений тысячи ночей, начала угасать.
+
+          Только оглянувшись назад, застывшая между сновидениями и реальностью слепая девушка поняла, что пути назад нет и что наступил рассвет.
+      - p: >-
+          С тех пор лампа из сна больше никогда не загоралась, а неумолимое
+          время поглотило сновидения прошлых ночей.
+
+          Птицы по-прежнему пели, приветствуя рассвет. Их удивительные песни были подобны прекрасным распустившимся цветам.
+
+          Трели птиц дарили смелость, надежду и счастье детям, которые не видели сновидений.
+
+          Эти звуки сплетались в нескончаемую песню тысячи ночей, освещая мгновения перед долгожданным рассветом.
+      - p: >-
+          После тысячи сновидений, когда соловей перестал петь и угасающее
+          солнце снова скрылось за горизонтом,
+
+          в конце своего пути путешественник наконец вновь увидел зелёную лампу, свою далёкую родину.
+
+          Там, где покрытые росой розы всё ещё мягко покачивались на ветру в лунном свете, путешественник ждал, когда лампа расскажет новую историю:
+
+          «Даже если воспоминания о прошедших ночах навсегда утрачены, мы продолжим воспевать прекрасные сны ночей грядущих».
+  specialAbility:
+    en: Party members other than the equipping character will provide the equipping
+      character with buffs based on whether their Elemental Type is the same as
+      the latter or not. If their Elemental Types are the same, increase
+      Elemental Mastery by  32. If not, increase the equipping character's DMG
+      Bonus from their Elemental Type by  10%. Each of the aforementioned
+      effects can have up to 3 stacks. Additionally, all nearby party members
+      other than the equipping character will have their Elemental Mastery
+      increased by  40. Multiple such effects from multiple such weapons can
+      stack.
+    ru: Другие члены отряда предоставляют экипированному этим оружием персонажу
+      усиления в зависимости от того, совпадают их элементы, или нет. Если
+      элементы совпадают, мастерство стихий повышается на  32 ед. Если не
+      совпадают, экипированный этим оружием персонаж получает  10% бонус урона
+      своего элемента. Данные эффекты складываются до 3 раз. Вдобавок мастерство
+      стихий всех персонажей отряда поблизости (кроме экипированного этим
+      оружием персонажа) увеличивается на  40 единиц. Если этим оружием обладают
+      и другие члены отряда, эффект суммируется.
+  materialCodes:
+    - oasis-gardens-truth
+    - radiant-prism
+    - crystalline-cyst-dust
+  obtainSources:
+    - event-wishes
 akuoumaru:
   code: akuoumaru
   typeCode: claymore
