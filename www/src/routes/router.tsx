@@ -129,7 +129,7 @@ export const route = <TPath extends RoutePath>(
 ): [RoutePath, ComponentType] => [[URL_LANG_PREFIX, ...path], comp as ComponentType]
 
 function makeUrlLangPrefix(lang: string): string {
-	return lang === 'en' ? '' : '/ru'
+	return lang === 'en' ? '' : '/' + lang
 }
 
 export function isOnRoute(path: RoutePath): boolean {

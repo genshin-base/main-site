@@ -7,10 +7,11 @@ import {
 	MapCode,
 } from '#lib/genshin'
 import { GI_TalentCode } from '#lib/parsing/helperteam/types'
+import { objGet } from '#src/../../lib/utils/collections'
 import { LINK_DISCORD_INVITE } from '#src/utils/links'
 import { BULLET, DASH, ELLIPSIS, NBSP } from '#src/utils/typography'
 
-type Lang = 'en' | 'ru' | 'ua'
+export type Lang = 'en' | 'ru' | 'ua'
 export const LANG = BUNDLE_ENV.LANG as Lang
 export const I18N_LANG_NAMES: Record<Lang, string> = {
 	en: 'English',
@@ -240,8 +241,8 @@ const statNamesUA: Record<GI_KnownStatBonusCode, string> = {
 }
 export const I18N_STAT_NAME = {
 	en: (code: string) => code.replace(/-/g, ' '),
-	ru: (code: string) => statNamesRU[code] ?? code,
-	ua: (code: string) => statNamesUA[code] ?? code,
+	ru: (code: string) => objGet(statNamesRU, code, code),
+	ua: (code: string) => objGet(statNamesUA, code, code),
 }[LANG]
 
 type TalentTypeNames = Record<GI_TalentCode, string>

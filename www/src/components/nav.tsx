@@ -14,14 +14,15 @@ import {
 	I18N_WEAPONS,
 } from '#src/i18n/i18n'
 import { paths } from '#src/routes/paths'
-import { A, isOnRoute, makeLocationHrefForLang } from '#src/routes/router'
+import { A, isOnRoute, makeLocationHrefForLang, RoutePath } from '#src/routes/router'
 import { useClickAway } from '#src/utils/hooks'
 import { LINK_DISCORD_INVITE, LINK_DONATION_ALERTS, LINK_KO_FI } from '#src/utils/links'
 import { VARIATION_SELECTOR } from '#src/utils/typography'
 import { GlobeIcon } from './globe-icon'
 
 type Props = { isNavExpanded: boolean }
-const isPageActive = routs => routs.some(r => isOnRoute(r))
+const isPageActive = (routes: RoutePath[]) => routes.some(r => isOnRoute(r))
+
 export function Nav({ isNavExpanded }: Props): JSX.Element {
 	return (
 		<div className={`collapse navbar-collapse ${isNavExpanded ? 'show' : ''}`}>
@@ -63,7 +64,7 @@ type DdLink = {
 	href: string
 	isExternal?: boolean
 	isActive?: boolean
-	code?: string
+	code?: keyof typeof paths
 }
 
 const SUPPORT_DD_LINKS: DdLink[] = [
@@ -97,7 +98,7 @@ function EquipmentDd(): JSX.Element {
 	const ddLinksLocal = EQUIPMENT_DD_LINKS.map(l => {
 		return {
 			...l,
-			isActive: isPageActive([paths[l.code]]),
+			isActive: !!l.code && isPageActive([paths[l.code]]),
 		}
 	})
 	return <HeadDd title={I18N_EQUIPMENT} ddLinks={ddLinksLocal} />

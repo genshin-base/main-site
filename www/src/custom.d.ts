@@ -28,8 +28,8 @@ declare namespace NodeJS {
 
 declare const BUNDLE_ENV: {
 	ASSET_PATH: string
-	LANGS: string[]
-	LANG: string
+	LANGS: import('./i18n/i18n').Lang[]
+	LANG: import('./i18n/i18n').Lang
 	IS_SSR: boolean
 	VERSION: { commitHash: string; commitDate: string; lastTag: string }
 	SUPPORTED_DOMAINS: string[] | null
