@@ -250,9 +250,18 @@ export const I18N_SELECT_CHAR_BELOW = { en: 'Select character below', ru: 'Вы�
 export const I18N_BUILD_RECS_FOR = { en: 'build recommendations', ru: 'билд' }[LANG]
 export const I18N_RECOMMENDED_RU_ONLY = { en: '', ru: 'Рекомендуемый' }[LANG]
 export const I18N_ABOUT_SITE = { en: 'Site History', ru: 'История сайта' }[LANG]
+export const I18N_WE_ARE_EVERYWHERE = { en: 'We are everywhere', ru: 'Мы везде' }[LANG]
+export const I18N_CHATS = { en: 'Chats', ru: 'Чатики' }[LANG]
+export const I18N_VIDEOS = { en: 'Videos', ru: 'Видосики' }[LANG]
+// export const I18N_PICTURES = { en: 'Images', ru: 'Картиночки' }[LANG]
+export const I18N_DONATE_US = { en: 'Donate', ru: 'Донатить здесь' }[LANG]
 export const I18N_EQUIPMENT = { en: 'Equipment', ru: 'Снаряжение' }[LANG]
+const yt = { en: 'YouTube', ru: 'Ютуб' }[LANG]
+export const I18N_YOUTUBE_RU = { en: yt + ' RU', ru: yt + ' на русском' }[LANG]
+export const I18N_YOUTUBE_UA = { en: yt + ' UA', ru: yt + ' на украинском' }[LANG]
 export const I18N_CHAR_EQUIPMENT = { en: 'Character Equipment', ru: 'Снаряжение персонажа' }[LANG]
 export const I18N_OUR_DISCORD = { en: 'Our Discord', ru: 'Наш Дискорд' }[LANG]
+export const I18N_OUR_TELEGRAM = { en: 'Our Telegram', ru: 'Наш Телеграм' }[LANG]
 export const I18N_CREATED_BY_US = {
 	en: `Designed and coded by${NBSP}Yurtaikin${NBSP}Studio`,
 	ru: `Задизайнено и запрограммировано студией${NBSP}Павла${NBSP}Юртайкина${NBSP}`,
@@ -268,6 +277,10 @@ export const I18N_SUPPORT_US = {
 export const I18N_SUPPORT_VIA_KO_FI = {
 	en: 'Ko-fi, if you have PayPal',
 	ru: 'Ко-фи, если у вас есть Пейпал',
+}[LANG]
+export const I18N_SUPPORT_VIA_KO_FI_SHORT = {
+	en: 'Ko-fi',
+	ru: 'Ко-фи',
 }[LANG]
 export const I18N_SUPPORT_VIA_DON_ALERTS = {
 	en: 'DonationAlerts',

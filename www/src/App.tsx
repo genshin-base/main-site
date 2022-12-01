@@ -5,6 +5,7 @@ import { Header } from './containers/header'
 import { AboutPage } from './pages/about'
 import { BuildsPage_BuildDetail, BuildsPage_CharSelect } from './pages/builds'
 import { ArtifactsPage, WeaponsPage } from './pages/equipment'
+import { EverywherePage } from './pages/everywhere'
 import { FrontPage } from './pages/front-page'
 import { paths } from './routes/paths'
 import { route, useRouter } from './routes/router'
@@ -19,6 +20,7 @@ const routes = [
 	route(paths.weapons, WeaponsPage),
 	route(paths.artifacts, ArtifactsPage),
 	route(paths.about, AboutPage),
+	route(paths.everywhere, EverywherePage),
 ]
 
 export function App(): JSX.Element {
