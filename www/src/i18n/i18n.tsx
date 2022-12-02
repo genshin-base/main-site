@@ -19,7 +19,11 @@ export const I18N_LANG_NAMES: Record<Lang, string> = {
 	ua: 'Українська',
 }
 export const I18N_LANG_NAME = I18N_LANG_NAMES[LANG]
-export const I18N_PAGE_TITLE_POSTFIX = { en: ` ${BULLET} Genshin Base`, ru: ` ${BULLET} Геншин База` }[LANG]
+export const I18N_PAGE_TITLE_POSTFIX = {
+	en: ` ${BULLET} Genshin Base`,
+	ru: ` ${BULLET} Геншин База`,
+	ua: ` ${BULLET} Геншiн База`,
+}[LANG]
 export const I18N_LOADING = { en: 'Loading', ru: 'Загрузка', ua: 'Завантаження' }[LANG]
 export const I18N_COLLAPSE = { en: 'Collapse', ru: 'Свернуть', ua: 'Приховати' }[LANG]
 export const I18N_DASHBOARD = { en: 'Dashboard', ru: 'Самое важное', ua: 'Наважливіше' }[LANG]
