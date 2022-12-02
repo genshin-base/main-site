@@ -695,11 +695,11 @@ export const I18N_WEAPON_TYPE_FILTER_TIP: Record<GI_WeaponTypeCode | 'everything
 	},
 	ua: {
 		everything: 'вибрані всі види зброї',
-		sword: 'вибрані тільки мечі',
-		catalyst: 'вибраны тільки каталізатори',
-		claymore: 'вибрані тільки дворучні мечі',
-		polearm: 'вибрані тільки списи',
-		bow: 'вибрані тільки луки',
+		sword: 'вибрані лише мечі',
+		catalyst: 'вибраны лише каталізатори',
+		claymore: 'вибрані лише дворучні мечі',
+		polearm: 'вибрані лише списи',
+		bow: 'вибрані лише луки',
 	},
 }[LANG]
 
