@@ -1931,7 +1931,7 @@ cаппорт
 
 **О выборе оружия**<br>
 
-**[Favonius Sword](#weapon:favonius-sword), [Festering Desire](#weapon:festering-desire), [Sacrificial Sword](#weapon:sacrificial-sword)**
+**[Меч Фавония](#weapon:favonius-sword), [Осквернённое желание](#weapon:festering-desire), [Церемониальный меч](#weapon:sacrificial-sword)**
 Хороший вариант чтобы регулярно использовать Взрыв стихии.
 
 **О комплектах артефактов**<br>
