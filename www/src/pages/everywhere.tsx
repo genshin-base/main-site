@@ -7,13 +7,22 @@ import {
 	I18N_PAGE_TITLE_POSTFIX,
 	I18N_SUPPORT_VIA_DON_ALERTS,
 	I18N_SUPPORT_VIA_KO_FI_SHORT,
+	I18N_TIKTOK_RU,
 	I18N_VIDEOS,
 	I18N_WE_ARE_EVERYWHERE,
 	I18N_YOUTUBE_RU,
 	I18N_YOUTUBE_UA,
 } from '#src/i18n/i18n'
 import { useDocumentTitle } from '#src/utils/hooks'
-import { LINK_DISCORD_INVITE, LINK_TELEGRAM_RU, LINK_YOUTUBE_RU, LINK_YOUTUBE_UA } from '#src/utils/links'
+import {
+	LINK_DISCORD_INVITE,
+	LINK_DONATION_ALERTS,
+	LINK_KO_FI,
+	LINK_TELEGRAM_RU,
+	LINK_TIKTOK_RU,
+	LINK_YOUTUBE_RU,
+	LINK_YOUTUBE_UA,
+} from '#src/utils/links'
 
 const groups: { title: string; links: { href: string; title: string; favicon: string }[] }[] = [
 	{
@@ -36,18 +45,19 @@ const groups: { title: string; links: { href: string; title: string; favicon: st
 		links: [
 			{ href: LINK_YOUTUBE_UA, title: I18N_YOUTUBE_UA, favicon: 'https://i.imgur.com/jruSfn5.png' },
 			{ href: LINK_YOUTUBE_RU, title: I18N_YOUTUBE_RU, favicon: 'https://i.imgur.com/jruSfn5.png' },
+			{ href: LINK_TIKTOK_RU, title: I18N_TIKTOK_RU, favicon: 'https://i.imgur.com/eq8XizF.png' },
 		],
 	},
 	{
 		title: I18N_DONATE_US,
 		links: [
 			{
-				href: LINK_YOUTUBE_UA,
+				href: LINK_KO_FI,
 				title: I18N_SUPPORT_VIA_KO_FI_SHORT,
 				favicon: 'https://ko-fi.com/favicon.ico',
 			},
 			{
-				href: LINK_YOUTUBE_RU,
+				href: LINK_DONATION_ALERTS,
 				title: I18N_SUPPORT_VIA_DON_ALERTS,
 				favicon: 'https://www.donationalerts.com/favicon-96x96.png',
 			},

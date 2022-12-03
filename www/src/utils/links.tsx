@@ -7,6 +7,9 @@ export const LINK_DONATION_ALERTS = 'https://www.donationalerts.com/r/genshinbas
 export const LINK_YOUTUBE_RU = 'https://www.youtube.com/@Genshin_Base_Media_RU'
 export const LINK_YOUTUBE_UA = 'https://www.youtube.com/@Genshin_Base_Media_UA'
 
+export const LINK_TIKTOK_RU = 'https://www.tiktok.com/@genshin_base_ru'
+// export const LINK_TIKTOK_UA = 'https://www.youtube.com/@Genshin_Base_Media_UA'
+
 export const LINK_GOOGLE_FORM_ORDER_SITE = 'https://forms.gle/WtWCxStRy5kqDwFY8'
 
 export const LINK_HELPER_TEAM_TABLE =
