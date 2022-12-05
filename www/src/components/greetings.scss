@@ -1,0 +1,59 @@
+.greetings {
+  height: 70vh;
+  overflow: hidden;
+  user-select: none;
+  .bg {
+    background: url("https://i.imgur.com/We2QBu5.png");
+    background-size: cover;
+    width: 110%;
+    height: 110%;
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    background-position: center;
+    filter: blur(2px)
+  }
+  .miko {
+    background: url("https://i.imgur.com/qXVxI2S.png");
+    background-size: 75vh;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .damages-wrap {
+    right: 30%;
+    width: 30%;
+    position: absolute;
+    height: 100%;
+    transform: scale(0.5, 0.5)
+  }
+  .damage-text {
+    position: absolute;
+  }
+  .damage-text:nth-child(1) {
+    top: 120%;
+    left: -10%;
+  }
+  .damage-text:nth-child(2) {
+    top: 30%;
+    left: -30%;
+  }
+  .damage-text:nth-child(3) {
+    top: 60%;
+    left: 30%;
+  }
+  .damage-text:nth-child(4) {
+    top: -20%;
+    left: 50%;
+  }
+  .build-info{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .build-info > *{
+    background: rgb(0 0 0 / 50%);
+  }
+}
