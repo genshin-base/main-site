@@ -11,11 +11,11 @@
     left: -5%;
     position: absolute;
     background-position: center;
-    filter: blur(2px)
+    filter: blur(2px);
   }
   .miko {
     background: url("https://i.imgur.com/qXVxI2S.png");
-    background-size: 75vh;
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: bottom left;
     height: 100%;
@@ -27,7 +27,7 @@
     width: 30%;
     position: absolute;
     height: 100%;
-    transform: scale(0.5, 0.5)
+    transform: scale(0.5, 0.5);
   }
   .damage-text {
     position: absolute;
@@ -48,12 +48,39 @@
     top: -20%;
     left: 50%;
   }
-  .build-info{
+  .build-info {
     position: absolute;
     bottom: 0;
     right: 0;
   }
-  .build-info > *{
+  .build-owner,
+  .build-info > * {
     background: rgb(0 0 0 / 50%);
+  }
+  .build-info {
+    .recs-wrap {
+      max-height: 162px;
+      transition: all 0.2s ease-in;
+      .arrow {
+        font-size: 18px;
+        display: block;
+        height: 0;
+        transform: translateY(-10px);
+        opacity: 0.5;
+        top: 10px;
+        span {
+          transform: rotate(90deg);
+          display: block;
+        }
+      }
+      &:hover {
+        max-height: 100%;
+        .arrow {
+          span {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
   }
 }

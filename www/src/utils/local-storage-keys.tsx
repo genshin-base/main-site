@@ -5,6 +5,10 @@ export const SV_SELECTED_REGION_CODE = {
 	key: 'selected-region-code',
 	versions: [() => guessCurrentRegion()] as const,
 }
+export const SV_ARE_GREETINGS_VISIBLE = {
+	key: 'are-greetings-visible',
+	versions: [() => true] as const,
+}
 
 export type SV_FavCodes = string[]
 const favCodes = (key: string) => ({

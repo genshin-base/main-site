@@ -31,7 +31,7 @@ export function FrontPage(): JSX.Element {
 
 	return (
 		<div className="dashboard container ">
-			<Greetings />
+			<Greetings classes="mb-4 mt-2 d-none d-lg-block" />
 			<h1 className="my-1 letter-spacing-1">{I18N_DASHBOARD}</h1>
 			<div className="row">
 				<Fieldset legend={I18N_REGION} classes="col-lg-3 col-12">
