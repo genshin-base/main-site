@@ -1,5 +1,6 @@
 export const LINK_DISCORD_INVITE = 'https://discord.gg/YapnrQ63bD'
 export const LINK_TELEGRAM_RU = 'https://t.me/genshin_base'
+export const LINK_TELEGRAM_UA = 'https://t.me/genshin_base_media_ua'
 
 export const LINK_KO_FI = 'https://ko-fi.com/genshinbase'
 export const LINK_DONATION_ALERTS = 'https://www.donationalerts.com/r/genshinbase'
