@@ -4,12 +4,14 @@ import { useBuildWithDelayedLocs } from '#src/api'
 import { WeaponCard } from '#src/containers/item-cards/dd-cards'
 import { LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
 import {
+	I18N_ARTIFACTS,
 	I18N_BEST_CHAR_BUILDS,
 	I18N_CONJUCTIONS,
 	I18N_FOR_EXAMPLE,
 	I18N_MORE_ON_BUILDS_PAGE,
 	I18N_WEAPON_REFINE,
 	I18N_WEAPON_STACKS_COUNT,
+	I18N_WEAPONS,
 } from '#src/i18n/i18n'
 import {
 	genArtifactAdvice,
@@ -22,6 +24,7 @@ import { A } from '#src/routes/router'
 import { isLoaded, useVersionedStorage, useWindowSize, WindowSize } from '#src/utils/hooks'
 import { SV_ARE_GREETINGS_VISIBLE } from '#src/utils/local-storage-keys'
 import { getWeaponIconSrc } from '#src/utils/weapons'
+import { BlockHeader } from './block-header'
 
 import './greetings.scss'
 
@@ -130,7 +133,7 @@ function BuildInfo({ updateName }: { updateName: (name: string) => void }): JSX.
 		const role = build.character.roles[0]
 		if (!role) return []
 		return (
-			<ol className="mb-0 py-2">
+			<ol className="mb-0 pb-2">
 				{role.weapons.advices.map((advice, i) => {
 					const isInList = advice.similar.length > 1
 					const map = advice.similar.map((item, i) => {
@@ -181,7 +184,7 @@ function BuildInfo({ updateName }: { updateName: (name: string) => void }): JSX.
 		if (!role) return []
 		const listTimit = 10
 		return (
-			<ol className="mb-0 rounded-top not-rounded-end py-2">
+			<ol className="mb-0 rounded-top not-rounded-end pb-2">
 				{role.artifacts.sets.map((set, i) => {
 					if (i > listTimit) return
 					return (
@@ -207,12 +210,14 @@ function BuildInfo({ updateName }: { updateName: (name: string) => void }): JSX.
 				<label className="arrow position-absolute start-50">
 					<span>‹</span>
 				</label>
+				<BlockHeader classes="mt-3 mx-2 mb-1">{I18N_ARTIFACTS}</BlockHeader>
 				{artifactsListBlock}
 			</div>
 			<div className="recs-wrap position-relative">
 				<label className="arrow position-absolute start-50">
 					<span>‹</span>
 				</label>
+				<BlockHeader classes="mt-3 mx-2 mb-1">{I18N_WEAPONS}</BlockHeader>
 				{weaponListBlock}
 			</div>
 		</div>
