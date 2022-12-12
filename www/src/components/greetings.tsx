@@ -48,7 +48,13 @@ const damages: string[] = [
 	'https://i.imgur.com/qglj5Eb.png',
 ]
 
-export function Greetings({ classes = '' }: { classes?: string }): JSX.Element | null {
+export function Greetings({
+	classes = '',
+	isClosable,
+}: {
+	classes?: string
+	isClosable: boolean
+}): JSX.Element | null {
 	const [areGreetingsVisible, setAreGreetingsVisible] = useVersionedStorage(SV_ARE_GREETINGS_VISIBLE)
 
 	const wrapRef = useRef<HTMLDivElement>(null)
@@ -75,10 +81,9 @@ export function Greetings({ classes = '' }: { classes?: string }): JSX.Element |
 		}
 	}, [windowSize])
 	useLayoutEffect(() => {
-		// if (wrapRef.current) wrapRef.current.style.minHeight = wrapRef.current.offsetWidth / 2 + 'px'
 		if (wrapRef.current) wrapRef.current.style.height = wrapRef.current.offsetWidth / 2 + 'px'
 	}, [wrapRef, windowSize])
-	if (!areGreetingsVisible) return null
+	if (!areGreetingsVisible && isClosable) return null
 	return (
 		<div className={`greetings w-100 position-relative rounded-1 ${classes}`} ref={wrapRef}>
 			<div className="bg" ref={bgRef}></div>
@@ -101,16 +106,18 @@ export function Greetings({ classes = '' }: { classes?: string }): JSX.Element |
 			<div className="build-owner position-absolute bottom-0 start-0 py-2 px-3 rounded-top not-rounded-start">
 				<span className="fs-2">{mikoName}</span>
 				<br />
-				<A className="" href={`/builds/` + yaeCode}>
+				<A className="link-danger" href={`/builds/` + yaeCode}>
 					{I18N_MORE_ON_BUILDS_PAGE}
 				</A>
 			</div>
-			<button
-				type="button"
-				class="btn-close btn-sm position-absolute end-0 top-0 m-3"
-				aria-label="Close"
-				onClick={closeGreetings}
-			></button>
+			{isClosable && (
+				<button
+					type="button"
+					class="btn-close btn-sm position-absolute end-0 top-0 m-3"
+					aria-label="Close"
+					onClick={closeGreetings}
+				></button>
+			)}
 		</div>
 	)
 }

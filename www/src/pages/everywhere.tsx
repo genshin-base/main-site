@@ -1,3 +1,4 @@
+import { Greetings } from '#src/components/greetings'
 import { ItemAvatar } from '#src/containers/item-cards/item-avatars'
 import {
 	I18N_CHATS,
@@ -8,6 +9,7 @@ import {
 	I18N_SUPPORT_VIA_DON_ALERTS,
 	I18N_SUPPORT_VIA_KO_FI_SHORT,
 	I18N_TIKTOK_RU,
+	I18N_TIKTOK_UA,
 	I18N_VIDEOS,
 	I18N_WE_ARE_EVERYWHERE,
 	I18N_YOUTUBE_RU,
@@ -20,6 +22,7 @@ import {
 	LINK_KO_FI,
 	LINK_TELEGRAM_RU,
 	LINK_TIKTOK_RU,
+	LINK_TIKTOK_UA,
 	LINK_YOUTUBE_RU,
 	LINK_YOUTUBE_UA,
 } from '#src/utils/links'
@@ -45,6 +48,7 @@ const groups: { title: string; links: { href: string; title: string; favicon: st
 		links: [
 			{ href: LINK_YOUTUBE_UA, title: I18N_YOUTUBE_UA, favicon: 'https://i.imgur.com/jruSfn5.png' },
 			{ href: LINK_YOUTUBE_RU, title: I18N_YOUTUBE_RU, favicon: 'https://i.imgur.com/jruSfn5.png' },
+			{ href: LINK_TIKTOK_UA, title: I18N_TIKTOK_UA, favicon: 'https://i.imgur.com/eq8XizF.png' },
 			{ href: LINK_TIKTOK_RU, title: I18N_TIKTOK_RU, favicon: 'https://i.imgur.com/eq8XizF.png' },
 		],
 	},
@@ -68,25 +72,30 @@ export function EverywherePage(): JSX.Element {
 	useDocumentTitle(I18N_WE_ARE_EVERYWHERE + I18N_PAGE_TITLE_POSTFIX)
 	return (
 		<div className="everywhere container">
-			<h1 className={`my-1 letter-spacing-1 ${BUNDLE_ENV.LANG === 'en' ? 'text-capitalize' : ''}`}>
+			<h1 className={`my-1 mb-3 letter-spacing-1 ${BUNDLE_ENV.LANG === 'en' ? 'text-capitalize' : ''}`}>
 				{I18N_WE_ARE_EVERYWHERE}
 			</h1>
-			<div className="">
-				{groups.map(g => (
-					<div className="card mx-auto my-4" style="width: 18rem;" key={g.title}>
-						<div className="card-header">{g.title}</div>
-						<ul className="list-group list-group-flush">
-							{g.links.map(l => (
-								<li className="list-group-item" key={l.title}>
-									<a href={l.href}>
-										<ItemAvatar src={l.favicon} classes="small-avatar me-3" />
-										{l.title}
-									</a>
-								</li>
-							))}
-						</ul>
-					</div>
-				))}
+			<div className="row">
+				<div class="d-none d-lg-block col-lg-9">
+					<Greetings isClosable={false} />
+				</div>
+				<div class="col-lg-3 col-12">
+					{groups.map(g => (
+						<div className="card mb-3" key={g.title}>
+							<div className="card-header">{g.title}</div>
+							<ul className="list-group list-group-flush">
+								{g.links.map(l => (
+									<li className="list-group-item" key={l.title}>
+										<a href={l.href}>
+											<ItemAvatar src={l.favicon} classes="small-avatar me-3" />
+											{l.title}
+										</a>
+									</li>
+								))}
+							</ul>
+						</div>
+					))}
+				</div>
 			</div>
 		</div>
 	)
