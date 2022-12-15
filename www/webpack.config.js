@@ -70,8 +70,7 @@ function makeConfig(mode, version, isMain, type) {
 		output: {
 			path: dist,
 			filename: isProd && !type.isSSR ? `[name].${suffix}.[contenthash:8].js` : `[name].${suffix}.js`,
-			// пока не нужно, см. file-loader
-			// assetModuleFilename: '[name].[hash:8][ext]',
+			assetModuleFilename: '[name].[hash:8][ext]',
 			publicPath: ASSET_PATH,
 			// чтоб в бандле был экспорт
 			...(type.isSSR ? { libraryTarget: 'module', chunkFormat: 'module' } : {}),
@@ -127,25 +126,10 @@ function makeConfig(mode, version, isMain, type) {
 						'sass-loader',
 					],
 				},
-				// Новые-модные вебпаковые ассеты (https://webpack.js.org/guides/asset-modules/)
-				// экспортируют CommonJS, ради подключения которого вебпак добавляет в бандл
-				// пол килобайта всякого мусора.
-				// Это некритично, но, раз уж я два часа разбирался в этой фигне, пусть тут
-				// пока полежит фикс: отключение фичи ассетов (javascript/auto) и использование
-				// устаревшего file-loader'а.
-				// Ждём, когда тут появится возможность экспортировать ES-модули
-				// https://github.com/webpack/webpack/blob/main/lib/asset/AssetGenerator.js#L272
 				{
 					test: /\.(png|svg|json)$/,
-					type: 'javascript/auto',
-				},
-				{
-					test: /\.(png|svg|json)$/,
-					loader: 'file-loader',
-					options: {
-						name: '[name].[hash:8].[ext]',
-						emitFile: isMain,
-					},
+					type: 'asset/resource',
+					generator: { emit: isMain },
 				},
 			],
 		},
