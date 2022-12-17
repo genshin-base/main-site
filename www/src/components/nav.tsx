@@ -1,5 +1,6 @@
 import { useCallback, useRef, useState } from 'preact/hooks'
 
+import { ItemAvatar } from '#src/containers/item-cards/item-avatars'
 import {
 	I18N_ABOUT_SITE,
 	I18N_ARTIFACTS,
@@ -7,7 +8,6 @@ import {
 	I18N_EQUIPMENT,
 	I18N_LANG_NAME,
 	I18N_LANG_NAMES,
-	I18N_OUR_DISCORD,
 	I18N_OUR_SOCIAL_NETWORKS,
 	I18N_PAGE_WITH_ALL_LINKS,
 	I18N_SUPPORT_US,
@@ -18,7 +18,7 @@ import {
 import { paths } from '#src/routes/paths'
 import { A, isOnRoute, makeLocationHrefForLang } from '#src/routes/router'
 import { useClickAway } from '#src/utils/hooks'
-import { LINK_DISCORD_INVITE, LINK_DONATION_ALERTS, LINK_KO_FI } from '#src/utils/links'
+import { LINK_DONATION_ALERTS, LINK_KO_FI } from '#src/utils/links'
 import { ourPagesInSocialNetworks } from '#src/utils/our-pages-in-social-networks'
 import { VARIATION_SELECTOR } from '#src/utils/typography'
 import { GlobeIcon } from './globe-icon'
@@ -63,15 +63,17 @@ type DdLink = {
 	isExternal?: boolean
 	isActive?: boolean
 	code?: string
+	favicon?: string
 }
 const LINKS_DD_LINKS: DdLink[] = ourPagesInSocialNetworks
 	.filter(g => g.code !== 'donations')
 	.map(g => g.links)
 	.flat()
-	.map(({ href, title }) => {
+	.map(({ href, title, favicon }) => {
 		return {
 			title,
 			href,
+			favicon,
 			isExternal: true,
 		}
 	})
@@ -80,6 +82,7 @@ const LINKS_DD_LINKS: DdLink[] = ourPagesInSocialNetworks
 			title: I18N_PAGE_WITH_ALL_LINKS,
 			href: '/everywhere',
 			isExternal: false,
+			favicon: '',
 		},
 	])
 function LinksDd(): JSX.Element {
@@ -151,6 +154,12 @@ function HeadDd({ title, ddLinks }: { title: string | JSX.Element; ddLinks: DdLi
 									href={l.href}
 									isExternal={l.isExternal}
 								>
+									{l.favicon && (
+										<ItemAvatar
+											src={l.favicon}
+											classes="emoji-avatar me-1 align-middle"
+										/>
+									)}
 									{l.title}
 								</A>
 							</li>

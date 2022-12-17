@@ -337,7 +337,10 @@ const SearchItemCard = ({
 			</div>
 			<div>
 				<h6 className="mb-0 text-break">
-					<ItemAvatar src={getIconForItem(item)} classes="emoji-avatar me-1 d-md-none" />
+					<ItemAvatar
+						src={getIconForItem(item)}
+						classes="emoji-avatar me-1 d-md-none align-middle"
+					/>
 					<span className="align-middle">{nameWithHighlight}</span>
 				</h6>
 				<div className="text-muted small text-break">{nameEnWithHighlight}</div>

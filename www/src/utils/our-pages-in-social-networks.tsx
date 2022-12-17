@@ -39,16 +39,16 @@ export const ourPagesInSocialNetworks: {
 				title: I18N_OUR_DISCORD,
 				favicon: 'https://i.imgur.com/Yr1itn9.png',
 			},
-			{
-				href: LINK_TELEGRAM_RU,
-				title: I18N_OUR_TELEGRAM_RU,
-				favicon: 'https://telegram.org/img/favicon.ico',
-			},
-			{
-				href: LINK_TELEGRAM_UA,
-				title: I18N_OUR_TELEGRAM_UA,
-				favicon: 'https://telegram.org/img/favicon.ico',
-			},
+			// {
+			// 	href: LINK_TELEGRAM_RU,
+			// 	title: I18N_OUR_TELEGRAM_RU,
+			// 	favicon: 'https://telegram.org/img/favicon.ico',
+			// },
+			// {
+			// 	href: LINK_TELEGRAM_UA,
+			// 	title: I18N_OUR_TELEGRAM_UA,
+			// 	favicon: 'https://telegram.org/img/favicon.ico',
+			// },
 		],
 	},
 	{
