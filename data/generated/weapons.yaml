@@ -4868,7 +4868,7 @@ haran-geppaku-futsu:
     ru:
       - p: >-
           Этот меч упоминается в «Антологии мечей Инадзумы» за авторством Микоси
-          Нагамусы, знаменитого инспектора Татарасуны.
+          Нагамасы, знаменитого инспектора Татарасуны.
 
           Школа Фуцу изготовила на заказ два меча серии гэппаку фуцу: Хасуи и Харан.
 
@@ -5721,14 +5721,14 @@ katsuragikiri-nagamasa:
 
           After Mikoshi Nagamasa became the inspector, he was for a time obsessed with the grim loveliness of steel.
 
-          He thus consulted the similarly-inclined Armory Officer Miyazaki for advice,
+          He thus consulted the similarly-inclined Vice Armory Officer Miyazaki for advice,
 
           With the end result being this tough and simple sword, the Daitatara Nagamasa.
       - p: >-
           Although he was only the foster son of the Mikoshi Clan, and although
           his foster mother had stained the reputation of the Mikoshi,
 
-          And even though Mikoshi’s only legitimate heir, Doukei, abandoned him and disappeared,
+          And even though Mikoshi’s only legitimate heir, Michihiro, abandoned him and disappeared,
 
           His self-admitted stupidity and loyalty led him to cherish the Mikoshi name all the more.
 
@@ -5752,14 +5752,14 @@ katsuragikiri-nagamasa:
 
           Но с тех пор как Микоси стал инспектором, он был одержим красотой стали.
 
-          Он спросил совета у Миядзаки, который тоже увлекался ковкой мечей.
+          Он спросил совета у заместителя офицера оружейной палаты Миядзаки, который тоже увлекался ковкой мечей.
 
-          В конце концов он создал этот простой и крепкий меч – Клинок Татары.
+          В конце концов он создал этот простой и крепкий меч – Даитатара Нагамаса.
       - p: >-
           Хотя он был лишь приёмным сыном семьи Микоси, и хотя его приёмная мать
           испортила репутацию Микоси,
 
-          и хотя единственный законный сын Микоси Дао Ци покинул его и исчез,
+          и хотя единственный законный сын Микоси Митихиро покинул его и исчез,
 
           из одной только глупости и верности – качеств, которые он не отрицал – он ценил имя Микоси.
 
@@ -11653,11 +11653,11 @@ staff-of-the-scarlet-sands:
       When an Elemental Skill hits opponents, the Dream of the Scarlet Sands
       effect will be gained for 10s: The equipping character will gain  28% of
       their Elemental Mastery as bonus ATK. Max 3 stacks."
-    ru: "Увеличивает бонус атаки экипированного этим оружием персонажа на  52% от
+    ru: "Экипированный этим оружием персонаж получает бонус атаки, равный  52% от
       его мастерства стихий. Попадание по врагу элементальным навыком на 10 сек.
-      наделяет Сном алых песков: бонус атаки экипированного этим оружием
-      персонажа увеличивается на  28% от мастерства стихий. Эффект складывается
-      до 3 раз."
+      наделяет Сном алых песков: экипированный этим оружием персонаж получает
+      бонус атаки, равный  28% от мастерства стихий. Эффект складывается до 3
+      раз."
   materialCodes:
     - oasis-gardens-truth
     - chaos-bolt
@@ -12713,7 +12713,7 @@ the-viridescent-hunt:
       - p: >-
           «Тогда избавь мой лук от скверны смертной мести».
 
-          «Я не смогу перейти на ту сторону и встретить моего создателя или моих родителей, который я никогда не видел».
+          «Я не смогу перейти на ту сторону и встретить моего создателя или родителей, которых я никогда не видел».
 
           «Хотя бы позволь этому луку остаться чистым, и пусть он принесёт им мои мысли и сожаления».
   specialAbility:
@@ -13014,7 +13014,7 @@ thundering-pulse:
       - p: >-
           Когда из-за моря пришла беда, самурай и храбрая жрица заключили пари.
 
-          Он поставил украшенный письменами лук, подаренный сёгуном, на то, что он выживет и вернётся бездны.
+          Он поставил украшенный письменами лук, подаренный сёгуном, на то, что он выживет и вернётся из бездны.
       - p: >-
           Когда тёмный яд просочился в землю и воцарился мир, мечник вернулся.
 
@@ -13047,6 +13047,96 @@ thundering-pulse:
     - weathered-arrowhead
   obtainSources:
     - event-wishes
+toukabou-shigure:
+  code: toukabou-shigure
+  typeCode: sword
+  name:
+    en: Toukabou Shigure
+    ru: Токабо сигурэ
+  rarity: 4
+  atk:
+    base: 42
+    max: 509
+  subStat:
+    code: em
+    base: 36
+    max: 165
+  description:
+    en: A rather special oil-paper umbrella. While long wanderings may make one used
+      to the wind and the rain, there might be some fun in admiring a rainy
+      scene beneath this parasol.
+    ru: Несколько необычный зонт из промасленной бумаги. В странствиях привыкаешь к
+      непогоде, но в любовании дождливым пейзажем из-под этого зонта есть своя
+      прелесть.
+  story:
+    en: >-
+      “Umbrellas from Inazuma are more like unique pieces of artistry than
+      something to shield oneself from the rain. Whether it be the design of the
+      bamboo handle, the patterns on its surface, or the colors of the oil paper
+      beneath beads of water, the umbrella looks in every way exquisite and
+      delicate. Each time I pass through an alley and see such an umbrella
+      outside a store, I often find my thoughts drifting back to a certain
+      event. Rumor has it that there once was an umbrella that sent the whole
+      town aflutter with activity. Here’s how the story goes:
+
+      “Hundreds of years ago, during the season of a grand festival, the flowers were in bloom, the foxes were at play, and even the typically stoic Tengu mingled amongst the people. Yet, the most eye-catching oddity was a girl bearing an intricate umbrella while sipping the fine wine of the Oni Clan. As she grew inspired, the young maiden danced like billowing flowers amidst the snow as the moonlight poured down on her. All who beheld her found themselves cheering her on, be they human or youkai. But with the passage of time, the girl went to war with the army and met a most untimely fate. With her passing, her cherished umbrella was offered to a shrine by her loyal subordinates.”
+
+      “A daughter to a prominent martial family encountered the umbrella when offering her prayers at a shrine. Hence, she decided to purchase it at full price. The next day, with the skies wet with rain, the girl wanted to seize the opportunity and venture out with her umbrella. However, before she could even get changed, a message was delivered from afar, informing her of her husband’s death in battle. Consumed by grief, the girl fell ill and left this mortal plane to seek her lover within the stretch of days. After her funeral, her parents regarded the umbrella she bought as something of a cursed object and returned it to the shrine to be sealed away.”
+
+      “Yet, after a few months, new rumors spread. People would claim that, on rainy nights, a previously unknown youkai would stalk the streets. The way the youkai was illustrated made it sound akin to an umbrella, except taller than a man, bearing a single eye, a single leg, and also a long tongue. Should someone walk alone at night, the youkai may just suddenly appear, using its long tongue to lick those that dare pass by. From the perspective of those who live in Fontaine, the youkai presented little threat with its main acts seeming like pranks. That said, few people actually knew what the youkai’s true intentions were. This engendered a sense of worry amongst the people who walked the streets. Young maidens dared not to leave home. The elderly sighed, saying if the wise and powerful were not absent, dealing with this youkai would be a trifling thing. At that moment, however, few even knew how to exorcise such a simple being.”
+
+      “Later, when a young Shrine Maiden caught wind of what happened, she took the umbrella out from the shrine, and washed it from the tip down using a wooden spoon. As she used a silk cloth to wipe its surface, she said this:”
+
+      “‘Even should the rains of yesterday cease, tomorrow and the day after remain. If that noble were still alive, your present state would surely be held unacceptable!'”
+
+      “Hence, she had the umbrella enshrined in an annex of the temple. Since then, none have heard either hint or whisper regarding this umbrella again.”
+
+      “Now, I heard this story from a friend of mine in Inazuma, although I did go around investigating the shrines around Narukami and found no mention of the umbrella being enshrined. When I told this to my friend, she just laughed:”
+
+      “‘Truly, Mademoiselle Leucade, do you take these kaidan to be the truth?'”
+    ru: >-
+      «Зонты из Инадзумы больше похожи на уникальные произведения искусства, чем
+      на простую защиту от дождя. Форма бамбуковой ручки, узоры на её
+      поверхности, цвета промасленной бумаги под каплями воды – зонт выглядит во
+      всех отношениях изысканно и элегантно. Каждый раз, когда я прохожу по
+      переулку и вижу такой зонтик у магазина, мои мысли возвращаются к одному
+      событию. Ходят слухи, что когда-то зонтик заставил встрепенуться весь
+      город. Вот как об этом рассказывают:
+
+      Сотни лет назад, в разгар грандиозного фестиваля, цветы цвели, лисы играли, и даже традиционно невозмутимые тэнгу смешались с толпой. Но самой запоминающейся из всех была девушка с замысловатым зонтиком, попивающая изысканное вино клана óни. Окрылённая вином, девушка танцевала под струящимся лунным светом, словно распустившийся среди снега цветок. Все, кто видел танец, – как люди, так и ёкаи – аплодировали ей. Позже девушка отправилась на войну, где встретила свою преждевременную кончину. После чего её верные помощники принесли зонтик в дар святилищу.
+
+      Одна молодая женщина из знатной семьи военных увидела этот зонтик, когда возносила молитвы в святилище, и решила выкупить его по самой высокой цене. На следующий день, когда небо налилось дождём, она решила воспользоваться случаем и выйти с ним на улицу. Однако не успела она переодеться, как издалека пришло сообщение о гибели её мужа в бою. Охваченная горем, молодая женщина заболела и в считанные дни покинула этот бренный мир, чтобы воссоединиться со своим возлюбленным. Её родители посчитали, что зонтик проклят, и вернули его в святилище после похорон.
+
+      Однако через несколько месяцев поползли новые слухи. Люди утверждали, что в дождливые ночи по улицам бродит неизвестный ранее ёкай. По описанию он напоминал зонтик, только ростом с человека, с одним глазом, одной ногой и длинным языком. Если кто-то шёл ночью один, перед ним мог внезапно появиться ёкай и облизать его своим длинным языком. Если взглянуть на это с точки зрения уроженки Фонтейна, ёкай не представлял особой угрозы, а его действия были похожи на розыгрыш. Но поскольку мало кто знал о его истинных намерениях, прохожим было не по себе. Юные девушки не решались выходить из дома. Пожилые люди вздыхали, говоря, что если бы мудрые и могущественные люди были на месте, то справиться с таким слабым ёкаем было бы пустяковым делом. Однако в тот момент мало кто знал, как изгнать этого безобразника.
+
+      Потом о случившемся узнала молодая жрица. Она взяла зонтик из святилища, зачерпнула деревянным ковшом воды и вымыла его от рукоятки до самого кончика. Вытирая зонтик шёлковой тканью, она сказала следующее:
+
+      «Даже если прошлые дожди не вернутся, всегда остаётся завтрашний день. Если бы твоя благородная госпожа была здесь, ей было бы больно смотреть на тебя в таком состоянии!»
+
+      Затем зонт поместили в пристройку к храму. С тех пор никто не слышал о зонтичном ёкае.
+
+      Эту историю я услышала от своей подруги в Инадзуме. Я обошла все святилища Наруками, но никто не слышал о таком подношении. Когда я рассказала об этом подруге, она рассмеялась:
+
+      “Мадемуазель Лёкад, неужели вы и правда верите в эти истории о ёкаях?”»
+  specialAbility:
+    en: After an attack hits opponents, it will inflict an instance of Cursed
+      Parasol upon one of them for 10s. This effect can be triggered once every
+      15s. If this opponent is taken out during Cursed Parasol's duration,
+      Cursed Parasol's CD will be refreshed immediately. The character wielding
+      this weapon will deal  16% more DMG to the opponent affected by Cursed
+      Parasol.
+    ru: При попадании по противникам на 10 сек. накладывает на одного из них
+      Проклятый зонт. Этот эффект может возникнуть один раз в 15 сек. Если
+      поражённый Проклятым зонтом противник погибнет до его окончания, откат
+      эффекта немедленно обновится. Урон, который наносит экипированный этим
+      оружием персонаж поражённым Проклятым зонтом противникам, увеличивается
+      на  16%.
+  materialCodes:
+    - narukamis-valor
+    - radiant-prism
+    - famed-handguard
+  obtainSources:
+    - events
 travelers-handy-sword:
   code: travelers-handy-sword
   typeCode: sword
@@ -13093,6 +13183,166 @@ travelers-handy-sword:
   obtainSources:
     - chests
     - quests
+tulaytullahs-remembrance:
+  code: tulaytullahs-remembrance
+  typeCode: catalyst
+  name:
+    en: Tulaytullah's Remembrance
+    ru: Воспоминания Тулайтуллы
+  rarity: 5
+  atk:
+    base: 47
+    max: 674
+  subStat:
+    code: crit-dmg%
+    base: 9
+    max: 44
+  description:
+    en: A bell crafted of deep sapphire and sterling silver. Its echoes are as crisp
+      as they are distant.
+    ru: Колокольчик, вырезанный из тёмного сапфира и покрытый чистым серебром. Его
+      хрустальный звон разносится далёким эхом.
+  story:
+    en:
+      - p: >-
+          Once upon the silver dunes, she danced with the three sisters of the
+          moon.
+
+          Once as shadows reached across the land, blood and tears mingled to form a garden spring…
+
+          The Lord of Flowers was grieved, and so a sapphire city arose from her tears,
+
+          And beneath those azure domes, the Tighnarians grew proud as they spawned generations of wisdom.
+      - p: >-
+          People claimed that Tulaytullah, home to the Tighnarians, was the Lord
+          of Flowers’ most precious jewel.
+
+          In that golden age, even the wan face of the moon shone like warm amber.
+
+          In the gardens bloomed Padisarahs clothed in dream-like violet, while the swollen pomegranate raised their voices on high and sang…
+
+          The lattice of canals shimmered, and even the passing of deities would not see them blanketed in sandstorms.
+      - p: >-
+          “Xiphos, exiled high-born, my beloved…”
+
+          “Xiphos, Blade of Tulaytullah, beloved of the Jinni…”
+
+          “May the sheen of moonlight deliver unto you peace, for tonight’s dance belongs to you alone,”
+
+          “And tomorrow I must depart, for the scholars have sold me unto the court of Badanah.”
+
+          “I cannot forget how his forefathers destroyed my homeland and enslaved my people.”
+
+          “I go now to serve the hated foe, to dance, speak honeyed words, and linger amongst them like the night wind…”
+      - p: >-
+          “But beloved Xiphos… On this night, the stars and lilies belong only
+          to you.”
+
+          “Keep my name in your heart, dearest Xiphos, if but only for this night.”
+      - p: >-
+          To please the waning vassal king, the scholars who ruled Tulaytullah
+          offered tribute,
+
+          And Makhaira, a court dancer, found herself as part of that inventory, forced to say farewell to her golden-eyed lover.
+
+          The stories that follow have been diluted by too many tongues and have been left forgotten by too many minds…
+      - p: >-
+          Makhaira claimed her vengeance, bringing low a desert kingdom once
+          thought invincible…
+
+          But her own life was devoured by an adder, and she was drawn into slumber beneath quilts of gilded sand, never to wake.
+
+          Xiphos earned esteem among his kindred, yet died in vain, protecting the nobles who feared him…
+
+          The Blade of Tulaytullah met his end at the hands of another exiled princeling,
+
+          Whose banishment had been delivered unto him indeed by that serpent-hearted dancer, the daughter of a Jinni.
+      - p: >-
+          In the end, all people, good or evil, will find themselves ground
+          beneath the wheels of fate,
+
+          And the sapphire city would fade, dissipating like tears beneath the scorching sun.
+    ru:
+      - p: >-
+          Давным-давно на серебряных дюнах три сестры танцевали с луной.
+
+          Давным-давно, когда по земле тянулись тени, кровь и слезы смешались и образовали источник в саду…
+
+          Опечалилась Повелительница цветов, и из её слёз возник сапфировый город,
+
+          и под его лазурными куполами возвеличились тигнарийцы, породив поколения мудрецов.
+      - p: >-
+          Считалось, что Тулайтулла, родина тигнарийцев, была самой драгоценной
+          жемчужиной Повелительницы цветов.
+
+          В тот золотой век даже бледный лик луны излучал янтарное сияние.
+
+          В садах цвели прекрасные фиолетовые падисары, а спелые гранаты пели во весь голос…
+
+          Искрились в переплетении каналы. Даже в дни после смерти богини песчаные бури не остановили их.
+      - p: >-
+          «Ксифос, изгнанный высокородный, мой возлюбленный…
+
+          Ксифос, клинок Тулайтуллы, возлюбленный джинна…
+
+          Пусть сияние лунного света дарует тебе покой. Сегодня я танцую лишь для тебя.
+
+          А завтра я должна уехать, ибо мудрецы продали меня ко двору Баданаха.
+
+          Я не в силах забыть, как его предки уничтожили мою родину и поработили мой народ.
+
+          Теперь я иду служить ненавистному врагу, танцевать, произносить медовые речи и виться среди них, будто ночной ветер…
+      - p: >-
+          Но дорогой Ксифос… В эту ночь все звёзды и водяные лилии принадлежат
+          только тебе.
+
+          Сохрани моё имя в своём сердце, дорогой Ксифос, хотя бы этой ночью».
+      - p: >-
+          Чтобы угодить ослабевшему вассальному царю, мудрецы, правившие
+          Тулайтуллой, принесли дань.
+
+          Махайра, придворная танцовщица, оказалась её частью и была вынуждена проститься со своим златоглазым возлюбленным.
+
+          Легенды, возникшие на основе этого события, были рассказаны слишком многими и забыты многими другими…
+      - p: >-
+          Махайра отомстила, низвергнув пустынное царство, которое когда-то
+          считалось непобедимым…
+
+          Но гадюка поглотила её жизнь, и она погрузилась под одеялами из позолоченного песка в дремоту, от которой не пробудиться.
+
+          Ксифос заслужил уважение своих сородичей, но погиб напрасно, защищая боявшихся его вельмож…
+
+          Клинок Тулайтуллы встретил свой конец от рук другого принца,
+
+          который был изгнан из-за танцовщицы, дочери джинна со змеиным сердцем.
+      - p: >-
+          В конце концов жернова судьбы перемалывают жизни всех людей – добрых и
+          злых.
+
+          Сапфировый город померк и исчез, как слёзы под палящим солнцем.
+  specialAbility:
+    en: Normal Attack SPD is increased by  10%. After the wielder unleashes an
+      Elemental Skill, Normal Attack DMG will increase by  4.8% every second for
+      14s. After hitting an opponent with a Normal Attack during this duration,
+      Normal Attack DMG will be increased by  9.6%. This increase can be
+      triggered once every 0.3s. The maximum Normal Attack DMG increase per
+      single duration of the overall effect is  48%. The effect will be removed
+      when the wielder leaves the field, and using the Elemental Skill again
+      will reset all DMG buffs.
+    ru: Скорость обычной атаки повышается на  10%. После активации экипированным
+      этим оружием персонажем элементального навыка урон обычной атаки будет
+      повышаться на  4,8% в секунду в течение 14 сек. Пока этот эффект активен,
+      каждое попадание по противнику мгновенно увеличивает урон обычной атаки
+      на  9,6%. Увеличение может возникнуть один раз в 0,3 сек. Во время
+      действия одного такого эффекта урон обычной атаки может быть увеличен
+      максимум на  48%. Эффект будет снят, если персонаж покинет поле боя, а
+      повторная активация элементального навыка сбросит увеличение урона.
+  materialCodes:
+    - olden-days-of-scorching-might
+    - robust-fungal-nucleus
+    - crystalline-cyst-dust
+  obtainSources:
+    - event-wishes
 twin-nephrite:
   code: twin-nephrite
   typeCode: catalyst

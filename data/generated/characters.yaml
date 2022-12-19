@@ -926,3 +926,33 @@ nahida:
     - nagadus-emerald-gemstone
     - kalpalata-lotus
     - crystalline-cyst-dust
+faruzan:
+  code: faruzan
+  name:
+    en: Faruzan
+    ru: Фарузан
+  rarity: 4
+  weaponTypeCode: bow
+  releaseVersion: "3.3"
+  materialCodes:
+    - philosophies-of-admonition
+    - puppet-strings
+    - light-guiding-tetrahedron
+    - vayuda-turquoise-gemstone
+    - henna-berry
+    - rich-red-brocade
+wanderer:
+  code: wanderer
+  name:
+    en: Wanderer
+    ru: Странник
+  rarity: 5
+  weaponTypeCode: catalyst
+  releaseVersion: "3.3"
+  materialCodes:
+    - philosophies-of-praxis
+    - dakas-bell
+    - perpetual-caliber
+    - vayuda-turquoise-gemstone
+    - rukkhashava-mushrooms
+    - famed-handguard
