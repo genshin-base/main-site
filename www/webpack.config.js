@@ -3,7 +3,7 @@ import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin'
 import ESLintPlugin from 'eslint-webpack-plugin'
 import glob from 'glob'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import { dirname, extname } from 'path'
+import { dirname, extname, relative } from 'path'
 import PurgeCSSPlugin from 'purgecss-webpack-plugin'
 import { fileURLToPath } from 'url'
 import webpack from 'webpack'
@@ -70,7 +70,7 @@ function makeConfig(mode, version, isMain, type) {
 		output: {
 			path: dist,
 			filename: isProd && !type.isSSR ? `[name].${suffix}.[contenthash:8].js` : `[name].${suffix}.js`,
-			assetModuleFilename: '[name].[hash:8][ext]',
+			assetModuleFilename: ({ filename }) => `${relative(SRC, dirname(filename))}/[name].[hash:8][ext]`,
 			publicPath: ASSET_PATH,
 			// чтоб в бандле был экспорт
 			...(type.isSSR ? { libraryTarget: 'module', chunkFormat: 'module' } : {}),
@@ -127,7 +127,7 @@ function makeConfig(mode, version, isMain, type) {
 					],
 				},
 				{
-					test: /\.(png|svg|json)$/,
+					test: /\.(png|jpe?g|webp|svg|json)$/,
 					type: 'asset/resource',
 					generator: { emit: isMain },
 				},

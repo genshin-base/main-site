@@ -3,7 +3,7 @@
   overflow: hidden;
   user-select: none;
   .bg {
-    background: url("https://i.imgur.com/We2QBu5.png");
+    background: url("./img/bg.webp");
     background-size: cover;
     width: 110%;
     height: 110%;
@@ -14,13 +14,14 @@
     filter: blur(2px);
   }
   .miko {
-    background: url("https://i.imgur.com/qXVxI2S.png");
+    background: url("./img/Miko.webp");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: bottom left;
     height: 100%;
     width: 100%;
     position: absolute;
+    filter: drop-shadow(-40px 30px 16px #0000004d);
   }
   .damages-wrap {
     right: 30%;

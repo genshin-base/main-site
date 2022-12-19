@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'preact/hooks'
 
 import { useBuildWithDelayedLocs } from '#src/api'
+import { BlockHeader } from '#src/components/block-header'
 import { WeaponCard } from '#src/containers/item-cards/dd-cards'
 import { LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
 import {
@@ -24,13 +25,17 @@ import { A } from '#src/routes/router'
 import { isLoaded, useVersionedStorage, useWindowSize, WindowSize } from '#src/utils/hooks'
 import { SV_ARE_GREETINGS_VISIBLE } from '#src/utils/local-storage-keys'
 import { getWeaponIconSrc } from '#src/utils/weapons'
-import { BlockHeader } from './block-header'
 
+import dmg0 from './img/dmg_0.webp'
+import dmg1 from './img/dmg_1.webp'
+import dmg2 from './img/dmg_2.webp'
+import dmg3 from './img/dmg_3.webp'
 import './greetings.scss'
 
 const yaeCode = 'yae-miko'
+const damages: string[] = [dmg0, dmg1, dmg2, dmg3]
 
-const updateEl = function (
+function updateEl(
 	coords: { x: number; y: number },
 	windowSize: WindowSize,
 	el: HTMLDivElement | HTMLImageElement,
@@ -44,13 +49,6 @@ const updateEl = function (
 	}px)`
 }
 
-const damages: string[] = [
-	'https://i.imgur.com/UiCDhKm.png',
-	'https://i.imgur.com/jEdnYZz.png',
-	'https://i.imgur.com/dAgppM3.png',
-	'https://i.imgur.com/qglj5Eb.png',
-]
-
 export function Greetings({
 	classes = '',
 	isClosable,
@@ -59,6 +57,7 @@ export function Greetings({
 	isClosable: boolean
 }): JSX.Element | null {
 	const [areGreetingsVisible, setAreGreetingsVisible] = useVersionedStorage(SV_ARE_GREETINGS_VISIBLE)
+	const areCurrentlyVisible = areGreetingsVisible || !isClosable
 
 	const wrapRef = useRef<HTMLDivElement>(null)
 	const bgRef = useRef<HTMLDivElement>(null)
@@ -66,11 +65,14 @@ export function Greetings({
 	const damagesRef = useRef<HTMLImageElement[]>([])
 	const windowSize = useWindowSize()
 	const [mikoName, setMikoName] = useState<string | null>(null)
+
 	const closeGreetings = useCallback(() => {
 		setAreGreetingsVisible(false)
 	}, [setAreGreetingsVisible])
+
 	useEffect(() => {
-		const moveElems = function (e: any) {
+		if (!areCurrentlyVisible) return
+		function moveElems(e: MouseEvent) {
 			if (!windowSize.width) return
 			const coords = { x: e.clientX, y: e.clientY }
 			if (bgRef.current) updateEl(coords, windowSize, bgRef.current, 0.1)
@@ -78,15 +80,17 @@ export function Greetings({
 			if (damagesRef.current)
 				damagesRef.current.forEach((dr, i) => updateEl(coords, windowSize, dr, 0.3 + i * 0.3))
 		}
-		addEventListener('mousemove', moveElems, true)
+		addEventListener('mousemove', moveElems, { passive: true })
 		return () => {
 			removeEventListener('mousemove', moveElems)
 		}
-	}, [windowSize])
+	}, [windowSize, areCurrentlyVisible])
+
 	useLayoutEffect(() => {
 		if (wrapRef.current) wrapRef.current.style.height = wrapRef.current.offsetWidth / 2 + 'px'
 	}, [wrapRef, windowSize])
-	if (!areGreetingsVisible && isClosable) return null
+
+	if (!areCurrentlyVisible) return null
 	return (
 		<div className={`greetings w-100 position-relative rounded-1 ${classes}`} ref={wrapRef}>
 			<div className="bg" ref={bgRef}></div>
