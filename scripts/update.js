@@ -78,7 +78,6 @@ import { getEnemyCodeFromName } from '#lib/genshin.js'
 import { extractArtifactsData, getArtifactSpecialGroupCodes } from '#lib/parsing/honeyhunter/artifacts.js'
 import { buildsConvertLangMode } from '#lib/parsing/helperteam/build_texts.js'
 import { extractAbyssStats } from '#lib/parsing/spiralabyss/index.js'
-import { mustBeDefined } from '#lib/utils/values.js'
 
 const HELPERTEAM_DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -348,16 +347,21 @@ const fixes = {
 	},
 	/** @type {import('#lib/parsing/mihoyo/fixes').MihoyoFixes} */
 	mihoyo: {
-		enemiesOnMap: [
-			{ nameOnMap: 'Fatui Agent', useCode: 'fatui-pyro-agent' },
-			{ nameOnMap: 'Fatui Mirror Maiden', useCode: 'mirror-maiden' },
-			{ nameOnMap: 'The Black Serpents', useCode: 'shadowy-husk' },
-			{ nameOnMap: 'Red-Finned Unagi', useCode: 'unagi' },
-			{ nameOnMap: 'Adorned Unagi', useCode: 'unagi' },
-			{ nameOnMap: 'Fungi', useCode: 'fungus' },
-			{ nameOnMap: 'Bathysmal Vishap', useCode: 'bathysmal-vishap-hatchling' },
-			{ nameOnMap: 'The Eremites', useCode: 'eremite' },
-		],
+		map: {
+			search: [
+				// enemies
+				{ nameOnMap: 'Fatui Agent', useCode: 'fatui-pyro-agent' },
+				{ nameOnMap: 'Fatui Mirror Maiden', useCode: 'mirror-maiden' },
+				{ nameOnMap: 'The Black Serpents', useCode: 'shadowy-husk' },
+				{ nameOnMap: 'Red-Finned Unagi', useCode: 'unagi' },
+				{ nameOnMap: 'Adorned Unagi', useCode: 'unagi' },
+				{ nameOnMap: 'Fungi', useCode: 'fungus' },
+				{ nameOnMap: 'Bathysmal Vishap', useCode: 'bathysmal-vishap-hatchling' },
+				{ nameOnMap: 'The Eremites', useCode: 'eremite' },
+				// items
+				{ nameOnMap: 'Unagi Meat', useCode: 'eel-meat' },
+			],
+		},
 	},
 }
 

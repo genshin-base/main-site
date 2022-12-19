@@ -1332,7 +1332,7 @@ crimson-witch-of-flames:
       en: Pyro DMG Bonus +15%
       ru: Увеличивает бонус Пиро урона на 15%.
     "4":
-      en: Increases Overloaded and Burning, and Burgeon DMG by 40%. Increases Vaporize
+      en: Increases Overloaded, Burning, and Burgeon DMG by 40%. Increases Vaporize
         and Melt DMG by 15%. Using Elemental Skill increases the 2-Piece Set
         Bonus by 50% of its starting value for 10s. Max 3 stacks.
       ru: Увеличивает урон реакций Перегрузка, Горение и Цветение на 40%, а урон
@@ -2313,6 +2313,563 @@ defenders-will:
               Если он готов в полной мере,
               даже если однажды он не сможет защитить свою землю,
               друга, или ту девушку, которая так любит петь…
+desert-pavilion-chronicle:
+  code: desert-pavilion-chronicle
+  name:
+    en: Desert Pavilion Chronicle
+    ru: Хроники Чертогов в пустыне
+  rarity: 5
+  sets:
+    "2":
+      en: Anemo DMG Bonus +15%
+      ru: Даёт 15% бонус Анемо урона.
+    "4":
+      en: When Charged Attacks hit opponents, the equipping character’s Normal Attack
+        SPD will increase by 10% while Normal, Charged, and Plunging Attack DMG
+        will increase by 40% for 15s.
+      ru: Попадание заряженной атакой на 15 сек. повышает скорость обычной атаки на
+        10%, а урон обычной атаки, заряженной атаки и атаки в падении – на 40%.
+  pieces:
+    flower:
+      name:
+        en: The First Days of the City of Kings
+        ru: Рождение города королей
+      description:
+        en: An artificial flower that shimmers with a strange light. If you incline your
+          ear to it, you can vaguely hear charming laughter issuing from within.
+        ru: Искусственный цветок излучает необычное сияние. Если приложить ухо, то можно
+          расслышать тихий смех.
+      story:
+        en:
+          - p: >-
+              Fallen noble, please heed this man so old and blind.
+
+              Heed the lessons of Gurabad, heed the evanescence of the flowers made by man.
+
+              Heed the king of common birth, and the mad love and boiling fury possessed by the Jinn…
+          - p: >-
+              Legend has it that the Lord of the Sands made a pact with humanity
+              after the passing of his lover, with the Jinn as his envoys.
+
+              Only those who possessed hearts of iron and were untainted by the allure of corruption,
+
+              Could serve as a vassal-king and guide the people, like a shepherd tending to a flock.
+
+              Just like that, under the merciful yet stern gaze of her master, the Jinni found her choice…
+
+              Ormazd, a young shepherd at the time, fell in love with the lily-born Liloupar.
+          - p: >-
+              “I shall grant you a hundred generations of blessings, at the
+              price of sharp retribution and the spilling of red wine.”
+
+              “For the mad love that we Jinn possess is chained to greed and want, and carries with it self-deigned retribution.”
+          - p: >-
+              Yet, beneath the light of the moon, Ormazd failed to take heed of
+              these warnings…
+
+              It was as if such fated punishment was still far from this valiant youth.
+
+              Under the guidance of the Jinni, the young shepherd became the leader of his nomadic clan,
+
+              And as time went on, Ormazd defeated his divided rivals and found himself crowned the vassal king.
+          - p: >-
+              Gurabad bloomed like a man-made flower in a cliff wall, becoming
+              the capital of the mortals.
+
+              Once a shepherd, Ormazd had now become the vassal king, proxy of the Lord of the Sands.
+
+              Yet, even as the flowers bloomed and their fragrance filled the air, who would have thought that…
+
+              The most bitter and violent demise was to follow the most vibrant bloom.
+          - p: >-
+              Following the old tales told to him by his master, Xiphos began
+              his journey to the city of sapphires,
+
+              Toward the lessons buried beneath the sands of yesteryear, which he would in future find repeated as the winds of infinite time blew…
+        ru:
+          - p: >-
+              О падшие вельможи, послушайте меня, слепого старца.
+
+              Я расскажу вам об уроках Гюрабада и о мимолётности цветов, созданных людьми.
+
+              Я расскажу вам о царе скромного происхождения, о безудержной любви и лютой обиде джинна…
+          - p: >-
+              Легенда гласит, что Владыка Песков заключил договор с людьми после
+              смерти своей возлюбленной, а джинны стали его посланниками.
+
+              Лишь те, чьи сердца не обратились в камень от невзгод, и те, кто не заразились отравой лживых миражей,
+
+              могли претендовать на титул вассального царя, чтобы вести народ, подобно доброму пастырю.
+
+              Вот так, под милосердным, но строгим взглядом господина, джинн сделала свой выбор…
+
+              Молодой Ормазд-шах, который в то время был простым пастухом, и рождённая из водяной лилии Лилупар полюбили друг друга.
+          - p: >-
+              «Я дам тебе своё благословение на сто поколений, но ценой за него
+              будет кровавая месть и красное вино.
+
+              Ибо безумная любовь джинна всегда сопровождается ненасытными желаниями и влечёт за собой жестокую и якобы справедливую кару».
+          - p: >-
+              Однако под светом луны Ормазд-шах не внял этим предупреждениям…
+
+              Казалось, что назначенное судьбой наказание слишком далеко от этого доблестного юноши.
+
+              Под руководством джинна молодой пастух стал вождём своего клана кочевников.
+
+              Со временем Ормазд-шах победил своих разобщённых соперников и был коронован как вассальный царь.
+          - p: >-
+              Гюрабад расцвёл, подобно рукотворному цветку на отвесной скале,
+              став столицей смертных.
+
+              Когда-то Ормазд-шах был пастухом, а теперь стал вассальным царём, доверенным лицом Владыки песков.
+
+              Цветы расцвели, и их аромат наполнил воздух, но никто и подумать не мог, что…
+
+              За прекрасным расцветом последует горький и жестокий конец.
+          - p: >-
+              Следуя указаниям изложенных наставником древних преданий, Ксифос
+              отправился в путь к сапфировому городу.
+
+              Погребённые под песками уроки прошлых лет порой являются вновь, послушные ветрам вечности…
+    plume:
+      name:
+        en: End of the Golden Realm
+        ru: Конец золотого царства
+      description:
+        en: A crystal-clear artificial feather that is one of the legacies of an ancient
+          human realm. The cries of soaring eagles are also sealed within.
+        ru: Искрящееся и кристальное рукотворное перо, сокровище древней цивилизации, в
+          котором запечатан орлиный крик.
+      story:
+        en:
+          - p: >-
+              Young wanderers, please heed this man so old and blind.
+
+              Heed the ruins of Gurabad, heed the culmination of a delusional dream…
+
+              Heed the jewel that shines like a dome of stars, and heed the riven states.
+          - p: >-
+              Towering spires and golden temples were swallowed by a raging
+              tide, and the halls and palaces became the abodes of the ragged
+              poor…
+
+              The infuriated mob followed the will of one wearing a brass mask, while those with wisdom proclaimed this happening the “great plague.”
+
+              Gurabad fell to this black plague, and Lord of the Red Sands fell upon the path of self-destruction…
+
+              Liloupar, born to lilies, found herself repaid with a split soul after falling victim to a plot most insidious,
+
+              While the vast and fertile kingdoms collapsed into the sands overnight. Tribes and kingdoms began the tumult anew…
+
+              From there, the people of the desert oases divided themselves into seven states, with the city of sapphires, Tulaytullah, being one of the greatest.
+          - p: >-
+              “I think I have lived long enough to bear witness to more than my
+              fair share of short-lived fools and villains…”
+
+              “When I was young, the gilded walls once shrouded the sapphire domes like waves covering the moon.”
+
+              “In the days of my youth, the canals of Tulaytullah shone like a luminous lattice, their lights dueling the moon for dominance.”
+
+              “Now, I have been stripped of sight, and yet I must witness nobles falling to slavery, princes cast down by slave-soldiers…”
+
+              “Now, I can no longer see, and yet I speak of dignitaries assassinating the wise and foreign dancers seizing power…”
+
+              “Nations live and die as if in a drunken dream. The beloved and vile alike are all crushed under the weight of a mill like wheat husks.”
+          - p: >-
+              The sapphire sea is wreathed in a fog of lies, which go on to
+              become legends and history—
+
+              A general, once the conqueror of countless cities, was left with but a slave to guide the way,
+
+              While a young slave bore the “key” to restoring their homeland…
+
+              The king who died absurdly because of a hunting falcon was left with bloodied knife marks along his throat,
+
+              And the dancer who made a vow to the prince cared only for the hatred she felt toward the tyrant…
+          - p: >-
+              Mortal hands were molded into the shape of a falcon, and the
+              broken Jinni was infused within it.
+
+              From the cliffs of Gurabad it rose with a cry, sailing past the pitiable desert states…
+
+              Finally arriving in the hands of gilded descendants, the lost memories flaking off like sand.
+
+              The man-made feather lay upon a dune, silently proclaiming the end of nations…
+          - p: >-
+              Through an aged voice, the lost prince recalled the palace burning
+              in his homeland,
+
+              His master at the time had been a general and a poet, loyal to the tyrant who ruined his nation.
+
+              All things will have their rewards and repercussions. One was stripped of sight, the other of their throne…
+
+              All the while, the grinding wheel of fate spun onward, scattering broken hopes across the world.
+        ru:
+          - p: >-
+              О юные странники, послушайте меня, слепого старца.
+
+              Я расскажу вам о руинах Гюрабада и конце иллюзорного сна…
+
+              Я расскажу вам об усеянных самоцветами куполах, о самовольных царствах.
+          - p: >-
+              Высокие шпили и золотые храмы были поглощены бушующим приливом, а
+              залы и дворцы стали обиталищем жалких нищих…
+
+              Разъярённая толпа исполнила волю человека в медной маске, а мудрецы объявили происходящее великой чумой.
+
+              Гюрабад пал жертвой чёрной чумы, а Владыка красных песков встал на путь самоуничтожения…
+
+              Джинн Лилупар, рождённая из водяной лилии, стала жертвой коварного заговора и поплатилась за это своей расколотой душой.
+
+              Огромные плодородные царства в одночасье канули в песок. Племена и царства вновь оказались втянуты в пучину смуты…
+
+              С тех пор жители пустынных оазисов разделились на семь королевств, и сапфировый город Тулайтулла стал величайшим из них.
+          - p: >-
+              «На своём долгом веку мне довелось увидеть на этих золотых
+              равнинах немало мимолётных жизней глупцов и злодеев…
+
+              Прежде я был молод, и позолоченные стены окаймляли сапфировые купола, подобные вздымающимся под луной волнам.
+
+              Прежде я был молод, и каналы Тулайтуллы образовывали светящуюся паутину, чьи огни соперничали с луной за превосходство.
+
+              Теперь я лишился зрения… Но от меня не может укрыться, как благородные обращаются в рабов, а солдаты-невольники низвергают принцев…
+
+              Теперь я лишился зрения… Но от меня не может укрыться, как сановники убивают мудрецов, а иноземные танцовщицы захватывают власть…
+
+              Города и страны живут и умирают, словно в сонном бреду. Огромные жернова перемалывают всех – влюблённых и подлецов – словно шелуху».
+          - p: >-
+              Сапфировое море окутано туманом лжи, которая превращается в
+              легенды и предания…
+
+              Генерал, завоевавший бесчисленные города, остался с одним единственным невольником, который указывал ему путь,
+
+              и молодой раб нёс «ключ» к возрождению их родины…
+
+              На шее погибшего нелепой смертью из-за соколиной охоты царя виднелись кровавые следы от ножа.
+
+              Танцовщица дала клятву принцу, но сердце её было наполнено лишь холодной ненавистью к тирану…
+          - p: >-
+              В умелых руках смертного обрёл форму летящий сокол, и в нём нашла
+              приют сломленная душа джинна.
+
+              Он с криком взмыл с утёса Гюрабада, пролетая мимо жалких пустынных городов…
+
+              И окончил свой полёт в руках позолоченных потомков, стряхивая с себя воспоминания, словно песок.
+
+              Рукотворное перо осталось лежать на дюне, безмолвно предвещая конец царств…
+          - p: >-
+              Старческим голосом изгнанный принц вспоминал, как горел дворец на
+              его родине.
+
+              Его наставник тогда был генералом и поэтому на службе у тирана, который вёл его родную страну к гибели.
+
+              У всего есть последствия. Кто-то теряет зрение, а кто-то – трон…
+
+              Тем временем жернова судьбы продолжают вращаться, разбрасывая по миру разбитые надежды.
+    sands:
+      name:
+        en: Timepiece of the Lost Path
+        ru: Часы потерянного пути
+      description:
+        en: An ancient mechanical clock. The Jinni fragments continue to emit light at
+          its center and vibrate ever so slightly, as if to say something…
+        ru: Старинные механические часы. Фрагменты джинна внутри сияют и слегка
+          вибрируют, будто что-то говорят…
+      story:
+        en:
+          - p: >-
+              “Mother… Mother…!”
+
+              “Born old, and with unfathomable power supported by a shattered consciousness…”
+
+              “Neither knowing the sweetness of milk nor tasting the warmth of the womb…”
+
+              “With tears made steam by the glaring sun and momentary joys fed to the crushing turn of gears…”
+
+              “We come not from loving union, but from hatred and alienation.”
+          - p: >-
+              “Mother… Mother…!”
+
+              “We are without pride, and lack any wisdom to boast of…”
+
+              “There is no space for which we can exist, no leisure offered to us as rest…”
+
+              “Our voices have been replaced with copper tubes, and our swollen stomachs lack an umbilicus …”
+
+              “To the mother who never bore us, may pestilence and woe fester in your every moment…”
+          - p: >-
+              “Mother… Mother…!”
+
+              “What are we but soulless machines, slaves amongst Jinn…”
+
+              “We have no names, nor has anyone ever heeded our cries…”
+
+              “Our vessels were carved into shape by vicious torments. Hatred fuels us…”
+
+              “This gathering hate builds within, creating the desire to destroy…”
+          - p: >-
+              “In the name of the moon’s bright, disfigured face, we make this
+              final pledge…”
+
+              “May the sands chip through your withered lungs. May all that is green be scorched to ashes…”
+          - p: >-
+              “And at last, we shall break the chains that have bound us since
+              our inception…”
+
+              “And we will return to the embrace of our unjustly tormented birth mother, Shirin…”
+        ru:
+          - p: >-
+              «Мама… Мама!»
+
+              «Мы рождаемся старыми, и лишь наш сломленный разум поддерживает безграничную силу…
+
+              Мы не знали сладости материнского молока и тепла материнской утробы…
+
+              Наши слёзы иссушило палящее солнце, а эфемерную радость раздавило шестернями…
+
+              Нас объединяет не любовь, а ненависть и отчуждение…»
+          - p: >-
+              «Мама… Мама!»
+
+              «Мы потеряли всю свою гордость и не можем похвастаться мудростью…
+
+              У нас нет ни пространства для существования, ни времени для отдыха…
+
+              Медные трубы заменили наши голоса, и на наших раздутых животах нет следов пуповины…
+
+              Мать, не родившая нас, да постигнут тебя болезни и несчастья…»
+          - p: |-
+              «Мама… Мама!»
+              «Кто мы, бездушные машины, рабы среди джиннов?
+              Нам не давали имён, и никто не слышал наших криков…
+              Наши тела источены тяжестью жестоких мук. Ненависть питает нас…
+              Ненависть накапливается в нас, порождая мечты об уничтожении…
+          - p: >-
+              Когда лунный свет освещает наши обезображенные лица, мы даём
+              последнее обещание…
+
+              Пусть песок заполнит твои лёгкие, пусть всё зелёное будет выжжено дотла…
+          - p: >-
+              Тогда мы разорвём цепи, сковывавшие нас с первого дня нашего
+              существования…
+
+              И вернёмся в объятия нашей несправедливо истязаемой матери Сирин…»
+    goblet:
+      name:
+        en: Defender of the Enchanting Dream
+        ru: Хранитель дивной мечты
+      description:
+        en: An ancient golden cup that is both marvelously and luxuriously wrought.
+          Murmurings can be heard within its empty innards.
+        ru: Старинный золотой кубок удивительной прекрасной формы. Из его пустого нутра
+          раздаётся тихое бормотание.
+      story:
+        en:
+          - p: >-
+              Travelers here to sup from the oasis, please heed this man so old
+              and blind.
+
+              Heed the dirge of Gurabad, heed the enrapturing dreams of King Deshret…
+
+              Heed the faithful but broken Jinn, and heed a betrayal between companions.
+          - p: >-
+              Legend has it that when the Lord of Flowers passed, her countless
+              Jinn turned to serve King Deshret.
+
+              King Deshret searched in vain for the ancient paradise where the divine needle fell, and there created an eternal oasis…
+
+              Among the greatest Jinn was one named Ferigees, granted governance of the oasis by King Deshret.
+
+              To protect her mistress’ slumber, she once used her powers to keep the springs ever-flowing,
+
+              And so she spread greenery across the desert like stars in the sky, providing sanctuary to folk who had lost their homes…
+          - p: >-
+              Later, under the guidance of the Jinni Liloupar, the vassal states
+              of the mortal kingdoms built their cities around the “Eternal
+              Oasis.”
+
+              Bearing loyalty to the Lord of Flowers and compassion for the newborn realms, Ferigees decided to make a sacrifice.
+
+              Disobeying the charge given to her by King Deshret, the great Jinni caged her own body in shackles of frost,
+
+              Turning herself into a seal in the shape of a crystalline cup, restraining the wrath of the vast sands, guarding the cities of the mortals with her immobile form…
+          - p: >-
+              “But there is a season for all things, and thus all things must
+              change. As we lean on each other today, so too will we abandon
+              each other tomorrow.”
+
+              “To lose the freedom which the Jinn are so proud of and a vessel that can partake in joy and love, to feel the diminishment of one’s spirit by the day.”
+
+              “The nymph of the water lilies drew mortal kings into her machinations with honey-tinged lies, and the Lord of the Sands sank deep into a dream of madness…”
+
+              “But I have long been waiting — always waiting — in a sleepless dream… Waiting for the King of Sand to fulfill his ancient promise.”
+          - p: >-
+              Mind and body festooned with wretched machinery, she awaits the
+              end of her mistress’ slumber,
+
+              Bearing a sullen hope as she silently guards the broken dreams of this empire of sand.
+
+              Even should the spring be mixed with bitter gravel, even if the oasis is swallowed by sand…
+
+              Even amidst the eternal pulsing of machines, she listens for the coming of the footsteps that will bring change.
+          - p: >-
+              “But, my teachers so sightless, I was born into a slave’s chains,
+              and had everything taken from me when I was young…”
+
+              “Might I, abandoned by the fates like the dunes of sand as I was, be worthy of a change in my fortunes?”
+        ru:
+          - p: >-
+              О путники, пришедшие в оазис утолить свою жажду, послушайте меня,
+              слепого старца.
+
+              Я расскажу вам о погребальной песне Гюрабада, о пленительных мечтах царя Дешрета…
+
+              Я поведаю вам о героической душе – верной, но сломленной; о предательстве среди единомышленников.
+          - p: >-
+              Легенда гласит, что, когда Повелительница цветов покинула этот
+              мир, её бесчисленные джинны перешли на службу к царю Дешрету.
+
+              Немало сил истратил царь Дешрет, разыскивая былой рай там, где упали небесные столпы, чтобы построить оазис вечности…
+
+              Одну из величайших джиннов звали Фериджиз, и ей царь Дешрет даровал власть над оазисом.
+
+              Чтобы защитить сон своей госпожи, силой джинна она сделала неиссякаемым источник вод.
+
+              И покрылась пустыня зеленью, даруя убежище людям, лишившимся крова…
+          - p: >-
+              Позднее смертные, наставляемые джинном Лилупар, устроили вокруг
+              оазиса свои королевства.
+
+              Храня верность Повелительнице цветов и испытывая жалость к новым царствам, Фериджиз решила принести себя в жертву.
+
+              Ослушавшись приказа царя Дешрета, великий джинн заключила своё тело в морозные оковы,
+
+              превратив себя в печать в форме хрустальной чаши, которая оставалась неизменной и неподвижной, сдерживая гнев могучих песков и оберегая города смертных…
+          - p: >-
+              «Но всему приходит конец, всё меняется. Пути тех, кто сегодня
+              служит друг другу опорой, завтра разойдутся.
+
+              Потерять свободу, которой так гордятся джинны; потерять тело, в котором можно жить в радости и любви; чувствовать, как дух иссякает с каждым днём…
+
+              Нимфа водяных лилий вовлекла смертных королей в свои интриги с медовым привкусом лжи, и Владыка песков погрузился в сон безумия…
+
+              Но я жду, давно жду в бессонной дремоте… Жду, когда царь Дешрет выполнит своё древнее обещание».
+          - p: >-
+              В механических тисках, удерживающих душу и тело, она ждёт
+              пробуждения своей госпожи,
+
+              сберегая скорбную надежду, молча охраняя разбитые мечты этой песчаной империи.
+
+              Пусть даже родник смешается с горьким гравием, пусть даже оазис будет поглощён песком…
+
+              Среди вечной пульсации машин она ждёт звука шагов, которые принесут перемены.
+          - p: >-
+              «Но скажи, слепой наставник… Моим уделом с рождения были рабские
+              цепи и горечь утрат…
+
+              Непредсказуемая, словно зыбкие дюны, судьба оставила меня. Могу ли я надеяться на перемену участи?»
+    circlet:
+      name:
+        en: Legacy of the Desert High-Born
+        ru: Наследие пустынной знати
+      description:
+        en: Earrings made from amber gold that shines with a strange light.
+        ru: Серьги из янтаря и золота, инкрустированные самоцветом, чарующе
+          переливаются.
+      story:
+        en:
+          - p: >-
+              Merchant sheltering from the storm, please heed this man so old
+              and blind.
+
+              Heed the past of Gurabad, heed the retribution its people sought for themselves.
+
+              Heed the newborn nobility and the peasants who dwell beneath the palace…
+          - p: >-
+              Legends say that when Gurabad rose, the kingdoms of man joined
+              many oases into one.
+
+              At this time, the scattered tribes and the short-lived states obeyed the will of Ormazd alone.
+
+              Ormazd took the Lord of the Desert as his lord-patron, constructing palaces and temples to facilitate his worship.
+
+              Slaves were taken from the tribes, servitude was demanded from states, and sacrifices were required of the cities…
+
+              The city thrived, and nobles and slaves alike lived in its shade.
+          - p: >-
+              Peering down from on high at the priests and servants below,
+              scurrying like ants, the Jinni concubine could only sigh
+              mournfully.
+
+              As an attendant of the Goddess of Flowers, she believed she had chosen the ideal king, but didn’t wish for him to be addled by vanity.
+
+              So, the Jinni offered gentle advice between the sheets, vainly trying to change the king’s mind…
+
+              Ormazd took the conventions of rule and slavery as a given, regarding her words only as the soft nothings of a lover.
+          - p: >-
+              “To infuse love into my vessel was to be in constant company with
+              everlasting and ever-demanding wants.”
+
+              “The search for a dream, for a homeland, and for my beloved to transcend mundane ideals.”
+
+              “But now, my beloved is deep in the throes of hypocrisy and greed. He has taken on the habits of an ordinary tyrant.”
+
+              “To quell my fury at this betrayal, I will impose upon you three generations of ruination.”
+          - p: >-
+              Silently, the Jinni removed the earrings he had given her as a
+              sign of her resolve,
+
+              A poisonous scheme already manifesting in a heart turned cruel.
+          - p: >-
+              “Xiphos, my child, hate burns everything like wildfire, leaving
+              only the ashes of madness.”
+
+              “Yet uncontrolled love is even more feral. A great many evils are born from unshackled love…”
+        ru:
+          - p: >-
+              О торговцы, укрывшиеся от песчаной бури, послушайте меня, слепого
+              старца.
+
+              Я расскажу вам о прошлом Гюрабада и о каре, которую его жители навлекли на себя.
+
+              Я расскажу вам о новоявленных сановниках и о невольниках у стен дворца…
+          - p: >-
+              Легенда гласит, что, когда возвысился Гюрабад, человеческий царь
+              объединил все оазисы в один.
+
+              В это время разрозненные племена и недолговечные государства подчинялись одной лишь воле Ормазд-шаха.
+
+              Он объявил Владыку песков своим покровителем и выстроил для поклонения ему дворцы и храмы.
+
+              Из племён забирали рабов, от государств требовали покорности, а от городов – подношений…
+
+              Город-государство процветал, а вельможи и рабы равно пребывали в его мрачной тени.
+          - p: >-
+              Взирая с высокой башни на копошащихся внизу жрецов и рабов,
+              наложница-джинн грустно вздыхала.
+
+              Как фамильяр богини цветов, она считала, что выбрала идеального царя, но не хотела, чтобы тщеславие одурманило его.
+
+              Жаркими ночами она делала царю нежные внушения, тщетно пытаясь переубедить его…
+
+              Для Ормазд-шаха рабство было непреложным условием царствования, что бы ни говорила его возлюбленная.
+          - p: >-
+              «Впустив в своё вместилище любовь, я оказалась в плену несбыточных
+              желаний.
+
+              Стремления к мечте, тоски по дому и надежды, что возлюбленный окажется превыше мирской тщеты.
+
+              Но мой возлюбленный погряз в лицемерии и жадности. Он превратился в обычного тирана.
+
+              Пусть обратятся мои скорбь и гнев на предателя в кару, что падёт на три поколения».
+          - p: |-
+              В знак решимости джинн молча сняла подаренные им серьги.
+              Решимость покарать любимого отравила её окаменевшее сердце.
+          - p: >-
+              «Ксифос, дитя моё, ненависть сжигает всё, словно лесной пожар,
+              оставляя лишь пепел безумия.
+
+              Однако безудержная любовь ещё более жестока. От неё рождается множество зол…»
 echoes-of-an-offering:
   code: echoes-of-an-offering
   name:
@@ -2886,7 +3443,7 @@ emblem-of-severed-fate:
 
               As he looked around at the small shrine he had destroyed, holding the tengu’s trembling hand,
 
-              These words lay on the tip of Doukei’s tongue even as he stared at the black feathers that he had sliced off.
+              These words lay on the tip of Michihiro’s tongue even as he stared at the black feathers that he had sliced off.
           - p: “You did touch me, after all. I must admit that this is clearly your
               victory.”
           - p: Victory has not been decided yet. Let’s meet again next year, he wanted to
@@ -2906,7 +3463,7 @@ emblem-of-severed-fate:
 
               “You are now ‘Iwakura.’ You are no longer the ‘Mikoshi’ who shoulders the burden of oni blood.”
           - p: >-
-              “Goodbye, Doukei, and please forget me.”
+              “Goodbye, Michihiro, and please forget me.”
 
               “Use your sword for the Iwakura bloodline… and open a path that belongs to the Iwakura alone.”
         ru:
@@ -2926,7 +3483,7 @@ emblem-of-severed-fate:
 
               Осматривая разрушенное им здание и держась за трясущуюся руку тэнгу,
 
-              Глядя на срезанные им черные перья, Докэй намеревался сказать так.
+              Глядя на срезанные им черные перья, Митихиро намеревался сказать так.
           - p: «Ты меня поймал. Я не могу отрицать, что ты действительно победил».
           - p: «Ещё неизвестно, кто победил. Встретимся снова в следующем году», – хотел он
               сказать.
@@ -2945,7 +3502,7 @@ emblem-of-severed-fate:
 
               «Теперь ты Ивакура, ты больше не Микоси, несущий кровь демона».
           - p: >-
-              «Прощай, Докэй. Забудь меня и своим мечом
+              «Прощай, Митихиро. Забудь меня и своим мечом
 
               во имя крови Ивакуры открой путь, доступный одному только Ивакуре».
     sands:
@@ -3087,12 +3644,12 @@ emblem-of-severed-fate:
       story:
         en:
           - p: >-
-              With his secret sword technique, Tengu Sweeper, Iwakura Doukei
+              With his secret sword technique, Tengu Sweeper, Iwakura Michihiro
               became the Kujou Clan’s swordsmanship instructor.
 
               He also received the title of “Douin” and founded a successful sword school.
 
-              As he headed off to take up his post at the Kujou Estate, Doukei, who had long learned how to drink,
+              As he headed off to take up his post at the Kujou Estate, Michihiro, who had long learned how to drink,
 
               Stepped into the branch shrine that had been utterly destroyed by his completion of the Tengu Sweeper.
 
@@ -3114,12 +3671,12 @@ emblem-of-severed-fate:
               But never again would the two set foot in that desolate yard.
         ru:
           - p: >-
-              Зная уникальный стиль владения мечом «Гроза Тэнгу», Ивакура Докэй
-              стал инструктором по фехтованию клана Кудзё.
+              Зная уникальный стиль владения мечом «Гроза Тэнгу», Ивакура
+              Митихиро стал инструктором по фехтованию клана Кудзё.
 
               Он получил титул «Доина» и основал успешную школу фехтования.
 
-              Прежде чем вступать на должность в поместье Кудзё, Докэю пришлось научиться пить.
+              Прежде чем вступать на должность в поместье Кудзё, Митихиро пришлось научиться пить.
 
               Он в последний раз вступил на место, полностью разрушенное тайной техникой владения мечом «Гроза Тэнгу».
 
@@ -3194,6 +3751,485 @@ emblem-of-severed-fate:
               Словно разогнав тучи, она дала ему новое имя, новую жизнь,
               она бросила ему ржавый клинок и сказала поразить им тэнгу,
               а когда его меч сломался, это были её последние слова к нему…
+flower-of-paradise-lost:
+  code: flower-of-paradise-lost
+  name:
+    en: Flower of Paradise Lost
+    ru: Цветок потерянного рая
+  rarity: 5
+  sets:
+    "2":
+      en: Increases Elemental Mastery by 80.
+      ru: Увеличивает мастерство стихий на 80 ед.
+    "4":
+      en: The equipping character’s Bloom, Hyperbloom, and Burgeon reaction DMG are
+        increased by 40%. Additionally, after the equipping character triggers
+        Bloom, Hyperbloom, or Burgeon, they will gain another 25% bonus to the
+        effect mentioned prior. Each stack of this lasts 10s. Max 4 stacks
+        simultaneously. This effect can only be triggered once per second. The
+        character who equips this can still trigger its effects when not on the
+        field.
+      ru: Увеличивает урон реакций Бутонизация, Вегетация и Цветение экипированного
+        этим набором персонажа на 40%. Кроме того, активация реакций
+        Бутонизация, Вегетация и Цветение экипированным этим набором персонажем
+        усилит этот эффект на 25%. Каждое суммирование длится 10 сек. Эффект
+        складывается до 4 раз, может возникнуть раз в 1 сек. и активируется,
+        даже если экипированный этим набором персонаж не активен.
+  pieces:
+    flower:
+      name:
+        en: Ay-Khanoum’s Myriad
+        ru: Великолепие Ай-Ханум
+      description:
+        en: An amethyst bloom that has been beautifully sculpted in the image of an
+          ancient, extinct flower.
+        ru: Чудесный аметист, искусно воссоздавший форму исчезнувшего древнего цветка.
+      story:
+        en:
+          - p: >-
+              In a bygone time which only the Jinn recall, the Lord of Flowers
+              was cast aside by the heavens.
+
+              Her magnificent vessel was left a savaged husk, her kinsfolk punished by way of being stripped of their minds…
+          - p: >-
+              Legend has it that the Lord of Flowers wandered the barren wastes
+              for seventy-two nights…
+
+              Her heels were worn through by the merciless gravel. Her wounds gushed into limpid springs, turning into streams with no boundaries.
+
+              Thence, those streams flowed into verdant gardens, from which sprouted night-blue water lilies.
+
+              Water lilies are the mothers of the Jinn, and the Jinn were birthed from intoxicating dreams and the bitter memories of loss.
+          - p: >-
+              The first Jinn were creatures of wisdom. They indulged in innocent
+              dreams and love just as sweet.
+
+              To thank their creator, the infantile Jinn took their mistress by the arm and granted her a laurel wreath of wild chrysanthemums.
+          - p: >-
+              “Oh, Lord of Flowers, master of the garden, we beg of thee — stay,
+              leave us not!”
+
+              “Yes. Please, dream-mother, mistress of forgetting and wine, we beg of you — remain queen of this garden.”
+          - p: >-
+              As so, detained by the gentleness of the Jinn, the exiled goddess
+              remained in this garden of flowers.
+
+              Gorgeous purple flowers bearing semblance to the moon bloomed wherever she stopped by. They were named “Padisarah.”
+        ru:
+          - p: >-
+              В далёкие времена, о которых вспоминают только джинны,
+              Повелительница цветов была изгнана небесами.
+
+              Её прекрасное тело было изранено, а её сородичей лишили разума…
+          - p: >-
+              Легенда гласит, что Повелительница цветов семьдесят две ночи
+              бродила по бесплодным пустошам…
+
+              Её ноги были истёрты безжалостными камнями. Из её ран брали начало чистые источники, обращаясь в бескрайние потоки.
+
+              Эти ручьи орошали зелёные сады, в которых росли синие, как ночь, водяные лилии.
+
+              Водяные лилии – матери джиннов, которые родились из пьянящих снов и горьких воспоминаний о потерях.
+          - p: >-
+              Первые джинны были мудрыми созданиями. Они предавались невинным
+              мечтам и сладкой любви.
+
+              В благодарность своей создательнице юные джинны увенчали свою госпожу венком из диких хризантем.
+          - p: >-
+              «О, Повелительница цветов, владычица сада, мы умоляем тебя –
+              останься, не покидай нас!»
+
+              «Да. Просим тебя, мать грёз, властительница забытья и вина, мы умоляем тебя – оставайся царицей этого сада».
+          - p: >-
+              Так, пленённая нежностью джиннов, изгнанная богиня осталась в этом
+              цветущем саду.
+
+              Там, где она ступала, расцветали прекрасные, словно лунная ночь, фиолетовые цветы. Их назвали падисарами».
+    plume:
+      name:
+        en: Wilting Feast
+        ru: Угасающий пир
+      description:
+        en: A feather left behind by a long-extinct bird species. It was inlaid with
+          gold and gems by the ancient adherents of the Goddess of Flowers.
+        ru: Перо давно вымершей птицы. Инкрустировано золотом и самоцветами
+          последователями древней богини цветов.
+      story:
+        en:
+          - p: >-
+              In a bygone time of which only the Jinn weep, the Mistress of
+              Oases made a final choice.
+
+              At that moment, she learned that her fate was no riddle, but the key to opening a mysterious doorway.
+          - p: >-
+              Through King Deshret’s words and aspirations, she saw the
+              possibility to transcend the absurd shackles that governed this
+              world.
+
+              Rejecting the gift granted by the divine throne, the red-crowned king sought a new path of his own volition…
+
+              Though the future she revealed was ruinous and bleak, the king refused to yield an inch.
+
+              Even knowing that the journey was to be fraught with peril, even knowing those dearest to him were certain to fade before his very eyes…
+
+              The Red Lord chose a noble lie, shepherding his followers on a path toward oblivion.
+          - p: >-
+              “You seek but to chain the winds. Upon the tombstone of divinity
+              shall humanity become the god of gods.”
+
+              “Such a carefree dream was certain to be unmade. In ruins where lies are sundered, humanity will become the king of kings.”
+          - p: >-
+              The Lord of Flowers capitulated to her friend’s folly, finding a
+              most admirable rebellion burning within the ambitions of the god.
+
+              An idea that joined the wisdom of thousands, and the great attempt at binding their dreams to power.
+
+              What hides here is more than lies, but also the future of humanity, burning like the sparks of hope…
+          - p: >-
+              Dreams will always dissolve, their landscapes fated to collapse —
+              this is the true meaning of the blooming flowers.
+
+              Only by suffering through the destruction of a god’s delusions can humanity learn to rise against divine will…
+
+              Just as the stubborn God King orchestrated this secret rebellion, surviving on the strength of individual will alone.
+
+              However, the Lord of Flowers never knew a love that could be as sweet as wine, let alone the paltriness of human emotion.
+
+              Brilliant as she was, even she could not easily predict when these little beings would finally realize the truth…
+          - p: “… Have these so-called gods not been superfluous to you since the
+              beginning?”
+        ru:
+          - p: >-
+              В далёкие времена, которые оплакивают только джинны, владычица
+              оазиса сделала окончательный выбор.
+
+              В этот момент она осознала, что её судьба не загадка, а ключ от таинственной двери.
+          - p: >-
+              В словах и стремлениях царя Дешрета она увидела возможность выйти
+              за пределы нелепых порядков, управляющих этим миром.
+
+              Отвергнув дар божественного престола, царь в красной короне прокладывал свой путь, следуя собственной воле…
+
+              И несмотря на открытые ей мрачные картины погибельного будущего, царь отказался отступать.
+
+              Даже зная, что путь будет сопряжён с опасностями, даже зная, что самые дорогие ему люди угаснут на его глазах…
+
+              Красный царь выбрал возвышенную ложь, направив своих последователей по пути забвения.
+          - p: >-
+              «Ты пытаешься поймать ветер. На могилах божеств люди станут богами
+              среди богов.
+
+              Бестревожным мечтам не суждено сбыться. Среди руин порушенной лжи люди станут царями среди царей».
+          - p: >-
+              Повелительница цветов не выступила против сумасбродства друга,
+              видя в его амбициях достойное уважения пламя божественного
+              бунтарства.
+
+              Идея собрать мудрость всех людей, попытка связать грёзы и силу власти…
+
+              В этой идее крылось большее, чем обман, – в ней таилось будущее простых смертных, проблеск надежды…
+          - p: >-
+              Грёзам суждено развеяться, их прекрасные образы обречены
+              рассыпаться в прах – таков истинный смысл распускающихся цветов.
+
+              Только страдая от разрушения божественных заблуждений человечество может научиться восставать против воли богов…
+
+              Подобно тому, как упрямый Царь богов поднял ради неё тайное восстание, выстояв только за счёт собственной силы воли.
+
+              Однако Повелительница цветов никогда не знала любви, что бывает слаще вина, и ещё меньше она разбиралась в никчёмных человеческих чувствах.
+
+              Какой бы гениальной она ни была, даже ей было тяжело предсказать, когда эти мимолётные существа наконец поймут правду…
+          - p: «Разве так называемые божества не были для вас лишними с самого начала?»
+    sands:
+      name:
+        en: A Moment Congealed
+        ru: Застывшее мгновение
+      description:
+        en: These sands no longer move no matter how you tilt the hourglass, now and
+          forever defying the drift of time itself.
+        ru: Застывшие песочные часы больше не внемлют течению времени, как бы их ни
+          поворачивали.
+      story:
+        en:
+          - p: >-
+              In a bygone time of which only the Jinn could sigh, the Lord of
+              the Desert built a cemetery for his beloved.
+
+              With the gems beneath the deep sands as a power source and the aid of the Jinn, he built an eternal oasis.
+          - p: >-
+              Eons later, the legend of the “Eternal Oasis” spread amongst the
+              wandering tribes of the desert.
+
+              Wanderers claim that it is a place of ever-flourishing greenery, ruled by the slumbering Goddess of Flowers.
+
+              Wanderers say that Ferigees, last mother of the Jinn, guards the grand gates to the oasis,
+
+              Blessing every mortal that comes before her with unwavering tenderness, be they good or ill…
+          - p: >-
+              The matriarchs of the Tanit, Uzza, Shimti, and other tribes
+              besides all refer to themselves as “Daughters of the Flower
+              Goddess.”
+
+              With faith as their foundation and united by blood, they are further joined by mutual imaginations of the fabled Padisarah garden.
+
+              The scattered, struggling tribes of the desert seek the Eternal Oasis and endless knowledge.
+          - p: >-
+              Just as the prophecy left by their goddess foretold, even after
+              the scouring of civilization, humanity yet survives by their
+              tenacity…
+
+              Even deprived of the guidance of gods, even if they were forced to unite via the memory of a goddess long dead,
+
+              This tear-sated desert of salt has been unable to halt humanity’s tread, unable to stop them from searching for the immortal lie that is the “Eternal Oasis.”
+          - p: >-
+              “My lord… why do you command the dunes to stop flowing? Why do you
+              bray at the winds to stop them from blowing?”
+
+              “Just like this hourglass. Should these crystal sands mingle into a congealed whole, what would be the meaning of its existence then?”
+
+              “Eternity is no paradise, but something that is nigh-impossible to deconstruct, an obstinate stain that cannot be mended.”
+
+              “Those who bloom like flowers, die like flowers, and rise again with the seasons like flowers can never be troubled by the likes of ‘death.'”
+          - p: >-
+              Once, in a moment in time, the three companions engaged in idle
+              chatter, their words seized by the flowing winds of the desert and
+              carried across the annals of time…
+
+              Somewhere in a faraway desert, the imaginings of a time-petrified oasis remains in the minds’ of a tribe,
+
+              Yet these rootless wandering people continue the cycle of life and death amidst the flowing sands of the dunes…
+        ru:
+          - p: >-
+              В далёкие времена, о которых сокрушаются только джинны, царь
+              Дешрет воздвиг гробницу для своей возлюбленной.
+
+              Призвав джиннов и применив силу драгоценных камней под толщей песка, он создал оазис, где время замедляет ход.
+          - p: >-
+              Спустя много веков легенда об оазисе вечности распространилась
+              среди бродячих племён пустыни.
+
+              Кочевники говорят, что это место вечно цветущей зелени, где правит спящая богиня цветов.
+
+              Кочевники говорят, что Фериджиз, последняя мать джиннов, охраняет великие врата оазиса.
+
+              Она с неизменной нежностью благословляет каждого приходящего смертного, будь он праведником или злодеем…
+          - p: >-
+              Матриархи племён Танит, Узза и Шимти, как и прочих, называют себя
+              дочерьми Повелительницы цветов.
+
+              Вера является их опорой, их роднит кровь, но ещё больше их объединяет общая мечта о сказочном саде с падисарами.
+
+              Разрозненные, отчаявшиеся племена пустыни ищут оазис вечности и безграничные знания.
+          - p: >-
+              Как и предсказывало пророчество, оставленное их богиней, даже
+              после уничтожения цивилизации человечество продолжает выживать
+              благодаря своему упорству…
+
+              Даже лишённые божественного руководства, племена пустыни нашли способ объединиться, хотя бы вокруг воспоминаний о давно ушедшей богине.
+
+              Пустыня, просоленная бесчисленными слезами, не смогла остановить продвижение смертных, так же как бесконечная ложь об оазисе вечности не смогла остановить племена от прекращения поисков.
+          - p: >-
+              «Мой господин… зачем ты велишь дюнам остановиться? Зачем
+              приказываешь ветрам перестать дуть?
+
+              Разве можно остановить изменения? Какой смысл будет в этих часах, если в них склеится песок?
+
+              Вечность – не райский сад, а засохший сор, который не поддаётся попыткам удалить его.
+
+              Цветы расцветают и облетают, а когда приходит пора, распускаются вновь. К чему тогда тревожиться о “смерти”?».
+          - p: >-
+              Однажды три друга вели праздную беседу. Ветер пустыни подхватил их
+              слова и разнёс по летописям времени…
+
+              В сознании племён пустыни сохранились образы оазиса, застывшего в потоке времени.
+
+              И эти скитальцы без устали поддерживают круговорот жизни и смерти среди текучих песков…
+    goblet:
+      name:
+        en: Secret-Keeper’s Magic Bottle
+        ru: Магический сосуд хранителя тайн
+      description:
+        en: A small bottle made of purple crystal. An emerald cap keeps it tightly
+          sealed.
+        ru: Миниатюрный сосуд из фиолетового кристалла, плотно закрытый изумрудной
+          крышкой.
+      story:
+        en:
+          - p: >-
+              In a bygone time on which the Jinn alone are silent, King Deshret
+              poured his deepest ambitions out before the Lord of Flowers…
+
+              As the moonlight’s visage drifted across ripples within a glass of pomegranate wine, the Lord of Flowers finally succumbed to the persuasion of a friend most beloved.
+          - p: >-
+              The words King Deshret spoke that night remain unknown to all.
+              Even the eldest Jinn bestow only silence when asked about that
+              which was said.
+
+              None know what secret desires King Deshret revealed in the dark past daylight, desires that might shock even the wisest of gods.
+
+              But the Lord of Flowers herself drew enlightenment from the exchange. It had been within her calculus — something long foreseen.
+
+              The desert and oasis were sovereigns most high, yet held wild thoughts of rebellion the most strongly.
+          - p: >-
+              “I shall keep your secrets on account of the feelings my heart
+              holds for you and the Lord of Wisdom.”
+
+              “I shall fashion you a bridge to allow you to slake your deepest wants. But you must fear not the crystalline sapphire nail…”
+
+              “I will deliver you unto higher knowledge. But as I have warned, you are fated to lose much in this exchange…”
+
+              “Nevertheless, hide my lesson in your heart. Remember the punishment that once was inflicted on the fallen envoys of heaven.”
+
+              “Know this: if there is to be hope in this world, it will be found kindling within mortals most ordinary.”
+          - p: >-
+              Wreathed in darkness, she guided her dearest friend toward the
+              path to understanding all there was to know about the skies and
+              the abyss.
+
+              Using his body as a conduit and offering the oasis in trade, he let the dazzling radiance consume him to see his deepest desires be made manifest…
+          - p: >-
+              Sandstorms swept in revelrous havoc across the paradise that was
+              now missing one of its gods, folding the skies with yellow sand,
+              swallowing all in calamity…
+
+              King Deshret returned from the swirling sands that devoured the skies. The Lord of Flowers, however, was never seen again.
+          - p: “… I just dreamed of you… feeling your way through the walls of a crystalline
+              maze… All that can be seen… is but sand…”
+        ru:
+          - p: >-
+              В далёкие времена, о которых безмолвствуют джинны, царь Дешрет
+              поведал свои самые сокровенные чаяния Повелительнице цветов…
+
+              Когда луна бледным сиянием освещала бокал гранатового вина, Повелительница цветов поддалась уговорам своего доброго друга.
+          - p: >-
+              Слова, которые царь Дешрет произнёс той ночью, остаются тайной для
+              всех. Даже древнейшие джинны хранят молчание, когда их спрашивают
+              об этом.
+
+              Никто не помнит, какие потаённые желания явил царь Дешрет в ту ночь, но его слова заставили бы содрогнуться даже мудрейших из божеств.
+
+              Но Повелительница цветов всё предвидела и спланировала заранее, а потому осознала глубокий смысл его речей.
+
+              Правители песчаного моря и оазиса были могущественными и благородными, но они вынашивали дикие мысли о предательстве.
+          - p: >-
+              «Я сохраню твой секрет из глубокой привязанности к тебе и
+              Владычице мудрости.
+
+              Я построю для тебя мост, чтобы ты смог воплотить в жизнь безумную мечту. Только не бойся сапфировых столпов…
+
+              Я укажу тебе путь к глубочайшим знаниям, хотя цена за это будет высока…
+
+              Сохрани мой урок в своём сердце. Помни о наказании, которое некогда постигло падших посланников небес.
+
+              Знай: если в этом мире есть надежда, её можно отыскать в простых смертных».
+          - p: >-
+              Под покровом тьмы она направила своего дорогого друга на путь
+              постижения всего, что только можно было узнать о небесах и бездне.
+
+              И стало тело мостом, а оазис платой. И пришла гибель в ослепительном свете – всё ради его безумных мечтаний…
+          - p: >-
+              Песчаные бури пронеслись с неистовой силой по раю, который лишился
+              одного из своих божеств, застилая небеса жёлтым песком, поглощая
+              всё вокруг…
+
+              Царь Дешрет вернулся из бурлящих песков, поглотивших небеса. Однако Повелительницу цветов более никто не видел.
+          - p: «…Ты являешься мне в грёзах… В блужданиях среди стен хрустального лабиринта…
+              Но вокруг лишь песок…»
+    circlet:
+      name:
+        en: Amethyst Crown
+        ru: Аметистовый венец
+      description:
+        en: A crown inlaid with amethyst and emerald. It seems to have been the headgear
+          worn by ancient priests of the Goddess of Flowers.
+        ru: Корона, инкрустированная аметистами и изумрудами, напоминает древний
+          головной убор жрецов богини цветов.
+      story:
+        en:
+          - p: >-
+              In a bygone time of which only the Jinn sing, the Lord of Flowers
+              once met the King of the Red Sands.
+
+              In an age where kings vied against one another for power, King Deshret allowed his throne to be shared with two others.
+          - p: >-
+              The Jinn bequeathed a throne inlaid with emeralds and rubies to
+              celebrate the union between the three friends.
+
+              In honor of the eternal oasis and the flourishing Padisarahs, the Lord of Flowers wore an amethyst crown.
+          - p: >-
+              “But ‘eternity’ is ultimately a lie. Intoxication and love could
+              only grind memories down to broken dreams.”
+
+              “You once asked me why I always sigh. Tonight, while the moon is bright, let me speak to you of things long past…”
+          - p: >-
+              “It was a faraway time of calm and peace. Divine envoys spoke
+              openly with the people then, bringing them the word from the
+              heavens…”
+
+              “But, in time, invaders descended from beyond the firmament, bringing with them destruction, overturning rivers, spreading plagues…”
+
+              “And though the invaders brought war to my former kin, they also brought about illusions that could break through shackles to the land.”
+
+              “But the master of the heavens, consumed by fear for the rising tide of delusion and breakthroughs, sent down the divine nails to mend the land, laying waste to the mortal realm…”
+
+              “We then suffered the torment of exile. Stripped was our connection to heaven, to our powers of enlightenment…”
+          - p: >-
+              “Since the disaster, I have long been cursed to never again look
+              upon the heavens. It is my fortune that I have been able to
+              maintain myself till now…”
+
+              “But my home calls to me nigh-constantly, even as a disaster between the stars and the abyss grows ever emergent on the surface of the crystals.”
+
+              “Heed my warnings: seek not the Master of the Four Shades, and inquire not of the mysteries of the sky and the abyss.”
+
+              “Otherwise, as shown by the nail of retribution, certain calamity and sorrow shall follow.”
+          - p: >-
+              However, King Deshret disagreed with the warnings of his partner,
+              silently swearing his intent to transgress.
+
+              Wiping clean the tears of his companion beneath the moon’s gaze, he spoke then of his own desires to the Goddess of Flowers…
+        ru:
+          - p: >-
+              В далёкие времена, которые воспевают только джинны, Повелительница
+              цветов повстречала Владыку красных песков.
+
+              В эпоху, когда короли соперничали друг с другом за власть, царь Дешрет разделил свой трон с двумя другими.
+          - p: >-
+              В ознаменование союза трёх друзей джинны подарили им трон,
+              инкрустированный изумрудами и рубинами.
+
+              В честь вечного оазиса и распускающихся падисар Повелительница цветов надела аметистовую корону.
+          - p: >-
+              «Но “вечность” – это в конечном счёте ложь. Хмельной дурман и
+              влюблённость обращают воспоминания в разбитые мечты.
+
+              Тебя когда-то интересовала причина моих неумолчных вздохов. Сегодня ночью, при яркой луне, позволь мне рассказать о давно минувших событиях…
+          - p: >-
+              То было далёкое время спокойствия и мира. Божественные посланники
+              тогда открыто говорили с людьми, принося им вести с небес…
+
+              Но позднее из заоблачных высот спустились захватчики, и не было счёта разрушениям, и разлились реки, и чума взяла свою дань…
+
+              Захватчики принесли моим былым сородичам войну, а всей земле тщетную надежду на разрушение оков.
+
+              Правитель небес, убоявшись беспочвенных иллюзий и прорывов, обрушил небесные столпы на землю и разрушил царства смертных.
+
+              Затем нас постигли муки изгнания. Мы утратили связь с небесами и способности к просвещению…
+          - p: >-
+              С тех пор, как меня настигла беда, проклятье не даёт мне вновь
+              обратить взор к небу. Мне повезло сохранить свою форму до этого
+              дня…
+
+              Но мой дом неустанно зовёт меня к себе, хотя бедствие меж звёздами и бездной уже явилось за кристальной гладью.
+
+              Прислушайся к моим предостережениям: не ищи Мастера Четырёх Теней и не спрашивай о тайнах небес и бездны.
+
+              Иначе – да будут карающие столпы тому порукой – в финале ждёт лишь горечь и беды».
+          - p: >-
+              Царь Дешрет не внял предупреждениям своей наперсницы, утвердившись
+              в намерении преступить черту.
+
+              Осушив её слезы под светом луны, он поведал Повелительнице цветов о своих желаниях…
 gambler:
   code: gambler
   name:
@@ -3355,7 +4391,7 @@ gilded-dreams:
   rarity: 5
   sets:
     "2":
-      en: Elemental Mastery +80.
+      en: Increases Elemental Mastery by 80.
       ru: Увеличивает мастерство стихий на 80 ед.
     "4":
       en: Within 8s of triggering an Elemental Reaction, the character equipping this
@@ -4399,7 +5435,7 @@ husk-of-opulent-dreams:
               Теперь же ты наконец обретёшь то, что тебе принадлежит.
               И это сконструированное тело сможет захватить власть над миром.
           - p: |-
-              Но всё это лишь мимолетные мечты о славе,
+              Но всё это лишь мимолётные мечты о славе,
               которые однажды развеются среди вздохов страдающей земли».
               Говорил ли это «он» из прошлого? Или «он» из будущего?
               Страннику было всё равно, и, когда он проснулся,
@@ -7955,7 +8991,7 @@ shimenawas-reminiscence:
 
               Госпожа Тэнгу была зла на себя за то, что плохо справилась с задачей защитника, и ушла. Она оставила Тэруё позади.
 
-              Харуносукэ уехал в другую страну из-за печали и гнева, а Нагамуса присоединился к сёгунату, чтобы очистить имя Микоси.
+              Харуносукэ уехал в другую страну из-за печали и гнева, а Нагамаса присоединился к сёгунату, чтобы очистить имя Микоси.
 
               Как человек, который научил меня стрельбе из лука в лесу и терпеливо слушал моё наивное обещание под коричневой ветвью сакуры,
 
