@@ -7,8 +7,9 @@ import { MegaSearch } from './mega-search'
 export function Header() {
 	const [isNavExpanded, setIsNavExpanded] = useState(false)
 	// TODO клик мимо компонента
+	// з-индекс для омамори, которая открывает гритингс
 	return (
-		<header>
+		<header style={{ zIndex: 1 }}>
 			<div className="navbar navbar-expand-lg navbar-dark header-main-bg">
 				<div className="container">
 					<A className="navbar-brand" href="/">

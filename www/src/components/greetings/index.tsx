@@ -52,12 +52,15 @@ function updateEl(
 export function Greetings({
 	classes = '',
 	isClosable,
+	isHiddenOnMobile,
 }: {
 	classes?: string
 	isClosable: boolean
+	isHiddenOnMobile?: boolean
 }): JSX.Element | null {
 	const [areGreetingsVisible, setAreGreetingsVisible] = useVersionedStorage(SV_ARE_GREETINGS_VISIBLE)
 	const areCurrentlyVisible = areGreetingsVisible || !isClosable
+	const hiddenOnMobileClass = isHiddenOnMobile ? 'd-none d-lg-block' : ''
 
 	const wrapRef = useRef<HTMLDivElement>(null)
 	const bgRef = useRef<HTMLDivElement>(null)
@@ -68,6 +71,10 @@ export function Greetings({
 
 	const closeGreetings = useCallback(() => {
 		setAreGreetingsVisible(false)
+	}, [setAreGreetingsVisible])
+
+	const openGreetings = useCallback(() => {
+		setAreGreetingsVisible(true)
 	}, [setAreGreetingsVisible])
 
 	useEffect(() => {
@@ -88,11 +95,28 @@ export function Greetings({
 
 	useLayoutEffect(() => {
 		if (wrapRef.current) wrapRef.current.style.height = wrapRef.current.offsetWidth / 2 + 'px'
-	}, [wrapRef, windowSize])
+	}, [wrapRef, windowSize, areCurrentlyVisible])
 
-	if (!areCurrentlyVisible) return null
+	/*
+	если убрать ключи у элементов,
+	то, после нажатия на крестик, во врап-реф и бг-реф попадут элементы омамори, 
+	и им установятся ненужные свойства
+	*/
+
+	if (!areCurrentlyVisible)
+		return (
+			<div className={`greetings-omamori position-relative ${hiddenOnMobileClass}`} key="omamori">
+				<div className="omamori-wrap position-absolute end-0 c-pointer" onClick={openGreetings}>
+					<img src="https://i.imgur.com/VlUoqjo.png" />
+				</div>
+			</div>
+		)
 	return (
-		<div className={`greetings w-100 position-relative rounded-1 ${classes}`} ref={wrapRef}>
+		<div
+			className={`greetings w-100 position-relative rounded-1 ${classes} ${hiddenOnMobileClass}`}
+			ref={wrapRef}
+			key="greetings"
+		>
 			<div className="bg" ref={bgRef}></div>
 			<div className="damages-wrap">
 				{damages.map((d, i) => (
@@ -106,7 +130,7 @@ export function Greetings({
 			</div>
 			<div className="miko" ref={mikoRef}></div>
 			<BuildInfo updateName={setMikoName} />
-			<h2 className="position-relative fw-bolder fst-italic text-center my-2">
+			<h2 className="position-relative fw-bolder fst-italic my-2 text-center">
 				{I18N_BEST_CHAR_BUILDS}
 			</h2>
 			<h4 className="position-relative text-center">{I18N_FOR_EXAMPLE}</h4>
