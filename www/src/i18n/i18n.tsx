@@ -624,12 +624,13 @@ export const I18N_OBTAINED_DURING_STORYLINE = {
 }[LANG]
 export const I18N_ART_GROUP_NAME: Record<GI_ArtifactGroupCode, string> = {
 	'18%-atk': { en: 'ATK +18%', ru: 'Сила атаки +18%', ua: 'Сила атаки +18%' }[LANG],
+	'25%-ph-atk': { en: 'Physical DMG +25%', ru: 'Физ. урон +25%', ua: 'Фіз. ушкодження +25%' }[LANG],
+	'15%-anemo': { en: 'Anemo DMG +15%', ru: 'Анемо урон +15%', ua: 'Анемо ушкодження +25%' }[LANG],
 	'20%-er': {
 		en: 'Energy Recharge +20%',
 		ru: 'Восстановление энергии +20%',
 		ua: 'Відновлення енергії +20%',
 	}[LANG],
-	'25%-ph-atk': { en: 'Physical DMG +25%', ru: 'Физ. урон +25%', ua: 'Фіз. ушкодження +25%' }[LANG],
 	'80-em': { en: 'Elemental Mastery +80', ru: 'Мастерство стихий +80', ua: 'Майстерність стихій +80' }[
 		LANG
 	],
