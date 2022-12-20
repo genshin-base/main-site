@@ -2,9 +2,9 @@ import yaml from 'yaml'
 import { promises as fs } from 'fs'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
-import { stringifyString, YAMLError } from 'yaml/util'
+import { stringifyString } from 'yaml/util'
 import { GI_MAP_CODES } from '#lib/genshin.js'
-import { error, warn } from '#lib/utils/logs.js'
+import { warn } from '#lib/utils/logs.js'
 import { textNodesFromMarkdown, textNodesToMarkdown } from '#lib/parsing/helperteam/text-markdown.js'
 import { buildsConvertLangMode, getBuildsFormattedBlocks } from '#lib/parsing/helperteam/build_texts.js'
 
@@ -25,23 +25,23 @@ export const WWW_API_FILE = `${BASE_DIR}/www/src/api/generated.js`
 export const WWW_DYNAMIC_DIR = `${BASE_DIR}/www/public/generated`
 export const WWW_MEDIA_DIR = `${BASE_DIR}/www/public/media`
 
-const location = {
+const location = /**@type {yaml.ScalarTag}*/ ({
 	tag: '!loc',
 	identify: val => typeof val === 'object' && val !== null && 'mapCode' in val && 'x' in val && 'y' in val,
 	stringify(item, ctx, onComment, onChompKeep) {
 		const { mapCode, x, y } = /**@type {import('#lib/genshin').MapLocation}*/ (item.value)
-		item = { value: `${mapCode} ${x} ${y}` }
+		item = /**@type {yaml.Scalar}*/ ({ value: `${mapCode} ${x} ${y}` })
 		return stringifyString(item, ctx, onComment, onChompKeep)
 	},
-	resolve(doc, node) {
-		const [mapCode, xStr, yStr, ...rem] = node.strValue.split(' ')
+	resolve(value, onError, options) {
+		const [mapCode, xStr, yStr, ...rem] = value.split(' ')
 		const x = parseFloat(xStr)
 		const y = parseFloat(yStr)
-		if (GI_MAP_CODES.includes(mapCode) && !isNaN(x) && !isNaN(y) && rem.length === 0)
+		if (GI_MAP_CODES.includes(/**@type {*}*/ (mapCode)) && !isNaN(x) && !isNaN(y) && rem.length === 0)
 			return /**@type {import('#lib/genshin').MapLocation}*/ ({ mapCode, x, y })
-		throw new Error('wrong location: ' + node.strValue)
+		throw new Error('wrong location: ' + value)
 	},
-}
+})
 const customTags = [location]
 
 /**
@@ -58,18 +58,7 @@ export async function prepareCacheDir(dirpath, clear) {
  * @returns {any}
  */
 export function parseYaml(content) {
-	try {
-		return yaml.parse(content, { customTags })
-	} catch (ex) {
-		if (ex instanceof YAMLError) {
-			const lineNum = pos => content.slice(0, pos).split('\n').length
-			error(ex.message)
-			if (ex.source?.['resolved']) error(`  value: ${(ex.source?.['resolved'] + '').trim()}`)
-			if (ex.source?.range)
-				error(`  lines ${lineNum(ex.source.range.start)}-${lineNum(ex.source.range.end)}`)
-			process.exit(1)
-		} else throw ex
-	}
+	return yaml.parse(content, { customTags })
 }
 /**
  * @param {any} data

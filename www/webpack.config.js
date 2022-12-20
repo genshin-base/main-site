@@ -4,7 +4,7 @@ import ESLintPlugin from 'eslint-webpack-plugin'
 import glob from 'glob'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { dirname, extname, relative } from 'path'
-import PurgeCSSPlugin from 'purgecss-webpack-plugin'
+import { PurgeCSSPlugin } from 'purgecss-webpack-plugin'
 import { fileURLToPath } from 'url'
 import webpack from 'webpack'
 import doT from 'dot'
@@ -62,7 +62,10 @@ function makeConfig(mode, version, isMain, type) {
 		name: `build-${suffix}`,
 		mode: mode,
 		bail: isProd, //в прод-режиме останавливаем сборку после первой ошибки
-		stats: { preset: isProd ? 'normal' : 'errors-warnings' },
+		stats: {
+			preset: isProd ? 'normal' : 'errors-warnings',
+			errorDetails: true,
+		},
 		devtool: isProd ? 'source-map' : 'cheap-module-source-map',
 		devServer: isMain ? makeDevServerConfig(isProd) : undefined,
 		entry: `${SRC}/index.tsx`,
@@ -153,7 +156,9 @@ function makeConfig(mode, version, isMain, type) {
 			new MiniCssExtractPlugin({ filename: isProd ? '[name].[contenthash:8].css' : '[name].css' }),
 			new PurgeCSSPlugin({
 				paths: glob.sync(`${SRC}/**/*`, { nodir: true }),
-				variables: true,
+				variables: true, //remove unused CSS variables
+				blocklist: [],
+				safelist: [],
 			}),
 			!type.isSSR &&
 				new GenerateIndexHtmls({
