@@ -104,12 +104,13 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 											}
 										/>
 									</div>
-									{/* <div
-										className={`color-${'sumeru'} me-1 fs-1 position-relative`}
+									<div
+										// for PurgeCSS: color-sumeru color-inazuma color-liyue color-mondstadt
+										className={`color-${asc.itemRegion} me-1 fs-1 position-relative`}
 										style={{ lineHeight: 0, top: '-4px' }}
 									>
 										{BULLET}
-									</div> */}
+									</div>
 									<div className="d-flex flex-wrap align-self-center pt-2">
 										{asc.characterCodes.map(c => (
 											<CharacterAvatar
