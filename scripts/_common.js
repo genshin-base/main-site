@@ -30,8 +30,7 @@ const location = /**@type {yaml.ScalarTag}*/ ({
 	identify: val => typeof val === 'object' && val !== null && 'mapCode' in val && 'x' in val && 'y' in val,
 	stringify(item, ctx, onComment, onChompKeep) {
 		const { mapCode, x, y } = /**@type {import('#lib/genshin').MapLocation}*/ (item.value)
-		item = /**@type {yaml.Scalar}*/ ({ value: `${mapCode} ${x} ${y}` })
-		return stringifyString(item, ctx, onComment, onChompKeep)
+		return stringifyString({ value: `${mapCode} ${x} ${y}` }, ctx, onComment, onChompKeep)
 	},
 	resolve(value, onError, options) {
 		const [mapCode, xStr, yStr, ...rem] = value.split(' ')
