@@ -2264,6 +2264,7 @@ rukkhashava-mushrooms:
     - !loc teyvat -3156 2153
     - !loc teyvat -3134 2179
     - !loc teyvat -3118 1940
+    - !loc teyvat -3118 1958
     - !loc teyvat -3116 1993
     - !loc teyvat -3110 1963
     - !loc teyvat -3096 2004
@@ -8753,6 +8754,7 @@ crab:
     - !loc teyvat 3823 4764
     - !loc teyvat 3827 4753
     - !loc teyvat 3835 6828
+    - !loc teyvat 3842 5116
     - !loc teyvat 3846 5513
     - !loc teyvat 3849 5126
     - !loc teyvat 3849 6870
@@ -8930,9 +8932,11 @@ crystal-chunk:
     - !loc teyvat -4474 2859
     - !loc teyvat -4473 2854
     - !loc teyvat -4438 3017
+    - !loc teyvat -4436 3755
     - !loc teyvat -4434 3011
     - !loc teyvat -4433 4281
     - !loc teyvat -4432 3024
+    - !loc teyvat -4432 3762
     - !loc teyvat -4432 4292
     - !loc teyvat -4430 4283
     - !loc teyvat -4351 3670
@@ -13492,6 +13496,8 @@ magical-crystal-chunk:
     - !loc teyvat -4674 3394
     - !loc teyvat -4671 2561
     - !loc teyvat -4475 2856
+    - !loc teyvat -4440 3757
+    - !loc teyvat -4437 3766
     - !loc teyvat -4431 4287
     - !loc teyvat -4334 3709
     - !loc teyvat -4252 4290
