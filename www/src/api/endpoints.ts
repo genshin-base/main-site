@@ -3,7 +3,6 @@ import { GENERATED_DATA_HASH } from './generated'
 import { apiGetJSONFile, decodeRelatedLocations, mapAllByCode, MapAllByCode } from './utils'
 
 import type {
-	AbyssStatsInfo,
 	ArtifactFullInfoWithRelated,
 	ArtifactRegularInfo,
 	CharacterFullInfoWithRelated,
@@ -71,8 +70,4 @@ export function apiMaterialsTimetable(
 
 export function apiGetSearchData(signal: AbortSignal) {
 	return getLang<SearchItem[]>(`search`, signal)
-}
-
-export function apiGetAbyssStats(signal: AbortSignal) {
-	return get<AbyssStatsInfo>(`abyss_stats`, signal)
 }
