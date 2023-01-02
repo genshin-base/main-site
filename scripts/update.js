@@ -44,6 +44,8 @@ import {
 	TRANSLATED_DATA_DIR,
 	loadTranslatedBuilds,
 	BUILDS_CACHE_DIR,
+	saveAbyssStats,
+	loadAbyssStats,
 } from './_common.js'
 import { makeResizeFitChecked, mediaChain, optipng, pngquant } from '#lib/media.js'
 import {
@@ -75,6 +77,7 @@ import { applyCharactersReleaseVersion } from '#lib/parsing/wiki/characters.js'
 import { getEnemyCodeFromName } from '#lib/genshin.js'
 import { extractArtifactsData, getArtifactSpecialGroupCodes } from '#lib/parsing/honeyhunter/artifacts.js'
 import { buildsConvertLangMode } from '#lib/parsing/helperteam/build_texts.js'
+import { extractAbyssStats } from '#lib/parsing/akashadata/index.js'
 
 const HELPERTEAM_DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -388,6 +391,7 @@ if (args['--help'] || args['-h']) {
 		await prepareCacheDir(DATA_CACHE_DIR, !!args['--ignore-cache'])
 		await extractAndSaveAllItemsData()
 		// await checkUsedItemsLocations()
+		await extractAndSaveAbyssStats()
 	}
 	if (updImgs) {
 		await prepareCacheDir(IMGS_CACHE_DIR, !!args['--ignore-cache'])
@@ -472,6 +476,15 @@ async function extractAndSaveAllItemsData() {
 	await saveEnemies(enemies.code2item)
 	await saveEnemyGroups(enemyGroups.code2item)
 
+	progress()
+}
+
+async function extractAndSaveAbyssStats() {
+	info('updating abyss stats', { newline: false })
+	await fs.mkdir(DATA_DIR, { recursive: true })
+	const code2character = await loadCharacters()
+	const abyssStats = await extractAbyssStats(DATA_CACHE_DIR, code2character)
+	await saveAbyssStats(abyssStats)
 	progress()
 }
 
@@ -634,6 +647,13 @@ async function saveWwwData() {
 
 		progress()
 	}
+
+	const abyssStats = await loadAbyssStats()
+	/** @type {import('#lib/parsing/combine').AbyssStatsInfo} */
+	const abyssStatsInfo = {
+		mostUsedCharacters: abyssStats.mostUsedCharacters,
+	}
+	await writeJson(`${WWW_DYNAMIC_DIR}/abyss_stats.json`, abyssStatsInfo)
 
 	const artGroupCodes = getArtifactSpecialGroupCodes(common.code2artifact)
 

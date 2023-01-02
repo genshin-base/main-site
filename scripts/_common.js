@@ -234,3 +234,8 @@ export const loadEnemies = () => loadGeneratedYaml('enemies')
 export const saveEnemyGroups = groups => saveGeneratedYaml('enemy_groups', groups)
 /** @returns {Promise<import('#lib/parsing').Code2EnemyGroupData>} */
 export const loadEnemyGroups = () => loadGeneratedYaml('enemy_groups')
+
+/** @param {import('#lib/parsing/akashadata').AbyssStats} abyssStats */
+export const saveAbyssStats = abyssStats => saveGeneratedYaml('abyss_stats', abyssStats)
+/** @returns {Promise<import('#lib/parsing/akashadata').AbyssStats>} */
+export const loadAbyssStats = () => loadGeneratedYaml('abyss_stats')
