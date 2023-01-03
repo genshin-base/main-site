@@ -524,23 +524,14 @@ characters:
           notes: null
           seeCharNotes: false
         tips:
-          - p:
-              - |
-                A few commonly used teams for pyro Xiangling are:
-              - b: "National Team:"
-              - >2
-                 Xiangling, Xingqiu, Bennett and a Flex unit (Sucrose/Zhongli/Kazuha/Raiden/Chongyun/etc)
-              - b: "Childe Team:"
-              - " Childe, Xiangling, Bennett and a Flex unit
-                (Sucrose/Zhongli/Venti/Kazuha/etc)"
-          - p:
-              - b: |-
-                  Recommended ER thresholds: 
-                  National/Childe Teams: 
-              - |
-                160-200 ER%
-              - b: "Enabler for Reverse Melt teams:"
-              - " 200-250 ER%"
+          - |
+            A few commonly used teams for pyro Xiangling are:
+          - b: "National Team:"
+          - >2
+             Xiangling, Xingqiu, Bennett and a Flex unit (Sucrose/Zhongli/Kazuha/Raiden/Chongyun/etc)
+          - b: "Childe Team:"
+          - " Childe, Xiangling, Bennett and a Flex unit
+            (Sucrose/Zhongli/Venti/Kazuha/etc)"
         notes:
           - p:
               - b: >-
@@ -564,11 +555,7 @@ characters:
               - "\n"
               - b: "Kitain Cross Spear: "
               - "This weapon's passive reduces the ER threshold of Xiangling
-                greatly, down to "
-              - b: ~140 ER% at [R1]
-              - " and "
-              - b: ~110 ER% at [R5].
-              - " This allows you to distribute ER rolls into otherwise
+                greatly. This allows you to distribute ER rolls into otherwise
                 offensive substats and due to this, an "
               - b: "[R5] Kitain Cross Spear"
               - " can outperform "
@@ -954,15 +941,6 @@ characters:
         notes:
           - p:
               - b: |-
-                  Regarding Weapon Choices:
-                  The Alley Flash: The Alley Flash
-              - " has the potential to beat "
-              - b: Iron Sting [R5],
-              - " but this requires the passive to be up, whenever damaged, your
-                passive is disabled for 5 seconds and you could be losing out a
-                lot of damage, especially if you are constantly being damaged."
-          - p:
-              - b: |-
                   Regarding Artifact Sets:
                   Crimson Witch of Flames (4):
               - >2
@@ -1007,8 +985,8 @@ characters:
                  is a different question because better buffs.
               - b: "Aquila Favonia: "
               - >
-                Assuming you have a whale build's CR/CD stats, this weapon with
-                EM sands will be better than the two above.
+                Assuming you have a high investment build's CR/CD stats, this
+                weapon with EM sands will be better than the two above.
               - b: "Primordial Jade Cutter: "
               - "With "
               - b: Thundering Fury (4),
@@ -1020,6 +998,13 @@ characters:
                 However, in the rare occasion that your EM pieces manage to roll
                 plenty of Crit subs, Mistsplitter easily overtakes the "
               - b: Jade Cutter.
+              - "\n"
+              - b: "The Alley Flash: The Alley Flash"
+              - " has the potential to beat "
+              - b: Iron Sting [R5],
+              - " but this requires the passive to be up, whenever damaged, your
+                passive is disabled for 5 seconds and you could be losing out a
+                lot of damage, especially if you are constantly being damaged."
           - p:
               - |-
                 Recommended amount of ER%: 130-150%. 
@@ -1168,7 +1153,7 @@ characters:
             - skill
           notes: null
           seeCharNotes: false
-        tips: "Recommended amount of ER%: 180-200"
+        tips: null
         notes:
           - "A Burst Support Bennett "
           - b: "completely ignores the need for excess healing potential "
@@ -1193,7 +1178,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: true
-            - similar:
                 - code: aquila-favonia
                   refine: null
                   stacks: null
@@ -1329,7 +1313,7 @@ characters:
             - burst
           notes: null
           seeCharNotes: false
-        tips: "Recommended amount of ER%: 200+"
+        tips: null
         notes:
           - p:
               - b: Heals from his Elemental Burst scale off of HP,
@@ -2213,18 +2197,7 @@ characters:
           notes: Yanfei's talent levels provide nothing for this role and it is not
             recommended to level them.
           seeCharNotes: false
-        tips:
-          - b: |-
-              Energy Recharge Guidelines
-              Prototype Amber [R5]:
-          - " 210 ER"
-          - b: |-
-              
-              Prototype Amber [R1] /Favonius Codex:
-          - |2
-             240 ER
-          - b: "Thrilling Tales of Dragon Slayers:"
-          - " 250+ ER"
+        tips: null
         notes:
           - "This section is dedicated to a playstyle where Yanfei is utilised
             as a primary shielder through her 4th Constellation. Due to the
@@ -2273,6 +2246,11 @@ characters:
           seeCharNotes: false
         artifacts:
           sets:
+            - arts:
+                code: flower-of-paradise-lost
+                count: 4
+              notes: null
+              seeCharNotes: false
             - arts:
                 code: gilded-dreams
                 count: 4
@@ -2635,7 +2613,7 @@ characters:
               - em
               - atk%
             notes: null
-            seeCharNotes: false
+            seeCharNotes: true
           notes: null
           seeCharNotes: false
         subStats:
@@ -3717,16 +3695,17 @@ characters:
                   notes: null
                   seeCharNotes: false
             - similar:
-                - code: the-stringless
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-                - code: prototype-crescent
+                - code: fading-twilight
                   refine: null
                   stacks: null
                   notes: null
                   seeCharNotes: false
+            - similar:
+                - code: the-stringless
+                  refine: null
+                  stacks: null
+                  notes: 8 Prototype Crescent (4✩)*
+                  seeCharNotes: true
           notes: null
           seeCharNotes: false
         artifacts:
@@ -3845,8 +3824,12 @@ characters:
               - b: Alley Hunter [R1]
               - " / "
               - b: The Viridescent Hunt.
-              - " This difference is enlarged in teams where Fischl can find
-                herself triggering reactions."
+              - >2
+                 This difference is enlarged in teams where Fischl can find herself triggering reactions.
+              - b: "Prototype Crescent: "
+              - "If you can consistently hit a weakpoint on an enemy before
+                summoning Oz, this weapon performs better than "
+              - b: Fading Twilight.
           - p:
               - b: "Regarding Artifact Sets:"
               - "\n"
@@ -3907,6 +3890,11 @@ characters:
                   notes: null
                   seeCharNotes: true
             - similar:
+                - code: the-viridescent-hunt
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
                 - code: alley-hunter
                   refine: null
                   stacks: null
@@ -3914,6 +3902,11 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: windblume-ode
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: fading-twilight
                   refine: null
                   stacks: null
                   notes: null
@@ -4000,8 +3993,8 @@ characters:
               - b: "Regarding Weapon Choices:"
               - |-2
                  
-                For more detailed numbers, see the Google 
-              - a: Sheet here.
+                For more detailed numbers, see the Google Sheet 
+              - a: here.
                 href: https://docs.google.com/spreadsheets/d/1wPoxuOIu21VmOkbmf5KxgVBrCi5Fv8mjqoLtnFqHCWc/edit?usp=sharing
               - "\n"
               - b: "Alley Hunter:"
@@ -4207,7 +4200,7 @@ characters:
               - " by a significant margin when Bennett/Sara ATK buffs are
                 applied."
               - b: >-2
-                   Be sure to use Beidou in slot 1 to pre-stack Serpent Spine before starting a abyss floor.
+                   Be sure to use Beidou in slot 1 to pre-stack Serpent Spine before starting an abyss floor.
                   Redhorn Stonethresher: 
               - "Depending on the amount of ATK% buffs you're getting, this
                 weapon can overtake "
@@ -4600,8 +4593,8 @@ characters:
           - p:
               - b: "Regarding Stats Priority:"
               - " Try to invest both into EM and ER. The goal is to try stack as
-                much EM while getting enough ER (170-190%) for a comfortable
-                Burst uptime depending on your teams."
+                much EM while getting enough ER for a comfortable Burst uptime
+                depending on your teams."
       - code: off-field dps
         name: off-field dps
         isRecommended: true
@@ -4960,8 +4953,8 @@ characters:
               - b: Serpent Spine
               - ") in addition to the fact that Electro accounts for a
                 significant portion of Razor's damage. An in-depth explanation
-                can be "
-              - a: found here.
+                can be found "
+              - a: here.
                 href: https://tinyurl.com/razoratk
               - " "
               - b: It is also worth noting that an [R5] Serpent Spine with max stacks can
@@ -5245,6 +5238,16 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
+                - code: key-of-khaj-nisut
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+                - code: toukabou-shigure
+                  refine: "5"
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
             - similar:
                 - code: dark-iron-sword
                   refine: null
@@ -5260,6 +5263,11 @@ characters:
           seeCharNotes: false
         artifacts:
           sets:
+            - arts:
+                code: flower-of-paradise-lost
+                count: 4
+              notes: null
+              seeCharNotes: false
             - arts:
                 code: gilded-dreams
                 count: 4
@@ -5328,11 +5336,36 @@ characters:
         tips: Aim for around 850-950+ Elemental Mastery. Depending on whether you use a
           Elemental Mastery weapon or not.
         notes:
-          - "This is a dendro team that requires a "
-          - b: reliable electro trigger unit
-          - " to work,for which Kuki is "
-          - b: one of the best electro units
-          - " to perform this role."
+          - p:
+              - "This is a dendro team that requires a "
+              - b: reliable electro trigger unit
+              - " to work,for which Kuki is "
+              - b: one of the best electro units
+              - " to perform this role."
+          - p:
+              - b: |-
+                  Regarding Weapon Choices:
+                  Key of Khaj-Nisut:
+              - " This becomes a better choice than "
+              - b: Iron Sting at [C4]
+              - " when you can gain the "
+              - b: 3rd passive stack without extending your rotation time or taking extra field
+                  time.
+              - " It can also "
+              - b: net more Elemental Mastery than Freedom-Sworn at 3 stacks,
+              - " assuming you have actually built some"
+              - b: " HP% Substats on your Sands/Goblet/Circlet,"
+              - " but this is usually "
+              - b: not enough to out-perform the overall gains from Xiphos'
+                  Moonlight/Freedom-sworn's respective passives.
+              - "\n"
+              - b: "Toukabou Shigure:"
+              - " This weapon performs "
+              - b: very similarly in a hyperbloom focused build
+              - " to "
+              - b: Iron sting
+              - " since its "
+              - b: passive does not effect Hyperbloom damage.
       - code: aggravate
         name: aggravate
         isRecommended: false
@@ -5415,9 +5448,7 @@ characters:
                 count: 4
               notes: null
               seeCharNotes: false
-          notes:
-            - p: ~=Thundering Fury (2) +80 EM set (2)
-            - p: +18% ATK set (2)* [Choose Two]
+          notes: ~=Thundering Fury (2) +80 EM set (2) Noblesse Oblige (2)* [Choose Two]
           seeCharNotes: false
         mainStats:
           circlet:
@@ -5579,17 +5610,17 @@ characters:
               notes: null
               seeCharNotes: false
             - arts:
-                code: ocean-hued-clam
-                count: 4
-              notes: null
-              seeCharNotes: false
-            - arts:
                 op: or
                 arts:
                   - code: instructor
                     count: 4
                   - code: the-exile
                     count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: ocean-hued-clam
+                count: 4
               notes: null
               seeCharNotes: false
           notes: null
@@ -5641,7 +5672,7 @@ characters:
         notes:
           - p:
               - "Outside of reaction teams where she can be a "
-              - b: reliable trigger unit
+              - b: reliable trigger unit,
               - " Kuki's damage contribution is usually insignificant. Hence her
                 best usage case in those scenarios is building purely for
                 utility."
@@ -5999,18 +6030,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-            - similar:
-                - code: harbinger-of-dawn
-                  refine: "5"
-                  stacks: null
-                  notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: blackcliff-longsword
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
           notes: null
           seeCharNotes: false
         artifacts:
@@ -6104,14 +6123,6 @@ characters:
               (white numbers). For this reason, you should be charged attacking
               after casting Stellar Restoration (E) instead of recasting it.
           - p:
-              - b: |-
-                  Regarding Weapon Choices:
-                  Harbinger of Dawn:
-              - " The performance of this weapon is heavily reliant on being
-                able to maintain its passive. It is "
-              - b: not recommended
-              - " otherwise."
-          - p:
               - b: "Regarding Artifact Sets:"
               - "\n"
               - b: "Pale Flame (4): "
@@ -6181,27 +6192,9 @@ characters:
                   refine: null
                   stacks: null
                   notes: null
-                  seeCharNotes: true
-            - similar:
-                - code: blackcliff-longsword
-                  refine: null
-                  stacks: null
-                  notes: null
                   seeCharNotes: false
             - similar:
-                - code: harbinger-of-dawn
-                  refine: "5"
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: the-flute
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: skyward-blade
+                - code: kagotsurube-isshin
                   refine: null
                   stacks: null
                   notes: null
@@ -6212,21 +6205,10 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-            - similar:
-                - code: prototype-rancour
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
           notes: null
           seeCharNotes: false
         artifacts:
           sets:
-            - arts:
-                code: thundering-fury
-                count: 4
-              notes: null
-              seeCharNotes: true
             - arts:
                 op: and
                 arts:
@@ -6234,11 +6216,6 @@ characters:
                     count: 2
                   - code: 18%-atk
                     count: 2
-              notes: null
-              seeCharNotes: false
-            - arts:
-                code: thundersoother
-                count: 4
               notes: null
               seeCharNotes: false
             - arts:
@@ -6250,8 +6227,12 @@ characters:
                     count: 2
               notes: null
               seeCharNotes: true
-          notes: "Note: Artifact recommendations are not ranked in order of
-            recommendation, read the notes for more info."
+            - arts:
+                code: thundersoother
+                count: 4
+              notes: null
+              seeCharNotes: true
+          notes: null
           seeCharNotes: false
         mainStats:
           circlet:
@@ -6302,44 +6283,37 @@ characters:
             - attack
             - burst
             - skill
-          notes: "Note: Since Keqing uses burst to get an extra 15% crit, it's much better
-            in leveling it.  Best course of action is to level NA and Burst
-            together. Don't forget to level skill to a decent level."
+          notes: null
           seeCharNotes: false
         tips:
           - p:
               - b: "Preferred Skill Combo: "
-              - ES (Place stiletto, don't reactivate yet) -> EB -> ES
-                (Reactivation) -> Spam AA -> Repeat
+              - Skill (Place stiletto, don't reactivate yet) -> Burst -> Skill
+                (Reactivation) -> Spam NA Combo (See Below) -> Repeat
           - p:
-              - b: "Regarding Roles:"
-              - >-
-                
-                Both physical and electro keqing are good and viable. You'd usually want to decide which build to go for depending on your weapon gacha luck. For example, Lion's Roar = Electro, Flute will be equally good on Electro/Phys, etc.
+              - b: |-
+                  NA Combos:
+                  N1C 
+              - = 1 Normal Attack followed by a Charged Attack - Highest DPS
+                Combo, but costs a lot of stamina
+              - b: |-
+                  
+                  N4C 
+              - = 4 Normal Attacks followed by a Charged Attack - Second best
+                Combo, and conserves stamina.
         notes:
           - p:
               - b: |-
                   Regarding Weapon Choices: 
                   Lion's Roar: 
-              - "This weapon is only recommended on Aggravate / Pure Electro /
+              - "This weapon is only recommended on Pure Electro /
                 Electro-charged teams. In teams where the Electro Aura can be
                 easily removed OR when facing enemies with innate elements, this
                 weapon "
               - b: will severely underperform.
-              - "\ \n"
-              - b: "The Black Sword:"
-              - " On a quickswap Keqing, this weapon will be shifted below "
-              - b: Harbinger of Dawn [R5].
           - p:
               - b: |-
                   Regarding Artifact Sets: 
-                  Thundering Fury (4): 
-              - "This set provides the highest damage output if you are running
-                Keqing in an "
-              - b: Aggravate
-              - "-based team composition. "
-              - b: |-
-                  
                   Thundering Fury (2) +18% ATK set (2): 
               - >
                 This set is a generalist set, which means it can be used
@@ -6357,15 +6331,194 @@ characters:
               - b: "Thundersoother (4): "
               - "This set should be used with "
               - b: Electro-charged
-              - " team compositions (Keqing + Xingqiu), and can also be a good
-                alternative for Keqing in "
-              - b: Aggravate
-              - " team compositions if you don't have "
-              - b: Thundering Fury (4).
-              - " This set has a 35% DMG modifier which increases all damage
-                from all sources, although that modifier is a bit unstable due
-                to its dependency to the sustainability of Electro aura on
-                enemies."
+              - " team compositions (Keqing + Xingqiu). This set has a 35% DMG
+                modifier which increases all damage from all sources, although
+                that modifier is a bit unstable due to its dependency to the
+                sustainability of Electro aura on enemies."
+      - code: aggravate dps
+        name: aggravate dps
+        isRecommended: true
+        weapons:
+          advices:
+            - similar:
+                - code: mistsplitter-reforged
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: primordial-jade-cutter
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: haran-geppaku-futsu
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: freedom-sworn
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: harbinger-of-dawn
+                  refine: "5"
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: summit-shaper
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: toukabou-shigure
+                  refine: "5"
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: lions-roar
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: the-black-sword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: iron-sting
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets:
+            - arts:
+                code: thundering-fury
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: gilded-dreams
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                op: or
+                arts:
+                  - code: thundering-fury
+                    count: 2
+                  - code: 80-em
+                    count: 2
+                  - code: 18%-atk
+                    count: 2
+              notes: null
+              seeCharNotes: false
+            - arts:
+                op: and
+                arts:
+                  - code: 18%-atk
+                    count: 2
+                  - code: 80-em
+                    count: 2
+              notes: null
+              seeCharNotes: false
+          notes: ~= Thundersoother (4)
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes:
+              - crit-rate
+              - crit-dmg
+            notes: null
+            seeCharNotes: false
+          goblet:
+            codes:
+              - electro-dmg
+            notes: null
+            seeCharNotes: false
+          sands:
+            codes:
+              - atk%
+              - em
+            notes: null
+            seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        subStats:
+          advices:
+            - codes:
+                - crit-rate
+                - crit-dmg
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk%
+              notes: ~= Elemental Mastery
+              seeCharNotes: false
+            - codes:
+                - atk
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices:
+            - attack
+            - burst
+          notes:
+            - p: ~= Skill
+            - p: It is recommended to level Keqing to level 90
+          seeCharNotes: false
+        tips: null
+        notes:
+          - p:
+              - b: |-
+                  Regarding Weapon Choices:
+                  Harbinger of Dawn [R5]: 
+              - This ranking assumes
+              - b: " full uptime on the passive."
+              - " If you cannnot maintain the passive, "
+              - b: |-
+                  this weapon is not recommended.
+                  Summit Shaper: 
+              - "This ranking assumes Keqing is unshielded. If Keqing has a
+                shielder, this weapon will perform better than "
+              - b: |-
+                  Harbinger of Dawn [R5].
+                  Toukabou Shigure: 
+              - Eventually with high refinement
+              - b: " Lion's Roar/The Black Sword "
+              - will surpass it
+              - b: ". "
+              - "But this ranking assumes "
+              - b: "[R1]"
+              - " for both"
+              - b: ", Iron Sting "
+              - can also surpass it at equal refinement in
+              - b: " Multi-target content where Toukabou Shigure's passive falls off, "
+              - since it can only be applied to
+              - b: " one target at a time."
+          - p:
+              - b: |-
+                  Regarding Artifact Choices:
+                  Gilded Dreams (4): 
+              - "This set encourages the use of "
+              - b: ATK% Sands over an EM Sands.
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/keqing/
@@ -6400,6 +6553,11 @@ characters:
           seeCharNotes: false
         artifacts:
           sets:
+            - arts:
+                code: flower-of-paradise-lost
+                count: 4
+              notes: null
+              seeCharNotes: false
             - arts:
                 code: gilded-dreams
                 count: 4
@@ -6690,10 +6848,7 @@ characters:
               - " (which is further amplified by her passive). This is
                 especially convenient on teams that doesn't conflict with her
                 element and wants the energy provision. (i.e. Eula, Electro,
-                National teams, etc.). Raiden has no issues with firing her ult
-                off cooldown after reaching about 200% Energy Recharge, but it
-                is possible to raise it higher for better energy restoration for
-                her team."
+                National teams, etc.)."
           - p:
               - b: >-
                   Regarding Weapon Choices: This list assumes the average across
@@ -6872,6 +7027,9 @@ characters:
           - p: |-
               Burst combo:
               - Skill > Skill > Skill > Burst > Skill > Skill > Skill
+          - p:
+              b: (After the first set of EEE you usually swap out and go through your buff
+                rotation before swapping back to burst)
           - p:
               - "Take note that "
               - b: none of Yae Miko's abilities snapshot.
@@ -7114,11 +7272,8 @@ characters:
                 and deal electro damage. The damage dealt during this stance is
                 "
               - b: "normal attack damage "
-              - "so burst damage buffs will not affect him. On most teams with
-                an electro battery, he will want "
-              - b: "120-150% "
-              - energy recharge.
-          - p:
+              - |
+                so burst damage buffs will not affect him.
               - b: |-
                   Regarding Weapon Choices:
                   Kitain Cross Spear: 
@@ -7994,6 +8149,109 @@ characters:
               - The hydro application from Elemental Skill can be used to
                 trigger an elemental reaction and provide a teamwide Elemental
                 Mastery buff.
+      - code: bloom dps
+        name: bloom dps
+        isRecommended: false
+        weapons:
+          advices:
+            - similar:
+                - code: a-thousand-floating-dreams
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: sacrificial-fragments
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: magic-guide
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets:
+            - arts:
+                code: flower-of-paradise-lost
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: gilded-dreams
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                op: and
+                arts:
+                  - code: 80-em
+                    count: 2
+                  - code: 80-em
+                    count: 2
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: ocean-hued-clam
+                count: 4
+              notes: null
+              seeCharNotes: true
+          notes: null
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes:
+              - em
+            notes: null
+            seeCharNotes: false
+          goblet:
+            codes:
+              - em
+            notes: null
+            seeCharNotes: false
+          sands:
+            codes:
+              - em
+            notes: null
+            seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        subStats:
+          advices:
+            - codes:
+                - em
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices:
+            - skill
+            - burst
+          notes: null
+          seeCharNotes: false
+        tips: null
+        notes:
+          - p: This build is specifically for Bloom teams where Barbara is the character
+              intended to trigger the majority of blooms.
+          - p:
+              - b: "Regarding Aritfact Sets:"
+              - "\n"
+              - b: "Ocean-Hued Clam (4):"
+              - " This set can do more damage than other options in certain
+                situations, while also increasing Barbara's healing to deal with
+                Bloom self-damage. However, this set is "
+              - b: very resin inefficient
+              - " and is thus "
+              - b: not recommended to farm specifically for this set.
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/barbara/
@@ -8106,6 +8364,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: true
+                - code: hunters-path
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
                 - code: aqua-simulacra
                   refine: null
                   stacks: null
@@ -8148,6 +8411,11 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: rust
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: kings-squire
                   refine: null
                   stacks: null
                   notes: null
@@ -8283,8 +8551,8 @@ characters:
               b: "*NA = Normal Attack, CA = Charged Attack"
           - p:
               b: "The Optimal combo provides more damage but consumes more stamina.
-                Recommended combo provides slightly less damage but is more
-                stamina efficient. "
+                Recommended combo provides slightly less damage but is stamina
+                neutral and what most weapons should use. "
         notes:
           - p: The Weapon Rankings here are under the assumption that Childe is used with
               Bennett and Vaporizes his Burst, aswell as using the optimal
@@ -8354,7 +8622,7 @@ characters:
               - >2
                  you can opt out for this set instead if you already have decent pieces.
               - b: "Shimenawa's Reminiscence (4):"
-              - " Due to this set requiring Childe to have around 140% Energy
+              - " Due to this set requiring Childe to have around 150% Energy
                 Recharge to reliably burst every rotation, it falls behind the
                 other options. However, it outperforms "
               - b: "Heart of Depth (4) "
@@ -8755,6 +9023,7 @@ characters:
         talents:
           advices:
             - burst
+            - skill
           notes: null
           seeCharNotes: false
         tips:
@@ -8953,9 +9222,7 @@ characters:
                   Energy Recharge:
               - " Prioritise Energy Recharge first to ensure you can always use
                 Elemental Burst before the Elemental Skill expires in order to
-                maintain Hydro application. "
-              - b: Without Prototype Amber, Kokomi will need ~200-220%+ Energy Recharge
-                  (170-190% with Prototype Amber at [R1] and 150-170% at [R5])
+                maintain Hydro application."
       - code: dps
         name: dps
         isRecommended: false
@@ -9050,10 +9317,10 @@ characters:
               seeCharNotes: false
             - codes:
                 - atk%
-              notes: null
+              notes: ~= Flat HP
               seeCharNotes: false
             - codes:
-                - hp
+                - em
               notes: null
               seeCharNotes: false
             - codes:
@@ -9101,14 +9368,125 @@ characters:
               - "\n"
               - b: "Hakushin Ring:"
               - " This weapon can provide Elemental DMG% for the team in
-                Electro-charged teams, and will usually be the best choice in
-                those situations."
+                Electro-charged teams, and is the best choice in those
+                situations."
           - p:
               - b: |-
                   Regarding Artifact Sets:
                   Tenacity of the Millelith (4): 
               - Although this set offers the lowest personal dmg for Kokomi, the
                 20% ATK team buff can sometimes be better for overall team DPS.
+      - code: bloom dps
+        name: bloom dps
+        isRecommended: false
+        weapons:
+          advices:
+            - similar:
+                - code: a-thousand-floating-dreams
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: sacrificial-fragments
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: magic-guide
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets:
+            - arts:
+                code: flower-of-paradise-lost
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: gilded-dreams
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                op: and
+                arts:
+                  - code: 80-em
+                    count: 2
+                  - code: 80-em
+                    count: 2
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: ocean-hued-clam
+                count: 4
+              notes: null
+              seeCharNotes: true
+          notes: null
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes:
+              - em
+            notes: null
+            seeCharNotes: false
+          goblet:
+            codes:
+              - em
+            notes: null
+            seeCharNotes: false
+          sands:
+            codes:
+              - em
+            notes: null
+            seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        subStats:
+          advices:
+            - codes:
+                - em
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - hp%
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - hp
+              notes: null
+              seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices:
+            - skill
+            - burst
+          notes: null
+          seeCharNotes: false
+        tips: null
+        notes:
+          - p: This build is specifically for Bloom teams where Kokomi is the character
+              intended to trigger the majority of blooms.
+          - p:
+              - b: |-
+                  Regarding Aritfact Sets:
+                  Ocean-Hued Clam (4): 
+              - "This set can do more damage than other options in certain
+                situations, while also increasing Kokomi's healing to deal with
+                Bloom self-damage. However, this set is "
+              - b: very resin inefficient
+              - " and is thus "
+              - b: not recommended to farm specifically for this set.
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/kokomi/
@@ -9468,13 +9846,13 @@ characters:
         notes:
           - p:
               - "Yelan is an off-field DPS who is able to "
-              - b: apply Hydro off-field via her Elemental Burst,
-              - " this part of her kit acts similarly like Xingqiu's Elemental
+              - b: apply Hydro via her Elemental Burst,
+              - " this part of her kit acts similarly to Xingqiu's Elemental
                 Burst. "
               - b: Yelan mainly scales off HP%,
               - " so don't build her with ATK%. "
               - b: Yelan also wants a lot of Energy Recharge to be able to maintain her
-                  Elemental Burst uptime (up to ~250 ER),
+                  Elemental Burst uptime,
               - " this can decrease depending on the number of Hydro units or
                 energy providers in the team."
           - p:
@@ -9496,7 +9874,8 @@ characters:
               - "\n"
               - b: "Goblet: "
               - "HP% Goblet is to be used "
-              - b: only if Hydro DMG% option is very bad and HP% option is very good,
+              - b: only if the Hydro DMG% option has terrible substats and HP% option has great
+                  substats,
               - " or "
               - b: if Yelan has strong DMG% buffs
               - " such as"
@@ -9801,18 +10180,13 @@ characters:
           notes: null
           seeCharNotes: false
         tips:
-          - p:
-              - b: |
-                  Typical Collei Rotation: 
-              - |
-                Skill > Burst > Swap
-              - b: |
-                  Rotation with Polar Star:
-              - N1 > tap Charged Attack > Skill > Burst > Swap
-          - p:
-              - b: |
-                  Energy Recharge Guidelines: 
-              - 200% - 160% (Depending on Team and weapon)
+          - b: |
+              Typical Collei Rotation: 
+          - |
+            Skill > Burst > Swap
+          - b: |
+              Rotation with Polar Star:
+          - N1 > tap Charged Attack > Skill > Burst > Swap
         notes:
           - p: Collei is a Bow User who provides off-field support in Dendro application and
               damage.
@@ -10149,9 +10523,14 @@ characters:
             - skill
           notes: null
           seeCharNotes: false
-        tips: One recommended rotation is E 3CA Q or an alternative variation while on
-          field, as it is impractical to do charged shots that are not boosted
-          by his E
+        tips: >-
+          There are three recommended combos that Tighnari can perform:
+
+          1. Skill -> Burst -> Charged Attack (x3) - Simplest combo to use, and generally weakest combo. His Burst does not benefit from A1 in this combo.
+
+          2. Skill -> Charged Attack (x3) -> Burst - Allows Tighnari's Burst to benefit from A1. However, this combo doesn't allow Tighnari to funnel particles from his Skill into his next Burst.
+
+          3. Skill -> Charged Attack -> Burst -> Charged Attack (x2) - This is the most mechanically difficult combo. However, this combo allows Tighnari to have both his Burst effected by A1 and funnel particles from his Skill to his next Burst.
         notes:
           - p: Tighnari's standard build revolves around him doing his Elemental Skill,
               Three Clusterbloom Arrows, an Elemental Burst, and promptly
@@ -11190,18 +11569,6 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: false
-            - similar:
-                - code: festering-desire
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: harbinger-of-dawn
-                  refine: "5"
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
           notes: null
           seeCharNotes: false
         artifacts:
@@ -11550,7 +11917,7 @@ characters:
           - p:
               - b: |-
                   Regarding Artifact Choices:
-                  Emblem of Severed Fate:
+                  Emblem of Severed Fate (4):
               - " in teams where her energy requirements are higher "
               - b: (130%+)
               - " it can surpass "
@@ -11716,7 +12083,7 @@ characters:
               - b: "Regarding Substats: "
               - >-
                 
-                Rosaria does not need much Energy Recharge if paired with Kaeya. If paired with another Cryo unit such as Chongyun or Ayaka, she will need ~130-150% Energy Recharge
+                Rosaria does not need much Energy Recharge if paired with Kaeya. If paired with another Cryo unit such as Chongyun or Ayaka, she will need more Energy Recharge.
 
                 Compared to Kaeya, Rosaria has even less desire for Crit Rate, as her Ascension 1 Talent includes an extra 12% Crit Rate once skill hits the back of an enemy.
           - p:
@@ -11728,7 +12095,7 @@ characters:
               - " this weapon can perform similarly to "
               - b: "Staff of Homa, "
               - "and even outperform it with a high energy cost team "
-              - b: (260 ER).
+              - b: (260 cost).
               - "\n"
               - b: "Deathmatch:"
               - " Rosaria gets a lot of Crit Rate from "
@@ -11742,7 +12109,7 @@ characters:
           - p:
               - b: "Regarding Artifact Choices:"
               - "\n"
-              - b: "Noblesse Oblige: "
+              - b: "Noblesse Oblige (4): "
               - "This set is "
               - b: only used in her sub-dps/quickswap roles not her perma-freeze dps role.
               - " Also it should only be considered when you have no decent "
@@ -11883,10 +12250,9 @@ characters:
               - b: "Regarding Weapon Choices:"
               - "\n"
               - b: "Favonius Lance:"
-              - " Her best option in situations where you havent met your teams
-                energy requirements and need the extra particles, outside of
-                that though you would be better of using a Crit Rate weapon that
-                improves her A4 buff if you dont need the extra particles."
+              - " The best option in situations where you havent met your teams
+                energy requirements. Outside of that scenario you would be
+                better of using a Crit Rate weapon that benefits her A4 buff."
           - p:
               - b: "Regarding Artifact Sets:"
               - "\n"
@@ -11898,6 +12264,147 @@ characters:
     credits:
       - a: In-depth Guide
         href: https://keqingmains.com/rosaria/
+      - " from KQM"
+  - code: layla
+    elementCode: cryo
+    roles:
+      - code: support
+        name: support
+        isRecommended: true
+        weapons:
+          advices:
+            - similar:
+                - code: key-of-khaj-nisut
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: primordial-jade-cutter
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: favonius-sword
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: freedom-sworn
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: harbinger-of-dawn
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets:
+            - arts:
+                code: tenacity-of-the-millelith
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: noblesse-oblige
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                op: or
+                arts:
+                  - code: tenacity-of-the-millelith
+                    count: 2
+                  - code: blizzard-strayer
+                    count: 2
+                  - code: emblem-of-severed-fate
+                    count: 2
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: blizzard-strayer
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: emblem-of-severed-fate
+                count: 4
+              notes: null
+              seeCharNotes: true
+          notes: null
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes:
+              - hp%
+              - crit-rate
+              - crit-dmg
+            notes: null
+            seeCharNotes: false
+          goblet:
+            codes:
+              - hp%
+              - cryo-dmg
+            notes: null
+            seeCharNotes: false
+          sands:
+            codes:
+              - hp%
+              - er
+            notes: null
+            seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        subStats:
+          advices:
+            - codes:
+                - hp%
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - crit-rate
+                - crit-dmg
+              notes: null
+              seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices:
+            - skill
+            - burst
+          notes: null
+          seeCharNotes: false
+        tips: null
+        notes:
+          - p: The goal of this build is to prioritize Layla's shield, and increase her
+              damage where possible.
+          - p:
+              - b: |-
+                  Regarding Weapon Choices:
+                  Freedom-Sworn: 
+              - This weapon can be a good option in teams where Layla can
+                consistently trigger reactions.
+          - p:
+              - b: |-
+                  Regarding Artifact Choices:
+                  Blizzard Strayer (4) 
+              - "and "
+              - b: "Emblem of Severed Fate (4): "
+              - These sets are primiarly for increasing Layla's personal damage.
+    credits:
+      - a: Quick Guide
+        href: https://keqingmains.com/q/layla-quickguide/
       - " from KQM"
   - code: qiqi
     elementCode: cryo
@@ -11915,6 +12422,12 @@ characters:
                   seeCharNotes: true
             - similar:
                 - code: skyward-blade
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: kagotsurube-isshin
                   refine: null
                   stacks: null
                   notes: null
@@ -11945,18 +12458,6 @@ characters:
                   seeCharNotes: false
             - similar:
                 - code: skyrider-sword
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: fillet-blade
-                  refine: null
-                  stacks: null
-                  notes: null
-                  seeCharNotes: false
-            - similar:
-                - code: cool-steel
                   refine: null
                   stacks: null
                   notes: null
@@ -12815,9 +13316,9 @@ characters:
               b: "*NA = Normal Attack"
         notes:
           - p: Eula's weapon rankings assume that you're running her with a Cryo battery
-              (i.e. Diona) instead of Bennett. She would usually need 30%-60%+
-              Energy Recharge from substats depending on what team and Cryo
-              batteries you use.
+              (i.e. Diona) instead of Bennett. She would usually need Energy
+              Recharge from substats depending on what team and Cryo batteries
+              you use.
           - p: Eula's Elemental Burst does not snapshot. This means that any buffs Eula has
               upon casting Burst will not be taken into effect if the buff
               duration expires before the Lightfall Sword hits.
@@ -13788,7 +14289,7 @@ characters:
           - p: Sayu does more damage with EM builds and heals more with ATK hybrid builds,
               Healing Bonus hat can be used for better heals while maintaining
               respectable damage. Note that Sayu wants a large amount of energy
-              recharge when used as the only anemo slot on the team (200%ish).
+              recharge when used as the only anemo slot on the team.
           - p:
               - b: "Regarding Weapon Choices:"
               - "\n"
@@ -13936,9 +14437,7 @@ characters:
                 build assuming he "
               - b: isn't being used in an electro-charged team,
               - " He has very "
-              - b: low energy recharge needs,
-              - " ranging from "
-              - b: 110% to 130%.
+              - b: low energy recharge needs.
               - " At "
               - b: "[C4] "
               - "he can run "
@@ -14196,6 +14695,187 @@ characters:
               - b: Viridescent Venerer (4)
               - " user on your team"
     credits: null
+  - code: faruzan
+    elementCode: anemo
+    roles:
+      - code: support
+        name: support
+        isRecommended: true
+        weapons:
+          advices:
+            - similar:
+                - code: favonius-warbow
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: elegy-for-the-end
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: end-of-the-line
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: fading-twilight
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+                - code: sacrificial-bow
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets:
+            - arts:
+                code: viridescent-venerer
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: noblesse-oblige
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: tenacity-of-the-millelith
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                op: or
+                arts:
+                  - code: emblem-of-severed-fate
+                    count: 2
+                  - code: the-exile
+                    count: 2
+                  - code: scholar
+                    count: 2
+              notes: null
+              seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes:
+              - crit-rate
+              - crit-dmg
+            notes: null
+            seeCharNotes: false
+          goblet:
+            codes:
+              - anemo-dmg
+            notes: null
+            seeCharNotes: false
+          sands:
+            codes:
+              - er
+            notes: null
+            seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        subStats:
+          advices:
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - crit-rate
+              notes: null
+              seeCharNotes: true
+            - codes:
+                - crit-dmg
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk%
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk
+              notes: null
+              seeCharNotes: false
+          notes: Only assumes higher priority than Crit DMG when using Favonius Warbow
+          seeCharNotes: false
+        talents:
+          advices:
+            - burst
+            - skill
+            - attack
+          notes: null
+          seeCharNotes: false
+        tips:
+          - p:
+              b: Regarding Optimal Rotations
+          - p:
+              - b: "For funneling particles to Faruzan:"
+              - |-
+                
+                Skill --> Charged Shot --> Burst
+          - p:
+              - b: "For funneling particles to other units:"
+              - |-
+                
+                Skill --> Burst --> Charged Shot
+          - p:
+              b: At C6 bear in mind the Charged shot portion of the rotation no longer becomes
+                necessary since your burst will start activating the Pressurized
+                Collapses instead.
+        notes:
+          - p:
+              - "As the "
+              - b: "premier Anemo support "
+              - "unit for Anemo dps based teams, "
+              - b: Faruzan combines both high Anemo damage buffing with Anemo resistance
+                  shredding
+              - " to become a cornerstone of any team that wants to focus on
+                Anemo damage. Though building her means "
+              - b: "primarly focusing "
+              - "on dealing with her "
+              - b: high energy requirements.
+          - p:
+              - b: "Regarding Weapon Choices:"
+              - "\n"
+              - b: "Elegy of the End:"
+              - " Usually only a better option at "
+              - b: higher constellation levels such as [C6]
+              - " where her energy needs can be met without "
+              - b: Favonius passive particles.
+              - "\n"
+              - b: "Sacrificial Bow:"
+              - " It's worth mentioning that the "
+              - b: extra Pressurized Collapse from a second E
+              - " wont give you any extra particles if it's within her "
+              - b: 5.5 second particle generation cooldown.
+          - p:
+              - b: "Regarding Artifact Sets:"
+              - "\n"
+              - b: "Noblesse Oblige (4):"
+              - " This is her best option in teams that either wont benefit
+                significantly from "
+              - b: Viridescent Venerer
+              - >2
+                 shred, or teams that already have another unit holding the aforementioned set.
+              - b: "Tenacity of the Millelith (4):"
+              - " This has similar usage cases to "
+              - b: Noblesse Oblige,
+              - " except in that it requires "
+              - b: Faruzan C6 for improved uptime through extra Pressurized Collapse
+                  activations.
+    credits:
+      - a: Quick Guide
+        href: https://keqingmains.com/q/faruzan-quickguide/
+      - " from KQM"
   - code: traveler-anemo
     elementCode: anemo
     roles:
@@ -14366,7 +15046,7 @@ characters:
                 quickswap style Sub-DPS.
 
                 Anemo Traveler can require 
-              - b: up to 160% Energy Recharge.
+              - b: a significant amount of Energy Recharge.
           - p:
               - b: "Regarding Weapon Choices:"
               - |-
@@ -14385,7 +15065,7 @@ characters:
               - "\n"
               - b: "Amenoma Kageuchi:"
               - " This weapon "
-              - b: reduces your ER% requirements to ~135% at [R1] and ~110% at [R5].
+              - b: reduces your ER% requirements to depending on refinement.
               - " At ["
               - b: R5],
               - " this weapon will be "
@@ -14764,8 +15444,7 @@ characters:
               - b: |-
                   Regarding Weapon Choices:
                   Amenoma Kageuchi: 
-              - "This weapon can lower your ER% requirements from anywhere
-                between ~150% to no additional ER% needed, depending on the
+              - "This weapon can lower your ER% requirements, depending on the
                 number of stacks on the passive and the refinement of this
                 weapon. As such, at higher refines / more stacks on the passive,
                 this weapon can perform better than "
@@ -15094,6 +15773,11 @@ characters:
               notes: null
               seeCharNotes: false
             - arts:
+                code: desert-pavilion-chronicle
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
                 op: or
                 arts:
                   - code: viridescent-venerer
@@ -15192,7 +15876,7 @@ characters:
           - p:
               - b: "Regarding Weapon Choices:"
               - >2
-                 With a proper anemo battery (e.g. Sucrose), Xiao needs as little as 120-130% ER to maintain a high burst uptime. In these scenarios, unless there are no ER from substats, you should always go for a non-ER weapon as it will result in more damage.
+                 With a proper anemo battery (e.g. Sucrose), Xiao needs a small amount of Energy Recharge to maintain a high burst uptime. In these scenarios, unless there are no ER from substats, you should always go for a non-ER weapon as it will result in more damage.
               - b: "Calamity Queller: "
               - "This weapon has a really high Base ATK, which means you benefit
                 more from ATK% buffs (e.g. "
@@ -15254,6 +15938,11 @@ characters:
                   stacks: null
                   notes: null
                   seeCharNotes: true
+                - code: toukabou-shigure
+                  refine: "5"
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
                 - code: amenoma-kageuchi
                   refine: "5"
                   stacks: null
@@ -15354,24 +16043,12 @@ characters:
                 attacks.
           seeCharNotes: false
         tips:
-          - p:
-              - "The element which is absorbed by Kazuha's elemental burst
-                follows the priority of Pyro > Hydro > Electro > Cryo, and can
-                be absorbed from both the active character and enemies. "
-              - b: (i.e. Standing in Bennett 's Elemental Burst will result in Kazuha's
-                  Elemental Burst infusing Pyro as Bennett's Elemental Burst
-                  applies Pyro to the active character)
-          - p:
-              - b: |-
-                  Recommended ER Thresholds: 
-                  With Raiden:
-              - |2
-                 ~160 ER%
-              - b: "General Teams:"
-              - |2
-                 ~180 ER%
-              - b: "Melt Ganyu:"
-              - " ~200 ER%"
+          - "The element which is absorbed by Kazuha's elemental burst follows
+            the priority of Pyro > Hydro > Electro > Cryo, and can be absorbed
+            from both the active character and enemies. "
+          - b: (i.e. Standing in Bennett 's Elemental Burst will result in Kazuha's
+              Elemental Burst infusing Pyro as Bennett's Elemental Burst applies
+              Pyro to the active character)
         notes:
           - p: Kazuha's 4th Ascension Passive encourages players to maximise Elemental
               Mastery in order to maximise his utility.
@@ -15411,19 +16088,24 @@ characters:
                 buff if compared to the other 4 star options,
               - b: >-2
                    if you manage to meet his energy needs or simply don't need more than one rotation, this would be the better option if compared to the Energy Recharge weapons.
+                  Toukabou Shigure: 
+              - This weapon performs very similarly to
+              - b: " Iron Sting "
+              - "in a "
+              - b: Swirl
+              - " focused build even at higher refinements since its passive
+                does not effect "
+              - b: Swirl
+              - " damage."
+              - b: |-
+                  
                   Amenoma Kageuchi: 
               - "At "
               - b: "[R5], Amenoma Kageuchi"
               - " needs no extra ER, and can focus building entirely EM. This
                 makes it roughly equal to "
-              - b: Iron Sting.
-              - " At "
-              - b: "[R1], Amenoma Kageuchi"
-              - " needs "
-              - b: "138% Energy Recharge "
-              - to burst consistently.
               - b: |-
-                  
+                  Iron Sting.
                   Sapwood Blade: 
               - Only really viable at high refinement in specific dendro teams
                 where you can trigger dendro reactions usually through swirling
@@ -15435,7 +16117,7 @@ characters:
                   Thundering Fury (4): 
               - "This is a niche build that excels "
               - b: only in AOE situations and with specific teams.
-              - " This teams includes an "
+              - " Those teams include an "
               - b: off-field Hydro and Electro support to allow Kazuha to constantly trigger the
                   4p effect and spam his Elemental Skill, aswell as another
                   Anemo support to hold the Viridiscent Venerer (4) set.
@@ -15455,6 +16137,219 @@ characters:
       - a: In-depth Guide
         href: https://keqingmains.com/kazuha/
       - " from KQM"
+  - code: wanderer-(wip)
+    elementCode: anemo
+    roles:
+      - code: dps
+        name: dps
+        isRecommended: true
+        weapons:
+          advices:
+            - similar:
+                - code: tulaytullahs-remembrance
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: memory-of-dust
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+                - code: skyward-atlas
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+                - code: dodoco-tales
+                  refine: "5"
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: lost-prayer-to-the-sacred-winds
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: the-widsith
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: true
+                - code: kaguras-verity
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: solar-pearl
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: eye-of-perception
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: blackcliff-agate
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+            - similar:
+                - code: mappa-mare
+                  refine: null
+                  stacks: null
+                  notes: null
+                  seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        artifacts:
+          sets:
+            - arts:
+                code: desert-pavilion-chronicle
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: shimenawas-reminiscence
+                count: 4
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: echoes-of-an-offering
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                op: and
+                arts:
+                  - code: 15%-anemo-dmg-set
+                    count: 2
+                  - code: 15%-anemo-dmg-set
+                    count: 2
+                  - code: 18%-atk
+                    count: 2
+                  - code: 18%-atk
+                    count: 2
+              notes: null
+              seeCharNotes: false
+            - arts:
+                code: blizzard-strayer
+                count: 4
+              notes: null
+              seeCharNotes: true
+            - arts:
+                code: lavawalker
+                count: 4
+              notes: null
+              seeCharNotes: true
+          notes: null
+          seeCharNotes: false
+        mainStats:
+          circlet:
+            codes:
+              - crit-rate
+              - crit-dmg
+            notes: null
+            seeCharNotes: false
+          goblet:
+            codes:
+              - anemo-dmg
+            notes: null
+            seeCharNotes: false
+          sands:
+            codes:
+              - atk%
+            notes: null
+            seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        subStats:
+          advices:
+            - codes:
+                - crit-rate
+                - crit-dmg
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk%
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - atk
+              notes: null
+              seeCharNotes: false
+            - codes:
+                - er
+              notes: null
+              seeCharNotes: false
+          notes: null
+          seeCharNotes: false
+        talents:
+          advices:
+            - attack
+            - skill
+            - burst
+          notes: IF WANDERER IS C2, PRIORITIZE BURST OVER SKILL**
+          seeCharNotes: false
+        tips:
+          - "Desert Pavillion "
+          - b: "and "
+          - |-
+            Signature Weapon Rotation: (Q) E CA N3x6
+            Desert Pavillion Rotation: (Q) E CA N3x5 N2
+            Other Artifact Sets Rotation: (Q) E N3x6 N2
+        notes:
+          - p:
+              - "Wanderer focuses on doing damage by activating his elemental
+                skill and performing boosted normal attacks. It should be noted
+                that in this state, he does not have knockback resistance so a "
+              - b: shielder
+              - " or other form of knockback immunity is recommended. "
+              - b: It is not worth building ER to burst every rotation.
+              - " Instead, bursting every other rotation is preferred."
+          - p:
+              - b: "Regarding Weapon Choices:"
+              - "\n"
+              - b: "Memory of Dust:"
+              - " If Bennett is on the team, this weapon ranks below "
+              - b: Kagura's Verity.
+              - "\n"
+              - b: "Skyward Atlas:"
+              - " If Bennett is on the team, this weapon ranks below "
+              - b: Solar Pearl.
+              - "\n"
+              - b: "Dodoco Tales [R5]:"
+              - " This weapon uses a different rotation of "
+              - b: E N1 CAx6 N1 CAx6
+              - " to maximize its passive. If Bennett is on the team, this
+                weapon ranks below "
+              - b: Kagura's Verity.
+              - "\n"
+              - b: "The Widsith:"
+              - " Because Wanderer doesn't focus on swirl damage, this weapon
+                can be inconsistent if you get the EM buff."
+          - p:
+              - b: "Regarding Artifact Sets:"
+              - "\n"
+              - b: "Echoes of an Offering (4):"
+              - >2
+                 If your ping is above 100, it is not recommended to run this set specifically
+              - b: "Blizzard Strayer (4):"
+              - >2
+                 This set synergizes well with the 20% crit rate that Wanderer gets from swirling cryo. It is only recommended if you have close to 100% uptime on freeze, which requires very specific teams.
+              - b: "Lavawalkers (4):"
+              - " In teams with consistent pyro application, this set is about
+                equal to "
+              - b: Echoes of an Offering.
+    credits: null
   - code: ningguang
     elementCode: geo
     roles:
@@ -15540,16 +16435,18 @@ characters:
         artifacts:
           sets:
             - arts:
-                op: or
+                op: and
                 arts:
                   - code: archaic-petra
                     count: 2
-                  - code: noblesse-oblige
-                    count: 2
-                  - code: 18%-atk
-                    count: 2
-                  - code: emblem-of-severed-fate
-                    count: 2
+                  - op: or
+                    arts:
+                      - code: noblesse-oblige
+                        count: 2
+                      - code: 18%-atk
+                        count: 2
+                      - code: emblem-of-severed-fate
+                        count: 2
               notes: null
               seeCharNotes: true
             - arts:
@@ -15799,7 +16696,7 @@ characters:
               seeCharNotes: false
             - codes:
                 - er
-              notes: ~20-30%
+              notes: null
               seeCharNotes: false
             - codes:
                 - def%
@@ -16279,7 +17176,7 @@ characters:
               - " Although the EM mainstat isn't useful for Yun Jin, the "
               - b: passive decreases her Energy Recharge requirements
               - " by a lot, especially at higher refinements. "
-              - b: "It can reduce her ER% reqs by around ~20% at [R1] to ~70% at [R5]. "
+              - b: "It can reduce her ER% reqs depending on refinement. "
               - Note that
               - b: " she must cast Elemental Burst first before Skill, as the passive drains 3
                   energy initially when Skill is cast. "
@@ -16552,7 +17449,7 @@ characters:
               - " (i.e. with a consistent pyro/electro aura from
                 Xiangling/Raiden/Fischl). It is "
               - b: not recommended
-              - " to farm this set purely for the traveller as the resin
+              - " to farm this set purely for the Traveler as the resin
                 efficiency is poor. "
               - b: |-
                   
