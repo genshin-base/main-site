@@ -116,6 +116,27 @@ const fixes = {
 					return copiedSmth
 				},
 			},
+			{
+				// у Фишль забыли точку в нумерованном списке
+				title: /^electro$/i,
+				fixFunc(sheet) {
+					const substr = '8 Prototype Crescent'
+					const replaceWith = '8. Prototype Crescent'
+					for (const { values: cells = [] } of sheet.data[0].rowData) {
+						for (const cell of cells) {
+							const text = json_getText(cell)
+							if (text.includes(substr)) {
+								delete cell.textFormatRuns
+								cell.userEnteredValue = {
+									stringValue: text.replace(substr, replaceWith),
+								}
+								return true
+							}
+						}
+					}
+					return false
+				},
+			},
 		],
 	},
 	/** @type {import('#lib/parsing/honeyhunter/fixes').HoneyhunterFixes} */
