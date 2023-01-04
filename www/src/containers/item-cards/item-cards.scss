@@ -2,6 +2,7 @@
 	width: var(--thumb-height);
 	height: var(--thumb-height);
 	box-sizing: content-box;
+	transition: border .1s ease-out;
 	&.small-avatar {
 		width: var(--thumb-height-sm);
 		height: var(--thumb-height-sm);

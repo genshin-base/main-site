@@ -329,6 +329,10 @@ export const I18N_GI_WIKI = {
 	en: 'Genshin Wiki',
 	ru: 'Вики Геншина',
 }[LANG]
+export const I18N_AKASHADATA = {
+	en: 'Akashadata',
+	ru: 'Акашадата',
+}[LANG]
 export const I18N_WE_USE_DATA_FROM = {
 	en: 'We use data from',
 	ru: 'Использованные источники',
@@ -352,6 +356,10 @@ export const I18N_NOTHING_TO_SHOW = {
 export const I18N_MEGA_SEARCH_PLACEHOLDER = {
 	en: 'Search for characters, weapons, artifacts',
 	ru: 'Искать персонажей, артефакты, оружие',
+}[LANG]
+export const I18N_ABYSS_LETTERS_EXPLANATION = {
+	en: 'F-SSS character ratings are based on approximate character usage statistics in the current abyss.',
+	ru: 'Рейтинги персонажей F-SSS основаны на примерной статистике использования персонажей в текущей бездне.',
 }[LANG]
 
 export const I18N_FRONT_PAGE_DESCRIPTION = {
@@ -467,6 +475,18 @@ export const I18N_OBTAIN_SOURCES = {
 export const I18N_SORT_BY = {
 	en: 'Sort by',
 	ru: 'Сортировать по',
+}[LANG]
+export const I18N_USAGE = {
+	en: 'Usage',
+	ru: 'Востребованность',
+}[LANG]
+export const I18N_USED_IN_ABYSS = {
+	en: (n: number) => `Used in Abyss by ${n.toFixed(2)}${NBSP}% owners`,
+	ru: (n: number) => `${n.toFixed(2)}${NBSP}% владельцев используют персонажа в Бездне`,
+}[LANG]
+export const I18N_FILTER = {
+	en: 'Filter',
+	ru: 'Фильтр',
 }[LANG]
 export const I18N_WEAPON_TYPE = {
 	en: 'Weapon type',

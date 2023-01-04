@@ -3,11 +3,11 @@ import { useMemo } from 'preact/hooks'
 import { ItemShortInfo } from '#lib/parsing/combine'
 import { mappedArrPush } from '#lib/utils/collections'
 import { I18N_ASC_MATERIALS, I18N_FOR_NOBODY, I18N_RECOMMENDED_FOR } from '#src/i18n/i18n'
-import { getItemIconSrc } from '#src/utils/items'
-import { CharacterAvatar, ItemAvatar } from './item-avatars'
-import { HEART } from '#src/utils/typography'
 import { useVersionedStorage } from '#src/utils/hooks'
+import { getItemIconSrc } from '#src/utils/items'
 import { SV_FAV_CHAR_CODES } from '#src/utils/local-storage-keys'
+import { HEART } from '#src/utils/typography'
+import { CharacterAvatar, ItemAvatar } from './item-avatars'
 
 export function RecommendedTo({
 	charCodes,
@@ -50,7 +50,9 @@ export function RecommendedTo({
 						classes={`small-avatar mb-2 me-2`}
 						href={navigateToCharacter ? '/builds/' + c : undefined}
 						badgeTopStart={
-							~favCharCodes.indexOf(c) ? <span className="text-danger">{HEART}</span> : null
+							~favCharCodes.indexOf(c) ? (
+								<span className="text-danger opacity-75">{HEART}</span>
+							) : null
 						}
 					/>
 				))}

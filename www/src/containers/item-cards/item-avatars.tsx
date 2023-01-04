@@ -26,6 +26,7 @@ export function getRarityBorder(r: GI_RarityCode): string {
 interface ItemAvatarCommonProps {
 	rarity?: GI_RarityCode
 	isNoBg?: boolean
+	borderColor?: string
 	classes?: string
 	href?: string
 	onClick?(): unknown
@@ -49,6 +50,7 @@ export function ItemAvatar({
 	badgeTopStart,
 	badgeTopEnd,
 	ddComponent,
+	borderColor,
 }: ItemAvatarProps): JSX.Element {
 	;['bg-2', 'bg-3', 'bg-4', 'bg-5']
 	const rarityClass = isNoBg ? '' : rarity ? 'bg-' + rarity : 'bg-dark'
@@ -62,6 +64,7 @@ export function ItemAvatar({
 		openDd && openDd()
 		onClick && onClick()
 	}, [openDd, onClick])
+	const borderStyle = borderColor ? { border: `1px solid ${borderColor}` } : {}
 	return (
 		<DdContext.Provider value={{ onClickAway: closeDd }}>
 			<A
@@ -69,10 +72,11 @@ export function ItemAvatar({
 				className={`item-avatar position-relative rounded-circle d-inline-block ${pointerClass} ${rarityClass} ${classes}`}
 				innerRef={elRef}
 				onClick={onClickLocal}
+				style={{ ...borderStyle }}
 			>
 				<img className="image" src={src} />
 				{badgeTopStart && (
-					<span className="position-absolute top-0 start-0 translate-middle badge rounded-pill opacity-75 small">
+					<span className="position-absolute top-0 start-0 translate-middle badge rounded-pill small">
 						{badgeTopStart}
 					</span>
 				)}

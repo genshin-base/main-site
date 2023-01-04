@@ -18,3 +18,4 @@ export const LINK_HELPER_TEAM_TABLE =
 export const LINK_HONEY_IMPACT = 'https://genshin.honeyhunterworld.com/'
 export const LINK_GI_MAP = 'https://webstatic-sea.hoyolab.com/ys/app/interactive-map/index.html'
 export const LINK_GI_WIKI = 'https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki'
+export const LINK_AKASHADATA = 'https://akashadata.feixiaoqiu.com/'

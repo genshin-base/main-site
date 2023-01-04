@@ -7,6 +7,7 @@ import { BlockHeader } from '#src/components/block-header'
 import { CharacterPortrait } from '#src/components/characters'
 import { CentredSpinner } from '#src/components/placeholders'
 import { BtnTabGroup, Tabs, useSelectable } from '#src/components/tabs'
+import { CharacterRating } from '#src/containers/abyss/char-rating'
 import { OtherItemCard, WeaponCard } from '#src/containers/item-cards/dd-cards'
 import { ItemAvatar, ItemsDataContext, LabeledItemAvatar } from '#src/containers/item-cards/item-avatars'
 import {
@@ -21,6 +22,7 @@ import {
 	I18N_SUBSTATS_PRIORITY,
 	I18N_TALENT_NAME,
 	I18N_TALENTS_PRIORITY,
+	I18N_USAGE,
 	I18N_WEAPON_REFINE,
 	I18N_WEAPON_STACKS_COUNT,
 	I18N_WEAPONS,
@@ -187,9 +189,11 @@ export function CharacterBuildDetailed({
 		const materials = getAllRelated(build.maps.items, build.character.materialCodes)
 		return (
 			<div className="w-100 d-flex flex-wrap justify-content-between">
-				{materials.map(m => (
+				{materials.map((m, i) => (
 					<ItemAvatar
-						classes="mb-2 mx-1 small-avatar with-padding"
+						classes={`${
+							i === materials.length - 1 ? 'ms-1' : i === 0 ? 'me-1' : 'mx-1'
+						} small-avatar with-padding`}
 						src={getItemIconSrc(m.code)}
 						ddComponent={<OtherItemCard item={m} related={build.maps} />}
 					/>
@@ -224,6 +228,14 @@ export function CharacterBuildDetailed({
 								classes="fs-3 position-absolute top-0 end-0"
 								characterCode={characterCode}
 							/>
+							<div className="mt-3 mb-4">
+								<BlockHeader>{I18N_USAGE}</BlockHeader>
+								<CharacterRating characterCode={characterCode} />
+							</div>
+							{/* <div className="my-2">
+								<BlockHeader>{'Отряды'}</BlockHeader>
+								<RecommendedTeams characterCode={characterCode} />
+							</div> */}
 						</div>
 					</div>
 					<div className="col col-9">
@@ -256,24 +268,28 @@ export function CharacterBuildDetailed({
 				src={getCharacterSilhouetteSrc(characterCode)}
 				classes="w-75 character-portrait-mobile"
 			/>
+			<div className="mt-3">
+				<BlockHeader>{I18N_USAGE}</BlockHeader>
+				<CharacterRating characterCode={characterCode} />
+			</div>
+			<div className="my-4">
+				<BlockHeader>{I18N_ASC_MATERIALS}</BlockHeader>
+				{materialsBlock}
+			</div>
 			<BtnTabGroup
 				tabs={roleTabs}
 				titleFunc={makeRoleTitle}
 				selectedTab={selectedRoleTab}
 				onTabSelect={setSelectedRoleTab}
-				classes="w-100 btn-group-sm mt-3 mb-0"
+				classes="w-100 btn-group-sm mb-n1"
 			/>
 			<div className="">
-				<div className="my-3">
-					<BlockHeader>{I18N_ASC_MATERIALS}</BlockHeader>
-					{materialsBlock}
-				</div>
-				<div className="my-3">
+				<div className="my-4">
 					<BlockHeader>{I18N_ARTIFACTS}</BlockHeader>
 					<ol className="items-list">{artifactsListBlock}</ol>
 				</div>
-				<div className="my-3">{artifactStatsAndSkillsBlock}</div>
-				<div className="my-3">
+				<div className="my-4">{artifactStatsAndSkillsBlock}</div>
+				<div className="my-4">
 					<BlockHeader>{I18N_WEAPONS}</BlockHeader>
 					<ol className="items-list">{weaponListBlock}</ol>
 				</div>
