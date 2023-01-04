@@ -401,6 +401,7 @@ if (args['--help'] || args['-h']) {
 ;(async () => {
 	const updBuilds = [undefined, 'builds'].includes(args['cmd'])
 	const updData = [undefined, 'data'].includes(args['cmd'])
+	const updAbyssData = [undefined, 'data', 'abyss-data'].includes(args['cmd'])
 	const updImgs = [undefined, 'images'].includes(args['cmd'])
 	const updWww = [undefined, 'www'].includes(args['cmd'])
 
@@ -412,6 +413,8 @@ if (args['--help'] || args['-h']) {
 		await prepareCacheDir(DATA_CACHE_DIR, !!args['--ignore-cache'])
 		await extractAndSaveAllItemsData()
 		// await checkUsedItemsLocations()
+	}
+	if (updAbyssData) {
 		await extractAndSaveAbyssStats()
 	}
 	if (updImgs) {
