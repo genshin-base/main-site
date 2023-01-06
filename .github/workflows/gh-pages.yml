@@ -47,8 +47,8 @@ jobs:
         working-directory: ${{ env.GITHUB_WORKSPACE }}
         run: |
           mkdir ./_new_content
-          mv ./www/dist/browser/* ./_new_content
-          mv ./www/public/* ./_new_content
+          cp -r ./www/public/. ./_new_content
+          cp -r ./www/dist/browser/. ./_new_content
           git checkout --force gh-pages || git checkout --orphan gh-pages
           find . -not -regex '\./\(\.git\|_new_content\)\(/.*\)?' -delete
           mv ./_new_content/* .
