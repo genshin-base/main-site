@@ -1,15 +1,20 @@
 import { useMemo, useState } from 'preact/hooks'
 
 import { GI_ElementCode, GI_WeaponTypeCode } from '#lib/genshin'
+import { apiGetAbyssStats } from '#src/api/endpoints'
 import { charactersShortList } from '#src/api/generated'
-import { CharacterAvatar, ItemAvatar } from '#src/containers/item-cards/item-avatars'
-import { elements } from '#src/utils/elements'
 import { WeaponTypeFilter } from '#src/components/weapon-type-filter'
+import { CharacterAvatar, ItemAvatar } from '#src/containers/item-cards/item-avatars'
+import { I18N_FILTER } from '#src/i18n/i18n'
+import { elements } from '#src/utils/elements'
+import { useFetch } from '#src/utils/hooks'
+import { getAbyssDataForCharIcon } from './common'
 
 export function CharacterPickerMobile() {
 	const [selectedElementCode, setSelectedElementCode] = useState<null | GI_ElementCode>(null)
 	const selectElement = el => setSelectedElementCode(selectedElementCode === el.code ? null : el.code)
 	const [selectedWeaponTypeCode, setSelectedWeaponTypeCode] = useState<null | GI_WeaponTypeCode>(null)
+	const abyssStats = useFetch(apiGetAbyssStats, [])
 
 	const selectWeaponTypeCode = code =>
 		setSelectedWeaponTypeCode(selectedWeaponTypeCode === code ? null : code)
@@ -36,14 +41,18 @@ export function CharacterPickerMobile() {
 				<ItemAvatar isNoBg={true} classes="d-block mx-auto muted-icon" src={element.imgSrc} />
 			</div>
 			<div className="col py-31">
-				{characters.map(x => (
-					<CharacterAvatar
-						code={x.code}
-						rarity={x.rarity}
-						href={'/builds/' + x.code}
-						classes={`m-1`}
-					/>
-				))}
+				{characters.map(x => {
+					const abyssData = getAbyssDataForCharIcon(x.code, abyssStats)
+					return (
+						<CharacterAvatar
+							code={x.code}
+							href={'/builds/' + x.code}
+							classes={`m-1`}
+							borderColor={abyssData?.color}
+							badgeTopStart={abyssData?.badge}
+						/>
+					)
+				})}
 			</div>
 		</div>
 	))
@@ -51,7 +60,7 @@ export function CharacterPickerMobile() {
 	return (
 		<div className="character-picker-mobile">
 			<div className="m-auto text-center my-3">
-				<div className="m-auto">Filter </div>
+				<div className="m-auto">{I18N_FILTER} </div>
 				<div className="d-inline">
 					<div className="d-inline">
 						{elements.map(el => (
@@ -61,7 +70,7 @@ export function CharacterPickerMobile() {
 								}`}
 								key={el.code}
 								src={el.imgSrc}
-								onClick={() => selectElement(el)} //todo почему без стрелки тайпскрипт не пускает?
+								onClick={() => selectElement(el)}
 							/>
 						))}
 					</div>

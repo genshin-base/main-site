@@ -1,0 +1,98 @@
+.greetings {
+  height: 70vh;
+  overflow: hidden;
+  user-select: none;
+  .bg {
+    background: url("./img/bg.webp");
+    background-size: cover;
+    width: 110%;
+    height: 110%;
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    background-position: center;
+    filter: blur(2px);
+  }
+  .miko {
+    background: url("./img/Miko.webp");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    filter: drop-shadow(-40px 30px 16px #0000004d);
+  }
+  .damages-wrap {
+    right: 30%;
+    width: 30%;
+    position: absolute;
+    height: 100%;
+    transform: scale(0.5, 0.5);
+  }
+  .damage-text {
+    position: absolute;
+  }
+  .damage-text:nth-child(1) {
+    top: 120%;
+    left: -10%;
+  }
+  .damage-text:nth-child(2) {
+    top: 30%;
+    left: -30%;
+  }
+  .damage-text:nth-child(3) {
+    top: 60%;
+    left: 30%;
+  }
+  .damage-text:nth-child(4) {
+    top: -20%;
+    left: 50%;
+  }
+  .build-info {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .build-owner,
+  .build-info > * {
+    background: rgba(19, 0, 102, 0.5)
+  }
+  .build-info {
+    .recs-wrap {
+      max-height: 162px;
+      .arrow {
+        font-size: 18px;
+        display: block;
+        height: 0;
+        transform: translateY(-10px);
+        opacity: 0.5;
+        top: 10px;
+        span {
+          transform: rotate(90deg);
+          display: block;
+        }
+      }
+      &:hover {
+        max-height: 100%;
+        .arrow {
+          span {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+  }
+}
+.greetings-omamori{
+  .omamori-wrap{
+    top: -42px;
+    transition: transform 0.1s ease-in;
+    &:hover{
+      transform: translateY(4px)
+    }
+  }
+  img {
+    height: 70px;
+  }
+}

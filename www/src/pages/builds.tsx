@@ -5,7 +5,6 @@ import { ArtifactRegularInfo, CharacterFullInfoWithRelated } from '#lib/parsing/
 import { CompactTextParagraphs, getInlineText, isParagraphArr } from '#lib/parsing/helperteam/text'
 import { CharacterBuildInfoRole } from '#lib/parsing/helperteam/types'
 import { useBuildWithDelayedLocs } from '#src/api'
-import { apiGetAbyssStats } from '#src/api/endpoints'
 import { MapAllByCode } from '#src/api/utils'
 import { Spinner } from '#src/components/placeholders'
 import { CharacterPicker } from '#src/containers/character-picker/character-picker'
@@ -21,7 +20,7 @@ import {
 	I18N_SELECT_CHAR_BELOW,
 } from '#src/i18n/i18n'
 import { CharacterBuildDetailed } from '#src/modules/builds/character-build-detailed'
-import { isLoaded, useDocumentTitle, useFetch, usePageDescription } from '#src/utils/hooks'
+import { isLoaded, useDocumentTitle, usePageDescription } from '#src/utils/hooks'
 
 export function BuildsPage_CharSelect(): JSX.Element {
 	useDocumentTitle(I18N_CHAR_BUILD_RECS + I18N_PAGE_TITLE_POSTFIX)
@@ -67,9 +66,6 @@ export function BuildsPage_BuildDetail({ code }: { code: string }): JSX.Element 
 			paragraphsToInline(role.notes),
 		)
 	})
-
-	// const abyssStats = useFetch(apiGetAbyssStats, [])
-	// console.log(abyssStats)
 
 	if (!isLoaded(build)) return <Spinner />
 

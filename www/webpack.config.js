@@ -3,8 +3,8 @@ import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin'
 import ESLintPlugin from 'eslint-webpack-plugin'
 import glob from 'glob'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import { dirname, extname } from 'path'
-import PurgeCSSPlugin from 'purgecss-webpack-plugin'
+import { dirname, extname, relative } from 'path'
+import { PurgeCSSPlugin } from 'purgecss-webpack-plugin'
 import { fileURLToPath } from 'url'
 import webpack from 'webpack'
 import doT from 'dot'
@@ -62,7 +62,10 @@ function makeConfig(mode, version, isMain, type) {
 		name: `build-${suffix}`,
 		mode: mode,
 		bail: isProd, //в прод-режиме останавливаем сборку после первой ошибки
-		stats: { preset: isProd ? 'normal' : 'errors-warnings' },
+		stats: {
+			preset: isProd ? 'normal' : 'errors-warnings',
+			errorDetails: true,
+		},
 		devtool: isProd ? 'source-map' : 'cheap-module-source-map',
 		devServer: isMain ? makeDevServerConfig(isProd) : undefined,
 		entry: `${SRC}/index.tsx`,
@@ -70,8 +73,7 @@ function makeConfig(mode, version, isMain, type) {
 		output: {
 			path: dist,
 			filename: isProd && !type.isSSR ? `[name].${suffix}.[contenthash:8].js` : `[name].${suffix}.js`,
-			// пока не нужно, см. file-loader
-			// assetModuleFilename: '[name].[hash:8][ext]',
+			assetModuleFilename: ({ filename }) => `${relative(SRC, dirname(filename))}/[name].[hash:8][ext]`,
 			publicPath: ASSET_PATH,
 			// чтоб в бандле был экспорт
 			...(type.isSSR ? { libraryTarget: 'module', chunkFormat: 'module' } : {}),
@@ -127,25 +129,10 @@ function makeConfig(mode, version, isMain, type) {
 						'sass-loader',
 					],
 				},
-				// Новые-модные вебпаковые ассеты (https://webpack.js.org/guides/asset-modules/)
-				// экспортируют CommonJS, ради подключения которого вебпак добавляет в бандл
-				// пол килобайта всякого мусора.
-				// Это некритично, но, раз уж я два часа разбирался в этой фигне, пусть тут
-				// пока полежит фикс: отключение фичи ассетов (javascript/auto) и использование
-				// устаревшего file-loader'а.
-				// Ждём, когда тут появится возможность экспортировать ES-модули
-				// https://github.com/webpack/webpack/blob/main/lib/asset/AssetGenerator.js#L272
 				{
-					test: /\.(png|svg|json)$/,
-					type: 'javascript/auto',
-				},
-				{
-					test: /\.(png|svg|json)$/,
-					loader: 'file-loader',
-					options: {
-						name: '[name].[hash:8].[ext]',
-						emitFile: isMain,
-					},
+					test: /\.(png|jpe?g|webp|svg|json)$/,
+					type: 'asset/resource',
+					generator: { emit: isMain },
 				},
 			],
 		},
@@ -169,7 +156,9 @@ function makeConfig(mode, version, isMain, type) {
 			new MiniCssExtractPlugin({ filename: isProd ? '[name].[contenthash:8].css' : '[name].css' }),
 			new PurgeCSSPlugin({
 				paths: glob.sync(`${SRC}/**/*`, { nodir: true }),
-				variables: true,
+				variables: true, //remove unused CSS variables
+				blocklist: [],
+				safelist: [],
 			}),
 			!type.isSSR &&
 				new GenerateIndexHtmls({

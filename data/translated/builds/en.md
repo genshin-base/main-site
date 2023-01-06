@@ -284,6 +284,20 @@ This is a very resin inefficient set and should not be intentionally farmed for.
 **[Instructor (4)](#artifact:instructor)**<br>
 The hydro application from Elemental Skill can be used to trigger an elemental reaction and provide a teamwide Elemental Mastery buff.
 
+# === characters.#barbara.roles.#bloom_dps.name ===
+
+bloom dps
+
+# === characters.#barbara.roles.#bloom_dps.notes ===
+
+This build is specifically for Bloom teams where Barbara is the character intended to trigger the majority of blooms.
+
+**Regarding Aritfact Sets**
+
+**[Ocean-Hued Clam (4)](#artifact:ocean-hued-clam)**
+This set can do more damage than other options in certain situations, while also increasing Barbara's healing to deal with Bloom self-damage. However, this set is very resin inefficient and is thus not recommended to farm specifically for this set.
+
+
 # === characters.#beidou.credits ===
 
 [In-depth Guide](https://keqingmains.com/beidou/) from Beidou Mains + KQM
@@ -309,7 +323,7 @@ Beidou's skill grants you an Electro status for a brief moment upon holding it. 
 **Regarding Weapon Choices**
 
 **[Serpent Spine](#weapon:serpent-spine)**<br>
-Serpent Spine is a fine choice for sub-DPS Beidou and can outperform Wolf's Gravestone by a significant margin when Bennett/Sara ATK buffs are applied. Be sure to use Beidou in slot 1 to pre-stack Serpent Spine before starting a abyss floor.
+Serpent Spine is a fine choice for sub-DPS Beidou and can outperform Wolf's Gravestone by a significant margin when Bennett/Sara ATK buffs are applied. Be sure to use Beidou in slot 1 to pre-stack Serpent Spine before starting an abyss floor.
 
 **[Redhorn Stonethresher](#weapon:redhorn-stonethresher)**<br>
 Depending on the amount of ATK% buffs you're getting, this weapon can overtake Wolf's Gravestone in personal damage.
@@ -368,11 +382,6 @@ Upon entering burst field, the Pyro status will continuously imbue you with Pyro
 
 # === characters.#bennett.roles.#dps.notes ===
 
-**Regarding Weapon Choices**
-
-[The Alley Flash](#weapon:the-alley-flash)<br>
-The Alley Flash has the potential to beat Iron Sting \[R5\]**,** but this requires the passive to be up, whenever damaged, your passive is disabled for 5 seconds and you could be losing out a lot of damage, especially if you are constantly being damaged.
-
 **Regarding Artifact Sets**
 
 [Crimson Witch of Flames (4)](#artifact:crimson-witch-of-flames)<br>
@@ -397,10 +406,13 @@ With the EM sand, this combo has the highest Melt/Vaporize damage. <br>
 This weapon at \[R1\] with EM sand turns out to have diminishing returns and isn't as good, but \[R2+\] Iron Sting is a different question because better buffs.<br>
 
 **[Aquila Favonia](#weapon:aquila-favonia)**
-Assuming you have a whale build's CR/CD stats, this weapon with EM sands will be better than the two above.<br>
+Assuming you have a high investment build's CR/CD stats, this weapon with EM sands will be better than the two above.<br>
 
 **[Primordial Jade Cutter](#weapon:primordial-jade-cutter)**
 With [Thundering Fury (4)](#artifact:thundering-fury), this weapon is able to out-perform [Mistsplitter Reforged](#weapon:mistsplitter-reforged) due to massive Crit Rate% substat, which allows consistent vaporize damage despite the lack of Crit Rate/DMG substats, assuming that your EM Sands/Circlet lacks crit rate substats. However, in the rare occasion that your EM pieces manage to roll plenty of Crit subs, Mistsplitter easily overtakes the Jade Cutter.
+
+**[The Alley Flash](#weapon:the-alley-flash)** 
+Has the potential to beat [Iron Sting](#weapon:iron-sting) \[R5\], but this requires the passive to be up, whenever damaged, your passive is disabled for 5 seconds and you could be losing out a lot of damage, especially if you are constantly being damaged.
 
 
 # === characters.#bennett.roles.#burst_support.name ===
@@ -812,6 +824,55 @@ This is Eula's optimal artifact set and it relies on having a condition fulfille
 [Pale Flame (2)](#artifact:pale-flame) + [Bloodstained Chivalry (2)](#artifact:bloodstained-chivalry)<br>
 This is a non-conditional, consistent artifact set that provides you a constant 50% Physical DMG bonus. While that by itself is amazing, Pale Flame (4) can outperform this set because it also has another 18% ATK buff and is easily maintained through her low tap skill cooldown.
 
+# === characters.#faruzan.credits ===
+
+[Quick Guide](https://keqingmains.com/q/faruzan-quickguide/) from KQM
+
+
+# === characters.#faruzan.roles.#support.name ===
+
+support
+
+
+# === characters.#faruzan.roles.#support.subStats.notes ===
+
+Only assumes higher priority than Crit DMG when using Favonius Warbow
+
+
+# === characters.#faruzan.roles.#support.tips ===
+
+**Regarding Optimal Rotations**
+
+**For funneling particles to Faruzan**<br>
+Skill --> Charged Shot --> Burst
+
+**For funneling particles to other units**<br>
+Skill --> Burst --> Charged Shot
+
+At C6 bear in mind the Charged shot portion of the rotation no longer becomes necessary since your burst will start activating the Pressurized Collapses instead.
+
+
+# === characters.#faruzan.roles.#support.notes ===
+
+As the premier Anemo support unit for Anemo dps based teams, Faruzan combines both high Anemo damage buffing with Anemo resistance shredding to become a cornerstone of any team that wants to focus on Anemo damage. Though building her means primarly focusing on dealing with her high energy requirements.
+
+**Regarding Weapon Choices**
+
+**[Elegy for the End](#weapon:elegy-for-the-end)**
+Usually only a better option at higher constellation levels such as \[C6\] where her energy needs can be met without Favonius passive particles.
+
+**[Sacrificial Bow](#weapon:sacrificial-bow)**
+It's worth mentioning that the extra Pressurized Collapse from a second E** wont give you any extra particles if it's within her 5.5 second particle generation cooldown.
+
+**Regarding Artifact Sets**
+
+**[Noblesse Oblige (4)](#artifact:noblesse-oblige)**
+This is her best option in teams that either wont benefit significantly from [Viridescent Venerer (4)](#artifact:viridescent-venerer) shred, or teams that already have another unit holding the aforementioned set.
+
+**[Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith)**
+This has similar usage cases to Noblesse Oblige except in that it requires Faruzan C6 for improved uptime through extra Pressurized Collapse activations.
+
+
 
 # === characters.#fischl.roles.#dps.name ===
 
@@ -870,6 +931,9 @@ At \[R5\] this weapon can be similar in performance to [Skyward Harp](#weapon:sk
 
 [The Stringless](#weapon:the-stringless)
 At \[R5\] this weapon can be stronger than [Amos' Bow](#weapon:amos-bow), [Alley Hunter](#weapon:alley-hunter) \[R1\] and The [Viridescent Hunt](#weapon:the-viridescent-hunt). This difference is enlarged in teams where Fischl can find herself triggering reactions.
+
+**[Prototype Crescent](#weapon:prototype-crescent)**
+If you can consistently hit a weakpoint on an enemy before summoning Oz, this weapon performs better than [Fading Twilight](#weapon:fading-twilight).
 
 **Regarding Artifact Sets**
 
@@ -1304,6 +1368,9 @@ In teams where you can meet energy requirements without needing the extra partic
 **[Iron Sting](#weapon:iron-sting)**
 Iron Sting will yield the highest upfront EM and teamwide buff if compared to the other 4 star options, if you manage to meet his energy needs or simply don't need more than one rotation, this would be the better option if compared to the Energy Recharge weapons.
 
+**[Toukabou Shigure](#weapon:toukabou-shigure)**
+This weapon performs very similarly to Iron Sting in a Swirl focused build even at higher refinements since its passive does not effect Swirl damage.
+
 **[Amenoma Kageuchi](#weapon:amenoma-kageuchi)**
 At R5, Amenoma Kageuchi needs no extra ER, and can focus building entirely EM. This makes it roughly equal to Iron Sting. At R1, Amenoma Kageuchi needs 138% Energy Recharge to burst consistently.<br>
 
@@ -1314,7 +1381,7 @@ Only really viable at high refinement in specific dendro teams where you can tri
 **Regarding Artifact Sets**
 
 [Thundering Fury (4)](#artifact:thundering-fury)<br>
-This is a niche build that excels only in AOE situations and with specific teams. This teams includes an off-field Hydro and Electro support to allow Kazuha to constantly trigger the 4p effect and spam his Elemental Skill, aswell as another Anemo support to hold the Viridiscent Venerer (4) set. Such teams can be Kazuha + Kokomi + Fischl + Venti, with Barbara and Sucrose being weaker replacements for Kokomi and Venti. This team triggers multiple fall damage instances against enemies that can be Crowd Controlled by Kazuha. Fischl can use The Viridiscent Hunt bow to allow for more fall damage instances. NOTE: This team performs very poorly in pure single target situations.
+This is a niche build that excels only in AOE situations and with specific teams. Those teams include an off-field Hydro and Electro support to allow Kazuha to constantly trigger the 4p effect and spam his Elemental Skill, aswell as another Anemo support to hold the Viridiscent Venerer (4) set. Such teams can be Kazuha + Kokomi + Fischl + Venti, with Barbara and Sucrose being weaker replacements for Kokomi and Venti. This team triggers multiple fall damage instances against enemies that can be Crowd Controlled by Kazuha. Fischl can use The Viridiscent Hunt bow to allow for more fall damage instances. \*\*NOTE: This team performs very poorly in pure single target situations
 
 
 # === characters.#keqing.credits ===
@@ -1336,11 +1403,6 @@ Refer to Notes below
 
 This section is dedicated to a playstyle where Keqing does not infuse her attacks with electro, and instead focuses on physical damage (white numbers). For this reason, you should be charged attacking after casting Stellar Restoration (E) instead of recasting it.
 
-**Regarding Weapon Choices**
-
-**[Harbinger of Dawn](#weapon:harbinger-of-dawn)**<br>
-The performance of this weapon is heavily reliant on being able to maintain its passive. It is not recommended otherwise.
-
 **Regarding Artifact Sets**
 
 **[Pale Flame (4)](#artifact:pale-flame)**<br>
@@ -1356,58 +1418,80 @@ The generalist Physical DPS set.
 This set should only be used with a consistent shielder (i.e. Zhongli/Diona) for obvious reasons.
 
 **[Bloodstained Chivalry (4)](#artifact:bloodstained-chivalry)**<br>
-This set is for general solo and Abyss content where there are multiple mobs that can be killed with charged attacks within 10 seconds, this is for dealing with a crowd, in other words, AoE. I**t is not recommended because of the kill condition.**
+This set is for general solo and Abyss content where there are multiple mobs that can be killed with charged attacks within 10 seconds, this is for dealing with a crowd, in other words, AoE. It is not recommended because of the kill condition.
 
 
 # === characters.#keqing.roles.#electro_dps.name ===
 
 electro dps
 
-
-# === characters.#keqing.roles.#electro_dps.artifacts.notes ===
-
-Note: Artifact recommendations are not ranked in order of recommendation, read the notes for more info.
-
-
-# === characters.#keqing.roles.#electro_dps.talents.notes ===
-
-Note: Since Keqing uses burst to get an extra 15% crit, it's much better in leveling it.  Best course of action is to level NA and Burst together. Don't forget to level skill to a decent level.
-
-
 # === characters.#keqing.roles.#electro_dps.tips ===
 
-**Preferred Skill Combo**
+**Preferred Skill Combo: **Skill (Place stiletto, don't reactivate yet) -> Burst -> Skill (Reactivation) -> Spam NA Combo (See Below) -> Repeat
 
-ES (Place stiletto, don't reactivate yet) -> EB -> ES (Reactivation) -> Spam AA -> Repeat
-
-**Regarding Roles**
-
-Both physical and electro keqing are good and viable. You'd usually want to decide which build to go for depending on your weapon gacha luck. For example, Lion's Roar = Electro, Flute will be equally good on Electro/Phys, etc.
+**NA Combos:<br>
+N1C = 1 Normal Attack followed by a Charged Attack - Highest DPS Combo, but costs a lot of stamina<br>
+N4C = 4 Normal Attacks followed by a Charged Attack - Second best Combo, and conserves stamina.
 
 
 # === characters.#keqing.roles.#electro_dps.notes ===
 
 **Regarding Weapon Choices**
 
-**[Lion's Roar](#weapon:lions-roar)**<br>
-This weapon is only recommended on Aggravate, Pure Electro or Electro-charged teams. In teams where the Electro Aura can be easily removed OR when facing enemies with innate elements, this weapon will severely underperform.
-
-**[The Black Sword](#weapon:the-black-sword)**<br>
-On a quickswap Keqing, this weapon will be shifted below Harbinger of Dawn **\[R5\].**
+**[Lion's Roar](#weapon:lions-roar)**
+This weapon is only recommended on Pure Electro / Electro-charged teams. In teams where the Electro Aura can be easily removed OR when facing enemies with innate elements, this weapon will severely underperform.
 
 **Regarding Artifact Sets**
 
-**[Thundering Fury (4)](#artifact:thundering-fury)**<br>
-This set provides the highest damage output if you are running Keqing in an Aggravate-based team composition. 
+**[Thundering Fury (2)](#artifact:thundering-fury) [+18% ATK set (2)](#artifact:18%-atk)**
+This set is a generalist set, which means it can be used generally anywhere, whether it be Co-op or Abyss, or other singleplayer content. This has a lot of consistency due to its independence from electro aura, and it is more viable in abyss.<br>
 
-**[Thundering Fury (2)](#artifact:thundering-fury) + [18% ATK set (2)](#artifact:18%-atk)**<br>
-This set is a generalist set, which means it can be used generally anywhere, whether it be Co-op or Abyss, or other singleplayer content. This has a lot of consistency due to its independence from electro aura, and it is more viable in abyss.
-
-**[18% ATK set (2)](#artifact:18%-atk) + [18% ATK set (2)](#artifact:18%-atk)**<br>
+**[+18% ATK set (2)](#artifact:18%-atk) + [+18% ATK set (2)](#artifact:18%-atk)**
 While it is slightly behind Thundering Fury (2) +18% ATK set (2), this set is preferred to farm for due to the resin efficiency of Shimenawa's Reminiscence's Domain.
 
-**[Thundersoother (4)](#artifact:thundersoother)**<br>
-This set should be used with Electro-charged team compositions (Keqing + Xingqiu), and can also be a good alternative for Keqing in Aggravate team compositions if you don't have [Thundering Fury (4)](#artifact:thundering-fury). This set has a 35% Dmg modifier which increases all damage from all sources, although that modifier is a bit unstable due to its dependency to the sustainability of Electro aura on enemies.
+**[Thundersoother (4)](#artifact:thundersoother)**
+This set should be used with Electro-charged team compositions (Keqing + Xingqiu). This set has a 35% DMG modifier which increases all damage from all sources, although that modifier is a bit unstable due to its dependency to the sustainability of Electro aura on enemies.
+
+
+# === characters.#keqing.roles.#aggravate_dps.name ===
+
+aggravate dps
+
+
+# === characters.#keqing.roles.#aggravate_dps.artifacts.notes ===
+
+≈ [Thundersoother (4)](#artifact:thundersoother)
+
+
+# === characters.#keqing.roles.#aggravate_dps.subStats.advices.1.notes ===
+
+≈ Elemental Mastery
+
+
+# === characters.#keqing.roles.#aggravate_dps.talents.notes ===
+
+≈ Skill
+
+It is recommended to level Keqing to level 90
+
+
+# === characters.#keqing.roles.#aggravate_dps.notes ===
+
+**Regarding Weapon Choices**
+
+**[Harbinger of Dawn](#weapon:harbinger-of-dawn) \[R5\]**
+This ranking assumes full uptime on the passive. If you cannnot maintain the passive, this weapon is not recommended.
+
+**[Summit Shaper](#weapon:summit-shaper)**
+This ranking assumes Keqing is unshielded. If Keqing has a shielder, this weapon will perform better than Harbinger of Dawn \[R5\].
+
+**[Toukabou Shigure](#weapon:toukabou-shigure)**
+Eventually with high refinement [Lion's Roar](#weapon:lions-roar) or [The Black Sword](#weapon:the-black-sword) will surpass it. But this ranking assumes \[R1\] for both, [Iron Sting](#weapon:iron-sting) can also surpass it at equal refinement in Multi-target content where Toukabou Shigure's passive falls off, since it can only be applied to one target at a time.
+
+**Regarding Artifact Choices**
+
+**[Gilded Dreams (4)](#artifact:gilded-dreams)**
+This set encourages the use of ATK% Sands over an EM Sands.
 
 
 # === characters.#klee.credits ===
@@ -1505,6 +1589,10 @@ Prioritise Energy Recharge first to ensure you can always use Elemental Burst be
 
 dps
 
+# === characters.#kokomi.roles.#dps.subStats.advices.2.notes ===
+
+≈ Flat HP
+
 
 # === characters.#kokomi.roles.#dps.tips ===
 
@@ -1528,13 +1616,27 @@ DPS Kokomi aims to maximise her onfield damage during her Elemental Burst's dura
 Although this weapon doesn't provide as much personal damage for Kokomi, the 48% ATK buff is usually more worth in most cases. This can be her best weapon in for overall team DPS if you don't already have another Thrilling Tales of Dragon Slayers user in your team.
 
 **[Hakushin Ring](#weapon:hakushin-ring)**<br>
-This weapon can provide Elemental DMG% for the team in Electro-charged teams, and will usually be the best choice in those situations.
+This weapon can provide Elemental DMG% for the team in Electro-charged teams, and is the best choice in those situations.
 
 **Regarding Artifact Sets**
 
 **[Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith)**<br>
 Although this set offers the lowest personal dmg for Kokomi, the 20% ATK team buff can sometimes be better for overall team DPS.
 
+
+# === characters.#kokomi.roles.#bloom_dps.name ===
+
+bloom dps
+
+
+# === characters.#kokomi.roles.#bloom_dps.notes ===
+
+This build is specifically for Bloom teams where Kokomi is the character intended to trigger the majority of blooms.
+
+**Regarding Aritfact Sets**
+
+**[Ocean-Hued Clam (4)](#artifact:ocean-hued-clam)**
+This set can do more damage than other options in certain situations, while also increasing Kokomi's healing to deal with Bloom self-damage. However, this set is very resin inefficient and is thus not recommended to farm specifically for this set.
 
 # === characters.#kujou-sara.roles.#burst_support.name ===
 
@@ -1593,6 +1695,14 @@ Aim for around 850-950+ Elemental Mastery. Depending on whether you use a Elemen
 
 This is a dendro team that requires a reliable electro trigger unit to work, for which Kuki is one of the best electro units to perform this role.
 
+**Regarding Weapon Choices**
+
+**[Key of Khaj-Nisut](#weapon:key-of-khaj-nisut)**
+This becomes a better choice than Iron Sting at \[C4\] when you can gain the 3rd passive stack without extending your rotation time or taking extra field time. It can also net more Elemental Mastery than Freedom-Sworn at 3 stacks, assuming you have actually built some HP% Substats on your Sands/Goblet/Circlet, but this is usually not enough to out-perform the overall gains from Xiphos' Moonlight/Freedom-sworn's respective passives.<br>
+
+**[Toukabou Shigure](#weapon:toukabou-shigure)**
+This weapon performs very similarly in a hyperbloom focused build to Iron sting since its passive does not effect Hyperbloom damage.
+
 
 # === characters.#kuki-shinobu.roles.#aggravate.name ===
 
@@ -1603,7 +1713,7 @@ aggravate
 
 ≈[Thundering Fury (2)](#artifact:thundering-fury) [80 EM set (2)](#artifact:80-em)
 
-[18% ATK set (2)](#artifact:18%-atk) \[Choose Two\]
+[Noblesse Oblige (2)](#artifact:noblesse-oblige) \[Choose Two\]
 
 
 # === characters.#kuki-shinobu.roles.#aggravate.notes ===
@@ -1646,7 +1756,7 @@ Crit Rate is useful only when using Favonius Sword
 
 # === characters.#kuki-shinobu.roles.#support.notes ===
 
-Outside of reaction teams where she can be a reliable trigger unit Kuki's damage contribution is usually insignificant. Hence her best usage case in those scenarios is building purely for utility.
+Outside of reaction teams where she can be a reliable trigger unit, Kuki's damage contribution is usually insignificant. Hence her best usage case in those scenarios is building purely for utility.
 
 
 **Regarding Weapon Choices**
@@ -1673,9 +1783,34 @@ Provides a decent amount of extra damage on a full healing build.
 Can be a cheap alternative on teams where the extra ATK% buff from [Tenacity of the Millelith (4)](#artifact:tenacity-of-the-millelith) or [Noblesse Oblige (4)](#artifact:noblesse-oblige) is not as useful.
 
 
+# === characters.#layla.credits ===
+
+[Quick Guide](https://keqingmains.com/q/layla-quickguide/) from KQM
+
+
+# === characters.#layla.roles.#support.name ===
+
+support
+
+
+# === characters.#layla.roles.#support.notes ===
+
+The goal of this build is to prioritize Layla's shield, and increase her damage where possible.
+
+**Regarding Weapon Choices**
+
+**[Freedom-Sworn](#weapon:freedom-sworn)**
+This weapon can be a good option in teams where Layla can consistently trigger reactions.
+
+**Regarding Artifact Choices**
+
+**[Blizzard Strayer (4)](#artifact:blizzard-strayer) and [Emblem of Severed Fate (4)](#artifact:emblem-of-severed-fate)**
+These sets are primiarly for increasing Layla's personal damage.
+
+
 # === characters.#lisa.credits ===
 
-[In-depth Guide](https://keqingmains.com/lisa/)  from  Lisa Mains + KQM
+[In-depth Guide](https://keqingmains.com/lisa/) from Lisa Mains + KQM
 
 
 # === characters.#lisa.roles.#electro_dps.name ===
@@ -1946,7 +2081,7 @@ dps
 
 # === characters.#ningguang.roles.#dps.artifacts.notes ===
 
-\~= Lavawalker (4)\*
+≈ Lavawalker (4)\*
 
 
 # === characters.#ningguang.roles.#dps.tips ===
@@ -2260,7 +2395,7 @@ Compared to Kaeya, Rosaria has even less desire for Crit Rate, as her Ascension 
 **Regarding Weapon Choices**<br>
 
 **[Wavebreaker's Fin](#weapon:wavebreakers-fin)**
-At high refinement \[R5\], this weapon can perform similarly to Staff of Homa, and even outperform it with a high energy cost team (260 ER).<br>
+At high refinement \[R5\], this weapon can perform similarly to Staff of Homa, and even outperform it with a high energy cost team (260).<br>
 
 **[Deathmatch](#weapon:deathmatch)**
 Rosaria gets a lot of Crit Rate from Blizzard Strayer (4) and Cryo Resonance. As a result, this weapon falls off in value as you will tend to overcap above 100% Crit rate. If Rosaria is being used without the Blizzard Strayer (4) set, then this weapon can perform better compared to other options.
@@ -2290,7 +2425,7 @@ This Build focuses on her Buffing/Energy generation/Cryo application capabilitie
 **Regarding Weapon Choices**<br>
 
 **[Favonius Lance](#weapon:favonius-lance)**
-Her best option in situations where you havent met your teams energy requirements and need the extra particles, outside of that though you would be better of using a Crit Rate weapon that improves her A4 buff if you dont need the extra particles.
+The best option in situations where you havent met your teams energy requirements. Outside of that scenario you would be better of using a Crit Rate weapon that benefits her A4 buff.
 
 **Regarding Artifact Sets**<br>
 
@@ -2501,7 +2636,7 @@ Main DPS Childe should only use this weapon in teams where you are Vaporising yo
 This set is only about 1-2 substats behind Heart of Depth (4), you can opt out for this set instead if you already have decent pieces.
 
 **[Shimenawa's Reminiscence (4)](#artifact:shimenawas-reminiscence)**<br>
-Due to this set requiring Childe to have around 140% Energy Recharge to reliably burst every rotation, it falls behind the other options. However, it outperforms Heart of Depth (4) if used in a single rotation setting (ignoring ER).
+Due to this set requiring Childe to have around 150% Energy Recharge to reliably burst every rotation, it falls behind the other options. However, it outperforms Heart of Depth (4) if used in a single rotation setting (ignoring ER).
 
 
 # === characters.#thoma.credits ===
@@ -2567,7 +2702,10 @@ quick swap dps
 
 # === characters.#tighnari.roles.#quick_swap_dps.tips ===
 
-One recommended rotation is E 3CA Q or an alternative variation while on field, as it is impractical to do charged shots that are not boosted by his E
+There are three recommended combos that Tighnari can perform:<br>
+1. Skill -> Burst -> Charged Attack (x3) — Simplest combo to use, and generally weakest combo. His Burst does not benefit from A1 in this combo.<br>
+2. Skill -> Charged Attack (x3) -> Burst — Allows Tighnari's Burst to benefit from A1. However, this combo doesn't allow Tighnari to funnel particles from his Skill into his next Burst.<br>
+3. Skill -> Charged Attack -> Burst -> Charged Attack (x2) — This is the most mechanically difficult combo. However, this combo allows Tighnari to have both his Burst effected by A1 and funnel particles from his Skill to his next Burst.
 
 
 # === characters.#tighnari.roles.#quick_swap_dps.notes ===
@@ -2786,6 +2924,51 @@ Due to EM build assumptions, the stats offered aren't very valuable.
 [Elegy for the End](#weapon:elegy-for-the-end)<br>
 Elegy for the End's ATK buff does not buff Venti's burst if Venti is the one equipping the bow, but the EM buff affects Venti's Swirl reaction. This is due to Venti's burst snapshotting his stats (excluding EM toward transformative reactions such as Swirl) at the time of cast. While an **\[R1\]** Elegy of the End yields slightly lower Venti damage compared to an **\[R5\]** Stringless (\~7% assuming 50% Elegy buff uptime), it provides a party-wide ATK and EM buff which can be better in terms of total team damage and comfortable ER.
 
+# === characters.#wanderer.roles.#dps.name ===
+
+dps
+
+
+# === characters.#wanderer.roles.#dps.talents.notes ===
+
+If Wandarer is C2, prioritize burst over skill
+
+
+# === characters.#wanderer.roles.#dps.tips ===
+[Desert Pavillion (4)](#artifact:desert-pavilion-chronicle) and [Tulaytullah's Remembrance](#weapon:tulaytullahs-remembrance): (Q) E CA N3x6<br>
+Only [Desert Pavillion (4)](#artifact:desert-pavilion-chronicle): (Q) E CA N3x5 N2<br>
+Other Artifact Sets Rotation: (Q) E N3x6 N2
+
+
+# === characters.#wanderer.roles.#dps.notes ===
+
+Wanderer focuses on doing damage by activating his elemental skill and performing boosted normal attacks. It should be noted that in this state, he does not have knockback resistance so a shielder or other form of knockback immunity is recommended. It is not worth building ER to burst every rotation. Instead, bursting every other rotation is preferred.
+
+**Regarding Weapon Choices**
+
+**[Memory of Dust](#weapon:memory-of-dust)**<br>
+If Bennett is on the team, this weapon ranks below Kagura's Verity.<br>
+
+**[Skyward Atlas](#weapon:skyward-atlas)**
+If Bennett is on the team, this weapon ranks below Solar Pearl.<br>
+
+**[Dodoco Tales](#weapon:dodoco-tales)<br>**
+This weapon uses a different rotation of E N1 CAx6 N1 CAx6 to maximize its passive. If Bennett is on the team, this weapon ranks below Kagura's Verity.
+
+**[The Widsith](#weapon:the-widsith)**
+Because Wanderer doesn't focus on swirl damage, this weapon can be inconsistent if you get the EM buff.
+
+**Regarding Artifact Sets**
+
+**[Echoes of an Offering (4)](#artifact:echoes-of-an-offering)**
+If your ping is above 100, it is not recommended to run this set specifically
+
+**[Blizzard Strayer (4)](#artifact:blizzard-strayer)**
+This set synergizes well with the 20% crit rate that Wanderer gets from swirling cryo. It is only recommended if you have close to 100% uptime on freeze, which requires very specific teams.
+
+**[Lavawalker (4)](#artifact:lavawalker)**
+In teams with consistent pyro application, this set is about equal to Echoes of an Offering.
+
 
 # === characters.#xiangling.credits ===
 
@@ -2805,7 +2988,7 @@ A few commonly used teams for pyro Xiangling are:
 
 **Childe Team:** Childe, Xiangling, Bennett and a Flex unit (Sucrose/Zhongli/Venti/Kazuha/etc)
 
-_**Recommended ER thresholds:**_
+**Recommended ER thresholds:**
 
 **National/Childe Teams:** 160-200 ER%<br>
 **Enabler for Reverse Melt teams:** 200-250 ER%
@@ -3098,6 +3281,8 @@ Start your rotations with Yae's Elemental Skill to amplify her Elemental Burst d
 
 **Burst combo**<br>
 Skill > Skill > Skill > Burst > Skill > Skill > Skill
+After the first set of EEE you usually swap out and go through your buff rotation before swapping back to burst.
+
 
 Take note that none of Yae Miko's abilities snapshot.
 
@@ -3215,7 +3400,7 @@ off-field dps
 
 # === characters.#yelan.roles.#off-field_dps.notes ===
 
-Yelan is an off-field DPS who is able to apply Hydro off-field via her Elemental Burst, this part of her kit acts similarly like Xingqiu's Elemental Burst. Yelan mainly scales off HP%, so don't build her with ATK%. Yelan also wants a lot of Energy Recharge to be able to maintain her Elemental Burst uptime (up to \~250 ER), this can decrease depending on the number of Hydro units or energy providers in the team.
+Yelan is an off-field DPS who is able to apply Hydro off-field via her Elemental Burst, this part of her kit acts similarly to Xingqiu's Elemental Burst. Yelan mainly scales off HP%, so don't build her with ATK%. Yelan also wants a lot of Energy Recharge to be able to maintain her Elemental Burst uptime (up to \~250 ER), this can decrease depending on the number of Hydro units or energy providers in the team.
 
 **Regarding Weapon Choices**
 
@@ -3228,7 +3413,7 @@ This weapon works best at \[R3\]+ and makes HP% Goblet potentially a stronger op
 **Regarding Artifact Main Stats**
 
 **Goblet**
-HP% Goblet is to be used only if Hydro DMG% option is very bad and HP% option is very good,** or if Yelan has strong DMG% buffs such as [Emblem of Severed Fate (4)](#artifact:emblem-of-severed-fate) + Mouun's Moon (especially with refinements) or Raiden + Kazuha and so on.
+HP% Goblet is to be used only if the Hydro DMG% option has terrible substats and HP% option has great substats, or if Yelan has strong DMG% buffs such as [Emblem of Severed Fate (4)](#artifact:emblem-of-severed-fate) + Mouun's Moon (especially with refinements) or Raiden + Kazuha and so on.
 
 **Regarding Talent Priority**
 

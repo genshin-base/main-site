@@ -1,3 +1,4 @@
+import { Greetings } from '#src/components/greetings'
 import { AlchemyCalculator } from '#src/containers/alchemy-calculator'
 import { FarmToday } from '#src/containers/farm-today'
 import { RegionSwitch } from '#src/containers/region-switch'
@@ -30,6 +31,7 @@ export function FrontPage(): JSX.Element {
 
 	return (
 		<div className="dashboard container ">
+			<Greetings classes="mb-4 mt-2" isHiddenOnMobile={true} isClosable={true} />
 			<h1 className="my-1 letter-spacing-1">{I18N_DASHBOARD}</h1>
 			<div className="row">
 				<Fieldset legend={I18N_REGION} classes="col-lg-3 col-12">

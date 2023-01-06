@@ -77,8 +77,7 @@ import { applyCharactersReleaseVersion } from '#lib/parsing/wiki/characters.js'
 import { getEnemyCodeFromName } from '#lib/genshin.js'
 import { extractArtifactsData, getArtifactSpecialGroupCodes } from '#lib/parsing/honeyhunter/artifacts.js'
 import { buildsConvertLangMode } from '#lib/parsing/helperteam/build_texts.js'
-import { extractAbyssStats } from '#lib/parsing/spiralabyss/index.js'
-import { mustBeDefined } from '#lib/utils/values.js'
+import { extractAbyssStats } from '#lib/parsing/akashadata/index.js'
 
 const HELPERTEAM_DOC_ID = '1gNxZ2xab1J6o1TuNVWMeLOZ7TPOqrsf3SshP5DLvKzI'
 
@@ -115,6 +114,27 @@ const fixes = {
 						}
 					}
 					return copiedSmth
+				},
+			},
+			{
+				// у Фишль забыли точку в нумерованном списке
+				title: /^electro$/i,
+				fixFunc(sheet) {
+					const substr = '8 Prototype Crescent'
+					const replaceWith = '8. Prototype Crescent'
+					for (const { values: cells = [] } of sheet.data[0].rowData) {
+						for (const cell of cells) {
+							const text = json_getText(cell)
+							if (text.includes(substr)) {
+								delete cell.textFormatRuns
+								cell.userEnteredValue = {
+									stringValue: text.replace(substr, replaceWith),
+								}
+								return true
+							}
+						}
+					}
+					return false
 				},
 			},
 		],
@@ -348,16 +368,21 @@ const fixes = {
 	},
 	/** @type {import('#lib/parsing/mihoyo/fixes').MihoyoFixes} */
 	mihoyo: {
-		enemiesOnMap: [
-			{ nameOnMap: 'Fatui Agent', useCode: 'fatui-pyro-agent' },
-			{ nameOnMap: 'Fatui Mirror Maiden', useCode: 'mirror-maiden' },
-			{ nameOnMap: 'The Black Serpents', useCode: 'shadowy-husk' },
-			{ nameOnMap: 'Red-Finned Unagi', useCode: 'unagi' },
-			{ nameOnMap: 'Adorned Unagi', useCode: 'unagi' },
-			{ nameOnMap: 'Fungi', useCode: 'fungus' },
-			{ nameOnMap: 'Bathysmal Vishap', useCode: 'bathysmal-vishap-hatchling' },
-			{ nameOnMap: 'The Eremites', useCode: 'eremite' },
-		],
+		map: {
+			search: [
+				// enemies
+				{ nameOnMap: 'Fatui Agent', useCode: 'fatui-pyro-agent' },
+				{ nameOnMap: 'Fatui Mirror Maiden', useCode: 'mirror-maiden' },
+				{ nameOnMap: 'The Black Serpents', useCode: 'shadowy-husk' },
+				{ nameOnMap: 'Red-Finned Unagi', useCode: 'unagi' },
+				{ nameOnMap: 'Adorned Unagi', useCode: 'unagi' },
+				{ nameOnMap: 'Fungi', useCode: 'fungus' },
+				{ nameOnMap: 'Bathysmal Vishap', useCode: 'bathysmal-vishap-hatchling' },
+				{ nameOnMap: 'The Eremites', useCode: 'eremite' },
+				// items
+				{ nameOnMap: 'Unagi Meat', useCode: 'eel-meat' },
+			],
+		},
 	},
 }
 
@@ -390,12 +415,7 @@ if (args['--help'] || args['-h']) {
 		// await checkUsedItemsLocations()
 	}
 	if (updAbyssData) {
-		info('updating abyss stats', { newline: false })
-		await fs.mkdir(DATA_DIR, { recursive: true })
-		const code2character = await loadCharacters()
-		const abyssStats = await extractAbyssStats(DATA_CACHE_DIR, code2character)
-		await saveAbyssStats(abyssStats)
-		progress()
+		await extractAndSaveAbyssStats()
 	}
 	if (updImgs) {
 		await prepareCacheDir(IMGS_CACHE_DIR, !!args['--ignore-cache'])
@@ -480,6 +500,15 @@ async function extractAndSaveAllItemsData() {
 	await saveEnemies(enemies.code2item)
 	await saveEnemyGroups(enemyGroups.code2item)
 
+	progress()
+}
+
+async function extractAndSaveAbyssStats() {
+	info('updating abyss stats', { newline: false })
+	await fs.mkdir(DATA_DIR, { recursive: true })
+	const code2character = await loadCharacters()
+	const abyssStats = await extractAbyssStats(DATA_CACHE_DIR, code2character)
+	await saveAbyssStats(abyssStats)
 	progress()
 }
 
@@ -647,7 +676,6 @@ async function saveWwwData() {
 	/** @type {import('#lib/parsing/combine').AbyssStatsInfo} */
 	const abyssStatsInfo = {
 		mostUsedCharacters: abyssStats.mostUsedCharacters,
-		mostUsedTeams: abyssStats.mostUsedTeams,
 	}
 	await writeJson(`${WWW_DYNAMIC_DIR}/abyss_stats.json`, abyssStatsInfo)
 

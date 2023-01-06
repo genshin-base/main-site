@@ -246,13 +246,37 @@ export const I18N_CHAR_BUILD_RECS = {
 	en: 'Character builds recommendations',
 	ru: 'Рекомендуемые сборки персонажей',
 }[LANG]
+export const I18N_BEST_CHAR_BUILDS = {
+	en: 'Best builds for Genshin characters',
+	ru: 'Лучшие сборки персонажей Геншин Импакта',
+}[LANG]
+export const I18N_FOR_EXAMPLE = {
+	en: 'For example' + ELLIPSIS,
+	ru: 'Например' + ELLIPSIS,
+}[LANG]
 export const I18N_SELECT_CHAR_BELOW = { en: 'Select character below', ru: 'Выберите персонажа' }[LANG]
 export const I18N_BUILD_RECS_FOR = { en: 'build recommendations', ru: 'билд' }[LANG]
 export const I18N_RECOMMENDED_RU_ONLY = { en: '', ru: 'Рекомендуемый' }[LANG]
 export const I18N_ABOUT_SITE = { en: 'Site History', ru: 'История сайта' }[LANG]
+export const I18N_OUR_SOCIAL_NETWORKS = { en: 'Social', ru: 'Мы в соцсетях' }[LANG]
+export const I18N_PAGE_WITH_ALL_LINKS = { en: 'Page with all links', ru: 'Страница со всеми ссылками' }[LANG]
+export const I18N_WE_ARE_EVERYWHERE = { en: 'We are everywhere', ru: 'Мы везде' }[LANG]
+export const I18N_CHATS = { en: 'Chats', ru: 'Чатики' }[LANG]
+export const I18N_VIDEOS = { en: 'Videos', ru: 'Видосики' }[LANG]
+// export const I18N_PICTURES = { en: 'Images', ru: 'Картиночки' }[LANG]
+export const I18N_DONATE_US = { en: 'Donate', ru: 'Донатить здесь' }[LANG]
 export const I18N_EQUIPMENT = { en: 'Equipment', ru: 'Снаряжение' }[LANG]
+export const I18N_OUR_DISCORD = { en: 'Discord', ru: 'Дискорд' }[LANG]
+const yt = { en: 'YouTube', ru: 'Ютуб' }[LANG]
+export const I18N_YOUTUBE_RU = { en: yt + ' RU', ru: yt + ' на русском' }[LANG]
+export const I18N_YOUTUBE_UA = { en: yt + ' UA', ru: yt + ' на украинском' }[LANG]
+const tiktok = { en: 'TikTok', ru: 'ТикТок' }[LANG]
+export const I18N_TIKTOK_RU = { en: tiktok + ' RU', ru: tiktok + ' на русском' }[LANG]
+export const I18N_TIKTOK_UA = { en: tiktok + ' UA', ru: tiktok + ' на украинском' }[LANG]
+const tg = { en: 'Telegram', ru: 'Телеграм' }[LANG]
+export const I18N_OUR_TELEGRAM_RU = { en: tg + ' RU', ru: tg + ' на русском' }[LANG]
+export const I18N_OUR_TELEGRAM_UA = { en: tg + ' UA', ru: tg + ' на украинском' }[LANG]
 export const I18N_CHAR_EQUIPMENT = { en: 'Character Equipment', ru: 'Снаряжение персонажа' }[LANG]
-export const I18N_OUR_DISCORD = { en: 'Our Discord', ru: 'Наш Дискорд' }[LANG]
 export const I18N_CREATED_BY_US = {
 	en: `Designed and coded by${NBSP}Yurtaikin${NBSP}Studio`,
 	ru: `Задизайнено и запрограммировано студией${NBSP}Павла${NBSP}Юртайкина${NBSP}`,
@@ -268,6 +292,10 @@ export const I18N_SUPPORT_US = {
 export const I18N_SUPPORT_VIA_KO_FI = {
 	en: 'Ko-fi, if you have PayPal',
 	ru: 'Ко-фи, если у вас есть Пейпал',
+}[LANG]
+export const I18N_SUPPORT_VIA_KO_FI_SHORT = {
+	en: 'Ko-fi',
+	ru: 'Ко-фи',
 }[LANG]
 export const I18N_SUPPORT_VIA_DON_ALERTS = {
 	en: 'DonationAlerts',
@@ -301,6 +329,10 @@ export const I18N_GI_WIKI = {
 	en: 'Genshin Wiki',
 	ru: 'Вики Геншина',
 }[LANG]
+export const I18N_AKASHADATA = {
+	en: 'Akashadata',
+	ru: 'Акашадата',
+}[LANG]
 export const I18N_WE_USE_DATA_FROM = {
 	en: 'We use data from',
 	ru: 'Использованные источники',
@@ -324,6 +356,10 @@ export const I18N_NOTHING_TO_SHOW = {
 export const I18N_MEGA_SEARCH_PLACEHOLDER = {
 	en: 'Search for characters, weapons, artifacts',
 	ru: 'Искать персонажей, артефакты, оружие',
+}[LANG]
+export const I18N_ABYSS_LETTERS_EXPLANATION = {
+	en: 'F-SSS character ratings are based on approximate character usage statistics in the current abyss.',
+	ru: 'Рейтинги персонажей F-SSS основаны на примерной статистике использования персонажей в текущей бездне.',
 }[LANG]
 
 export const I18N_FRONT_PAGE_DESCRIPTION = {
@@ -414,8 +450,9 @@ export const I18N_OBTAINED_DURING_STORYLINE = {
 }[LANG]
 export const I18N_ART_GROUP_NAME: Record<GI_ArtifactGroupCode, string> = {
 	'18%-atk': { en: 'ATK +18%', ru: 'Сила атаки +18%' }[LANG],
-	'20%-er': { en: 'Energy Recharge +20%', ru: 'Восстановление энергии +20%' }[LANG],
 	'25%-ph-atk': { en: 'Physical DMG +25%', ru: 'Физ. урон +25%' }[LANG],
+	'15%-anemo': { en: 'Anemo DMG +15%', ru: 'Анемо урон +15%' }[LANG],
+	'20%-er': { en: 'Energy Recharge +20%', ru: 'Восстановление энергии +20%' }[LANG],
 	'80-em': { en: 'Elemental Mastery +80', ru: 'Мастерство Стихий +80' }[LANG],
 	'15%-heal': { en: 'Healing Bonus +15%', ru: 'Бонус лечения +15%' }[LANG],
 }
@@ -438,6 +475,18 @@ export const I18N_OBTAIN_SOURCES = {
 export const I18N_SORT_BY = {
 	en: 'Sort by',
 	ru: 'Сортировать по',
+}[LANG]
+export const I18N_USAGE = {
+	en: 'Usage',
+	ru: 'Востребованность',
+}[LANG]
+export const I18N_USED_IN_ABYSS = {
+	en: (n: number) => `Used in Abyss by ${n.toFixed(2)}${NBSP}% owners`,
+	ru: (n: number) => `${n.toFixed(2)}${NBSP}% владельцев используют персонажа в Бездне`,
+}[LANG]
+export const I18N_FILTER = {
+	en: 'Filter',
+	ru: 'Фильтр',
 }[LANG]
 export const I18N_WEAPON_TYPE = {
 	en: 'Weapon type',

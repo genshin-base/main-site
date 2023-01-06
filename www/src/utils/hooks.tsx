@@ -91,7 +91,7 @@ export const useClickAway = (
 	})
 }
 
-interface WindowSize {
+export type WindowSize = {
 	width: number | undefined
 	height: number | undefined
 	breakpoint: BS_BreakpointCode

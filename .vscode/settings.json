@@ -35,7 +35,7 @@
 	"importSorter.importStringConfiguration.trailingComma": "multiLine",
 	"importSorter.sortConfiguration.customOrderingRules.rules": [
 		{
-			"regex": "\\.(css|s[ac]ss)$",
+			"regex": "\\.(css|s[ac]ss|png|jpe?g|webp)$",
 			"orderLevel": 100,
 			"disableSort": true
 		},

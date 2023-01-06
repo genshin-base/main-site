@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'preact/hooks'
 
 import {
+	I18N_AKASHADATA,
 	I18N_C_MIHOYO,
 	I18N_COPYRIGHTS,
 	I18N_CREATED_BY_US,
@@ -15,6 +16,7 @@ import {
 } from '#src/i18n/i18n'
 import { ReportBugModal } from '#src/modals/report-bug'
 import {
+	LINK_AKASHADATA,
 	LINK_GI_MAP,
 	LINK_GI_WIKI,
 	LINK_GOOGLE_FORM_ORDER_SITE,
@@ -78,6 +80,11 @@ export function Footer() {
 							<p>
 								<a target="_blank" href={LINK_GI_WIKI} className="text-muted small">
 									{I18N_GI_WIKI}
+								</a>
+							</p>
+							<p>
+								<a target="_blank" href={LINK_AKASHADATA} className="text-muted small">
+									{I18N_AKASHADATA}
 								</a>
 							</p>
 						</div>

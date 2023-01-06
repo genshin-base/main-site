@@ -23,7 +23,7 @@ import {
 	SV_FAV_WEAPON_PRIMARY_MATERIAL_CODES,
 	SV_SELECTED_REGION_CODE,
 } from '#src/utils/local-storage-keys'
-import { HEART } from '#src/utils/typography'
+import { BULLET, HEART } from '#src/utils/typography'
 import { OtherItemCard } from './item-cards/dd-cards'
 import { CharacterAvatar, ItemAvatar } from './item-cards/item-avatars'
 
@@ -88,10 +88,10 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 									<div>
 										<ItemAvatar
 											src={getItemIconLargeSrc(asc.itemCode)}
-											classes="me-3 vertical-align-middle"
+											classes="me-2 vertical-align-middle"
 											badgeTopStart={
 												~favTalMaterialCodes.indexOf(asc.itemCode) ? (
-													<span className="text-danger">{HEART}</span>
+													<span className="text-danger opacity-75">{HEART}</span>
 												) : null
 											}
 											ddComponent={
@@ -104,18 +104,27 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 											}
 										/>
 									</div>
+									<div
+										// for PurgeCSS: color-sumeru color-inazuma color-liyue color-mondstadt
+										className={`color-${asc.itemRegion} me-1 fs-1 position-relative`}
+										style={{ lineHeight: 0, top: '-4px' }}
+									>
+										{BULLET}
+									</div>
 									<div className="d-flex flex-wrap align-self-center pt-2">
 										{asc.characterCodes.map(c => (
 											<CharacterAvatar
 												key={c}
 												code={c}
-												isNoBg={true}
+												href={'/builds/' + c}
 												classes={`small-avatar mb-2 me-2 ${
 													~favCharCodes.indexOf(c) ? 'order-1' : 'order-2'
 												}`}
 												badgeTopStart={
 													~favCharCodes.indexOf(c) ? (
-														<span className="text-danger">{HEART}</span>
+														<span className="text-danger opacity-75">
+															{HEART}
+														</span>
 													) : null
 												}
 											/>
@@ -134,7 +143,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 								classes="small-avatar me-3 with-padding"
 								badgeTopStart={
 									~favWeapPrimMatCodes.indexOf(code) ? (
-										<span className="text-danger">{HEART}</span>
+										<span className="text-danger opacity-75">{HEART}</span>
 									) : null
 								}
 								ddComponent={

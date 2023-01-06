@@ -7,6 +7,7 @@ export const paths = /** @type {const} */ ({
 	weapons: ['/weapons'],
 	artifacts: ['/artifacts'],
 	about: ['/about'],
+	everywhere: ['/everywhere'],
 })
 
 /**
