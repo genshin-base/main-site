@@ -535,9 +535,8 @@ characters:
         notes:
           - p:
               - b: >-
-                  Regarding Weapon Choices: THIS LIST ASSUMES THAT XIANGLING IS
-                  RUN WITH BOTH BENNETT AND A SECONDARY BUFFER (i.e.
-                  Kazuha/Sucrose)
+                  Regarding Weapon Choices: THIS LIST ASSUMES THAT XIANGLING IS RUN WITH BOTH
+                  BENNETT AND A SECONDARY BUFFER (i.e. Kazuha/Sucrose)
 
                   Wavebreaker's Fin: 
               - "At "
@@ -935,9 +934,9 @@ characters:
           - p: For that, cast EB with Bennett, switch to the character imbued with Cryo and
               walk on Bennett's Burst field
           - p: >
-              Upon entering burst field, the Pyro status will continuously imbue
-              you with Pyro, reacting with other elements on you and eventually
-              removing them.
+              Upon entering burst field, the Pyro status will continuously imbue you with
+              Pyro, reacting with other elements on you and eventually removing
+              them.
         notes:
           - p:
               - b: |-
@@ -946,7 +945,7 @@ characters:
               - >2
                  Assuming a Melt/Vaporize team, this set is your best set for damage and works best with Chongyun on the same team for consistent Melt.
               - b: "Thundering Fury (4):"
-              - >-2
+              - >2-
                  This set works best if paired with Electro supports such as Beidou and Fischl/Lisa, as it allows Bennett to accomplish 2 things: 
                 >1) Rapidly spam E for raw pyro damage and application, allowing frequent Overload reaction triggers and breaking Electro shields rapidly.
 
@@ -1159,7 +1158,7 @@ characters:
           - b: "completely ignores the need for excess healing potential "
           - "and is aimed for people who prefer to "
           - b: squeeze out more damage
-          - |-2
+          - |2-
              instead. 
             On this build, Bennett is 
           - b: built with offensive stats like ATK%, Pyro Damage, and Crit stats while
@@ -2015,9 +2014,9 @@ characters:
           notes: null
           seeCharNotes: false
         tips: >
-          Yanfei's Ascension 4 Talent does a second hit after a Crit Charge
-          Attack. This scales 80% of your ATK and can trigger reactions as well
-          due to having a separate internal cooldown on its pyro application. 
+          Yanfei's Ascension 4 Talent does a second hit after a Crit Charge Attack.
+          This scales 80% of your ATK and can trigger reactions as well due to
+          having a separate internal cooldown on its pyro application. 
         notes:
           - p: Yanfei can have trouble trying to set up for her reaction DPS. Vaporize is
               generally the more consistent option and you need Xingqiu to make
@@ -3155,8 +3154,8 @@ characters:
               - "Provides little to nothing to Hu Tao since she scales better
                 with HP% than ATK% with every spear in the game. "
               - b: >-
-                  Base ATK makes little difference on Hu Tao because she has a
-                  very high HP to ATK conversion cap.
+                  Base ATK makes little difference on Hu Tao because she has a very high HP to
+                  ATK conversion cap.
 
                   White Tassel: 
               - This weapon requires your combos to be more focused on Normal
@@ -3704,7 +3703,13 @@ characters:
                 - code: the-stringless
                   refine: null
                   stacks: null
-                  notes: 8 Prototype Crescent (4✩)*
+                  notes: null
+                  seeCharNotes: true
+            - similar:
+                - code: prototype-crescent
+                  refine: null
+                  stacks: null
+                  notes: null
                   seeCharNotes: true
           notes: null
           seeCharNotes: false
@@ -3991,7 +3996,7 @@ characters:
         notes:
           - p:
               - b: "Regarding Weapon Choices:"
-              - |-2
+              - |2-
                  
                 For more detailed numbers, see the Google Sheet 
               - a: here.
@@ -4199,7 +4204,7 @@ characters:
               - b: " Wolf's Gravestone"
               - " by a significant margin when Bennett/Sara ATK buffs are
                 applied."
-              - b: >-2
+              - b: >2-
                    Be sure to use Beidou in slot 1 to pre-stack Serpent Spine before starting an abyss floor.
                   Redhorn Stonethresher: 
               - "Depending on the amount of ATK% buffs you're getting, this
@@ -4738,8 +4743,8 @@ characters:
           you can release your cast at max damage.
         notes:
           - p: >-
-              Can be built to set up for either Burst damage or Quickswap Skill
-              Nuke damage.
+              Can be built to set up for either Burst damage or Quickswap Skill Nuke
+              damage.
 
               Lisa works well with anemo characters which can keep enemies in her ultimate radius.
           - p:
@@ -4916,8 +4921,8 @@ characters:
           notes: null
           seeCharNotes: false
         tips: >
-          Razor's EB grants you an Electro Status when you basic attack while
-          burst is in-effect, that means it can be used for status-cleansing (no
+          Razor's EB grants you an Electro Status when you basic attack while burst
+          is in-effect, that means it can be used for status-cleansing (no
           particular effective element).  Can only be done on himself.
         notes:
           - p:
@@ -5540,7 +5545,7 @@ characters:
                 fully stacked. This is usually a "
               - b: unrealistic scenario
               - " though with it taking up to"
-              - b: |-2
+              - b: |2-
                    2-3
                   rotations
               - " to fully stack or forcing you to stay on-field to let it stack
@@ -6851,8 +6856,8 @@ characters:
                 National teams, etc.)."
           - p:
               - b: >-
-                  Regarding Weapon Choices: This list assumes the average across
-                  a variety of buffs. 
+                  Regarding Weapon Choices: This list assumes the average across a variety of
+                  buffs. 
 
                   Skyward Spine: 
               - >
@@ -7065,7 +7070,7 @@ characters:
               - " This set also"
               - b: " provides more value"
               - " if she's used WITHOUT Raiden"
-              - b: |-2
+              - b: |2-
                    (due to the higher ER requirements).
                   Gilded Dreams (4):
               - " If Yae is used in an "
@@ -7989,8 +7994,8 @@ characters:
               - "This section is dedicated to the playstyle where Barbara is
                 triggering the vaporize reaction with her charged attack, "
               - b: >
-                  for an Electro-Charged focused team, follow the weapon choices
-                  in the Support section instead. 
+                  for an Electro-Charged focused team, follow the weapon choices in the Support
+                  section instead. 
               - >-
                 For this playstyle, Barbara is heavily recommended to be run
                 with Xiangling, as she is the only character that can keep up
@@ -9180,9 +9185,9 @@ characters:
           notes: null
           seeCharNotes: false
         tips: >
-          Kokomi's Elemental Burst dynamically alters her skill's damage, this
-          means that you cannot use her Burst to snapshot the buff onto the
-          Skill and swap out.
+          Kokomi's Elemental Burst dynamically alters her skill's damage, this means
+          that you cannot use her Burst to snapshot the buff onto the Skill and
+          swap out.
         notes:
           - p: Support Kokomi focuses on just using her Elemental Burst before her Elemental
               Skill's duration ends to refresh her skill duration. This allows
@@ -11072,12 +11077,12 @@ characters:
                 diona, increasing ult uptime and healing strength respectively.
           - p:
               - b: "Regarding Main Stats Priority:"
-              - >-2
+              - >2-
                  
                 Full Stack HP% is recommended if you want stronger shields but a weaker heal. You can use Healing Bonus Circlet if you want a nice balance between the two.
           - p:
               - b: "Regarding Talent Priority:"
-              - >-2
+              - >2-
                  
                 Prioritise whichever your Diona is geared for (shielder or healer), if built for a balance between the two, level both equally.
     credits: null
@@ -12556,7 +12561,7 @@ characters:
               - "Qiqi's Burst has an 80 energy cost with her skill not
                 generating any energy until "
               - b: "[C1]."
-              - >-2
+              - >2-
                  Energy Recharge will greatly benefit Qiqi, while her Burst should be kept as a last resort.
                 Qiqi's Burst allows other characters to maximize DPS field time while offering healing from being off-field. At Ascension 4, her Normal Attack applies the healing talisman onto an enemy with a cooldown of 30 seconds.
           - p:
@@ -12574,8 +12579,8 @@ characters:
                 heals are often more than enough, you may consider switching her
                 to this artifact set. "
               - b: >-
-                  Do note that other characters might utilize Sacrificial Sword
-                  more than Qiqi, such as Xingqiu, Kazuha, etc.
+                  Do note that other characters might utilize Sacrificial Sword more than Qiqi,
+                  such as Xingqiu, Kazuha, etc.
 
                   Ocean Hued Clam (4):
               - " This ranking assumes "
@@ -16086,7 +16091,7 @@ characters:
               - b: "Iron Sting: "
               - This weapon will yield the joint highest upfront EM and teamwide
                 buff if compared to the other 4 star options,
-              - b: >-2
+              - b: >2-
                    if you manage to meet his energy needs or simply don't need more than one rotation, this would be the better option if compared to the Energy Recharge weapons.
                   Toukabou Shigure: 
               - This weapon performs very similarly to
@@ -16137,7 +16142,7 @@ characters:
       - a: In-depth Guide
         href: https://keqingmains.com/kazuha/
       - " from KQM"
-  - code: wanderer-(wip)
+  - code: wanderer
     elementCode: anemo
     roles:
       - code: dps
@@ -16230,9 +16235,9 @@ characters:
             - arts:
                 op: and
                 arts:
-                  - code: 15%-anemo-dmg-set
+                  - code: 15%-anemo
                     count: 2
-                  - code: 15%-anemo-dmg-set
+                  - code: 15%-anemo
                     count: 2
                   - code: 18%-atk
                     count: 2
@@ -16722,8 +16727,7 @@ characters:
         notes:
           - p:
               - b: >
-                  It's recommended to avoid building a DPS Noelle if she's not
-                  [C5+].
+                  It's recommended to avoid building a DPS Noelle if she's not [C5+].
               - "Noelle DPS is best optimized at "
               - b: "[C6]"
               - " where she converts an additional 50% DEF into ATK. Her ability
