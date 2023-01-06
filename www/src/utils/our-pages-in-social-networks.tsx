@@ -3,7 +3,8 @@ import {
 	I18N_DONATE_US,
 	I18N_OUR_DISCORD,
 	I18N_SUPPORT_VIA_DON_ALERTS,
-	I18N_SUPPORT_VIA_KO_FI_SHORT,
+	I18N_SUPPORT_VIA_DONATELLO,
+	I18N_SUPPORT_VIA_KO_FI,
 	I18N_TIKTOK_RU,
 	I18N_TIKTOK_UA,
 	I18N_VIDEOS,
@@ -12,6 +13,7 @@ import {
 } from '#src/i18n/i18n'
 import {
 	LINK_DISCORD_INVITE,
+	LINK_DONATELLO,
 	LINK_DONATION_ALERTS,
 	LINK_KO_FI,
 	LINK_TIKTOK_RU,
@@ -62,14 +64,19 @@ export const ourPagesInSocialNetworks: {
 		code: 'donations',
 		links: [
 			{
-				href: LINK_KO_FI,
-				title: I18N_SUPPORT_VIA_KO_FI_SHORT,
-				favicon: 'https://ko-fi.com/favicon.ico',
+				href: LINK_DONATELLO,
+				title: I18N_SUPPORT_VIA_DONATELLO,
+				favicon: 'https://donatello.to/favicon.ico',
 			},
 			{
 				href: LINK_DONATION_ALERTS,
 				title: I18N_SUPPORT_VIA_DON_ALERTS,
 				favicon: 'https://www.donationalerts.com/favicon-96x96.png',
+			},
+			{
+				href: LINK_KO_FI,
+				title: I18N_SUPPORT_VIA_KO_FI,
+				favicon: 'https://ko-fi.com/favicon.ico',
 			},
 		],
 	},

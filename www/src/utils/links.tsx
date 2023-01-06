@@ -3,6 +3,7 @@ export const LINK_TELEGRAM_RU = 'https://t.me/genshin_base'
 export const LINK_TELEGRAM_UA = 'https://t.me/genshin_base_media_ua'
 
 export const LINK_KO_FI = 'https://ko-fi.com/genshinbase'
+export const LINK_DONATELLO = 'https://donatello.to/genshinbase'
 export const LINK_DONATION_ALERTS = 'https://www.donationalerts.com/r/genshinbase'
 
 export const LINK_YOUTUBE_RU = 'https://www.youtube.com/@Genshin_Base_Media_RU'

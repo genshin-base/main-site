@@ -289,11 +289,11 @@ export const I18N_SUPPORT_US = {
 	en: 'Support Us',
 	ru: 'Поддержать нас',
 }[LANG]
-export const I18N_SUPPORT_VIA_KO_FI = {
-	en: 'Ko-fi, if you have PayPal',
-	ru: 'Ко-фи, если у вас есть Пейпал',
+export const I18N_SUPPORT_VIA_DONATELLO = {
+	en: 'Donatello',
+	ru: 'Донателло',
 }[LANG]
-export const I18N_SUPPORT_VIA_KO_FI_SHORT = {
+export const I18N_SUPPORT_VIA_KO_FI = {
 	en: 'Ko-fi',
 	ru: 'Ко-фи',
 }[LANG]

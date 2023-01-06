@@ -11,14 +11,11 @@ import {
 	I18N_OUR_SOCIAL_NETWORKS,
 	I18N_PAGE_WITH_ALL_LINKS,
 	I18N_SUPPORT_US,
-	I18N_SUPPORT_VIA_DON_ALERTS,
-	I18N_SUPPORT_VIA_KO_FI,
 	I18N_WEAPONS,
 } from '#src/i18n/i18n'
 import { paths } from '#src/routes/paths'
 import { A, isOnRoute, makeLocationHrefForLang } from '#src/routes/router'
 import { useClickAway } from '#src/utils/hooks'
-import { LINK_DONATION_ALERTS, LINK_KO_FI } from '#src/utils/links'
 import { ourPagesInSocialNetworks } from '#src/utils/our-pages-in-social-networks'
 import { VARIATION_SELECTOR } from '#src/utils/typography'
 import { GlobeIcon } from './globe-icon'
@@ -57,6 +54,14 @@ export function Nav({ isNavExpanded }: Props): JSX.Element {
 		</div>
 	)
 }
+const linkDataToDdLink = ({ href, title, favicon }) => {
+	return {
+		title,
+		href,
+		favicon,
+		isExternal: true,
+	}
+}
 type DdLink = {
 	title: string | JSX.Element
 	href: string
@@ -69,14 +74,7 @@ const LINKS_DD_LINKS: DdLink[] = ourPagesInSocialNetworks
 	.filter(g => g.code !== 'donations')
 	.map(g => g.links)
 	.flat()
-	.map(({ href, title, favicon }) => {
-		return {
-			title,
-			href,
-			favicon,
-			isExternal: true,
-		}
-	})
+	.map(linkDataToDdLink)
 	.concat([
 		{
 			title: I18N_PAGE_WITH_ALL_LINKS,
@@ -88,18 +86,12 @@ const LINKS_DD_LINKS: DdLink[] = ourPagesInSocialNetworks
 function LinksDd(): JSX.Element {
 	return <HeadDd title={I18N_OUR_SOCIAL_NETWORKS} ddLinks={LINKS_DD_LINKS} />
 }
-const SUPPORT_DD_LINKS: DdLink[] = [
-	{
-		title: I18N_SUPPORT_VIA_KO_FI,
-		href: LINK_KO_FI,
-		isExternal: true,
-	},
-	{
-		title: I18N_SUPPORT_VIA_DON_ALERTS,
-		href: LINK_DONATION_ALERTS,
-		isExternal: true,
-	},
-]
+const SUPPORT_DD_LINKS: DdLink[] = ourPagesInSocialNetworks
+	.filter(g => g.code === 'donations')
+	.map(g => g.links)
+	.flat()
+	.map(linkDataToDdLink)
+
 function DonationDd(): JSX.Element {
 	return <HeadDd title={I18N_SUPPORT_US} ddLinks={SUPPORT_DD_LINKS} />
 }
