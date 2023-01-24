@@ -971,3 +971,33 @@ wanderer:
     - vayuda-turquoise-gemstone
     - rukkhashava-mushrooms
     - famed-handguard
+alhaitham:
+  code: alhaitham
+  name:
+    en: Alhaitham
+    ru: Аль-Хайтам
+  rarity: 5
+  weaponTypeCode: sword
+  releaseVersion: "3.4"
+  materialCodes:
+    - philosophies-of-ingenuity
+    - mirror-of-mushin
+    - pseudo-stamens
+    - nagadus-emerald-gemstone
+    - sand-grease-pupa
+    - rich-red-brocade
+yaoyao:
+  code: yaoyao
+  name:
+    en: Yaoyao
+    ru: Яо Яо
+  rarity: 4
+  weaponTypeCode: polearm
+  releaseVersion: "3.4"
+  materialCodes:
+    - philosophies-of-diligence
+    - dakas-bell
+    - quelled-creeper
+    - nagadus-emerald-gemstone
+    - jueyun-chili
+    - slime-concentrate

@@ -51,7 +51,7 @@
 		"purgecss-webpack-plugin": "^5.0.0",
 		"sass": "^1.56.2",
 		"sass-loader": "^13.2.0",
-		"teyvat-map": "github:genshin-base/teyvat-map#v4.1.0",
+		"teyvat-map": "github:genshin-base/teyvat-map#v5.0.1",
 		"ts-loader": "^9.2.6",
 		"typescript": "^4.5.3",
 		"webpack": "^5.75.0",

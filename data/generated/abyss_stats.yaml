@@ -1,121 +1,127 @@
 mostUsedCharacters:
   - code: bennett
-    use: 0.8573
+    use: 0.8543
   - code: zhongli
-    use: 0.8462
+    use: 0.8358
   - code: nahida
-    use: 0.7038
+    use: 0.7509
   - code: raiden-shogun
-    use: 0.6708
+    use: 0.628
   - code: kokomi
-    use: 0.657
+    use: 0.6193
   - code: kazuha
-    use: 0.6458
+    use: 0.5846
   - code: yelan
-    use: 0.6411
+    use: 0.5598
   - code: xingqiu
-    use: 0.5698
+    use: 0.5492
   - code: xiangling
-    use: 0.4975
+    use: 0.4954
   - code: wanderer
-    use: 0.3562
-  - code: nilou
-    use: 0.3432
-  - code: hu-tao
-    use: 0.34
-  - code: cyno
-    use: 0.3094
-  - code: yae-miko
-    use: 0.3011
+    use: 0.3732
   - code: kuki-shinobu
-    use: 0.2951
-  - code: itto
-    use: 0.2862
+    use: 0.3524
+  - code: nilou
+    use: 0.3228
+  - code: yae-miko
+    use: 0.3065
   - code: ayato
-    use: 0.2739
-  - code: ayaka
-    use: 0.2376
-  - code: tartaglia
-    use: 0.2372
+    use: 0.2954
+  - code: cyno
+    use: 0.2768
   - code: faruzan
-    use: 0.227
-  - code: yoimiya
-    use: 0.2024
-  - code: albedo
-    use: 0.1946
-  - code: ganyu
-    use: 0.1858
-  - code: kujou-sara
-    use: 0.1662
-  - code: shenhe
-    use: 0.1538
-  - code: fischl
-    use: 0.1214
-  - code: xiao
-    use: 0.1132
-  - code: tighnari
-    use: 0.1079
-  - code: gorou
-    use: 0.0968
-  - code: yun-jin
-    use: 0.0962
-  - code: traveler-anemo
-    use: 0.0962
-  - code: mona
-    use: 0.0953
-  - code: ningguang
-    use: 0.0901
-  - code: keqing
-    use: 0.0842
-  - code: diona
-    use: 0.0695
-  - code: barbara
-    use: 0.0637
-  - code: venti
-    use: 0.0611
-  - code: jean
-    use: 0.0579
-  - code: eula
-    use: 0.0562
-  - code: rosaria
-    use: 0.0369
-  - code: collei
-    use: 0.0347
-  - code: sucrose
-    use: 0.0306
+    use: 0.2636
+  - code: hu-tao
+    use: 0.2581
+  - code: itto
+    use: 0.2556
   - code: klee
-    use: 0.0254
-  - code: layla
-    use: 0.0208
+    use: 0.2149
+  - code: tartaglia
+    use: 0.2
+  - code: ayaka
+    use: 0.1872
+  - code: alhaitham
+    use: 0.181
+  - code: albedo
+    use: 0.1705
+  - code: ganyu
+    use: 0.1625
+  - code: yoimiya
+    use: 0.1534
+  - code: shenhe
+    use: 0.1532
+  - code: kujou-sara
+    use: 0.1374
+  - code: xiao
+    use: 0.1293
+  - code: fischl
+    use: 0.1167
+  - code: tighnari
+    use: 0.0974
+  - code: yun-jin
+    use: 0.095
+  - code: gorou
+    use: 0.0925
+  - code: traveler-anemo
+    use: 0.0901
+  - code: ningguang
+    use: 0.0814
+  - code: mona
+    use: 0.0796
+  - code: eula
+    use: 0.0735
+  - code: jean
+    use: 0.0637
+  - code: keqing
+    use: 0.0619
+  - code: yaoyao
+    use: 0.0577
+  - code: diona
+    use: 0.0572
+  - code: barbara
+    use: 0.0566
+  - code: venti
+    use: 0.0463
+  - code: collei
+    use: 0.0308
+  - code: rosaria
+    use: 0.0273
+  - code: sucrose
+    use: 0.0264
   - code: noelle
-    use: 0.0179
+    use: 0.0223
+  - code: layla
+    use: 0.0181
   - code: qiqi
-    use: 0.0135
-  - code: thoma
-    use: 0.0097
-  - code: beidou
-    use: 0.0088
+    use: 0.0154
   - code: diluc
-    use: 0.006
+    use: 0.0123
+  - code: beidou
+    use: 0.0098
+  - code: thoma
+    use: 0.009
   - code: yanfei
-    use: 0.005
+    use: 0.0062
   - code: sayu
-    use: 0.0041
-  - code: heizou
-    use: 0.0033
+    use: 0.0043
   - code: kaeya
-    use: 0.0028
-  - code: dori
-    use: 0.0019
-  - code: chongyun
-    use: 0.0016
-  - code: razor
-    use: 0.0016
+    use: 0.0042
   - code: lisa
-    use: 0.0009
-  - code: xinyan
-    use: 0.0009
-  - code: candace
-    use: 0.0005
+    use: 0.0039
+  - code: dori
+    use: 0.0035
   - code: amber
-    use: 0.0003
+    use: 0.0035
+  - code: chongyun
+    use: 0.0028
+  - code: heizou
+    use: 0.0025
+  - code: xinyan
+    use: 0.0023
+  - code: aloy
+    use: 0.002
+  - code: razor
+    use: 0.0019
+  - code: candace
+    use: 0.0017

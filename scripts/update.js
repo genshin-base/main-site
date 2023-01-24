@@ -203,6 +203,10 @@ const fixes = {
 				origNames: /^Eremite/,
 				name: { en: 'Eremite', ru: 'Пустынник' },
 			},
+			{
+				origNames: /^Consecrated/,
+				name: { en: 'Consecrated Beast', ru: 'Хищник священной кости' },
+			},
 		],
 		domainMissingLocations: [
 			// найденные вручную (точные)
@@ -217,6 +221,7 @@ const fixes = {
 			{ code: 'steeple-of-ignorance', location: { mapCode: 'teyvat', x: -3763, y: 2415 } },
 			{ code: 'tower-of-abject-pride', location: { mapCode: 'teyvat', x: -4222, y: 4072 } },
 			{ code: 'joururi-workshop', location: { mapCode: 'teyvat', x: -3294, y: 2844 } },
+			{ code: 'city-of-gold', location: { mapCode: 'teyvat', x: -5041, y: 3727 } },
 			// от хонихантеров (не очень точные)
 			{ code: 'cecilia-garden', location: { mapCode: 'teyvat', x: -513, y: 79 } },
 			{ code: 'clear-pool-and-mountain-cavern', location: { mapCode: 'teyvat', x: -2181, y: 1045 } },
@@ -379,6 +384,7 @@ const fixes = {
 				{ nameOnMap: 'Fungi', useCode: 'fungus' },
 				{ nameOnMap: 'Bathysmal Vishap', useCode: 'bathysmal-vishap-hatchling' },
 				{ nameOnMap: 'The Eremites', useCode: 'eremite' },
+				{ nameOnMap: 'Consecrated Red Vulture', useCode: 'consecrated-beast' },
 				// items
 				{ nameOnMap: 'Unagi Meat', useCode: 'eel-meat' },
 			],

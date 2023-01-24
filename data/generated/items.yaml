@@ -148,6 +148,16 @@ perpetual-heart:
   rarity: 4
   craftedFrom: []
   locations: []
+pseudo-stamens:
+  code: pseudo-stamens
+  name:
+    en: Pseudo-Stamens
+    ru: Псевдотычинки
+  types:
+    - character-material-elemental-stone
+  rarity: 4
+  craftedFrom: []
+  locations: []
 quelled-creeper:
   code: quelled-creeper
   name:
@@ -1308,25 +1318,36 @@ henna-berry:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -6785 3082
+    - !loc teyvat -6766 2950
+    - !loc teyvat -6700 3290
     - !loc teyvat -6682 4895
     - !loc teyvat -6674 4923
     - !loc teyvat -6673 4921
+    - !loc teyvat -6662 2839
     - !loc teyvat -6455 5101
     - !loc teyvat -6410 5103
     - !loc teyvat -6395 4132
     - !loc teyvat -6394 4130
     - !loc teyvat -6390 4168
     - !loc teyvat -6389 4166
+    - !loc teyvat -6280 2535
+    - !loc teyvat -6278 2533
+    - !loc teyvat -6267 2735
+    - !loc teyvat -6239 3572
+    - !loc teyvat -6214 2663
     - !loc teyvat -6210 4261
     - !loc teyvat -6209 4259
     - !loc teyvat -6200 5040
     - !loc teyvat -6198 5041
     - !loc teyvat -6194 5041
     - !loc teyvat -6114 4920
+    - !loc teyvat -6101 2588
     - !loc teyvat -6092 4954
     - !loc teyvat -6038 5267
     - !loc teyvat -6012 4937
     - !loc teyvat -6001 4931
+    - !loc teyvat -5991 2472
     - !loc teyvat -5983 5263
     - !loc teyvat -5949 4339
     - !loc teyvat -5947 4327
@@ -1360,8 +1381,13 @@ henna-berry:
     - !loc teyvat -5445 4659
     - !loc teyvat -5417 4314
     - !loc teyvat -5415 4303
+    - !loc teyvat -5386 2719
     - !loc teyvat -5349 5116
     - !loc teyvat -5346 5118
+    - !loc teyvat -5340 2704
+    - !loc teyvat -5325 2973
+    - !loc teyvat -5322 2907
+    - !loc teyvat -5278 2959
     - !loc teyvat -5274 4546
     - !loc teyvat -5224 4556
     - !loc teyvat -5220 4816
@@ -2375,6 +2401,90 @@ sakura-bloom:
     - !loc teyvat 3880 4913
     - !loc teyvat 3899 4870
     - !loc teyvat 4179 4541
+sand-grease-pupa:
+  code: sand-grease-pupa
+  name:
+    en: Sand Grease Pupa
+    ru: Личинка песчаного жировика
+  types:
+    - character-material-local
+  rarity: 1
+  craftedFrom: []
+  locations:
+    - !loc teyvat -6413 3631
+    - !loc teyvat -6411 3638
+    - !loc teyvat -6381 3616
+    - !loc teyvat -6378 3619
+    - !loc teyvat -6372 3665
+    - !loc teyvat -6353 3020
+    - !loc teyvat -6347 3016
+    - !loc teyvat -6344 3054
+    - !loc teyvat -6343 3058
+    - !loc teyvat -6339 3052
+    - !loc teyvat -6209 3494
+    - !loc teyvat -6205 3494
+    - !loc teyvat -6187 3533
+    - !loc teyvat -6186 3535
+    - !loc teyvat -6185 3542
+    - !loc teyvat -6181 3487
+    - !loc teyvat -6181 3541
+    - !loc teyvat -6180 3490
+    - !loc teyvat -5935 2880
+    - !loc teyvat -5929 2879
+    - !loc teyvat -5922 2919
+    - !loc teyvat -5920 2923
+    - !loc teyvat -5915 2915
+    - !loc teyvat -5771 3666
+    - !loc teyvat -5767 3670
+    - !loc teyvat -5766 3661
+    - !loc teyvat -5762 3668
+    - !loc teyvat -5743 3633
+    - !loc teyvat -5738 3629
+    - !loc teyvat -5573 3295
+    - !loc teyvat -5568 3293
+    - !loc teyvat -5400 3373
+    - !loc teyvat -5396 3198
+    - !loc teyvat -5392 3183
+    - !loc teyvat -5392 3199
+    - !loc teyvat -5388 3182
+    - !loc teyvat -5386 3380
+    - !loc teyvat -5361 3370
+    - !loc teyvat -5359 3375
+    - !loc teyvat -5351 3320
+    - !loc teyvat -5349 3320
+    - !loc teyvat -5343 3318
+    - !loc teyvat -5325 3309
+    - !loc teyvat -5321 3305
+    - !loc teyvat -5292 3424
+    - !loc teyvat -5290 3426
+    - !loc teyvat -5283 3377
+    - !loc teyvat -5281 3367
+    - !loc teyvat -5279 3375
+    - !loc teyvat -5268 3447
+    - !loc teyvat -5259 3442
+    - !loc teyvat -5254 3444
+    - !loc teyvat -5253 3441
+    - !loc teyvat -5242 3164
+    - !loc teyvat -5240 3170
+    - !loc teyvat -5238 3427
+    - !loc teyvat -5230 3193
+    - !loc teyvat -5217 3080
+    - !loc teyvat -5203 3050
+    - !loc teyvat -5201 3056
+    - !loc teyvat -5200 3052
+    - !loc teyvat -5186 3195
+    - !loc teyvat -5185 3049
+    - !loc teyvat -5185 3200
+    - !loc teyvat -5182 3051
+    - !loc teyvat -5180 3083
+    - !loc teyvat -5177 3238
+    - !loc teyvat -5174 3061
+    - !loc teyvat -5169 3062
+    - !loc teyvat -5138 3237
+    - !loc teyvat -5135 3241
+    - !loc teyvat -5120 3250
+    - !loc teyvat -5119 3254
+    - !loc teyvat -5115 3250
 sango-pearl:
   code: sango-pearl
   name:
@@ -2966,7 +3076,6 @@ violetgrass:
     - !loc teyvat -2468 1403
     - !loc teyvat -2458 3226
     - !loc teyvat -2450 2775
-    - !loc teyvat -2445 3230
     - !loc teyvat -2442 3228
     - !loc teyvat -2438 1603
     - !loc teyvat -2429 3245
@@ -3110,8 +3219,8 @@ violetgrass:
     - !loc teyvat -643 1758
     - !loc teyvat -641 1513
     - !loc teyvat -635 1505
-    - !loc teyvat -630 1278
     - !loc teyvat -619 1692
+    - !loc teyvat -611 1277
     - !loc teyvat -581 1746
     - !loc teyvat -580 1748
     - !loc teyvat -579 1253
@@ -3119,11 +3228,11 @@ violetgrass:
     - !loc teyvat -566 1275
     - !loc teyvat -559 939
     - !loc teyvat -559 943
-    - !loc teyvat -555 1242
     - !loc teyvat -552 944
-    - !loc teyvat -542 1241
+    - !loc teyvat -548 1247
     - !loc teyvat -539 937
     - !loc teyvat -536 1739
+    - !loc teyvat -525 1240
     - !loc teyvat -522 1230
     - !loc teyvat -521 1426
     - !loc teyvat -510 1489
@@ -8832,6 +8941,9 @@ crystal-chunk:
     - !loc teyvat -6733 4618
     - !loc teyvat -6732 4615
     - !loc teyvat -6732 4620
+    - !loc teyvat -6729 3083
+    - !loc teyvat -6727 3089
+    - !loc teyvat -6724 3095
     - !loc teyvat -6699 4451
     - !loc teyvat -6693 4449
     - !loc teyvat -6689 4517
@@ -8858,7 +8970,10 @@ crystal-chunk:
     - !loc teyvat -6478 4950
     - !loc teyvat -6477 4829
     - !loc teyvat -6473 4951
+    - !loc teyvat -6469 3163
+    - !loc teyvat -6468 3168
     - !loc teyvat -6467 4364
+    - !loc teyvat -6466 3173
     - !loc teyvat -6462 4363
     - !loc teyvat -6437 4994
     - !loc teyvat -6433 4996
@@ -8866,34 +8981,97 @@ crystal-chunk:
     - !loc teyvat -6425 4372
     - !loc teyvat -6425 4840
     - !loc teyvat -6420 4775
+    - !loc teyvat -6418 2565
     - !loc teyvat -6417 4370
+    - !loc teyvat -6416 2564
     - !loc teyvat -6416 4776
+    - !loc teyvat -6411 2561
     - !loc teyvat -6360 4468
     - !loc teyvat -6357 4466
+    - !loc teyvat -6333 2984
+    - !loc teyvat -6332 2982
+    - !loc teyvat -6329 2984
     - !loc teyvat -6323 4334
+    - !loc teyvat -6321 2464
+    - !loc teyvat -6320 2462
     - !loc teyvat -6318 4336
+    - !loc teyvat -6314 3345
+    - !loc teyvat -6311 2474
+    - !loc teyvat -6311 3280
+    - !loc teyvat -6311 3342
+    - !loc teyvat -6309 3278
+    - !loc teyvat -6308 3490
+    - !loc teyvat -6302 3410
+    - !loc teyvat -6292 3191
+    - !loc teyvat -6289 3228
+    - !loc teyvat -6289 4120
     - !loc teyvat -6287 4346
+    - !loc teyvat -6286 3529
     - !loc teyvat -6284 4353
+    - !loc teyvat -6283 4112
+    - !loc teyvat -6281 3439
+    - !loc teyvat -6280 4119
     - !loc teyvat -6275 4452
     - !loc teyvat -6272 4449
+    - !loc teyvat -6267 3467
+    - !loc teyvat -6204 3469
     - !loc teyvat -6201 4681
     - !loc teyvat -6199 4681
+    - !loc teyvat -6198 3487
+    - !loc teyvat -6197 3473
     - !loc teyvat -6196 4681
+    - !loc teyvat -6195 3478
+    - !loc teyvat -6183 2705
+    - !loc teyvat -6175 2704
+    - !loc teyvat -6159 3585
+    - !loc teyvat -6159 3588
+    - !loc teyvat -6158 3582
     - !loc teyvat -6129 4955
     - !loc teyvat -6129 4961
+    - !loc teyvat -6061 3642
+    - !loc teyvat -6058 3639
     - !loc teyvat -6023 5059
     - !loc teyvat -6019 5053
+    - !loc teyvat -5975 3642
+    - !loc teyvat -5908 3532
+    - !loc teyvat -5904 3504
+    - !loc teyvat -5902 3503
+    - !loc teyvat -5901 3501
+    - !loc teyvat -5774 3260
+    - !loc teyvat -5773 3263
+    - !loc teyvat -5760 3257
+    - !loc teyvat -5759 3253
+    - !loc teyvat -5756 3224
     - !loc teyvat -5705 5396
     - !loc teyvat -5697 5404
     - !loc teyvat -5679 4842
     - !loc teyvat -5675 4841
+    - !loc teyvat -5662 3702
+    - !loc teyvat -5660 3701
+    - !loc teyvat -5660 3702
+    - !loc teyvat -5597 3590
     - !loc teyvat -5540 4877
     - !loc teyvat -5538 4876
+    - !loc teyvat -5477 3170
+    - !loc teyvat -5469 2801
+    - !loc teyvat -5468 2798
+    - !loc teyvat -5467 2800
     - !loc teyvat -5400 5294
     - !loc teyvat -5373 5283
+    - !loc teyvat -5371 3257
+    - !loc teyvat -5369 3256
+    - !loc teyvat -5338 3129
+    - !loc teyvat -5326 2997
+    - !loc teyvat -5323 3308
+    - !loc teyvat -5320 3123
+    - !loc teyvat -5280 3444
+    - !loc teyvat -5253 3440
     - !loc teyvat -5251 4491
     - !loc teyvat -5243 3981
+    - !loc teyvat -5230 2966
+    - !loc teyvat -5219 2991
     - !loc teyvat -5206 4358
+    - !loc teyvat -5203 3183
     - !loc teyvat -5196 4355
     - !loc teyvat -5126 4409
     - !loc teyvat -5096 5499
@@ -9344,17 +9522,43 @@ crystal-core:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -6759 3017
+    - !loc teyvat -6758 3018
+    - !loc teyvat -6757 3017
+    - !loc teyvat -6614 2817
     - !loc teyvat -6559 5008
     - !loc teyvat -6550 5008
     - !loc teyvat -6459 4730
     - !loc teyvat -6456 4727
     - !loc teyvat -6454 4726
+    - !loc teyvat -6399 2676
+    - !loc teyvat -6386 3898
+    - !loc teyvat -6374 3900
+    - !loc teyvat -6319 2682
+    - !loc teyvat -6310 2678
+    - !loc teyvat -6288 2476
+    - !loc teyvat -6278 2823
+    - !loc teyvat -6266 4219
+    - !loc teyvat -6224 3522
+    - !loc teyvat -5958 3869
+    - !loc teyvat -5641 2447
+    - !loc teyvat -5641 3099
+    - !loc teyvat -5634 3106
     - !loc teyvat -5416 5217
     - !loc teyvat -5407 5194
+    - !loc teyvat -5236 3448
+    - !loc teyvat -5230 3441
+    - !loc teyvat -5226 3438
+    - !loc teyvat -5219 3053
+    - !loc teyvat -5213 3054
+    - !loc teyvat -5206 3056
     - !loc teyvat -5201 4786
     - !loc teyvat -5197 4787
+    - !loc teyvat -5195 3202
+    - !loc teyvat -5193 3207
     - !loc teyvat -5192 4777
     - !loc teyvat -5153 4458
+    - !loc teyvat -5147 2993
     - !loc teyvat -5145 4451
     - !loc teyvat -5141 4455
     - !loc teyvat -5092 4290
@@ -10053,7 +10257,34 @@ electro-crystal:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -6436 2742
+    - !loc teyvat -6408 2725
+    - !loc teyvat -6402 2773
+    - !loc teyvat -6376 2725
+    - !loc teyvat -6362 3382
+    - !loc teyvat -6352 2673
+    - !loc teyvat -6351 2661
+    - !loc teyvat -6344 2694
+    - !loc teyvat -6240 2813
+    - !loc teyvat -6212 2828
+    - !loc teyvat -6206 2806
+    - !loc teyvat -5527 3125
+    - !loc teyvat -5474 3163
+    - !loc teyvat -5457 3141
+    - !loc teyvat -5454 3141
+    - !loc teyvat -5448 3188
+    - !loc teyvat -5446 3188
+    - !loc teyvat -5410 3160
+    - !loc teyvat -5390 3106
+    - !loc teyvat -5381 3086
+    - !loc teyvat -5240 3151
+    - !loc teyvat -5226 3113
+    - !loc teyvat -5217 3092
+    - !loc teyvat -5203 3133
+    - !loc teyvat -5187 3114
     - !loc teyvat -5134 4540
+    - !loc teyvat -5110 2573
+    - !loc teyvat -5109 2574
     - !loc teyvat -5065 4456
     - !loc teyvat -5003 4236
     - !loc teyvat -4795 4172
@@ -10928,6 +11159,8 @@ flaming-flower-stamen:
   locations:
     - !loc teyvat -6661 4949
     - !loc teyvat -6620 4913
+    - !loc teyvat -6468 3526
+    - !loc teyvat -6446 3081
     - !loc teyvat -6415 4135
     - !loc teyvat -6415 4142
     - !loc teyvat -6413 4160
@@ -10938,15 +11171,33 @@ flaming-flower-stamen:
     - !loc teyvat -6397 4128
     - !loc teyvat -6391 4168
     - !loc teyvat -6389 4164
+    - !loc teyvat -6384 3001
+    - !loc teyvat -6360 2966
+    - !loc teyvat -6349 2970
     - !loc teyvat -6285 4198
     - !loc teyvat -6099 4926
+    - !loc teyvat -6074 3802
+    - !loc teyvat -6066 3800
+    - !loc teyvat -6055 2759
+    - !loc teyvat -5990 2749
     - !loc teyvat -5829 5033
+    - !loc teyvat -5755 3813
+    - !loc teyvat -5737 3817
+    - !loc teyvat -5694 3763
     - !loc teyvat -5692 3880
+    - !loc teyvat -5687 3776
     - !loc teyvat -5685 3879
+    - !loc teyvat -5617 3073
+    - !loc teyvat -5607 3047
+    - !loc teyvat -5582 3311
+    - !loc teyvat -5567 3249
+    - !loc teyvat -5557 3248
     - !loc teyvat -5551 5498
     - !loc teyvat -5546 4968
     - !loc teyvat -5494 5408
     - !loc teyvat -5491 5417
+    - !loc teyvat -5488 3335
+    - !loc teyvat -5485 3358
     - !loc teyvat -5482 5412
     - !loc teyvat -5471 4905
     - !loc teyvat -5451 3690
@@ -10959,7 +11210,9 @@ flaming-flower-stamen:
     - !loc teyvat -5346 5318
     - !loc teyvat -5331 4842
     - !loc teyvat -5317 5064
+    - !loc teyvat -5315 3036
     - !loc teyvat -5312 5074
+    - !loc teyvat -5302 3047
     - !loc teyvat -5278 4523
     - !loc teyvat -5246 4451
     - !loc teyvat -5233 4461
@@ -11197,6 +11450,9 @@ fowl:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -5896 4592
+    - !loc teyvat -5684 3959
+    - !loc teyvat -5664 4247
     - !loc teyvat -5637 4945
     - !loc teyvat -5637 4949
     - !loc teyvat -5558 5116
@@ -11206,13 +11462,17 @@ fowl:
     - !loc teyvat -5394 5410
     - !loc teyvat -5391 5400
     - !loc teyvat -5390 4832
+    - !loc teyvat -5377 4190
+    - !loc teyvat -5320 4122
     - !loc teyvat -5188 4826
     - !loc teyvat -5176 5524
     - !loc teyvat -5165 5227
     - !loc teyvat -5160 4472
+    - !loc teyvat -5144 4032
     - !loc teyvat -5044 4663
     - !loc teyvat -5032 4337
     - !loc teyvat -4985 4473
+    - !loc teyvat -4801 4034
     - !loc teyvat -4681 2677
     - !loc teyvat -4562 3871
     - !loc teyvat -4544 3896
@@ -12133,6 +12393,17 @@ harra-fruit:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -6360 3384
+    - !loc teyvat -6319 3417
+    - !loc teyvat -5638 2477
+    - !loc teyvat -5609 2510
+    - !loc teyvat -5605 2506
+    - !loc teyvat -5482 2579
+    - !loc teyvat -5466 2580
+    - !loc teyvat -5449 2563
+    - !loc teyvat -5425 2569
+    - !loc teyvat -5393 2597
+    - !loc teyvat -5384 2593
     - !loc teyvat -4544 3844
     - !loc teyvat -4531 3868
     - !loc teyvat -4492 2518
@@ -12330,44 +12601,175 @@ iron-chunk:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -6743 3099
+    - !loc teyvat -6741 3102
+    - !loc teyvat -6721 3101
+    - !loc teyvat -6600 4031
+    - !loc teyvat -6594 4034
+    - !loc teyvat -6562 3326
+    - !loc teyvat -6557 3326
+    - !loc teyvat -6520 3290
+    - !loc teyvat -6515 3289
+    - !loc teyvat -6437 3162
+    - !loc teyvat -6437 3170
+    - !loc teyvat -6435 3163
+    - !loc teyvat -6413 2563
+    - !loc teyvat -6379 3082
+    - !loc teyvat -6375 3080
+    - !loc teyvat -6331 3599
+    - !loc teyvat -6328 3599
+    - !loc teyvat -6327 2454
+    - !loc teyvat -6326 2453
+    - !loc teyvat -6325 2452
+    - !loc teyvat -6313 2555
+    - !loc teyvat -6311 3344
+    - !loc teyvat -6309 3343
+    - !loc teyvat -6309 3486
+    - !loc teyvat -6308 2553
+    - !loc teyvat -6304 3407
+    - !loc teyvat -6303 2483
+    - !loc teyvat -6300 3407
+    - !loc teyvat -6298 3516
+    - !loc teyvat -6290 3184
+    - !loc teyvat -6287 3225
+    - !loc teyvat -6285 3439
+    - !loc teyvat -6281 3532
+    - !loc teyvat -6278 3196
+    - !loc teyvat -6277 3224
+    - !loc teyvat -6275 3537
+    - !loc teyvat -6272 4179
+    - !loc teyvat -6270 4175
+    - !loc teyvat -6228 2629
+    - !loc teyvat -6224 2611
+    - !loc teyvat -6193 3476
+    - !loc teyvat -6173 2725
+    - !loc teyvat -6169 2728
+    - !loc teyvat -6165 2725
+    - !loc teyvat -6160 3587
+    - !loc teyvat -6156 3582
+    - !loc teyvat -6124 3561
+    - !loc teyvat -6124 3668
+    - !loc teyvat -6122 2865
+    - !loc teyvat -6122 3668
+    - !loc teyvat -6122 3669
+    - !loc teyvat -6120 3562
+    - !loc teyvat -6108 2490
+    - !loc teyvat -6097 3558
+    - !loc teyvat -6095 2522
+    - !loc teyvat -6093 3556
+    - !loc teyvat -6059 3641
+    - !loc teyvat -6058 3640
+    - !loc teyvat -6049 2844
+    - !loc teyvat -6044 2813
+    - !loc teyvat -6040 2766
+    - !loc teyvat -6040 2812
+    - !loc teyvat -6037 2766
+    - !loc teyvat -6033 3722
+    - !loc teyvat -6030 3722
+    - !loc teyvat -6010 2813
+    - !loc teyvat -5968 3640
+    - !loc teyvat -5909 3534
+    - !loc teyvat -5907 3504
+    - !loc teyvat -5907 3534
+    - !loc teyvat -5906 3533
+    - !loc teyvat -5899 3500
+    - !loc teyvat -5899 3500
+    - !loc teyvat -5803 3644
+    - !loc teyvat -5799 3643
+    - !loc teyvat -5797 3642
     - !loc teyvat -5766 5338
     - !loc teyvat -5766 5343
     - !loc teyvat -5763 5333
+    - !loc teyvat -5761 3260
+    - !loc teyvat -5757 3256
+    - !loc teyvat -5755 3227
+    - !loc teyvat -5755 3290
+    - !loc teyvat -5745 3597
+    - !loc teyvat -5743 3598
+    - !loc teyvat -5742 3596
+    - !loc teyvat -5739 3284
+    - !loc teyvat -5736 3283
+    - !loc teyvat -5731 3550
+    - !loc teyvat -5731 3554
+    - !loc teyvat -5729 3551
+    - !loc teyvat -5728 3549
     - !loc teyvat -5726 5104
     - !loc teyvat -5709 4011
     - !loc teyvat -5703 4010
     - !loc teyvat -5684 5013
     - !loc teyvat -5683 5019
+    - !loc teyvat -5668 3730
     - !loc teyvat -5668 4992
     - !loc teyvat -5666 4990
+    - !loc teyvat -5665 3728
     - !loc teyvat -5657 4957
     - !loc teyvat -5653 4954
     - !loc teyvat -5649 4885
+    - !loc teyvat -5647 3088
+    - !loc teyvat -5638 2493
     - !loc teyvat -5632 4875
+    - !loc teyvat -5630 2497
+    - !loc teyvat -5599 3588
+    - !loc teyvat -5599 3634
+    - !loc teyvat -5597 3631
+    - !loc teyvat -5591 3650
+    - !loc teyvat -5591 3654
+    - !loc teyvat -5585 2688
     - !loc teyvat -5585 5018
+    - !loc teyvat -5581 2688
     - !loc teyvat -5569 5004
     - !loc teyvat -5569 5008
     - !loc teyvat -5548 5539
+    - !loc teyvat -5514 3127
+    - !loc teyvat -5514 3336
+    - !loc teyvat -5511 3336
+    - !loc teyvat -5506 2562
+    - !loc teyvat -5501 2571
+    - !loc teyvat -5498 3116
     - !loc teyvat -5480 5392
     - !loc teyvat -5476 5391
     - !loc teyvat -5474 5386
+    - !loc teyvat -5473 2799
+    - !loc teyvat -5473 2800
+    - !loc teyvat -5464 2538
+    - !loc teyvat -5457 2543
     - !loc teyvat -5453 4693
     - !loc teyvat -5449 4693
     - !loc teyvat -5430 5008
     - !loc teyvat -5422 5252
     - !loc teyvat -5420 5008
     - !loc teyvat -5417 5254
+    - !loc teyvat -5410 3381
+    - !loc teyvat -5406 3382
     - !loc teyvat -5404 4992
     - !loc teyvat -5400 4987
     - !loc teyvat -5395 5286
+    - !loc teyvat -5394 3158
+    - !loc teyvat -5392 3381
+    - !loc teyvat -5384 3303
     - !loc teyvat -5384 5279
+    - !loc teyvat -5383 3064
+    - !loc teyvat -5382 3106
     - !loc teyvat -5375 4791
+    - !loc teyvat -5374 3258
     - !loc teyvat -5374 4775
     - !loc teyvat -5373 4772
+    - !loc teyvat -5372 3258
     - !loc teyvat -5350 4908
     - !loc teyvat -5349 4910
+    - !loc teyvat -5346 3280
+    - !loc teyvat -5343 3279
+    - !loc teyvat -5332 3133
+    - !loc teyvat -5331 2997
+    - !loc teyvat -5331 3311
+    - !loc teyvat -5329 2995
+    - !loc teyvat -5328 3000
+    - !loc teyvat -5321 3116
+    - !loc teyvat -5315 3129
+    - !loc teyvat -5303 3437
     - !loc teyvat -5301 4668
     - !loc teyvat -5299 4669
+    - !loc teyvat -5298 3441
     - !loc teyvat -5298 4671
     - !loc teyvat -5293 5102
     - !loc teyvat -5290 5109
@@ -12376,13 +12778,20 @@ iron-chunk:
     - !loc teyvat -5287 5244
     - !loc teyvat -5279 4823
     - !loc teyvat -5278 4820
+    - !loc teyvat -5273 3446
+    - !loc teyvat -5256 2964
     - !loc teyvat -5254 5295
     - !loc teyvat -5253 5129
     - !loc teyvat -5246 3903
     - !loc teyvat -5244 5310
     - !loc teyvat -5238 3906
+    - !loc teyvat -5226 2988
+    - !loc teyvat -5219 2968
+    - !loc teyvat -5216 2974
     - !loc teyvat -5213 5046
     - !loc teyvat -5211 4621
+    - !loc teyvat -5208 2979
+    - !loc teyvat -5199 3211
     - !loc teyvat -5182 4502
     - !loc teyvat -5180 5281
     - !loc teyvat -5174 5278
@@ -13223,6 +13632,8 @@ lizard-tail:
     - !loc teyvat -624 -240
     - !loc teyvat -613 -249
     - !loc teyvat -438 507
+    - !loc teyvat -345 1610
+    - !loc teyvat -337 1637
     - !loc teyvat 73 691
     - !loc teyvat 137 605
     - !loc teyvat 203 298
@@ -15661,6 +16072,16 @@ mist-flower-corolla:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -6586 3999
+    - !loc teyvat -6581 3961
+    - !loc teyvat -6571 3910
+    - !loc teyvat -6347 3384
+    - !loc teyvat -5583 2522
+    - !loc teyvat -5578 2527
+    - !loc teyvat -5560 2540
+    - !loc teyvat -5526 2530
+    - !loc teyvat -5523 2490
+    - !loc teyvat -5522 2492
     - !loc teyvat -4602 2424
     - !loc teyvat -4203 3042
     - !loc teyvat -4197 3067
@@ -16702,6 +17123,30 @@ mushroom:
     - !loc enkanomiya 397 1037
     - !loc enkanomiya 421 1046
     - !loc enkanomiya 426 1021
+mysterious-meat:
+  code: mysterious-meat
+  name:
+    en: Mysterious Meat
+    ru: Загадочное мясо
+  types:
+    - ingredient
+  rarity: 1
+  craftedFrom: []
+  locations:
+    - !loc teyvat -6506 2701
+    - !loc teyvat -6502 2699
+    - !loc teyvat -6446 3058
+    - !loc teyvat -6442 3059
+    - !loc teyvat -6435 3051
+    - !loc teyvat -6421 3051
+    - !loc teyvat -5429 2571
+    - !loc teyvat -5288 3441
+    - !loc teyvat -5257 3443
+    - !loc teyvat -5245 3443
+    - !loc teyvat -5211 3419
+    - !loc teyvat -5202 3416
+    - !loc teyvat -5194 3390
+    - !loc teyvat -5188 3332
 northlander-bow-billet:
   code: northlander-bow-billet
   name:
@@ -17673,6 +18118,34 @@ raw-meat:
     - code: chilled-meat
       count: 1
   locations:
+    - !loc teyvat -6005 5243
+    - !loc teyvat -5950 5193
+    - !loc teyvat -5901 5171
+    - !loc teyvat -5893 4593
+    - !loc teyvat -5854 4601
+    - !loc teyvat -5820 4583
+    - !loc teyvat -5802 4227
+    - !loc teyvat -5777 4561
+    - !loc teyvat -5771 4521
+    - !loc teyvat -5700 4290
+    - !loc teyvat -5648 4000
+    - !loc teyvat -5518 3961
+    - !loc teyvat -5413 4037
+    - !loc teyvat -5410 4111
+    - !loc teyvat -5394 4215
+    - !loc teyvat -5281 4124
+    - !loc teyvat -5172 3816
+    - !loc teyvat -5171 3831
+    - !loc teyvat -5154 3635
+    - !loc teyvat -5154 3798
+    - !loc teyvat -5143 3830
+    - !loc teyvat -5135 3819
+    - !loc teyvat -5133 3800
+    - !loc teyvat -5007 3988
+    - !loc teyvat -4835 3929
+    - !loc teyvat -4830 3814
+    - !loc teyvat -4795 4000
+    - !loc teyvat -4781 4469
     - !loc teyvat -4721 3587
     - !loc teyvat -4671 3502
     - !loc teyvat -4667 3497
@@ -19390,10 +19863,13 @@ starshroom:
     - !loc teyvat -6643 4949
     - !loc teyvat -6634 4574
     - !loc teyvat -6633 4900
+    - !loc teyvat -6630 3035
     - !loc teyvat -6627 4726
+    - !loc teyvat -6626 3028
     - !loc teyvat -6626 4923
     - !loc teyvat -6618 4913
     - !loc teyvat -6602 4988
+    - !loc teyvat -6601 3062
     - !loc teyvat -6598 4998
     - !loc teyvat -6595 4890
     - !loc teyvat -6588 5000
@@ -19412,11 +19888,27 @@ starshroom:
     - !loc teyvat -6425 4538
     - !loc teyvat -6355 4497
     - !loc teyvat -6317 4437
+    - !loc teyvat -6273 3440
+    - !loc teyvat -6272 3443
+    - !loc teyvat -6242 2836
+    - !loc teyvat -6227 2791
+    - !loc teyvat -6163 2815
     - !loc teyvat -6159 4849
     - !loc teyvat -6123 5041
     - !loc teyvat -6121 4794
     - !loc teyvat -6121 5061
     - !loc teyvat -6106 5033
+    - !loc teyvat -5834 3150
+    - !loc teyvat -5831 3144
+    - !loc teyvat -5784 3220
+    - !loc teyvat -5755 3120
+    - !loc teyvat -5735 3108
+    - !loc teyvat -5698 3159
+    - !loc teyvat -5654 3133
+    - !loc teyvat -5653 3083
+    - !loc teyvat -5643 3092
+    - !loc teyvat -5168 2995
+    - !loc teyvat -5145 2992
     - !loc teyvat -5053 4216
     - !loc teyvat -5035 5354
     - !loc teyvat -5034 4185
@@ -21046,6 +21538,7 @@ sweet-flower:
   rarity: 1
   craftedFrom: []
   locations:
+    - !loc teyvat -6249 3486
     - !loc teyvat -4822 3124
     - !loc teyvat -4806 3150
     - !loc teyvat -4804 2575
@@ -22712,15 +23205,37 @@ white-iron-chunk:
     - !loc teyvat -6707 4440
     - !loc teyvat -6498 4923
     - !loc teyvat -6496 4925
+    - !loc teyvat -6440 3178
+    - !loc teyvat -6438 3176
+    - !loc teyvat -6437 3179
     - !loc teyvat -6377 4406
     - !loc teyvat -6374 4408
+    - !loc teyvat -6334 2577
+    - !loc teyvat -6322 2572
+    - !loc teyvat -6313 2475
+    - !loc teyvat -6311 2554
+    - !loc teyvat -6309 2472
+    - !loc teyvat -6306 2553
+    - !loc teyvat -6305 2486
+    - !loc teyvat -6269 4178
+    - !loc teyvat -6213 2600
+    - !loc teyvat -6209 2600
+    - !loc teyvat -6200 3470
+    - !loc teyvat -6195 3482
+    - !loc teyvat -6181 2486
+    - !loc teyvat -6175 2487
+    - !loc teyvat -6171 2484
     - !loc teyvat -6162 4874
     - !loc teyvat -6158 4876
     - !loc teyvat -6148 4811
     - !loc teyvat -6144 4813
     - !loc teyvat -6139 4922
     - !loc teyvat -6139 5053
+    - !loc teyvat -6124 3667
+    - !loc teyvat -6119 3669
+    - !loc teyvat -6104 2524
     - !loc teyvat -6102 4849
+    - !loc teyvat -6099 2487
     - !loc teyvat -6089 5103
     - !loc teyvat -6083 4912
     - !loc teyvat -6070 4798
@@ -22728,14 +23243,22 @@ white-iron-chunk:
     - !loc teyvat -6065 5019
     - !loc teyvat -6058 4865
     - !loc teyvat -6044 4950
+    - !loc teyvat -6043 2745
     - !loc teyvat -6042 4811
     - !loc teyvat -6038 4810
+    - !loc teyvat -6029 2768
+    - !loc teyvat -5980 3641
+    - !loc teyvat -5971 3641
+    - !loc teyvat -5965 3640
     - !loc teyvat -5770 5336
     - !loc teyvat -5769 5340
     - !loc teyvat -5762 5208
     - !loc teyvat -5761 5206
+    - !loc teyvat -5755 3222
     - !loc teyvat -5731 5103
     - !loc teyvat -5724 5100
+    - !loc teyvat -5719 3579
+    - !loc teyvat -5716 3577
     - !loc teyvat -5708 4005
     - !loc teyvat -5708 5388
     - !loc teyvat -5695 5397
@@ -22757,18 +23280,26 @@ white-iron-chunk:
     - !loc teyvat -5552 5541
     - !loc teyvat -5543 4878
     - !loc teyvat -5535 4876
+    - !loc teyvat -5503 2567
     - !loc teyvat -5478 5391
     - !loc teyvat -5476 5387
     - !loc teyvat -5451 4692
+    - !loc teyvat -5430 3362
     - !loc teyvat -5425 5009
     - !loc teyvat -5424 5250
     - !loc teyvat -5421 5012
     - !loc teyvat -5419 5253
     - !loc teyvat -5405 4983
+    - !loc teyvat -5400 3157
     - !loc teyvat -5399 4982
     - !loc teyvat -5375 4789
     - !loc teyvat -5374 4774
+    - !loc teyvat -5356 2588
     - !loc teyvat -5350 4906
+    - !loc teyvat -5348 2588
+    - !loc teyvat -5345 3319
+    - !loc teyvat -5341 3317
+    - !loc teyvat -5330 2999
     - !loc teyvat -5304 4665
     - !loc teyvat -5302 4666
     - !loc teyvat -5295 5242
@@ -22785,13 +23316,16 @@ white-iron-chunk:
     - !loc teyvat -5247 5314
     - !loc teyvat -5216 5045
     - !loc teyvat -5211 5048
+    - !loc teyvat -5208 3184
     - !loc teyvat -5199 4634
+    - !loc teyvat -5194 3242
     - !loc teyvat -5191 4533
     - !loc teyvat -5190 4513
     - !loc teyvat -5177 5283
     - !loc teyvat -5176 5280
     - !loc teyvat -5175 5283
     - !loc teyvat -5169 5060
+    - !loc teyvat -5168 3257
     - !loc teyvat -5161 5063
     - !loc teyvat -5143 4570
     - !loc teyvat -5126 4412
@@ -24353,6 +24887,16 @@ deathly-statuette:
     - code: dark-statuette
       count: 3
   locations: []
+desiccated-shell:
+  code: desiccated-shell
+  name:
+    en: Desiccated Shell
+    ru: Опустошённая оболочка
+  types:
+    - weapon-material-secondary
+  rarity: 2
+  craftedFrom: []
+  locations: []
 dismal-prism:
   code: dismal-prism
   name:
@@ -24461,6 +25005,18 @@ ley-line-sprout:
     - code: dead-ley-line-leaves
       count: 3
   locations: []
+marked-shell:
+  code: marked-shell
+  name:
+    en: Marked Shell
+    ru: Меченая оболочка
+  types:
+    - weapon-material-secondary
+  rarity: 4
+  craftedFrom:
+    - code: sturdy-shell
+      count: 3
+  locations: []
 mist-grass:
   code: mist-grass
   name:
@@ -24541,6 +25097,18 @@ sturdy-bone-shard:
   rarity: 3
   craftedFrom:
     - code: fragile-bone-shard
+      count: 3
+  locations: []
+sturdy-shell:
+  code: sturdy-shell
+  name:
+    en: Sturdy Shell
+    ru: Прочная оболочка
+  types:
+    - weapon-material-secondary
+  rarity: 3
+  craftedFrom:
+    - code: desiccated-shell
       count: 3
   locations: []
 turbid-prism:
