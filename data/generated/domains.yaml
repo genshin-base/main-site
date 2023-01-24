@@ -147,6 +147,26 @@ cecilia-garden:
   region: mondstadt
   location: !loc teyvat -513 79
   bossCode: null
+city-of-gold:
+  code: city-of-gold
+  type: artifacts
+  name:
+    en: City of Gold
+    ru: Город золота
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+    artifactSetCodes:
+      - brave-heart
+      - desert-pavilion-chronicle
+      - flower-of-paradise-lost
+      - resolution-of-sojourner
+  dropTimetable: {}
+  region: sumeru
+  location: !loc teyvat -5041 3727
+  bossCode: null
 clear-pool-and-mountain-cavern:
   code: clear-pool-and-mountain-cavern
   type: artifacts

@@ -6023,7 +6023,7 @@ key-of-khaj-nisut:
 
           Этот ключ переходил из рук в руки смертных тиранов и царей, пока наконец тоже не вернулся в объятия песка.
 
-          Что же касается престарелого слепого поэта, то он шёл по запятнанным кровью следам и нашёл свой путь в лес…
+          Что же касается престарелого слепого поэта, то он шёл по запятнанным кровью следам, пока не отыскал свой путь в лес…
   specialAbility:
     en: HP increased by  20%. When an Elemental Skill hits opponents, you gain the
       Grand Hymn effect for 20s. This effect increases the equipping character's
@@ -6266,6 +6266,150 @@ kitain-cross-spear:
     - golden-raven-insignia
   obtainSources:
     - forging
+light-of-foliar-incision:
+  code: light-of-foliar-incision
+  typeCode: sword
+  name:
+    en: Light of Foliar Incision
+    ru: Свет лиственного разреза
+  rarity: 5
+  atk:
+    base: 44
+    max: 541
+  subStat:
+    code: crit-dmg%
+    base: 19
+    max: 88
+  description:
+    en: This gilded blade was made using precious white branches. It was once used
+      to destroy countless poisons that infested the forest.
+    ru: Этот позолоченный клинок, выполненный из драгоценных белых ветвей, когда-то
+      рассекал бесчисленные ядовитые пары, которые отравляли лес.
+  story:
+    en:
+      - p: >-
+          From the land of gold came a wanderer, his body and mind scarred by the touch
+          of battle.
+
+          He was once a prince, but now, he was merely someone lost in a winding and deceptive verdant maze.
+
+          The ancient forest king, tasting the scent of blood that stems from authority, was unable to hold back a deep sigh…
+
+          Summons were sent, and a huntress bearing a moon-white bow came forth, tasked to hunt the trapped beast that had come from beyond the woods.
+      - p: >-
+          The sky was overcast, spreading like ink blots in the clouds. Death whispered
+          through the wooded maze, groping for a path to follow.
+
+          Following the exile’s footsteps, the curse spread across the desert sands to swallow the “living” lands.
+
+          Through jade hallways and pathways narrow, she discovered the intruder’s intent from the strangeness of their scent…
+
+          Adrift between memory and ambition, however, the exile was lost amidst the discord of running water and birdsong…
+      - p: >-
+          “You have been struck with one of my arrows, insolent invader! The next shall
+          find its path into your heart.”
+
+          “No longer shall you loiter in the forest. No longer shall you disturb the dreams of the children. The crown you seek, you shall not find here!”
+      - p: >-
+          Thus did the hale huntress warn her prey, that none yet had ever evaded her
+          arrows or her perspicacity.
+
+          Yet, for reasons unknown, she lowered her bow by a few inches and deliberately missed the addled man.
+
+          The greenery looked on, bewildered, and the dream-hidden children exhaled as blood went unspilled.
+
+          The slumbering forest king, blessed with insight that can pierce through all dreams, understood her intent and gave a thunderous murmur that caused even the greatest of trees to tremble:
+      - p: >-
+          “That mortal is not alike to you. He comes from a sordid land, and his hands
+          are stained with blood, while his heart festers with delusions and
+          madness.”
+
+          “But the forest only keeps dreams wrought from naivete, and blood is only meant to be shed for the hunt or in sacrifice — in this there can be no deception.”
+
+          “If you believe that he yet has the potential to reclaim his honor in the maze, then guide him to break off the pale branch…”
+
+          “Only then can the bright moon and the newborn stars grant him pure wisdom and help him shed his bitter memories and desires.”
+      - p: >-
+          So, she again took hold of her pure-white bow and drove the exile, sending
+          him fleeing into the depths of the maze…
+
+          The truth of what happened afterward was witnessed by the moon and the stars, and only dwells still in the dreams of children.
+
+          Some rumors say that the exiled noble finally used the pale branch to forge a blade that belonged to him and him alone,
+
+          While some children claim in their sleep that he forgot the name of his home, and of his dream to be king.
+
+          Regardless, Prince Faramarz’s name vanished within the rainforest henceforth, returning to the desert on the back of sand carried by the wind.
+    ru:
+      - p: >-
+          Из золотого края явился странник, тело и душа его были исполосованы следами
+          битвы.
+
+          Когда-то он был принцем, но теперь стал обычным путником, заблудившимся в изгибах зелёного лабиринта.
+
+          Старый лесной царь, учуяв кровавый запах власти, невольно вздохнул…
+
+          На зов пришла охотница с белоснежным луком, которой было поручено разить всех существ, явившихся в лес извне.
+      - p: >-
+          Тучи растекались по небу, словно чернильные пятна по бумаге. Шёпот смерти
+          летел по лесному лабиринту в поисках цели.
+
+          Следуя за изгнанником, проклятие вышло из пустыни и принялось пожирать земли, где царила жизнь.
+
+          Она шла через лазурные галереи и узкие переходы, незнакомый запах открыл ей, зачем изгнанник явился в лес…
+
+          Блуждая между памятью и честолюбием, он потерялся среди беспокойного плеска воды и пения птиц…
+      - p: >-
+          «Ты ранен моей стрелой, дерзкий захватчик! А следующая стрела полетит прямо в
+          сердце.
+
+          Ты больше не будешь кружить по лесу, не будешь тревожить детские сны. Здесь нет короны, которую ты ищешь!»
+      - p: >-
+          Такое предупреждение храбрая лесная охотница дала своей добыче, и никто ещё
+          не ускользнул от её стрел, никто не ушёл от её острых глаз.
+
+          Но в этот раз она зачем-то послала свою стрелу в пустоту, чтобы не поразить заблудшего путника.
+
+          Травы в недоумении перешёптывались, а укрытые сном дети выдохнули, ибо кровь осталась непролитой.
+
+          Дремлющий лесной царь, ведавший всеми снами, понял намерение охотницы, и изо рта его вырвался шёпот, от которого задрожали даже самые большие деревья:
+      - p: >-
+          «Этот смертный не похож на тебя. Он родом из нечистой страны, и руки его
+          обагрены кровью, а сердце гноится от заблуждений и безумия».
+
+          Но лес хранит только невинные сны, и кровь проливается лишь во время охоты и жертвоприношения. Обману здесь не место.
+
+          Если ты думаешь, что он способен отвоевать свою славу в лабиринте, направь его, и пусть он сломит белую ветвь…
+
+          Тогда луна и звёзды даруют ему чистую мудрость и помогут избавиться от горьких воспоминаний и страстей».
+      - p: >-
+          И охотница взяла свой белоснежный лук и погнала странника в глубины
+          лабиринта…
+
+          Что случилось потом, знают только луна и звёзды, правда об этом скрыта в туманных детских снах.
+
+          Ходят слухи, что изгнанный принц выковал из белой ветви клинок, принадлежавший ему и только ему одному.
+
+          Другие дети шепчут во сне, что с тех пор он забыл, как назывался его родной край, забыл и свою мечту стать царём.
+
+          С той поры имя принца Фарамарза растворилось в тропическом лесу и вернулось в пустыню с песком, на волнах ветра.
+  specialAbility:
+    en: CRIT Rate is increased by  4%. After Normal Attacks deal Elemental DMG, the
+      Foliar Incision effect will be obtained, increasing DMG dealt by Normal
+      Attacks and Elemental Skills by  120% of Elemental Mastery. This effect
+      will disappear after 28 DMG instances or 12s. You can obtain Foliar
+      Incision once every 12s.
+    ru: "Шанс крит. попадания увеличивается на  4%. Когда обычная атака наносит
+      элементальный урон, она даёт эффект Лиственного выреза: урон обычных атак
+      и элементальных навыков повышается на  120% от мастерства стихий. После 28
+      активаций или через 12 сек. эффект исчезнет. Лиственный вырез можно
+      получить не чаще одного раза в 12 сек."
+  materialCodes:
+    - golden-talisman-of-the-forest-dew
+    - marked-shell
+    - rich-red-brocade
+  obtainSources:
+    - event-wishes
 lions-roar:
   code: lions-roar
   typeCode: sword
@@ -7024,8 +7168,8 @@ mappa-mare:
   specialAbility:
     en: Triggering an Elemental reaction grants a  8% Elemental DMG Bonus for 10s.
       Max 2 stacks.
-    ru: В течение 10 сек. после вызова элементальной реакции увеличивает бонус
-      элементального урона на  8%. Может складываться до 2 раз.
+    ru: В течение 10 сек. после вызова элементальной реакции даёт  8% бонус
+      элементального урона. Может складываться до 2 раз.
   materialCodes:
     - chunk-of-aerosiderite
     - fossilized-bone-shard
@@ -10388,7 +10532,7 @@ skyrider-greatsword:
       Потерпевший поражение Небесный Всадник понял, что не всё решается
       фехтовальным искусством.
 
-      Поэтому, вместо того, чтобы слепо верить в свое фехтовальное мастерство, он обратился к самому мечу.
+      Поэтому, вместо того, чтобы слепо верить в своё фехтовальное мастерство, он обратился к самому мечу.
 
       «Чем больше, тем лучше. С мечами это тоже работает,» – рассуждал он.
 
@@ -13120,7 +13264,7 @@ toukabou-shigure:
       delicate. Each time I pass through an alley and see such an umbrella
       outside a store, I often find my thoughts drifting back to a certain
       event. Rumor has it that there once was an umbrella that sent the whole
-      town aflutter with activity. Here’s how the story goes:
+      town aflutter with activity. Here’s how the story goes:”
 
       “Hundreds of years ago, during the season of a grand festival, the flowers were in bloom, the foxes were at play, and even the typically stoic Tengu mingled amongst the people. Yet, the most eye-catching oddity was a girl bearing an intricate umbrella while sipping the fine wine of the Oni Clan. As she grew inspired, the young maiden danced like billowing flowers amidst the snow as the moonlight poured down on her. All who beheld her found themselves cheering her on, be they human or youkai. But with the passage of time, the girl went to war with the army and met a most untimely fate. With her passing, her cherished umbrella was offered to a shrine by her loyal subordinates.”
 
@@ -13146,11 +13290,11 @@ toukabou-shigure:
       событию. Ходят слухи, что когда-то зонтик заставил встрепенуться весь
       город. Вот как об этом рассказывают:
 
-      Сотни лет назад, в разгар грандиозного фестиваля, цветы цвели, лисы играли, и даже традиционно невозмутимые тэнгу смешались с толпой. Но самой запоминающейся из всех была девушка с замысловатым зонтиком, попивающая изысканное вино клана óни. Окрылённая вином, девушка танцевала под струящимся лунным светом, словно распустившийся среди снега цветок. Все, кто видел танец, – как люди, так и ёкаи – аплодировали ей. Позже девушка отправилась на войну, где встретила свою преждевременную кончину. После чего её верные помощники принесли зонтик в дар святилищу.
+      Сотни лет назад, в разгар грандиозного фестиваля, цветы цвели, лисы играли, и даже традиционно невозмутимые тэнгу смешались с толпой. Но самой запоминающейся из всех была девушка с замысловатым зонтиком, попивающая изысканное вино клана óни. Окрылённая вином девушка танцевала под струящимся лунным светом, словно распустившийся среди снега цветок. Все, кто видел танец, – как люди, так и ёкаи – аплодировали ей. Позже девушка отправилась на войну, где встретила свою преждевременную кончину. После чего её верные помощники принесли зонтик в дар святилищу.
 
-      Одна молодая женщина из знатной семьи военных увидела этот зонтик, когда возносила молитвы в святилище, и решила выкупить его по самой высокой цене. На следующий день, когда небо налилось дождём, она решила воспользоваться случаем и выйти с ним на улицу. Однако не успела она переодеться, как издалека пришло сообщение о гибели её мужа в бою. Охваченная горем, молодая женщина заболела и в считанные дни покинула этот бренный мир, чтобы воссоединиться со своим возлюбленным. Её родители посчитали, что зонтик проклят, и вернули его в святилище после похорон.
+      Одна молодая женщина из знатной семьи военных увидела этот зонтик, когда возносила молитвы в святилище, и решила выкупить его по самой высокой цене. На следующий день, когда небо налилось дождём, она захотела воспользоваться случаем и выйти с ним на улицу. Однако не успела она переодеться, как издалека пришло сообщение о гибели её мужа в бою. Охваченная горем молодая женщина заболела и в считанные дни покинула этот бренный мир, чтобы воссоединиться со своим возлюбленным. Её родители посчитали, что зонтик проклят, и вернули его в святилище после похорон.
 
-      Однако через несколько месяцев поползли новые слухи. Люди утверждали, что в дождливые ночи по улицам бродит неизвестный ранее ёкай. По описанию он напоминал зонтик, только ростом с человека, с одним глазом, одной ногой и длинным языком. Если кто-то шёл ночью один, перед ним мог внезапно появиться ёкай и облизать его своим длинным языком. Если взглянуть на это с точки зрения уроженки Фонтейна, ёкай не представлял особой угрозы, а его действия были похожи на розыгрыш. Но поскольку мало кто знал о его истинных намерениях, прохожим было не по себе. Юные девушки не решались выходить из дома. Пожилые люди вздыхали, говоря, что если бы мудрые и могущественные люди были на месте, то справиться с таким слабым ёкаем было бы пустяковым делом. Однако в тот момент мало кто знал, как изгнать этого безобразника.
+      Однако через несколько месяцев поползли новые слухи. Люди утверждали, что в дождливые ночи по улицам бродит неизвестный ранее ёкай. По описанию он напоминал зонтик, только ростом с человека, с одним глазом, одной ногой и длинным языком. Если кто-то шёл ночью один, перед ним мог внезапно появиться ёкай и облизать его своим длинным языком. Если взглянуть на это с точки зрения уроженки Фонтейна, ёкай не представлял особой угрозы, а его действия были похожи на розыгрыш. Но поскольку мало кто знал о его истинных намерениях, прохожим было не по себе. Юные девушки не решались выходить из дома. Пожилые люди вздыхали, говоря, что если бы не перевелись мудрые и могущественные люди, то справиться с таким слабым ёкаем было бы пустяковым делом. Однако в тот момент мало кто знал, как изгнать этого безобразника.
 
       Потом о случившемся узнала молодая жрица. Она взяла зонтик из святилища, зачерпнула деревянным ковшом воды и вымыла его от рукоятки до самого кончика. Вытирая зонтик шёлковой тканью, она сказала следующее:
 

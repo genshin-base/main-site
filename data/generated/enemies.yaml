@@ -511,14 +511,34 @@ hilichurl:
     - !loc teyvat -6685 4920
     - !loc teyvat -6682 4902
     - !loc teyvat -6679 4915
+    - !loc teyvat -6646 3122
+    - !loc teyvat -6645 3129
+    - !loc teyvat -6608 2861
+    - !loc teyvat -6548 3108
+    - !loc teyvat -6544 3112
+    - !loc teyvat -6508 3533
+    - !loc teyvat -6506 3388
+    - !loc teyvat -6501 3528
+    - !loc teyvat -6500 3383
+    - !loc teyvat -6496 3390
+    - !loc teyvat -6470 3480
     - !loc teyvat -6464 5090
+    - !loc teyvat -6427 3066
+    - !loc teyvat -6377 2887
+    - !loc teyvat -6302 2477
+    - !loc teyvat -6300 2471
+    - !loc teyvat -6217 2485
     - !loc teyvat -6188 4415
     - !loc teyvat -6185 4415
+    - !loc teyvat -6161 3799
+    - !loc teyvat -6153 3792
+    - !loc teyvat -6150 3799
     - !loc teyvat -6140 4487
     - !loc teyvat -6139 4495
     - !loc teyvat -6134 4493
     - !loc teyvat -6080 4476
     - !loc teyvat -6079 4512
+    - !loc teyvat -5953 2695
     - !loc teyvat -5946 4331
     - !loc teyvat -5944 4323
     - !loc teyvat -5936 4264
@@ -526,24 +546,73 @@ hilichurl:
     - !loc teyvat -5911 4333
     - !loc teyvat -5903 4330
     - !loc teyvat -5828 4228
+    - !loc teyvat -5823 2433
+    - !loc teyvat -5816 2431
     - !loc teyvat -5808 4173
+    - !loc teyvat -5760 3744
     - !loc teyvat -5740 4161
+    - !loc teyvat -5700 2778
+    - !loc teyvat -5694 2774
+    - !loc teyvat -5692 2782
+    - !loc teyvat -5687 2776
     - !loc teyvat -5687 4014
     - !loc teyvat -5684 4030
     - !loc teyvat -5682 4067
     - !loc teyvat -5675 4058
+    - !loc teyvat -5619 3308
     - !loc teyvat -5595 4098
+    - !loc teyvat -5581 2517
+    - !loc teyvat -5578 2523
+    - !loc teyvat -5564 3443
+    - !loc teyvat -5563 3594
+    - !loc teyvat -5559 3493
+    - !loc teyvat -5557 3505
+    - !loc teyvat -5554 3499
     - !loc teyvat -5531 3958
+    - !loc teyvat -5521 2521
     - !loc teyvat -5510 3942
+    - !loc teyvat -5495 2956
+    - !loc teyvat -5495 2964
+    - !loc teyvat -5494 2696
+    - !loc teyvat -5492 2703
+    - !loc teyvat -5487 2957
+    - !loc teyvat -5485 2697
+    - !loc teyvat -5434 2757
+    - !loc teyvat -5434 2766
     - !loc teyvat -5432 4035
     - !loc teyvat -5427 4038
+    - !loc teyvat -5426 2761
     - !loc teyvat -5415 4655
+    - !loc teyvat -5411 2895
     - !loc teyvat -5409 4662
+    - !loc teyvat -5407 2900
     - !loc teyvat -5407 5330
     - !loc teyvat -5399 5328
+    - !loc teyvat -5390 2954
+    - !loc teyvat -5389 2968
+    - !loc teyvat -5385 2903
+    - !loc teyvat -5358 3363
+    - !loc teyvat -5347 3361
     - !loc teyvat -5298 5260
+    - !loc teyvat -5297 3131
+    - !loc teyvat -5296 3147
     - !loc teyvat -5288 5277
+    - !loc teyvat -5284 3143
+    - !loc teyvat -5282 3128
     - !loc teyvat -5275 5263
+    - !loc teyvat -5256 3201
+    - !loc teyvat -5251 3205
+    - !loc teyvat -5246 3199
+    - !loc teyvat -5243 2983
+    - !loc teyvat -5241 2972
+    - !loc teyvat -5208 3125
+    - !loc teyvat -5177 3103
+    - !loc teyvat -5171 3104
+    - !loc teyvat -5168 3109
+    - !loc teyvat -5130 2943
+    - !loc teyvat -5034 2687
+    - !loc teyvat -5029 2700
+    - !loc teyvat -5028 2692
     - !loc teyvat -4972 4445
     - !loc teyvat -4951 4551
     - !loc teyvat -4940 4550
@@ -1393,7 +1462,16 @@ hilichurl-shooter:
     ru: Хиличурл-стрелок
   locations:
     - !loc teyvat -6679 4923
+    - !loc teyvat -6634 3110
+    - !loc teyvat -6618 3151
+    - !loc teyvat -6615 2863
+    - !loc teyvat -6608 2863
     - !loc teyvat -6458 5092
+    - !loc teyvat -6334 2814
+    - !loc teyvat -6321 2811
+    - !loc teyvat -5976 3542
+    - !loc teyvat -5972 3542
+    - !loc teyvat -5967 3542
     - !loc teyvat -5958 4312
     - !loc teyvat -5958 4320
     - !loc teyvat -5957 4324
@@ -1410,9 +1488,18 @@ hilichurl-shooter:
     - !loc teyvat -5659 4181
     - !loc teyvat -5593 4091
     - !loc teyvat -5591 4102
+    - !loc teyvat -5564 3589
+    - !loc teyvat -5545 3590
+    - !loc teyvat -5545 3600
+    - !loc teyvat -5539 2475
     - !loc teyvat -5539 3951
+    - !loc teyvat -5532 2476
+    - !loc teyvat -5525 2522
     - !loc teyvat -5427 4034
     - !loc teyvat -5394 5325
+    - !loc teyvat -5389 2971
+    - !loc teyvat -5369 2626
+    - !loc teyvat -5133 2941
     - !loc teyvat -4984 4466
     - !loc teyvat -4945 4550
     - !loc teyvat -4904 4516
@@ -2612,6 +2699,8 @@ fatui-pyro-agent:
   locations:
     - !loc teyvat -6758 4397
     - !loc teyvat -6671 4381
+    - !loc teyvat -5101 2492
+    - !loc teyvat -5081 2454
     - !loc teyvat -4756 4989
     - !loc teyvat -3824 3537
     - !loc teyvat -3152 2206
@@ -2689,6 +2778,7 @@ mirror-maiden:
     ru: Зеркальная дева Фатуи
   locations:
     - !loc teyvat -6687 4483
+    - !loc teyvat -4963 2911
     - !loc teyvat -4689 2612
     - !loc teyvat -3509 2413
     - !loc teyvat -3087 2074
@@ -2736,9 +2826,13 @@ ruin-guard:
     en: Ruin Guard
     ru: Страж руин
   locations:
+    - !loc teyvat -6720 2895
+    - !loc teyvat -6455 3528
     - !loc teyvat -5405 5512
     - !loc teyvat -5371 5605
+    - !loc teyvat -5338 2812
     - !loc teyvat -5303 4020
+    - !loc teyvat -5220 3041
     - !loc teyvat -4410 4005
     - !loc teyvat -3866 3829
     - !loc teyvat -2604 3210
@@ -2845,6 +2939,9 @@ ruin-grader:
     en: Ruin Grader
     ru: Руинный молотильщик
   locations:
+    - !loc teyvat -6643 3209
+    - !loc teyvat -6023 2496
+    - !loc teyvat -5379 3317
     - !loc teyvat -4723 2571
     - !loc teyvat -4274 4057
     - !loc teyvat -3586 2195
@@ -3878,6 +3975,57 @@ stretchy-geo-fungus:
       - mora
       - robust-fungal-nucleus
     artifactSetCodes: []
+consecrated-red-vulture:
+  code: consecrated-red-vulture
+  name:
+    en: Consecrated Red Vulture
+    ru: Священный красный стервятник
+  locations: []
+  drop:
+    itemCodes:
+      - desiccated-shell
+      - marked-shell
+      - mora
+      - sturdy-shell
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
+consecrated-scorpion:
+  code: consecrated-scorpion
+  name:
+    en: Consecrated Scorpion
+    ru: Священный скорпион
+  locations: []
+  drop:
+    itemCodes:
+      - desiccated-shell
+      - marked-shell
+      - mora
+      - sturdy-shell
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
+consecrated-flying-serpent:
+  code: consecrated-flying-serpent
+  name:
+    en: Consecrated Flying Serpent
+    ru: Священный летучий змей
+  locations: []
+  drop:
+    itemCodes:
+      - desiccated-shell
+      - marked-shell
+      - mora
+      - sturdy-shell
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
 jadeplume-terrorshroom:
   code: jadeplume-terrorshroom
   name:
@@ -3949,6 +4097,29 @@ grounded-hydroshroom:
       - mora
       - robust-fungal-nucleus
     artifactSetCodes: []
+setekh-wenut:
+  code: setekh-wenut
+  name:
+    en: Setekh Wenut
+    ru: Унут Сетеха
+  locations:
+    - !loc teyvat -5312 3346
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+      - pseudo-stamens
+      - vayuda-turquoise-chunk
+      - vayuda-turquoise-fragment
+      - vayuda-turquoise-gemstone
+      - vayuda-turquoise-sliver
+    artifactSetCodes:
+      - berserker
+      - gladiators-finale
+      - instructor
+      - lucky-dog
+      - wanderers-troupe
 stormterror:
   code: stormterror
   name:

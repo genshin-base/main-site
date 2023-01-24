@@ -41,6 +41,8 @@ mostUsedCharacters:
     use: 0.2
   - code: ayaka
     use: 0.1872
+  - code: alhaitham
+    use: 0.181
   - code: albedo
     use: 0.1705
   - code: ganyu
@@ -73,6 +75,8 @@ mostUsedCharacters:
     use: 0.0637
   - code: keqing
     use: 0.0619
+  - code: yaoyao
+    use: 0.0577
   - code: diona
     use: 0.0572
   - code: barbara

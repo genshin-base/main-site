@@ -157,16 +157,16 @@ archaic-petra:
   sets:
     "2":
       en: Gain a 15% Geo DMG Bonus.
-      ru: Увеличивает бонус Гео урона на 15%.
+      ru: Даёт 15% бонус Гео урона.
     "4":
       en: Upon obtaining an Elemental Shard created through a Crystallize Reaction,
         all party members gain a 35% DMG Bonus for that particular element for
         10s. Only one form of Elemental DMG Bonus can be gained in this manner
         at any one time.
-      ru: Подобранный элементальный осколок, образованный реакцией Кристалл,
-        увеличивает бонус элементального урона соответствующего элемента всех
-        членов отряда на 35% в течение 10 сек. Одновременно можно иметь бонус
-        урона только одного элемента.
+      ru: Подобранный элементальный осколок, образованный реакцией Кристалл, даёт 35%
+        бонус элементального урона соответствующего элемента всем членам отряда
+        в течение 10 сек. Одновременно можно иметь бонус урона только одного
+        элемента.
   pieces:
     flower:
       name:
@@ -232,19 +232,18 @@ archaic-petra:
           - p: >-
               A feather left behind by the giant wings that flattened the mountains.
 
-              Though it has long turned moss-green, this feather remains sharp as a naked blade.
+              Though its tip has long turned a deep black, this feather remains sharp as a naked blade.
           - p: >-
               They say that in ancient times, when the world was in turmoil, Rex Lapis
-              plucked mountains and turned them into huge birds of prey.
+              uprooted mountains to create a giant bird of prey.
 
-              These birds were carved out of rock and jade, and they soared above the ground once they had taken shape.
+              The bird was carved out of rock and jade, and it soared above the ground the moment it had taken shape.
 
-              Spiraling toward the heavens, they pierced through the clouds and flattened many stone peaks therein.
+              Spiraling toward the heavens, it pierced through the clouds and flattened many stone peaks therein.
           - p: >-
-              They say that these rock kites spread their wings and dived towards the
-              ocean,
+              They say that the rock kite spread its wings and dived towards the ocean,
 
-              And they fell from the sky like comets,
+              Plummeting from the sky like a sharpened spear,
 
               Right into the heart of the sea, and the monsters within…
           - p: And they say that the pillars of stone that jut out from the ocean continue
@@ -515,9 +514,9 @@ berserker:
 
           Стальная маска берсерка скрывала сжигающий душу гнев. Он вступил в безжалостный, кровопролитный бой с монстром.
 
-          Сражение длилось часы, дни, годы, и монстр, наконец, был повержен.
+          Сражение длилось часы, дни, годы, и монстр наконец был повержен.
 
-          И берсерк высосал из сломленного рога монстра костный мозг, который заменил ему вино для победителя.
+          И берсерк высосал из отломленного рога монстра костный мозг, словно вино для победителя.
     circlet:
       name:
         en: Berserker’s Battle Mask
@@ -561,7 +560,7 @@ blizzard-strayer:
   sets:
     "2":
       en: Cryo DMG Bonus +15%
-      ru: Увеличивает бонус Крио урона на 15%.
+      ru: Даёт 15% бонус Крио урона.
     "4":
       en: When a character attacks an opponent affected by Cryo, their CRIT Rate is
         increased by 20%. If the opponent is Frozen, CRIT Rate is increased by
@@ -1304,7 +1303,7 @@ crimson-witch-of-flames:
   sets:
     "2":
       en: Pyro DMG Bonus +15%
-      ru: Увеличивает бонус Пиро урона на 15%.
+      ru: Даёт 15% бонус Пиро урона.
     "4":
       en: Increases Overloaded, Burning, and Burgeon DMG by 40%. Increases Vaporize
         and Melt DMG by 15%. Using Elemental Skill increases the 2-Piece Set
@@ -1534,7 +1533,7 @@ deepwood-memories:
   sets:
     "2":
       en: Dendro DMG Bonus +15%.
-      ru: Увеличивает бонус Дендро урона на 15%.
+      ru: Даёт 15% бонус Дендро урона.
     "4":
       en: After Elemental Skills or Bursts hit opponents, the targets’ Dendro RES will
         be decreased by 30% for 8s. This effect can be triggered even if the
@@ -2626,7 +2625,7 @@ desert-pavilion-chronicle:
 
               Heed the dirge of Gurabad, heed the enrapturing dreams of King Deshret…
 
-              Heed the faithful but broken Jinn, and heed a betrayal between companions.
+              Heed the disloyal souls, and heed a betrayal between companions.
           - p: >-
               Legend has it that when the Lord of Flowers passed, her countless Jinn turned
               to serve King Deshret.
@@ -2691,8 +2690,8 @@ desert-pavilion-chronicle:
 
               И покрылась пустыня зеленью, даруя убежище людям, лишившимся крова…
           - p: >-
-              Позднее смертные, наставляемые джинном Лилупар, устроили вокруг оазиса свои
-              королевства.
+              Позднее смертные, наставляемые джинном Лилупар, устроили вокруг Оазиса
+              вечности свои королевства.
 
               Храня верность Повелительнице цветов и испытывая жалость к новым царствам, Фериджиз решила принести себя в жертву.
 
@@ -3929,7 +3928,7 @@ flower-of-paradise-lost:
 
               Призвав джиннов и применив силу драгоценных камней под толщей песка, он создал оазис, где время замедляет ход.
           - p: >-
-              Спустя много веков легенда об оазисе вечности распространилась среди бродячих
+              Спустя много веков легенда об Оазисе вечности распространилась среди бродячих
               племён пустыни.
 
               Кочевники говорят, что это место вечно цветущей зелени, где правит спящая богиня цветов.
@@ -3951,7 +3950,7 @@ flower-of-paradise-lost:
 
               Даже лишённые божественного руководства, племена пустыни нашли способ объединиться, хотя бы вокруг воспоминаний о давно ушедшей богине.
 
-              Пустыня, просоленная бесчисленными слезами, не смогла остановить продвижение смертных, так же как бесконечная ложь об оазисе вечности не смогла остановить племена от прекращения поисков.
+              Пустыня, просоленная бесчисленными слезами, не смогла остановить продвижение смертных, так же как бесконечная ложь об Оазисе вечности не смогла остановить племена от прекращения поисков.
           - p: >-
               «Мой господин… зачем ты велишь дюнам остановиться? Зачем приказываешь ветрам
               перестать дуть?
@@ -4943,7 +4942,7 @@ heart-of-depth:
   sets:
     "2":
       en: Hydro DMG Bonus +15%
-      ru: Увеличивает бонус Гидро урона на 15%.
+      ru: Даёт 15% бонус Гидро урона.
     "4":
       en: After using Elemental Skill, increases Normal Attack and Charged Attack DMG
         by 30% for 15s.
@@ -6646,7 +6645,7 @@ martial-artist:
 
           Годами отточенные ловкость и гибкость тоже являются навыками, которыми воин может гордиться.
 
-          Чтобы подчеркнуть свое феноменальное владение навыками боя, воин носит на груди перо птицы.
+          Чтобы подчеркнуть феноменальное владение навыками боя, воин носит на груди перо птицы.
     sands:
       name:
         en: Martial Artist’s Water Hourglass
@@ -6829,7 +6828,7 @@ noblesse-oblige:
 
               и помногу выезжали на просторные угодья вместе со своей свитой и подданными.
 
-              И если они устраивали эти весёлые пиршества, чтобы показать свое могущество и великодушие,
+              И если они устраивали эти весёлые пиршества, чтобы показать своё могущество и великодушие,
 
               то простой народ с радостью предавался гуляньям.
           - p: >-
@@ -7733,7 +7732,7 @@ prayers-for-illumination:
           After being subjected to the dancing sacrificial flames year in and
           year out, it possesses remarkable resistance.
         ru: Ритуальный головной убор того, кому в древние времена доверяли церемонию
-          жертвоприношения. Он обладает высоким сопротивлением к огню благодаря
+          жертвоприношения. Обладает высоким сопротивлением к огню благодаря
           многолетнему контакту с ритуальным пламенем.
       story:
         en:
@@ -7872,8 +7871,8 @@ prayers-to-springtime:
           Because it once weathered years of the icy cold, it possesses
           remarkable resistance.
         ru: Ритуальный головной убор того, кому в древние времена доверяли церемонию
-          жертвоприношения. Он обладает высоким сопротивлением к холоду
-          благодаря годам пронзающего обледенения.
+          жертвоприношения. Обладает сильным сопротивлением к холоду благодаря
+          годам пронзающего обледенения.
       story:
         en:
           - p: >-
@@ -9549,7 +9548,7 @@ thundering-fury:
   sets:
     "2":
       en: Electro DMG Bonus +15%
-      ru: Увеличивает бонус Электро урона на 15%.
+      ru: Даёт 15% бонус Электро урона.
     "4":
       en: Increases DMG caused by Overloaded, Electro-Charged, Superconduct, and
         Hyperbloom by 40%, and the DMG Bonus conferred by Aggravate is increased
@@ -10686,7 +10685,7 @@ viridescent-venerer:
   sets:
     "2":
       en: Anemo DMG Bonus +15%
-      ru: Увеличивает бонус Анемо урона на 15%.
+      ru: Даёт 15% бонус Анемо урона.
     "4":
       en: Increases Swirl DMG by 60%. Decreases opponent’s Elemental RES to the
         element infused in the Swirl by 40% for 10s.
