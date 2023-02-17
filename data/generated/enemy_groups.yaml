@@ -1048,9 +1048,7 @@ hilichurl:
     - !loc teyvat -6735 4844
     - !loc teyvat -6712 4819
     - !loc teyvat -6703 4812
-    - !loc teyvat -6685 4920
     - !loc teyvat -6682 4902
-    - !loc teyvat -6679 4915
     - !loc teyvat -6646 3122
     - !loc teyvat -6645 3129
     - !loc teyvat -6608 2861
@@ -1126,8 +1124,6 @@ hilichurl:
     - !loc teyvat -5411 2895
     - !loc teyvat -5409 4662
     - !loc teyvat -5407 2900
-    - !loc teyvat -5407 5330
-    - !loc teyvat -5399 5328
     - !loc teyvat -5390 2954
     - !loc teyvat -5389 2968
     - !loc teyvat -5385 2903
@@ -3342,6 +3338,9 @@ ruin-sentinel:
     - ruin-defender
     - ruin-scout
   locations:
+    - !loc teyvat -6557 3267
+    - !loc teyvat -6533 3255
+    - !loc teyvat -6484 3210
     - !loc teyvat -4694 2614
     - !loc teyvat -4690 2603
     - !loc teyvat -4679 2616
@@ -3529,6 +3528,8 @@ ruin-drake:
     - !loc teyvat -6614 4841
     - !loc teyvat -6607 4849
     - !loc teyvat -6569 3010
+    - !loc teyvat -6350 2727
+    - !loc teyvat -6279 2721
     - !loc teyvat -6226 2548
     - !loc teyvat -5968 4107
     - !loc teyvat -5643 3894
@@ -3538,6 +3539,7 @@ ruin-drake:
     - !loc teyvat -5361 5740
     - !loc teyvat -5350 5710
     - !loc teyvat -5300 4015
+    - !loc teyvat -5181 2525
     - !loc teyvat -5150 5135
     - !loc teyvat -5032 4106
     - !loc teyvat -4919 5076
@@ -3584,19 +3586,26 @@ primal-construct:
     - !loc teyvat -6517 4381
     - !loc teyvat -6514 4479
     - !loc teyvat -6512 4483
-    - !loc teyvat -6500 3105
+    - !loc teyvat -6497 4103
+    - !loc teyvat -6469 4124
     - !loc teyvat -6469 4653
     - !loc teyvat -6466 4776
     - !loc teyvat -6464 4962
+    - !loc teyvat -6461 4128
     - !loc teyvat -6459 4025
     - !loc teyvat -6459 4034
     - !loc teyvat -6458 4960
     - !loc teyvat -6458 5227
     - !loc teyvat -6455 4941
+    - !loc teyvat -6450 4094
+    - !loc teyvat -6446 4095
+    - !loc teyvat -6433 3817
     - !loc teyvat -6425 4994
     - !loc teyvat -6411 3718
     - !loc teyvat -6411 4943
+    - !loc teyvat -6400 4149
     - !loc teyvat -6394 3536
+    - !loc teyvat -6391 3811
     - !loc teyvat -6391 4342
     - !loc teyvat -6361 4946
     - !loc teyvat -6360 3675
@@ -3608,6 +3617,7 @@ primal-construct:
     - !loc teyvat -6331 3676
     - !loc teyvat -6327 4553
     - !loc teyvat -6326 4500
+    - !loc teyvat -6325 3810
     - !loc teyvat -6315 4599
     - !loc teyvat -6313 4546
     - !loc teyvat -6310 4058
@@ -3622,6 +3632,7 @@ primal-construct:
     - !loc teyvat -6262 4373
     - !loc teyvat -6258 4719
     - !loc teyvat -6233 4899
+    - !loc teyvat -6211 3482
     - !loc teyvat -6190 4671
     - !loc teyvat -6190 4675
     - !loc teyvat -6189 4987
@@ -3652,6 +3663,7 @@ primal-construct:
     - !loc teyvat -5799 4730
     - !loc teyvat -5797 4618
     - !loc teyvat -5787 4683
+    - !loc teyvat -5733 3116
     - !loc teyvat -5724 3084
     - !loc teyvat -5713 4812
     - !loc teyvat -5667 3132
@@ -3662,6 +3674,7 @@ primal-construct:
     - !loc teyvat -5565 4630
     - !loc teyvat -5562 4629
     - !loc teyvat -5559 3754
+    - !loc teyvat -5495 2589
     - !loc teyvat -5457 5193
     - !loc teyvat -5446 5187
     - !loc teyvat -5355 3805
@@ -6020,8 +6033,6 @@ consecrated-beast:
     - consecrated-flying-serpent
   locations:
     - !loc teyvat -6758 3094
-    - !loc teyvat -6479 3663
-    - !loc teyvat -6468 3435
     - !loc teyvat -6323 3999
     - !loc teyvat -6275 4212
     - !loc teyvat -5798 3481
@@ -6031,6 +6042,7 @@ consecrated-beast:
     - !loc teyvat -5220 3113
     - !loc teyvat -5208 3415
     - !loc teyvat -5198 3083
+    - !loc teyvat -5128 2560
     - !loc teyvat -4995 2441
     - !loc teyvat -4977 3064
     - !loc teyvat 1582 6176

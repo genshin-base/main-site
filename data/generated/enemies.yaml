@@ -508,9 +508,7 @@ hilichurl:
     - !loc teyvat -6735 4844
     - !loc teyvat -6712 4819
     - !loc teyvat -6703 4812
-    - !loc teyvat -6685 4920
     - !loc teyvat -6682 4902
-    - !loc teyvat -6679 4915
     - !loc teyvat -6646 3122
     - !loc teyvat -6645 3129
     - !loc teyvat -6608 2861
@@ -586,8 +584,6 @@ hilichurl:
     - !loc teyvat -5411 2895
     - !loc teyvat -5409 4662
     - !loc teyvat -5407 2900
-    - !loc teyvat -5407 5330
-    - !loc teyvat -5399 5328
     - !loc teyvat -5390 2954
     - !loc teyvat -5389 2968
     - !loc teyvat -5385 2903
@@ -2828,6 +2824,7 @@ ruin-guard:
   locations:
     - !loc teyvat -6720 2895
     - !loc teyvat -6455 3528
+    - !loc teyvat -5977 3568
     - !loc teyvat -5405 5512
     - !loc teyvat -5371 5605
     - !loc teyvat -5338 2812
@@ -2909,6 +2906,7 @@ ruin-hunter:
     en: Ruin Hunter
     ru: Руинный охотник
   locations:
+    - !loc teyvat -5195 2522
     - !loc teyvat -4510 4036
     - !loc teyvat -4449 4134
     - !loc teyvat -4406 4105
