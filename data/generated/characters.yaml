@@ -1001,3 +1001,63 @@ yaoyao:
     - nagadus-emerald-gemstone
     - jueyun-chili
     - slime-concentrate
+dehya:
+  code: dehya
+  name:
+    en: Dehya
+    ru: Дэхья
+  rarity: 5
+  weaponTypeCode: claymore
+  releaseVersion: "3.5"
+  materialCodes:
+    - philosophies-of-praxis
+    - puppet-strings
+    - light-guiding-tetrahedron
+    - agnidus-agate-gemstone
+    - sand-grease-pupa
+    - rich-red-brocade
+mika:
+  code: mika
+  name:
+    en: Mika
+    ru: Мика
+  rarity: 4
+  weaponTypeCode: polearm
+  releaseVersion: "3.5"
+  materialCodes:
+    - philosophies-of-ballad
+    - mirror-of-mushin
+    - pseudo-stamens
+    - shivada-jade-gemstone
+    - wolfhook
+    - lieutenants-insignia
+baizhu:
+  code: baizhu
+  name:
+    en: Baizhu
+    ru: Бай Чжу
+  rarity: 5
+  weaponTypeCode: catalyst
+  releaseVersion: "3.6"
+  materialCodes:
+    - philosophies-of-gold
+    - worldspan-fern
+    - evergloom-ring
+    - nagadus-emerald-gemstone
+    - violetgrass
+    - crystalline-cyst-dust
+kaveh:
+  code: kaveh
+  name:
+    en: Kaveh
+    ru: Кавех
+  rarity: 4
+  weaponTypeCode: claymore
+  releaseVersion: "3.6"
+  materialCodes:
+    - philosophies-of-ingenuity
+    - primordial-greenbloom
+    - quelled-creeper
+    - nagadus-emerald-gemstone
+    - mourning-flower
+    - crystalline-cyst-dust

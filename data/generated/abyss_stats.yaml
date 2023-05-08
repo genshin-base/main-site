@@ -1,127 +1,135 @@
 mostUsedCharacters:
   - code: nahida
-    use: 0.8291
-  - code: zhongli
-    use: 0.764
-  - code: bennett
-    use: 0.7318
-  - code: kazuha
-    use: 0.6668
+    use: 0.8819
   - code: yelan
-    use: 0.6365
+    use: 0.836
+  - code: bennett
+    use: 0.7057
   - code: raiden-shogun
-    use: 0.6344
-  - code: xingqiu
-    use: 0.6217
-  - code: alhaitham
-    use: 0.5616
+    use: 0.699
   - code: kokomi
-    use: 0.5469
-  - code: xiangling
-    use: 0.4502
+    use: 0.6328
   - code: nilou
-    use: 0.4429
-  - code: yae-miko
-    use: 0.4076
+    use: 0.6306
+  - code: zhongli
+    use: 0.5836
+  - code: xingqiu
+    use: 0.5395
+  - code: kazuha
+    use: 0.5383
+  - code: xiangling
+    use: 0.5026
+  - code: alhaitham
+    use: 0.4422
   - code: kuki-shinobu
-    use: 0.3462
+    use: 0.3737
+  - code: baizhu
+    use: 0.2898
+  - code: yae-miko
+    use: 0.2874
   - code: hu-tao
-    use: 0.3137
-  - code: tartaglia
-    use: 0.2964
-  - code: wanderer
-    use: 0.2889
-  - code: ayato
-    use: 0.2357
-  - code: faruzan
-    use: 0.1891
+    use: 0.2502
   - code: ayaka
-    use: 0.1819
-  - code: tighnari
-    use: 0.1543
-  - code: cyno
-    use: 0.1483
+    use: 0.2076
+  - code: ayato
+    use: 0.2048
+  - code: tartaglia
+    use: 0.1971
   - code: shenhe
-    use: 0.1429
-  - code: fischl
-    use: 0.1289
-  - code: yaoyao
-    use: 0.1143
+    use: 0.1826
   - code: traveler-anemo
-    use: 0.11
+    use: 0.1621
+  - code: yaoyao
+    use: 0.1555
+  - code: tighnari
+    use: 0.1487
+  - code: cyno
+    use: 0.1398
+  - code: fischl
+    use: 0.1349
   - code: itto
-    use: 0.1029
+    use: 0.1314
   - code: kujou-sara
-    use: 0.0949
-  - code: yoimiya
-    use: 0.0908
+    use: 0.1192
+  - code: wanderer
+    use: 0.117
   - code: mona
-    use: 0.0897
+    use: 0.0912
   - code: albedo
-    use: 0.0856
-  - code: ganyu
-    use: 0.0789
-  - code: xiao
-    use: 0.0753
+    use: 0.0893
   - code: diona
-    use: 0.0739
-  - code: keqing
-    use: 0.0612
-  - code: venti
-    use: 0.0514
-  - code: eula
-    use: 0.0465
-  - code: layla
-    use: 0.0335
+    use: 0.0706
+  - code: ganyu
+    use: 0.0693
+  - code: faruzan
+    use: 0.0613
   - code: barbara
-    use: 0.033
+    use: 0.055
+  - code: keqing
+    use: 0.0501
+  - code: yoimiya
+    use: 0.0483
+  - code: venti
+    use: 0.0452
+  - code: eula
+    use: 0.0444
   - code: gorou
-    use: 0.0315
-  - code: thoma
-    use: 0.0303
-  - code: yun-jin
-    use: 0.0281
-  - code: jean
-    use: 0.027
-  - code: beidou
-    use: 0.0259
-  - code: klee
-    use: 0.0253
+    use: 0.0404
   - code: collei
-    use: 0.0244
+    use: 0.038
+  - code: xiao
+    use: 0.0379
+  - code: dehya
+    use: 0.0331
+  - code: jean
+    use: 0.0325
+  - code: layla
+    use: 0.0261
+  - code: kaveh
+    use: 0.0206
+  - code: klee
+    use: 0.0191
+  - code: beidou
+    use: 0.0183
   - code: rosaria
-    use: 0.0189
+    use: 0.0145
+  - code: thoma
+    use: 0.0141
   - code: sucrose
-    use: 0.0175
-  - code: qiqi
-    use: 0.0165
+    use: 0.0136
   - code: diluc
-    use: 0.0069
-  - code: noelle
-    use: 0.005
-  - code: yanfei
-    use: 0.004
+    use: 0.0044
+  - code: yun-jin
+    use: 0.0044
   - code: kaeya
-    use: 0.0032
-  - code: lisa
-    use: 0.0025
+    use: 0.004
+  - code: noelle
+    use: 0.0036
   - code: candace
-    use: 0.0021
-  - code: ningguang
-    use: 0.0018
-  - code: sayu
-    use: 0.0018
-  - code: dori
-    use: 0.0018
-  - code: razor
-    use: 0.0014
-  - code: heizou
-    use: 0.0012
-  - code: amber
-    use: 0.0011
-  - code: xinyan
-    use: 0.0011
-  - code: aloy
-    use: 0.001
+    use: 0.0034
+  - code: qiqi
+    use: 0.0022
   - code: chongyun
-    use: 0.0007
+    use: 0.0021
+  - code: sayu
+    use: 0.002
+  - code: yanfei
+    use: 0.002
+  - code: dori
+    use: 0.002
+  - code: ningguang
+    use: 0.0016
+  - code: mika
+    use: 0.0013
+  - code: razor
+    use: 0.0012
+  - code: aloy
+    use: 0.0012
+  - code: xinyan
+    use: 0.0008
+  - code: heizou
+    use: 0.0008
+  - code: lisa
+    use: 0.0004
+  - code: amber
+    use: 0.0004

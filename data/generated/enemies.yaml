@@ -503,15 +503,88 @@ hilichurl:
     en: Hilichurl
     ru: Хиличурл
   locations:
+    - !loc teyvat -7658 2106
+    - !loc teyvat -7646 1904
+    - !loc teyvat -7626 1963
+    - !loc teyvat -7618 1787
+    - !loc teyvat -7572 1944
+    - !loc teyvat -7571 1942
+    - !loc teyvat -7570 1184
+    - !loc teyvat -7548 1932
+    - !loc teyvat -7527 1962
+    - !loc teyvat -7470 1433
+    - !loc teyvat -7463 1712
+    - !loc teyvat -7389 1425
+    - !loc teyvat -7388 1400
+    - !loc teyvat -7368 1315
+    - !loc teyvat -7367 1316
+    - !loc teyvat -7358 1334
+    - !loc teyvat -7334 1662
+    - !loc teyvat -7286 1219
+    - !loc teyvat -7259 1132
+    - !loc teyvat -7258 1133
+    - !loc teyvat -7224 1148
+    - !loc teyvat -7222 1148
+    - !loc teyvat -7216 1645
+    - !loc teyvat -7214 1646
+    - !loc teyvat -7212 1643
+    - !loc teyvat -7212 1646
+    - !loc teyvat -7182 1176
+    - !loc teyvat -7153 1300
+    - !loc teyvat -7136 1552
+    - !loc teyvat -7080 1662
+    - !loc teyvat -7078 1965
+    - !loc teyvat -7077 1962
+    - !loc teyvat -7076 1653
+    - !loc teyvat -7076 1965
+    - !loc teyvat -7075 1657
+    - !loc teyvat -7059 1780
+    - !loc teyvat -7059 1814
+    - !loc teyvat -7057 1817
+    - !loc teyvat -7055 1778
+    - !loc teyvat -7055 1781
+    - !loc teyvat -7055 1815
+    - !loc teyvat -7053 1781
+    - !loc teyvat -7051 2030
+    - !loc teyvat -7022 1967
+    - !loc teyvat -6975 2255
+    - !loc teyvat -6972 2256
+    - !loc teyvat -6891 2062
+    - !loc teyvat -6884 1497
+    - !loc teyvat -6874 2131
+    - !loc teyvat -6872 2075
+    - !loc teyvat -6869 1779
+    - !loc teyvat -6868 1778
+    - !loc teyvat -6867 1780
+    - !loc teyvat -6865 1663
+    - !loc teyvat -6865 1666
+    - !loc teyvat -6861 2515
+    - !loc teyvat -6858 2158
+    - !loc teyvat -6858 2160
+    - !loc teyvat -6817 2640
+    - !loc teyvat -6816 2643
+    - !loc teyvat -6809 2643
+    - !loc teyvat -6778 2665
+    - !loc teyvat -6755 1758
+    - !loc teyvat -6753 1741
+    - !loc teyvat -6752 1758
     - !loc teyvat -6742 4843
     - !loc teyvat -6736 4840
     - !loc teyvat -6735 4844
+    - !loc teyvat -6723 1834
+    - !loc teyvat -6719 1834
     - !loc teyvat -6712 4819
+    - !loc teyvat -6703 1274
     - !loc teyvat -6703 4812
+    - !loc teyvat -6691 1290
+    - !loc teyvat -6687 1287
+    - !loc teyvat -6687 1291
     - !loc teyvat -6682 4902
     - !loc teyvat -6646 3122
     - !loc teyvat -6645 3129
+    - !loc teyvat -6624 1439
     - !loc teyvat -6608 2861
+    - !loc teyvat -6578 2755
     - !loc teyvat -6548 3108
     - !loc teyvat -6544 3112
     - !loc teyvat -6508 3533
@@ -526,6 +599,7 @@ hilichurl:
     - !loc teyvat -6302 2477
     - !loc teyvat -6300 2471
     - !loc teyvat -6217 2485
+    - !loc teyvat -6211 1832
     - !loc teyvat -6188 4415
     - !loc teyvat -6185 4415
     - !loc teyvat -6161 3799
@@ -1332,6 +1406,7 @@ hilichurl:
     - !loc enkanomiya -614 -273
     - !loc enkanomiya -590 -248
     - !loc enkanomiya -590 -246
+    - !loc enkanomiya -550 -265
     - !loc enkanomiya -531 -328
     - !loc enkanomiya -526 -328
     - !loc enkanomiya -435 -391
@@ -1341,11 +1416,12 @@ hilichurl:
     - !loc enkanomiya -392 -229
     - !loc enkanomiya -389 -235
     - !loc enkanomiya -386 -237
+    - !loc enkanomiya -377 -384
     - !loc enkanomiya -364 -494
     - !loc enkanomiya -362 -496
     - !loc enkanomiya -362 -334
-    - !loc enkanomiya -362 -308
     - !loc enkanomiya -357 -336
+    - !loc enkanomiya -356 -304
     - !loc enkanomiya -353 -339
     - !loc enkanomiya -352 833
     - !loc enkanomiya -349 833
@@ -1354,10 +1430,11 @@ hilichurl:
     - !loc enkanomiya -339 -257
     - !loc enkanomiya -338 749
     - !loc enkanomiya -337 749
+    - !loc enkanomiya -334 -348
     - !loc enkanomiya -326 -394
     - !loc enkanomiya -325 -317
     - !loc enkanomiya -322 -393
-    - !loc enkanomiya -315 -348
+    - !loc enkanomiya -314 -349
     - !loc enkanomiya -299 521
     - !loc enkanomiya -212 569
     - !loc enkanomiya -207 114
@@ -1386,6 +1463,7 @@ hilichurl:
     - !loc enkanomiya -106 168
     - !loc enkanomiya -103 166
     - !loc enkanomiya -83 -132
+    - !loc enkanomiya -78 -133
     - !loc enkanomiya -75 -344
     - !loc enkanomiya -75 -135
     - !loc enkanomiya -74 -340
@@ -1457,11 +1535,23 @@ hilichurl-shooter:
     en: Hilichurl Shooter
     ru: Хиличурл-стрелок
   locations:
+    - !loc teyvat -7624 1949
+    - !loc teyvat -7567 1833
+    - !loc teyvat -7526 1822
+    - !loc teyvat -7054 1823
+    - !loc teyvat -7043 2033
+    - !loc teyvat -7025 1931
+    - !loc teyvat -6890 2068
+    - !loc teyvat -6879 1780
+    - !loc teyvat -6867 2149
+    - !loc teyvat -6866 2152
+    - !loc teyvat -6799 2641
     - !loc teyvat -6679 4923
     - !loc teyvat -6634 3110
     - !loc teyvat -6618 3151
     - !loc teyvat -6615 2863
     - !loc teyvat -6608 2863
+    - !loc teyvat -6532 2680
     - !loc teyvat -6458 5092
     - !loc teyvat -6334 2814
     - !loc teyvat -6321 2811
@@ -2322,6 +2412,40 @@ electro-samachurl:
       - sealed-scroll
       - stained-mask
     artifactSetCodes: []
+anemo-hilichurl-rogue:
+  code: anemo-hilichurl-rogue
+  name:
+    en: Anemo Hilichurl Rogue
+    ru: Анемо хиличурл-изгой
+  locations: []
+  drop:
+    itemCodes:
+      - a-flower-yet-to-bloom
+      - mora
+      - treasured-flower
+      - wanderers-blooming-flower
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
+hydro-hilichurl-rogue:
+  code: hydro-hilichurl-rogue
+  name:
+    en: Hydro Hilichurl Rogue
+    ru: Гидро хиличурл-изгой
+  locations: []
+  drop:
+    itemCodes:
+      - a-flower-yet-to-bloom
+      - mora
+      - treasured-flower
+      - wanderers-blooming-flower
+    artifactSetCodes:
+      - berserker
+      - instructor
+      - the-exile
+      - traveling-doctor
 pyro-abyss-mage:
   code: pyro-abyss-mage
   name:
@@ -2698,8 +2822,12 @@ fatui-pyro-agent:
     - !loc teyvat -5101 2492
     - !loc teyvat -5081 2454
     - !loc teyvat -4756 4989
+    - !loc teyvat -4746 2477
     - !loc teyvat -3824 3537
+    - !loc teyvat -3733 3814
+    - !loc teyvat -3688 3335
     - !loc teyvat -3152 2206
+    - !loc teyvat -2820 3874
     - !loc teyvat -1986 2482
     - !loc teyvat -1793 2785
     - !loc teyvat -1760 3201
@@ -2822,9 +2950,14 @@ ruin-guard:
     en: Ruin Guard
     ru: Страж руин
   locations:
+    - !loc teyvat -7237 1433
+    - !loc teyvat -7234 1439
     - !loc teyvat -6720 2895
+    - !loc teyvat -6631 3176
+    - !loc teyvat -6549 2764
     - !loc teyvat -6455 3528
     - !loc teyvat -5977 3568
+    - !loc teyvat -5660 2995
     - !loc teyvat -5405 5512
     - !loc teyvat -5371 5605
     - !loc teyvat -5338 2812
@@ -2867,9 +3000,9 @@ ruin-guard:
     - !loc enkanomiya -1415 665
     - !loc enkanomiya -1229 323
     - !loc enkanomiya -656 -16
-    - !loc enkanomiya -647 -24
     - !loc enkanomiya -646 -15
     - !loc enkanomiya -638 -293
+    - !loc enkanomiya -625 -9
     - !loc enkanomiya -492 -243
     - !loc enkanomiya -327 832
     - !loc enkanomiya -225 778
@@ -2938,10 +3071,13 @@ ruin-grader:
     ru: Руинный молотильщик
   locations:
     - !loc teyvat -6643 3209
+    - !loc teyvat -6209 3440
     - !loc teyvat -6023 2496
+    - !loc teyvat -5825 2912
+    - !loc teyvat -5531 2611
+    - !loc teyvat -5457 3481
     - !loc teyvat -5379 3317
     - !loc teyvat -4723 2571
-    - !loc teyvat -4274 4057
     - !loc teyvat -3586 2195
     - !loc teyvat -3366 3725
     - !loc teyvat -2622 3215
@@ -4375,6 +4511,36 @@ shouki-no-kami-the-prodigal:
       - vayuda-turquoise-fragment
       - vayuda-turquoise-gemstone
       - vayuda-turquoise-sliver
+    artifactSetCodes:
+      - berserker
+      - gladiators-finale
+      - instructor
+      - the-exile
+      - wanderers-troupe
+guardian-of-apeps-oasis:
+  code: guardian-of-apeps-oasis
+  name:
+    en: Guardian of Apep's Oasis
+    ru: Страж оазиса Апепа
+  locations: []
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - dream-solvent
+      - everamber
+      - midlander-bow-billet
+      - midlander-catalyst-billet
+      - midlander-claymore-billet
+      - midlander-polearm-billet
+      - midlander-sword-billet
+      - mora
+      - nagadus-emerald-chunk
+      - nagadus-emerald-fragment
+      - nagadus-emerald-gemstone
+      - nagadus-emerald-sliver
+      - primordial-greenbloom
+      - worldspan-fern
     artifactSetCodes:
       - berserker
       - gladiators-finale

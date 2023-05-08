@@ -800,6 +800,135 @@ aquila-favonia:
     - weathered-arrowhead
   obtainSources:
     - wishes
+beacon-of-the-reed-sea:
+  code: beacon-of-the-reed-sea
+  typeCode: claymore
+  name:
+    en: Beacon of the Reed Sea
+    ru: Маяк тростникового моря
+  rarity: 5
+  atk:
+    base: 45
+    max: 608
+  subStat:
+    code: crit-rate%
+    base: 7
+    max: 33
+  description:
+    en: A large, flat-tipped sword designed in to fit as the weapon of an ancient
+      king or some ceremonial instrument.
+    ru: Древний меч с закруглённым остриём. Похоже, это оружие принадлежало королю и
+      использовалось в неких ритуалах.
+  story:
+    en:
+      - p: >-
+          In the times when kingdoms sprang up like the mushrooms and collapsed like
+          castles in the sand, when heroes rose like stars and fell like comets,
+
+          After the Lord of Sand sank into the desert with dreams in his embrace, the blind wandering poet, of the once-privileged origin,
+
+          Traveled across the vast sea of desert, and gathered its ballads from the scattered people of the desert.
+      - p: >-
+          He heard of the fall of his homeland, of the prince who blinded his eyes
+          finally crushing the overwhelmed throne.
+
+          He heard of the legends of how the dancer aided one after another in becoming the king and made them obliterated by the sandstorm.
+
+          He heard the elegy of the clear springs that were replaced by flowing sands and the ancient cries of nations that collapsed into villages and tribes.
+
+          He heard of the story depicting the homeless prince’s death, the fate of his swords, and the killer that traversed deep into the forest…
+
+          Now, the ballads, uncontrollable like water yet intriguing like the flowing sand, had all been embedded in his heart.
+
+          In the searing sandstorms came forth the long-departed dream of the desert from the shards of ballads—
+      - p: >-
+          “On the other side of the sea of sand dunes once stood King Deshret’s abode.”
+
+          “The many streets and alleys were nothing less than paths of gold, converging towards the only throne.”
+
+          “Like the eye that shone with a golden light and the noble heart, King Deshret was once the destination of all paths…”
+
+          “But the searing dreams of gold were broken at last, and the great eye was dazzled by the sun and the sand.”
+
+          “Fate sank like the sands of the ages into the dark depths, and the kingdom of flowing sands was crushed into golden dust.”
+      - p: >-
+          The clock of fate never ceased for half-a-second for the folly of the king
+          and the ordinary,
+
+          The trivial nations, the despicable king, were all finally devoured by the flowing sand…
+
+          Once, the paranoid prince built up forts outside the forest line to uphold the honor of the sand.
+
+          But eventually his soldiers and people scattered, and his name was lost in the desert wind.
+
+          On top of the ruins of the pool where the regalia of past executions of offenders was excavated,
+
+          Those who had lost the dream of the desert, yet were unwilling to give up their vast sea of sand gathered.
+
+          In the name of the Reed Sea that never existed, they connected with the dream that was promised to them…
+    ru:
+      - p: >-
+          В те времена, когда королевства возникали как грибы и рушились как песочные
+          замки, когда герои восходили как звёзды и падали как кометы…
+
+          После того как захваченный мечтами Владыка песков погрузился в пустыню, слепой бездомный поэт некогда благородного происхождения…
+
+          …странствовал по бескрайнему морю пустыни и собирал баллады у людей, рассеянных среди песков.
+      - p: >-
+          Он слышал о падении своей родины. Что принц, ослепивший его, наконец-то
+          сокрушил свой трон.
+
+          Он слышал легенды о том, как танцовщица помогала претендентам на трон становиться королями и затем уничтожала их песчаной бурей.
+
+          Он слышал элегию о том, как чистые родники сменились текучими песками. Он слышал древний плач народа, распавшегося на деревни и племена.
+
+          Он слышал историю о гибели бездомного принца, о судьбе его мечей и о том, что убийца ушёл глубоко в лес…
+
+          Теперь все эти баллады, неудержимые, как вода, но манящие, как текущий песок, запечатлелись в его сердце.
+
+          Под знойными песчаными бурями из отрывков баллад всплыла давно ушедшая мечта пустыни…
+      - p: >-
+          «По ту сторону моря песчаных дюн когда-то стояла обитель Владыки песков.
+
+          Множество улиц и переулков были дорогами золота, сходящимися к единственному трону.
+
+          Сияющий золотом глаз и благородное сердце царя Дешрета были некогда целью всех путей…
+
+          Но обжигающие мечты о золоте были наконец разбиты, и великий глаз был ослеплён солнцем и песком.
+
+          Судьба погрузилась в тёмные глубины, и царство текучих песков разбилось в золотую пыль».
+      - p: >-
+          Часы судьбы не останавливались ни на полсекунды из-за глупости царя и простых
+          людей.
+
+          Ничтожные народы, презренный царь – всё это в конце концов было поглощено песчаным потоком…
+
+          Однажды мнительный принц построил форты за линией леса, чтобы воздать честь пескам.
+
+          Но солдаты его разбежались, народ рассеялся, а имя его было утеряно, как ветер среди дюн.
+
+          На вершине руин бассейна, где были раскопаны орудия прошлых казней преступников…
+
+          …собрались люди, потерявшие мечту о песках, но не пожелавшие отказаться от песчаного моря.
+
+          Во имя тростникового моря, которого никогда не существовало, они откликнулись на обещанный им сон…
+  specialAbility:
+    en: After the character's Elemental Skill hits an opponent, their ATK will be
+      increased by  20% for 8s. After the character takes DMG, their ATK will be
+      increased by  20% for 8s. The 2 aforementioned effects can be triggered
+      even when the character is not on the field. Additionally, when not
+      protected by a shield, the character's Max HP will be increased by  32%.
+    ru: После попадания элементальным навыком по противнику сила атаки увеличится
+      на  20% на 8 сек. При получении урона сила атаки увеличится на  20% на 8
+      сек. Эти эффекты срабатывают, даже если персонаж не на поле боя. Кроме
+      того, если экипированный персонаж не защищён щитом, его макс. ХП
+      увеличится на  32%.
+  materialCodes:
+    - olden-days-of-scorching-might
+    - marked-shell
+    - rich-red-brocade
+  obtainSources:
+    - event-wishes
 beginners-protector:
   code: beginners-protector
   typeCode: polearm
@@ -2362,7 +2491,7 @@ dragons-bane:
           defied the ocean’s wrath and fought fiercely against the monstrosities
           it harbored within.
 
-          Many years after the dragon slayer had disappeared without a trace, the hopeless sound of a dragon’s cry could be still be heard resounding throughout the ocean.
+          Many years after the dragon slayer had disappeared without a trace, the hopeless sound of a dragon’s cry could still be heard resounding throughout the ocean.
       - p: >-
           The dragon slayer became an urban legend. In the end, both the legend and the
           dragon-slaying polearm were lost.
@@ -5430,6 +5559,155 @@ iron-sting:
     - energy-nectar
   obtainSources:
     - forging
+jadefalls-splendor:
+  code: jadefalls-splendor
+  typeCode: catalyst
+  name:
+    en: Jadefall's Splendor
+    ru: Великолепие лазурного свода
+  rarity: 5
+  atk:
+    base: 45
+    max: 608
+  subStat:
+    code: hp%
+    base: 10
+    max: 49
+  description:
+    en: A ritual vessel carved from jade that reflects the luster of the skies and
+      the clear waters.
+    ru: Церемониальный предмет, вырезанный из прекрасного нефрита изумрудного цвета,
+      отражает сияние неба и чистых вод.
+  story:
+    en:
+      - p: >-
+          The splendid jadeite fell from the sky, washed by the ever-flowing cleansing
+          waters.
+
+          Freed from dark earth and rotten wood, every trace of residue removed.
+
+          A primordial stone, chiseled and molded by the hands of mortal youth.
+
+          Ultimately becoming a splendid jade instrument, awaiting a serendipitous moment to fulfill its sacred purpose…
+      - p: >-
+          “It is just as I said,” mused the researcher from the realm of rainforests
+          over tea, “the arc of history bends towards decay and collapse.”
+
+          “The fall of humanity can only be prevented with the wisdom and mercy of the gods. Without these, humans will inevitably annihilate themselves.”
+
+          “Witness the silent testimony of the deserted ruins lying betwixt mountain and swamp. Witness the wild beasts in the hills, bereft of their powers of speech and spirit…”
+
+          “The people of the past perished without a trace, and even their greatest kings and chiefs failed to make even a ripple.”
+      - p: >-
+          The people of Chenyu Vale did not always dwell there, but once called the
+          crystal-veined mountains home.
+
+          Life of family and tribe both revolved around the mines, and their settlements stretched from peak to peak.
+
+          But the ancient sin lying buried beneath their feet and shovels was unknown to the mortals, hidden under the deepest shafts.
+
+          Divine punishment is unforgiving, and cares not for the lives of mortals. After the catastrophe, their forebears were forced to bring their families northward.
+      - p: >-
+          The elders of Qiaoying Village claim that the ancestors of the people of
+          Chenyu Vale came from a chasm to the south.
+
+          They brought with them a great jade altar, and left behind ancient, enigmatic ruins…
+
+          When war among the gods brought tragedy, the ancestors of Chenyu Vale’s people were reduced to wandering refugees.
+
+          Their descendents once believed in a now-forgotten god, and all are now lost to history and consigned to dust.
+      - p: >-
+          “An unsound theory,” responded the consultant in the dark robes, “the history
+          of mortals is one filled with rebirth.”
+
+          “Glory and ruin both spring from mortals themselves. Without agency, there is no rise or fall to speak of.”
+
+          “Ancient ruins lie forsaken, but their former inhabitants, buffeted by fate, live on to this day…”
+
+          “The fading of their ancestors has given rise to the prosperity of today… even if they are now assimilated, one with the people of a new god.”
+
+          “Even if they are often helpless in matters great and small, they have not been destroyed by circumstance, but rather made their own choices.”
+
+          “As for the wisdom and laws of the gods, they are based on the consensus of mortals, and not personal whim.”
+      - p: >-
+          After a short while, the trivial debate over tea came to an inconclusive end.
+          Such discussions between mortals and gods are wont to end in
+          squabbling over this and that.
+
+          But the Bishui River flows eternal, just as the luster of the sacred jade within remains as constant as its former master.
+    ru:
+      - p: >-
+          Легендарный нефрит, омываемый вечными чистыми водами, упал с неба.
+
+          Свободный от непонятной грязи, зеленоватых остатков и гниющей древесины.
+
+          Первобытный камень, выточенный и вылепленный руками смертного юноши.
+
+          В конце концов он становится великолепным нефритовым инструментом, ожидающим удобного момента, чтобы исполнить своё предназначение…
+      - p: >-
+          «Как я и говорил, – размышлял за чаем исследователь из царства тропических
+          лесов, – история движется к краху.
+
+          Падение человечества можно предотвратить лишь мудростью и милосердием богов. Без них люди неизбежно уничтожат сами себя.
+
+          Узрите безмолвное свидетельство заброшенных руин, лежащих между горами и болотами. Узрите диких зверей, лишённых духа и речи…
+
+          Люди прошлого сгинули без следа, а от их великих вождей не осталось и следа».
+      - p: >-
+          Долина Чэньюй не всегда была домом этого народа. Когда-то своей родиной они
+          считали богатые шахты этих гор.
+
+          Жизнь семьи и племени была сосредоточена вокруг шахт, а их поселения простирались от вершины до вершины.
+
+          Но древний грех, лежащий в глубине, был неизвестен смертным, скрыт глубже самых глубоких шахт.
+
+          Божественная кара неумолима и не щадит смертных. После катастрофы их предки ушли на север.
+      - p: >-
+          Старейшины деревни Цяоин утверждают, что предки жителей долины Чэньюй пришли
+          из пропасти на юге.
+
+          Они принесли с собой великий нефритовый алтарь, оставив позади загадочные руины…
+
+          Когда война между богами вызвала трагедию, предки людей Чэньюй превратились в скитальцев.
+
+          Их потомки когда-то верили в ныне забытое божество, и все они теперь потеряны для истории и преданы забвению.
+      - p: >-
+          «Несостоятельная теория, – ответил гость в тёмной рубашке, – история смертных
+          полна перерождений.
+
+          Слава и погибель исходят от самих смертных. Без участия человека нет ни взлёта, ни падения.
+
+          Древние руины лежат в запустении, но их бывшие обитатели, потрёпанные судьбой, живут и по сей день…
+
+          Увядание их предков породило сегодняшнее процветание… Пусть они и смешались с народом нового божества.
+
+          Даже если они бывают беспомощны в больших и малых делах, их не уничтожили обстоятельства. Они сделали собственный выбор.
+
+          Что касается мудрости и законов богов, то они основаны на согласии смертных, а не на личной прихоти».
+      - p: >-
+          Спустя некоторое время, пустяковый спор за чашечкой чая закончился
+          безрезультатно. Такие споры между смертными и богами обычно и
+          заканчиваются препирательствами по поводу всяких мелочей.
+
+          Но река чистой воды течёт вечно, а блеск священного нефрита внутри остаётся таким же неизменным, как и его прежний хозяин.
+  specialAbility:
+    en: "For 3s after using an Elemental Burst or creating a shield, the equipping
+      character can gain the Primordial Jade Regalia effect: Restore  4.5 Energy
+      every 2.5s, and gain  0.3% Elemental DMG Bonus for their corresponding
+      Elemental Type for every 1,000 Max HP they possess, up to  12%. Primordial
+      Jade Regalia will still take effect even if the equipping character is not
+      on the field."
+    ru: "Когда экипированный персонаж активирует взрыв стихии или создаёт щит, он на
+      3 сек. получает эффект Камня воли: каждые 2,5 сек. восстанавливается  4,5
+      ед. энергии, а бонус урона соответствующего элемента повышается на  0,3%
+      за каждую 1000 ед. макс. ХП персонажа, максимум  12%. Эффект Камня воли
+      активируется, даже если экипированный персонаж не на поле боя."
+  materialCodes:
+    - divine-body-from-guyun
+    - wanderers-blooming-flower
+    - crystalline-cyst-dust
+  obtainSources:
+    - event-wishes
 kagotsurube-isshin:
   code: kagotsurube-isshin
   typeCode: sword
@@ -6893,7 +7171,7 @@ luxurious-sea-lord:
           Но в руки взяв меня, ты силу обретёшь.
       - p: |-
           Смелее же, распоряжайся мною,
-          Ха-ха, по крайней мере до тех пор,
+          Ха-ха, по крайней мере, до тех пор,
           Пока все воды не впадут в моря
           И не угаснет, тлея, далеких звёзд узор.
           Тогда мы все вернёмся в первозданность моря,
@@ -6962,6 +7240,125 @@ magic-guide:
     - slime-concentrate
   obtainSources:
     - wishes
+mailed-flower:
+  code: mailed-flower
+  typeCode: claymore
+  name:
+    en: Mailed Flower
+    ru: Цветок в латах
+  rarity: 4
+  atk:
+    base: 43
+    max: 564
+  subStat:
+    code: em
+    base: 24
+    max: 110
+  description:
+    en: A graceful and elegant greatsword that is decorated with flowers and
+      ribbons.
+    ru: Изящный двуручный меч, украшенный цветами и лентами.
+  story:
+    en:
+      - p: >-
+          The image of the Windblume has been lost amidst the flowing winds of time,
+
+          In times of peace, it has become synonymous with love and gladness.
+
+          Sometimes, even the forged weapons that are to be wielded for conquest and victory,
+
+          Are adorned with such flowers following the commissioner’s or forger’s wish.
+
+          It seems that this blade was custom-made by someone for their beloved.
+      - p: >-
+          “Iron blades fail to slash it, neither can imprisonment of stones confine
+          it.”
+
+          “The wind has no fear of future, only constantly flowing in its direction.”
+
+          The nameless shepherd who belonged not to the church silently told of stories of the wind,
+
+          And presented the “flowers” to them in whose eyes the light yet shone.
+      - p: >-
+          If the noble descendants had all but forgotten their original oath, if the
+          conceited silence rose to popularity,
+
+          Or if the principle of the blood stood against the flowing wind, the legend of trees and flowers would be forbidden.
+
+          In that era, numerous flowers blossomed in places not favored by people.
+
+          The flowers were swept away by the wind, yet left an instant of glorious charm in the bleak world.
+      - p: >-
+          “In the shadow cast by the tower of the past, in the alleys and streets of
+          today,”
+
+          “In the smallest corners, the flowers are still blooming with the faintest glow.”
+
+          The nameless shepherd who did not hail from the palace silently told of the flowers’ stories.
+      - p: >-
+          He said: “Today, Ludi Harpastum has been taken away by the noble.”
+
+          But did you know that, in the ruins where mighty winds once swept, there used to be blooming wild flowers over hill and dale?
+
+          Those flowers were not the common kind. The stronger the wind blew, the sturdier those flowers’ root would grow, and the more they flourished.
+
+          The day when the kingdom was dotted with those flowers would be the day when the tower finally fell down.
+    ru:
+      - p: >-
+          Образ «анемонии» с годами ушёл в небытие.
+
+          В мирные годы название этого цветка стало означать радость и любовь.
+
+          Иногда даже кованое оружие, предназначенное для завоеваний и побед,
+
+          украшается такими цветами по желанию заказчика или кузнеца.
+
+          Похоже, что этот клинок кто-то изготовил на заказ для дорогого ему человека.
+      - p: >-
+          «Стальные клинки его не разрубят, и каменная тюрьма его не сдержит.
+
+          Ветер не страшится будущего, а лишь несётся ему навстречу», –
+
+          безымянный пастырь, не принадлежавший к церкви, тихо рассказывал истории о ветре.
+
+          И подарил «цветы» тем, в чьих глазах ещё не померк свет.
+      - p: >-
+          Если благородные потомки напрочь забыли о своей первоначальной клятве, если
+          тщеславное молчание стало повсеместным,
+
+          и если бы принцип крови противоречил дующему ветру, то легенда о деревьях и цветах была бы запрещена.
+
+          В ту эпоху цветы росли в местах, не нравившихся людям.
+
+          Цветы были смыты ветром, но оставили мгновение великолепного очарования в мрачном мире.
+      - p: >-
+          «В тени, отбрасываемой башней прошлого, в переулках и улицах сегодняшнего
+          дня…
+
+          …цветы сияют в маленьких укромных уголках», –
+
+          безымянный пастырь, не принадлежащий ко дворцу, тихо рассказывал истории о цветке.
+      - p: >-
+          Он сказал: «Сегодня Луди Гарпастум забрали благородные».
+
+          Но знаете ли вы, что в руинах, над которыми когда-то проносились могучие ветры, холмы и дали были усеяны дикими цветами?
+
+          Эти цветы не были обычными. Чем сильнее дул ветер, тем прочнее цеплялись они корнями и тем пышнее расцветали.
+
+          День, когда королевство будет усеяно этими цветами, станет днём, когда башня окончательно рухнет.
+  specialAbility:
+    en: Within 8s after the character's Elemental Skill hits an opponent or the
+      character triggers an Elemental Reaction, their ATK and Elemental Mastery
+      will be increased by  12% and  48 respectively.
+    ru: После попадания элементальным навыком по противнику или активации
+      элементальной реакции, на 8 сек. сила атаки повышается на  12%, а
+      мастерство стихий - на  48 ед.
+  materialCodes:
+    - dream-of-the-dandelion-gladiator
+    - marked-shell
+    - spectral-nucleus
+  obtainSources:
+    - events
 makhaira-aquamarine:
   code: makhaira-aquamarine
   typeCode: claymore
@@ -7068,7 +7465,7 @@ makhaira-aquamarine:
 
           Уродливый тиран вернулся в страну обжигающих песков, а его мечты о войнах и гаремах наконец растворились в воздухе, словно мираж.
 
-          Взлёт и падение города-государства – всего лишь пьяный сон, в котором и добрые, и злые были раздавлены огромными жерновами, как пшеничная шелуха.
+          Взлёт и падение города-государства всего лишь пьяный сон, в котором и добрые, и злые были раздавлены огромными жерновами, как пшеничная шелуха.
 
           Наложница, искусная в танце с мечом, в конце концов не смогла стать царицей, а мудрый старый министр, который выжил, чтобы рассказать эту историю, тоже потерял глаза.
 
@@ -8342,11 +8739,10 @@ predator:
           «Просто с помощью этого лука можно поохотиться и добыть мясо. Как раз сейчас я отправляюсь за лесным кабаном».
   specialAbility:
     en: "Effective only on the following platform:   \"PlayStation
-      Network\"\\nDealing Cryo DMG to opponents increases this character's
-      Normal and Charged Attack DMG by 10% for 6s. This effect can have a
-      maximum of 2 stacks. Additionally, when Aloy equips Predator, ATK is
-      increased by 66."
-    ru: Действует только для игроков  "PlayStation Network".\nНанесённый противникам
+      Network\"  Dealing Cryo DMG to opponents increases this character's Normal
+      and Charged Attack DMG by 10% for 6s. This effect can have a maximum of 2
+      stacks. Additionally, when Aloy equips Predator, ATK is increased by 66."
+    ru: Действует только для игроков  "PlayStation Network".  Нанесённый противникам
       Крио урон повышает урон обычной и заряженной атаки персонажа на 10% в
       течение 6 сек. Эффект может складываться до 2 раз. Кроме этого, когда
       Хищником экипирована Элой, сила атаки повышается на 66 ед.
@@ -12082,12 +12478,12 @@ sword-of-descension:
       - p: чтобы острым лезвием раскрывать тайны и справляться с трудностями, которые
           уготовил вам этот мир.
   specialAbility:
-    en: 'Effective only on the following platform:   "PlayStation Network"\nHitting
+    en: 'Effective only on the following platform:   "PlayStation Network"  Hitting
       opponents with Normal and Charged Attacks grants a  50% chance to
       deal  200% ATK as DMG in a small AoE. This effect can only occur once
       every 10s. Additionally, if the Traveler equips the Sword of Descension,
       their ATK is increased by  66.'
-    ru: Действует только для игроков  "PlayStation Network".\nАтакуя противников
+    ru: Действует только для игроков  "PlayStation Network".  Атакуя противников
       обычными и заряженными атаками, вы получаете  50% шанс нанести урон,
       равный  200% силы атаки в небольшом радиусе. Эффект может возникнуть 1 раз
       в 10 сек. Кроме того, если Путешественник экипирован Мечом нисхождения,
@@ -13308,10 +13704,9 @@ toukabou-shigure:
   specialAbility:
     en: After an attack hits opponents, it will inflict an instance of Cursed
       Parasol upon one of them for 10s. This effect can be triggered once every
-      15s. If this opponent is taken out during Cursed Parasol's duration,
-      Cursed Parasol's CD will be refreshed immediately. The character wielding
-      this weapon will deal  16% more DMG to the opponent affected by Cursed
-      Parasol.
+      15s. If this opponent is defeated during Cursed Parasol's duration, Cursed
+      Parasol's CD will be refreshed immediately. The character wielding this
+      weapon will deal  16% more DMG to the opponent affected by Cursed Parasol.
     ru: При попадании по противникам на 10 сек. накладывает на одного из них
       Проклятый зонт. Этот эффект может возникнуть один раз в 15 сек. Если
       поражённый Проклятым зонтом противник погибнет до его окончания, откат

@@ -3612,12 +3612,10 @@ emblem-of-severed-fate:
               За последние тринадцать лет на этом месте он десять раз проводил спарринги с тэнгу из Ёго, три из которых – на настоящих мечах.
 
               Он вспомнил свой поединок с чернокрылой тэнгу, называвшей себя «Тэруё с Ёго»…
-          - p: >-
-              Предыдущие тринадцать лет пролетели, как сон.
-
-              Тени снежинок путешествуют по горе, а во дворе клубится пар от готовящихся блюд
-
-              Когда я снова взглянул, этот человек был уже далеко
+          - p: |-
+              Тринадцать лет прошли как сон.
+              Клубится дымом снег багровый среди тёмных пиков.
+              Ты далеко…
           - p: |-
               Лепестки Священной сакуры тоже опали, словно снег с неба.
               Ветвь потеряла бога, которому поклонялась, но не сломалась.
@@ -4008,7 +4006,7 @@ flower-of-paradise-lost:
               Wreathed in darkness, she guided her dearest friend toward the path to
               understanding all there was to know about the skies and the abyss.
 
-              Using his body as a conduit and offering the oasis in trade, he let the dazzling radiance consume him to see his deepest desires be made manifest…
+              Using her body as a conduit and offering the oasis in trade, she let the dazzling radiance consume her to see his deepest desires be made manifest…
           - p: >-
               Sandstorms swept in revelrous havoc across the paradise that was now missing
               one of its gods, folding the skies with yellow sand, swallowing
@@ -6583,7 +6581,7 @@ martial-artist:
   rarity: 4
   sets:
     "2":
-      en: Increases Normal Attack and Charged Attack DMG by 15%.
+      en: Normal and Charged Attack DMG +15%
       ru: Увеличивает урон обычной и заряженной атаки на 15%.
     "4":
       en: After using Elemental Skill, increases Normal Attack and Charged Attack DMG
@@ -6984,6 +6982,404 @@ noblesse-oblige:
               В эти золотые дни просвещение и достаток был справедливым уделом каждого.
 
               Постепенно развращённое дворянство забывалось в чаду бессмысленного кутежа лишь ради собственной услады.
+nymphs-dream:
+  code: nymphs-dream
+  name:
+    en: Nymph’s Dream
+    ru: Сон нимфы
+  rarity: 5
+  sets:
+    "2":
+      en: Hydro DMG Bonus +15%
+      ru: Даёт 15% бонус Гидро урона.
+    "4":
+      en: After Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental
+        Bursts hit opponents, 1 stack of Mirrored Nymph will be triggered,
+        lasting 8s. When under the effect of 1, 2, or 3 or more Mirrored Nymph
+        stacks, ATK will be increased by 7%/16%/25%, and Hydro DMG Bonus will be
+        increased by 4%/9%/15%. Mirrored Nymph stacks created by Normal,
+        Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts
+        exist independently.
+      ru: Попадания обычной атакой, заряженной атакой, атакой в падении, элементальным
+        навыком и взрывом стихии по противнику на 8 сек. создают 1 уровень
+        Отражения нимфы. Когда действуют 1/2/3 и более уровня Отражения нимфы,
+        сила атаки повышается на 7%/16%/25%, а бонус Гидро урона на 4%/9%/15%.
+        Уровни Отражения нимфы, созданные обычными атаками, заряженными атаками,
+        атаками в падении, элементальными навыками и взрывами стихии, существуют
+        независимо друг от друга.
+  pieces:
+    flower:
+      name:
+        en: Odyssean Flower
+        ru: Цветок странствий
+      description:
+        en: The story must end, and even fresh flowers will wither. But the flower
+          within one’s dreams will always remain in full and fragrant bloom.
+        ru: Истории подходят к концу, и даже свежие цветы увядают. Но цветок, что явился
+          во снах, всегда будет цвести и благоухать.
+      story:
+        en:
+          - p: >-
+              …But in the end, a shadow still fell over the kingdom.
+
+              It was not that the dragon defeated the hero, but rather, that they both became lost in the world.
+
+              Amidst the chaos as thick as lightless dark waters, amidst the sorrows and the partings that followed,
+
+              The Director and her sisters set out on a journey to defeat the evil at its source,
+
+              And her assistant in turn boarded the ship built for battle, eventually slumbering beneath the waters.
+
+              The Narzissen champions and many knights, evil dragons, and virtuous sages were scattered.
+          - p: >-
+              Some would be taken in by the Marechaussee Phantom or the Special Security
+              and Surveillance Patrol,
+
+              And they would work to protect the realm such that it would not again have a shadow cast over it.
+
+              Some were taken in by explorers moving to and from foreign lands,
+
+              And from then on would truly set out on an adventure to witness the edge of the world.
+          - p: >-
+              Many years would pass after that.
+
+              Some would try to prevent future tales from ever being stopped by such events as these,
+
+              And so would seek out the path ahead using the secrets of machinery and bodies of steel.
+
+              Some, on the other hand, would go against the grain, so that the stories might begin again,
+
+              Embarking on a journey beyond normal comprehension in the name of the nymphs.
+
+              And just as how some people treasure withered flowers,
+
+              Some still reminisce endlessly over the afternoon adventures that have yet to continue…
+        ru:
+          - p: >-
+              …В конце концов тень упала на королевство.
+
+              Дело не в том, что дракон победил героя, а в том, что они исчезли вместе.
+
+              Среди непроницаемого хаоса, среди печалей и расставаний, которые последовали за этим,
+
+              наставница и её сёстры отправились в путь, чтобы победить сам источник зла.
+
+              А её помощница, в свою очередь, взошла на борт корабля, построенного для сражения и в конце концов ушедшего ко дну.
+
+              Цветочные хранительницы и множество рыцарей, злые драконы и добрые мудрецы были разбиты.
+          - p: >-
+              Кто-то из них попал к Сумеречному двору, иной – к Особому патрулю.
+
+              И они трудились на благо королевства, чтобы тень больше никогда не укрыла его.
+
+              Другие попали к путешественникам, странствующим в далёких землях.
+
+              И с того момента отправились на самый край земли.
+          - p: >-
+              Много лет прошло с тех пор.
+
+              Некоторые пытались сделать так, чтобы будущие сказания нельзя было остановить.
+
+              Для этого они открывали путь впереди, используя механизмы и стальные тела.
+
+              Некоторые люди отворачиваются от истории, чтобы возобновить её.
+
+              Во имя Цветочных защитниц они отправляются в путешествие за пределами привычного восприятия вещей.
+
+              И были среди них те, кто дорожит увядшими цветами.
+
+              Кто бесконечно вспоминает послеобеденные приключения, которые нужно продолжить…
+    plume:
+      name:
+        en: Wicked Mage’s Plumule
+        ru: Перо злого мага
+      description:
+        en: This was once a decorative feather in someone’s hat. Being dark green, it is
+          quite eye-catching indeed.
+        ru: Перо, некогда украшавшее чью-то шляпу. Его тёмно-зелёный цвет, должно быть,
+          привлекал немало внимания.
+      story:
+        en:
+          - p: >-
+              Where there are heroes, there must be wicked mages, and where there are
+              knights, there must be evil dragons.
+
+              The hero would always wield a holy blade, while the mage might carry some kind of magical catalyst.
+
+              In the interstice between adventures, when the heroes and mages and knights and fell dragons had yet to be born,
+
+              They would always gaze upon the feather of an unknown bird species pinned to the Vice Director’s hat.
+
+              That feather must hold many stories within it, the little adventurers thought to themselves,
+
+              And the Vice Director must have witnessed many tales, like an old heroine after her seclusion.
+
+              Or why would even the Director, who had promised to procure the feather for us, never be able to take it off?
+          - p: >-
+              “Now, now, ██, ██, do get along. Don’t fight.”
+
+              The two who would always play the knight and the fell dragon nodded reluctantly.
+
+              “And when I’m not around, ███, you’ll take care of ███, won’t you?”
+
+              “The Director and I will be back once we have finished attending to business, so don’t go running outside.”
+
+              The Vice Director thought for a moment, and plucked the dark green feather from her hat before departing.
+
+              “You’ve wanted this for a while, haven’t you, ███? Alright then. Here you go.”
+
+              “But I’m only giving this to you for safekeeping for a while, alright? I’ll be quite cross if it gets dirty.”
+          - p: >-
+              But in the end, this feather would never become the mystical staff used by
+              some evil mage.
+
+              It would instead follow its new owner and reach the source of that which caused the calamity of parting, before returning to from whence it came…
+        ru:
+          - p: >-
+              Где есть герои, там должны быть и злые колдуны, а где есть рыцари, там должны
+              быть и злые драконы.
+
+              У героя всегда будет священный клинок, а у мага может быть припрятан волшебный посох.
+
+              В промежутке между приключениями, когда ещё не родились герои, колдуны, рыцари и драконы,
+
+              они всегда смотрели на перо неизвестной птицы, приколотое к шляпе помощницы настоятельницы.
+
+              Это перо должно хранить в себе много историй, думали про себя маленькие искатели приключений.
+
+              А помощница настоятельницы, должно быть, и сама застала многие истории, словно героиня после своего ухода на покой.
+
+              Иначе почему даже настоятельница, обещавшая нам перо, не могла его снять?
+          - p: >-
+              «Ну же, ████, ████, нет причины для драки».
+
+              Эти двое, игравшие в рыцаря и дракона, неохотно кивнули.
+
+              «А когда меня не будет рядом, ████, ты ведь позаботишься о ████?»
+
+              «Мы с настоятельницей вернёмся, как только закончим с делами, так что не выбегайте на улицу».
+
+              Помощница настоятельницы задумалась на мгновение и вынула тёмно-зелёное перо из шляпы, прежде чем уйти».
+
+              «Тебе ведь так его хотелось, не правда ли, ████? Хорошо. Держи».
+
+              «Но я даю тебе его лишь на некоторое время, понятно? Я буду очень расстроена, если оно испачкается».
+          - p: >-
+              Но в конце концов это перо так и не стало волшебным посохом какого-то злого
+              колдуна.
+
+              Вместо этого оно последует за своим новым владельцем и достигнет источника бедствия, которое приведёт к расставанию, прежде чем вернуться назад…
+    sands:
+      name:
+        en: Nymph’s Constancy
+        ru: Постоянство нимфы
+      description:
+        en: A pocket watch that has long stopped working. It seems to have borne witness
+          to many a passing year as its hands spun in vain.
+        ru: Карманные часы, которые давно сломались. Пока их стрелки вращались впустую,
+          утекло много лет.
+      story:
+        en:
+          - p: >-
+              The hands of a timepiece must eventually return to their original places, and
+              their circle will begin anew.
+
+              All that the Narzissen champions were seemed as if they would never change.
+
+              But the years must ultimately grind down the intricate yet vulnerable calibers of such timepieces.
+
+              Until such a time when a new day will not come. Indeed, where nothing will.
+          - p: >-
+              This pocket watch was originally owned by a tiny champion who loved machines,
+
+              A test piece created by piecing together the rejected components of various devices.
+
+              At the very end, this pocket watch and the one it had been gifted to fell into the primordial liquid that dissolves all.
+
+              But it had already long ceased to run its clockwork course by that point.
+          - p: >-
+              “A long, long time in the future, in a place far, far away…”
+
+              “There was a dark empire ruled by the fell dragon Narcissus.”
+
+              “The princess he once yearned for had, together with the high tower in which she lived, plunged into a stagnant slumber in which there were no dreams, and so she remained untainted by him. Narcissus was infuriated by this, and so sent out his minions and enforcers to scour the empire for her treasure. He set up many defensive mechanisms using his fell sorceries to prevent those on the side of justice from resisting him. He swore that he would reclaim the princess’ treasure and reawaken her. That way, he would be able to claim her wholly for his own.”
+
+              “There was a group of heroes who protected a treasure that the princess had entrusted to them, a clear, bright pearl of water.”
+
+              “One day, a tiny life was born from this pearl.”
+
+              “Hmm… and what shall we call this life? Ah, what a pain. If I had known that this was how the story might go, I should’ve used your name here. Do you have any other good friends?”
+
+              “‘Friends, you say… Well, if that’s what you need, I do have one. I think it would really fit here.'”
+        ru:
+          - p: >-
+              Стрелки часов в конце концов должны вернуться на свои места, и их круг
+              начнётся заново.
+
+              Всё, чем были Цветочные хранительницы, казалось, никогда не изменится.
+
+              Но годы со временем изнашивают невероятно нежный и хрупкий механизм.
+
+              Пока однажды новый день попросту не наступит. Ничто не наступит.
+          - p: >-
+              Эти часы изначально принадлежали маленькому герою, который любил механизмы.
+
+              Тестовый образец, собранный из отброшенных деталей различных устройств.
+
+              В итоге эти часы и тот, кому они были подарены, упали в первобытную жидкость, которая растворяет всё.
+
+              Но к тому времени их механизм уже давно оставался неподвижным.
+          - p: >-
+              «Давным давно, в далёкой земле…
+
+              Была мрачная империя, которой правил злобный дракон.
+
+              Принцесса, о которой он когда-то мечтал, и высокая башня, в которой она жила, погрузились в дрёму без снов. Поэтому она осталась незапятнанной им. Нарцисс был разгневан, и отправил своих приспешников рыскать по землям империи в поисках её сокровищ. Своими чарами он создал множество защитных механизмов, чтобы помешать тем, кто на стороне справедливости, противостоять ему. Он поклялся, что вернёт сокровища принцессы и вновь пробудит её. Таким образом, он сможет полностью подчинить её своей воле.
+
+              Была команда героев, защищавших сокровище, которое им доверила принцесса. Это была чистая и яркая жемчужина воды.
+
+              И однажды из этой жемчужины появилась жизнь.
+
+              Как же назвать эту жизнь?.. Ах, какая боль. Если бы только знать, что история может пойти именно так, мне следовало бы использовать здесь ваше имя. Есть ли у тебя ещё хорошие друзья?
+
+              “Друзья?.. Что ж, в таком случае, есть у меня один. Будет как раз к месту."»
+    goblet:
+      name:
+        en: Heroes’ Tea Party
+        ru: Чаепитие героев
+      description:
+        en: A lovely teacup. Perhaps it was once used by people enjoying a leisurely
+          afternoon together.
+        ru: Утончённая чайная чашка. Возможно, когда-то она была частью чьего-то
+          послеобеденного отдыха.
+      story:
+        en:
+          - p: >-
+              Even the Narzissen champions would need to rest for a short time along the
+              adventuring road.
+
+              When the clock sounded, many champions and mages, knights and evil dragons,
+
+              All forgot for a time the imprisoned princess and the treasures of the domains.
+
+              The dark clouds that shrouded the distant kingdom’s skies temporarily faded away,
+
+              And the princess amid her agonized wait would turn her gaze from her window.
+
+              For when the knights depart, so too must the adventure be put on hold.
+
+              This is the universal rule the Narzissen champions follow, and many other tiny worlds do as well.
+
+              If one must ask why, then it is because the refreshments made by the Vice Director are far too delicious.
+          - p: >-
+              It was a gloomy afternoon… but that phrase seems to have little meaning.
+
+              For the new home she was going to was one that would not see the light of either sun or moon.
+
+              Here, the first person she met was the tall, pure Director.
+
+              And though she was even less sure of what to do than the little girl, she still greeted her with an embrace,
+
+              And got her clothes soaked for the trouble. The Vice Director was old enough to be the girl’s mother.
+
+              Taking the girl by the hand, she brought her amongst the resting champions, knights, and evil dragons.
+
+              She thought that this was quite alright. In any case, the refreshments really were delicious.
+        ru:
+          - p: >-
+              Даже Цветочные хранительницы должны были отдохнуть на пути к приключениям.
+
+              Когда прозвучали часы, многие герои и маги, рыцари и злые драконы,
+
+              все на время забыли о пленной принцессе и несметных сокровищах.
+
+              Тёмные тучи, окутавшие небо далёкого королевства, ненадолго рассеялись,
+
+              и принцесса в мучительном ожидании отводила взгляд от окна.
+
+              Ведь когда рыцари уезжают, приключения тоже должны быть приостановлены.
+
+              Это универсальный закон, которому следуют и Цветочные хранительницы, и многие другие крошечные миры.
+
+              Если вы спросите почему, то потому, что закуски, приготовленные помощницей настоятельницы, слишком вкусные.
+          - p: >-
+              Это был пасмурный день… Но эта фраза, похоже, не имеет особого смысла.
+
+              Ведь новый дом, в который она отправлялась, не видел ни света солнца, ни света луны.
+
+              Здесь первой, кого она встретила, была высокая, чистая настоятельница.
+
+              И хоть у неё было уверенности не меньше, чем у этой маленькой девочки, она всё равно радушно встретила её.
+
+              И намочила свою одежду. Помощница настоятельницы была достаточно взрослой, чтобы быть матерью девочки.
+
+              Взяв девочку за руку, она провела её среди отдыхающих героев, рыцарей и злых драконов.
+
+              Она подумала, что это вполне нормально. И угощение было таким вкусным.
+    circlet:
+      name:
+        en: Fell Dragon’s Monocle
+        ru: Монокль свирепого дракона
+      description:
+        en: An exquisitely-made monocle. Ancient anecdotes say that one might be able to
+          see the future through it.
+        ru: Утончённый монокль. Если верить старинным пересказам, через него можно
+          мельком увидеть будущее.
+      story:
+        en:
+          - p: >-
+              The heroes of different stories will naturally find different (expedient)
+              holy swords, and they must also face different nemeses.
+
+              But it is oft-said that heroes who live too long, live to become the evil dragon. And when many stories cross paths, perhaps one side’s hero is another side’s dragon.
+
+              The tale that finally emerges will trend toward narratives that are easier to grasp — which is why heroes are heroes, and not evil dragons.
+
+              That is why, for all their strength and schemes, the evil dragons will ultimately be defeated by the heroes wielding their holy swords.
+          - p: >-
+              And before the dragon falls into the chasm that dissolves all things, he will
+              think of the times he once spent with the hero. And at last, he
+              will say:
+
+              “Yes, hatred shall not fill me. I know that you have not seen the sights I have, and that is why you wish to stop me.”
+
+              “The star-beasts shall drink the amniotic fluid of the world dry. A hundred years from then, all life on its surface shall be wiped away.”
+
+              “I will surely return to save all souls. Ten years, even a hundred years may pass, but I shall be reborn as a new universe.”
+          - p: >-
+              But the hero, victorious over the dragon, will also lose the thing most
+              precious to him during the hunt.
+
+              He will never again believe in anything that the sum of human knowledge cannot completely grasp and understand,
+
+              And to the end of his days, he shall conceive of a kingdom powered by machines and energies not derived from the elements.
+        ru:
+          - p: >-
+              Герои разных историй, естественно, найдут разные (сообразные им) священные
+              клинки и столкнутся с разнообразными врагами.
+
+              Но часто говорят, что герои, которые живут слишком долго, сами становятся злыми драконами. И когда многие истории пересекаются, возможно, герой одной стороны становится драконом для другой.
+
+              Сказки, которые появляются из настоящих приключений, всегда упрощают сюжеты. Вот почему герои являются героями, а не злыми драконами.
+
+              Вот почему, несмотря на всю свою силу и коварные планы, злые драконы в конечном итоге будут побеждены героями, владеющими священными клинками.
+          - p: >-
+              И прежде чем дракон упадёт в пропасть, растворяющую всё сущее, он будет
+              думать о том времени, которое он когда-то провел с героем. И,
+              наконец, он скажет:
+
+              «Да не наполнит меня злоба. Я знаю, ты не видел всего того, что довелось увидеть мне, и поэтому ты хочешь меня остановить.
+
+              Звездные звери выпьют жидкость этого мира досуха. Пройдёт сто лет, и жизнь будет стёрта с лица земли.
+
+              Я обязательно вернусь, чтобы спасти все души. Может пройти десять, даже сто лет, но я смогу переродиться в новой вселенной».
+          - p: >-
+              Но герой, одержав победу над драконом, потеряет и самое дорогое для него
+              самого.
+
+              Он никогда больше не будет верить ни во что, что нельзя постигнуть до конца и понять совокупностью человеческих знаний.
+
+              И до конца своих дней он будет представлять себе королевство, приводимое в движение машинами и энергией, которая не происходит от силы стихий.
 ocean-hued-clam:
   code: ocean-hued-clam
   name:
@@ -7732,7 +8128,7 @@ prayers-for-illumination:
           After being subjected to the dancing sacrificial flames year in and
           year out, it possesses remarkable resistance.
         ru: Ритуальный головной убор того, кому в древние времена доверяли церемонию
-          жертвоприношения. Обладает высоким сопротивлением к огню благодаря
+          жертвоприношения. Обладает сильным сопротивлением к огню благодаря
           многолетнему контакту с ритуальным пламенем.
       story:
         en:
@@ -8730,8 +9126,8 @@ shimenawas-reminiscence:
 
               “The so-called omamori cannot make one’s wishes come true at all, but they can make them eternal through this entanglement.”
           - p: >-
-              The Lady Kitsune couldn’t help but break out into laughter upon seeing my
-              clueless expression.
+              Seeing my befuddled expression, a picture of complete confusion, Lady Kitsune
+              couldn’t help bursting into laughter,
 
               She cheerfully knocked my head with her pipe and sneakily changed the subject.
           - p: “I suppose you’ve met your fated one as well, Hibiki?”
@@ -9062,7 +9458,7 @@ shimenawas-reminiscence:
 
               Но по какой-то непонятной причине чем старше я становлюсь, тем угрюмее становится лицо госпожи Сайгу.
 
-              На лице её проступает не тревога или страх, а скорее глубокая печать…
+              На лице её проступает не тревога или страх, а скорее глубокая печаль…
           - p: >-
               «Жизнь полна неопределённости, любовь быстротечна, а вечные воспоминания
               будут утрачены.
@@ -9083,8 +9479,8 @@ tenacity-of-the-millelith:
   rarity: 5
   sets:
     "2":
-      en: HP increased by 20%.
-      ru: Увеличивает НР на 20%
+      en: HP +20%
+      ru: Увеличивает НР на 20%.
     "4":
       en: When an Elemental Skill hits an opponent, the ATK of all nearby party
         members is increased by 20% and their Shield Strength is increased by
@@ -10485,7 +10881,7 @@ vermillion-hereafter:
       story:
         en:
           - p: >-
-              It is said that Rex Laps was yet young, the sun was a chariot that raced
+              It is said that Rex Lapis was still young, the sun was a chariot that raced
               across the earth.
 
               When the three sisters of the night sky were martyred in a calamity, the solar chariot fell into a deep gorge.
@@ -10937,6 +11333,429 @@ viridescent-venerer:
           - p: |-
               Позже, когда настал век бедствий, один вид этой зелёной шляпы
               повергал чудовищ в ужас.
+vourukashas-glow:
+  code: vourukashas-glow
+  name:
+    en: Vourukasha’s Glow
+    ru: Сияние Вурукаши
+  rarity: 5
+  sets:
+    "2":
+      en: HP +20%
+      ru: Увеличивает НР на 20%.
+    "4":
+      en: Elemental Skill and Elemental Burst DMG will be increased by 10%. After the
+        equipping character takes DMG, the aforementioned DMG Bonus is increased
+        by 80% for 5s. This effect increase can have 5 stacks. The duration of
+        each stack is counted independently. These effects can be triggered even
+        when the equipping character is not on the field.
+      ru: Увеличивает урон элементального навыка и взрыва стихии на 10%. Если
+        экипированный персонаж получает урон, этот эффект повышения урона
+        увеличивается на 80% на 5 сек. Эффект может складываться до 5 раз.
+        Отсчёт времени каждого уровня происходит отдельно. Эти эффекты
+        активируются даже если экипированный персонаж не на поле боя.
+  pieces:
+    flower:
+      name:
+        en: Stamen of Khvarena’s Origin
+        ru: Тычинка истока Хварны
+      description:
+        en: An insignia in the shape of a lovely little flower that was once worn by
+          pilgrims in times long bygone.
+        ru: Значок паломников древности, выполненный в форме милого маленького цветка.
+      story:
+        en:
+          - p: >-
+              “My innocent daughter, my Khvarena…”
+
+              “I shall give you unto another mother. Love her, and be loyal to her.”
+
+              “She is no less than I, and her light is yet more radiant than mine.”
+
+              “I once encountered a faceless nightmare in my dreams, and it frightened me to no end.”
+
+              “And so I separated you from my body, and I ask you now to prevent that nightmare’s coming.”
+          - p: >-
+              “My Khvarena, the light of my eyes…”
+
+              “I once warned her of the coming of the dark tide, and it is from this that your destiny arises.”
+
+              “Please do not be afraid, and do not flee, do not let your Khvarena dim, and do not disgrace your mother.”
+
+              “Just as it is my fate to sacrifice myself for mortals, so too is sacrifice the beautiful prelude to new life…”
+
+              “Go now, into your verdant mother’s embrace. You shall find your destiny in her realm.”
+          - p: >-
+              “My Khvarena, my pure daughter…”
+
+              “You shall change utterly. You shall face the trial of division and death.”
+
+              “And after that, you shall become immortal — and yet that shall be a harder road still…”
+
+              “The lord of sweet dew and the lord of grass and trees shall precede you in losing their divine forms…”
+
+              “They shall be forgotten, and only the memory of your sacrifice will be remembered.”
+          - p: |-
+              “My Khvarena, daughter of flowers…”
+              “If you are resolved to not retreat out of fear…”
+              “Then throw yourself into the embrace of your new mistress.”
+        ru:
+          - p: >-
+              «Моя невинная дочь, моя Хварна…
+
+              Я отдам тебя другой матери. Люби её и будь ей верна.
+
+              Мудростью она не уступает мне, и её свет ещё более лучезарен, чем мой.
+
+              Однажды во сне мне встретился безликий кошмар, и он меня безгранично испугал.
+
+              И вот ты больше не принадлежишь моему телу. Прошу, предотврати наступление этого кошмара.
+          - p: >-
+              Моя Хварна, свет моих очей…
+
+              Я предупредила её о приливе тёмных волн, отсюда и проистекает твоя судьба.
+
+              Не бойся и не убегай, не дай померкнуть твоей Хварне и не разочаруй свою мать.
+
+              Моя судьба – жертвовать собой ради смертных, и жертва – лишь прекрасная прелюдия к новой жизни…
+
+              Ступай же в объятия своей зеленеющей матери. Ты найдёшь свою судьбу в её царстве.
+          - p: >-
+              Моя Хварна, моя чистейшая дочь…
+
+              Тебе нужно полностью измениться. Тебе предстоит испытание разделением и смертью.
+
+              Именно так ты обретёшь бессмертие. Но путь к нему лежит через пелену мрака…
+
+              Владычица амриты и владычица травы и деревьев будут предшествовать тебе в потере их божественных форм…
+
+              Они будут забыты, сохранится лишь память о вашей жертве.
+          - p: |-
+              Моя Хварна, дитя цветов…
+              Если ты решишь не отступать из-за страха…
+              Тогда бросься в объятия своей новой госпожи».
+    plume:
+      name:
+        en: Vibrant Pinion
+        ru: Самоцветное перо
+      description:
+        en: An exquisite feather-shaped decoration on which the vivid hues of verdant
+          leaves and fragrant flowers shimmer.
+        ru: Искусно выполненное украшение в виде пера, переливающееся зелёной листвой и
+          благоухающими цветами.
+      story:
+        en:
+          - p: >-
+              In a time no one remembers, the night before the sandstorm of tragedy swept
+              through paradise…
+
+              The flowers and the trees once spoke of the mortal realms, their hopes, and their desolate future.
+
+              The ones who must not be approached brought about the gray death, and the dark tide ravaged the raw river banks,
+
+              Only for the newborn plants and beasts to unite with mortals and push the rolling sinister waves back.
+          - p: >-
+              In the lonesome years after she had broken off ties with the lord of the red
+              sands, the queen of grass and trees forged Khvarena into a divine
+              bird,
+
+              Charging her with the protection of two worlds, with the guardianship of the border between new birth and death.
+
+              The divine bird lived amongst the pines, the cypresses and the snow-lotuses, and slumbered in dreams that recalled a time when the covenant still endured…
+
+              It was only when disaster came that she awakened, and went to her inevitable doom.
+
+              Later, just as that person had prophesied sadly, the deathly, silent gloom would permeate the rainforest…
+
+              Just as that covenant fellow had warned, the tides of dark beasts swarmed forth and swept through the newly-birthed forests…
+          - p: >-
+              The former leader of the realm of water was slain amidst the upheaval, and
+              her body was transformed into a sea of pure dew, the Amrita,
+
+              And yet even that pure sea would dry up in a desolate land destroyed by the Abyss.
+
+              Yet the mistress of grass and trees had no time to mourn, for the mother-tree of numberless seeds needed to be nurtured…
+
+              To cleanse the dark impurities and ensure the purity of the Amrita, Simurgh would shatter its divine form—
+          - p: >-
+              “All beautiful things born from the Khvarena of flowers must face their fate
+              — to wither and fall into the mud,”
+
+              “And once they have withered, they shall be reborn, nourished by the Amrita, as beings of the flowery sea, no longer troubled by such things as ‘death.'”
+        ru:
+          - p: >-
+              В те времена, о которых никто не помнит, в ночь перед песчаной бурей трагедия
+              пронеслась над раем…
+
+              Цветы и деревья некогда говорили о смертных царствах, их надеждах и заброшенном будущем.
+
+              Те, к кому нельзя приближаться, принесли серую смерть, и тёмный прилив опустошил речные берега.
+
+              Лишь для того, чтобы новорождённые растения и звери объединились со смертными и отбросили зловещие волны назад.
+          - p: >-
+              В тоскливые годы после разрыва связи с владыкой красных песков владычица трав
+              и деревьев превратила Хварну в божественную птицу.
+
+              Ей она поручила защиту двух миров и охрану границы между смертью и новой жизнью.
+
+              Божественная птица жила среди сосен, кипарисов и снежных лотосов и видела сны, вспоминая времена, когда завет еще был нерушим…
+
+              И только когда пришла беда, она очнулась и пошла навстречу неизбежной гибели.
+
+              Позже, как и сказано в пророчестве, смертельный, безмолвный мрак пропитает тропический лес…
+
+              Как и предупреждал дорогой друг, волны тёмных зверей хлынули и пронеслись по новорождённым лесам…
+          - p: >-
+              Бывший лидер царства воды была убита во время потрясений, а её тело стало
+              морем чистой росы, амритой.
+
+              И всё же даже это море высохнет в пустынной земле, уничтоженной Бездной.
+
+              Но у хозяйки трав и деревьев не было времени на скорбь, ведь нужно было взращивать дерево-мать из бесчисленных семян…
+
+              Чтобы очистить скверну и обеспечить чистоту амриты, Симург разрушала её божественную форму.
+          - p: >-
+              «Всё прекрасное, рождённое из Хварны цветов, должно встретить свою судьбу –
+              увянуть и провалиться в грязь.
+
+              И как только они увянут, они возродятся, питаемые амритой, как существа цветочного моря, которых больше не беспокоит смерть».
+    sands:
+      name:
+        en: Ancient Abscission
+        ru: Древнее увядание
+      description:
+        en: An ancient timepiece upon which the light of Khvarena gleams. It is filled
+          with a pure liquid that appears alive.
+        ru: Старинные часы, мерцающие светом Хварны. Они наполнены прозрачной жидкостью,
+          которая кажется живой.
+      story:
+        en:
+          - p: >-
+              “I shall give you a shard of Khvarena, my friend. Keep her close, and keep
+              her safe.”
+
+              “She comes from the wisdom of the flowers and the veins of the skies, and in her is the pure essence of life.”
+
+              “Khvarena is a point in the flower’s heart, a single drop of light in a sea of sweet dew.”
+
+              “Please treasure my gift, until the day when the dark abyss rises to drown all life…”
+          - p: >-
+              The leaves and flowers passed the distant fable between them, and it was
+              remembered by the fruits and seeds.
+
+              When the mistress of flowers had withered into dust, when the master of the desert had been led astray by a false dream,
+
+              When the tyrants had been buried beneath the ever-shifting dunes and their ambitions were extinguished,
+
+              When all that had come from the soil was returned to the golden sands, and that which had come from the flowing wind was given over to the rainforest…
+
+              The queen of the grass and trees watched the world change quietly, remembering her earnest covenant with those who had fallen.
+          - p: >-
+              “Please protect this Khvarena for me, my companion, my friend whom I love.”
+
+              “When we are gone, the mortals shall wander, lost, like infants newly taken from their swaddling,”
+
+              “Fragile, yet sufficiently strong to conquer the wild winds, the searing flames, and their own imperfections.”
+
+              “But that which I fear is not the disasters I can predict, but rather the chaotic darkness…”
+
+              “Only the evil of this darkness and the threat of ‘death’ can crush the buds.”
+          - p: >-
+              When the gilded sand had devoured the paradise of the past, the queen of
+              trees and grass arose to fulfill that ancient agreement.
+
+              Heeding the will of the Khvarena, she created for her a beauteous form, fashioning for her a life that was lovely beyond compare—
+
+              That was Simurgh, the divine bird, in whose form could be seen the vivid hues of countless birds, and in whose song was the song of numerous flowers…
+
+              The final dream of the oasis was gathered into one body, and transformed into the pure, bright, endless sea of flowers hidden within the divine bird’s body.
+        ru:
+          - p: >-
+              «Я дам тебе осколок Хварны. Держи его при себе и бережно храни.
+
+              Она происходит из мудрости цветов и небесных нитей, и в ней – чистая сущность жизни.
+
+              Хварна – это точка в сердцевине цветка, одинокая капля света в море сладкой росы.
+
+              Пожалуйста, храни мой дар до того дня, когда тёмная бездна поднимется, чтобы утопить всё живое…
+          - p: >-
+              Цветы передавали далёкую притчу, и её запомнили плоды и семена.
+
+              Когда госпожа цветов обратилась в прах, когда ложная мечта сбила с пути хозяина пустыни…
+
+              Когда дюны погребли под собой тиранов, чьи амбиции угасли…
+
+              Когда всё, что произошло из почвы, вернулось в золотые пески, а что принёс ветер, было отдано тропическим лесам…
+
+              Королева трав и деревьев спокойно наблюдала за тем, как меняется мир, вспоминая свой искренний завет с теми, кто пал.
+          - p: >-
+              Пожалуйста, защити эту Хварну ради меня, моего спутника, моего друга,
+              которого я люблю.
+
+              Когда нас не станет, смертные будут скитаться в растерянности, словно младенцы, только что вынутые из пелёнок.
+
+              Хрупкие, но достаточно сильные, чтобы сразить дикие ветра, обжигающее пламя и свои собственные недостатки.
+
+              Но я боюсь не катастроф, которые я могу предсказать, а хаоса тьмы…
+
+              Лишь зло этой тьмы и угроза “смерти” могут раздавить бутоны…»
+          - p: >-
+              Когда золотой песок поглотил далёкий рай, королева деревьев и травы восстала,
+              чтобы исполнить древний уговор.
+
+              Прислушавшись к воле Хварны, она создала прекрасную форму, создала жизнь, которая была несравненно прекрасна…
+
+              Это была Симург, божественная птица, в облике которой можно было увидеть яркие оттенки бесчисленных пернатых созданий, а в песне – мелодию многочисленных цветов…
+
+              Последняя мечта оазиса была собрана в одно тело и превратилась в чистое, яркое, бесконечное море цветов, скрытое в теле божественной птицы.
+    goblet:
+      name:
+        en: Feast of Boundless Joy
+        ru: Пир необузданного веселья
+      description:
+        en: An opulent wine goblet that was once filled with nectar and honeydew, but is
+          empty today.
+        ru: Великолепный кубок, когда-то наполнявшийся медовой росой и нектаром, теперь
+          совершенно пуст.
+      story:
+        en:
+          - p: >-
+              After the mistress of the orchard passed, the queen of grass and trees cut
+              ties with the sea of sand.
+
+              Forsaking mad love and majesty, she chose to return to the rainforest and take up the path of defending life…
+
+              Thus did new life emerge from the forest, thus did the sages make a stir, and thus was a home fashioned.
+
+              Wild fantasy leads to inexorable death, and the metaphor of death cautions mortals.
+          - p: >-
+              The Khvarena of the flowers were born of the most exuberant of banquets and
+              the purest of delights,
+
+              And within them was not to be found the tartness of asceticism, or the rank stench of authority.
+
+              Her final fate was inescapable death, to wither and dry up…
+
+              Only the Lord of Wisdom could learn from such, so as to properly safeguard and use it.
+          - p: >-
+              “But do not forget my great mistress’s prophecy, for it was she who sent me
+              unto you.”
+
+              “Folly shall yet not kill mortals, but the wild tide of darkness from beyond this world will sweep all away still.”
+
+              “I am the final remnant of my mistress. I am the floral essence that cleanses all.”
+
+              “Should I join with the purest water, I shall burst, even as the pomegranates do, into countless rays of light.”
+          - p: >-
+              And thus was the divine bird Simurgh born from the Khvarena of the flowers,
+
+              Staying by her master’s side for a time before flying to the flowery sea…
+        ru:
+          - p: >-
+              Когда хозяйка фруктового сада ушла, владычица травы и деревьев разорвала
+              связь с морем песка.
+
+              Отказавшись от безумной любви и величия, она решила вернуться в тропический лес и встать на путь защиты жизни…
+
+              Так в тропическом лесу воссияла новая жизнь, так мудрецы подняли шум, и так был создан дом.
+
+              Необузданная фантазия ведёт к необратимой гибели, и метафора гибели предостерегает смертных.
+          - p: >-
+              Хварна цветов была рождена самым пышным из пиров и самым чистым из
+              наслаждений.
+
+              И в ней не было ни горечи аскетизма, ни зловония власти.
+
+              Её конечная судьба – неизбежная смерть, увядание и засыхание…
+
+              Только повелитель Мудрости мог извлечь из этого урок, чтобы правильно хранить и использовать его.
+          - p: >-
+              «Но не забывай пророчество моей великой госпожи, ибо это она послала меня к
+              тебе.
+
+              Сумасбродство ещё не приведёт к исчезновению смертных, но дикая волна тьмы не из мира сего сметёт их.
+
+              Я – исчезающий след моей госпожи. Я – цветочная суть, всё очищающая.
+
+              Если я соединюсь с чистейшей водой, то, подобно гранатовому плоду, разорвусь на множество маленьких частиц».
+          - p: >-
+              Так из цветочной Хварны родилась божественная птица Симург.
+
+              Некоторое время она оставалась рядом со своим хозяином, прежде чем улететь к оазису…
+    circlet:
+      name:
+        en: Heart of Khvarena’s Brilliance
+        ru: Сердце светозарности Хварны
+      description:
+        en: Intricate and vibrant earrings upon which the luster of a hundred flowers
+          seems to flow.
+        ru: Утончённые пёстрые серьги, которые переливаются, словно сто цветов.
+      story:
+        en:
+          - p: >-
+              “My dear friend, you who were so wise, yet passed early…”
+
+              “Amidst glorious legends lurks the gloom of oblivion,”
+
+              “Just as life walks with death, and forgetting is the lover of remembrance.”
+
+              “If the darkness of death did not threaten it, no life would have any importance.”
+
+              “If the waves of forgetfulness did not surge against them, there would be no histories worth recording.”
+          - p: >-
+              In the age long past, the queen of grass and trees once did as her friend had
+              entrusted,
+
+              Granting the Khvarena of flowers to the divine bird’s form, giving her charge over the defense over a part of the rainforest.
+
+              And just as the fate of the fresh flower is to wither, Simurgh’s fate was sacrifice.
+
+              The nurturer of all things verdant had known this since the night she slept beside the lord of flowers…
+          - p: >-
+              “And so the verdant divine bird blossomed into countless Khvarena flowers,
+              scattering across the land like hoopoes…”
+
+              “The Khvarena fell upon the pure remains of the Amrita’s mistress, and thus was a glimmering sea of flowers born.”
+
+              “Many spirits dwell in the sea, and they carry the wishes of grass, tree, and dew, cleansing all filth.”
+
+              “Many spirits dwell in the sea, and they sing of the three mothers — of verdure, of sweet dew, and fresh flowers.”
+          - p: >-
+              One night, the daughter must leave the embrace of the three mothers,
+
+              And sacrifice herself, for the impurity of the world grows great…
+        ru:
+          - p: >-
+              «Мой дорогой друг, ты был так мудр, но так рано покинул нас…
+
+              Среди славных легенд таится мрак забвения.
+
+              Как жизнь ходит со смертью рука об руку, так и забвение дорожит воспоминаниями.
+
+              Если бы тьма смерти не нависала над жизнью, ценность её была бы невелика.
+
+              Если бы волны забвения не накатывали на них, не было бы историй, достойных записи».
+          - p: >-
+              В давно минувшую эпоху королева трав и деревьев однажды выполнила поручение
+              её друга.
+
+              Она наделила Хварну цветов формой божественной птицы, чтобы она защищала часть тропического леса.
+
+              И как свежий цветок ждёт увядание, так и Симург однажды станет жертвой.
+
+              Хранительница зелёного мира знала это с той самой ночи, когда спала рядом с повелителем цветов…
+          - p: >-
+              «И вот божественная птица расцвела бесчисленными цветами Хварны, рассыпавшись
+              по земле, как цветы маргаритки…
+
+              Хварна снизошла на прозрачное тело Владычицы амриты, и так родилось сверкающее море цветов.
+
+              Многие духи обитают в море, и они несут желания травы, дерева и росы, избавляя от грязи.
+
+              Многие духи обитают в море, и они поют о трёх матерях – о зелени, об амрите и о цветах».
+          - p: |-
+              Однажды в ночи дочь должна покинуть объятия трёх матерей.
+              И пожертвовать собой, ибо мир погряз в скверне…
 wanderers-troupe:
   code: wanderers-troupe
   name:

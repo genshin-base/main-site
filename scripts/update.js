@@ -175,6 +175,8 @@ const fixes = {
 			artifacts: [],
 			items: [
 				/^Festive Fever$/, //CHECK: два предмета с одинаковым названием (и поэтому одинаковым кодом), пока всё равно не нужны
+				/幸运牌币/, //какие-то "lucky tokens"
+				/\(test\)/,
 			],
 		},
 		manualEnemyGroups: [
@@ -222,6 +224,8 @@ const fixes = {
 			{ code: 'tower-of-abject-pride', location: { mapCode: 'teyvat', x: -4222, y: 4072 } },
 			{ code: 'joururi-workshop', location: { mapCode: 'teyvat', x: -3294, y: 2844 } },
 			{ code: 'city-of-gold', location: { mapCode: 'teyvat', x: -5041, y: 3727 } },
+			{ code: 'molten-iron-fortress', location: { mapCode: 'teyvat', x: -6803, y: 2395 } },
+			{ code: 'the-realm-of-beginnings', location: { mapCode: 'teyvat', x: -6803, y: 2395 } },
 			// от хонихантеров (не очень точные)
 			{ code: 'cecilia-garden', location: { mapCode: 'teyvat', x: -513, y: 79 } },
 			{ code: 'clear-pool-and-mountain-cavern', location: { mapCode: 'teyvat', x: -2181, y: 1045 } },
@@ -284,23 +288,7 @@ const fixes = {
 				]
 			})(),
 			weapons: (() => {
-				function removeSlashNs(attrFunc) {
-					return code2weapon => {
-						let used = false
-						const attr = attrFunc(code2weapon)
-						for (const [lang, text] of Object.entries(attr)) {
-							const newText = text.replace('\\n', ' ')
-							if (newText !== text) used = true
-							attr[lang] = newText
-						}
-						return used
-					}
-				}
-				return [
-					// у некоторых оружий в описании встречаются "\n" (двумя символами)
-					removeSlashNs(code2weapon => code2weapon['predator'].specialAbility),
-					removeSlashNs(code2weapon => code2weapon['sword-of-descension'].specialAbility),
-				]
+				return []
 			})(),
 			characters: (() => {
 				function setMaterialCodes(characterCode, materialCodes) {
@@ -384,7 +372,6 @@ const fixes = {
 				{ nameOnMap: 'Fungi', useCode: 'fungus' },
 				{ nameOnMap: 'Bathysmal Vishap', useCode: 'bathysmal-vishap-hatchling' },
 				{ nameOnMap: 'The Eremites', useCode: 'eremite' },
-				{ nameOnMap: 'Consecrated Red Vulture', useCode: 'consecrated-beast' },
 				// items
 				{ nameOnMap: 'Unagi Meat', useCode: 'eel-meat' },
 			],

@@ -692,6 +692,26 @@ midsummer-courtyard:
   region: mondstadt
   location: !loc teyvat 809 -153
   bossCode: null
+molten-iron-fortress:
+  code: molten-iron-fortress
+  type: artifacts
+  name:
+    en: Molten Iron Fortress
+    ru: Расплавленная крепость
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - mora
+    artifactSetCodes:
+      - martial-artist
+      - nymphs-dream
+      - scholar
+      - vourukashas-glow
+  dropTimetable: {}
+  region: sumeru
+  location: !loc teyvat -6803 2395
+  bossCode: null
 momiji-dyed-court:
   code: momiji-dyed-court
   type: artifacts
@@ -1024,6 +1044,40 @@ the-lost-valley:
   region: liyue
   location: !loc teyvat -2647 2811
   bossCode: null
+the-realm-of-beginnings:
+  code: the-realm-of-beginnings
+  type: trounce
+  name:
+    en: The Realm of Beginnings
+    ru: Владение начинаний
+  drop:
+    itemCodes:
+      - adventure-exp
+      - companionship-exp
+      - dream-solvent
+      - everamber
+      - midlander-bow-billet
+      - midlander-catalyst-billet
+      - midlander-claymore-billet
+      - midlander-polearm-billet
+      - midlander-sword-billet
+      - mora
+      - nagadus-emerald-chunk
+      - nagadus-emerald-fragment
+      - nagadus-emerald-gemstone
+      - nagadus-emerald-sliver
+      - primordial-greenbloom
+      - worldspan-fern
+    artifactSetCodes:
+      - berserker
+      - gladiators-finale
+      - instructor
+      - the-exile
+      - wanderers-troupe
+  dropTimetable: {}
+  region: sumeru
+  location: !loc teyvat -6803 2395
+  bossCode: guardian-of-apeps-oasis
 tower-of-abject-pride:
   code: tower-of-abject-pride
   type: weapons

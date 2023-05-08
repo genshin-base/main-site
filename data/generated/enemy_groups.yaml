@@ -21,6 +21,11 @@ slime:
     - geo-slime
     - large-geo-slime
   locations:
+    - !loc teyvat -7477 1606
+    - !loc teyvat -7475 1608
+    - !loc teyvat -7474 1606
+    - !loc teyvat -6875 1782
+    - !loc teyvat -6814 2641
     - !loc teyvat -6592 3989
     - !loc teyvat -6587 3982
     - !loc teyvat -6582 3990
@@ -818,7 +823,8 @@ slime:
     - !loc enkanomiya 423 -264
     - !loc enkanomiya 426 -260
     - !loc enkanomiya 436 -137
-    - !loc chasm -470 74
+    - !loc chasm -472 76
+    - !loc chasm -468 80
     - !loc chasm -444 -480
     - !loc chasm -434 -568
     - !loc chasm -249 -560
@@ -1043,15 +1049,88 @@ hilichurl:
     - ice-shield-hilichurl-guard
     - electro-hilichurl-grenadier
   locations:
+    - !loc teyvat -7658 2106
+    - !loc teyvat -7646 1904
+    - !loc teyvat -7626 1963
+    - !loc teyvat -7618 1787
+    - !loc teyvat -7572 1944
+    - !loc teyvat -7571 1942
+    - !loc teyvat -7570 1184
+    - !loc teyvat -7548 1932
+    - !loc teyvat -7527 1962
+    - !loc teyvat -7470 1433
+    - !loc teyvat -7463 1712
+    - !loc teyvat -7389 1425
+    - !loc teyvat -7388 1400
+    - !loc teyvat -7368 1315
+    - !loc teyvat -7367 1316
+    - !loc teyvat -7358 1334
+    - !loc teyvat -7334 1662
+    - !loc teyvat -7286 1219
+    - !loc teyvat -7259 1132
+    - !loc teyvat -7258 1133
+    - !loc teyvat -7224 1148
+    - !loc teyvat -7222 1148
+    - !loc teyvat -7216 1645
+    - !loc teyvat -7214 1646
+    - !loc teyvat -7212 1643
+    - !loc teyvat -7212 1646
+    - !loc teyvat -7182 1176
+    - !loc teyvat -7153 1300
+    - !loc teyvat -7136 1552
+    - !loc teyvat -7080 1662
+    - !loc teyvat -7078 1965
+    - !loc teyvat -7077 1962
+    - !loc teyvat -7076 1653
+    - !loc teyvat -7076 1965
+    - !loc teyvat -7075 1657
+    - !loc teyvat -7059 1780
+    - !loc teyvat -7059 1814
+    - !loc teyvat -7057 1817
+    - !loc teyvat -7055 1778
+    - !loc teyvat -7055 1781
+    - !loc teyvat -7055 1815
+    - !loc teyvat -7053 1781
+    - !loc teyvat -7051 2030
+    - !loc teyvat -7022 1967
+    - !loc teyvat -6975 2255
+    - !loc teyvat -6972 2256
+    - !loc teyvat -6891 2062
+    - !loc teyvat -6884 1497
+    - !loc teyvat -6874 2131
+    - !loc teyvat -6872 2075
+    - !loc teyvat -6869 1779
+    - !loc teyvat -6868 1778
+    - !loc teyvat -6867 1780
+    - !loc teyvat -6865 1663
+    - !loc teyvat -6865 1666
+    - !loc teyvat -6861 2515
+    - !loc teyvat -6858 2158
+    - !loc teyvat -6858 2160
+    - !loc teyvat -6817 2640
+    - !loc teyvat -6816 2643
+    - !loc teyvat -6809 2643
+    - !loc teyvat -6778 2665
+    - !loc teyvat -6755 1758
+    - !loc teyvat -6753 1741
+    - !loc teyvat -6752 1758
     - !loc teyvat -6742 4843
     - !loc teyvat -6736 4840
     - !loc teyvat -6735 4844
+    - !loc teyvat -6723 1834
+    - !loc teyvat -6719 1834
     - !loc teyvat -6712 4819
+    - !loc teyvat -6703 1274
     - !loc teyvat -6703 4812
+    - !loc teyvat -6691 1290
+    - !loc teyvat -6687 1287
+    - !loc teyvat -6687 1291
     - !loc teyvat -6682 4902
     - !loc teyvat -6646 3122
     - !loc teyvat -6645 3129
+    - !loc teyvat -6624 1439
     - !loc teyvat -6608 2861
+    - !loc teyvat -6578 2755
     - !loc teyvat -6548 3108
     - !loc teyvat -6544 3112
     - !loc teyvat -6508 3533
@@ -1066,6 +1145,7 @@ hilichurl:
     - !loc teyvat -6302 2477
     - !loc teyvat -6300 2471
     - !loc teyvat -6217 2485
+    - !loc teyvat -6211 1832
     - !loc teyvat -6188 4415
     - !loc teyvat -6185 4415
     - !loc teyvat -6161 3799
@@ -1872,6 +1952,7 @@ hilichurl:
     - !loc enkanomiya -614 -273
     - !loc enkanomiya -590 -248
     - !loc enkanomiya -590 -246
+    - !loc enkanomiya -550 -265
     - !loc enkanomiya -531 -328
     - !loc enkanomiya -526 -328
     - !loc enkanomiya -435 -391
@@ -1881,11 +1962,12 @@ hilichurl:
     - !loc enkanomiya -392 -229
     - !loc enkanomiya -389 -235
     - !loc enkanomiya -386 -237
+    - !loc enkanomiya -377 -384
     - !loc enkanomiya -364 -494
     - !loc enkanomiya -362 -496
     - !loc enkanomiya -362 -334
-    - !loc enkanomiya -362 -308
     - !loc enkanomiya -357 -336
+    - !loc enkanomiya -356 -304
     - !loc enkanomiya -353 -339
     - !loc enkanomiya -352 833
     - !loc enkanomiya -349 833
@@ -1894,10 +1976,11 @@ hilichurl:
     - !loc enkanomiya -339 -257
     - !loc enkanomiya -338 749
     - !loc enkanomiya -337 749
+    - !loc enkanomiya -334 -348
     - !loc enkanomiya -326 -394
     - !loc enkanomiya -325 -317
     - !loc enkanomiya -322 -393
-    - !loc enkanomiya -315 -348
+    - !loc enkanomiya -314 -349
     - !loc enkanomiya -299 521
     - !loc enkanomiya -212 569
     - !loc enkanomiya -207 114
@@ -1926,6 +2009,7 @@ hilichurl:
     - !loc enkanomiya -106 168
     - !loc enkanomiya -103 166
     - !loc enkanomiya -83 -132
+    - !loc enkanomiya -78 -133
     - !loc enkanomiya -75 -344
     - !loc enkanomiya -75 -135
     - !loc enkanomiya -74 -340
@@ -1970,11 +2054,23 @@ hilichurl-shooter:
     - cryo-hilichurl-shooter
     - electro-hilichurl-shooter
   locations:
+    - !loc teyvat -7624 1949
+    - !loc teyvat -7567 1833
+    - !loc teyvat -7526 1822
+    - !loc teyvat -7054 1823
+    - !loc teyvat -7043 2033
+    - !loc teyvat -7025 1931
+    - !loc teyvat -6890 2068
+    - !loc teyvat -6879 1780
+    - !loc teyvat -6867 2149
+    - !loc teyvat -6866 2152
+    - !loc teyvat -6799 2641
     - !loc teyvat -6679 4923
     - !loc teyvat -6634 3110
     - !loc teyvat -6618 3151
     - !loc teyvat -6615 2863
     - !loc teyvat -6608 2863
+    - !loc teyvat -6532 2680
     - !loc teyvat -6458 5092
     - !loc teyvat -6334 2814
     - !loc teyvat -6321 2811
@@ -2433,6 +2529,14 @@ mitachurl:
     - crackling-axe-mitachurl
     - thunderhelm-lawachurl
   locations:
+    - !loc teyvat -7557 1811
+    - !loc teyvat -7390 1418
+    - !loc teyvat -7215 1649
+    - !loc teyvat -6890 2064
+    - !loc teyvat -6881 1485
+    - !loc teyvat -6876 1779
+    - !loc teyvat -6829 2637
+    - !loc teyvat -6813 2646
     - !loc teyvat -6616 3153
     - !loc teyvat -6609 2859
     - !loc teyvat -6462 5092
@@ -2625,6 +2729,7 @@ mitachurl:
     - !loc enkanomiya -722 -83
     - !loc enkanomiya -689 -209
     - !loc enkanomiya -681 -196
+    - !loc enkanomiya -554 -260
     - !loc enkanomiya -528 -329
     - !loc enkanomiya -336 -258
     - !loc enkanomiya -209 571
@@ -2652,6 +2757,10 @@ samachurl:
     - cryo-samachurl
     - electro-samachurl
   locations:
+    - !loc teyvat -7573 1942
+    - !loc teyvat -7080 1656
+    - !loc teyvat -7047 2034
+    - !loc teyvat -6813 2651
     - !loc teyvat -5908 4321
     - !loc teyvat -5741 4243
     - !loc teyvat -5674 4065
@@ -2858,6 +2967,33 @@ samachurl:
     - !loc enkanomiya 407 -104
     - !loc enkanomiya 408 -101
     - !loc enkanomiya 455 -53
+hilichurl-rogue:
+  code: hilichurl-rogue
+  name:
+    en: Hilichurl Rogue
+    ru: Хиличурл-изгой
+  iconEnemyCode: anemo-hilichurl-rogue
+  enemyCodes:
+    - anemo-hilichurl-rogue
+    - hydro-hilichurl-rogue
+  locations:
+    - !loc teyvat -7642 1961
+    - !loc teyvat -7637 1962
+    - !loc teyvat -7561 1799
+    - !loc teyvat -7365 1530
+    - !loc teyvat -7346 1750
+    - !loc teyvat -7078 1334
+    - !loc teyvat -7050 2135
+    - !loc teyvat -7035 1983
+    - !loc teyvat -7002 1844
+    - !loc teyvat -6981 1503
+    - !loc teyvat -6975 1497
+    - !loc teyvat -6971 2251
+    - !loc teyvat -6908 1653
+    - !loc teyvat -6898 2523
+    - !loc teyvat -6880 2183
+    - !loc teyvat -6857 2149
+    - !loc teyvat -6754 1770
 abyss-mage:
   code: abyss-mage
   name:
@@ -2870,6 +3006,9 @@ abyss-mage:
     - hydro-abyss-mage
     - electro-abyss-mage
   locations:
+    - !loc teyvat -7573 1943
+    - !loc teyvat -7558 1803
+    - !loc teyvat -7073 1657
     - !loc teyvat -5174 3109
     - !loc teyvat -4827 3011
     - !loc teyvat -4801 2911
@@ -2962,6 +3101,7 @@ abyss-mage:
     - !loc teyvat 3592 5068
     - !loc enkanomiya -397 -232
     - !loc enkanomiya -371 -272
+    - !loc enkanomiya -360 -336
     - !loc enkanomiya -332 753
     - !loc enkanomiya -319 -399
     - !loc enkanomiya -243 507
@@ -3096,7 +3236,7 @@ shadowy-husk:
     - !loc chasm -73 49
     - !loc chasm 204 313
     - !loc chasm 210 317
-    - !loc chasm 215 317
+    - !loc chasm 215 310
 fatui-skirmisher:
   code: fatui-skirmisher
   name:
@@ -3111,6 +3251,13 @@ fatui-skirmisher:
     - fatui-skirmisher-anemoboxer-vanguard
     - fatui-skirmisher-pyroslinger-bracer
   locations:
+    - !loc teyvat -7504 1910
+    - !loc teyvat -7493 1901
+    - !loc teyvat -7484 1903
+    - !loc teyvat -7304 2019
+    - !loc teyvat -7245 1491
+    - !loc teyvat -7033 2199
+    - !loc teyvat -7028 2196
     - !loc teyvat -6701 4500
     - !loc teyvat -6674 4383
     - !loc teyvat -6669 4519
@@ -3122,8 +3269,11 @@ fatui-skirmisher:
     - !loc teyvat -6612 4509
     - !loc teyvat -6540 4493
     - !loc teyvat -6525 4448
+    - !loc teyvat -6518 1417
+    - !loc teyvat -6515 1412
     - !loc teyvat -6514 4391
     - !loc teyvat -6512 3602
+    - !loc teyvat -6511 1411
     - !loc teyvat -6508 3598
     - !loc teyvat -6506 3604
     - !loc teyvat -6419 2988
@@ -3155,8 +3305,25 @@ fatui-skirmisher:
     - !loc teyvat -5010 3140
     - !loc teyvat -5007 3140
     - !loc teyvat -4884 4941
+    - !loc teyvat -4783 2447
+    - !loc teyvat -4766 2452
+    - !loc teyvat -4762 2463
     - !loc teyvat -4754 4994
     - !loc teyvat -4751 4981
+    - !loc teyvat -4706 2491
+    - !loc teyvat -4676 3413
+    - !loc teyvat -4664 3425
+    - !loc teyvat -4638 3365
+    - !loc teyvat -4619 3385
+    - !loc teyvat -3861 3553
+    - !loc teyvat -3836 3529
+    - !loc teyvat -3751 3797
+    - !loc teyvat -3741 3813
+    - !loc teyvat -3738 3806
+    - !loc teyvat -3738 3826
+    - !loc teyvat -3235 2479
+    - !loc teyvat -3224 2482
+    - !loc teyvat -3089 3243
     - !loc teyvat -2739 2916
     - !loc teyvat -2738 2929
     - !loc teyvat -2725 2919
@@ -3288,6 +3455,7 @@ fatui-cicin-mage:
     - fatui-electro-cicin-mage
     - fatui-cryo-cicin-mage
   locations:
+    - !loc teyvat -7292 2036
     - !loc teyvat -6426 2993
     - !loc teyvat -6285 4495
     - !loc teyvat -5519 2533
@@ -3338,6 +3506,8 @@ ruin-sentinel:
     - ruin-defender
     - ruin-scout
   locations:
+    - !loc teyvat -7420 2064
+    - !loc teyvat -7416 2064
     - !loc teyvat -6557 3267
     - !loc teyvat -6533 3255
     - !loc teyvat -6484 3210
@@ -3521,6 +3691,12 @@ ruin-drake:
     - ruin-drake-skywatch
     - ruin-drake-earthguard
   locations:
+    - !loc teyvat -7511 2122
+    - !loc teyvat -7506 2123
+    - !loc teyvat -7416 1884
+    - !loc teyvat -7411 1886
+    - !loc teyvat -7102 1666
+    - !loc teyvat -6995 2080
     - !loc teyvat -6754 3247
     - !loc teyvat -6729 4657
     - !loc teyvat -6725 5067
@@ -3708,6 +3884,45 @@ treasure-hoarders:
     - treasure-hoarders-pugilist
     - treasure-hoarders-crusher
   locations:
+    - !loc teyvat -7696 1863
+    - !loc teyvat -7694 1861
+    - !loc teyvat -7693 1864
+    - !loc teyvat -7690 1863
+    - !loc teyvat -7688 1865
+    - !loc teyvat -7500 1993
+    - !loc teyvat -7498 1996
+    - !loc teyvat -7495 2001
+    - !loc teyvat -7492 2008
+    - !loc teyvat -7489 2005
+    - !loc teyvat -7402 1811
+    - !loc teyvat -7399 1813
+    - !loc teyvat -7398 1817
+    - !loc teyvat -7389 1815
+    - !loc teyvat -7388 1817
+    - !loc teyvat -7247 1487
+    - !loc teyvat -7031 2198
+    - !loc teyvat -7028 2192
+    - !loc teyvat -6932 1993
+    - !loc teyvat -6932 1996
+    - !loc teyvat -6925 1989
+    - !loc teyvat -6923 2003
+    - !loc teyvat -6922 2000
+    - !loc teyvat -6920 2003
+    - !loc teyvat -6895 1320
+    - !loc teyvat -6832 1371
+    - !loc teyvat -6831 1378
+    - !loc teyvat -6720 1429
+    - !loc teyvat -6662 1388
+    - !loc teyvat -6660 1390
+    - !loc teyvat -6656 1390
+    - !loc teyvat -6654 1389
+    - !loc teyvat -6505 1418
+    - !loc teyvat -6491 1426
+    - !loc teyvat -6278 1381
+    - !loc teyvat -6276 1378
+    - !loc teyvat -6252 1392
+    - !loc teyvat -6251 1391
+    - !loc teyvat -6248 1392
     - !loc teyvat -6237 4181
     - !loc teyvat -6235 4178
     - !loc teyvat -6233 4182
@@ -3729,6 +3944,7 @@ treasure-hoarders:
     - !loc teyvat -5155 5140
     - !loc teyvat -5108 4239
     - !loc teyvat -5105 4241
+    - !loc teyvat -5005 3818
     - !loc teyvat -4953 4064
     - !loc teyvat -4951 4069
     - !loc teyvat -4930 5246
@@ -4292,12 +4508,38 @@ eremite:
     - eremite-sunfrost
     - eremite-daythunder
   locations:
+    - !loc teyvat -7645 1913
+    - !loc teyvat -7641 1912
+    - !loc teyvat -7639 1911
+    - !loc teyvat -7520 1664
+    - !loc teyvat -7519 1666
+    - !loc teyvat -7518 1664
+    - !loc teyvat -7517 1658
+    - !loc teyvat -7515 1656
+    - !loc teyvat -7515 1660
+    - !loc teyvat -7316 1762
+    - !loc teyvat -6842 2389
+    - !loc teyvat -6833 2127
+    - !loc teyvat -6833 2129
+    - !loc teyvat -6832 2230
+    - !loc teyvat -6831 2125
+    - !loc teyvat -6831 2128
+    - !loc teyvat -6830 2123
+    - !loc teyvat -6830 2128
+    - !loc teyvat -6830 2129
+    - !loc teyvat -6821 2209
     - !loc teyvat -6741 3119
+    - !loc teyvat -6737 1953
+    - !loc teyvat -6736 1956
     - !loc teyvat -6735 5174
     - !loc teyvat -6730 5174
+    - !loc teyvat -6717 1377
+    - !loc teyvat -6695 1374
     - !loc teyvat -6695 5153
+    - !loc teyvat -6693 1374
     - !loc teyvat -6693 5152
     - !loc teyvat -6692 5153
+    - !loc teyvat -6688 1377
     - !loc teyvat -6681 5253
     - !loc teyvat -6673 5260
     - !loc teyvat -6671 5142
@@ -4306,6 +4548,9 @@ eremite:
     - !loc teyvat -6632 4250
     - !loc teyvat -6628 4251
     - !loc teyvat -6616 4438
+    - !loc teyvat -6603 1902
+    - !loc teyvat -6602 1897
+    - !loc teyvat -6590 1904
     - !loc teyvat -6588 4280
     - !loc teyvat -6588 4287
     - !loc teyvat -6580 4286
@@ -4330,6 +4575,8 @@ eremite:
     - !loc teyvat -6428 5283
     - !loc teyvat -6427 5295
     - !loc teyvat -6425 3796
+    - !loc teyvat -6421 1434
+    - !loc teyvat -6419 1440
     - !loc teyvat -6417 2685
     - !loc teyvat -6412 2691
     - !loc teyvat -6412 5294
@@ -4648,7 +4895,6 @@ eremite:
     - !loc teyvat -5053 2974
     - !loc teyvat -5014 5144
     - !loc teyvat -5004 5127
-    - !loc teyvat -5001 3820
     - !loc teyvat -4995 3836
     - !loc teyvat -4993 3824
     - !loc teyvat -4993 4446
@@ -5210,6 +5456,48 @@ fungus:
     - winged-cryoshroom
     - grounded-hydroshroom
   locations:
+    - !loc teyvat -7617 1870
+    - !loc teyvat -7616 1878
+    - !loc teyvat -7615 1868
+    - !loc teyvat -7615 1869
+    - !loc teyvat -7614 1870
+    - !loc teyvat -7516 2020
+    - !loc teyvat -7514 2022
+    - !loc teyvat -7512 2016
+    - !loc teyvat -7511 2022
+    - !loc teyvat -7399 1745
+    - !loc teyvat -7399 1746
+    - !loc teyvat -7397 1744
+    - !loc teyvat -7397 1746
+    - !loc teyvat -7369 1653
+    - !loc teyvat -7367 1655
+    - !loc teyvat -7364 1653
+    - !loc teyvat -7117 1574
+    - !loc teyvat -7117 1578
+    - !loc teyvat -7016 1762
+    - !loc teyvat -7016 1784
+    - !loc teyvat -7011 1771
+    - !loc teyvat -6995 1518
+    - !loc teyvat -6990 1520
+    - !loc teyvat -6989 1518
+    - !loc teyvat -6893 1800
+    - !loc teyvat -6890 1802
+    - !loc teyvat -6889 1796
+    - !loc teyvat -6889 1800
+    - !loc teyvat -6886 1801
+    - !loc teyvat -6847 1985
+    - !loc teyvat -6845 1983
+    - !loc teyvat -6843 2482
+    - !loc teyvat -6842 2485
+    - !loc teyvat -6840 2483
+    - !loc teyvat -6839 2485
+    - !loc teyvat -6817 2418
+    - !loc teyvat -6816 2414
+    - !loc teyvat -6815 2416
+    - !loc teyvat -6802 1540
+    - !loc teyvat -6794 1375
+    - !loc teyvat -6793 1372
+    - !loc teyvat -6793 1375
     - !loc teyvat -6752 3064
     - !loc teyvat -6741 3242
     - !loc teyvat -6740 4700
@@ -5217,6 +5505,7 @@ fungus:
     - !loc teyvat -6733 3243
     - !loc teyvat -6731 3089
     - !loc teyvat -6731 3235
+    - !loc teyvat -6730 1478
     - !loc teyvat -6727 3084
     - !loc teyvat -6723 3089
     - !loc teyvat -6687 4723
@@ -5321,6 +5610,9 @@ fungus:
     - !loc teyvat -6171 4222
     - !loc teyvat -6170 4226
     - !loc teyvat -6168 4223
+    - !loc teyvat -6158 1621
+    - !loc teyvat -6155 1617
+    - !loc teyvat -6154 1621
     - !loc teyvat -6131 3571
     - !loc teyvat -6124 3565
     - !loc teyvat -6120 3575
@@ -5986,7 +6278,6 @@ fungus:
     - !loc teyvat -2817 2416
     - !loc teyvat -2815 3428
     - !loc teyvat -2813 2418
-    - !loc teyvat -2811 2384
     - !loc teyvat -2807 3459
     - !loc teyvat -2805 2385
     - !loc teyvat -2804 2382
@@ -6032,7 +6323,12 @@ consecrated-beast:
     - consecrated-scorpion
     - consecrated-flying-serpent
   locations:
+    - !loc teyvat -7667 1762
+    - !loc teyvat -7196 1871
+    - !loc teyvat -7071 1561
     - !loc teyvat -6758 3094
+    - !loc teyvat -6741 1513
+    - !loc teyvat -6681 1844
     - !loc teyvat -6323 3999
     - !loc teyvat -6275 4212
     - !loc teyvat -5798 3481
