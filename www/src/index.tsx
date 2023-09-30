@@ -32,3 +32,5 @@ function insertUnsupportedLocationWarning() {
 	wrap.textContent = I18N_UNSUPPORTED_LOCATION_WARNING
 	document.body.prepend(wrap)
 }
+
+if (BUNDLE_ENV.IS_TG_MINI_APP) console.log('tg mini app')

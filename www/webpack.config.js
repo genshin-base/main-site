@@ -30,6 +30,7 @@ export default async function (env, argv) {
 	const mode = argv.mode
 	if (mode !== 'production' && mode !== 'development') throw new Error('wrong mode: ' + mode)
 	const prerender = !env['no-prerender'] && mode === 'production'
+	const isTgMiniApp = !!env['tg-mini-app']
 
 	const commitHash = (await runAndReadStdout('git', ['rev-parse', 'HEAD'])).trim()
 	const lastTag = (await runAndReadStdout('git', ['describe', '--tags', '--abbrev=0'])).trim()
@@ -40,9 +41,9 @@ export default async function (env, argv) {
 	const ssrBuildBarrier = prerender ? new Deferred() : null
 	const configs = []
 	LANGS.forEach((lang, i) => {
-		configs.push(cfg(i === 0, { isSSR: false, lang, ssrBuildBarrier }))
+		configs.push(cfg(i === 0, { isSSR: false, lang, ssrBuildBarrier, isTgMiniApp }))
 	})
-	if (ssrBuildBarrier) configs.push(cfg(false, { isSSR: true, ssrBuildBarrier }))
+	if (ssrBuildBarrier) configs.push(cfg(false, { isSSR: true, ssrBuildBarrier, isTgMiniApp }))
 	return configs
 }
 
@@ -50,8 +51,8 @@ export default async function (env, argv) {
  * @param {'production'|'development'} mode
  * @param {{commitHash:string, lastTag:string, commitDate:string}} version
  * @param {boolean} isMain
- * @param {{isSSR:false, ssrBuildBarrier:Deferred<void>|null, lang:string}
- *   | {isSSR:true, ssrBuildBarrier:Deferred<void>}} type
+ * @param {{isSSR:false, ssrBuildBarrier:Deferred<void>|null, lang:string, isTgMiniApp:boolean}
+ *   | {isSSR:true, ssrBuildBarrier:Deferred<void>, isTgMiniApp:boolean}} type
  */
 function makeConfig(mode, version, isMain, type) {
 	const isProd = mode === 'production'
@@ -143,6 +144,7 @@ function makeConfig(mode, version, isMain, type) {
 				'BUNDLE_ENV.LANGS': JSON.stringify(LANGS),
 				'BUNDLE_ENV.LANG': type.isSSR ? 'SSR_ENV.lang' : JSON.stringify(type.lang),
 				'BUNDLE_ENV.IS_SSR': JSON.stringify(type.isSSR),
+				'BUNDLE_ENV.IS_TG_MINI_APP': JSON.stringify(type.isTgMiniApp),
 				'BUNDLE_ENV.VERSION': JSON.stringify(version),
 				'BUNDLE_ENV.SUPPORTED_DOMAINS': JSON.stringify(isProd ? SUPPORTED_DOMAINS : null),
 			}),
