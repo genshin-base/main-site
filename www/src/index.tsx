@@ -7,6 +7,7 @@ import '#src/errors/catch'
 
 import { render } from 'preact'
 
+import { WebApp } from '#lib/telegram/webapp'
 import { App } from './App'
 import { I18N_UNSUPPORTED_LOCATION_WARNING } from './i18n/i18n'
 
@@ -33,4 +34,6 @@ function insertUnsupportedLocationWarning() {
 	document.body.prepend(wrap)
 }
 
-if (BUNDLE_ENV.IS_TG_MINI_APP) console.log('tg mini app')
+if (BUNDLE_ENV.IS_TG_MINI_APP) {
+	console.log('tg mini app v' + WebApp.version)
+}
