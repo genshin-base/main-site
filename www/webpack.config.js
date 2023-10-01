@@ -166,6 +166,7 @@ function makeConfig(mode, version, isMain, type) {
 				new GenerateIndexHtmls({
 					template: `${SRC}/index.html`,
 					lang: type.lang,
+					isTgMiniApp: type.isTgMiniApp,
 					ssrBuildBarrier: type.ssrBuildBarrier,
 					onlyFront: !isProd,
 				}),
@@ -216,11 +217,12 @@ let pagePrerenderSemaphore = /**@type {Promise<unknown>}*/ (Promise.resolve())
  * @param {object} opts
  * @param {string} opts.template
  * @param {string} opts.lang
+ * @param {boolean} opts.isTgMiniApp
  * @param {Deferred<void>|null} opts.ssrBuildBarrier барьер для ожидания окончания сборки SSR-бандла
  *   (если не задан, пререндера не будет)
  * @param {boolean} opts.onlyFront
  */
-function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
+function GenerateIndexHtmls({ template, lang, isTgMiniApp, ssrBuildBarrier, onlyFront }) {
 	/**
 	 * Засовывает в global разные значения для эмуляции браузерной страницы.
 	 * Удаляет их после выполнения func().
@@ -318,7 +320,7 @@ function GenerateIndexHtmls({ template, lang, ssrBuildBarrier, onlyFront }) {
 								href: REFLANG_ORIGIN + prefixedStrPath(lang, urlBase),
 							}))
 
-							const html = tmpl({ title, content, description, files, otherLangs })
+							const html = tmpl({ title, content, description, files, isTgMiniApp, otherLangs })
 							const src = new webpack.sources.RawSource(html, false)
 							const fpath = cutLeadingSlash(url + '/index.html')
 							compilation.emitAsset(fpath, src, {})

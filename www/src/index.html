@@ -9,6 +9,7 @@
 		{{?it.description}}<meta name="description" content="{{attr! it.description}}" />{{?}}
 		{{~it.otherLangs :x }}<link rel="alternate" hreflang="{{=x.lang}}" href="{{=x.href}}" />{{~}}
 		{{~it.files.css :path}}<link rel="stylesheet" href="{{=path}}" />{{~}}
+		{{?it.isTgMiniApp}}<script src="https://telegram.org/js/telegram-web-app.js"></script>{{?}}
 		{{~it.files.js :path}}<script defer src="{{=path}}"></script>{{~}}
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-FDTQB09C8B"></script>
