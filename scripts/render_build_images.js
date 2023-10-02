@@ -6,7 +6,7 @@ import { BASE_DIR, WWW_MEDIA_DIR, loadTranslatedBuilds } from './_common.js'
 import { error, info, warn } from '#lib/utils/logs.js'
 import puppeteer from 'puppeteer'
 import url from 'url'
-import { Deferred, mustBeDefined, mustBeNotNull } from '#lib/utils/values.js'
+import { mustBeDefined, mustBeNotNull } from '#lib/utils/values.js'
 import { ignoreNotExists } from '#lib/utils/os.js'
 
 const LANGS = ['en', 'ru']
@@ -49,31 +49,30 @@ await withTempDir(async staticRoot => {
 	const builds = await loadTranslatedBuilds()
 
 	info('opening browser...')
-	const browser = await puppeteer.launch({
-		headless: 'new',
-		defaultViewport: { width: 1280, height: 800, deviceScaleFactor: 1.5 },
-	})
+	const browsers = Array(8)
+		.fill(0)
+		.map(() => {
+			return puppeteer.launch({
+				headless: 'new',
+				defaultViewport: { width: 1280, height: 800, deviceScaleFactor: 1.5 },
+			})
+		})
 
 	info('processing pages...')
 
-	const tasks = new Set()
-	/** @param {() => Promise<unknown>} task */
-	async function addTask(task) {
-		if (tasks.size >= 2) await Promise.race(tasks.values())
-		const promise = task().finally(() => tasks.delete(promise))
-		tasks.add(promise)
-	}
-
-	const withLock = makeMutex()
 	await fs.rm(buildSummariesDir, { recursive: true }).catch(ignoreNotExists)
 	for (const character of builds.characters) {
 		for (const lang of LANGS) {
-			await addTask(async () => {
+			const { browser, i: browserI } = await Promise.race(
+				browsers.map((x, i) => x.then(browser => ({ browser, i }))),
+			)
+
+			browsers[browserI] = (async () => {
 				const stt = Date.now()
 				info(`${character.code}-${lang}: loading page...`)
 				const langPart = lang === 'en' ? '' : lang + '/'
 				const url = `http://127.0.0.1:${port}/${langPart}builds/${character.code}`
-				const page = await withLock(() => browser.newPage())
+				const page = await browser.newPage()
 				await page.goto(url, { waitUntil: 'networkidle0' })
 
 				const roleBtns = {}
@@ -92,28 +91,26 @@ await withTempDir(async staticRoot => {
 					const notesBox = mustBeNotNull(await page.$(`[data-summary-notes]`))
 					await notesBox.evaluate(x => x.remove())
 
-					info(`  ${character.code}-${lang}: taking screenshot...`)
+					info(`  ${character.code}-${lang} ${role.code}: taking screenshot...`)
 					const mainBox = await page.$('main')
 					if (!mainBox) throw new Error('content wrap not found on page')
 					const box = mustBeNotNull(await mainBox.boundingBox())
 					const outDir = `${buildSummariesDir}/${character.code}`
 					await fs.mkdir(outDir, { recursive: true })
 
-					await withLock(async () => {
-						// await page.bringToFront()
-						const path = `${outDir}/${role.code.replace(/[\s/\[\]]/g, '-')}-${lang}.png`
-						await page.screenshot({ path, clip: box })
-					})
+					const path = `${outDir}/${role.code.replace(/[\s/\[\]]/g, '-')}-${lang}.png`
+					await page.screenshot({ path, clip: box })
 				}
 
 				await page.close()
 				info(`  ${character.code}-${lang}: done, ${Date.now() - stt}ms`)
-			})
+
+				return browser
+			})()
 		}
 	}
-	await Promise.all(tasks.values())
 
-	await browser.close()
+	await Promise.all(browsers.map(x => x.then(x => x.close())))
 
 	server.close()
 	info('done.')
@@ -128,25 +125,5 @@ async function withTempDir(func) {
 		await func(dir)
 	} finally {
 		await fs.rm(dir, { recursive: true })
-	}
-}
-
-function makeMutex() {
-	const locks = []
-
-	/**
-	 * @template T
-	 * @param {() => Promise<T>} func
-	 * @returns {Promise<T>}
-	 */
-	return async function withLock(func) {
-		const lock = new Deferred()
-		locks.push(lock)
-		await locks[locks.length - 2]?.promise
-		try {
-			return await func()
-		} finally {
-			locks.shift().resolve(null)
-		}
 	}
 }
