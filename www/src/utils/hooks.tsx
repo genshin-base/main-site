@@ -1,6 +1,7 @@
 import { Ref, RefObject } from 'preact'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'preact/hooks'
 
+import { WebApp } from '#lib/telegram/webapp'
 import { arrShallowEqual } from '#lib/utils/collections'
 import { isPromise } from '#lib/utils/values'
 import { logError } from '#src/errors'
@@ -125,6 +126,18 @@ declare global {
 }
 
 export function useLocalStorage<T>(key: string, initialValue: T): [T, (val: T) => unknown] {
+	if (BUNDLE_ENV.IS_SSR) {
+		return [initialValue, () => undefined]
+	} else if (BUNDLE_ENV.IS_TG_MINI_APP) {
+		// eslint-disable-next-line react-hooks/rules-of-hooks
+		return useTgMiniAppStorage(key, initialValue)
+	} else {
+		// eslint-disable-next-line react-hooks/rules-of-hooks
+		return useBrowserStorage(key, initialValue)
+	}
+}
+
+function useBrowserStorage<T>(key: string, initialValue: T): [T, (val: T) => unknown] {
 	const [value, setValueInner] = useState(() => {
 		try {
 			const curRecord = localStorage.getItem(key) //reading 'localStorage' from window may fail with SecurityError
@@ -167,6 +180,54 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, (val: T) =
 			removeEventListener('x-local-tab-storage', onStorage)
 		}
 	}, [key])
+
+	return [value, setValueAndSave]
+}
+
+function useTgMiniAppStorage<T>(key: string, initialValue: T): [T, (val: T) => unknown] {
+	const [value, setValueInner] = useState(initialValue)
+
+	useEffect(() => {
+		WebApp.CloudStorage.getItem(key, (err, valueStr) => {
+			if (err) return logError(err)
+			if (valueStr === '') return
+			let val: T
+			try {
+				val = JSON.parse(valueStr)
+			} catch (ex) {
+				return logError(ex)
+			}
+			setValueInner(val)
+		})
+	}, [key])
+
+	const abortRef = useRef<AbortController | null>(null)
+	const setValueAndSave = useCallback(
+		(val: T) => {
+			setValueInner(val)
+			abortRef.current?.abort()
+			WebApp.CloudStorage.setItem(key, JSON.stringify(val), (err, wasStored) => {
+				if (err) return logError(err)
+				if (!wasStored) return logError(new Error('setItem did not store'))
+				if (abortRef.current?.signal.aborted) return
+				setValueInner(val)
+			})
+		},
+		[key],
+	)
+
+	if (process.env.NODE_ENV === 'development') {
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		;(window as any)._debug_showCloudStorage ??= () => {
+			WebApp.CloudStorage.getKeys((err, keys) => {
+				console.log('getKeys', err, keys)
+				if (err) return
+				WebApp.CloudStorage.getItems(keys, (err, values) => {
+					console.log('getItems', err, values)
+				})
+			})
+		}
+	}
 
 	return [value, setValueAndSave]
 }

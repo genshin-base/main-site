@@ -187,7 +187,7 @@ function patch(types, events) {
 				return '(err: Error | null, wasStored: boolean) => unknown'
 			if (fi === 'getItem' && arg === 'callback') return '(err: Error | null, value: string) => unknown'
 			if (fi === 'getItems' && arg === 'callback')
-				return '(err: Error | null, values: string[]) => unknown'
+				return '(err: Error | null, values: Record<string, string>) => unknown'
 			if (fi === 'removeItem' && arg === 'callback?')
 				return '(err: Error | null, wasRemoved: boolean) => unknown'
 			if (fi === 'removeItems' && arg === 'callback?')
