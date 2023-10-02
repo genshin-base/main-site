@@ -21,7 +21,7 @@ import { VARIATION_SELECTOR } from '#src/utils/typography'
 import { GlobeIcon } from './globe-icon'
 
 type Props = { isNavExpanded: boolean }
-const isPageActive = routs => routs.some(r => isOnRoute(r))
+export const isPageActive = routs => routs.some(r => isOnRoute(r))
 export function Nav({ isNavExpanded }: Props): JSX.Element {
 	return (
 		<div className={`collapse navbar-collapse ${isNavExpanded ? 'show' : ''}`}>

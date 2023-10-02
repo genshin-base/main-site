@@ -1,7 +1,6 @@
 import { Greetings } from '#src/components/greetings'
 import { AlchemyCalculator } from '#src/containers/alchemy-calculator'
 import { FarmToday } from '#src/containers/farm-today'
-import { RegionSwitch } from '#src/containers/region-switch'
 import { TimeUntilDayReset } from '#src/containers/time-until-day-reset'
 import {
 	I18N_ALCHEMY_CALC,
@@ -9,7 +8,6 @@ import {
 	I18N_DASHBOARD,
 	I18N_FRONT_PAGE_DESCRIPTION,
 	I18N_PAGE_TITLE_POSTFIX,
-	I18N_REGION,
 	I18N_UNTIL_DAY_RESET,
 	I18N_WHAT_TO_FARM,
 } from '#src/i18n/i18n'
@@ -18,8 +16,8 @@ import { useDocumentTitle, usePageDescription } from '#src/utils/hooks'
 
 function Fieldset({ children, legend, classes = '' }) {
 	return (
-		<fieldset className={`my-2 ${classes}`}>
-			<legend className="mb-2">{legend}</legend>
+		<fieldset className={`my-2 py-2 main-bg fw-bold ${classes}`}>
+			<legend className="mb-2 ">{legend}</legend>
 			{children}
 		</fieldset>
 	)
@@ -34,11 +32,8 @@ export function FrontPage(): JSX.Element {
 			<Greetings classes="mb-4 mt-2" isHiddenOnMobile={true} isClosable={true} />
 			<h1 className="my-1 letter-spacing-1">{I18N_DASHBOARD}</h1>
 			<div className="row">
-				<Fieldset legend={I18N_REGION} classes="col-lg-3 col-12">
-					<RegionSwitch />
-				</Fieldset>
-				<Fieldset legend={I18N_UNTIL_DAY_RESET} classes="col-lg-3 col-12">
-					<TimeUntilDayReset classes="fs-4 opacity-75" />
+				<Fieldset legend={I18N_UNTIL_DAY_RESET} classes="col-lg-6 col-12">
+					<TimeUntilDayReset classes="opacity-75" />
 				</Fieldset>
 				<Fieldset legend={I18N_ALCHEMY_CALC} classes="col-lg-6 col-12 ">
 					<AlchemyCalculator />

@@ -10,21 +10,23 @@ export function Header() {
 	// з-индекс для омамори, которая открывает гритингс
 	return (
 		<header style={{ zIndex: 1 }}>
-			<div className="navbar navbar-expand-lg navbar-dark header-main-bg">
-				<div className="container">
-					<A className="navbar-brand" href="/">
-						Genshin Base
-					</A>
-					<button
-						className="navbar-toggler"
-						type="button"
-						onClick={() => setIsNavExpanded(!isNavExpanded)}
-					>
-						<span className="navbar-toggler-icon"></span>
-					</button>
-					<Nav isNavExpanded={isNavExpanded} />
+			{!BUNDLE_ENV.IS_TG_MINI_APP && (
+				<div className="navbar navbar-expand-lg navbar-dark header-main-bg">
+					<div className="container">
+						<A className="navbar-brand" href="/">
+							Genshin Base
+						</A>
+						<button
+							className="navbar-toggler"
+							type="button"
+							onClick={() => setIsNavExpanded(!isNavExpanded)}
+						>
+							<span className="navbar-toggler-icon"></span>
+						</button>
+						<Nav isNavExpanded={isNavExpanded} />
+					</div>
 				</div>
-			</div>
+			)}
 			<div className="navbar py-2 header-sub-bg">
 				<div className="container">
 					<MegaSearch />

@@ -1,0 +1,55 @@
+:root {
+  --bs-body-bg: var(--tg-theme-secondary-bg-color) !important;
+  --bs-body-color: var(--tg-theme-text-color) !important;
+}
+
+$darkBgCol: color-mix(in srgb, var(--tg-theme-bg-color), #000 33%);
+$lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 25%);
+
+.app {
+  .main-bg {
+    background: var(--tg-theme-bg-color);
+  }
+  .bg-dark {
+    background-color: $darkBgCol !important;
+  }
+  .border-secondary {
+    border-color: $darkBgCol !important;
+  }
+  .text-light {
+    color: $lightCol !important;
+  }
+  .btn-primary {
+    color: var(--tg-theme-button-text-color);
+    background-color: var(--tg-theme-button-color);
+    border-color: var(--tg-theme-button-color);
+  }
+  .btn-primary:hover {
+    color: var(--tg-theme-button-text-color);
+    background-color: color-mix(in srgb, var(--tg-theme-button-color), #000 15%);
+    border-color: color-mix(in srgb, var(--tg-theme-button-color), #000 15%);
+  }
+  .btn-outline-primary {
+    color: var(--tg-theme-button-color);
+    border-color: var(--tg-theme-button-color);
+  }
+  .btn-outline-primary:hover {
+    color: var(--tg-theme-button-text-color);
+    background-color: color-mix(in srgb, var(--tg-theme-button-color), #000 15%);
+    border-color: color-mix(in srgb, var(--tg-theme-button-color), #000 15%);
+  }
+  .btn-link {
+    color: var(--tg-theme-link-color);
+  }
+  .badge-element-icon,
+  .artifact-main-stat-icon {
+    filter: drop-shadow(0px 0px 0px #000);
+  }
+  .page {
+    margin-bottom: 65px;
+  }
+  .bottom-tab-bar {
+    background-color: var(--tg-theme-bg-color);
+    border-color: var(--tg-theme-secondary-bg-color);
+  }
+}

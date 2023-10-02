@@ -1,5 +1,6 @@
 import { GoUpBtn } from './components/go-up-btn'
 import { PageWrap } from './components/page-wrap'
+import { BottomTabBar } from './containers/bottom-tab-bar'
 import { Footer } from './containers/footer'
 import { Header } from './containers/header'
 import { AboutPage } from './pages/about'
@@ -31,8 +32,9 @@ export function App(): JSX.Element {
 			<main>
 				<PageWrap>{page}</PageWrap>
 			</main>
-			<Footer />
-			<GoUpBtn />
+			{!BUNDLE_ENV.IS_TG_MINI_APP && <Footer />}
+			{!BUNDLE_ENV.IS_TG_MINI_APP && <GoUpBtn />}
+			{BUNDLE_ENV.IS_TG_MINI_APP && <BottomTabBar />}
 		</div>
 	)
 }

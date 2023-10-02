@@ -1,6 +1,7 @@
 if (process.env.NODE_ENV === 'development') {
 	require('preact/debug')
 }
+if (BUNDLE_ENV.IS_TG_MINI_APP) require('./miniapp-theme.scss')
 
 // должно быть одним из первых
 import '#src/errors/catch'

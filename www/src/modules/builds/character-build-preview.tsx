@@ -79,7 +79,7 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 						<ItemAvatar
 							src={getArtifactTypeIconSrc(ac)}
 							isNoBg={true}
-							classes="small-avatar with-padding align-middle"
+							classes="small-avatar with-padding align-middle artifact-main-stat-icon"
 						/>
 						{genArtMainStatDetail(role, ac, true)}
 					</li>
