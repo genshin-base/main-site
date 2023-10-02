@@ -4,7 +4,6 @@ import { getFileCached } from '#lib/requests.js'
 import { info, progress } from '#lib/utils/logs.js'
 import {
 	forEachTBodyRow,
-	getMultilineTextContent,
 	getTextContent,
 	isNode,
 	mustFindNodeWithTag,
@@ -14,6 +13,8 @@ import {
 import path from 'path'
 import { createReadStream, promises as fs } from 'fs'
 import { relativeToCwd } from '#lib/utils/os.js'
+
+const PAGE_URL = 'https://core.telegram.org/bots/webapps'
 
 const outFPath = BASE_DIR + '/lib/telegram/webapp_types.d.ts'
 await fs.writeFile(outFPath, await extractMiniAppTypes(CACHE_DIR))
@@ -38,7 +39,7 @@ info('saved to: ' + relativeToCwd(outFPath))
  * @param {string} cacheDir
  */
 async function extractMiniAppTypes(cacheDir) {
-	const root = await getTgPage('bots/webapps', cacheDir)
+	const root = await getTgPage(cacheDir)
 
 	let version = null
 	{
@@ -97,7 +98,7 @@ async function extractMiniAppTypes(cacheDir) {
 			const name = getTextContent(cells[0])
 				.trim()
 				.replace(/\s+NEW$/, '')
-			const doc = getMultilineTextContent(cells[1])
+			const doc = getDocTextContent(cells[1])
 			eventTypes.push({ name, arg: 'void', doc })
 		})
 		events = { doc, types: eventTypes }
@@ -114,14 +115,13 @@ async function extractMiniAppTypes(cacheDir) {
 	out += `}\n\n`
 
 	// out += `export const TG_LATEST_BOT_API_VERSION = ${version}\n\n`
-	out += 'type ButtonId = string\n\n'
 
 	out += `export interface EventMap {\n`
 	for (const type of events.types) {
 		out += `  /**\n`
 		out += type.doc
 			.split('\n')
-			.map(x => '   * ' + x + '\n')
+			.map(x => ('   * ' + x).trimEnd() + '\n')
 			.join('')
 		out += `   */\n`
 		out += `  ${type.name}: ${type.arg}\n`
@@ -153,7 +153,7 @@ function patch(types, events) {
 				return `(status: EventMap['invoiceClosed']['status']) => unknown`
 			if (fi === 'showPopup') {
 				if (arg === 'params') return 'PopupParams'
-				if (arg === 'callback?') return '(button_id: ButtonId) => unknown'
+				if (arg === 'callback?') return '(button_id: string) => unknown'
 			}
 			if (fi === 'showAlert' && arg === 'callback?') return '() => unknown'
 			if (fi === 'showConfirm' && arg === 'callback?') return '(isOk: boolean) => unknown'
@@ -199,10 +199,22 @@ function patch(types, events) {
 
 	for (const type of types) {
 		for (const field of type.fields) {
-			const args = field.args
-			if (!args) continue
+			if (type.name === 'WebApp' && field.name === 'colorScheme') {
+				field.type = `'light' | 'dark'`
+			}
+			if (type.name === 'PopupButton' && field.name === 'type') {
+				field.type = `'default' | 'ok' | 'close' | 'cancel' | 'destructive'`
+			}
+			if (type.name === 'WebAppChat' && field.name === 'type') {
+				field.type = `'group' | 'supergroup' | 'channel'`
+			}
+		}
+	}
 
-			if (args.some(x => x === 'eventType')) {
+	for (const type of types) {
+		for (const field of type.fields) {
+			const args = field.args
+			if (args && args.some(x => x === 'eventType')) {
 				field.name += '<K extends keyof EventMap>'
 				for (let i = 0; i < args.length; i++) {
 					if (args[i] === 'eventType') args[i] += ':K'
@@ -217,7 +229,7 @@ function patch(types, events) {
 		if (type.name === 'viewportChanged') type.arg = '{ isStateStable: boolean }'
 		if (type.name === 'invoiceClosed')
 			type.arg = `{ url: string, status: 'paid' | 'cancelled' | 'failed' | 'pending' }`
-		if (type.name === 'popupClosed') type.arg = `{ button_id: ButtonId | null }`
+		if (type.name === 'popupClosed') type.arg = `{ button_id: string | null }`
 		if (type.name === 'qrTextReceived') type.arg = `{ data: string }`
 		if (type.name === 'clipboardTextReceived') type.arg = `{ data: string | null }`
 		if (type.name === 'writeAccessRequested') type.arg = `{ status: 'allowed' | 'cancelled' }`
@@ -266,7 +278,7 @@ function extractStructDoc(parentNode, afterHeader, name) {
 			args = argsM[2].split(',').map(x => x.trim())
 		}
 		const type = getTextContent(cells[1]).trim()
-		const doc = getMultilineTextContent(cells[2])
+		const doc = getDocTextContent(cells[2])
 
 		fields.push({ name, args, type, doc })
 	})
@@ -290,21 +302,13 @@ function extractStructDoc(parentNode, afterHeader, name) {
 			field.type = 'true'
 		} else if (field.type === 'Float') {
 			field.type = 'number'
-			field.doc += '\n (Float)'
+			field.doc += '\n\n(Float)'
 		} else if (field.type === 'Integer') {
 			field.type = 'number'
-			field.doc += '\n (Integer)'
+			field.doc += '\n\n(Integer)'
 		}
 
-		field.doc = field.doc
-			.replace(/ +/g, ' ')
-			.replace(/(^|\n) /g, '$1')
-			.replace(/ ([.,])/g, '$1')
-			.trim()
-			.replace(/\n+/g, '\n')
-			.replace(/\n/g, '\n\n')
-
-		if (field.doc.startsWith('Optional.')) {
+		if (/^\*?Optional/.test(field.doc)) {
 			field.name += '?'
 		}
 	}
@@ -347,7 +351,7 @@ function mustFindDocTableAfter(parentNode, afterHeader) {
 	for (const node of parentNode.children.slice(parentNode.children.indexOf(afterHeader))) {
 		if (!isNode(node)) continue
 		if (node.tag === 'p') {
-			structDoc.push(getTextContent(node).trim().replace(/^NEW /, ''))
+			structDoc.push(getDocTextContent(node))
 		} else if (node.tag === 'pre') {
 			structDoc.push('```\n' + getTextContent(node).trim() + '\n```')
 		} else if (node.tag === 'table') {
@@ -360,17 +364,53 @@ function mustFindDocTableAfter(parentNode, afterHeader) {
 }
 
 /**
- * @param {string} path
+ * @param {import('#lib/xml.js').NodeOrText} node
+ * @returns {string}
+ */
+function getDocTextContent(node) {
+	return getTextInner(node)
+		.replace(/ +/g, ' ')
+		.replace(/(^|\n) /g, '$1')
+		.replace(/ ([.,\n])/g, '$1')
+		.trim()
+		.replace(/\n+/g, '\n')
+		.replace(/\n/g, '\n\n')
+
+	/**
+	 * @param {import('#lib/xml.js').NodeOrText} node
+	 * @returns {string}
+	 */
+	function getTextInner(node) {
+		if (typeof node === 'string') return escapeMD(node.replaceAll('\n', ' '))
+		if (node.tag === 'br') return '\n'
+		let text = node.children.map(getTextInner).join(' ')
+		if (node.tag === 'mark' && text.trim() === 'NEW') return ''
+		if (node.tag === 'em') text = `*${text}*`
+		if (node.tag === 'mark') text = `**${text}**`
+		if (node.tag === 'strong') text = `**${text}**`
+		if (node.tag === 'code') text = `\`${text}\``
+		if (node.tag === 'a' && node.attrs.href) {
+			let href = node.attrs.href
+			if (href.startsWith('#')) href = PAGE_URL + href
+			text = `[${text}](${href})`
+		}
+		return text
+	}
+}
+/** @param {string} text */
+function escapeMD(text) {
+	return text.replace(/([_*\[\]~`|])/g, '\\$1')
+}
+
+/**
  * @param {string} cacheDir
  * @returns {Promise<import('#lib/xml').Node>}
  */
-async function getTgPage(path, cacheDir) {
+async function getTgPage(cacheDir) {
 	await fs.mkdir(`${cacheDir}/telegram.org`, { recursive: true })
 
-	if (path !== '') path += '/'
-	const url = `https://core.telegram.org/${path}`
-	const fpath = `${cacheDir}/telegram.org/${path.replace(/\//g, '-')}.html`
-	const cacheUsed = await getFileCached(url, {}, fpath, false, Infinity)
+	const fpath = `${cacheDir}/telegram.org/${PAGE_URL.replace(/\//g, '-')}.html`
+	const cacheUsed = await getFileCached(PAGE_URL, {}, fpath, false, Infinity)
 
 	if (!cacheUsed) progress()
 	return await parseXmlStream(createReadStream(fpath, { encoding: 'utf-8' }))
