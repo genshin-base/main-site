@@ -32,7 +32,7 @@ export type BuildRoleOrDummy = CharacterBuildInfoRole<'monolang'> | typeof DUMMY
 
 export function makeRoleTitle(r: BuildRoleOrDummy) {
 	return (
-		<span key={r.code}>
+		<span key={r.code} data-summary-role-code={r.code}>
 			{r.isRecommended && (
 				<span className="fs-4 lh-1 opacity-75 text-rarity-5 align-bottom">{STAR}</span>
 			)}
@@ -68,7 +68,6 @@ export function genNotes(item: { notes: CompactTextParagraphs | null }) {
 }
 export function genSeeCharNotes(item: { seeCharNotes: boolean }) {
 	return '' //TODO
-	return item.seeCharNotes ? notesWrap(' (see notes)') : ''
 }
 export function notesToJSX(tips: CompactTextParagraphs | null): JSX.Nodes {
 	function processString(str: string) {

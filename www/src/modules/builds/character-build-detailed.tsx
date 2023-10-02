@@ -251,7 +251,7 @@ export function CharacterBuildDetailed({
 							</div>
 							<div className="flex-fill w-33 p-3">{artifactStatsAndSkillsBlock}</div>
 						</div>
-						<div className="w-100">
+						<div className="w-100" data-summary-notes>
 							<div className="p-3">
 								<BlockHeader>{I18N_NOTES}</BlockHeader>
 								<div className="text-muted">{notesBlock}</div>

@@ -3,4 +3,5 @@
 /www/dist/
 /www/src/api/generated.js
 /www/public/generated/
+/www/public/media/summaries/
 /google.private_key.json
