@@ -75,7 +75,11 @@ export function BuildsPage_BuildDetail({ code }: { code: string }): JSX.Element 
 				<span className="d-none d-xl-inline">{build.character.name}</span>
 				<span className="d-xl-none">{I18N_RECOMMENDED_RU_ONLY}</span> {I18N_BUILD_RECS_FOR}
 			</h1>
-			<FavoriteCharacters navigateToCharacter={true} selectedCharacterCode={code} />
+			<FavoriteCharacters
+				classes="summary-hide"
+				navigateToCharacter={true}
+				selectedCharacterCode={code}
+			/>
 			<CharacterBuildDetailed build={build} isUpdating={isUpdating} />
 		</div>
 	)

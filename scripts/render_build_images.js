@@ -17,7 +17,8 @@ const buildSummariesDir = WWW_MEDIA_DIR + '/summaries/builds'
 
 try {
 	const stat = await fs.stat(browserBuildDir)
-	if (Date.now() - stat.mtimeMs > 5 * 60) warn('www/dist/browser seems old, forgot to run `npm run build`?')
+	if (Date.now() - stat.mtimeMs > 5 * 60 * 1000)
+		warn('www/dist/browser seems old, forgot to run `npm run build`?')
 } catch (ex) {
 	if (ex.code === 'ENOENT') error('www/dist/browser is missing, forgot to run `npm run build`?')
 	else error(ex)
@@ -32,7 +33,6 @@ await withTempDir(async staticRoot => {
 	info('starting server...')
 	const server = http.createServer(async (req, res) => {
 		// console.log(req.url)
-		// progress()
 		const path = staticRoot + '/' + url.parse(req.url ?? '').pathname
 		const data = await fs.readFile(path).catch(err => {
 			if (err.code === 'EISDIR') return fs.readFile(path + '/index.html')
@@ -43,12 +43,11 @@ await withTempDir(async staticRoot => {
 	})
 	const port = 8089
 	server.listen(8089)
-	// setTimeout(() => server.close(), 2000)
 
 	info('loading builds...')
 	const builds = await loadTranslatedBuilds()
 
-	info('opening browser...')
+	info('processing pages...')
 	const browsers = Array(8)
 		.fill(0)
 		.map(() => {
@@ -57,8 +56,6 @@ await withTempDir(async staticRoot => {
 				defaultViewport: { width: 1280, height: 800, deviceScaleFactor: 1.5 },
 			})
 		})
-
-	info('processing pages...')
 
 	await fs.rm(buildSummariesDir, { recursive: true }).catch(ignoreNotExists)
 	for (const character of builds.characters) {
@@ -88,8 +85,9 @@ await withTempDir(async staticRoot => {
 					await roleBtn.evaluate(x => x.click())
 					await page.waitForNetworkIdle({ idleTime: 500 })
 
-					const notesBox = mustBeNotNull(await page.$(`[data-summary-notes]`))
-					await notesBox.evaluate(x => x.remove())
+					await page.evaluate(() => {
+						document.querySelectorAll('.summary-hide').forEach(x => x.remove())
+					})
 
 					info(`  ${character.code}-${lang} ${role.code}: taking screenshot...`)
 					const mainBox = await page.$('main')
@@ -123,6 +121,10 @@ async function withTempDir(func) {
 	const dir = await fs.mkdtemp(os.tmpdir() + '/genshin-base-render-')
 	try {
 		await func(dir)
+	} catch (ex) {
+		error(ex)
+		error('press Ctrl+D key to remove ' + dir)
+		await new Promise(res => process.stdin.once('data', res))
 	} finally {
 		await fs.rm(dir, { recursive: true })
 	}
