@@ -125,10 +125,10 @@ declare global {
 	}
 }
 
-export function useLocalStorage<T>(key: string, initialValue: T): [T, (val: T) => unknown] {
+export function useStorage<T>(key: string, initialValue: T): [T, (val: T) => unknown] {
 	if (BUNDLE_ENV.IS_SSR) {
 		return [initialValue, () => undefined]
-	} else if (BUNDLE_ENV.IS_TG_MINI_APP) {
+	} else if (BUNDLE_ENV.IS_TG_MINI_APP && WebApp.isVersionAtLeast('6.9')) {
 		// eslint-disable-next-line react-hooks/rules-of-hooks
 		return useTgMiniAppStorage(key, initialValue)
 	} else {
@@ -244,7 +244,7 @@ export function useVersionedStorage<T extends readonly Migration<unknown, unknow
 	key: string
 	versions: T
 }): [MigrationResult<Last<T>>, (val: MigrationResult<Last<T>>) => unknown] {
-	const [val, setVal] = useLocalStorage<VersionedValue<unknown> | null>(key, null)
+	const [val, setVal] = useStorage<VersionedValue<unknown> | null>(key, null)
 
 	let version = -1
 	let value = null as unknown

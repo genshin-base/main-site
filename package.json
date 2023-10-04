@@ -28,6 +28,7 @@
 		"webpack-dev-server": "^4.15.1"
 	},
 	"dependencies": {
+		"@types/koa": "^2.13.9",
 		"@typescript-eslint/eslint-plugin": "^6.7.4",
 		"@typescript-eslint/parser": "^6.7.4",
 		"bootstrap": "5.1",
@@ -39,6 +40,8 @@
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-react-hooks": "^4.3.0",
 		"eslint-webpack-plugin": "^4.0.1",
+		"koa": "^2.14.2",
+		"koa-body": "^6.0.1",
 		"locmap": "github:3bl3gamer/locmap#v1.8.2",
 		"marked": "^9.0.3",
 		"mini-css-extract-plugin": "^2.7.6",
@@ -51,6 +54,7 @@
 		"purgecss-webpack-plugin": "^5.0.0",
 		"sass": "^1.68.0",
 		"sass-loader": "^13.3.2",
+		"telegraf": "^4.14.0",
 		"teyvat-map": "github:genshin-base/teyvat-map#v5.0.1",
 		"ts-loader": "^9.4.4",
 		"typescript": "^5.2.2",

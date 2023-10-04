@@ -1,6 +1,8 @@
 import { useCallback, useMemo } from 'preact/hooks'
 
+import { WebApp } from '#lib/telegram/webapp'
 import { arrOrItemToArr } from '#lib/utils/collections'
+import { getBuildSummaryPath } from '#lib/www-utils/summaries'
 import { CharacterFullInfoWithRelated } from '#src/../../lib/parsing/combine'
 import { getAllRelated, MapAllByCode } from '#src/api/utils'
 import { BlockHeader } from '#src/components/block-header'
@@ -26,6 +28,7 @@ import {
 	I18N_WEAPON_REFINE,
 	I18N_WEAPON_STACKS_COUNT,
 	I18N_WEAPONS,
+	I18N_WEBAPP_BOT_SHARING_DONE,
 } from '#src/i18n/i18n'
 import { A } from '#src/routes/router'
 import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
@@ -307,6 +310,12 @@ export function CharacterBuildDetailed({
 					<A className="btn btn-secondary align-self-center" type="submit" href="/builds">
 						<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
 					</A>
+					{BUNDLE_ENV.IS_TG_MINI_APP && (
+						<WebAppBuildShareButton
+							characterCode={characterCode}
+							roleCode={selectedRoleTab.code}
+						/>
+					)}
 					<h5 className="ps-3 pe-1 m-0 align-self-center w-50 d-inline-block overflow-hidden text-truncate text-wrap">
 						{build.character.name}
 					</h5>
@@ -326,4 +335,41 @@ export function CharacterBuildDetailed({
 			</div>
 		</ItemsDataContext.Provider>
 	)
+}
+
+function WebAppBuildShareButton({ characterCode, roleCode }: { characterCode: string; roleCode: string }) {
+	const onShareClick = useCallback(() => {
+		if (WebApp.isVersionAtLeast('6.9')) {
+			WebApp.requestWriteAccess(granted => {
+				if (granted) {
+					const url = '/api/webapp/share'
+					const headers = { 'content-type': 'application/json' }
+					const body = JSON.stringify({
+						character: characterCode,
+						role: roleCode,
+						initData: WebApp.initData,
+					})
+					fetch(url, { method: 'POST', body, headers })
+						.then(r => r.json())
+						.then(() => WebApp.showAlert(I18N_WEBAPP_BOT_SHARING_DONE))
+						.catch(err => {
+							WebApp.showAlert(err + '')
+						})
+				}
+			})
+		} else {
+			let lang = WebApp.initDataUnsafe.user?.language_code ?? 'en'
+			if (!BUNDLE_ENV.LANGS.includes(lang)) lang = BUNDLE_ENV.LANGS[0]
+
+			const mediaOrigin = new URL(BUNDLE_ENV.ASSET_PATH + 'media/', location.origin).toString()
+			const imgSrc = getBuildSummaryPath(mediaOrigin, characterCode, roleCode, lang, 'png')
+
+			const text = ''
+
+			location.href =
+				`https://t.me/share/url` +
+				`?url=${encodeURIComponent(imgSrc)}&text=${encodeURIComponent(text)}`
+		}
+	}, [characterCode, roleCode])
+	return <button onClick={onShareClick}>шаре</button>
 }

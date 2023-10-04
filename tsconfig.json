@@ -15,5 +15,5 @@
 			"#lib/*": ["./lib/*"]
 		}
 	},
-	"include": ["lib", "scripts"]
+	"include": ["lib", "scripts", "tg_bot"]
 }
