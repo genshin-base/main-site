@@ -60,7 +60,7 @@ export function BottomTabBar() {
 							<ItemAvatar
 								src={t.iconSrc}
 								isNoBg={true}
-								classes="small-avatar align-middle artifact-main-stat-icon"
+								classes="small-avatar align-middle artifact-main-stat-icon webapp-icon-shadow"
 							/>
 							<span className="small">{t.text}</span>
 						</A>

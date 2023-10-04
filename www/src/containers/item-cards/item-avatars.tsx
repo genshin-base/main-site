@@ -99,7 +99,9 @@ export function ItemAvatar({
 }
 const codeToBadge = (code: string) => {
 	const e = elements.find(e => code === `traveler-${e.code}`)
-	return e ? <img className="badge-element-icon d-block ms-n1 mb-n1" src={e.imgSrc} /> : null
+	return e ? (
+		<img className="badge-element-icon webapp-icon-shadow d-block ms-n1 mb-n1" src={e.imgSrc} />
+	) : null
 }
 export function CharacterAvatar(props: CharacterAvatarProps) {
 	const classesLocal = props.rarity

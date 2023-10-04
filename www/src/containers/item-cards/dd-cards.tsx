@@ -10,7 +10,6 @@ import {
 	ItemDetailDdPortal,
 } from '#src/containers/item-cards/item-detail-dd-portal'
 import {
-	I18N_ALCHEMY_CALC,
 	I18N_BASE_ATTACK,
 	I18N_OBTAINED_DURING_STORYLINE,
 	I18N_PIECE_BONUS,
@@ -29,7 +28,6 @@ import { getArtifactIconLargeSrc, getArtifactIconSrc } from '#src/utils/artifact
 import { getItemIconSrc } from '#src/utils/items'
 import { BULLET } from '#src/utils/typography'
 import { getWeaponIconLageSrc } from '#src/utils/weapons'
-import { AlchemyCalculator } from '../alchemy-calculator'
 import { addMarkerGroupsByDomains, addMarkerGroupsByEnemies, CardMap, CardMapMarkerGroup } from './card-map'
 import { RecommendedTo } from './common'
 import { DdContext, ItemAvatar } from './item-avatars'
@@ -340,19 +338,7 @@ export function OtherItemCard({
 				</>
 			}
 			classes={classes}
-			bodyEl={
-				item.code === 'brilliant-diamond-gemstone' ? (
-					I18N_OBTAINED_DURING_STORYLINE
-				) : item.ancestryCodes.length > 0 ? (
-					<div className="">
-						{/* <ItemAvatar rarity={3} classes="large-avatar float-end" src={getItemIconSrc(item.code)} /> */}
-						{/* <BlockHeader>Описание</BlockHeader>
-				<div className="mb-3">{notesToJSX()}</div> */}
-						<BlockHeader>{I18N_ALCHEMY_CALC}</BlockHeader>
-						<AlchemyCalculator ancestryCodes={codesForCalc} />
-					</div>
-				) : null
-			}
+			bodyEl={item.code === 'brilliant-diamond-gemstone' ? I18N_OBTAINED_DURING_STORYLINE : null}
 			mapEl={dataForMap.markerGroups.length ? <CardMap {...dataForMap} /> : null}
 		></Card>
 	)

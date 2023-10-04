@@ -19,7 +19,11 @@ function CharacterPickerDesktop({ weaponTypes }: { weaponTypes: GI_WeaponType[] 
 				return (
 					<div className="row" key={el.code}>
 						<div className="col col-2 pt-3 pb-2 opacity-50 rounded-start">
-							<ItemAvatar classes="d-block mx-auto" isNoBg={true} src={el.imgSrc} />
+							<ItemAvatar
+								classes="d-block mx-auto webapp-icon-shadow"
+								isNoBg={true}
+								src={el.imgSrc}
+							/>
 						</div>
 						{weaponTypes.map(wType => (
 							<div className={`col col-2 pt-3 pb-2 px-2 ${isLastRowClass}`} key={wType.code}>
@@ -55,7 +59,11 @@ export function CharacterPicker() {
 					<div className="col col-2 pb-3 pt-2"></div>
 					{weaponTypes.map((wt, i) => (
 						<div className="col col-2 pb-3 pt-2 rounded-top " key={wt.code}>
-							<ItemAvatar classes="d-block mx-auto" isNoBg={true} src={wt.imgSrc} />
+							<ItemAvatar
+								classes="d-block mx-auto webapp-icon-shadow"
+								isNoBg={true}
+								src={wt.imgSrc}
+							/>
 						</div>
 					))}
 				</div>

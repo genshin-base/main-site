@@ -131,7 +131,7 @@ export function CharacterBuildDetailed({
 							<ItemAvatar
 								src={getArtifactTypeIconSrc(ac)}
 								isNoBg={true}
-								classes="small-avatar small with-padding align-middle"
+								classes="small-avatar small with-padding align-middle artifact-main-stat-icon webapp-icon-shadow"
 							/>
 							<b className="text-muted">{I18N_ART_TYPE(ac)} — </b>
 							{genArtMainStatDetail(role, ac)}

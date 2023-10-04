@@ -15,7 +15,7 @@ export function WeaponTypeFilter({
 		<div className={classes}>
 			{weaponTypes.map(wt => (
 				<ItemAvatar
-					classes={`small-avatar bg-secondary p-1 m-1 ${
+					classes={`small-avatar bg-secondary p-1 m-1 webapp-icon-shadow ${
 						selectedWeaponTypeCode && selectedWeaponTypeCode !== wt.code ? 'opacity-25' : ''
 					}`}
 					key={wt.code}

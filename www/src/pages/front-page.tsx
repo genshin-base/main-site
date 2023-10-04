@@ -1,9 +1,7 @@
 import { Greetings } from '#src/components/greetings'
-import { AlchemyCalculator } from '#src/containers/alchemy-calculator'
 import { FarmToday } from '#src/containers/farm-today'
 import { TimeUntilDayReset } from '#src/containers/time-until-day-reset'
 import {
-	I18N_ALCHEMY_CALC,
 	I18N_BUILDS,
 	I18N_DASHBOARD,
 	I18N_FRONT_PAGE_DESCRIPTION,
@@ -34,9 +32,6 @@ export function FrontPage(): JSX.Element {
 			<div className="row">
 				<Fieldset legend={I18N_UNTIL_DAY_RESET} classes="col-lg-6 col-12">
 					<TimeUntilDayReset classes="opacity-75" />
-				</Fieldset>
-				<Fieldset legend={I18N_ALCHEMY_CALC} classes="col-lg-6 col-12 ">
-					<AlchemyCalculator />
 				</Fieldset>
 			</div>
 			<div className="row">

@@ -1,3 +1,7 @@
+/**
+  * Override default styles to match the theme set by the user in Telegram.
+  */
+
 :root {
   --bs-body-bg: var(--tg-theme-secondary-bg-color) !important;
   --bs-body-color: var(--tg-theme-text-color) !important;
@@ -24,7 +28,7 @@ $lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 25%);
     background-color: var(--tg-theme-button-color);
     border-color: var(--tg-theme-button-color);
   }
-  .btn-primary:hover {
+  .btn-primary:hover, .btn-primary:focus{
     color: var(--tg-theme-button-text-color);
     background-color: color-mix(in srgb, var(--tg-theme-button-color), #000 15%);
     border-color: color-mix(in srgb, var(--tg-theme-button-color), #000 15%);
@@ -41,9 +45,8 @@ $lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 25%);
   .btn-link {
     color: var(--tg-theme-link-color);
   }
-  .badge-element-icon,
-  .artifact-main-stat-icon {
-    filter: drop-shadow(0px 0px 0px #000);
+  .webapp-icon-shadow img {
+    filter: drop-shadow(0px 0px 0px #808080);
   }
   .page {
     margin-bottom: 65px;

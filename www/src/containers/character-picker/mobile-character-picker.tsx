@@ -38,7 +38,11 @@ export function CharacterPickerMobile() {
 	const rows = elementGroups.map(({ element, characters }) => (
 		<div className="row py-2" key={element.code}>
 			<div className="col-2 py-1">
-				<ItemAvatar isNoBg={true} classes="d-block mx-auto muted-icon" src={element.imgSrc} />
+				<ItemAvatar
+					isNoBg={true}
+					classes="d-block mx-auto muted-icon webapp-icon-shadow"
+					src={element.imgSrc}
+				/>
 			</div>
 			<div className="col py-31">
 				{characters.map(x => {
@@ -65,7 +69,7 @@ export function CharacterPickerMobile() {
 					<div className="d-inline">
 						{elements.map(el => (
 							<ItemAvatar
-								classes={`small-avatar bg-secondary p-1 m-1 ${
+								classes={`small-avatar bg-secondary p-1 m-1 webapp-icon-shadow ${
 									selectedElementCode && selectedElementCode !== el.code ? 'opacity-25' : ''
 								}`}
 								key={el.code}
