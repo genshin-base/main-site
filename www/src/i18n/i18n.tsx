@@ -348,6 +348,10 @@ export const I18N_SEE_NOTES = {
 	en: 'see notes',
 	ru: 'см. заметки',
 }[LANG]
+export const I18N_WEBAPP_BOT_SHARING_DONE = {
+	en: "Build info was sent to bot's PM",
+	ru: 'Билд отправлен в ЛС бота',
+}[LANG]
 export const I18N_UNSUPPORTED_LOCATION_WARNING = {
 	en: "Looks like you've opened a cached/saved page. It won't work correctly that way :(",
 	ru: 'Похоже, вы открыли сохранённую страницу. В таком виде она нормально работать не будет :(',

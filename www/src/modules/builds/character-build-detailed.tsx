@@ -28,6 +28,7 @@ import {
 	I18N_WEAPON_REFINE,
 	I18N_WEAPON_STACKS_COUNT,
 	I18N_WEAPONS,
+	I18N_WEBAPP_BOT_SHARING_DONE,
 } from '#src/i18n/i18n'
 import { A } from '#src/routes/router'
 import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
@@ -350,6 +351,7 @@ function WebAppBuildShareButton({ characterCode, roleCode }: { characterCode: st
 					})
 					fetch(url, { method: 'POST', body, headers })
 						.then(r => r.json())
+						.then(() => WebApp.showAlert(I18N_WEBAPP_BOT_SHARING_DONE))
 						.catch(err => {
 							WebApp.showAlert(err + '')
 						})

@@ -57,7 +57,7 @@ app.use(async ctx => {
 			{ caption },
 		)
 
-		ctx.body = 'Hello World'
+		ctx.body = { status: 'ok' }
 	} else {
 		ctx.throw(404)
 	}
