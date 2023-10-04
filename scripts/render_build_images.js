@@ -8,6 +8,9 @@ import puppeteer from 'puppeteer'
 import url from 'url'
 import { mustBeDefined, mustBeNotNull } from '#lib/utils/values.js'
 import { ignoreNotExists } from '#lib/utils/os.js'
+import { magick } from '#lib/media.js'
+import { getBuildSummaryPath } from '#lib/www-utils/summaries.js'
+import { dirname } from 'path'
 
 const LANGS = ['en', 'ru']
 
@@ -75,7 +78,7 @@ await withTempDir(async staticRoot => {
 				const roleBtns = {}
 				for (const btn of await page.$$(`[data-summary-role-code]`)) {
 					const code = mustBeNotNull(
-						await btn.evaluate(x => x.getAttribute('data-summary-role-code')),
+						await btn.evaluate(x => x.getAttribute('data-summary-role-code')), //TODO: better role code
 					)
 					roleBtns[code] = btn
 				}
@@ -93,11 +96,23 @@ await withTempDir(async staticRoot => {
 					const mainBox = await page.$('main')
 					if (!mainBox) throw new Error('content wrap not found on page')
 					const box = mustBeNotNull(await mainBox.boundingBox())
-					const outDir = `${buildSummariesDir}/${character.code}`
+					const pathPng = getBuildSummaryPath(WWW_MEDIA_DIR, character.code, role.code, lang, 'png')
+					const pathJpg = getBuildSummaryPath(WWW_MEDIA_DIR, character.code, role.code, lang, 'jpg')
+					const outDir = dirname(pathPng)
 					await fs.mkdir(outDir, { recursive: true })
 
-					const path = `${outDir}/${role.code.replace(/[\s/\[\]]/g, '-')}-${lang}.png`
-					await page.screenshot({ path, clip: box })
+					await page.screenshot({ path: pathPng, clip: box })
+					await magick(pathPng, pathJpg, ['-quality', '98'], 'jpg')
+					// // prettier-ignore
+					// const textArgs = ['-background', 'transparent', '-pointsize', '24', '-gravity', 'South', 'caption:'+role.name[lang]]
+					// const dupArgs = ['(', '+clone', ')', '-composite']
+					// // prettier-ignore
+					// await magick(getCharacterAvatarLargeSrc(WWW_MEDIA_DIR, character.code), path + '-thumb.jpg', [
+					// 	'\(', '-size', '120x120', '-fill', 'black', ...textArgs, '-blur', '0x4', ...dupArgs, ...dupArgs, '\)',
+					// 	'-composite',
+					// 	'-fill', 'white', ...textArgs,
+					// 	'-background', 'lightblue', '-flatten', '-alpha', 'off'
+					// ], 'jpg')
 				}
 
 				await page.close()

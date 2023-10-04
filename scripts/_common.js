@@ -22,6 +22,7 @@ export const TRANSLATED_BUILDS_REF_FPATH = `${TRANSLATED_BUILDS_DIR}/reference.y
 export const TRANSLATED_BUILDS_LANG_FPATH = (/**@type {string}*/ lang) =>
 	`${TRANSLATED_BUILDS_DIR}/${lang}.md`
 export const WWW_API_FILE = `${BASE_DIR}/www/src/api/generated.js`
+export const WWW_PUBLIC_DIR = `${BASE_DIR}/www/public`
 export const WWW_DYNAMIC_DIR = `${BASE_DIR}/www/public/generated`
 export const WWW_MEDIA_DIR = `${BASE_DIR}/www/public/media`
 
