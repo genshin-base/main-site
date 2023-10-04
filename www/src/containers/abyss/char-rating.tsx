@@ -42,8 +42,8 @@ export function CharacterRating({ characterCode }: { characterCode: string }): J
 					role="progressbar"
 					style={{ width: stats.width, backgroundColor: stats.color }}
 					aria-valuenow={stats.percent}
-					aria-valuemin="0"
-					aria-valuemax="100"
+					aria-valuemin={0}
+					aria-valuemax={100}
 				></div>
 			</div>
 		</div>

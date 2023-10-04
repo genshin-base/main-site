@@ -18,7 +18,7 @@ export const renderContent: void | SSRRenderFunc = BUNDLE_ENV.IS_SSR
 	? // Импортировать preact-render-to-string в начале нельзя,
 	  // т.к. Терсер видит где-то там побочные эффекты и не выкидывает код из продакшн-бандла.
 	  // А от require(...) что-то падает в недрах преактовых хуков.
-	  () => import('preact-render-to-string').then(x => x.renderToString(<App />, null, { pretty: false }))
+	  () => import('preact-render-to-string').then(x => x.renderToString(<App />, null))
 	: isOnExpectedDomain()
 	? render(<App />, document.querySelector('body .app') as Element)
 	: insertUnsupportedLocationWarning()

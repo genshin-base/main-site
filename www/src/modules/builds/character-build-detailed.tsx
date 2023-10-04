@@ -205,7 +205,7 @@ export function CharacterBuildDetailed({
 		<div className="d-none d-xl-block">
 			<div className="container">
 				<div className="row">
-					<div className="col col-3 p-0">
+					<div className="col col-3 p-0 summary-hide">
 						<button className="btn btn-secondary align-self-center" onClick={goBack}>
 							<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
 						</button>
@@ -225,7 +225,7 @@ export function CharacterBuildDetailed({
 							<CharacterPortrait src={getCharacterPortraitSrc(characterCode)} classes="w-100" />
 							<div className="mt-3">{materialsBlock}</div>
 							<ToggleCharFav
-								classes="fs-3 position-absolute top-0 end-0"
+								classes="fs-3 position-absolute top-0 end-0 summary-hide"
 								characterCode={characterCode}
 							/>
 							<div className="mt-3 mb-4">
@@ -251,7 +251,7 @@ export function CharacterBuildDetailed({
 							</div>
 							<div className="flex-fill w-33 p-3">{artifactStatsAndSkillsBlock}</div>
 						</div>
-						<div className="w-100">
+						<div className="w-100 summary-hide">
 							<div className="p-3">
 								<BlockHeader>{I18N_NOTES}</BlockHeader>
 								<div className="text-muted">{notesBlock}</div>
