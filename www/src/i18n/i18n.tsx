@@ -36,6 +36,7 @@ export const I18N_MINUTE = { en: 'minute', ru: 'минута' }[LANG]
 export const I18N_MINUTES = { en: 'minutes', ru: 'минуты' }[LANG]
 export const I18N_MINUTES_3 = { en: 'minutes', ru: 'минут' }[LANG]
 export const I18N_TODAY = { en: 'today', ru: 'сегодня' }[LANG]
+export const I18N_SHARE = { en: 'Share', ru: 'Поделиться' }[LANG]
 export const I18N_WEEKDAYS = {
 	en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
 	ru: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
@@ -97,6 +98,7 @@ export const I18N_TALENTS_PRIORITY = { en: 'Talents Priority', ru: 'Приори
 export const I18N_ASC_MATERIALS = { en: 'Ascension materials', ru: 'Материалы возвышения' }[LANG]
 export const I18N_FULL_BUILD_INFO = { en: 'Full build info', ru: 'Полная информация о билде' }[LANG]
 export const I18N_CHAR_LORE = { en: 'Character lore', ru: 'Лор персонажа' }[LANG]
+export const I18N_SAVE_BUILD_AS_IMAGE = { en: 'Save Build As Image', ru: 'Сохранить билд как картинку' }[LANG]
 export const I18N_MORE_ON_BUILDS_PAGE = {
 	en: 'more on build page',
 	ru: 'продолжение на странице билда',

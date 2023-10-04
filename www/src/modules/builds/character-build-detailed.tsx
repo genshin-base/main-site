@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'preact/hooks'
+import { useCallback, useEffect, useMemo, useState } from 'preact/hooks'
 
 import { WebApp } from '#lib/telegram/webapp'
 import { arrOrItemToArr } from '#lib/utils/collections'
@@ -20,6 +20,8 @@ import {
 	I18N_BACK,
 	I18N_CONJUCTIONS,
 	I18N_NOTES,
+	I18N_SAVE_BUILD_AS_IMAGE,
+	I18N_SHARE,
 	I18N_STAT_NAME,
 	I18N_SUBSTATS_PRIORITY,
 	I18N_TALENT_NAME,
@@ -30,7 +32,6 @@ import {
 	I18N_WEAPONS,
 	I18N_WEBAPP_BOT_SHARING_DONE,
 } from '#src/i18n/i18n'
-import { A } from '#src/routes/router'
 import { getArtifactTypeIconSrc } from '#src/utils/artifacts'
 import {
 	getCharacterAvatarLargeSrc,
@@ -57,6 +58,10 @@ import {
 
 import './character-build-detailed.scss'
 
+const goBack = () => {
+	history.back()
+}
+
 export function CharacterBuildDetailed({
 	build,
 	isUpdating,
@@ -65,11 +70,34 @@ export function CharacterBuildDetailed({
 	isUpdating: boolean
 }): JSX.Element {
 	const roleTabs: BuildRoleOrDummy[] = build.character.roles
+	const [isBackBtnHidden, setIsBackBtnHidden] = useState<boolean>(false)
 	const characterCode = build.character.code
 	const [selectedRoleTab, setSelectedRoleTab] = useSelectable(roleTabs, [characterCode])
-	const goBack = useCallback(() => {
-		history.back()
+
+	/* using Telegram buttons if the API version is greater than 6.1.
+	 * In older versions, such buttons are not available.
+	 */
+	if (BUNDLE_ENV.IS_TG_MINI_APP && WebApp.isVersionAtLeast('6.1')) {
+		setIsBackBtnHidden(true)
+		WebApp.BackButton.show()
+		WebApp.BackButton.onClick(goBack)
+
+		WebApp.MainButton.show()
+		WebApp.MainButton.setText(I18N_SAVE_BUILD_AS_IMAGE)
+	}
+	/*
+	 * hiding the Telegram buttons when user leaves the page.
+	 */
+	useEffect(() => {
+		return () => {
+			WebApp.BackButton.offClick(goBack)
+			WebApp.BackButton.hide()
+
+			WebApp.MainButton.offClick(callImageExport)
+			WebApp.MainButton.hide()
+		}
 	}, [])
+
 	const weaponListBlock = useMemo(() => {
 		const role = getRoleData(build, selectedRoleTab.code)
 		if (!role) return []
@@ -208,10 +236,21 @@ export function CharacterBuildDetailed({
 		<div className="d-none d-xl-block">
 			<div className="container">
 				<div className="row">
-					<div className="col col-3 p-0 summary-hide">
-						<button className="btn btn-secondary align-self-center" onClick={goBack}>
-							<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
-						</button>
+					<div className="col col-3 p-0 summary-hide d-flex justify-content-between">
+						{!isBackBtnHidden && (
+							<button
+								className="btn btn-secondary align-self-center text-nowrap"
+								onClick={goBack}
+							>
+								<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
+							</button>
+						)}
+						{BUNDLE_ENV.IS_TG_MINI_APP && (
+							<WebAppBuildShareButton
+								characterCode={characterCode}
+								roleCode={selectedRoleTab.code}
+							/>
+						)}
 					</div>
 					<div className="col col-9">
 						<Tabs
@@ -307,18 +346,23 @@ export function CharacterBuildDetailed({
 		<ItemsDataContext.Provider value={build.maps}>
 			<div className="character-build-detailed mt-2 mb-3 position-relative">
 				<div className="d-flex d-xl-none mt-3">
-					<A className="btn btn-secondary align-self-center" type="submit" href="/builds">
-						<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
-					</A>
+					{!isBackBtnHidden && (
+						<button
+							className="btn btn-secondary align-self-center me-3 text-nowrap"
+							onClick={goBack}
+						>
+							<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
+						</button>
+					)}
+					<h5 className="pe-1 m-0 align-self-center w-50 d-inline-block overflow-hidden text-truncate text-wrap">
+						{build.character.name}
+					</h5>
 					{BUNDLE_ENV.IS_TG_MINI_APP && (
 						<WebAppBuildShareButton
 							characterCode={characterCode}
 							roleCode={selectedRoleTab.code}
 						/>
 					)}
-					<h5 className="ps-3 pe-1 m-0 align-self-center w-50 d-inline-block overflow-hidden text-truncate text-wrap">
-						{build.character.name}
-					</h5>
 					<div className="align-self-end ms-auto d-flex">
 						<ToggleCharFav classes="fs-3" characterCode={characterCode} />
 						<ItemAvatar
@@ -336,40 +380,46 @@ export function CharacterBuildDetailed({
 		</ItemsDataContext.Provider>
 	)
 }
+const callImageExport = () => {
+	/** todo */
+}
+const callWebAppShare = (characterCode: string, roleCode: string): void => {
+	if (WebApp.isVersionAtLeast('6.9')) {
+		WebApp.requestWriteAccess(granted => {
+			if (granted) {
+				const url = '/api/webapp/share'
+				const headers = { 'content-type': 'application/json' }
+				const body = JSON.stringify({
+					character: characterCode,
+					role: roleCode,
+					initData: WebApp.initData,
+				})
+				fetch(url, { method: 'POST', body, headers })
+					.then(r => r.json())
+					.then(() => WebApp.showAlert(I18N_WEBAPP_BOT_SHARING_DONE))
+					.catch(err => {
+						WebApp.showAlert(err + '')
+					})
+			}
+		})
+	} else {
+		let lang = WebApp.initDataUnsafe.user?.language_code ?? 'en'
+		if (!BUNDLE_ENV.LANGS.includes(lang)) lang = BUNDLE_ENV.LANGS[0]
 
+		const mediaOrigin = new URL(BUNDLE_ENV.ASSET_PATH + 'media/', location.origin).toString()
+		const imgSrc = getBuildSummaryPath(mediaOrigin, characterCode, roleCode, lang, 'png')
+		const text = ''
+		location.href =
+			`https://t.me/share/url` + `?url=${encodeURIComponent(imgSrc)}&text=${encodeURIComponent(text)}`
+	}
+}
 function WebAppBuildShareButton({ characterCode, roleCode }: { characterCode: string; roleCode: string }) {
 	const onShareClick = useCallback(() => {
-		if (WebApp.isVersionAtLeast('6.9')) {
-			WebApp.requestWriteAccess(granted => {
-				if (granted) {
-					const url = '/api/webapp/share'
-					const headers = { 'content-type': 'application/json' }
-					const body = JSON.stringify({
-						character: characterCode,
-						role: roleCode,
-						initData: WebApp.initData,
-					})
-					fetch(url, { method: 'POST', body, headers })
-						.then(r => r.json())
-						.then(() => WebApp.showAlert(I18N_WEBAPP_BOT_SHARING_DONE))
-						.catch(err => {
-							WebApp.showAlert(err + '')
-						})
-				}
-			})
-		} else {
-			let lang = WebApp.initDataUnsafe.user?.language_code ?? 'en'
-			if (!BUNDLE_ENV.LANGS.includes(lang)) lang = BUNDLE_ENV.LANGS[0]
-
-			const mediaOrigin = new URL(BUNDLE_ENV.ASSET_PATH + 'media/', location.origin).toString()
-			const imgSrc = getBuildSummaryPath(mediaOrigin, characterCode, roleCode, lang, 'png')
-
-			const text = ''
-
-			location.href =
-				`https://t.me/share/url` +
-				`?url=${encodeURIComponent(imgSrc)}&text=${encodeURIComponent(text)}`
-		}
+		callWebAppShare(characterCode, roleCode)
 	}, [characterCode, roleCode])
-	return <button onClick={onShareClick}>шаре</button>
+	return (
+		<button className="btn btn-primary align-self-center btn-telegram me-3" onClick={onShareClick}>
+			{I18N_SHARE}
+		</button>
+	)
 }
