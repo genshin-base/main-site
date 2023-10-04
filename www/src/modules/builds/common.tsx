@@ -3,6 +3,7 @@ import { useCallback, useMemo } from 'preact/hooks'
 import { CharacterFullInfoWithRelated } from '#lib/parsing/combine'
 import { CompactTextParagraphs, TextNode } from '#lib/parsing/helperteam/text'
 import { ArtifactRef, ArtifactRefNode, CharacterBuildInfoRole } from '#lib/parsing/helperteam/types'
+import { WebApp } from '#lib/telegram/webapp'
 import { mustBeDefined, staticNever } from '#lib/utils/values'
 import { ART_GROUP_CODES } from '#src/api/generated'
 import { MapAllByCode } from '#src/api/utils'
@@ -203,6 +204,8 @@ function ToggleSmthFav<
 	const [elRef, isHovered] = useHover<HTMLDivElement>()
 	const isFav = ~favSmthCodes.indexOf(smthCode)
 	const toggleFav = useCallback(() => {
+		// using Telegram Haptic to give user feel of a liking
+		if (BUNDLE_ENV.IS_TG_MINI_APP) WebApp.HapticFeedback.selectionChanged()
 		setFavSmthCodes(
 			removeOldSmthsFromList(
 				isFav ? favSmthCodes.filter(c => c !== smthCode) : [smthCode, ...favSmthCodes],
