@@ -493,3 +493,62 @@ export function useScrollPosition(): number {
 
 	return scrollPosition
 }
+type scrollDirection = 'down' | 'up'
+const useScrollDirection = (threshold: number = 0): scrollDirection => {
+	const [scrollDirection, setScrollDirection] = useState<scrollDirection>('up')
+
+	const blocking = useRef(false)
+	const prevScrollY = useRef(0)
+
+	useEffect(() => {
+		prevScrollY.current = window.pageYOffset
+
+		const updateScrollDirection = () => {
+			const scrollY = window.pageYOffset
+
+			if (Math.abs(scrollY - prevScrollY.current) >= threshold) {
+				const newScrollDirection = scrollY > prevScrollY.current ? 'down' : 'up'
+
+				setScrollDirection(newScrollDirection)
+
+				prevScrollY.current = scrollY > 0 ? scrollY : 0
+			}
+
+			blocking.current = false
+		}
+
+		const onScroll = () => {
+			if (!blocking.current) {
+				blocking.current = true
+				window.requestAnimationFrame(updateScrollDirection)
+			}
+		}
+
+		window.addEventListener('scroll', onScroll)
+
+		return () => window.removeEventListener('scroll', onScroll)
+	}, [scrollDirection, threshold])
+
+	return scrollDirection
+}
+
+export { useScrollDirection }
+
+export const useCheckIfPageBottomReached = (): boolean => {
+	const [reachedBottom, setReachedBottom] = useState(false)
+	const isBottomReached = () => {
+		const offsetHeight = document.documentElement.offsetHeight
+		const innerHeight = window.innerHeight
+		const scrollTop = document.documentElement.scrollTop
+		return offsetHeight - (innerHeight + scrollTop) <= 10
+	}
+	useEffect(() => {
+		const handleScroll = () => {
+			setReachedBottom(isBottomReached())
+		}
+		window.addEventListener('scroll', handleScroll)
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [])
+
+	return reachedBottom
+}

@@ -1,9 +1,7 @@
-import { useCallback } from 'preact/hooks'
-
-import { isPageActive } from '#src/components/nav'
 import { I18N_BUILDS, I18N_EQUIPMENT, I18N_HOME, I18N_SEARCH } from '#src/i18n/i18n'
 import { paths } from '#src/routes/paths'
-import { A } from '#src/routes/router'
+import { A, isOnRoute } from '#src/routes/router'
+import { useCheckIfPageBottomReached, useScrollDirection } from '#src/utils/hooks'
 import { getIconSrc } from '#src/utils/icons'
 import { ItemAvatar } from './item-cards/item-avatars'
 
@@ -14,22 +12,27 @@ type bottomTab = {
 	iconSrc: string
 	href: string
 	onClick?: (e: Event) => void
+	isPageActive: () => boolean
 }
+const checkRouts = routs => routs.some(r => isOnRoute(r))
 const tabs: bottomTab[] = [
 	{
 		text: I18N_HOME,
 		iconSrc: getIconSrc('home'),
 		href: '/',
+		isPageActive: () => checkRouts([paths.front]),
 	},
 	{
 		text: I18N_BUILDS,
 		iconSrc: getIconSrc('characters'),
 		href: paths.builds[0],
+		isPageActive: () => checkRouts([paths.builds, paths.buildCharacters]),
 	},
 	{
 		text: I18N_EQUIPMENT,
 		iconSrc: getIconSrc('equipment'),
 		href: 'weapons',
+		isPageActive: () => checkRouts([paths['weapons'], paths['artifacts']]),
 	},
 	{
 		text: I18N_SEARCH,
@@ -41,19 +44,24 @@ const tabs: bottomTab[] = [
 			console.log(searchEl)
 			if (searchEl) searchEl.focus()
 		},
+		isPageActive: () => checkRouts([]),
 	},
 ]
 export function BottomTabBar() {
+	const scrollDirection = useScrollDirection()
+	const isBottomReached = useCheckIfPageBottomReached()
 	return (
-		<ul class="nav bottom-tab-bar w-100 justify-content-between">
+		<ul
+			class={`nav bottom-tab-bar w-100 justify-content-between ${
+				scrollDirection === 'up' || isBottomReached ? 'not-muted' : 'muted-a-little'
+			}`}
+		>
 			{tabs.map(t => {
 				return (
 					<li className="nav-item" onClick={t.onClick}>
 						<A
 							className={`nav-link ${
-								isPageActive([paths.builds, paths.buildCharacters, paths['weapons'], ''])
-									? ' active'
-									: ''
+								t.isPageActive() ? ' active' : ''
 							} d-flex flex-column align-items-center px-3`}
 							href={t.href}
 						>

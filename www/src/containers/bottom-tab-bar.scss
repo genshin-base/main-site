@@ -3,4 +3,24 @@
   bottom: 0;
   background-color: var(--bs-body-bg);
   border-top: 1px solid #dcdcdc;
+  will-change: opacity;
+  .nav-link.active .item-avatar{
+    filter: sepia(0.8);
+  }
+  &.not-muted{
+    animation: bottom-tab-show 0.1s ease-in reverse;
+    animation-fill-mode: forwards
+  }
+  &.muted-a-little{
+    animation: bottom-tab-hide 0.6s ease-out;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes bottom-tab-hide {
+  from {opacity:1}
+  to {opacity: 0.4}
+}
+@keyframes bottom-tab-show {
+  from {opacity:1}
+  to {opacity: 0.4}
 }
