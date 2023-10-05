@@ -211,7 +211,7 @@ export function CardMap({
 					) : null}
 				</div>
 			</div>
-			<div className="map-tip position-absolute px-3 pt-1 lh-1 top-100 start-0 small text-muted opacity-75 user-select-none">
+			<div className="map-tip position-absolute px-3 lh-1 top-100 start-0 small text-muted opacity-75 user-select-none">
 				{!isMapEmpty &&
 					visibleMapCodeTabs.map(({ code }) => (
 						<div className="d-inline me-2" key={code} onClick={() => setMapCodeTab({ code })}>

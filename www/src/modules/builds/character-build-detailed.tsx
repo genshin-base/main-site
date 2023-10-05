@@ -242,7 +242,7 @@ export function CharacterBuildDetailed({
 								className="btn btn-secondary align-self-center text-nowrap"
 								onClick={goBack}
 							>
-								<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
+								<span className="fs-4 opacity-75 lh-08">‹ </span> {I18N_BACK}
 							</button>
 						)}
 						{BUNDLE_ENV.IS_TG_MINI_APP && (
@@ -351,7 +351,7 @@ export function CharacterBuildDetailed({
 							className="btn btn-secondary align-self-center me-3 text-nowrap"
 							onClick={goBack}
 						>
-							<span className="fs-4 lh-1 opacity-75">‹ </span> {I18N_BACK}
+							<span className="fs-4 opacity-75 lh-08">‹ </span> {I18N_BACK}
 						</button>
 					)}
 					<h5 className="pe-1 m-0 align-self-center w-50 d-inline-block overflow-hidden text-truncate text-wrap">

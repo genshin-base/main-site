@@ -35,7 +35,7 @@ export function makeRoleTitle(r: BuildRoleOrDummy) {
 	return (
 		<span key={r.code} data-summary-role-code={r.code}>
 			{r.isRecommended && (
-				<span className="fs-4 lh-1 opacity-75 text-rarity-5 align-bottom">{STAR}</span>
+				<span className="fs-4 opacity-75 text-rarity-5 align-bottom lh-08">{STAR}</span>
 			)}
 			{r.name}
 		</span>
