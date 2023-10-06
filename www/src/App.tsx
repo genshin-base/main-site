@@ -14,6 +14,8 @@ import { route, useRouter } from './routes/router'
 import './App.scss'
 import './animations.scss'
 
+if (BUNDLE_ENV.IS_TG_MINI_APP) require('./miniapp-styling')
+
 const routes = [
 	route(paths.front, FrontPage),
 	route(paths.builds, BuildsPage_CharSelect),

@@ -7,8 +7,8 @@
   --bs-body-color: var(--tg-theme-text-color) !important;
 }
 
-$darkBgCol: color-mix(in srgb, var(--tg-theme-bg-color), #000 33%);
-$lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 25%);
+$darkBgCol: color-mix(in srgb, var(--tg-theme-bg-color), #000 20%);
+$lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 10%);
 
 .app {
   .main-bg {
@@ -23,15 +23,23 @@ $lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 25%);
   .text-light {
     color: $lightCol !important;
   }
-  .btn-primary {
+  .btn-primary,
+  .nav-pills .nav-link.active,
+  .form-check-input:checked,
+  .form-check-input:checked {
     color: var(--tg-theme-button-text-color);
     background-color: var(--tg-theme-button-color);
     border-color: var(--tg-theme-button-color);
   }
-  .btn-primary:hover, .btn-primary:focus{
+  .btn-primary:hover,
+  .btn-primary:focus {
     color: var(--tg-theme-button-text-color);
     background-color: color-mix(in srgb, var(--tg-theme-button-color), #000 15%);
     border-color: color-mix(in srgb, var(--tg-theme-button-color), #000 15%);
+  }
+  .btn-primary:disabled {
+    background-color: var(--tg-theme-button-color);
+    border-color: var(--tg-theme-button-color);
   }
   .btn-outline-primary {
     color: var(--tg-theme-button-color);
@@ -54,5 +62,8 @@ $lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 25%);
   .bottom-tab-bar {
     background-color: var(--tg-theme-bg-color);
     border-color: var(--tg-theme-secondary-bg-color);
+  }
+  .header-sub-bg {
+    background-color: color-mix(in srgb, var(--tg-theme-button-color), #000 50%);
   }
 }

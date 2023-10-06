@@ -31,7 +31,7 @@ const tabs: bottomTab[] = [
 	{
 		text: I18N_EQUIPMENT,
 		iconSrc: getIconSrc('equipment'),
-		href: 'weapons',
+		href: paths.weapons[0],
 		isPageActive: () => checkRouts([paths['weapons'], paths['artifacts']]),
 	},
 	{
