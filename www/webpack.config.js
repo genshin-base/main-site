@@ -8,6 +8,7 @@ import { PurgeCSSPlugin } from 'purgecss-webpack-plugin'
 import { fileURLToPath } from 'url'
 import webpack from 'webpack'
 import doT from 'dot'
+import TerserPlugin from 'terser-webpack-plugin'
 
 import { Deferred, mustBeNotNull } from '#lib/utils/values.js'
 import { matchPath, paths, pathToStrings } from './src/routes/paths.js'
@@ -88,6 +89,12 @@ function makeConfig(mode, version, isMain, type) {
 		},
 		optimization: {
 			minimize: isProd && !type.isSSR,
+			minimizer: [
+				new TerserPlugin({
+					minify: TerserPlugin.swcMinify,
+					terserOptions: { compress: { passes: 2 } },
+				}),
+			],
 			splitChunks: {
 				chunks: type.isSSR ? () => false : 'async',
 				cacheGroups: {
