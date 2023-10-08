@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="{{=it.lang}}">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -10,6 +10,15 @@
 		{{~it.files.css :path}}<link rel="stylesheet" href="{{=path}}" />{{~}}
 		{{?it.isTgMiniApp}}<script src="https://telegram.org/js/telegram-web-app.js"></script>{{?}}
 		{{~it.files.js :path}}<script defer src="{{=path}}"></script>{{~}}
+		{{?it.isTgMiniApp}}
+		<script>
+			let langs = {{=JSON.stringify(it.langs)}}
+			let lp = l => l === 'en' ? '/' : '/ru'
+			let cl = l => langs.includes(l) ? l : l === 'ua' ? 'ru' : 'en'
+			let wal = cl(Telegram.WebApp.initDataUnsafe.user?.language_code)
+			if (wal !== {{=JSON.stringify(it.lang)}}) location.href = lp(wal)
+		</script>
+		{{?}}
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-FDTQB09C8B"></script>
 		<script>

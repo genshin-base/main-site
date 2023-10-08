@@ -6,7 +6,7 @@ import { koaBody } from 'koa-body'
 import crypto from 'crypto'
 import { mustBeNotNull } from '#lib/utils/values.js'
 import { getBuildSummaryPath } from '#lib/www-utils/summaries.js'
-import { I18N_BUILD_SUMMARY_SHARING_CAPTION, chooseLangVal } from '#lib/i18n.js'
+import { I18N_BUILD_SUMMARY_SHARING_CAPTION, chooseLang, chooseLangVal } from '#lib/i18n.js'
 
 const TG_BOT_TOKEN = mustGetEnv('TG_BOT_TOKEN')
 const MEDIA_URL = mustGetEnv('MEDIA_URL')
@@ -41,7 +41,7 @@ app.use(async ctx => {
 		if (!initData) return ctx.throw(400)
 
 		const user = JSON.parse(mustBeNotNull(initData.get('user')))
-		const lang = chooseLang(user.language_code)
+		const lang = chooseLang(user.language_code, LANGS)
 
 		const characterCode = body.character
 		const roleCode = body.role
@@ -96,13 +96,6 @@ function mustGetEnv(key) {
 	const val = process.env[key] ?? ''
 	if (!val) throw new Error(`env variable ${key} is required`)
 	return val
-}
-
-/** @param {string} langRaw */
-function chooseLang(langRaw) {
-	if (LANGS.includes(langRaw)) return langRaw
-	if (langRaw === 'ua' && LANGS.includes('ru')) return 'ru'
-	return 'en'
 }
 
 /*

@@ -327,7 +327,16 @@ function GenerateIndexHtmls({ template, lang, isTgMiniApp, ssrBuildBarrier, only
 								href: REFLANG_ORIGIN + prefixedStrPath(lang, urlBase),
 							}))
 
-							const html = tmpl({ title, content, description, files, isTgMiniApp, otherLangs })
+							const html = tmpl({
+								title,
+								content,
+								description,
+								files,
+								isTgMiniApp,
+								lang,
+								langs: LANGS,
+								otherLangs,
+							})
 							const src = new webpack.sources.RawSource(html, false)
 							const fpath = cutLeadingSlash(url + '/index.html')
 							compilation.emitAsset(fpath, src, {})

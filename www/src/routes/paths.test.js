@@ -30,6 +30,7 @@ describe('pathToStrings', () => {
 		test.deepEqual(pathToStrings('', []), [])
 	})
 	it('should return single path for simple route', () => {
+		test.deepEqual(pathToStrings('', ['']), [''])
 		test.deepEqual(pathToStrings('', ['/bla']), ['/bla'])
 		test.deepEqual(pathToStrings('', ['/bla', '/sub']), ['/bla/sub'])
 	})
