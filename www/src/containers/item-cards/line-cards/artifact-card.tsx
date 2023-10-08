@@ -185,7 +185,7 @@ function ArtifactCardLine({
 	return (
 		<MobileDesktopSwitch
 			childrenDesktop={
-				<div className="bg-dark-darker rounded-start border border-secondary d-flex w-100 line-card-desktop">
+				<div className="bg-dark-darker rounded-start d-flex w-100 line-card-desktop">
 					<div className={cellClass}>{mainInfoColInner}</div>
 					<div className={cellClass}>
 						<div className="invisible pe-none">
@@ -215,16 +215,16 @@ function ArtifactCardLine({
 						className="ms-auto d-flex justify-content-end align-items-center mb-2 me-3"
 						onClick={onClose}
 					>
-						<label className="small text-muted c-pointer">{I18N_COLLAPSE}</label>
+						<label className="small c-pointer btn-link">{I18N_COLLAPSE}</label>
 						<button
 							type="button"
-							className="btn-close btn-sm d-inline-block ms-1"
+							className="btn-close btn-sm d-inline-block ms-1 btn-link"
 							aria-label="Close"
 						></button>
 					</div>
-					<div className="bg-dark rounded border overflow-hidden border-secondary d-flex w-100 line-card-mobile">
+					<div className="bg-dark rounded overflow-hidden d-flex w-100 line-card-mobile">
 						<Accordion
-							classes="accordion-flush w-100"
+							classes="accordion-flush w-100 border border-secondary"
 							items={forAccordion}
 							expandedItemCode={forAccordion[0].code}
 						/>
@@ -249,7 +249,7 @@ export function ArtifactCardTableRow({ artifact, isExpanded, group }: ArtifactRo
 		return (
 			<>
 				<tr>
-					<td colSpan={5} className="p-2" ref={cardRef}>
+					<td colSpan={5} className="p-2 no-border" ref={cardRef}>
 						<ArtifactCardLine artifact={artifact} onClose={toggleExpand} />
 					</td>
 				</tr>
@@ -259,8 +259,8 @@ export function ArtifactCardTableRow({ artifact, isExpanded, group }: ArtifactRo
 	const collapsededRow = useMemo(() => {
 		return (
 			<>
-				<tr className={'small lh-sm ' + bgClass}>
-					<td colSpan={1}>
+				<tr className={'small lh-sm no-border ' + bgClass}>
+					<td colSpan={1} className="align-middle">
 						<div className="d-flex c-pointer" onClick={toggleExpand}>
 							<ItemAvatar
 								classes="me-2 small-avatar align-self-center flex-shrink-0"

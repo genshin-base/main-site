@@ -73,13 +73,13 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 		if (!isLoaded(build)) return null
 		const role = getRoleData(build, selectedRoleTab.code)
 		return (
-			<ul className="mb-1 list-unstyled ms-1 pt-1 ps-1 small">
+			<ul className="list-unstyled small">
 				{CIRCLET_GOBLET_SANDS.map(ac => (
 					<li className="my-1 ms-1">
 						<ItemAvatar
 							src={getArtifactTypeIconSrc(ac)}
 							isNoBg={true}
-							classes="small-avatar with-padding align-middle artifact-main-stat-icon webapp-icon-shadow"
+							classes="small-avatar with-padding align-middle artifact-main-stat-icon"
 						/>
 						{genArtMainStatDetail(role, ac, true)}
 					</li>
@@ -118,10 +118,10 @@ function CharacterBuildPreview({ characterCode }: { characterCode: string }): JS
 		if (!isLoaded(build)) return null
 		const materials = getAllRelated(build.maps.items, build.character.materialCodes)
 		return (
-			<div className="d-flex justify-content-between flex-wrap px-2">
+			<div className="d-flex flex-wrap px-2">
 				{materials.map(m => (
 					<ItemAvatar
-						classes="mb-2 mx-1 small-avatar with-padding flex-shrink-0"
+						classes="mb-2 me-2 small-avatar with-padding flex-shrink-0"
 						src={getItemIconSrc(m.code)}
 						ddComponent={<OtherItemCard item={m} related={build.maps} />}
 					/>

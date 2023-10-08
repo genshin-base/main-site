@@ -25,6 +25,7 @@ import {
 	useClickAway,
 	useFetch,
 	useForceUpdate,
+	useScrollIntoView,
 	useScrollTo,
 	useWindowSize,
 } from '#src/utils/hooks'
@@ -314,7 +315,7 @@ const SearchItemCard = ({
 	isSelected: boolean
 	clearSearch: (shouldBlur?: boolean) => unknown
 }): JSX.Element => {
-	const [wrapRef] = useScrollTo<HTMLDivElement>(isSelected, { block: 'nearest' })
+	const [wrapRef] = useScrollIntoView<HTMLDivElement>(isSelected, { block: 'nearest' })
 	const clearSearchAndBlurLocal = useCallback(() => clearSearch(true), [clearSearch])
 	const regexp = new RegExp(`(${searchStr})`, 'gi')
 	const nameWithHighlight = searchStr ? highlightPartOfText(regexp, item.name) : item.name

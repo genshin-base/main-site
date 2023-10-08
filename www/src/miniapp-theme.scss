@@ -5,17 +5,22 @@
 :root {
   --bs-body-bg: var(--tg-theme-secondary-bg-color) !important;
   --bs-body-color: var(--tg-theme-text-color) !important;
+  --app-stat-icon-reverse: 0%;
 }
 
 $darkBgCol: color-mix(in srgb, var(--tg-theme-bg-color), #000 20%);
+$darkDarkerBgCol: color-mix(in srgb, var(--tg-theme-bg-color), #000 30%);
 $lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 10%);
 
-.app {
+.app-wrap {
   .main-bg {
     background: var(--tg-theme-bg-color);
   }
   .bg-dark {
     background-color: $darkBgCol !important;
+  }
+  .bg-dark-darker {
+    background-color: $lightCol !important;
   }
   .border-secondary {
     border-color: $darkBgCol !important;
@@ -23,6 +28,7 @@ $lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 10%);
   .text-light {
     color: $lightCol !important;
   }
+  // inputs
   .btn-primary,
   .nav-pills .nav-link.active,
   .form-check-input:checked,
@@ -53,8 +59,12 @@ $lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 10%);
   .btn-link {
     color: var(--tg-theme-link-color);
   }
+  // inputs end
   .webapp-icon-shadow img {
     filter: drop-shadow(0px 0px 0px #808080);
+  }
+  .artifact-main-stat-icon img {
+    filter: invert(var(--app-stat-icon-reverse));
   }
   .page {
     margin-bottom: 65px;
@@ -65,5 +75,42 @@ $lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 10%);
   }
   .header-sub-bg {
     background-color: color-mix(in srgb, var(--tg-theme-button-color), #000 50%);
+  }
+  // tables
+  .character-picker .big-table .col:nth-child(even),
+  .character-picker .big-table .row:nth-child(even):not(:nth-last-child(1)) .col,
+  .character-picker .character-picker-mobile .row:nth-child(even) {
+    background-color: color-mix(in srgb, var(--tg-theme-secondary-bg-color), rgba(0 0 0 / 10%) 50%);
+  }
+  .equipment {
+    .table {
+      color: var(--tg-theme-text-color) !important;
+      > :not(caption) > * > * {
+        border-bottom-width: 0px;
+      }
+      .btn-close,
+      .accordion-button.collapsed,
+      .btn-expand-inner {
+        filter: invert(var(--app-stat-icon-reverse));
+      }
+      .accordion-item{
+        border-color: $darkBgCol !important;
+      }
+      .accordion-body{
+        background: var(--tg-theme-bg-color);
+      }
+    }
+  }
+  // end tables
+  .map-wrap{
+    .map-header-content{
+      .text-wrap,
+      label{
+        filter: invert(var(--app-stat-icon-reverse));
+      }
+    }
+    .map-tip div{
+      filter: invert(var(--app-stat-icon-reverse));
+    }
   }
 }

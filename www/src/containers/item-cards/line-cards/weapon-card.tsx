@@ -175,7 +175,7 @@ function WeaponCardLine({
 	return (
 		<MobileDesktopSwitch
 			childrenDesktop={
-				<div className="bg-dark-darker rounded-start border border-secondary d-flex w-100 line-card-desktop">
+				<div className="bg-dark-darker rounded-start d-flex w-100 line-card-desktop">
 					<div className={cellClass}>{mainInfoColInner}</div>
 					<div className={cellClass}>
 						<div className="invisible pe-none">
@@ -205,16 +205,16 @@ function WeaponCardLine({
 						className="ms-auto d-flex justify-content-end align-items-center mb-2 me-3"
 						onClick={onClose}
 					>
-						<label className="small text-muted c-pointer">{I18N_COLLAPSE}</label>
+						<label className="small c-pointer btn-link ">{I18N_COLLAPSE}</label>
 						<button
 							type="button"
-							className="btn-close btn-sm d-inline-block ms-1"
+							className="btn-close btn-sm d-inline-block ms-1 btn-link"
 							aria-label="Close"
 						></button>
 					</div>
-					<div className="bg-dark rounded border overflow-hidden border-secondary d-flex w-100 line-card-mobile">
+					<div className="bg-dark rounded overflow-hidden d-flex w-100 line-card-mobile">
 						<Accordion
-							classes="accordion-flush w-100"
+							classes="accordion-flush w-100 border border-secondary"
 							items={forAccordion}
 							expandedItemCode={forAccordion[0].code}
 						/>
@@ -248,8 +248,8 @@ export function WeaponCardTableRow({ weapon, isExpanded, group }: WeaponRowProps
 	const collapsededRow = useMemo(() => {
 		return (
 			<>
-				<tr className={'small lh-sm ' + bgClass}>
-					<td colSpan={1}>
+				<tr className={'small lh-sm no-border ' + bgClass}>
+					<td colSpan={1} className="align-middle">
 						<div className="d-flex c-pointer" onClick={toggleExpand}>
 							<ItemAvatar
 								classes="me-2 small-avatar align-self-center flex-shrink-0"
@@ -264,10 +264,10 @@ export function WeaponCardTableRow({ weapon, isExpanded, group }: WeaponRowProps
 							</a>
 						</div>
 					</td>
-					<td>
+					<td className="align-middle">
 						{weapon.atk.base} / {weapon.atk.max}
 					</td>
-					<td>
+					<td className="align-middle">
 						{weapon.subStat ? (
 							<>
 								{I18N_STAT_NAME(weapon.subStat.code)} <br />
@@ -279,7 +279,9 @@ export function WeaponCardTableRow({ weapon, isExpanded, group }: WeaponRowProps
 					</td>
 					<MobileDesktopSwitch
 						childrenDesktop={
-							<td className="opacity-75">{weapon.passiveStat ? weapon.passiveStat : DASH}</td>
+							<td className="opacity-75 align-middle">
+								{weapon.passiveStat ? weapon.passiveStat : DASH}
+							</td>
 						}
 						childrenMobile={null}
 					/>

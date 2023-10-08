@@ -462,7 +462,7 @@ function setHashValue(key: string, val: string | null) {
 		history.replaceState(history.state, '', origin + pathname + search + hash)
 	}
 }
-export function useScrollTo<T extends Element>(
+export function useScrollIntoView<T extends Element>(
 	shouldScrollToArg: boolean,
 	scrollParams?: ScrollIntoViewOptions,
 ): [Ref<T>, (flag: boolean) => void] {
@@ -479,6 +479,21 @@ export function useScrollTo<T extends Element>(
 	}, [shouldScrollTo, shouldScrollToArg])
 	return [ref, setShouldScrollTo]
 }
+export function useScrollTo<T extends Element>(
+	shouldScrollToArg: boolean,
+): [Ref<T>, (flag: boolean) => void] {
+	const ref = useRef<T>(null)
+	const [shouldScrollTo, setShouldScrollTo] = useState(false)
+	useEffect(() => {
+		if (ref.current && (shouldScrollTo || shouldScrollToArg)) {
+			window.scrollTo(0, window.scrollY + ref.current.getBoundingClientRect().top)
+			setShouldScrollTo(false)
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [shouldScrollTo, shouldScrollToArg])
+	return [ref, setShouldScrollTo]
+}
+
 export function useScrollPosition(): number {
 	const [scrollPosition, setScrollPosition] = useState<number>(0)
 

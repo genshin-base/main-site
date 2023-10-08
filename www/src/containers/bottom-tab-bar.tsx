@@ -65,11 +65,7 @@ export function BottomTabBar() {
 							} d-flex flex-column align-items-center px-3`}
 							href={t.href}
 						>
-							<ItemAvatar
-								src={t.iconSrc}
-								isNoBg={true}
-								classes="small-avatar align-middle artifact-main-stat-icon webapp-icon-shadow"
-							/>
+							<ItemAvatar src={t.iconSrc} isNoBg={true} classes="small-avatar align-middle" />
 							<span className="small">{t.text}</span>
 						</A>
 					</li>

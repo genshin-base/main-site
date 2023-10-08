@@ -76,6 +76,8 @@ body,
 .text-decoration-underline-dotted {
 	text-decoration: dotted;
 	text-decoration-line: underline;
+	-webkit-text-decoration: underline;
+	text-underline-position: under;
 }
 .btn-reset {
 	background: none;
@@ -123,7 +125,9 @@ $colors: primary, secondary, warning, dark;
 .form-select.bg-dark {
 	background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23adb5bd%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27M2 5l6 6 6-6%27/%3e%3c/svg%3e");
 }
-
+.no-border{
+	border: none;
+}
 .not-rounded-top-end {
 	border-top-right-radius: 0 !important;
 }

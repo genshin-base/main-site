@@ -156,7 +156,7 @@ export function CharacterBuildDetailed({
 		return (
 			<>
 				<BlockHeader>{I18N_ART_STATS_PRIORITY}</BlockHeader>
-				<ul className="mb-1 list-unstyled ms-1 small">
+				<ul className="list-unstyled small">
 					{CIRCLET_GOBLET_SANDS.map(ac => (
 						<li className="my-1 ms-1">
 							<ItemAvatar
@@ -219,7 +219,7 @@ export function CharacterBuildDetailed({
 	const materialsBlock = useMemo(() => {
 		const materials = getAllRelated(build.maps.items, build.character.materialCodes)
 		return (
-			<div className="w-100 d-flex flex-wrap justify-content-between">
+			<div className="w-100 d-flex flex-wrap">
 				{materials.map((m, i) => (
 					<ItemAvatar
 						classes={`${
@@ -346,24 +346,26 @@ export function CharacterBuildDetailed({
 		<ItemsDataContext.Provider value={build.maps}>
 			<div className="character-build-detailed mt-2 mb-3 position-relative">
 				<div className="d-flex d-xl-none mt-3">
-					{!isBackBtnHidden && (
-						<button
-							className="btn btn-secondary align-self-center me-3 text-nowrap"
-							onClick={goBack}
-						>
-							<span className="fs-4 opacity-75 lh-08">‹ </span> {I18N_BACK}
-						</button>
-					)}
-					<h5 className="pe-1 m-0 align-self-center w-50 d-inline-block overflow-hidden text-truncate text-wrap">
-						{build.character.name}
-					</h5>
-					{BUNDLE_ENV.IS_TG_MINI_APP && (
-						<WebAppBuildShareButton
-							characterCode={characterCode}
-							roleCode={selectedRoleTab.code}
-						/>
-					)}
-					<div className="align-self-end ms-auto d-flex">
+					<div className="d-flex flex-grow-1 justify-content-between">
+						{!isBackBtnHidden && (
+							<button
+								className="btn btn-secondary align-self-center me-3 text-nowrap"
+								onClick={goBack}
+							>
+								<span className="fs-4 opacity-75 lh-08">‹ </span> {I18N_BACK}
+							</button>
+						)}
+						<h5 className="pe-1 m-0 align-self-center w-50 d-inline-block overflow-hidden text-truncate text-wrap">
+							{build.character.name}
+						</h5>
+						{BUNDLE_ENV.IS_TG_MINI_APP && (
+							<WebAppBuildShareButton
+								characterCode={characterCode}
+								roleCode={selectedRoleTab.code}
+							/>
+						)}
+					</div>
+					<div className="align-self-end d-flex">
 						<ToggleCharFav classes="fs-3" characterCode={characterCode} />
 						<ItemAvatar
 							src={getCharacterAvatarLargeSrc(characterCode)}

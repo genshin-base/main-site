@@ -179,7 +179,9 @@ export function CardMap({
 			<div className="map-header position-absolute top-0 px-3 py-1 w-100">
 				<div className="map-header-bg position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
 				<div
-					className={`d-flex ${isFatHead ? 'flex-column' : 'flex-row'} justify-content-between`}
+					className={`d-flex ${
+						isFatHead ? 'flex-column' : 'flex-row'
+					} justify-content-between map-header-content`}
 					style={{ opacity: '0.9999' }}
 				>
 					{itemData && (
@@ -236,14 +238,14 @@ export function CardMap({
 			</div>
 			<div
 				className={`map-tip position-absolute \
-				 px-3 pt-1 lh-1 \
+				 px-3 pt-1 \
 				 bottom-0 end-0 small text-muted \
 				 opacity-75 pe-none bg-dark opacity-75 \
 				 rounded-start not-rounded-bottom \
 				 ${isMapEmpty ? 'd-none' : ''}`}
 			>
-				<div class="d-none d-xl-block">{I18N_SCROLL_TO_ZOOM}</div>
-				<div class="d-xl-none">{I18N_PINCH_TO_ZOOM}</div>
+				<div class="d-none d-xl-block lh-1">{I18N_SCROLL_TO_ZOOM}</div>
+				<div class="d-xl-none lh-1">{I18N_PINCH_TO_ZOOM}</div>
 			</div>
 			{isMapEmpty ? <CentredLabel label={I18N_NOTHING_TO_SHOW} /> : null}
 		</div>
