@@ -27,7 +27,7 @@ export function FrontPage(): JSX.Element {
 
 	return (
 		<div className="dashboard container ">
-			{!BUNDLE_ENV.IS_TG_MINI_APP && (
+			{!BUNDLE_ENV.TG_WEB_APP && (
 				<Greetings classes="mb-4 mt-2" isHiddenOnMobile={true} isClosable={true} />
 			)}
 			<h1 className="my-1 letter-spacing-1">{I18N_DASHBOARD}</h1>

@@ -10,7 +10,7 @@ export function Header() {
 	// з-индекс для омамори, которая открывает гритингс
 	return (
 		<header style={{ zIndex: 1 }}>
-			{!BUNDLE_ENV.IS_TG_MINI_APP && (
+			{!BUNDLE_ENV.TG_WEB_APP && (
 				<div className="navbar navbar-expand-lg navbar-dark header-main-bg">
 					<div className="container">
 						<A className="navbar-brand" href="/">

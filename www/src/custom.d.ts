@@ -32,7 +32,7 @@ declare const BUNDLE_ENV: {
 	LANGS: string[]
 	LANG: string
 	IS_SSR: boolean
-	IS_TG_MINI_APP: boolean
+	TG_WEB_APP: { URL: string } | null
 	VERSION: { commitHash: string; commitDate: string; lastTag: string }
 	SUPPORTED_DOMAINS: string[] | null
 }

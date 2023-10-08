@@ -1,7 +1,7 @@
 if (process.env.NODE_ENV === 'development') {
 	require('preact/debug')
 }
-if (BUNDLE_ENV.IS_TG_MINI_APP) require('./miniapp-theme.scss')
+if (BUNDLE_ENV.TG_WEB_APP) require('./miniapp-theme.scss')
 
 // должно быть одним из первых
 import '#src/errors/catch'
@@ -35,6 +35,6 @@ function insertUnsupportedLocationWarning() {
 	document.body.prepend(wrap)
 }
 
-if (BUNDLE_ENV.IS_TG_MINI_APP) {
+if (BUNDLE_ENV.TG_WEB_APP) {
 	console.log('tg mini app v' + WebApp.version)
 }

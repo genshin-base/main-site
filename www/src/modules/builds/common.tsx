@@ -205,7 +205,7 @@ function ToggleSmthFav<
 	const isFav = ~favSmthCodes.indexOf(smthCode)
 	const toggleFav = useCallback(() => {
 		// using Telegram Haptic to give user feel of a liking
-		if (BUNDLE_ENV.IS_TG_MINI_APP) WebApp.HapticFeedback.selectionChanged()
+		if (BUNDLE_ENV.TG_WEB_APP) WebApp.HapticFeedback.selectionChanged()
 		setFavSmthCodes(
 			removeOldSmthsFromList(
 				isFav ? favSmthCodes.filter(c => c !== smthCode) : [smthCode, ...favSmthCodes],
