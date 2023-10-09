@@ -54,7 +54,7 @@ export function TimeUntilDayReset({ classes = '' }: { classes?: string }): JSX.E
 			<span className="animation-time-glow px-1">{BULLET}</span>
 			<div className="flex-break .d-block d-lg-none" />
 			{selectedOption}
-			{BUNDLE_ENV.IS_TG_MINI_APP ? (
+			{BUNDLE_ENV.TG_WEB_APP ? (
 				<button className="btn btn-link px-1 py-0" onClick={showTgModal}>
 					{I18N_CHANGE}
 				</button>

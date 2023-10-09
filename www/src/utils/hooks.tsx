@@ -128,7 +128,7 @@ declare global {
 export function useStorage<T>(key: string, initialValue: T): [T, (val: T) => unknown] {
 	if (BUNDLE_ENV.IS_SSR) {
 		return [initialValue, () => undefined]
-	} else if (BUNDLE_ENV.IS_TG_MINI_APP && WebApp.isVersionAtLeast('6.9')) {
+	} else if (BUNDLE_ENV.TG_WEB_APP && WebApp.isVersionAtLeast('6.9')) {
 		// eslint-disable-next-line react-hooks/rules-of-hooks
 		return useTgMiniAppStorage(key, initialValue)
 	} else {

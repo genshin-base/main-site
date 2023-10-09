@@ -49,7 +49,10 @@ app.use(async ctx => {
 		if (!roles) return ctx.throw(400)
 		if (!roles.includes(roleCode)) return ctx.throw(400)
 
-		const caption = chooseLangVal(lang, I18N_BUILD_SUMMARY_SHARING_CAPTION)(WEBAPP_URL)
+		const caption = chooseLangVal(
+			lang,
+			I18N_BUILD_SUMMARY_SHARING_CAPTION,
+		)(WEBAPP_URL + `?startapp=_${characterCode}`)
 
 		await bot.telegram.sendPhoto(
 			user.id,

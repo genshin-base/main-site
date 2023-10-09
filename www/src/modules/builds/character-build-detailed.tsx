@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'preact/hooks'
 
+import { chooseLang } from '#lib/i18n'
 import { WebApp } from '#lib/telegram/webapp'
 import { arrOrItemToArr } from '#lib/utils/collections'
 import { getBuildSummaryPath } from '#lib/www-utils/summaries'
@@ -74,29 +75,28 @@ export function CharacterBuildDetailed({
 	const characterCode = build.character.code
 	const [selectedRoleTab, setSelectedRoleTab] = useSelectable(roleTabs, [characterCode])
 
-	/* using Telegram buttons if the API version is greater than 6.1.
-	 * In older versions, such buttons are not available.
-	 */
-	if (BUNDLE_ENV.IS_TG_MINI_APP && WebApp.isVersionAtLeast('6.1')) {
-		setIsBackBtnHidden(true)
-		WebApp.BackButton.show()
-		WebApp.BackButton.onClick(goBack)
-
-		WebApp.MainButton.show()
-		WebApp.MainButton.setText(I18N_SAVE_BUILD_AS_IMAGE)
-	}
-	/*
-	 * hiding the Telegram buttons when user leaves the page.
-	 */
 	useEffect(() => {
-		return () => {
-			WebApp.BackButton.offClick(goBack)
-			WebApp.BackButton.hide()
+		/* In older versions, such buttons are not available. */
+		if (BUNDLE_ENV.TG_WEB_APP && WebApp.isVersionAtLeast('6.1')) {
+			const onMainClick = () => callImageExport(characterCode, selectedRoleTab.code)
 
-			WebApp.MainButton.offClick(callImageExport)
-			WebApp.MainButton.hide()
+			setIsBackBtnHidden(true)
+			WebApp.BackButton.show()
+			WebApp.BackButton.onClick(goBack)
+
+			WebApp.MainButton.show()
+			WebApp.MainButton.setText(I18N_SAVE_BUILD_AS_IMAGE)
+			WebApp.MainButton.onClick(onMainClick)
+
+			return () => {
+				WebApp.BackButton.offClick(goBack)
+				WebApp.BackButton.hide()
+
+				WebApp.MainButton.offClick(onMainClick)
+				WebApp.MainButton.hide()
+			}
 		}
-	}, [])
+	}, [characterCode, selectedRoleTab.code])
 
 	const weaponListBlock = useMemo(() => {
 		const role = getRoleData(build, selectedRoleTab.code)
@@ -243,7 +243,7 @@ export function CharacterBuildDetailed({
 								<span className="fs-4 opacity-75 lh-08">‹ </span> {I18N_BACK}
 							</button>
 						)}
-						{BUNDLE_ENV.IS_TG_MINI_APP && (
+						{BUNDLE_ENV.TG_WEB_APP && (
 							<WebAppBuildShareButton
 								characterCode={characterCode}
 								roleCode={selectedRoleTab.code}
@@ -356,7 +356,7 @@ export function CharacterBuildDetailed({
 						<h5 className="pe-1 m-0 align-self-center w-50 d-inline-block overflow-hidden text-truncate text-wrap">
 							{build.character.name}
 						</h5>
-						{BUNDLE_ENV.IS_TG_MINI_APP && (
+						{BUNDLE_ENV.TG_WEB_APP && (
 							<WebAppBuildShareButton
 								characterCode={characterCode}
 								roleCode={selectedRoleTab.code}
@@ -380,10 +380,11 @@ export function CharacterBuildDetailed({
 		</ItemsDataContext.Provider>
 	)
 }
-const callImageExport = () => {
-	/** todo */
+const callWebAppShare = (characterCode: string) => {
+	location.href =
+		`https://t.me/share/url` + `?url=${BUNDLE_ENV.TG_WEB_APP?.URL}?startapp_${characterCode}&text={text}`
 }
-const callWebAppShare = (characterCode: string, roleCode: string): void => {
+const callImageExport = (characterCode: string, roleCode: string): void => {
 	if (WebApp.isVersionAtLeast('6.9')) {
 		WebApp.requestWriteAccess(granted => {
 			if (granted) {
@@ -403,9 +404,7 @@ const callWebAppShare = (characterCode: string, roleCode: string): void => {
 			}
 		})
 	} else {
-		let lang = WebApp.initDataUnsafe.user?.language_code ?? 'en'
-		if (!BUNDLE_ENV.LANGS.includes(lang)) lang = BUNDLE_ENV.LANGS[0]
-
+		const lang = chooseLang(WebApp.initDataUnsafe.user?.language_code, BUNDLE_ENV.LANGS)
 		const mediaOrigin = new URL(BUNDLE_ENV.ASSET_PATH + 'media/', location.origin).toString()
 		const imgSrc = getBuildSummaryPath(mediaOrigin, characterCode, roleCode, lang, 'png')
 		const text = ''
@@ -415,8 +414,8 @@ const callWebAppShare = (characterCode: string, roleCode: string): void => {
 }
 function WebAppBuildShareButton({ characterCode, roleCode }: { characterCode: string; roleCode: string }) {
 	const onShareClick = useCallback(() => {
-		callWebAppShare(characterCode, roleCode)
-	}, [characterCode, roleCode])
+		callWebAppShare(characterCode)
+	}, [characterCode])
 	return (
 		<button className="btn btn-primary align-self-center btn-telegram me-3" onClick={onShareClick}>
 			{I18N_SHARE}

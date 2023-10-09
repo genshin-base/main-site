@@ -14,7 +14,7 @@ import { route, useRouter } from './routes/router'
 import './App.scss'
 import './animations.scss'
 
-if (BUNDLE_ENV.IS_TG_MINI_APP) require('./miniapp-styling')
+if (BUNDLE_ENV.TG_WEB_APP) require('./miniapp-styling')
 
 const routes = [
 	route(paths.front, FrontPage),
@@ -34,9 +34,9 @@ export function App(): JSX.Element {
 			<main>
 				<PageWrap>{page}</PageWrap>
 			</main>
-			{!BUNDLE_ENV.IS_TG_MINI_APP && <Footer />}
-			{!BUNDLE_ENV.IS_TG_MINI_APP && <GoUpBtn />}
-			{BUNDLE_ENV.IS_TG_MINI_APP && <BottomTabBar />}
+			{!BUNDLE_ENV.TG_WEB_APP && <Footer />}
+			{!BUNDLE_ENV.TG_WEB_APP && <GoUpBtn />}
+			{BUNDLE_ENV.TG_WEB_APP && <BottomTabBar />}
 		</div>
 	)
 }
