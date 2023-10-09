@@ -19,7 +19,7 @@
 			let newLoc = ''
 
 			let sp = Telegram.WebApp.initDataUnsafe.start_param
-			if (sp && sp.startsWith('_')) newLoc = langPrefix(destLang)+'/builds/'+sp.slice(1)
+			if (sp && sp.startsWith('_')) newLoc = langPrefix(destLang)+'/builds/'+sp.slice(1)+'/'
 
 			if (!newLoc && destLang !== {{=JSON.stringify(it.lang)}}) newLoc = langPrefix(destLang)+'/'
 

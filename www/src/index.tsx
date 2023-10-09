@@ -36,5 +36,5 @@ function insertUnsupportedLocationWarning() {
 }
 
 if (BUNDLE_ENV.TG_WEB_APP) {
-	console.log('tg mini app v' + WebApp.version)
+	console.log(`tg mini app v${WebApp.version}, lang: ${WebApp.initDataUnsafe.user?.language_code}`)
 }
