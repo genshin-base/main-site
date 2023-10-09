@@ -1,4 +1,4 @@
-import { I18N_BUILDS, I18N_EQUIPMENT, I18N_HOME, I18N_SEARCH } from '#src/i18n/i18n'
+import { I18N_BUILDS_SHORT, I18N_EQUIPMENT, I18N_HOME, I18N_SEARCH } from '#src/i18n/i18n'
 import { paths } from '#src/routes/paths'
 import { A, isOnRoute } from '#src/routes/router'
 import { useCheckIfPageBottomReached, useScrollDirection } from '#src/utils/hooks'
@@ -23,7 +23,7 @@ const tabs: bottomTab[] = [
 		isPageActive: () => checkRouts([paths.front]),
 	},
 	{
-		text: I18N_BUILDS,
+		text: I18N_BUILDS_SHORT,
 		iconSrc: getIconSrc('characters'),
 		href: paths.builds[0],
 		isPageActive: () => checkRouts([paths.builds, paths.buildCharacters]),

@@ -29,6 +29,7 @@ export const I18N_SELECT_REGION = { en: 'Choose server region', ru: 'Выбер�
 export const I18N_UNTIL_DAY_RESET = { en: 'Until Day Reset', ru: 'До нового дня' }[LANG]
 export const I18N_WHAT_TO_FARM = { en: 'What to Farm', ru: 'Что фармить' }[LANG]
 export const I18N_BUILDS = { en: 'Builds', ru: 'Сборки персонажей' }[LANG]
+export const I18N_BUILDS_SHORT = { en: 'Builds', ru: 'Сборки' }[LANG]
 export const I18N_ASIA = { en: 'Asia', ru: 'Азия' }[LANG]
 export const I18N_NORH_AMERICA = { en: 'North America', ru: 'Северная Америка' }[LANG]
 export const I18N_EUROPE = { en: 'Europe', ru: 'Европа' }[LANG]

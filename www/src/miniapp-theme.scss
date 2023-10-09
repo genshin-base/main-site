@@ -8,6 +8,7 @@
   --app-stat-icon-reverse: 0%;
 }
 
+// creating new variables using CSS
 $darkBgCol: color-mix(in srgb, var(--tg-theme-bg-color), #000 20%);
 $darkDarkerBgCol: color-mix(in srgb, var(--tg-theme-bg-color), #000 30%);
 $lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 20%);
