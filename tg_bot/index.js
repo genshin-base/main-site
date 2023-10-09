@@ -4,7 +4,7 @@ import { loadTranslatedBuilds } from '../scripts/_common.js'
 import Koa from 'koa'
 import { koaBody } from 'koa-body'
 import crypto from 'crypto'
-import { mustBeNotNull } from '#lib/utils/values.js'
+import { mustBeDefined, mustBeNotNull } from '#lib/utils/values.js'
 import { getBuildSummaryPath } from '#lib/www-utils/summaries.js'
 import { I18N_BUILD_SUMMARY_SHARING_CAPTION, chooseLang, chooseLangVal } from '#lib/i18n.js'
 
@@ -24,6 +24,27 @@ const characterRoleCodes = new Map(
 const bot = new Telegraf(TG_BOT_TOKEN)
 
 // bot.command('test', ctx => ctx.reply('bla'))
+
+bot.on('message', ctx => {
+	const lang = chooseLang(ctx.update.message.from.language_code, LANGS)
+
+	const charCodes = Array.from(characterRoleCodes.keys())
+	const characterCode = charCodes[(Math.random() * charCodes.length) | 0]
+	const roleCode = mustBeDefined(characterRoleCodes.get(characterCode))[0]
+
+	const caption = chooseLangVal(
+		lang,
+		I18N_BUILD_SUMMARY_SHARING_CAPTION,
+	)(WEBAPP_URL + `?startapp=_${characterCode}`)
+
+	bot.telegram.sendPhoto(
+		ctx.update.message.from.id,
+		getBuildSummaryPath(MEDIA_URL, characterCode, roleCode, lang, 'jpg'),
+		{ caption },
+	)
+
+	// ctx.reply(chooseLangVal(lang, I18N_BUILD_SUMMARY_SHARING_CAPTION)(WEBAPP_URL))
+})
 
 bot.launch()
 
@@ -66,7 +87,7 @@ app.use(async ctx => {
 	}
 })
 
-app.listen(8081)
+app.listen(8088)
 
 /** @param {string} initData */
 function getValidatedInitData(initData) {
