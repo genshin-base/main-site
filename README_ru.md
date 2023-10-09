@@ -1,37 +1,37 @@
-[версия руководства на русском языке](https://github.com/genshin-base/main-site/blob/miniapp/README_ru.md)
+[english version of the guide](https://github.com/genshin-base/main-site/blob/miniapp/README.md)
 
-## About App
-Genshin Base — an application where Genshin Impact players can find up-to-date character builds and view recommended owners for weapons and artifacts. Convenient search, no unnecessary information, the ability to like a character or item, as well as plan resource farming in a special widget.
+## О приложении
+Геншин База — приложение, где игроки в Геншин Импакт могут найти актуальные сборки персонажей, а так же посмотреть рекомендованных владельцев для оружия и артефактов. Удобный поиск, никакой лишней информации, возможность лайкнуть персонажа или предмет, а так же планировать добычу ресурсов в специальном виджете.
 
-As the future lies with super-apps and visual information, the application leverages the maximum capabilities provided by Telegram for mini-apps. It also has the ability to share a character's page with other messenger users and save a character build as an image.
+Так как будущее за супер-приложениями и визуальной информацией, в приложение использует максимум возможностей, которые даёт Телеграм для мини приложений. А так же имеет возможность поделиться страницей персонажа с другими пользователями мессенджера и сохранить сборку персонажа себе как картинку.
 
-## About Styling
-Currently, there are two themes for mini-apps in Telegram — light and dark. The provided color options are not sufficient for a complete application styling, so some colors have to be generated. An example of color generation, as well as an example of overriding default application styles for Telegram, can be found in [this file](https://github.com/genshin-base/main-site/blob/miniapp/www/src/miniapp-theme.scss).
+## О стилизации
+На данный момент в Телеграме есть две темы для мини приложений — дневная и ночная. Предоставленного количества цветов недостаточно для полноценной стилизации приложения, поэтому часть цветов приходится генерировать. Пример генерации цветов, а так же пример переопределения дефолтных стилей приложения под Телеграм в [этом файле](https://github.com/genshin-base/main-site/blob/miniapp/www/src/miniapp-theme.scss).
 
-There are colors that are not available in earlier versions of the bot. To generate them, JavaScript needs to be used, as demonstrated in [this file](https://github.com/genshin-base/main-site/blob/miniapp/www/src/miniapp-styling.tsx).
+Есть цвета, которые отсутствуют в более ранних версиях бота. Для их генерации нужно использовать ЯваСкрипт, пример в [этом файле](https://github.com/genshin-base/main-site/blob/miniapp/www/src/miniapp-styling.tsx).
 
-## About File Type Generation
-TODO
+## О генерации типов файлов
+ТУДУ
 
-## Share Build Button
-Integration with the messenger would not be complete without the ability to share a direct link to a character's page with other users. Therefore, TODO.
+## Кнопка «поделиться сборкой»
+Интеграция в мессенджер была бы не полной, если бы нельзя было делиться прямой ссылкой на страницу с персонажем с другими пользователями. Поэтому ТУДУ.
 https://github.com/genshin-base/main-site/blob/miniapp/www/src/modules/builds/character-build-detailed.tsx#L415
 
-## Save Build as an Image Button
-Currently, users find it important to have the option to save necessary information as an image. Genshin Base provides this capability. By using the Main Button, the user can save a build as an image. The button's initialization can be found in [this file](https://github.com/genshin-base/main-site/blob/miniapp/www/src/modules/builds/character-build-detailed.tsx#L78), and the click handler is described [here](https://github.com/genshin-base/main-site/blob/miniapp/www/src/modules/builds/character-build-detailed.tsx#L387).
+## Кнопка сохранения сборки картинкой
+Сейчас пользователям важно иметь возможность сохранить нужную информацию как картинку. Геншин База даёт и такую возможность. Используя Главную Кнопку (MainButton), пользователь может сохранить сборку как картинку. Инициализация кнопки в этом [файле](https://github.com/genshin-base/main-site/blob/miniapp/www/src/modules/builds/character-build-detailed.tsx#L78), а обработчик нажатия описан [здесь](https://github.com/genshin-base/main-site/blob/miniapp/www/src/modules/builds/character-build-detailed.tsx#L387)
 
-## User Storage
-To store items that a user has liked, Telegram's provided storage is used. The connection is described in [this file](https://github.com/genshin-base/main-site/blob/miniapp/www/src/utils/hooks.tsx#L128). If a situation arises where the user hasn't visited the application for a while and the data format for stored data has changed, the application retains the identifier of the current data format, as described in [this file](https://github.com/genshin-base/main-site/blob/miniapp/www/src/utils/hooks.tsx#L240).
+## Пользовательское хранилище
+Чтобы хранить предметы, которым пользователь поставил лайк, используется предоставленное Телеграмом хранилище. Подключение описано в этом [файле](https://github.com/genshin-base/main-site/blob/miniapp/www/src/utils/hooks.tsx#L128). Если возникнет ситуация, что пользователь давно не заходил в приложение, и формат хранимых данных поменялся, приложение сохраняет идентификатор текущего формата хранимых данных. Описано в (этом файле)[https://github.com/genshin-base/main-site/blob/miniapp/www/src/utils/hooks.tsx#L240]
 
-## Native Popup for Quick Setup
-The game has several servers in different time zones. The selected server determines what is available for farming today. To easily switch between servers, the application uses Telegram's native popup, with an example of usage in [this file](https://github.com/genshin-base/main-site/blob/miniapp/www/src/containers/time-until-day-reset.tsx#L37).
+## Нативный попап для быстрой настройки
+У игры существует несколько серверов в разных временных зонах. Выбранный сервер определяет, что доступно для добычи сегодня. Чтобы удобно переключаться между серверами, приложение использует нативный попап Телеграма, пример использования в [этом файле](https://github.com/genshin-base/main-site/blob/miniapp/www/src/containers/time-until-day-reset.tsx#L37).
 
-## Automatic Language Selection
-TODO.
+## Автоматический выбор языка
+ТУДУ
+
 
 
 ==============================
-
 ## Дев-режим
 
 `npm install`
