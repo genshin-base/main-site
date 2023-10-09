@@ -66,7 +66,7 @@ app.use(async ctx => {
 	}
 })
 
-app.listen(8081)
+app.listen(8088)
 
 /** @param {string} initData */
 function getValidatedInitData(initData) {

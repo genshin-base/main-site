@@ -13,17 +13,17 @@
 		{{?it.isTgMiniApp}}
 		<script>
 			let langs = {{=JSON.stringify(it.langs)}}
-			let lp = l => l === 'en' ? '' : '/ru'
-			let cl = l => langs.includes(l) ? l : l === 'ua' ? 'ru' : 'en'
-			let wal = cl(Telegram.WebApp.initDataUnsafe.user?.language_code)
-			let nl = ''
+			let langPrefix = l => l === 'en' ? '' : '/ru'
+			let chooseLang = l => langs.includes(l) ? l : l === 'ua' ? 'ru' : 'en'
+			let destLang = chooseLang(Telegram.WebApp.initDataUnsafe.user?.language_code)
+			let newLoc = ''
 
 			let sp = Telegram.WebApp.initDataUnsafe.start_param
-			if (sp && sp.startsWith('_')) nl = lp(wal)+'/builds/'+sp.slice(1)
+			if (sp && sp.startsWith('_')) newLoc = langPrefix(destLang)+'/builds/'+sp.slice(1)
 
-			if (!nl && wal !== {{=JSON.stringify(it.lang)}}) nl = lp(wal)+'/'
+			if (!newLoc && destLang !== {{=JSON.stringify(it.lang)}}) newLoc = langPrefix(destLang)+'/'
 
-			if (nl && location.pathname !== nl) location.href = nl
+			if (newLoc && location.pathname !== newLoc) location.href = newLoc
 		</script>
 		{{?}}
 		<!-- Global site tag (gtag.js) - Google Analytics -->
