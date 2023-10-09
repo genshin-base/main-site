@@ -84,7 +84,7 @@ export function FarmToday({ classes = '' }: { classes?: string }): JSX.Element {
 					<div className="talents-wrap pt-1">
 						{ttData.timetable[selectedTab.code].characterAscensions.map(asc => (
 							<>
-								<div className="mb-3 ps-2 ms-1 d-flex align-items-center" key={asc.itemCode}>
+								<div className="mb-2 ps-2 ms-1 d-flex align-items-center" key={asc.itemCode}>
 									<div>
 										<ItemAvatar
 											src={getItemIconLargeSrc(asc.itemCode)}

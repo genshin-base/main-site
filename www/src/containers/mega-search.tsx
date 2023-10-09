@@ -26,7 +26,6 @@ import {
 	useFetch,
 	useForceUpdate,
 	useScrollIntoView,
-	useScrollTo,
 	useWindowSize,
 } from '#src/utils/hooks'
 import { createPortal } from '#src/utils/preact-compat'

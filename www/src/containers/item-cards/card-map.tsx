@@ -139,7 +139,7 @@ export function CardMap({
 					options={markerGroupsLocal}
 					selectedOption={selectedSource}
 					onOptionSelect={setSourceAndFixMapCode}
-					classes="w-100 rounded-0"
+					classes="w-100 rounded-0 border-dark"
 				/>
 				<button
 					type="button"

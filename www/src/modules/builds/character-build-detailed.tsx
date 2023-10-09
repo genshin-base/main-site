@@ -222,9 +222,7 @@ export function CharacterBuildDetailed({
 			<div className="w-100 d-flex flex-wrap">
 				{materials.map((m, i) => (
 					<ItemAvatar
-						classes={`${
-							i === materials.length - 1 ? 'ms-1' : i === 0 ? 'me-1' : 'mx-1'
-						} small-avatar with-padding`}
+						classes={`me-2 mb-2 small-avatar with-padding`}
 						src={getItemIconSrc(m.code)}
 						ddComponent={<OtherItemCard item={m} related={build.maps} />}
 					/>

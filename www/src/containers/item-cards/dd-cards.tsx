@@ -72,7 +72,7 @@ function Card({
 }): JSX.Element {
 	return (
 		<div className={`item-detail-popover-card card ${classes}`}>
-			<h3 className="card-header fs-4 d-flex position-relative">
+			<h3 className="card-header fs-4 d-flex position-relative bg-dark">
 				<span className="flex-fill">{titleEl}</span>{' '}
 				<DdContext.Consumer>
 					{ddContext =>
@@ -318,9 +318,6 @@ export function OtherItemCard({
 
 	const isItemCharTalentMaterial = useMemo(() => ~item.types.indexOf('character-material-talent'), [item])
 	const isItemWeaponPrimaryMaterial = useMemo(() => ~item.types.indexOf('weapon-material-primary'), [item])
-	const codesForCalc = useMemo(() => {
-		return [...item.ancestryCodes.reverse(), item.code]
-	}, [item])
 	return (
 		<Card
 			titleEl={

@@ -10,9 +10,13 @@
 
 $darkBgCol: color-mix(in srgb, var(--tg-theme-bg-color), #000 20%);
 $darkDarkerBgCol: color-mix(in srgb, var(--tg-theme-bg-color), #000 30%);
-$lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 10%);
+$lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 20%);
 
 .app-wrap {
+  .badge,
+  .text-rarity-3 {
+    color: #808080 !important;
+  }
   .main-bg {
     background: var(--tg-theme-bg-color);
   }
@@ -26,9 +30,14 @@ $lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 10%);
     border-color: $darkBgCol !important;
   }
   .text-light {
-    color: $lightCol !important;
+    color: grey !important;
   }
   // inputs
+  .btn-secondary {
+    background-color: $darkBgCol !important;
+    border-color: $darkBgCol !important;
+    color: var(--tg-theme-button-text-color);
+  }
   .btn-primary,
   .nav-pills .nav-link.active,
   .form-check-input:checked,
@@ -93,24 +102,38 @@ $lightCol: color-mix(in srgb, var(--tg-theme-bg-color), #fff 10%);
       .btn-expand-inner {
         filter: invert(var(--app-stat-icon-reverse));
       }
-      .accordion-item{
+      .accordion-item {
         border-color: $darkBgCol !important;
       }
-      .accordion-body{
+      .accordion-body {
         background: var(--tg-theme-bg-color);
       }
     }
   }
   // end tables
-  .map-wrap{
-    .map-header-content{
+  .map-wrap {
+    .map-header-content {
       .text-wrap,
-      label{
+      label {
         filter: invert(var(--app-stat-icon-reverse));
       }
     }
-    .map-tip div{
+    .map-tip div {
       filter: invert(var(--app-stat-icon-reverse));
     }
+  }
+  .item-detail-popover-card {
+    .card-body {
+      max-height: calc(var(--tg-viewport-height) - 350px);
+    }
+  }
+  .card-header .btn-close {
+    filter: invert(var(--app-stat-icon-reverse));
+  }
+  .card {
+    background-color: var(--tg-theme-secondary-bg-color);
+  }
+  .search-item-card.highlighted {
+    background-color: $darkBgCol !important;
   }
 }
