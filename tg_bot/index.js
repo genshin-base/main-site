@@ -70,6 +70,7 @@ bot.on(message('text'), ctx => {
 })
 
 bot.launch()
+console.log('TG bot started')
 
 // =====
 
@@ -78,10 +79,12 @@ const app = new Koa()
 app.use(koaBody({ jsonLimit: '1kb', json: true, jsonStrict: true }))
 
 app.use(async ctx => {
+	console.log(`${ctx.method}: ${ctx.path}`)
 	if (ctx.method === 'POST' && ctx.path === '/api/webapp/share') {
 		const body = ctx.request.body
 
 		const initData = getValidatedInitData(body.initData + '')
+		console.log(`  init data ${initData ? 'ok' : 'wrong'}: ` + (initData ?? body.initData))
 		if (!initData) return ctx.throw(400)
 
 		const user = JSON.parse(mustBeNotNull(initData.get('user')))
@@ -89,9 +92,11 @@ app.use(async ctx => {
 
 		const characterCode = body.character
 		const roleCode = body.role
-		const roles = builds.characters.find(x => x.code === characterCode)?.roles
-		if (!roles) return ctx.throw(400)
-		if (!roles.includes(roleCode)) return ctx.throw(400)
+		const isCorrect = builds.characters
+			.find(x => x.code === characterCode)
+			?.roles.some(x => x.code === roleCode)
+		console.log(`  req is${isCorrect ? '' : ' NOT'} correct: ${characterCode} ${roleCode}`)
+		if (!isCorrect) return ctx.throw(400)
 
 		const caption = chooseLangVal(
 			lang,
@@ -110,7 +115,9 @@ app.use(async ctx => {
 	}
 })
 
-app.listen(8088)
+app.listen(8088, () => {
+	console.log('HTTP server started')
+})
 
 /** @param {string} initData */
 function getValidatedInitData(initData) {

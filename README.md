@@ -28,18 +28,22 @@ The game has several servers in different time zones. The selected server determ
 
 ## How to run
 
+Install dependencies:
+
 `npm install`
 
-### Frontend (HTML pages) of Mini App
+Generate JSONs with characters and items data:
 
-### Generating build images
+`node scripts/update.js www`
 
-Pre-generating images that will be sent when sharing builds.
+Pre-generating images that will be sent when sharing builds:
 
 ```bash
 npm run build -- --env no-prerender
 node scripts/render_build_images.js
 ```
+
+### Frontend (HTML pages) of Mini App
 
 #### Dev mode
 
@@ -56,6 +60,9 @@ Or you can proxy requests from you domain with configured TLS. In that case it's
 
 ```bash
 npm run dev -- --client-web-socket-url ws://0.0.0.0:443/ws --allowed-hosts all --env tg-web-app-url=t.me/mybot/myapp
+```
+
+Dev-server proxies requests to `/api` to the bot server at `127.0.0.1:8088`, is enough to start it alongside.
 
 #### Prod mode
 
