@@ -381,8 +381,11 @@ export function CharacterBuildDetailed({
 	)
 }
 const callWebAppShare = (characterCode: string) => {
-	location.href =
-		`https://t.me/share/url` + `?url=${BUNDLE_ENV.TG_WEB_APP?.URL}?startapp_${characterCode}&text={text}`
+	if (!BUNDLE_ENV.TG_WEB_APP) return
+
+	const appUrl = BUNDLE_ENV.TG_WEB_APP.URL + `?startapp=_${characterCode}`
+
+	location.href = `https://t.me/share/url` + `?url=${encodeURIComponent(appUrl)}&text=`
 }
 const callImageExport = (characterCode: string, roleCode: string): void => {
 	if (WebApp.isVersionAtLeast('6.9')) {
