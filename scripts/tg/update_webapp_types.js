@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { BASE_DIR, CACHE_DIR } from '../_common.js'
-import { getFileCached } from '#lib/requests.js'
-import { info, progress } from '#lib/utils/logs.js'
+import { getFile } from '#lib/requests.js'
+import { info } from '#lib/utils/logs.js'
 import {
 	forEachTBodyRow,
 	getTextContent,
@@ -409,9 +409,8 @@ function escapeMD(text) {
 async function getTgPage(cacheDir) {
 	await fs.mkdir(`${cacheDir}/telegram.org`, { recursive: true })
 
-	const fpath = `${cacheDir}/telegram.org/${PAGE_URL.replace(/\//g, '-')}.html`
-	const cacheUsed = await getFileCached(PAGE_URL, {}, fpath, false, Infinity)
+	const fpath = `${cacheDir}/telegram.org/${PAGE_URL.replace(/[:\/]/g, '-')}.html`
+	await getFile(PAGE_URL, {}, fpath, false)
 
-	if (!cacheUsed) progress()
 	return await parseXmlStream(createReadStream(fpath, { encoding: 'utf-8' }))
 }

@@ -10,8 +10,9 @@
 
 Есть цвета, которые отсутствуют в более ранних версиях бота. Для их генерации нужно использовать ЯваСкрипт, пример в [этом файле](https://github.com/genshin-base/main-site/blob/miniapp/www/src/miniapp-styling.tsx).
 
-## О генерации типов файлов
-ТУДУ
+## О генерации типов АПИ
+Типы для АПИ мини приложений (`Telegram.WebApp` и др.) генерятся скриптом `node scripts/tg/update_webapp_types.js` по [странице с документацией](https://core.telegram.org/bots/webapps).
+Результат сохраняется в [lib/telegram/webapp_types.d.ts](https://github.com/genshin-base/main-site/blob/miniapp/lib/telegram/webapp_types.d.ts).
 
 ## Кнопка «поделиться сборкой»
 Интеграция в мессенджер была бы не полной, если бы нельзя было делиться прямой ссылкой на страницу с персонажем с другими пользователями. Поэтому ТУДУ.
@@ -26,10 +27,20 @@ https://github.com/genshin-base/main-site/blob/miniapp/www/src/modules/builds/ch
 ## Нативный попап для быстрой настройки
 У игры существует несколько серверов в разных временных зонах. Выбранный сервер определяет, что доступно для добычи сегодня. Чтобы удобно переключаться между серверами, приложение использует нативный попап Телеграма, пример использования в [этом файле](https://github.com/genshin-base/main-site/blob/miniapp/www/src/containers/time-until-day-reset.tsx#L37).
 
-## Автоматический выбор языка
-ТУДУ
-
 ## Как запустить
+
+`npm install`
+
+### Генерация изображений билдов
+
+Генерация изображений, которые будут использоваться при отправке билдов в чат.
+
+Требуется `imagemagick`.
+
+```bash
+npm run build -- --env tg-web-app-url=t.me/mybot/myapp --env no-prerender
+node scripts/render_build_images.js
+```
 
 ### Фронтенд (HTML-страницы) мини-приложения
 
@@ -53,7 +64,5 @@ cp -r www/public/. www/dist/browser/
 ### Бекенд (бот)
 
 ```bash
-TG_BOT_TOKEN=token MEDIA_URL=https://mydomain.com/media WEBAPP_URL=t.me/mybot/myapp node tg_bot/index.js
+TG_BOT_TOKEN=token WEBAPP_URL=t.me/mybot/myapp node tg_bot/index.js
 ```
-
-`mydomain.com` пока используется для отправки изображений билдов в Телеграм, поэтому он должен быть общедоступен.
