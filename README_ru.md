@@ -15,8 +15,7 @@
 Результат сохраняется в [lib/telegram/webapp_types.d.ts](https://github.com/genshin-base/main-site/blob/miniapp/lib/telegram/webapp_types.d.ts).
 
 ## Кнопка «поделиться сборкой»
-Интеграция в мессенджер была бы не полной, если бы нельзя было делиться прямой ссылкой на страницу с персонажем с другими пользователями. Поэтому ТУДУ.
-https://github.com/genshin-base/main-site/blob/miniapp/www/src/modules/builds/character-build-detailed.tsx#L415
+Интеграция в мессенджер была бы не полной, если бы нельзя было делиться прямой ссылкой на страницу персонажа с другими пользователями. Поэтому кнопкой «Поделиться» можно отправить ссылку, которая будет открывать приложение сразу на нужной странице. Ссылка формируется и применяется [здесь](https://github.com/genshin-base/main-site/blob/miniapp/www/src/modules/builds/character-build-detailed.tsx#L388).
 
 ## Кнопка сохранения сборки картинкой
 Сейчас пользователям важно иметь возможность сохранить нужную информацию как картинку. Геншин База даёт и такую возможность. Используя Главную Кнопку (MainButton), пользователь может сохранить сборку как картинку. Инициализация кнопки в этом [файле](https://github.com/genshin-base/main-site/blob/miniapp/www/src/modules/builds/character-build-detailed.tsx#L78), а обработчик нажатия описан [здесь](https://github.com/genshin-base/main-site/blob/miniapp/www/src/modules/builds/character-build-detailed.tsx#L387)
