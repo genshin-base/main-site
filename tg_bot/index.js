@@ -1,49 +1,72 @@
 import { URLSearchParams } from 'url'
-import { Telegraf } from 'telegraf'
-import { loadTranslatedBuilds } from '../scripts/_common.js'
+import { Input, Telegraf } from 'telegraf'
+import { WWW_MEDIA_DIR, loadCharacters, loadTranslatedBuilds } from '../scripts/_common.js'
 import Koa from 'koa'
 import { koaBody } from 'koa-body'
 import crypto from 'crypto'
-import { mustBeDefined, mustBeNotNull } from '#lib/utils/values.js'
+import { mustBeNotNull } from '#lib/utils/values.js'
 import { getBuildSummaryPath } from '#lib/www-utils/summaries.js'
-import { I18N_BUILD_SUMMARY_SHARING_CAPTION, chooseLang, chooseLangVal } from '#lib/i18n.js'
+import {
+	I18N_BUILD_SUMMARY_SHARING_CAPTION,
+	I18N_NO_BUILD_FOUND,
+	chooseLang,
+	chooseLangVal,
+} from '#lib/i18n.js'
+import { TrigramSearcher } from '#lib/trigrams.js'
+import { getInlineText } from '#lib/parsing/helperteam/text.js'
+import { message } from 'telegraf/filters'
 
 const TG_BOT_TOKEN = mustGetEnv('TG_BOT_TOKEN')
-const MEDIA_URL = mustGetEnv('MEDIA_URL')
 const WEBAPP_URL = mustGetEnv('WEBAPP_URL')
 const LANGS = ['ru', 'en']
 
 const WEBAPP_SECRET_KEY = HMAC_SHA256(TG_BOT_TOKEN, 'WebAppData').digest()
 
-const characterRoleCodes = new Map(
-	(await loadTranslatedBuilds()).characters.map(x => [x.code, x.roles.map(x => x.code)]),
-)
+const code2character = await loadCharacters()
+const builds = await loadTranslatedBuilds()
+
+/** @type {TrigramSearcher<{id:String, title:string, characterCode:string, roleCode:string}>} */
+const searcher = new TrigramSearcher()
+for (const buildCharacter of builds.characters) {
+	const character = code2character[buildCharacter.code]
+	for (const role of buildCharacter.roles) {
+		for (const lang of LANGS) {
+			const title = `${character.name[lang]} ${getRoleNameStr(role.name[lang])}`
+			const id = `${character.code} ${role.code}`.slice(0, 64)
+			searcher.add(title.toLocaleLowerCase(), {
+				id,
+				title,
+				characterCode: character.code,
+				roleCode: role.code,
+			})
+		}
+	}
+}
 
 // =====
 
 const bot = new Telegraf(TG_BOT_TOKEN)
 
-// bot.command('test', ctx => ctx.reply('bla'))
-
-bot.on('message', ctx => {
+bot.on(message('text'), ctx => {
 	const lang = chooseLang(ctx.update.message.from.language_code, LANGS)
 
-	const charCodes = Array.from(characterRoleCodes.keys())
-	const characterCode = charCodes[(Math.random() * charCodes.length) | 0]
-	const roleCode = mustBeDefined(characterRoleCodes.get(characterCode))[0]
+	const res = searcher.getN(ctx.update.message.text.toLocaleLowerCase(), 1)[0]
+	if (res.sim === 0) {
+		ctx.reply(chooseLangVal(lang, I18N_NO_BUILD_FOUND))
+		return
+	}
 
 	const caption = chooseLangVal(
 		lang,
 		I18N_BUILD_SUMMARY_SHARING_CAPTION,
-	)(WEBAPP_URL + `?startapp=_${characterCode}`)
+	)(WEBAPP_URL + `?startapp=_${res.val.characterCode}`)
 
-	bot.telegram.sendPhoto(
-		ctx.update.message.from.id,
-		getBuildSummaryPath(MEDIA_URL, characterCode, roleCode, lang, 'jpg'),
+	ctx.replyWithPhoto(
+		Input.fromLocalFile(
+			getBuildSummaryPath(WWW_MEDIA_DIR, res.val.characterCode, res.val.roleCode, lang),
+		),
 		{ caption },
-	)
-
-	// ctx.reply(chooseLangVal(lang, I18N_BUILD_SUMMARY_SHARING_CAPTION)(WEBAPP_URL))
+	).catch(console.error)
 })
 
 bot.launch()
@@ -66,7 +89,7 @@ app.use(async ctx => {
 
 		const characterCode = body.character
 		const roleCode = body.role
-		const roles = characterRoleCodes.get(characterCode)
+		const roles = builds.characters.find(x => x.code === characterCode)?.roles
 		if (!roles) return ctx.throw(400)
 		if (!roles.includes(roleCode)) return ctx.throw(400)
 
@@ -77,7 +100,7 @@ app.use(async ctx => {
 
 		await bot.telegram.sendPhoto(
 			user.id,
-			getBuildSummaryPath(MEDIA_URL, characterCode, roleCode, lang, 'jpg'),
+			Input.fromLocalFile(getBuildSummaryPath(WWW_MEDIA_DIR, characterCode, roleCode, lang)),
 			{ caption },
 		)
 
@@ -120,6 +143,15 @@ function mustGetEnv(key) {
 	const val = process.env[key] ?? ''
 	if (!val) throw new Error(`env variable ${key} is required`)
 	return val
+}
+
+/**  @param {import('#lib/parsing/helperteam/text').CompactTextParagraphs|null} node */
+function getRoleNameStr(node) {
+	if (node === null) return ''
+	if (typeof node === 'string') return node
+	if (Array.isArray(node)) return node.map(getRoleNameStr).join(' ')
+	if ('p' in node) return getRoleNameStr(node.p)
+	return getInlineText(node)
 }
 
 /*

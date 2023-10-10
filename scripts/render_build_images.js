@@ -8,7 +8,6 @@ import puppeteer from 'puppeteer'
 import url from 'url'
 import { mustBeDefined, mustBeNotNull } from '#lib/utils/values.js'
 import { ignoreNotExists } from '#lib/utils/os.js'
-import { magick } from '#lib/media.js'
 import { getBuildSummaryPath } from '#lib/www-utils/summaries.js'
 import { dirname } from 'path'
 
@@ -96,13 +95,11 @@ await withTempDir(async staticRoot => {
 					const mainBox = await page.$('main')
 					if (!mainBox) throw new Error('content wrap not found on page')
 					const box = mustBeNotNull(await mainBox.boundingBox())
-					const pathPng = getBuildSummaryPath(WWW_MEDIA_DIR, character.code, role.code, lang, 'png')
-					const pathJpg = getBuildSummaryPath(WWW_MEDIA_DIR, character.code, role.code, lang, 'jpg')
-					const outDir = dirname(pathPng)
+					const pathJpg = getBuildSummaryPath(WWW_MEDIA_DIR, character.code, role.code, lang)
+					const outDir = dirname(pathJpg)
 					await fs.mkdir(outDir, { recursive: true })
 
-					await page.screenshot({ path: pathPng, clip: box })
-					await magick(pathPng, pathJpg, ['-quality', '98'], 'jpg')
+					await page.screenshot({ type: 'jpeg', path: pathJpg, quality: 98, clip: box })
 					// // prettier-ignore
 					// const textArgs = ['-background', 'transparent', '-pointsize', '24', '-gravity', 'South', 'caption:'+role.name[lang]]
 					// const dupArgs = ['(', '+clone', ')', '-composite']
