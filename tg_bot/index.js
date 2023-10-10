@@ -63,7 +63,7 @@ bot.on(message('text'), ctx => {
 
 	ctx.replyWithPhoto(
 		Input.fromLocalFile(
-			getBuildSummaryPath(WWW_MEDIA_DIR, res.val.characterCode, res.val.roleCode, lang, 'jpg'),
+			getBuildSummaryPath(WWW_MEDIA_DIR, res.val.characterCode, res.val.roleCode, lang),
 		),
 		{ caption },
 	).catch(console.error)
@@ -100,7 +100,7 @@ app.use(async ctx => {
 
 		await bot.telegram.sendPhoto(
 			user.id,
-			Input.fromLocalFile(getBuildSummaryPath(WWW_MEDIA_DIR, characterCode, roleCode, lang, 'jpg')),
+			Input.fromLocalFile(getBuildSummaryPath(WWW_MEDIA_DIR, characterCode, roleCode, lang)),
 			{ caption },
 		)
 

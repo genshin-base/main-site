@@ -406,7 +406,7 @@ const callImageExport = (characterCode: string, roleCode: string): void => {
 	} else {
 		const lang = chooseLang(WebApp.initDataUnsafe.user?.language_code, BUNDLE_ENV.LANGS)
 		const mediaOrigin = new URL(BUNDLE_ENV.ASSET_PATH + 'media/', location.origin).toString()
-		const imgSrc = getBuildSummaryPath(mediaOrigin, characterCode, roleCode, lang, 'png')
+		const imgSrc = getBuildSummaryPath(mediaOrigin, characterCode, roleCode, lang)
 		const text = ''
 		location.href =
 			`https://t.me/share/url` + `?url=${encodeURIComponent(imgSrc)}&text=${encodeURIComponent(text)}`

@@ -35,10 +35,8 @@ https://github.com/genshin-base/main-site/blob/miniapp/www/src/modules/builds/ch
 
 Генерация изображений, которые будут использоваться при отправке билдов в чат.
 
-Требуется `imagemagick`.
-
 ```bash
-npm run build -- --env tg-web-app-url=t.me/mybot/myapp --env no-prerender
+npm run build -- --env no-prerender
 node scripts/render_build_images.js
 ```
 
@@ -46,11 +44,20 @@ node scripts/render_build_images.js
 
 #### Дев-режим
 
+Можно просто запустить дев-сервер в режиме `https`, а в качестве адреса веб-приложения указать `https://127.0.0.1:8080`.
+Так можно отлаживать приложение через [веб-версию](https://web.telegram.org/) Телеграма.
+Но нужно сначала открыть приложение в браузере по ссылке напрямую и согласиться использовать самоподписанный сертификат.
+
+```bash
+npm run dev -- --env tg-web-app-url=t.me/mybot/myapp --https
+```
+
+Можно проксировать запросы со своего домена с настроенным TLS, но в этом случае стоит добавить параметры
+`--client-web-socket-url` и `--allowed-hosts`, чтобы работал HMR и автоперезагрузка страницы.
+
 ```bash
 npm run dev -- --client-web-socket-url ws://0.0.0.0:443/ws --allowed-hosts all --env tg-web-app-url=t.me/mybot/myapp
 ```
-
-Параметры `--client-web-socket-url` и `--allowed-hosts` необязательны, но без них не работает HMR и автоперезагрузка страницы.
 
 #### Прод-режим
 
@@ -59,7 +66,7 @@ npm run build -- --env tg-web-app-url=t.me/mybot/myapp --env no-prerender
 cp -r www/public/. www/dist/browser/
 ```
 
-Содержимое `www/dist/browser` может раздавать HTTP-сервер (`nginx` или `python3 -m http.server 8080 --directory www/dist/browser/`, или др.)
+Содержимое `www/dist/browser` может просто раздавать HTTPS-сервер (`nginx` например).
 
 ### Бекенд (бот)
 

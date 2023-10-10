@@ -37,20 +37,26 @@ The game has several servers in different time zones. The selected server determ
 
 Pre-generating images that will be sent when sharing builds.
 
-Requires `imagemagick`.
-
 ```bash
-npm run build -- --env tg-web-app-url=t.me/mybot/myapp --env no-prerender
+npm run build -- --env no-prerender
 node scripts/render_build_images.js
 ```
 
 #### Dev mode
 
+You can just start dev-server in `https` mode and configure `https://127.0.0.1:8080` as webapp's URL.
+That way you can develop and debug the webapp via Telegram [web-clients](https://web.telegram.org/).
+But you'll have to first open the app URL in the browser directly and accept to use a self-signed certificate.
+
 ```bash
-npm run dev -- --client-web-socket-url ws://0.0.0.0:443/ws --allowed-hosts all --env tg-web-app-url=t.me/mybot/myapp
+npm run dev -- --env tg-web-app-url=t.me/mybot/myapp --https
 ```
 
-Parameters `--client-web-socket-url` and `--allowed-hosts` are not required but they fix HMR and page autoreload.
+Or you can proxy requests from you domain with configured TLS. In that case it's better to add parameters
+`--client-web-socket-url` and `--allowed-hosts` so HMR and page autoreload can work correctly.
+
+```bash
+npm run dev -- --client-web-socket-url ws://0.0.0.0:443/ws --allowed-hosts all --env tg-web-app-url=t.me/mybot/myapp
 
 #### Prod mode
 
@@ -59,7 +65,7 @@ npm run build -- --env tg-web-app-url=t.me/mybot/myapp --env no-prerender
 cp -r www/public/. www/dist/browser/
 ```
 
-And serve `www/dist/browser` folder content (with `nginx` or `python3 -m http.server 8080 --directory www/dist/browser/` or etc.)
+And serve `www/dist/browser` folder content (with `nginx` for example).
 
 ### Backend (bot)
 
